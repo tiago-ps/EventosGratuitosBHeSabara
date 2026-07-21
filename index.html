@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#07111f">
+  <title>Agenda Cultural Gratuita</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main id="app" class="app" aria-live="polite">
+    <section class="loading" id="loading">
+      <div class="spinner" aria-hidden="true"></div>
+      <p>Carregando programação…</p>
+    </section>
+  </main>
+
+  <template id="slide-template">
+    <article class="slide" aria-roledescription="slide">
+      <div class="media">
+        <img class="event-image" alt="">
+        <div class="image-fallback" aria-hidden="true">
+          <span class="fallback-icon"></span>
+          <span class="fallback-label"></span>
+        </div>
+        <div class="media-overlay"></div>
+      </div>
+
+      <div class="content">
+        <header class="topbar">
+          <div>
+            <p class="panel-title"></p>
+            <p class="period"></p>
+          </div>
+          <div class="counter" aria-label="posição do evento"></div>
+        </header>
+
+        <div class="event-copy">
+          <div class="badges">
+            <span class="badge category"></span>
+            <span class="badge free">GRATUITO</span>
+          </div>
+
+          <h1 class="event-title"></h1>
+          <p class="description"></p>
+
+          <dl class="details">
+            <div>
+              <dt>Quando</dt>
+              <dd class="when"></dd>
+            </div>
+            <div>
+              <dt>Onde</dt>
+              <dd class="where"></dd>
+            </div>
+            <div class="registration-row">
+              <dt>Participação</dt>
+              <dd class="registration"></dd>
+            </div>
+          </dl>
+        </div>
+
+        <footer class="footer">
+          <div class="source-block">
+            <p class="source-label">Programação e inscrição</p>
+            <p class="source-url"></p>
+            <p class="updated"></p>
+          </div>
+          <div class="qr-wrap">
+            <div class="qr-code" aria-label="QR Code do evento"></div>
+            <span>Aponte a câmera</span>
+          </div>
+        </footer>
+      </div>
+
+      <div class="progress" aria-hidden="true"><span></span></div>
+    </article>
+  </template>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
