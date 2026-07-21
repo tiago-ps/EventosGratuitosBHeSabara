@@ -148,6 +148,8 @@
 
     if (event.imagem) {
       image.alt = `Imagem de divulgação: ${event.titulo}`;
+      image.referrerPolicy = 'no-referrer';
+      image.decoding = 'async';
       image.onload = () => {
         image.classList.add('loaded');
         fallback.style.display = 'none';

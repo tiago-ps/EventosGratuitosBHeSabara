@@ -63,3 +63,13 @@ O site atualiza automaticamente após a publicação do commit.
 ## Observação sobre imagens
 
 Alguns sites bloqueiam a exibição externa de suas imagens. Quando isso acontecer, o painel usa automaticamente a arte genérica da categoria, sem quebrar o slide.
+
+
+## Como funcionam as imagens
+
+O campo `imagem` aceita:
+
+- uma URL direta externa, como `https://site.org/banner.jpg`; ou
+- um caminho local, como `imagens/banner.jpg`, caso você decida adicionar arquivos ao repositório.
+
+Na rotina recomendada, o GPT fornece uma URL externa no JSON. Se ela estiver vazia, não for uma imagem direta ou o servidor bloquear a exibição, o painel mostra automaticamente uma arte gráfica da categoria. Portanto, não é necessário manter uma pasta de imagens.
