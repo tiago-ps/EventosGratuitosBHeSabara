@@ -155,6 +155,18 @@ function showIframe() {
     return;
   }
 
+  const mediaContainer = slide.querySelector('.media');
+  const overlay = slide.querySelector('.media-overlay');
+
+  if (!mediaContainer) {
+    fallback.style.display = 'grid';
+    return;
+  }
+
+  if (overlay) {
+    overlay.style.display = 'none';
+  }
+
   const iframe = document.createElement('iframe');
 
   iframe.className = 'event-page';
@@ -163,11 +175,19 @@ function showIframe() {
   iframe.loading = 'eager';
   iframe.referrerPolicy = 'no-referrer';
 
-  /*
-   * Não usamos sandbox neste primeiro teste porque alguns sites
-   * dependem de scripts, cookies e redirecionamentos para funcionar.
-   */
-  image.parentElement.appendChild(iframe);
+  // Força o iframe a ocupar todo o quadro.
+  iframe.style.position = 'absolute';
+  iframe.style.inset = '0';
+  iframe.style.width = '100%';
+  iframe.style.height = '100%';
+  iframe.style.minWidth = '100%';
+  iframe.style.minHeight = '100%';
+  iframe.style.border = '0';
+  iframe.style.display = 'block';
+  iframe.style.zIndex = '1';
+  iframe.style.background = '#fff';
+
+  mediaContainer.appendChild(iframe);
 }
 
 if (event.imagem) {
