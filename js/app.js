@@ -146,23 +146,49 @@
     slide.querySelector('.fallback-icon').textContent = icon;
     slide.querySelector('.fallback-label').textContent = label;
 
-    if (event.imagem) {
-      image.alt = `Imagem de divulgação: ${event.titulo}`;
-      image.referrerPolicy = 'no-referrer';
-      image.decoding = 'async';
-      image.onload = () => {
-        image.classList.add('loaded');
-        fallback.style.display = 'none';
-      };
-      image.onerror = () => {
-        image.removeAttribute('src');
-        image.style.display = 'none';
-        fallback.style.display = 'grid';
-      };
-      image.src = event.imagem;
-    } else {
-      image.style.display = 'none';
-    }
+function showIframe() {
+  image.style.display = 'none';
+  fallback.style.display = 'none';
+
+  if (!link) {
+    fallback.style.display = 'grid';
+    return;
+  }
+
+  const iframe = document.createElement('iframe');
+
+  iframe.className = 'event-page';
+  iframe.src = link;
+  iframe.title = `Página oficial: ${event.titulo}`;
+  iframe.loading = 'eager';
+  iframe.referrerPolicy = 'no-referrer';
+
+  /*
+   * Não usamos sandbox neste primeiro teste porque alguns sites
+   * dependem de scripts, cookies e redirecionamentos para funcionar.
+   */
+  image.parentElement.appendChild(iframe);
+}
+
+if (event.imagem) {
+  image.alt = `Imagem de divulgação: ${event.titulo}`;
+  image.referrerPolicy = 'no-referrer';
+  image.decoding = 'async';
+
+  image.onload = () => {
+    image.classList.add('loaded');
+    fallback.style.display = 'none';
+  };
+
+  image.onerror = () => {
+    image.removeAttribute('src');
+    showIframe();
+  };
+
+  image.src = event.imagem;
+} else {
+  showIframe();
+}
 
     app.replaceChildren(slide);
 
