@@ -93,7 +93,8 @@ body {
   background:
     radial-gradient(circle at 25% 20%, rgba(246,183,60,.28), transparent 33%),
     linear-gradient(145deg, #162d4b, #091423);
-}.fallback-icon { font-size: clamp(64px, 10vw, 170px); }
+}
+.fallback-icon { font-size: clamp(64px, 10vw, 170px); }
 .fallback-label { text-transform: uppercase; letter-spacing: .18em; font-weight: 800; font-size: clamp(16px, 2vw, 34px); color: #eef3f9; }
 
 .content {
@@ -139,6 +140,58 @@ dd { margin: 0; font-size: clamp(14px, 1.15vw, 23px); line-height: 1.25; overflo
 .slide.enter { animation: enter .45s ease both; }
 @keyframes enter { from { opacity: 0; transform: scale(1.01); } to { opacity: 1; transform: scale(1); } }
 
+/* Controls */
+.controls {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+  z-index: 100;
+  background: rgba(11, 23, 40, 0.8);
+  padding: 1rem;
+  border-radius: 999px;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--line);
+}
+
+.control-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(246, 183, 60, 0.15);
+  color: var(--accent);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 20px;
+}
+
+.control-btn svg {
+  width: 24px;
+  height: 24px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.control-btn:hover {
+  background: rgba(246, 183, 60, 0.25);
+  transform: scale(1.05);
+}
+
+.control-btn:active {
+  transform: scale(0.95);
+}
+
+.control-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
 /* Telas verticais, tablets e janelas estreitas */
 @media (max-aspect-ratio: 5/4), (max-width: 850px) {
   body { overflow: auto; }
@@ -158,6 +211,22 @@ dd { margin: 0; font-size: clamp(14px, 1.15vw, 23px); line-height: 1.25; overflo
   .details { grid-template-columns: 1fr; }
   .details .registration-row { grid-column: auto; }
   .source-url { max-width: 58vw; }
+
+  .controls {
+    bottom: 1rem;
+    gap: 0.5rem;
+    padding: 0.75rem;
+  }
+
+  .control-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .control-btn svg {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 /* Celulares muito estreitos */
@@ -169,6 +238,22 @@ dd { margin: 0; font-size: clamp(14px, 1.15vw, 23px); line-height: 1.25; overflo
   .qr-code { width: 76px; height: 76px; }
   .source-url { max-width: 58vw; }
   .details { margin-top: 14px; }
+
+  .controls {
+    bottom: 0.75rem;
+    gap: 0.4rem;
+    padding: 0.6rem;
+  }
+
+  .control-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .control-btn svg {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 /* TV/monitor baixo, como notebook em tela dividida */
