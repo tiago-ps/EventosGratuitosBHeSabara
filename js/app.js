@@ -4,6 +4,9 @@
   const DATA_URL = 'eventos.json';
   const app = document.getElementById('app');
   const template = document.getElementById('slide-template');
+  const btnPrev = document.getElementById('btn-prev');
+  const btnNext = document.getElementById('btn-next');
+  const btnPlayPause = document.getElementById('btn-play-pause');
 
   const categoryVisuals = {
     cinema: ['🎬', 'Cinema'],
@@ -38,7 +41,8 @@
     data: null,
     events: [],
     index: 0,
-    timer: null
+    timer: null,
+    isPaused: false
   };
 
   function normalizeText(value = '') {
@@ -156,6 +160,8 @@
 
   function showMessage(type, title, text) {
     clearTimeout(state.timer);
+    state.isPaused = true;
+    updatePlayPauseButton();
 
     app.innerHTML = `
       <section class="${type}">
@@ -183,6 +189,42 @@
       height: 256,
       correctLevel: QRCode.CorrectLevel.M
     });
+  }
+
+  function updatePlayPauseButton() {
+    const pauseIcon = btnPlayPause.querySelector('.pause-icon');
+    const playIcon = btnPlayPause.querySelector('.play-icon');
+
+    if (state.isPaused) {
+      pauseIcon.style.display = 'none';
+      playIcon.style.display = 'block';
+      btnPlayPause.setAttribute('aria-label', 'Reproduzir');
+      btnPlayPause.setAttribute('title', 'Reproduzir');
+    } else {
+      pauseIcon.style.display = 'block';
+      playIcon.style.display = 'none';
+      btnPlayPause.setAttribute('aria-label', 'Pausar');
+      btnPlayPause.setAttribute('title', 'Pausar');
+    }
+  }
+
+  function scheduleNextSlide() {
+    if (state.isPaused) return;
+
+    clearTimeout(state.timer);
+
+    const event = state.events[state.index];
+    const data = state.data;
+
+    const seconds = Math.max(
+      5,
+      Number(data.tempo_slide) || 12
+    );
+
+    state.timer = setTimeout(() => {
+      state.index = (state.index + 1) % state.events.length;
+      renderSlide(state.index);
+    }, seconds * 1000);
   }
 
   function renderSlide(index) {
@@ -402,12 +444,34 @@
 
     app.replaceChildren(slide);
 
-    state.timer = setTimeout(() => {
-      state.index =
-        (state.index + 1) % state.events.length;
+    scheduleNextSlide();
+  }
 
-      renderSlide(state.index);
-    }, seconds * 1000);
+  function goToNext() {
+    state.index = (state.index + 1) % state.events.length;
+    renderSlide(state.index);
+  }
+
+  function goToPrevious() {
+    state.index = (state.index - 1 + state.events.length) % state.events.length;
+    renderSlide(state.index);
+  }
+
+  function togglePlayPause() {
+    state.isPaused = !state.isPaused;
+    updatePlayPauseButton();
+
+    if (!state.isPaused) {
+      scheduleNextSlide();
+    } else {
+      clearTimeout(state.timer);
+    }
+  }
+
+  function setupControls() {
+    btnNext.addEventListener('click', goToNext);
+    btnPrev.addEventListener('click', goToPrevious);
+    btnPlayPause.addEventListener('click', togglePlayPause);
   }
 
   async function load() {
@@ -442,6 +506,7 @@
         return;
       }
 
+      setupControls();
       renderSlide(0);
 
     } catch (error) {
@@ -460,7 +525,7 @@
     () => {
       if (document.hidden) {
         clearTimeout(state.timer);
-      } else if (state.events.length) {
+      } else if (state.events.length && !state.isPaused) {
         renderSlide(state.index);
       }
     }
