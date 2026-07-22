@@ -17,6 +17,28 @@
     </section>
   </main>
 
+  <div class="controls">
+    <button id="btn-prev" class="control-btn prev-btn" aria-label="Slide anterior" title="Anterior">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </button>
+    <button id="btn-play-pause" class="control-btn play-pause-btn" aria-label="Pausar" title="Pausar">
+      <svg class="pause-icon" viewBox="0 0 24 24" fill="currentColor">
+        <rect x="6" y="4" width="4" height="16"></rect>
+        <rect x="14" y="4" width="4" height="16"></rect>
+      </svg>
+      <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+        <polygon points="5 3 19 12 5 21 5 3"></polygon>
+      </svg>
+    </button>
+    <button id="btn-next" class="control-btn next-btn" aria-label="Próximo slide" title="Próximo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+  </div>
+
   <template id="slide-template">
     <article class="slide" aria-roledescription="slide">
       <div class="media">
