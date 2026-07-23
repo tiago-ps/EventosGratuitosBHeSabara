@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Abril a Setembro de 2026",
-  "atualizado_em": "2026-07-23T01:11:05-03:00",
+  "atualizado_em": "2026-07-23T01:27:20-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -25,7 +25,7 @@
     {
       "id": "fcs-wp-36808",
       "titulo": "Exposição “seria uma rima, não seria rima”",
-      "data": "2026-06-16",
+      "data": "2026-06-10",
       "data_fim": "2026-09-06",
       "horario": "",
       "local": "Palácio das Artes",
@@ -43,7 +43,7 @@
     {
       "id": "fcs-wp-36987",
       "titulo": "17ª Mostra CHAMA – Permanências: Revisitar passados para construir futuros",
-      "data": "2026-06-23",
+      "data": "2026-06-26",
       "data_fim": "2026-07-26",
       "horario": "",
       "local": "PQNA Galeria Pedro Moraleida",
@@ -57,6 +57,24 @@
       "fonte": "Fundação Clóvis Salgado",
       "fonte_id": 36987,
       "atualizado_na_fonte": "2026-06-30T18:44:30"
+    },
+    {
+      "id": "fcs-wp-37102",
+      "titulo": "Programação Educativa de Julho",
+      "data": "2026-07-04",
+      "data_fim": "2026-07-25",
+      "horario": "",
+      "local": "Vários espaços da Fundação Clóvis Salgado",
+      "cidade": "Belo Horizonte",
+      "categoria": "Programação",
+      "gratuito": true,
+      "inscricao": "Consulte a página oficial; algumas atividades exigem inscrição",
+      "descricao": "Programação gratuita com atividades educativas em diferentes datas e espaços da Fundação Clóvis Salgado. Consulte a página oficial para escolher a atividade e conferir horário, público, vagas e necessidade de inscrição.",
+      "imagem": "https://fcs.mg.gov.br/wp-content/uploads/2026/07/educativo-card-1024x1024.png",
+      "link": "https://fcs.mg.gov.br/evento/programacao-educativa-de-julho/",
+      "fonte": "Fundação Clóvis Salgado",
+      "fonte_id": 37102,
+      "atualizado_na_fonte": "2026-07-06T19:12:34"
     },
     {
       "id": "fcs-wp-37031",
@@ -75,24 +93,6 @@
       "fonte": "Fundação Clóvis Salgado",
       "fonte_id": 37031,
       "atualizado_na_fonte": "2026-07-16T19:02:45"
-    },
-    {
-      "id": "fcs-wp-37102",
-      "titulo": "Programação Educativa de Julho",
-      "data": "2026-07-23",
-      "data_fim": "2026-07-25",
-      "horario": "",
-      "local": "CâmeraSete – Casa da Fotografia de Minas Gerais",
-      "cidade": "Belo Horizonte",
-      "categoria": "Oficina",
-      "gratuito": true,
-      "inscricao": "Inscrição necessária; consulte a página oficial",
-      "descricao": "A oficina Ecos de Luz convida o público a experimentar a técnica da cianotipia como prática artística e sensível, em diálogo com a exposição Foto em Pauta . A atividade propõe reflexões sobre arte, natureza e ecologia a partir da criação de fotogramas com elementos naturais.",
-      "imagem": "https://fcs.mg.gov.br/wp-content/uploads/2026/07/educativo-card-1024x1024.png",
-      "link": "https://fcs.mg.gov.br/evento/programacao-educativa-de-julho/",
-      "fonte": "Fundação Clóvis Salgado",
-      "fonte_id": 37102,
-      "atualizado_na_fonte": "2026-07-06T19:12:34"
     },
     {
       "id": "fcs-wp-37198",
