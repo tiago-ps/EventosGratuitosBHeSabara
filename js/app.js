@@ -4,9 +4,6 @@
   const DATA_URL = 'eventos.json';
   const app = document.getElementById('app');
   const template = document.getElementById('slide-template');
-  const btnPrev = document.getElementById('btn-prev');
-  const btnNext = document.getElementById('btn-next');
-  const btnPlayPause = document.getElementById('btn-play-pause');
 
   const categoryVisuals = {
     cinema: ['🎬', 'Cinema'],
@@ -42,7 +39,10 @@
     events: [],
     index: 0,
     timer: null,
-    isPaused: false
+    isPaused: false,
+    btnNext: null,
+    btnPrev: null,
+    btnPlayPause: null
   };
 
   function normalizeText(value = '') {
@@ -161,7 +161,6 @@
   function showMessage(type, title, text) {
     clearTimeout(state.timer);
     state.isPaused = true;
-    updatePlayPauseButton();
 
     app.innerHTML = `
       <section class="${type}">
@@ -192,19 +191,21 @@
   }
 
   function updatePlayPauseButton() {
-    const pauseIcon = btnPlayPause.querySelector('.pause-icon');
-    const playIcon = btnPlayPause.querySelector('.play-icon');
+    if (!state.btnPlayPause) return;
+
+    const pauseIcon = state.btnPlayPause.querySelector('.pause-icon');
+    const playIcon = state.btnPlayPause.querySelector('.play-icon');
 
     if (state.isPaused) {
       pauseIcon.style.display = 'none';
       playIcon.style.display = 'block';
-      btnPlayPause.setAttribute('aria-label', 'Reproduzir');
-      btnPlayPause.setAttribute('title', 'Reproduzir');
+      state.btnPlayPause.setAttribute('aria-label', 'Reproduzir');
+      state.btnPlayPause.setAttribute('title', 'Reproduzir');
     } else {
       pauseIcon.style.display = 'block';
       playIcon.style.display = 'none';
-      btnPlayPause.setAttribute('aria-label', 'Pausar');
-      btnPlayPause.setAttribute('title', 'Pausar');
+      state.btnPlayPause.setAttribute('aria-label', 'Pausar');
+      state.btnPlayPause.setAttribute('title', 'Pausar');
     }
   }
 
@@ -454,6 +455,15 @@
 
     app.replaceChildren(slide);
 
+    // Atualizar referências dos botões após renderizar o slide
+    state.btnNext = slide.querySelector('.next-btn');
+    state.btnPrev = slide.querySelector('.prev-btn');
+    state.btnPlayPause = slide.querySelector('.play-pause-btn');
+
+    // Reconfigurar event listeners
+    setupControls();
+    updatePlayPauseButton();
+
     scheduleNextSlide();
   }
 
@@ -479,9 +489,19 @@
   }
 
   function setupControls() {
-    btnNext.addEventListener('click', goToNext);
-    btnPrev.addEventListener('click', goToPrevious);
-    btnPlayPause.addEventListener('click', togglePlayPause);
+    // Remover listeners antigos para evitar duplicação
+    if (state.btnNext) {
+      state.btnNext.removeEventListener('click', goToNext);
+      state.btnNext.addEventListener('click', goToNext);
+    }
+    if (state.btnPrev) {
+      state.btnPrev.removeEventListener('click', goToPrevious);
+      state.btnPrev.addEventListener('click', goToPrevious);
+    }
+    if (state.btnPlayPause) {
+      state.btnPlayPause.removeEventListener('click', togglePlayPause);
+      state.btnPlayPause.addEventListener('click', togglePlayPause);
+    }
   }
 
   async function load() {
@@ -516,7 +536,6 @@
         return;
       }
 
-      setupControls();
       renderSlide(0);
 
     } catch (error) {
