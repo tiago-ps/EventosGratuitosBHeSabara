@@ -261,6 +261,36 @@
     slide.querySelector('.category').textContent =
       event.categoria || 'Evento';
 
+    // cidade: badge ao lado do "GRATUITO"
+    const cityBadge = slide.querySelector('.badge.city');
+    const cityRaw = event.cidade || '';
+    const cityKey = normalizeText(cityRaw);
+
+    if (cityBadge) {
+      // limpar classes anteriores por precaução (não estraga se for clone novo)
+      cityBadge.classList.remove('city-bh', 'city-sabara', 'city-caete');
+
+      let cityLabel = '';
+      if (cityKey.includes('sabara')) {
+        cityLabel = 'Sabará';
+        cityBadge.classList.add('city-sabara');
+      } else if (cityKey.includes('caete') || cityKey.includes('caete')) {
+        cityLabel = 'Caeté';
+        cityBadge.classList.add('city-caete');
+      } else if (cityKey.includes('belo') || cityKey === 'bh' || cityKey.includes('belo horizonte')) {
+        cityLabel = 'BH';
+        cityBadge.classList.add('city-bh');
+      }
+
+      if (cityLabel) {
+        cityBadge.textContent = cityLabel;
+        cityBadge.style.display = ''; // garantir visibilidade
+      } else {
+        // se cidade desconhecida, escondemos a badge para não poluir UI
+        cityBadge.style.display = 'none';
+      }
+    }
+
     slide.querySelector('.event-title').textContent =
       event.titulo;
 
