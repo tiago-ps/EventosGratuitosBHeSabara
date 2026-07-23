@@ -504,6 +504,34 @@
     }
   }
 
+  function handleKeyPress(event) {
+    // Verificar se o usuário está digitando em um input/textarea
+    if (
+      event.target.tagName === 'INPUT' ||
+      event.target.tagName === 'TEXTAREA'
+    ) {
+      return;
+    }
+
+    const key = event.key.toLowerCase();
+
+    // ArrowRight / Direita
+    if (key === 'arrowright' || key === 'd') {
+      event.preventDefault();
+      goToNext();
+    }
+    // ArrowLeft / Esquerda
+    else if (key === 'arrowleft' || key === 'a') {
+      event.preventDefault();
+      goToPrevious();
+    }
+    // Espaço / p (play/pause)
+    else if (key === ' ' || key === 'p') {
+      event.preventDefault();
+      togglePlayPause();
+    }
+  }
+
   async function load() {
     try {
       const response = await fetch(
@@ -559,6 +587,9 @@
       }
     }
   );
+
+  // Adicionar listeners de teclado
+  document.addEventListener('keydown', handleKeyPress);
 
   load();
 })();
