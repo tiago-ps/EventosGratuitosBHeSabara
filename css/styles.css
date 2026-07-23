@@ -217,13 +217,14 @@ dd { margin: 0; font-size: clamp(14px, 1.15vw, 23px); line-height: 1.25; overflo
   .source-url { max-width: 58vw; }
 
   .controls {
-    position: static;
-    transform: none;
-    width: 100%;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
     justify-content: center;
     gap: 0.6rem;
     padding: 0.6rem 0.8rem;
-    margin-top: 1rem;
   }
 
   .control-btn {
