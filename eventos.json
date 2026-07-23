@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Janeiro a Dezembro de 2026",
-  "atualizado_em": "2026-07-23T14:47:01-03:00",
+  "atualizado_em": "2026-07-23T17:48:57-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -353,6 +353,25 @@
       "fonte": "Espaço do Conhecimento UFMG"
     },
     {
+      "id": "sympla-sabara-3512703",
+      "titulo": "Férias no Bosque 2026",
+      "data": "2026-07-29",
+      "data_fim": "2026-07-31",
+      "horario": "8h30 às 11h",
+      "local": "Bosque Municipal Alfredo Machado",
+      "cidade": "Sabará",
+      "categoria": "Atividade infantil",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página da Sympla",
+      "descricao": "A Prefeitura de Sabará, por meio da Secretaria Municipal de Meio Ambiente, anuncia mais uma edição do projeto Férias no Bosque, que será realizada nos dias 29, 30 e 31 de julho de 2026. O evento acontecerá no Bosque Municipal Alfredo Machado, localizado na Avenida Prefeito Serafim Motta Barros, 109, Centro,",
+      "imagem": "https://images.sympla.com.br/6a60f7ac9cd07-lg.jpg",
+      "link": "https://www.sympla.com.br/evento/ferias-no-bosque-2026/3512703",
+      "fonte": "Sympla — evento em Sabará",
+      "fonte_id": "3512703",
+      "organizador": "",
+      "endereco": "Avenida Prefeito Serafim Motta Barros, 109, Centro, e reunirá atividades educativas e recreativas gratuitas para crianças de 4 a 12 anos"
+    },
+    {
       "id": "ufmg-ec-oficina-evolucao-no-mundo-animal-quinta-feira",
       "titulo": "Oficina “Evolução no Mundo Animal” (quinta-feira)",
       "data": "2026-07-30",
@@ -367,25 +386,6 @@
       "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/06/30.07-Oficina-Evolucao-no-Mundo-Animal-Creditos-Ana-Valvassori-Divulgacao-Espaco-do-Conhecimento-UFMG-1-scaled.jpg",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/oficina-evolucao-no-mundo-animal-quinta-feira/",
       "fonte": "Espaço do Conhecimento UFMG"
-    },
-    {
-      "id": "sympla-sabara-3512703",
-      "titulo": "Férias no Bosque 2026",
-      "data": "2026-07-30",
-      "data_fim": "2026-07-31",
-      "horario": "8h30 às 11h",
-      "local": "Local informado na página da Sympla",
-      "cidade": "Sabará",
-      "categoria": "Atividade infantil",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página da Sympla",
-      "descricao": "A Prefeitura de Sabará, por meio da Secretaria Municipal de Meio Ambiente, anuncia mais uma edição do projeto Férias no Bosque, que será realizada nos dias 29, 30 e 31 de julho de 2026. O evento acontecerá no Bosque Municipal Alfredo Machado, localizado na Avenida Prefeito Serafim Motta Barros, 109, Centro,",
-      "imagem": "https://images.sympla.com.br/6a60f7ac9cd07-lg.jpg",
-      "link": "https://www.sympla.com.br/evento/ferias-no-bosque-2026/3512703",
-      "fonte": "Sympla — evento em Sabará",
-      "fonte_id": "3512703",
-      "organizador": "",
-      "endereco": ""
     },
     {
       "id": "fcs-wp-37108",
@@ -484,44 +484,6 @@
       "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/05/Oficina-Costurando-Dinossauros-Brasileiros-Creditos-Vanessa-Lemos-Divulgacao-Espaco-do-Conhecimento-UFMG-scaled.jpg",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/oficina-costurando-dinossauros-brasileiros-domingo/",
       "fonte": "Espaço do Conhecimento UFMG"
-    },
-    {
-      "id": "sympla-sabara-2658386",
-      "titulo": "Leitura Coletiva de HELENA - Machado de Assis",
-      "data": "2026-10-17",
-      "data_fim": "2026-10-24",
-      "horario": "19h",
-      "local": "Local informado na página da Sympla",
-      "cidade": "Sabará",
-      "categoria": "Evento cultural",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página da Sympla",
-      "descricao": "O escritor e professor Bernardo Lopes, com o apoio da Academia de Ciências e Letras de Sabará (@academiacelsabara) inicia no próximo dia 10/10 a leitura em grupo de um dos livros mais icônicos de Machado de Assis: “HELENA”. O romance “HELENA” cativou e cativa leitores por gerações e gerações.",
-      "imagem": "https://images.sympla.com.br/66f5a626ad73b-lg.jpg",
-      "link": "https://www.sympla.com.br/evento/leitura-coletiva-de-helena-machado-de-assis/2658386",
-      "fonte": "Prefeitura de Sabará — Sympla",
-      "fonte_id": "2658386",
-      "organizador": "",
-      "endereco": ""
-    },
-    {
-      "id": "sympla-sabara-2682609",
-      "titulo": "Curso de Palma Portuguesa",
-      "data": "2026-11-18",
-      "data_fim": "2026-11-19",
-      "horario": "",
-      "local": "Local informado na página da Sympla",
-      "cidade": "Sabará",
-      "categoria": "Curso",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página da Sympla",
-      "descricao": "As palmas, herança portuguesa, chegaram ao país no século XVIII, instalando-se na região mineira no mesmo período de formação de suas cidades barrocas. O conhecimento repassado ao longo dos séculos foi resgatado nos anos 80, por meio do Museu do Ouro e em 2012,",
-      "imagem": "https://images.sympla.com.br/67087b114e307-lg.png",
-      "link": "https://www.sympla.com.br/evento/curso-de-palma-portuguesa/2682609",
-      "fonte": "Prefeitura de Sabará — Sympla",
-      "fonte_id": "2682609",
-      "organizador": "",
-      "endereco": ""
     }
   ]
 }
