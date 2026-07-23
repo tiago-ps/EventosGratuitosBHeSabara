@@ -1,7 +1,7 @@
 {
-  "titulo_painel": "Agenda Cultural Gratuita - BH e Sabará",
+  "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Janeiro a Dezembro de 2026",
-  "atualizado_em": "2026-07-23T02:59:55-03:00",
+  "atualizado_em": "2026-07-23T12:19:05-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -57,24 +57,6 @@
       "atualizado_na_fonte": "2026-06-30T17:39:02"
     },
     {
-      "id": "fcs-wp-36987",
-      "titulo": "17ª Mostra CHAMA – Permanências: Revisitar passados para construir futuros",
-      "data": "2026-06-26",
-      "data_fim": "2026-07-26",
-      "horario": "",
-      "local": "PQNA Galeria Pedro Moraleida",
-      "cidade": "Belo Horizonte",
-      "categoria": "Exposição",
-      "gratuito": true,
-      "inscricao": "Ingresso gratuito; consulte a página oficial",
-      "descricao": "Em 2026, o Palácio das Artes completa 55 anos. Enquanto quatro galerias do espaço exibem uma mostra com o acervo de artes visuais da Fundação Clóvis Salgado (FCS), instituição gestora do Palácio, a Escola de Artes Visuais do Centro de Formação Artística e Tecnológica (CEFART) da FCS inaugura a mostra “Chama”,",
-      "imagem": "https://fcs.mg.gov.br/wp-content/uploads/2026/06/1080-trio-2-1-1-1024x1024.png",
-      "link": "https://fcs.mg.gov.br/evento/17a-mostra-chama-permanencias-revisitar-passados-para-construir-futuros/",
-      "fonte": "Fundação Clóvis Salgado",
-      "fonte_id": 36987,
-      "atualizado_na_fonte": "2026-06-30T18:44:30"
-    },
-    {
       "id": "ccbb-bh-marcelo-xavier-asa-de-papel",
       "titulo": "Asa de Papel – Marcelo Xavier",
       "data": "2026-07-01",
@@ -88,40 +70,6 @@
       "descricao": "Entre os dias 1º de julho e 12 de outubro , o CCBB BH recebe a exposição inédita “ Asa de Papel – Marcelo Xavier”, que convida o público a mergulhar no universo do multiartista mineiro por meio de instalações imersivas, obras originais,",
       "imagem": "https://ccbbstg.blob.core.windows.net/site-2025/2026/06/Asa-papel-scaled.png",
       "link": "https://ccbb.com.br/belo-horizonte/programacao/marcelo-xavier-asa-de-papel/",
-      "fonte": "CCBB Belo Horizonte"
-    },
-    {
-      "id": "fcs-wp-37102",
-      "titulo": "Programação Educativa de Julho",
-      "data": "2026-07-04",
-      "data_fim": "2026-07-25",
-      "horario": "",
-      "local": "Vários espaços da Fundação Clóvis Salgado",
-      "cidade": "Belo Horizonte",
-      "categoria": "Programação",
-      "gratuito": true,
-      "inscricao": "Consulte a página oficial; algumas atividades exigem inscrição",
-      "descricao": "Programação gratuita com atividades educativas em diferentes datas e espaços da Fundação Clóvis Salgado. Consulte a página oficial para escolher a atividade e conferir horário, público, vagas e necessidade de inscrição.",
-      "imagem": "https://fcs.mg.gov.br/wp-content/uploads/2026/07/educativo-card-1024x1024.png",
-      "link": "https://fcs.mg.gov.br/evento/programacao-educativa-de-julho/",
-      "fonte": "Fundação Clóvis Salgado",
-      "fonte_id": 37102,
-      "atualizado_na_fonte": "2026-07-06T19:12:34"
-    },
-    {
-      "id": "ccbb-bh-joaquin-torres-garcia-150-anos",
-      "titulo": "Joaquín Torres García – 150 anos",
-      "data": "2026-07-15",
-      "data_fim": "2026-10-12",
-      "horario": "Quarta a segunda, das 10h às 22h",
-      "local": "CCBB Belo Horizonte – Galerias do 3º andar e Pátio",
-      "cidade": "Belo Horizonte",
-      "categoria": "Exposição",
-      "gratuito": true,
-      "inscricao": "Retirada gratuita de ingresso; consulte a página oficial",
-      "descricao": "Entre os dias 15 de julho e 12 de outubro , o CCBB BH recebe a exposição “ Joaquín Torres García – 150 anos” , a maior já realizada no Brasil sobre um dos principais nomes da arte moderna latino-americana.",
-      "imagem": "https://ccbbstg.blob.core.windows.net/site-2025/2026/06/Header-1024x841.png",
-      "link": "https://ccbb.com.br/belo-horizonte/programacao/joaquin-torres-garcia-150-anos/",
       "fonte": "CCBB Belo Horizonte"
     },
     {
@@ -255,6 +203,20 @@
       "fonte": "Espaço do Conhecimento UFMG"
     },
     {
+      "id": "ec-ufmg-planetario-tea-2026-07-26-14h",
+      "titulo": "Sessão de Planetário Adaptada para TEA",
+      "data": "2026-07-26",
+      "horario": "14h",
+      "local": "Planetário – Espaço do Conhecimento UFMG",
+      "cidade": "Belo Horizonte",
+      "categoria": "Planetário",
+      "gratuito": true,
+      "inscricao": "Retirada de ingressos uma hora antes",
+      "descricao": "Sessão gratuita do Planetário adaptada para pessoas com Transtorno do Espectro Autista.",
+      "imagem": "",
+      "link": "https://www.ufmg.br/espacodoconhecimento/"
+    },
+    {
       "id": "ufmg-ec-sessao-netuno-tea-era-uma-vez-no-ceu-andromeda-e-perseu-domingo-2",
       "titulo": "Sessão Netuno (TEA) “Era Uma Vez no Céu: Andrômeda e Perseu” (domingo)",
       "data": "2026-07-26",
@@ -367,6 +329,25 @@
       "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/06/30.07-Oficina-Evolucao-no-Mundo-Animal-Creditos-Ana-Valvassori-Divulgacao-Espaco-do-Conhecimento-UFMG-1-scaled.jpg",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/oficina-evolucao-no-mundo-animal-quinta-feira/",
       "fonte": "Espaço do Conhecimento UFMG"
+    },
+    {
+      "id": "sympla-sabara-3512703",
+      "titulo": "Férias no Bosque 2026",
+      "data": "2026-07-30",
+      "data_fim": "2026-07-31",
+      "horario": "8h30 às 11h",
+      "local": "Local informado na página da Sympla",
+      "cidade": "Sabará",
+      "categoria": "Atividade infantil",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página da Sympla",
+      "descricao": "A Prefeitura de Sabará, por meio da Secretaria Municipal de Meio Ambiente, anuncia mais uma edição do projeto Férias no Bosque, que será realizada nos dias 29, 30 e 31 de julho de 2026. O evento acontecerá no Bosque Municipal Alfredo Machado, localizado na Avenida Prefeito Serafim Motta Barros, 109, Centro,",
+      "imagem": "https://images.sympla.com.br/6a60f7ac9cd07-lg.jpg",
+      "link": "https://www.sympla.com.br/evento/ferias-no-bosque-2026/3512703",
+      "fonte": "Sympla — evento em Sabará",
+      "fonte_id": "3512703",
+      "organizador": "",
+      "endereco": ""
     },
     {
       "id": "fcs-wp-37108",
