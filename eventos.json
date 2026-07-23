@@ -1,9 +1,25 @@
 {
-  "titulo_painel": "Agenda Cultural Gratuita - BH e Sabará",
-  "periodo": "Abril a Setembro de 2026",
-  "atualizado_em": "2026-07-23T01:27:20-03:00",
+  "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
+  "periodo": "Janeiro a Dezembro de 2026",
+  "atualizado_em": "2026-07-23T02:18:49-03:00",
   "tempo_slide": 12,
   "eventos": [
+    {
+      "id": "ccbb-bh-exposicao-permanente",
+      "titulo": "Exposição de Longa Duração",
+      "data": "2026-01-01",
+      "data_fim": "2026-12-31",
+      "horario": "10h às 22h. De quarta a segunda.",
+      "local": "CCBB Belo Horizonte – 2º andar",
+      "cidade": "Belo Horizonte",
+      "categoria": "Exposição",
+      "gratuito": true,
+      "inscricao": "Ingresso gratuito; consulte a página oficial",
+      "descricao": "O Centro Cultural Banco do Brasil Belo Horizonte possui duas salas de exposição permanente, o Grande Salão e o Gabinete do Secretário, que apresentam parte da história do CCBB BH e do prédio que o abriga. A expografia é fruto de uma parceria com o Arquivo Público Mineiro,",
+      "imagem": "https://ccbb-images-f6fvd8g2e5hjeubc.a03.azurefd.net/site-2025/2025/10/DSC052481-scaled.jpg",
+      "link": "https://ccbb.com.br/belo-horizonte/programacao/exposicao-permanente/",
+      "fonte": "CCBB Belo Horizonte"
+    },
     {
       "id": "fcs-wp-36313",
       "titulo": "“Foto em Pauta”: Exposição “Mundo ≡ Floresta”",
@@ -59,6 +75,22 @@
       "atualizado_na_fonte": "2026-06-30T18:44:30"
     },
     {
+      "id": "ccbb-bh-marcelo-xavier-asa-de-papel",
+      "titulo": "Asa de Papel – Marcelo Xavier",
+      "data": "2026-07-01",
+      "data_fim": "2026-10-12",
+      "horario": "Quarta a segunda, das 10h às 22h",
+      "local": "CCBB Belo Horizonte – Galerias do Térreo",
+      "cidade": "Belo Horizonte",
+      "categoria": "Exposição",
+      "gratuito": true,
+      "inscricao": "Retirada gratuita de ingresso; consulte a página oficial",
+      "descricao": "Entre os dias 1º de julho e 12 de outubro , o CCBB BH recebe a exposição inédita “ Asa de Papel – Marcelo Xavier”, que convida o público a mergulhar no universo do multiartista mineiro por meio de instalações imersivas, obras originais,",
+      "imagem": "https://ccbbstg.blob.core.windows.net/site-2025/2026/06/Asa-papel-scaled.png",
+      "link": "https://ccbb.com.br/belo-horizonte/programacao/marcelo-xavier-asa-de-papel/",
+      "fonte": "CCBB Belo Horizonte"
+    },
+    {
       "id": "fcs-wp-37102",
       "titulo": "Programação Educativa de Julho",
       "data": "2026-07-04",
@@ -75,6 +107,22 @@
       "fonte": "Fundação Clóvis Salgado",
       "fonte_id": 37102,
       "atualizado_na_fonte": "2026-07-06T19:12:34"
+    },
+    {
+      "id": "ccbb-bh-joaquin-torres-garcia-150-anos",
+      "titulo": "Joaquín Torres García – 150 anos",
+      "data": "2026-07-15",
+      "data_fim": "2026-10-12",
+      "horario": "Quarta a segunda, das 10h às 22h",
+      "local": "CCBB Belo Horizonte – Galerias do 3º andar e Pátio",
+      "cidade": "Belo Horizonte",
+      "categoria": "Exposição",
+      "gratuito": true,
+      "inscricao": "Retirada gratuita de ingresso; consulte a página oficial",
+      "descricao": "Entre os dias 15 de julho e 12 de outubro , o CCBB BH recebe a exposição “ Joaquín Torres García – 150 anos” , a maior já realizada no Brasil sobre um dos principais nomes da arte moderna latino-americana.",
+      "imagem": "https://ccbbstg.blob.core.windows.net/site-2025/2026/06/Header-1024x841.png",
+      "link": "https://ccbb.com.br/belo-horizonte/programacao/joaquin-torres-garcia-150-anos/",
+      "fonte": "CCBB Belo Horizonte"
     },
     {
       "id": "fcs-wp-37031",
