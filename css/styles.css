@@ -117,7 +117,7 @@ body {
 .event-copy { align-self: center; min-width: 0; min-height: 0; overflow: hidden; }
 .badges { display: flex; flex-wrap: wrap; gap: .55rem; margin-bottom: clamp(10px, 1.6vh, 22px); }
 .badge { display: inline-flex; align-items: center; min-height: 30px; padding: .4em .75em; border-radius: 999px; font-size: clamp(11px, .85vw, 17px); font-weight: 850; letter-spacing: .06em; text-transform: uppercase; }
-.category { background: rgba(255,255,255,.12); border: 1px solid var(--line); }
+.category { background: #a855f7; color: #fff; border: none; }
 .free { background: var(--accent); color: #111; }
 .event-title { margin: 0; font-size: clamp(30px, 4.2vw, 82px); line-height: 1; letter-spacing: -.04em; overflow-wrap: anywhere; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .description { margin: clamp(10px, 1.7vh, 24px) 0 0; color: var(--muted); font-size: clamp(15px, 1.35vw, 27px); line-height: 1.3; max-width: 54ch; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
