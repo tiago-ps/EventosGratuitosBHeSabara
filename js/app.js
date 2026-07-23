@@ -290,9 +290,19 @@
     }
 
     const link = event.link || '';
+    const sourceUrlElement = slide.querySelector('.source-url');
 
-    slide.querySelector('.source-url').textContent =
-      shortUrl(link) || 'Consulte a equipe da biblioteca';
+    if (link) {
+      // Criar um link clicável
+      const linkElement = document.createElement('a');
+      linkElement.href = link;
+      linkElement.textContent = shortUrl(link);
+      linkElement.target = '_blank';
+      linkElement.rel = 'noopener noreferrer';
+      sourceUrlElement.replaceChildren(linkElement);
+    } else {
+      sourceUrlElement.textContent = 'Consulte a equipe da biblioteca';
+    }
 
     slide.querySelector('.updated').textContent =
       formatUpdated(data.atualizado_em);
