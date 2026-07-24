@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Janeiro a Dezembro de 2026",
-  "atualizado_em": "2026-07-24T16:49:31-03:00",
+  "atualizado_em": "2026-07-24T20:27:06-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -148,11 +148,11 @@
       "fonte": "Fundação Clóvis Salgado",
       "instituicao_id": "fcs",
       "fonte_id": 37031,
-      "atualizado_na_fonte": "2026-07-16T19:02:45"
+      "atualizado_na_fonte": "2026-07-24T20:31:48"
     },
     {
       "id": "portal-bh-f414e6515b4a-2026-07-24-1400",
-      "titulo": "FMC - Menu Secundario Museus Centro 2025",
+      "titulo": "Oficina de férias: Brincadeiras Circenses no MIS",
       "data": "2026-07-24",
       "data_fim": "",
       "horario": "14h às 16h",
@@ -206,7 +206,7 @@
     },
     {
       "id": "portal-bh-98fc26024f1f-2026-07-25-1000",
-      "titulo": "Museus Pampulha 2025 secundario",
+      "titulo": "Férias nos Museus - Oficina Papibaquígrafo: criando objetos imaginários",
       "data": "2026-07-25",
       "data_fim": "",
       "horario": "10h às 12h",
@@ -235,7 +235,7 @@
     },
     {
       "id": "portal-bh-d38a537fc0a6-2026-07-25-1000",
-      "titulo": "FMC - Menu Secundario Museus Centro 2025",
+      "titulo": "Oficina Inventando Moda — Arraial MUMO",
       "data": "2026-07-25",
       "data_fim": "",
       "horario": "10h às 12h30",
@@ -255,7 +255,7 @@
     },
     {
       "id": "portal-bh-1012cb3840f4-2026-07-25-1400",
-      "titulo": "Parceiros realizadores",
+      "titulo": "Fábrica de Brinquedos – Oficina de Criação com Materiais Recicláveis",
       "data": "2026-07-25",
       "data_fim": "",
       "horario": "14h às 16h",
@@ -274,6 +274,26 @@
       "tags_fonte": [
         "Ações Formativas"
       ]
+    },
+    {
+      "id": "portal-bh-89c2b6ebbd1f-2026-07-25-1400",
+      "titulo": "Oficinas de Férias do MHAB: Gambiologia – Luminária Pringles",
+      "data": "2026-07-25",
+      "data_fim": "",
+      "horario": "14h às 17h",
+      "local": "Museu Histórico Abílio Barreto – MHAB",
+      "cidade": "Belo Horizonte",
+      "categoria": "Oficina",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "Oficinas de Férias do MHAB: Gambiologia – Luminária Pringles Dia 25/7 sábado . 14h às 17h Classificação: 7 a 14 anos (crianças menores de 10 anos devem estar acompanhadas por um responsável) Inscrições: via formulário",
+      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-07/mhab-3.png",
+      "link": "https://portalbelohorizonte.com.br/museuscentro/2026/eventos/oficina/cultural/oficinas-de-ferias-do-mhab-gambiologia-luminaria-pringles",
+      "fonte": "Portal Belo Horizonte",
+      "fonte_id": "89c2b6ebbd1f",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "endereco": "",
+      "tags_fonte": []
     },
     {
       "id": "ufmg-ec-oficina-personagens-cosmicos-criando-estrelas-sabado",
@@ -415,7 +435,7 @@
     },
     {
       "id": "portal-bh-5170ac9d1ede-2026-07-29-1400",
-      "titulo": "Museus Pampulha 2025 secundario",
+      "titulo": "Férias nos Museus - Ateliê de Origami - Animais da Lagoa da Pampulha",
       "data": "2026-07-29",
       "data_fim": "",
       "horario": "14h às 15h30",
@@ -461,7 +481,7 @@
     },
     {
       "id": "portal-bh-1c8b319b382c-2026-07-30-1400",
-      "titulo": "Museus Pampulha 2025 secundario",
+      "titulo": "Férias nos Museus - Caminhada sensorial - Pequenos exploradores",
       "data": "2026-07-30",
       "data_fim": "",
       "horario": "14h às 15h30",
@@ -508,7 +528,7 @@
     },
     {
       "id": "portal-bh-775f97bbfcfe-2026-07-30-2000",
-      "titulo": "Menu second",
+      "titulo": "Espetáculo: A confissão de Leontina",
       "data": "2026-07-30",
       "data_fim": "",
       "horario": "20h às 21h",
@@ -555,7 +575,7 @@
     },
     {
       "id": "portal-bh-3877151f55ac-2026-07-31-1400",
-      "titulo": "Museus Pampulha 2025 secundario",
+      "titulo": "Férias no museu - Caça ao tesouro",
       "data": "2026-07-31",
       "data_fim": "",
       "horario": "14h às 15h30",
@@ -669,7 +689,7 @@
     },
     {
       "id": "portal-bh-a29c176629fb-2026-08-06-2000",
-      "titulo": "Menu second",
+      "titulo": "Espetáculo: Farewell",
       "data": "2026-08-06",
       "data_fim": "",
       "horario": "20h às 21h30",
@@ -797,6 +817,25 @@
       "instituicao_id": "espaco-conhecimento-ufmg"
     },
     {
+      "id": "fcs-wp-37247",
+      "titulo": "Cineclube Comum: Visões Táteis | Trabalho de Amor Perdido/Sexta-feira à noite",
+      "data": "2026-08-11",
+      "data_fim": "",
+      "horario": "19h30",
+      "local": "Cine Humberto Mauro",
+      "cidade": "Belo Horizonte",
+      "categoria": "Cinema",
+      "gratuito": true,
+      "inscricao": "Ingresso gratuito; consulte a página oficial",
+      "descricao": "No dia 11 de agosto, às 19h30, o Cine Humberto Mauro recebe mais uma sessão do Cineclube Comum: Visões Táteis, projeto realizado em correalização entre a Fundação Clóvis Salgado e o Instituto Cervantes de Belo Horizonte. A programação reúne o curta-metragem Trabalho de Amor Perdido (Vinícius Romero, Brasil,",
+      "imagem": "https://fcs.mg.gov.br/wp-content/uploads/2026/07/visoes-tateis-card-1024x1024.png",
+      "link": "https://fcs.mg.gov.br/evento/cineclube-comum-visoes-tateis-trabalho-de-amor-perdido-sexta-feira-a-noite/",
+      "fonte": "Fundação Clóvis Salgado",
+      "instituicao_id": "fcs",
+      "fonte_id": 37247,
+      "atualizado_na_fonte": "2026-07-24T19:58:54"
+    },
+    {
       "id": "ufmg-ec-espaco-aberto-a-educadores-quarta-feira",
       "titulo": "Espaço Aberto a Educadores (quarta-feira)",
       "data": "2026-08-12",
@@ -812,6 +851,45 @@
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/espaco-aberto-a-educadores-quarta-feira/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg"
+    },
+    {
+      "id": "fcs-wp-37245",
+      "titulo": "Cineclube Íbero-Americano Permanente | Oriana",
+      "data": "2026-08-12",
+      "data_fim": "",
+      "horario": "19h30",
+      "local": "Cine Humberto Mauro",
+      "cidade": "Belo Horizonte",
+      "categoria": "Cinema",
+      "gratuito": true,
+      "inscricao": "Ingresso gratuito; consulte a página oficial",
+      "descricao": "19h30 CINECLUBE-IBERO AMERICANO | Oriana (Fina Torres, Venezuela/França, 1985) | 14 anos | 1h26 | Sessão comentada por Juliana Gusman No dia 12 de agosto, o Cineclube Ibero-americano Permanente realiza seu quarto encontro no Cine Humberto Mauro, com exibição gratuita de Oriana (1985),",
+      "imagem": "https://fcs.mg.gov.br/wp-content/uploads/2026/07/ibero-card-1024x1024.png",
+      "link": "https://fcs.mg.gov.br/evento/cineclube-ibero-americano-permanente-oriana/",
+      "fonte": "Fundação Clóvis Salgado",
+      "instituicao_id": "fcs",
+      "fonte_id": 37245,
+      "atualizado_na_fonte": "2026-07-24T19:55:33"
+    },
+    {
+      "id": "sympla-sabara-3505581",
+      "titulo": "Pagode dos Amigos",
+      "data": "2026-08-15",
+      "data_fim": "2026-08-16",
+      "horario": "",
+      "local": "Local informado na página da Sympla",
+      "cidade": "Sabará",
+      "categoria": "Música",
+      "gratuito": true,
+      "inscricao": "Inscrição gratuita pela Sympla; consulte disponibilidade",
+      "descricao": "Prepare-se para viver uma noite inesquecível de muita música, alegria e boas vibrações!O Pagode dos Amigos chega para reunir a galera em um ambiente descontraído, com muito pagode, gente bonita, drinks,",
+      "imagem": "https://images.sympla.com.br/6a5917042029d-lg.png",
+      "link": "https://www.sympla.com.br/evento/pagode-dos-amigos/3505581",
+      "fonte": "Sympla — evento em Sabará",
+      "instituicao_id": "",
+      "fonte_id": "3505581",
+      "organizador": "",
+      "endereco": ""
     },
     {
       "id": "ufmg-ec-sabado-com-libras-a-comunicacao-com-surdos-nos-museus-sabado",
@@ -882,6 +960,26 @@
       "instituicao_id": "espaco-conhecimento-ufmg"
     },
     {
+      "id": "sympla-sabara-3506737",
+      "titulo": "assombro / ARTO LINDSAY e ARÍCIA FERIGATO",
+      "data": "2026-08-21",
+      "data_fim": "",
+      "horario": "",
+      "local": "Local informado na página da Sympla",
+      "cidade": "Sabará",
+      "categoria": "Música",
+      "gratuito": true,
+      "inscricao": "Inscrição gratuita pela Sympla; consulte disponibilidade",
+      "descricao": "ASSOMBRO é uma mostra criada em 2025 e foca em artistas que exploram possibilidades artísticas sem se restringir a gêneros ou fórmulas pré-estabelecidas. Sua programação já teve shows de Iggor Cavalera, Kiko Dinucci, Arrigo Barnabé com Lívia Nestrovski, Maria Beraldo e Juçara Marçal com Thaís Nicodemo.",
+      "imagem": "https://images.sympla.com.br/6a5a538eeb317-lg.jpg",
+      "link": "https://www.sympla.com.br/evento/assombro-arto-lindsay-e-aricia-ferigato/3506737",
+      "fonte": "Sympla — evento em Sabará",
+      "instituicao_id": "",
+      "fonte_id": "3506737",
+      "organizador": "",
+      "endereco": ""
+    },
+    {
       "id": "ufmg-ec-visita-mediada-a-exposicao-demasiado-humano-sabado",
       "titulo": "Visita mediada à exposição “demasiado humano” (sábado)",
       "data": "2026-08-22",
@@ -914,6 +1012,26 @@
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/observacao-noturna-dos-astros-com-telescopios-sabado-4/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg"
+    },
+    {
+      "id": "sympla-sabara-3459871",
+      "titulo": "Mostra de Dança Studio Pratique e Dance",
+      "data": "2026-08-22",
+      "data_fim": "",
+      "horario": "19h às 21h",
+      "local": "Centro Cultural José da Costa Sepúlveda - Cine Bandeirante - Sabará Ingressos disponíveis pelo Sympla e também diretamente com as bailarinas e atrizes",
+      "cidade": "Sabará",
+      "categoria": "Teatro",
+      "gratuito": true,
+      "inscricao": "Inscrição gratuita pela Sympla; consulte disponibilidade",
+      "descricao": "PASSAPORTE CULTURAL – Mostra de Estudos Coreográficos 2026Prepare seu passaporte e embarque conosco em uma viagem inesquecível através da arte!O Studio Pratique e Dance apresenta o espetáculo Passaporte Cultural,",
+      "imagem": "https://images.sympla.com.br/6a289f8329635-lg.png",
+      "link": "https://www.sympla.com.br/evento/mostra-de-danca-studio-pratique-e-dance/3459871",
+      "fonte": "Sympla — evento em Sabará",
+      "instituicao_id": "",
+      "fonte_id": "3459871",
+      "organizador": "",
+      "endereco": ""
     },
     {
       "id": "ufmg-ec-observacao-solar-com-telescopios-domingo-4",
@@ -951,7 +1069,7 @@
     },
     {
       "id": "portal-bh-e610e4ec1f94-2026-08-26-2030",
-      "titulo": "Menu second",
+      "titulo": "Como cheguei até aqui: Cíntia Chargas",
       "data": "2026-08-26",
       "data_fim": "",
       "horario": "20h30 às 22h",
