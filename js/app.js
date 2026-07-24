@@ -5,6 +5,13 @@
   const app = document.getElementById('app');
   const template = document.getElementById('slide-template');
 
+  const THEME_STORAGE_KEY = 'agenda-cultural-tema';
+  const VALID_THEMES = new Set(['original', 'ifmg']);
+  const THEME_META_COLORS = {
+    original: '#07111f',
+    ifmg: '#071a0d'
+  };
+
   const categoryVisuals = {
     cinema: ['🎬', 'Cinema'],
     teatro: ['🎭', 'Teatro'],
@@ -51,6 +58,53 @@
       .replace(/[\u0300-\u036f]/g, '')
       .toLowerCase()
       .trim();
+  }
+
+  function currentTheme() {
+    const theme = document.documentElement.dataset.theme;
+
+    return VALID_THEMES.has(theme) ? theme : 'ifmg';
+  }
+
+  function saveTheme(theme) {
+    try {
+      localStorage.setItem(THEME_STORAGE_KEY, theme);
+    } catch {
+      /* A troca continua funcionando mesmo sem armazenamento persistente. */
+    }
+  }
+
+  function applyTheme(theme, { persist = true } = {}) {
+    const selectedTheme = VALID_THEMES.has(theme) ? theme : 'ifmg';
+
+    document.documentElement.dataset.theme = selectedTheme;
+
+    const themeColor = document.querySelector('meta[name="theme-color"]');
+    if (themeColor) {
+      themeColor.setAttribute(
+        'content',
+        THEME_META_COLORS[selectedTheme]
+      );
+    }
+
+    document.querySelectorAll('.theme-select').forEach(select => {
+      select.value = selectedTheme;
+    });
+
+    if (persist) {
+      saveTheme(selectedTheme);
+    }
+  }
+
+  function setupThemeSelector(slide) {
+    const select = slide.querySelector('.theme-select');
+
+    if (!select) return;
+
+    select.value = currentTheme();
+    select.addEventListener('change', event => {
+      applyTheme(event.target.value);
+    });
   }
 
   function joinCityNames(cities) {
@@ -653,6 +707,7 @@
     }
 
     app.replaceChildren(slide);
+    setupThemeSelector(slide);
 
     // Atualizar referências dos botões após renderizar o slide
     state.btnNext = slide.querySelector('.next-btn');
@@ -707,7 +762,10 @@
     // Verificar se o usuário está digitando em um input/textarea
     if (
       event.target.tagName === 'INPUT' ||
-      event.target.tagName === 'TEXTAREA'
+      event.target.tagName === 'TEXTAREA' ||
+      event.target.tagName === 'SELECT' ||
+      event.target.tagName === 'BUTTON' ||
+      event.target.isContentEditable
     ) {
       return;
     }
@@ -790,5 +848,6 @@
   // Adicionar listeners de teclado
   document.addEventListener('keydown', handleKeyPress);
 
+  applyTheme(currentTheme(), { persist: false });
   load();
 })();
