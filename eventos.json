@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Janeiro a Dezembro de 2026",
-  "atualizado_em": "2026-07-24T13:24:15-03:00",
+  "atualizado_em": "2026-07-24T14:04:15-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -151,6 +151,26 @@
       "atualizado_na_fonte": "2026-07-16T19:02:45"
     },
     {
+      "id": "portal-bh-f414e6515b4a-2026-07-24-1400",
+      "titulo": "Política de cookies",
+      "data": "2026-07-24",
+      "data_fim": "",
+      "horario": "14h às 16h",
+      "local": "Museu da Imagem e do Som – MIS BH",
+      "cidade": "Belo Horizonte",
+      "categoria": "Oficina",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "Oficina de férias: Brincadeiras Circenses no MIS Dia 24 SEX. 14h ÀS 16H Classificação: Livre (menores acompanhados dos responsáveis) Inscrições: via formulário",
+      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-07/mis-brincadeiras.png",
+      "link": "https://portalbelohorizonte.com.br/museuscentro/2026/eventos/oficina/cultural/oficina-de-ferias-brincadeiras-circenses-no-mis",
+      "fonte": "Portal Belo Horizonte",
+      "fonte_id": "f414e6515b4a",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "endereco": "",
+      "tags_fonte": []
+    },
+    {
       "id": "ufmg-ec-atelie-tarde-de-jogos",
       "titulo": "Ateliê “Tarde de Jogos” (sexta-feira)",
       "data": "2026-07-24",
@@ -183,6 +203,35 @@
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/sessao-de-planetario-finda-noite-no-sertao-sexta-feira-2/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg"
+    },
+    {
+      "id": "portal-bh-98fc26024f1f-2026-07-25-1000",
+      "titulo": "Política de cookies",
+      "data": "2026-07-25",
+      "data_fim": "",
+      "horario": "10h às 12h",
+      "local": "Museu de Arte da Pampulha - MAP",
+      "cidade": "Belo Horizonte",
+      "categoria": "Exposição",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "A programação de Férias nos Museus segue no dia 25 de julho, sábado, das 10h às 12h, com a ação “Papibaquígrafo: criando objetos imaginários”, que será realizada no jardim do MAP . A proposta é estimular a criançada a soltar a imaginação e idealizar equipamentos impossíveis, com funções nem sempre utilitárias. Inspirado no poema “O Fazedor de Amanhecer”, de Manoel de Barros,",
+      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-07/fotos-para-site-formato-440x225-11.png",
+      "link": "https://portalbelohorizonte.com.br/museuspampulha/2026/eventos/oficina/artes-plasticas/ferias-nos-museus-oficina-papibaquigrafo-criando-objetos-imaginarios",
+      "fonte": "Portal Belo Horizonte",
+      "fonte_id": "98fc26024f1f",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "endereco": "Museu de Arte da Pampulha - Avenida Otacílio Negrão de Lima, 16585 - Pampulha",
+      "tags_fonte": [
+        "Artes Plásticas",
+        "Artes Visuais",
+        "Cultura PBH",
+        "Curso e Oficina",
+        "Cultural",
+        "Gratuito",
+        "Oficinas",
+        "Pampulha"
+      ]
     },
     {
       "id": "ufmg-ec-oficina-personagens-cosmicos-criando-estrelas-sabado",
@@ -323,6 +372,35 @@
       "atualizado_na_fonte": "2026-07-20T13:36:19"
     },
     {
+      "id": "portal-bh-5170ac9d1ede-2026-07-29-1400",
+      "titulo": "Política de cookies",
+      "data": "2026-07-29",
+      "data_fim": "",
+      "horario": "14h às 15h30",
+      "local": "Museu de Arte da Pampulha - MAP",
+      "cidade": "Belo Horizonte",
+      "categoria": "Exposição",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "No dia 29, quarta-feira, das 14h às 15h30, é a vez do “Ateliê de Origami - Animais da Lagoa da Pampulha”, no Jardim do MAP. Os participantes serão convidados a observar a paisagem do jardim e conhecer algumas das espécies que fazem parte desse ecossistema, transformando simples folhas de papel em aves, peixes, capivaras e outros animais por meio da técnica do origami.",
+      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-07/fotos-para-site-formato-440x225-12.png",
+      "link": "https://portalbelohorizonte.com.br/museuspampulha/2026/eventos/oficina/artes-plasticas/ferias-nos-museus-atelie-de-origami-animais-da-lagoa-da-pampulha",
+      "fonte": "Portal Belo Horizonte",
+      "fonte_id": "5170ac9d1ede",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "endereco": "Museu de Arte da Pampulha - Avenida Otacílio Negrão de Lima, 751 - Pampulha",
+      "tags_fonte": [
+        "Gratuito",
+        "Cultura PBH",
+        "Pampulha",
+        "Curso e Oficina",
+        "Cultural",
+        "Oficinas",
+        "Artes Visuais",
+        "Artes Plásticas"
+      ]
+    },
+    {
       "id": "ufmg-ec-oficina-costurando-dinossauros-brasileiros-quarta-feira",
       "titulo": "Oficina “Costurando Dinossauros Brasileiros” (quarta-feira)",
       "data": "2026-07-29",
@@ -338,6 +416,36 @@
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/oficina-costurando-dinossauros-brasileiros-quarta-feira/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg"
+    },
+    {
+      "id": "portal-bh-1c8b319b382c-2026-07-30-1400",
+      "titulo": "Política de cookies",
+      "data": "2026-07-30",
+      "data_fim": "",
+      "horario": "14h às 15h30",
+      "local": "Museu de Arte da Pampulha - MAP",
+      "cidade": "Belo Horizonte",
+      "categoria": "Exposição",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "A programação especial de Férias no Museu segue no dia 30, quinta-feira, das 14h às 15h30, com a “Caminhada sensorial - Pequenos exploradores”. A proposta é que os participantes possam explorar os jardins do MAP de uma maneira diferente: caminhando, observando, imaginando e descobrindo o espaço através do corpo e dos sentidos. Ao longo do percurso,",
+      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-07/fotos-para-site-formato-440x225-13.png",
+      "link": "https://portalbelohorizonte.com.br/museuspampulha/2026/eventos/caminhada/artes-plasticas/ferias-nos-museus-caminhada-sensorial-pequenos-exploradores",
+      "fonte": "Portal Belo Horizonte",
+      "fonte_id": "1c8b319b382c",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "endereco": "Jardim do Museu de Arte da Pampulha - Avenida Otacílio Negrão de Lima, 16585 - Pampulha",
+      "tags_fonte": [
+        "Ar livre",
+        "Artes Plásticas",
+        "Artes Visuais",
+        "Cultural",
+        "Cultura PBH",
+        "Curso e Oficina",
+        "Gratuito",
+        "Oficinas",
+        "Pampulha"
+      ]
     },
     {
       "id": "ufmg-ec-oficina-evolucao-no-mundo-animal-quinta-feira",
@@ -374,6 +482,35 @@
       "instituicao_id": "fcs",
       "fonte_id": 37108,
       "atualizado_na_fonte": "2026-07-03T20:40:28"
+    },
+    {
+      "id": "portal-bh-3877151f55ac-2026-07-31-1400",
+      "titulo": "Política de cookies",
+      "data": "2026-07-31",
+      "data_fim": "",
+      "horario": "14h às 15h30",
+      "local": "Museu de Arte da Pampulha - MAP",
+      "cidade": "Belo Horizonte",
+      "categoria": "Exposição",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "E fechando o mês, no dia 31, também das 14h às 15h30, é a vez da atividade Férias no museu - Caça ao tesouro, que propõe ao público desafios lúdicos inspirados nas obras do acervo do MAP , na arquitetura modernista e nas paisagens que compõem o Conjunto Moderno da Pampulha. Por meio de jogos, explorações, pistas e caça ao tesouro,",
+      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-07/fotos-para-site-formato-440x225-14_0.png",
+      "link": "https://portalbelohorizonte.com.br/museuspampulha/2026/eventos/oficina/artes-plasticas/ferias-no-museu-caca-ao-tesouro",
+      "fonte": "Portal Belo Horizonte",
+      "fonte_id": "3877151f55ac",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "endereco": "Museu de Arte da Pampulha - Avenida Otacílio Negrão de Lima, 16585 - Pampulha",
+      "tags_fonte": [
+        "Gratuito",
+        "Cultura PBH",
+        "Pampulha",
+        "Curso e Oficina",
+        "Cultural",
+        "Oficinas",
+        "Artes Visuais",
+        "Artes Plásticas"
+      ]
     },
     {
       "id": "ufmg-ec-oficina-como-o-aviao-voa-2",
@@ -459,6 +596,33 @@
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/oficina-costurando-dinossauros-brasileiros-domingo/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg"
+    },
+    {
+      "id": "portal-bh-a29c176629fb-2026-08-06-2000",
+      "titulo": "Política de cookies",
+      "data": "2026-08-06",
+      "data_fim": "",
+      "horario": "20h às 21h30",
+      "local": "Centro-Sul",
+      "cidade": "Belo Horizonte",
+      "categoria": "Cinema",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "O espetáculo teatral e cinematográfico \"Farewell\" estreia no dia 6 de agosto de 2026, às 20h, no Teatro SESIMINAS, em Belo Horizonte. A montagem é o resultado prático da segunda edição do Ateliê de Montagem: Entre Teatro e Cinema, curso de formação e experimentação oferecido pela Escola SENAI do Audiovisual.",
+      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-07/8rtbrffm2lpolaj9r2t7sc3hnp5bufvvvj377l8131khvs2re14eot2jqmiq0ombhevvp6vad5qgqpj7r1n2ft7bqim2rfnm0vnpvf.jpg",
+      "link": "https://portalbelohorizonte.com.br/2026/eventos/espetaculo/artes-cenicas/espetaculo-farewell",
+      "fonte": "Portal Belo Horizonte",
+      "fonte_id": "a29c176629fb",
+      "instituicao_id": "",
+      "endereco": "Centro Cultural Sesiminas - Rua Padre Marinho, 60 - Santa Efigênia",
+      "tags_fonte": [
+        "Acessibilidade",
+        "Artes Cênicas",
+        "Cultural",
+        "Espetáculos cênicos",
+        "Experiências",
+        "Ingressos on-line"
+      ]
     },
     {
       "id": "ufmg-ec-espaco-aberto-a-educadores-sabado",
@@ -714,6 +878,35 @@
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/oficina-de-colagem-espaco-de-memorias-domingo/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg"
+    },
+    {
+      "id": "portal-bh-e610e4ec1f94-2026-08-26-2030",
+      "titulo": "Política de cookies",
+      "data": "2026-08-26",
+      "data_fim": "",
+      "horario": "20h30 às 22h",
+      "local": "Grande Teatro BeFly Minascentro",
+      "cidade": "Belo Horizonte",
+      "categoria": "Palestra e debate",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "Cíntia Chagas chega a capital mineira com a sua nova palestra de empreendedorismo e motivação: \"Como Cheguei Até Aqui'. Na palestra, Cíntia compartilha sua própria história de superação, revelando como uma professora comum se tornou a educadora mais conhecida do país. Trata-se de uma fonte de motivação e de inspiração para todos os presentes.",
+      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-05/691949416_18420889945121589_3881373670632113085_n.jpg",
+      "link": "https://portalbelohorizonte.com.br/2026/eventos/palestra/empreendedorismo/como-cheguei-ate-aqui-cintia-chargas",
+      "fonte": "Portal Belo Horizonte",
+      "fonte_id": "e610e4ec1f94",
+      "instituicao_id": "",
+      "endereco": "Avenida Augusto de Lima, 785 - Centro",
+      "tags_fonte": [
+        "60+",
+        "Bate Papo",
+        "Comunicação",
+        "Cultural",
+        "Empreendedorismo",
+        "Experiências",
+        "Ingressos on-line",
+        "Network"
+      ]
     },
     {
       "id": "ufmg-ec-oficina-desvendando-as-constelacoes-guarani-sabado",
