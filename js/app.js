@@ -147,7 +147,43 @@
       });
   }
 
-  function formatDateParts(dateString) {
+  // Em intervalos acima deste limite, os dias da semana são omitidos
+  // para evitar excesso de informação no cartão.
+  const LONG_EVENT_THRESHOLD_DAYS = 14;
+
+  function calendarDayNumber(date) {
+    return Date.UTC(
+      date.getFullYear(),
+      date.getMonth(),
+      date.getDate()
+    );
+  }
+
+  function eventDurationDays(event) {
+    const start = safeDate(event.data);
+    const end = safeDate(event.data_fim);
+
+    if (!start || !end || end <= start) {
+      return 0;
+    }
+
+    return Math.round(
+      (calendarDayNumber(end) - calendarDayNumber(start)) /
+      86400000
+    );
+  }
+
+  function formatDayMonth(date, includeYear = false) {
+    const day = date.getDate() === 1 ? '1º' : String(date.getDate());
+    const month = new Intl.DateTimeFormat('pt-BR', {
+      month: 'long'
+    }).format(date);
+    const year = includeYear ? ` de ${date.getFullYear()}` : '';
+
+    return `${day} de ${month}${year}`;
+  }
+
+  function formatDateParts(dateString, includeYear = false) {
     const date = safeDate(dateString);
 
     if (!date) {
@@ -163,25 +199,28 @@
       .format(date)
       .replace(/^./, char => char.toUpperCase());
 
-    const formattedDate = new Intl.DateTimeFormat('pt-BR', {
-      day: '2-digit',
-      month: 'long'
-    }).format(date);
-
     return {
       weekday,
-      date: formattedDate
+      date: formatDayMonth(date, includeYear)
     };
   }
 
-  function appendWhenDate(container, dateString, prefix = '') {
-    const parts = formatDateParts(dateString);
+  function appendWhenDate(
+    container,
+    dateString,
+    {
+      prefix = '',
+      showWeekday = true,
+      includeYear = false
+    } = {}
+  ) {
+    const parts = formatDateParts(dateString, includeYear);
 
     if (prefix) {
       container.append(document.createTextNode(prefix));
     }
 
-    if (parts.weekday) {
+    if (showWeekday && parts.weekday) {
       const weekday = document.createElement('span');
       weekday.className = 'when-weekday';
       weekday.textContent = `${parts.weekday}, `;
@@ -197,16 +236,49 @@
   function renderWhen(container, event) {
     container.replaceChildren();
 
-    appendWhenDate(container, event.data);
+    const hasDateRange = Boolean(
+      event.data_fim && event.data_fim !== event.data
+    );
+    const isLongEvent = hasDateRange &&
+      eventDurationDays(event) > LONG_EVENT_THRESHOLD_DAYS;
 
-    if (event.data_fim && event.data_fim !== event.data) {
-      appendWhenDate(container, event.data_fim, ' a ');
+    if (isLongEvent) {
+      const start = safeDate(event.data);
+      const end = safeDate(event.data_fim);
+      const differentYears = Boolean(
+        start && end && start.getFullYear() !== end.getFullYear()
+      );
+
+      appendWhenDate(container, event.data, {
+        showWeekday: false,
+        includeYear: differentYears
+      });
+      appendWhenDate(container, event.data_fim, {
+        prefix: ' a ',
+        showWeekday: false,
+        includeYear: true
+      });
+    } else {
+      appendWhenDate(container, event.data);
+
+      if (hasDateRange) {
+        appendWhenDate(container, event.data_fim, {
+          prefix: ' a '
+        });
+      }
     }
 
     if (event.horario) {
       const time = document.createElement('span');
       time.className = 'when-time';
-      time.textContent = ` • ${event.horario}`;
+
+      if (isLongEvent) {
+        container.append(document.createElement('br'));
+        time.textContent = event.horario;
+      } else {
+        time.textContent = ` • ${event.horario}`;
+      }
+
       container.append(time);
     }
   }
