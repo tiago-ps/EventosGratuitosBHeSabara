@@ -4,7 +4,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="color-scheme" content="dark">
-  <meta name="theme-color" content="#07111f">
+  <meta name="theme-color" content="#071a0d">
+  <script>
+    /* Aplica o tema salvo antes de carregar o CSS, evitando piscar a paleta errada. */
+    (() => {
+      const validThemes = new Set(['original', 'ifmg']);
+      let theme = 'ifmg';
+
+      try {
+        const savedTheme = localStorage.getItem('agenda-cultural-tema');
+        if (validThemes.has(savedTheme)) theme = savedTheme;
+      } catch {
+        /* O site continua com o tema IFMG quando o armazenamento não está disponível. */
+      }
+
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
   <title>Agenda Cultural Gratuita</title>
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="stylesheet" href="css/styles.css">
@@ -58,7 +74,16 @@
               <span class="panel-title-cities"></span>
             </p>
           </div>
-          <div class="counter" aria-label="posição do evento"></div>
+          <div class="topbar-actions">
+            <label class="theme-picker">
+              <span class="theme-picker-label">Tema</span>
+              <select class="theme-select" aria-label="Escolher tema visual">
+                <option value="ifmg">IFMG</option>
+                <option value="original">Original</option>
+              </select>
+            </label>
+            <div class="counter" aria-label="posição do evento"></div>
+          </div>
         </header>
 
         <div class="event-copy">
