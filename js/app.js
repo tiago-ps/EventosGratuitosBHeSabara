@@ -53,6 +53,41 @@
       .trim();
   }
 
+  function joinCityNames(cities) {
+    const uniqueCities = [...new Set(
+      cities
+        .map(city => String(city || '').trim())
+        .filter(Boolean)
+    )];
+
+    if (uniqueCities.length <= 1) {
+      return uniqueCities[0] || '';
+    }
+
+    if (uniqueCities.length === 2) {
+      return `${uniqueCities[0]} e ${uniqueCities[1]}`;
+    }
+
+    return `${uniqueCities.slice(0, -1).join(', ')} e ${uniqueCities.at(-1)}`;
+  }
+
+  function getPanelTitleParts(titleValue, events) {
+    const fallbackTitle = 'Agenda Cultural Gratuita';
+    const rawTitle = String(titleValue || fallbackTitle).trim();
+    const parts = rawTitle.split(/\s+(?:-|–|—)\s+/, 2);
+
+    const mainTitle = parts[0] || fallbackTitle;
+    const citiesFromTitle = parts[1] || '';
+    const citiesFromEvents = joinCityNames(
+      events.map(event => event.cidade)
+    );
+
+    return {
+      mainTitle,
+      citiesTitle: citiesFromTitle || citiesFromEvents
+    };
+  }
+
   function getLocalImage(event) {
     const local = normalizeText(event.local);
 
@@ -249,11 +284,19 @@
       `${seconds}s`
     );
 
-    slide.querySelector('.panel-title').textContent =
-      data.titulo_painel || 'Agenda Cultural Gratuita';
+    const { mainTitle, citiesTitle } = getPanelTitleParts(
+      data.titulo_painel,
+      state.events
+    );
 
-    slide.querySelector('.period').textContent =
-      data.periodo || 'Programação da semana';
+    slide.querySelector('.panel-title-main').textContent =
+      mainTitle;
+
+    const citiesTitleElement =
+      slide.querySelector('.panel-title-cities');
+
+    citiesTitleElement.textContent = citiesTitle;
+    citiesTitleElement.hidden = !citiesTitle;
 
     slide.querySelector('.counter').textContent =
       `${index + 1} / ${state.events.length}`;
@@ -310,15 +353,27 @@
         .filter(Boolean)
         .join(' • ') || 'Local não informado';
 
-    const registrationRow =
-      slide.querySelector('.registration-row');
-
-    if (event.inscricao) {
-      slide.querySelector('.registration').textContent =
-        event.inscricao;
-    } else if (registrationRow) {
-      registrationRow.remove();
-    }
+    /*
+     * FUNCIONALIDADE SOB ANÁLISE DE VIABILIDADE
+     *
+     * A caixa "Participação" foi retirada temporariamente da interface.
+     * As orientações de retirada ou inscrição continuam disponíveis na página
+     * oficial do evento, acessada pelo link e pelo QR Code. O campo "inscricao"
+     * permanece no eventos.json para permitir uma eventual reativação.
+     *
+     * Para reativar, remova este comentário e reative também o bloco
+     * correspondente em index.html e a regra em css/styles.css.
+     *
+     * const registrationRow =
+     *   slide.querySelector('.registration-row');
+     *
+     * if (event.inscricao) {
+     *   slide.querySelector('.registration').textContent =
+     *     event.inscricao;
+     * } else if (registrationRow) {
+     *   registrationRow.remove();
+     * }
+     */
 
     const link = event.link || '';
     const sourceUrlElement = slide.querySelector('.source-url');
