@@ -53,8 +53,10 @@
       <div class="content">
         <header class="topbar">
           <div>
-            <p class="panel-title"></p>
-            <p class="period"></p>
+            <p class="panel-title">
+              <span class="panel-title-main"></span>
+              <span class="panel-title-cities"></span>
+            </p>
           </div>
           <div class="counter" aria-label="posição do evento"></div>
         </header>
@@ -78,10 +80,21 @@
               <dt>Onde</dt>
               <dd class="where"></dd>
             </div>
-            <div class="registration-row">  
-              <dt>Participação</dt>   
-              <dd class="registration"></dd>  
-            </div>  
+            <!--
+              FUNCIONALIDADE SOB ANÁLISE DE VIABILIDADE
+
+              A caixa "Participação" foi temporariamente retirada da interface,
+              pois normalmente repetia orientações de retirada ou inscrição
+              gratuita já disponíveis na página oficial acessada pelo QR Code.
+
+              Para reativar, remova este comentário e reative também o bloco
+              correspondente em js/app.js e a regra em css/styles.css.
+
+              <div class="registration-row">
+                <dt>Participação</dt>
+                <dd class="registration"></dd>
+              </div>
+            -->
           </dl>
         </div>
 
