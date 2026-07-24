@@ -147,20 +147,68 @@
       });
   }
 
-  function formatDate(dateString) {
+  function formatDateParts(dateString) {
     const date = safeDate(dateString);
 
     if (!date) {
-      return dateString || 'Data não informada';
+      return {
+        weekday: '',
+        date: dateString || 'Data não informada'
+      };
     }
 
-    return new Intl.DateTimeFormat('pt-BR', {
-      weekday: 'long',
-      day: '2-digit',
-      month: 'long'
+    const weekday = new Intl.DateTimeFormat('pt-BR', {
+      weekday: 'long'
     })
       .format(date)
       .replace(/^./, char => char.toUpperCase());
+
+    const formattedDate = new Intl.DateTimeFormat('pt-BR', {
+      day: '2-digit',
+      month: 'long'
+    }).format(date);
+
+    return {
+      weekday,
+      date: formattedDate
+    };
+  }
+
+  function appendWhenDate(container, dateString, prefix = '') {
+    const parts = formatDateParts(dateString);
+
+    if (prefix) {
+      container.append(document.createTextNode(prefix));
+    }
+
+    if (parts.weekday) {
+      const weekday = document.createElement('span');
+      weekday.className = 'when-weekday';
+      weekday.textContent = `${parts.weekday}, `;
+      container.append(weekday);
+    }
+
+    const date = document.createElement('span');
+    date.className = 'when-date';
+    date.textContent = parts.date;
+    container.append(date);
+  }
+
+  function renderWhen(container, event) {
+    container.replaceChildren();
+
+    appendWhenDate(container, event.data);
+
+    if (event.data_fim && event.data_fim !== event.data) {
+      appendWhenDate(container, event.data_fim, ' a ');
+    }
+
+    if (event.horario) {
+      const time = document.createElement('span');
+      time.className = 'when-time';
+      time.textContent = ` • ${event.horario}`;
+      container.append(time);
+    }
   }
 
   function formatUpdated(value) {
@@ -340,13 +388,7 @@
     slide.querySelector('.description').textContent =
       event.descricao || '';
 
-    const dateText =
-      event.data_fim && event.data_fim !== event.data
-        ? `${formatDate(event.data)} a ${formatDate(event.data_fim)}`
-        : formatDate(event.data);
-
-    slide.querySelector('.when').textContent =
-      `${dateText}${event.horario ? ` • ${event.horario}` : ''}`;
+    renderWhen(slide.querySelector('.when'), event);
 
     slide.querySelector('.where').textContent =
       [event.local, event.cidade]
