@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Janeiro a Dezembro de 2026",
-  "atualizado_em": "2026-07-24T21:30:00-03:00",
+  "atualizado_em": "2026-07-24T22:13:22-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -151,26 +151,6 @@
       "atualizado_na_fonte": "2026-07-24T20:31:48"
     },
     {
-      "id": "sympla-sabara-3514633",
-      "titulo": "Day Use Pousada Sant'Anna",
-      "data": "2026-07-25",
-      "data_fim": "",
-      "horario": "",
-      "local": "Local informado na página da Sympla",
-      "cidade": "Sabará",
-      "categoria": "Festival",
-      "gratuito": true,
-      "inscricao": "Inscrição gratuita pela Sympla; consulte disponibilidade",
-      "descricao": "A Pousada Sant'Ana oferece uma localização privilegiada, proporcionando aos seus hóspedes conforto e tranquilidade. Situada na encantadora cidade de Sabará, a pousada é uma excelente opção para quem busca um refúgio em meio à natureza.Arraial Velho, que faz parte da famosa Estrada Real,",
-      "imagem": "https://images.sympla.com.br/6a6276cc1c6c7-lg.png",
-      "link": "https://www.sympla.com.br/evento/day-use-pousada-sant-anna/3514633",
-      "fonte": "Sympla — evento em Sabará",
-      "instituicao_id": "",
-      "fonte_id": "3514633",
-      "organizador": "",
-      "endereco": "encantadora cidade de Sabará, a pousada é uma excelente opção para quem busca um refúgio em meio à natureza"
-    },
-    {
       "id": "portal-bh-98fc26024f1f-2026-07-25-1000",
       "titulo": "Férias nos Museus - Oficina Papibaquígrafo: criando objetos imaginários",
       "data": "2026-07-25",
@@ -296,26 +276,6 @@
       "instituicao_id": "espaco-conhecimento-ufmg"
     },
     {
-      "id": "sympla-sabara-3514639",
-      "titulo": "Day Use Pousada Sant'Anna",
-      "data": "2026-07-26",
-      "data_fim": "",
-      "horario": "",
-      "local": "Local informado na página da Sympla",
-      "cidade": "Sabará",
-      "categoria": "Festival",
-      "gratuito": true,
-      "inscricao": "Inscrição gratuita pela Sympla; consulte disponibilidade",
-      "descricao": "A Pousada Sant'Ana oferece uma localização privilegiada, proporcionando aos seus hóspedes conforto e tranquilidade. Situada na encantadora cidade de Sabará, a pousada é uma excelente opção para quem busca um refúgio em meio à natureza.Arraial Velho, que faz parte da famosa Estrada Real,",
-      "imagem": "https://images.sympla.com.br/6a62778697887-lg.png",
-      "link": "https://www.sympla.com.br/evento/day-use-pousada-sant-anna/3514639",
-      "fonte": "Sympla — evento em Sabará",
-      "instituicao_id": "",
-      "fonte_id": "3514639",
-      "organizador": "",
-      "endereco": "encantadora cidade de Sabará, a pousada é uma excelente opção para quem busca um refúgio em meio à natureza"
-    },
-    {
       "id": "ufmg-ec-observacao-solar-com-telescopios-domingo-8",
       "titulo": "Observação Solar com Telescópios (domingo)",
       "data": "2026-07-26",
@@ -382,26 +342,6 @@
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/sessao-netuno-tea-dois-pedacinhos-de-vidro-domingo-2/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg"
-    },
-    {
-      "id": "sympla-sabara-3514647",
-      "titulo": "Day Use Pousada Sant'Anna",
-      "data": "2026-07-27",
-      "data_fim": "",
-      "horario": "",
-      "local": "Local informado na página da Sympla",
-      "cidade": "Sabará",
-      "categoria": "Festival",
-      "gratuito": true,
-      "inscricao": "Inscrição gratuita pela Sympla; consulte disponibilidade",
-      "descricao": "A Pousada Sant'Ana oferece uma localização privilegiada, proporcionando aos seus hóspedes conforto e tranquilidade. Situada na encantadora cidade de Sabará, a pousada é uma excelente opção para quem busca um refúgio em meio à natureza.Arraial Velho, que faz parte da famosa Estrada Real,",
-      "imagem": "https://images.sympla.com.br/6a62780cd0809-lg.png",
-      "link": "https://www.sympla.com.br/evento/day-use-pousada-sant-anna/3514647",
-      "fonte": "Sympla — evento em Sabará",
-      "instituicao_id": "",
-      "fonte_id": "3514647",
-      "organizador": "",
-      "endereco": "encantadora cidade de Sabará, a pousada é uma excelente opção para quem busca um refúgio em meio à natureza"
     },
     {
       "id": "ufmg-ec-oficina-tarde-de-jogos-terca-feira",
@@ -523,7 +463,7 @@
       "horario": "14h às 18h",
       "local": "Fazenda Arraial Velho – Sabará/MG Programação Música e muito forró Quadrilha junina Confraternização Atividades recreativas Comidas e clima típico de",
       "cidade": "Sabará",
-      "categoria": "Dança",
+      "categoria": "Festival",
       "gratuito": true,
       "inscricao": "Inscrição gratuita pela Sympla; consulte disponibilidade",
       "descricao": "Arraiá 60+ – Tradição que Encanta Gerações Prepare o traje caipira e venha viver uma tarde de muita alegria, música, dança e convivência! O Arraiá 60+ foi preparado especialmente para valorizar a pessoa idosa, promovendo integração,",
