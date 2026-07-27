@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Janeiro a Dezembro de 2026",
-  "atualizado_em": "2026-07-27T14:09:17-03:00",
+  "atualizado_em": "2026-07-27T15:21:07-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -437,36 +437,6 @@
       "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+SESIMINAS+BH%2C+Rua+Padre+Marinho%2C+60+%E2%80%93+Belo+Horizonte+%E2%80%93+Minas+Gerais"
     },
     {
-      "id": "portal-bh-775f97bbfcfe-2026-07-30-2000",
-      "titulo": "Espetáculo: A confissão de Leontina",
-      "data": "2026-07-30",
-      "data_fim": "",
-      "horario": "20h às 21h",
-      "local": "Teatro de Bolso Sesiminas",
-      "cidade": "Belo Horizonte",
-      "categoria": "Teatro",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "O monólogo \"A Confissão de Leontina\" inicia uma nova etapa de circulação nacional, prevendo a realização de 20 apresentações gratuitas distribuídas por estados das regiões Nordeste e Sudeste do Brasil. Baseado na obra de Lygia Fagundes Telles, o espetáculo é protagonizado pela atriz Rose Irene Visitação, sob a direção de Karina de Faria,",
-      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-07/1dgsvg10lul3cloi44h1i10e51vi361c4j0j108u58uperh35ct580m0qo7m7mcc0ikf48fv4s4je8ndj39tqjbf6s4gc2vcd78ugs6.jpg",
-      "link": "https://portalbelohorizonte.com.br/2026/eventos/espetaculo/artes-cenicas/espetaculo-confissao-de-leontina",
-      "fonte": "Portal Belo Horizonte",
-      "fonte_id": "775f97bbfcfe",
-      "instituicao_id": "",
-      "endereco": "Rua Padre Marinho, 60 - Santa Efigênia",
-      "tags_fonte": [
-        "Acessibilidade",
-        "Artes Cênicas",
-        "Cultural",
-        "Espetáculos cênicos",
-        "Experiências",
-        "Ingressos on-line",
-        "Lançamentos"
-      ],
-      "local_id": "centro-cultural-sesiminas-bh",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+SESIMINAS+BH%2C+Rua+Padre+Marinho%2C+60+-+Santa+Efig%C3%AAnia%2C+Belo+Horizonte"
-    },
-    {
       "id": "fcs-wp-37108",
       "titulo": "Sessão da meia-noite – House",
       "data": "2026-07-31",
@@ -583,6 +553,36 @@
       "classificacao_indicativa": "10 anos",
       "local_id": "cine-santa-tereza",
       "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88"
+    },
+    {
+      "id": "portal-bh-775f97bbfcfe-2026-07-31-2000",
+      "titulo": "Espetáculo: A confissão de Leontina",
+      "data": "2026-07-31",
+      "data_fim": "",
+      "horario": "20h às 21h",
+      "local": "Teatro de Bolso Sesiminas",
+      "cidade": "Belo Horizonte",
+      "categoria": "Teatro",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "O monólogo \"A Confissão de Leontina\" inicia uma nova etapa de circulação nacional, prevendo a realização de 20 apresentações gratuitas distribuídas por estados das regiões Nordeste e Sudeste do Brasil. Baseado na obra de Lygia Fagundes Telles, o espetáculo é protagonizado pela atriz Rose Irene Visitação, sob a direção de Karina de Faria,",
+      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-07/1dgsvg10lul3cloi44h1i10e51vi361c4j0j108u58uperh35ct580m0qo7m7mcc0ikf48fv4s4je8ndj39tqjbf6s4gc2vcd78ugs6.jpg",
+      "link": "https://portalbelohorizonte.com.br/2026/eventos/espetaculo/artes-cenicas/espetaculo-confissao-de-leontina",
+      "fonte": "Portal Belo Horizonte",
+      "fonte_id": "775f97bbfcfe",
+      "instituicao_id": "",
+      "endereco": "Rua Padre Marinho, 60 - Santa Efigênia",
+      "tags_fonte": [
+        "Acessibilidade",
+        "Artes Cênicas",
+        "Cultural",
+        "Espetáculos cênicos",
+        "Experiências",
+        "Ingressos on-line",
+        "Lançamentos"
+      ],
+      "local_id": "centro-cultural-sesiminas-bh",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+SESIMINAS+BH%2C+Rua+Padre+Marinho%2C+60+-+Santa+Efig%C3%AAnia%2C+Belo+Horizonte"
     },
     {
       "id": "ufmg-ec-oficina-fabrica-de-planetas-sabado",
