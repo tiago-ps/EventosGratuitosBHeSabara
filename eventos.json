@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Janeiro a Dezembro de 2026",
-  "atualizado_em": "2026-07-26T23:55:48-03:00",
+  "atualizado_em": "2026-07-26T22:42:19-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -214,7 +214,7 @@
       "fonte": "Portal Belo Horizonte",
       "fonte_id": "5170ac9d1ede",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "endereco": "Avenida Otacílio Negrão de Lima, 751 - Pampulha",
+      "endereco": "Museu de Arte da Pampulha - Avenida Otacílio Negrão de Lima, 751 - Pampulha",
       "tags_fonte": [
         "Gratuito",
         "Cultura PBH",
@@ -225,7 +225,7 @@
         "Artes Visuais",
         "Artes Plásticas"
       ],
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Arte+da+Pampulha+-+MAP%2C+Avenida+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+751+-+Pampulha%2C+Belo+Horizonte"
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Arte+da+Pampulha+-+MAP%2C+Museu+de+Arte+da+Pampulha+-+Avenida+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+751+-+Pampulha%2C+Belo+Horizonte"
     },
     {
       "id": "ufmg-ec-oficina-costurando-dinossauros-brasileiros-quarta-feira",
@@ -266,7 +266,8 @@
       "fonte_id": "124487",
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88"
+      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88",
+      "classificacao_indicativa": "Livre"
     },
     {
       "id": "cine-santa-tereza-bileto-124484",
@@ -287,7 +288,8 @@
       "fonte_id": "124484",
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88"
+      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88",
+      "classificacao_indicativa": "10 anos"
     },
     {
       "id": "portal-bh-1c8b319b382c-2026-07-30-1400",
@@ -306,7 +308,7 @@
       "fonte": "Portal Belo Horizonte",
       "fonte_id": "1c8b319b382c",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "endereco": "Avenida Otacílio Negrão de Lima, 16585 - Pampulha",
+      "endereco": "Jardim do Museu de Arte da Pampulha - Avenida Otacílio Negrão de Lima, 16585 - Pampulha",
       "tags_fonte": [
         "Ar livre",
         "Artes Plásticas",
@@ -318,7 +320,7 @@
         "Oficinas",
         "Pampulha"
       ],
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Arte+da+Pampulha+-+MAP%2C+Avenida+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+16585+-+Pampulha%2C+Belo+Horizonte"
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Arte+da+Pampulha+-+MAP%2C+Jardim+do+Museu+de+Arte+da+Pampulha+-+Avenida+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+16585+-+Pampulha%2C+Belo+Horizonte"
     },
     {
       "id": "sympla-sabara-3489452",
@@ -338,9 +340,9 @@
       "instituicao_id": "prefeitura-sabara",
       "fonte_id": "3489452",
       "organizador": "",
-      "endereco": "Rua Paracatu, 588, Sabará, MG",
+      "endereco": "Rua Paracatu, 588, Sabará - MG",
       "local_id": "fazenda-arraial-velho",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Fazenda+Arraial+Velho%2C+Rua+Paracatu%2C+588%2C+Sabar%C3%A1%2C+MG"
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Fazenda+Arraial+Velho%2C+Rua+Paracatu%2C+588%2C+Sabar%C3%A1+-+MG"
     },
     {
       "id": "ufmg-ec-oficina-evolucao-no-mundo-animal-quinta-feira",
@@ -381,7 +383,8 @@
       "fonte_id": "124492",
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88"
+      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88",
+      "classificacao_indicativa": "Livre"
     },
     {
       "id": "cine-santa-tereza-bileto-124485",
@@ -402,7 +405,8 @@
       "fonte_id": "124485",
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88"
+      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88",
+      "classificacao_indicativa": "10 anos"
     },
     {
       "id": "portal-bh-775f97bbfcfe-2026-07-30-2000",
@@ -410,7 +414,7 @@
       "data": "2026-07-30",
       "data_fim": "",
       "horario": "20h às 21h",
-      "local": "Teatro de Bolso Sesiminas",
+      "local": "Teatro de Bolso SESIMINAS",
       "cidade": "Belo Horizonte",
       "categoria": "Teatro",
       "gratuito": true,
@@ -421,7 +425,7 @@
       "fonte": "Portal Belo Horizonte",
       "fonte_id": "775f97bbfcfe",
       "instituicao_id": "",
-      "endereco": "Rua Padre Marinho, 60 - Santa Efigênia",
+      "endereco": "Rua Padre Marinho, 60, Santa Efigênia, Belo Horizonte - MG",
       "tags_fonte": [
         "Acessibilidade",
         "Artes Cênicas",
@@ -431,8 +435,9 @@
         "Ingressos on-line",
         "Lançamentos"
       ],
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+SESIMINAS+BH%2C+Rua+Padre+Marinho%2C+60%2C+Santa+Efig%C3%AAnia%2C+Belo+Horizonte+-+MG",
       "local_id": "centro-cultural-sesiminas-bh",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+SESIMINAS+BH%2C+Rua+Padre+Marinho%2C+60+-+Santa+Efig%C3%AAnia%2C+Belo+Horizonte"
+      "espaco_interno": "Teatro de Bolso"
     },
     {
       "id": "fcs-wp-37108",
@@ -474,7 +479,7 @@
       "fonte": "Portal Belo Horizonte",
       "fonte_id": "3877151f55ac",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "endereco": "Avenida Otacílio Negrão de Lima, 16585 - Pampulha",
+      "endereco": "Museu de Arte da Pampulha - Avenida Otacílio Negrão de Lima, 16585 - Pampulha",
       "tags_fonte": [
         "Gratuito",
         "Cultura PBH",
@@ -485,7 +490,7 @@
         "Artes Visuais",
         "Artes Plásticas"
       ],
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Arte+da+Pampulha+-+MAP%2C+Avenida+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+16585+-+Pampulha%2C+Belo+Horizonte"
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Arte+da+Pampulha+-+MAP%2C+Museu+de+Arte+da+Pampulha+-+Avenida+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+16585+-+Pampulha%2C+Belo+Horizonte"
     },
     {
       "id": "ufmg-ec-oficina-como-o-aviao-voa-2",
@@ -526,7 +531,8 @@
       "fonte_id": "124493",
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88"
+      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88",
+      "classificacao_indicativa": "14 anos"
     },
     {
       "id": "cine-santa-tereza-bileto-124486",
@@ -547,7 +553,8 @@
       "fonte_id": "124486",
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88"
+      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88",
+      "classificacao_indicativa": "10 anos"
     },
     {
       "id": "ufmg-ec-oficina-fabrica-de-planetas-sabado",
@@ -609,7 +616,8 @@
       "fonte_id": "124489",
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88"
+      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88",
+      "classificacao_indicativa": "Livre"
     },
     {
       "id": "ufmg-ec-observacao-noturna-dos-astros-com-telescopios-sabado-8",
@@ -692,7 +700,8 @@
       "fonte_id": "124490",
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88"
+      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88",
+      "classificacao_indicativa": "10 anos"
     },
     {
       "id": "cine-santa-tereza-bileto-124491",
@@ -713,7 +722,8 @@
       "fonte_id": "124491",
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88"
+      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88",
+      "classificacao_indicativa": "Livre"
     },
     {
       "id": "cine-santa-tereza-bileto-124494",
@@ -742,7 +752,7 @@
       "data": "2026-08-06",
       "data_fim": "",
       "horario": "20h às 21h30",
-      "local": "Centro Cultural Sesiminas",
+      "local": "Centro-Sul",
       "cidade": "Belo Horizonte",
       "categoria": "Teatro",
       "gratuito": true,
@@ -752,8 +762,8 @@
       "link": "https://portalbelohorizonte.com.br/2026/eventos/espetaculo/artes-cenicas/espetaculo-farewell",
       "fonte": "Portal Belo Horizonte",
       "fonte_id": "a29c176629fb",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "endereco": "Rua Padre Marinho, 60 - Santa Efigênia",
+      "instituicao_id": "",
+      "endereco": "Centro Cultural Sesiminas - Rua Padre Marinho, 60 - Santa Efigênia",
       "tags_fonte": [
         "Acessibilidade",
         "Artes Cênicas",
@@ -762,8 +772,8 @@
         "Experiências",
         "Ingressos on-line"
       ],
-      "local_id": "centro-cultural-sesiminas-bh",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+SESIMINAS+BH%2C+Rua+Padre+Marinho%2C+60+-+Santa+Efig%C3%AAnia%2C+Belo+Horizonte"
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro-Sul%2C+Centro+Cultural+Sesiminas+-+Rua+Padre+Marinho%2C+60+-+Santa+Efig%C3%AAnia%2C+Belo+Horizonte",
+      "local_id": "centro-cultural-sesiminas-bh"
     },
     {
       "id": "ufmg-ec-espaco-aberto-a-educadores-sabado",

@@ -94,3 +94,20 @@ O arquivo de demonstração passa a exibir corretamente `Fazenda Arraial Velho` 
 ## Tema visual
 
 O site utiliza exclusivamente o tema **Original**. O seletor de tema foi removido da interface e preferências antigas salvas no navegador são descartadas ao carregar a página.
+
+## Classificação indicativa
+
+Quando o evento possui o campo `classificacao_indicativa`, o painel exibe uma
+badge compacta junto a categoria, gratuidade e cidade. Os valores aceitos são:
+
+```text
+Livre
+10 anos
+12 anos
+14 anos
+16 anos
+18 anos
+```
+
+A badge é omitida quando a fonte não fornece classificação confiável. O site
+não tenta deduzir a faixa a partir do público-alvo descrito no evento.

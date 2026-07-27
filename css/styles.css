@@ -226,6 +226,17 @@ body {
 .category { background: var(--category); color: var(--category-contrast); border: 1px solid rgba(255,255,255,.14); }
 .free { background: var(--accent); color: var(--accent-contrast); border: 1px solid rgba(255,255,255,.14); }
 
+.badge.rating {
+  border: 1px solid rgba(255,255,255,.22);
+  color: #fff;
+}
+.badge.rating-livre { background: #238636; }
+.badge.rating-10 { background: #2563a8; }
+.badge.rating-12 { background: #c58a08; color: #111; }
+.badge.rating-14 { background: #d96d1f; }
+.badge.rating-16 { background: #bd2c2c; }
+.badge.rating-18 { background: #24292f; }
+
 /* nova badge de cidade */
 .badge.city { display: inline-flex; align-items: center; justify-content: center; min-width: 56px; padding: .4em .75em; }
 .badge.city.city-bh { background: var(--city-bh); color: var(--city-text); }

@@ -60,6 +60,31 @@
       .trim();
   }
 
+  function normalizeRating(value = '') {
+    const raw = String(value || '').trim();
+    const normalized = normalizeText(raw);
+
+    if (!normalized) {
+      return null;
+    }
+
+    if (normalized === 'l' || normalized.includes('livre')) {
+      return { label: 'LIVRE', className: 'rating-livre', accessible: 'Livre' };
+    }
+
+    const match = normalized.match(/(?:^|\D)(10|12|14|16|18)(?:\D|$)/);
+    if (!match) {
+      return null;
+    }
+
+    const age = match[1];
+    return {
+      label: `${age} ANOS`,
+      className: `rating-${age}`,
+      accessible: `${age} anos`
+    };
+  }
+
   function joinCityNames(cities) {
     const uniqueCities = [...new Set(
       cities
@@ -446,6 +471,22 @@
 
     slide.querySelector('.category').textContent =
       event.categoria || 'Evento';
+
+    const ratingBadge = slide.querySelector('.badge.rating');
+    const rating = normalizeRating(event.classificacao_indicativa);
+
+    if (ratingBadge && rating) {
+      ratingBadge.hidden = false;
+      ratingBadge.textContent = rating.label;
+      ratingBadge.classList.add(rating.className);
+      ratingBadge.setAttribute(
+        'aria-label',
+        `Classificação indicativa: ${rating.accessible}`
+      );
+      ratingBadge.title = `Classificação indicativa: ${rating.accessible}`;
+    } else if (ratingBadge) {
+      ratingBadge.remove();
+    }
 
     // cidade: badge ao lado do "GRATUITO"
     const cityBadge = slide.querySelector('.badge.city');
