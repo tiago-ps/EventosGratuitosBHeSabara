@@ -367,6 +367,22 @@
     }
   }
 
+  function safeExternalUrl(value) {
+    if (!value) return '';
+
+    try {
+      const parsed = new URL(value, window.location.href);
+
+      if (!['http:', 'https:'].includes(parsed.protocol)) {
+        return '';
+      }
+
+      return parsed.href;
+    } catch {
+      return '';
+    }
+  }
+
   function showMessage(type, title, text) {
     clearTimeout(state.timer);
     state.isPaused = true;
@@ -516,10 +532,26 @@
 
     renderWhen(slide.querySelector('.when'), event);
 
-    slide.querySelector('.where').textContent =
+    const whereText = slide.querySelector('.where-text');
+    const mapLink = slide.querySelector('.map-link');
+
+    whereText.textContent =
       [event.local, event.cidade]
         .filter(Boolean)
         .join(' • ') || 'Local não informado';
+
+    const mapUrl = safeExternalUrl(event.mapa);
+
+    if (mapUrl) {
+      mapLink.href = mapUrl;
+      mapLink.hidden = false;
+      mapLink.setAttribute(
+        'aria-label',
+        `Abrir ${event.local || 'o local do evento'} no Google Maps`
+      );
+    } else {
+      mapLink.remove();
+    }
 
     /*
      * FUNCIONALIDADE SOB ANÁLISE DE VIABILIDADE

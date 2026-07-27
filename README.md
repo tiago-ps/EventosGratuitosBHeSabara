@@ -43,7 +43,8 @@ O site atualiza automaticamente após a publicação do commit.
       "inscricao": "Entrada gratuita",
       "descricao": "Descrição curta.",
       "imagem": "https://endereco-direto-da-imagem.jpg",
-      "link": "https://link-oficial-do-evento"
+      "link": "https://link-oficial-do-evento",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=..."
     }
   ]
 }
@@ -55,6 +56,8 @@ O site atualiza automaticamente após a publicação do commit.
 - ignora eventos cuja data final já passou;
 - troca de evento automaticamente;
 - cria QR Code a partir do campo `link`;
+- exibe **Abrir no Google Maps** quando o evento possui o campo `mapa`;
+- mantém o QR Code apontando para a página oficial, não para o mapa;
 - usa a imagem remota indicada no JSON;
 - mostra uma arte genérica por categoria se a imagem estiver vazia ou falhar;
 - adapta o layout a telas horizontais e verticais;
@@ -73,3 +76,7 @@ O campo `imagem` aceita:
 - um caminho local, como `imagens/banner.jpg`, caso você decida adicionar arquivos ao repositório.
 
 Na rotina recomendada, o GPT fornece uma URL externa no JSON. Se ela estiver vazia, não for uma imagem direta ou o servidor bloquear a exibição, o painel mostra automaticamente uma arte gráfica da categoria. Portanto, não é necessário manter uma pasta de imagens.
+
+## Localização no Google Maps
+
+O texto do campo `local` continua sendo exibido integralmente, inclusive quando informa piso, galeria, teatro ou outro espaço interno. Quando o campo `mapa` estiver preenchido com uma URL HTTP ou HTTPS válida, o bloco **Onde** exibirá o botão **Abrir no Google Maps**. Eventos sem esse campo continuam aparecendo normalmente, sem botão.

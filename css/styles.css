@@ -286,6 +286,60 @@ dd { margin: 0; font-size: clamp(14px, 1.15vw, 23px); line-height: 1.25; overflo
 .when-date { color: var(--date-highlight); font-weight: 850; }
 .when-weekday, .when-time { color: var(--text); }
 
+.where {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .45rem .75rem;
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+.where-text {
+  flex: 1 1 16ch;
+  min-width: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.map-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .4em;
+  flex: 0 0 auto;
+  min-height: 34px;
+  padding: .42em .72em;
+  border: 1px solid var(--detail-border);
+  border-radius: 999px;
+  background: var(--panel);
+  color: var(--accent-soft);
+  font-size: clamp(11px, .78vw, 15px);
+  font-weight: 800;
+  line-height: 1.1;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background .2s ease, color .2s ease, transform .2s ease;
+}
+.map-link[hidden] { display: none; }
+.map-link svg {
+  width: 1.15em;
+  height: 1.15em;
+  flex: 0 0 auto;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.map-link:hover {
+  background: var(--control-hover-bg);
+  color: var(--link-hover);
+  transform: translateY(-1px);
+}
+.map-link:active { transform: translateY(0); }
+.map-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
 .footer { min-width: 0; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-top: .75rem; border-top: 1px solid var(--line); }
 .source-block { min-width: 0; overflow: hidden; }
 .source-label, .updated { margin: 0; color: var(--muted); font-size: clamp(10px, .75vw, 15px); }
@@ -440,6 +494,7 @@ dd { margin: 0; font-size: clamp(14px, 1.15vw, 23px); line-height: 1.25; overflo
   .details { margin-top: 10px; gap: 8px; }
   .details > div { padding: 8px 10px; }
   dd { font-size: 13px; }
+  .map-link { min-height: 28px; padding: .32em .58em; font-size: 11px; }
   .qr-code { width: 66px; height: 66px; }
   .footer { padding-top: 6px; }
 
