@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Janeiro a Dezembro de 2026",
-  "atualizado_em": "2026-07-26T13:06:40-03:00",
+  "atualizado_em": "2026-07-26T22:23:05-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -19,7 +19,11 @@
       "imagem": "https://ccbb-images-f6fvd8g2e5hjeubc.a03.azurefd.net/site-2025/2025/10/DSC052481-scaled.jpg",
       "link": "https://ccbb.com.br/belo-horizonte/programacao/exposicao-permanente/",
       "fonte": "CCBB Belo Horizonte",
-      "instituicao_id": "ccbb-bh"
+      "instituicao_id": "ccbb-bh",
+      "local_id": "ccbb-bh",
+      "endereco": "Praça da Liberdade, 450, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=CCBB+Belo+Horizonte%2C+Pra%C3%A7a+da+Liberdade%2C+450%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "2º andar"
     },
     {
       "id": "fcs-wp-36313",
@@ -57,26 +61,10 @@
       "fonte": "Fundação Clóvis Salgado",
       "instituicao_id": "fcs",
       "fonte_id": 36808,
-      "atualizado_na_fonte": "2026-06-30T17:39:02"
-    },
-    {
-      "id": "fcs-wp-36987",
-      "titulo": "17ª Mostra CHAMA – Permanências: Revisitar passados para construir futuros",
-      "data": "2026-06-26",
-      "data_fim": "2026-07-26",
-      "horario": "",
-      "local": "PQNA Galeria Pedro Moraleida",
-      "cidade": "Belo Horizonte",
-      "categoria": "Exposição",
-      "gratuito": true,
-      "inscricao": "Ingresso gratuito; consulte a página oficial",
-      "descricao": "Em 2026, o Palácio das Artes completa 55 anos. Enquanto quatro galerias do espaço exibem uma mostra com o acervo de artes visuais da Fundação Clóvis Salgado (FCS), instituição gestora do Palácio, a Escola de Artes Visuais do Centro de Formação Artística e Tecnológica (CEFART) da FCS inaugura a mostra “Chama”,",
-      "imagem": "https://fcs.mg.gov.br/wp-content/uploads/2026/06/1080-trio-2-1-1-1024x1024.png",
-      "link": "https://fcs.mg.gov.br/evento/17a-mostra-chama-permanencias-revisitar-passados-para-construir-futuros/",
-      "fonte": "Fundação Clóvis Salgado",
-      "instituicao_id": "fcs",
-      "fonte_id": 36987,
-      "atualizado_na_fonte": "2026-06-30T18:44:30"
+      "atualizado_na_fonte": "2026-06-30T17:39:02",
+      "local_id": "palacio-das-artes",
+      "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Pal%C3%A1cio+das+Artes%2C+Avenida+Afonso+Pena%2C+1537%2C+Centro%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "ccbb-bh-marcelo-xavier-asa-de-papel",
@@ -93,7 +81,11 @@
       "imagem": "https://ccbbstg.blob.core.windows.net/site-2025/2026/06/Asa-papel-scaled.png",
       "link": "https://ccbb.com.br/belo-horizonte/programacao/marcelo-xavier-asa-de-papel/",
       "fonte": "CCBB Belo Horizonte",
-      "instituicao_id": "ccbb-bh"
+      "instituicao_id": "ccbb-bh",
+      "local_id": "ccbb-bh",
+      "endereco": "Praça da Liberdade, 450, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=CCBB+Belo+Horizonte%2C+Pra%C3%A7a+da+Liberdade%2C+450%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Galerias do Térreo"
     },
     {
       "id": "ccbb-bh-joaquin-torres-garcia-150-anos",
@@ -110,7 +102,11 @@
       "imagem": "https://ccbbstg.blob.core.windows.net/site-2025/2026/06/Header-1024x841.png",
       "link": "https://ccbb.com.br/belo-horizonte/programacao/joaquin-torres-garcia-150-anos/",
       "fonte": "CCBB Belo Horizonte",
-      "instituicao_id": "ccbb-bh"
+      "instituicao_id": "ccbb-bh",
+      "local_id": "ccbb-bh",
+      "endereco": "Praça da Liberdade, 450, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=CCBB+Belo+Horizonte%2C+Pra%C3%A7a+da+Liberdade%2C+450%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Galerias do 3º andar e Pátio"
     },
     {
       "id": "fcs-wp-37031",
@@ -129,113 +125,11 @@
       "fonte": "Fundação Clóvis Salgado",
       "instituicao_id": "fcs",
       "fonte_id": 37031,
-      "atualizado_na_fonte": "2026-07-24T20:31:48"
-    },
-    {
-      "id": "ufmg-ec-observacao-solar-com-telescopios-domingo-8",
-      "titulo": "Observação Solar com Telescópios (domingo)",
-      "data": "2026-07-26",
-      "data_fim": "",
-      "horario": "10h30",
-      "local": "Espaço do Conhecimento UFMG – Terraço Astronômico",
-      "cidade": "Belo Horizonte",
-      "categoria": "Astronomia",
-      "gratuito": true,
-      "inscricao": "Retirada gratuita de ingresso online; consulte a página oficial",
-      "descricao": "A cada 15 minutos, um grupo de 17 pessoas tem acesso ao terraço para observar o astro-rei de forma segura com um telescópio equipado com um filtro especial e tirar suas dúvidas com os educadores que acompanham a atividade.",
-      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/05/Observacao-Solar-Divulgacao-Espaco-do-Conhecimento-UFMG-scaled.jpg",
-      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/observacao-solar-com-telescopios-domingo-8/",
-      "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg"
-    },
-    {
-      "id": "ufmg-ec-sessao-netuno-tea-era-uma-vez-no-ceu-andromeda-e-perseu-domingo-2",
-      "titulo": "Sessão Netuno (TEA) “Era Uma Vez no Céu: Andrômeda e Perseu” (domingo)",
-      "data": "2026-07-26",
-      "data_fim": "",
-      "horario": "14h",
-      "local": "Espaço do Conhecimento UFMG – Planetário",
-      "cidade": "Belo Horizonte",
-      "categoria": "Planetário",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": ": Sessão direcionada ao público infantil, com contação da história da princesa Andrômeda e do herói Perseu a partir de constelações que podem ser reconhecidas no céu noturno. Além disso, os planetas do Sistema Solar serão identificados da maneira como são vistos a olho nu da superfície terrestre,",
-      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2025/11/Era-Uma-Vez-no-Ceu-Andromeda-e-Perseu-Creditos-Fernando-Silva.png",
-      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/sessao-netuno-tea-era-uma-vez-no-ceu-andromeda-e-perseu-domingo-2/",
-      "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg"
-    },
-    {
-      "id": "ufmg-ec-visita-mediada-a-exposicao-demasiado-humano-domingo-2",
-      "titulo": "Visita mediada à exposição “demasiado humano” (domingo)",
-      "data": "2026-07-26",
-      "data_fim": "",
-      "horario": "15h",
-      "local": "Espaço do Conhecimento UFMG",
-      "cidade": "Belo Horizonte",
-      "categoria": "Visita guiada",
-      "gratuito": true,
-      "inscricao": "Ingresso gratuito emitido 2h antes da atividade",
-      "descricao": "A atividade consiste em um diálogo repleto de questionamentos e reflexões entre os visitantes e os mediadores do museu, ao longo da exposição de longa duração “demasiado humano”. Durante a visita, que abordará a origem da vida, a evolução e a trajetória humana na Terra,",
-      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/04/Visita-mediada-a-exposicao-demasiado-humano-Creditos-Julia-Lobato-Divulgacao-Espaco-do-Conhecimento-UFMG-1-scaled.jpg",
-      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/visita-mediada-a-exposicao-demasiado-humano-domingo-2/",
-      "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg"
-    },
-    {
-      "id": "ufmg-ec-sessao-netuno-tea-dois-pedacinhos-de-vidro-domingo-2",
-      "titulo": "Sessão Netuno (TEA) “Dois Pedacinhos de Vidro” (domingo)",
-      "data": "2026-07-26",
-      "data_fim": "",
-      "horario": "16h",
-      "local": "Espaço do Conhecimento UFMG – Planetário",
-      "cidade": "Belo Horizonte",
-      "categoria": "Planetário",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "A partir de uma noite de observação astronômica, o filme conta a história do telescópio, desde a luneta de Galileu até os modernos instrumentos de observação astronômicos. São apresentados os diversos tipos de telescópios, a partir do funcionamento e da observação que cada um permite,",
-      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2025/11/Dois-pedacinhos-de-vidro.jpg",
-      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/sessao-netuno-tea-dois-pedacinhos-de-vidro-domingo-2/",
-      "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg"
-    },
-    {
-      "id": "cine-santa-tereza-bileto-124079",
-      "titulo": "CINECLUBE LUMIÈRE - Calamity",
-      "data": "2026-07-26",
-      "data_fim": "",
-      "horario": "17h",
-      "local": "Cine Santa Tereza",
-      "cidade": "Belo Horizonte",
-      "categoria": "Cinema",
-      "gratuito": true,
-      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
-      "descricao": "Calamity (Rémi Chayé | França / Dinamarca | 2020 |Animação | 82 min | Legendado) Injustamente acusada de roubo, Martha é obrigada a fugir. Disfarçada de menino e em busca de provas de sua inocência, ela descobre um mundo em construção, onde sua personalidade única começa a se afirmar. Uma aventura repleta de perigos e encontros marcantes que, passo a passo, revelará a lendária Calamity Jane. Classificação indicativa: Livre",
-      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/36a1durmj7s5d78ps5j5gms0g74knd3ih8c9oade0g8mjsii9k7vmouq19oofd386in06g9sttmeofqsjgmcotap98ck8t7ul4o98au.jpeg",
-      "link": "https://bileto.sympla.com.br/event/124079/d/400759/s/2630608",
-      "fonte": "Cine Santa Tereza",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "fonte_id": "124079",
-      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte"
-    },
-    {
-      "id": "cine-santa-tereza-bileto-124072",
-      "titulo": "SENTIR, IMAGINAR, CONVIVER - Elio",
-      "data": "2026-07-26",
-      "data_fim": "",
-      "horario": "19h",
-      "local": "Cine Santa Tereza",
-      "cidade": "Belo Horizonte",
-      "categoria": "Cinema",
-      "gratuito": true,
-      "inscricao": "Ingressos on-line esgotados; há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade",
-      "descricao": "Elio (Adrian Molina/Madeline Sharafian/Domee Shi | EUA | 2025 | Animação/Fantasia | 98 min | Dublado) Elio, de onze anos, se vê transportado pela galáxia e confundido com o embaixador intergaláctico do planeta Terra. Classificação indicativa: livre",
-      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/3fltirn07rfb7b7l9n26knrjok0bd6os86vejadugdvs7dump9hi8i6rl9rivui7r27s1a6is5gg8kfbk7vtt60utcgpi00gbq91gn2.jpeg",
-      "link": "https://bileto.sympla.com.br/event/124072/d/400752/s/2630596",
-      "fonte": "Cine Santa Tereza",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "fonte_id": "124072",
-      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte"
+      "atualizado_na_fonte": "2026-07-24T20:31:48",
+      "local_id": "palacio-das-artes",
+      "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Pal%C3%A1cio+das+Artes%2C+Avenida+Afonso+Pena%2C+1537%2C+Centro%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Cine Humberto Mauro"
     },
     {
       "id": "ufmg-ec-oficina-tarde-de-jogos-terca-feira",
@@ -252,7 +146,10 @@
       "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/06/28.07-Oficina-Tarde-de-Jogos-Divulgacao-Espaco-do-Conhecimento-UFMG.png",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/oficina-tarde-de-jogos-terca-feira/",
       "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg"
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "cine-santa-tereza-bileto-124073",
@@ -271,7 +168,9 @@
       "fonte": "Cine Santa Tereza",
       "instituicao_id": "fundacao-municipal-cultura-bh",
       "fonte_id": "124073",
-      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte"
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Cine+Santa+Tereza%2C+Rua+Estrela+do+Sul%2C+89+%E2%80%93+Santa+Tereza%2C+Belo+Horizonte"
     },
     {
       "id": "fcs-wp-37198",
@@ -290,7 +189,10 @@
       "fonte": "Fundação Clóvis Salgado",
       "instituicao_id": "fcs",
       "fonte_id": 37198,
-      "atualizado_na_fonte": "2026-07-20T13:36:19"
+      "atualizado_na_fonte": "2026-07-20T13:36:19",
+      "local_id": "palacio-das-artes",
+      "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Pal%C3%A1cio+das+Artes%2C+Avenida+Afonso+Pena%2C+1537%2C+Centro%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "portal-bh-5170ac9d1ede-2026-07-29-1400",
@@ -319,7 +221,8 @@
         "Oficinas",
         "Artes Visuais",
         "Artes Plásticas"
-      ]
+      ],
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Arte+da+Pampulha+-+MAP%2C+Museu+de+Arte+da+Pampulha+-+Avenida+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+751+-+Pampulha%2C+Belo+Horizonte"
     },
     {
       "id": "ufmg-ec-oficina-costurando-dinossauros-brasileiros-quarta-feira",
@@ -336,7 +239,10 @@
       "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/05/Oficina-Costurando-Dinossauros-Brasileiros-Creditos-Vanessa-Lemos-Divulgacao-Espaco-do-Conhecimento-UFMG-scaled.jpg",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/oficina-costurando-dinossauros-brasileiros-quarta-feira/",
       "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg"
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "cine-santa-tereza-bileto-124487",
@@ -348,14 +254,16 @@
       "cidade": "Belo Horizonte",
       "categoria": "Cinema",
       "gratuito": true,
-      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial. Também há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade.",
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
       "descricao": "Sessão da Mostra Movimento no Cine Santa Tereza. Classificação indicativa: Livre. Consulte a programação completa e a disponibilidade de ingressos no link oficial.",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/am32g3h5deaolb056r4k1f3lbhamh4qdcsuomfphcirc01e4bsq1mon8nggrmimrkv808pgqp1icplsfqovpfk4tlsd560ldtr6445.webp",
       "link": "https://bileto.sympla.com.br/event/124487/d/402447/s/2637934",
       "fonte": "Cine Santa Tereza",
       "instituicao_id": "fundacao-municipal-cultura-bh",
       "fonte_id": "124487",
-      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte"
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Cine+Santa+Tereza%2C+Rua+Estrela+do+Sul%2C+89+%E2%80%93+Santa+Tereza%2C+Belo+Horizonte"
     },
     {
       "id": "cine-santa-tereza-bileto-124484",
@@ -374,7 +282,9 @@
       "fonte": "Cine Santa Tereza",
       "instituicao_id": "fundacao-municipal-cultura-bh",
       "fonte_id": "124484",
-      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte"
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Cine+Santa+Tereza%2C+Rua+Estrela+do+Sul%2C+89+%E2%80%93+Santa+Tereza%2C+Belo+Horizonte"
     },
     {
       "id": "portal-bh-1c8b319b382c-2026-07-30-1400",
@@ -404,7 +314,8 @@
         "Gratuito",
         "Oficinas",
         "Pampulha"
-      ]
+      ],
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Arte+da+Pampulha+-+MAP%2C+Jardim+do+Museu+de+Arte+da+Pampulha+-+Avenida+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+16585+-+Pampulha%2C+Belo+Horizonte"
     },
     {
       "id": "sympla-sabara-3489452",
@@ -441,7 +352,10 @@
       "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/06/30.07-Oficina-Evolucao-no-Mundo-Animal-Creditos-Ana-Valvassori-Divulgacao-Espaco-do-Conhecimento-UFMG-1-scaled.jpg",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/oficina-evolucao-no-mundo-animal-quinta-feira/",
       "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg"
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "cine-santa-tereza-bileto-124492",
@@ -453,14 +367,16 @@
       "cidade": "Belo Horizonte",
       "categoria": "Cinema",
       "gratuito": true,
-      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial. Também há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade.",
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
       "descricao": "Sessão da Mostra Movimento no Cine Santa Tereza. Classificação indicativa: Livre. Consulte a programação completa e a disponibilidade de ingressos no link oficial.",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/am32g3h5deaolb056r4k1f3lbhamh4qdcsuomfphcirc01e4bsq1mon8nggrmimrkv808pgqp1icplsfqovpfk4tlsd560ldtr6445.webp",
       "link": "https://bileto.sympla.com.br/event/124492/d/402452/s/2637944",
       "fonte": "Cine Santa Tereza",
       "instituicao_id": "fundacao-municipal-cultura-bh",
       "fonte_id": "124492",
-      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte"
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Cine+Santa+Tereza%2C+Rua+Estrela+do+Sul%2C+89+%E2%80%93+Santa+Tereza%2C+Belo+Horizonte"
     },
     {
       "id": "cine-santa-tereza-bileto-124485",
@@ -479,7 +395,9 @@
       "fonte": "Cine Santa Tereza",
       "instituicao_id": "fundacao-municipal-cultura-bh",
       "fonte_id": "124485",
-      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte"
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Cine+Santa+Tereza%2C+Rua+Estrela+do+Sul%2C+89+%E2%80%93+Santa+Tereza%2C+Belo+Horizonte"
     },
     {
       "id": "portal-bh-775f97bbfcfe-2026-07-30-2000",
@@ -507,7 +425,8 @@
         "Experiências",
         "Ingressos on-line",
         "Lançamentos"
-      ]
+      ],
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro-Sul%2C+Teatro+de+Bolso+Sesiminas+-+Rua+Padre+Marinho%2C+60+-+Santa+Efig%C3%AAnia%2C+Belo+Horizonte"
     },
     {
       "id": "fcs-wp-37108",
@@ -526,7 +445,11 @@
       "fonte": "Fundação Clóvis Salgado",
       "instituicao_id": "fcs",
       "fonte_id": 37108,
-      "atualizado_na_fonte": "2026-07-03T20:40:28"
+      "atualizado_na_fonte": "2026-07-03T20:40:28",
+      "local_id": "palacio-das-artes",
+      "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Pal%C3%A1cio+das+Artes%2C+Avenida+Afonso+Pena%2C+1537%2C+Centro%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Cine Humberto Mauro"
     },
     {
       "id": "portal-bh-3877151f55ac-2026-07-31-1400",
@@ -555,7 +478,8 @@
         "Oficinas",
         "Artes Visuais",
         "Artes Plásticas"
-      ]
+      ],
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Arte+da+Pampulha+-+MAP%2C+Museu+de+Arte+da+Pampulha+-+Avenida+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+16585+-+Pampulha%2C+Belo+Horizonte"
     },
     {
       "id": "ufmg-ec-oficina-como-o-aviao-voa-2",
@@ -572,7 +496,10 @@
       "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/06/31.07-Oficina-Como-o-Aviao-Voa_-Divulgacao-Espaco-do-Conhecimento-UFMG.jpg",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/oficina-como-o-aviao-voa-2/",
       "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg"
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "cine-santa-tereza-bileto-124493",
@@ -584,14 +511,16 @@
       "cidade": "Belo Horizonte",
       "categoria": "Cinema",
       "gratuito": true,
-      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial. Também há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade.",
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
       "descricao": "Sessão da Mostra Movimento no Cine Santa Tereza. Classificação indicativa: 14 anos. Consulte a programação completa e a disponibilidade de ingressos no link oficial.",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/am32g3h5deaolb056r4k1f3lbhamh4qdcsuomfphcirc01e4bsq1mon8nggrmimrkv808pgqp1icplsfqovpfk4tlsd560ldtr6445.webp",
       "link": "https://bileto.sympla.com.br/event/124493/d/402453/s/2637946",
       "fonte": "Cine Santa Tereza",
       "instituicao_id": "fundacao-municipal-cultura-bh",
       "fonte_id": "124493",
-      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte"
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Cine+Santa+Tereza%2C+Rua+Estrela+do+Sul%2C+89+%E2%80%93+Santa+Tereza%2C+Belo+Horizonte"
     },
     {
       "id": "cine-santa-tereza-bileto-124486",
@@ -610,7 +539,9 @@
       "fonte": "Cine Santa Tereza",
       "instituicao_id": "fundacao-municipal-cultura-bh",
       "fonte_id": "124486",
-      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte"
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Cine+Santa+Tereza%2C+Rua+Estrela+do+Sul%2C+89+%E2%80%93+Santa+Tereza%2C+Belo+Horizonte"
     },
     {
       "id": "ufmg-ec-oficina-fabrica-de-planetas-sabado",
@@ -627,7 +558,10 @@
       "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/06/01.08-Oficina-Fabrica-de-Planetas-Divulgacao-Espaco-do-Conhecimento-UFMG-scaled.jpg",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/oficina-fabrica-de-planetas-sabado/",
       "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg"
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "cine-santa-tereza-bileto-124488",
@@ -639,14 +573,16 @@
       "cidade": "Belo Horizonte",
       "categoria": "Cinema",
       "gratuito": true,
-      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial. Também há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade.",
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
       "descricao": "O que ela quiser (Pri Garcia | Brasil | 2026 | Documentário | 20 min) ‘’O Que Ela Quiser‘’ acompanha mulheres que transformam a palhaçaria em espaço de liberdade e criação, mostrando como o corpo que ri também denuncia, subverte e se reinventa. O documentário dá visibilidade às artistas que ocupam o circo e o humor, questionando o apagamento histórico, a sexualização e a falta de registros sobre suas trajetórias, tornando‐se um manifesto sobre presença, força e resistência.",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/3ntcuhbije3h9c51a70us4mull31mrcocjml0ar43m5vismbrsvv3rv4kcq313016nfnptb9dor40d15qdikjh9kvmau0or4qktntc8.webp",
       "link": "https://bileto.sympla.com.br/event/124488/d/402448/s/2637936",
       "fonte": "Cine Santa Tereza",
       "instituicao_id": "fundacao-municipal-cultura-bh",
       "fonte_id": "124488",
-      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte"
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Cine+Santa+Tereza%2C+Rua+Estrela+do+Sul%2C+89+%E2%80%93+Santa+Tereza%2C+Belo+Horizonte"
     },
     {
       "id": "cine-santa-tereza-bileto-124489",
@@ -658,14 +594,16 @@
       "cidade": "Belo Horizonte",
       "categoria": "Cinema",
       "gratuito": true,
-      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial. Também há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade.",
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
       "descricao": "Mambembe (Fábio Meira | Brasil | 2024 | Documentário | 98 min) “Mambembe” é um filme que retorna a uma filmagem feita em 2010. Acompanhando Ruy, um agrimensor solitário, durante uma de suas viagens para estudar Pernambuco, o longa retrata o seu encontro com três mulheres circenses. Madrinha, Jéssica e Diadorim são integrantes do circo Mambembe e a partir do cruzamento da história desses quatro personagens, é possível entender um pouco mais sobre a construção artística e as forças do destino. Classificação indicativa: Livre.",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/15mm2cqacrh7rah5cb3nok22hb89urb9u6d6gs9acimqr5hk2hbqlb5f0mvlmg9oqq604c6muo3j9gkj7hr04bc18u65j7qm4ebbpj0.webp",
       "link": "https://bileto.sympla.com.br/event/124489/d/402449/s/2637938",
       "fonte": "Cine Santa Tereza",
       "instituicao_id": "fundacao-municipal-cultura-bh",
       "fonte_id": "124489",
-      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte"
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Cine+Santa+Tereza%2C+Rua+Estrela+do+Sul%2C+89+%E2%80%93+Santa+Tereza%2C+Belo+Horizonte"
     },
     {
       "id": "ufmg-ec-observacao-noturna-dos-astros-com-telescopios-sabado-8",
@@ -682,7 +620,11 @@
       "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/03/Terraco-Astronomico-Obs-Noturna-Creditos_-Kayke-Quadros-Divulgacao-Espaco-do-Conhecimento-UFMG-scaled.jpg",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/observacao-noturna-dos-astros-com-telescopios-sabado-8/",
       "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg"
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Terraço Astronômico"
     },
     {
       "id": "ufmg-ec-observacao-solar-com-telescopios-domingo-9",
@@ -699,7 +641,11 @@
       "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/05/Observacao-Solar-Divulgacao-Espaco-do-Conhecimento-UFMG-scaled.jpg",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/observacao-solar-com-telescopios-domingo-9/",
       "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg"
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Terraço Astronômico"
     },
     {
       "id": "ufmg-ec-oficina-costurando-dinossauros-brasileiros-domingo",
@@ -716,7 +662,10 @@
       "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/05/Oficina-Costurando-Dinossauros-Brasileiros-Creditos-Vanessa-Lemos-Divulgacao-Espaco-do-Conhecimento-UFMG-scaled.jpg",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/oficina-costurando-dinossauros-brasileiros-domingo/",
       "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg"
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "cine-santa-tereza-bileto-124490",
@@ -728,14 +677,16 @@
       "cidade": "Belo Horizonte",
       "categoria": "Cinema",
       "gratuito": true,
-      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial. Também há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade.",
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
       "descricao": "O Palhaço (Selton Mello | Brasil | 2011 | Drama/Comédia | 88 min) Pai e filho trabalham como palhaços em um circo no interior do Brasil. Benjamin decide seguir um caminho diferente e encontra várias pessoas no processo. Classificação indicativa: 10 anos",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/ka95htbbm6j5o079hphdqeoorqjgbg7od397adkhrddu6joa8hci08su1nb4udft5th84c2leogbihs3h85ql7bb8btn0kjje0tkbo.webp",
       "link": "https://bileto.sympla.com.br/event/124490/d/402450/s/2637940",
       "fonte": "Cine Santa Tereza",
       "instituicao_id": "fundacao-municipal-cultura-bh",
       "fonte_id": "124490",
-      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte"
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Cine+Santa+Tereza%2C+Rua+Estrela+do+Sul%2C+89+%E2%80%93+Santa+Tereza%2C+Belo+Horizonte"
     },
     {
       "id": "cine-santa-tereza-bileto-124491",
@@ -747,14 +698,16 @@
       "cidade": "Belo Horizonte",
       "categoria": "Cinema",
       "gratuito": true,
-      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial. Também há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade.",
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
       "descricao": "O Circo (Charles Chaplin | EUA | 1928 | Comédia | 72 min) O vagabundo Carlitos é confundido com um ladrão e vai se refugiar num circo, onde se transforma na atração principal e revolta-se contra o tirânico proprietário do circo. Classificação indicativa: Livre.",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/34mdtd03t1jgk137f8vk96c17eprs50qod7p5sfu5np19svme1qmll0b0sin7e8sr8rlgldasndrn1bi54o5f2u4hv9dgstkptm2bta.jpeg",
       "link": "https://bileto.sympla.com.br/event/124491/d/402451/s/2637942",
       "fonte": "Cine Santa Tereza",
       "instituicao_id": "fundacao-municipal-cultura-bh",
       "fonte_id": "124491",
-      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte"
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Cine+Santa+Tereza%2C+Rua+Estrela+do+Sul%2C+89+%E2%80%93+Santa+Tereza%2C+Belo+Horizonte"
     },
     {
       "id": "cine-santa-tereza-bileto-124494",
@@ -766,14 +719,16 @@
       "cidade": "Belo Horizonte",
       "categoria": "Cinema",
       "gratuito": true,
-      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial. Também há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade.",
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
       "descricao": "MOSTRA LIQUIDIFICADOR CULTURAL A mostra “Liquidificador Cultural”é um evento que celebra a efervescência da produção audiovisual independente, reunindo uma seleção diversa de curtas-metragens, videoclipes e performances em sessão comentada. A programação apresenta trabalhos que transitam entre o experimental, o musical e o narrativo, com participações de artistas como Confeitaria, João Sentidor, Luísa Bahia, Nívea Sabino, Sick, JEZ, entre outros. Destaques incluem o clipe Anos 90, de Asa de Besouro, e a performance coreográfica Confluxo , criada colaborativamente com orientação de Guidá,",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/am32g3h5deaolb056r4k1f3lbhamh4qdcsuomfphcirc01e4bsq1mon8nggrmimrkv808pgqp1icplsfqovpfk4tlsd560ldtr6445.webp",
       "link": "https://bileto.sympla.com.br/event/124494/d/402454/s/2637948",
       "fonte": "Cine Santa Tereza",
       "instituicao_id": "fundacao-municipal-cultura-bh",
       "fonte_id": "124494",
-      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte"
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Cine+Santa+Tereza%2C+Rua+Estrela+do+Sul%2C+89+%E2%80%93+Santa+Tereza%2C+Belo+Horizonte"
     },
     {
       "id": "portal-bh-a29c176629fb-2026-08-06-2000",
@@ -800,7 +755,8 @@
         "Espetáculos cênicos",
         "Experiências",
         "Ingressos on-line"
-      ]
+      ],
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro-Sul%2C+Centro+Cultural+Sesiminas+-+Rua+Padre+Marinho%2C+60+-+Santa+Efig%C3%AAnia%2C+Belo+Horizonte"
     },
     {
       "id": "ufmg-ec-espaco-aberto-a-educadores-sabado",
@@ -817,7 +773,10 @@
       "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/07/08-e-12.08-Espaco-Aberto-a-Educadores-Divulgacao-Espaco-do-Conhecimento-UFMG-scaled.jpg",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/espaco-aberto-a-educadores-sabado/",
       "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg"
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "ufmg-ec-sabado-com-libras-visita-mediada-a-exposicao-demasiado-humano-sabado",
@@ -834,7 +793,10 @@
       "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/07/08.08-Sabado-com-Libras_-Visita-mediada-a-exposicao-demasiado-humano-Creditos-Julia-Lobato-Divulgacao-Espaco-do-Conhecimento-UFMG-scaled.jpg",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/sabado-com-libras-visita-mediada-a-exposicao-demasiado-humano-sabado/",
       "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg"
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "ufmg-ec-oficina-colecao-de-estrelas-sabado",
@@ -851,7 +813,10 @@
       "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/07/08.08-Oficina-Colecao-de-Estrelas-Divulgacao-Espaco-do-Conhecimento-UFMG-scaled.jpg",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/oficina-colecao-de-estrelas-sabado/",
       "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg"
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "ufmg-ec-observacao-noturna-dos-astros-com-telescopios-sabado-2",
@@ -868,7 +833,11 @@
       "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/03/Terraco-Astronomico-Obs-Noturna-Creditos_-Kayke-Quadros-Divulgacao-Espaco-do-Conhecimento-UFMG-scaled.jpg",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/observacao-noturna-dos-astros-com-telescopios-sabado-2/",
       "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg"
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Terraço Astronômico"
     },
     {
       "id": "ufmg-ec-observacao-solar-com-telescopios-domingo-2",
@@ -885,7 +854,11 @@
       "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/05/Observacao-Solar-Divulgacao-Espaco-do-Conhecimento-UFMG-scaled.jpg",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/observacao-solar-com-telescopios-domingo-2/",
       "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg"
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Terraço Astronômico"
     },
     {
       "id": "ufmg-ec-oficina-de-colagem-espaco-de-memorias-domingo-2",
@@ -902,7 +875,10 @@
       "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/07/09-e-23.08-Oficina-de-Colagem_-Espaco-de-Memorias-Divulgacao-Espaco-do-Conhecimento-UFMG-1-scaled.jpg",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/oficina-de-colagem-espaco-de-memorias-domingo-2/",
       "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg"
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "fcs-wp-37247",
@@ -921,7 +897,11 @@
       "fonte": "Fundação Clóvis Salgado",
       "instituicao_id": "fcs",
       "fonte_id": 37247,
-      "atualizado_na_fonte": "2026-07-24T19:58:54"
+      "atualizado_na_fonte": "2026-07-24T19:58:54",
+      "local_id": "palacio-das-artes",
+      "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Pal%C3%A1cio+das+Artes%2C+Avenida+Afonso+Pena%2C+1537%2C+Centro%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Cine Humberto Mauro"
     },
     {
       "id": "ufmg-ec-espaco-aberto-a-educadores-quarta-feira",
@@ -938,7 +918,10 @@
       "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/07/08-e-12.08-Espaco-Aberto-a-Educadores-Divulgacao-Espaco-do-Conhecimento-UFMG-scaled.jpg",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/espaco-aberto-a-educadores-quarta-feira/",
       "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg"
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "fcs-wp-37245",
@@ -957,7 +940,11 @@
       "fonte": "Fundação Clóvis Salgado",
       "instituicao_id": "fcs",
       "fonte_id": 37245,
-      "atualizado_na_fonte": "2026-07-24T19:55:33"
+      "atualizado_na_fonte": "2026-07-24T19:55:33",
+      "local_id": "palacio-das-artes",
+      "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Pal%C3%A1cio+das+Artes%2C+Avenida+Afonso+Pena%2C+1537%2C+Centro%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Cine Humberto Mauro"
     },
     {
       "id": "ufmg-ec-sabado-com-libras-a-comunicacao-com-surdos-nos-museus-sabado",
@@ -974,7 +961,10 @@
       "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/07/15.08-Sabado-com-Libras_-A-Comunicacao-com-Surdos-nos-Museus-Divulgacao-Espaco-do-Conhecimento-UFMG-scaled.jpeg",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/sabado-com-libras-a-comunicacao-com-surdos-nos-museus-sabado/",
       "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg"
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "ufmg-ec-observacao-noturna-dos-astros-com-telescopios-sabado-3",
@@ -991,7 +981,11 @@
       "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/03/Terraco-Astronomico-Obs-Noturna-Creditos_-Kayke-Quadros-Divulgacao-Espaco-do-Conhecimento-UFMG-scaled.jpg",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/observacao-noturna-dos-astros-com-telescopios-sabado-3/",
       "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg"
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Terraço Astronômico"
     },
     {
       "id": "ufmg-ec-observacao-solar-com-telescopios-domingo-3",
@@ -1008,7 +1002,11 @@
       "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/05/Observacao-Solar-Divulgacao-Espaco-do-Conhecimento-UFMG-scaled.jpg",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/observacao-solar-com-telescopios-domingo-3/",
       "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg"
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Terraço Astronômico"
     },
     {
       "id": "ufmg-ec-visita-mediada-a-exposicao-demasiado-humano-domingo",
@@ -1025,7 +1023,10 @@
       "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/07/16-22-e-30.08-Visita-mediada-a-exposicao-demasiado-humano-Creditos-Guilherme-Maciel-Divulgacao-Espaco-do-Conhecimento-UFMG-scaled.jpg",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/visita-mediada-a-exposicao-demasiado-humano-domingo/",
       "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg"
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "ufmg-ec-visita-mediada-a-exposicao-demasiado-humano-sabado",
@@ -1042,7 +1043,10 @@
       "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/07/16-22-e-30.08-Visita-mediada-a-exposicao-demasiado-humano-Creditos-Guilherme-Maciel-Divulgacao-Espaco-do-Conhecimento-UFMG-scaled.jpg",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/visita-mediada-a-exposicao-demasiado-humano-sabado/",
       "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg"
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "ufmg-ec-observacao-noturna-dos-astros-com-telescopios-sabado-4",
@@ -1059,7 +1063,11 @@
       "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/03/Terraco-Astronomico-Obs-Noturna-Creditos_-Kayke-Quadros-Divulgacao-Espaco-do-Conhecimento-UFMG-scaled.jpg",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/observacao-noturna-dos-astros-com-telescopios-sabado-4/",
       "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg"
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Terraço Astronômico"
     },
     {
       "id": "ufmg-ec-observacao-solar-com-telescopios-domingo-4",
@@ -1076,7 +1084,11 @@
       "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/05/Observacao-Solar-Divulgacao-Espaco-do-Conhecimento-UFMG-scaled.jpg",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/observacao-solar-com-telescopios-domingo-4/",
       "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg"
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Terraço Astronômico"
     },
     {
       "id": "ufmg-ec-oficina-de-colagem-espaco-de-memorias-domingo",
@@ -1093,7 +1105,10 @@
       "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/07/09-e-23.08-Oficina-de-Colagem_-Espaco-de-Memorias-Divulgacao-Espaco-do-Conhecimento-UFMG-1-1-scaled.jpg",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/oficina-de-colagem-espaco-de-memorias-domingo/",
       "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg"
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "ufmg-ec-oficina-desvendando-as-constelacoes-guarani-sabado",
@@ -1110,7 +1125,10 @@
       "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/07/29.08-Oficina-Desvendando-as-Constelacoes-Guarani-Divulgacao-Espaco-do-Conhecimento-UFMG-scaled.jpg",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/oficina-desvendando-as-constelacoes-guarani-sabado/",
       "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg"
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "ufmg-ec-observacao-noturna-dos-astros-com-telescopios-sabado-5",
@@ -1127,7 +1145,11 @@
       "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/03/Terraco-Astronomico-Obs-Noturna-Creditos_-Kayke-Quadros-Divulgacao-Espaco-do-Conhecimento-UFMG-scaled.jpg",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/observacao-noturna-dos-astros-com-telescopios-sabado-5/",
       "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg"
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Terraço Astronômico"
     },
     {
       "id": "ufmg-ec-observacao-solar-com-telescopios-domingo-5",
@@ -1144,7 +1166,11 @@
       "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/05/Observacao-Solar-Divulgacao-Espaco-do-Conhecimento-UFMG-scaled.jpg",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/observacao-solar-com-telescopios-domingo-5/",
       "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg"
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Terraço Astronômico"
     },
     {
       "id": "ufmg-ec-sessao-netuno-tea-era-uma-vez-no-ceu-andromeda-e-perseu-domingo",
@@ -1161,7 +1187,11 @@
       "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2025/11/Era-Uma-Vez-no-Ceu-Andromeda-e-Perseu-Creditos-Fernando-Silva.png",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/sessao-netuno-tea-era-uma-vez-no-ceu-andromeda-e-perseu-domingo/",
       "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg"
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Planetário"
     },
     {
       "id": "ufmg-ec-visita-mediada-a-exposicao-demasiado-humano-domingo-3",
@@ -1178,7 +1208,10 @@
       "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/07/16-22-e-30.08-Visita-mediada-a-exposicao-demasiado-humano-Creditos-Guilherme-Maciel-Divulgacao-Espaco-do-Conhecimento-UFMG-scaled.jpg",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/visita-mediada-a-exposicao-demasiado-humano-domingo-3/",
       "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg"
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "ufmg-ec-sessao-netuno-tea-dois-pedacinhos-de-vidro-domingo",
@@ -1195,7 +1228,11 @@
       "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2025/11/Dois-pedacinhos-de-vidro.jpg",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/sessao-netuno-tea-dois-pedacinhos-de-vidro-domingo/",
       "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg"
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Planetário"
     }
   ]
 }
