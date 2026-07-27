@@ -80,3 +80,9 @@ Na rotina recomendada, o GPT fornece uma URL externa no JSON. Se ela estiver vaz
 ## Localização no Google Maps
 
 O texto do campo `local` continua sendo exibido integralmente, inclusive quando informa piso, galeria, teatro ou outro espaço interno. Quando o campo `mapa` estiver preenchido com uma URL HTTP ou HTTPS válida, o bloco **Onde** exibirá o botão **Abrir no Google Maps**. Eventos sem esse campo continuam aparecendo normalmente, sem botão.
+
+## Ajuste de layout v35
+
+As caixas **Quando** e **Onde** comportam até três linhas. O botão **Abrir no
+Google Maps** fica em uma linha própria dentro da caixa **Onde**, sem reduzir a
+largura disponível para o nome do local.

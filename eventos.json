@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Janeiro a Dezembro de 2026",
-  "atualizado_em": "2026-07-26T22:23:05-03:00",
+  "atualizado_em": "2026-07-26T22:42:19-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -22,7 +22,7 @@
       "instituicao_id": "ccbb-bh",
       "local_id": "ccbb-bh",
       "endereco": "Praça da Liberdade, 450, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=CCBB+Belo+Horizonte%2C+Pra%C3%A7a+da+Liberdade%2C+450%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
+      "mapa": "https://maps.app.goo.gl/Q6UrZGKEn8eCx8Kb8",
       "espaco_interno": "2º andar"
     },
     {
@@ -42,7 +42,10 @@
       "fonte": "Fundação Clóvis Salgado",
       "instituicao_id": "fcs",
       "fonte_id": 36313,
-      "atualizado_na_fonte": "2026-06-12T21:44:56"
+      "atualizado_na_fonte": "2026-06-12T21:44:56",
+      "local_id": "camerasete",
+      "endereco": "Avenida Afonso Pena, 737, Centro, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/Ab3GCDUXaWph6oRs7"
     },
     {
       "id": "fcs-wp-36808",
@@ -64,7 +67,7 @@
       "atualizado_na_fonte": "2026-06-30T17:39:02",
       "local_id": "palacio-das-artes",
       "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Pal%C3%A1cio+das+Artes%2C+Avenida+Afonso+Pena%2C+1537%2C+Centro%2C+Belo+Horizonte+-+MG"
+      "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7"
     },
     {
       "id": "ccbb-bh-marcelo-xavier-asa-de-papel",
@@ -84,7 +87,7 @@
       "instituicao_id": "ccbb-bh",
       "local_id": "ccbb-bh",
       "endereco": "Praça da Liberdade, 450, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=CCBB+Belo+Horizonte%2C+Pra%C3%A7a+da+Liberdade%2C+450%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
+      "mapa": "https://maps.app.goo.gl/Q6UrZGKEn8eCx8Kb8",
       "espaco_interno": "Galerias do Térreo"
     },
     {
@@ -105,7 +108,7 @@
       "instituicao_id": "ccbb-bh",
       "local_id": "ccbb-bh",
       "endereco": "Praça da Liberdade, 450, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=CCBB+Belo+Horizonte%2C+Pra%C3%A7a+da+Liberdade%2C+450%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
+      "mapa": "https://maps.app.goo.gl/Q6UrZGKEn8eCx8Kb8",
       "espaco_interno": "Galerias do 3º andar e Pátio"
     },
     {
@@ -128,7 +131,7 @@
       "atualizado_na_fonte": "2026-07-24T20:31:48",
       "local_id": "palacio-das-artes",
       "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Pal%C3%A1cio+das+Artes%2C+Avenida+Afonso+Pena%2C+1537%2C+Centro%2C+Belo+Horizonte+-+MG",
+      "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
       "espaco_interno": "Cine Humberto Mauro"
     },
     {
@@ -149,7 +152,7 @@
       "instituicao_id": "espaco-conhecimento-ufmg",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
     },
     {
       "id": "cine-santa-tereza-bileto-124073",
@@ -170,7 +173,7 @@
       "fonte_id": "124073",
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Cine+Santa+Tereza%2C+Rua+Estrela+do+Sul%2C+89+%E2%80%93+Santa+Tereza%2C+Belo+Horizonte"
+      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88"
     },
     {
       "id": "fcs-wp-37198",
@@ -192,7 +195,7 @@
       "atualizado_na_fonte": "2026-07-20T13:36:19",
       "local_id": "palacio-das-artes",
       "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Pal%C3%A1cio+das+Artes%2C+Avenida+Afonso+Pena%2C+1537%2C+Centro%2C+Belo+Horizonte+-+MG"
+      "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7"
     },
     {
       "id": "portal-bh-5170ac9d1ede-2026-07-29-1400",
@@ -242,7 +245,7 @@
       "instituicao_id": "espaco-conhecimento-ufmg",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
     },
     {
       "id": "cine-santa-tereza-bileto-124487",
@@ -263,7 +266,7 @@
       "fonte_id": "124487",
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Cine+Santa+Tereza%2C+Rua+Estrela+do+Sul%2C+89+%E2%80%93+Santa+Tereza%2C+Belo+Horizonte"
+      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88"
     },
     {
       "id": "cine-santa-tereza-bileto-124484",
@@ -284,7 +287,7 @@
       "fonte_id": "124484",
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Cine+Santa+Tereza%2C+Rua+Estrela+do+Sul%2C+89+%E2%80%93+Santa+Tereza%2C+Belo+Horizonte"
+      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88"
     },
     {
       "id": "portal-bh-1c8b319b382c-2026-07-30-1400",
@@ -355,7 +358,7 @@
       "instituicao_id": "espaco-conhecimento-ufmg",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
     },
     {
       "id": "cine-santa-tereza-bileto-124492",
@@ -376,7 +379,7 @@
       "fonte_id": "124492",
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Cine+Santa+Tereza%2C+Rua+Estrela+do+Sul%2C+89+%E2%80%93+Santa+Tereza%2C+Belo+Horizonte"
+      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88"
     },
     {
       "id": "cine-santa-tereza-bileto-124485",
@@ -397,7 +400,7 @@
       "fonte_id": "124485",
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Cine+Santa+Tereza%2C+Rua+Estrela+do+Sul%2C+89+%E2%80%93+Santa+Tereza%2C+Belo+Horizonte"
+      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88"
     },
     {
       "id": "portal-bh-775f97bbfcfe-2026-07-30-2000",
@@ -426,7 +429,8 @@
         "Ingressos on-line",
         "Lançamentos"
       ],
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro-Sul%2C+Teatro+de+Bolso+Sesiminas+-+Rua+Padre+Marinho%2C+60+-+Santa+Efig%C3%AAnia%2C+Belo+Horizonte"
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro-Sul%2C+Teatro+de+Bolso+Sesiminas+-+Rua+Padre+Marinho%2C+60+-+Santa+Efig%C3%AAnia%2C+Belo+Horizonte",
+      "local_id": "centro-cultural-sesiminas-bh"
     },
     {
       "id": "fcs-wp-37108",
@@ -448,7 +452,7 @@
       "atualizado_na_fonte": "2026-07-03T20:40:28",
       "local_id": "palacio-das-artes",
       "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Pal%C3%A1cio+das+Artes%2C+Avenida+Afonso+Pena%2C+1537%2C+Centro%2C+Belo+Horizonte+-+MG",
+      "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
       "espaco_interno": "Cine Humberto Mauro"
     },
     {
@@ -499,7 +503,7 @@
       "instituicao_id": "espaco-conhecimento-ufmg",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
     },
     {
       "id": "cine-santa-tereza-bileto-124493",
@@ -520,7 +524,7 @@
       "fonte_id": "124493",
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Cine+Santa+Tereza%2C+Rua+Estrela+do+Sul%2C+89+%E2%80%93+Santa+Tereza%2C+Belo+Horizonte"
+      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88"
     },
     {
       "id": "cine-santa-tereza-bileto-124486",
@@ -541,7 +545,7 @@
       "fonte_id": "124486",
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Cine+Santa+Tereza%2C+Rua+Estrela+do+Sul%2C+89+%E2%80%93+Santa+Tereza%2C+Belo+Horizonte"
+      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88"
     },
     {
       "id": "ufmg-ec-oficina-fabrica-de-planetas-sabado",
@@ -561,7 +565,7 @@
       "instituicao_id": "espaco-conhecimento-ufmg",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
     },
     {
       "id": "cine-santa-tereza-bileto-124488",
@@ -582,7 +586,7 @@
       "fonte_id": "124488",
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Cine+Santa+Tereza%2C+Rua+Estrela+do+Sul%2C+89+%E2%80%93+Santa+Tereza%2C+Belo+Horizonte"
+      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88"
     },
     {
       "id": "cine-santa-tereza-bileto-124489",
@@ -603,7 +607,7 @@
       "fonte_id": "124489",
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Cine+Santa+Tereza%2C+Rua+Estrela+do+Sul%2C+89+%E2%80%93+Santa+Tereza%2C+Belo+Horizonte"
+      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88"
     },
     {
       "id": "ufmg-ec-observacao-noturna-dos-astros-com-telescopios-sabado-8",
@@ -623,7 +627,7 @@
       "instituicao_id": "espaco-conhecimento-ufmg",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
       "espaco_interno": "Terraço Astronômico"
     },
     {
@@ -644,7 +648,7 @@
       "instituicao_id": "espaco-conhecimento-ufmg",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
       "espaco_interno": "Terraço Astronômico"
     },
     {
@@ -665,7 +669,7 @@
       "instituicao_id": "espaco-conhecimento-ufmg",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
     },
     {
       "id": "cine-santa-tereza-bileto-124490",
@@ -686,7 +690,7 @@
       "fonte_id": "124490",
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Cine+Santa+Tereza%2C+Rua+Estrela+do+Sul%2C+89+%E2%80%93+Santa+Tereza%2C+Belo+Horizonte"
+      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88"
     },
     {
       "id": "cine-santa-tereza-bileto-124491",
@@ -707,7 +711,7 @@
       "fonte_id": "124491",
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Cine+Santa+Tereza%2C+Rua+Estrela+do+Sul%2C+89+%E2%80%93+Santa+Tereza%2C+Belo+Horizonte"
+      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88"
     },
     {
       "id": "cine-santa-tereza-bileto-124494",
@@ -728,7 +732,7 @@
       "fonte_id": "124494",
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Cine+Santa+Tereza%2C+Rua+Estrela+do+Sul%2C+89+%E2%80%93+Santa+Tereza%2C+Belo+Horizonte"
+      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88"
     },
     {
       "id": "portal-bh-a29c176629fb-2026-08-06-2000",
@@ -756,7 +760,8 @@
         "Experiências",
         "Ingressos on-line"
       ],
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro-Sul%2C+Centro+Cultural+Sesiminas+-+Rua+Padre+Marinho%2C+60+-+Santa+Efig%C3%AAnia%2C+Belo+Horizonte"
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro-Sul%2C+Centro+Cultural+Sesiminas+-+Rua+Padre+Marinho%2C+60+-+Santa+Efig%C3%AAnia%2C+Belo+Horizonte",
+      "local_id": "centro-cultural-sesiminas-bh"
     },
     {
       "id": "ufmg-ec-espaco-aberto-a-educadores-sabado",
@@ -776,7 +781,7 @@
       "instituicao_id": "espaco-conhecimento-ufmg",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
     },
     {
       "id": "ufmg-ec-sabado-com-libras-visita-mediada-a-exposicao-demasiado-humano-sabado",
@@ -796,7 +801,7 @@
       "instituicao_id": "espaco-conhecimento-ufmg",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
     },
     {
       "id": "ufmg-ec-oficina-colecao-de-estrelas-sabado",
@@ -816,7 +821,7 @@
       "instituicao_id": "espaco-conhecimento-ufmg",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
     },
     {
       "id": "ufmg-ec-observacao-noturna-dos-astros-com-telescopios-sabado-2",
@@ -836,7 +841,7 @@
       "instituicao_id": "espaco-conhecimento-ufmg",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
       "espaco_interno": "Terraço Astronômico"
     },
     {
@@ -857,7 +862,7 @@
       "instituicao_id": "espaco-conhecimento-ufmg",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
       "espaco_interno": "Terraço Astronômico"
     },
     {
@@ -878,7 +883,7 @@
       "instituicao_id": "espaco-conhecimento-ufmg",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
     },
     {
       "id": "fcs-wp-37247",
@@ -900,7 +905,7 @@
       "atualizado_na_fonte": "2026-07-24T19:58:54",
       "local_id": "palacio-das-artes",
       "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Pal%C3%A1cio+das+Artes%2C+Avenida+Afonso+Pena%2C+1537%2C+Centro%2C+Belo+Horizonte+-+MG",
+      "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
       "espaco_interno": "Cine Humberto Mauro"
     },
     {
@@ -921,7 +926,7 @@
       "instituicao_id": "espaco-conhecimento-ufmg",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
     },
     {
       "id": "fcs-wp-37245",
@@ -943,7 +948,7 @@
       "atualizado_na_fonte": "2026-07-24T19:55:33",
       "local_id": "palacio-das-artes",
       "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Pal%C3%A1cio+das+Artes%2C+Avenida+Afonso+Pena%2C+1537%2C+Centro%2C+Belo+Horizonte+-+MG",
+      "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
       "espaco_interno": "Cine Humberto Mauro"
     },
     {
@@ -964,7 +969,7 @@
       "instituicao_id": "espaco-conhecimento-ufmg",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
     },
     {
       "id": "ufmg-ec-observacao-noturna-dos-astros-com-telescopios-sabado-3",
@@ -984,7 +989,7 @@
       "instituicao_id": "espaco-conhecimento-ufmg",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
       "espaco_interno": "Terraço Astronômico"
     },
     {
@@ -1005,7 +1010,7 @@
       "instituicao_id": "espaco-conhecimento-ufmg",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
       "espaco_interno": "Terraço Astronômico"
     },
     {
@@ -1026,7 +1031,7 @@
       "instituicao_id": "espaco-conhecimento-ufmg",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
     },
     {
       "id": "ufmg-ec-visita-mediada-a-exposicao-demasiado-humano-sabado",
@@ -1046,7 +1051,7 @@
       "instituicao_id": "espaco-conhecimento-ufmg",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
     },
     {
       "id": "ufmg-ec-observacao-noturna-dos-astros-com-telescopios-sabado-4",
@@ -1066,7 +1071,7 @@
       "instituicao_id": "espaco-conhecimento-ufmg",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
       "espaco_interno": "Terraço Astronômico"
     },
     {
@@ -1087,7 +1092,7 @@
       "instituicao_id": "espaco-conhecimento-ufmg",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
       "espaco_interno": "Terraço Astronômico"
     },
     {
@@ -1108,7 +1113,7 @@
       "instituicao_id": "espaco-conhecimento-ufmg",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
     },
     {
       "id": "ufmg-ec-oficina-desvendando-as-constelacoes-guarani-sabado",
@@ -1128,7 +1133,7 @@
       "instituicao_id": "espaco-conhecimento-ufmg",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
     },
     {
       "id": "ufmg-ec-observacao-noturna-dos-astros-com-telescopios-sabado-5",
@@ -1148,7 +1153,7 @@
       "instituicao_id": "espaco-conhecimento-ufmg",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
       "espaco_interno": "Terraço Astronômico"
     },
     {
@@ -1169,7 +1174,7 @@
       "instituicao_id": "espaco-conhecimento-ufmg",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
       "espaco_interno": "Terraço Astronômico"
     },
     {
@@ -1190,7 +1195,7 @@
       "instituicao_id": "espaco-conhecimento-ufmg",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
       "espaco_interno": "Planetário"
     },
     {
@@ -1211,7 +1216,7 @@
       "instituicao_id": "espaco-conhecimento-ufmg",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
     },
     {
       "id": "ufmg-ec-sessao-netuno-tea-dois-pedacinhos-de-vidro-domingo",
@@ -1231,7 +1236,7 @@
       "instituicao_id": "espaco-conhecimento-ufmg",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+do+Conhecimento+UFMG%2C+Pra%C3%A7a+da+Liberdade%2C+700%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
       "espaco_interno": "Planetário"
     }
   ]
