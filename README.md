@@ -86,3 +86,11 @@ O texto do campo `local` continua sendo exibido integralmente, inclusive quando 
 As caixas **Quando** e **Onde** comportam até três linhas. O botão **Abrir no
 Google Maps** fica em uma linha própria dentro da caixa **Onde**, sem reduzir a
 largura disponível para o nome do local.
+
+## Dados corrigidos na v36
+
+O arquivo de demonstração passa a exibir corretamente `Fazenda Arraial Velho` e `Teatro de Bolso SESIMINAS`. O layout de três linhas para **Quando** e **Onde**, com o botão do Maps em linha própria, permanece o mesmo da v35.
+
+## Tema visual
+
+O site utiliza exclusivamente o tema **Original**. O seletor de tema foi removido da interface e preferências antigas salvas no navegador são descartadas ao carregar a página.
