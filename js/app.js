@@ -38,7 +38,8 @@
    * pois será comparada com o texto normalizado do campo "local".
    */
   const localImages = {
-    'cine santa tereza': 'imagens/CineSantaTerezaBH.png'
+    'cine santa tereza': 'imagens/CineSantaTerezaBH.png',
+    'ccbb-bh': 'imagens/CCBB_BH.png'
   };
 
   let state = {
