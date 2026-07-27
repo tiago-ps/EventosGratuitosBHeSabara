@@ -38,19 +38,27 @@
    * pois será comparada com o texto normalizado do campo "local".
    */
   const localImages = {
-    'cine santa tereza': 'imagens/CineSantaTerezaBH.png',
-    'ccbb-bh': 'imagens/CCBB_BH.png'
+    'cine santa tereza': 'imagens/CineSantaTerezaBH.png'
   };
 
   let state = {
     data: null,
+    allEvents: [],
     events: [],
     index: 0,
     timer: null,
     isPaused: false,
     btnNext: null,
     btnPrev: null,
-    btnPlayPause: null
+    btnPlayPause: null,
+    btnFilter: null,
+    filterOverlay: null,
+    filters: {
+      city: '',
+      category: '',
+      period: 'all',
+      rating: ''
+    }
   };
 
   function normalizeText(value = '') {
@@ -178,6 +186,91 @@
             'pt-BR'
           );
       });
+  }
+
+  function parseCalendarDate(value, endOfDay = false) {
+    const match = String(value || '').match(/^(\d{4})-(\d{2})-(\d{2})/);
+
+    if (!match) return null;
+
+    const date = new Date(
+      Number(match[1]),
+      Number(match[2]) - 1,
+      Number(match[3]),
+      endOfDay ? 23 : 0,
+      endOfDay ? 59 : 0,
+      endOfDay ? 59 : 0,
+      endOfDay ? 999 : 0
+    );
+
+    return Number.isNaN(date.getTime()) ? null : date;
+  }
+
+  function addCalendarDays(date, amount) {
+    const result = new Date(date);
+    result.setDate(result.getDate() + amount);
+    return result;
+  }
+
+  function eventIntersectsPeriod(event, rangeStart, rangeEnd) {
+    const eventStart = parseCalendarDate(event.data);
+    const eventEnd = parseCalendarDate(event.data_fim || event.data, true);
+
+    if (!eventStart || !eventEnd) return false;
+
+    return eventStart <= rangeEnd && eventEnd >= rangeStart;
+  }
+
+  function eventMatchesPeriod(event, period) {
+    if (!period || period === 'all') return true;
+
+    const today = todayAtMidnight();
+    let rangeStart = today;
+    let rangeEnd = new Date(today);
+    rangeEnd.setHours(23, 59, 59, 999);
+
+    if (period === 'tomorrow') {
+      rangeStart = addCalendarDays(today, 1);
+      rangeEnd = new Date(rangeStart);
+      rangeEnd.setHours(23, 59, 59, 999);
+    } else if (period === '7days') {
+      rangeEnd = addCalendarDays(today, 6);
+      rangeEnd.setHours(23, 59, 59, 999);
+    }
+
+    return eventIntersectsPeriod(event, rangeStart, rangeEnd);
+  }
+
+  function ratingFilterValue(value) {
+    const rating = normalizeRating(value);
+
+    if (!rating) return '';
+    if (rating.label === 'LIVRE') return 'livre';
+
+    return rating.label.match(/\d+/)?.[0] || '';
+  }
+
+  function applyUserFilters(events) {
+    const { city, category, period, rating } = state.filters;
+
+    return events.filter(event => {
+      if (city && normalizeText(event.cidade) !== city) return false;
+      if (category && normalizeText(event.categoria) !== category) return false;
+      if (rating && ratingFilterValue(event.classificacao_indicativa) !== rating) {
+        return false;
+      }
+
+      return eventMatchesPeriod(event, period);
+    });
+  }
+
+  function activeFilterCount() {
+    return [
+      state.filters.city,
+      state.filters.category,
+      state.filters.rating,
+      state.filters.period !== 'all' ? state.filters.period : ''
+    ].filter(Boolean).length;
   }
 
   // Em intervalos acima deste limite, os dias da semana são omitidos
@@ -468,7 +561,7 @@
     citiesTitleElement.hidden = !citiesTitle;
 
     slide.querySelector('.counter').textContent =
-      `${index + 1} / ${state.events.length}`;
+      `${index + 1} de ${state.events.length}`;
 
     slide.querySelector('.category').textContent =
       event.categoria || 'Evento';
@@ -739,9 +832,13 @@
     state.btnNext = slide.querySelector('.next-btn');
     state.btnPrev = slide.querySelector('.prev-btn');
     state.btnPlayPause = slide.querySelector('.play-pause-btn');
+    state.btnFilter = slide.querySelector('.filter-btn');
+    state.filterOverlay = slide.querySelector('.filter-overlay');
 
-    // Reconfigurar event listeners
+    // Reconfigurar controles e filtros após a troca do slide.
     setupControls();
+    setupFilterPanel(slide);
+    updateFilterButton();
     updatePlayPauseButton();
 
     scheduleNextSlide();
@@ -768,6 +865,175 @@
     }
   }
 
+  function updateFilterButton() {
+    if (!state.btnFilter) return;
+
+    const count = activeFilterCount();
+    const countElement = state.btnFilter.querySelector('.filter-count');
+    const description = count
+      ? `Filtrar eventos: ${count} filtro${count === 1 ? '' : 's'} ativo${count === 1 ? '' : 's'}`
+      : 'Filtrar eventos';
+
+    state.btnFilter.classList.toggle('has-filters', count > 0);
+    state.btnFilter.setAttribute('aria-label', description);
+    state.btnFilter.setAttribute('title', description);
+
+    if (countElement) {
+      countElement.textContent = String(count);
+      countElement.hidden = count === 0;
+    }
+  }
+
+  function uniqueFilterOptions(events, field) {
+    const values = new Map();
+
+    for (const event of events) {
+      const label = String(event[field] || '').trim();
+      const value = normalizeText(label);
+
+      if (label && value && !values.has(value)) {
+        values.set(value, label);
+      }
+    }
+
+    return [...values.entries()].sort((a, b) =>
+      a[1].localeCompare(b[1], 'pt-BR')
+    );
+  }
+
+  function populateDynamicSelect(select, firstLabel, options, selectedValue) {
+    if (!select) return;
+
+    select.replaceChildren();
+
+    const firstOption = document.createElement('option');
+    firstOption.value = '';
+    firstOption.textContent = firstLabel;
+    select.append(firstOption);
+
+    for (const [value, label] of options) {
+      const option = document.createElement('option');
+      option.value = value;
+      option.textContent = label;
+      select.append(option);
+    }
+
+    select.value = selectedValue || '';
+  }
+
+  function populateFilterPanel(slide) {
+    const citySelect = slide.querySelector('.filter-city');
+    const categorySelect = slide.querySelector('.filter-category');
+    const periodSelect = slide.querySelector('.filter-period');
+    const ratingSelect = slide.querySelector('.filter-rating');
+
+    populateDynamicSelect(
+      citySelect,
+      'Todas as cidades',
+      uniqueFilterOptions(state.allEvents, 'cidade'),
+      state.filters.city
+    );
+
+    populateDynamicSelect(
+      categorySelect,
+      'Todas as categorias',
+      uniqueFilterOptions(state.allEvents, 'categoria'),
+      state.filters.category
+    );
+
+    if (periodSelect) periodSelect.value = state.filters.period || 'all';
+    if (ratingSelect) ratingSelect.value = state.filters.rating || '';
+  }
+
+  function openFilterPanel() {
+    if (!state.filterOverlay || !state.btnFilter) return;
+
+    clearTimeout(state.timer);
+    state.filterOverlay.hidden = false;
+    state.btnFilter.setAttribute('aria-expanded', 'true');
+
+    const firstSelect = state.filterOverlay.querySelector('select');
+    window.setTimeout(() => firstSelect?.focus(), 0);
+  }
+
+  function closeFilterPanel() {
+    if (!state.filterOverlay || state.filterOverlay.hidden) return;
+
+    state.filterOverlay.hidden = true;
+    state.btnFilter?.setAttribute('aria-expanded', 'false');
+    state.btnFilter?.focus();
+
+    if (!state.isPaused) {
+      scheduleNextSlide();
+    }
+  }
+
+  function showFilteredEmpty() {
+    clearTimeout(state.timer);
+
+    app.innerHTML = `
+      <section class="empty filtered-empty">
+        <div>
+          <h1>Nenhum evento encontrado</h1>
+          <p>Não há eventos que correspondam aos filtros selecionados.</p>
+          <button class="empty-clear-filters" type="button">Limpar filtros</button>
+        </div>
+      </section>
+    `;
+
+    app.querySelector('.empty-clear-filters')?.addEventListener('click', () => {
+      state.filters = { city: '', category: '', period: 'all', rating: '' };
+      state.events = [...state.allEvents];
+      state.index = 0;
+      renderSlide(0);
+    });
+  }
+
+  function applyFiltersFromPanel() {
+    if (!state.filterOverlay) return;
+
+    state.filters = {
+      city: state.filterOverlay.querySelector('.filter-city')?.value || '',
+      category: state.filterOverlay.querySelector('.filter-category')?.value || '',
+      period: state.filterOverlay.querySelector('.filter-period')?.value || 'all',
+      rating: state.filterOverlay.querySelector('.filter-rating')?.value || ''
+    };
+
+    state.events = applyUserFilters(state.allEvents);
+    state.index = 0;
+
+    if (!state.events.length) {
+      showFilteredEmpty();
+      return;
+    }
+
+    renderSlide(0);
+  }
+
+  function clearUserFilters() {
+    state.filters = { city: '', category: '', period: 'all', rating: '' };
+    state.events = [...state.allEvents];
+    state.index = 0;
+    renderSlide(0);
+  }
+
+  function setupFilterPanel(slide) {
+    populateFilterPanel(slide);
+
+    const overlay = slide.querySelector('.filter-overlay');
+    const closeButton = slide.querySelector('.filter-close');
+    const applyButton = slide.querySelector('.filter-apply');
+    const clearButton = slide.querySelector('.filter-clear');
+
+    closeButton?.addEventListener('click', closeFilterPanel);
+    applyButton?.addEventListener('click', applyFiltersFromPanel);
+    clearButton?.addEventListener('click', clearUserFilters);
+
+    overlay?.addEventListener('click', event => {
+      if (event.target === overlay) closeFilterPanel();
+    });
+  }
+
   function setupControls() {
     // Remover listeners antigos para evitar duplicação
     if (state.btnNext) {
@@ -782,9 +1048,19 @@
       state.btnPlayPause.removeEventListener('click', togglePlayPause);
       state.btnPlayPause.addEventListener('click', togglePlayPause);
     }
+    if (state.btnFilter) {
+      state.btnFilter.removeEventListener('click', openFilterPanel);
+      state.btnFilter.addEventListener('click', openFilterPanel);
+    }
   }
 
   function handleKeyPress(event) {
+    if (state.filterOverlay && !state.filterOverlay.hidden && event.key === 'Escape') {
+      event.preventDefault();
+      closeFilterPanel();
+      return;
+    }
+
     // Verificar se o usuário está digitando em um input/textarea
     if (
       event.target.tagName === 'INPUT' ||
@@ -813,6 +1089,11 @@
       event.preventDefault();
       togglePlayPause();
     }
+    // Filtro
+    else if (key === 'f') {
+      event.preventDefault();
+      openFilterPanel();
+    }
   }
 
   async function load() {
@@ -835,7 +1116,8 @@
       }
 
       state.data = data;
-      state.events = filterAndSort(data.eventos);
+      state.allEvents = filterAndSort(data.eventos);
+      state.events = [...state.allEvents];
 
       if (!state.events.length) {
         showMessage(

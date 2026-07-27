@@ -111,3 +111,24 @@ Livre
 
 A badge é omitida quando a fonte não fornece classificação confiável. O site
 não tenta deduzir a faixa a partir do público-alvo descrito no evento.
+
+## Filtros e navegação — v40
+
+A contagem que antes aparecia ao lado do título do painel foi movida para os
+controles de navegação, entre as setas anterior e próxima:
+
+```text
+[Filtrar] [‹] 12 de 57 [›] [Pausar]
+```
+
+O botão de filtro abre um painel com quatro opções:
+
+- cidade;
+- categoria;
+- período: hoje, amanhã, próximos 7 dias ou todos;
+- classificação indicativa.
+
+Ao aplicar os filtros, a contagem e a rotação automática passam a considerar
+somente os eventos encontrados. O botão exibe a quantidade de filtros ativos.
+Enquanto o painel está aberto, a troca automática fica suspensa. Também é
+possível abrir o filtro pela tecla `F` e fechá-lo pela tecla `Esc`.

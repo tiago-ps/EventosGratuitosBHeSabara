@@ -27,10 +27,27 @@
         </div>
         <div class="media-overlay"></div>
         
-        <div class="controls">
+        <div class="controls" aria-label="Controles da apresentação">
+          <button
+            class="control-btn filter-btn"
+            aria-label="Filtrar eventos"
+            title="Filtrar eventos"
+            aria-expanded="false"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M4 5h16l-6.2 7.1v5.2l-3.6 1.8v-7L4 5Z"></path>
+            </svg>
+            <span class="filter-count" hidden></span>
+          </button>
           <button class="control-btn prev-btn" aria-label="Slide anterior" title="Anterior">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <div class="navigation-counter counter" aria-label="posição do evento"></div>
+          <button class="control-btn next-btn" aria-label="Próximo slide" title="Próximo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="9 18 15 12 9 6"></polyline>
             </svg>
           </button>
           <button class="control-btn play-pause-btn" aria-label="Pausar" title="Pausar">
@@ -40,11 +57,6 @@
             </svg>
             <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
               <polygon points="5 3 19 12 5 21 5 3"></polygon>
-            </svg>
-          </button>
-          <button class="control-btn next-btn" aria-label="Próximo slide" title="Próximo">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="9 18 15 12 9 6"></polyline>
             </svg>
           </button>
         </div>
@@ -57,9 +69,6 @@
               <span class="panel-title-main"></span>
               <span class="panel-title-cities"></span>
             </p>
-          </div>
-          <div class="topbar-actions">
-            <div class="counter" aria-label="posição do evento"></div>
           </div>
         </header>
 
@@ -132,6 +141,67 @@
             <span>Aponte a câmera</span>
           </div>
         </footer>
+      </div>
+
+      <div class="filter-overlay" hidden>
+        <section
+          class="filter-panel"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="filter-title"
+        >
+          <header class="filter-header">
+            <div>
+              <p class="filter-eyebrow">Refinar programação</p>
+              <h2 id="filter-title">Filtrar eventos</h2>
+            </div>
+            <button class="filter-close" type="button" aria-label="Fechar filtros" title="Fechar">×</button>
+          </header>
+
+          <div class="filter-grid">
+            <label>
+              <span>Cidade</span>
+              <select class="filter-city">
+                <option value="">Todas as cidades</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Categoria</span>
+              <select class="filter-category">
+                <option value="">Todas as categorias</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Período</span>
+              <select class="filter-period">
+                <option value="all">Todos os eventos futuros</option>
+                <option value="today">Hoje</option>
+                <option value="tomorrow">Amanhã</option>
+                <option value="7days">Próximos 7 dias</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Classificação indicativa</span>
+              <select class="filter-rating">
+                <option value="">Todas as classificações</option>
+                <option value="livre">Livre</option>
+                <option value="10">10 anos</option>
+                <option value="12">12 anos</option>
+                <option value="14">14 anos</option>
+                <option value="16">16 anos</option>
+                <option value="18">18 anos</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="filter-actions">
+            <button class="filter-clear" type="button">Limpar filtros</button>
+            <button class="filter-apply" type="button">Aplicar filtros</button>
+          </div>
+        </section>
       </div>
 
       <div class="progress" aria-hidden="true"><span></span></div>
