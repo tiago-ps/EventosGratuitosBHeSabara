@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Janeiro a Dezembro de 2026",
-  "atualizado_em": "2026-07-28T03:26:35-03:00",
+  "atualizado_em": "2026-07-28T08:43:55-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -450,7 +450,7 @@
       "cidade": "Belo Horizonte",
       "categoria": "Teatro",
       "gratuito": true,
-      "inscricao": "Ingressos gratuitos disponíveis on-line, conforme disponibilidade",
+      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial e na bilheteria do espaço.",
       "descricao": "A CONFISSÃO DE LEONTINA LEONTINA Circulação Após o sucesso da primeira temporada de circulação pela Bahia, o monólogo \"A Confissão de Leontina\" segue em viagem pelo Brasil. Desta vez, com 20 apresentações gratuitas em estados das regiões Nordeste e Sudeste. Do texto de Lygia Fagundes Telles (1918-2022), uma das maiores escritoras da literatura brasileira, o espetáculo é interpretado por Rose Irene Visitação, sob direção de Karina de Faria. Em cena, a obra propõe uma reflexão profunda e sensível sobre invisibilidade feminina e a naturalização da violência contra a mulher.",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/19clj25tedajlrjihg6fdivtgg9l1aiqgoflbbi5fg09r4qpjad3m1h9fnmeg0keek62qa272lcojri9b74boelkgg9bfatp1fv5v5u.jpeg",
       "link": "https://bileto.sympla.com.br/event/123723/d/399402/s/2626359",
@@ -846,7 +846,7 @@
       "cidade": "Belo Horizonte",
       "categoria": "Cinema",
       "gratuito": true,
-      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial. Também há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade.",
       "descricao": "MOSTRA LIQUIDIFICADOR CULTURAL A mostra “Liquidificador Cultural”é um evento que celebra a efervescência da produção audiovisual independente, reunindo uma seleção diversa de curtas-metragens, videoclipes e performances em sessão comentada. A programação apresenta trabalhos que transitam entre o experimental, o musical e o narrativo, com participações de artistas como Confeitaria, João Sentidor, Luísa Bahia, Nívea Sabino, Sick, JEZ, entre outros. Destaques incluem o clipe Anos 90, de Asa de Besouro, e a performance coreográfica Confluxo , criada colaborativamente com orientação de Guidá,",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/am32g3h5deaolb056r4k1f3lbhamh4qdcsuomfphcirc01e4bsq1mon8nggrmimrkv808pgqp1icplsfqovpfk4tlsd560ldtr6445.webp",
       "link": "https://bileto.sympla.com.br/event/124494/d/402454/s/2637948",
@@ -868,7 +868,7 @@
       "cidade": "Belo Horizonte",
       "categoria": "Teatro",
       "gratuito": true,
-      "inscricao": "Ingressos gratuitos on-line esgotados; consulte a bilheteria e o link oficial para verificar eventual disponibilidade",
+      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial e na bilheteria do espaço.",
       "descricao": "Espetáculo \"Farewell” Sinopse: Maria Lúcia do Amparo, professora de inglês aposentada, descobre ter pouco tempo de vida e faz ao filho um último pedido: assistir pela primeira vez a um concerto de orquestra. A partir desse desejo, o espetáculo reúne uma coleção de personagens, seus momentos de vida e como cada um resolve se despedir. Organizada em uma série de quadros que alternam cenas ao vivo e projeções cinematográficas, a montagem é resultado do Ateliê de Montagem: Entre Teatro e Cinema , laboratório que reuniu 22 atores e atrizes sob a condução de Bárbara Colen e Vinícius de Souza.",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/lbq7bq92rrkadebn9jm3e4l8bhimguhvuau4orkqttjhsmiedaivhpioo4rcld0bhf483o2sr03pfs2it2910kiuf6cb1jtn4nuqbe.webp",
       "link": "https://bileto.sympla.com.br/event/123626/d/399186/s/2625853",
@@ -928,7 +928,7 @@
       "cidade": "Belo Horizonte",
       "categoria": "Festival",
       "gratuito": true,
-      "inscricao": "Ingressos gratuitos disponíveis on-line, conforme disponibilidade",
+      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial e na bilheteria do espaço.",
       "descricao": "Nome do evento: Board Game na Biblioteca SESIMINAS Data: 08/08/2026 Horário: 14h às 19h Idade: a partir de 16 anos SINOPSE SESIMINAS, BG Mulheres BH e Brechó Lúdico te convidam para um dia de jogos de tabuleiro na biblioteca! Teremos jogos para iniciantes ou experientes! Por ser um evento voltado às mulheres, a regra para pegar ingresso é a seguinte: - Mulheres cis/trans, pessoas não binárias: entrada liberada. - Homens: entrada apenas se convidados por uma das pessoas acima citadas. Não esqueçam de levar comida e bebida para compartilhar! Qualquer dúvida,",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/2e477sjrl8s89url1f92boguprok79drg1s552c3qu50sk8s8ibgju339vgo0aqgq5m48t8kavkaq56upq3bucbtr09p5u7h0e06r2.jpeg",
       "link": "https://bileto.sympla.com.br/event/124448/d/402353/s/2637643",
@@ -1024,7 +1024,8 @@
       "endereco": "Parque Ana Lúcia, Sabará - MG",
       "fonte": "Cadastro manual",
       "instituicao_id": "",
-      "local_id": ""
+      "local_id": "",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Parque+Ana+L%C3%BAcia%2C+Sabar%C3%A1+-+MG"
     },
     {
       "id": "ufmg-ec-observacao-solar-com-telescopios-domingo-2",
@@ -1433,7 +1434,7 @@
       "cidade": "Belo Horizonte",
       "categoria": "Teatro",
       "gratuito": true,
-      "inscricao": "Ingressos gratuitos disponíveis on-line, conforme disponibilidade",
+      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial e na bilheteria do espaço.",
       "descricao": "Festival SESI em Cena apresenta GAMBIARRA , espetáculo celebra o funk como linguagem de invenção e resistência, memória e afeto A 3ª edição do Festival SESI em Cena recebe, no dia 26 de setembro, no Teatro SESIMINAS, o espetáculo GAMBIARRA , criação dirigida por Léo Garcia que faz do funk, da dança e da palavra um território de invenção, memória e celebração da vida. Partindo da ideia da gambiarra como gesto de criação e sobrevivência, o espetáculo desloca o sentido da palavra para refletir sobre a capacidade de reinventar caminhos diante das dificuldades. Em cena, improviso,",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/cgbna6q40m4vl37r2qe9qfb10isvarjb2b7j5v8fdmh1ptl3sl5ob2hoqs19mj37079j2o7bcu418pk2e0j3t81g87jtguhv756rp6.jpeg",
       "link": "https://bileto.sympla.com.br/event/122927/d/395491/s/2607841",
