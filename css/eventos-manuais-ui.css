@@ -1,0 +1,58 @@
+/* Períodos de inscrição e atividade em eventos manuais ou não padronizados. */
+.details > .registration-period-card {
+  min-height: clamp(138px, 15vh, 176px);
+}
+
+.when.when-registration {
+  display: block;
+  overflow: visible;
+  -webkit-line-clamp: unset;
+  font-size: clamp(13px, 1.02vw, 20px);
+  line-height: 1.2;
+}
+
+.registration-period,
+.activity-period,
+.activity-period-line,
+.activity-period-schedule {
+  display: block;
+}
+
+.activity-period {
+  margin-top: .48rem;
+  padding-top: .42rem;
+  border-top: 1px solid var(--detail-border);
+}
+
+.activity-period-label {
+  color: var(--detail-heading);
+  font-size: .72em;
+  font-weight: 850;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.activity-period-value {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.activity-period-schedule {
+  margin-top: .18rem;
+  color: var(--text);
+}
+
+@media (min-aspect-ratio: 5/4) and (max-height: 650px) {
+  .details > .registration-period-card {
+    min-height: 122px;
+  }
+
+  .when.when-registration {
+    font-size: 12px;
+  }
+
+  .activity-period {
+    margin-top: .32rem;
+    padding-top: .3rem;
+  }
+}
