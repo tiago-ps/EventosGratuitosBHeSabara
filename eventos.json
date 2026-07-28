@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Janeiro a Dezembro de 2026",
-  "atualizado_em": "2026-07-28T02:37:53-03:00",
+  "atualizado_em": "2026-07-28T03:26:35-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -1000,6 +1000,31 @@
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
       "espaco_interno": "Terraço Astronômico"
+    },
+    {
+      "id": "manual-larga-o-verbo-de-cor-de-quebra-2026-08-08",
+      "titulo": "Larga o Verbo: De Cor & de Quebra",
+      "tipo_data": "evento",
+      "data": "2026-08-08",
+      "data_fim": "",
+      "periodo_atividade": "",
+      "horario": "A partir das 14h",
+      "local": "Parque Ana Lúcia",
+      "espaco_interno": "",
+      "cidade": "Sabará",
+      "categoria": "Festival",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; não foi informada necessidade de inscrição",
+      "descricao": "Evento de cultura hip-hop com a primeira Batalha de Rima Escrita de Minas Gerais, shows, batalha em Libras, pocket show, feira de empreendedorismo e área destinada a crianças e famílias.",
+      "imagem": "imagens/eventos-manuais/larga-o-verbo-de-cor-de-quebra.png",
+      "pagina": "https://www.instagram.com/p/DbGS-kxRQrr/",
+      "link_inscricao": "",
+      "link": "https://www.instagram.com/p/DbGS-kxRQrr/",
+      "classificacao_indicativa": "",
+      "endereco": "Parque Ana Lúcia, Sabará - MG",
+      "fonte": "Cadastro manual",
+      "instituicao_id": "",
+      "local_id": ""
     },
     {
       "id": "ufmg-ec-observacao-solar-com-telescopios-domingo-2",
