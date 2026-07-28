@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Janeiro a Dezembro de 2026",
-  "atualizado_em": "2026-07-27T15:21:07-03:00",
+  "atualizado_em": "2026-07-27T23:04:39-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -167,7 +167,7 @@
       "cidade": "Belo Horizonte",
       "categoria": "Cinema",
       "gratuito": true,
-      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial. Também há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade.",
       "descricao": "Nosferatu (Robert Eggers | EUA | 2024 | Terror | 132 min | Legendado) Na Alemanha de 1800, o rico e misterioso Conde Orlok busca um novo lar. O vendedor de imóveis Thomas Hutter fica responsável por conduzir os negócios de Orlok e, então, viaja para as montanhas da Transilvânia para prosseguir com as burocracias da nova propriedade do nobre. O que Thomas não esperava era encontrar o mal encarnado. Todos ao seu redor lhe indicam abandonar suas viagens, enquanto, longe dali, Ellen é continuamente perturbada por sonhos assustadores.",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/281d2jcojdeagukieh9fjdk970vjejr2cnol7meh7eb9bmj5jbiukluf3q2meftich84i9uaafhen1j1pn5daiqupt7pl0kkqnulmd3.webp",
       "link": "https://bileto.sympla.com.br/event/124073/d/400753/s/2630598",
@@ -262,7 +262,7 @@
       "cidade": "Belo Horizonte",
       "categoria": "Cinema",
       "gratuito": true,
-      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial. Também há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade.",
       "descricao": "Sessão da Mostra Movimento no Cine Santa Tereza. Classificação indicativa: Livre. Consulte a programação completa e a disponibilidade de ingressos no link oficial.",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/am32g3h5deaolb056r4k1f3lbhamh4qdcsuomfphcirc01e4bsq1mon8nggrmimrkv808pgqp1icplsfqovpfk4tlsd560ldtr6445.webp",
       "link": "https://bileto.sympla.com.br/event/124487/d/402447/s/2637934",
@@ -284,7 +284,7 @@
       "cidade": "Belo Horizonte",
       "categoria": "Cinema",
       "gratuito": true,
-      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial. Também há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade.",
       "descricao": "As Crônicas de Nárnia: O Leão, a Feiticeira e o Guarda-Roupa (Andrew Adamson | EUA | 2005 | Aventura | 143 min | Dublado) Durante a Segunda Guerra Mundial, os irmãos Pevensie deixam Londres para viver em uma pequena cidade com um professor. Enquanto exploram sua mansão, eles descobrem uma passagem secreta em um guarda-roupas, que dá acesso ao mundo de Nárnia. Classificação indicativa: 10 anos",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/3v19jb5robenomhcrn2eoajd7blaptb2fq980klfj7c5nioophnj0evhmrqticvciueb66tqc1rbi8o3v5tdfrj80ictep3bu5oll0e.webp",
       "link": "https://bileto.sympla.com.br/event/124484/d/402444/s/2637928",
@@ -402,7 +402,7 @@
       "cidade": "Belo Horizonte",
       "categoria": "Cinema",
       "gratuito": true,
-      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial. Também há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade.",
       "descricao": "As Crônicas de Nárnia: Príncipe Caspian (Andrew Adamson | EUA | 2008 | Aventura | 150 min | Dublado) Os irmãos Pevensie, após um ano, retornam à Nárnia, onde passaram mais de 1300 anos desde sua última visita. A terra agora está sob o domínio de Miraz, que procura impedir a ascensão do verdadeiro herdeiro do trono, o príncipe Caspian. Classificação indicativa: 10 anos",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/3u4tnhq9nv074p77hbuiq2n5jculjb7d332u30a6gi6so1gbajglidf7a39ndcr9frns86ksv48n5lrrbnedara1rsftab06kob4uf8.jpeg",
       "link": "https://bileto.sympla.com.br/event/124485/d/402445/s/2637930",
@@ -419,7 +419,7 @@
       "titulo": "A confissão de Leontina",
       "data": "2026-07-30",
       "data_fim": "",
-      "horario": "20h",
+      "horario": "20h às 21h",
       "local": "Teatro de Bolso",
       "cidade": "Belo Horizonte",
       "categoria": "Teatro",
@@ -434,7 +434,26 @@
       "endereco": "Rua Padre Marinho, 60 – Belo Horizonte – Minas Gerais",
       "classificacao_indicativa": "12 anos",
       "local_id": "centro-cultural-sesiminas-bh",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+SESIMINAS+BH%2C+Rua+Padre+Marinho%2C+60+%E2%80%93+Belo+Horizonte+%E2%80%93+Minas+Gerais"
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+SESIMINAS+BH%2C+Rua+Padre+Marinho%2C+60+%E2%80%93+Belo+Horizonte+%E2%80%93+Minas+Gerais",
+      "link_inscricao": "https://bileto.sympla.com.br/event/123723/d/399402/s/2626359",
+      "pagina": "https://portalbelohorizonte.com.br/2026/eventos/espetaculo/artes-cenicas/espetaculo-confissao-de-leontina",
+      "tags_fonte": [
+        "Acessibilidade",
+        "Artes Cênicas",
+        "Cultural",
+        "Espetáculos cênicos",
+        "Experiências",
+        "Ingressos on-line",
+        "Lançamentos"
+      ],
+      "fontes": [
+        "Centro Cultural SESIMINAS BH",
+        "Portal Belo Horizonte"
+      ],
+      "ids_mesclados": [
+        "sesiminas-bh-bileto-123723",
+        "portal-bh-775f97bbfcfe-2026-07-30-2000"
+      ]
     },
     {
       "id": "fcs-wp-37108",
@@ -533,6 +552,35 @@
       "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88"
     },
     {
+      "id": "portal-bh-6042d8031ac4-2026-07-31-1700",
+      "titulo": "Casa 360º",
+      "data": "2026-07-31",
+      "data_fim": "",
+      "horario": "17h às 18h",
+      "local": "Casa do Baile",
+      "cidade": "Belo Horizonte",
+      "categoria": "Música",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "E que tal desbravar novos espaços e ângulos da Casa do Baile - Centro de Referência de Arquitetura, Urbanismo e Design , para usufruir de uma das vistas mais exuberantes para a Lagoa da Pampulha? É o que propõe o projeto “Casa 360º ”, que acontece em duas edições especiais no mês de julho, nos dias 17 e 31, das 17h às 18h.",
+      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-07/fotos-para-site-formato-440x225-7.png",
+      "link": "https://portalbelohorizonte.com.br/museuspampulha/2026/eventos/apresentacao-artistica/musica/casa-360o",
+      "fonte": "Portal Belo Horizonte",
+      "fonte_id": "6042d8031ac4",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "endereco": "Avenida Otacílio Negrão de Lima, 751 - Pampulha",
+      "tags_fonte": [
+        "Gratuito",
+        "Cultura PBH",
+        "Pampulha",
+        "Cultural",
+        "Música",
+        "Experiências"
+      ],
+      "classificacao_indicativa": "Livre",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+do+Baile%2C+Avenida+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+751+-+Pampulha%2C+Belo+Horizonte"
+    },
+    {
       "id": "cine-santa-tereza-bileto-124486",
       "titulo": "ESPECIAL HISTÓRIAS FANTÁSTICAS - As Crônicas de Nárnia: A Viagem do Peregrino da Alvorada",
       "data": "2026-07-31",
@@ -542,7 +590,7 @@
       "cidade": "Belo Horizonte",
       "categoria": "Cinema",
       "gratuito": true,
-      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial. Também há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade.",
       "descricao": "As Crônicas de Nárnia: A Viagem do Peregrino da Alvorada (Michael Apted | EUA | 2010 | Aventura | 113 min | Dublado) Quando Lúcia e Edmundo Pevensie, acompanhados por seu primo Eustáquio, são transportados para Nárnia, eles se juntam ao Rei Caspian a bordo do navio O Peregrino da Alvorada e partem em uma missão que decidirá o destino da própria Nárnia. Classificação indicativa: 10 anos",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/bius4ti7fg2q46r1k5eoqqdl6qh5i50q262d0om2ouip91p5nq03poi82kffcr31ekgh8qt6klb649jf19mp0f121rfljf96vq1hik.webp",
       "link": "https://bileto.sympla.com.br/event/124486/d/402446/s/2637932",
@@ -649,7 +697,7 @@
       "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88"
     },
     {
-      "id": "ufmg-ec-observacao-noturna-dos-astros-com-telescopios-sabado-8",
+      "id": "ufmg-ec-observacao-noturna-dos-astros-com-telescopios-sabado",
       "titulo": "Observação Noturna dos Astros com Telescópios (sábado)",
       "data": "2026-08-01",
       "data_fim": "",
@@ -661,7 +709,7 @@
       "inscricao": "Retirada gratuita de ingresso online; consulte a página oficial",
       "descricao": "A cada 15 minutos, um grupo de 17 pessoas tem acesso ao terraço para observar nos telescópios e tirar suas dúvidas com os educadores que acompanham a atividade.",
       "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/03/Terraco-Astronomico-Obs-Noturna-Creditos_-Kayke-Quadros-Divulgacao-Espaco-do-Conhecimento-UFMG-scaled.jpg",
-      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/observacao-noturna-dos-astros-com-telescopios-sabado-8/",
+      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/observacao-noturna-dos-astros-com-telescopios-sabado/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg",
       "local_id": "espaco-conhecimento-ufmg",
@@ -688,7 +736,15 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "espaco_interno": "Terraço Astronômico"
+      "espaco_interno": "Terraço Astronômico",
+      "pagina": "https://www.ufmg.br/espacodoconhecimento/programacao/observacao-solar-com-telescopios-domingo-9/",
+      "fontes": [
+        "Espaço do Conhecimento UFMG"
+      ],
+      "ids_mesclados": [
+        "ufmg-ec-observacao-solar-com-telescopios-domingo-9",
+        "ufmg-ec-observacao-solar-com-telescopios-domingo"
+      ]
     },
     {
       "id": "ufmg-ec-oficina-costurando-dinossauros-brasileiros-domingo",
@@ -781,7 +837,7 @@
       "titulo": "Espetáculo \"Farewell”",
       "data": "2026-08-06",
       "data_fim": "",
-      "horario": "20h",
+      "horario": "20h às 21h30",
       "local": "Centro Cultural SESIMINAS",
       "cidade": "Belo Horizonte",
       "categoria": "Teatro",
@@ -796,26 +852,9 @@
       "endereco": "Rua Padre Marinho,60 – Belo Horizonte – Minas Gerais",
       "classificacao_indicativa": "16 anos",
       "local_id": "centro-cultural-sesiminas-bh",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+SESIMINAS+BH%2C+Rua+Padre+Marinho%2C60+%E2%80%93+Belo+Horizonte+%E2%80%93+Minas+Gerais"
-    },
-    {
-      "id": "portal-bh-a29c176629fb-2026-08-06-2000",
-      "titulo": "Espetáculo: Farewell",
-      "data": "2026-08-06",
-      "data_fim": "",
-      "horario": "20h às 21h30",
-      "local": "Centro Cultural Sesiminas",
-      "cidade": "Belo Horizonte",
-      "categoria": "Teatro",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "O espetáculo teatral e cinematográfico \"Farewell\" estreia no dia 6 de agosto de 2026, às 20h, no Teatro SESIMINAS, em Belo Horizonte. A montagem é o resultado prático da segunda edição do Ateliê de Montagem: Entre Teatro e Cinema, curso de formação e experimentação oferecido pela Escola SENAI do Audiovisual.",
-      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-07/8rtbrffm2lpolaj9r2t7sc3hnp5bufvvvj377l8131khvs2re14eot2jqmiq0ombhevvp6vad5qgqpj7r1n2ft7bqim2rfnm0vnpvf.jpg",
-      "link": "https://portalbelohorizonte.com.br/2026/eventos/espetaculo/artes-cenicas/espetaculo-farewell",
-      "fonte": "Portal Belo Horizonte",
-      "fonte_id": "a29c176629fb",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "endereco": "Rua Padre Marinho, 60 - Santa Efigênia",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+SESIMINAS+BH%2C+Rua+Padre+Marinho%2C60+%E2%80%93+Belo+Horizonte+%E2%80%93+Minas+Gerais",
+      "link_inscricao": "https://bileto.sympla.com.br/event/123626/d/399186/s/2625853",
+      "pagina": "https://portalbelohorizonte.com.br/2026/eventos/espetaculo/artes-cenicas/espetaculo-farewell",
       "tags_fonte": [
         "Acessibilidade",
         "Artes Cênicas",
@@ -824,8 +863,14 @@
         "Experiências",
         "Ingressos on-line"
       ],
-      "local_id": "centro-cultural-sesiminas-bh",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+SESIMINAS+BH%2C+Rua+Padre+Marinho%2C+60+-+Santa+Efig%C3%AAnia%2C+Belo+Horizonte"
+      "fontes": [
+        "Centro Cultural SESIMINAS BH",
+        "Portal Belo Horizonte"
+      ],
+      "ids_mesclados": [
+        "sesiminas-bh-bileto-123626",
+        "portal-bh-a29c176629fb-2026-08-06-2000"
+      ]
     },
     {
       "id": "ufmg-ec-espaco-aberto-a-educadores-sabado",
