@@ -43,6 +43,17 @@
     'cine santa tereza': 'imagens/CineSantaTerezaBH.png'
   };
 
+  /*
+   * Imagens padrão por programa.
+   *
+   * São usadas quando o evento não possui imagem própria e o local também
+   * não possui uma imagem padrão cadastrada.
+   */
+  const programImages = {
+    'escola livre de artes arena da cultura':
+      'imagens/eventos-manuais/escola-livre-de-artes.png'
+  };
+
   let state = {
     data: null,
     allEvents: [],
@@ -143,6 +154,22 @@
 
     for (const [localName, imagePath] of Object.entries(localImages)) {
       if (local.includes(localName)) {
+        return imagePath;
+      }
+    }
+
+    return '';
+  }
+
+  function getProgramImage(event) {
+    const program = normalizeText(event.programa);
+
+    if (!program) {
+      return '';
+    }
+
+    for (const [programName, imagePath] of Object.entries(programImages)) {
+      if (program.includes(programName)) {
         return imagePath;
       }
     }
@@ -346,6 +373,16 @@
 
     return events.filter(event => {
       if (event.exibicao_por_filtro === false) return false;
+
+      /*
+       * O registro geral da Escola Livre descreve todas as áreas oferecidas.
+       * Em filtros temáticos, porém, devem aparecer apenas as atividades
+       * específicas daquela área, e não o slide institucional do programa.
+       */
+      if (category && event.tipo_registro === 'programa_escola_livre') {
+        return false;
+      }
+
       if (city && normalizeText(event.cidade) !== city) return false;
       if (!categoryMatches(event, category)) return false;
       if (program && normalizeText(eventProgram(event)) !== program) return false;
@@ -847,7 +884,9 @@
       image.alt =
         imageType === 'event'
           ? `Imagem de divulgação: ${event.titulo}`
-          : `Imagem do local: ${event.local || event.titulo}`;
+          : imageType === 'program'
+            ? `Imagem do programa: ${event.programa || event.titulo}`
+            : `Imagem do local: ${event.local || event.titulo}`;
 
       image.referrerPolicy =
         imageType === 'event'
@@ -871,50 +910,48 @@
     }
 
     const localImage = getLocalImage(event);
+    const programImage = getProgramImage(event);
+    const fallbackImage = localImage || programImage;
+    const fallbackImageType = localImage ? 'local' : 'program';
 
     if (event.imagem) {
       image.onerror = () => {
         image.removeAttribute('src');
 
         /*
-         * Se a imagem específica do evento falhar,
-         * tenta a imagem padrão do local.
+         * Se a imagem específica do evento falhar, tenta primeiro a imagem
+         * padrão do local e, na falta dela, a imagem padrão do programa.
          */
-        if (localImage) {
+        if (fallbackImage) {
           image.onerror = () => {
             image.removeAttribute('src');
             showIframe();
           };
 
-          loadImage(localImage, 'local');
+          loadImage(fallbackImage, fallbackImageType);
           return;
         }
 
-        /*
-         * Sem imagem padrão do local,
-         * tenta abrir a página oficial.
-         */
         showIframe();
       };
 
       loadImage(event.imagem, 'event');
 
-    } else if (localImage) {
+    } else if (fallbackImage) {
       /*
-       * Quando não há imagem específica do evento,
-       * usa primeiro a imagem padrão do local.
+       * Sem imagem específica, usa a imagem padrão do local ou do programa.
        */
       image.onerror = () => {
         image.removeAttribute('src');
         showIframe();
       };
 
-      loadImage(localImage, 'local');
+      loadImage(fallbackImage, fallbackImageType);
 
     } else {
       /*
-       * Sem imagem do evento e sem imagem do local,
-       * tenta incorporar a página oficial.
+       * Sem imagem do evento, do local ou do programa, tenta incorporar a
+       * página oficial.
        */
       showIframe();
     }
