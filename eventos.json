@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Janeiro a Dezembro de 2026",
-  "atualizado_em": "2026-07-28T23:24:27-03:00",
+  "atualizado_em": "2026-07-29T02:43:52-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -63,12 +63,14 @@
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-lindeia-regina",
       "grupo_rotativo": "escola_livre_unidades",
       "exibicao_padrao": true,
       "exibicao_por_filtro": false,
       "instagram_perfil": "centroculturallindeiaregina",
-      "instagram_url": "https://www.instagram.com/centroculturallindeiaregina/"
+      "instagram_url": "https://www.instagram.com/centroculturallindeiaregina/",
+      "endereco": "Rua Aristolino Basílio de Oliveira, 445, Regina, Belo Horizonte - MG, 30692-190",
+      "mapa": "https://maps.app.goo.gl/NbE1w2tMKeH6P3Lm8"
     },
     {
       "id": "ela-programa-2026-2",
@@ -352,7 +354,7 @@
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "classificacao_indicativa": "Livre",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88"
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
     {
       "id": "cine-santa-tereza-bileto-124484",
@@ -374,7 +376,7 @@
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "classificacao_indicativa": "10 anos",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88"
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
     {
       "id": "portal-bh-1c8b319b382c-2026-07-30-1400",
@@ -470,7 +472,7 @@
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "classificacao_indicativa": "Livre",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88"
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
     {
       "id": "cine-santa-tereza-bileto-124485",
@@ -492,7 +494,7 @@
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "classificacao_indicativa": "10 anos",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88"
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
     {
       "id": "sesiminas-bh-bileto-123723",
@@ -631,7 +633,7 @@
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "classificacao_indicativa": "14 anos",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88"
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
     {
       "id": "portal-bh-6042d8031ac4-2026-07-31-1700",
@@ -682,7 +684,7 @@
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "classificacao_indicativa": "10 anos",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88"
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
     {
       "id": "portal-bh-775f97bbfcfe-2026-07-31-2000",
@@ -715,48 +717,6 @@
       ],
       "local_id": "centro-cultural-sesiminas-bh",
       "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+SESIMINAS+BH%2C+Rua+Padre+Marinho%2C+60+-+Santa+Efig%C3%AAnia%2C+Belo+Horizonte"
-    },
-    {
-      "id": "sympla-sabara-3519363",
-      "titulo": "DIA D | Formação Continuada dos Agentes de Merenda Escolar",
-      "data": "2026-07-31",
-      "data_fim": "",
-      "horario": "8h00 às 8h20",
-      "local": "E M Construtor Joaquim Borges",
-      "cidade": "Sabará",
-      "categoria": "Curso",
-      "gratuito": true,
-      "inscricao": "Inscrição gratuita pela Sympla; consulte disponibilidade",
-      "descricao": "P R O G R A M A Ç Ã O 8h00 às 8h20: Acolhida /Lanche/ Assinatura da lista de presença 8h20 às 8h50: Apresentação do Conselho de Alimentação Escolar de Sabará (CAE) Palestrante: Liliane Viana Lima – Presidente do CAE-Sabará 8h50 às 9h50: A importância do Programa Nacional de Alimentação Escolar (PNAE) nas Escolas e o…",
-      "imagem": "https://images.sympla.com.br/6a68c96600b23-lg.png",
-      "link": "https://www.sympla.com.br/evento/dia-d-formacao-continuada-dos-agentes-de-merenda-escolar/3519363",
-      "fonte": "Sympla — evento em Sabará",
-      "instituicao_id": "",
-      "fonte_id": "3519363",
-      "organizador": "",
-      "endereco": "Rua Diamante, 108 Carvalho de Brito, Sabará, MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=E+M+Construtor+Joaquim+Borges%2C+Rua+Diamante%2C+108+Carvalho+de+Brito%2C+Sabar%C3%A1%2C+MG"
-    },
-    {
-      "id": "sympla-sabara-3519328",
-      "titulo": "DIA D - Formação Continuada dos Agentes de Apoio à Educação Infantil",
-      "data": "2026-07-31",
-      "data_fim": "",
-      "horario": "8h30 às 8h50",
-      "local": "Centro Cultural José da Costa Sepúlveda (Cine-Teatro Bandeirante)",
-      "cidade": "Sabará",
-      "categoria": "Curso",
-      "gratuito": true,
-      "inscricao": "Inscrição gratuita pela Sympla; consulte disponibilidade",
-      "descricao": "PROGRAMAÇÃO:8h30 às 8h50 — Credenciamento, acolhimento e coffee breakRecepção dos participantes e abertura institucional.9h às 10h — Prevenção de Engasgos e Desobstrução das Vias Aéreas e Protocolos de Saúde no Ambiente EscolarPalestrante: Érica Moreira de Souza — Enfermeira do Programa Saúde da Família…",
-      "imagem": "https://images.sympla.com.br/6a68cc751c55e-lg.png",
-      "link": "https://www.sympla.com.br/evento/dia-d-formacao-continuada-dos-agentes-de-apoio-a-educacao-infantil/3519328",
-      "fonte": "Sympla — evento em Sabará",
-      "instituicao_id": "",
-      "fonte_id": "3519328",
-      "organizador": "",
-      "endereco": "Rua Luís Cassiano, 60 Centro, Sabará, MG",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+Jos%C3%A9+da+Costa+Sep%C3%BAlveda+%28Cine-Teatro+Bandeirante%29%2C+Rua+Lu%C3%ADs+Cassiano%2C+60+Centro%2C+Sabar%C3%A1%2C+MG"
     },
     {
       "id": "ufmg-ec-oficina-fabrica-de-planetas-sabado",
@@ -798,7 +758,7 @@
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "classificacao_indicativa": "12 anos",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88"
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
     {
       "id": "cine-santa-tereza-bileto-124489",
@@ -820,7 +780,7 @@
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "classificacao_indicativa": "Livre",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88"
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
     {
       "id": "ufmg-ec-observacao-noturna-dos-astros-com-telescopios-sabado",
@@ -912,7 +872,7 @@
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "classificacao_indicativa": "10 anos",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88"
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
     {
       "id": "cine-santa-tereza-bileto-124491",
@@ -934,7 +894,7 @@
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "classificacao_indicativa": "Livre",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88"
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
     {
       "id": "ela-unidade-centro-cultural-usina-de-cultura",
@@ -974,12 +934,14 @@
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-usina-de-cultura",
       "grupo_rotativo": "escola_livre_unidades",
       "exibicao_padrao": true,
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
-      "instagram_url": ""
+      "instagram_url": "",
+      "endereco": "Rua Dom Cabral, 765, Ipiranga, Belo Horizonte - MG, 31160-150",
+      "mapa": "https://maps.app.goo.gl/Da4tniDGCdhMExeY9"
     },
     {
       "id": "ela-brincadeiras-circenses-praticas-e-criacoes-juvenis-7c47756cce",
@@ -1009,14 +971,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-usina-de-cultura",
       "unidade": "Centro Cultural Usina de Cultura",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "Crianças de 11 a 13 anos"
+      "idade_publico": "Crianças de 11 a 13 anos",
+      "endereco": "Rua Dom Cabral, 765, Ipiranga, Belo Horizonte - MG, 31160-150",
+      "mapa": "https://maps.app.goo.gl/Da4tniDGCdhMExeY9"
     },
     {
       "id": "cine-santa-tereza-bileto-124494",
@@ -1038,7 +1002,7 @@
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "classificacao_indicativa": "Livre",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88"
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
     {
       "id": "ela-unidade-nucleo-de-formacao-e-criacao-artistica-e-cultural-nufac",
@@ -1094,12 +1058,15 @@
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "nufac",
       "grupo_rotativo": "escola_livre_unidades",
       "exibicao_padrao": true,
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
-      "instagram_url": ""
+      "instagram_url": "",
+      "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
+      "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
     },
     {
       "id": "ela-ciclo-de-expansao-modulo-i-78dc521ed1",
@@ -1129,14 +1096,17 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "nufac",
       "unidade": "Núcleo de Formação e Criação Artística e Cultural (NUFAC)",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
+      "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
     },
     {
       "id": "ela-unidade-centro-cultural-sao-bernardo",
@@ -1178,12 +1148,14 @@
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-sao-bernardo",
       "grupo_rotativo": "escola_livre_unidades",
       "exibicao_padrao": true,
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
-      "instagram_url": ""
+      "instagram_url": "",
+      "endereco": "Rua Édna Quintel, 320, São Bernardo, Belo Horizonte - MG, 31750-030",
+      "mapa": "https://maps.app.goo.gl/Yufimrb872nmXa4s9"
     },
     {
       "id": "ela-unidade-centro-cultural-zilah-sposito",
@@ -1225,12 +1197,14 @@
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-zilah-sposito",
       "grupo_rotativo": "escola_livre_unidades",
       "exibicao_padrao": true,
       "exibicao_por_filtro": false,
       "instagram_perfil": "centroculturalzilahsposito",
-      "instagram_url": "https://www.instagram.com/centroculturalzilahsposito/"
+      "instagram_url": "https://www.instagram.com/centroculturalzilahsposito/",
+      "endereco": "Rua Carnaúba, 286, Zilah Spósito, Belo Horizonte - MG, 31787-210",
+      "mapa": "https://maps.app.goo.gl/hTZMNcQSzknYzSRx7"
     },
     {
       "id": "ela-encontros-para-dancar-em-dialogo-com-saberes-ancestrais-2b3263ef42",
@@ -1260,14 +1234,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-sao-bernardo",
       "unidade": "Centro Cultural São Bernardo",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Rua Édna Quintel, 320, São Bernardo, Belo Horizonte - MG, 31750-030",
+      "mapa": "https://maps.app.goo.gl/Yufimrb872nmXa4s9"
     },
     {
       "id": "ela-oficina-basica-de-musica-94a9e11d19",
@@ -1297,14 +1273,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-zilah-sposito",
       "unidade": "Centro Cultural Zilah Spósito",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Rua Carnaúba, 286, Zilah Spósito, Belo Horizonte - MG, 31787-210",
+      "mapa": "https://maps.app.goo.gl/hTZMNcQSzknYzSRx7"
     },
     {
       "id": "ela-ciclo-expansao-modulo-corpo-787ea7d17f",
@@ -1334,14 +1312,17 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "nufac",
       "unidade": "Núcleo de Formação e Criação Artística e Cultural (NUFAC)",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
+      "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
     },
     {
       "id": "ela-ciclo-expansao-modulo-corpo-52b53e6cfb",
@@ -1371,14 +1352,17 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "nufac",
       "unidade": "Núcleo de Formação e Criação Artística e Cultural (NUFAC)",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
+      "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
     },
     {
       "id": "sesiminas-bh-bileto-123626",
@@ -1630,12 +1614,14 @@
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-jardim-guanabara",
       "grupo_rotativo": "escola_livre_unidades",
       "exibicao_padrao": true,
       "exibicao_por_filtro": false,
       "instagram_perfil": "centroculturaljardimguanabara",
-      "instagram_url": "https://www.instagram.com/centroculturaljardimguanabara/"
+      "instagram_url": "https://www.instagram.com/centroculturaljardimguanabara/",
+      "endereco": "Rua João Álvares Cabral, 277, Jardim Guanabara, Belo Horizonte - MG, 31742-170",
+      "mapa": "https://maps.app.goo.gl/eCATveDGRuNKYLof9"
     },
     {
       "id": "ela-curso-de-longa-duracao-ciclo-i-modulo-ii-076cced98b",
@@ -1665,14 +1651,17 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "nufac",
       "unidade": "Núcleo de Formação e Criação Artística e Cultural (NUFAC)",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
+      "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
     },
     {
       "id": "ela-ciclo-de-poeticas-modulo-residencia-ii-e74468cfb7",
@@ -1702,14 +1691,17 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "nufac",
       "unidade": "Núcleo de Formação e Criação Artística e Cultural (NUFAC)",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 16 anos"
+      "idade_publico": "A partir de 16 anos",
+      "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
+      "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
     },
     {
       "id": "ela-2-pra-la-1-pra-ca-456b85f080",
@@ -1739,14 +1731,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-jardim-guanabara",
       "unidade": "Centro Cultural Jardim Guanabara",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Rua João Álvares Cabral, 277, Jardim Guanabara, Belo Horizonte - MG, 31742-170",
+      "mapa": "https://maps.app.goo.gl/eCATveDGRuNKYLof9"
     },
     {
       "id": "fcs-wp-37247",
@@ -1811,12 +1805,14 @@
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-urucuia",
       "grupo_rotativo": "escola_livre_unidades",
       "exibicao_padrao": true,
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
-      "instagram_url": ""
+      "instagram_url": "",
+      "endereco": "Rua W-3, 500, Pongelupe, Belo Horizonte - MG, 30628-175",
+      "mapa": "https://maps.app.goo.gl/Uq5R3PNvQBrdWSnT9"
     },
     {
       "id": "ela-literatura-e-oralidade-popular-968a50341d",
@@ -1846,14 +1842,17 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "nufac",
       "unidade": "Núcleo de Formação e Criação Artística e Cultural (NUFAC)",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
+      "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
     },
     {
       "id": "ela-encontros-para-dancar-530cc07633",
@@ -1883,14 +1882,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-urucuia",
       "unidade": "Centro Cultural Urucuia",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Rua W-3, 500, Pongelupe, Belo Horizonte - MG, 30628-175",
+      "mapa": "https://maps.app.goo.gl/Uq5R3PNvQBrdWSnT9"
     },
     {
       "id": "ufmg-ec-espaco-aberto-a-educadores-quarta-feira",
@@ -1978,12 +1979,14 @@
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-liberalino-alves-de-oliveira",
       "grupo_rotativo": "escola_livre_unidades",
       "exibicao_padrao": true,
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
-      "instagram_url": ""
+      "instagram_url": "",
+      "endereco": "Avenida Presidente Antônio Carlos, 821, Lagoinha, Belo Horizonte - MG, 31110-314",
+      "mapa": "https://maps.app.goo.gl/59216yGPUBfMrKVa9"
     },
     {
       "id": "ela-unidade-centro-cultural-vila-marcola",
@@ -2029,12 +2032,14 @@
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-vila-marcola",
       "grupo_rotativo": "escola_livre_unidades",
       "exibicao_padrao": true,
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
-      "instagram_url": ""
+      "instagram_url": "",
+      "endereco": "Rua Mangabeira da Serra, 320, Marçola, Belo Horizonte - MG, 30220-265",
+      "mapa": "https://maps.app.goo.gl/CqmZC29eVpYZdKzFA"
     },
     {
       "id": "ela-fotografia-e-outras-janelas-para-ver-o-mundo-ebab07d61e",
@@ -2065,14 +2070,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-zilah-sposito",
       "unidade": "Centro Cultural Zilah Spósito",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "Crianças entre 10 e 13 anos"
+      "idade_publico": "Crianças entre 10 e 13 anos",
+      "endereco": "Rua Carnaúba, 286, Zilah Spósito, Belo Horizonte - MG, 31787-210",
+      "mapa": "https://maps.app.goo.gl/hTZMNcQSzknYzSRx7"
     },
     {
       "id": "ela-encontros-para-dancar-f4bb1e2327",
@@ -2102,14 +2109,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-vila-marcola",
       "unidade": "Centro Cultural Vila Marçola",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de14 anos"
+      "idade_publico": "A partir de14 anos",
+      "endereco": "Rua Mangabeira da Serra, 320, Marçola, Belo Horizonte - MG, 30220-265",
+      "mapa": "https://maps.app.goo.gl/CqmZC29eVpYZdKzFA"
     },
     {
       "id": "ela-encontros-para-dancar-413a0b6aad",
@@ -2139,14 +2148,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-liberalino-alves-de-oliveira",
       "unidade": "Centro Cultural Liberalino Alves de Oliveira",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Avenida Presidente Antônio Carlos, 821, Lagoinha, Belo Horizonte - MG, 31110-314",
+      "mapa": "https://maps.app.goo.gl/59216yGPUBfMrKVa9"
     },
     {
       "id": "ela-unidade-centro-cultural-salgado-filho",
@@ -2189,12 +2200,14 @@
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-salgado-filho",
       "grupo_rotativo": "escola_livre_unidades",
       "exibicao_padrao": true,
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
-      "instagram_url": ""
+      "instagram_url": "",
+      "endereco": "Rua Nova Ponte, 22, Salgado Filho, Belo Horizonte - MG, 30550-720",
+      "mapa": "https://maps.app.goo.gl/xqnT1A9TWbQdY2wE8"
     },
     {
       "id": "ela-descobrindo-a-palhacaria-335b2e03d1",
@@ -2224,14 +2237,17 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "nufac",
       "unidade": "Núcleo de Formação e Criação Artística e Cultural (NUFAC)",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
+      "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
     },
     {
       "id": "ela-brincadeiras-circenses-9c5f12c97a",
@@ -2261,14 +2277,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-salgado-filho",
       "unidade": "Centro Cultural Salgado Filho",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "Crianças entre 6 e 10 anos"
+      "idade_publico": "Crianças entre 6 e 10 anos",
+      "endereco": "Rua Nova Ponte, 22, Salgado Filho, Belo Horizonte - MG, 30550-720",
+      "mapa": "https://maps.app.goo.gl/xqnT1A9TWbQdY2wE8"
     },
     {
       "id": "ela-npd-bh-laboratorio-de-pesquisa-e-experimentacao-escrevendo-um-roteiro-de-curta-metragem-4a0d2366de",
@@ -2299,14 +2317,17 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "nufac",
       "unidade": "Núcleo de Formação e Criação Artística e Cultural (NUFAC)",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
+      "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
     },
     {
       "id": "ela-unidade-centro-cultural-alto-vera-cruz",
@@ -2348,12 +2369,14 @@
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-alto-vera-cruz",
       "grupo_rotativo": "escola_livre_unidades",
       "exibicao_padrao": true,
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
-      "instagram_url": ""
+      "instagram_url": "",
+      "endereco": "Rua Padre Júlio Maria, 1577, Alto Vera Cruz, Belo Horizonte - MG, 30285-360",
+      "mapa": "https://maps.app.goo.gl/BVLi6uyKLmALv6SM6"
     },
     {
       "id": "ela-bordados-e-outras-delicadezas-86941605f7",
@@ -2383,14 +2406,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-salgado-filho",
       "unidade": "Centro Cultural Salgado Filho",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Rua Nova Ponte, 22, Salgado Filho, Belo Horizonte - MG, 30550-720",
+      "mapa": "https://maps.app.goo.gl/xqnT1A9TWbQdY2wE8"
     },
     {
       "id": "ela-teclados-teclando-cancoes-para-a-vida-483b9d5498",
@@ -2420,14 +2445,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-alto-vera-cruz",
       "unidade": "Centro Cultural Alto Vera Cruz",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Rua Padre Júlio Maria, 1577, Alto Vera Cruz, Belo Horizonte - MG, 30285-360",
+      "mapa": "https://maps.app.goo.gl/BVLi6uyKLmALv6SM6"
     },
     {
       "id": "ela-encontros-para-ver-imagens-60260a2cbf",
@@ -2458,14 +2485,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-vila-marcola",
       "unidade": "Centro Cultural Vila Marçola",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Rua Mangabeira da Serra, 320, Marçola, Belo Horizonte - MG, 30220-265",
+      "mapa": "https://maps.app.goo.gl/CqmZC29eVpYZdKzFA"
     },
     {
       "id": "ufmg-ec-sabado-com-libras-a-comunicacao-com-surdos-nos-museus-sabado",
@@ -2584,12 +2613,14 @@
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "teatro-marilia",
       "grupo_rotativo": "escola_livre_unidades",
       "exibicao_padrao": true,
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
-      "instagram_url": ""
+      "instagram_url": "",
+      "endereco": "Avenida Professor Alfredo Balena, 586, Santa Efigênia, Belo Horizonte - MG, 30130-100",
+      "mapa": "https://maps.app.goo.gl/MtyButkEtXBbL1Ae8"
     },
     {
       "id": "ela-africas-em-nos-dancas-e-outras-performatividades-negras-a15bcc06e4",
@@ -2619,14 +2650,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "teatro-marilia",
       "unidade": "Centro de Referência da Dança (Teatro Marilia)",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Avenida Professor Alfredo Balena, 586, Santa Efigênia, Belo Horizonte - MG, 30130-100",
+      "mapa": "https://maps.app.goo.gl/MtyButkEtXBbL1Ae8"
     },
     {
       "id": "ela-laboratorio-de-praticas-livres-em-audiovisual-experimentos-para-uma-introducao-a-montagem-cinematografica-3f4d85b9ec",
@@ -2657,14 +2690,17 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "nufac",
       "unidade": "Núcleo de Formação e Criação Artística e Cultural (NUFAC)",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
+      "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
     },
     {
       "id": "ela-unidade-centro-cultural-bairro-das-industrias",
@@ -2706,12 +2742,14 @@
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-bairro-das-industrias",
       "grupo_rotativo": "escola_livre_unidades",
       "exibicao_padrao": true,
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
-      "instagram_url": ""
+      "instagram_url": "",
+      "endereco": "Rua dos Industriários, 289, Indústrias I (Barreiro), Belo Horizonte - MG, 30610-280",
+      "mapa": "https://maps.app.goo.gl/o3ucaPwjJs26Zdvy5"
     },
     {
       "id": "ela-unidade-plataforma-de-educacao-a-distancia-da-pbh",
@@ -2820,51 +2858,24 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "nufac",
       "unidade": "Núcleo de Formação e Criação Artística e Cultural (NUFAC)",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
-    },
-    {
-      "id": "ela-laboratorio-de-africanidades-18892054fe",
-      "tipo_registro": "atividade_escola_livre",
-      "programa": "Escola Livre de Artes Arena da Cultura",
-      "titulo": "Laboratório de Africanidades",
-      "data": "2026-08-18",
-      "data_fim": "2026-11-10",
-      "periodo_atividade": "18 de agosto a 10 de novembro.",
-      "horario": "Terça-feira — 17h às 19h",
-      "local": "Núcleo de Formação e Criação Artística e Cultural (NUFAC)",
-      "cidade": "Belo Horizonte",
-      "categoria": "Curso",
-      "area_artistica": "Patrimônio Cultural",
-      "tags": [
-        "Curso",
-        "Patrimônio Cultural",
-        "Formação artística",
-        "Escola Livre de Artes"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
+      "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
+      "fontes": [
+        "Escola Livre de Artes Arena da Cultura"
       ],
-      "gratuito": true,
-      "inscricao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável.",
-      "descricao": "Atividade da Escola Livre de Artes. Público: A partir de 14 anos. Modalidade: Presencial.",
-      "imagem": "",
-      "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
-      "link": "https://form.jotform.com/261965053614661",
-      "link_inscricao": "https://form.jotform.com/261965053614661",
-      "fonte": "Escola Livre de Artes Arena da Cultura",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
-      "unidade": "Núcleo de Formação e Criação Artística e Cultural (NUFAC)",
-      "status_inscricao": "aberta",
-      "exibicao_padrao": false,
-      "exibicao_por_filtro": true,
-      "grupo_rotativo": "",
-      "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "ids_mesclados": [
+        "ela-boi-livre-3c9a386eae",
+        "ela-laboratorio-de-africanidades-18892054fe"
+      ]
     },
     {
       "id": "ela-danca-para-criancas-c5e700d124",
@@ -2894,14 +2905,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-bairro-das-industrias",
       "unidade": "Centro Cultural Bairro das Indústrias",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "Crianças entre 6 e 10 anos"
+      "idade_publico": "Crianças entre 6 e 10 anos",
+      "endereco": "Rua dos Industriários, 289, Indústrias I (Barreiro), Belo Horizonte - MG, 30610-280",
+      "mapa": "https://maps.app.goo.gl/o3ucaPwjJs26Zdvy5"
     },
     {
       "id": "ela-pesquise-como-dj-a-preparacao-antes-da-pista-5ac543bc47",
@@ -2931,14 +2944,17 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "nufac",
       "unidade": "Núcleo de Formação e Criação Artística e Cultural (NUFAC)",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
+      "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
     },
     {
       "id": "ela-unidade-centro-cultural-padre-eustaquio",
@@ -2978,12 +2994,14 @@
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-padre-eustaquio",
       "grupo_rotativo": "escola_livre_unidades",
       "exibicao_padrao": true,
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
-      "instagram_url": ""
+      "instagram_url": "",
+      "endereco": "Rua Jacutinga, 550, Padre Eustáquio, Belo Horizonte - MG, 30730-430",
+      "mapa": "https://maps.app.goo.gl/7rg1vm7n5XChXQbv7"
     },
     {
       "id": "ela-laboratorio-de-experimentacao-e-criacao-eu-tu-nos-el-s-4de9156555",
@@ -3013,14 +3031,17 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "nufac",
       "unidade": "Núcleo de Formação e Criação Artística e Cultural (NUFAC)",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
+      "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
     },
     {
       "id": "ela-roda-de-choro-13ef75b94c",
@@ -3050,14 +3071,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-padre-eustaquio",
       "unidade": "Centro Cultural Padre Eustáquio",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14anos"
+      "idade_publico": "A partir de 14anos",
+      "endereco": "Rua Jacutinga, 550, Padre Eustáquio, Belo Horizonte - MG, 30730-430",
+      "mapa": "https://maps.app.goo.gl/7rg1vm7n5XChXQbv7"
     },
     {
       "id": "ela-brincadeiras-circenses-ea4143ad6a",
@@ -3087,14 +3110,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-usina-de-cultura",
       "unidade": "Centro Cultural Usina de Cultura",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "Crianças entre 6 e 10 anos"
+      "idade_publico": "Crianças entre 6 e 10 anos",
+      "endereco": "Rua Dom Cabral, 765, Ipiranga, Belo Horizonte - MG, 31160-150",
+      "mapa": "https://maps.app.goo.gl/Da4tniDGCdhMExeY9"
     },
     {
       "id": "ela-vamos-brincar-de-inventar-um-filme-747e60043f",
@@ -3125,14 +3150,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-bairro-das-industrias",
       "unidade": "Centro Cultural Bairro das Indústrias",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "Crianças entre 10 e 14 anos"
+      "idade_publico": "Crianças entre 10 e 14 anos",
+      "endereco": "Rua dos Industriários, 289, Indústrias I (Barreiro), Belo Horizonte - MG, 30610-280",
+      "mapa": "https://maps.app.goo.gl/o3ucaPwjJs26Zdvy5"
     },
     {
       "id": "ela-ciclo-de-poeticas-modulo-residencia-ii-58f9b86345",
@@ -3162,14 +3189,17 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "nufac",
       "unidade": "Núcleo de Formação e Criação Artística e Cultural (NUFAC)",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 16 anos"
+      "idade_publico": "A partir de 16 anos",
+      "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
+      "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
     },
     {
       "id": "ela-unidade-centro-cultural-venda-nova",
@@ -3208,12 +3238,14 @@
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-venda-nova",
       "grupo_rotativo": "escola_livre_unidades",
       "exibicao_padrao": true,
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
-      "instagram_url": ""
+      "instagram_url": "",
+      "endereco": "Rua José Ferreira dos Santos, 184, Jardim dos Comerciários, Belo Horizonte - MG, 31640-060",
+      "mapa": "https://maps.app.goo.gl/zcTEYqwr1mBiBwZ99"
     },
     {
       "id": "ela-unidade-centro-de-referencia-das-juventudes",
@@ -3249,12 +3281,14 @@
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-de-referencia-das-juventudes",
       "grupo_rotativo": "escola_livre_unidades",
       "exibicao_padrao": true,
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
-      "instagram_url": ""
+      "instagram_url": "",
+      "endereco": "Rua Guaicurus, 50, Centro, Belo Horizonte - MG, 30111-060",
+      "mapa": "https://maps.app.goo.gl/BvSVrZ34oQpWFoM57"
     },
     {
       "id": "ela-bordados-e-outras-delicadezas-68cf4dea9c",
@@ -3284,51 +3318,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-venda-nova",
       "unidade": "Centro Cultural Venda Nova",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
-    },
-    {
-      "id": "ela-formacao-de-brincantes-o-brincar-e-a-natureza-f0ab60fc5a",
-      "tipo_registro": "atividade_escola_livre",
-      "programa": "Escola Livre de Artes Arena da Cultura",
-      "titulo": "Formação de Brincantes: O brincar e a natureza",
-      "data": "2026-08-21",
-      "data_fim": "2026-12-04",
-      "periodo_atividade": "21 de agosto a 04 de dezembro +3 encontros em dias e horários a combinar.",
-      "horario": "Sexta-feira — 14h às 16h",
-      "local": "Núcleo de Formação e Criação Artística e Cultural (NUFAC)",
-      "cidade": "Belo Horizonte",
-      "categoria": "Curso",
-      "area_artistica": "Patrimônio Cultural",
-      "tags": [
-        "Curso",
-        "Patrimônio Cultural",
-        "Formação artística",
-        "Escola Livre de Artes"
-      ],
-      "gratuito": true,
-      "inscricao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável.",
-      "descricao": "Atividade da Escola Livre de Artes. Público: A partir de 14 anos. Modalidade: Presencial.",
-      "imagem": "",
-      "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
-      "link": "https://form.jotform.com/261965053614661",
-      "link_inscricao": "https://form.jotform.com/261965053614661",
-      "fonte": "Escola Livre de Artes Arena da Cultura",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
-      "unidade": "Núcleo de Formação e Criação Artística e Cultural (NUFAC)",
-      "status_inscricao": "aberta",
-      "exibicao_padrao": false,
-      "exibicao_por_filtro": true,
-      "grupo_rotativo": "",
-      "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Rua José Ferreira dos Santos, 184, Jardim dos Comerciários, Belo Horizonte - MG, 31640-060",
+      "mapa": "https://maps.app.goo.gl/zcTEYqwr1mBiBwZ99"
     },
     {
       "id": "ela-arena-atelie-livre-fcace676d6",
@@ -3358,14 +3357,24 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "nufac",
       "unidade": "Núcleo de Formação e Criação Artística e Cultural (NUFAC)",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
+      "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
+      "fontes": [
+        "Escola Livre de Artes Arena da Cultura"
+      ],
+      "ids_mesclados": [
+        "ela-arena-atelie-livre-fcace676d6",
+        "ela-formacao-de-brincantes-o-brincar-e-a-natureza-f0ab60fc5a"
+      ]
     },
     {
       "id": "ela-oficina-basica-de-circo-996ad91965",
@@ -3395,14 +3404,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-de-referencia-das-juventudes",
       "unidade": "Centro de Referência das Juventudes",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Rua Guaicurus, 50, Centro, Belo Horizonte - MG, 30111-060",
+      "mapa": "https://maps.app.goo.gl/BvSVrZ34oQpWFoM57"
     },
     {
       "id": "ela-atelie-de-espectador-s-287d10ddab",
@@ -3432,14 +3443,17 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "nufac",
       "unidade": "Núcleo de Formação e Criação Artística e Cultural (NUFAC)",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
+      "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
     },
     {
       "id": "ufmg-ec-visita-mediada-a-exposicao-demasiado-humano-sabado",
@@ -3522,12 +3536,14 @@
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-pampulha",
       "grupo_rotativo": "escola_livre_unidades",
       "exibicao_padrao": true,
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
-      "instagram_url": ""
+      "instagram_url": "",
+      "endereco": "Rua Expedicionário Paulo de Souza, 185, Urca, Belo Horizonte - MG, 31360-310",
+      "mapa": "https://maps.app.goo.gl/rrV4fGrZHEfgd5k57"
     },
     {
       "id": "ela-unidade-centro-cultural-vila-fatima",
@@ -3566,12 +3582,14 @@
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-vila-fatima",
       "grupo_rotativo": "escola_livre_unidades",
       "exibicao_padrao": true,
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
-      "instagram_url": ""
+      "instagram_url": "",
+      "endereco": "Rua São Miguel Arcanjo, 215, Nossa Senhora de Fátima, Belo Horizonte - MG, 30230-660",
+      "mapa": "https://maps.app.goo.gl/Ky1wTCbu3P1i94FQ7"
     },
     {
       "id": "ela-unidade-centro-de-referencia-da-cultura-popular-e-tradicional-lagoa-do-nado",
@@ -3610,12 +3628,14 @@
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "lagoa-do-nado",
       "grupo_rotativo": "escola_livre_unidades",
       "exibicao_padrao": true,
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
-      "instagram_url": ""
+      "instagram_url": "",
+      "endereco": "Rua Ministro Hermenegildo de Barros, 904, Itapoã, Belo Horizonte - MG, 31710-230",
+      "mapa": "https://maps.app.goo.gl/Xupvn986WiEQikbR8"
     },
     {
       "id": "ela-aventuras-de-infancia-vamos-brincar-de-inventar-com-as-artes-visuais-b6dc0ebb12",
@@ -3645,14 +3665,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-pampulha",
       "unidade": "Centro Cultural Pampulha",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "Todas as Idades com protagonismo das crianças"
+      "idade_publico": "Todas as Idades com protagonismo das crianças",
+      "endereco": "Rua Expedicionário Paulo de Souza, 185, Urca, Belo Horizonte - MG, 31360-310",
+      "mapa": "https://maps.app.goo.gl/rrV4fGrZHEfgd5k57"
     },
     {
       "id": "ela-aventuras-de-infancia-vamos-brincar-de-inventar-com-as-artes-visuais-301eef8344",
@@ -3682,14 +3704,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-vila-fatima",
       "unidade": "Centro Cultural Vila Fátima",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "Todas as Idades com protagonismo das crianças"
+      "idade_publico": "Todas as Idades com protagonismo das crianças",
+      "endereco": "Rua São Miguel Arcanjo, 215, Nossa Senhora de Fátima, Belo Horizonte - MG, 30230-660",
+      "mapa": "https://maps.app.goo.gl/Ky1wTCbu3P1i94FQ7"
     },
     {
       "id": "ela-corpo-camera-acao-praticas-coletivas-para-criacao-de-um-filme-946d822c4e",
@@ -3720,14 +3744,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-alto-vera-cruz",
       "unidade": "Centro Cultural Alto Vera Cruz",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Rua Padre Júlio Maria, 1577, Alto Vera Cruz, Belo Horizonte - MG, 30285-360",
+      "mapa": "https://maps.app.goo.gl/BVLi6uyKLmALv6SM6"
     },
     {
       "id": "ela-tecnicas-circenses-1568d23720",
@@ -3757,14 +3783,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "lagoa-do-nado",
       "unidade": "Centro de Referência da Cultura Popular e Tradicional Lagoa do Nado",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Rua Ministro Hermenegildo de Barros, 904, Itapoã, Belo Horizonte - MG, 31710-230",
+      "mapa": "https://maps.app.goo.gl/Xupvn986WiEQikbR8"
     },
     {
       "id": "ela-brincadeiras-circenses-538c41367d",
@@ -3794,14 +3822,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-sao-bernardo",
       "unidade": "Centro Cultural São Bernardo",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "Crianças entre 6 e 10 anos"
+      "idade_publico": "Crianças entre 6 e 10 anos",
+      "endereco": "Rua Édna Quintel, 320, São Bernardo, Belo Horizonte - MG, 31750-030",
+      "mapa": "https://maps.app.goo.gl/Yufimrb872nmXa4s9"
     },
     {
       "id": "ufmg-ec-observacao-solar-com-telescopios-domingo-4",
@@ -3872,14 +3902,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-liberalino-alves-de-oliveira",
       "unidade": "Centro Cultural Liberalino Alves de Oliveira",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Avenida Presidente Antônio Carlos, 821, Lagoinha, Belo Horizonte - MG, 31110-314",
+      "mapa": "https://maps.app.goo.gl/59216yGPUBfMrKVa9"
     },
     {
       "id": "ela-costurando-ideias-costura-criativa-e-invencoes-efc01ba2f7",
@@ -3909,14 +3941,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-jardim-guanabara",
       "unidade": "Centro Cultural Jardim Guanabara",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Rua João Álvares Cabral, 277, Jardim Guanabara, Belo Horizonte - MG, 31742-170",
+      "mapa": "https://maps.app.goo.gl/eCATveDGRuNKYLof9"
     },
     {
       "id": "ela-praticas-percussivas-ritmos-brasileiros-2157c0200a",
@@ -3946,14 +3980,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-padre-eustaquio",
       "unidade": "Centro Cultural Padre Eustáquio",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Rua Jacutinga, 550, Padre Eustáquio, Belo Horizonte - MG, 30730-430",
+      "mapa": "https://maps.app.goo.gl/7rg1vm7n5XChXQbv7"
     },
     {
       "id": "ela-unidade-cine-santa-tereza",
@@ -3998,8 +4034,8 @@
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
       "instagram_url": "",
-      "endereco": "Rua Estrela do Sul, 89, Santa Tereza, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88"
+      "endereco": "Rua Estrela do Sul, 89, Santa Tereza, Belo Horizonte - MG, 31010-240",
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
     {
       "id": "ela-npd-bh-minicurso-documentario-e-invencao-modulo-ii-memorias-fragmentos-e-colecoes-f3fb8c6dd0",
@@ -4038,8 +4074,8 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
-      "endereco": "Rua Estrela do Sul, 89, Santa Tereza, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88"
+      "endereco": "Rua Estrela do Sul, 89, Santa Tereza, Belo Horizonte - MG, 31010-240",
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
     {
       "id": "ela-arena-atelie-livre-68965bd217",
@@ -4069,14 +4105,17 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "nufac",
       "unidade": "Núcleo de Formação e Criação Artística e Cultural (NUFAC)",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
+      "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
     },
     {
       "id": "sympla-sabara-3520241",
@@ -4127,14 +4166,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-salgado-filho",
       "unidade": "Centro Cultural Salgado Filho",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14anos"
+      "idade_publico": "A partir de 14anos",
+      "endereco": "Rua Nova Ponte, 22, Salgado Filho, Belo Horizonte - MG, 30550-720",
+      "mapa": "https://maps.app.goo.gl/xqnT1A9TWbQdY2wE8"
     },
     {
       "id": "ela-laboratorio-de-pesquisa-saberes-de-povos-originarios-6f89e3a592",
@@ -4164,14 +4205,17 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "nufac",
       "unidade": "Núcleo de Formação e Criação Artística e Cultural (NUFAC)",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
+      "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
     },
     {
       "id": "ela-tecido-e-pintado-c4272e5dad",
@@ -4201,14 +4245,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-liberalino-alves-de-oliveira",
       "unidade": "Centro Cultural Liberalino Alves de Oliveira",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Avenida Presidente Antônio Carlos, 821, Lagoinha, Belo Horizonte - MG, 31110-314",
+      "mapa": "https://maps.app.goo.gl/59216yGPUBfMrKVa9"
     },
     {
       "id": "ela-unidade-centro-de-referencia-de-assistencia-social-cras-conjunto-paulo-vi",
@@ -4357,14 +4403,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "teatro-marilia",
       "unidade": "Centro de Referência da Dança (Teatro Marilia)",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Avenida Professor Alfredo Balena, 586, Santa Efigênia, Belo Horizonte - MG, 30130-100",
+      "mapa": "https://maps.app.goo.gl/MtyButkEtXBbL1Ae8"
     },
     {
       "id": "ela-grafite-e-bom-demais-stencil-lambes-pixo-arte-urbana-e91a057086",
@@ -4394,14 +4442,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-vila-marcola",
       "unidade": "Centro Cultural Vila Marçola",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Rua Mangabeira da Serra, 320, Marçola, Belo Horizonte - MG, 30220-265",
+      "mapa": "https://maps.app.goo.gl/CqmZC29eVpYZdKzFA"
     },
     {
       "id": "ela-encontros-para-ver-e-criar-filmes-052b55f529",
@@ -4432,14 +4482,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-vila-marcola",
       "unidade": "Centro Cultural Vila Marçola",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "6 a 10 anos"
+      "idade_publico": "6 a 10 anos",
+      "endereco": "Rua Mangabeira da Serra, 320, Marçola, Belo Horizonte - MG, 30220-265",
+      "mapa": "https://maps.app.goo.gl/CqmZC29eVpYZdKzFA"
     },
     {
       "id": "ufmg-ec-observacao-solar-com-telescopios-domingo-5",
@@ -4554,14 +4606,17 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "nufac",
       "unidade": "Núcleo de Formação e Criação Artística e Cultural (NUFAC)",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
+      "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
     },
     {
       "id": "ela-unidade-centro-cultural-sao-geraldo",
@@ -4597,12 +4652,14 @@
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-sao-geraldo",
       "grupo_rotativo": "escola_livre_unidades",
       "exibicao_padrao": true,
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
-      "instagram_url": ""
+      "instagram_url": "",
+      "endereco": "Rua Silva Alvarenga, 548, São Geraldo, Belo Horizonte - MG, 31050-640",
+      "mapa": "https://maps.app.goo.gl/BTFGBXTDZkSgQRc98"
     },
     {
       "id": "ela-laboratorio-com-linhas-e-agulhas-5f80aa6249",
@@ -4632,14 +4689,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-vila-fatima",
       "unidade": "Centro Cultural Vila Fátima",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Rua São Miguel Arcanjo, 215, Nossa Senhora de Fátima, Belo Horizonte - MG, 30230-660",
+      "mapa": "https://maps.app.goo.gl/Ky1wTCbu3P1i94FQ7"
     },
     {
       "id": "ela-canto-voz-e-expressao-b0d6ae10c7",
@@ -4669,14 +4728,17 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "nufac",
       "unidade": "Núcleo de Formação e Criação Artística e Cultural (NUFAC)",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
+      "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
     },
     {
       "id": "ela-atelie-de-bastidores-das-artes-cenografia-e-iluminacao-20945bf013",
@@ -4706,14 +4768,17 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "nufac",
       "unidade": "Núcleo de Formação e Criação Artística e Cultural (NUFAC)",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
+      "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
     },
     {
       "id": "ela-grafite-e-bom-demais-stencil-lambes-pixo-arte-urbana-d47b745671",
@@ -4743,14 +4808,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-lindeia-regina",
       "unidade": "Centro Cultural Lindeia Regina",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Rua Aristolino Basílio de Oliveira, 445, Regina, Belo Horizonte - MG, 30692-190",
+      "mapa": "https://maps.app.goo.gl/NbE1w2tMKeH6P3Lm8"
     },
     {
       "id": "ela-canto-voz-e-expressao-b9bb05c243",
@@ -4780,14 +4847,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-sao-geraldo",
       "unidade": "Centro Cultural São Geraldo",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de14 anos"
+      "idade_publico": "A partir de14 anos",
+      "endereco": "Rua Silva Alvarenga, 548, São Geraldo, Belo Horizonte - MG, 31050-640",
+      "mapa": "https://maps.app.goo.gl/BTFGBXTDZkSgQRc98"
     },
     {
       "id": "ela-canto-voz-e-expressao-744db33fba",
@@ -4817,14 +4886,17 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "nufac",
       "unidade": "Núcleo de Formação e Criação Artística e Cultural (NUFAC)",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
+      "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
     },
     {
       "id": "ela-unidade-centro-cultural-vila-santa-rita",
@@ -4866,12 +4938,14 @@
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-vila-santa-rita",
       "grupo_rotativo": "escola_livre_unidades",
       "exibicao_padrao": true,
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
-      "instagram_url": ""
+      "instagram_url": "",
+      "endereco": "Rua Ana Rafael dos Santos, 149, Vila Santa Rita, Belo Horizonte - MG, 30668-570",
+      "mapa": "https://maps.app.goo.gl/2bjmUoYBq6G5Tfm17"
     },
     {
       "id": "ela-laboratorio-com-linhas-e-agulhas-5caca04e80",
@@ -4901,14 +4975,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-alto-vera-cruz",
       "unidade": "Centro Cultural Alto Vera Cruz",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Rua Padre Júlio Maria, 1577, Alto Vera Cruz, Belo Horizonte - MG, 30285-360",
+      "mapa": "https://maps.app.goo.gl/BVLi6uyKLmALv6SM6"
     },
     {
       "id": "ela-laboratorio-com-linhas-e-agulhas-470610ecc7",
@@ -4938,14 +5014,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-urucuia",
       "unidade": "Centro Cultural Urucuia",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Rua W-3, 500, Pongelupe, Belo Horizonte - MG, 30628-175",
+      "mapa": "https://maps.app.goo.gl/Uq5R3PNvQBrdWSnT9"
     },
     {
       "id": "ela-beaba-do-violao-3b084583e3",
@@ -4975,14 +5053,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-vila-santa-rita",
       "unidade": "Centro Cultural Vila Santa Rita",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Rua Ana Rafael dos Santos, 149, Vila Santa Rita, Belo Horizonte - MG, 30668-570",
+      "mapa": "https://maps.app.goo.gl/2bjmUoYBq6G5Tfm17"
     },
     {
       "id": "ela-quem-cuida-da-arte-os-bastidores-da-curadoria-56806ceda0",
@@ -5020,8 +5100,8 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
-      "endereco": "Rua Estrela do Sul, 89, Santa Tereza, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/UaTHkk5FcH4pp5e88"
+      "endereco": "Rua Estrela do Sul, 89, Santa Tereza, Belo Horizonte - MG, 31010-240",
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
     {
       "id": "ela-tirando-as-ideias-das-gavetas-laboratorio-de-elaboracao-de-projetos-culturais-b0a44ba65b",
@@ -5051,14 +5131,17 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "nufac",
       "unidade": "Núcleo de Formação e Criação Artística e Cultural (NUFAC)",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
+      "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
     },
     {
       "id": "ela-atelie-de-design-popular-74727c50cc",
@@ -5088,14 +5171,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "lagoa-do-nado",
       "unidade": "Centro de Referência da Cultura Popular e Tradicional Lagoa do Nado",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Rua Ministro Hermenegildo de Barros, 904, Itapoã, Belo Horizonte - MG, 31710-230",
+      "mapa": "https://maps.app.goo.gl/Xupvn986WiEQikbR8"
     },
     {
       "id": "ela-beaba-do-violao-8e196d89cb",
@@ -5125,14 +5210,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-urucuia",
       "unidade": "Centro Cultural Urucuia",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Rua W-3, 500, Pongelupe, Belo Horizonte - MG, 30628-175",
+      "mapa": "https://maps.app.goo.gl/Uq5R3PNvQBrdWSnT9"
     },
     {
       "id": "ela-atelie-bastidores-das-artes-performance-figurino-e-curadoria-049cd9fa95",
@@ -5162,14 +5249,17 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "nufac",
       "unidade": "Núcleo de Formação e Criação Artística e Cultural (NUFAC)",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
+      "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
     },
     {
       "id": "ela-costurando-ideias-costura-criativa-e-invencoes-35e148f8b2",
@@ -5199,14 +5289,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-zilah-sposito",
       "unidade": "Centro Cultural Zilah Spósito",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Rua Carnaúba, 286, Zilah Spósito, Belo Horizonte - MG, 31787-210",
+      "mapa": "https://maps.app.goo.gl/hTZMNcQSzknYzSRx7"
     },
     {
       "id": "ela-laboratorio-de-producao-cultural-do-criar-ao-fazer-acontecer-23d1407ea1",
@@ -5236,14 +5328,17 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "nufac",
       "unidade": "Núcleo de Formação e Criação Artística e Cultural (NUFAC)",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
+      "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
     },
     {
       "id": "ela-danca-para-criancas-3dc24f22a7",
@@ -5273,14 +5368,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-vila-santa-rita",
       "unidade": "Centro Cultural Vila Santa Rita",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "Crianças entre 6 e 10 anos"
+      "idade_publico": "Crianças entre 6 e 10 anos",
+      "endereco": "Rua Ana Rafael dos Santos, 149, Vila Santa Rita, Belo Horizonte - MG, 30668-570",
+      "mapa": "https://maps.app.goo.gl/2bjmUoYBq6G5Tfm17"
     },
     {
       "id": "ela-aventuras-de-infancia-vamos-brincar-de-inventar-com-as-artes-visuais-7ab0087345",
@@ -5310,14 +5407,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-vila-santa-rita",
       "unidade": "Centro Cultural Vila Santa Rita",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "Todas as Idades com protagonismo das crianças"
+      "idade_publico": "Todas as Idades com protagonismo das crianças",
+      "endereco": "Rua Ana Rafael dos Santos, 149, Vila Santa Rita, Belo Horizonte - MG, 30668-570",
+      "mapa": "https://maps.app.goo.gl/2bjmUoYBq6G5Tfm17"
     },
     {
       "id": "ela-grafite-e-bom-demais-stencil-lambes-pixo-arte-urbana-909724bef2",
@@ -5347,14 +5446,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-venda-nova",
       "unidade": "Centro Cultural Venda Nova",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Rua José Ferreira dos Santos, 184, Jardim dos Comerciários, Belo Horizonte - MG, 31640-060",
+      "mapa": "https://maps.app.goo.gl/zcTEYqwr1mBiBwZ99"
     },
     {
       "id": "ela-desenho-de-observacao-c6927fb23d",
@@ -5384,14 +5485,17 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "nufac",
       "unidade": "Núcleo de Formação e Criação Artística e Cultural (NUFAC)",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
+      "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
     },
     {
       "id": "ela-elaboracao-de-projetos-culturais-f008f5558f",
@@ -5421,14 +5525,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-sao-bernardo",
       "unidade": "Centro Cultural São Bernardo",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Rua Édna Quintel, 320, São Bernardo, Belo Horizonte - MG, 31750-030",
+      "mapa": "https://maps.app.goo.gl/Yufimrb872nmXa4s9"
     },
     {
       "id": "ela-gestao-e-producao-cultural-praticas-inventivas-no-fazer-artistico-07d9bdf7a7",
@@ -5458,14 +5564,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-vila-marcola",
       "unidade": "Centro Cultural Vila Marçola",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Rua Mangabeira da Serra, 320, Marçola, Belo Horizonte - MG, 30220-265",
+      "mapa": "https://maps.app.goo.gl/CqmZC29eVpYZdKzFA"
     },
     {
       "id": "ela-musica-percussiva-de-rua-4d8887bc14",
@@ -5495,14 +5603,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-usina-de-cultura",
       "unidade": "Centro Cultural Usina de Cultura",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Rua Dom Cabral, 765, Ipiranga, Belo Horizonte - MG, 31160-150",
+      "mapa": "https://maps.app.goo.gl/Da4tniDGCdhMExeY9"
     },
     {
       "id": "ela-unidade-museu-da-moda",
@@ -5539,12 +5649,14 @@
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "museu-da-moda",
       "grupo_rotativo": "escola_livre_unidades",
       "exibicao_padrao": true,
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
-      "instagram_url": ""
+      "instagram_url": "",
+      "endereco": "Rua da Bahia, 1149, Centro, Belo Horizonte - MG, 30160-011",
+      "mapa": "https://maps.app.goo.gl/NSKCeznUnR3ooTQaA"
     },
     {
       "id": "ela-a-arte-da-moda-o-figurino-e-a-maquiagem-como-linguagem-de-criacao-9b86e45cf9",
@@ -5574,14 +5686,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "museu-da-moda",
       "unidade": "Museu da Moda",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Rua da Bahia, 1149, Centro, Belo Horizonte - MG, 30160-011",
+      "mapa": "https://maps.app.goo.gl/NSKCeznUnR3ooTQaA"
     },
     {
       "id": "ela-costurando-ideias-costura-criativa-e-invencoes-6edf9a425f",
@@ -5611,14 +5725,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-bairro-das-industrias",
       "unidade": "Centro Cultural Bairro das Indústrias",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Rua dos Industriários, 289, Indústrias I (Barreiro), Belo Horizonte - MG, 30610-280",
+      "mapa": "https://maps.app.goo.gl/o3ucaPwjJs26Zdvy5"
     },
     {
       "id": "ela-a-arte-da-moda-maquiagem-e-caracterizacao-como-linguagens-de-criacao-6b666545d5",
@@ -5648,14 +5764,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "museu-da-moda",
       "unidade": "Museu da Moda",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Rua da Bahia, 1149, Centro, Belo Horizonte - MG, 30160-011",
+      "mapa": "https://maps.app.goo.gl/NSKCeznUnR3ooTQaA"
     },
     {
       "id": "ela-elaboracao-de-projetos-culturais-b3d7f38056",
@@ -5685,14 +5803,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-jardim-guanabara",
       "unidade": "Centro Cultural Jardim Guanabara",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Rua João Álvares Cabral, 277, Jardim Guanabara, Belo Horizonte - MG, 31742-170",
+      "mapa": "https://maps.app.goo.gl/eCATveDGRuNKYLof9"
     },
     {
       "id": "ela-enquanto-as-linhas-dancam-bordados-artesanias-e-encontros-7bad5d78fe",
@@ -5722,14 +5842,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-pampulha",
       "unidade": "Centro Cultural Pampulha",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Rua Expedicionário Paulo de Souza, 185, Urca, Belo Horizonte - MG, 31360-310",
+      "mapa": "https://maps.app.goo.gl/rrV4fGrZHEfgd5k57"
     },
     {
       "id": "ela-canto-voz-e-expressao-4f91627676",
@@ -5759,14 +5881,17 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "nufac",
       "unidade": "Núcleo de Formação e Criação Artística e Cultural (NUFAC)",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
+      "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
     },
     {
       "id": "ela-elaboracao-de-projetos-culturais-0563dc9854",
@@ -5796,14 +5921,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-pampulha",
       "unidade": "Centro Cultural Pampulha",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Rua Expedicionário Paulo de Souza, 185, Urca, Belo Horizonte - MG, 31360-310",
+      "mapa": "https://maps.app.goo.gl/rrV4fGrZHEfgd5k57"
     },
     {
       "id": "ela-voa-palavra-elaboracao-de-projetos-culturais-em-literatura-e-leitura-d3a8ca75d9",
@@ -5833,14 +5960,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-padre-eustaquio",
       "unidade": "Centro Cultural Padre Eustáquio",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Rua Jacutinga, 550, Padre Eustáquio, Belo Horizonte - MG, 30730-430",
+      "mapa": "https://maps.app.goo.gl/7rg1vm7n5XChXQbv7"
     },
     {
       "id": "ela-orquestra-transversal-vozes-instrumentos-samples-beats-e-som-d3862c5cae",
@@ -5870,14 +5999,17 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "nufac",
       "unidade": "Núcleo de Formação e Criação Artística e Cultural (NUFAC)",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
+      "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
     },
     {
       "id": "ela-criacao-e-producao-de-eventos-culturais-8b324801ac",
@@ -5907,14 +6039,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-liberalino-alves-de-oliveira",
       "unidade": "Centro Cultural Liberalino Alves de Oliveira",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Avenida Presidente Antônio Carlos, 821, Lagoinha, Belo Horizonte - MG, 31110-314",
+      "mapa": "https://maps.app.goo.gl/59216yGPUBfMrKVa9"
     },
     {
       "id": "sesiminas-bh-bileto-122927",
@@ -5966,14 +6100,17 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "nufac",
       "unidade": "Núcleo de Formação e Criação Artística e Cultural (NUFAC)",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
+      "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
     },
     {
       "id": "ela-carnaval-os-bastidores-da-festa-1eb05ac8ec",
@@ -6003,14 +6140,17 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "nufac",
       "unidade": "Núcleo de Formação e Criação Artística e Cultural (NUFAC)",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
+      "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
     },
     {
       "id": "ela-formas-criativas-e-afetivas-de-divulgacao-de-projetos-culturais-f82276907d",
@@ -6077,14 +6217,17 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "nufac",
       "unidade": "Núcleo de Formação e Criação Artística e Cultural (NUFAC)",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
+      "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
     },
     {
       "id": "ela-transe-da-tranca-aula-aberta-de-artes-visuais-4a55564c94",
@@ -6114,14 +6257,16 @@
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "local_id": "",
+      "local_id": "centro-cultural-salgado-filho",
       "unidade": "Centro Cultural Salgado Filho",
       "status_inscricao": "aberta",
       "exibicao_padrao": false,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "endereco": "Rua Nova Ponte, 22, Salgado Filho, Belo Horizonte - MG, 30550-720",
+      "mapa": "https://maps.app.goo.gl/xqnT1A9TWbQdY2wE8"
     }
   ]
 }
