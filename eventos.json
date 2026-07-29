@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Janeiro a Dezembro de 2026",
-  "atualizado_em": "2026-07-29T13:42:01-03:00",
+  "atualizado_em": "2026-07-29T16:38:13-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -333,28 +333,6 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
-    },
-    {
-      "id": "cine-santa-tereza-bileto-124487",
-      "titulo": "MOSTRA MOVIMENTO - Sessão 5",
-      "data": "2026-07-29",
-      "data_fim": "",
-      "horario": "16h30",
-      "local": "Cine Santa Tereza",
-      "cidade": "Belo Horizonte",
-      "categoria": "Cinema",
-      "gratuito": true,
-      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial. Também há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade.",
-      "descricao": "Sessão da Mostra Movimento no Cine Santa Tereza. Classificação indicativa: Livre. Consulte a programação completa e a disponibilidade de ingressos no link oficial.",
-      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/am32g3h5deaolb056r4k1f3lbhamh4qdcsuomfphcirc01e4bsq1mon8nggrmimrkv808pgqp1icplsfqovpfk4tlsd560ldtr6445.webp",
-      "link": "https://bileto.sympla.com.br/event/124487/d/402447/s/2637934",
-      "fonte": "Cine Santa Tereza",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "fonte_id": "124487",
-      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
-      "classificacao_indicativa": "Livre",
-      "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
     {
       "id": "cine-santa-tereza-bileto-124484",
@@ -6688,6 +6666,30 @@
       "idade_publico": "A partir de 14 anos",
       "endereco": "Rua Nova Ponte, 22, Salgado Filho, Belo Horizonte - MG, 30550-720",
       "mapa": "https://maps.app.goo.gl/xqnT1A9TWbQdY2wE8"
+    },
+    {
+      "id": "manual-projeto-solidario-grupo-de-bordadeiras-2026-12-31",
+      "titulo": "Projeto Solidário: Grupo de Bordadeiras",
+      "data": "2026-12-31",
+      "data_fim": "",
+      "horario": "13h às 16h",
+      "local": "Solar Padre Correia",
+      "cidade": "Sabará",
+      "categoria": "Encontro",
+      "gratuito": true,
+      "inscricao": "",
+      "descricao": "Grupo de Bordadeiras: encontros na sede da Secretaria para praticar e compartilhar a arte do bordado. Atividade gratuita, aberta ao público e com caráter solidário.",
+      "imagem": "imagens/eventos-manuais/projeto-solidario-grupo-de-bordadeiras.png",
+      "link": "https://www.instagram.com/cultura.sabara/",
+      "pagina": "https://www.instagram.com/cultura.sabara/",
+      "link_inscricao": "",
+      "fonte": "Cadastro manual",
+      "instituicao_id": "Secretaria de Cultura de Sabará",
+      "classificacao_indicativa": "",
+      "local_id": "solar-padre-correia",
+      "endereco": "R. Dom Pedro II, 200 - Centro, Sabará - MG, 34505-000",
+      "mapa": "https://maps.app.goo.gl/fNCH9XLpCY5V4z2j6",
+      "espaco_interno": ""
     }
   ]
 }
