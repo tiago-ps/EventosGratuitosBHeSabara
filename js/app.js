@@ -3,6 +3,8 @@
 
   const DATA_URL = 'eventos.json';
   const app = document.getElementById('app');
+  const SCHOOL_ROTATION_SIZE = 6;
+  const SCHOOL_ROTATION_KEY = 'agenda-cultural-escola-livre-lote';
   const template = document.getElementById('slide-template');
 
   // O tema original é fixo; remove preferências antigas salvas pelo seletor.
@@ -56,9 +58,12 @@
     filters: {
       city: '',
       category: '',
+      program: '',
+      unit: '',
       period: 'all',
       rating: ''
-    }
+    },
+    schoolRotationBatch: 0
   };
 
   function normalizeText(value = '') {
@@ -250,12 +255,101 @@
     return rating.label.match(/\d+/)?.[0] || '';
   }
 
+  function schoolRotationRecords(events) {
+    return events.filter(event => event.grupo_rotativo === 'escola_livre_unidades');
+  }
+
+  function hasUserFilters() {
+    return Boolean(
+      state.filters.city ||
+      state.filters.category ||
+      state.filters.program ||
+      state.filters.unit ||
+      state.filters.rating ||
+      state.filters.period !== 'all'
+    );
+  }
+
+  function readStoredSchoolBatch() {
+    try {
+      const value = Number(localStorage.getItem(SCHOOL_ROTATION_KEY));
+      return Number.isFinite(value) && value >= 0 ? Math.floor(value) : 0;
+    } catch {
+      return 0;
+    }
+  }
+
+  function storeSchoolBatch(value) {
+    try {
+      localStorage.setItem(SCHOOL_ROTATION_KEY, String(value));
+    } catch {
+      /* O rodízio continua enquanto a página estiver aberta. */
+    }
+  }
+
+  function buildDefaultEvents(events) {
+    const ordinary = events.filter(event =>
+      event.exibicao_padrao !== false &&
+      event.grupo_rotativo !== 'escola_livre_unidades'
+    );
+    const rotating = schoolRotationRecords(events)
+      .filter(event => event.exibicao_padrao !== false)
+      .sort((a, b) => String(a.unidade || a.local || a.titulo || '')
+        .localeCompare(String(b.unidade || b.local || b.titulo || ''), 'pt-BR'));
+
+    if (!rotating.length) return ordinary;
+
+    const batches = Math.ceil(rotating.length / SCHOOL_ROTATION_SIZE);
+    state.schoolRotationBatch %= batches;
+    const start = state.schoolRotationBatch * SCHOOL_ROTATION_SIZE;
+    const selected = rotating.slice(start, start + SCHOOL_ROTATION_SIZE);
+
+    return filterAndSort([...ordinary, ...selected]);
+  }
+
+  function advanceSchoolRotation(direction = 1) {
+    const total = schoolRotationRecords(state.allEvents).length;
+    if (!total) return;
+    const batches = Math.ceil(total / SCHOOL_ROTATION_SIZE);
+    state.schoolRotationBatch =
+      (state.schoolRotationBatch + direction + batches) % batches;
+    storeSchoolBatch(state.schoolRotationBatch);
+    state.events = buildDefaultEvents(state.allEvents);
+  }
+
+  function eventSearchFacets(event) {
+    return [
+      event.categoria,
+      event.area_artistica,
+      ...(Array.isArray(event.areas) ? event.areas : []),
+      ...(Array.isArray(event.tags) ? event.tags : []),
+      event.titulo
+    ].map(normalizeText).filter(Boolean);
+  }
+
+  function categoryMatches(event, category) {
+    if (!category) return true;
+    const facets = eventSearchFacets(event);
+    return facets.some(value => value === category || value.includes(category));
+  }
+
+  function eventProgram(event) {
+    return event.programa || event.fonte || '';
+  }
+
+  function eventUnit(event) {
+    return event.unidade || event.local || '';
+  }
+
   function applyUserFilters(events) {
-    const { city, category, period, rating } = state.filters;
+    const { city, category, program, unit, period, rating } = state.filters;
 
     return events.filter(event => {
+      if (event.exibicao_por_filtro === false) return false;
       if (city && normalizeText(event.cidade) !== city) return false;
-      if (category && normalizeText(event.categoria) !== category) return false;
+      if (!categoryMatches(event, category)) return false;
+      if (program && normalizeText(eventProgram(event)) !== program) return false;
+      if (unit && normalizeText(eventUnit(event)) !== unit) return false;
       if (rating && ratingFilterValue(event.classificacao_indicativa) !== rating) {
         return false;
       }
@@ -268,6 +362,8 @@
     return [
       state.filters.city,
       state.filters.category,
+      state.filters.program,
+      state.filters.unit,
       state.filters.rating,
       state.filters.period !== 'all' ? state.filters.period : ''
     ].filter(Boolean).length;
@@ -519,10 +615,7 @@
       Number(data.tempo_slide) || 12
     );
 
-    state.timer = setTimeout(() => {
-      state.index = (state.index + 1) % state.events.length;
-      renderSlide(state.index);
-    }, seconds * 1000);
+    state.timer = setTimeout(goToNext, seconds * 1000);
   }
 
   function renderSlide(index) {
@@ -845,12 +938,24 @@
   }
 
   function goToNext() {
-    state.index = (state.index + 1) % state.events.length;
+    const completedCycle = state.index >= state.events.length - 1;
+    if (completedCycle && !hasUserFilters()) {
+      advanceSchoolRotation(1);
+      state.index = 0;
+    } else {
+      state.index = (state.index + 1) % state.events.length;
+    }
     renderSlide(state.index);
   }
 
   function goToPrevious() {
-    state.index = (state.index - 1 + state.events.length) % state.events.length;
+    const crossedStart = state.index === 0;
+    if (crossedStart && !hasUserFilters()) {
+      advanceSchoolRotation(-1);
+      state.index = Math.max(0, state.events.length - 1);
+    } else {
+      state.index = (state.index - 1 + state.events.length) % state.events.length;
+    }
     renderSlide(state.index);
   }
 
@@ -924,6 +1029,8 @@
   function populateFilterPanel(slide) {
     const citySelect = slide.querySelector('.filter-city');
     const categorySelect = slide.querySelector('.filter-category');
+    const programSelect = slide.querySelector('.filter-program');
+    const unitSelect = slide.querySelector('.filter-unit');
     const periodSelect = slide.querySelector('.filter-period');
     const ratingSelect = slide.querySelector('.filter-rating');
 
@@ -934,11 +1041,32 @@
       state.filters.city
     );
 
+    const categoryValues = new Map(uniqueFilterOptions(state.allEvents, 'categoria'));
+    for (const event of state.allEvents) {
+      for (const label of [event.area_artistica, ...(Array.isArray(event.tags) ? event.tags : [])]) {
+        const value = normalizeText(label);
+        if (label && value && !categoryValues.has(value)) categoryValues.set(value, label);
+      }
+    }
     populateDynamicSelect(
       categorySelect,
-      'Todas as categorias',
-      uniqueFilterOptions(state.allEvents, 'categoria'),
+      'Todas as categorias e áreas',
+      [...categoryValues.entries()].sort((a, b) => a[1].localeCompare(b[1], 'pt-BR')),
       state.filters.category
+    );
+
+    populateDynamicSelect(
+      programSelect,
+      'Todos os programas',
+      uniqueFilterOptions(state.allEvents.map(event => ({ programa: eventProgram(event) })), 'programa'),
+      state.filters.program
+    );
+
+    populateDynamicSelect(
+      unitSelect,
+      'Todos os espaços',
+      uniqueFilterOptions(state.allEvents.map(event => ({ unidade: eventUnit(event) })), 'unidade'),
+      state.filters.unit
     );
 
     if (periodSelect) periodSelect.value = state.filters.period || 'all';
@@ -982,8 +1110,8 @@
     `;
 
     app.querySelector('.empty-clear-filters')?.addEventListener('click', () => {
-      state.filters = { city: '', category: '', period: 'all', rating: '' };
-      state.events = [...state.allEvents];
+      state.filters = { city: '', category: '', program: '', unit: '', period: 'all', rating: '' };
+      state.events = buildDefaultEvents(state.allEvents);
       state.index = 0;
       renderSlide(0);
     });
@@ -995,6 +1123,8 @@
     state.filters = {
       city: state.filterOverlay.querySelector('.filter-city')?.value || '',
       category: state.filterOverlay.querySelector('.filter-category')?.value || '',
+      program: state.filterOverlay.querySelector('.filter-program')?.value || '',
+      unit: state.filterOverlay.querySelector('.filter-unit')?.value || '',
       period: state.filterOverlay.querySelector('.filter-period')?.value || 'all',
       rating: state.filterOverlay.querySelector('.filter-rating')?.value || ''
     };
@@ -1011,8 +1141,8 @@
   }
 
   function clearUserFilters() {
-    state.filters = { city: '', category: '', period: 'all', rating: '' };
-    state.events = [...state.allEvents];
+    state.filters = { city: '', category: '', program: '', unit: '', period: 'all', rating: '' };
+    state.events = buildDefaultEvents(state.allEvents);
     state.index = 0;
     renderSlide(0);
   }
@@ -1117,7 +1247,8 @@
 
       state.data = data;
       state.allEvents = filterAndSort(data.eventos);
-      state.events = [...state.allEvents];
+      state.schoolRotationBatch = readStoredSchoolBatch();
+      state.events = buildDefaultEvents(state.allEvents);
 
       if (!state.events.length) {
         showMessage(

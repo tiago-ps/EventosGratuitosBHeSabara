@@ -1,0 +1,19 @@
+SITE v42 — ESCOLA LIVRE DE ARTES
+
+O mural agora distingue registros exibidos normalmente de registros disponíveis apenas por filtros.
+
+SEM FILTRO
+- eventos comuns;
+- slide geral da Escola Livre;
+- 6 unidades da Escola Livre por volta completa;
+- ao reiniciar a apresentação, o lote muda para as próximas 6 unidades;
+- o lote atual fica salvo no navegador.
+
+COM FILTRO
+Foram acrescentados filtros por programa/instituição e por espaço.
+As atividades individuais da Escola Livre ficam no eventos.json, mas só entram na apresentação quando um filtro compatível é aplicado.
+O filtro de categoria também procura em área artística, tags e título, permitindo combinar Cinema com cursos de Audiovisual.
+
+ARQUIVOS ALTERADOS
+- index.html
+- js/app.js
