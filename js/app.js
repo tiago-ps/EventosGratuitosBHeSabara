@@ -195,8 +195,48 @@
     );
   }
 
-  function eventEndDate(event) {
-    return safeDate(event.data_fim || event.data);
+  const CLOSED_ACCESS_STATUSES = new Set([
+    'encerrada', 'encerrada provavel', 'esgotado', 'indisponivel'
+  ]);
+
+  function displayCriterion(event) {
+    const value = normalizeText(event.criterio_exibicao);
+    return ['inscricao', 'acesso', 'manual', 'realizacao'].includes(value)
+      ? value
+      : 'realizacao';
+  }
+
+  function eventIsPublishable(event, today = todayAtMidnight()) {
+    const criterion = displayCriterion(event);
+    if (criterion === 'manual') return event.exibicao_ativa !== false;
+
+    if (criterion === 'inscricao' || criterion === 'acesso') {
+      const status = normalizeText(
+        criterion === 'inscricao' ? event.status_inscricao : event.status_acesso
+      ).replaceAll('_', ' ');
+      if (CLOSED_ACCESS_STATUSES.has(status)) return false;
+      const deadline = safeDate(
+        criterion === 'inscricao' ? event.inscricao_fim : event.acesso_fim
+      );
+      return !deadline || deadline >= today;
+    }
+
+    const end = safeDate(event.data_fim || event.data);
+    return !end || end >= today;
+  }
+
+  function eventSortKey(event) {
+    const criterion = displayCriterion(event);
+    const realization = safeDate(event.data)?.getTime() || Number.MAX_SAFE_INTEGER;
+    if (criterion === 'inscricao') {
+      const deadline = safeDate(event.inscricao_fim)?.getTime();
+      return [deadline ? 0 : 1, deadline || realization, realization];
+    }
+    if (criterion === 'acesso') {
+      const deadline = safeDate(event.acesso_fim)?.getTime();
+      return [deadline ? 0 : 1, deadline || realization, realization];
+    }
+    return [2, realization, realization];
   }
 
   function filterAndSort(events) {
@@ -204,19 +244,13 @@
 
     return events
       .filter(event => event && event.titulo && event.data)
-      .filter(event => {
-        const end = eventEndDate(event);
-        return !end || end >= today;
-      })
+      .filter(event => eventIsPublishable(event, today))
       .sort((a, b) => {
-        const da = safeDate(a.data)?.getTime() || 0;
-        const db = safeDate(b.data)?.getTime() || 0;
-
-        return da - db ||
-          String(a.horario || '').localeCompare(
-            String(b.horario || ''),
-            'pt-BR'
-          );
+        const ka = eventSortKey(a);
+        const kb = eventSortKey(b);
+        return ka[0] - kb[0] || ka[1] - kb[1] || ka[2] - kb[2] ||
+          String(a.horario || '').localeCompare(String(b.horario || ''), 'pt-BR') ||
+          String(a.titulo || '').localeCompare(String(b.titulo || ''), 'pt-BR');
       });
   }
 
@@ -245,11 +279,26 @@
   }
 
   function eventIntersectsPeriod(event, rangeStart, rangeEnd) {
+    const criterion = displayCriterion(event);
+    if (criterion === 'inscricao' || criterion === 'acesso') {
+      const startValue = criterion === 'inscricao'
+        ? (event.inscricao_inicio || event.data)
+        : (event.acesso_inicio || event.data);
+      const endValue = criterion === 'inscricao'
+        ? event.inscricao_fim
+        : event.acesso_fim;
+      const windowStart = parseCalendarDate(startValue);
+      // Prazo não informado + status disponível = janela aberta sem fim conhecido.
+      const windowEnd = endValue
+        ? parseCalendarDate(endValue, true)
+        : new Date(9999, 11, 31, 23, 59, 59, 999);
+      if (!windowStart || !windowEnd) return false;
+      return windowStart <= rangeEnd && windowEnd >= rangeStart;
+    }
+
     const eventStart = parseCalendarDate(event.data);
     const eventEnd = parseCalendarDate(event.data_fim || event.data, true);
-
     if (!eventStart || !eventEnd) return false;
-
     return eventStart <= rangeEnd && eventEnd >= rangeStart;
   }
 
@@ -366,6 +415,24 @@
 
   function eventUnit(event) {
     return event.unidade || event.local || '';
+  }
+
+  function isSchoolEvent(event) {
+    return normalizeText(eventProgram(event)).includes(
+      'escola livre de artes arena da cultura'
+    );
+  }
+
+  function schoolProgramFilterIsActive() {
+    return normalizeText(state.filters.program).includes(
+      'escola livre de artes arena da cultura'
+    );
+  }
+
+  function eventsAvailableForCurrentFilters(events) {
+    // Somente o filtro explícito do programa libera todos os cursos individuais.
+    // Qualquer outro filtro atua sobre o mesmo lote reduzido do mural padrão.
+    return schoolProgramFilterIsActive() ? events : buildDefaultEvents(events);
   }
 
   function applyUserFilters(events) {
@@ -1166,7 +1233,7 @@
       rating: state.filterOverlay.querySelector('.filter-rating')?.value || ''
     };
 
-    state.events = applyUserFilters(state.allEvents);
+    state.events = applyUserFilters(eventsAvailableForCurrentFilters(state.allEvents));
     state.index = 0;
 
     if (!state.events.length) {
