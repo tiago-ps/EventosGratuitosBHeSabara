@@ -1,0 +1,9 @@
+V49 — exibição separada de realização e inscrição
+
+Substitua:
+  js/app.js
+
+A caixa QUANDO continua mostrando a realização e acrescenta uma linha como:
+  Inscrições abertas desde 17 de julho de 2026, enquanto houver disponibilidade
+
+A linha só aparece quando o eventos.json contém criterio_exibicao="inscricao" e inscricao_inicio.

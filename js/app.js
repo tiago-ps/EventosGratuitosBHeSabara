@@ -607,6 +607,22 @@
 
       container.append(time);
     }
+
+    if (displayCriterion(event) === 'inscricao' && event.inscricao_inicio) {
+      const registration = document.createElement('span');
+      registration.className = 'when-registration';
+      const start = formatDateParts(event.inscricao_inicio, true).date;
+      const status = normalizeText(event.status_inscricao).replaceAll('_', ' ');
+      const closed = CLOSED_ACCESS_STATUSES.has(status);
+
+      container.append(document.createElement('br'));
+      registration.textContent = closed
+        ? `Inscrições encerradas — abertas desde ${start}`
+        : event.inscricao_fim
+          ? `Inscrições: ${start} a ${formatDateParts(event.inscricao_fim, true).date}`
+          : `Inscrições abertas desde ${start}, enquanto houver disponibilidade`;
+      container.append(registration);
+    }
   }
 
   function formatUpdated(value) {
