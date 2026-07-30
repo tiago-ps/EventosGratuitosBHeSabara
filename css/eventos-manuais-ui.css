@@ -1,6 +1,6 @@
 /* Períodos de inscrição e atividade em eventos manuais ou não padronizados. */
 .details > .registration-period-card {
-  min-height: clamp(138px, 15vh, 176px);
+  min-height: 0;
 }
 
 .when.when-registration {
@@ -42,9 +42,84 @@
   color: var(--text);
 }
 
-@media (min-aspect-ratio: 5/4) and (max-height: 650px) {
+/*
+ * Layout flexível da área textual.
+ *
+ * O título, as badges e as caixas "Quando/Onde" usam somente a altura
+ * necessária. A descrição recebe todo o espaço restante, sem invadir
+ * o cabeçalho ou o rodapé.
+ */
+@media (min-aspect-ratio: 5/4) and (min-width: 851px) {
+  .event-copy {
+    align-self: stretch;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    display: grid;
+    grid-template-rows: auto auto minmax(0, 1fr) auto;
+    align-content: stretch;
+    overflow: hidden;
+  }
+
+  .badges,
+  .event-title,
+  .details {
+    min-height: 0;
+  }
+
+  .description {
+    min-height: 0;
+    max-height: none;
+    overflow: hidden;
+    display: block;
+    -webkit-line-clamp: unset;
+    -webkit-box-orient: initial;
+  }
+
+  .details {
+    align-self: end;
+    margin-top: clamp(10px, 1.8vh, 26px);
+  }
+
+  .details > div,
   .details > .registration-period-card {
-    min-height: 122px;
+    min-height: 0;
+    height: auto;
+  }
+
+  .details dd,
+  .where-text {
+    -webkit-line-clamp: 3;
+  }
+}
+
+/* Em telas verticais ou estreitas o conteúdo volta ao fluxo normal. */
+@media (max-aspect-ratio: 5/4), (max-width: 850px) {
+  .event-copy {
+    display: block;
+    height: auto;
+    overflow: visible;
+  }
+
+  .description {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .details > div,
+  .details > .registration-period-card {
+    min-height: 0;
+  }
+}
+
+/* Ajuste adicional para monitores baixos e tela dividida. */
+@media (min-aspect-ratio: 5/4) and (max-height: 650px) {
+  .details > div,
+  .details > .registration-period-card {
+    min-height: 0;
+    padding: 8px 10px;
   }
 
   .when.when-registration {
@@ -54,5 +129,13 @@
   .activity-period {
     margin-top: .32rem;
     padding-top: .3rem;
+  }
+
+  .description {
+    margin-top: 8px;
+  }
+
+  .details {
+    margin-top: 8px;
   }
 }

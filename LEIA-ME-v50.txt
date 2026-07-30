@@ -1,0 +1,18 @@
+EVENTOS GRATUITOS BH E SABARÁ — V50
+
+Arquivo alterado:
+- css/eventos-manuais-ui.css
+
+Como aplicar:
+1. Extraia o ZIP.
+2. No repositório do site, abra a pasta css.
+3. Substitua eventos-manuais-ui.css pelo arquivo desta versão.
+4. Aguarde o GitHub Pages atualizar.
+5. Atualize a página com Ctrl + F5.
+
+O ajuste:
+- remove as alturas mínimas artificiais das caixas Quando e Onde;
+- faz título e badges ocuparem somente o espaço necessário;
+- permite que a descrição utilize todo o espaço restante;
+- protege cabeçalho, título, caixas de detalhes e rodapé contra sobreposição;
+- mantém o fluxo normal em telas verticais e celulares.
