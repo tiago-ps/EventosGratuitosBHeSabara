@@ -1,0 +1,16 @@
+SITE V48 — DATAS DE PARTICIPAÇÃO E REGRA DA ESCOLA LIVRE
+
+1. Copie aplicar_patch_site_v48.py para a raiz do repositório EventosGratuitosBHeSabara.
+2. No terminal, execute: python aplicar_patch_site_v48.py
+3. Confira: git diff -- js/app.js
+4. Apague aplicar_patch_site_v48.py depois da aplicação.
+5. Faça commit e push do js/app.js.
+
+O patch:
+- mantém data/data_fim como realização;
+- usa inscrição/acesso para validade, filtros de período e ordenação quando indicado;
+- considera inscrição aberta sem prazo como janela ainda disponível;
+- somente o filtro explícito da Escola Livre libera todos os cursos individuais;
+- outros filtros atuam sobre o lote rotativo normal.
+
+O script para com mensagem clara se o app.js não corresponder à versão esperada; nesse caso ele não grava alteração parcial.
