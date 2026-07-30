@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Janeiro a Dezembro de 2026",
-  "atualizado_em": "2026-07-30T00:49:37-03:00",
+  "atualizado_em": "2026-07-30T17:10:56-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -21,6 +21,7 @@
       "fonte": "CCBB Belo Horizonte",
       "instituicao_id": "ccbb-bh",
       "classificacao_indicativa": "Livre",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "ccbb-bh",
       "endereco": "Praça da Liberdade, 450, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/Q6UrZGKEn8eCx8Kb8",
@@ -69,6 +70,7 @@
       "exibicao_por_filtro": false,
       "instagram_perfil": "centroculturallindeiaregina",
       "instagram_url": "https://www.instagram.com/centroculturallindeiaregina/",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Aristolino Basílio de Oliveira, 445, Regina, Belo Horizonte - MG, 30692-190",
       "mapa": "https://maps.app.goo.gl/NbE1w2tMKeH6P3Lm8"
     },
@@ -122,7 +124,8 @@
       "exibicao_padrao": true,
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
-      "descricao": "94 cursos e atividades gratuitas de formação artística e cultural em 25 unidades ou espaços de Belo Horizonte e on-line."
+      "descricao": "94 cursos e atividades gratuitas de formação artística e cultural em 25 unidades ou espaços de Belo Horizonte e on-line.",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
       "id": "fcs-wp-36313",
@@ -142,6 +145,7 @@
       "instituicao_id": "fcs",
       "fonte_id": 36313,
       "atualizado_na_fonte": "2026-06-12T21:44:56",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "camerasete",
       "endereco": "Avenida Afonso Pena, 737, Centro, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/Ab3GCDUXaWph6oRs7"
@@ -164,6 +168,7 @@
       "instituicao_id": "fcs",
       "fonte_id": 36808,
       "atualizado_na_fonte": "2026-06-30T17:39:02",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "palacio-das-artes",
       "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7"
@@ -185,6 +190,7 @@
       "fonte": "CCBB Belo Horizonte",
       "instituicao_id": "ccbb-bh",
       "classificacao_indicativa": "Livre",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "ccbb-bh",
       "endereco": "Praça da Liberdade, 450, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/Q6UrZGKEn8eCx8Kb8",
@@ -207,6 +213,7 @@
       "fonte": "CCBB Belo Horizonte",
       "instituicao_id": "ccbb-bh",
       "classificacao_indicativa": "Livre",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "ccbb-bh",
       "endereco": "Praça da Liberdade, 450, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/Q6UrZGKEn8eCx8Kb8",
@@ -230,6 +237,7 @@
       "instituicao_id": "fcs",
       "fonte_id": 37031,
       "atualizado_na_fonte": "2026-07-24T20:31:48",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "palacio-das-artes",
       "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
@@ -259,6 +267,11 @@
       "fonte": "Cadastro manual",
       "instituicao_id": "espaco-conhecimento-ufmg",
       "local_id": "espaco-conhecimento-ufmg",
+      "inscricao_inicio": "",
+      "inscricao_fim": "",
+      "status_inscricao": "",
+      "criterio_exibicao": "realizacao",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
     },
     {
@@ -285,6 +298,11 @@
       "fonte": "Cadastro manual",
       "instituicao_id": "fundacao-municipal-cultura-bh",
       "local_id": "centro-cultural-lindeia-regina",
+      "inscricao_inicio": "",
+      "inscricao_fim": "",
+      "status_inscricao": "",
+      "criterio_exibicao": "realizacao",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "mapa": "https://maps.app.goo.gl/NbE1w2tMKeH6P3Lm8"
     },
     {
@@ -317,6 +335,7 @@
         "Pampulha"
       ],
       "classificacao_indicativa": "Livre",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Arte+da+Pampulha+-+MAP%2C+Avenida+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+16585+-+Pampulha%2C+Belo+Horizonte"
     },
     {
@@ -338,6 +357,7 @@
       "fonte_id": "3489452",
       "organizador": "",
       "endereco": "Rua Paracatu, 588, Sabará, MG",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "fazenda-arraial-velho",
       "mapa": "https://www.google.com/maps/search/?api=1&query=Fazenda+Arraial+Velho%2C+Rua+Paracatu%2C+588%2C+Sabar%C3%A1%2C+MG"
     },
@@ -365,6 +385,11 @@
       "fonte": "Cadastro manual",
       "instituicao_id": "fundacao-municipal-cultura-bh",
       "local_id": "centro-cultural-venda-nova",
+      "inscricao_inicio": "",
+      "inscricao_fim": "",
+      "status_inscricao": "",
+      "criterio_exibicao": "realizacao",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "mapa": "https://maps.app.goo.gl/zcTEYqwr1mBiBwZ99"
     },
     {
@@ -383,31 +408,10 @@
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/oficina-evolucao-no-mundo-animal-quinta-feira/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
-    },
-    {
-      "id": "cine-santa-tereza-bileto-124492",
-      "titulo": "MOSTRA MOVIMENTO - Sessão 6",
-      "data": "2026-07-30",
-      "data_fim": "",
-      "horario": "16h",
-      "local": "Cine Santa Tereza",
-      "cidade": "Belo Horizonte",
-      "categoria": "Cinema",
-      "gratuito": true,
-      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial. Também há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade.",
-      "descricao": "Sessão da Mostra Movimento no Cine Santa Tereza. Classificação indicativa: Livre. Consulte a programação completa e a disponibilidade de ingressos no link oficial.",
-      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/am32g3h5deaolb056r4k1f3lbhamh4qdcsuomfphcirc01e4bsq1mon8nggrmimrkv808pgqp1icplsfqovpfk4tlsd560ldtr6445.webp",
-      "link": "https://bileto.sympla.com.br/event/124492/d/402452/s/2637944",
-      "fonte": "Cine Santa Tereza",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "fonte_id": "124492",
-      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
-      "classificacao_indicativa": "Livre",
-      "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
     {
       "id": "cine-santa-tereza-bileto-124485",
@@ -428,6 +432,7 @@
       "fonte_id": "124485",
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "classificacao_indicativa": "10 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "cine-santa-tereza",
       "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
@@ -441,7 +446,7 @@
       "cidade": "Belo Horizonte",
       "categoria": "Teatro",
       "gratuito": true,
-      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial e na bilheteria do espaço.",
+      "inscricao": "Ingressos gratuitos on-line esgotados; consulte a bilheteria e o link oficial para verificar eventual disponibilidade",
       "descricao": "A CONFISSÃO DE LEONTINA LEONTINA Circulação Após o sucesso da primeira temporada de circulação pela Bahia, o monólogo \"A Confissão de Leontina\" segue em viagem pelo Brasil. Desta vez, com 20 apresentações gratuitas em estados das regiões Nordeste e Sudeste. Do texto de Lygia Fagundes Telles (1918-2022), uma das maiores escritoras da literatura brasileira, o espetáculo é interpretado por Rose Irene Visitação, sob direção de Karina de Faria. Em cena, a obra propõe uma reflexão profunda e sensível sobre invisibilidade feminina e a naturalização da violência contra a mulher.",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/19clj25tedajlrjihg6fdivtgg9l1aiqgoflbbi5fg09r4qpjad3m1h9fnmeg0keek62qa272lcojri9b74boelkgg9bfatp1fv5v5u.jpeg",
       "link": "https://bileto.sympla.com.br/event/123723/d/399402/s/2626359",
@@ -450,6 +455,7 @@
       "fonte_id": "123723",
       "endereco": "Rua Padre Marinho, 60 – Belo Horizonte – Minas Gerais",
       "classificacao_indicativa": "12 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "centro-cultural-sesiminas-bh",
       "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+SESIMINAS+BH%2C+Rua+Padre+Marinho%2C+60+%E2%80%93+Belo+Horizonte+%E2%80%93+Minas+Gerais",
       "link_inscricao": "https://bileto.sympla.com.br/event/123723/d/399402/s/2626359",
@@ -492,6 +498,7 @@
       "instituicao_id": "fcs",
       "fonte_id": 37108,
       "atualizado_na_fonte": "2026-07-03T20:40:28",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "palacio-das-artes",
       "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
@@ -521,6 +528,11 @@
       "fonte": "Cadastro manual",
       "instituicao_id": "fundacao-municipal-cultura-bh",
       "local_id": "centro-cultural-lindeia-regina",
+      "inscricao_inicio": "",
+      "inscricao_fim": "",
+      "status_inscricao": "",
+      "criterio_exibicao": "realizacao",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "mapa": "https://maps.app.goo.gl/NbE1w2tMKeH6P3Lm8"
     },
     {
@@ -552,6 +564,7 @@
         "Artes Plásticas"
       ],
       "classificacao_indicativa": "Livre",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Arte+da+Pampulha+-+MAP%2C+Avenida+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+16585+-+Pampulha%2C+Belo+Horizonte"
     },
     {
@@ -570,6 +583,7 @@
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/oficina-como-o-aviao-voa-2/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
@@ -584,7 +598,7 @@
       "cidade": "Belo Horizonte",
       "categoria": "Cinema",
       "gratuito": true,
-      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial. Também há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade.",
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
       "descricao": "Sessão da Mostra Movimento no Cine Santa Tereza. Classificação indicativa: 14 anos. Consulte a programação completa e a disponibilidade de ingressos no link oficial.",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/am32g3h5deaolb056r4k1f3lbhamh4qdcsuomfphcirc01e4bsq1mon8nggrmimrkv808pgqp1icplsfqovpfk4tlsd560ldtr6445.webp",
       "link": "https://bileto.sympla.com.br/event/124493/d/402453/s/2637946",
@@ -593,6 +607,7 @@
       "fonte_id": "124493",
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "classificacao_indicativa": "14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "cine-santa-tereza",
       "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
@@ -623,6 +638,7 @@
         "Experiências"
       ],
       "classificacao_indicativa": "Livre",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+do+Baile%2C+Avenida+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+751+-+Pampulha%2C+Belo+Horizonte"
     },
     {
@@ -644,6 +660,7 @@
       "fonte_id": "124486",
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "classificacao_indicativa": "10 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "cine-santa-tereza",
       "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
@@ -676,6 +693,7 @@
         "60+",
         "Teatro"
       ],
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "centro-cultural-sesiminas-bh",
       "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+SESIMINAS+BH%2C+Rua+Padre+Marinho%2C+60+-+Santa+Efig%C3%AAnia%2C+Belo+Horizonte"
     },
@@ -703,6 +721,11 @@
       "fonte": "Cadastro manual",
       "instituicao_id": "fundacao-municipal-cultura-bh",
       "local_id": "centro-cultural-vila-fatima",
+      "inscricao_inicio": "",
+      "inscricao_fim": "",
+      "status_inscricao": "",
+      "criterio_exibicao": "realizacao",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "mapa": "https://maps.app.goo.gl/Ky1wTCbu3P1i94FQ7"
     },
     {
@@ -729,7 +752,77 @@
       "fonte": "Cadastro manual",
       "instituicao_id": "fundacao-municipal-cultura-bh",
       "local_id": "centro-cultural-vila-fatima",
+      "inscricao_inicio": "",
+      "inscricao_fim": "",
+      "status_inscricao": "",
+      "criterio_exibicao": "realizacao",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "mapa": "https://maps.app.goo.gl/Ky1wTCbu3P1i94FQ7"
+    },
+    {
+      "id": "portal-bh-35889a82ac24-2026-08-01-0000",
+      "titulo": "Programação Agosto 2026 - Museus",
+      "data": "2026-08-01",
+      "data_fim": "2026-08-31",
+      "horario": "0h às 23h59",
+      "local": "Casa do Baile",
+      "cidade": "Belo Horizonte",
+      "categoria": "Exposição",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "Museu Casa Kubitschek 01/08/26 MCK FEITO À MÃO Brota no Jardim: Oficina de carimbaria/pigmentação com plantas - Aniversário Burle Marx Horário: 14h às 16h30 Tempo de duração da atividade: 2h30m Público-alvo: Geral Classificação indicativa: Livre O Museu Casa Kubitschek convida o público geral para uma experiência de produção artística usando técnicas de carimbaria e…",
+      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-07/mck_foto.rafaelcosta-60_0.jpg",
+      "link": "https://portalbelohorizonte.com.br/2026/eventos/exposicao/patrimonio-memoria-e-identidades-culturais-memoria-social-e-urbana/programacao-agosto-2026-museus",
+      "fonte": "Portal Belo Horizonte",
+      "fonte_id": "35889a82ac24",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "endereco": "",
+      "tags_fonte": [
+        "60+",
+        "Acessibilidade",
+        "Ações Formativas",
+        "BH Grátis",
+        "Moda",
+        "Oficinas",
+        "Visita virtual"
+      ],
+      "classificacao_indicativa": "Livre",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
+    },
+    {
+      "id": "portal-bh-d20a52e595fc-2026-08-01-0001",
+      "titulo": "Rede de Identidades Culturais - Agosto de 2026",
+      "data": "2026-08-01",
+      "data_fim": "2026-08-31",
+      "horario": "0h01 às 23h59",
+      "local": "Centro Cultural Alto Vera Cruz",
+      "cidade": "Belo Horizonte",
+      "categoria": "Apresentação artística",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "AÇÃO HORIZONTES DO SAMBA Samba No Morro da PPL Avenida José Bonifácio 236 - bairro São Cristóvão, Belo Horizonte Samba Tradicional com Fran Januário Sextas- Feiras, 07/08, 14/08, 21/08 e 28/08. A partir das 18h Samba das Malandras alternando com Samba de Nego, Sábados, 01/08, 08/08, 15/08, 22/08, 29/08. Abertura 17h, samba inicia às 18:30 Samba Que Escuto Em Casa.",
+      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-07/foto_rafaelcosta-7878.jpg",
+      "link": "https://portalbelohorizonte.com.br/2026/eventos/apresentacao-artistica/patrimonio-memoria-e-identidades-culturais-memoria-social-e-urbana/rede-de-identidades-culturais-agosto-de-2026",
+      "fonte": "Portal Belo Horizonte",
+      "fonte_id": "d20a52e595fc",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "endereco": "Rua Padre Júlio Maria, 1577, Alto Vera Cruz, Belo Horizonte - MG, 30285-360",
+      "tags_fonte": [
+        "60+",
+        "Acessibilidade",
+        "Acessível para cadeirantes",
+        "BH Grátis",
+        "Samba",
+        "Oficinas",
+        "Moda",
+        "Literatura",
+        "Gratuito",
+        "Cultura PBH",
+        "Cultural"
+      ],
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "centro-cultural-alto-vera-cruz",
+      "mapa": "https://maps.app.goo.gl/BVLi6uyKLmALv6SM6"
     },
     {
       "id": "portal-bh-b5482299b85e-2026-08-01-1000",
@@ -761,6 +854,7 @@
         "Oficinas"
       ],
       "classificacao_indicativa": "Livre",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Arte+da+Pampulha+-+MAP%2C+Av.+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+16.585+-+Pampulha%2C+Belo+Horizonte"
     },
     {
@@ -783,6 +877,7 @@
       "endereco": "Rua da Bahia, 1149, Centro, Belo Horizonte - MG, 30160-011",
       "tags_fonte": [],
       "classificacao_indicativa": "Livre",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "museu-da-moda",
       "mapa": "https://maps.app.goo.gl/NSKCeznUnR3ooTQaA",
       "espaco_interno": "MUMO"
@@ -799,7 +894,7 @@
       "gratuito": true,
       "inscricao": "",
       "descricao": "O Tanabata Matsuri 2026 promete trazer toda a magia, tradição e cor da cultura japonesa diretamente para o coração de Minas Gerais. Taiko, Kagami Wari, Danças Tradicionais, Flauta Shakuhachi, Doceria Japonesa Yogashi com Cesar Yukio e oficinas culturais.",
-      "imagem": "imagens/eventos-manuais/tanabata-matsuri.png",
+      "imagem": "imagens/eventos-manuais/tanabata-matsuri-2026.png",
       "link": "https://www.instagram.com/tanabatamatsuribh/",
       "pagina": "https://www.instagram.com/tanabatamatsuribh/",
       "link_inscricao": "https://app.gofree.com.br/ingressos/5-tanabata-matsuri_41516/41516?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnIOR7zMOVD6hn0VyCEB2I-44awmS_fxjcUOZY4QsAah6XrP9s3eRIHlFtpvs_aem_cet0wA5HjoDtFUVyISs08Q",
@@ -809,7 +904,12 @@
       "local_id": "",
       "endereco": "Av. Cristiano Machado, 3411 - Ipiranga, Belo Horizonte - MG, 31160-380, Brasil",
       "mapa": "https://maps.app.goo.gl/vkDD2G45FcewVr9o8",
-      "espaco_interno": ""
+      "espaco_interno": "",
+      "inscricao_inicio": "",
+      "inscricao_fim": "",
+      "status_inscricao": "",
+      "criterio_exibicao": "realizacao",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
       "id": "portal-bh-6280a47582a0-2026-08-01-1400",
@@ -840,6 +940,7 @@
         "Pampulha"
       ],
       "classificacao_indicativa": "Livre",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Kubitschek%2C+Av.+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+4.188%2C+Belo+Horizonte"
     },
     {
@@ -858,6 +959,7 @@
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/oficina-fabrica-de-planetas-sabado/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
@@ -881,6 +983,7 @@
       "fonte_id": "124488",
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "classificacao_indicativa": "12 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "cine-santa-tereza",
       "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
@@ -903,6 +1006,7 @@
       "fonte_id": "124489",
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "classificacao_indicativa": "Livre",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "cine-santa-tereza",
       "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
@@ -922,6 +1026,7 @@
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/observacao-noturna-dos-astros-com-telescopios-sabado/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
@@ -943,6 +1048,7 @@
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/observacao-solar-com-telescopios-domingo-9/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
@@ -975,7 +1081,8 @@
       "instituicao_id": "fundacao-municipal-cultura-bh",
       "endereco": "",
       "tags_fonte": [],
-      "classificacao_indicativa": "Livre"
+      "classificacao_indicativa": "Livre",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
       "id": "ufmg-ec-oficina-costurando-dinossauros-brasileiros-domingo",
@@ -993,6 +1100,7 @@
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/oficina-costurando-dinossauros-brasileiros-domingo/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
@@ -1016,6 +1124,7 @@
       "fonte_id": "124490",
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "classificacao_indicativa": "10 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "cine-santa-tereza",
       "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
@@ -1038,6 +1147,7 @@
       "fonte_id": "124491",
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "classificacao_indicativa": "Livre",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "cine-santa-tereza",
       "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
@@ -1065,6 +1175,11 @@
       "fonte": "Cadastro manual",
       "instituicao_id": "",
       "local_id": "teatro-marilia",
+      "inscricao_inicio": "",
+      "inscricao_fim": "",
+      "status_inscricao": "",
+      "criterio_exibicao": "realizacao",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "mapa": "https://maps.app.goo.gl/MtyButkEtXBbL1Ae8"
     },
     {
@@ -1111,6 +1226,7 @@
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
       "instagram_url": "",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Dom Cabral, 765, Ipiranga, Belo Horizonte - MG, 31160-150",
       "mapa": "https://maps.app.goo.gl/Da4tniDGCdhMExeY9"
     },
@@ -1150,6 +1266,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "Crianças de 11 a 13 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Dom Cabral, 765, Ipiranga, Belo Horizonte - MG, 31160-150",
       "mapa": "https://maps.app.goo.gl/Da4tniDGCdhMExeY9"
     },
@@ -1163,7 +1280,7 @@
       "cidade": "Belo Horizonte",
       "categoria": "Cinema",
       "gratuito": true,
-      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial. Também há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade.",
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
       "descricao": "MOSTRA LIQUIDIFICADOR CULTURAL A mostra “Liquidificador Cultural”é um evento que celebra a efervescência da produção audiovisual independente, reunindo uma seleção diversa de curtas-metragens, videoclipes e performances em sessão comentada. A programação apresenta trabalhos que transitam entre o experimental, o musical e o narrativo, com participações de artistas como Confeitaria, João Sentidor, Luísa Bahia, Nívea Sabino, Sick, JEZ, entre outros. Destaques incluem o clipe Anos 90, de Asa de Besouro, e a performance coreográfica Confluxo , criada colaborativamente com orientação de Guidá,",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/am32g3h5deaolb056r4k1f3lbhamh4qdcsuomfphcirc01e4bsq1mon8nggrmimrkv808pgqp1icplsfqovpfk4tlsd560ldtr6445.webp",
       "link": "https://bileto.sympla.com.br/event/124494/d/402454/s/2637948",
@@ -1172,6 +1289,7 @@
       "fonte_id": "124494",
       "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
       "classificacao_indicativa": "Livre",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "cine-santa-tereza",
       "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
@@ -1199,6 +1317,11 @@
       "fonte": "Cadastro manual",
       "instituicao_id": "fundacao-municipal-cultura-bh",
       "local_id": "centro-cultural-liberalino-alves-de-oliveira",
+      "inscricao_inicio": "",
+      "inscricao_fim": "",
+      "status_inscricao": "",
+      "criterio_exibicao": "realizacao",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "mapa": "https://maps.app.goo.gl/59216yGPUBfMrKVa9"
     },
     {
@@ -1261,6 +1384,7 @@
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
       "instagram_url": "",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
@@ -1301,6 +1425,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
@@ -1351,6 +1476,7 @@
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
       "instagram_url": "",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Édna Quintel, 320, São Bernardo, Belo Horizonte - MG, 31750-030",
       "mapa": "https://maps.app.goo.gl/Yufimrb872nmXa4s9"
     },
@@ -1400,6 +1526,7 @@
       "exibicao_por_filtro": false,
       "instagram_perfil": "centroculturalzilahsposito",
       "instagram_url": "https://www.instagram.com/centroculturalzilahsposito/",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Carnaúba, 286, Zilah Spósito, Belo Horizonte - MG, 31787-210",
       "mapa": "https://maps.app.goo.gl/hTZMNcQSzknYzSRx7"
     },
@@ -1439,6 +1566,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Édna Quintel, 320, São Bernardo, Belo Horizonte - MG, 31750-030",
       "mapa": "https://maps.app.goo.gl/Yufimrb872nmXa4s9"
     },
@@ -1478,6 +1606,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Carnaúba, 286, Zilah Spósito, Belo Horizonte - MG, 31787-210",
       "mapa": "https://maps.app.goo.gl/hTZMNcQSzknYzSRx7"
     },
@@ -1517,6 +1646,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
@@ -1557,6 +1687,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
@@ -1571,7 +1702,7 @@
       "cidade": "Belo Horizonte",
       "categoria": "Teatro",
       "gratuito": true,
-      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial e na bilheteria do espaço.",
+      "inscricao": "Ingressos gratuitos on-line esgotados; consulte a bilheteria e o link oficial para verificar eventual disponibilidade",
       "descricao": "Espetáculo \"Farewell” Sinopse: Maria Lúcia do Amparo, professora de inglês aposentada, descobre ter pouco tempo de vida e faz ao filho um último pedido: assistir pela primeira vez a um concerto de orquestra. A partir desse desejo, o espetáculo reúne uma coleção de personagens, seus momentos de vida e como cada um resolve se despedir. Organizada em uma série de quadros que alternam cenas ao vivo e projeções cinematográficas, a montagem é resultado do Ateliê de Montagem: Entre Teatro e Cinema , laboratório que reuniu 22 atores e atrizes sob a condução de Bárbara Colen e Vinícius de Souza.",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/lbq7bq92rrkadebn9jm3e4l8bhimguhvuau4orkqttjhsmiedaivhpioo4rcld0bhf483o2sr03pfs2it2910kiuf6cb1jtn4nuqbe.webp",
       "link": "https://bileto.sympla.com.br/event/123626/d/399186/s/2625853",
@@ -1580,6 +1711,7 @@
       "fonte_id": "123626",
       "endereco": "Rua Padre Marinho,60 – Belo Horizonte – Minas Gerais",
       "classificacao_indicativa": "16 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "centro-cultural-sesiminas-bh",
       "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+SESIMINAS+BH%2C+Rua+Padre+Marinho%2C60+%E2%80%93+Belo+Horizonte+%E2%80%93+Minas+Gerais",
       "link_inscricao": "https://bileto.sympla.com.br/event/123626/d/399186/s/2625853",
@@ -1617,6 +1749,7 @@
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/espaco-aberto-a-educadores-sabado/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
@@ -1631,7 +1764,7 @@
       "cidade": "Belo Horizonte",
       "categoria": "Festival",
       "gratuito": true,
-      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial e na bilheteria do espaço.",
+      "inscricao": "Ingressos gratuitos disponíveis on-line, conforme disponibilidade",
       "descricao": "Nome do evento: Board Game na Biblioteca SESIMINAS Data: 08/08/2026 Horário: 14h às 19h Idade: a partir de 16 anos SINOPSE SESIMINAS, BG Mulheres BH e Brechó Lúdico te convidam para um dia de jogos de tabuleiro na biblioteca! Teremos jogos para iniciantes ou experientes! Por ser um evento voltado às mulheres, a regra para pegar ingresso é a seguinte: - Mulheres cis/trans, pessoas não binárias: entrada liberada. - Homens: entrada apenas se convidados por uma das pessoas acima citadas. Não esqueçam de levar comida e bebida para compartilhar! Qualquer dúvida,",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/2e477sjrl8s89url1f92boguprok79drg1s552c3qu50sk8s8ibgju339vgo0aqgq5m48t8kavkaq56upq3bucbtr09p5u7h0e06r2.jpeg",
       "link": "https://bileto.sympla.com.br/event/124448/d/402353/s/2637643",
@@ -1640,6 +1773,7 @@
       "fonte_id": "124448",
       "endereco": "Rua Álvares Maciel,59 – Belo Horizonte – Minas Gerais",
       "classificacao_indicativa": "16 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "sesi-cultura-biblioteca-sesiminas",
       "mapa": "https://maps.app.goo.gl/8JZjtbjNSJVHuXrh8"
     },
@@ -1659,6 +1793,7 @@
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/sabado-com-libras-visita-mediada-a-exposicao-demasiado-humano-sabado/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
@@ -1690,6 +1825,7 @@
         "Gratuito",
         "Ingressos on-line"
       ],
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "centro-cultural-sesiminas-bh",
       "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+SESIMINAS+BH%2C+Rua+%C3%81lvares+Maciel%2C+59+-+Santa+Efig%C3%AAnia%2C+Belo+Horizonte"
     },
@@ -1709,9 +1845,36 @@
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/oficina-colecao-de-estrelas-sabado/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
+    },
+    {
+      "id": "portal-bh-504e2c802fbd-2026-08-08-1500",
+      "titulo": "Oficina \"Prosa de Saberes Tradicionais\"",
+      "data": "2026-08-08",
+      "data_fim": "",
+      "horario": "15h às 17h",
+      "local": "Centro Cultural São Geraldo",
+      "cidade": "Belo Horizonte",
+      "categoria": "Oficina",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "No dia 8 de agosto, o Centro Cultural São Geraldo recebe a oficina Prosa de Saberes Tradicionais. 🌿 Ministrada por Ana Maria, do coletivo “Minhas Plantas, Meu Quintal”, a atividade entrelaça bate-papo, conhecimentos sobre ervas, espiritualidade, alimentação saudável e convivência comunitária. Tudo isso em um ambiente de aprendizado horizontal,",
+      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-07/quadrado.jpg.jpg",
+      "link": "https://portalbelohorizonte.com.br/circuitomunicipaldecultura/2026/eventos/oficina/cultura-popular/oficina-prosa-de-saberes-tradicionais",
+      "fonte": "Portal Belo Horizonte",
+      "fonte_id": "504e2c802fbd",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "endereco": "R. Silva Alvarenga, 548 - São Geraldo",
+      "tags_fonte": [
+        "Ações Formativas"
+      ],
+      "classificacao_indicativa": "Livre",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "centro-cultural-sao-geraldo",
+      "mapa": "https://maps.app.goo.gl/BTFGBXTDZkSgQRc98"
     },
     {
       "id": "ufmg-ec-observacao-noturna-dos-astros-com-telescopios-sabado-2",
@@ -1729,6 +1892,7 @@
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/observacao-noturna-dos-astros-com-telescopios-sabado-2/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
@@ -1758,6 +1922,11 @@
       "fonte": "Cadastro manual",
       "instituicao_id": "",
       "local_id": "",
+      "inscricao_inicio": "",
+      "inscricao_fim": "",
+      "status_inscricao": "",
+      "criterio_exibicao": "realizacao",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "mapa": "https://www.google.com/maps/search/?api=1&query=Parque+Ana+L%C3%BAcia%2C+Sabar%C3%A1+-+MG"
     },
     {
@@ -1776,6 +1945,7 @@
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/observacao-solar-com-telescopios-domingo-2/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
@@ -1797,6 +1967,7 @@
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/oficina-de-colagem-espaco-de-memorias-domingo-2/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
@@ -1847,6 +2018,7 @@
       "exibicao_por_filtro": false,
       "instagram_perfil": "centroculturaljardimguanabara",
       "instagram_url": "https://www.instagram.com/centroculturaljardimguanabara/",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua João Álvares Cabral, 277, Jardim Guanabara, Belo Horizonte - MG, 31742-170",
       "mapa": "https://maps.app.goo.gl/eCATveDGRuNKYLof9"
     },
@@ -1886,6 +2058,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
@@ -1926,6 +2099,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 16 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
@@ -1966,6 +2140,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua João Álvares Cabral, 277, Jardim Guanabara, Belo Horizonte - MG, 31742-170",
       "mapa": "https://maps.app.goo.gl/eCATveDGRuNKYLof9"
     },
@@ -1987,6 +2162,7 @@
       "instituicao_id": "fcs",
       "fonte_id": 37247,
       "atualizado_na_fonte": "2026-07-24T19:58:54",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "palacio-das-artes",
       "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
@@ -2038,6 +2214,7 @@
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
       "instagram_url": "",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua W-3, 500, Pongelupe, Belo Horizonte - MG, 30628-175",
       "mapa": "https://maps.app.goo.gl/Uq5R3PNvQBrdWSnT9"
     },
@@ -2077,6 +2254,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
@@ -2117,6 +2295,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua W-3, 500, Pongelupe, Belo Horizonte - MG, 30628-175",
       "mapa": "https://maps.app.goo.gl/Uq5R3PNvQBrdWSnT9"
     },
@@ -2136,6 +2315,7 @@
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/espaco-aberto-a-educadores-quarta-feira/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
@@ -2158,6 +2338,7 @@
       "instituicao_id": "fcs",
       "fonte_id": 37245,
       "atualizado_na_fonte": "2026-07-24T19:55:33",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "palacio-das-artes",
       "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
@@ -2212,6 +2393,7 @@
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
       "instagram_url": "",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Avenida Presidente Antônio Carlos, 821, Lagoinha, Belo Horizonte - MG, 31110-314",
       "mapa": "https://maps.app.goo.gl/59216yGPUBfMrKVa9"
     },
@@ -2265,6 +2447,7 @@
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
       "instagram_url": "",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Mangabeira da Serra, 320, Marçola, Belo Horizonte - MG, 30220-265",
       "mapa": "https://maps.app.goo.gl/CqmZC29eVpYZdKzFA"
     },
@@ -2305,6 +2488,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "Crianças entre 10 e 13 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Carnaúba, 286, Zilah Spósito, Belo Horizonte - MG, 31787-210",
       "mapa": "https://maps.app.goo.gl/hTZMNcQSzknYzSRx7"
     },
@@ -2344,6 +2528,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Mangabeira da Serra, 320, Marçola, Belo Horizonte - MG, 30220-265",
       "mapa": "https://maps.app.goo.gl/CqmZC29eVpYZdKzFA"
     },
@@ -2383,6 +2568,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Avenida Presidente Antônio Carlos, 821, Lagoinha, Belo Horizonte - MG, 31110-314",
       "mapa": "https://maps.app.goo.gl/59216yGPUBfMrKVa9"
     },
@@ -2433,6 +2619,7 @@
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
       "instagram_url": "",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Nova Ponte, 22, Salgado Filho, Belo Horizonte - MG, 30550-720",
       "mapa": "https://maps.app.goo.gl/xqnT1A9TWbQdY2wE8"
     },
@@ -2472,6 +2659,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
@@ -2512,6 +2700,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "Crianças entre 6 e 10 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Nova Ponte, 22, Salgado Filho, Belo Horizonte - MG, 30550-720",
       "mapa": "https://maps.app.goo.gl/xqnT1A9TWbQdY2wE8"
     },
@@ -2552,6 +2741,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
@@ -2602,6 +2792,7 @@
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
       "instagram_url": "",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Padre Júlio Maria, 1577, Alto Vera Cruz, Belo Horizonte - MG, 30285-360",
       "mapa": "https://maps.app.goo.gl/BVLi6uyKLmALv6SM6"
     },
@@ -2641,6 +2832,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Nova Ponte, 22, Salgado Filho, Belo Horizonte - MG, 30550-720",
       "mapa": "https://maps.app.goo.gl/xqnT1A9TWbQdY2wE8"
     },
@@ -2680,6 +2872,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Padre Júlio Maria, 1577, Alto Vera Cruz, Belo Horizonte - MG, 30285-360",
       "mapa": "https://maps.app.goo.gl/BVLi6uyKLmALv6SM6"
     },
@@ -2720,6 +2913,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Mangabeira da Serra, 320, Marçola, Belo Horizonte - MG, 30220-265",
       "mapa": "https://maps.app.goo.gl/CqmZC29eVpYZdKzFA"
     },
@@ -2753,6 +2947,7 @@
         "Pampulha"
       ],
       "classificacao_indicativa": "Livre",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Arte+da+Pampulha+-+MAP%2C+Av.+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+16.585%2C+Belo+Horizonte"
     },
     {
@@ -2771,6 +2966,7 @@
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/sabado-com-libras-a-comunicacao-com-surdos-nos-museus-sabado/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
@@ -2791,6 +2987,7 @@
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/observacao-noturna-dos-astros-com-telescopios-sabado-3/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
@@ -2812,6 +3009,7 @@
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/observacao-solar-com-telescopios-domingo-3/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
@@ -2833,6 +3031,7 @@
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/visita-mediada-a-exposicao-demasiado-humano-domingo/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
@@ -2878,6 +3077,7 @@
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
       "instagram_url": "",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Avenida Professor Alfredo Balena, 586, Santa Efigênia, Belo Horizonte - MG, 30130-100",
       "mapa": "https://maps.app.goo.gl/MtyButkEtXBbL1Ae8"
     },
@@ -2917,6 +3117,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Avenida Professor Alfredo Balena, 586, Santa Efigênia, Belo Horizonte - MG, 30130-100",
       "mapa": "https://maps.app.goo.gl/MtyButkEtXBbL1Ae8"
     },
@@ -2957,6 +3158,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
@@ -3007,6 +3209,7 @@
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
       "instagram_url": "",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua dos Industriários, 289, Indústrias I (Barreiro), Belo Horizonte - MG, 30610-280",
       "mapa": "https://maps.app.goo.gl/o3ucaPwjJs26Zdvy5"
     },
@@ -3050,7 +3253,8 @@
       "exibicao_padrao": true,
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
-      "instagram_url": ""
+      "instagram_url": "",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
       "id": "ela-gestao-financeira-de-projetos-culturais-d3410375e2",
@@ -3087,7 +3291,8 @@
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "On-line",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
       "id": "ela-boi-livre-3c9a386eae",
@@ -3125,6 +3330,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
@@ -3172,6 +3378,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "Crianças entre 6 e 10 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua dos Industriários, 289, Indústrias I (Barreiro), Belo Horizonte - MG, 30610-280",
       "mapa": "https://maps.app.goo.gl/o3ucaPwjJs26Zdvy5"
     },
@@ -3211,6 +3418,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
@@ -3259,6 +3467,7 @@
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
       "instagram_url": "",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Jacutinga, 550, Padre Eustáquio, Belo Horizonte - MG, 30730-430",
       "mapa": "https://maps.app.goo.gl/7rg1vm7n5XChXQbv7"
     },
@@ -3298,6 +3507,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
@@ -3338,6 +3548,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Jacutinga, 550, Padre Eustáquio, Belo Horizonte - MG, 30730-430",
       "mapa": "https://maps.app.goo.gl/7rg1vm7n5XChXQbv7"
     },
@@ -3377,6 +3588,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "Crianças entre 6 e 10 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Dom Cabral, 765, Ipiranga, Belo Horizonte - MG, 31160-150",
       "mapa": "https://maps.app.goo.gl/Da4tniDGCdhMExeY9"
     },
@@ -3417,6 +3629,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "Crianças entre 10 e 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua dos Industriários, 289, Indústrias I (Barreiro), Belo Horizonte - MG, 30610-280",
       "mapa": "https://maps.app.goo.gl/o3ucaPwjJs26Zdvy5"
     },
@@ -3456,6 +3669,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 16 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
@@ -3503,6 +3717,7 @@
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
       "instagram_url": "",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua José Ferreira dos Santos, 184, Jardim dos Comerciários, Belo Horizonte - MG, 31640-060",
       "mapa": "https://maps.app.goo.gl/zcTEYqwr1mBiBwZ99"
     },
@@ -3546,6 +3761,7 @@
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
       "instagram_url": "",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Guaicurus, 50, Centro, Belo Horizonte - MG, 30111-060",
       "mapa": "https://maps.app.goo.gl/BvSVrZ34oQpWFoM57"
     },
@@ -3585,6 +3801,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua José Ferreira dos Santos, 184, Jardim dos Comerciários, Belo Horizonte - MG, 31640-060",
       "mapa": "https://maps.app.goo.gl/zcTEYqwr1mBiBwZ99"
     },
@@ -3624,6 +3841,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
@@ -3671,6 +3889,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Guaicurus, 50, Centro, Belo Horizonte - MG, 30111-060",
       "mapa": "https://maps.app.goo.gl/BvSVrZ34oQpWFoM57"
     },
@@ -3710,6 +3929,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
@@ -3744,6 +3964,7 @@
         "Artes Plásticas"
       ],
       "classificacao_indicativa": "Livre",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Arte+da+Pampulha+-+MAP%2C+Av.+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+16.585%2C+Belo+Horizonte"
     },
     {
@@ -3774,6 +3995,7 @@
         "Pampulha"
       ],
       "classificacao_indicativa": "Livre",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Kubitschek%2C+Av.+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+4.188+-+Pampulha%2C+Belo+Horizonte"
     },
     {
@@ -3792,6 +4014,7 @@
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/visita-mediada-a-exposicao-demasiado-humano-sabado/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
@@ -3812,6 +4035,7 @@
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/observacao-noturna-dos-astros-com-telescopios-sabado-4/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
@@ -3863,6 +4087,7 @@
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
       "instagram_url": "",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Expedicionário Paulo de Souza, 185, Urca, Belo Horizonte - MG, 31360-310",
       "mapa": "https://maps.app.goo.gl/rrV4fGrZHEfgd5k57"
     },
@@ -3909,6 +4134,7 @@
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
       "instagram_url": "",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua São Miguel Arcanjo, 215, Nossa Senhora de Fátima, Belo Horizonte - MG, 30230-660",
       "mapa": "https://maps.app.goo.gl/Ky1wTCbu3P1i94FQ7"
     },
@@ -3955,6 +4181,7 @@
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
       "instagram_url": "",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Ministro Hermenegildo de Barros, 904, Itapoã, Belo Horizonte - MG, 31710-230",
       "mapa": "https://maps.app.goo.gl/Xupvn986WiEQikbR8"
     },
@@ -3994,6 +4221,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "Todas as Idades com protagonismo das crianças",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Expedicionário Paulo de Souza, 185, Urca, Belo Horizonte - MG, 31360-310",
       "mapa": "https://maps.app.goo.gl/rrV4fGrZHEfgd5k57"
     },
@@ -4033,6 +4261,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "Todas as Idades com protagonismo das crianças",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua São Miguel Arcanjo, 215, Nossa Senhora de Fátima, Belo Horizonte - MG, 30230-660",
       "mapa": "https://maps.app.goo.gl/Ky1wTCbu3P1i94FQ7"
     },
@@ -4073,6 +4302,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Padre Júlio Maria, 1577, Alto Vera Cruz, Belo Horizonte - MG, 30285-360",
       "mapa": "https://maps.app.goo.gl/BVLi6uyKLmALv6SM6"
     },
@@ -4112,6 +4342,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Ministro Hermenegildo de Barros, 904, Itapoã, Belo Horizonte - MG, 31710-230",
       "mapa": "https://maps.app.goo.gl/Xupvn986WiEQikbR8"
     },
@@ -4151,6 +4382,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "Crianças entre 6 e 10 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Édna Quintel, 320, São Bernardo, Belo Horizonte - MG, 31750-030",
       "mapa": "https://maps.app.goo.gl/Yufimrb872nmXa4s9"
     },
@@ -4170,6 +4402,7 @@
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/observacao-solar-com-telescopios-domingo-4/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
@@ -4191,6 +4424,7 @@
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/oficina-de-colagem-espaco-de-memorias-domingo/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
@@ -4231,6 +4465,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Avenida Presidente Antônio Carlos, 821, Lagoinha, Belo Horizonte - MG, 31110-314",
       "mapa": "https://maps.app.goo.gl/59216yGPUBfMrKVa9"
     },
@@ -4270,6 +4505,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua João Álvares Cabral, 277, Jardim Guanabara, Belo Horizonte - MG, 31742-170",
       "mapa": "https://maps.app.goo.gl/eCATveDGRuNKYLof9"
     },
@@ -4309,6 +4545,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Jacutinga, 550, Padre Eustáquio, Belo Horizonte - MG, 30730-430",
       "mapa": "https://maps.app.goo.gl/7rg1vm7n5XChXQbv7"
     },
@@ -4355,6 +4592,7 @@
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
       "instagram_url": "",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Estrela do Sul, 89, Santa Tereza, Belo Horizonte - MG, 31010-240",
       "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
@@ -4395,6 +4633,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Estrela do Sul, 89, Santa Tereza, Belo Horizonte - MG, 31010-240",
       "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
@@ -4434,6 +4673,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
@@ -4474,6 +4714,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Nova Ponte, 22, Salgado Filho, Belo Horizonte - MG, 30550-720",
       "mapa": "https://maps.app.goo.gl/xqnT1A9TWbQdY2wE8"
     },
@@ -4513,6 +4754,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
@@ -4543,6 +4785,7 @@
         "Artes Visuais",
         "Bate Papo"
       ],
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+do+Baile%2C+Pra%C3%A7a+Sete%29+-+Rua+Rio+de+Janeiro%2C+471+-+Centro%2C+Belo+Horizonte"
     },
     {
@@ -4581,6 +4824,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Avenida Presidente Antônio Carlos, 821, Lagoinha, Belo Horizonte - MG, 31110-314",
       "mapa": "https://maps.app.goo.gl/59216yGPUBfMrKVa9"
     },
@@ -4623,7 +4867,8 @@
       "exibicao_padrao": true,
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
-      "instagram_url": ""
+      "instagram_url": "",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
       "id": "ela-laboratorio-com-linhas-e-agulhas-fba5d83c6e",
@@ -4660,7 +4905,8 @@
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "Presencial",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
       "id": "ufmg-ec-oficina-desvendando-as-constelacoes-guarani-sabado",
@@ -4678,6 +4924,7 @@
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/oficina-desvendando-as-constelacoes-guarani-sabado/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
@@ -4698,6 +4945,7 @@
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/observacao-noturna-dos-astros-com-telescopios-sabado-5/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
@@ -4739,6 +4987,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Avenida Professor Alfredo Balena, 586, Santa Efigênia, Belo Horizonte - MG, 30130-100",
       "mapa": "https://maps.app.goo.gl/MtyButkEtXBbL1Ae8"
     },
@@ -4778,6 +5027,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Mangabeira da Serra, 320, Marçola, Belo Horizonte - MG, 30220-265",
       "mapa": "https://maps.app.goo.gl/CqmZC29eVpYZdKzFA"
     },
@@ -4818,6 +5068,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "6 a 10 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Mangabeira da Serra, 320, Marçola, Belo Horizonte - MG, 30220-265",
       "mapa": "https://maps.app.goo.gl/CqmZC29eVpYZdKzFA"
     },
@@ -4837,6 +5088,7 @@
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/observacao-solar-com-telescopios-domingo-5/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
@@ -4859,6 +5111,7 @@
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg",
       "classificacao_indicativa": "Livre",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
@@ -4880,6 +5133,7 @@
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/visita-mediada-a-exposicao-demasiado-humano-domingo-3/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
@@ -4901,6 +5155,7 @@
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg",
       "classificacao_indicativa": "Livre",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
@@ -4942,6 +5197,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
@@ -4986,6 +5242,7 @@
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
       "instagram_url": "",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Silva Alvarenga, 548, São Geraldo, Belo Horizonte - MG, 31050-640",
       "mapa": "https://maps.app.goo.gl/BTFGBXTDZkSgQRc98"
     },
@@ -5025,6 +5282,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua São Miguel Arcanjo, 215, Nossa Senhora de Fátima, Belo Horizonte - MG, 30230-660",
       "mapa": "https://maps.app.goo.gl/Ky1wTCbu3P1i94FQ7"
     },
@@ -5064,6 +5322,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
@@ -5104,6 +5363,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
@@ -5144,6 +5404,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Aristolino Basílio de Oliveira, 445, Regina, Belo Horizonte - MG, 30692-190",
       "mapa": "https://maps.app.goo.gl/NbE1w2tMKeH6P3Lm8"
     },
@@ -5183,6 +5444,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Silva Alvarenga, 548, São Geraldo, Belo Horizonte - MG, 31050-640",
       "mapa": "https://maps.app.goo.gl/BTFGBXTDZkSgQRc98"
     },
@@ -5222,6 +5484,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
@@ -5272,6 +5535,7 @@
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
       "instagram_url": "",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Ana Rafael dos Santos, 149, Vila Santa Rita, Belo Horizonte - MG, 30668-570",
       "mapa": "https://maps.app.goo.gl/2bjmUoYBq6G5Tfm17"
     },
@@ -5311,6 +5575,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Padre Júlio Maria, 1577, Alto Vera Cruz, Belo Horizonte - MG, 30285-360",
       "mapa": "https://maps.app.goo.gl/BVLi6uyKLmALv6SM6"
     },
@@ -5350,6 +5615,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua W-3, 500, Pongelupe, Belo Horizonte - MG, 30628-175",
       "mapa": "https://maps.app.goo.gl/Uq5R3PNvQBrdWSnT9"
     },
@@ -5389,6 +5655,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Ana Rafael dos Santos, 149, Vila Santa Rita, Belo Horizonte - MG, 30668-570",
       "mapa": "https://maps.app.goo.gl/2bjmUoYBq6G5Tfm17"
     },
@@ -5428,6 +5695,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Estrela do Sul, 89, Santa Tereza, Belo Horizonte - MG, 31010-240",
       "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
@@ -5467,6 +5735,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
@@ -5507,6 +5776,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Ministro Hermenegildo de Barros, 904, Itapoã, Belo Horizonte - MG, 31710-230",
       "mapa": "https://maps.app.goo.gl/Xupvn986WiEQikbR8"
     },
@@ -5546,6 +5816,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua W-3, 500, Pongelupe, Belo Horizonte - MG, 30628-175",
       "mapa": "https://maps.app.goo.gl/Uq5R3PNvQBrdWSnT9"
     },
@@ -5585,6 +5856,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
@@ -5625,6 +5897,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Carnaúba, 286, Zilah Spósito, Belo Horizonte - MG, 31787-210",
       "mapa": "https://maps.app.goo.gl/hTZMNcQSzknYzSRx7"
     },
@@ -5664,6 +5937,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
@@ -5704,6 +5978,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "Crianças entre 6 e 10 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Ana Rafael dos Santos, 149, Vila Santa Rita, Belo Horizonte - MG, 30668-570",
       "mapa": "https://maps.app.goo.gl/2bjmUoYBq6G5Tfm17"
     },
@@ -5743,6 +6018,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "Todas as Idades com protagonismo das crianças",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Ana Rafael dos Santos, 149, Vila Santa Rita, Belo Horizonte - MG, 30668-570",
       "mapa": "https://maps.app.goo.gl/2bjmUoYBq6G5Tfm17"
     },
@@ -5782,6 +6058,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua José Ferreira dos Santos, 184, Jardim dos Comerciários, Belo Horizonte - MG, 31640-060",
       "mapa": "https://maps.app.goo.gl/zcTEYqwr1mBiBwZ99"
     },
@@ -5821,6 +6098,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
@@ -5861,6 +6139,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Édna Quintel, 320, São Bernardo, Belo Horizonte - MG, 31750-030",
       "mapa": "https://maps.app.goo.gl/Yufimrb872nmXa4s9"
     },
@@ -5900,6 +6179,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Mangabeira da Serra, 320, Marçola, Belo Horizonte - MG, 30220-265",
       "mapa": "https://maps.app.goo.gl/CqmZC29eVpYZdKzFA"
     },
@@ -5939,6 +6219,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Dom Cabral, 765, Ipiranga, Belo Horizonte - MG, 31160-150",
       "mapa": "https://maps.app.goo.gl/Da4tniDGCdhMExeY9"
     },
@@ -5983,6 +6264,7 @@
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
       "instagram_url": "",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua da Bahia, 1149, Centro, Belo Horizonte - MG, 30160-011",
       "mapa": "https://maps.app.goo.gl/NSKCeznUnR3ooTQaA"
     },
@@ -6022,6 +6304,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua da Bahia, 1149, Centro, Belo Horizonte - MG, 30160-011",
       "mapa": "https://maps.app.goo.gl/NSKCeznUnR3ooTQaA"
     },
@@ -6061,6 +6344,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua dos Industriários, 289, Indústrias I (Barreiro), Belo Horizonte - MG, 30610-280",
       "mapa": "https://maps.app.goo.gl/o3ucaPwjJs26Zdvy5"
     },
@@ -6100,6 +6384,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua da Bahia, 1149, Centro, Belo Horizonte - MG, 30160-011",
       "mapa": "https://maps.app.goo.gl/NSKCeznUnR3ooTQaA"
     },
@@ -6139,6 +6424,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua João Álvares Cabral, 277, Jardim Guanabara, Belo Horizonte - MG, 31742-170",
       "mapa": "https://maps.app.goo.gl/eCATveDGRuNKYLof9"
     },
@@ -6178,6 +6464,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Expedicionário Paulo de Souza, 185, Urca, Belo Horizonte - MG, 31360-310",
       "mapa": "https://maps.app.goo.gl/rrV4fGrZHEfgd5k57"
     },
@@ -6217,6 +6504,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
@@ -6257,6 +6545,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Expedicionário Paulo de Souza, 185, Urca, Belo Horizonte - MG, 31360-310",
       "mapa": "https://maps.app.goo.gl/rrV4fGrZHEfgd5k57"
     },
@@ -6296,6 +6585,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Jacutinga, 550, Padre Eustáquio, Belo Horizonte - MG, 30730-430",
       "mapa": "https://maps.app.goo.gl/7rg1vm7n5XChXQbv7"
     },
@@ -6335,6 +6625,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
@@ -6375,6 +6666,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Avenida Presidente Antônio Carlos, 821, Lagoinha, Belo Horizonte - MG, 31110-314",
       "mapa": "https://maps.app.goo.gl/59216yGPUBfMrKVa9"
     },
@@ -6388,7 +6680,7 @@
       "cidade": "Belo Horizonte",
       "categoria": "Teatro",
       "gratuito": true,
-      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial e na bilheteria do espaço.",
+      "inscricao": "Ingressos gratuitos disponíveis on-line, conforme disponibilidade",
       "descricao": "Festival SESI em Cena apresenta GAMBIARRA , espetáculo celebra o funk como linguagem de invenção e resistência, memória e afeto A 3ª edição do Festival SESI em Cena recebe, no dia 26 de setembro, no Teatro SESIMINAS, o espetáculo GAMBIARRA , criação dirigida por Léo Garcia que faz do funk, da dança e da palavra um território de invenção, memória e celebração da vida. Partindo da ideia da gambiarra como gesto de criação e sobrevivência, o espetáculo desloca o sentido da palavra para refletir sobre a capacidade de reinventar caminhos diante das dificuldades. Em cena, improviso,",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/cgbna6q40m4vl37r2qe9qfb10isvarjb2b7j5v8fdmh1ptl3sl5ob2hoqs19mj37079j2o7bcu418pk2e0j3t81g87jtguhv756rp6.jpeg",
       "link": "https://bileto.sympla.com.br/event/122927/d/395491/s/2607841",
@@ -6397,6 +6689,7 @@
       "fonte_id": "122927",
       "endereco": "Rua Padre Marinho,60 – Belo Horizonte – Minas Gerais",
       "classificacao_indicativa": "16 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "centro-cultural-sesiminas-bh",
       "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+SESIMINAS+BH%2C+Rua+Padre+Marinho%2C60+%E2%80%93+Belo+Horizonte+%E2%80%93+Minas+Gerais"
     },
@@ -6436,6 +6729,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
@@ -6476,6 +6770,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
@@ -6515,7 +6810,8 @@
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "modalidade": "On-line",
-      "idade_publico": "A partir de 14 anos"
+      "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
       "id": "ela-o-funk-e-a-cidade-do-batuque-tamborzao-ao-batidao-corpo-e-ancestralidade-3b24223326",
@@ -6553,6 +6849,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
@@ -6593,6 +6890,7 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "endereco": "Rua Nova Ponte, 22, Salgado Filho, Belo Horizonte - MG, 30550-720",
       "mapa": "https://maps.app.goo.gl/xqnT1A9TWbQdY2wE8"
     },
@@ -6618,7 +6916,12 @@
       "local_id": "solar-padre-correia",
       "endereco": "R. Dom Pedro II, 200 - Centro, Sabará - MG, 34505-000",
       "mapa": "https://maps.app.goo.gl/fNCH9XLpCY5V4z2j6",
-      "espaco_interno": ""
+      "espaco_interno": "",
+      "inscricao_inicio": "",
+      "inscricao_fim": "",
+      "status_inscricao": "",
+      "criterio_exibicao": "realizacao",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     }
   ]
 }
