@@ -430,9 +430,23 @@
   }
 
   function eventsAvailableForCurrentFilters(events) {
-    // Somente o filtro explícito do programa libera todos os cursos individuais.
-    // Qualquer outro filtro atua sobre o mesmo lote reduzido do mural padrão.
-    return schoolProgramFilterIsActive() ? events : buildDefaultEvents(events);
+    /*
+     * O programa Escola Livre libera todas as atividades para permitir a
+     * navegação completa. Filtros de área/categoria ou espaço também precisam
+     * consultar os registros individuais, mas o próprio filtro já restringe
+     * quais deles serão exibidos.
+     *
+     * Filtros genéricos isolados (período, cidade e classificação) continuam
+     * atuando sobre o mural reduzido, evitando liberar dezenas de cursos apenas
+     * porque suas inscrições estão abertas no mesmo dia.
+     */
+    const needsSchoolActivityRecords = Boolean(
+      schoolProgramFilterIsActive() ||
+      state.filters.category ||
+      state.filters.unit
+    );
+
+    return needsSchoolActivityRecords ? events : buildDefaultEvents(events);
   }
 
   function applyUserFilters(events) {
