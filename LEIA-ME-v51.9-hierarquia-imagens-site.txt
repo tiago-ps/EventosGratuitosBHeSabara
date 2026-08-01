@@ -1,0 +1,9 @@
+V51.9 — SITE: HIERARQUIA DE IMAGENS
+
+Ordem usada pelo site:
+1. evento.imagem
+2. evento.imagem_local
+3. evento.imagem_programa
+4. fallback já existente
+
+Substitua js/app.js no repositório público.

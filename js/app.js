@@ -146,6 +146,9 @@
   }
 
   function getLocalImage(event) {
+    const explicitImage = String(event.imagem_local || '').trim();
+    if (explicitImage) return explicitImage;
+
     const local = normalizeText(event.local);
 
     if (!local) {
@@ -162,6 +165,9 @@
   }
 
   function getProgramImage(event) {
+    const explicitImage = String(event.imagem_programa || '').trim();
+    if (explicitImage) return explicitImage;
+
     const program = normalizeText(event.programa);
 
     if (!program) {
