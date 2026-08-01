@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Janeiro a Dezembro de 2026",
-  "atualizado_em": "2026-08-01T00:39:01-03:00",
+  "atualizado_em": "2026-08-01T02:42:32-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -53,7 +53,8 @@
       "instagram_url": "https://www.instagram.com/centroculturallindeiaregina/",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Aristolino Basílio de Oliveira, 445, Regina, Belo Horizonte - MG, 30692-190",
-      "mapa": "https://maps.app.goo.gl/NbE1w2tMKeH6P3Lm8"
+      "mapa": "https://maps.app.goo.gl/NbE1w2tMKeH6P3Lm8",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-programa-2026-2",
@@ -110,7 +111,8 @@
       "exibicao_por_filtro": true,
       "grupo_rotativo": "",
       "descricao": "94 cursos e atividades gratuitas de formação artística e cultural em 25 unidades ou espaços de Belo Horizonte e on-line.",
-      "motivo_publicacao": "inscricao_disponivel"
+      "motivo_publicacao": "inscricao_disponivel",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-danca-para-criancas-9af8c11c87",
@@ -153,7 +155,8 @@
       "idade_publico": "Crianças entre 6 e 10 anos",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Aristolino Basílio de Oliveira, 445, Regina, Belo Horizonte - MG, 30692-190",
-      "mapa": "https://maps.app.goo.gl/NbE1w2tMKeH6P3Lm8"
+      "mapa": "https://maps.app.goo.gl/NbE1w2tMKeH6P3Lm8",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-unidade-centro-cultural-usina-de-cultura",
@@ -205,7 +208,8 @@
       "instagram_url": "",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Dom Cabral, 765, Ipiranga, Belo Horizonte - MG, 31160-150",
-      "mapa": "https://maps.app.goo.gl/Da4tniDGCdhMExeY9"
+      "mapa": "https://maps.app.goo.gl/Da4tniDGCdhMExeY9",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-brincadeiras-circenses-praticas-e-criacoes-juvenis-7c47756cce",
@@ -250,7 +254,8 @@
       "ajuste_editor_aplicado": true,
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Dom Cabral, 765, Ipiranga, Belo Horizonte - MG, 31160-150",
-      "mapa": "https://maps.app.goo.gl/Da4tniDGCdhMExeY9"
+      "mapa": "https://maps.app.goo.gl/Da4tniDGCdhMExeY9",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-unidade-nucleo-de-formacao-e-criacao-artistica-e-cultural-nufac",
@@ -319,7 +324,8 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
-      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-ciclo-de-expansao-modulo-i-78dc521ed1",
@@ -363,7 +369,8 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
-      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-unidade-centro-cultural-sao-bernardo",
@@ -417,7 +424,8 @@
       "instagram_url": "",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Édna Quintel, 320, São Bernardo, Belo Horizonte - MG, 31750-030",
-      "mapa": "https://maps.app.goo.gl/Yufimrb872nmXa4s9"
+      "mapa": "https://maps.app.goo.gl/Yufimrb872nmXa4s9",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-unidade-centro-cultural-zilah-sposito",
@@ -471,7 +479,8 @@
       "instagram_url": "https://www.instagram.com/centroculturalzilahsposito/",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Carnaúba, 286, Zilah Spósito, Belo Horizonte - MG, 31787-210",
-      "mapa": "https://maps.app.goo.gl/hTZMNcQSzknYzSRx7"
+      "mapa": "https://maps.app.goo.gl/hTZMNcQSzknYzSRx7",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-encontros-para-dancar-em-dialogo-com-saberes-ancestrais-2b3263ef42",
@@ -514,7 +523,8 @@
       "idade_publico": "A partir de 14 anos",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Édna Quintel, 320, São Bernardo, Belo Horizonte - MG, 31750-030",
-      "mapa": "https://maps.app.goo.gl/Yufimrb872nmXa4s9"
+      "mapa": "https://maps.app.goo.gl/Yufimrb872nmXa4s9",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-oficina-basica-de-musica-94a9e11d19",
@@ -559,7 +569,8 @@
       "ajuste_editor_aplicado": true,
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Carnaúba, 286, Zilah Spósito, Belo Horizonte - MG, 31787-210",
-      "mapa": "https://maps.app.goo.gl/hTZMNcQSzknYzSRx7"
+      "mapa": "https://maps.app.goo.gl/hTZMNcQSzknYzSRx7",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-ciclo-expansao-modulo-corpo-787ea7d17f",
@@ -603,7 +614,8 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
-      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-ciclo-expansao-modulo-corpo-52b53e6cfb",
@@ -647,7 +659,8 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
-      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-unidade-centro-cultural-jardim-guanabara",
@@ -701,7 +714,8 @@
       "instagram_url": "https://www.instagram.com/centroculturaljardimguanabara/",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua João Álvares Cabral, 277, Jardim Guanabara, Belo Horizonte - MG, 31742-170",
-      "mapa": "https://maps.app.goo.gl/eCATveDGRuNKYLof9"
+      "mapa": "https://maps.app.goo.gl/eCATveDGRuNKYLof9",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-curso-de-longa-duracao-ciclo-i-modulo-ii-076cced98b",
@@ -745,7 +759,8 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
-      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-ciclo-de-poeticas-modulo-residencia-ii-e74468cfb7",
@@ -789,7 +804,8 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
-      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-2-pra-la-1-pra-ca-456b85f080",
@@ -832,7 +848,8 @@
       "idade_publico": "A partir de 14 anos",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua João Álvares Cabral, 277, Jardim Guanabara, Belo Horizonte - MG, 31742-170",
-      "mapa": "https://maps.app.goo.gl/eCATveDGRuNKYLof9"
+      "mapa": "https://maps.app.goo.gl/eCATveDGRuNKYLof9",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-unidade-centro-cultural-urucuia",
@@ -886,7 +903,8 @@
       "instagram_url": "",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua W-3, 500, Pongelupe, Belo Horizonte - MG, 30628-175",
-      "mapa": "https://maps.app.goo.gl/Uq5R3PNvQBrdWSnT9"
+      "mapa": "https://maps.app.goo.gl/Uq5R3PNvQBrdWSnT9",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-literatura-e-oralidade-popular-968a50341d",
@@ -930,7 +948,8 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
-      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-encontros-para-dancar-530cc07633",
@@ -975,7 +994,8 @@
       "ajuste_editor_aplicado": true,
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua W-3, 500, Pongelupe, Belo Horizonte - MG, 30628-175",
-      "mapa": "https://maps.app.goo.gl/Uq5R3PNvQBrdWSnT9"
+      "mapa": "https://maps.app.goo.gl/Uq5R3PNvQBrdWSnT9",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-unidade-centro-cultural-liberalino-alves-de-oliveira",
@@ -1032,7 +1052,8 @@
       "instagram_url": "",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida Presidente Antônio Carlos, 821, Lagoinha, Belo Horizonte - MG, 31110-314",
-      "mapa": "https://maps.app.goo.gl/59216yGPUBfMrKVa9"
+      "mapa": "https://maps.app.goo.gl/59216yGPUBfMrKVa9",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-unidade-centro-cultural-vila-marcola",
@@ -1090,7 +1111,8 @@
       "instagram_url": "",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Mangabeira da Serra, 320, Marçola, Belo Horizonte - MG, 30220-265",
-      "mapa": "https://maps.app.goo.gl/CqmZC29eVpYZdKzFA"
+      "mapa": "https://maps.app.goo.gl/CqmZC29eVpYZdKzFA",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-fotografia-e-outras-janelas-para-ver-o-mundo-ebab07d61e",
@@ -1136,7 +1158,8 @@
       "ajuste_editor_aplicado": true,
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Carnaúba, 286, Zilah Spósito, Belo Horizonte - MG, 31787-210",
-      "mapa": "https://maps.app.goo.gl/hTZMNcQSzknYzSRx7"
+      "mapa": "https://maps.app.goo.gl/hTZMNcQSzknYzSRx7",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-encontros-para-dancar-f4bb1e2327",
@@ -1181,7 +1204,8 @@
       "ajuste_editor_aplicado": true,
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Mangabeira da Serra, 320, Marçola, Belo Horizonte - MG, 30220-265",
-      "mapa": "https://maps.app.goo.gl/CqmZC29eVpYZdKzFA"
+      "mapa": "https://maps.app.goo.gl/CqmZC29eVpYZdKzFA",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-encontros-para-dancar-413a0b6aad",
@@ -1224,7 +1248,8 @@
       "idade_publico": "A partir de 14 anos",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida Presidente Antônio Carlos, 821, Lagoinha, Belo Horizonte - MG, 31110-314",
-      "mapa": "https://maps.app.goo.gl/59216yGPUBfMrKVa9"
+      "mapa": "https://maps.app.goo.gl/59216yGPUBfMrKVa9",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-unidade-centro-cultural-salgado-filho",
@@ -1279,7 +1304,8 @@
       "instagram_url": "",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Nova Ponte, 22, Salgado Filho, Belo Horizonte - MG, 30550-720",
-      "mapa": "https://maps.app.goo.gl/xqnT1A9TWbQdY2wE8"
+      "mapa": "https://maps.app.goo.gl/xqnT1A9TWbQdY2wE8",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-descobrindo-a-palhacaria-335b2e03d1",
@@ -1323,7 +1349,8 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
-      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-brincadeiras-circenses-9c5f12c97a",
@@ -1366,7 +1393,8 @@
       "idade_publico": "Crianças entre 6 e 10 anos",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Nova Ponte, 22, Salgado Filho, Belo Horizonte - MG, 30550-720",
-      "mapa": "https://maps.app.goo.gl/xqnT1A9TWbQdY2wE8"
+      "mapa": "https://maps.app.goo.gl/xqnT1A9TWbQdY2wE8",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-npd-bh-laboratorio-de-pesquisa-e-experimentacao-escrevendo-um-roteiro-de-curta-metragem-4a0d2366de",
@@ -1411,7 +1439,8 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
-      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-unidade-centro-cultural-alto-vera-cruz",
@@ -1465,7 +1494,8 @@
       "instagram_url": "",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Padre Júlio Maria, 1577, Alto Vera Cruz, Belo Horizonte - MG, 30285-360",
-      "mapa": "https://maps.app.goo.gl/BVLi6uyKLmALv6SM6"
+      "mapa": "https://maps.app.goo.gl/BVLi6uyKLmALv6SM6",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-bordados-e-outras-delicadezas-86941605f7",
@@ -1508,7 +1538,8 @@
       "idade_publico": "A partir de 14 anos",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Nova Ponte, 22, Salgado Filho, Belo Horizonte - MG, 30550-720",
-      "mapa": "https://maps.app.goo.gl/xqnT1A9TWbQdY2wE8"
+      "mapa": "https://maps.app.goo.gl/xqnT1A9TWbQdY2wE8",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-teclados-teclando-cancoes-para-a-vida-483b9d5498",
@@ -1551,7 +1582,8 @@
       "idade_publico": "A partir de 14 anos",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Padre Júlio Maria, 1577, Alto Vera Cruz, Belo Horizonte - MG, 30285-360",
-      "mapa": "https://maps.app.goo.gl/BVLi6uyKLmALv6SM6"
+      "mapa": "https://maps.app.goo.gl/BVLi6uyKLmALv6SM6",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-encontros-para-ver-imagens-60260a2cbf",
@@ -1597,7 +1629,8 @@
       "ajuste_editor_aplicado": true,
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Mangabeira da Serra, 320, Marçola, Belo Horizonte - MG, 30220-265",
-      "mapa": "https://maps.app.goo.gl/CqmZC29eVpYZdKzFA"
+      "mapa": "https://maps.app.goo.gl/CqmZC29eVpYZdKzFA",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-unidade-centro-de-referencia-da-danca-teatro-marilia",
@@ -1646,7 +1679,8 @@
       "instagram_url": "",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida Professor Alfredo Balena, 586, Santa Efigênia, Belo Horizonte - MG, 30130-100",
-      "mapa": "https://maps.app.goo.gl/MtyButkEtXBbL1Ae8"
+      "mapa": "https://maps.app.goo.gl/MtyButkEtXBbL1Ae8",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-africas-em-nos-dancas-e-outras-performatividades-negras-a15bcc06e4",
@@ -1689,7 +1723,8 @@
       "idade_publico": "A partir de 14 anos",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida Professor Alfredo Balena, 586, Santa Efigênia, Belo Horizonte - MG, 30130-100",
-      "mapa": "https://maps.app.goo.gl/MtyButkEtXBbL1Ae8"
+      "mapa": "https://maps.app.goo.gl/MtyButkEtXBbL1Ae8",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-laboratorio-de-praticas-livres-em-audiovisual-experimentos-para-uma-introducao-a-montagem-cinematografica-3f4d85b9ec",
@@ -1734,7 +1769,8 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
-      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-unidade-centro-cultural-bairro-das-industrias",
@@ -1788,7 +1824,8 @@
       "instagram_url": "",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua dos Industriários, 289, Indústrias I (Barreiro), Belo Horizonte - MG, 30610-280",
-      "mapa": "https://maps.app.goo.gl/o3ucaPwjJs26Zdvy5"
+      "mapa": "https://maps.app.goo.gl/o3ucaPwjJs26Zdvy5",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-unidade-plataforma-de-educacao-a-distancia-da-pbh",
@@ -1835,7 +1872,8 @@
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
       "instagram_url": "",
-      "motivo_publicacao": "inscricao_disponivel"
+      "motivo_publicacao": "inscricao_disponivel",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-gestao-financeira-de-projetos-culturais-d3410375e2",
@@ -1876,7 +1914,8 @@
       "grupo_rotativo": "",
       "modalidade": "On-line",
       "idade_publico": "A partir de 14 anos",
-      "motivo_publicacao": "inscricao_disponivel"
+      "motivo_publicacao": "inscricao_disponivel",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-boi-livre-3c9a386eae",
@@ -1927,7 +1966,8 @@
       "ids_mesclados": [
         "ela-boi-livre-3c9a386eae",
         "ela-laboratorio-de-africanidades-18892054fe"
-      ]
+      ],
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-danca-para-criancas-c5e700d124",
@@ -1970,7 +2010,8 @@
       "idade_publico": "Crianças entre 6 e 10 anos",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua dos Industriários, 289, Indústrias I (Barreiro), Belo Horizonte - MG, 30610-280",
-      "mapa": "https://maps.app.goo.gl/o3ucaPwjJs26Zdvy5"
+      "mapa": "https://maps.app.goo.gl/o3ucaPwjJs26Zdvy5",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-pesquise-como-dj-a-preparacao-antes-da-pista-5ac543bc47",
@@ -2014,7 +2055,8 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
-      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-unidade-centro-cultural-padre-eustaquio",
@@ -2066,7 +2108,8 @@
       "instagram_url": "",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Jacutinga, 550, Padre Eustáquio, Belo Horizonte - MG, 30730-430",
-      "mapa": "https://maps.app.goo.gl/7rg1vm7n5XChXQbv7"
+      "mapa": "https://maps.app.goo.gl/7rg1vm7n5XChXQbv7",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-laboratorio-de-experimentacao-e-criacao-eu-tu-nos-el-s-4de9156555",
@@ -2110,7 +2153,8 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
-      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "manual-ela-roda-de-choro-13ef75b94c-2026-08-19",
@@ -2191,7 +2235,8 @@
       "ajuste_editor_aplicado": true,
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Dom Cabral, 765, Ipiranga, Belo Horizonte - MG, 31160-150",
-      "mapa": "https://maps.app.goo.gl/Da4tniDGCdhMExeY9"
+      "mapa": "https://maps.app.goo.gl/Da4tniDGCdhMExeY9",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-vamos-brincar-de-inventar-um-filme-747e60043f",
@@ -2235,7 +2280,8 @@
       "idade_publico": "Crianças entre 10 e 14 anos",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua dos Industriários, 289, Indústrias I (Barreiro), Belo Horizonte - MG, 30610-280",
-      "mapa": "https://maps.app.goo.gl/o3ucaPwjJs26Zdvy5"
+      "mapa": "https://maps.app.goo.gl/o3ucaPwjJs26Zdvy5",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-ciclo-de-poeticas-modulo-residencia-ii-58f9b86345",
@@ -2279,7 +2325,8 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
-      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-unidade-centro-cultural-venda-nova",
@@ -2330,7 +2377,8 @@
       "instagram_url": "",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua José Ferreira dos Santos, 184, Jardim dos Comerciários, Belo Horizonte - MG, 31640-060",
-      "mapa": "https://maps.app.goo.gl/zcTEYqwr1mBiBwZ99"
+      "mapa": "https://maps.app.goo.gl/zcTEYqwr1mBiBwZ99",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-unidade-centro-de-referencia-das-juventudes",
@@ -2378,7 +2426,8 @@
       "instagram_url": "",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Guaicurus, 50, Centro, Belo Horizonte - MG, 30111-060",
-      "mapa": "https://maps.app.goo.gl/BvSVrZ34oQpWFoM57"
+      "mapa": "https://maps.app.goo.gl/BvSVrZ34oQpWFoM57",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-bordados-e-outras-delicadezas-68cf4dea9c",
@@ -2423,7 +2472,8 @@
       "ajuste_editor_aplicado": true,
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua José Ferreira dos Santos, 184, Jardim dos Comerciários, Belo Horizonte - MG, 31640-060",
-      "mapa": "https://maps.app.goo.gl/zcTEYqwr1mBiBwZ99"
+      "mapa": "https://maps.app.goo.gl/zcTEYqwr1mBiBwZ99",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-arena-atelie-livre-fcace676d6",
@@ -2474,7 +2524,8 @@
       "ids_mesclados": [
         "ela-arena-atelie-livre-fcace676d6",
         "ela-formacao-de-brincantes-o-brincar-e-a-natureza-f0ab60fc5a"
-      ]
+      ],
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-oficina-basica-de-circo-996ad91965",
@@ -2517,7 +2568,8 @@
       "idade_publico": "A partir de 14 anos",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Guaicurus, 50, Centro, Belo Horizonte - MG, 30111-060",
-      "mapa": "https://maps.app.goo.gl/BvSVrZ34oQpWFoM57"
+      "mapa": "https://maps.app.goo.gl/BvSVrZ34oQpWFoM57",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-atelie-de-espectador-s-287d10ddab",
@@ -2561,7 +2613,8 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
-      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-unidade-centro-cultural-pampulha",
@@ -2615,7 +2668,8 @@
       "instagram_url": "",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Expedicionário Paulo de Souza, 185, Urca, Belo Horizonte - MG, 31360-310",
-      "mapa": "https://maps.app.goo.gl/rrV4fGrZHEfgd5k57"
+      "mapa": "https://maps.app.goo.gl/rrV4fGrZHEfgd5k57",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-unidade-centro-cultural-vila-fatima",
@@ -2666,7 +2720,8 @@
       "instagram_url": "",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua São Miguel Arcanjo, 215, Nossa Senhora de Fátima, Belo Horizonte - MG, 30230-660",
-      "mapa": "https://maps.app.goo.gl/Ky1wTCbu3P1i94FQ7"
+      "mapa": "https://maps.app.goo.gl/Ky1wTCbu3P1i94FQ7",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-unidade-centro-de-referencia-da-cultura-popular-e-tradicional-lagoa-do-nado",
@@ -2717,7 +2772,8 @@
       "instagram_url": "",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Ministro Hermenegildo de Barros, 904, Itapoã, Belo Horizonte - MG, 31710-230",
-      "mapa": "https://maps.app.goo.gl/Xupvn986WiEQikbR8"
+      "mapa": "https://maps.app.goo.gl/Xupvn986WiEQikbR8",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-aventuras-de-infancia-vamos-brincar-de-inventar-com-as-artes-visuais-b6dc0ebb12",
@@ -2760,7 +2816,8 @@
       "idade_publico": "Todas as Idades com protagonismo das crianças",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Expedicionário Paulo de Souza, 185, Urca, Belo Horizonte - MG, 31360-310",
-      "mapa": "https://maps.app.goo.gl/rrV4fGrZHEfgd5k57"
+      "mapa": "https://maps.app.goo.gl/rrV4fGrZHEfgd5k57",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-aventuras-de-infancia-vamos-brincar-de-inventar-com-as-artes-visuais-301eef8344",
@@ -2805,7 +2862,8 @@
       "ajuste_editor_aplicado": true,
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua São Miguel Arcanjo, 215, Nossa Senhora de Fátima, Belo Horizonte - MG, 30230-660",
-      "mapa": "https://maps.app.goo.gl/Ky1wTCbu3P1i94FQ7"
+      "mapa": "https://maps.app.goo.gl/Ky1wTCbu3P1i94FQ7",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-corpo-camera-acao-praticas-coletivas-para-criacao-de-um-filme-946d822c4e",
@@ -2849,7 +2907,8 @@
       "idade_publico": "A partir de 14 anos",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Padre Júlio Maria, 1577, Alto Vera Cruz, Belo Horizonte - MG, 30285-360",
-      "mapa": "https://maps.app.goo.gl/BVLi6uyKLmALv6SM6"
+      "mapa": "https://maps.app.goo.gl/BVLi6uyKLmALv6SM6",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-tecnicas-circenses-1568d23720",
@@ -2892,7 +2951,8 @@
       "idade_publico": "A partir de 14 anos",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Ministro Hermenegildo de Barros, 904, Itapoã, Belo Horizonte - MG, 31710-230",
-      "mapa": "https://maps.app.goo.gl/Xupvn986WiEQikbR8"
+      "mapa": "https://maps.app.goo.gl/Xupvn986WiEQikbR8",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-brincadeiras-circenses-538c41367d",
@@ -2935,7 +2995,8 @@
       "idade_publico": "Crianças entre 6 e 10 anos",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Édna Quintel, 320, São Bernardo, Belo Horizonte - MG, 31750-030",
-      "mapa": "https://maps.app.goo.gl/Yufimrb872nmXa4s9"
+      "mapa": "https://maps.app.goo.gl/Yufimrb872nmXa4s9",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-oficina-basica-de-musica-e-violao-dbd384aa4a",
@@ -2978,7 +3039,8 @@
       "idade_publico": "A partir de 14 anos",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida Presidente Antônio Carlos, 821, Lagoinha, Belo Horizonte - MG, 31110-314",
-      "mapa": "https://maps.app.goo.gl/59216yGPUBfMrKVa9"
+      "mapa": "https://maps.app.goo.gl/59216yGPUBfMrKVa9",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-costurando-ideias-costura-criativa-e-invencoes-efc01ba2f7",
@@ -3021,7 +3083,8 @@
       "idade_publico": "A partir de 14 anos",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua João Álvares Cabral, 277, Jardim Guanabara, Belo Horizonte - MG, 31742-170",
-      "mapa": "https://maps.app.goo.gl/eCATveDGRuNKYLof9"
+      "mapa": "https://maps.app.goo.gl/eCATveDGRuNKYLof9",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "manual-ela-praticas-percussivas-ritmos-brasileiros-2157c0200a-2026-08-24",
@@ -3108,7 +3171,8 @@
       "instagram_url": "",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Estrela do Sul, 89, Santa Tereza, Belo Horizonte - MG, 31010-240",
-      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-npd-bh-minicurso-documentario-e-invencao-modulo-ii-memorias-fragmentos-e-colecoes-f3fb8c6dd0",
@@ -3152,7 +3216,8 @@
       "idade_publico": "A partir de 14 anos",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Estrela do Sul, 89, Santa Tereza, Belo Horizonte - MG, 31010-240",
-      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-arena-atelie-livre-68965bd217",
@@ -3196,7 +3261,8 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
-      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-arena-atelie-livre-52e864fa5b",
@@ -3239,7 +3305,8 @@
       "idade_publico": "A partir de 14anos",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Nova Ponte, 22, Salgado Filho, Belo Horizonte - MG, 30550-720",
-      "mapa": "https://maps.app.goo.gl/xqnT1A9TWbQdY2wE8"
+      "mapa": "https://maps.app.goo.gl/xqnT1A9TWbQdY2wE8",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-laboratorio-de-pesquisa-saberes-de-povos-originarios-6f89e3a592",
@@ -3283,7 +3350,8 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
-      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-tecido-e-pintado-c4272e5dad",
@@ -3326,7 +3394,8 @@
       "idade_publico": "A partir de 14 anos",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida Presidente Antônio Carlos, 821, Lagoinha, Belo Horizonte - MG, 31110-314",
-      "mapa": "https://maps.app.goo.gl/59216yGPUBfMrKVa9"
+      "mapa": "https://maps.app.goo.gl/59216yGPUBfMrKVa9",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-unidade-centro-de-referencia-de-assistencia-social-cras-conjunto-paulo-vi",
@@ -3372,7 +3441,8 @@
       "exibicao_por_filtro": false,
       "instagram_perfil": "",
       "instagram_url": "",
-      "motivo_publicacao": "inscricao_disponivel"
+      "motivo_publicacao": "inscricao_disponivel",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-laboratorio-com-linhas-e-agulhas-fba5d83c6e",
@@ -3413,7 +3483,8 @@
       "grupo_rotativo": "",
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
-      "motivo_publicacao": "inscricao_disponivel"
+      "motivo_publicacao": "inscricao_disponivel",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-dancas-populares-de-minas-gerais-ada738a671",
@@ -3456,7 +3527,8 @@
       "idade_publico": "A partir de 14 anos",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida Professor Alfredo Balena, 586, Santa Efigênia, Belo Horizonte - MG, 30130-100",
-      "mapa": "https://maps.app.goo.gl/MtyButkEtXBbL1Ae8"
+      "mapa": "https://maps.app.goo.gl/MtyButkEtXBbL1Ae8",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-grafite-e-bom-demais-stencil-lambes-pixo-arte-urbana-e91a057086",
@@ -3501,7 +3573,8 @@
       "ajuste_editor_aplicado": true,
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Mangabeira da Serra, 320, Marçola, Belo Horizonte - MG, 30220-265",
-      "mapa": "https://maps.app.goo.gl/CqmZC29eVpYZdKzFA"
+      "mapa": "https://maps.app.goo.gl/CqmZC29eVpYZdKzFA",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-encontros-para-ver-e-criar-filmes-052b55f529",
@@ -3547,7 +3620,8 @@
       "ajuste_editor_aplicado": true,
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Mangabeira da Serra, 320, Marçola, Belo Horizonte - MG, 30220-265",
-      "mapa": "https://maps.app.goo.gl/CqmZC29eVpYZdKzFA"
+      "mapa": "https://maps.app.goo.gl/CqmZC29eVpYZdKzFA",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-oficina-de-dramaturgia-criacao-e-experimentacao-4efa071cc2",
@@ -3591,7 +3665,8 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
-      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-unidade-centro-cultural-sao-geraldo",
@@ -3639,7 +3714,8 @@
       "instagram_url": "",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Silva Alvarenga, 548, São Geraldo, Belo Horizonte - MG, 31050-640",
-      "mapa": "https://maps.app.goo.gl/BTFGBXTDZkSgQRc98"
+      "mapa": "https://maps.app.goo.gl/BTFGBXTDZkSgQRc98",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-laboratorio-com-linhas-e-agulhas-5f80aa6249",
@@ -3684,7 +3760,8 @@
       "ajuste_editor_aplicado": true,
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua São Miguel Arcanjo, 215, Nossa Senhora de Fátima, Belo Horizonte - MG, 30230-660",
-      "mapa": "https://maps.app.goo.gl/Ky1wTCbu3P1i94FQ7"
+      "mapa": "https://maps.app.goo.gl/Ky1wTCbu3P1i94FQ7",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-canto-voz-e-expressao-b0d6ae10c7",
@@ -3728,7 +3805,8 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
-      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-atelie-de-bastidores-das-artes-cenografia-e-iluminacao-20945bf013",
@@ -3772,7 +3850,8 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
-      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-grafite-e-bom-demais-stencil-lambes-pixo-arte-urbana-d47b745671",
@@ -3815,7 +3894,8 @@
       "idade_publico": "A partir de 14 anos",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Aristolino Basílio de Oliveira, 445, Regina, Belo Horizonte - MG, 30692-190",
-      "mapa": "https://maps.app.goo.gl/NbE1w2tMKeH6P3Lm8"
+      "mapa": "https://maps.app.goo.gl/NbE1w2tMKeH6P3Lm8",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-canto-voz-e-expressao-b9bb05c243",
@@ -3860,7 +3940,8 @@
       "ajuste_editor_aplicado": true,
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Silva Alvarenga, 548, São Geraldo, Belo Horizonte - MG, 31050-640",
-      "mapa": "https://maps.app.goo.gl/BTFGBXTDZkSgQRc98"
+      "mapa": "https://maps.app.goo.gl/BTFGBXTDZkSgQRc98",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-canto-voz-e-expressao-744db33fba",
@@ -3904,7 +3985,8 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
-      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-unidade-centro-cultural-vila-santa-rita",
@@ -3958,7 +4040,8 @@
       "instagram_url": "",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Ana Rafael dos Santos, 149, Vila Santa Rita, Belo Horizonte - MG, 30668-570",
-      "mapa": "https://maps.app.goo.gl/2bjmUoYBq6G5Tfm17"
+      "mapa": "https://maps.app.goo.gl/2bjmUoYBq6G5Tfm17",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-laboratorio-com-linhas-e-agulhas-5caca04e80",
@@ -4001,7 +4084,8 @@
       "idade_publico": "A partir de 14 anos",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Padre Júlio Maria, 1577, Alto Vera Cruz, Belo Horizonte - MG, 30285-360",
-      "mapa": "https://maps.app.goo.gl/BVLi6uyKLmALv6SM6"
+      "mapa": "https://maps.app.goo.gl/BVLi6uyKLmALv6SM6",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-laboratorio-com-linhas-e-agulhas-470610ecc7",
@@ -4046,7 +4130,8 @@
       "ajuste_editor_aplicado": true,
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua W-3, 500, Pongelupe, Belo Horizonte - MG, 30628-175",
-      "mapa": "https://maps.app.goo.gl/Uq5R3PNvQBrdWSnT9"
+      "mapa": "https://maps.app.goo.gl/Uq5R3PNvQBrdWSnT9",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-beaba-do-violao-3b084583e3",
@@ -4091,7 +4176,8 @@
       "ajuste_editor_aplicado": true,
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Ana Rafael dos Santos, 149, Vila Santa Rita, Belo Horizonte - MG, 30668-570",
-      "mapa": "https://maps.app.goo.gl/2bjmUoYBq6G5Tfm17"
+      "mapa": "https://maps.app.goo.gl/2bjmUoYBq6G5Tfm17",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-quem-cuida-da-arte-os-bastidores-da-curadoria-56806ceda0",
@@ -4134,7 +4220,8 @@
       "idade_publico": "A partir de 14 anos",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Estrela do Sul, 89, Santa Tereza, Belo Horizonte - MG, 31010-240",
-      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-tirando-as-ideias-das-gavetas-laboratorio-de-elaboracao-de-projetos-culturais-b0a44ba65b",
@@ -4178,7 +4265,8 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
-      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-atelie-de-design-popular-74727c50cc",
@@ -4221,7 +4309,8 @@
       "idade_publico": "A partir de 14 anos",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Ministro Hermenegildo de Barros, 904, Itapoã, Belo Horizonte - MG, 31710-230",
-      "mapa": "https://maps.app.goo.gl/Xupvn986WiEQikbR8"
+      "mapa": "https://maps.app.goo.gl/Xupvn986WiEQikbR8",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-beaba-do-violao-8e196d89cb",
@@ -4266,7 +4355,8 @@
       "ajuste_editor_aplicado": true,
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua W-3, 500, Pongelupe, Belo Horizonte - MG, 30628-175",
-      "mapa": "https://maps.app.goo.gl/Uq5R3PNvQBrdWSnT9"
+      "mapa": "https://maps.app.goo.gl/Uq5R3PNvQBrdWSnT9",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-atelie-bastidores-das-artes-performance-figurino-e-curadoria-049cd9fa95",
@@ -4310,7 +4400,8 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
-      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-costurando-ideias-costura-criativa-e-invencoes-35e148f8b2",
@@ -4355,7 +4446,8 @@
       "ajuste_editor_aplicado": true,
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Carnaúba, 286, Zilah Spósito, Belo Horizonte - MG, 31787-210",
-      "mapa": "https://maps.app.goo.gl/hTZMNcQSzknYzSRx7"
+      "mapa": "https://maps.app.goo.gl/hTZMNcQSzknYzSRx7",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-laboratorio-de-producao-cultural-do-criar-ao-fazer-acontecer-23d1407ea1",
@@ -4399,7 +4491,8 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
-      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-danca-para-criancas-3dc24f22a7",
@@ -4444,7 +4537,8 @@
       "ajuste_editor_aplicado": true,
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Ana Rafael dos Santos, 149, Vila Santa Rita, Belo Horizonte - MG, 30668-570",
-      "mapa": "https://maps.app.goo.gl/2bjmUoYBq6G5Tfm17"
+      "mapa": "https://maps.app.goo.gl/2bjmUoYBq6G5Tfm17",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-aventuras-de-infancia-vamos-brincar-de-inventar-com-as-artes-visuais-7ab0087345",
@@ -4489,7 +4583,8 @@
       "ajuste_editor_aplicado": true,
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Ana Rafael dos Santos, 149, Vila Santa Rita, Belo Horizonte - MG, 30668-570",
-      "mapa": "https://maps.app.goo.gl/2bjmUoYBq6G5Tfm17"
+      "mapa": "https://maps.app.goo.gl/2bjmUoYBq6G5Tfm17",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-grafite-e-bom-demais-stencil-lambes-pixo-arte-urbana-909724bef2",
@@ -4534,7 +4629,8 @@
       "ajuste_editor_aplicado": true,
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua José Ferreira dos Santos, 184, Jardim dos Comerciários, Belo Horizonte - MG, 31640-060",
-      "mapa": "https://maps.app.goo.gl/zcTEYqwr1mBiBwZ99"
+      "mapa": "https://maps.app.goo.gl/zcTEYqwr1mBiBwZ99",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-desenho-de-observacao-c6927fb23d",
@@ -4578,7 +4674,8 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
-      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-elaboracao-de-projetos-culturais-f008f5558f",
@@ -4621,7 +4718,8 @@
       "idade_publico": "A partir de 14 anos",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Édna Quintel, 320, São Bernardo, Belo Horizonte - MG, 31750-030",
-      "mapa": "https://maps.app.goo.gl/Yufimrb872nmXa4s9"
+      "mapa": "https://maps.app.goo.gl/Yufimrb872nmXa4s9",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-gestao-e-producao-cultural-praticas-inventivas-no-fazer-artistico-07d9bdf7a7",
@@ -4666,7 +4764,8 @@
       "ajuste_editor_aplicado": true,
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Mangabeira da Serra, 320, Marçola, Belo Horizonte - MG, 30220-265",
-      "mapa": "https://maps.app.goo.gl/CqmZC29eVpYZdKzFA"
+      "mapa": "https://maps.app.goo.gl/CqmZC29eVpYZdKzFA",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-musica-percussiva-de-rua-4d8887bc14",
@@ -4709,7 +4808,8 @@
       "idade_publico": "A partir de 14 anos",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Dom Cabral, 765, Ipiranga, Belo Horizonte - MG, 31160-150",
-      "mapa": "https://maps.app.goo.gl/Da4tniDGCdhMExeY9"
+      "mapa": "https://maps.app.goo.gl/Da4tniDGCdhMExeY9",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-unidade-museu-da-moda",
@@ -4758,7 +4858,8 @@
       "instagram_url": "",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua da Bahia, 1149, Centro, Belo Horizonte - MG, 30160-011",
-      "mapa": "https://maps.app.goo.gl/NSKCeznUnR3ooTQaA"
+      "mapa": "https://maps.app.goo.gl/NSKCeznUnR3ooTQaA",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-a-arte-da-moda-o-figurino-e-a-maquiagem-como-linguagem-de-criacao-9b86e45cf9",
@@ -4801,7 +4902,8 @@
       "idade_publico": "A partir de 14 anos",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua da Bahia, 1149, Centro, Belo Horizonte - MG, 30160-011",
-      "mapa": "https://maps.app.goo.gl/NSKCeznUnR3ooTQaA"
+      "mapa": "https://maps.app.goo.gl/NSKCeznUnR3ooTQaA",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-costurando-ideias-costura-criativa-e-invencoes-6edf9a425f",
@@ -4844,7 +4946,8 @@
       "idade_publico": "A partir de 14 anos",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua dos Industriários, 289, Indústrias I (Barreiro), Belo Horizonte - MG, 30610-280",
-      "mapa": "https://maps.app.goo.gl/o3ucaPwjJs26Zdvy5"
+      "mapa": "https://maps.app.goo.gl/o3ucaPwjJs26Zdvy5",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-a-arte-da-moda-maquiagem-e-caracterizacao-como-linguagens-de-criacao-6b666545d5",
@@ -4887,7 +4990,8 @@
       "idade_publico": "A partir de 14 anos",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua da Bahia, 1149, Centro, Belo Horizonte - MG, 30160-011",
-      "mapa": "https://maps.app.goo.gl/NSKCeznUnR3ooTQaA"
+      "mapa": "https://maps.app.goo.gl/NSKCeznUnR3ooTQaA",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-elaboracao-de-projetos-culturais-b3d7f38056",
@@ -4930,7 +5034,8 @@
       "idade_publico": "A partir de 14 anos",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua João Álvares Cabral, 277, Jardim Guanabara, Belo Horizonte - MG, 31742-170",
-      "mapa": "https://maps.app.goo.gl/eCATveDGRuNKYLof9"
+      "mapa": "https://maps.app.goo.gl/eCATveDGRuNKYLof9",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-enquanto-as-linhas-dancam-bordados-artesanias-e-encontros-7bad5d78fe",
@@ -4973,7 +5078,8 @@
       "idade_publico": "A partir de 14 anos",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Expedicionário Paulo de Souza, 185, Urca, Belo Horizonte - MG, 31360-310",
-      "mapa": "https://maps.app.goo.gl/rrV4fGrZHEfgd5k57"
+      "mapa": "https://maps.app.goo.gl/rrV4fGrZHEfgd5k57",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-canto-voz-e-expressao-4f91627676",
@@ -5017,7 +5123,8 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
-      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-elaboracao-de-projetos-culturais-0563dc9854",
@@ -5060,7 +5167,8 @@
       "idade_publico": "A partir de 14 anos",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Expedicionário Paulo de Souza, 185, Urca, Belo Horizonte - MG, 31360-310",
-      "mapa": "https://maps.app.goo.gl/rrV4fGrZHEfgd5k57"
+      "mapa": "https://maps.app.goo.gl/rrV4fGrZHEfgd5k57",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "manual-ela-voa-palavra-elaboracao-de-projetos-culturais-em-literatura-e-leitura-d3a8ca75d9-2026-09-15",
@@ -5140,7 +5248,8 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
-      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-criacao-e-producao-de-eventos-culturais-8b324801ac",
@@ -5183,7 +5292,8 @@
       "idade_publico": "A partir de 14 anos",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida Presidente Antônio Carlos, 821, Lagoinha, Belo Horizonte - MG, 31110-314",
-      "mapa": "https://maps.app.goo.gl/59216yGPUBfMrKVa9"
+      "mapa": "https://maps.app.goo.gl/59216yGPUBfMrKVa9",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-arena-dj-diversidade-na-pista-0a1fc71968",
@@ -5227,7 +5337,8 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
-      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-carnaval-os-bastidores-da-festa-1eb05ac8ec",
@@ -5271,7 +5382,8 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
-      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-formas-criativas-e-afetivas-de-divulgacao-de-projetos-culturais-f82276907d",
@@ -5312,7 +5424,8 @@
       "grupo_rotativo": "",
       "modalidade": "On-line",
       "idade_publico": "A partir de 14 anos",
-      "motivo_publicacao": "inscricao_disponivel"
+      "motivo_publicacao": "inscricao_disponivel",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-o-funk-e-a-cidade-do-batuque-tamborzao-ao-batidao-corpo-e-ancestralidade-3b24223326",
@@ -5356,7 +5469,8 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
-      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural"
+      "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-transe-da-tranca-aula-aberta-de-artes-visuais-4a55564c94",
@@ -5399,7 +5513,8 @@
       "idade_publico": "A partir de 14 anos",
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Nova Ponte, 22, Salgado Filho, Belo Horizonte - MG, 30550-720",
-      "mapa": "https://maps.app.goo.gl/xqnT1A9TWbQdY2wE8"
+      "mapa": "https://maps.app.goo.gl/xqnT1A9TWbQdY2wE8",
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ccbb-bh-exposicao-permanente",
@@ -6574,6 +6689,52 @@
       "mapa": "https://maps.app.goo.gl/59216yGPUBfMrKVa9"
     },
     {
+      "id": "cine-santa-tereza-bileto-124833",
+      "titulo": "FENDA - FESTIVAL EXPERIMENTAL DE ARTES FÍLMICAS - Visões: Carolina Fusilier e Miko Revereza",
+      "data": "2026-08-06",
+      "data_fim": "",
+      "horario": "17h45",
+      "local": "Cine Santa Tereza",
+      "cidade": "Belo Horizonte",
+      "categoria": "Cinema",
+      "gratuito": true,
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "descricao": "6/8, quinta, 17h45 Visões: Carolina Fusilier e Miko Revereza O lado quieto (El Lado Quieto | 2021 | Filipinas e México | 70 min) Sessão com legendagem descritiva e em presença de Carolina Fusilier (Argentina) e Miko Revereza (Filipinas)",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/3jbavb6cfktmjh4ool3co23ph7su1jkoo4nh9hgj0a5fsrhfuk9ifr539p07se06fsags1k83lufu65bih4d47fhnaqidfvfalhaduc.jpeg",
+      "link": "https://bileto.sympla.com.br/event/124833/d/403987/s/2646256",
+      "fonte": "Cine Santa Tereza",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "fonte_id": "124833",
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "classificacao_indicativa": "Livre",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
+    },
+    {
+      "id": "cine-santa-tereza-bileto-124832",
+      "titulo": "FENDA - FESTIVAL EXPERIMENTAL DE ARTES FÍLMICAS - Horizontes: Paulo Nazareth 2 - Quem Tiver de Sapato Não Sobra",
+      "data": "2026-08-06",
+      "data_fim": "",
+      "horario": "19h30",
+      "local": "Cine Santa Tereza",
+      "cidade": "Belo Horizonte",
+      "categoria": "Cinema",
+      "gratuito": true,
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "descricao": "Horizontes: Paulo Nazareth 2 - Quem Tiver de Sapato Não Sobra Projecto levar poeira de aqui para lá (2010 | Brasil | 2 min) Pé Vermêi (Paulo Nazareth | 2005 | Brasil | 8 min) Cine África (Paulo Nazareth | 2012-2013 | Moçambique | 8 min) Uma rúpia para o meu país (One Rupee for my Country | Paulo Nazareth | 2006 | Índia | 20 min) Estrangeiro nacional (Paulo Nazareth | 2012 | Brasil | 13 min) Para que não encontrem as minhas marcas no deserto (Para que no encuentren mis huellas en el desierto | Paulo Nazareth | 2012 | México | 6 min) Quando tenho comida nas minhas mãos (Cuando tengo comida en mis manos | Paulo…",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/3jbavb6cfktmjh4ool3co23ph7su1jkoo4nh9hgj0a5fsrhfuk9ifr539p07se06fsags1k83lufu65bih4d47fhnaqidfvfalhaduc.jpeg",
+      "link": "https://bileto.sympla.com.br/event/124832/d/403986/s/2646254",
+      "fonte": "Cine Santa Tereza",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "fonte_id": "124832",
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "classificacao_indicativa": "Livre",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
+    },
+    {
       "id": "sesiminas-bh-bileto-123626",
       "titulo": "Espetáculo \"Farewell”",
       "data": "2026-08-06",
@@ -6648,6 +6809,52 @@
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "teatro-marilia",
       "mapa": "https://maps.app.goo.gl/MtyButkEtXBbL1Ae8"
+    },
+    {
+      "id": "cine-santa-tereza-bileto-124831",
+      "titulo": "FENDA - FESTIVAL EXPERIMENTAL DE ARTES FÍLMICAS - Competitiva Internacional 3",
+      "data": "2026-08-07",
+      "data_fim": "",
+      "horario": "16h30",
+      "local": "Cine Santa Tereza",
+      "cidade": "Belo Horizonte",
+      "categoria": "Cinema",
+      "gratuito": true,
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "descricao": "Competitiva Internacional 3 Fotossíntese (Photosynthesis| Erica Schreiner | 2026 | EUA| 8 min) Ecos do monte Kwet Tul (Ecos del cerro Kwet Tul / Kwet tul wejxa sxwa'w | Sandra Rengifo e Kostas Tsanakas | 2023 | Colômbia | 23 min) Lima (Biviana Chauchi | 2025 | Peru/Espanha | 4 min) Trivakra (Sofia Angst | 2025 | Brasil | 10 min) Círculo da manhã (Morning Circle / Morgenkreis | Basma al-Sharif | 2025 | Alemanha/Canadá/Estados Árabes Unidos | 20 min)",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/3jbavb6cfktmjh4ool3co23ph7su1jkoo4nh9hgj0a5fsrhfuk9ifr539p07se06fsags1k83lufu65bih4d47fhnaqidfvfalhaduc.jpeg",
+      "link": "https://bileto.sympla.com.br/event/124831/d/403985/s/2646252",
+      "fonte": "Cine Santa Tereza",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "fonte_id": "124831",
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "classificacao_indicativa": "Livre",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
+    },
+    {
+      "id": "cine-santa-tereza-bileto-124830",
+      "titulo": "FENDA - FESTIVAL EXPERIMENTAL DE ARTES FÍLMICAS - Competitiva Internacional 4",
+      "data": "2026-08-07",
+      "data_fim": "",
+      "horario": "18h",
+      "local": "Cine Santa Tereza",
+      "cidade": "Belo Horizonte",
+      "categoria": "Cinema",
+      "gratuito": true,
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "descricao": "Competitiva Internacional 4 Pompa e circunstância (Pompa y circunstancia | Daniela Delgado Viteri | 2026 | Equador | 11 min) Meu filme estruturalista (My Structuralist Film | Angelo Madsen | 2026 | EUA | 6 min) Por que não consigo lembrar dos sonhos de meu pai? (Why can't I recall my father's dreams? | Mehdi Jahan | 2026 | Índia | 11 min) Amante, Amantes, Amar, Amor (Lover, Lovers, Loving, Love | Jodie Mack | 2025 | EUA | 15 min) Para sempre…Para sempre (Forever...Forever | Johann Lurf | 2026 | Áustria/França | 21 min)",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/3jbavb6cfktmjh4ool3co23ph7su1jkoo4nh9hgj0a5fsrhfuk9ifr539p07se06fsags1k83lufu65bih4d47fhnaqidfvfalhaduc.jpeg",
+      "link": "https://bileto.sympla.com.br/event/124830/d/403984/s/2646250",
+      "fonte": "Cine Santa Tereza",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "fonte_id": "124830",
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "classificacao_indicativa": "Livre",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
     {
       "id": "fcs-wp-37426",
