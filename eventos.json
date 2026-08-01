@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Janeiro a Dezembro de 2026",
-  "atualizado_em": "2026-08-01T19:38:19-03:00",
+  "atualizado_em": "2026-08-01T20:22:55-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -5574,22 +5574,26 @@
       "data": "2026-01-01",
       "data_fim": "2026-12-31",
       "horario": "10h às 22h. De quarta a segunda.",
-      "local": "CCBB Belo Horizonte – 2º andar",
+      "local": "CCBB Belo Horizonte",
       "cidade": "Belo Horizonte",
       "categoria": "Exposição",
       "gratuito": true,
       "inscricao": "Ingresso gratuito; consulte a página oficial",
       "descricao": "O Centro Cultural Banco do Brasil Belo Horizonte possui duas salas de exposição permanente, o Grande Salão e o Gabinete do Secretário, que apresentam parte da história do CCBB BH e do prédio que o abriga. A expografia é fruto de uma parceria com o Arquivo Público Mineiro,",
-      "imagem": "https://ccbb-images-f6fvd8g2e5hjeubc.a03.azurefd.net/site-2025/2025/10/DSC052481-scaled.jpg",
+      "imagem": "imagens/ajustes-eventos/ccbb-bh-exposicao-permanente.jpg",
       "link": "https://ccbb.com.br/belo-horizonte/programacao/exposicao-permanente/",
       "fonte": "CCBB Belo Horizonte",
       "instituicao_id": "ccbb-bh",
       "classificacao_indicativa": "Livre",
+      "pagina": "https://ccbb.com.br/belo-horizonte/programacao/exposicao-permanente/",
+      "espaco_interno": "",
+      "criterio_exibicao": "realizacao",
+      "imagem_fonte": "Imagem adicionada manualmente pelo editor",
+      "ajuste_editor_aplicado": true,
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "ccbb-bh",
       "endereco": "Praça da Liberdade, 450, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/Q6UrZGKEn8eCx8Kb8",
-      "espaco_interno": "2º andar"
+      "mapa": "https://maps.app.goo.gl/Q6UrZGKEn8eCx8Kb8"
     },
     {
       "id": "fcs-wp-36313",
