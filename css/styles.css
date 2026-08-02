@@ -717,7 +717,7 @@ body.agenda-mode .app { min-height: 100dvh; height: auto; display: block; }
   .agenda-header { align-items: center; }
   .agenda-updated { max-width: 70vw; }
   .view-toggle { min-height: 38px; padding: 0 11px; font-size: 12px; }
-  .agenda-tools { grid-template-columns: 1fr 1fr; top: env(safe-area-inset-top); }
+  .agenda-tools { position: static; top: auto; grid-template-columns: 1fr 1fr; }
   .agenda-search { grid-column: 1/-1; }
   .agenda-list { grid-template-columns: 1fr; }
   .agenda-card { display: grid; grid-template-columns: 112px minmax(0, 1fr); }

@@ -1,0 +1,9 @@
+V53.1 — Correção dos filtros no modo agenda móvel
+
+Alteração:
+- Em telas de até 760 px, a caixa de pesquisa e filtros deixa de usar position: sticky.
+- Agora os filtros rolam normalmente junto com a página e não cobrem os cartões dos eventos.
+- Em telas maiores, o comportamento fixo do modo agenda foi preservado.
+
+Arquivo alterado:
+- css/styles.css
