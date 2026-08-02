@@ -1,0 +1,44 @@
+{
+  "id": "./",
+  "name": "Agenda Cultural Gratuita — Belo Horizonte e Sabará",
+  "short_name": "Agenda Cultural",
+  "description": "Agenda de eventos culturais gratuitos em Belo Horizonte e Sabará.",
+  "lang": "pt-BR",
+  "start_url": "./?source=pwa",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#07111f",
+  "theme_color": "#07111f",
+  "categories": [
+    "entertainment",
+    "events",
+    "education"
+  ],
+  "icons": [
+    {
+      "src": "imagens/app-icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "imagens/app-icons/icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "imagens/app-icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "imagens/app-icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

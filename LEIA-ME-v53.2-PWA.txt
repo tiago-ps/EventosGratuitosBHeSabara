@@ -1,0 +1,22 @@
+VERSÃO 53.2 — SITE INSTALÁVEL (PWA)
+
+Arquivos novos:
+- manifest.webmanifest
+- service-worker.js
+- imagens/app-icons/icon-192.png
+- imagens/app-icons/icon-512.png
+- imagens/app-icons/icon-maskable-192.png
+- imagens/app-icons/icon-maskable-512.png
+- imagens/app-icons/apple-touch-icon.png
+- imagens/app-icons/favicon-32.png
+
+Arquivos alterados:
+- index.html
+- js/app.js
+- css/styles.css
+
+O mesmo site pode ser instalado pelo navegador, sem Play Store.
+O service worker mantém a interface e a última agenda carregada disponíveis quando a conexão falhar.
+As imagens visitadas são armazenadas gradualmente, sem tentar baixar todo o acervo de uma vez.
+
+Observação: a opção “Instalar app” depende do navegador considerar o site instalável. Em iPhone/iPad, a instalação normalmente é feita pelo menu Compartilhar > Adicionar à Tela de Início.

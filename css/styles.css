@@ -736,3 +736,17 @@ body.agenda-mode .app { min-height: 100dvh; height: auto; display: block; }
   .agenda-card-actions { display: grid; }
   .agenda-card-actions a { justify-content: center; }
 }
+
+
+/* v53.2 — instalação como aplicativo (PWA) */
+.agenda-header-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; }
+.install-app-btn { min-height: 42px; padding: 0 14px; border: 0; border-radius: 999px; background: var(--accent); color: var(--accent-contrast); font: inherit; font-weight: 900; cursor: pointer; }
+.install-app-btn[hidden] { display: none; }
+@media (max-width: 760px) {
+  .agenda-header-actions { flex: 0 0 auto; }
+  .install-app-btn { min-height: 38px; padding: 0 11px; font-size: 12px; }
+}
+@media (max-width: 430px) {
+  .agenda-header-actions { justify-content: flex-start; margin-top: 12px; }
+  .agenda-header-actions .view-toggle { margin-top: 0; }
+}

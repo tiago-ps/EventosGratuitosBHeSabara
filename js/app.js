@@ -6,6 +6,7 @@
   const SCHOOL_ROTATION_SIZE = 6;
   const SCHOOL_ROTATION_KEY = 'agenda-cultural-escola-livre-lote';
   const template = document.getElementById('slide-template');
+  let deferredInstallPrompt = null;
 
   // O tema original é fixo; remove preferências antigas salvas pelo seletor.
   try {
@@ -1465,6 +1466,26 @@
     tryNext();
   }
 
+
+
+  function isStandaloneApp() {
+    return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+  }
+
+  function refreshInstallButtons() {
+    document.querySelectorAll('.install-app-btn').forEach(button => {
+      button.hidden = !deferredInstallPrompt || isStandaloneApp();
+    });
+  }
+
+  async function installApp() {
+    if (!deferredInstallPrompt) return;
+    deferredInstallPrompt.prompt();
+    try { await deferredInstallPrompt.userChoice; } catch { /* navegador encerrou o diálogo */ }
+    deferredInstallPrompt = null;
+    refreshInstallButtons();
+  }
+
   function renderAgenda() {
     clearTimeout(state.timer);
     state.isPaused = true;
@@ -1480,7 +1501,10 @@
         <h1>Agenda Cultural Gratuita</h1>
         <p class="agenda-updated">${formatUpdated(state.data?.atualizado_em)}</p>
       </div>
-      <button class="view-toggle" type="button" aria-label="Abrir modo painel">Modo painel</button>
+      <div class="agenda-header-actions">
+        <button class="install-app-btn" type="button" hidden>Instalar app</button>
+        <button class="view-toggle" type="button" aria-label="Abrir modo painel">Modo painel</button>
+      </div>
     `;
 
     const controls = document.createElement('section');
@@ -1554,6 +1578,10 @@
     shell.className = 'agenda-shell';
     shell.append(header, controls, count, list);
     app.replaceChildren(shell);
+
+    const installButton = header.querySelector('.install-app-btn');
+    installButton.addEventListener('click', installApp);
+    refreshInstallButtons();
 
     header.querySelector('.view-toggle').addEventListener('click', () => {
       saveViewMode('painel');
@@ -1660,6 +1688,19 @@
 
   window.addEventListener('resize', () => {
     if (state.viewMode === 'auto' && state.data) renderCurrentView();
+  });
+
+
+
+  window.addEventListener('beforeinstallprompt', event => {
+    event.preventDefault();
+    deferredInstallPrompt = event;
+    refreshInstallButtons();
+  });
+
+  window.addEventListener('appinstalled', () => {
+    deferredInstallPrompt = null;
+    refreshInstallButtons();
   });
 
   // Adicionar listeners de teclado

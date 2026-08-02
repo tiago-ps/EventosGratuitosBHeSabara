@@ -5,9 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="color-scheme" content="dark">
   <meta name="theme-color" content="#07111f">
+  <meta name="application-name" content="Agenda Cultural Gratuita">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Agenda Cultural">
   <title>Agenda Cultural Gratuita</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="imagens/app-icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="imagens/app-icons/favicon-32.png">
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="stylesheet" href="css/styles.css?v=53">
+  <link rel="stylesheet" href="css/styles.css?v=53.2">
   <link rel="stylesheet" href="css/eventos-manuais-ui.css?v=42">
 </head>
 <body>
@@ -224,7 +231,17 @@
   </template>
 
   <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
-  <script src="js/app.js?v=53" defer></script>
+  <script src="js/app.js?v=53.2" defer></script>
   <script src="js/eventos-manuais-ui.js?v=42" defer></script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./service-worker.js').catch(error => {
+          console.warn('Não foi possível ativar o modo aplicativo:', error);
+        });
+      });
+    }
+  </script>
 </body>
 </html>
