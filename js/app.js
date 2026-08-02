@@ -74,7 +74,12 @@
       period: 'all',
       rating: ''
     },
-    schoolRotationBatch: 0
+    schoolRotationBatch: 0,
+    viewMode: 'auto',
+    mobileQuery: '',
+    mobileCategory: '',
+    mobileCity: '',
+    mobilePeriod: 'all'
   };
 
   function normalizeText(value = '') {
@@ -1074,6 +1079,7 @@
     updateFilterButton();
     updatePlayPauseButton();
 
+    addPanelViewToggle();
     scheduleNextSlide();
   }
 
@@ -1277,14 +1283,14 @@
       return;
     }
 
-    renderSlide(0);
+    renderCurrentView();
   }
 
   function clearUserFilters() {
     state.filters = { city: '', category: '', program: '', unit: '', period: 'all', rating: '' };
     state.events = buildDefaultEvents(state.allEvents);
     state.index = 0;
-    renderSlide(0);
+    renderCurrentView();
   }
 
   function setupFilterPanel(slide) {
@@ -1366,6 +1372,233 @@
     }
   }
 
+
+
+  const MOBILE_BREAKPOINT = 760;
+  const VIEW_MODE_KEY = 'agenda-cultural-modo-visualizacao';
+
+  function storedViewMode() {
+    try {
+      const value = localStorage.getItem(VIEW_MODE_KEY);
+      return ['auto', 'agenda', 'painel'].includes(value) ? value : 'auto';
+    } catch {
+      return 'auto';
+    }
+  }
+
+  function effectiveViewMode() {
+    if (state.viewMode === 'agenda' || state.viewMode === 'painel') {
+      return state.viewMode;
+    }
+    return window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT}px)`).matches
+      ? 'agenda'
+      : 'painel';
+  }
+
+  function saveViewMode(value) {
+    state.viewMode = value;
+    try { localStorage.setItem(VIEW_MODE_KEY, value); } catch { /* opcional */ }
+  }
+
+  function eventImageCandidates(event) {
+    return [
+      String(event.imagem || '').trim(),
+      getLocalImage(event),
+      getProgramImage(event)
+    ].filter(Boolean);
+  }
+
+  function mobileDateLabel(event) {
+    const start = safeDate(event.data);
+    if (!start) return event.data || 'Data não informada';
+    const today = todayAtMidnight();
+    const tomorrow = addCalendarDays(today, 1);
+    const sameDay = (a, b) => a.getFullYear() === b.getFullYear() &&
+      a.getMonth() === b.getMonth() && a.getDate() === b.getDate();
+    if (sameDay(start, today)) return 'Hoje';
+    if (sameDay(start, tomorrow)) return 'Amanhã';
+    return new Intl.DateTimeFormat('pt-BR', {
+      weekday: 'short', day: '2-digit', month: 'short'
+    }).format(start).replace('.', '');
+  }
+
+  function mobileVisibleEvents() {
+    const query = normalizeText(state.mobileQuery);
+    return state.events.filter(event => {
+      if (state.mobileCity && normalizeText(event.cidade) !== state.mobileCity) return false;
+      if (state.mobileCategory && !categoryMatches(event, state.mobileCategory)) return false;
+      if (!eventMatchesPeriod(event, state.mobilePeriod)) return false;
+      if (!query) return true;
+      const haystack = normalizeText([
+        event.titulo, event.descricao, event.local, event.cidade,
+        event.categoria, event.area_artistica, event.programa, event.fonte
+      ].filter(Boolean).join(' '));
+      return haystack.includes(query);
+    });
+  }
+
+  function mobileSelectOptions(events, field) {
+    const map = new Map();
+    for (const event of events) {
+      const label = String(event[field] || '').trim();
+      const value = normalizeText(label);
+      if (label && value && !map.has(value)) map.set(value, label);
+    }
+    return [...map.entries()].sort((a, b) => a[1].localeCompare(b[1], 'pt-BR'));
+  }
+
+  function setMobileCardImage(img, event) {
+    const candidates = eventImageCandidates(event);
+    let index = 0;
+    const tryNext = () => {
+      if (index >= candidates.length) {
+        img.closest('.agenda-card-media')?.classList.add('without-image');
+        img.remove();
+        return;
+      }
+      img.src = candidates[index++];
+    };
+    img.onerror = tryNext;
+    img.alt = `Imagem de divulgação: ${event.titulo}`;
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    tryNext();
+  }
+
+  function renderAgenda() {
+    clearTimeout(state.timer);
+    state.isPaused = true;
+    document.body.classList.add('agenda-mode');
+    document.body.classList.remove('panel-mode');
+
+    const events = mobileVisibleEvents();
+    const header = document.createElement('header');
+    header.className = 'agenda-header';
+    header.innerHTML = `
+      <div class="agenda-heading">
+        <p class="agenda-eyebrow">Belo Horizonte e Sabará</p>
+        <h1>Agenda Cultural Gratuita</h1>
+        <p class="agenda-updated">${formatUpdated(state.data?.atualizado_em)}</p>
+      </div>
+      <button class="view-toggle" type="button" aria-label="Abrir modo painel">Modo painel</button>
+    `;
+
+    const controls = document.createElement('section');
+    controls.className = 'agenda-tools';
+    controls.setAttribute('aria-label', 'Pesquisar e filtrar eventos');
+    controls.innerHTML = `
+      <label class="agenda-search"><span>Pesquisar</span><input type="search" placeholder="Evento, local ou atividade" value="${String(state.mobileQuery).replaceAll('"', '&quot;')}"></label>
+      <label><span>Período</span><select class="agenda-period">
+        <option value="all">Todos os eventos futuros</option><option value="today">Hoje</option>
+        <option value="tomorrow">Amanhã</option><option value="7days">Próximos 7 dias</option>
+      </select></label>
+      <label><span>Categoria</span><select class="agenda-category"><option value="">Todas</option></select></label>
+      <label><span>Cidade</span><select class="agenda-city"><option value="">Todas</option></select></label>
+    `;
+
+    const category = controls.querySelector('.agenda-category');
+    const categoryMap = new Map(mobileSelectOptions(state.allEvents, 'categoria'));
+    for (const event of state.allEvents) {
+      for (const label of [event.area_artistica, ...(Array.isArray(event.areas) ? event.areas : [])]) {
+        const value = normalizeText(label);
+        if (label && value && !categoryMap.has(value)) categoryMap.set(value, label);
+      }
+    }
+    for (const [value, label] of [...categoryMap.entries()].sort((a,b)=>a[1].localeCompare(b[1], 'pt-BR'))) {
+      category.add(new Option(label, value));
+    }
+    const city = controls.querySelector('.agenda-city');
+    for (const [value, label] of mobileSelectOptions(state.allEvents, 'cidade')) city.add(new Option(label, value));
+    controls.querySelector('.agenda-period').value = state.mobilePeriod;
+    category.value = state.mobileCategory;
+    city.value = state.mobileCity;
+
+    const count = document.createElement('p');
+    count.className = 'agenda-count';
+    count.textContent = `${events.length} ${events.length === 1 ? 'evento encontrado' : 'eventos encontrados'}`;
+
+    const list = document.createElement('section');
+    list.className = 'agenda-list';
+    list.setAttribute('aria-label', 'Eventos');
+
+    if (!events.length) {
+      list.innerHTML = '<div class="agenda-empty"><h2>Nenhum evento encontrado</h2><p>Tente alterar a busca ou os filtros.</p></div>';
+    }
+
+    for (const event of events) {
+      const article = document.createElement('article');
+      article.className = 'agenda-card';
+      const link = safeExternalUrl(event.link || event.pagina);
+      const map = safeExternalUrl(event.mapa);
+      const rating = normalizeRating(event.classificacao_indicativa);
+      article.innerHTML = `
+        <div class="agenda-card-media"><img></div>
+        <div class="agenda-card-body">
+          <div class="agenda-card-badges">
+            <span>${event.categoria || 'Evento'}</span><span>Gratuito</span>${rating ? `<span>${rating.label}</span>` : ''}
+          </div>
+          <p class="agenda-card-date">${mobileDateLabel(event)}${event.horario ? ` • ${event.horario}` : ''}</p>
+          <h2>${event.titulo || 'Evento cultural'}</h2>
+          <p class="agenda-card-place">${[event.local, event.cidade].filter(Boolean).join(' • ') || 'Local não informado'}</p>
+          <p class="agenda-card-description">${event.descricao || ''}</p>
+          <div class="agenda-card-actions">
+            ${link ? `<a href="${link}" target="_blank" rel="noopener noreferrer">Programação e inscrição</a>` : ''}
+            ${map ? `<a class="secondary" href="${map}" target="_blank" rel="noopener noreferrer">Como chegar</a>` : ''}
+          </div>
+        </div>`;
+      setMobileCardImage(article.querySelector('img'), event);
+      list.append(article);
+    }
+
+    const shell = document.createElement('div');
+    shell.className = 'agenda-shell';
+    shell.append(header, controls, count, list);
+    app.replaceChildren(shell);
+
+    header.querySelector('.view-toggle').addEventListener('click', () => {
+      saveViewMode('painel');
+      state.isPaused = false;
+      renderCurrentView();
+    });
+    const rerender = () => renderAgenda();
+    controls.querySelector('input').addEventListener('input', event => {
+      state.mobileQuery = event.target.value;
+      window.clearTimeout(state.mobileSearchTimer);
+      state.mobileSearchTimer = window.setTimeout(rerender, 180);
+    });
+    controls.querySelector('.agenda-period').addEventListener('change', event => { state.mobilePeriod = event.target.value; rerender(); });
+    category.addEventListener('change', event => { state.mobileCategory = event.target.value; rerender(); });
+    city.addEventListener('change', event => { state.mobileCity = event.target.value; rerender(); });
+  }
+
+  function addPanelViewToggle() {
+    const controls = app.querySelector('.controls');
+    if (!controls || controls.querySelector('.view-mode-btn')) return;
+    const button = document.createElement('button');
+    button.className = 'control-btn view-mode-btn';
+    button.type = 'button';
+    button.title = 'Modo agenda';
+    button.setAttribute('aria-label', 'Abrir modo agenda');
+    button.textContent = '☷';
+    button.addEventListener('click', () => {
+      saveViewMode('agenda');
+      renderCurrentView();
+    });
+    controls.prepend(button);
+  }
+
+  function renderCurrentView() {
+    if (effectiveViewMode() === 'agenda') {
+      renderAgenda();
+      return;
+    }
+    document.body.classList.remove('agenda-mode');
+    document.body.classList.add('panel-mode');
+    state.isPaused = false;
+    renderSlide(Math.min(state.index, Math.max(0, state.events.length - 1)));
+    addPanelViewToggle();
+  }
+
   async function load() {
     try {
       const response = await fetch(
@@ -1400,7 +1633,8 @@
         return;
       }
 
-      renderSlide(0);
+      state.viewMode = storedViewMode();
+      renderCurrentView();
 
     } catch (error) {
       console.error(error);
@@ -1423,6 +1657,10 @@
       }
     }
   );
+
+  window.addEventListener('resize', () => {
+    if (state.viewMode === 'auto' && state.data) renderCurrentView();
+  });
 
   // Adicionar listeners de teclado
   document.addEventListener('keydown', handleKeyPress);

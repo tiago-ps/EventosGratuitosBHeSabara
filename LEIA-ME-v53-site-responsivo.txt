@@ -1,0 +1,9 @@
+VERSÃO 53 — SITE RESPONSIVO
+
+- Um único site com dois modos: painel e agenda.
+- Em telas de até 760 px, a agenda móvel abre automaticamente.
+- Em telas maiores, o painel continua como padrão.
+- O usuário pode alternar manualmente entre os modos.
+- A preferência fica salva no navegador.
+- A agenda possui pesquisa, filtros rápidos, cartões, inscrição e mapa.
+- O painel e a agenda usam o mesmo eventos.json.
