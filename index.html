@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="color-scheme" content="dark">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
   <meta name="theme-color" content="#07111f">
   <meta name="application-name" content="Agenda Cultural Gratuita">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -234,14 +235,5 @@
   <script src="js/app.js?v=53.2" defer></script>
   <script src="js/eventos-manuais-ui.js?v=42" defer></script>
 
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./service-worker.js').catch(error => {
-          console.warn('Não foi possível ativar o modo aplicativo:', error);
-        });
-      });
-    }
-  </script>
 </body>
 </html>

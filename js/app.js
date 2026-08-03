@@ -91,6 +91,26 @@
       .trim();
   }
 
+  function escapeHtml(value = '') {
+    return String(value)
+      .replaceAll('&', '&amp;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;')
+      .replaceAll('"', '&quot;')
+      .replaceAll("'", '&#39;');
+  }
+
+  function safeImageUrl(value) {
+    const text = String(value || '').trim();
+    if (!text) return '';
+    try {
+      const parsed = new URL(text, window.location.href);
+      return ['http:', 'https:'].includes(parsed.protocol) ? parsed.href : '';
+    } catch {
+      return '';
+    }
+  }
+
   function normalizeRating(value = '') {
     const raw = String(value || '').trim();
     const normalized = normalizeText(raw);
@@ -902,7 +922,7 @@
      * }
      */
 
-    const link = event.link || '';
+    const link = safeExternalUrl(event.link || event.pagina);
     const sourceUrlElement = slide.querySelector('.source-url');
 
     if (link) {
@@ -1402,11 +1422,9 @@
   }
 
   function eventImageCandidates(event) {
-    return [
-      String(event.imagem || '').trim(),
-      getLocalImage(event),
-      getProgramImage(event)
-    ].filter(Boolean);
+    return [event.imagem, getLocalImage(event), getProgramImage(event)]
+      .map(safeImageUrl)
+      .filter(Boolean);
   }
 
   function mobileDateLabel(event) {
@@ -1499,7 +1517,7 @@
       <div class="agenda-heading">
         <p class="agenda-eyebrow">Belo Horizonte e Sabará</p>
         <h1>Agenda Cultural Gratuita</h1>
-        <p class="agenda-updated">${formatUpdated(state.data?.atualizado_em)}</p>
+        <p class="agenda-updated">${escapeHtml(formatUpdated(state.data?.atualizado_em))}</p>
       </div>
       <div class="agenda-header-actions">
         <button class="install-app-btn" type="button" hidden>Instalar app</button>
@@ -1511,7 +1529,7 @@
     controls.className = 'agenda-tools';
     controls.setAttribute('aria-label', 'Pesquisar e filtrar eventos');
     controls.innerHTML = `
-      <label class="agenda-search"><span>Pesquisar</span><input type="search" placeholder="Evento, local ou atividade" value="${String(state.mobileQuery).replaceAll('"', '&quot;')}"></label>
+      <label class="agenda-search"><span>Pesquisar</span><input type="search" placeholder="Evento, local ou atividade" value="${escapeHtml(state.mobileQuery)}"></label>
       <label><span>Período</span><select class="agenda-period">
         <option value="all">Todos os eventos futuros</option><option value="today">Hoje</option>
         <option value="tomorrow">Amanhã</option><option value="7days">Próximos 7 dias</option>
@@ -1559,15 +1577,15 @@
         <div class="agenda-card-media"><img></div>
         <div class="agenda-card-body">
           <div class="agenda-card-badges">
-            <span>${event.categoria || 'Evento'}</span><span>Gratuito</span>${rating ? `<span>${rating.label}</span>` : ''}
+            <span>${escapeHtml(event.categoria || 'Evento')}</span><span>Gratuito</span>${rating ? `<span>${escapeHtml(rating.label)}</span>` : ''}
           </div>
-          <p class="agenda-card-date">${mobileDateLabel(event)}${event.horario ? ` • ${event.horario}` : ''}</p>
-          <h2>${event.titulo || 'Evento cultural'}</h2>
-          <p class="agenda-card-place">${[event.local, event.cidade].filter(Boolean).join(' • ') || 'Local não informado'}</p>
-          <p class="agenda-card-description">${event.descricao || ''}</p>
+          <p class="agenda-card-date">${escapeHtml(mobileDateLabel(event))}${event.horario ? ` • ${escapeHtml(event.horario)}` : ''}</p>
+          <h2>${escapeHtml(event.titulo || 'Evento cultural')}</h2>
+          <p class="agenda-card-place">${escapeHtml([event.local, event.cidade].filter(Boolean).join(' • ') || 'Local não informado')}</p>
+          <p class="agenda-card-description">${escapeHtml(event.descricao || '')}</p>
           <div class="agenda-card-actions">
-            ${link ? `<a href="${link}" target="_blank" rel="noopener noreferrer">Programação e inscrição</a>` : ''}
-            ${map ? `<a class="secondary" href="${map}" target="_blank" rel="noopener noreferrer">Como chegar</a>` : ''}
+            ${link ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer">Programação e inscrição</a>` : ''}
+            ${map ? `<a class="secondary" href="${escapeHtml(map)}" target="_blank" rel="noopener noreferrer">Como chegar</a>` : ''}
           </div>
         </div>`;
       setMobileCardImage(article.querySelector('img'), event);
@@ -1702,6 +1720,14 @@
     deferredInstallPrompt = null;
     refreshInstallButtons();
   });
+
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./service-worker.js').catch(error => {
+        console.warn('Não foi possível ativar o modo aplicativo:', error);
+      });
+    });
+  }
 
   // Adicionar listeners de teclado
   document.addEventListener('keydown', handleKeyPress);
