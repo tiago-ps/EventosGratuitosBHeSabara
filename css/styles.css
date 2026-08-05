@@ -783,3 +783,6 @@ body.agenda-mode .app { min-height: 100dvh; height: auto; display: block; }
 .book-themes{margin-bottom:9px}.book-themes span{padding:5px 9px}
 .book-actions a{min-height:38px;padding:7px 12px}
 @media(max-height:720px) and (min-width:681px){.book-badges{display:none}.book-question{font-size:clamp(30px,3.1vw,54px)}.book-themes{display:none}}
+
+/* v58 — opiniões moderadas de leitores */
+.book-user-opinion{margin:0 0 9px;padding:9px 12px;border-left:4px solid var(--accent);background:rgba(255,255,255,.055);border-radius:0 10px 10px 0;min-width:0}.book-user-opinion[hidden]{display:none}.book-user-opinion figcaption{font-size:clamp(9px,.68vw,13px);font-weight:900;text-transform:uppercase;letter-spacing:.05em;color:var(--accent)}.book-user-opinion blockquote{margin:4px 0 2px;font-size:clamp(12px,.86vw,16px);font-weight:700;line-height:1.28;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.book-user-opinion cite{font-size:clamp(10px,.7vw,13px);color:var(--muted);font-style:normal}.book-actions .book-opinion-link{background:#e8b86d}.agenda-book-opinion{margin:10px 0;padding:10px;border-left:3px solid var(--accent);background:#f4f7fb}.agenda-book-opinion cite{display:block;margin-top:5px;font-size:.82rem;font-style:normal;color:#526071}@media(max-height:760px) and (min-width:681px){.book-user-opinion{display:none}}

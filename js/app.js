@@ -248,6 +248,7 @@
   }
 
   function eventIsPublishable(event, today = todayAtMidnight()) {
+    if (event?.exibicao_ativa === false) return false;
     const criterion = displayCriterion(event);
     if (criterion === 'manual') return event.exibicao_ativa !== false;
 
@@ -369,7 +370,7 @@
     if (content === 'events') state.events = events;
     else if (content === 'books') state.events = books;
     else state.events = interleaveContents(
-      events, books, state.config?.proporcao?.eventos_por_livro || 9
+      events, books, state.config?.proporcao?.eventos_por_livro || 5
     );
     return state.events;
   }
@@ -1234,12 +1235,29 @@
       themes.append(span);
     }
 
+    const opinion = copy.querySelector('.book-user-opinion');
+    const commentText = String(book.comentario_aprovado || '').trim();
+    if (opinion && book.exibir_comentario && commentText) {
+      opinion.hidden = false;
+      opinion.querySelector('blockquote').textContent = `“${commentText}”`;
+      opinion.querySelector('cite').textContent = String(book.credito_comentario || 'Leitor(a) do IFMG').trim();
+    } else if (opinion) {
+      opinion.hidden = true;
+    }
+
     const physicalLink = copy.querySelector('.book-physical-link');
     const virtualLink = copy.querySelector('.book-virtual-link');
     const physicalUrl = safeExternalUrl(book.link_fisico);
     const virtualUrl = safeExternalUrl(book.link_virtual);
     if (physicalUrl) physicalLink.href = physicalUrl; else physicalLink.remove();
     if (virtualUrl) virtualLink.href = virtualUrl; else virtualLink.remove();
+    const opinionLink = copy.querySelector('.book-opinion-link');
+    const opinionUrl = safeExternalUrl(book.link_formulario_opiniao || state.config?.opinioes_livros?.url_formulario);
+    const opinionsEnabled = state.config?.opinioes_livros?.habilitado === true;
+    if (opinionLink) {
+      opinionLink.hidden = !(opinionsEnabled && opinionUrl);
+      if (opinionsEnabled && opinionUrl) opinionLink.href = opinionUrl;
+    }
 
     const link = safeExternalUrl(book.link || book.link_fisico || book.link_virtual);
     slide.querySelector('.source-label').textContent = 'Encontre este livro';
@@ -1829,9 +1847,11 @@
             <p class="agenda-card-place"><strong>${escapeHtml(item.titulo || '')}</strong> · ${escapeHtml(item.autor || '')}</p>
             <p class="agenda-card-description">${escapeHtml(item.texto_apoio || '')}</p>
             ${item.numero_chamada ? `<p class="agenda-card-call">Número de chamada: ${escapeHtml(item.numero_chamada)}</p>` : ''}
+            ${item.exibir_comentario && item.comentario_aprovado ? `<blockquote class="agenda-book-opinion">“${escapeHtml(item.comentario_aprovado)}”<cite>${escapeHtml(item.credito_comentario || 'Leitor(a) do IFMG')}</cite></blockquote>` : ''}
             <div class="agenda-card-actions">
               ${link ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer">Encontrar este livro</a>` : ''}
               ${item.link_virtual ? `<a class="secondary" href="${escapeHtml(item.link_virtual)}" target="_blank" rel="noopener noreferrer">Edição virtual</a>` : ''}
+              ${state.config?.opinioes_livros?.habilitado === true && safeExternalUrl(item.link_formulario_opiniao || state.config?.opinioes_livros?.url_formulario) ? `<a class="secondary" href="${escapeHtml(safeExternalUrl(item.link_formulario_opiniao || state.config?.opinioes_livros?.url_formulario))}" target="_blank" rel="noopener noreferrer">Opine sobre este livro</a>` : ''}
             </div>
           </div>`;
         list.append(article);
@@ -1933,7 +1953,7 @@
         loadOptionalJson(CONFIG_URL, {
           nome: 'Mural Cultural',
           modulos: { eventos: true, livros: false },
-          proporcao: { eventos_por_livro: 9 },
+          proporcao: { eventos_por_livro: 5 },
           tempo_slide: { evento: 12, livro: 15 },
           filtros: { conteudo_padrao: 'all' }
         })

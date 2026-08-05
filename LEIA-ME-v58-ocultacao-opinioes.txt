@@ -1,0 +1,7 @@
+Mural Cultural v58
+
+- Livros são intercalados a cada 5 eventos por padrão.
+- Eventos e livros com exibicao_ativa=false não aparecem.
+- Comentários de leitores só aparecem após moderação.
+- O botão de opinião fica desativado enquanto configuracao-mural.json mantiver opinioes_livros.habilitado=false.
+- O site é estático e não recebe nem armazena respostas de formulário.

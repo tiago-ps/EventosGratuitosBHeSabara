@@ -1,6 +1,6 @@
 {
   "versao": 1,
-  "atualizado_em": "2026-08-05T01:27:44.217784+00:00",
+  "atualizado_em": "2026-08-05T02:13:37.130751+00:00",
   "titulo": "Descobertas de leitura",
   "origem": "Acervos físico e virtual da Biblioteca do IFMG Campus Sabará",
   "aviso": "Os exemplares informados são os catalogados nos relatórios. Consulte o catálogo para verificar disponibilidade em tempo real.",
@@ -37,7 +37,11 @@
       "exibir_de": "",
       "exibir_ate": "",
       "prioridade": 5,
-      "tempo_slide": 15
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": ""
     },
     {
       "tipo_conteudo": "livro",
@@ -71,7 +75,11 @@
       "exibir_de": "",
       "exibir_ate": "",
       "prioridade": 5,
-      "tempo_slide": 15
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": ""
     },
     {
       "tipo_conteudo": "livro",
@@ -105,7 +113,11 @@
       "exibir_de": "",
       "exibir_ate": "",
       "prioridade": 5,
-      "tempo_slide": 15
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": ""
     },
     {
       "tipo_conteudo": "livro",
@@ -139,7 +151,11 @@
       "exibir_de": "",
       "exibir_ate": "",
       "prioridade": 5,
-      "tempo_slide": 15
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": ""
     },
     {
       "tipo_conteudo": "livro",
@@ -173,7 +189,11 @@
       "exibir_de": "",
       "exibir_ate": "",
       "prioridade": 5,
-      "tempo_slide": 15
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": ""
     },
     {
       "tipo_conteudo": "livro",
@@ -207,7 +227,11 @@
       "exibir_de": "",
       "exibir_ate": "",
       "prioridade": 5,
-      "tempo_slide": 15
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": ""
     },
     {
       "tipo_conteudo": "livro",
@@ -241,7 +265,11 @@
       "exibir_de": "",
       "exibir_ate": "",
       "prioridade": 5,
-      "tempo_slide": 15
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": ""
     },
     {
       "tipo_conteudo": "livro",
@@ -275,7 +303,11 @@
       "exibir_de": "",
       "exibir_ate": "",
       "prioridade": 5,
-      "tempo_slide": 15
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": ""
     },
     {
       "tipo_conteudo": "livro",
@@ -309,7 +341,11 @@
       "exibir_de": "",
       "exibir_ate": "",
       "prioridade": 4,
-      "tempo_slide": 15
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": ""
     }
   ]
 }
