@@ -1,6 +1,6 @@
 {
   "versao": 1,
-  "atualizado_em": "2026-08-05T02:13:37.130751+00:00",
+  "atualizado_em": "2026-08-05T05:34:27.136810+00:00",
   "titulo": "Descobertas de leitura",
   "origem": "Acervos físico e virtual da Biblioteca do IFMG Campus Sabará",
   "aviso": "Os exemplares informados são os catalogados nos relatórios. Consulte o catálogo para verificar disponibilidade em tempo real.",
@@ -10,8 +10,8 @@
       "id": "1984",
       "titulo": "1984",
       "autor": "George Orwell",
-      "pergunta_curiosidade": "E se toda a sua vida estivesse sendo observada?",
-      "texto_apoio": "Uma sociedade organizada em nome do bem comum pode esconder a perda da liberdade.",
+      "pergunta_curiosidade": "E se a câmera do seu celular nunca pudesse ser desligada? 👁️📱",
+      "texto_apoio": "Imagina viver em um mundo onde cada passo seu, cada mensagem e até a sua expressão facial são monitorados 24 horas por dia. Se você acha que o algoritmo do TikTok já sabe demais sobre você, é porque você ainda não conheceu o Grande Irmão.",
       "temas": [
         "vigilância",
         "liberdade",
@@ -41,7 +41,8 @@
       "exibir_comentario": false,
       "comentario_aprovado": "",
       "credito_comentario": "",
-      "link_formulario_opiniao": ""
+      "link_formulario_opiniao": "",
+      "observacoes": "Chamada utilizada no primeiro protótipo."
     },
     {
       "tipo_conteudo": "livro",
