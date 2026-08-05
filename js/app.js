@@ -2,6 +2,8 @@
   'use strict';
 
   const DATA_URL = 'eventos.json';
+  const BOOKS_URL = 'livros.json';
+  const CONFIG_URL = 'configuracao-mural.json';
   const app = document.getElementById('app');
   const SCHOOL_ROTATION_SIZE = 6;
   const SCHOOL_ROTATION_KEY = 'agenda-cultural-escola-livre-lote';
@@ -57,7 +59,10 @@
 
   let state = {
     data: null,
+    booksData: null,
+    config: null,
     allEvents: [],
+    allBooks: [],
     events: [],
     index: 0,
     timer: null,
@@ -68,19 +73,23 @@
     btnFilter: null,
     filterOverlay: null,
     filters: {
+      content: 'all',
       city: '',
       category: '',
       program: '',
       unit: '',
       period: 'all',
-      rating: ''
+      rating: '',
+      bookTheme: '',
+      bookAccess: ''
     },
     schoolRotationBatch: 0,
     viewMode: 'auto',
     mobileQuery: '',
     mobileCategory: '',
     mobileCity: '',
-    mobilePeriod: 'all'
+    mobilePeriod: 'all',
+    mobileContent: 'all'
   };
 
   function normalizeText(value = '') {
@@ -155,7 +164,7 @@
   }
 
   function getPanelTitleParts(titleValue, events) {
-    const fallbackTitle = 'Agenda Cultural Gratuita';
+    const fallbackTitle = 'Mural Cultural';
     const rawTitle = String(titleValue || fallbackTitle).trim();
     const parts = rawTitle.split(/\s+(?:-|–|—)\s+/, 2);
 
@@ -286,6 +295,85 @@
       });
   }
 
+  function bookIsPublishable(book, today = todayAtMidnight()) {
+    if (!book || !book.titulo || book.exibicao_ativa === false) return false;
+    const start = parseCalendarDate(book.exibir_de);
+    const end = parseCalendarDate(book.exibir_ate, true);
+    if (start && today < start) return false;
+    if (end && today > end) return false;
+    return Boolean(book.link && book.imagem);
+  }
+
+  function bookMatchesFilters(book) {
+    const theme = state.filters.bookTheme;
+    const access = state.filters.bookAccess;
+    const themes = (Array.isArray(book.temas) ? book.temas : [])
+      .map(normalizeText);
+    if (theme && !themes.includes(theme)) return false;
+    if (access === 'physical' && !book.acesso_fisico) return false;
+    if (access === 'virtual' && !book.acesso_virtual) return false;
+    if (access === 'both' && !(book.acesso_fisico && book.acesso_virtual)) return false;
+    return true;
+  }
+
+  function filterBooks(books) {
+    const today = todayAtMidnight();
+    return books
+      .filter(book => bookIsPublishable(book, today))
+      .filter(bookMatchesFilters)
+      .sort((a, b) =>
+        Number(b.prioridade || 0) - Number(a.prioridade || 0) ||
+        String(a.titulo || '').localeCompare(String(b.titulo || ''), 'pt-BR')
+      );
+  }
+
+  function interleaveContents(events, books, eventsPerBook) {
+    if (!books.length) return events;
+    if (!events.length) return books;
+    const interval = Math.max(1, Number(eventsPerBook) || 9);
+    const combined = [];
+    let bookIndex = 0;
+    for (let i = 0; i < events.length; i += 1) {
+      combined.push(events[i]);
+      if ((i + 1) % interval === 0) {
+        combined.push(books[bookIndex % books.length]);
+        bookIndex += 1;
+      }
+    }
+    if (!combined.some(item => item.tipo_conteudo === 'livro')) {
+      combined.push(books[0]);
+    }
+    return combined;
+  }
+
+  function hasEventFilters() {
+    return Boolean(
+      state.filters.city || state.filters.category || state.filters.program ||
+      state.filters.unit || state.filters.rating || state.filters.period !== 'all'
+    );
+  }
+
+  function visibleEventsForFilters() {
+    return hasEventFilters()
+      ? applyUserFilters(eventsAvailableForCurrentFilters(state.allEvents))
+      : buildDefaultEvents(state.allEvents);
+  }
+
+  function rebuildVisibleItems() {
+    const content = state.filters.content || 'all';
+    const events = content === 'books' ? [] : visibleEventsForFilters();
+    const booksEnabled = state.config?.modulos?.livros !== false;
+    const books = content === 'events' || !booksEnabled
+      ? []
+      : filterBooks(state.allBooks);
+    if (content === 'events') state.events = events;
+    else if (content === 'books') state.events = books;
+    else state.events = interleaveContents(
+      events, books, state.config?.proporcao?.eventos_por_livro || 9
+    );
+    return state.events;
+  }
+
   function parseCalendarDate(value, endOfDay = false) {
     const match = String(value || '').match(/^(\d{4})-(\d{2})-(\d{2})/);
 
@@ -369,12 +457,10 @@
 
   function hasUserFilters() {
     return Boolean(
-      state.filters.city ||
-      state.filters.category ||
-      state.filters.program ||
-      state.filters.unit ||
-      state.filters.rating ||
-      state.filters.period !== 'all'
+      state.filters.content !== 'all' ||
+      state.filters.city || state.filters.category || state.filters.program ||
+      state.filters.unit || state.filters.rating || state.filters.period !== 'all' ||
+      state.filters.bookTheme || state.filters.bookAccess
     );
   }
 
@@ -422,7 +508,7 @@
     state.schoolRotationBatch =
       (state.schoolRotationBatch + direction + batches) % batches;
     storeSchoolBatch(state.schoolRotationBatch);
-    state.events = buildDefaultEvents(state.allEvents);
+    rebuildVisibleItems();
   }
 
   function eventSearchFacets(event) {
@@ -510,12 +596,11 @@
 
   function activeFilterCount() {
     return [
-      state.filters.city,
-      state.filters.category,
-      state.filters.program,
-      state.filters.unit,
-      state.filters.rating,
-      state.filters.period !== 'all' ? state.filters.period : ''
+      state.filters.content !== 'all' ? state.filters.content : '',
+      state.filters.city, state.filters.category, state.filters.program,
+      state.filters.unit, state.filters.rating,
+      state.filters.period !== 'all' ? state.filters.period : '',
+      state.filters.bookTheme, state.filters.bookAccess
     ].filter(Boolean).length;
   }
 
@@ -773,18 +858,16 @@
 
     clearTimeout(state.timer);
 
-    const event = state.events[state.index];
-    const data = state.data;
-
-    const seconds = Math.max(
-      5,
-      Number(data.tempo_slide) || 12
-    );
+    const item = state.events[state.index];
+    const defaultSeconds = item?.tipo_conteudo === 'livro'
+      ? state.config?.tempo_slide?.livro
+      : state.config?.tempo_slide?.evento;
+    const seconds = Math.max(5, Number(item?.tempo_slide) || Number(defaultSeconds) || 12);
 
     state.timer = setTimeout(goToNext, seconds * 1000);
   }
 
-  function renderSlide(index) {
+  function renderEventSlide(index) {
     clearTimeout(state.timer);
 
     const event = state.events[index];
@@ -796,7 +879,7 @@
       categoryVisuals[visualKey] || categoryVisuals.default;
 
     const seconds = Math.max(
-      5,
+      5, Number(event.tempo_slide) || Number(state.config?.tempo_slide?.evento) ||
       Number(data.tempo_slide) || 12
     );
 
@@ -805,10 +888,10 @@
       `${seconds}s`
     );
 
-    const { mainTitle, citiesTitle } = getPanelTitleParts(
-      data.titulo_painel,
-      state.events
+    const { mainTitle: originalTitle, citiesTitle } = getPanelTitleParts(
+      data.titulo_painel, state.allEvents
     );
+    const mainTitle = state.config?.nome || originalTitle;
 
     slide.querySelector('.panel-title-main').textContent =
       mainTitle;
@@ -1104,6 +1187,118 @@
     scheduleNextSlide();
   }
 
+  function renderBookSlide(index) {
+    clearTimeout(state.timer);
+    const book = state.events[index];
+    const slide = template.content.firstElementChild.cloneNode(true);
+    slide.classList.add('book-slide');
+
+    const seconds = Math.max(
+      5, Number(book.tempo_slide) || Number(state.config?.tempo_slide?.livro) || 15
+    );
+    slide.style.setProperty('--slide-seconds', `${seconds}s`);
+    slide.querySelector('.panel-title-main').textContent = state.config?.nome || 'Mural Cultural';
+    const subtitle = slide.querySelector('.panel-title-cities');
+    subtitle.textContent = 'Descoberta de leitura';
+    subtitle.hidden = false;
+    slide.querySelector('.counter').textContent = `${index + 1} de ${state.events.length}`;
+
+    slide.querySelector('.event-copy').hidden = true;
+    const copy = slide.querySelector('.book-copy');
+    copy.hidden = false;
+    copy.querySelector('.book-question').textContent = book.pergunta_curiosidade || 'Descubra uma nova leitura.';
+    copy.querySelector('.book-support').textContent = book.texto_apoio || '';
+    copy.querySelector('.book-title').textContent = book.titulo || '';
+    copy.querySelector('.book-author').textContent = book.autor || '';
+    copy.querySelector('.book-call').textContent = book.numero_chamada || 'Consulte o catálogo ou a equipe da biblioteca';
+
+    const accessLabels = [];
+    if (book.acesso_fisico) accessLabels.push('Físico');
+    if (book.acesso_virtual) accessLabels.push('Virtual');
+    copy.querySelector('.book-access').textContent = accessLabels.join(' + ') || 'Catálogo';
+    const availability = [];
+    if (book.acesso_fisico) {
+      const count = Number(book.exemplares_fisicos_catalogados || 0);
+      availability.push(`${count} ${count === 1 ? 'exemplar físico catalogado' : 'exemplares físicos catalogados'}`);
+      if (Number(book.outras_edicoes_fisicas || 0) > 0) {
+        availability.push(`+ ${book.outras_edicoes_fisicas} outra${Number(book.outras_edicoes_fisicas) === 1 ? '' : 's'} edição${Number(book.outras_edicoes_fisicas) === 1 ? '' : 'ões'} em Sabará`);
+      }
+    }
+    if (book.acesso_virtual) availability.push('edição virtual');
+    copy.querySelector('.book-availability').textContent = availability.join(' • ');
+
+    const themes = copy.querySelector('.book-themes');
+    for (const theme of Array.isArray(book.temas) ? book.temas : []) {
+      const span = document.createElement('span');
+      span.textContent = theme;
+      themes.append(span);
+    }
+
+    const physicalLink = copy.querySelector('.book-physical-link');
+    const virtualLink = copy.querySelector('.book-virtual-link');
+    const physicalUrl = safeExternalUrl(book.link_fisico);
+    const virtualUrl = safeExternalUrl(book.link_virtual);
+    if (physicalUrl) physicalLink.href = physicalUrl; else physicalLink.remove();
+    if (virtualUrl) virtualLink.href = virtualUrl; else virtualLink.remove();
+
+    const link = safeExternalUrl(book.link || book.link_fisico || book.link_virtual);
+    slide.querySelector('.source-label').textContent = 'Encontre este livro';
+    const source = slide.querySelector('.source-url');
+    if (link) {
+      const anchor = document.createElement('a');
+      anchor.href = link;
+      anchor.textContent = book.tipo_link_principal === 'virtual' ? 'Abrir edição virtual' : 'Ver no catálogo da biblioteca';
+      anchor.target = '_blank';
+      anchor.rel = 'noopener noreferrer';
+      source.replaceChildren(anchor);
+    } else {
+      source.textContent = 'Consulte a equipe da biblioteca';
+    }
+    slide.querySelector('.updated').textContent = formatUpdated(state.booksData?.atualizado_em);
+
+    const qrContainer = slide.querySelector('.qr-code');
+    if (book.qr_code) {
+      const qrImage = document.createElement('img');
+      qrImage.src = book.qr_code;
+      qrImage.alt = `QR Code para ${book.titulo}`;
+      qrImage.onerror = () => buildQr(qrContainer, link);
+      qrContainer.replaceChildren(qrImage);
+    } else {
+      buildQr(qrContainer, link);
+    }
+
+    const image = slide.querySelector('.event-image');
+    const fallback = slide.querySelector('.image-fallback');
+    slide.querySelector('.fallback-icon').textContent = book.icone || '📚';
+    slide.querySelector('.fallback-label').textContent = 'Livro';
+    image.alt = `Capa do livro ${book.titulo}`;
+    image.decoding = 'async';
+    image.classList.add('loaded');
+    image.onload = () => { fallback.style.display = 'none'; };
+    image.onerror = () => { image.classList.remove('loaded'); image.style.display = 'none'; fallback.style.display = 'grid'; };
+    image.src = book.imagem || '';
+
+    app.replaceChildren(slide);
+    state.btnNext = slide.querySelector('.next-btn');
+    state.btnPrev = slide.querySelector('.prev-btn');
+    state.btnPlayPause = slide.querySelector('.play-pause-btn');
+    state.btnFilter = slide.querySelector('.filter-btn');
+    state.filterOverlay = slide.querySelector('.filter-overlay');
+    setupControls();
+    setupFilterPanel(slide);
+    updateFilterButton();
+    updatePlayPauseButton();
+    addPanelViewToggle();
+    scheduleNextSlide();
+  }
+
+  function renderSlide(index) {
+    const item = state.events[index];
+    if (!item) return;
+    if (item.tipo_conteudo === 'livro') renderBookSlide(index);
+    else renderEventSlide(index);
+  }
+
   function goToNext() {
     const completedCycle = state.index >= state.events.length - 1;
     if (completedCycle && !hasUserFilters()) {
@@ -1143,8 +1338,8 @@
     const count = activeFilterCount();
     const countElement = state.btnFilter.querySelector('.filter-count');
     const description = count
-      ? `Filtrar eventos: ${count} filtro${count === 1 ? '' : 's'} ativo${count === 1 ? '' : 's'}`
-      : 'Filtrar eventos';
+      ? `Filtrar conteúdos: ${count} filtro${count === 1 ? '' : 's'} ativo${count === 1 ? '' : 's'}`
+      : 'Filtrar conteúdos';
 
     state.btnFilter.classList.toggle('has-filters', count > 0);
     state.btnFilter.setAttribute('aria-label', description);
@@ -1194,12 +1389,17 @@
   }
 
   function populateFilterPanel(slide) {
+    const contentSelect = slide.querySelector('.filter-content');
     const citySelect = slide.querySelector('.filter-city');
     const categorySelect = slide.querySelector('.filter-category');
     const programSelect = slide.querySelector('.filter-program');
     const unitSelect = slide.querySelector('.filter-unit');
     const periodSelect = slide.querySelector('.filter-period');
     const ratingSelect = slide.querySelector('.filter-rating');
+    const bookThemeSelect = slide.querySelector('.filter-book-theme');
+    const bookAccessSelect = slide.querySelector('.filter-book-access');
+
+    if (contentSelect) contentSelect.value = state.filters.content || 'all';
 
     populateDynamicSelect(
       citySelect,
@@ -1238,6 +1438,31 @@
 
     if (periodSelect) periodSelect.value = state.filters.period || 'all';
     if (ratingSelect) ratingSelect.value = state.filters.rating || '';
+
+    const themes = new Map();
+    for (const book of state.allBooks) {
+      for (const label of Array.isArray(book.temas) ? book.temas : []) {
+        const value = normalizeText(label);
+        if (label && value && !themes.has(value)) themes.set(value, label);
+      }
+    }
+    populateDynamicSelect(
+      bookThemeSelect, 'Todos os temas',
+      [...themes.entries()].sort((a,b)=>a[1].localeCompare(b[1], 'pt-BR')),
+      state.filters.bookTheme
+    );
+    if (bookAccessSelect) bookAccessSelect.value = state.filters.bookAccess || '';
+    updateFilterFieldVisibility(slide);
+  }
+
+  function updateFilterFieldVisibility(slide) {
+    const content = slide.querySelector('.filter-content')?.value || 'all';
+    slide.querySelectorAll('.event-filter-field').forEach(field => {
+      field.hidden = content === 'books';
+    });
+    slide.querySelectorAll('.book-filter-field').forEach(field => {
+      field.hidden = content === 'events';
+    });
   }
 
   function openFilterPanel() {
@@ -1269,16 +1494,16 @@
     app.innerHTML = `
       <section class="empty filtered-empty">
         <div>
-          <h1>Nenhum evento encontrado</h1>
-          <p>Não há eventos que correspondam aos filtros selecionados.</p>
+          <h1>Nenhum conteúdo encontrado</h1>
+          <p>Não há eventos ou livros que correspondam aos filtros selecionados.</p>
           <button class="empty-clear-filters" type="button">Limpar filtros</button>
         </div>
       </section>
     `;
 
     app.querySelector('.empty-clear-filters')?.addEventListener('click', () => {
-      state.filters = { city: '', category: '', program: '', unit: '', period: 'all', rating: '' };
-      state.events = buildDefaultEvents(state.allEvents);
+      state.filters = { content: 'all', city: '', category: '', program: '', unit: '', period: 'all', rating: '', bookTheme: '', bookAccess: '' };
+      rebuildVisibleItems();
       state.index = 0;
       renderSlide(0);
     });
@@ -1288,15 +1513,18 @@
     if (!state.filterOverlay) return;
 
     state.filters = {
+      content: state.filterOverlay.querySelector('.filter-content')?.value || 'all',
       city: state.filterOverlay.querySelector('.filter-city')?.value || '',
       category: state.filterOverlay.querySelector('.filter-category')?.value || '',
       program: state.filterOverlay.querySelector('.filter-program')?.value || '',
       unit: state.filterOverlay.querySelector('.filter-unit')?.value || '',
       period: state.filterOverlay.querySelector('.filter-period')?.value || 'all',
-      rating: state.filterOverlay.querySelector('.filter-rating')?.value || ''
+      rating: state.filterOverlay.querySelector('.filter-rating')?.value || '',
+      bookTheme: state.filterOverlay.querySelector('.filter-book-theme')?.value || '',
+      bookAccess: state.filterOverlay.querySelector('.filter-book-access')?.value || ''
     };
 
-    state.events = applyUserFilters(eventsAvailableForCurrentFilters(state.allEvents));
+    rebuildVisibleItems();
     state.index = 0;
 
     if (!state.events.length) {
@@ -1308,8 +1536,8 @@
   }
 
   function clearUserFilters() {
-    state.filters = { city: '', category: '', program: '', unit: '', period: 'all', rating: '' };
-    state.events = buildDefaultEvents(state.allEvents);
+    state.filters = { content: 'all', city: '', category: '', program: '', unit: '', period: 'all', rating: '', bookTheme: '', bookAccess: '' };
+    rebuildVisibleItems();
     state.index = 0;
     renderCurrentView();
   }
@@ -1325,6 +1553,7 @@
     closeButton?.addEventListener('click', closeFilterPanel);
     applyButton?.addEventListener('click', applyFiltersFromPanel);
     clearButton?.addEventListener('click', clearUserFilters);
+    slide.querySelector('.filter-content')?.addEventListener('change', () => updateFilterFieldVisibility(slide));
 
     overlay?.addEventListener('click', event => {
       if (event.target === overlay) closeFilterPanel();
@@ -1441,16 +1670,30 @@
     }).format(start).replace('.', '');
   }
 
-  function mobileVisibleEvents() {
+  function mobileVisibleContents() {
     const query = normalizeText(state.mobileQuery);
-    return state.events.filter(event => {
-      if (state.mobileCity && normalizeText(event.cidade) !== state.mobileCity) return false;
-      if (state.mobileCategory && !categoryMatches(event, state.mobileCategory)) return false;
-      if (!eventMatchesPeriod(event, state.mobilePeriod)) return false;
+    const source = state.mobileContent === 'books'
+      ? filterBooks(state.allBooks)
+      : state.events;
+    return source.filter(item => {
+      const isBook = item.tipo_conteudo === 'livro';
+      if (state.mobileContent === 'events' && isBook) return false;
+      if (state.mobileContent === 'books' && !isBook) return false;
+      if (isBook) {
+        if (!query) return true;
+        const haystack = normalizeText([
+          item.titulo, item.autor, item.pergunta_curiosidade,
+          item.texto_apoio, ...(Array.isArray(item.temas) ? item.temas : [])
+        ].filter(Boolean).join(' '));
+        return haystack.includes(query);
+      }
+      if (state.mobileCity && normalizeText(item.cidade) !== state.mobileCity) return false;
+      if (state.mobileCategory && !categoryMatches(item, state.mobileCategory)) return false;
+      if (!eventMatchesPeriod(item, state.mobilePeriod)) return false;
       if (!query) return true;
       const haystack = normalizeText([
-        event.titulo, event.descricao, event.local, event.cidade,
-        event.categoria, event.area_artistica, event.programa, event.fonte
+        item.titulo, item.descricao, item.local, item.cidade,
+        item.categoria, item.area_artistica, item.programa, item.fonte
       ].filter(Boolean).join(' '));
       return haystack.includes(query);
     });
@@ -1510,13 +1753,13 @@
     document.body.classList.add('agenda-mode');
     document.body.classList.remove('panel-mode');
 
-    const events = mobileVisibleEvents();
+    const contents = mobileVisibleContents();
     const header = document.createElement('header');
     header.className = 'agenda-header';
     header.innerHTML = `
       <div class="agenda-heading">
         <p class="agenda-eyebrow">Belo Horizonte e Sabará</p>
-        <h1>Agenda Cultural Gratuita</h1>
+        <h1>Mural Cultural</h1>
         <p class="agenda-updated">${escapeHtml(formatUpdated(state.data?.atualizado_em))}</p>
       </div>
       <div class="agenda-header-actions">
@@ -1527,15 +1770,18 @@
 
     const controls = document.createElement('section');
     controls.className = 'agenda-tools';
-    controls.setAttribute('aria-label', 'Pesquisar e filtrar eventos');
+    controls.setAttribute('aria-label', 'Pesquisar e filtrar conteúdos');
     controls.innerHTML = `
-      <label class="agenda-search"><span>Pesquisar</span><input type="search" placeholder="Evento, local ou atividade" value="${escapeHtml(state.mobileQuery)}"></label>
-      <label><span>Período</span><select class="agenda-period">
+      <label class="agenda-search"><span>Pesquisar</span><input type="search" placeholder="Evento, livro, autor ou tema" value="${escapeHtml(state.mobileQuery)}"></label>
+      <label><span>Conteúdo</span><select class="agenda-content">
+        <option value="all">Eventos e livros</option><option value="events">Eventos</option><option value="books">Livros</option>
+      </select></label>
+      <label class="agenda-event-filter"><span>Período</span><select class="agenda-period">
         <option value="all">Todos os eventos futuros</option><option value="today">Hoje</option>
         <option value="tomorrow">Amanhã</option><option value="7days">Próximos 7 dias</option>
       </select></label>
-      <label><span>Categoria</span><select class="agenda-category"><option value="">Todas</option></select></label>
-      <label><span>Cidade</span><select class="agenda-city"><option value="">Todas</option></select></label>
+      <label class="agenda-event-filter"><span>Categoria</span><select class="agenda-category"><option value="">Todas</option></select></label>
+      <label class="agenda-event-filter"><span>Cidade</span><select class="agenda-city"><option value="">Todas</option></select></label>
     `;
 
     const category = controls.querySelector('.agenda-category');
@@ -1552,24 +1798,46 @@
     const city = controls.querySelector('.agenda-city');
     for (const [value, label] of mobileSelectOptions(state.allEvents, 'cidade')) city.add(new Option(label, value));
     controls.querySelector('.agenda-period').value = state.mobilePeriod;
+    controls.querySelector('.agenda-content').value = state.mobileContent;
+    controls.querySelectorAll('.agenda-event-filter').forEach(field => { field.hidden = state.mobileContent === 'books'; });
     category.value = state.mobileCategory;
     city.value = state.mobileCity;
 
     const count = document.createElement('p');
     count.className = 'agenda-count';
-    count.textContent = `${events.length} ${events.length === 1 ? 'evento encontrado' : 'eventos encontrados'}`;
+    count.textContent = `${contents.length} ${contents.length === 1 ? 'conteúdo encontrado' : 'conteúdos encontrados'}`;
 
     const list = document.createElement('section');
     list.className = 'agenda-list';
-    list.setAttribute('aria-label', 'Eventos');
+    list.setAttribute('aria-label', 'Conteúdos culturais');
 
-    if (!events.length) {
-      list.innerHTML = '<div class="agenda-empty"><h2>Nenhum evento encontrado</h2><p>Tente alterar a busca ou os filtros.</p></div>';
+    if (!contents.length) {
+      list.innerHTML = '<div class="agenda-empty"><h2>Nenhum conteúdo encontrado</h2><p>Tente alterar a busca ou os filtros.</p></div>';
     }
 
-    for (const event of events) {
+    for (const item of contents) {
       const article = document.createElement('article');
-      article.className = 'agenda-card';
+      article.className = `agenda-card ${item.tipo_conteudo === 'livro' ? 'agenda-book-card' : ''}`;
+      if (item.tipo_conteudo === 'livro') {
+        const link = safeExternalUrl(item.link || item.link_fisico || item.link_virtual);
+        article.innerHTML = `
+          <div class="agenda-card-media book-media"><img src="${escapeHtml(item.imagem || '')}" alt="Capa: ${escapeHtml(item.titulo || '')}" loading="lazy"></div>
+          <div class="agenda-card-body">
+            <div class="agenda-card-badges"><span>Livro</span>${item.acesso_fisico ? '<span>Físico</span>' : ''}${item.acesso_virtual ? '<span>Virtual</span>' : ''}</div>
+            <p class="agenda-card-date">Descoberta de leitura</p>
+            <h2>${escapeHtml(item.pergunta_curiosidade || item.titulo || 'Livro')}</h2>
+            <p class="agenda-card-place"><strong>${escapeHtml(item.titulo || '')}</strong> · ${escapeHtml(item.autor || '')}</p>
+            <p class="agenda-card-description">${escapeHtml(item.texto_apoio || '')}</p>
+            ${item.numero_chamada ? `<p class="agenda-card-call">Número de chamada: ${escapeHtml(item.numero_chamada)}</p>` : ''}
+            <div class="agenda-card-actions">
+              ${link ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer">Encontrar este livro</a>` : ''}
+              ${item.link_virtual ? `<a class="secondary" href="${escapeHtml(item.link_virtual)}" target="_blank" rel="noopener noreferrer">Edição virtual</a>` : ''}
+            </div>
+          </div>`;
+        list.append(article);
+        continue;
+      }
+      const event = item;
       const link = safeExternalUrl(event.link || event.pagina);
       const map = safeExternalUrl(event.mapa);
       const rating = normalizeRating(event.classificacao_indicativa);
@@ -1612,6 +1880,7 @@
       window.clearTimeout(state.mobileSearchTimer);
       state.mobileSearchTimer = window.setTimeout(rerender, 180);
     });
+    controls.querySelector('.agenda-content').addEventListener('change', event => { state.mobileContent = event.target.value; rerender(); });
     controls.querySelector('.agenda-period').addEventListener('change', event => { state.mobilePeriod = event.target.value; rerender(); });
     category.addEventListener('change', event => { state.mobileCategory = event.target.value; rerender(); });
     city.addEventListener('change', event => { state.mobileCity = event.target.value; rerender(); });
@@ -1645,50 +1914,57 @@
     addPanelViewToggle();
   }
 
+  async function loadOptionalJson(url, fallback) {
+    try {
+      const response = await fetch(`${url}?v=${Date.now()}`, { cache: 'no-store' });
+      if (!response.ok) return fallback;
+      return await response.json();
+    } catch (error) {
+      console.warn(`Conteúdo opcional indisponível: ${url}`, error);
+      return fallback;
+    }
+  }
+
   async function load() {
     try {
-      const response = await fetch(
-        `${DATA_URL}?v=${Date.now()}`,
-        {
-          cache: 'no-store'
-        }
-      );
+      const [response, booksData, config] = await Promise.all([
+        fetch(`${DATA_URL}?v=${Date.now()}`, { cache: 'no-store' }),
+        loadOptionalJson(BOOKS_URL, { livros: [] }),
+        loadOptionalJson(CONFIG_URL, {
+          nome: 'Mural Cultural',
+          modulos: { eventos: true, livros: false },
+          proporcao: { eventos_por_livro: 9 },
+          tempo_slide: { evento: 12, livro: 15 },
+          filtros: { conteudo_padrao: 'all' }
+        })
+      ]);
 
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status}`);
-      }
-
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const data = await response.json();
-
-      if (!data || !Array.isArray(data.eventos)) {
-        throw new Error('Formato inválido');
-      }
+      if (!data || !Array.isArray(data.eventos)) throw new Error('Formato inválido');
 
       state.data = data;
-      state.allEvents = filterAndSort(data.eventos);
+      state.booksData = booksData && Array.isArray(booksData.livros) ? booksData : { livros: [] };
+      state.config = config || {};
+      state.allEvents = filterAndSort(data.eventos).map(event => ({ ...event, tipo_conteudo: 'evento' }));
+      state.allBooks = (state.booksData.livros || []).map(book => ({ ...book, tipo_conteudo: 'livro' }));
+      state.filters.content = state.config?.filtros?.conteudo_padrao || 'all';
       state.schoolRotationBatch = readStoredSchoolBatch();
-      state.events = buildDefaultEvents(state.allEvents);
+      rebuildVisibleItems();
 
       if (!state.events.length) {
-        showMessage(
-          'empty',
-          'Nenhum evento futuro',
-          'A programação será atualizada em breve.'
-        );
-
+        showMessage('empty', 'Nenhum conteúdo disponível', 'A programação será atualizada em breve.');
         return;
       }
 
       state.viewMode = storedViewMode();
       renderCurrentView();
-
     } catch (error) {
       console.error(error);
-
       showMessage(
         'error',
-        'Não foi possível carregar a agenda',
-        'Verifique se o arquivo eventos.json contém um JSON válido.'
+        'Não foi possível carregar o Mural Cultural',
+        'Verifique se eventos.json contém um JSON válido.'
       );
     }
   }

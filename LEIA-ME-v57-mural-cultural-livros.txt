@@ -1,0 +1,18 @@
+VERSÃO 57 — MURAL CULTURAL COM LIVROS
+
+Novidades:
+- carrega eventos.json, livros.json e configuracao-mural.json;
+- intercala 1 livro a cada 9 eventos;
+- permite filtrar Todos, Eventos ou Livros;
+- livros possuem filtros de tema e forma de acesso;
+- o slide de livro mantém os controles, contador, QR Code e responsividade do mural;
+- o modo agenda para celular também exibe livros;
+- se livros.json estiver ausente, o site continua funcionando apenas com eventos.
+
+Arquivos novos:
+- livros.json
+- configuracao-mural.json
+- imagens/livros/capas/
+- imagens/livros/qrcodes/
+
+A proporção pode ser alterada em configuracao-mural.json.

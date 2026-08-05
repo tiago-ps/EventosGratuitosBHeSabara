@@ -1,8 +1,8 @@
-const CACHE_VERSION = 'agenda-cultural-v53.3-security';
+const CACHE_VERSION = 'mural-cultural-v57';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
-const MAX_IMAGE_CACHE_ITEMS = 80;
+const MAX_IMAGE_CACHE_ITEMS = 140;
 
 const CORE_ASSETS = [
   './', './index.html', './css/styles.css', './css/eventos-manuais-ui.css',
@@ -20,7 +20,7 @@ self.addEventListener('install', event => {
 self.addEventListener('activate', event => {
   event.waitUntil(caches.keys()
     .then(keys => Promise.all(keys
-      .filter(key => key.startsWith('agenda-cultural-') &&
+      .filter(key => (key.startsWith('agenda-cultural-') || key.startsWith('mural-cultural-')) &&
         ![CORE_CACHE, DATA_CACHE, IMAGE_CACHE].includes(key))
       .map(key => caches.delete(key))))
     .then(() => self.clients.claim()));
@@ -75,8 +75,9 @@ self.addEventListener('fetch', event => {
 
   if (request.mode === 'navigate') {
     event.respondWith(networkFirst(request, CORE_CACHE, './index.html', 'text/html'));
-  } else if (url.pathname.endsWith('/eventos.json')) {
-    const stableRequest = new Request(new URL('./eventos.json', self.registration.scope), {
+  } else if (['/eventos.json', '/livros.json', '/configuracao-mural.json'].some(path => url.pathname.endsWith(path))) {
+    const fileName = url.pathname.split('/').pop();
+    const stableRequest = new Request(new URL(`./${fileName}`, self.registration.scope), {
       mode: 'same-origin', credentials: 'same-origin'
     });
     event.respondWith(networkFirst(stableRequest, DATA_CACHE, '', 'application/json'));

@@ -1,8 +1,8 @@
 {
   "id": "./",
-  "name": "Agenda Cultural Gratuita — Belo Horizonte e Sabará",
-  "short_name": "Agenda Cultural",
-  "description": "Agenda de eventos culturais gratuitos em Belo Horizonte e Sabará.",
+  "name": "Mural Cultural — Belo Horizonte e Sabará",
+  "short_name": "Mural Cultural",
+  "description": "Eventos culturais gratuitos e descobertas de leitura para bibliotecas, escolas e espaços públicos.",
   "lang": "pt-BR",
   "start_url": "./?source=pwa",
   "scope": "./",
@@ -11,9 +11,10 @@
   "background_color": "#07111f",
   "theme_color": "#07111f",
   "categories": [
+    "education",
     "entertainment",
     "events",
-    "education"
+    "books"
   ],
   "icons": [
     {

@@ -1,0 +1,18 @@
+{
+  "versao": 1,
+  "nome": "Mural Cultural",
+  "modulos": {
+    "eventos": true,
+    "livros": true
+  },
+  "proporcao": {
+    "eventos_por_livro": 9
+  },
+  "tempo_slide": {
+    "evento": 12,
+    "livro": 15
+  },
+  "filtros": {
+    "conteudo_padrao": "todos"
+  }
+}

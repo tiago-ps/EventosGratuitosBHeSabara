@@ -6,16 +6,16 @@
   <meta name="color-scheme" content="dark">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
   <meta name="theme-color" content="#07111f">
-  <meta name="application-name" content="Agenda Cultural Gratuita">
+  <meta name="application-name" content="Mural Cultural">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Agenda Cultural">
-  <title>Agenda Cultural Gratuita</title>
+  <meta name="apple-mobile-web-app-title" content="Mural Cultural">
+  <title>Mural Cultural</title>
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="imagens/app-icons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="imagens/app-icons/favicon-32.png">
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="stylesheet" href="css/styles.css?v=53.2">
+  <link rel="stylesheet" href="css/styles.css?v=57">
   <link rel="stylesheet" href="css/eventos-manuais-ui.css?v=42">
 </head>
 <body>
@@ -39,8 +39,8 @@
         <div class="controls" aria-label="Controles da apresentação">
           <button
             class="control-btn filter-btn"
-            aria-label="Filtrar eventos"
-            title="Filtrar eventos"
+            aria-label="Filtrar conteúdos"
+            title="Filtrar conteúdos"
             aria-expanded="false"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -139,6 +139,35 @@
           </dl>
         </div>
 
+        <div class="book-copy" hidden>
+          <div class="badges book-badges">
+            <span class="badge category">LIVRO</span>
+            <span class="badge book-access"></span>
+          </div>
+          <p class="book-eyebrow">Mural Cultural · descoberta de leitura</p>
+          <h1 class="book-question"></h1>
+          <p class="book-support"></p>
+          <div class="book-identification">
+            <h2 class="book-title"></h2>
+            <p class="book-author"></p>
+          </div>
+          <dl class="book-details">
+            <div class="book-call-row">
+              <dt>Número de chamada · Sabará</dt>
+              <dd class="book-call"></dd>
+            </div>
+            <div>
+              <dt>Disponível no acervo</dt>
+              <dd class="book-availability"></dd>
+            </div>
+          </dl>
+          <div class="book-themes" aria-label="Temas do livro"></div>
+          <div class="book-actions">
+            <a class="book-physical-link" target="_blank" rel="noopener noreferrer">Ver no catálogo físico</a>
+            <a class="book-virtual-link" target="_blank" rel="noopener noreferrer">Acessar edição virtual</a>
+          </div>
+        </div>
+
         <footer class="footer">
           <div class="source-block">
             <p class="source-label">Programação e inscrição</p>
@@ -162,41 +191,50 @@
           <header class="filter-header">
             <div>
               <p class="filter-eyebrow">Refinar programação</p>
-              <h2 id="filter-title">Filtrar eventos</h2>
+              <h2 id="filter-title">Filtrar conteúdos</h2>
             </div>
             <button class="filter-close" type="button" aria-label="Fechar filtros" title="Fechar">×</button>
           </header>
 
           <div class="filter-grid">
             <label>
+              <span>Tipo de conteúdo</span>
+              <select class="filter-content">
+                <option value="all">Eventos e livros</option>
+                <option value="events">Somente eventos</option>
+                <option value="books">Somente livros</option>
+              </select>
+            </label>
+
+            <label class="event-filter-field">
               <span>Cidade</span>
               <select class="filter-city">
                 <option value="">Todas as cidades</option>
               </select>
             </label>
 
-            <label>
+            <label class="event-filter-field">
               <span>Categoria</span>
               <select class="filter-category">
                 <option value="">Todas as categorias</option>
               </select>
             </label>
 
-            <label>
+            <label class="event-filter-field">
               <span>Programa ou instituição</span>
               <select class="filter-program">
                 <option value="">Todos os programas</option>
               </select>
             </label>
 
-            <label>
+            <label class="event-filter-field">
               <span>Espaço</span>
               <select class="filter-unit">
                 <option value="">Todos os espaços</option>
               </select>
             </label>
 
-            <label>
+            <label class="event-filter-field">
               <span>Período</span>
               <select class="filter-period">
                 <option value="all">Todos os eventos futuros</option>
@@ -206,7 +244,7 @@
               </select>
             </label>
 
-            <label>
+            <label class="event-filter-field">
               <span>Classificação indicativa</span>
               <select class="filter-rating">
                 <option value="">Todas as classificações</option>
@@ -216,6 +254,21 @@
                 <option value="14">14 anos</option>
                 <option value="16">16 anos</option>
                 <option value="18">18 anos</option>
+              </select>
+            </label>
+
+            <label class="book-filter-field">
+              <span>Tema do livro</span>
+              <select class="filter-book-theme"><option value="">Todos os temas</option></select>
+            </label>
+
+            <label class="book-filter-field">
+              <span>Forma de acesso</span>
+              <select class="filter-book-access">
+                <option value="">Físico ou virtual</option>
+                <option value="physical">Acervo físico</option>
+                <option value="virtual">Biblioteca virtual</option>
+                <option value="both">Físico e virtual</option>
               </select>
             </label>
           </div>
@@ -232,7 +285,7 @@
   </template>
 
   <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
-  <script src="js/app.js?v=53.2" defer></script>
+  <script src="js/app.js?v=57" defer></script>
   <script src="js/eventos-manuais-ui.js?v=42" defer></script>
 
 </body>
