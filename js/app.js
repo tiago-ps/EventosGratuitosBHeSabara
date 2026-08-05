@@ -1188,6 +1188,57 @@
     scheduleNextSlide();
   }
 
+  function setBookDetailVisibility(copy, rowSelector, value) {
+    const row = copy.querySelector(rowSelector);
+    if (!row) return false;
+    const hasValue = Boolean(String(value || '').trim());
+    row.hidden = !hasValue;
+    return hasValue;
+  }
+
+  function fitBookCopy(slide) {
+    const copy = slide?.querySelector('.book-copy');
+    const question = copy?.querySelector('.book-question');
+    const support = copy?.querySelector('.book-support');
+    if (!copy || !question || !support || copy.hidden) return;
+
+    copy.classList.remove('book-fit-tight', 'book-fit-very-tight');
+
+    const mobile = window.matchMedia('(max-width: 680px)').matches;
+    const questionMaximum = mobile ? 4 : 3;
+    const supportMaximum = mobile ? 6 : 9;
+    const tolerance = 2;
+
+    function apply(questionLines, supportLines, density = '') {
+      copy.style.setProperty('--book-question-lines', String(questionLines));
+      copy.style.setProperty('--book-support-lines', String(supportLines));
+      copy.classList.toggle('book-fit-tight', density === 'tight' || density === 'very-tight');
+      copy.classList.toggle('book-fit-very-tight', density === 'very-tight');
+    }
+
+    function fits() {
+      return copy.scrollHeight <= copy.clientHeight + tolerance;
+    }
+
+    const densities = ['', 'tight', 'very-tight'];
+    for (const density of densities) {
+      for (let questionLines = questionMaximum; questionLines >= 2; questionLines -= 1) {
+        for (let supportLines = supportMaximum; supportLines >= 1; supportLines -= 1) {
+          apply(questionLines, supportLines, density);
+          if (fits()) return;
+        }
+      }
+    }
+
+    apply(2, 1, 'very-tight');
+  }
+
+  function scheduleBookFit(slide) {
+    const execute = () => requestAnimationFrame(() => fitBookCopy(slide));
+    requestAnimationFrame(execute);
+    if (document.fonts?.ready) document.fonts.ready.then(execute).catch(() => {});
+  }
+
   function renderBookSlide(index) {
     clearTimeout(state.timer);
     const book = state.events[index];
@@ -1211,7 +1262,8 @@
     copy.querySelector('.book-support').textContent = book.texto_apoio || '';
     copy.querySelector('.book-title').textContent = book.titulo || '';
     copy.querySelector('.book-author').textContent = book.autor || '';
-    copy.querySelector('.book-call').textContent = book.numero_chamada || 'Consulte o catálogo ou a equipe da biblioteca';
+    const callText = String(book.numero_chamada || '').trim();
+    copy.querySelector('.book-call').textContent = callText;
 
     const accessLabels = [];
     if (book.acesso_fisico) accessLabels.push('Físico');
@@ -1226,7 +1278,14 @@
       }
     }
     if (book.acesso_virtual) availability.push('edição virtual');
-    copy.querySelector('.book-availability').textContent = availability.join(' • ');
+    const availabilityText = availability.join(' • ');
+    copy.querySelector('.book-availability').textContent = availabilityText;
+
+    const details = copy.querySelector('.book-details');
+    let visibleDetailCount = 0;
+    if (setBookDetailVisibility(copy, '.book-call-row', callText)) visibleDetailCount += 1;
+    if (setBookDetailVisibility(copy, '.book-availability-row', availabilityText)) visibleDetailCount += 1;
+    if (details) details.dataset.visibleCount = String(visibleDetailCount);
 
     const themes = copy.querySelector('.book-themes');
     for (const theme of Array.isArray(book.temas) ? book.temas : []) {
@@ -1297,6 +1356,7 @@
     image.src = book.imagem || '';
 
     app.replaceChildren(slide);
+    scheduleBookFit(slide);
     state.btnNext = slide.querySelector('.next-btn');
     state.btnPrev = slide.querySelector('.prev-btn');
     state.btnPlayPause = slide.querySelector('.play-pause-btn');
@@ -2000,8 +2060,17 @@
     }
   );
 
+  let resizeFitTimer = null;
   window.addEventListener('resize', () => {
-    if (state.viewMode === 'auto' && state.data) renderCurrentView();
+    if (state.viewMode === 'auto' && state.data) {
+      renderCurrentView();
+      return;
+    }
+    clearTimeout(resizeFitTimer);
+    resizeFitTimer = setTimeout(() => {
+      const currentBookSlide = app.querySelector('.book-slide');
+      if (currentBookSlide) fitBookCopy(currentBookSlide);
+    }, 120);
   });
 
 
