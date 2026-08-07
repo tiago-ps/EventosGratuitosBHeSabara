@@ -542,23 +542,22 @@
   }
 
   function buildDefaultEvents(events) {
-    const ordinary = events.filter(event =>
-      event.exibicao_padrao !== false &&
-      event.grupo_rotativo !== 'escola_livre_unidades'
-    );
-    const rotating = schoolRotationRecords(events)
-      .filter(event => event.exibicao_padrao !== false)
-      .sort((a, b) => String(a.unidade || a.local || a.titulo || '')
-        .localeCompare(String(b.unidade || b.local || b.titulo || ''), 'pt-BR'));
+    /*
+     * Na exibição geral do Painel, a Escola Livre de Artes é representada
+     * somente pelo slide institucional do programa. As dezenas de atividades
+     * específicas e os antigos resumos rotativos por unidade aparecem apenas
+     * quando o usuário procura/filtra explicitamente a Escola Livre, uma área
+     * ou um espaço. Isso evita que um único programa domine a rotação geral.
+     */
+    const defaultEvents = events.filter(event => {
+      if (isSchoolEvent(event)) {
+        return event.tipo_registro === 'programa_escola_livre';
+      }
+      return event.exibicao_padrao !== false &&
+        event.grupo_rotativo !== 'escola_livre_unidades';
+    });
 
-    if (!rotating.length) return ordinary;
-
-    const batches = Math.ceil(rotating.length / SCHOOL_ROTATION_SIZE);
-    state.schoolRotationBatch %= batches;
-    const start = state.schoolRotationBatch * SCHOOL_ROTATION_SIZE;
-    const selected = rotating.slice(start, start + SCHOOL_ROTATION_SIZE);
-
-    return filterAndSort([...ordinary, ...selected]);
+    return filterAndSort(defaultEvents);
   }
 
   function advanceSchoolRotation(direction = 1) {
@@ -1936,11 +1935,17 @@
     return [...values.entries()].sort((a, b) => a[1].localeCompare(b[1], 'pt-BR'));
   }
 
-  function agendaEventSource() {
-    const needsDetailedRecords = Boolean(
-      state.mobileQuery || state.mobileTheme || state.mobileCategory || state.mobileSpace
+  function agendaUsesDetailedEventRecords() {
+    return Boolean(
+      state.mobileQuery || state.mobileTheme || state.mobileCategory ||
+      state.mobileSpace || state.mobileInstitution
     );
-    return needsDetailedRecords ? state.allEvents : buildDefaultEvents(state.allEvents);
+  }
+
+  function agendaEventSource() {
+    return agendaUsesDetailedEventRecords()
+      ? state.allEvents
+      : buildDefaultEvents(state.allEvents);
   }
 
   function eventMatchesRegistrationFilter(event, value) {
@@ -1988,7 +1993,7 @@
     const query = normalizeText(state.mobileQuery);
     const specific = state.mobileContent === 'events';
     return agendaEventSource().filter(event => {
-      if (event.exibicao_por_filtro === false && (state.mobileQuery || state.mobileTheme || state.mobileCategory || state.mobileSpace)) {
+      if (event.exibicao_por_filtro === false && agendaUsesDetailedEventRecords()) {
         return false;
       }
       if (!eventMatchesTheme(event, state.mobileTheme)) return false;
