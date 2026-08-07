@@ -15,7 +15,7 @@
   <link rel="apple-touch-icon" href="imagens/app-icons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="imagens/app-icons/favicon-32.png">
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="stylesheet" href="css/styles.css?v=60">
+  <link rel="stylesheet" href="css/styles.css?v=61">
   <link rel="stylesheet" href="css/eventos-manuais-ui.css?v=42">
 </head>
 <body>
@@ -53,7 +53,7 @@
               <polyline points="15 18 9 12 15 6"></polyline>
             </svg>
           </button>
-          <div class="navigation-counter counter" aria-label="posição do evento"></div>
+          <div class="navigation-counter counter" aria-label="posição do conteúdo"></div>
           <button class="control-btn next-btn" aria-label="Próximo slide" title="Próximo">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <polyline points="9 18 15 12 9 6"></polyline>
@@ -198,19 +198,26 @@
         >
           <header class="filter-header">
             <div>
-              <p class="filter-eyebrow">Refinar programação</p>
-              <h2 id="filter-title">Filtrar conteúdos</h2>
+              <p class="filter-eyebrow">Modo painel</p>
+              <h2 id="filter-title">Configurar exibição</h2>
             </div>
             <button class="filter-close" type="button" aria-label="Fechar filtros" title="Fechar">×</button>
           </header>
 
           <div class="filter-grid">
             <label>
-              <span>Tipo de conteúdo</span>
+              <span>Conteúdo</span>
               <select class="filter-content">
-                <option value="all">Eventos e livros</option>
-                <option value="events">Somente eventos</option>
-                <option value="books">Somente livros</option>
+                <option value="all">Todos</option>
+                <option value="events">Eventos</option>
+                <option value="books">Livros</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Tema</span>
+              <select class="filter-theme">
+                <option value="">Todos os temas</option>
               </select>
             </label>
 
@@ -228,63 +235,31 @@
               </select>
             </label>
 
-            <label class="event-filter-field">
+            <div class="filter-more-wrap">
+              <button class="filter-more-toggle" type="button" aria-expanded="false">Mais filtros</button>
+            </div>
+
+            <label class="filter-advanced-field event-filter-field" hidden>
               <span>Cidade</span>
-              <select class="filter-city">
-                <option value="">Todas as cidades</option>
-              </select>
+              <select class="filter-city"><option value="">Todas as cidades</option></select>
             </label>
 
-            <label class="event-filter-field">
-              <span>Categoria</span>
-              <select class="filter-category">
-                <option value="">Todas as categorias</option>
-              </select>
+            <label class="filter-advanced-field event-filter-field" hidden>
+              <span>Categoria / linguagem</span>
+              <select class="filter-category"><option value="">Todas as categorias</option></select>
             </label>
 
-            <label class="event-filter-field">
-              <span>Programa ou instituição</span>
-              <select class="filter-program">
-                <option value="">Todos os programas</option>
-              </select>
+            <label class="filter-advanced-field event-filter-field" hidden>
+              <span>Instituição / programa</span>
+              <select class="filter-program"><option value="">Todas as instituições</option></select>
             </label>
 
-            <label class="event-filter-field">
+            <label class="filter-advanced-field event-filter-field" hidden>
               <span>Espaço</span>
-              <select class="filter-unit">
-                <option value="">Todos os espaços</option>
-              </select>
+              <select class="filter-unit"><option value="">Todos os espaços</option></select>
             </label>
 
-            <label class="event-filter-field">
-              <span>Período</span>
-              <select class="filter-period">
-                <option value="all">Todos os eventos futuros</option>
-                <option value="today">Hoje</option>
-                <option value="tomorrow">Amanhã</option>
-                <option value="7days">Próximos 7 dias</option>
-              </select>
-            </label>
-
-            <label class="event-filter-field">
-              <span>Classificação indicativa</span>
-              <select class="filter-rating">
-                <option value="">Todas as classificações</option>
-                <option value="livre">Livre</option>
-                <option value="10">10 anos</option>
-                <option value="12">12 anos</option>
-                <option value="14">14 anos</option>
-                <option value="16">16 anos</option>
-                <option value="18">18 anos</option>
-              </select>
-            </label>
-
-            <label class="book-filter-field">
-              <span>Tema do livro</span>
-              <select class="filter-book-theme"><option value="">Todos os temas</option></select>
-            </label>
-
-            <label class="book-filter-field">
+            <label class="filter-advanced-field book-filter-field" hidden>
               <span>Forma de acesso</span>
               <select class="filter-book-access">
                 <option value="">Físico ou virtual</option>
@@ -307,7 +282,7 @@
   </template>
 
   <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
-  <script src="js/app.js?v=60" defer></script>
+  <script src="js/app.js?v=61" defer></script>
   <script src="js/eventos-manuais-ui.js?v=42" defer></script>
 
 </body>

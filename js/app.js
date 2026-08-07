@@ -81,25 +81,31 @@
     btnPlayPause: null,
     btnFilter: null,
     filterOverlay: null,
+    panelMoreFiltersOpen: false,
     filters: {
       content: 'all',
+      theme: '',
       city: '',
       category: '',
       program: '',
       unit: '',
       period: 'all',
       rating: '',
-      bookTheme: '',
       bookAccess: ''
     },
     schoolRotationBatch: 0,
     viewMode: 'auto',
     slideDuration: 0,
     mobileQuery: '',
+    mobileContent: 'all',
+    mobileTheme: '',
+    mobilePeriod: 'all',
     mobileCategory: '',
     mobileCity: '',
-    mobilePeriod: 'all',
-    mobileContent: 'all'
+    mobileSpace: '',
+    mobileInstitution: '',
+    mobileRegistration: '',
+    mobileBookAccess: ''
   };
 
   function normalizeText(value = '') {
@@ -350,11 +356,11 @@
   }
 
   function bookMatchesFilters(book) {
-    const theme = state.filters.bookTheme;
+    const theme = state.filters.theme;
     const access = state.filters.bookAccess;
     const themes = (Array.isArray(book.temas) ? book.temas : [])
       .map(normalizeText);
-    if (theme && !themes.includes(theme)) return false;
+    if (theme && !themes.some(value => value === theme || value.includes(theme))) return false;
     if (access === 'physical' && !book.acesso_fisico) return false;
     if (access === 'virtual' && !book.acesso_virtual) return false;
     if (access === 'both' && !(book.acesso_fisico && book.acesso_virtual)) return false;
@@ -393,7 +399,7 @@
 
   function hasEventFilters() {
     return Boolean(
-      state.filters.city || state.filters.category || state.filters.program ||
+      state.filters.theme || state.filters.city || state.filters.category || state.filters.program ||
       state.filters.unit || state.filters.rating || state.filters.period !== 'all'
     );
   }
@@ -479,8 +485,17 @@
       rangeStart = addCalendarDays(today, 1);
       rangeEnd = new Date(rangeStart);
       rangeEnd.setHours(23, 59, 59, 999);
+    } else if (period === 'weekend') {
+      const day = today.getDay();
+      const daysUntilSaturday = day === 6 ? 0 : day === 0 ? -1 : 6 - day;
+      rangeStart = day === 0 ? addCalendarDays(today, -1) : addCalendarDays(today, daysUntilSaturday);
+      rangeEnd = addCalendarDays(rangeStart, 1);
+      rangeEnd.setHours(23, 59, 59, 999);
     } else if (period === '7days') {
       rangeEnd = addCalendarDays(today, 6);
+      rangeEnd.setHours(23, 59, 59, 999);
+    } else if (period === '30days') {
+      rangeEnd = addCalendarDays(today, 29);
       rangeEnd.setHours(23, 59, 59, 999);
     }
 
@@ -502,10 +517,10 @@
 
   function hasUserFilters() {
     return Boolean(
-      state.filters.content !== 'all' ||
+      state.filters.content !== 'all' || state.filters.theme ||
       state.filters.city || state.filters.category || state.filters.program ||
       state.filters.unit || state.filters.rating || state.filters.period !== 'all' ||
-      state.filters.bookTheme || state.filters.bookAccess
+      state.filters.bookAccess
     );
   }
 
@@ -560,9 +575,7 @@
     return [
       event.categoria,
       event.area_artistica,
-      ...(Array.isArray(event.areas) ? event.areas : []),
-      ...(Array.isArray(event.tags) ? event.tags : []),
-      event.titulo
+      ...(Array.isArray(event.areas) ? event.areas : [])
     ].map(normalizeText).filter(Boolean);
   }
 
@@ -570,6 +583,55 @@
     if (!category) return true;
     const facets = eventSearchFacets(event);
     return facets.some(value => value === category || value.includes(category));
+  }
+
+  function eventThemeLabels(event) {
+    const values = [
+      ...(Array.isArray(event.temas) ? event.temas : []),
+      ...(Array.isArray(event.tags) ? event.tags : []),
+      ...(Array.isArray(event.areas) ? event.areas : []),
+      event.area_artistica
+    ];
+    const ignored = new Set([
+      'curso', 'escola livre de artes', 'formacao artistica',
+      normalizeText(event.categoria), normalizeText(eventProgram(event))
+    ].filter(Boolean));
+    const seen = new Set();
+    return values
+      .map(value => String(value || '').trim())
+      .filter(Boolean)
+      .filter(value => {
+        const normalized = normalizeText(value);
+        if (!normalized || ignored.has(normalized) || seen.has(normalized)) return false;
+        seen.add(normalized);
+        return true;
+      });
+  }
+
+  function eventMatchesTheme(event, theme) {
+    if (!theme) return true;
+    return eventThemeLabels(event)
+      .map(normalizeText)
+      .some(value => value === theme || value.includes(theme));
+  }
+
+  function bookMatchesTheme(book, theme) {
+    if (!theme) return true;
+    return (Array.isArray(book.temas) ? book.temas : [])
+      .map(normalizeText)
+      .some(value => value === theme || value.includes(theme));
+  }
+
+  function universalThemeOptions() {
+    const values = new Map();
+    const add = label => {
+      const text = String(label || '').trim();
+      const value = normalizeText(text);
+      if (text && value && !values.has(value)) values.set(value, text);
+    };
+    for (const event of state.allEvents) eventThemeLabels(event).forEach(add);
+    for (const book of state.allBooks) (Array.isArray(book.temas) ? book.temas : []).forEach(add);
+    return [...values.entries()].sort((a, b) => a[1].localeCompare(b[1], 'pt-BR'));
   }
 
   function eventProgram(event) {
@@ -613,7 +675,7 @@
   }
 
   function applyUserFilters(events) {
-    const { city, category, program, unit, period, rating } = state.filters;
+    const { theme, city, category, program, unit, period, rating } = state.filters;
 
     return events.filter(event => {
       if (event.exibicao_por_filtro === false) return false;
@@ -627,6 +689,7 @@
         return false;
       }
 
+      if (!eventMatchesTheme(event, theme)) return false;
       if (city && normalizeText(event.cidade) !== city) return false;
       if (!categoryMatches(event, category)) return false;
       if (program && normalizeText(eventProgram(event)) !== program) return false;
@@ -640,13 +703,16 @@
   }
 
   function activeFilterCount() {
-    return [
-      state.filters.content !== 'all' ? state.filters.content : '',
-      state.filters.city, state.filters.category, state.filters.program,
-      state.filters.unit, state.filters.rating,
-      state.filters.period !== 'all' ? state.filters.period : '',
-      state.filters.bookTheme, state.filters.bookAccess
-    ].filter(Boolean).length;
+    const content = state.filters.content || 'all';
+    const common = [
+      content !== 'all' ? content : '',
+      state.filters.theme
+    ];
+    const eventSpecific = content === 'events'
+      ? [state.filters.city, state.filters.category, state.filters.program, state.filters.unit]
+      : [];
+    const bookSpecific = content === 'books' ? [state.filters.bookAccess] : [];
+    return [...common, ...eventSpecific, ...bookSpecific].filter(Boolean).length;
   }
 
   // Em intervalos acima deste limite, os dias da semana são omitidos
@@ -1544,18 +1610,23 @@
 
   function populateFilterPanel(slide) {
     const contentSelect = slide.querySelector('.filter-content');
+    const themeSelect = slide.querySelector('.filter-theme');
     const citySelect = slide.querySelector('.filter-city');
     const categorySelect = slide.querySelector('.filter-category');
     const programSelect = slide.querySelector('.filter-program');
     const unitSelect = slide.querySelector('.filter-unit');
-    const periodSelect = slide.querySelector('.filter-period');
-    const ratingSelect = slide.querySelector('.filter-rating');
-    const bookThemeSelect = slide.querySelector('.filter-book-theme');
     const bookAccessSelect = slide.querySelector('.filter-book-access');
     const durationSelect = slide.querySelector('.filter-slide-duration');
 
     if (contentSelect) contentSelect.value = state.filters.content || 'all';
     if (durationSelect) durationSelect.value = String(state.slideDuration || 0);
+
+    populateDynamicSelect(
+      themeSelect,
+      'Todos os temas',
+      universalThemeOptions(),
+      state.filters.theme
+    );
 
     populateDynamicSelect(
       citySelect,
@@ -1566,21 +1637,21 @@
 
     const categoryValues = new Map(uniqueFilterOptions(state.allEvents, 'categoria'));
     for (const event of state.allEvents) {
-      for (const label of [event.area_artistica, ...(Array.isArray(event.tags) ? event.tags : [])]) {
+      for (const label of [event.area_artistica, ...(Array.isArray(event.areas) ? event.areas : [])]) {
         const value = normalizeText(label);
         if (label && value && !categoryValues.has(value)) categoryValues.set(value, label);
       }
     }
     populateDynamicSelect(
       categorySelect,
-      'Todas as categorias e áreas',
+      'Todas as categorias e linguagens',
       [...categoryValues.entries()].sort((a, b) => a[1].localeCompare(b[1], 'pt-BR')),
       state.filters.category
     );
 
     populateDynamicSelect(
       programSelect,
-      'Todos os programas',
+      'Todas as instituições e programas',
       uniqueFilterOptions(state.allEvents.map(event => ({ programa: eventProgram(event) })), 'programa'),
       state.filters.program
     );
@@ -1592,32 +1663,28 @@
       state.filters.unit
     );
 
-    if (periodSelect) periodSelect.value = state.filters.period || 'all';
-    if (ratingSelect) ratingSelect.value = state.filters.rating || '';
-
-    const themes = new Map();
-    for (const book of state.allBooks) {
-      for (const label of Array.isArray(book.temas) ? book.temas : []) {
-        const value = normalizeText(label);
-        if (label && value && !themes.has(value)) themes.set(value, label);
-      }
-    }
-    populateDynamicSelect(
-      bookThemeSelect, 'Todos os temas',
-      [...themes.entries()].sort((a,b)=>a[1].localeCompare(b[1], 'pt-BR')),
-      state.filters.bookTheme
-    );
     if (bookAccessSelect) bookAccessSelect.value = state.filters.bookAccess || '';
     updateFilterFieldVisibility(slide);
   }
 
   function updateFilterFieldVisibility(slide) {
     const content = slide.querySelector('.filter-content')?.value || 'all';
+    const toggle = slide.querySelector('.filter-more-toggle');
+    const canShowMore = content === 'events' || content === 'books';
+
+    if (toggle) {
+      const wrap = toggle.closest('.filter-more-wrap');
+      if (wrap) wrap.hidden = !canShowMore;
+      toggle.hidden = !canShowMore;
+      toggle.textContent = state.panelMoreFiltersOpen ? 'Menos filtros' : 'Mais filtros';
+      toggle.setAttribute('aria-expanded', String(canShowMore && state.panelMoreFiltersOpen));
+    }
+
     slide.querySelectorAll('.event-filter-field').forEach(field => {
-      field.hidden = content === 'books';
+      field.hidden = !(content === 'events' && state.panelMoreFiltersOpen);
     });
     slide.querySelectorAll('.book-filter-field').forEach(field => {
-      field.hidden = content === 'events';
+      field.hidden = !(content === 'books' && state.panelMoreFiltersOpen);
     });
   }
 
@@ -1658,7 +1725,8 @@
     `;
 
     app.querySelector('.empty-clear-filters')?.addEventListener('click', () => {
-      state.filters = { content: 'all', city: '', category: '', program: '', unit: '', period: 'all', rating: '', bookTheme: '', bookAccess: '' };
+      state.filters = { content: 'all', theme: '', city: '', category: '', program: '', unit: '', period: 'all', rating: '', bookAccess: '' };
+      state.panelMoreFiltersOpen = false;
       rebuildVisibleItems();
       state.index = 0;
       renderSlide(0);
@@ -1670,16 +1738,17 @@
 
     saveSlideDuration(state.filterOverlay.querySelector('.filter-slide-duration')?.value || 0);
 
+    const content = state.filterOverlay.querySelector('.filter-content')?.value || 'all';
     state.filters = {
-      content: state.filterOverlay.querySelector('.filter-content')?.value || 'all',
-      city: state.filterOverlay.querySelector('.filter-city')?.value || '',
-      category: state.filterOverlay.querySelector('.filter-category')?.value || '',
-      program: state.filterOverlay.querySelector('.filter-program')?.value || '',
-      unit: state.filterOverlay.querySelector('.filter-unit')?.value || '',
-      period: state.filterOverlay.querySelector('.filter-period')?.value || 'all',
-      rating: state.filterOverlay.querySelector('.filter-rating')?.value || '',
-      bookTheme: state.filterOverlay.querySelector('.filter-book-theme')?.value || '',
-      bookAccess: state.filterOverlay.querySelector('.filter-book-access')?.value || ''
+      content,
+      theme: state.filterOverlay.querySelector('.filter-theme')?.value || '',
+      city: content === 'events' ? state.filterOverlay.querySelector('.filter-city')?.value || '' : '',
+      category: content === 'events' ? state.filterOverlay.querySelector('.filter-category')?.value || '' : '',
+      program: content === 'events' ? state.filterOverlay.querySelector('.filter-program')?.value || '' : '',
+      unit: content === 'events' ? state.filterOverlay.querySelector('.filter-unit')?.value || '' : '',
+      period: 'all',
+      rating: '',
+      bookAccess: content === 'books' ? state.filterOverlay.querySelector('.filter-book-access')?.value || '' : ''
     };
 
     rebuildVisibleItems();
@@ -1694,7 +1763,8 @@
   }
 
   function clearUserFilters() {
-    state.filters = { content: 'all', city: '', category: '', program: '', unit: '', period: 'all', rating: '', bookTheme: '', bookAccess: '' };
+    state.filters = { content: 'all', theme: '', city: '', category: '', program: '', unit: '', period: 'all', rating: '', bookAccess: '' };
+    state.panelMoreFiltersOpen = false;
     rebuildVisibleItems();
     state.index = 0;
     renderCurrentView();
@@ -1711,7 +1781,14 @@
     closeButton?.addEventListener('click', closeFilterPanel);
     applyButton?.addEventListener('click', applyFiltersFromPanel);
     clearButton?.addEventListener('click', clearUserFilters);
-    slide.querySelector('.filter-content')?.addEventListener('change', () => updateFilterFieldVisibility(slide));
+    slide.querySelector('.filter-content')?.addEventListener('change', () => {
+      state.panelMoreFiltersOpen = false;
+      updateFilterFieldVisibility(slide);
+    });
+    slide.querySelector('.filter-more-toggle')?.addEventListener('click', () => {
+      state.panelMoreFiltersOpen = !state.panelMoreFiltersOpen;
+      updateFilterFieldVisibility(slide);
+    });
 
     overlay?.addEventListener('click', event => {
       if (event.target === overlay) closeFilterPanel();
@@ -1828,33 +1905,159 @@
     }).format(start).replace('.', '');
   }
 
-  function mobileVisibleContents() {
+  function agendaThemeOptions(content = state.mobileContent) {
+    const values = new Map();
+    const add = label => {
+      const text = String(label || '').trim();
+      const value = normalizeText(text);
+      if (text && value && !values.has(value)) values.set(value, text);
+    };
+    if (content !== 'books') {
+      for (const event of state.allEvents) eventThemeLabels(event).forEach(add);
+    }
+    if (content !== 'events') {
+      for (const book of state.allBooks) (Array.isArray(book.temas) ? book.temas : []).forEach(add);
+    }
+    return [...values.entries()].sort((a, b) => a[1].localeCompare(b[1], 'pt-BR'));
+  }
+
+  function agendaCategoryOptions() {
+    const values = new Map();
+    const add = label => {
+      const text = String(label || '').trim();
+      const value = normalizeText(text);
+      if (text && value && !values.has(value)) values.set(value, text);
+    };
+    for (const event of state.allEvents) {
+      add(event.categoria);
+      add(event.area_artistica);
+      (Array.isArray(event.areas) ? event.areas : []).forEach(add);
+    }
+    return [...values.entries()].sort((a, b) => a[1].localeCompare(b[1], 'pt-BR'));
+  }
+
+  function agendaEventSource() {
+    const needsDetailedRecords = Boolean(
+      state.mobileQuery || state.mobileTheme || state.mobileCategory || state.mobileSpace
+    );
+    return needsDetailedRecords ? state.allEvents : buildDefaultEvents(state.allEvents);
+  }
+
+  function eventMatchesRegistrationFilter(event, value) {
+    if (!value) return true;
+    const status = normalizeText(event.status_inscricao).replaceAll('_', ' ');
+    const formStatus = normalizeText(event.status_formulario_google).replaceAll('_', ' ');
+    const hasRegistrationLink = Boolean(safeExternalUrl(event.link_inscricao));
+    const registrationCriterion = displayCriterion(event) === 'inscricao';
+    const hasRegistrationText = Boolean(String(event.inscricao || '').trim());
+
+    if (value === 'closed') return registrationIsClosed(event);
+    if (value === 'open') {
+      return !registrationIsClosed(event) && (
+        status === 'aberta' || formStatus === 'aberto' || registrationCriterion || hasRegistrationLink
+      );
+    }
+    if (value === 'none') {
+      return !registrationIsClosed(event) && !hasRegistrationLink && !registrationCriterion && !hasRegistrationText;
+    }
+    return true;
+  }
+
+  function agendaEventQueryMatches(event, query) {
+    if (!query) return true;
+    const haystack = normalizeText([
+      event.titulo, event.descricao, event.local, event.unidade, event.cidade,
+      event.categoria, event.area_artistica, event.programa, event.fonte,
+      ...(Array.isArray(event.areas) ? event.areas : []),
+      ...(Array.isArray(event.tags) ? event.tags : [])
+    ].filter(Boolean).join(' '));
+    return haystack.includes(query);
+  }
+
+  function agendaBookQueryMatches(book, query) {
+    if (!query) return true;
+    const haystack = normalizeText([
+      book.titulo, book.autor, book.pergunta_curiosidade,
+      book.texto_apoio, ...(Array.isArray(book.temas) ? book.temas : [])
+    ].filter(Boolean).join(' '));
+    return haystack.includes(query);
+  }
+
+  function agendaVisibleEvents() {
+    if (state.mobileContent === 'books') return [];
     const query = normalizeText(state.mobileQuery);
-    const source = state.mobileContent === 'books'
-      ? filterBooks(state.allBooks)
-      : state.events;
-    return source.filter(item => {
-      const isBook = item.tipo_conteudo === 'livro';
-      if (state.mobileContent === 'events' && isBook) return false;
-      if (state.mobileContent === 'books' && !isBook) return false;
-      if (isBook) {
-        if (!query) return true;
-        const haystack = normalizeText([
-          item.titulo, item.autor, item.pergunta_curiosidade,
-          item.texto_apoio, ...(Array.isArray(item.temas) ? item.temas : [])
-        ].filter(Boolean).join(' '));
-        return haystack.includes(query);
+    const specific = state.mobileContent === 'events';
+    return agendaEventSource().filter(event => {
+      if (event.exibicao_por_filtro === false && (state.mobileQuery || state.mobileTheme || state.mobileCategory || state.mobileSpace)) {
+        return false;
       }
-      if (state.mobileCity && normalizeText(item.cidade) !== state.mobileCity) return false;
-      if (state.mobileCategory && !categoryMatches(item, state.mobileCategory)) return false;
-      if (!eventMatchesPeriod(item, state.mobilePeriod)) return false;
-      if (!query) return true;
-      const haystack = normalizeText([
-        item.titulo, item.descricao, item.local, item.cidade,
-        item.categoria, item.area_artistica, item.programa, item.fonte
-      ].filter(Boolean).join(' '));
-      return haystack.includes(query);
+      if (!eventMatchesTheme(event, state.mobileTheme)) return false;
+      if (specific) {
+        if (state.mobileCity && normalizeText(event.cidade) !== state.mobileCity) return false;
+        if (!categoryMatches(event, state.mobileCategory)) return false;
+        if (state.mobileSpace && normalizeText(eventUnit(event)) !== state.mobileSpace) return false;
+        if (state.mobileInstitution && normalizeText(eventProgram(event)) !== state.mobileInstitution) return false;
+        if (!eventMatchesPeriod(event, state.mobilePeriod)) return false;
+        if (!eventMatchesRegistrationFilter(event, state.mobileRegistration)) return false;
+      }
+      return agendaEventQueryMatches(event, query);
     });
+  }
+
+  function agendaVisibleBooks() {
+    if (state.mobileContent === 'events' || state.config?.modulos?.livros === false) return [];
+    const query = normalizeText(state.mobileQuery);
+    const today = todayAtMidnight();
+    const specific = state.mobileContent === 'books';
+    return state.allBooks
+      .filter(book => bookIsPublishable(book, today))
+      .filter(book => bookMatchesTheme(book, state.mobileTheme))
+      .filter(book => {
+        if (!specific) return true;
+        if (state.mobileBookAccess === 'physical' && !book.acesso_fisico) return false;
+        if (state.mobileBookAccess === 'virtual' && !book.acesso_virtual) return false;
+        if (state.mobileBookAccess === 'both' && !(book.acesso_fisico && book.acesso_virtual)) return false;
+        return true;
+      })
+      .filter(book => agendaBookQueryMatches(book, query))
+      .sort((a, b) =>
+        Number(b.prioridade || 0) - Number(a.prioridade || 0) ||
+        String(a.titulo || '').localeCompare(String(b.titulo || ''), 'pt-BR')
+      );
+  }
+
+  function agendaVisibleContents() {
+    const events = agendaVisibleEvents();
+    const books = agendaVisibleBooks();
+    return { events, books, total: events.length + books.length };
+  }
+
+  function agendaActiveFilterCount() {
+    const common = [state.mobileQuery, state.mobileTheme];
+    if (state.mobileContent !== 'all') common.push(state.mobileContent);
+    if (state.mobileContent === 'events') {
+      common.push(
+        state.mobilePeriod !== 'all' ? state.mobilePeriod : '',
+        state.mobileCategory, state.mobileCity, state.mobileSpace,
+        state.mobileInstitution, state.mobileRegistration
+      );
+    } else if (state.mobileContent === 'books') {
+      common.push(state.mobileBookAccess);
+    }
+    return common.filter(Boolean).length;
+  }
+
+  function clearAgendaFilters() {
+    state.mobileQuery = '';
+    state.mobileContent = 'all';
+    state.mobileTheme = '';
+    state.mobilePeriod = 'all';
+    state.mobileCategory = '';
+    state.mobileCity = '';
+    state.mobileSpace = '';
+    state.mobileInstitution = '';
+    state.mobileRegistration = '';
+    state.mobileBookAccess = '';
   }
 
   function mobileSelectOptions(events, field) {
@@ -1905,19 +2108,97 @@
     refreshInstallButtons();
   }
 
+  function agendaSubtitleLabel() {
+    if (state.mobileContent === 'events') return 'Agenda Cultural';
+    if (state.mobileContent === 'books') return 'Sugestão de Leitura';
+    return 'Descobertas culturais';
+  }
+
+  function renderAgendaCard(item) {
+    const article = document.createElement('article');
+    article.className = `agenda-card ${item.tipo_conteudo === 'livro' ? 'agenda-book-card' : ''}`;
+
+    if (item.tipo_conteudo === 'livro') {
+      const link = safeExternalUrl(item.link || item.link_fisico || item.link_virtual);
+      article.innerHTML = `
+        <div class="agenda-card-media book-media"><img src="${escapeHtml(item.imagem || '')}" alt="Capa: ${escapeHtml(item.titulo || '')}" loading="lazy"></div>
+        <div class="agenda-card-body">
+          <div class="agenda-card-badges"><span>Livro</span>${item.acesso_fisico ? '<span>Físico</span>' : ''}${item.acesso_virtual ? '<span>Virtual</span>' : ''}</div>
+          <p class="agenda-card-date">Sugestão de Leitura</p>
+          <h2>${escapeHtml(item.pergunta_curiosidade || item.titulo || 'Livro')}</h2>
+          <p class="agenda-card-place"><strong class="agenda-book-title">${escapeHtml(item.titulo || '')}</strong> · ${escapeHtml(item.autor || '')}</p>
+          <p class="agenda-card-description">${escapeHtml(item.texto_apoio || '')}</p>
+          ${item.numero_chamada ? `<p class="agenda-card-call">Número de chamada: ${escapeHtml(item.numero_chamada)}</p>` : ''}
+          ${item.exibir_comentario && item.comentario_aprovado ? `<blockquote class="agenda-book-opinion">“${escapeHtml(item.comentario_aprovado)}”<cite>${escapeHtml(item.credito_comentario || 'Leitor(a) do IFMG')}</cite></blockquote>` : ''}
+          <div class="agenda-card-actions">
+            ${link ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer">Encontrar este livro</a>` : ''}
+            ${item.link_virtual ? `<a class="secondary" href="${escapeHtml(item.link_virtual)}" target="_blank" rel="noopener noreferrer">Edição virtual</a>` : ''}
+            ${state.config?.opinioes_livros?.habilitado === true && safeExternalUrl(item.link_formulario_opiniao || state.config?.opinioes_livros?.url_formulario) ? `<a class="secondary" href="${escapeHtml(safeExternalUrl(item.link_formulario_opiniao || state.config?.opinioes_livros?.url_formulario))}" target="_blank" rel="noopener noreferrer">Opine sobre este livro</a>` : ''}
+          </div>
+        </div>`;
+      return article;
+    }
+
+    const event = item;
+    const link = eventPublicLink(event);
+    const map = safeExternalUrl(event.mapa);
+    const closedRegistration = registrationIsClosed(event);
+    const rating = normalizeRating(event.classificacao_indicativa);
+    article.innerHTML = `
+      <div class="agenda-card-media"><img></div>
+      <div class="agenda-card-body">
+        <div class="agenda-card-badges">
+          <span>${escapeHtml(event.categoria || 'Evento')}</span><span>Gratuito</span>${rating ? `<span>${escapeHtml(rating.label)}</span>` : ''}
+        </div>
+        <p class="agenda-card-date">${escapeHtml(mobileDateLabel(event))}${event.horario ? ` • ${escapeHtml(event.horario)}` : ''}</p>
+        <h2>${escapeHtml(event.titulo || 'Evento cultural')}</h2>
+        <p class="agenda-card-place">${escapeHtml([event.local, event.cidade].filter(Boolean).join(' • ') || 'Local não informado')}</p>
+        <p class="agenda-card-description">${escapeHtml(event.descricao || '')}</p>
+        <div class="agenda-card-actions">
+          ${link ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer">${closedRegistration ? 'Programação do evento' : 'Programação e inscrição'}</a>` : closedRegistration ? '<span class="agenda-action-disabled">Inscrições encerradas</span>' : ''}
+          ${map ? `<a class="secondary" href="${escapeHtml(map)}" target="_blank" rel="noopener noreferrer">Como chegar</a>` : ''}
+        </div>
+      </div>`;
+    setMobileCardImage(article.querySelector('img'), event);
+    return article;
+  }
+
+  function appendAgendaSection(container, title, items, contentValue, actionLabel) {
+    if (!items.length) return;
+    const section = document.createElement('section');
+    section.className = 'agenda-content-section';
+
+    const heading = document.createElement('header');
+    heading.className = 'agenda-section-header';
+    heading.innerHTML = `
+      <div>
+        <h2>${escapeHtml(title)}</h2>
+        <span>${items.length} ${items.length === 1 ? 'resultado' : 'resultados'}</span>
+      </div>
+      <button type="button" class="agenda-section-action" data-content="${escapeHtml(contentValue)}">${escapeHtml(actionLabel)} →</button>
+    `;
+
+    const grid = document.createElement('div');
+    grid.className = 'agenda-section-grid';
+    items.forEach(item => grid.append(renderAgendaCard(item)));
+    section.append(heading, grid);
+    container.append(section);
+  }
+
   function renderAgenda() {
     clearTimeout(state.timer);
     state.isPaused = true;
     document.body.classList.add('agenda-mode');
     document.body.classList.remove('panel-mode');
 
-    const contents = mobileVisibleContents();
+    const results = agendaVisibleContents();
+    const activeFilters = agendaActiveFilterCount();
     const header = document.createElement('header');
     header.className = 'agenda-header';
     header.innerHTML = `
       <div class="agenda-heading">
         <img class="agenda-logo" src="imagens/marca/logo-mural-cultural.png" alt="Mural Cultural">
-        <p class="agenda-eyebrow">Agenda Cultural</p>
+        <p class="agenda-eyebrow">${escapeHtml(agendaSubtitleLabel())}</p>
         <p class="agenda-updated">${escapeHtml(formatUpdated(state.data?.atualizado_em))}</p>
       </div>
       <div class="agenda-header-actions">
@@ -1927,109 +2208,98 @@
     `;
 
     const controls = document.createElement('section');
-    controls.className = 'agenda-tools';
+    controls.className = `agenda-tools agenda-tools-${state.mobileContent}`;
     controls.setAttribute('aria-label', 'Pesquisar e filtrar conteúdos');
-    controls.innerHTML = `
-      <label class="agenda-search"><span>Pesquisar</span><input type="search" placeholder="Evento, livro, autor ou tema" value="${escapeHtml(state.mobileQuery)}"></label>
+
+    const commonControls = `
+      <label class="agenda-search"><span>Pesquisar</span><input type="search" placeholder="Título, autor, instituição ou tema" value="${escapeHtml(state.mobileQuery)}"></label>
       <label><span>Conteúdo</span><select class="agenda-content">
-        <option value="all">Eventos e livros</option><option value="events">Eventos</option><option value="books">Livros</option>
+        <option value="all">Todos</option><option value="events">Eventos</option><option value="books">Livros</option>
       </select></label>
-      <label><span>Tempo dos slides</span><select class="agenda-slide-duration">
-        <option value="0">Padrão</option><option value="5">5 s</option><option value="8">8 s</option>
-        <option value="10">10 s</option><option value="12">12 s</option><option value="15">15 s</option>
-        <option value="20">20 s</option><option value="30">30 s</option>
-      </select></label>
-      <label class="agenda-event-filter"><span>Período</span><select class="agenda-period">
-        <option value="all">Todos os eventos futuros</option><option value="today">Hoje</option>
-        <option value="tomorrow">Amanhã</option><option value="7days">Próximos 7 dias</option>
-      </select></label>
-      <label class="agenda-event-filter"><span>Categoria</span><select class="agenda-category"><option value="">Todas</option></select></label>
-      <label class="agenda-event-filter"><span>Cidade</span><select class="agenda-city"><option value="">Todas</option></select></label>
+      <label><span>Tema</span><select class="agenda-theme"><option value="">Todos os temas</option></select></label>
     `;
 
-    const category = controls.querySelector('.agenda-category');
-    const categoryMap = new Map(mobileSelectOptions(state.allEvents, 'categoria'));
-    for (const event of state.allEvents) {
-      for (const label of [event.area_artistica, ...(Array.isArray(event.areas) ? event.areas : [])]) {
-        const value = normalizeText(label);
-        if (label && value && !categoryMap.has(value)) categoryMap.set(value, label);
-      }
-    }
-    for (const [value, label] of [...categoryMap.entries()].sort((a,b)=>a[1].localeCompare(b[1], 'pt-BR'))) {
-      category.add(new Option(label, value));
-    }
-    const city = controls.querySelector('.agenda-city');
-    for (const [value, label] of mobileSelectOptions(state.allEvents, 'cidade')) city.add(new Option(label, value));
-    controls.querySelector('.agenda-period').value = state.mobilePeriod;
+    const eventControls = state.mobileContent === 'events' ? `
+      <label><span>Quando</span><select class="agenda-period">
+        <option value="all">Todos os eventos futuros</option><option value="today">Hoje</option>
+        <option value="tomorrow">Amanhã</option><option value="weekend">Este fim de semana</option>
+        <option value="7days">Próximos 7 dias</option><option value="30days">Próximos 30 dias</option>
+      </select></label>
+      <label><span>Cidade</span><select class="agenda-city"><option value="">Todas as cidades</option></select></label>
+      <label><span>Categoria / linguagem</span><select class="agenda-category"><option value="">Todas</option></select></label>
+      <label><span>Espaço</span><select class="agenda-space"><option value="">Todos os espaços</option></select></label>
+      <label><span>Instituição / programa</span><select class="agenda-institution"><option value="">Todas</option></select></label>
+      <label><span>Inscrição</span><select class="agenda-registration">
+        <option value="">Todas</option><option value="open">Inscrições abertas</option>
+        <option value="none">Sem inscrição informada</option><option value="closed">Inscrições encerradas</option>
+      </select></label>
+    ` : '';
+
+    const bookControls = state.mobileContent === 'books' ? `
+      <label><span>Acesso</span><select class="agenda-book-access">
+        <option value="">Físico ou virtual</option><option value="physical">Acervo físico</option>
+        <option value="virtual">Biblioteca virtual</option><option value="both">Físico e virtual</option>
+      </select></label>
+    ` : '';
+
+    controls.innerHTML = commonControls + eventControls + bookControls;
+
     controls.querySelector('.agenda-content').value = state.mobileContent;
-    controls.querySelector('.agenda-slide-duration').value = String(state.slideDuration || 0);
-    controls.querySelectorAll('.agenda-event-filter').forEach(field => { field.hidden = state.mobileContent === 'books'; });
-    category.value = state.mobileCategory;
-    city.value = state.mobileCity;
+    populateDynamicSelect(
+      controls.querySelector('.agenda-theme'),
+      'Todos os temas',
+      agendaThemeOptions(state.mobileContent),
+      state.mobileTheme
+    );
 
-    const count = document.createElement('p');
-    count.className = 'agenda-count';
-    count.textContent = `${contents.length} ${contents.length === 1 ? 'conteúdo encontrado' : 'conteúdos encontrados'}`;
-
-    const list = document.createElement('section');
-    list.className = 'agenda-list';
-    list.setAttribute('aria-label', 'Conteúdos culturais');
-
-    if (!contents.length) {
-      list.innerHTML = '<div class="agenda-empty"><h2>Nenhum conteúdo encontrado</h2><p>Tente alterar a busca ou os filtros.</p></div>';
+    if (state.mobileContent === 'events') {
+      populateDynamicSelect(controls.querySelector('.agenda-city'), 'Todas as cidades', mobileSelectOptions(state.allEvents, 'cidade'), state.mobileCity);
+      populateDynamicSelect(controls.querySelector('.agenda-category'), 'Todas as categorias e linguagens', agendaCategoryOptions(), state.mobileCategory);
+      populateDynamicSelect(
+        controls.querySelector('.agenda-space'),
+        'Todos os espaços',
+        mobileSelectOptions(state.allEvents.map(event => ({ unidade: eventUnit(event) })), 'unidade'),
+        state.mobileSpace
+      );
+      populateDynamicSelect(
+        controls.querySelector('.agenda-institution'),
+        'Todas as instituições e programas',
+        mobileSelectOptions(state.allEvents.map(event => ({ programa: eventProgram(event) })), 'programa'),
+        state.mobileInstitution
+      );
+      controls.querySelector('.agenda-period').value = state.mobilePeriod;
+      controls.querySelector('.agenda-registration').value = state.mobileRegistration;
+    } else if (state.mobileContent === 'books') {
+      controls.querySelector('.agenda-book-access').value = state.mobileBookAccess;
     }
 
-    for (const item of contents) {
-      const article = document.createElement('article');
-      article.className = `agenda-card ${item.tipo_conteudo === 'livro' ? 'agenda-book-card' : ''}`;
-      if (item.tipo_conteudo === 'livro') {
-        const link = safeExternalUrl(item.link || item.link_fisico || item.link_virtual);
-        article.innerHTML = `
-          <div class="agenda-card-media book-media"><img src="${escapeHtml(item.imagem || '')}" alt="Capa: ${escapeHtml(item.titulo || '')}" loading="lazy"></div>
-          <div class="agenda-card-body">
-            <div class="agenda-card-badges"><span>Livro</span>${item.acesso_fisico ? '<span>Físico</span>' : ''}${item.acesso_virtual ? '<span>Virtual</span>' : ''}</div>
-            <p class="agenda-card-date">Sugestão de Leitura</p>
-            <h2>${escapeHtml(item.pergunta_curiosidade || item.titulo || 'Livro')}</h2>
-            <p class="agenda-card-place"><strong>${escapeHtml(item.titulo || '')}</strong> · ${escapeHtml(item.autor || '')}</p>
-            <p class="agenda-card-description">${escapeHtml(item.texto_apoio || '')}</p>
-            ${item.numero_chamada ? `<p class="agenda-card-call">Número de chamada: ${escapeHtml(item.numero_chamada)}</p>` : ''}
-            ${item.exibir_comentario && item.comentario_aprovado ? `<blockquote class="agenda-book-opinion">“${escapeHtml(item.comentario_aprovado)}”<cite>${escapeHtml(item.credito_comentario || 'Leitor(a) do IFMG')}</cite></blockquote>` : ''}
-            <div class="agenda-card-actions">
-              ${link ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer">Encontrar este livro</a>` : ''}
-              ${item.link_virtual ? `<a class="secondary" href="${escapeHtml(item.link_virtual)}" target="_blank" rel="noopener noreferrer">Edição virtual</a>` : ''}
-              ${state.config?.opinioes_livros?.habilitado === true && safeExternalUrl(item.link_formulario_opiniao || state.config?.opinioes_livros?.url_formulario) ? `<a class="secondary" href="${escapeHtml(safeExternalUrl(item.link_formulario_opiniao || state.config?.opinioes_livros?.url_formulario))}" target="_blank" rel="noopener noreferrer">Opine sobre este livro</a>` : ''}
-            </div>
-          </div>`;
-        list.append(article);
-        continue;
-      }
-      const event = item;
-      const link = eventPublicLink(event);
-      const map = safeExternalUrl(event.mapa);
-      const closedRegistration = registrationIsClosed(event);
-      const rating = normalizeRating(event.classificacao_indicativa);
-      article.innerHTML = `
-        <div class="agenda-card-media"><img></div>
-        <div class="agenda-card-body">
-          <div class="agenda-card-badges">
-            <span>${escapeHtml(event.categoria || 'Evento')}</span><span>Gratuito</span>${rating ? `<span>${escapeHtml(rating.label)}</span>` : ''}
-          </div>
-          <p class="agenda-card-date">${escapeHtml(mobileDateLabel(event))}${event.horario ? ` • ${escapeHtml(event.horario)}` : ''}</p>
-          <h2>${escapeHtml(event.titulo || 'Evento cultural')}</h2>
-          <p class="agenda-card-place">${escapeHtml([event.local, event.cidade].filter(Boolean).join(' • ') || 'Local não informado')}</p>
-          <p class="agenda-card-description">${escapeHtml(event.descricao || '')}</p>
-          <div class="agenda-card-actions">
-            ${link ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer">${closedRegistration ? 'Programação do evento' : 'Programação e inscrição'}</a>` : closedRegistration ? '<span class="agenda-action-disabled">Inscrições encerradas</span>' : ''}
-            ${map ? `<a class="secondary" href="${escapeHtml(map)}" target="_blank" rel="noopener noreferrer">Como chegar</a>` : ''}
-          </div>
-        </div>`;
-      setMobileCardImage(article.querySelector('img'), event);
-      list.append(article);
+    const count = document.createElement('div');
+    count.className = 'agenda-count';
+    count.innerHTML = `
+      <span><strong>${results.total}</strong> ${results.total === 1 ? 'conteúdo encontrado' : 'conteúdos encontrados'}${activeFilters ? ` · ${activeFilters} ${activeFilters === 1 ? 'filtro ativo' : 'filtros ativos'}` : ''}</span>
+      ${activeFilters ? '<button type="button" class="agenda-clear-filters">Limpar filtros</button>' : ''}
+    `;
+
+    const resultsContainer = document.createElement('div');
+    resultsContainer.className = 'agenda-results';
+    resultsContainer.setAttribute('aria-label', 'Conteúdos culturais');
+
+    if (!results.total) {
+      resultsContainer.innerHTML = '<div class="agenda-empty"><h2>Nenhum conteúdo encontrado</h2><p>Tente alterar a busca ou os filtros.</p></div>';
+    } else if (state.mobileContent === 'all') {
+      appendAgendaSection(resultsContainer, 'Agenda Cultural', results.events, 'events', 'Ver somente eventos');
+      appendAgendaSection(resultsContainer, 'Sugestões de Leitura', results.books, 'books', 'Ver somente livros');
+    } else {
+      const list = document.createElement('section');
+      list.className = 'agenda-list';
+      const items = state.mobileContent === 'events' ? results.events : results.books;
+      items.forEach(item => list.append(renderAgendaCard(item)));
+      resultsContainer.append(list);
     }
 
     const shell = document.createElement('div');
     shell.className = 'agenda-shell';
-    shell.append(header, controls, count, list);
+    shell.append(header, controls, count, resultsContainer);
     app.replaceChildren(shell);
 
     const installButton = header.querySelector('.install-app-btn');
@@ -2041,17 +2311,45 @@
       state.isPaused = false;
       renderCurrentView();
     });
+
     const rerender = () => renderAgenda();
-    controls.querySelector('input').addEventListener('input', event => {
+    controls.querySelector('.agenda-search input').addEventListener('input', event => {
       state.mobileQuery = event.target.value;
       window.clearTimeout(state.mobileSearchTimer);
       state.mobileSearchTimer = window.setTimeout(rerender, 180);
     });
-    controls.querySelector('.agenda-content').addEventListener('change', event => { state.mobileContent = event.target.value; rerender(); });
-    controls.querySelector('.agenda-slide-duration').addEventListener('change', event => { saveSlideDuration(event.target.value); });
-    controls.querySelector('.agenda-period').addEventListener('change', event => { state.mobilePeriod = event.target.value; rerender(); });
-    category.addEventListener('change', event => { state.mobileCategory = event.target.value; rerender(); });
-    city.addEventListener('change', event => { state.mobileCity = event.target.value; rerender(); });
+    controls.querySelector('.agenda-content').addEventListener('change', event => {
+      state.mobileContent = event.target.value;
+      const allowedThemes = new Set(agendaThemeOptions(state.mobileContent).map(([value]) => value));
+      if (state.mobileTheme && !allowedThemes.has(state.mobileTheme)) state.mobileTheme = '';
+      rerender();
+    });
+    controls.querySelector('.agenda-theme').addEventListener('change', event => { state.mobileTheme = event.target.value; rerender(); });
+
+    if (state.mobileContent === 'events') {
+      controls.querySelector('.agenda-period').addEventListener('change', event => { state.mobilePeriod = event.target.value; rerender(); });
+      controls.querySelector('.agenda-category').addEventListener('change', event => { state.mobileCategory = event.target.value; rerender(); });
+      controls.querySelector('.agenda-city').addEventListener('change', event => { state.mobileCity = event.target.value; rerender(); });
+      controls.querySelector('.agenda-space').addEventListener('change', event => { state.mobileSpace = event.target.value; rerender(); });
+      controls.querySelector('.agenda-institution').addEventListener('change', event => { state.mobileInstitution = event.target.value; rerender(); });
+      controls.querySelector('.agenda-registration').addEventListener('change', event => { state.mobileRegistration = event.target.value; rerender(); });
+    } else if (state.mobileContent === 'books') {
+      controls.querySelector('.agenda-book-access').addEventListener('change', event => { state.mobileBookAccess = event.target.value; rerender(); });
+    }
+
+    count.querySelector('.agenda-clear-filters')?.addEventListener('click', () => {
+      clearAgendaFilters();
+      rerender();
+    });
+
+    resultsContainer.querySelectorAll('.agenda-section-action').forEach(button => {
+      button.addEventListener('click', () => {
+        state.mobileContent = button.dataset.content || 'all';
+        const allowedThemes = new Set(agendaThemeOptions(state.mobileContent).map(([value]) => value));
+        if (state.mobileTheme && !allowedThemes.has(state.mobileTheme)) state.mobileTheme = '';
+        rerender();
+      });
+    });
   }
 
   function addPanelViewToggle() {
