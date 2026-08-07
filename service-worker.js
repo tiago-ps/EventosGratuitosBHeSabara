@@ -1,15 +1,15 @@
-const CACHE_VERSION = 'mural-cultural-v60';
+const CACHE_VERSION = 'mural-cultural-v60.1';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
 const MAX_IMAGE_CACHE_ITEMS = 140;
+const BRAND_LOGO_PATH = '/imagens/marca/logo-mural-cultural.png';
 
 const CORE_ASSETS = [
   './', './index.html', './css/styles.css', './css/eventos-manuais-ui.css',
   './js/app.js', './js/eventos-manuais-ui.js', './manifest.webmanifest',
   './imagens/app-icons/icon-192.png', './imagens/app-icons/icon-512.png',
-  './imagens/app-icons/apple-touch-icon.png',
-  './imagens/marca/logo-mural-cultural.png'
+  './imagens/app-icons/apple-touch-icon.png'
 ];
 
 self.addEventListener('install', event => {
@@ -55,6 +55,11 @@ async function networkFirst(request, cacheName, fallbackUrl = '', expectedConten
   }
 }
 
+async function networkFirstBrandImage(request) {
+  const freshRequest = new Request(request, { cache: 'no-store' });
+  return networkFirst(freshRequest, IMAGE_CACHE, '', 'image/');
+}
+
 async function cacheFirstImage(request) {
   const cache = await caches.open(IMAGE_CACHE);
   const cached = await cache.match(request);
@@ -82,6 +87,10 @@ self.addEventListener('fetch', event => {
       mode: 'same-origin', credentials: 'same-origin'
     });
     event.respondWith(networkFirst(stableRequest, DATA_CACHE, '', 'application/json'));
+  } else if (url.pathname.endsWith(BRAND_LOGO_PATH)) {
+    // A marca pode ser trocada no repositório mantendo o mesmo nome.
+    // Busca sempre a versão da rede e usa a cópia local apenas se estiver offline.
+    event.respondWith(networkFirstBrandImage(request));
   } else if (request.destination === 'image') {
     event.respondWith(cacheFirstImage(request));
   } else if (['style', 'script', 'manifest', 'font'].includes(request.destination)) {
