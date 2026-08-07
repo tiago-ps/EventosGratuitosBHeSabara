@@ -1002,6 +1002,67 @@
     });
   }
 
+  function muralPublicUrl() {
+    try {
+      const url = new URL(window.location.href);
+      if (!['http:', 'https:'].includes(url.protocol)) return '';
+
+      // O QR geral sempre aponta para a porta de entrada do Mural Cultural.
+      // Parâmetros de perfil, filtros e âncoras pertencem apenas à sessão atual.
+      url.search = '';
+      url.hash = '';
+      url.pathname = url.pathname.replace(/\/index\.html?$/i, '/');
+      return url.href;
+    } catch {
+      return '';
+    }
+  }
+
+  function buildSiteQr(slide) {
+    const wrap = slide.querySelector('.site-qr-wrap');
+    const container = slide.querySelector('.site-qr-code');
+    if (!wrap || !container) return;
+
+    const link = muralPublicUrl();
+    if (!link || typeof QRCode === 'undefined') {
+      wrap.hidden = true;
+      return;
+    }
+
+    wrap.hidden = false;
+    container.setAttribute('aria-label', `QR Code do Mural Cultural: ${link}`);
+    container.title = link;
+    buildQr(container, link);
+  }
+
+  function qrActionLabel(item) {
+    const type = item?.tipo_conteudo === 'livro'
+      ? 'livro'
+      : String(item?.tipo_conteudo || 'evento').toLowerCase();
+
+    return ({
+      evento: 'Abrir este evento',
+      livro: 'Ver este livro',
+      filme: 'Ver este filme',
+      jogo: 'Ver este jogo',
+      passeio: 'Ver este passeio'
+    })[type] || 'Abrir este conteúdo';
+  }
+
+  function configureItemQrLabel(slide, item, hasQr) {
+    const wrap = slide.querySelector('.qr-wrap');
+    const label = slide.querySelector('.qr-item-label');
+    const container = slide.querySelector('.qr-code');
+    if (!wrap) return;
+
+    wrap.hidden = !hasQr;
+    if (!hasQr) return;
+
+    const action = qrActionLabel(item);
+    if (label) label.textContent = action;
+    if (container) container.setAttribute('aria-label', `${action} por QR Code`);
+  }
+
   function contentSubtitle(item) {
     const type = item?.tipo_conteudo === 'livro'
       ? 'livro'
@@ -1078,6 +1139,7 @@
     const event = state.events[index];
     const data = state.data;
     const slide = template.content.firstElementChild.cloneNode(true);
+    buildSiteQr(slide);
 
     const visualKey = normalizeText(event.categoria);
     const [icon, label] =
@@ -1219,10 +1281,13 @@
     slide.querySelector('.updated').textContent =
       formatUpdated(data.atualizado_em);
 
-    buildQr(
-      slide.querySelector('.qr-code'),
-      link
-    );
+    configureItemQrLabel(slide, event, Boolean(link));
+    if (link) {
+      buildQr(
+        slide.querySelector('.qr-code'),
+        link
+      );
+    }
 
     const image = slide.querySelector('.event-image');
     const fallback = slide.querySelector('.image-fallback');
@@ -1438,6 +1503,7 @@
     clearTimeout(state.timer);
     const book = state.events[index];
     const slide = template.content.firstElementChild.cloneNode(true);
+    buildSiteQr(slide);
     slide.classList.add('book-slide');
 
     const seconds = slideDurationFor(book);
@@ -1525,13 +1591,15 @@
     slide.querySelector('.updated').textContent = formatUpdated(state.booksData?.atualizado_em);
 
     const qrContainer = slide.querySelector('.qr-code');
-    if (book.qr_code) {
+    const hasBookQr = Boolean(book.qr_code || link);
+    configureItemQrLabel(slide, book, hasBookQr);
+    if (hasBookQr && book.qr_code) {
       const qrImage = document.createElement('img');
       qrImage.src = book.qr_code;
       qrImage.alt = `QR Code para ${book.titulo}`;
       qrImage.onerror = () => buildQr(qrContainer, link);
       qrContainer.replaceChildren(qrImage);
-    } else {
+    } else if (hasBookQr) {
       buildQr(qrContainer, link);
     }
 
