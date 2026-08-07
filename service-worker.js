@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v58.3';
+const CACHE_VERSION = 'mural-cultural-v60';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -8,7 +8,8 @@ const CORE_ASSETS = [
   './', './index.html', './css/styles.css', './css/eventos-manuais-ui.css',
   './js/app.js', './js/eventos-manuais-ui.js', './manifest.webmanifest',
   './imagens/app-icons/icon-192.png', './imagens/app-icons/icon-512.png',
-  './imagens/app-icons/apple-touch-icon.png'
+  './imagens/app-icons/apple-touch-icon.png',
+  './imagens/marca/logo-mural-cultural.png'
 ];
 
 self.addEventListener('install', event => {

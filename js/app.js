@@ -7,6 +7,15 @@
   const app = document.getElementById('app');
   const SCHOOL_ROTATION_SIZE = 6;
   const SCHOOL_ROTATION_KEY = 'agenda-cultural-escola-livre-lote';
+  const SLIDE_DURATION_KEY = 'mural-cultural-tempo-slides';
+  const ALLOWED_SLIDE_DURATIONS = new Set([0, 5, 8, 10, 12, 15, 20, 30]);
+  const CONTENT_SUBTITLES = Object.freeze({
+    evento: 'Agenda Cultural',
+    livro: 'Sugestão de Leitura',
+    filme: 'Sugestão de Filme',
+    jogo: 'Sugestão de Jogo',
+    passeio: 'Sugestão de Passeio'
+  });
   const template = document.getElementById('slide-template');
   let deferredInstallPrompt = null;
 
@@ -85,6 +94,7 @@
     },
     schoolRotationBatch: 0,
     viewMode: 'auto',
+    slideDuration: 0,
     mobileQuery: '',
     mobileCategory: '',
     mobileCity: '',
@@ -245,6 +255,40 @@
     return ['inscricao', 'acesso', 'manual', 'realizacao'].includes(value)
       ? value
       : 'realizacao';
+  }
+
+
+  function isGoogleFormUrl(value) {
+    const link = safeExternalUrl(value);
+    if (!link) return false;
+    try {
+      const url = new URL(link);
+      const host = url.hostname.toLowerCase();
+      return host === 'forms.gle' ||
+        ((host === 'docs.google.com' || host === 'forms.google.com') && url.pathname.toLowerCase().includes('/forms'));
+    } catch {
+      return false;
+    }
+  }
+
+  function registrationIsClosed(event) {
+    const registrationStatus = normalizeText(event.status_inscricao).replaceAll('_', ' ');
+    const formStatus = normalizeText(event.status_formulario_google).replaceAll('_', ' ');
+    return CLOSED_ACCESS_STATUSES.has(registrationStatus) || formStatus === 'fechado';
+  }
+
+  function eventPublicLink(event) {
+    const registration = safeExternalUrl(event.link_inscricao);
+    const primary = safeExternalUrl(event.link);
+    const page = safeExternalUrl(event.pagina);
+    const formAction = normalizeText(event.formulario_google_acao_aplicada).replaceAll('_', ' ');
+    const suppressClosedForm = registrationIsClosed(event) &&
+      ['marcar encerrada', 'retirar link'].includes(formAction);
+
+    if (suppressClosedForm) {
+      return [page, primary].find(link => link && !isGoogleFormUrl(link)) || '';
+    }
+    return registration || primary || page;
   }
 
   function eventIsPublishable(event, today = todayAtMidnight()) {
@@ -755,6 +799,14 @@
           : `Inscrições abertas desde ${start}, enquanto houver disponibilidade`;
       container.append(registration);
     }
+
+    else if (registrationIsClosed(event)) {
+      const registration = document.createElement('span');
+      registration.className = 'when-registration';
+      container.append(document.createElement('br'));
+      registration.textContent = 'Inscrições encerradas';
+      container.append(registration);
+    }
   }
 
   function formatUpdated(value) {
@@ -835,6 +887,46 @@
     });
   }
 
+  function contentSubtitle(item) {
+    const type = item?.tipo_conteudo === 'livro'
+      ? 'livro'
+      : String(item?.tipo_conteudo || 'evento').toLowerCase();
+    return CONTENT_SUBTITLES[type] || 'Mural Cultural';
+  }
+
+  function storedSlideDuration() {
+    try {
+      const value = Number(localStorage.getItem(SLIDE_DURATION_KEY) || 0);
+      return ALLOWED_SLIDE_DURATIONS.has(value) ? value : 0;
+    } catch {
+      return 0;
+    }
+  }
+
+  function saveSlideDuration(value) {
+    const numeric = Number(value || 0);
+    state.slideDuration = ALLOWED_SLIDE_DURATIONS.has(numeric) ? numeric : 0;
+    try {
+      localStorage.setItem(SLIDE_DURATION_KEY, String(state.slideDuration));
+    } catch {
+      /* Preferência opcional; o site continua funcionando sem armazenamento. */
+    }
+  }
+
+  function slideDurationFor(item) {
+    if (state.slideDuration >= 5) return state.slideDuration;
+    const defaultSeconds = item?.tipo_conteudo === 'livro'
+      ? state.config?.tempo_slide?.livro
+      : state.config?.tempo_slide?.evento;
+    return Math.max(
+      5,
+      Number(item?.tempo_slide) ||
+      Number(defaultSeconds) ||
+      Number(state.data?.tempo_slide) ||
+      12
+    );
+  }
+
   function updatePlayPauseButton() {
     if (!state.btnPlayPause) return;
 
@@ -860,10 +952,7 @@
     clearTimeout(state.timer);
 
     const item = state.events[state.index];
-    const defaultSeconds = item?.tipo_conteudo === 'livro'
-      ? state.config?.tempo_slide?.livro
-      : state.config?.tempo_slide?.evento;
-    const seconds = Math.max(5, Number(item?.tempo_slide) || Number(defaultSeconds) || 12);
+    const seconds = slideDurationFor(item);
 
     state.timer = setTimeout(goToNext, seconds * 1000);
   }
@@ -879,29 +968,15 @@
     const [icon, label] =
       categoryVisuals[visualKey] || categoryVisuals.default;
 
-    const seconds = Math.max(
-      5, Number(event.tempo_slide) || Number(state.config?.tempo_slide?.evento) ||
-      Number(data.tempo_slide) || 12
-    );
+    const seconds = slideDurationFor(event);
 
     slide.style.setProperty(
       '--slide-seconds',
       `${seconds}s`
     );
 
-    const { mainTitle: originalTitle, citiesTitle } = getPanelTitleParts(
-      data.titulo_painel, state.allEvents
-    );
-    const mainTitle = state.config?.nome || originalTitle;
-
-    slide.querySelector('.panel-title-main').textContent =
-      mainTitle;
-
-    const citiesTitleElement =
-      slide.querySelector('.panel-title-cities');
-
-    citiesTitleElement.textContent = citiesTitle;
-    citiesTitleElement.hidden = !citiesTitle;
+    const panelSubtitle = slide.querySelector('.panel-subtitle');
+    if (panelSubtitle) panelSubtitle.textContent = contentSubtitle(event);
 
     slide.querySelector('.counter').textContent =
       `${index + 1} de ${state.events.length}`;
@@ -1006,8 +1081,13 @@
      * }
      */
 
-    const link = safeExternalUrl(event.link || event.pagina);
+    const link = eventPublicLink(event);
     const sourceUrlElement = slide.querySelector('.source-url');
+    const sourceLabelElement = slide.querySelector('.source-label');
+    const closedRegistration = registrationIsClosed(event);
+    if (closedRegistration && normalizeText(event.formulario_google_acao_aplicada) !== 'somente relatorio') {
+      sourceLabelElement.textContent = 'Inscrições encerradas';
+    }
 
     if (link) {
       // Criar um link clicável
@@ -1018,7 +1098,7 @@
       linkElement.rel = 'noopener noreferrer';
       sourceUrlElement.replaceChildren(linkElement);
     } else {
-      sourceUrlElement.textContent = 'Consulte a equipe da biblioteca';
+      sourceUrlElement.textContent = closedRegistration ? 'Formulário de inscrição encerrado' : 'Consulte a equipe da biblioteca';
     }
 
     slide.querySelector('.updated').textContent =
@@ -1245,14 +1325,10 @@
     const slide = template.content.firstElementChild.cloneNode(true);
     slide.classList.add('book-slide');
 
-    const seconds = Math.max(
-      5, Number(book.tempo_slide) || Number(state.config?.tempo_slide?.livro) || 15
-    );
+    const seconds = slideDurationFor(book);
     slide.style.setProperty('--slide-seconds', `${seconds}s`);
-    slide.querySelector('.panel-title-main').textContent = state.config?.nome || 'Mural Cultural';
-    const subtitle = slide.querySelector('.panel-title-cities');
-    subtitle.textContent = 'Descoberta de leitura';
-    subtitle.hidden = false;
+    const subtitle = slide.querySelector('.panel-subtitle');
+    if (subtitle) subtitle.textContent = contentSubtitle(book);
     slide.querySelector('.counter').textContent = `${index + 1} de ${state.events.length}`;
 
     slide.querySelector('.event-copy').hidden = true;
@@ -1476,8 +1552,10 @@
     const ratingSelect = slide.querySelector('.filter-rating');
     const bookThemeSelect = slide.querySelector('.filter-book-theme');
     const bookAccessSelect = slide.querySelector('.filter-book-access');
+    const durationSelect = slide.querySelector('.filter-slide-duration');
 
     if (contentSelect) contentSelect.value = state.filters.content || 'all';
+    if (durationSelect) durationSelect.value = String(state.slideDuration || 0);
 
     populateDynamicSelect(
       citySelect,
@@ -1589,6 +1667,8 @@
 
   function applyFiltersFromPanel() {
     if (!state.filterOverlay) return;
+
+    saveSlideDuration(state.filterOverlay.querySelector('.filter-slide-duration')?.value || 0);
 
     state.filters = {
       content: state.filterOverlay.querySelector('.filter-content')?.value || 'all',
@@ -1836,8 +1916,8 @@
     header.className = 'agenda-header';
     header.innerHTML = `
       <div class="agenda-heading">
-        <p class="agenda-eyebrow">Belo Horizonte e Sabará</p>
-        <h1>Mural Cultural</h1>
+        <img class="agenda-logo" src="imagens/marca/logo-mural-cultural.png" alt="Mural Cultural">
+        <p class="agenda-eyebrow">Agenda Cultural</p>
         <p class="agenda-updated">${escapeHtml(formatUpdated(state.data?.atualizado_em))}</p>
       </div>
       <div class="agenda-header-actions">
@@ -1853,6 +1933,11 @@
       <label class="agenda-search"><span>Pesquisar</span><input type="search" placeholder="Evento, livro, autor ou tema" value="${escapeHtml(state.mobileQuery)}"></label>
       <label><span>Conteúdo</span><select class="agenda-content">
         <option value="all">Eventos e livros</option><option value="events">Eventos</option><option value="books">Livros</option>
+      </select></label>
+      <label><span>Tempo dos slides</span><select class="agenda-slide-duration">
+        <option value="0">Padrão</option><option value="5">5 s</option><option value="8">8 s</option>
+        <option value="10">10 s</option><option value="12">12 s</option><option value="15">15 s</option>
+        <option value="20">20 s</option><option value="30">30 s</option>
       </select></label>
       <label class="agenda-event-filter"><span>Período</span><select class="agenda-period">
         <option value="all">Todos os eventos futuros</option><option value="today">Hoje</option>
@@ -1877,6 +1962,7 @@
     for (const [value, label] of mobileSelectOptions(state.allEvents, 'cidade')) city.add(new Option(label, value));
     controls.querySelector('.agenda-period').value = state.mobilePeriod;
     controls.querySelector('.agenda-content').value = state.mobileContent;
+    controls.querySelector('.agenda-slide-duration').value = String(state.slideDuration || 0);
     controls.querySelectorAll('.agenda-event-filter').forEach(field => { field.hidden = state.mobileContent === 'books'; });
     category.value = state.mobileCategory;
     city.value = state.mobileCity;
@@ -1902,7 +1988,7 @@
           <div class="agenda-card-media book-media"><img src="${escapeHtml(item.imagem || '')}" alt="Capa: ${escapeHtml(item.titulo || '')}" loading="lazy"></div>
           <div class="agenda-card-body">
             <div class="agenda-card-badges"><span>Livro</span>${item.acesso_fisico ? '<span>Físico</span>' : ''}${item.acesso_virtual ? '<span>Virtual</span>' : ''}</div>
-            <p class="agenda-card-date">Descoberta de leitura</p>
+            <p class="agenda-card-date">Sugestão de Leitura</p>
             <h2>${escapeHtml(item.pergunta_curiosidade || item.titulo || 'Livro')}</h2>
             <p class="agenda-card-place"><strong>${escapeHtml(item.titulo || '')}</strong> · ${escapeHtml(item.autor || '')}</p>
             <p class="agenda-card-description">${escapeHtml(item.texto_apoio || '')}</p>
@@ -1918,8 +2004,9 @@
         continue;
       }
       const event = item;
-      const link = safeExternalUrl(event.link || event.pagina);
+      const link = eventPublicLink(event);
       const map = safeExternalUrl(event.mapa);
+      const closedRegistration = registrationIsClosed(event);
       const rating = normalizeRating(event.classificacao_indicativa);
       article.innerHTML = `
         <div class="agenda-card-media"><img></div>
@@ -1932,7 +2019,7 @@
           <p class="agenda-card-place">${escapeHtml([event.local, event.cidade].filter(Boolean).join(' • ') || 'Local não informado')}</p>
           <p class="agenda-card-description">${escapeHtml(event.descricao || '')}</p>
           <div class="agenda-card-actions">
-            ${link ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer">Programação e inscrição</a>` : ''}
+            ${link ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer">${closedRegistration ? 'Programação do evento' : 'Programação e inscrição'}</a>` : closedRegistration ? '<span class="agenda-action-disabled">Inscrições encerradas</span>' : ''}
             ${map ? `<a class="secondary" href="${escapeHtml(map)}" target="_blank" rel="noopener noreferrer">Como chegar</a>` : ''}
           </div>
         </div>`;
@@ -1961,6 +2048,7 @@
       state.mobileSearchTimer = window.setTimeout(rerender, 180);
     });
     controls.querySelector('.agenda-content').addEventListener('change', event => { state.mobileContent = event.target.value; rerender(); });
+    controls.querySelector('.agenda-slide-duration').addEventListener('change', event => { saveSlideDuration(event.target.value); });
     controls.querySelector('.agenda-period').addEventListener('change', event => { state.mobilePeriod = event.target.value; rerender(); });
     category.addEventListener('change', event => { state.mobileCategory = event.target.value; rerender(); });
     city.addEventListener('change', event => { state.mobileCity = event.target.value; rerender(); });
@@ -2038,6 +2126,7 @@
       }
 
       state.viewMode = storedViewMode();
+      state.slideDuration = storedSlideDuration();
       renderCurrentView();
     } catch (error) {
       console.error(error);
