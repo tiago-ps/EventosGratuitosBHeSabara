@@ -8,6 +8,8 @@
   const SCHOOL_ROTATION_SIZE = 6;
   const SCHOOL_ROTATION_KEY = 'agenda-cultural-escola-livre-lote';
   const SLIDE_DURATION_KEY = 'mural-cultural-tempo-slides';
+  const PANEL_SETTINGS_KEY = 'mural-cultural-configuracao-painel-v1';
+  const PANEL_PROFILES_KEY = 'mural-cultural-perfis-painel-v1';
   const ALLOWED_SLIDE_DURATIONS = new Set([0, 5, 8, 10, 12, 15, 20, 30]);
   const CONTENT_SUBTITLES = Object.freeze({
     evento: 'Agenda Cultural',
@@ -81,11 +83,13 @@
     btnPlayPause: null,
     btnFilter: null,
     filterOverlay: null,
-    panelMoreFiltersOpen: false,
+    panelModules: { events: true, books: true },
+    panelEventCities: [],
+    panelBookCampuses: [],
+    panelWeights: { events: 5, books: 1 },
     filters: {
       content: 'all',
       theme: '',
-      city: '',
       category: '',
       program: '',
       unit: '',
@@ -355,12 +359,36 @@
     return Boolean(book.link && book.imagem);
   }
 
+  function bookCampusLabel(book) {
+    const explicit = [
+      book.campus, book.campus_acervo, book.unidade_acervo,
+      book.biblioteca, book.acervo
+    ].map(value => String(value || '').trim()).find(Boolean);
+
+    const raw = explicit || String(book.fonte || state.booksData?.origem || '').trim();
+    if (!raw) return 'Acervo não identificado';
+
+    const campusMatch = raw.match(/(?:IFMG\s+)?Campus\s+([^,;|]+)/i);
+    if (campusMatch) return `IFMG ${campusMatch[1].trim()}`;
+
+    const ifmgMatch = raw.match(/IFMG\s+([^,;|]+)/i);
+    if (ifmgMatch) return `IFMG ${ifmgMatch[1].trim()}`;
+
+    return raw;
+  }
+
   function bookMatchesFilters(book) {
     const theme = state.filters.theme;
     const access = state.filters.bookAccess;
     const themes = (Array.isArray(book.temas) ? book.temas : [])
       .map(normalizeText);
     if (theme && !themes.some(value => value === theme || value.includes(theme))) return false;
+
+    if (state.panelBookCampuses.length) {
+      const campus = normalizeText(bookCampusLabel(book));
+      if (!state.panelBookCampuses.includes(campus)) return false;
+    }
+
     if (access === 'physical' && !book.acesso_fisico) return false;
     if (access === 'virtual' && !book.acesso_virtual) return false;
     if (access === 'both' && !(book.acesso_fisico && book.acesso_virtual)) return false;
@@ -378,28 +406,34 @@
       );
   }
 
-  function interleaveContents(events, books, eventsPerBook) {
+  function interleaveContents(events, books, eventWeight = 5, bookWeight = 1) {
     if (!books.length) return events;
     if (!events.length) return books;
-    const interval = Math.max(1, Number(eventsPerBook) || 9);
+
+    const eventsPerTurn = Math.max(1, Number(eventWeight) || 5);
+    const booksPerTurn = Math.max(1, Number(bookWeight) || 1);
     const combined = [];
+    let eventIndex = 0;
     let bookIndex = 0;
-    for (let i = 0; i < events.length; i += 1) {
-      combined.push(events[i]);
-      if ((i + 1) % interval === 0) {
-        combined.push(books[bookIndex % books.length]);
+
+    while (eventIndex < events.length || bookIndex < books.length) {
+      for (let i = 0; i < eventsPerTurn && eventIndex < events.length; i += 1) {
+        combined.push(events[eventIndex]);
+        eventIndex += 1;
+      }
+      for (let i = 0; i < booksPerTurn && bookIndex < books.length; i += 1) {
+        combined.push(books[bookIndex]);
         bookIndex += 1;
       }
     }
-    if (!combined.some(item => item.tipo_conteudo === 'livro')) {
-      combined.push(books[0]);
-    }
+
     return combined;
   }
 
   function hasEventFilters() {
     return Boolean(
-      state.filters.theme || state.filters.city || state.filters.category || state.filters.program ||
+      state.filters.theme || state.panelEventCities.length ||
+      state.filters.category || state.filters.program ||
       state.filters.unit || state.filters.rating || state.filters.period !== 'all'
     );
   }
@@ -411,17 +445,23 @@
   }
 
   function rebuildVisibleItems() {
-    const content = state.filters.content || 'all';
-    const events = content === 'books' ? [] : visibleEventsForFilters();
-    const booksEnabled = state.config?.modulos?.livros !== false;
-    const books = content === 'events' || !booksEnabled
-      ? []
-      : filterBooks(state.allBooks);
-    if (content === 'events') state.events = events;
-    else if (content === 'books') state.events = books;
-    else state.events = interleaveContents(
-      events, books, state.config?.proporcao?.eventos_por_livro || 5
-    );
+    const eventsEnabled = state.panelModules.events && state.config?.modulos?.eventos !== false;
+    const booksEnabled = state.panelModules.books && state.config?.modulos?.livros !== false;
+    const events = eventsEnabled ? visibleEventsForFilters() : [];
+    const books = booksEnabled ? filterBooks(state.allBooks) : [];
+
+    if (eventsEnabled && booksEnabled) {
+      state.events = interleaveContents(
+        events, books, state.panelWeights.events, state.panelWeights.books
+      );
+    } else if (eventsEnabled) {
+      state.events = events;
+    } else if (booksEnabled) {
+      state.events = books;
+    } else {
+      state.events = [];
+    }
+
     return state.events;
   }
 
@@ -517,10 +557,11 @@
 
   function hasUserFilters() {
     return Boolean(
-      state.filters.content !== 'all' || state.filters.theme ||
-      state.filters.city || state.filters.category || state.filters.program ||
-      state.filters.unit || state.filters.rating || state.filters.period !== 'all' ||
-      state.filters.bookAccess
+      !state.panelModules.events || !state.panelModules.books ||
+      state.filters.theme || state.panelEventCities.length ||
+      state.filters.category || state.filters.program || state.filters.unit ||
+      state.filters.rating || state.filters.period !== 'all' ||
+      state.filters.bookAccess || state.panelBookCampuses.length
     );
   }
 
@@ -674,7 +715,7 @@
   }
 
   function applyUserFilters(events) {
-    const { theme, city, category, program, unit, period, rating } = state.filters;
+    const { theme, category, program, unit, period, rating } = state.filters;
 
     return events.filter(event => {
       if (event.exibicao_por_filtro === false) return false;
@@ -689,7 +730,7 @@
       }
 
       if (!eventMatchesTheme(event, theme)) return false;
-      if (city && normalizeText(event.cidade) !== city) return false;
+      if (state.panelEventCities.length && !state.panelEventCities.includes(normalizeText(event.cidade))) return false;
       if (!categoryMatches(event, category)) return false;
       if (program && normalizeText(eventProgram(event)) !== program) return false;
       if (unit && normalizeText(eventUnit(event)) !== unit) return false;
@@ -702,16 +743,25 @@
   }
 
   function activeFilterCount() {
-    const content = state.filters.content || 'all';
-    const common = [
-      content !== 'all' ? content : '',
-      state.filters.theme
-    ];
-    const eventSpecific = content === 'events'
-      ? [state.filters.city, state.filters.category, state.filters.program, state.filters.unit]
-      : [];
-    const bookSpecific = content === 'books' ? [state.filters.bookAccess] : [];
-    return [...common, ...eventSpecific, ...bookSpecific].filter(Boolean).length;
+    const defaults = defaultPanelSettings();
+    let count = 0;
+    if (state.panelModules.events !== defaults.modules.events ||
+        state.panelModules.books !== defaults.modules.books) count += 1;
+    if (state.filters.theme) count += 1;
+    if (state.panelModules.events) {
+      if (state.panelEventCities.length) count += 1;
+      if (state.filters.category) count += 1;
+      if (state.filters.program) count += 1;
+      if (state.filters.unit) count += 1;
+    }
+    if (state.panelModules.books) {
+      if (state.panelBookCampuses.length) count += 1;
+      if (state.filters.bookAccess) count += 1;
+    }
+    if (state.panelWeights.events !== defaults.weights.events ||
+        state.panelWeights.books !== defaults.weights.books) count += 1;
+    if (state.slideDuration !== defaults.slideDuration) count += 1;
+    return count;
   }
 
   // Em intervalos acima deste limite, os dias da semana são omitidos
@@ -1519,24 +1569,14 @@
   }
 
   function goToNext() {
-    const completedCycle = state.index >= state.events.length - 1;
-    if (completedCycle && !hasUserFilters()) {
-      advanceSchoolRotation(1);
-      state.index = 0;
-    } else {
-      state.index = (state.index + 1) % state.events.length;
-    }
+    if (!state.events.length) return;
+    state.index = (state.index + 1) % state.events.length;
     renderSlide(state.index);
   }
 
   function goToPrevious() {
-    const crossedStart = state.index === 0;
-    if (crossedStart && !hasUserFilters()) {
-      advanceSchoolRotation(-1);
-      state.index = Math.max(0, state.events.length - 1);
-    } else {
-      state.index = (state.index - 1 + state.events.length) % state.events.length;
-    }
+    if (!state.events.length) return;
+    state.index = (state.index - 1 + state.events.length) % state.events.length;
     renderSlide(state.index);
   }
 
@@ -1557,8 +1597,8 @@
     const count = activeFilterCount();
     const countElement = state.btnFilter.querySelector('.filter-count');
     const description = count
-      ? `Filtrar conteúdos: ${count} filtro${count === 1 ? '' : 's'} ativo${count === 1 ? '' : 's'}`
-      : 'Filtrar conteúdos';
+      ? `Configurar painel: ${count} ajuste${count === 1 ? '' : 's'} ativo${count === 1 ? '' : 's'}`
+      : 'Configurar painel';
 
     state.btnFilter.classList.toggle('has-filters', count > 0);
     state.btnFilter.setAttribute('aria-label', description);
@@ -1607,84 +1647,363 @@
     select.value = selectedValue || '';
   }
 
-  function populateFilterPanel(slide) {
-    const contentSelect = slide.querySelector('.filter-content');
+  function panelCityOptions() {
+    return uniqueFilterOptions(state.allEvents, 'cidade');
+  }
+
+  function panelCampusOptions() {
+    const values = new Map();
+    for (const book of state.allBooks) {
+      const label = bookCampusLabel(book);
+      const value = normalizeText(label);
+      if (label && value && !values.has(value)) values.set(value, label);
+    }
+    return [...values.entries()].sort((a, b) => a[1].localeCompare(b[1], 'pt-BR'));
+  }
+
+  function defaultPanelSettings() {
+    const panel = state.config?.painel || {};
+    const panelModules = panel.modulos_ativos || {};
+    const eventConfig = panel.eventos || {};
+    const bookConfig = panel.livros || {};
+    const frequency = panel.frequencia || {};
+    return {
+      modules: {
+        events: panelModules.eventos !== undefined
+          ? Boolean(panelModules.eventos)
+          : state.config?.modulos?.eventos !== false,
+        books: panelModules.livros !== undefined
+          ? Boolean(panelModules.livros)
+          : state.config?.modulos?.livros !== false
+      },
+      theme: String(panel.tema || ''),
+      eventCities: Array.isArray(eventConfig.cidades) ? eventConfig.cidades.map(normalizeText).filter(Boolean) : [],
+      eventCategory: String(eventConfig.categoria || ''),
+      eventProgram: String(eventConfig.programa || ''),
+      eventUnit: String(eventConfig.espaco || ''),
+      bookCampuses: Array.isArray(bookConfig.campi_acervos) ? bookConfig.campi_acervos.map(normalizeText).filter(Boolean) : [],
+      bookAccess: String(bookConfig.acesso || ''),
+      weights: {
+        events: Math.max(1, Number(frequency.eventos ?? state.config?.proporcao?.eventos_por_livro) || 5),
+        books: Math.max(1, Number(frequency.livros) || 1)
+      },
+      slideDuration: ALLOWED_SLIDE_DURATIONS.has(Number(panel.tempo_slides)) ? Number(panel.tempo_slides) : 0
+    };
+  }
+
+  function normalizePanelSettings(value = {}) {
+    const defaults = defaultPanelSettings();
+    const modules = value.modules || {};
+    const weights = value.weights || {};
+    const clampWeight = number => Math.min(10, Math.max(1, Number(number) || 1));
+
+    return {
+      modules: {
+        events: modules.events !== undefined ? Boolean(modules.events) : defaults.modules.events,
+        books: modules.books !== undefined ? Boolean(modules.books) : defaults.modules.books
+      },
+      theme: String(value.theme || ''),
+      eventCities: Array.isArray(value.eventCities) ? value.eventCities.map(normalizeText).filter(Boolean) : [],
+      eventCategory: String(value.eventCategory || ''),
+      eventProgram: String(value.eventProgram || ''),
+      eventUnit: String(value.eventUnit || ''),
+      bookCampuses: Array.isArray(value.bookCampuses) ? value.bookCampuses.map(normalizeText).filter(Boolean) : [],
+      bookAccess: String(value.bookAccess || ''),
+      weights: {
+        events: clampWeight(weights.events ?? defaults.weights.events),
+        books: clampWeight(weights.books ?? defaults.weights.books)
+      },
+      slideDuration: ALLOWED_SLIDE_DURATIONS.has(Number(value.slideDuration))
+        ? Number(value.slideDuration)
+        : defaults.slideDuration
+    };
+  }
+
+  function currentPanelSettings() {
+    return normalizePanelSettings({
+      modules: state.panelModules,
+      theme: state.filters.theme,
+      eventCities: state.panelEventCities,
+      eventCategory: state.filters.category,
+      eventProgram: state.filters.program,
+      eventUnit: state.filters.unit,
+      bookCampuses: state.panelBookCampuses,
+      bookAccess: state.filters.bookAccess,
+      weights: state.panelWeights,
+      slideDuration: state.slideDuration
+    });
+  }
+
+  function applyPanelSettings(settings, persist = false) {
+    const value = normalizePanelSettings(settings);
+    state.panelModules = { ...value.modules };
+    state.panelEventCities = [...value.eventCities];
+    state.panelBookCampuses = [...value.bookCampuses];
+    state.panelWeights = { ...value.weights };
+    state.filters = {
+      content: 'all',
+      theme: value.theme,
+      category: value.eventCategory,
+      program: value.eventProgram,
+      unit: value.eventUnit,
+      period: 'all',
+      rating: '',
+      bookAccess: value.bookAccess
+    };
+    state.slideDuration = value.slideDuration;
+
+    if (persist) {
+      try {
+        localStorage.setItem(PANEL_SETTINGS_KEY, JSON.stringify(value));
+        localStorage.setItem(SLIDE_DURATION_KEY, String(value.slideDuration));
+      } catch {
+        /* A programação continua funcionando quando o armazenamento está indisponível. */
+      }
+    }
+  }
+
+  function loadStoredPanelSettings() {
+    const requestedProfile = findRequestedPanelProfile();
+    if (requestedProfile) {
+      applyPanelSettings(requestedProfile, false);
+      return;
+    }
+
+    const defaults = defaultPanelSettings();
+    let stored = null;
+    try {
+      stored = JSON.parse(localStorage.getItem(PANEL_SETTINGS_KEY) || 'null');
+    } catch {
+      stored = null;
+    }
+
+    if (!stored) {
+      defaults.slideDuration = storedSlideDuration();
+      applyPanelSettings(defaults, false);
+      return;
+    }
+
+    applyPanelSettings(stored, false);
+  }
+
+  function readPanelProfiles() {
+    try {
+      const parsed = JSON.parse(localStorage.getItem(PANEL_PROFILES_KEY) || '{}');
+      return parsed && typeof parsed === 'object' && !Array.isArray(parsed) ? parsed : {};
+    } catch {
+      return {};
+    }
+  }
+
+
+  function panelProfileSlug(value = '') {
+    return normalizeText(value)
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+  }
+
+  function requestedPanelProfile() {
+    try {
+      return panelProfileSlug(new URLSearchParams(window.location.search).get('perfil') || '');
+    } catch {
+      return '';
+    }
+  }
+
+  function configuredPanelProfiles() {
+    const profiles = state.config?.perfis_painel;
+    return profiles && typeof profiles === 'object' && !Array.isArray(profiles) ? profiles : {};
+  }
+
+  function findRequestedPanelProfile() {
+    const requested = requestedPanelProfile();
+    if (!requested) return null;
+    const candidates = {
+      ...configuredPanelProfiles(),
+      ...readPanelProfiles()
+    };
+    for (const [name, settings] of Object.entries(candidates)) {
+      if (panelProfileSlug(name) === requested) return settings;
+    }
+    return null;
+  }
+
+  function writePanelProfiles(profiles) {
+    try {
+      localStorage.setItem(PANEL_PROFILES_KEY, JSON.stringify(profiles));
+    } catch {
+      /* Perfis são um recurso opcional. */
+    }
+  }
+
+  function populateProfileSelect(slide, selectedName = '') {
+    const select = slide.querySelector('.panel-profile-select');
+    if (!select) return;
+    const profiles = readPanelProfiles();
+    select.replaceChildren();
+    const current = document.createElement('option');
+    current.value = '';
+    current.textContent = 'Configuração atual';
+    select.append(current);
+    Object.keys(profiles)
+      .sort((a, b) => a.localeCompare(b, 'pt-BR'))
+      .forEach(name => {
+        const option = document.createElement('option');
+        option.value = name;
+        option.textContent = name;
+        select.append(option);
+      });
+    select.value = Object.hasOwn(profiles, selectedName) ? selectedName : '';
+    const deleteButton = slide.querySelector('.panel-profile-delete');
+    if (deleteButton) deleteButton.disabled = !select.value;
+  }
+
+  function populateCheckboxOptions(container, options, selectedValues) {
+    if (!container) return;
+    container.replaceChildren();
+    const selected = new Set((selectedValues || []).map(normalizeText));
+    const unrestricted = selected.size === 0;
+    container.dataset.unrestricted = unrestricted ? 'true' : 'false';
+    const combined = new Map(options);
+    for (const value of selected) {
+      if (!combined.has(value)) combined.set(value, `${value} · sem itens atuais`);
+    }
+
+    if (!combined.size) {
+      const empty = document.createElement('span');
+      empty.className = 'panel-options-empty';
+      empty.textContent = 'Nenhuma opção disponível nos dados atuais.';
+      container.append(empty);
+      return;
+    }
+
+    for (const [value, label] of combined) {
+      const option = document.createElement('label');
+      option.className = 'panel-check-option';
+      const input = document.createElement('input');
+      input.type = 'checkbox';
+      input.value = value;
+      input.checked = unrestricted || selected.has(value);
+      const text = document.createElement('span');
+      text.textContent = label;
+      option.append(input, text);
+      container.append(option);
+    }
+  }
+
+  function checkedFilterValues(container) {
+    if (!container) return [];
+    const inputs = [...container.querySelectorAll('input[type="checkbox"]')];
+    if (!inputs.length) return [];
+    const checked = inputs.filter(input => input.checked).map(input => input.value);
+    if (container.dataset.unrestricted === 'true' && checked.length === inputs.length) return [];
+    return checked;
+  }
+
+  function showPanelValidation(slide, message = '') {
+    const box = slide.querySelector('.panel-validation');
+    if (!box) return;
+    box.textContent = message;
+    box.hidden = !message;
+    if (message) box.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  }
+
+  function readPanelSettingsFromOverlay(slide) {
+    const eventsEnabled = Boolean(slide.querySelector('.panel-module-events')?.checked);
+    const booksEnabled = Boolean(slide.querySelector('.panel-module-books')?.checked);
+    if (!eventsEnabled && !booksEnabled) {
+      throw new Error('Ative pelo menos um tipo de conteúdo para o painel.');
+    }
+
+    const cityContainer = slide.querySelector('.panel-city-options');
+    const campusContainer = slide.querySelector('.panel-campus-options');
+    if (eventsEnabled && cityContainer?.querySelectorAll('input').length &&
+        !cityContainer.querySelector('input:checked')) {
+      throw new Error('Selecione pelo menos uma cidade para os eventos ou desative o módulo Eventos.');
+    }
+    if (booksEnabled && campusContainer?.querySelectorAll('input').length &&
+        !campusContainer.querySelector('input:checked')) {
+      throw new Error('Selecione pelo menos um campus/acervo para os livros ou desative o módulo Livros.');
+    }
+
+    return normalizePanelSettings({
+      modules: { events: eventsEnabled, books: booksEnabled },
+      theme: slide.querySelector('.filter-theme')?.value || '',
+      eventCities: checkedFilterValues(cityContainer),
+      eventCategory: slide.querySelector('.filter-category')?.value || '',
+      eventProgram: slide.querySelector('.filter-program')?.value || '',
+      eventUnit: slide.querySelector('.filter-unit')?.value || '',
+      bookCampuses: checkedFilterValues(campusContainer),
+      bookAccess: slide.querySelector('.filter-book-access')?.value || '',
+      weights: {
+        events: slide.querySelector('.panel-event-weight')?.value || 5,
+        books: slide.querySelector('.panel-book-weight')?.value || 1
+      },
+      slideDuration: slide.querySelector('.filter-slide-duration')?.value || 0
+    });
+  }
+
+  function updatePanelModuleVisibility(slide) {
+    const eventsEnabled = Boolean(slide.querySelector('.panel-module-events')?.checked);
+    const booksEnabled = Boolean(slide.querySelector('.panel-module-books')?.checked);
+    const eventSection = slide.querySelector('.panel-event-section');
+    const bookSection = slide.querySelector('.panel-book-section');
+    if (eventSection) eventSection.hidden = !eventsEnabled;
+    if (bookSection) bookSection.hidden = !booksEnabled;
+  }
+
+  function populateFilterPanel(slide, settings = currentPanelSettings()) {
+    const value = normalizePanelSettings(settings);
     const themeSelect = slide.querySelector('.filter-theme');
-    const citySelect = slide.querySelector('.filter-city');
     const categorySelect = slide.querySelector('.filter-category');
     const programSelect = slide.querySelector('.filter-program');
     const unitSelect = slide.querySelector('.filter-unit');
     const bookAccessSelect = slide.querySelector('.filter-book-access');
     const durationSelect = slide.querySelector('.filter-slide-duration');
 
-    if (contentSelect) contentSelect.value = state.filters.content || 'all';
-    if (durationSelect) durationSelect.value = String(state.slideDuration || 0);
+    const eventsToggle = slide.querySelector('.panel-module-events');
+    const booksToggle = slide.querySelector('.panel-module-books');
+    if (eventsToggle) eventsToggle.checked = value.modules.events;
+    if (booksToggle) booksToggle.checked = value.modules.books;
+    if (durationSelect) durationSelect.value = String(value.slideDuration || 0);
+    const eventWeight = slide.querySelector('.panel-event-weight');
+    const bookWeight = slide.querySelector('.panel-book-weight');
+    if (eventWeight) eventWeight.value = String(value.weights.events);
+    if (bookWeight) bookWeight.value = String(value.weights.books);
 
-    populateDynamicSelect(
-      themeSelect,
-      'Todos os temas',
-      universalThemeOptions(),
-      state.filters.theme
-    );
-
-    populateDynamicSelect(
-      citySelect,
-      'Todas as cidades',
-      uniqueFilterOptions(state.allEvents, 'cidade'),
-      state.filters.city
-    );
+    populateDynamicSelect(themeSelect, 'Todos os temas', universalThemeOptions(), value.theme);
 
     const categoryValues = new Map(uniqueFilterOptions(state.allEvents, 'categoria'));
     for (const event of state.allEvents) {
       for (const label of [event.area_artistica, ...(Array.isArray(event.areas) ? event.areas : [])]) {
-        const value = normalizeText(label);
-        if (label && value && !categoryValues.has(value)) categoryValues.set(value, label);
+        const normalized = normalizeText(label);
+        if (label && normalized && !categoryValues.has(normalized)) categoryValues.set(normalized, label);
       }
     }
     populateDynamicSelect(
       categorySelect,
       'Todas as categorias e linguagens',
       [...categoryValues.entries()].sort((a, b) => a[1].localeCompare(b[1], 'pt-BR')),
-      state.filters.category
+      value.eventCategory
     );
-
     populateDynamicSelect(
       programSelect,
       'Todas as instituições e programas',
       uniqueFilterOptions(state.allEvents.map(event => ({ programa: eventProgram(event) })), 'programa'),
-      state.filters.program
+      value.eventProgram
     );
-
     populateDynamicSelect(
       unitSelect,
       'Todos os espaços',
       uniqueFilterOptions(state.allEvents.map(event => ({ unidade: eventUnit(event) })), 'unidade'),
-      state.filters.unit
+      value.eventUnit
     );
 
-    if (bookAccessSelect) bookAccessSelect.value = state.filters.bookAccess || '';
-    updateFilterFieldVisibility(slide);
-  }
-
-  function updateFilterFieldVisibility(slide) {
-    const content = slide.querySelector('.filter-content')?.value || 'all';
-    const toggle = slide.querySelector('.filter-more-toggle');
-    const canShowMore = content === 'events' || content === 'books';
-
-    if (toggle) {
-      const wrap = toggle.closest('.filter-more-wrap');
-      if (wrap) wrap.hidden = !canShowMore;
-      toggle.hidden = !canShowMore;
-      toggle.textContent = state.panelMoreFiltersOpen ? 'Menos filtros' : 'Mais filtros';
-      toggle.setAttribute('aria-expanded', String(canShowMore && state.panelMoreFiltersOpen));
-    }
-
-    slide.querySelectorAll('.event-filter-field').forEach(field => {
-      field.hidden = !(content === 'events' && state.panelMoreFiltersOpen);
-    });
-    slide.querySelectorAll('.book-filter-field').forEach(field => {
-      field.hidden = !(content === 'books' && state.panelMoreFiltersOpen);
-    });
+    populateCheckboxOptions(slide.querySelector('.panel-city-options'), panelCityOptions(), value.eventCities);
+    populateCheckboxOptions(slide.querySelector('.panel-campus-options'), panelCampusOptions(), value.bookCampuses);
+    if (bookAccessSelect) bookAccessSelect.value = value.bookAccess;
+    updatePanelModuleVisibility(slide);
+    showPanelValidation(slide, '');
   }
 
   function openFilterPanel() {
@@ -1705,9 +2024,16 @@
     state.btnFilter?.setAttribute('aria-expanded', 'false');
     state.btnFilter?.focus();
 
-    if (!state.isPaused) {
-      scheduleNextSlide();
-    }
+    if (!state.isPaused) scheduleNextSlide();
+  }
+
+  function restoreDefaultPanelSettings(render = true) {
+    const defaults = defaultPanelSettings();
+    applyPanelSettings(defaults, true);
+    if (!render) return;
+    rebuildVisibleItems();
+    state.index = 0;
+    renderCurrentView();
   }
 
   function showFilteredEmpty() {
@@ -1717,60 +2043,73 @@
       <section class="empty filtered-empty">
         <div>
           <h1>Nenhum conteúdo encontrado</h1>
-          <p>Não há eventos ou livros que correspondam aos filtros selecionados.</p>
-          <button class="empty-clear-filters" type="button">Limpar filtros</button>
+          <p>A programação escolhida não possui itens disponíveis neste momento.</p>
+          <button class="empty-clear-filters" type="button">Restaurar programação padrão</button>
         </div>
       </section>
     `;
 
     app.querySelector('.empty-clear-filters')?.addEventListener('click', () => {
-      state.filters = { content: 'all', theme: '', city: '', category: '', program: '', unit: '', period: 'all', rating: '', bookAccess: '' };
-      state.panelMoreFiltersOpen = false;
+      restoreDefaultPanelSettings(false);
       rebuildVisibleItems();
       state.index = 0;
-      renderSlide(0);
+      renderCurrentView();
     });
   }
 
   function applyFiltersFromPanel() {
     if (!state.filterOverlay) return;
+    try {
+      const settings = readPanelSettingsFromOverlay(state.filterOverlay);
+      applyPanelSettings(settings, true);
+      rebuildVisibleItems();
+      state.index = 0;
 
-    saveSlideDuration(state.filterOverlay.querySelector('.filter-slide-duration')?.value || 0);
+      if (!state.events.length) {
+        showFilteredEmpty();
+        return;
+      }
 
-    const content = state.filterOverlay.querySelector('.filter-content')?.value || 'all';
-    state.filters = {
-      content,
-      theme: state.filterOverlay.querySelector('.filter-theme')?.value || '',
-      city: content === 'events' ? state.filterOverlay.querySelector('.filter-city')?.value || '' : '',
-      category: content === 'events' ? state.filterOverlay.querySelector('.filter-category')?.value || '' : '',
-      program: content === 'events' ? state.filterOverlay.querySelector('.filter-program')?.value || '' : '',
-      unit: content === 'events' ? state.filterOverlay.querySelector('.filter-unit')?.value || '' : '',
-      period: 'all',
-      rating: '',
-      bookAccess: content === 'books' ? state.filterOverlay.querySelector('.filter-book-access')?.value || '' : ''
-    };
-
-    rebuildVisibleItems();
-    state.index = 0;
-
-    if (!state.events.length) {
-      showFilteredEmpty();
-      return;
+      renderCurrentView();
+    } catch (error) {
+      showPanelValidation(state.filterOverlay, error.message || 'Revise a configuração do painel.');
     }
-
-    renderCurrentView();
   }
 
   function clearUserFilters() {
-    state.filters = { content: 'all', theme: '', city: '', category: '', program: '', unit: '', period: 'all', rating: '', bookAccess: '' };
-    state.panelMoreFiltersOpen = false;
-    rebuildVisibleItems();
-    state.index = 0;
-    renderCurrentView();
+    restoreDefaultPanelSettings();
+  }
+
+  function savePanelProfile(slide) {
+    try {
+      const nameInput = slide.querySelector('.panel-profile-name');
+      const name = String(nameInput?.value || '').trim();
+      if (!name) throw new Error('Digite um nome para o perfil antes de salvá-lo.');
+      const settings = readPanelSettingsFromOverlay(slide);
+      const profiles = readPanelProfiles();
+      profiles[name] = settings;
+      writePanelProfiles(profiles);
+      populateProfileSelect(slide, name);
+      if (nameInput) nameInput.value = '';
+      showPanelValidation(slide, '');
+    } catch (error) {
+      showPanelValidation(slide, error.message || 'Não foi possível salvar o perfil.');
+    }
+  }
+
+  function deletePanelProfile(slide) {
+    const select = slide.querySelector('.panel-profile-select');
+    const name = select?.value || '';
+    if (!name) return;
+    const profiles = readPanelProfiles();
+    delete profiles[name];
+    writePanelProfiles(profiles);
+    populateProfileSelect(slide, '');
   }
 
   function setupFilterPanel(slide) {
     populateFilterPanel(slide);
+    populateProfileSelect(slide);
 
     const overlay = slide.querySelector('.filter-overlay');
     const closeButton = slide.querySelector('.filter-close');
@@ -1779,14 +2118,24 @@
 
     closeButton?.addEventListener('click', closeFilterPanel);
     applyButton?.addEventListener('click', applyFiltersFromPanel);
-    clearButton?.addEventListener('click', clearUserFilters);
-    slide.querySelector('.filter-content')?.addEventListener('change', () => {
-      state.panelMoreFiltersOpen = false;
-      updateFilterFieldVisibility(slide);
+    clearButton?.addEventListener('click', () => {
+      const defaults = defaultPanelSettings();
+      populateFilterPanel(slide, defaults);
+      const profileSelect = slide.querySelector('.panel-profile-select');
+      if (profileSelect) profileSelect.value = '';
+      showPanelValidation(slide, '');
     });
-    slide.querySelector('.filter-more-toggle')?.addEventListener('click', () => {
-      state.panelMoreFiltersOpen = !state.panelMoreFiltersOpen;
-      updateFilterFieldVisibility(slide);
+
+    slide.querySelector('.panel-module-events')?.addEventListener('change', () => updatePanelModuleVisibility(slide));
+    slide.querySelector('.panel-module-books')?.addEventListener('change', () => updatePanelModuleVisibility(slide));
+    slide.querySelector('.panel-profile-save')?.addEventListener('click', () => savePanelProfile(slide));
+    slide.querySelector('.panel-profile-delete')?.addEventListener('click', () => deletePanelProfile(slide));
+    slide.querySelector('.panel-profile-select')?.addEventListener('change', event => {
+      const profiles = readPanelProfiles();
+      const selected = event.target.value;
+      if (selected && profiles[selected]) populateFilterPanel(slide, profiles[selected]);
+      const deleteButton = slide.querySelector('.panel-profile-delete');
+      if (deleteButton) deleteButton.disabled = !selected;
     });
 
     overlay?.addEventListener('click', event => {
@@ -2419,8 +2768,8 @@
       state.config = config || {};
       state.allEvents = filterAndSort(data.eventos).map(event => ({ ...event, tipo_conteudo: 'evento' }));
       state.allBooks = (state.booksData.livros || []).map(book => ({ ...book, tipo_conteudo: 'livro' }));
-      state.filters.content = state.config?.filtros?.conteudo_padrao || 'all';
       state.schoolRotationBatch = readStoredSchoolBatch();
+      loadStoredPanelSettings();
       rebuildVisibleItems();
 
       if (!state.events.length) {
@@ -2429,7 +2778,6 @@
       }
 
       state.viewMode = storedViewMode();
-      state.slideDuration = storedSlideDuration();
       renderCurrentView();
     } catch (error) {
       console.error(error);

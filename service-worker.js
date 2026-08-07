@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v61.1';
+const CACHE_VERSION = 'mural-cultural-v62';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;

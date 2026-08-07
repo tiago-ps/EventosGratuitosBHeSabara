@@ -15,7 +15,7 @@
   <link rel="apple-touch-icon" href="imagens/app-icons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="imagens/app-icons/favicon-32.png">
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="stylesheet" href="css/styles.css?v=61">
+  <link rel="stylesheet" href="css/styles.css?v=62">
   <link rel="stylesheet" href="css/eventos-manuais-ui.css?v=42">
 </head>
 <body>
@@ -39,8 +39,8 @@
         <div class="controls" aria-label="Controles da apresentação">
           <button
             class="control-btn filter-btn"
-            aria-label="Filtrar conteúdos"
-            title="Filtrar conteúdos"
+            aria-label="Configurar painel"
+            title="Configurar painel"
             aria-expanded="false"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -191,7 +191,7 @@
 
       <div class="filter-overlay" hidden>
         <section
-          class="filter-panel"
+          class="filter-panel panel-composer"
           role="dialog"
           aria-modal="true"
           aria-labelledby="filter-title"
@@ -199,80 +199,151 @@
           <header class="filter-header">
             <div>
               <p class="filter-eyebrow">Modo painel</p>
-              <h2 id="filter-title">Configurar exibição</h2>
+              <h2 id="filter-title">Montar programação</h2>
+              <p class="filter-intro">Combine diferentes conteúdos e defina filtros próprios para cada módulo.</p>
             </div>
             <button class="filter-close" type="button" aria-label="Fechar filtros" title="Fechar">×</button>
           </header>
+          <p class="panel-validation" role="alert" hidden></p>
 
-          <div class="filter-grid">
-            <label>
-              <span>Conteúdo</span>
-              <select class="filter-content">
-                <option value="all">Todos</option>
-                <option value="events">Eventos</option>
-                <option value="books">Livros</option>
-              </select>
-            </label>
-
-            <label>
-              <span>Tema</span>
-              <select class="filter-theme">
-                <option value="">Todos os temas</option>
-              </select>
-            </label>
-
-            <label>
-              <span>Tempo dos slides</span>
-              <select class="filter-slide-duration">
-                <option value="0">Padrão de cada conteúdo</option>
-                <option value="5">5 segundos</option>
-                <option value="8">8 segundos</option>
-                <option value="10">10 segundos</option>
-                <option value="12">12 segundos</option>
-                <option value="15">15 segundos</option>
-                <option value="20">20 segundos</option>
-                <option value="30">30 segundos</option>
-              </select>
-            </label>
-
-            <div class="filter-more-wrap">
-              <button class="filter-more-toggle" type="button" aria-expanded="false">Mais filtros</button>
+          <section class="panel-profile-section" aria-label="Perfis do painel">
+            <div class="panel-profile-grid">
+              <label>
+                <span>Perfil do painel</span>
+                <select class="panel-profile-select">
+                  <option value="">Configuração atual</option>
+                </select>
+              </label>
+              <label>
+                <span>Nome para salvar</span>
+                <input class="panel-profile-name" type="text" maxlength="60" placeholder="Ex.: IFMG Betim">
+              </label>
+              <button class="panel-profile-save" type="button">Salvar perfil</button>
+              <button class="panel-profile-delete" type="button">Excluir perfil</button>
             </div>
+          </section>
 
-            <label class="filter-advanced-field event-filter-field" hidden>
-              <span>Cidade</span>
-              <select class="filter-city"><option value="">Todas as cidades</option></select>
-            </label>
+          <section class="panel-config-section panel-modules-section">
+            <div class="panel-section-heading">
+              <div>
+                <h3>Exibir no painel</h3>
+                <p>Ative os tipos de conteúdo que farão parte da rotação.</p>
+              </div>
+            </div>
+            <div class="panel-module-switches">
+              <label class="panel-module-toggle">
+                <input class="panel-module-events" type="checkbox" checked>
+                <span>Eventos</span>
+              </label>
+              <label class="panel-module-toggle">
+                <input class="panel-module-books" type="checkbox" checked>
+                <span>Livros</span>
+              </label>
+            </div>
+          </section>
 
-            <label class="filter-advanced-field event-filter-field" hidden>
-              <span>Categoria / linguagem</span>
-              <select class="filter-category"><option value="">Todas as categorias</option></select>
-            </label>
+          <section class="panel-config-section">
+            <div class="panel-section-heading">
+              <div>
+                <h3>Configuração geral</h3>
+                <p>Estas opções se aplicam a todos os conteúdos ativos.</p>
+              </div>
+            </div>
+            <div class="filter-grid panel-general-grid">
+              <label>
+                <span>Tema</span>
+                <select class="filter-theme"><option value="">Todos os temas</option></select>
+              </label>
+              <label>
+                <span>Tempo dos slides</span>
+                <select class="filter-slide-duration">
+                  <option value="0">Padrão de cada conteúdo</option>
+                  <option value="5">5 segundos</option>
+                  <option value="8">8 segundos</option>
+                  <option value="10">10 segundos</option>
+                  <option value="12">12 segundos</option>
+                  <option value="15">15 segundos</option>
+                  <option value="20">20 segundos</option>
+                  <option value="30">30 segundos</option>
+                </select>
+              </label>
+            </div>
+          </section>
 
-            <label class="filter-advanced-field event-filter-field" hidden>
-              <span>Instituição / programa</span>
-              <select class="filter-program"><option value="">Todas as instituições</option></select>
-            </label>
+          <section class="panel-config-section panel-event-section">
+            <div class="panel-section-heading">
+              <div>
+                <h3>Eventos</h3>
+                <p>Escolha as cidades e, se quiser, restrinja linguagem, instituição ou espaço.</p>
+              </div>
+              <label class="panel-weight-field">
+                <span>Frequência</span>
+                <select class="panel-event-weight">
+                  <option value="1">1</option><option value="2">2</option><option value="3">3</option>
+                  <option value="4">4</option><option value="5">5</option><option value="6">6</option>
+                  <option value="7">7</option><option value="8">8</option><option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </label>
+            </div>
+            <div class="panel-multiselect-field">
+              <span>Cidades</span>
+              <div class="panel-checkbox-list panel-city-options" aria-label="Cidades dos eventos"></div>
+            </div>
+            <div class="filter-grid">
+              <label>
+                <span>Categoria / linguagem</span>
+                <select class="filter-category"><option value="">Todas as categorias</option></select>
+              </label>
+              <label>
+                <span>Instituição / programa</span>
+                <select class="filter-program"><option value="">Todas as instituições</option></select>
+              </label>
+              <label>
+                <span>Espaço</span>
+                <select class="filter-unit"><option value="">Todos os espaços</option></select>
+              </label>
+            </div>
+          </section>
 
-            <label class="filter-advanced-field event-filter-field" hidden>
-              <span>Espaço</span>
-              <select class="filter-unit"><option value="">Todos os espaços</option></select>
-            </label>
+          <section class="panel-config-section panel-book-section">
+            <div class="panel-section-heading">
+              <div>
+                <h3>Livros</h3>
+                <p>O acervo é independente das cidades selecionadas para os eventos.</p>
+              </div>
+              <label class="panel-weight-field">
+                <span>Frequência</span>
+                <select class="panel-book-weight">
+                  <option value="1">1</option><option value="2">2</option><option value="3">3</option>
+                  <option value="4">4</option><option value="5">5</option><option value="6">6</option>
+                  <option value="7">7</option><option value="8">8</option><option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </label>
+            </div>
+            <div class="panel-multiselect-field">
+              <span>Campus / acervo</span>
+              <div class="panel-checkbox-list panel-campus-options" aria-label="Campus ou acervos dos livros"></div>
+            </div>
+            <div class="filter-grid panel-book-grid">
+              <label>
+                <span>Forma de acesso</span>
+                <select class="filter-book-access">
+                  <option value="">Físico ou virtual</option>
+                  <option value="physical">Acervo físico</option>
+                  <option value="virtual">Biblioteca virtual</option>
+                  <option value="both">Físico e virtual</option>
+                </select>
+              </label>
+            </div>
+          </section>
 
-            <label class="filter-advanced-field book-filter-field" hidden>
-              <span>Forma de acesso</span>
-              <select class="filter-book-access">
-                <option value="">Físico ou virtual</option>
-                <option value="physical">Acervo físico</option>
-                <option value="virtual">Biblioteca virtual</option>
-                <option value="both">Físico e virtual</option>
-              </select>
-            </label>
-          </div>
+          <p class="panel-frequency-help">A frequência define o peso de cada módulo na rotação. Ex.: Eventos 5 + Livros 1 reproduz aproximadamente cinco eventos para cada sugestão de leitura.</p>
 
           <div class="filter-actions">
-            <button class="filter-clear" type="button">Limpar filtros</button>
-            <button class="filter-apply" type="button">Aplicar filtros</button>
+            <button class="filter-clear" type="button">Carregar padrão</button>
+            <button class="filter-apply" type="button">Aplicar programação</button>
           </div>
         </section>
       </div>
@@ -282,7 +353,7 @@
   </template>
 
   <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
-  <script src="js/app.js?v=61" defer></script>
+  <script src="js/app.js?v=62" defer></script>
   <script src="js/eventos-manuais-ui.js?v=42" defer></script>
 
 </body>
