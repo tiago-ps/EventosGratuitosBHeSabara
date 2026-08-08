@@ -361,8 +361,8 @@
 
   function bookCampusLabel(book) {
     const explicit = [
-      book.campus, book.campus_acervo, book.unidade_acervo,
-      book.biblioteca, book.acervo
+      book.campus, book.campus_acervo, book.unidade_acervo, book.unidade,
+      book.biblioteca, book.biblioteca_rede, book.acervo
     ].map(value => String(value || '').trim()).find(Boolean);
 
     const raw = explicit || String(book.fonte || state.booksData?.origem || '').trim();
@@ -1519,7 +1519,9 @@
     copy.querySelector('.book-support').textContent = book.texto_apoio || '';
     copy.querySelector('.book-title').textContent = book.titulo || '';
     copy.querySelector('.book-author').textContent = book.autor || '';
-    const callText = String(book.numero_chamada || '').trim();
+    const callNumber = String(book.numero_chamada || '').trim();
+    const unitText = String(book.unidade || '').trim();
+    const callText = [callNumber ? `Número de chamada: ${callNumber}` : '', unitText].filter(Boolean).join(' • ');
     copy.querySelector('.book-call').textContent = callText;
 
     const accessLabels = [];
@@ -1531,7 +1533,7 @@
       const count = Number(book.exemplares_fisicos_catalogados || 0);
       availability.push(`${count} ${count === 1 ? 'exemplar físico catalogado' : 'exemplares físicos catalogados'}`);
       if (Number(book.outras_edicoes_fisicas || 0) > 0) {
-        availability.push(`+ ${book.outras_edicoes_fisicas} outra${Number(book.outras_edicoes_fisicas) === 1 ? '' : 's'} edição${Number(book.outras_edicoes_fisicas) === 1 ? '' : 'ões'} em Sabará`);
+        availability.push(`+ ${book.outras_edicoes_fisicas} outra${Number(book.outras_edicoes_fisicas) === 1 ? '' : 's'} edição${Number(book.outras_edicoes_fisicas) === 1 ? '' : 'ões'} catalogada${Number(book.outras_edicoes_fisicas) === 1 ? '' : 's'}`);
       }
     }
     if (book.acesso_virtual) availability.push('edição virtual');
@@ -2550,7 +2552,7 @@
           <h2>${escapeHtml(item.pergunta_curiosidade || item.titulo || 'Livro')}</h2>
           <p class="agenda-card-place"><strong class="agenda-book-title">${escapeHtml(item.titulo || '')}</strong> · ${escapeHtml(item.autor || '')}</p>
           <p class="agenda-card-description">${escapeHtml(item.texto_apoio || '')}</p>
-          ${item.numero_chamada ? `<p class="agenda-card-call">Número de chamada: ${escapeHtml(item.numero_chamada)}</p>` : ''}
+          ${(item.numero_chamada || item.unidade) ? `<p class="agenda-card-call">${item.numero_chamada ? `Número de chamada: ${escapeHtml(item.numero_chamada)}` : ''}${item.numero_chamada && item.unidade ? ' • ' : ''}${item.unidade ? escapeHtml(item.unidade) : ''}</p>` : ''}
           ${item.exibir_comentario && item.comentario_aprovado ? `<blockquote class="agenda-book-opinion">“${escapeHtml(item.comentario_aprovado)}”<cite>${escapeHtml(item.credito_comentario || 'Leitor(a) do IFMG')}</cite></blockquote>` : ''}
           <div class="agenda-card-actions">
             ${link ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer">Encontrar este livro</a>` : ''}
