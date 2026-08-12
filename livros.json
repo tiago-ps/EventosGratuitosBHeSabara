@@ -1,6 +1,6 @@
 {
   "versao": 2,
-  "atualizado_em": "2026-08-12T03:44:51.307357+00:00",
+  "atualizado_em": "2026-08-12T04:28:58.732043+00:00",
   "titulo": "Descobertas de leitura",
   "origem": "Acervos consultados em catálogos públicos Pergamum e bases institucionais",
   "aviso": "Seleção construída progressivamente e sujeita a curadoria. Não representa a totalidade dos acervos. Consulte o registro oficial para confirmar localização e disponibilidade.",
@@ -734,11 +734,11 @@
       "unidade": "IFMG São João Evangelista",
       "biblioteca_rede": "Bibliotecas do IFMG",
       "codigo_acervo": "103266",
-      "exemplares_fisicos_catalogados": 7,
+      "exemplares_fisicos_catalogados": 8,
       "outras_edicoes_fisicas": 0,
       "acesso_fisico": true,
       "acesso_virtual": false,
-      "link_fisico": "http://200.198.28.214/acervo/219920",
+      "link_fisico": "http://200.198.28.214/acervo/217282",
       "link_virtual": "",
       "link": "https://pergamum.ifmg.edu.br/acervo/103266",
       "tipo_link_principal": "fisico",
@@ -759,6 +759,7 @@
       "observacoes": "Importado de pesquisa progressiva; revisar antes de publicar.",
       "id_obra": "obra-eu-nao-sou-uma-mulher-mulheres-negras-e-feminismo-f2828c5b",
       "registros_ids": [
+        "biblioteca-publica-estadual-de-minas-gerais-217282",
         "biblioteca-publica-estadual-de-minas-gerais-219920",
         "bibliotecas-do-ifmg-103266",
         "bibliotecas-ufmg-660938",
@@ -772,8 +773,25 @@
           "unidade": "",
           "acesso_fisico": true,
           "acesso_virtual": false,
-          "exemplares_fisicos_catalogados": 1,
+          "exemplares_fisicos_catalogados": 2,
           "registros": [
+            {
+              "registro_id": "biblioteca-publica-estadual-de-minas-gerais-217282",
+              "titulo_registro": "Eu não sou uma mulher? : mulheres negras e feminismo, E - 1. ed. [Exemplar / 2022",
+              "autor_registro": "bell hooks",
+              "biblioteca_rede": "Biblioteca Pública Estadual de Minas Gerais",
+              "unidade": "",
+              "codigo_acervo": "217282",
+              "numero_chamada": "305.42 H783a.Pl 2022",
+              "exemplares_fisicos_catalogados": 1,
+              "acesso_fisico": true,
+              "acesso_virtual": false,
+              "link_fisico": "http://200.198.28.214/acervo/217282",
+              "link_virtual": "",
+              "link": "http://200.198.28.214/acervo/217282",
+              "tipo_link_principal": "fisico",
+              "fonte": "Biblioteca Pública Estadual de Minas Gerais"
+            },
             {
               "registro_id": "biblioteca-publica-estadual-de-minas-gerais-219920",
               "titulo_registro": "Eu não sou uma mulher?: mulheres negras e feminismo, E - 14. ed. / 2023",
@@ -821,36 +839,19 @@
           ]
         },
         {
-          "biblioteca": "Bibliotecas UFMG",
+          "biblioteca": "Bibliotecas UFMG — Faculdade de Ciências Econômicas",
           "biblioteca_rede": "Bibliotecas UFMG",
-          "unidade": "",
+          "unidade": "Faculdade de Ciências Econômicas",
           "acesso_fisico": true,
           "acesso_virtual": false,
-          "exemplares_fisicos_catalogados": 5,
+          "exemplares_fisicos_catalogados": 4,
           "registros": [
-            {
-              "registro_id": "bibliotecas-ufmg-660938",
-              "titulo_registro": "E eu não sou uma mulher? : mulheres negras e feminismo - 1. ed. / 2019",
-              "autor_registro": "",
-              "biblioteca_rede": "Bibliotecas UFMG",
-              "unidade": "",
-              "codigo_acervo": "660938",
-              "numero_chamada": "305.42 H784a.Pl 2019",
-              "exemplares_fisicos_catalogados": 1,
-              "acesso_fisico": true,
-              "acesso_virtual": false,
-              "link_fisico": "https://catalogobiblioteca.ufmg.br/acervo/660938",
-              "link_virtual": "",
-              "link": "https://catalogobiblioteca.ufmg.br/acervo/660938",
-              "tipo_link_principal": "fisico",
-              "fonte": "Bibliotecas UFMG"
-            },
             {
               "registro_id": "bibliotecas-ufmg-676195",
               "titulo_registro": "E eu não sou uma mulher? : mulheres negras e feminismo - 11. ed. / 2022",
-              "autor_registro": "",
+              "autor_registro": "bell hooks",
               "biblioteca_rede": "Bibliotecas UFMG",
-              "unidade": "",
+              "unidade": "Faculdade de Ciências Econômicas",
               "codigo_acervo": "676195",
               "numero_chamada": "305.42 H784e 11.ed.",
               "exemplares_fisicos_catalogados": 1,
@@ -860,14 +861,14 @@
               "link_virtual": "",
               "link": "https://catalogobiblioteca.ufmg.br/acervo/676195",
               "tipo_link_principal": "fisico",
-              "fonte": "Bibliotecas UFMG"
+              "fonte": "Bibliotecas UFMG — Faculdade de Ciências Econômicas"
             },
             {
               "registro_id": "bibliotecas-ufmg-694176",
               "titulo_registro": "E eu não sou uma mulher? : mulheres negras e feminismo - 15. ed. / 2019",
-              "autor_registro": "",
+              "autor_registro": "bell hooks",
               "biblioteca_rede": "Bibliotecas UFMG",
-              "unidade": "",
+              "unidade": "Faculdade de Ciências Econômicas",
               "codigo_acervo": "694176",
               "numero_chamada": "305.42 H784e 15. ed.",
               "exemplares_fisicos_catalogados": 3,
@@ -877,17 +878,45 @@
               "link_virtual": "",
               "link": "https://catalogobiblioteca.ufmg.br/acervo/694176",
               "tipo_link_principal": "fisico",
-              "fonte": "Bibliotecas UFMG"
+              "fonte": "Bibliotecas UFMG — Faculdade de Ciências Econômicas"
+            }
+          ]
+        },
+        {
+          "biblioteca": "Bibliotecas UFMG — Faculdade de Filosofia e Ciências Humanas",
+          "biblioteca_rede": "Bibliotecas UFMG",
+          "unidade": "Faculdade de Filosofia e Ciências Humanas",
+          "acesso_fisico": true,
+          "acesso_virtual": false,
+          "exemplares_fisicos_catalogados": 1,
+          "registros": [
+            {
+              "registro_id": "bibliotecas-ufmg-660938",
+              "titulo_registro": "E eu não sou uma mulher? : mulheres negras e feminismo - 1. ed. / 2019",
+              "autor_registro": "bell hooks",
+              "biblioteca_rede": "Bibliotecas UFMG",
+              "unidade": "Faculdade de Filosofia e Ciências Humanas",
+              "codigo_acervo": "660938",
+              "numero_chamada": "305.42 H784a.Pl 2019",
+              "exemplares_fisicos_catalogados": 1,
+              "acesso_fisico": true,
+              "acesso_virtual": false,
+              "link_fisico": "https://catalogobiblioteca.ufmg.br/acervo/660938",
+              "link_virtual": "",
+              "link": "https://catalogobiblioteca.ufmg.br/acervo/660938",
+              "tipo_link_principal": "fisico",
+              "fonte": "Bibliotecas UFMG — Faculdade de Filosofia e Ciências Humanas"
             }
           ]
         }
       ],
-      "acervos_quantidade": 3,
-      "registros_acervo_quantidade": 5,
+      "acervos_quantidade": 4,
+      "registros_acervo_quantidade": 6,
       "bibliotecas": [
         "Biblioteca Pública Estadual de Minas Gerais",
         "Bibliotecas do IFMG — IFMG São João Evangelista",
-        "Bibliotecas UFMG"
+        "Bibliotecas UFMG — Faculdade de Ciências Econômicas",
+        "Bibliotecas UFMG — Faculdade de Filosofia e Ciências Humanas"
       ]
     }
   ]
