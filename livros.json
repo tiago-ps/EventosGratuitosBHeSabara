@@ -1,6 +1,6 @@
 {
-  "versao": 1,
-  "atualizado_em": "2026-08-11T16:40:21.066074+00:00",
+  "versao": 2,
+  "atualizado_em": "2026-08-12T03:44:51.307357+00:00",
   "titulo": "Descobertas de leitura",
   "origem": "Acervos consultados em catálogos públicos Pergamum e bases institucionais",
   "aviso": "Seleção construída progressivamente e sujeita a curadoria. Não representa a totalidade dos acervos. Consulte o registro oficial para confirmar localização e disponibilidade.",
@@ -45,7 +45,45 @@
       "comentario_aprovado": "",
       "credito_comentario": "",
       "link_formulario_opiniao": "",
-      "observacoes": "Chamada utilizada no primeiro protótipo."
+      "observacoes": "Chamada utilizada no primeiro protótipo.",
+      "id_obra": "obra-1984-299d111a",
+      "registros_ids": [
+        "1984"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "Biblioteca não informada",
+          "biblioteca_rede": "",
+          "unidade": "",
+          "acesso_fisico": true,
+          "acesso_virtual": true,
+          "exemplares_fisicos_catalogados": 2,
+          "registros": [
+            {
+              "registro_id": "1984",
+              "titulo_registro": "1984",
+              "autor_registro": "George Orwell",
+              "biblioteca_rede": "",
+              "unidade": "",
+              "codigo_acervo": "104173",
+              "numero_chamada": "821(41)-3 O79m 2021",
+              "exemplares_fisicos_catalogados": 2,
+              "acesso_fisico": true,
+              "acesso_virtual": true,
+              "link_fisico": "https://pergamum.ifmg.edu.br/acervo/104173",
+              "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=203294&page=1&perPage=20&orderBy=obra&direction=C",
+              "link": "https://pergamum.ifmg.edu.br/acervo/104173",
+              "tipo_link_principal": "fisico",
+              "fonte": "Biblioteca não informada"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "Biblioteca não informada"
+      ]
     },
     {
       "tipo_conteudo": "livro",
@@ -86,7 +124,45 @@
       "exibir_comentario": false,
       "comentario_aprovado": "",
       "credito_comentario": "",
-      "link_formulario_opiniao": ""
+      "link_formulario_opiniao": "",
+      "id_obra": "obra-metamorfose-20adeb7b",
+      "registros_ids": [
+        "a-metamorfose"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "Biblioteca não informada",
+          "biblioteca_rede": "",
+          "unidade": "",
+          "acesso_fisico": true,
+          "acesso_virtual": true,
+          "exemplares_fisicos_catalogados": 2,
+          "registros": [
+            {
+              "registro_id": "a-metamorfose",
+              "titulo_registro": "A metamorfose",
+              "autor_registro": "Franz Kafka",
+              "biblioteca_rede": "",
+              "unidade": "",
+              "codigo_acervo": "97512",
+              "numero_chamada": "821(430)-32 K11m 2018",
+              "exemplares_fisicos_catalogados": 2,
+              "acesso_fisico": true,
+              "acesso_virtual": true,
+              "link_fisico": "https://pergamum.ifmg.edu.br/acervo/97512",
+              "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=202983&page=1&perPage=20&orderBy=obra&direction=C",
+              "link": "https://pergamum.ifmg.edu.br/acervo/97512",
+              "tipo_link_principal": "fisico",
+              "fonte": "Biblioteca não informada"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "Biblioteca não informada"
+      ]
     },
     {
       "tipo_conteudo": "livro",
@@ -127,7 +203,45 @@
       "exibir_comentario": false,
       "comentario_aprovado": "",
       "credito_comentario": "",
-      "link_formulario_opiniao": ""
+      "link_formulario_opiniao": "",
+      "id_obra": "obra-dom-casmurro-64511ec4",
+      "registros_ids": [
+        "dom-casmurro"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "Biblioteca não informada",
+          "biblioteca_rede": "",
+          "unidade": "",
+          "acesso_fisico": true,
+          "acesso_virtual": true,
+          "exemplares_fisicos_catalogados": 1,
+          "registros": [
+            {
+              "registro_id": "dom-casmurro",
+              "titulo_registro": "Dom Casmurro",
+              "autor_registro": "Machado de Assis",
+              "biblioteca_rede": "",
+              "unidade": "",
+              "codigo_acervo": "6669",
+              "numero_chamada": "821(81)-3 A848d 1997",
+              "exemplares_fisicos_catalogados": 1,
+              "acesso_fisico": true,
+              "acesso_virtual": true,
+              "link_fisico": "https://pergamum.ifmg.edu.br/acervo/6669",
+              "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=209148&page=1&perPage=20&orderBy=obra&direction=C",
+              "link": "https://pergamum.ifmg.edu.br/acervo/6669",
+              "tipo_link_principal": "fisico",
+              "fonte": "Biblioteca não informada"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "Biblioteca não informada"
+      ]
     },
     {
       "tipo_conteudo": "livro",
@@ -168,7 +282,45 @@
       "exibir_comentario": false,
       "comentario_aprovado": "",
       "credito_comentario": "",
-      "link_formulario_opiniao": ""
+      "link_formulario_opiniao": "",
+      "id_obra": "obra-frankenstein-ou-o-prometeu-moderno-697a3d5b",
+      "registros_ids": [
+        "frankenstein-ou-o-prometeu-moderno"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "Biblioteca não informada",
+          "biblioteca_rede": "",
+          "unidade": "",
+          "acesso_fisico": true,
+          "acesso_virtual": true,
+          "exemplares_fisicos_catalogados": 1,
+          "registros": [
+            {
+              "registro_id": "frankenstein-ou-o-prometeu-moderno",
+              "titulo_registro": "Frankenstein: ou o Prometeu moderno",
+              "autor_registro": "Mary Shelley",
+              "biblioteca_rede": "",
+              "unidade": "",
+              "codigo_acervo": "99360",
+              "numero_chamada": "821(41)-3 S545f 2018",
+              "exemplares_fisicos_catalogados": 1,
+              "acesso_fisico": true,
+              "acesso_virtual": true,
+              "link_fisico": "https://pergamum.ifmg.edu.br/acervo/99360",
+              "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=192808&page=1&perPage=20&orderBy=obra&direction=C",
+              "link": "https://pergamum.ifmg.edu.br/acervo/99360",
+              "tipo_link_principal": "fisico",
+              "fonte": "Biblioteca não informada"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "Biblioteca não informada"
+      ]
     },
     {
       "tipo_conteudo": "livro",
@@ -209,7 +361,45 @@
       "exibir_comentario": false,
       "comentario_aprovado": "",
       "credito_comentario": "",
-      "link_formulario_opiniao": ""
+      "link_formulario_opiniao": "",
+      "id_obra": "obra-lelia-gonzalez-682f8bfc",
+      "registros_ids": [
+        "lelia-gonzalez"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "Biblioteca não informada",
+          "biblioteca_rede": "",
+          "unidade": "",
+          "acesso_fisico": true,
+          "acesso_virtual": true,
+          "exemplares_fisicos_catalogados": 1,
+          "registros": [
+            {
+              "registro_id": "lelia-gonzalez",
+              "titulo_registro": "Lélia Gonzalez",
+              "autor_registro": "Alex Ratts e Flavia Rios",
+              "biblioteca_rede": "",
+              "unidade": "",
+              "codigo_acervo": "109262",
+              "numero_chamada": "929 R237l 2010",
+              "exemplares_fisicos_catalogados": 1,
+              "acesso_fisico": true,
+              "acesso_virtual": true,
+              "link_fisico": "https://pergamum.ifmg.edu.br/acervo/109262",
+              "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=123613&page=1&perPage=20&orderBy=obra&direction=C",
+              "link": "https://pergamum.ifmg.edu.br/acervo/109262",
+              "tipo_link_principal": "fisico",
+              "fonte": "Biblioteca não informada"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "Biblioteca não informada"
+      ]
     },
     {
       "tipo_conteudo": "livro",
@@ -250,7 +440,45 @@
       "exibir_comentario": false,
       "comentario_aprovado": "",
       "credito_comentario": "",
-      "link_formulario_opiniao": ""
+      "link_formulario_opiniao": "",
+      "id_obra": "obra-memorias-postumas-de-bras-cubas-d2e4e918",
+      "registros_ids": [
+        "memorias-postumas-de-bras-cubas"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "Biblioteca não informada",
+          "biblioteca_rede": "",
+          "unidade": "",
+          "acesso_fisico": true,
+          "acesso_virtual": true,
+          "exemplares_fisicos_catalogados": 1,
+          "registros": [
+            {
+              "registro_id": "memorias-postumas-de-bras-cubas",
+              "titulo_registro": "Memórias póstumas de Brás Cubas",
+              "autor_registro": "Machado de Assis",
+              "biblioteca_rede": "",
+              "unidade": "",
+              "codigo_acervo": "85355",
+              "numero_chamada": "821(81)-3 A848m 2008",
+              "exemplares_fisicos_catalogados": 1,
+              "acesso_fisico": true,
+              "acesso_virtual": true,
+              "link_fisico": "https://pergamum.ifmg.edu.br/acervo/85355",
+              "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=192845&page=1&perPage=20&orderBy=obra&direction=C",
+              "link": "https://pergamum.ifmg.edu.br/acervo/85355",
+              "tipo_link_principal": "fisico",
+              "fonte": "Biblioteca não informada"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "Biblioteca não informada"
+      ]
     },
     {
       "tipo_conteudo": "livro",
@@ -291,7 +519,45 @@
       "exibir_comentario": false,
       "comentario_aprovado": "",
       "credito_comentario": "",
-      "link_formulario_opiniao": ""
+      "link_formulario_opiniao": "",
+      "id_obra": "obra-processo-557a6d9b",
+      "registros_ids": [
+        "o-processo"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "Biblioteca não informada",
+          "biblioteca_rede": "",
+          "unidade": "",
+          "acesso_fisico": true,
+          "acesso_virtual": true,
+          "exemplares_fisicos_catalogados": 3,
+          "registros": [
+            {
+              "registro_id": "o-processo",
+              "titulo_registro": "O processo",
+              "autor_registro": "Franz Kafka",
+              "biblioteca_rede": "",
+              "unidade": "",
+              "codigo_acervo": "103829",
+              "numero_chamada": "821(430)-3 K11p 2005",
+              "exemplares_fisicos_catalogados": 3,
+              "acesso_fisico": true,
+              "acesso_virtual": true,
+              "link_fisico": "https://pergamum.ifmg.edu.br/acervo/103829",
+              "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=199200&page=1&perPage=20&orderBy=obra&direction=C",
+              "link": "https://pergamum.ifmg.edu.br/acervo/103829",
+              "tipo_link_principal": "fisico",
+              "fonte": "Biblioteca não informada"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "Biblioteca não informada"
+      ]
     },
     {
       "tipo_conteudo": "livro",
@@ -332,7 +598,45 @@
       "exibir_comentario": false,
       "comentario_aprovado": "",
       "credito_comentario": "",
-      "link_formulario_opiniao": ""
+      "link_formulario_opiniao": "",
+      "id_obra": "obra-retrato-de-dorian-gray-8ecc4d77",
+      "registros_ids": [
+        "o-retrato-de-dorian-gray"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "Biblioteca não informada",
+          "biblioteca_rede": "",
+          "unidade": "",
+          "acesso_fisico": true,
+          "acesso_virtual": true,
+          "exemplares_fisicos_catalogados": 1,
+          "registros": [
+            {
+              "registro_id": "o-retrato-de-dorian-gray",
+              "titulo_registro": "O retrato de Dorian Gray",
+              "autor_registro": "Oscar Wilde",
+              "biblioteca_rede": "",
+              "unidade": "",
+              "codigo_acervo": "106514",
+              "numero_chamada": "821(41)-3 W672r 2021",
+              "exemplares_fisicos_catalogados": 1,
+              "acesso_fisico": true,
+              "acesso_virtual": true,
+              "link_fisico": "https://pergamum.ifmg.edu.br/acervo/106514",
+              "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=209276&page=1&perPage=20&orderBy=obra&direction=C",
+              "link": "https://pergamum.ifmg.edu.br/acervo/106514",
+              "tipo_link_principal": "fisico",
+              "fonte": "Biblioteca não informada"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "Biblioteca não informada"
+      ]
     },
     {
       "tipo_conteudo": "livro",
@@ -373,13 +677,51 @@
       "exibir_comentario": false,
       "comentario_aprovado": "",
       "credito_comentario": "",
-      "link_formulario_opiniao": ""
+      "link_formulario_opiniao": "",
+      "id_obra": "obra-vidas-secas-e50f19ca",
+      "registros_ids": [
+        "vidas-secas"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "Biblioteca não informada",
+          "biblioteca_rede": "",
+          "unidade": "",
+          "acesso_fisico": true,
+          "acesso_virtual": true,
+          "exemplares_fisicos_catalogados": 5,
+          "registros": [
+            {
+              "registro_id": "vidas-secas",
+              "titulo_registro": "Vidas secas",
+              "autor_registro": "Graciliano Ramos",
+              "biblioteca_rede": "",
+              "unidade": "",
+              "codigo_acervo": "106545",
+              "numero_chamada": "821(81)-3 R175v 2021",
+              "exemplares_fisicos_catalogados": 5,
+              "acesso_fisico": true,
+              "acesso_virtual": true,
+              "link_fisico": "https://pergamum.ifmg.edu.br/acervo/106545",
+              "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=223181&page=1&perPage=20&orderBy=obra&direction=C",
+              "link": "https://pergamum.ifmg.edu.br/acervo/106545",
+              "tipo_link_principal": "fisico",
+              "fonte": "Biblioteca não informada"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "Biblioteca não informada"
+      ]
     },
     {
       "tipo_conteudo": "livro",
       "id": "bibliotecas-do-ifmg-103266",
-      "titulo": "Eu não sou uma mulher? mulheres negras e feminismo - 7. ed. / 2017",
-      "autor": "bell hokks",
+      "titulo": "Eu não sou uma mulher? mulheres negras e feminismo",
+      "autor": "bell hooks",
       "pergunta_curiosidade": "Sabe quando você faz toda a parte difícil do trabalho em grupo, e na hora de apresentar a galera te deixa no vácuo e leva todo o crédito? 🤡",
       "texto_apoio": "Então, a história das mulheres negras nos movimentos sociais foi mais ou menos isso, só que com consequências reais e históricas. Se você acha que o feminismo é só usar camiseta de \"Girl Power\" de loja de departamento e postar hashtag no Dia das Mulheres, você precisa ler Eu não sou uma mulher? Mulheres negras e feminismo, da bell hooks.\n\nAh, e sim: o nome dela se escreve todo em minúsculo mesmo. A mulher já era subversiva, aesthetic e protestava contra o próprio ego lá nos anos 80.\n\nEsse livro é basicamente um compilado de \"verdades que ninguém estava pronto para ouvir\". É uma obra sobre História e sociologia, mas escrita com a energia de quem manda um áudio de 5 minutos desabafando e expondo a hipocrisia alheia.",
       "temas": [
@@ -389,14 +731,14 @@
       ],
       "icone": "📚",
       "numero_chamada": "305.42 H776n 7. ed. 2020",
-      "unidade": "São João Evangelista",
+      "unidade": "IFMG São João Evangelista",
       "biblioteca_rede": "Bibliotecas do IFMG",
       "codigo_acervo": "103266",
-      "exemplares_fisicos_catalogados": 1,
+      "exemplares_fisicos_catalogados": 7,
       "outras_edicoes_fisicas": 0,
       "acesso_fisico": true,
       "acesso_virtual": false,
-      "link_fisico": "https://pergamum.ifmg.edu.br/acervo/103266",
+      "link_fisico": "http://200.198.28.214/acervo/219920",
       "link_virtual": "",
       "link": "https://pergamum.ifmg.edu.br/acervo/103266",
       "tipo_link_principal": "fisico",
@@ -404,7 +746,7 @@
       "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
       "imagem_url_origem": "",
       "qr_code": "imagens/livros/qrcodes/bibliotecas-do-ifmg-103266.svg",
-      "fonte": "Bibliotecas do IFMG — São João Evangelista",
+      "fonte": "Bibliotecas do IFMG — IFMG São João Evangelista",
       "exibicao_ativa": true,
       "exibir_de": "",
       "exibir_ate": "",
@@ -414,7 +756,139 @@
       "comentario_aprovado": "",
       "credito_comentario": "",
       "link_formulario_opiniao": "",
-      "observacoes": "Importado de pesquisa progressiva; revisar antes de publicar."
+      "observacoes": "Importado de pesquisa progressiva; revisar antes de publicar.",
+      "id_obra": "obra-eu-nao-sou-uma-mulher-mulheres-negras-e-feminismo-f2828c5b",
+      "registros_ids": [
+        "biblioteca-publica-estadual-de-minas-gerais-219920",
+        "bibliotecas-do-ifmg-103266",
+        "bibliotecas-ufmg-660938",
+        "bibliotecas-ufmg-676195",
+        "bibliotecas-ufmg-694176"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "Biblioteca Pública Estadual de Minas Gerais",
+          "biblioteca_rede": "Biblioteca Pública Estadual de Minas Gerais",
+          "unidade": "",
+          "acesso_fisico": true,
+          "acesso_virtual": false,
+          "exemplares_fisicos_catalogados": 1,
+          "registros": [
+            {
+              "registro_id": "biblioteca-publica-estadual-de-minas-gerais-219920",
+              "titulo_registro": "Eu não sou uma mulher?: mulheres negras e feminismo, E - 14. ed. / 2023",
+              "autor_registro": "bell hooks",
+              "biblioteca_rede": "Biblioteca Pública Estadual de Minas Gerais",
+              "unidade": "",
+              "codigo_acervo": "219920",
+              "numero_chamada": "305.42 H783a.Pl 2023",
+              "exemplares_fisicos_catalogados": 1,
+              "acesso_fisico": true,
+              "acesso_virtual": false,
+              "link_fisico": "http://200.198.28.214/acervo/219920",
+              "link_virtual": "",
+              "link": "http://200.198.28.214/acervo/219920",
+              "tipo_link_principal": "fisico",
+              "fonte": "Biblioteca Pública Estadual de Minas Gerais"
+            }
+          ]
+        },
+        {
+          "biblioteca": "Bibliotecas do IFMG — IFMG São João Evangelista",
+          "biblioteca_rede": "Bibliotecas do IFMG",
+          "unidade": "IFMG São João Evangelista",
+          "acesso_fisico": true,
+          "acesso_virtual": false,
+          "exemplares_fisicos_catalogados": 1,
+          "registros": [
+            {
+              "registro_id": "bibliotecas-do-ifmg-103266",
+              "titulo_registro": "Eu não sou uma mulher? mulheres negras e feminismo - 7. ed. / 2017",
+              "autor_registro": "bell hooks",
+              "biblioteca_rede": "Bibliotecas do IFMG",
+              "unidade": "IFMG São João Evangelista",
+              "codigo_acervo": "103266",
+              "numero_chamada": "305.42 H776n 7. ed. 2020",
+              "exemplares_fisicos_catalogados": 1,
+              "acesso_fisico": true,
+              "acesso_virtual": false,
+              "link_fisico": "https://pergamum.ifmg.edu.br/acervo/103266",
+              "link_virtual": "",
+              "link": "https://pergamum.ifmg.edu.br/acervo/103266",
+              "tipo_link_principal": "fisico",
+              "fonte": "Bibliotecas do IFMG — IFMG São João Evangelista"
+            }
+          ]
+        },
+        {
+          "biblioteca": "Bibliotecas UFMG",
+          "biblioteca_rede": "Bibliotecas UFMG",
+          "unidade": "",
+          "acesso_fisico": true,
+          "acesso_virtual": false,
+          "exemplares_fisicos_catalogados": 5,
+          "registros": [
+            {
+              "registro_id": "bibliotecas-ufmg-660938",
+              "titulo_registro": "E eu não sou uma mulher? : mulheres negras e feminismo - 1. ed. / 2019",
+              "autor_registro": "",
+              "biblioteca_rede": "Bibliotecas UFMG",
+              "unidade": "",
+              "codigo_acervo": "660938",
+              "numero_chamada": "305.42 H784a.Pl 2019",
+              "exemplares_fisicos_catalogados": 1,
+              "acesso_fisico": true,
+              "acesso_virtual": false,
+              "link_fisico": "https://catalogobiblioteca.ufmg.br/acervo/660938",
+              "link_virtual": "",
+              "link": "https://catalogobiblioteca.ufmg.br/acervo/660938",
+              "tipo_link_principal": "fisico",
+              "fonte": "Bibliotecas UFMG"
+            },
+            {
+              "registro_id": "bibliotecas-ufmg-676195",
+              "titulo_registro": "E eu não sou uma mulher? : mulheres negras e feminismo - 11. ed. / 2022",
+              "autor_registro": "",
+              "biblioteca_rede": "Bibliotecas UFMG",
+              "unidade": "",
+              "codigo_acervo": "676195",
+              "numero_chamada": "305.42 H784e 11.ed.",
+              "exemplares_fisicos_catalogados": 1,
+              "acesso_fisico": true,
+              "acesso_virtual": false,
+              "link_fisico": "https://catalogobiblioteca.ufmg.br/acervo/676195",
+              "link_virtual": "",
+              "link": "https://catalogobiblioteca.ufmg.br/acervo/676195",
+              "tipo_link_principal": "fisico",
+              "fonte": "Bibliotecas UFMG"
+            },
+            {
+              "registro_id": "bibliotecas-ufmg-694176",
+              "titulo_registro": "E eu não sou uma mulher? : mulheres negras e feminismo - 15. ed. / 2019",
+              "autor_registro": "",
+              "biblioteca_rede": "Bibliotecas UFMG",
+              "unidade": "",
+              "codigo_acervo": "694176",
+              "numero_chamada": "305.42 H784e 15. ed.",
+              "exemplares_fisicos_catalogados": 3,
+              "acesso_fisico": true,
+              "acesso_virtual": false,
+              "link_fisico": "https://catalogobiblioteca.ufmg.br/acervo/694176",
+              "link_virtual": "",
+              "link": "https://catalogobiblioteca.ufmg.br/acervo/694176",
+              "tipo_link_principal": "fisico",
+              "fonte": "Bibliotecas UFMG"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 3,
+      "registros_acervo_quantidade": 5,
+      "bibliotecas": [
+        "Biblioteca Pública Estadual de Minas Gerais",
+        "Bibliotecas do IFMG — IFMG São João Evangelista",
+        "Bibliotecas UFMG"
+      ]
     }
   ]
 }
