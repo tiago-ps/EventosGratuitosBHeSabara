@@ -359,22 +359,136 @@
     return Boolean(book.link && book.imagem);
   }
 
+  function bookAcervos(book) {
+    if (Array.isArray(book?.acervos) && book.acervos.length) {
+      return book.acervos.map(acervo => {
+        const registrosOriginais = Array.isArray(acervo?.registros) && acervo.registros.length
+          ? acervo.registros
+          : [acervo];
+        const registros = registrosOriginais.map(registro => ({
+          ...registro,
+          biblioteca: registro?.biblioteca || acervo?.biblioteca || '',
+          biblioteca_rede: registro?.biblioteca_rede || acervo?.biblioteca_rede || '',
+          unidade: registro?.unidade || acervo?.unidade || '',
+        }));
+        return { ...acervo, registros };
+      });
+    }
+
+    // Compatibilidade com livros.json v1: transforma o registro único em um acervo.
+    return [{
+      biblioteca: '',
+      biblioteca_rede: book?.biblioteca_rede || book?.biblioteca || '',
+      unidade: book?.unidade || book?.campus || book?.campus_acervo || '',
+      registros: [{
+        registro_id: book?.id || '',
+        biblioteca_rede: book?.biblioteca_rede || book?.biblioteca || '',
+        unidade: book?.unidade || book?.campus || book?.campus_acervo || '',
+        numero_chamada: book?.numero_chamada || '',
+        codigo_acervo: book?.codigo_acervo || '',
+        exemplares_fisicos_catalogados: Number(book?.exemplares_fisicos_catalogados || 0),
+        acesso_fisico: Boolean(book?.acesso_fisico),
+        acesso_virtual: Boolean(book?.acesso_virtual),
+        link_fisico: book?.link_fisico || '',
+        link_virtual: book?.link_virtual || '',
+        link: book?.link || '',
+        fonte: book?.fonte || '',
+      }],
+    }];
+  }
+
+  function bookHoldingLabel(acervo) {
+    const explicit = String(acervo?.biblioteca || '').trim();
+    const rede = String(acervo?.biblioteca_rede || '').trim();
+    const unidade = String(acervo?.unidade || '').trim();
+    if (explicit) return explicit;
+    if (rede && unidade && !normalizeText(rede).includes(normalizeText(unidade))) {
+      return `${rede} — ${unidade}`;
+    }
+    return unidade || rede || 'Acervo não identificado';
+  }
+
+  function bookCampusLabels(book) {
+    const values = new Map();
+    for (const acervo of bookAcervos(book)) {
+      const label = bookHoldingLabel(acervo);
+      const value = normalizeText(label);
+      if (value && !values.has(value)) values.set(value, label);
+    }
+    return [...values.values()];
+  }
+
   function bookCampusLabel(book) {
-    const explicit = [
-      book.campus, book.campus_acervo, book.unidade_acervo, book.unidade,
-      book.biblioteca, book.biblioteca_rede, book.acervo
-    ].map(value => String(value || '').trim()).find(Boolean);
+    return bookCampusLabels(book)[0] || String(book?.fonte || state.booksData?.origem || 'Acervo não identificado');
+  }
 
-    const raw = explicit || String(book.fonte || state.booksData?.origem || '').trim();
-    if (!raw) return 'Acervo não identificado';
+  function bookHoldings(book) {
+    return bookAcervos(book).flatMap(acervo =>
+      (acervo.registros || []).map(registro => ({
+        ...registro,
+        biblioteca: bookHoldingLabel(acervo),
+        biblioteca_rede: registro.biblioteca_rede || acervo.biblioteca_rede || '',
+        unidade: registro.unidade || acervo.unidade || '',
+      }))
+    );
+  }
 
-    const campusMatch = raw.match(/(?:IFMG\s+)?Campus\s+([^,;|]+)/i);
-    if (campusMatch) return `IFMG ${campusMatch[1].trim()}`;
+  function firstBookHoldingUrl(book, field) {
+    for (const holding of bookHoldings(book)) {
+      const url = safeExternalUrl(holding?.[field]);
+      if (url) return url;
+    }
+    return safeExternalUrl(book?.[field]);
+  }
 
-    const ifmgMatch = raw.match(/IFMG\s+([^,;|]+)/i);
-    if (ifmgMatch) return `IFMG ${ifmgMatch[1].trim()}`;
+  function bookLocationsSummary(book) {
+    const acervos = bookAcervos(book);
+    const labels = bookCampusLabels(book);
+    const registros = bookHoldings(book);
+    if (acervos.length > 1) {
+      return `Disponível em ${acervos.length} acervos: ${labels.join(' • ')}`;
+    }
+    if (registros.length > 1) {
+      return `${labels[0] || 'Acervo'} • ${registros.length} registros catalogados`;
+    }
+    const registro = registros[0] || {};
+    const callNumber = String(registro.numero_chamada || book?.numero_chamada || '').trim();
+    return [callNumber ? `Número de chamada: ${callNumber}` : '', labels[0] || ''].filter(Boolean).join(' • ');
+  }
 
-    return raw;
+  function agendaBookHoldingsHtml(book) {
+    const acervos = bookAcervos(book);
+    if (!acervos.length) return '';
+    const blocks = acervos.map(acervo => {
+      const label = bookHoldingLabel(acervo);
+      const registros = Array.isArray(acervo.registros) ? acervo.registros : [];
+      const recordsHtml = registros.map((registro, index) => {
+        const call = String(registro.numero_chamada || '').trim();
+        const code = String(registro.codigo_acervo || '').trim();
+        const physical = safeExternalUrl(registro.link_fisico || registro.link);
+        const virtual = safeExternalUrl(registro.link_virtual);
+        const recordLabel = registros.length > 1
+          ? `Registro ${index + 1}${code ? ` · ${code}` : ''}`
+          : (code ? `Registro ${code}` : 'Registro do catálogo');
+        const links = [
+          physical ? `<a href="${escapeHtml(physical)}" target="_blank" rel="noopener noreferrer">${registros.length > 1 ? 'Abrir este registro' : 'Ver no catálogo'}</a>` : '',
+          virtual ? `<a class="secondary" href="${escapeHtml(virtual)}" target="_blank" rel="noopener noreferrer">Edição virtual</a>` : '',
+        ].filter(Boolean).join('');
+        return `<div class="agenda-book-record">
+          ${registros.length > 1 ? `<span class="agenda-book-record-label">${escapeHtml(recordLabel)}</span>` : ''}
+          ${call ? `<span class="agenda-book-call">Número de chamada: ${escapeHtml(call)}</span>` : ''}
+          ${links ? `<div class="agenda-book-record-actions">${links}</div>` : ''}
+        </div>`;
+      }).join('');
+      return `<div class="agenda-book-holding">
+        <strong>${escapeHtml(label)}</strong>
+        ${recordsHtml}
+      </div>`;
+    }).join('');
+    return `<section class="agenda-book-holdings" aria-label="Bibliotecas onde encontrar este livro">
+      <h3>Onde encontrar</h3>
+      ${blocks}
+    </section>`;
   }
 
   function bookMatchesFilters(book) {
@@ -385,8 +499,8 @@
     if (theme && !themes.some(value => value === theme || value.includes(theme))) return false;
 
     if (state.panelBookCampuses.length) {
-      const campus = normalizeText(bookCampusLabel(book));
-      if (!state.panelBookCampuses.includes(campus)) return false;
+      const campuses = bookCampusLabels(book).map(normalizeText);
+      if (!campuses.some(campus => state.panelBookCampuses.includes(campus))) return false;
     }
 
     if (access === 'physical' && !book.acesso_fisico) return false;
@@ -1519,15 +1633,16 @@
     copy.querySelector('.book-support').textContent = book.texto_apoio || '';
     copy.querySelector('.book-title').textContent = book.titulo || '';
     copy.querySelector('.book-author').textContent = book.autor || '';
-    const callNumber = String(book.numero_chamada || '').trim();
-    const unitText = String(book.unidade || '').trim();
-    const callText = [callNumber ? `Número de chamada: ${callNumber}` : '', unitText].filter(Boolean).join(' • ');
+    const holdings = bookHoldings(book);
+    const acervos = bookAcervos(book);
+    const callText = bookLocationsSummary(book);
     copy.querySelector('.book-call').textContent = callText;
 
     const accessLabels = [];
     if (book.acesso_fisico) accessLabels.push('Físico');
     if (book.acesso_virtual) accessLabels.push('Virtual');
-    copy.querySelector('.book-access').textContent = accessLabels.join(' + ') || 'Catálogo';
+    if (acervos.length > 1) accessLabels.push(`${acervos.length} acervos`);
+    copy.querySelector('.book-access').textContent = accessLabels.join(' · ') || 'Catálogo';
     const availability = [];
     if (book.acesso_fisico) {
       const count = Number(book.exemplares_fisicos_catalogados || 0);
@@ -1537,6 +1652,7 @@
       }
     }
     if (book.acesso_virtual) availability.push('edição virtual');
+    if (acervos.length > 1) availability.push(`${acervos.length} acervos`);
     const availabilityText = availability.join(' • ');
     copy.querySelector('.book-availability').textContent = availabilityText;
 
@@ -1565,10 +1681,18 @@
 
     const physicalLink = copy.querySelector('.book-physical-link');
     const virtualLink = copy.querySelector('.book-virtual-link');
-    const physicalUrl = safeExternalUrl(book.link_fisico);
-    const virtualUrl = safeExternalUrl(book.link_virtual);
-    if (physicalUrl) physicalLink.href = physicalUrl; else physicalLink.remove();
-    if (virtualUrl) virtualLink.href = virtualUrl; else virtualLink.remove();
+    const physicalUrl = firstBookHoldingUrl(book, 'link_fisico');
+    const virtualUrl = firstBookHoldingUrl(book, 'link_virtual');
+    const physicalLinksCount = new Set(holdings.map(item => safeExternalUrl(item.link_fisico)).filter(Boolean)).size;
+    const virtualLinksCount = new Set(holdings.map(item => safeExternalUrl(item.link_virtual)).filter(Boolean)).size;
+    if (physicalUrl) {
+      physicalLink.href = physicalUrl;
+      if (physicalLinksCount > 1) physicalLink.textContent = 'Ver um dos catálogos físicos';
+    } else physicalLink.remove();
+    if (virtualUrl) {
+      virtualLink.href = virtualUrl;
+      if (virtualLinksCount > 1) virtualLink.textContent = 'Acessar uma edição virtual';
+    } else virtualLink.remove();
     const opinionLink = copy.querySelector('.book-opinion-link');
     const opinionUrl = safeExternalUrl(book.link_formulario_opiniao || state.config?.opinioes_livros?.url_formulario);
     const opinionsEnabled = state.config?.opinioes_livros?.habilitado === true;
@@ -1583,7 +1707,9 @@
     if (link) {
       const anchor = document.createElement('a');
       anchor.href = link;
-      anchor.textContent = book.tipo_link_principal === 'virtual' ? 'Abrir edição virtual' : 'Ver no catálogo da biblioteca';
+      anchor.textContent = acervos.length > 1
+        ? 'Abrir um dos catálogos desta obra'
+        : (book.tipo_link_principal === 'virtual' ? 'Abrir edição virtual' : 'Ver no catálogo da biblioteca');
       anchor.target = '_blank';
       anchor.rel = 'noopener noreferrer';
       source.replaceChildren(anchor);
@@ -1724,9 +1850,10 @@
   function panelCampusOptions() {
     const values = new Map();
     for (const book of state.allBooks) {
-      const label = bookCampusLabel(book);
-      const value = normalizeText(label);
-      if (label && value && !values.has(value)) values.set(value, label);
+      for (const label of bookCampusLabels(book)) {
+        const value = normalizeText(label);
+        if (label && value && !values.has(value)) values.set(value, label);
+      }
     }
     return [...values.entries()].sort((a, b) => a[1].localeCompare(b[1], 'pt-BR'));
   }
@@ -2400,9 +2527,12 @@
 
   function agendaBookQueryMatches(book, query) {
     if (!query) return true;
+    const holdings = bookHoldings(book);
     const haystack = normalizeText([
       book.titulo, book.autor, book.pergunta_curiosidade,
-      book.texto_apoio, ...(Array.isArray(book.temas) ? book.temas : [])
+      book.texto_apoio, ...(Array.isArray(book.temas) ? book.temas : []),
+      ...bookCampusLabels(book),
+      ...holdings.flatMap(item => [item.numero_chamada, item.codigo_acervo])
     ].filter(Boolean).join(' '));
     return haystack.includes(query);
   }
@@ -2543,22 +2673,22 @@
     article.className = `agenda-card ${item.tipo_conteudo === 'livro' ? 'agenda-book-card' : ''}`;
 
     if (item.tipo_conteudo === 'livro') {
-      const link = safeExternalUrl(item.link || item.link_fisico || item.link_virtual);
+      const holdingsHtml = agendaBookHoldingsHtml(item);
+      const acervosCount = bookAcervos(item).length;
+      const opinionUrl = state.config?.opinioes_livros?.habilitado === true
+        ? safeExternalUrl(item.link_formulario_opiniao || state.config?.opinioes_livros?.url_formulario)
+        : '';
       article.innerHTML = `
         <div class="agenda-card-media book-media"><img src="${escapeHtml(item.imagem || '')}" alt="Capa: ${escapeHtml(item.titulo || '')}" loading="lazy"></div>
         <div class="agenda-card-body">
-          <div class="agenda-card-badges"><span>Livro</span>${item.acesso_fisico ? '<span>Físico</span>' : ''}${item.acesso_virtual ? '<span>Virtual</span>' : ''}</div>
+          <div class="agenda-card-badges"><span>Livro</span>${item.acesso_fisico ? '<span>Físico</span>' : ''}${item.acesso_virtual ? '<span>Virtual</span>' : ''}${acervosCount > 1 ? `<span>${acervosCount} acervos</span>` : ''}</div>
           <p class="agenda-card-date">Sugestão de Leitura</p>
           <h2>${escapeHtml(item.pergunta_curiosidade || item.titulo || 'Livro')}</h2>
           <p class="agenda-card-place"><strong class="agenda-book-title">${escapeHtml(item.titulo || '')}</strong> · ${escapeHtml(item.autor || '')}</p>
           <p class="agenda-card-description">${escapeHtml(item.texto_apoio || '')}</p>
-          ${(item.numero_chamada || item.unidade) ? `<p class="agenda-card-call">${item.numero_chamada ? `Número de chamada: ${escapeHtml(item.numero_chamada)}` : ''}${item.numero_chamada && item.unidade ? ' • ' : ''}${item.unidade ? escapeHtml(item.unidade) : ''}</p>` : ''}
+          ${holdingsHtml}
           ${item.exibir_comentario && item.comentario_aprovado ? `<blockquote class="agenda-book-opinion">“${escapeHtml(item.comentario_aprovado)}”<cite>${escapeHtml(item.credito_comentario || 'Leitor(a) do IFMG')}</cite></blockquote>` : ''}
-          <div class="agenda-card-actions">
-            ${link ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer">Encontrar este livro</a>` : ''}
-            ${item.link_virtual ? `<a class="secondary" href="${escapeHtml(item.link_virtual)}" target="_blank" rel="noopener noreferrer">Edição virtual</a>` : ''}
-            ${state.config?.opinioes_livros?.habilitado === true && safeExternalUrl(item.link_formulario_opiniao || state.config?.opinioes_livros?.url_formulario) ? `<a class="secondary" href="${escapeHtml(safeExternalUrl(item.link_formulario_opiniao || state.config?.opinioes_livros?.url_formulario))}" target="_blank" rel="noopener noreferrer">Opine sobre este livro</a>` : ''}
-          </div>
+          ${opinionUrl ? `<div class="agenda-card-actions"><a class="secondary" href="${escapeHtml(opinionUrl)}" target="_blank" rel="noopener noreferrer">Opine sobre este livro</a></div>` : ''}
         </div>`;
       return article;
     }
