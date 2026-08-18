@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Janeiro a Dezembro de 2026",
-  "atualizado_em": "2026-08-17T20:41:24-03:00",
+  "atualizado_em": "2026-08-17T21:38:50-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -7263,7 +7263,7 @@
       "inscricao": "Entrada gratuita; consulte a página oficial",
       "descricao": "De 1º a 8 de setembro, acontece a 5ª mostra CRDançaBH, com o tema Mapas de Encontro. Todo mapa é uma representação provisória. Ele registra percursos, aproxima territórios e organiza caminhos, mas nunca é capaz de conter completamente a experiência de quem percorre um lugar. Entre o traço desenhado e o território vivido existe sempre um espaço aberto à imaginação,",
       "imagem": "imagens/ajustes-eventos/portal-bh-586d9ce7ab90-2026-09-01-0900.png",
-      "link": "https://portalbelohorizonte.com.br/circuitomunicipaldecultura/2026/eventos/mostra/danca/5a-mostra-crdancabh",
+      "link": "https://www.instagram.com/p/Db_qlbmifGC/",
       "fonte": "Portal Belo Horizonte",
       "fonte_id": "586d9ce7ab90",
       "instituicao_id": "fundacao-municipal-cultura-bh",
@@ -7273,10 +7273,10 @@
         "Dança"
       ],
       "criterio_exibicao": "realizacao",
-      "link_inscricao": "https://www.instagram.com/p/Db_qlbmifGC/",
+      "link_inscricao": "https://www.instagram.com/crdancabh",
       "monitorar_formulario_google": false,
       "exibicao_ativa": true,
-      "pagina": "https://portalbelohorizonte.com.br/circuitomunicipaldecultura/2026/eventos/mostra/danca/5a-mostra-crdancabh",
+      "pagina": "https://www.instagram.com/p/Db_qlbmifGC/",
       "acao_formulario_fechado": "marcar_encerrada",
       "imagem_fonte": "Imagem adicionada manualmente pelo editor",
       "ajuste_editor_aplicado": true,
