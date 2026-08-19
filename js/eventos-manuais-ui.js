@@ -22,6 +22,10 @@
     'pbh.gov.br'
   ];
 
+  const CLOSED_ACCESS_STATUSES = new Set([
+    'encerrada', 'encerrada provavel', 'esgotado', 'indisponivel'
+  ]);
+
   let events = [];
   let updateQueued = false;
 
@@ -33,11 +37,21 @@
       .trim();
   }
 
+  function escapeHtml(value = '') {
+    return String(value)
+      .replaceAll('&', '&amp;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;')
+      .replaceAll('"', '&quot;')
+      .replaceAll("'", '&#39;');
+  }
+
   function absoluteUrl(value) {
     if (!value) return '';
 
     try {
-      return new URL(value, window.location.href).href;
+      const url = new URL(value, window.location.href);
+      return ['http:', 'https:'].includes(url.protocol) ? url.href : '';
     } catch {
       return '';
     }
@@ -45,6 +59,46 @@
 
   function isRegistrationPeriod(event) {
     return normalizeText(event?.tipo_data) === 'inscricao';
+  }
+
+  function displayCriterion(event) {
+    const value = normalizeText(event?.criterio_exibicao);
+    return ['inscricao', 'acesso', 'manual', 'realizacao'].includes(value)
+      ? value
+      : 'realizacao';
+  }
+
+  function registrationIsClosed(event) {
+    const registrationStatus = normalizeText(event?.status_inscricao).replaceAll('_', ' ');
+    const formStatus = normalizeText(event?.status_formulario_google).replaceAll('_', ' ');
+    return CLOSED_ACCESS_STATUSES.has(registrationStatus) || formStatus === 'fechado';
+  }
+
+  function isGoogleFormUrl(value) {
+    const link = absoluteUrl(value);
+    if (!link) return false;
+    try {
+      const url = new URL(link);
+      const host = url.hostname.toLowerCase();
+      return host === 'forms.gle' ||
+        ((host === 'docs.google.com' || host === 'forms.google.com') && url.pathname.toLowerCase().includes('/forms'));
+    } catch {
+      return false;
+    }
+  }
+
+  function eventPublicLink(event) {
+    const registration = absoluteUrl(event?.link_inscricao);
+    const primary = absoluteUrl(event?.link);
+    const page = absoluteUrl(event?.pagina);
+    const formAction = normalizeText(event?.formulario_google_acao_aplicada).replaceAll('_', ' ');
+    const suppressClosedForm = registrationIsClosed(event) &&
+      ['marcar encerrada', 'retirar link'].includes(formAction);
+
+    if (suppressClosedForm) {
+      return [page, primary].find(link => link && !isGoogleFormUrl(link)) || '';
+    }
+    return registration || primary || page;
   }
 
   function shouldAvoidIframe(value) {
@@ -75,6 +129,65 @@
     );
 
     return Number.isNaN(date.getTime()) ? null : date;
+  }
+
+  function safeDate(value) {
+    const date = parseCalendarDate(value);
+    if (!date) return null;
+    date.setHours(23, 59, 59, 999);
+    return date;
+  }
+
+  function todayAtMidnight() {
+    const now = new Date();
+    return new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  }
+
+  function eventIsPublishable(event, today = todayAtMidnight()) {
+    if (!event || !event.titulo || !event.data || event.exibicao_ativa === false) return false;
+    const criterion = displayCriterion(event);
+    if (criterion === 'manual') return true;
+
+    if (criterion === 'inscricao' || criterion === 'acesso') {
+      const status = normalizeText(
+        criterion === 'inscricao' ? event.status_inscricao : event.status_acesso
+      ).replaceAll('_', ' ');
+      if (CLOSED_ACCESS_STATUSES.has(status)) return false;
+      const deadline = safeDate(
+        criterion === 'inscricao' ? event.inscricao_fim : event.acesso_fim
+      );
+      return !deadline || deadline >= today;
+    }
+
+    const end = safeDate(event.data_fim || event.data);
+    return !end || end >= today;
+  }
+
+  function eventSortKey(event) {
+    const criterion = displayCriterion(event);
+    const realization = safeDate(event.data)?.getTime() || Number.MAX_SAFE_INTEGER;
+    if (criterion === 'inscricao') {
+      const deadline = safeDate(event.inscricao_fim)?.getTime();
+      return [deadline ? 0 : 1, deadline || realization, realization];
+    }
+    if (criterion === 'acesso') {
+      const deadline = safeDate(event.acesso_fim)?.getTime();
+      return [deadline ? 0 : 1, deadline || realization, realization];
+    }
+    return [2, realization, realization];
+  }
+
+  function agendaAllEvents() {
+    const today = todayAtMidnight();
+    return events
+      .filter(event => eventIsPublishable(event, today))
+      .sort((a, b) => {
+        const ka = eventSortKey(a);
+        const kb = eventSortKey(b);
+        return ka[0] - kb[0] || ka[1] - kb[1] || ka[2] - kb[2] ||
+          String(a.horario || '').localeCompare(String(b.horario || ''), 'pt-BR') ||
+          String(a.titulo || '').localeCompare(String(b.titulo || ''), 'pt-BR');
+      });
   }
 
   function formatDayMonth(value) {
@@ -115,6 +228,54 @@
     }).format(end);
 
     return `${startLabel} a ${endLabel}`;
+  }
+
+  function formatAgendaDate(event) {
+    const range = formatAgendaRange(event);
+    if (range) return range;
+
+    const start = parseCalendarDate(event?.data);
+    if (!start) return event?.data || 'Data não informada';
+
+    const today = todayAtMidnight();
+    const tomorrow = new Date(today);
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    const sameDay = (a, b) => a.getFullYear() === b.getFullYear() &&
+      a.getMonth() === b.getMonth() && a.getDate() === b.getDate();
+
+    if (sameDay(start, today)) return 'Hoje';
+    if (sameDay(start, tomorrow)) return 'Amanhã';
+
+    return new Intl.DateTimeFormat('pt-BR', {
+      weekday: 'short', day: '2-digit', month: 'short'
+    }).format(start).replace('.', '');
+  }
+
+  function normalizeRating(value = '') {
+    const normalized = normalizeText(value);
+    if (!normalized) return null;
+    if (normalized === 'l' || normalized.includes('livre')) return { label: 'LIVRE' };
+    const match = normalized.match(/(?:^|\D)(10|12|14|16|18)(?:\D|$)/);
+    return match ? { label: `${match[1]} ANOS` } : null;
+  }
+
+  function eventImage(event) {
+    const explicit = [event?.imagem, event?.imagem_local, event?.imagem_programa]
+      .map(absoluteUrl)
+      .find(Boolean);
+    if (explicit) return explicit;
+
+    const local = normalizeText(event?.local);
+    if (local.includes('cine santa tereza')) {
+      return absoluteUrl('imagens/CineSantaTerezaBH.png');
+    }
+
+    const program = normalizeText(event?.programa);
+    if (program.includes('escola livre de artes arena da cultura')) {
+      return absoluteUrl('imagens/eventos-manuais/escola-livre-de-artes.png');
+    }
+
+    return '';
   }
 
   function findCurrentEvent(slide) {
@@ -249,7 +410,75 @@
     applyAgendaBadgeStyle(cityBadge, cityData.background, cityData.color);
   }
 
+  function createAgendaEventCard(event) {
+    const article = document.createElement('article');
+    article.className = 'agenda-card';
+
+    const rating = normalizeRating(event?.classificacao_indicativa);
+    const link = eventPublicLink(event);
+    const map = absoluteUrl(event?.mapa);
+    const closedRegistration = registrationIsClosed(event);
+    const image = eventImage(event);
+    const dateLabel = formatAgendaDate(event);
+
+    article.innerHTML = `
+      ${image ? `<div class="agenda-card-media"><img src="${escapeHtml(image)}" alt="Imagem de divulgação: ${escapeHtml(event.titulo || '')}" loading="lazy" decoding="async"></div>` : ''}
+      <div class="agenda-card-body">
+        <div class="agenda-card-badges">
+          <span>${escapeHtml(event.categoria || 'Evento')}</span><span>Gratuito</span>${rating ? `<span>${escapeHtml(rating.label)}</span>` : ''}
+        </div>
+        <p class="agenda-card-date">${escapeHtml(dateLabel)}${event.horario ? ` • ${escapeHtml(event.horario)}` : ''}</p>
+        <h2>${escapeHtml(event.titulo || 'Evento cultural')}</h2>
+        <p class="agenda-card-place">${escapeHtml([event.local, event.cidade].filter(Boolean).join(' • ') || 'Local não informado')}</p>
+        <p class="agenda-card-description">${escapeHtml(event.descricao || '')}</p>
+        <div class="agenda-card-actions">
+          ${link ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer">${closedRegistration ? 'Programação do evento' : 'Programação e inscrição'}</a>` : closedRegistration ? '<span class="agenda-action-disabled">Inscrições encerradas</span>' : ''}
+          ${map ? `<a class="secondary" href="${escapeHtml(map)}" target="_blank" rel="noopener noreferrer">Como chegar</a>` : ''}
+        </div>
+      </div>`;
+
+    styleAgendaBadges(article, event);
+    return article;
+  }
+
+  function agendaHasSpecificFilters(shell) {
+    const search = shell.querySelector('.agenda-search input')?.value?.trim() || '';
+    const theme = shell.querySelector('.agenda-theme')?.value || '';
+    const period = shell.querySelector('.agenda-period')?.value || 'all';
+    const values = [
+      shell.querySelector('.agenda-city')?.value || '',
+      shell.querySelector('.agenda-category')?.value || '',
+      shell.querySelector('.agenda-space')?.value || '',
+      shell.querySelector('.agenda-institution')?.value || '',
+      shell.querySelector('.agenda-registration')?.value || ''
+    ];
+
+    return Boolean(search || theme || period !== 'all' || values.some(Boolean));
+  }
+
+  function expandUnfilteredAgendaEvents() {
+    const shell = document.querySelector('#app .agenda-shell');
+    if (!shell) return;
+
+    const content = shell.querySelector('.agenda-content')?.value || '';
+    if (content !== 'events' || agendaHasSpecificFilters(shell)) return;
+
+    const list = shell.querySelector('.agenda-results .agenda-list');
+    if (!list || list.dataset.allEventsExpanded === '1') return;
+
+    const visibleEvents = agendaAllEvents();
+    list.dataset.allEventsExpanded = '1';
+    list.replaceChildren(...visibleEvents.map(createAgendaEventCard));
+
+    const count = shell.querySelector('.agenda-count > span');
+    if (count) {
+      count.textContent = `${visibleEvents.length} ${visibleEvents.length === 1 ? 'conteúdo encontrado' : 'conteúdos encontrados'}`;
+    }
+  }
+
   function enhanceAgendaCards() {
+    expandUnfilteredAgendaEvents();
+
     document.querySelectorAll('#app .agenda-card:not(.agenda-book-card)').forEach(card => {
       const event = findAgendaCardEvent(card);
       if (!event) return;
