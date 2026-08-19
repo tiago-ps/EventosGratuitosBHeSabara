@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v63.2-obras-multiacervo';
+const CACHE_VERSION = 'mural-cultural-v63.3-ios-install';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -7,7 +7,7 @@ const BRAND_LOGO_PATH = '/imagens/marca/logo-mural-cultural.png';
 
 const CORE_ASSETS = [
   './', './index.html', './css/styles.css', './css/eventos-manuais-ui.css',
-  './js/app.js', './js/eventos-manuais-ui.js', './manifest.webmanifest',
+  './js/app.js', './js/eventos-manuais-ui.js', './js/ios-install.js', './manifest.webmanifest',
   './imagens/app-icons/icon-192.png', './imagens/app-icons/icon-512.png',
   './imagens/app-icons/apple-touch-icon.png'
 ];
