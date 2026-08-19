@@ -62,10 +62,10 @@
     }
   }
 
-  function formatDayMonth(value) {
+  function parseCalendarDate(value) {
     const match = String(value || '').match(/^(\d{4})-(\d{2})-(\d{2})$/);
 
-    if (!match) return String(value || 'Data não informada');
+    if (!match) return null;
 
     const date = new Date(
       Number(match[1]),
@@ -74,9 +74,13 @@
       12
     );
 
-    if (Number.isNaN(date.getTime())) {
-      return String(value || 'Data não informada');
-    }
+    return Number.isNaN(date.getTime()) ? null : date;
+  }
+
+  function formatDayMonth(value) {
+    const date = parseCalendarDate(value);
+
+    if (!date) return String(value || 'Data não informada');
 
     const day = date.getDate() === 1 ? '1º' : String(date.getDate());
     const month = new Intl.DateTimeFormat('pt-BR', {
@@ -84,6 +88,33 @@
     }).format(date);
 
     return `${day} de ${month}`;
+  }
+
+  function formatAgendaRange(event) {
+    if (!event?.data_fim || event.data_fim === event.data) return '';
+
+    const start = parseCalendarDate(event.data);
+    const end = parseCalendarDate(event.data_fim);
+    if (!start || !end) return '';
+
+    const differentYears = start.getFullYear() !== end.getFullYear();
+    const startOptions = {
+      weekday: 'short',
+      day: '2-digit',
+      month: 'short'
+    };
+    if (differentYears) startOptions.year = 'numeric';
+
+    const startLabel = new Intl.DateTimeFormat('pt-BR', startOptions)
+      .format(start)
+      .replace(',', '');
+    const endLabel = new Intl.DateTimeFormat('pt-BR', {
+      day: '2-digit',
+      month: 'short',
+      year: 'numeric'
+    }).format(end);
+
+    return `${startLabel} a ${endLabel}`;
   }
 
   function findCurrentEvent(slide) {
@@ -127,6 +158,41 @@
     if (candidates.length === 1) return candidates[0];
 
     return candidates.find(isRegistrationPeriod) || candidates[0] || null;
+  }
+
+  function findAgendaCardEvent(card) {
+    const title = card.querySelector('.agenda-card-body > h2')?.textContent?.trim() || '';
+    if (!title || !events.length) return null;
+
+    let candidates = events.filter(event =>
+      String(event?.titulo || '').trim() === title
+    );
+    if (!candidates.length) return null;
+
+    const place = normalizeText(
+      card.querySelector('.agenda-card-place')?.textContent || ''
+    );
+
+    if (place && candidates.length > 1) {
+      const samePlace = candidates.filter(event =>
+        normalizeText([event?.local, event?.cidade].filter(Boolean).join(' • ')) === place
+      );
+      if (samePlace.length) candidates = samePlace;
+    }
+
+    return candidates[0] || null;
+  }
+
+  function enhanceAgendaCards() {
+    document.querySelectorAll('#app .agenda-card:not(.agenda-book-card)').forEach(card => {
+      const event = findAgendaCardEvent(card);
+      const range = formatAgendaRange(event);
+      const date = card.querySelector('.agenda-card-date');
+      if (!event || !range || !date) return;
+
+      const expected = `${range}${event.horario ? ` • ${event.horario}` : ''}`;
+      if (date.textContent !== expected) date.textContent = expected;
+    });
   }
 
   function appendDate(container, value) {
@@ -223,12 +289,14 @@
     updateQueued = false;
 
     const slide = document.querySelector('#app .slide');
-    if (!slide) return;
+    if (slide) {
+      replaceBlockedIframes(slide);
 
-    replaceBlockedIframes(slide);
+      const event = findCurrentEvent(slide);
+      if (event) renderRegistrationPeriod(slide, event);
+    }
 
-    const event = findCurrentEvent(slide);
-    if (event) renderRegistrationPeriod(slide, event);
+    enhanceAgendaCards();
   }
 
   function queueEnhancement() {
