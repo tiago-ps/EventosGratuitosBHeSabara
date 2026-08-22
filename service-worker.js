@@ -68,7 +68,7 @@ async function cacheFirstImage(request) {
   const contentType = response.headers.get('content-type') || '';
   if (isCacheableResponse(response) && contentType.startsWith('image/')) {
     await cache.put(request, response.clone());
-    await trimCache(cacheName, MAX_IMAGE_CACHE_ITEMS);
+    await trimCache(IMAGE_CACHE, MAX_IMAGE_CACHE_ITEMS);
   }
   return response;
 }
