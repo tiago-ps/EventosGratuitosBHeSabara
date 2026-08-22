@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v63.3-ios-install';
+const CACHE_VERSION = 'mural-cultural-v63.4-fresh-data';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -83,8 +83,12 @@ self.addEventListener('fetch', event => {
     event.respondWith(networkFirst(request, CORE_CACHE, './index.html', 'text/html'));
   } else if (['/eventos.json', '/livros.json', '/configuracao-mural.json'].some(path => url.pathname.endsWith(path))) {
     const fileName = url.pathname.split('/').pop();
+    // Sempre consulta a rede sem reutilizar a resposta HTTP anterior. O Cache
+    // Storage continua servindo como fallback somente quando a rede falha.
     const stableRequest = new Request(new URL(`./${fileName}`, self.registration.scope), {
-      mode: 'same-origin', credentials: 'same-origin'
+      mode: 'same-origin',
+      credentials: 'same-origin',
+      cache: 'no-store'
     });
     event.respondWith(networkFirst(stableRequest, DATA_CACHE, '', 'application/json'));
   } else if (url.pathname.endsWith(BRAND_LOGO_PATH)) {
