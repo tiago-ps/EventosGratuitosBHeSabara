@@ -1,8 +1,8 @@
 {
-  "schema": 7,
+  "schema": 8,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-08-23T07:05:11.834172+00:00",
+  "coletado_em_utc": "2026-08-23T07:22:08.240137+00:00",
   "total": 27,
   "concursos": [
     {
@@ -119,7 +119,7 @@
       "inscricoes_inicio_texto": "13 de julho de 2026",
       "inscricoes_fim_texto": "20 de agosto de 2026",
       "inscricoes_texto": "13 de julho de 2026 a 20 de agosto de 2026",
-      "remuneracao_faixa_texto": "R$ 115,00 a R$ 20.940,20",
+      "remuneracao_faixa_texto": "R$ 20.940,20",
       "cargos_compativeis": [
         {
           "cargo": "Auditor de Controle Externo - DIPE - Tecnologia da Informação",
@@ -187,7 +187,7 @@
       "inscricoes_inicio_texto": "19 de agosto de 2026",
       "inscricoes_fim_texto": "24 de agosto de 2026",
       "inscricoes_texto": "19 de agosto de 2026 a 24 de agosto de 2026",
-      "remuneracao_faixa_texto": "R$ 130,00 a R$ 5.215,39",
+      "remuneracao_faixa_texto": "",
       "cargos_compativeis": [
         {
           "cargo": "Analista de Tecnologia da Informação/Sistemas",
@@ -403,7 +403,7 @@
       "inscricoes_inicio_texto": "3 de agosto de 2026",
       "inscricoes_fim_texto": "5 de agosto de 2026",
       "inscricoes_texto": "3 de agosto de 2026 a 5 de agosto de 2026",
-      "remuneracao_faixa_texto": "R$ 100,00 a R$ 10.222,24",
+      "remuneracao_faixa_texto": "R$ 1.750,00 a R$ 10.222,24",
       "cargos_compativeis": [
         {
           "cargo": "Técnico em Informática",
@@ -434,7 +434,7 @@
       "inscricoes_inicio_texto": "2 de outubro de 2026",
       "inscricoes_fim_texto": "6 de outubro de 2026",
       "inscricoes_texto": "2 de outubro de 2026 a 6 de outubro de 2026",
-      "remuneracao_faixa_texto": "R$ 120,00 a R$ 8.000,00",
+      "remuneracao_faixa_texto": "R$ 1.745,00 a R$ 8.000,00",
       "cargos_compativeis": [
         {
           "cargo": "Técnico em Informática",
@@ -496,7 +496,7 @@
       "inscricoes_inicio_texto": "19 de outubro de 2026",
       "inscricoes_fim_texto": "21 de outubro de 2026",
       "inscricoes_texto": "19 de outubro de 2026 a 21 de outubro de 2026",
-      "remuneracao_faixa_texto": "R$ 2.698,73 a R$ 13.305,57",
+      "remuneracao_faixa_texto": "R$ 13.305,57",
       "cargos_compativeis": [
         {
           "cargo": "Auditor de Controle Interno - Tecnologia da Informação",
@@ -558,7 +558,7 @@
       "inscricoes_inicio_texto": "2 de setembro de 2026",
       "inscricoes_fim_texto": "2 de outubro de 2026",
       "inscricoes_texto": "2 de setembro de 2026 a 2 de outubro de 2026",
-      "remuneracao_faixa_texto": "R$ 100,00 a R$ 18.702,17",
+      "remuneracao_faixa_texto": "R$ 1.469,88 a R$ 18.702,17",
       "cargos_compativeis": [
         {
           "cargo": "Técnico em Informática",
@@ -688,7 +688,7 @@
       "inscricoes_inicio_texto": "20 de outubro de 2026",
       "inscricoes_fim_texto": "22 de outubro de 2026",
       "inscricoes_texto": "20 de outubro de 2026 a 22 de outubro de 2026",
-      "remuneracao_faixa_texto": "R$ 100,00 a R$ 18.647,01",
+      "remuneracao_faixa_texto": "R$ 1.621,00 a R$ 18.647,01",
       "cargos_compativeis": [
         {
           "cargo": "Técnico em Informática",
@@ -824,7 +824,7 @@
       "inscricoes_inicio_texto": "11 de agosto de 2026",
       "inscricoes_fim_texto": "26 de agosto de 2026",
       "inscricoes_texto": "11 de agosto de 2026 a 26 de agosto de 2026",
-      "remuneracao_faixa_texto": "R$ 100,00 a R$ 7.997,72",
+      "remuneracao_faixa_texto": "R$ 4.443,18 a R$ 7.997,72",
       "cargos_compativeis": [
         {
           "cargo": "Agente Universitário de Execução/Técnico em Informática - Campus de Cornélio Procópio",
@@ -855,7 +855,7 @@
       "inscricoes_inicio_texto": "26 de agosto de 2026",
       "inscricoes_fim_texto": "23 de agosto de 2026",
       "inscricoes_texto": "26 de agosto de 2026 a 23 de agosto de 2026",
-      "remuneracao_faixa_texto": "R$ 150,00 a R$ 6.757,44",
+      "remuneracao_faixa_texto": "",
       "cargos_compativeis": [
         {
           "cargo": "Agente Técnico em Informática",
