@@ -1,8 +1,8 @@
 {
-  "schema": 2,
+  "schema": 3,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-08-23T04:13:48.362133+00:00",
+  "coletado_em_utc": "2026-08-23T04:52:48.468871+00:00",
   "total": 32,
   "concursos": [
     {
@@ -15,12 +15,43 @@
         {
           "nome": "Técnico em Informática",
           "nivel": "tecnico",
-          "evidencia": "riu um concurso publico visando preencher vagas para profissionais de nivel fundamental, medio, tecnico e superior. segundo o edital, as oportunidades sao para os cargos de: motorista i (1 vaga) agente administrativo (1 vaga) tecnico de contabilidade (1 vaga) tecnico em informatica (1 vaga) contador (1 vaga) controlador interno (1 vaga) procurador juridico (1 vaga) a jornada de trabalho varia de 20 a 40 horas semanais e as remuneracoes vao de r$ 1.706,94 a r$ 7.104,30. todos os cargos contam com beneficios como vale-alimentacao, vale-re"
+          "evidencia": "tatuba ( caraguaprev ), em sao paulo, abriu um concurso publico visando preencher vagas para profissionais de nivel fundamental, medio, tecnico e superior. segundo o edital, as oportunidades sao para os cargos de: motorista i (1 vaga) agente administrativo (1 vaga) tecnico de contabilidade (1 vaga) tecnico em informatica (1 vaga) contador (1 vaga) controlador interno (1 vaga) procurador juridico (1 vaga) a jornada de trabalho varia de 20 a 40 horas semanais e as remuneracoes vao de r$ 1.706,94 a r$ 7.104,30. todos os cargos contam com beneficios como vale-alimentacao, vale-refeicao e vale-transporte mediante requer"
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "remuneracao_texto": "R$ 7.104,30"
+      "uf": "",
+      "cidade": "",
+      "inscricoes_inicio_texto": "17 de agosto de 2026",
+      "inscricoes_fim_texto": "29 de setembro de 2026",
+      "inscricoes_texto": "17 de agosto de 2026 a 29 de setembro de 2026",
+      "remuneracao_faixa_texto": "R$ 1.706,94 a R$ 19.593,52",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico em Informática",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Contador",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Controlador Interno",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Procurador Jurídico",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        }
+      ]
     },
     {
       "titulo": "CONDERG - Consórcio de Desenvolvimento da Região de Governo de São João da Boa Vista",
@@ -32,12 +63,43 @@
         {
           "nome": "Sistemas de Informação / Computação",
           "nivel": "superior",
-          "evidencia": "radiologia (cadastro de reserva) telefonista (cadastro de reserva) terapeuta ocupacional (3 vagas) samu condutor de ambulancia (cadastro de reserva) radio operador (cadastro de reserva) tarm - telefonista auxiliar de regulacao (cadastro de reserva) tecnico em computacao (cadastro de reserva) sao joao da boa vista aplicador aba (cadastro de reserva) auxiliar de consultorio dentario (cadastro de reserva) auxiliar de servicos de farmacia (cadastro de reserva) auxiliar de servicos gerais (cadastro de reserva) cuidador de saude ("
+          "evidencia": "rmagem (cadastro de reserva) tecnico em radiologia (cadastro de reserva) telefonista (cadastro de reserva) terapeuta ocupacional (3 vagas) samu condutor de ambulancia (cadastro de reserva) radio operador (cadastro de reserva) tarm - telefonista auxiliar de regulacao (cadastro de reserva) tecnico em computacao (cadastro de reserva) sao joao da boa vista aplicador aba (cadastro de reserva) auxiliar de consultorio dentario (cadastro de reserva) auxiliar de servicos de farmacia (cadastro de reserva) auxiliar de servicos gerais (cadastro de reserva) cuidador de saude (cadastro de reserva) fonoaudiologo (1 va"
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "remuneracao_texto": "R$ 6.009,98"
+      "uf": "",
+      "cidade": "",
+      "inscricoes_inicio_texto": "18 de agosto de 2026",
+      "inscricoes_fim_texto": "10 de setembro de 2026",
+      "inscricoes_texto": "18 de agosto de 2026 a 10 de setembro de 2026",
+      "remuneracao_faixa_texto": "R$ 1.621,00 a R$ 19.593,52",
+      "cargos_compativeis": [
+        {
+          "cargo": "Auxiliar de Serviços Gerais",
+          "vagas_texto": "Cadastro de Reserva",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Cuidador de Saúde",
+          "vagas_texto": "Cadastro de Reserva",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Fonoaudiólogo",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Psicólogo Especialista em ABA",
+          "vagas_texto": "Cadastro de Reserva",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        }
+      ]
     },
     {
       "titulo": "Prefeitura de Cafelândia",
@@ -49,12 +111,40 @@
         {
           "nome": "Técnico em Informática",
           "nivel": "tecnico",
-          "evidencia": "te de atividade infantil (1 vaga) artesao (1 vaga) motorista (1 vaga) operador de maquinas (1 vaga) agente administrativo (1 vaga) agente comunitario esf (1 vaga) agente de organizacao escolar (1 vaga) orientador social (1 vaga) tecnico em enfermagem (1 vaga) tecnico em informatica (1 vaga) tecnico em servicos juridicos (1 vaga) assistente social (1 vaga) bibliotecario (1 vaga) controlador interno (1 vaga) dentista esf (1 vaga) enfermeiro esf (1 vaga) engenheiro agronomo (1 vaga) engenheiro civil (1 vaga) farmaceutico (1 vaga) fiscal de"
+          "evidencia": "portunidades sao para os cargos de: agente de atividade infantil (1 vaga) artesao (1 vaga) motorista (1 vaga) operador de maquinas (1 vaga) agente administrativo (1 vaga) agente comunitario esf (1 vaga) agente de organizacao escolar (1 vaga) orientador social (1 vaga) tecnico em enfermagem (1 vaga) tecnico em informatica (1 vaga) tecnico em servicos juridicos (1 vaga) assistente social (1 vaga) bibliotecario (1 vaga) controlador interno (1 vaga) dentista esf (1 vaga) enfermeiro esf (1 vaga) engenheiro agronomo (1 vaga) engenheiro civil (1 vaga) farmaceutico (1 vaga) fiscal de tributos (1 vaga) fisioterapeuta (1 vag"
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "remuneracao_texto": "R$ 9.028,49"
+      "uf": "",
+      "cidade": "",
+      "remuneracao_faixa_texto": "R$ 2.260,18 a R$ 19.593,52",
+      "cargos_compativeis": [
+        {
+          "cargo": "Farmacêutico",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Fiscal de Tributos",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Fisioterapeuta",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Fonoaudiólogo",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        }
+      ]
     },
     {
       "titulo": "TCESP - Tribunal de Contas do Estado de São Paulo",
@@ -66,12 +156,34 @@
         {
           "nome": "Sistemas de Informação / Computação",
           "nivel": "superior",
-          "evidencia": "tas do estado de sao paulo ( tce-sp ) publicou um edital de concurso publico para preencher vagas no cargo de auditor de controle externo - dipe, com exigencia de nivel superior. o edital atualizou a lista de especialidades de formacao exigidas para a area de tecnologia da informacao (ti). alem disso, topicos relacionados as provas e ao conteudo programatico tambem foram atualizados. segundo o edital, as oportunidades sao para os cargos de: auditor de controle externo - dipe - ciencias atuariais (2 vagas) auditor de controle externo - dip"
+          "evidencia": ", 13 de agosto de 2026 o tribunal de contas do estado de sao paulo ( tce-sp ) publicou um edital de concurso publico para preencher vagas no cargo de auditor de controle externo - dipe, com exigencia de nivel superior. o edital atualizou a lista de especialidades de formacao exigidas para a area de tecnologia da informacao (ti). alem disso, topicos relacionados as provas e ao conteudo programatico tambem foram atualizados. segundo o edital, as oportunidades sao para os cargos de: auditor de controle externo - dipe - ciencias atuariais (2 vagas) auditor de controle externo - dipe - ciencias contabeis (11 vagas) audito"
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "remuneracao_texto": "R$ 20.940,20"
+      "uf": "",
+      "cidade": "",
+      "remuneracao_faixa_texto": "R$ 4.098,78 a R$ 20.940,20",
+      "cargos_compativeis": [
+        {
+          "cargo": "Auditor de Controle Externo - DIPE - Ciências Atuariais",
+          "vagas_texto": "2 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Auditor de Controle Externo - DIPE - Ciências Contábeis",
+          "vagas_texto": "11 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Auditor de Controle Externo - DIPE - Ciências Econômicas",
+          "vagas_texto": "10 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        }
+      ]
     },
     {
       "titulo": "Marinha do Brasil - Comando do 1º Distrito Naval",
@@ -83,12 +195,40 @@
         {
           "nome": "Sistemas de Informação / Computação",
           "nivel": "superior",
-          "evidencia": " processo seletivo destinado a preencher vagas e formar cadastro de reserva para oficiais de 3a classe da reserva da marinha (rm3) em areas de nivel superior. segundo o edital, as oportunidades sao para os cargos de: area de ciencia e tecnologia engenharia da computacao (1 vaga) biomedicina/ciencias biologicas - modalidade medica/biotecnologia/bioquimica/farmacia (1 vaga + cr) engenharia eletronica ou engenharia acustica (1 vaga) engenharia de producao (1 vaga + cr) engenharia eletronica (1 vaga) engenharia mecanica (1 vaga)"
+          "evidencia": "o rio de janeiro/rj, publicou o aviso do processo seletivo destinado a preencher vagas e formar cadastro de reserva para oficiais de 3a classe da reserva da marinha (rm3) em areas de nivel superior. segundo o edital, as oportunidades sao para os cargos de: area de ciencia e tecnologia engenharia da computacao (1 vaga) biomedicina/ciencias biologicas - modalidade medica/biotecnologia/bioquimica/farmacia (1 vaga + cr) engenharia eletronica ou engenharia acustica (1 vaga) engenharia de producao (1 vaga + cr) engenharia eletronica (1 vaga) engenharia mecanica (1 vaga) engenharia mecanica - estruturas ou tub"
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "remuneracao_texto": "R$ 4.277,48"
+      "uf": "",
+      "cidade": "",
+      "remuneracao_faixa_texto": "R$ 4.277,48 a R$ 12.579,96",
+      "cargos_compativeis": [
+        {
+          "cargo": "Engenharia de Produção",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Engenharia Eletrônica",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Engenharia Mecânica",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Engenharia Mecânica - Estruturas ou Tubulações",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        }
+      ]
     },
     {
       "titulo": "UFRRJ - Universidade Federal Rural do Rio de Janeiro",
@@ -100,12 +240,40 @@
         {
           "nome": "Sistemas de Informação / Computação",
           "nivel": "superior",
-          "evidencia": "exta-feira, 21 de agosto de 2026 a universidade federal rural do rio de janeiro (ufrrj) abriu um concurso publico para preencher vagas em cargos do quadro de pessoal tecnico-administrativo. segundo o edital, as oportunidades sao para os cargos de: analista de tecnologia da informacao/sistemas (2 vagas) analista de tecnologia da informacao/infraestrutura (2 vagas) engenheiro de seguranca do trabalho (1 vaga) fonoaudiologo (1 vaga) medico clinico geral (1 vaga) medico psiquiatra (2 vagas) medico veterinario/cirurgia de pequenos animais (1 v"
+          "evidencia": "ificos. concursos › noticias › sudeste sexta-feira, 21 de agosto de 2026 a universidade federal rural do rio de janeiro (ufrrj) abriu um concurso publico para preencher vagas em cargos do quadro de pessoal tecnico-administrativo. segundo o edital, as oportunidades sao para os cargos de: analista de tecnologia da informacao/sistemas (2 vagas) analista de tecnologia da informacao/infraestrutura (2 vagas) engenheiro de seguranca do trabalho (1 vaga) fonoaudiologo (1 vaga) medico clinico geral (1 vaga) medico psiquiatra (2 vagas) medico veterinario/cirurgia de pequenos animais (1 vaga) zootecnista (2 vagas) a jornada de "
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "remuneracao_texto": "R$ 4.277,48"
+      "uf": "",
+      "cidade": "",
+      "remuneracao_faixa_texto": "R$ 4.277,48 a R$ 12.579,96",
+      "cargos_compativeis": [
+        {
+          "cargo": "Médico Clínico Geral",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Médico Psiquiatra",
+          "vagas_texto": "2 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Médico Veterinário/Cirurgia de Pequenos Animais",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Zootecnista",
+          "vagas_texto": "2 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        }
+      ]
     },
     {
       "titulo": "DMAE - Departamento Municipal de Água e Esgoto de Uberlândia",
@@ -117,12 +285,40 @@
         {
           "nome": "Técnico em Informática",
           "nivel": "tecnico",
-          "evidencia": "ador de bombas (1 vaga) operador de maquinas automotivas (1 vaga) soldador industrial (1 vaga) agente comercial (5 vagas) oficial administrativo (10 vagas) desenhista (1 vaga) fiscal de obras do saneamento (1 vaga) tecnico de operacoes de etas e etes (1 vaga) tecnico em informatica (1 vaga) tecnico em meio ambiente (1 vaga) assistente social (1 vaga) biologo (1 vaga) contador (1 vaga) economista (1 vaga) engenheiro ambiental (1 vaga) engenheiro civil (1 vaga) engenheiro eletricista (1 vaga) engenheiro de seguranca do trabalho (1 vaga) e"
+          "evidencia": "ustrial (1 vaga) motorista (1 vaga) operador de bombas (1 vaga) operador de maquinas automotivas (1 vaga) soldador industrial (1 vaga) agente comercial (5 vagas) oficial administrativo (10 vagas) desenhista (1 vaga) fiscal de obras do saneamento (1 vaga) tecnico de operacoes de etas e etes (1 vaga) tecnico em informatica (1 vaga) tecnico em meio ambiente (1 vaga) assistente social (1 vaga) biologo (1 vaga) contador (1 vaga) economista (1 vaga) engenheiro ambiental (1 vaga) engenheiro civil (1 vaga) engenheiro eletricista (1 vaga) engenheiro de seguranca do trabalho (1 vaga) engenheiro quimico (1 vaga) psicologo (1 "
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "remuneracao_texto": "R$ 7.018,00"
+      "uf": "",
+      "cidade": "",
+      "remuneracao_faixa_texto": "R$ 2.235,35 a R$ 21.138,26",
+      "cargos_compativeis": [
+        {
+          "cargo": "Engenheiro de Segurança do Trabalho",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Engenheiro Químico",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Psicólogo",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Químico",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        }
+      ]
     },
     {
       "titulo": "Câmara de Capelinha",
@@ -134,12 +330,43 @@
         {
           "nome": "Técnico em Informática",
           "nivel": "tecnico",
-          "evidencia": "agas) assistente legislativo (1 vaga) auxiliar de administracao (4 vagas) auxiliar tecnico administrativo (3 vagas) monitor (3 vagas) motorista (categoria b) (1 vaga) motorista (categoria d) (1 vaga) oficial legislativo (1 vaga) tecnico em radio e tv (1 vaga) tecnico em informatica (1 vaga) tradutor e interprete de libras (1 vaga) agente de servicos externos (1 vaga) auxiliar de servicos gerais (2 vagas) zelador (1 vaga) a jornada semanal e de 20 a 40 horas, conforme o cargo. as remuneracoes variam de r$ 1.914,05 a r$ 4.527,60. as inscr"
+          "evidencia": "icacao (2 vagas) agente legislativo (2 vagas) assistente legislativo (1 vaga) auxiliar de administracao (4 vagas) auxiliar tecnico administrativo (3 vagas) monitor (3 vagas) motorista (categoria b) (1 vaga) motorista (categoria d) (1 vaga) oficial legislativo (1 vaga) tecnico em radio e tv (1 vaga) tecnico em informatica (1 vaga) tradutor e interprete de libras (1 vaga) agente de servicos externos (1 vaga) auxiliar de servicos gerais (2 vagas) zelador (1 vaga) a jornada semanal e de 20 a 40 horas, conforme o cargo. as remuneracoes variam de r$ 1.914,05 a r$ 4.527,60. as inscricoes estarao abertas de 21 de setembro "
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "remuneracao_texto": "R$ 4.527,60"
+      "uf": "",
+      "cidade": "",
+      "inscricoes_inicio_texto": "21 de setembro de 2026",
+      "inscricoes_fim_texto": "21 de outubro de 2026",
+      "inscricoes_texto": "21 de setembro de 2026 a 21 de outubro de 2026",
+      "remuneracao_faixa_texto": "R$ 1.914,05 a R$ 21.138,26",
+      "cargos_compativeis": [
+        {
+          "cargo": "Tradutor e Intérprete de Libras",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Agente de Serviços Externos",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Auxiliar de Serviços Gerais",
+          "vagas_texto": "2 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Zelador",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        }
+      ]
     },
     {
       "titulo": "Câmara de Passos",
@@ -151,12 +378,40 @@
         {
           "nome": "Sistemas de Informação / Computação",
           "nivel": "superior",
-          "evidencia": "l administrativo e agente de apoio legislativo e administrativo. segundo o edital, as oportunidades sao para os cargos de: oficial administrativo (3 vagas) agente de apoio legislativo e administrativo (4 vagas) agente de comunicacao social (3 vagas) agente de tecnologia da informacao (2 vagas) analista tecnico-juridico (2 vagas) contador (2 vagas) a jornada de trabalho para todos os cargos sera de 40 horas semanais. a remuneracao ofertada varia de r$ 4.585,17 a r$ 5.485,48. as inscricoes deverao ser realizadas exclusivamente via internet,"
+          "evidencia": "ria, sendo incluidos os cargos de oficial administrativo e agente de apoio legislativo e administrativo. segundo o edital, as oportunidades sao para os cargos de: oficial administrativo (3 vagas) agente de apoio legislativo e administrativo (4 vagas) agente de comunicacao social (3 vagas) agente de tecnologia da informacao (2 vagas) analista tecnico-juridico (2 vagas) contador (2 vagas) a jornada de trabalho para todos os cargos sera de 40 horas semanais. a remuneracao ofertada varia de r$ 4.585,17 a r$ 5.485,48. as inscricoes deverao ser realizadas exclusivamente via internet, no site www.gestaodeconcursos.com.br , "
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "remuneracao_texto": "R$ 4.848,48"
+      "uf": "",
+      "cidade": "",
+      "remuneracao_faixa_texto": "R$ 4.000,00 a R$ 21.138,26",
+      "cargos_compativeis": [
+        {
+          "cargo": "Agente de Comunicação Social",
+          "vagas_texto": "3 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Agente de Tecnologia da Informação",
+          "vagas_texto": "2 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Analista Técnico-Jurídico",
+          "vagas_texto": "2 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Contador",
+          "vagas_texto": "2 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        }
+      ]
     },
     {
       "titulo": "FJP - Fundação João Pinheiro",
@@ -168,12 +423,25 @@
         {
           "nome": "Administração",
           "nivel": "superior",
-          "evidencia": " tenham prestado servicos eleitorais, no periodo de 24 de agosto de 2026 a 3 de setembro de 2026. o processo de selecao tera tres etapas: participacao no enem 2026 (provas objetivas e redacao), habilitacao documental dos classificados e realizacao do curso de graduacao em administracao publica (csap). o candidato aprovado sera contratado sob regime estatutario. o concurso tem validade de 2 anos, a contar da homologacao, podendo ser prorrogado uma unica vez por igual periodo. mais informacoes podem ser obtidas no edital completo. estude de f"
+          "evidencia": " regulares, inscritos no cadunico ou que tenham prestado servicos eleitorais, no periodo de 24 de agosto de 2026 a 3 de setembro de 2026. o processo de selecao tera tres etapas: participacao no enem 2026 (provas objetivas e redacao), habilitacao documental dos classificados e realizacao do curso de graduacao em administracao publica (csap). o candidato aprovado sera contratado sob regime estatutario. o concurso tem validade de 2 anos, a contar da homologacao, podendo ser prorrogado uma unica vez por igual periodo. mais informacoes podem ser obtidas no edital completo. estude de forma inteligente com o material basico p"
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "remuneracao_texto": "R$ 5.226,60"
+      "uf": "",
+      "cidade": "",
+      "inscricoes_inicio_texto": "24 de agosto de 2026",
+      "inscricoes_fim_texto": "28 de setembro de 2026",
+      "inscricoes_texto": "24 de agosto de 2026 a 28 de setembro de 2026",
+      "remuneracao_faixa_texto": "R$ 4.000,00 a R$ 21.138,26",
+      "cargos_compativeis": [
+        {
+          "cargo": "líticas Públicas e Gestão Governamental",
+          "vagas_texto": "30 vaga",
+          "formacao": "Administração",
+          "confianca": "media"
+        }
+      ]
     },
     {
       "titulo": "FUMEP - Fundação Municipal de Ensino Profissionalizante de Sete Lagoas",
@@ -186,17 +454,63 @@
         {
           "nome": "Sistemas de Informação / Computação",
           "nivel": "superior",
-          "evidencia": "nsino profissionalizante - engenharia mecatronica (1 vaga) professor de ensino profissionalizante - engenharia de automacao e controle (1 vaga) professor de ensino profissionalizante - enfermagem (1 vaga) professor de ensino profissionalizante - engenharia da computacao (1 vaga) professor de ensino profissionalizante - tecnologo em rede de computadores (1 vaga) professor de ensino profissionalizante - engenharia mecanica (1 vaga) professor de ensino profissionalizante - engenharia metalurgica (1 vaga) professor de ensino pro"
+          "evidencia": "te - arquitetura (1 vaga) professor de ensino profissionalizante - engenharia mecatronica (1 vaga) professor de ensino profissionalizante - engenharia de automacao e controle (1 vaga) professor de ensino profissionalizante - enfermagem (1 vaga) professor de ensino profissionalizante - engenharia da computacao (1 vaga) professor de ensino profissionalizante - tecnologo em rede de computadores (1 vaga) professor de ensino profissionalizante - engenharia mecanica (1 vaga) professor de ensino profissionalizante - engenharia metalurgica (1 vaga) professor de ensino profissionalizante - engenharia ambiental ("
         },
         {
           "nome": "Engenharia de Automação",
           "nivel": "superior",
-          "evidencia": "inicas (2 vagas) professor de ensino profissionalizante - engenharia civil (1 vaga) professor de ensino profissionalizante - arquitetura (1 vaga) professor de ensino profissionalizante - engenharia mecatronica (1 vaga) professor de ensino profissionalizante - engenharia de automacao e controle (1 vaga) professor de ensino profissionalizante - enfermagem (1 vaga) professor de ensino profissionalizante - engenharia da computacao (1 vaga) professor de ensino profissionalizante - tecnologo em rede de computadores (1 vaga) professor de ensino"
+          "evidencia": "ioquimica com habilitacao em analises clinicas (2 vagas) professor de ensino profissionalizante - engenharia civil (1 vaga) professor de ensino profissionalizante - arquitetura (1 vaga) professor de ensino profissionalizante - engenharia mecatronica (1 vaga) professor de ensino profissionalizante - engenharia de automacao e controle (1 vaga) professor de ensino profissionalizante - enfermagem (1 vaga) professor de ensino profissionalizante - engenharia da computacao (1 vaga) professor de ensino profissionalizante - tecnologo em rede de computadores (1 vaga) professor de ensino profissionalizante - engenharia mecanic"
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "remuneracao_texto": "R$ 1.621,00"
+      "uf": "",
+      "cidade": "",
+      "remuneracao_faixa_texto": "R$ 1.621,00 a R$ 21.138,26",
+      "cargos_compativeis": [
+        {
+          "cargo": "Professor de Ensino Profissionalizante - Engenharia Mecânica",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Professor de Ensino Profissionalizante - Engenharia Metalúrgica",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Professor de Ensino Profissionalizante - Engenharia Ambiental",
+          "vagas_texto": "CR",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Professor de Ensino Profissionalizante - Química",
+          "vagas_texto": "CR",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Professor de Ensino Profissionalizante - Enfermagem",
+          "vagas_texto": "1 vaga",
+          "formacao": "Engenharia de Automação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Professor de Ensino Profissionalizante - Engenharia da Computação",
+          "vagas_texto": "1 vaga",
+          "formacao": "Engenharia de Automação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Professor de Ensino Profissionalizante - Tecnólogo em Rede de Computadores",
+          "vagas_texto": "1 vaga",
+          "formacao": "Engenharia de Automação",
+          "confianca": "media"
+        }
+      ]
     },
     {
       "titulo": "HOB - Hospital Metropolitano Odilon Behrens",
@@ -209,17 +523,60 @@
         {
           "nome": "Técnico em Administração",
           "nivel": "tecnico",
-          "evidencia": "2026 o hospital metropolitano odilon behrens - hob , em belo horizonte/mg, abriu um concurso publico para o preenchimento de vagas em funcoes de nivel medio/tecnico e superior. segundo o edital, as oportunidades sao para os cargos de: tecnico de nivel medio - tecnico em administracao (2 vagas) tecnico de nivel medio - tecnico em eletronica (1 vaga) tecnico de servicos de saude - tecnico em enfermagem (10 vagas) tecnico de servicos de saude - tecnico em nutricao (5 vagas) tecnico de servicos de saude - tecnico em patologia clinica (1 vaga)"
+          "evidencia": "as › sudeste terca-feira, 7 de julho de 2026 o hospital metropolitano odilon behrens - hob , em belo horizonte/mg, abriu um concurso publico para o preenchimento de vagas em funcoes de nivel medio/tecnico e superior. segundo o edital, as oportunidades sao para os cargos de: tecnico de nivel medio - tecnico em administracao (2 vagas) tecnico de nivel medio - tecnico em eletronica (1 vaga) tecnico de servicos de saude - tecnico em enfermagem (10 vagas) tecnico de servicos de saude - tecnico em nutricao (5 vagas) tecnico de servicos de saude - tecnico em patologia clinica (1 vaga) tecnico de servicos de saude - tecnico "
         },
         {
           "nome": "Técnico em Eletrônica",
           "nivel": "tecnico",
-          "evidencia": " horizonte/mg, abriu um concurso publico para o preenchimento de vagas em funcoes de nivel medio/tecnico e superior. segundo o edital, as oportunidades sao para os cargos de: tecnico de nivel medio - tecnico em administracao (2 vagas) tecnico de nivel medio - tecnico em eletronica (1 vaga) tecnico de servicos de saude - tecnico em enfermagem (10 vagas) tecnico de servicos de saude - tecnico em nutricao (5 vagas) tecnico de servicos de saude - tecnico em patologia clinica (1 vaga) tecnico de servicos de saude - tecnico em radiologia (1 "
+          "evidencia": "opolitano odilon behrens - hob , em belo horizonte/mg, abriu um concurso publico para o preenchimento de vagas em funcoes de nivel medio/tecnico e superior. segundo o edital, as oportunidades sao para os cargos de: tecnico de nivel medio - tecnico em administracao (2 vagas) tecnico de nivel medio - tecnico em eletronica (1 vaga) tecnico de servicos de saude - tecnico em enfermagem (10 vagas) tecnico de servicos de saude - tecnico em nutricao (5 vagas) tecnico de servicos de saude - tecnico em patologia clinica (1 vaga) tecnico de servicos de saude - tecnico em radiologia (1 vaga) cirurgiao dentista clinico geral ("
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "remuneracao_texto": "R$ 7.397,55"
+      "uf": "",
+      "cidade": "",
+      "inscricoes_inicio_texto": "9 de setembro de 2026",
+      "inscricoes_fim_texto": "8 de outubro de 2026",
+      "inscricoes_texto": "9 de setembro de 2026 a 8 de outubro de 2026",
+      "remuneracao_faixa_texto": "R$ 2.003,25 a R$ 21.138,26",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico de Serviços de Saúde - Técnico em Nutrição",
+          "vagas_texto": "5 vaga",
+          "formacao": "Técnico em Administração",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Técnico de Serviços de Saúde - Técnico em Patologia Clínica",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Administração",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Técnico de Serviços de Saúde - Técnico em Radiologia",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Administração",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Cirurgião Dentista Clínico Geral",
+          "vagas_texto": "3 vaga",
+          "formacao": "Técnico em Administração",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Enfermeiro 24 horas",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Eletrônica",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Enfermeiro 30 horas",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Eletrônica",
+          "confianca": "media"
+        }
+      ]
     },
     {
       "titulo": "Município e Câmara de Tombos",
@@ -231,12 +588,43 @@
         {
           "nome": "Técnico em Informática",
           "nivel": "tecnico",
-          "evidencia": "eteiro (1 vaga) oficial carpinteiro (cr) oficial pedreiro (2 vagas) operador de maquinas (7 vagas) agente de administracao escolar (cr) agente administrativo (2 vagas) monitor de educacao infantil (4 vagas) motorista (12 vagas) tecnico em enfermagem (4 vagas) tecnico em informatica (1 vaga) tecnico em saude bucal (cr) analista de sistemas (1 vaga) assistente social (3 vagas) enfermeiro 20h (1 vaga) enfermeiro 40h (4 vagas) especialista em educacao basica (cr) farmaceutico (2 vagas) fisioterapeuta (3 vagas) fonoaudiologo (2 vagas) medico"
+          "evidencia": "ficial eletricista (1 vaga) oficial calceteiro (1 vaga) oficial carpinteiro (cr) oficial pedreiro (2 vagas) operador de maquinas (7 vagas) agente de administracao escolar (cr) agente administrativo (2 vagas) monitor de educacao infantil (4 vagas) motorista (12 vagas) tecnico em enfermagem (4 vagas) tecnico em informatica (1 vaga) tecnico em saude bucal (cr) analista de sistemas (1 vaga) assistente social (3 vagas) enfermeiro 20h (1 vaga) enfermeiro 40h (4 vagas) especialista em educacao basica (cr) farmaceutico (2 vagas) fisioterapeuta (3 vagas) fonoaudiologo (2 vagas) medico psf (2 vagas) nutricionista (3 vagas) o"
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "remuneracao_texto": "R$ 10.222,24"
+      "uf": "",
+      "cidade": "",
+      "inscricoes_inicio_texto": "3 de agosto de 2026",
+      "inscricoes_fim_texto": "3 de setembro de 2026",
+      "inscricoes_texto": "3 de agosto de 2026 a 3 de setembro de 2026",
+      "remuneracao_faixa_texto": "R$ 1.750,00 a R$ 21.138,26",
+      "cargos_compativeis": [
+        {
+          "cargo": "Nutricionista",
+          "vagas_texto": "3 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Odontólogo",
+          "vagas_texto": "CR",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Odontólogo PSF",
+          "vagas_texto": "4 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Pedagogo - CAPS",
+          "vagas_texto": "CR",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        }
+      ]
     },
     {
       "titulo": "Prefeitura de Belo Vale",
@@ -248,12 +636,40 @@
         {
           "nome": "Técnico em Informática",
           "nivel": "tecnico",
-          "evidencia": " vagas) atendente de saude (6 vagas) auxiliar administrativo (8 vagas) auxiliar de biblioteca (2 vagas) cuidador social (6 vagas) vigilante patrimonial (4 vagas) tecnico de enfermagem (4 vagas) tecnico de enfermagem i (4 vagas) tecnico em saude bucal (1 vaga) tecnico em informatica (2 vagas) tecnico de laboratorio (1 vaga) tecnico de laboratorio i (1 vaga) tecnico em raio x (2 vagas) tecnico em seguranca do trabalho (1 vaga) tecnico em veterinaria (1 vaga) procurador i (1 vaga) biomedico (2 vagas) dentista ii (1 vaga) educador fisico (3"
+          "evidencia": "em saude (2 vagas) atendente de museu (2 vagas) atendente de saude (6 vagas) auxiliar administrativo (8 vagas) auxiliar de biblioteca (2 vagas) cuidador social (6 vagas) vigilante patrimonial (4 vagas) tecnico de enfermagem (4 vagas) tecnico de enfermagem i (4 vagas) tecnico em saude bucal (1 vaga) tecnico em informatica (2 vagas) tecnico de laboratorio (1 vaga) tecnico de laboratorio i (1 vaga) tecnico em raio x (2 vagas) tecnico em seguranca do trabalho (1 vaga) tecnico em veterinaria (1 vaga) procurador i (1 vaga) biomedico (2 vagas) dentista ii (1 vaga) educador fisico (3 vagas) enfermeiro ii (2 vagas) enfermei"
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "remuneracao_texto": "R$ 8.000,00"
+      "uf": "",
+      "cidade": "",
+      "remuneracao_faixa_texto": "R$ 1.745,00 a R$ 21.138,26",
+      "cargos_compativeis": [
+        {
+          "cargo": "Educador Físico",
+          "vagas_texto": "3 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Enfermeiro II",
+          "vagas_texto": "2 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Enfermeiro III",
+          "vagas_texto": "4 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Farmacêutico",
+          "vagas_texto": "2 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        }
+      ]
     },
     {
       "titulo": "Prefeitura de Carmo da Mata",
@@ -265,12 +681,43 @@
         {
           "nome": "Técnico em Informática",
           "nivel": "tecnico",
-          "evidencia": "(cadastro de reserva) recepcionista (cadastro de reserva) ensino medio e/ou tecnico auxiliar de servicos (1 vaga) fiscal ambiental (1 vaga) fiscal de posturas e obras (1 vaga) fiscal de vigilancia sanitaria e em saude (1 vaga) fiscal sim (cadastro de reserva) tecnico em informatica (cadastro de reserva) tecnico em seguranca do trabalho (cadastro de reserva) ensino superior bibliotecario (cadastro de reserva) enfermeiro (cadastro de reserva) engenheiro ambiental (1 vaga) engenheiro civil (cadastro de reserva) fisioterapeuta (cadastro de "
+          "evidencia": "tro de reserva) motorista de ambulancia (cadastro de reserva) recepcionista (cadastro de reserva) ensino medio e/ou tecnico auxiliar de servicos (1 vaga) fiscal ambiental (1 vaga) fiscal de posturas e obras (1 vaga) fiscal de vigilancia sanitaria e em saude (1 vaga) fiscal sim (cadastro de reserva) tecnico em informatica (cadastro de reserva) tecnico em seguranca do trabalho (cadastro de reserva) ensino superior bibliotecario (cadastro de reserva) enfermeiro (cadastro de reserva) engenheiro ambiental (1 vaga) engenheiro civil (cadastro de reserva) fisioterapeuta (cadastro de reserva) maestro (cadastro de reserva) p"
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "remuneracao_texto": "R$ 3.886,53"
+      "uf": "",
+      "cidade": "",
+      "inscricoes_inicio_texto": "2 de setembro de 2026",
+      "inscricoes_fim_texto": "2 de outubro de 2026",
+      "inscricoes_texto": "2 de setembro de 2026 a 2 de outubro de 2026",
+      "remuneracao_faixa_texto": "R$ 1.629,09 a R$ 21.138,26",
+      "cargos_compativeis": [
+        {
+          "cargo": "Fisioterapeuta",
+          "vagas_texto": "cadastro de reserva",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Maestro",
+          "vagas_texto": "cadastro de reserva",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Procurador Municipal",
+          "vagas_texto": "2 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Psicólogo",
+          "vagas_texto": "cadastro de reserva",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        }
+      ]
     },
     {
       "titulo": "Prefeitura de Contagem",
@@ -282,12 +729,43 @@
         {
           "nome": "Sistemas de Informação / Computação",
           "nivel": "superior",
-          "evidencia": "rquiteto (14 vagas) arquivista (2 vagas) assistente social (5 vagas) auditor de controle interno - ciencias contabeis (1 vaga) auditor de controle interno - direito (1 vaga) auditor de controle interno - engenharia civil (1 vaga) auditor de controle interno - tecnologia da informacao (1 vaga) biologo (7 vagas) contador (3 vagas) economista (1 vaga) engenheiro agrimensor (1 vaga) engenheiro agronomo (1 vaga) engenheiro ambiental (5 vagas) engenheiro cartografico (1 vaga) engenheiro civil (18 vagas) engenheiro de automacao (1 vaga) engenhei"
+          "evidencia": "alho (3 vagas) analista de ti (1 vaga) arquiteto (14 vagas) arquivista (2 vagas) assistente social (5 vagas) auditor de controle interno - ciencias contabeis (1 vaga) auditor de controle interno - direito (1 vaga) auditor de controle interno - engenharia civil (1 vaga) auditor de controle interno - tecnologia da informacao (1 vaga) biologo (7 vagas) contador (3 vagas) economista (1 vaga) engenheiro agrimensor (1 vaga) engenheiro agronomo (1 vaga) engenheiro ambiental (5 vagas) engenheiro cartografico (1 vaga) engenheiro civil (18 vagas) engenheiro de automacao (1 vaga) engenheiro eletricista (3 vagas) engenheiro flor"
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "remuneracao_texto": "R$ 13.305,57"
+      "uf": "",
+      "cidade": "",
+      "inscricoes_inicio_texto": "19 de outubro de 2026",
+      "inscricoes_fim_texto": "17 de novembro de 2026",
+      "inscricoes_texto": "19 de outubro de 2026 a 17 de novembro de 2026",
+      "remuneracao_faixa_texto": "R$ 2.698,73 a R$ 21.138,26",
+      "cargos_compativeis": [
+        {
+          "cargo": "Engenheiro de Automação",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Engenheiro Eletricista",
+          "vagas_texto": "3 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Engenheiro Florestal",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Engenheiro Geotécnico",
+          "vagas_texto": "2 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        }
+      ]
     },
     {
       "titulo": "Prefeitura de Coromandel",
@@ -299,12 +777,40 @@
         {
           "nome": "Sistemas de Informação / Computação",
           "nivel": "superior",
-          "evidencia": "stente administrativo (7 vagas) oficial tecnico administrativo e fiscal - fiscal de obras (1 vaga) oficial tecnico administrativo e fiscal - fiscal de posturas municipais (1 vaga) oficial tecnico administrativo e fiscal - fiscal do procon (1 vaga) analista de tecnologia da informacao (1 vaga) contador (1 vaga) controlador interno (1 vaga) engenheiro civil (1 vaga) as jornadas de trabalho variam de 30 a 40 horas semanais, conforme o cargo. as remuneracoes vao de r$ 1.621,00 a r$ 7.821,98. as inscricoes deverao ser realizadas no site www.ib"
+          "evidencia": "l tecnico administrativo e fiscal - assistente administrativo (7 vagas) oficial tecnico administrativo e fiscal - fiscal de obras (1 vaga) oficial tecnico administrativo e fiscal - fiscal de posturas municipais (1 vaga) oficial tecnico administrativo e fiscal - fiscal do procon (1 vaga) analista de tecnologia da informacao (1 vaga) contador (1 vaga) controlador interno (1 vaga) engenheiro civil (1 vaga) as jornadas de trabalho variam de 30 a 40 horas semanais, conforme o cargo. as remuneracoes vao de r$ 1.621,00 a r$ 7.821,98. as inscricoes deverao ser realizadas no site www.ibgpconcursos.com.br , das 9h do dia 8 de "
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "remuneracao_texto": "R$ 7.821,98"
+      "uf": "",
+      "cidade": "",
+      "remuneracao_faixa_texto": "R$ 1.621,00 a R$ 21.138,26",
+      "cargos_compativeis": [
+        {
+          "cargo": "Analista de Tecnologia da Informação",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Contador",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Controlador Interno",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Engenheiro Civil",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        }
+      ]
     },
     {
       "titulo": "Prefeitura de Dores do Indaiá",
@@ -316,12 +822,43 @@
         {
           "nome": "Técnico em Informática",
           "nivel": "tecnico",
-          "evidencia": "blicos servente escolar (18 vagas) zelador (2 vagas) agente fiscal (1 vaga) agente sanitario (1 vaga) fiscal ambiental (1 vaga) profissional de apoio escolar (5 vagas) secretario escolar (1 vaga) tecnico de saude bucal (1 vaga) tecnico em enfermagem (7 vagas) tecnico em informatica (1 vaga) tecnico em informatica - saude (1 vaga) advogado da assistencia social (1 vaga) analista ambiental (1 vaga) assistente social (1 vaga) assistente social da saude (1 vaga) biomedico (1 vaga) bioquimico (1 vaga) enfermeiro psf (1 vaga) engenheiro agron"
+          "evidencia": "ineira (5 vagas) auxiliar de servicos publicos servente escolar (18 vagas) zelador (2 vagas) agente fiscal (1 vaga) agente sanitario (1 vaga) fiscal ambiental (1 vaga) profissional de apoio escolar (5 vagas) secretario escolar (1 vaga) tecnico de saude bucal (1 vaga) tecnico em enfermagem (7 vagas) tecnico em informatica (1 vaga) tecnico em informatica - saude (1 vaga) advogado da assistencia social (1 vaga) analista ambiental (1 vaga) assistente social (1 vaga) assistente social da saude (1 vaga) biomedico (1 vaga) bioquimico (1 vaga) enfermeiro psf (1 vaga) engenheiro agronomo (1 vaga) farmaceutico (1 vaga) medic"
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "remuneracao_texto": "R$ 18.702,17"
+      "uf": "",
+      "cidade": "",
+      "inscricoes_inicio_texto": "2 de setembro de 2026",
+      "inscricoes_fim_texto": "2 de outubro de 2026",
+      "inscricoes_texto": "2 de setembro de 2026 a 2 de outubro de 2026",
+      "remuneracao_faixa_texto": "R$ 1.469,88 a R$ 21.138,26",
+      "cargos_compativeis": [
+        {
+          "cargo": "Engenheiro Agrônomo",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Farmacêutico",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Médico Generalista - 20h",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Médico Generalista - 40h",
+          "vagas_texto": "2 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        }
+      ]
     },
     {
       "titulo": "Prefeitura de Faria Lemos",
@@ -333,12 +870,40 @@
         {
           "nome": "Técnico em Informática",
           "nivel": "tecnico",
-          "evidencia": " vaga) auxiliar de secretaria (1 vaga) auxiliar em saude bucal (1 vaga) escriturario (1 vaga) monitor (2 vagas) oficial administrativo (1 vaga) secretario escolar (3 vagas) tesoureiro (1 vaga) tecnico em ar-condicionado (1 vaga) tecnico em enfermagem (1 vaga) tecnico em informatica (1 vaga) tecnico em saude bucal (1 vaga) assistente social 20h (1 vaga) assistente social 30h (1 vaga) bibliotecario (1 vaga) contador (1 vaga) controlador interno (1 vaga) enfermeiro (1 vaga) enfermeiro psf (1 vaga) engenheiro civil (1 vaga) farmaceutico 20h"
+          "evidencia": "arquivo (1 vaga) auxiliar de farmacia (1 vaga) auxiliar de secretaria (1 vaga) auxiliar em saude bucal (1 vaga) escriturario (1 vaga) monitor (2 vagas) oficial administrativo (1 vaga) secretario escolar (3 vagas) tesoureiro (1 vaga) tecnico em ar-condicionado (1 vaga) tecnico em enfermagem (1 vaga) tecnico em informatica (1 vaga) tecnico em saude bucal (1 vaga) assistente social 20h (1 vaga) assistente social 30h (1 vaga) bibliotecario (1 vaga) contador (1 vaga) controlador interno (1 vaga) enfermeiro (1 vaga) enfermeiro psf (1 vaga) engenheiro civil (1 vaga) farmaceutico 20h (1 vaga) farmaceutico 40h (1 vaga) fisi"
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "remuneracao_texto": "R$ 5.313,00"
+      "uf": "",
+      "cidade": "",
+      "remuneracao_faixa_texto": "R$ 1.650,00 a R$ 21.138,26",
+      "cargos_compativeis": [
+        {
+          "cargo": "Farmacêutico 20h",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Farmacêutico 40h",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Fisioterapeuta",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Fonoaudiólogo 20h",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        }
+      ]
     },
     {
       "titulo": "Prefeitura de Ipaba",
@@ -350,12 +915,43 @@
         {
           "nome": "Técnico em Informática",
           "nivel": "tecnico",
-          "evidencia": "fiscal ambiental (2 vagas) fiscal sanitario (3 vagas) operador de video monitoramento (2 vagas) secretario(a) de gabinete (3 vagas) ensino medio/tecnico completo tecnico de enfermagem (7 vagas) tecnico em contabilidade (1 vaga) tecnico em edificacoes (1 vaga) tecnico em informatica (1 vaga) tecnico em radiologia (2 vagas) tecnico em seguranca do trabalho (1 vaga) ensino superior completo arquiteto urbanista (1 vaga) assistente social (3 vagas) biologo (1 vaga) contador (1 vaga) enfermeiro (7 vagas) engenheiro ambiental (1 vaga) engenhei"
+          "evidencia": "ervicos (3 vagas) escriturario (1 vaga) fiscal ambiental (2 vagas) fiscal sanitario (3 vagas) operador de video monitoramento (2 vagas) secretario(a) de gabinete (3 vagas) ensino medio/tecnico completo tecnico de enfermagem (7 vagas) tecnico em contabilidade (1 vaga) tecnico em edificacoes (1 vaga) tecnico em informatica (1 vaga) tecnico em radiologia (2 vagas) tecnico em seguranca do trabalho (1 vaga) ensino superior completo arquiteto urbanista (1 vaga) assistente social (3 vagas) biologo (1 vaga) contador (1 vaga) enfermeiro (7 vagas) engenheiro ambiental (1 vaga) engenheiro civil (1 vaga) farmaceutico (2 vagas)"
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "remuneracao_texto": "R$ 5.275,34"
+      "uf": "",
+      "cidade": "",
+      "inscricoes_inicio_texto": "9 de setembro de 2026",
+      "inscricoes_fim_texto": "8 de outubro de 2026",
+      "inscricoes_texto": "9 de setembro de 2026 a 8 de outubro de 2026",
+      "remuneracao_faixa_texto": "R$ 1.621,00 a R$ 21.138,26",
+      "cargos_compativeis": [
+        {
+          "cargo": "Engenheiro Civil",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Farmacêutico",
+          "vagas_texto": "2 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Fiscal Tributário",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Fisioterapeuta",
+          "vagas_texto": "2 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        }
+      ]
     },
     {
       "titulo": "Prefeitura de Pedro Teixeira",
@@ -367,12 +963,43 @@
         {
           "nome": "Sistemas de Informação / Computação",
           "nivel": "superior",
-          "evidencia": "- portugues (2 vagas) professor regente ii - redacao (1 vaga) profissional de apoio escolar (5 vagas) psicologo (2 vagas) psicologo (educacao) (1 vaga) recepcionista (3 vagas) tecnico em enfermagem 12x36 (4 vagas) tecnico em enfermagem 40h (1 vaga) tecnico em tecnologia da informacao (1 vaga) vigia de reparticoes publicas (4 vagas) zelador de reparticao (2 vagas) a jornada de trabalho varia de 20 a 44 horas semanais, incluindo escalas de 12x36 para alguns cargos. as remuneracoes vao de r$ 1.621,00 a r$ 5.494,76, com valores diferenciados "
+          "evidencia": "atematica (1 vaga) professor regente ii - portugues (2 vagas) professor regente ii - redacao (1 vaga) profissional de apoio escolar (5 vagas) psicologo (2 vagas) psicologo (educacao) (1 vaga) recepcionista (3 vagas) tecnico em enfermagem 12x36 (4 vagas) tecnico em enfermagem 40h (1 vaga) tecnico em tecnologia da informacao (1 vaga) vigia de reparticoes publicas (4 vagas) zelador de reparticao (2 vagas) a jornada de trabalho varia de 20 a 44 horas semanais, incluindo escalas de 12x36 para alguns cargos. as remuneracoes vao de r$ 1.621,00 a r$ 5.494,76, com valores diferenciados para a carreira do magisterio (professor"
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "remuneracao_texto": "R$ 5.494,76"
+      "uf": "",
+      "cidade": "",
+      "inscricoes_inicio_texto": "30 de setembro de 2026",
+      "inscricoes_fim_texto": "30 de outubro de 2026",
+      "inscricoes_texto": "30 de setembro de 2026 a 30 de outubro de 2026",
+      "remuneracao_faixa_texto": "R$ 1.621,00 a R$ 21.138,26",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico em Enfermagem 40h",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Técnico em Tecnologia da Informação",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Vigia de Repartições Públicas",
+          "vagas_texto": "4 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Zelador de Repartição",
+          "vagas_texto": "2 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        }
+      ]
     },
     {
       "titulo": "Prefeitura de Piracema",
@@ -384,12 +1011,40 @@
         {
           "nome": "Técnico em Informática",
           "nivel": "tecnico",
-          "evidencia": "ente de defesa civil (1 vaga) assistente administrativo (2 vagas) assistente escolar (8 vagas) fiscal de postura (1 vaga) fiscal sanitario (1 vaga) operador de eta (2 vagas) recepcionista (1 vaga) tecnico de enfermagem (6 vagas) tecnico de radiologia (1 vaga) tecnico em informatica (1 vaga) agente de licitacao (1 vaga) assistente social - educacao (1 vaga) enfermeiro (1 vaga) fiscal de obras (1 vaga) fisioterapeuta (2 vagas) fonoaudiologo (1 vaga) medico (2 vagas) nutricionista - educacao (1 vaga) nutricionista - saude (1 vaga) professo"
+          "evidencia": "orteiro (4 vagas) tratorista (1 vaga) agente de defesa civil (1 vaga) assistente administrativo (2 vagas) assistente escolar (8 vagas) fiscal de postura (1 vaga) fiscal sanitario (1 vaga) operador de eta (2 vagas) recepcionista (1 vaga) tecnico de enfermagem (6 vagas) tecnico de radiologia (1 vaga) tecnico em informatica (1 vaga) agente de licitacao (1 vaga) assistente social - educacao (1 vaga) enfermeiro (1 vaga) fiscal de obras (1 vaga) fisioterapeuta (2 vagas) fonoaudiologo (1 vaga) medico (2 vagas) nutricionista - educacao (1 vaga) nutricionista - saude (1 vaga) professor da educacao basica - regente de turma "
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "remuneracao_texto": "R$ 18.647,01"
+      "uf": "",
+      "cidade": "",
+      "remuneracao_faixa_texto": "R$ 1.621,00 a R$ 21.138,26",
+      "cargos_compativeis": [
+        {
+          "cargo": "Nutricionista - Saúde",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Professor da Educação Básica - Regente de Turma",
+          "vagas_texto": "5 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Psicólogo - Educação",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Psicólogo - Saúde",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        }
+      ]
     },
     {
       "titulo": "Prefeitura de São Félix de Minas",
@@ -401,12 +1056,43 @@
         {
           "nome": "Sistemas de Informação / Computação",
           "nivel": "superior",
-          "evidencia": "o objetivo de preencher vagas em funcoes de nivel alfabetizado, fundamental, medio, tecnico e superior. segundo o edital, as oportunidades sao para os cargos de: agente administrativo (2 vagas) agente fiscal (1 vaga) ajudante de pedreiro (2 vagas) analista de tecnologia da informacao (1 vaga) assistente de secretaria (2 vagas) atendente de saude (2 vagas) auxiliar administrativo (2 vagas) auxiliar de servicos gerais (3 vagas, 1 pcd) cantineira (2 vagas) carpinteiro (1 vaga) enfermeiro (1 vaga) engenheiro civil (1 vaga) escriturario (2 vag"
+          "evidencia": "erais, divulgou um concurso publico com o objetivo de preencher vagas em funcoes de nivel alfabetizado, fundamental, medio, tecnico e superior. segundo o edital, as oportunidades sao para os cargos de: agente administrativo (2 vagas) agente fiscal (1 vaga) ajudante de pedreiro (2 vagas) analista de tecnologia da informacao (1 vaga) assistente de secretaria (2 vagas) atendente de saude (2 vagas) auxiliar administrativo (2 vagas) auxiliar de servicos gerais (3 vagas, 1 pcd) cantineira (2 vagas) carpinteiro (1 vaga) enfermeiro (1 vaga) engenheiro civil (1 vaga) escriturario (2 vagas) farmaceutico bioquimico (1 vaga) fis"
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "remuneracao_texto": "R$ 12"
+      "uf": "",
+      "cidade": "",
+      "inscricoes_inicio_texto": "3 de agosto de 2026",
+      "inscricoes_fim_texto": "2 de setembro de 2026",
+      "inscricoes_texto": "3 de agosto de 2026 a 2 de setembro de 2026",
+      "remuneracao_faixa_texto": "R$ 1.621,00 a R$ 21.138,26",
+      "cargos_compativeis": [
+        {
+          "cargo": "Farmacêutico Bioquímico",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Fisioterapeuta",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Fonoaudiólogo",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Gari",
+          "vagas_texto": "2 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        }
+      ]
     },
     {
       "titulo": "Prefeitura de Coronel Vivida",
@@ -418,12 +1104,43 @@
         {
           "nome": "Sistemas de Informação / Computação",
           "nivel": "superior",
-          "evidencia": " cr) agente comunitario de saude - equipe esf n.o 011 - unidade basica de saude madalosso (1 vaga + cr) assistente administrativo (cr) auxiliar de odontologia (cr) secretario escolar da educacao basica (4 vagas + cr ampla concorrencia; 1 vaga pcd) analista de tecnologia da informacao (1 vaga + cr) assistente social (3 vagas + cr) contador (cr) enfermeiro (cr) engenheiro civil (cr) farmaceutico (2 vagas + cr) fiscal tributario (1 vaga + cr) fonoaudiologo (2 vagas + cr) medico da familia (cr) nutricionista (2 vagas + cr) procurador juridico"
+          "evidencia": "cnico em seguranca do trabalho (1 vaga + cr) agente comunitario de saude - equipe esf n.o 011 - unidade basica de saude madalosso (1 vaga + cr) assistente administrativo (cr) auxiliar de odontologia (cr) secretario escolar da educacao basica (4 vagas + cr ampla concorrencia; 1 vaga pcd) analista de tecnologia da informacao (1 vaga + cr) assistente social (3 vagas + cr) contador (cr) enfermeiro (cr) engenheiro civil (cr) farmaceutico (2 vagas + cr) fiscal tributario (1 vaga + cr) fonoaudiologo (2 vagas + cr) medico da familia (cr) nutricionista (2 vagas + cr) procurador juridico (cr) professor municipal 20h (18 vagas "
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "remuneracao_texto": "R$ 21.525,56"
+      "uf": "",
+      "cidade": "",
+      "inscricoes_inicio_texto": "11 de agosto de 2026",
+      "inscricoes_fim_texto": "8 de outubro de 2026",
+      "inscricoes_texto": "11 de agosto de 2026 a 8 de outubro de 2026",
+      "remuneracao_faixa_texto": "R$ 2.565,32 a R$ 21.525,56",
+      "cargos_compativeis": [
+        {
+          "cargo": "Médico da Família",
+          "vagas_texto": "CR",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Nutricionista",
+          "vagas_texto": "2 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Procurador Jurídico",
+          "vagas_texto": "CR",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Professor Municipal 20h",
+          "vagas_texto": "18 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        }
+      ]
     },
     {
       "titulo": "Prefeitura de Matinhos",
@@ -435,12 +1152,40 @@
         {
           "nome": "Técnico em Informática",
           "nivel": "tecnico",
-          "evidencia": "orista de veiculos pesados/cargas e onibus (9 vagas) vigia/vigilante (8 vagas) cuidador social (1 vaga) desenhista cadista (1 vaga) monitor de transporte escolar (4 vagas) secretario escolar (1 vaga) tecnico administrativo (5 vagas) tecnico em enfermagem (cr) tecnico em informatica/manutencao de computadores (1 vaga) tecnico em seguranca do trabalho (1 vaga) topografo (1 vaga) arquiteto (1 vaga) contador (1 vaga) enfermeiro (1 vaga) engenheiro ambiental (1 vaga) engenheiro agrimensor (1 vaga) engenheiro civil (1 vaga) fonoaudiologo (1 v"
+          "evidencia": "os de: atendente infantil (10 vagas) motorista de veiculos pesados/cargas e onibus (9 vagas) vigia/vigilante (8 vagas) cuidador social (1 vaga) desenhista cadista (1 vaga) monitor de transporte escolar (4 vagas) secretario escolar (1 vaga) tecnico administrativo (5 vagas) tecnico em enfermagem (cr) tecnico em informatica/manutencao de computadores (1 vaga) tecnico em seguranca do trabalho (1 vaga) topografo (1 vaga) arquiteto (1 vaga) contador (1 vaga) enfermeiro (1 vaga) engenheiro ambiental (1 vaga) engenheiro agrimensor (1 vaga) engenheiro civil (1 vaga) fonoaudiologo (1 vaga) medico anestesista plantonista (1 v"
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "remuneracao_texto": "R$ 20.330,16"
+      "uf": "",
+      "cidade": "",
+      "remuneracao_faixa_texto": "R$ 1.621,00 a R$ 21.525,56",
+      "cargos_compativeis": [
+        {
+          "cargo": "Engenheiro Civil",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Fonoaudiólogo",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Médico Anestesista Plantonista",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Médico Cardiologista",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        }
+      ]
     },
     {
       "titulo": "Prefeitura de Ponta Grossa",
@@ -452,12 +1197,40 @@
         {
           "nome": "Sistemas de Informação / Computação",
           "nivel": "superior",
-          "evidencia": "sportes (1 vaga + cr) fiscal de tributos ii (1 vaga + cr) inspetor sanitario (1 vaga + cr) tecnico administrativo (1 vaga + cr) auxiliar de farmacia plantonista (1 vaga + cr) auxiliar em saude bucal (1 vaga + cr) fiscal de edificacoes (1 vaga + cr) tecnico em tecnologia da informacao e comunicacao (1 vaga + cr) tecnico em enfermagem (1 vaga + cr) tecnico em saude bucal (1 vaga + cr) tecnico em seguranca do trabalho (1 vaga + cr) arquiteto (1 vaga + cr) dentista (1 vaga + cr) engenheiro agronomo (1 vaga + cr) engenheiro ambiental (1 vaga +"
+          "evidencia": "de educacao (1 vaga + cr) fiscal de transportes (1 vaga + cr) fiscal de tributos ii (1 vaga + cr) inspetor sanitario (1 vaga + cr) tecnico administrativo (1 vaga + cr) auxiliar de farmacia plantonista (1 vaga + cr) auxiliar em saude bucal (1 vaga + cr) fiscal de edificacoes (1 vaga + cr) tecnico em tecnologia da informacao e comunicacao (1 vaga + cr) tecnico em enfermagem (1 vaga + cr) tecnico em saude bucal (1 vaga + cr) tecnico em seguranca do trabalho (1 vaga + cr) arquiteto (1 vaga + cr) dentista (1 vaga + cr) engenheiro agronomo (1 vaga + cr) engenheiro ambiental (1 vaga + cr) engenheiro ambiental e sanitarista "
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "remuneracao_texto": "R$ 14.756,74"
+      "uf": "",
+      "cidade": "",
+      "remuneracao_faixa_texto": "R$ 2.021,95 a R$ 21.525,56",
+      "cargos_compativeis": [
+        {
+          "cargo": "Engenheiro Agrônomo",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Engenheiro Ambiental",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Engenheiro Ambiental e Sanitarista",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Engenheiro de Alimentos",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        }
+      ]
     },
     {
       "titulo": "Prefeitura de Quitandinha",
@@ -469,12 +1242,40 @@
         {
           "nome": "Técnico em Informática",
           "nivel": "tecnico",
-          "evidencia": "de maquinas (8 vagas + cr) orientador social (cr) assistente administrativo (cr) auxiliar administrativo (5 vagas + cr) fiscal de obras e posturas (cr) tecnico agricola (2 vagas + cr) tecnico em agrimensura (1 vaga + cr) tecnico em enfermagem a (3 vagas + cr) tecnico em informatica (1 vaga + cr) tecnico em topografia (1 vaga + cr) advogado (cr) arquiteto (1 vaga + cr) assistente social (2 vagas + cr) biologo (2 vagas + cr) contador i (cr) enfermeiro (cr) engenheiro agronomo (cr) engenheiro agrimensor (1 vaga + cr) engenheiro civil (1 va"
+          "evidencia": "ultorio dentario (1 vaga + cr) operador de maquinas (8 vagas + cr) orientador social (cr) assistente administrativo (cr) auxiliar administrativo (5 vagas + cr) fiscal de obras e posturas (cr) tecnico agricola (2 vagas + cr) tecnico em agrimensura (1 vaga + cr) tecnico em enfermagem a (3 vagas + cr) tecnico em informatica (1 vaga + cr) tecnico em topografia (1 vaga + cr) advogado (cr) arquiteto (1 vaga + cr) assistente social (2 vagas + cr) biologo (2 vagas + cr) contador i (cr) enfermeiro (cr) engenheiro agronomo (cr) engenheiro agrimensor (1 vaga + cr) engenheiro civil (1 vaga + cr) farmaceutico (1 vaga + cr) fisi"
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "remuneracao_texto": "R$ 12.111,16"
+      "uf": "",
+      "cidade": "",
+      "remuneracao_faixa_texto": "R$ 1.731,14 a R$ 21.525,56",
+      "cargos_compativeis": [
+        {
+          "cargo": "Farmacêutico",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Fisioterapeuta",
+          "vagas_texto": "2 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Médico III",
+          "vagas_texto": "CR",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Médico Veterinário",
+          "vagas_texto": "CR",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        }
+      ]
     },
     {
       "titulo": "UENP - Universidade Estadual do Norte do Paraná",
@@ -486,12 +1287,43 @@
         {
           "nome": "Técnico em Informática",
           "nivel": "tecnico",
-          "evidencia": "11 vagas) tecnico administrativo - campus de jacarezinho (23 vagas) tecnico administrativo - campus luiz meneghel de bandeirantes (3 vagas) tecnico em anatomia e necropsia - campus de jacarezinho (1 vaga) tecnico em enfermagem - campus de jacarezinho (1 vaga) tecnico em informatica - campus de cornelio procopio (2 vagas) tecnico em informatica - campus de jacarezinho (1 vaga) tecnico em laboratorio/biologia - campus de cornelio procopio (1 vaga) tecnico em laboratorio/biologia - campus de jacarezinho (1 vaga) tecnico em laboratorio/biol"
+          "evidencia": "strativo - campus de cornelio procopio (11 vagas) tecnico administrativo - campus de jacarezinho (23 vagas) tecnico administrativo - campus luiz meneghel de bandeirantes (3 vagas) tecnico em anatomia e necropsia - campus de jacarezinho (1 vaga) tecnico em enfermagem - campus de jacarezinho (1 vaga) tecnico em informatica - campus de cornelio procopio (2 vagas) tecnico em informatica - campus de jacarezinho (1 vaga) tecnico em laboratorio/biologia - campus de cornelio procopio (1 vaga) tecnico em laboratorio/biologia - campus de jacarezinho (1 vaga) tecnico em laboratorio/biologia - campus luiz meneghel de bandeiran"
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "remuneracao_texto": "R$ 8.752,26"
+      "uf": "",
+      "cidade": "",
+      "inscricoes_inicio_texto": "15 de julho de 2026",
+      "inscricoes_fim_texto": "17 de agosto de 2026",
+      "inscricoes_texto": "15 de julho de 2026 a 17 de agosto de 2026",
+      "remuneracao_faixa_texto": "R$ 4.134,40 a R$ 21.525,56",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico em Laboratório/Biologia - Campus de Cornélio Procópio",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Técnico em Laboratório/Biologia - Campus de Jacarezinho",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Técnico em Laboratório/Biologia - Campus Luiz Meneghel de Bandeirantes",
+          "vagas_texto": "2 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Técnico em Radiologia - Campus de Jacarezinho",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        }
+      ]
     },
     {
       "titulo": "UENP - Universidade Estadual do Norte do Paraná",
@@ -503,12 +1335,14 @@
         {
           "nome": "Técnico em Informática",
           "nivel": "tecnico",
-          "evidencia": "as aulas --> organizadoras colaborar contato pesquisar nacional sudeste sul centro-oeste norte nordeste uenp - pr abre processo seletivo para agentes universitarios oportunidades com salarios de ate r$ 7.997,72 contemplam cargos de enfermeiro, bibliotecario e tecnico em informatica. a selecao sera realizada por meio de analise de curriculo e prova de titulos. concursos › noticias › sul segunda-feira, 3 de agosto de 2026 a universidade estadual do norte do parana (uenp) lancou um processo seletivo para preencher 3 vagas temporarias de ag"
+          "evidencia": "trabalho d. humanos q. comentadas + varias aulas --> organizadoras colaborar contato pesquisar nacional sudeste sul centro-oeste norte nordeste uenp - pr abre processo seletivo para agentes universitarios oportunidades com salarios de ate r$ 7.997,72 contemplam cargos de enfermeiro, bibliotecario e tecnico em informatica. a selecao sera realizada por meio de analise de curriculo e prova de titulos. concursos › noticias › sul segunda-feira, 3 de agosto de 2026 a universidade estadual do norte do parana (uenp) lancou um processo seletivo para preencher 3 vagas temporarias de agente universitario, nos niveis medio pro"
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "remuneracao_texto": "R$ 7.997,72"
+      "uf": "",
+      "cidade": "",
+      "remuneracao_faixa_texto": "R$ 4.134,40 a R$ 21.525,56"
     },
     {
       "titulo": "Prefeitura de Silveira Martins",
@@ -520,12 +1354,40 @@
         {
           "nome": "Técnico em Informática",
           "nivel": "tecnico",
-          "evidencia": " disso, foram alterados os requisitos para professor de educacao especial e professor de educacao infantil. segundo os editais, as oportunidades sao para os cargos de: concurso publico 01/2026 agente de manutencao (2 vagas) agente de servicos (5 vagas) agente tecnico em informatica (1 vaga) almoxarife (1 vaga) enfermeiro (1 vaga) engenheiro civil (1 vaga) farmaceutico bioquimico (cr) medico (5 vagas) medico veterinario (cr) monitor (6 vagas) motorista (2 vagas) nutricionista (cr) oficial administrativo (3 vagas) operador de maquinas (1 "
+          "evidencia": "as mencoes atualizadas nos editais. alem disso, foram alterados os requisitos para professor de educacao especial e professor de educacao infantil. segundo os editais, as oportunidades sao para os cargos de: concurso publico 01/2026 agente de manutencao (2 vagas) agente de servicos (5 vagas) agente tecnico em informatica (1 vaga) almoxarife (1 vaga) enfermeiro (1 vaga) engenheiro civil (1 vaga) farmaceutico bioquimico (cr) medico (5 vagas) medico veterinario (cr) monitor (6 vagas) motorista (2 vagas) nutricionista (cr) oficial administrativo (3 vagas) operador de maquinas (1 vaga) professor de anos iniciais (1 vaga"
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "remuneracao_texto": "R$ 19.535,28"
+      "uf": "",
+      "cidade": "",
+      "remuneracao_faixa_texto": "R$ 1.386,47 a R$ 19.535,28",
+      "cargos_compativeis": [
+        {
+          "cargo": "Operador de Máquinas",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Professor de Anos Iniciais",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Professor de Artes",
+          "vagas_texto": "CR",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Professor de Ciências",
+          "vagas_texto": "CR",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        }
+      ]
     },
     {
       "titulo": "Prefeitura de Calmon",
@@ -537,12 +1399,43 @@
         {
           "nome": "Sistemas de Informação / Computação",
           "nivel": "superior",
-          "evidencia": "ente de portaria escolar (1 vaga + cr) agente de recepcao (1 vaga + cr) agente de recursos humanos (1 vaga + cr) agente de tributacao e fiscalizacao (cr) agente de vigilancia sanitaria (cr) assistente administrativo (4 vagas ac + cr, 1 vaga pcd) assistente de tecnologia da informacao (1 vaga + cr) atendente de farmacia (1 vaga + cr) auxiliar de consultorio dentario (1 vaga + cr) auxiliar educacional i (1 vaga + cr) auxiliar educacional ii (8 vagas ac + cr, 1 vaga pcd) educador social (1 vaga + cr) fiscal de obras e posturas (1 vaga + cr) "
+          "evidencia": " agente de defesa civil (1 vaga + cr) agente de portaria escolar (1 vaga + cr) agente de recepcao (1 vaga + cr) agente de recursos humanos (1 vaga + cr) agente de tributacao e fiscalizacao (cr) agente de vigilancia sanitaria (cr) assistente administrativo (4 vagas ac + cr, 1 vaga pcd) assistente de tecnologia da informacao (1 vaga + cr) atendente de farmacia (1 vaga + cr) auxiliar de consultorio dentario (1 vaga + cr) auxiliar educacional i (1 vaga + cr) auxiliar educacional ii (8 vagas ac + cr, 1 vaga pcd) educador social (1 vaga + cr) fiscal de obras e posturas (1 vaga + cr) monitor escolar (1 vaga + cr) secretario"
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "remuneracao_texto": "R$ 7.314,30"
+      "uf": "",
+      "cidade": "",
+      "inscricoes_inicio_texto": "23 de agosto de 2026",
+      "inscricoes_fim_texto": "14 de setembro de 2026",
+      "inscricoes_texto": "23 de agosto de 2026 a 14 de setembro de 2026",
+      "remuneracao_faixa_texto": "R$ 1.631,77 a R$ 36.619,86",
+      "cargos_compativeis": [
+        {
+          "cargo": "Fiscal de Obras e Posturas",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Monitor Escolar",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Secretário Escolar",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Técnico em Agropecuária",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "media"
+        }
+      ]
     },
     {
       "titulo": "SES - Secretaria de Estado da Saúde de Santa Catarina",
@@ -554,12 +1447,43 @@
         {
           "nome": "Técnico em Informática",
           "nivel": "tecnico",
-          "evidencia": "(1 vaga) medico especialista em pneumologia (1 vaga) medico especialista em radiologia e diagnostico por imagem ultrassonografia geral (1 vaga) terapeuta ocupacional hospitalar (1 vaga) maternidade darcy vargas-mdv engenheiro mecanico - area da saude (1 vaga) tecnico em informatica (1 vaga) a jornada e de 30 horas semanais para enfermeiro, engenheiro, terapeuta ocupacional e tecnico em informatica, e de 20 horas semanais para medico. as remuneracoes variam de r$ 4.448,15 a r$ 10.581,16, incluindo gratificacoes, auxilio-alimentacao e ins"
+          "evidencia": " especialista em medicina de emergencia (1 vaga) medico especialista em pneumologia (1 vaga) medico especialista em radiologia e diagnostico por imagem ultrassonografia geral (1 vaga) terapeuta ocupacional hospitalar (1 vaga) maternidade darcy vargas-mdv engenheiro mecanico - area da saude (1 vaga) tecnico em informatica (1 vaga) a jornada e de 30 horas semanais para enfermeiro, engenheiro, terapeuta ocupacional e tecnico em informatica, e de 20 horas semanais para medico. as remuneracoes variam de r$ 4.448,15 a r$ 10.581,16, incluindo gratificacoes, auxilio-alimentacao e insalubridade, conforme o cargo. beneficios"
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "remuneracao_texto": "R$ 12.111,16"
+      "uf": "",
+      "cidade": "",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "28 de agosto de 2026",
+      "inscricoes_texto": "até 28 de agosto de 2026",
+      "remuneracao_faixa_texto": "R$ 4.448,15 a R$ 36.619,86",
+      "cargos_compativeis": [
+        {
+          "cargo": "Médico Especialista em Radiologia e Diagnóstico por Imagem Ultrassonografia Geral",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Terapeuta Ocupacional Hospitalar",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Maternidade Darcy Vargas-MDV Engenheiro Mecânico - Área da Saúde",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        },
+        {
+          "cargo": "Técnico em Informática",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "media"
+        }
+      ]
     }
   ]
 }
