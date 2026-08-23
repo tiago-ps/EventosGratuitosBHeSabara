@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Concursos — Mural Cultural</title>
+  <link rel="stylesheet" href="css/concursos.css">
+</head>
+<body>
+  <header class="topo">
+    <a class="voltar" href="./">← Mural Cultural</a>
+    <div><p class="rotulo">FORMAÇÃO E OPORTUNIDADES</p><h1>Concursos públicos</h1><p id="resumo">Carregando oportunidades…</p></div>
+  </header>
+  <main>
+    <section class="filtros" aria-label="Filtros">
+      <label>Buscar <input id="busca" type="search" placeholder="Órgão, formação…"></label>
+      <label>Formação <select id="formacao"><option value="">Todas as formações</option></select></label>
+    </section>
+    <p id="estado" class="estado" hidden></p>
+    <section id="lista" class="lista" aria-live="polite"></section>
+  </main>
+  <script src="js/concursos.js"></script>
+</body>
+</html>
