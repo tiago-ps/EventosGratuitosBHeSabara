@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "status": "amostra_visual",
+  "observacao": "Amostra inicial de registros reais da coleta EV.G para validação da interface. A sincronização do catálogo completo será ligada após a validação visual.",
+  "fonte": "Escola Virtual de Governo (EV.G)",
+  "total_catalogo_origem": 1041,
+  "cursos": [
+    {
+      "id_fonte": "1366",
+      "titulo": "Contratação e operacionalização do COMPREV",
+      "instituicao": "Escola Virtual de Governo (EV.G)",
+      "area": "",
+      "carga_horaria": "",
+      "prazo_conclusao_dias": "",
+      "tipo": "",
+      "descricao": "",
+      "publico_alvo": "",
+      "url": "https://www.escolavirtual.gov.br/curso/1366",
+      "modalidade": "online",
+      "gratuito": true,
+      "fonte": "EV.G"
+    },
+    {
+      "id_fonte": "1489",
+      "titulo": "Diversidade e Inclusão: Uma Introdução",
+      "instituicao": "Escola Virtual de Governo (EV.G)",
+      "area": "",
+      "carga_horaria": "",
+      "prazo_conclusao_dias": "",
+      "tipo": "",
+      "descricao": "",
+      "publico_alvo": "",
+      "url": "https://www.escolavirtual.gov.br/curso/1489",
+      "modalidade": "online",
+      "gratuito": true,
+      "fonte": "EV.G"
+    },
+    {
+      "id_fonte": "1086",
+      "titulo": "BIM - Fluxos de Trabalho",
+      "instituicao": "Escola Virtual de Governo (EV.G)",
+      "area": "",
+      "carga_horaria": "",
+      "prazo_conclusao_dias": "",
+      "tipo": "",
+      "descricao": "",
+      "publico_alvo": "",
+      "url": "https://www.escolavirtual.gov.br/curso/1086",
+      "modalidade": "online",
+      "gratuito": true,
+      "fonte": "EV.G"
+    }
+  ]
+}
