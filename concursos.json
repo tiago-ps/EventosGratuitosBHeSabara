@@ -1,0 +1,565 @@
+{
+  "schema": 2,
+  "fonte": "PCI Concursos",
+  "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
+  "coletado_em_utc": "2026-08-23T04:13:48.362133+00:00",
+  "total": 32,
+  "concursos": [
+    {
+      "titulo": "CaraguaPrev - Instituto de Previdência do Município de Caraguatatuba",
+      "url": "https://www.pciconcursos.com.br/noticias/caraguaprev-sp-abre-concurso-publico-com-salarios-de-ate-7104",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": "riu um concurso publico visando preencher vagas para profissionais de nivel fundamental, medio, tecnico e superior. segundo o edital, as oportunidades sao para os cargos de: motorista i (1 vaga) agente administrativo (1 vaga) tecnico de contabilidade (1 vaga) tecnico em informatica (1 vaga) contador (1 vaga) controlador interno (1 vaga) procurador juridico (1 vaga) a jornada de trabalho varia de 20 a 40 horas semanais e as remuneracoes vao de r$ 1.706,94 a r$ 7.104,30. todos os cargos contam com beneficios como vale-alimentacao, vale-re"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "remuneracao_texto": "R$ 7.104,30"
+    },
+    {
+      "titulo": "CONDERG - Consórcio de Desenvolvimento da Região de Governo de São João da Boa Vista",
+      "url": "https://www.pciconcursos.com.br/noticias/conderg-sp-abre-processo-seletivo-com-salarios-de-ate-6009",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "radiologia (cadastro de reserva) telefonista (cadastro de reserva) terapeuta ocupacional (3 vagas) samu condutor de ambulancia (cadastro de reserva) radio operador (cadastro de reserva) tarm - telefonista auxiliar de regulacao (cadastro de reserva) tecnico em computacao (cadastro de reserva) sao joao da boa vista aplicador aba (cadastro de reserva) auxiliar de consultorio dentario (cadastro de reserva) auxiliar de servicos de farmacia (cadastro de reserva) auxiliar de servicos gerais (cadastro de reserva) cuidador de saude ("
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "remuneracao_texto": "R$ 6.009,98"
+    },
+    {
+      "titulo": "Prefeitura de Cafelândia",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-cafelandia-sp-abre-concurso-publico-com-salarios-de-ate-9028",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": "te de atividade infantil (1 vaga) artesao (1 vaga) motorista (1 vaga) operador de maquinas (1 vaga) agente administrativo (1 vaga) agente comunitario esf (1 vaga) agente de organizacao escolar (1 vaga) orientador social (1 vaga) tecnico em enfermagem (1 vaga) tecnico em informatica (1 vaga) tecnico em servicos juridicos (1 vaga) assistente social (1 vaga) bibliotecario (1 vaga) controlador interno (1 vaga) dentista esf (1 vaga) enfermeiro esf (1 vaga) engenheiro agronomo (1 vaga) engenheiro civil (1 vaga) farmaceutico (1 vaga) fiscal de"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "remuneracao_texto": "R$ 9.028,49"
+    },
+    {
+      "titulo": "TCESP - Tribunal de Contas do Estado de São Paulo",
+      "url": "https://www.pciconcursos.com.br/noticias/tce-sp-divulga-retificacao-do-concurso-publico-para-auditor-de-controle-externo",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "tas do estado de sao paulo ( tce-sp ) publicou um edital de concurso publico para preencher vagas no cargo de auditor de controle externo - dipe, com exigencia de nivel superior. o edital atualizou a lista de especialidades de formacao exigidas para a area de tecnologia da informacao (ti). alem disso, topicos relacionados as provas e ao conteudo programatico tambem foram atualizados. segundo o edital, as oportunidades sao para os cargos de: auditor de controle externo - dipe - ciencias atuariais (2 vagas) auditor de controle externo - dip"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "remuneracao_texto": "R$ 20.940,20"
+    },
+    {
+      "titulo": "Marinha do Brasil - Comando do 1º Distrito Naval",
+      "url": "https://www.pciconcursos.com.br/noticias/comando-do-1-distrito-naval-da-marinha-rj-abre-processo-seletivo-para-oficiais-de-3-classe",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": " processo seletivo destinado a preencher vagas e formar cadastro de reserva para oficiais de 3a classe da reserva da marinha (rm3) em areas de nivel superior. segundo o edital, as oportunidades sao para os cargos de: area de ciencia e tecnologia engenharia da computacao (1 vaga) biomedicina/ciencias biologicas - modalidade medica/biotecnologia/bioquimica/farmacia (1 vaga + cr) engenharia eletronica ou engenharia acustica (1 vaga) engenharia de producao (1 vaga + cr) engenharia eletronica (1 vaga) engenharia mecanica (1 vaga)"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "remuneracao_texto": "R$ 4.277,48"
+    },
+    {
+      "titulo": "UFRRJ - Universidade Federal Rural do Rio de Janeiro",
+      "url": "https://www.pciconcursos.com.br/noticias/ufrrj-rj-abre-concurso-publico-para-cargos-tecnico-administrativos-de-nivel-superior",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "exta-feira, 21 de agosto de 2026 a universidade federal rural do rio de janeiro (ufrrj) abriu um concurso publico para preencher vagas em cargos do quadro de pessoal tecnico-administrativo. segundo o edital, as oportunidades sao para os cargos de: analista de tecnologia da informacao/sistemas (2 vagas) analista de tecnologia da informacao/infraestrutura (2 vagas) engenheiro de seguranca do trabalho (1 vaga) fonoaudiologo (1 vaga) medico clinico geral (1 vaga) medico psiquiatra (2 vagas) medico veterinario/cirurgia de pequenos animais (1 v"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "remuneracao_texto": "R$ 4.277,48"
+    },
+    {
+      "titulo": "DMAE - Departamento Municipal de Água e Esgoto de Uberlândia",
+      "url": "https://www.pciconcursos.com.br/noticias/dmae-de-uberlandia-mg-abre-concurso-publico-com-vagas-para-diversos-niveis-de-escolaridade",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": "ador de bombas (1 vaga) operador de maquinas automotivas (1 vaga) soldador industrial (1 vaga) agente comercial (5 vagas) oficial administrativo (10 vagas) desenhista (1 vaga) fiscal de obras do saneamento (1 vaga) tecnico de operacoes de etas e etes (1 vaga) tecnico em informatica (1 vaga) tecnico em meio ambiente (1 vaga) assistente social (1 vaga) biologo (1 vaga) contador (1 vaga) economista (1 vaga) engenheiro ambiental (1 vaga) engenheiro civil (1 vaga) engenheiro eletricista (1 vaga) engenheiro de seguranca do trabalho (1 vaga) e"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "remuneracao_texto": "R$ 7.018,00"
+    },
+    {
+      "titulo": "Câmara de Capelinha",
+      "url": "https://www.pciconcursos.com.br/noticias/camara-de-capelinha-mg-retifica-edital-do-concurso-publico-com-salarios-de-ate-4527",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": "agas) assistente legislativo (1 vaga) auxiliar de administracao (4 vagas) auxiliar tecnico administrativo (3 vagas) monitor (3 vagas) motorista (categoria b) (1 vaga) motorista (categoria d) (1 vaga) oficial legislativo (1 vaga) tecnico em radio e tv (1 vaga) tecnico em informatica (1 vaga) tradutor e interprete de libras (1 vaga) agente de servicos externos (1 vaga) auxiliar de servicos gerais (2 vagas) zelador (1 vaga) a jornada semanal e de 20 a 40 horas, conforme o cargo. as remuneracoes variam de r$ 1.914,05 a r$ 4.527,60. as inscr"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "remuneracao_texto": "R$ 4.527,60"
+    },
+    {
+      "titulo": "Câmara de Passos",
+      "url": "https://www.pciconcursos.com.br/noticias/camara-de-passos-mg-retifica-edital-de-concurso-publico",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "l administrativo e agente de apoio legislativo e administrativo. segundo o edital, as oportunidades sao para os cargos de: oficial administrativo (3 vagas) agente de apoio legislativo e administrativo (4 vagas) agente de comunicacao social (3 vagas) agente de tecnologia da informacao (2 vagas) analista tecnico-juridico (2 vagas) contador (2 vagas) a jornada de trabalho para todos os cargos sera de 40 horas semanais. a remuneracao ofertada varia de r$ 4.585,17 a r$ 5.485,48. as inscricoes deverao ser realizadas exclusivamente via internet,"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "remuneracao_texto": "R$ 4.848,48"
+    },
+    {
+      "titulo": "FJP - Fundação João Pinheiro",
+      "url": "https://www.pciconcursos.com.br/noticias/fundacao-joao-pinheiro-mg-abre-concurso-publico-para-especialista-em-politicas-publicas-e-gestao-governamental",
+      "formacoes_compativeis": [
+        "Administração"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Administração",
+          "nivel": "superior",
+          "evidencia": " tenham prestado servicos eleitorais, no periodo de 24 de agosto de 2026 a 3 de setembro de 2026. o processo de selecao tera tres etapas: participacao no enem 2026 (provas objetivas e redacao), habilitacao documental dos classificados e realizacao do curso de graduacao em administracao publica (csap). o candidato aprovado sera contratado sob regime estatutario. o concurso tem validade de 2 anos, a contar da homologacao, podendo ser prorrogado uma unica vez por igual periodo. mais informacoes podem ser obtidas no edital completo. estude de f"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "remuneracao_texto": "R$ 5.226,60"
+    },
+    {
+      "titulo": "FUMEP - Fundação Municipal de Ensino Profissionalizante de Sete Lagoas",
+      "url": "https://www.pciconcursos.com.br/noticias/fumep-de-sete-lagoas-mg-abre-concurso-publico-para-diversos-niveis-de-escolaridade",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação",
+        "Engenharia de Automação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "nsino profissionalizante - engenharia mecatronica (1 vaga) professor de ensino profissionalizante - engenharia de automacao e controle (1 vaga) professor de ensino profissionalizante - enfermagem (1 vaga) professor de ensino profissionalizante - engenharia da computacao (1 vaga) professor de ensino profissionalizante - tecnologo em rede de computadores (1 vaga) professor de ensino profissionalizante - engenharia mecanica (1 vaga) professor de ensino profissionalizante - engenharia metalurgica (1 vaga) professor de ensino pro"
+        },
+        {
+          "nome": "Engenharia de Automação",
+          "nivel": "superior",
+          "evidencia": "inicas (2 vagas) professor de ensino profissionalizante - engenharia civil (1 vaga) professor de ensino profissionalizante - arquitetura (1 vaga) professor de ensino profissionalizante - engenharia mecatronica (1 vaga) professor de ensino profissionalizante - engenharia de automacao e controle (1 vaga) professor de ensino profissionalizante - enfermagem (1 vaga) professor de ensino profissionalizante - engenharia da computacao (1 vaga) professor de ensino profissionalizante - tecnologo em rede de computadores (1 vaga) professor de ensino"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "remuneracao_texto": "R$ 1.621,00"
+    },
+    {
+      "titulo": "HOB - Hospital Metropolitano Odilon Behrens",
+      "url": "https://www.pciconcursos.com.br/noticias/hospital-metropolitano-odilon-behrens-mg-abre-concurso-publico-com-salarios-de-ate-7397",
+      "formacoes_compativeis": [
+        "Técnico em Administração",
+        "Técnico em Eletrônica"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Administração",
+          "nivel": "tecnico",
+          "evidencia": "2026 o hospital metropolitano odilon behrens - hob , em belo horizonte/mg, abriu um concurso publico para o preenchimento de vagas em funcoes de nivel medio/tecnico e superior. segundo o edital, as oportunidades sao para os cargos de: tecnico de nivel medio - tecnico em administracao (2 vagas) tecnico de nivel medio - tecnico em eletronica (1 vaga) tecnico de servicos de saude - tecnico em enfermagem (10 vagas) tecnico de servicos de saude - tecnico em nutricao (5 vagas) tecnico de servicos de saude - tecnico em patologia clinica (1 vaga)"
+        },
+        {
+          "nome": "Técnico em Eletrônica",
+          "nivel": "tecnico",
+          "evidencia": " horizonte/mg, abriu um concurso publico para o preenchimento de vagas em funcoes de nivel medio/tecnico e superior. segundo o edital, as oportunidades sao para os cargos de: tecnico de nivel medio - tecnico em administracao (2 vagas) tecnico de nivel medio - tecnico em eletronica (1 vaga) tecnico de servicos de saude - tecnico em enfermagem (10 vagas) tecnico de servicos de saude - tecnico em nutricao (5 vagas) tecnico de servicos de saude - tecnico em patologia clinica (1 vaga) tecnico de servicos de saude - tecnico em radiologia (1 "
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "remuneracao_texto": "R$ 7.397,55"
+    },
+    {
+      "titulo": "Município e Câmara de Tombos",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-e-camara-de-tombos-mg-abrem-concurso-publico-com-diversas-vagas-e-cadastro-de-reserva",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": "eteiro (1 vaga) oficial carpinteiro (cr) oficial pedreiro (2 vagas) operador de maquinas (7 vagas) agente de administracao escolar (cr) agente administrativo (2 vagas) monitor de educacao infantil (4 vagas) motorista (12 vagas) tecnico em enfermagem (4 vagas) tecnico em informatica (1 vaga) tecnico em saude bucal (cr) analista de sistemas (1 vaga) assistente social (3 vagas) enfermeiro 20h (1 vaga) enfermeiro 40h (4 vagas) especialista em educacao basica (cr) farmaceutico (2 vagas) fisioterapeuta (3 vagas) fonoaudiologo (2 vagas) medico"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "remuneracao_texto": "R$ 10.222,24"
+    },
+    {
+      "titulo": "Prefeitura de Belo Vale",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-belo-vale-mg-abre-concurso-publico-com-diversas-vagas-e-salarios-de-ate-8000",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": " vagas) atendente de saude (6 vagas) auxiliar administrativo (8 vagas) auxiliar de biblioteca (2 vagas) cuidador social (6 vagas) vigilante patrimonial (4 vagas) tecnico de enfermagem (4 vagas) tecnico de enfermagem i (4 vagas) tecnico em saude bucal (1 vaga) tecnico em informatica (2 vagas) tecnico de laboratorio (1 vaga) tecnico de laboratorio i (1 vaga) tecnico em raio x (2 vagas) tecnico em seguranca do trabalho (1 vaga) tecnico em veterinaria (1 vaga) procurador i (1 vaga) biomedico (2 vagas) dentista ii (1 vaga) educador fisico (3"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "remuneracao_texto": "R$ 8.000,00"
+    },
+    {
+      "titulo": "Prefeitura de Carmo da Mata",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-carmo-da-mata-mg-abre-concurso-publico-para-diversos-cargos",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": "(cadastro de reserva) recepcionista (cadastro de reserva) ensino medio e/ou tecnico auxiliar de servicos (1 vaga) fiscal ambiental (1 vaga) fiscal de posturas e obras (1 vaga) fiscal de vigilancia sanitaria e em saude (1 vaga) fiscal sim (cadastro de reserva) tecnico em informatica (cadastro de reserva) tecnico em seguranca do trabalho (cadastro de reserva) ensino superior bibliotecario (cadastro de reserva) enfermeiro (cadastro de reserva) engenheiro ambiental (1 vaga) engenheiro civil (cadastro de reserva) fisioterapeuta (cadastro de "
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "remuneracao_texto": "R$ 3.886,53"
+    },
+    {
+      "titulo": "Prefeitura de Contagem",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-contagem-mg-abre-concurso-publico-com-salarios-de-ate-13305",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "rquiteto (14 vagas) arquivista (2 vagas) assistente social (5 vagas) auditor de controle interno - ciencias contabeis (1 vaga) auditor de controle interno - direito (1 vaga) auditor de controle interno - engenharia civil (1 vaga) auditor de controle interno - tecnologia da informacao (1 vaga) biologo (7 vagas) contador (3 vagas) economista (1 vaga) engenheiro agrimensor (1 vaga) engenheiro agronomo (1 vaga) engenheiro ambiental (5 vagas) engenheiro cartografico (1 vaga) engenheiro civil (18 vagas) engenheiro de automacao (1 vaga) engenhei"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "remuneracao_texto": "R$ 13.305,57"
+    },
+    {
+      "titulo": "Prefeitura de Coromandel",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-coromandel-mg-abre-concurso-publico-com-salarios-de-ate-7821",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "stente administrativo (7 vagas) oficial tecnico administrativo e fiscal - fiscal de obras (1 vaga) oficial tecnico administrativo e fiscal - fiscal de posturas municipais (1 vaga) oficial tecnico administrativo e fiscal - fiscal do procon (1 vaga) analista de tecnologia da informacao (1 vaga) contador (1 vaga) controlador interno (1 vaga) engenheiro civil (1 vaga) as jornadas de trabalho variam de 30 a 40 horas semanais, conforme o cargo. as remuneracoes vao de r$ 1.621,00 a r$ 7.821,98. as inscricoes deverao ser realizadas no site www.ib"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "remuneracao_texto": "R$ 7.821,98"
+    },
+    {
+      "titulo": "Prefeitura de Dores do Indaiá",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-dores-do-indaia-mg-abre-concurso-publico-com-salarios-de-ate-18702",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": "blicos servente escolar (18 vagas) zelador (2 vagas) agente fiscal (1 vaga) agente sanitario (1 vaga) fiscal ambiental (1 vaga) profissional de apoio escolar (5 vagas) secretario escolar (1 vaga) tecnico de saude bucal (1 vaga) tecnico em enfermagem (7 vagas) tecnico em informatica (1 vaga) tecnico em informatica - saude (1 vaga) advogado da assistencia social (1 vaga) analista ambiental (1 vaga) assistente social (1 vaga) assistente social da saude (1 vaga) biomedico (1 vaga) bioquimico (1 vaga) enfermeiro psf (1 vaga) engenheiro agron"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "remuneracao_texto": "R$ 18.702,17"
+    },
+    {
+      "titulo": "Prefeitura de Faria Lemos",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-faria-lemos-mg-abre-concurso-publico-com-remuneracoes-de-ate-16803",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": " vaga) auxiliar de secretaria (1 vaga) auxiliar em saude bucal (1 vaga) escriturario (1 vaga) monitor (2 vagas) oficial administrativo (1 vaga) secretario escolar (3 vagas) tesoureiro (1 vaga) tecnico em ar-condicionado (1 vaga) tecnico em enfermagem (1 vaga) tecnico em informatica (1 vaga) tecnico em saude bucal (1 vaga) assistente social 20h (1 vaga) assistente social 30h (1 vaga) bibliotecario (1 vaga) contador (1 vaga) controlador interno (1 vaga) enfermeiro (1 vaga) enfermeiro psf (1 vaga) engenheiro civil (1 vaga) farmaceutico 20h"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "remuneracao_texto": "R$ 5.313,00"
+    },
+    {
+      "titulo": "Prefeitura de Ipaba",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-ipaba-mg-abre-concurso-publico-com-salarios-de-ate-5275",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": "fiscal ambiental (2 vagas) fiscal sanitario (3 vagas) operador de video monitoramento (2 vagas) secretario(a) de gabinete (3 vagas) ensino medio/tecnico completo tecnico de enfermagem (7 vagas) tecnico em contabilidade (1 vaga) tecnico em edificacoes (1 vaga) tecnico em informatica (1 vaga) tecnico em radiologia (2 vagas) tecnico em seguranca do trabalho (1 vaga) ensino superior completo arquiteto urbanista (1 vaga) assistente social (3 vagas) biologo (1 vaga) contador (1 vaga) enfermeiro (7 vagas) engenheiro ambiental (1 vaga) engenhei"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "remuneracao_texto": "R$ 5.275,34"
+    },
+    {
+      "titulo": "Prefeitura de Pedro Teixeira",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-pedro-teixeira-mg-publica-edital-de-concurso-publico-com-salarios-de-ate-5494",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "- portugues (2 vagas) professor regente ii - redacao (1 vaga) profissional de apoio escolar (5 vagas) psicologo (2 vagas) psicologo (educacao) (1 vaga) recepcionista (3 vagas) tecnico em enfermagem 12x36 (4 vagas) tecnico em enfermagem 40h (1 vaga) tecnico em tecnologia da informacao (1 vaga) vigia de reparticoes publicas (4 vagas) zelador de reparticao (2 vagas) a jornada de trabalho varia de 20 a 44 horas semanais, incluindo escalas de 12x36 para alguns cargos. as remuneracoes vao de r$ 1.621,00 a r$ 5.494,76, com valores diferenciados "
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "remuneracao_texto": "R$ 5.494,76"
+    },
+    {
+      "titulo": "Prefeitura de Piracema",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-piracema-mg-abre-concurso-e-processo-seletivo-com-diversas-vagas",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": "ente de defesa civil (1 vaga) assistente administrativo (2 vagas) assistente escolar (8 vagas) fiscal de postura (1 vaga) fiscal sanitario (1 vaga) operador de eta (2 vagas) recepcionista (1 vaga) tecnico de enfermagem (6 vagas) tecnico de radiologia (1 vaga) tecnico em informatica (1 vaga) agente de licitacao (1 vaga) assistente social - educacao (1 vaga) enfermeiro (1 vaga) fiscal de obras (1 vaga) fisioterapeuta (2 vagas) fonoaudiologo (1 vaga) medico (2 vagas) nutricionista - educacao (1 vaga) nutricionista - saude (1 vaga) professo"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "remuneracao_texto": "R$ 18.647,01"
+    },
+    {
+      "titulo": "Prefeitura de São Félix de Minas",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-sao-felix-de-minas-mg-abre-concurso-publico-com-salarios-de-ate-12-mil",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "o objetivo de preencher vagas em funcoes de nivel alfabetizado, fundamental, medio, tecnico e superior. segundo o edital, as oportunidades sao para os cargos de: agente administrativo (2 vagas) agente fiscal (1 vaga) ajudante de pedreiro (2 vagas) analista de tecnologia da informacao (1 vaga) assistente de secretaria (2 vagas) atendente de saude (2 vagas) auxiliar administrativo (2 vagas) auxiliar de servicos gerais (3 vagas, 1 pcd) cantineira (2 vagas) carpinteiro (1 vaga) enfermeiro (1 vaga) engenheiro civil (1 vaga) escriturario (2 vag"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "remuneracao_texto": "R$ 12"
+    },
+    {
+      "titulo": "Prefeitura de Coronel Vivida",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-coronel-vivida-pr-retifica-edital-de-concurso-publico-com-salarios-de-ate-21525",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": " cr) agente comunitario de saude - equipe esf n.o 011 - unidade basica de saude madalosso (1 vaga + cr) assistente administrativo (cr) auxiliar de odontologia (cr) secretario escolar da educacao basica (4 vagas + cr ampla concorrencia; 1 vaga pcd) analista de tecnologia da informacao (1 vaga + cr) assistente social (3 vagas + cr) contador (cr) enfermeiro (cr) engenheiro civil (cr) farmaceutico (2 vagas + cr) fiscal tributario (1 vaga + cr) fonoaudiologo (2 vagas + cr) medico da familia (cr) nutricionista (2 vagas + cr) procurador juridico"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "remuneracao_texto": "R$ 21.525,56"
+    },
+    {
+      "titulo": "Prefeitura de Matinhos",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-matinhos-pr-publica-edital-de-concurso-publico-com-salarios-de-ate-20330",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": "orista de veiculos pesados/cargas e onibus (9 vagas) vigia/vigilante (8 vagas) cuidador social (1 vaga) desenhista cadista (1 vaga) monitor de transporte escolar (4 vagas) secretario escolar (1 vaga) tecnico administrativo (5 vagas) tecnico em enfermagem (cr) tecnico em informatica/manutencao de computadores (1 vaga) tecnico em seguranca do trabalho (1 vaga) topografo (1 vaga) arquiteto (1 vaga) contador (1 vaga) enfermeiro (1 vaga) engenheiro ambiental (1 vaga) engenheiro agrimensor (1 vaga) engenheiro civil (1 vaga) fonoaudiologo (1 v"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "remuneracao_texto": "R$ 20.330,16"
+    },
+    {
+      "titulo": "Prefeitura de Ponta Grossa",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-ponta-grossa-pr-divulga-retificacao-do-concurso-publico",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "sportes (1 vaga + cr) fiscal de tributos ii (1 vaga + cr) inspetor sanitario (1 vaga + cr) tecnico administrativo (1 vaga + cr) auxiliar de farmacia plantonista (1 vaga + cr) auxiliar em saude bucal (1 vaga + cr) fiscal de edificacoes (1 vaga + cr) tecnico em tecnologia da informacao e comunicacao (1 vaga + cr) tecnico em enfermagem (1 vaga + cr) tecnico em saude bucal (1 vaga + cr) tecnico em seguranca do trabalho (1 vaga + cr) arquiteto (1 vaga + cr) dentista (1 vaga + cr) engenheiro agronomo (1 vaga + cr) engenheiro ambiental (1 vaga +"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "remuneracao_texto": "R$ 14.756,74"
+    },
+    {
+      "titulo": "Prefeitura de Quitandinha",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-quitandinha-pr-lanca-concurso-publico-com-salarios-de-ate-12111",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": "de maquinas (8 vagas + cr) orientador social (cr) assistente administrativo (cr) auxiliar administrativo (5 vagas + cr) fiscal de obras e posturas (cr) tecnico agricola (2 vagas + cr) tecnico em agrimensura (1 vaga + cr) tecnico em enfermagem a (3 vagas + cr) tecnico em informatica (1 vaga + cr) tecnico em topografia (1 vaga + cr) advogado (cr) arquiteto (1 vaga + cr) assistente social (2 vagas + cr) biologo (2 vagas + cr) contador i (cr) enfermeiro (cr) engenheiro agronomo (cr) engenheiro agrimensor (1 vaga + cr) engenheiro civil (1 va"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "remuneracao_texto": "R$ 12.111,16"
+    },
+    {
+      "titulo": "UENP - Universidade Estadual do Norte do Paraná",
+      "url": "https://www.pciconcursos.com.br/noticias/uenp-pr-retifica-concursos-com-vagas-para-agentes-universitarios-de-execucao-e-profissionais",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": "11 vagas) tecnico administrativo - campus de jacarezinho (23 vagas) tecnico administrativo - campus luiz meneghel de bandeirantes (3 vagas) tecnico em anatomia e necropsia - campus de jacarezinho (1 vaga) tecnico em enfermagem - campus de jacarezinho (1 vaga) tecnico em informatica - campus de cornelio procopio (2 vagas) tecnico em informatica - campus de jacarezinho (1 vaga) tecnico em laboratorio/biologia - campus de cornelio procopio (1 vaga) tecnico em laboratorio/biologia - campus de jacarezinho (1 vaga) tecnico em laboratorio/biol"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "remuneracao_texto": "R$ 8.752,26"
+    },
+    {
+      "titulo": "UENP - Universidade Estadual do Norte do Paraná",
+      "url": "https://www.pciconcursos.com.br/noticias/uenp-pr-abre-processo-seletivo-para-agentes-universitarios",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": "as aulas --> organizadoras colaborar contato pesquisar nacional sudeste sul centro-oeste norte nordeste uenp - pr abre processo seletivo para agentes universitarios oportunidades com salarios de ate r$ 7.997,72 contemplam cargos de enfermeiro, bibliotecario e tecnico em informatica. a selecao sera realizada por meio de analise de curriculo e prova de titulos. concursos › noticias › sul segunda-feira, 3 de agosto de 2026 a universidade estadual do norte do parana (uenp) lancou um processo seletivo para preencher 3 vagas temporarias de ag"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "remuneracao_texto": "R$ 7.997,72"
+    },
+    {
+      "titulo": "Prefeitura de Silveira Martins",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-silveira-martins-rs-retifica-concurso-publico-e-mantem-processo-seletivo-inalterado",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": " disso, foram alterados os requisitos para professor de educacao especial e professor de educacao infantil. segundo os editais, as oportunidades sao para os cargos de: concurso publico 01/2026 agente de manutencao (2 vagas) agente de servicos (5 vagas) agente tecnico em informatica (1 vaga) almoxarife (1 vaga) enfermeiro (1 vaga) engenheiro civil (1 vaga) farmaceutico bioquimico (cr) medico (5 vagas) medico veterinario (cr) monitor (6 vagas) motorista (2 vagas) nutricionista (cr) oficial administrativo (3 vagas) operador de maquinas (1 "
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "remuneracao_texto": "R$ 19.535,28"
+    },
+    {
+      "titulo": "Prefeitura de Calmon",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-calmon-sc-abre-concurso-publico-com-salarios-de-ate-7314",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "ente de portaria escolar (1 vaga + cr) agente de recepcao (1 vaga + cr) agente de recursos humanos (1 vaga + cr) agente de tributacao e fiscalizacao (cr) agente de vigilancia sanitaria (cr) assistente administrativo (4 vagas ac + cr, 1 vaga pcd) assistente de tecnologia da informacao (1 vaga + cr) atendente de farmacia (1 vaga + cr) auxiliar de consultorio dentario (1 vaga + cr) auxiliar educacional i (1 vaga + cr) auxiliar educacional ii (8 vagas ac + cr, 1 vaga pcd) educador social (1 vaga + cr) fiscal de obras e posturas (1 vaga + cr) "
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "remuneracao_texto": "R$ 7.314,30"
+    },
+    {
+      "titulo": "SES - Secretaria de Estado da Saúde de Santa Catarina",
+      "url": "https://www.pciconcursos.com.br/noticias/ses-sc-abre-processo-seletivo-para-profissionais-de-saude-em-joinville",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": "(1 vaga) medico especialista em pneumologia (1 vaga) medico especialista em radiologia e diagnostico por imagem ultrassonografia geral (1 vaga) terapeuta ocupacional hospitalar (1 vaga) maternidade darcy vargas-mdv engenheiro mecanico - area da saude (1 vaga) tecnico em informatica (1 vaga) a jornada e de 30 horas semanais para enfermeiro, engenheiro, terapeuta ocupacional e tecnico em informatica, e de 20 horas semanais para medico. as remuneracoes variam de r$ 4.448,15 a r$ 10.581,16, incluindo gratificacoes, auxilio-alimentacao e ins"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "remuneracao_texto": "R$ 12.111,16"
+    }
+  ]
+}
