@@ -1796,11 +1796,9 @@
     slide.querySelector('.source-url').textContent = link ? new URL(link).hostname : (course.instituicao || '');
     slide.querySelector('.updated').textContent = course.area || '';
     const qr = slide.querySelector('.qr-code');
-    if (qr) {
-      qr.innerHTML = '';
-      if (link && window.QRCode) new QRCode(qr, { text: link, width: 128, height: 128 });
-    }
-    slide.querySelector('.qr-item-label').textContent = 'Abrir este curso';
+    if (qr) qr.innerHTML = '';
+    const qrWrap = slide.querySelector('.qr-wrap');
+    if (qrWrap) qrWrap.hidden = true;
     const subtitle = slide.querySelector('.panel-subtitle');
     if (subtitle) subtitle.textContent = CONTENT_SUBTITLES.curso;
     updateCounter();
