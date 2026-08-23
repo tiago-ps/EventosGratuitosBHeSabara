@@ -1817,7 +1817,7 @@
     const online = slide.querySelector('.city');
     if (online) {
       online.hidden = false;
-      online.className = 'city course-online';
+      online.className = 'badge course-online';
       online.textContent = 'ONLINE';
       online.removeAttribute('style');
     }
