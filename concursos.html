@@ -9,13 +9,15 @@
 </head>
 <body>
   <header class="topo">
-    <a class="voltar" href="./">← Mural Cultural</a>
+    <nav class="nav-mural" aria-label="Conteúdos do Mural"><a class="voltar" href="./">← Mural Cultural</a><span aria-current="page">Concursos</span></nav>
     <div><p class="rotulo">FORMAÇÃO E OPORTUNIDADES</p><h1>Concursos públicos</h1><p id="resumo">Carregando oportunidades…</p></div>
   </header>
   <main>
     <section class="filtros" aria-label="Filtros">
-      <label>Buscar <input id="busca" type="search" placeholder="Órgão, formação…"></label>
+      <label>Buscar <input id="busca" type="search" placeholder="Órgão, cargo, cidade, formação…"></label>
       <label>Formação <select id="formacao"><option value="">Todas as formações</option></select></label>
+      <label>UF <select id="uf"><option value="">Todos os estados</option></select></label>
+      <label>Prazo <select id="prazo"><option value="">Todos</option><option value="com-data">Com data de inscrição</option><option value="sem-data">Data não identificada</option></select></label>
     </section>
     <p id="estado" class="estado" hidden></p>
     <section id="lista" class="lista" aria-live="polite"></section>
