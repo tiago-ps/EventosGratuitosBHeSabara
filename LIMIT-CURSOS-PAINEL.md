@@ -1,0 +1,1 @@
+O modo Painel usa no máximo 15 cursos escolhidos aleatoriamente por carregamento. A Agenda mantém o catálogo completo. Quando somente Cursos está ativo, o filtro geral Tema é ocultado para não misturar temas de Eventos/Livros.
