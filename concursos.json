@@ -1,9 +1,9 @@
 {
-  "schema": 3,
+  "schema": 4,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-08-23T04:52:48.468871+00:00",
-  "total": 32,
+  "coletado_em_utc": "2026-08-23T05:23:20.199066+00:00",
+  "total": 27,
   "concursos": [
     {
       "titulo": "CaraguaPrev - Instituto de Previdência do Município de Caraguatatuba",
@@ -20,36 +20,18 @@
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "",
-      "cidade": "",
+      "uf": "PA",
+      "cidade": "Caraguatatuba",
       "inscricoes_inicio_texto": "17 de agosto de 2026",
       "inscricoes_fim_texto": "29 de setembro de 2026",
       "inscricoes_texto": "17 de agosto de 2026 a 29 de setembro de 2026",
-      "remuneracao_faixa_texto": "R$ 1.706,94 a R$ 19.593,52",
+      "remuneracao_faixa_texto": "",
       "cargos_compativeis": [
         {
           "cargo": "Técnico em Informática",
           "vagas_texto": "1 vaga",
           "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Contador",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Controlador Interno",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Procurador Jurídico",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
+          "confianca": "alta"
         }
       ]
     },
@@ -68,36 +50,18 @@
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "",
+      "uf": "PA",
       "cidade": "",
       "inscricoes_inicio_texto": "18 de agosto de 2026",
       "inscricoes_fim_texto": "10 de setembro de 2026",
       "inscricoes_texto": "18 de agosto de 2026 a 10 de setembro de 2026",
-      "remuneracao_faixa_texto": "R$ 1.621,00 a R$ 19.593,52",
+      "remuneracao_faixa_texto": "",
       "cargos_compativeis": [
         {
-          "cargo": "Auxiliar de Serviços Gerais",
+          "cargo": "Técnico em Computação",
           "vagas_texto": "Cadastro de Reserva",
           "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Cuidador de Saúde",
-          "vagas_texto": "Cadastro de Reserva",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Fonoaudiólogo",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Psicólogo Especialista em ABA",
-          "vagas_texto": "Cadastro de Reserva",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
+          "confianca": "alta"
         }
       ]
     },
@@ -116,33 +80,18 @@
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "",
-      "cidade": "",
-      "remuneracao_faixa_texto": "R$ 2.260,18 a R$ 19.593,52",
+      "uf": "PA",
+      "cidade": "Cafelândia",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "",
       "cargos_compativeis": [
         {
-          "cargo": "Farmacêutico",
+          "cargo": "Técnico em Informática",
           "vagas_texto": "1 vaga",
           "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Fiscal de Tributos",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Fisioterapeuta",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Fonoaudiólogo",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
+          "confianca": "alta"
         }
       ]
     },
@@ -161,27 +110,18 @@
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "",
+      "uf": "PA",
       "cidade": "",
-      "remuneracao_faixa_texto": "R$ 4.098,78 a R$ 20.940,20",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "",
       "cargos_compativeis": [
         {
-          "cargo": "Auditor de Controle Externo - DIPE - Ciências Atuariais",
-          "vagas_texto": "2 vaga",
+          "cargo": "Auditor de Controle Externo - DIPE - Tecnologia da Informação",
+          "vagas_texto": "5 vagas",
           "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Auditor de Controle Externo - DIPE - Ciências Contábeis",
-          "vagas_texto": "11 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Auditor de Controle Externo - DIPE - Ciências Econômicas",
-          "vagas_texto": "10 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
+          "confianca": "alta"
         }
       ]
     },
@@ -195,38 +135,29 @@
         {
           "nome": "Sistemas de Informação / Computação",
           "nivel": "superior",
-          "evidencia": "o rio de janeiro/rj, publicou o aviso do processo seletivo destinado a preencher vagas e formar cadastro de reserva para oficiais de 3a classe da reserva da marinha (rm3) em areas de nivel superior. segundo o edital, as oportunidades sao para os cargos de: area de ciencia e tecnologia engenharia da computacao (1 vaga) biomedicina/ciencias biologicas - modalidade medica/biotecnologia/bioquimica/farmacia (1 vaga + cr) engenharia eletronica ou engenharia acustica (1 vaga) engenharia de producao (1 vaga + cr) engenharia eletronica (1 vaga) engenharia mecanica (1 vaga) engenharia mecanica - estruturas ou tub"
+          "evidencia": "cina/ciencias biologicas - modalidade medica/biotecnologia/bioquimica/farmacia (1 vaga + cr) engenharia eletronica ou engenharia acustica (1 vaga) engenharia de producao (1 vaga + cr) engenharia eletronica (1 vaga) engenharia mecanica (1 vaga) engenharia mecanica - estruturas ou tubulacoes (1 vaga) ciencia da computacao (ia/machine learning) (1 vaga + cr) ciencia da computacao (arquitetura de software orientada a servicos) (1 vaga) ciencia da computacao/engenharia da computacao/engenharia de software (1 vaga) area de medicina hematologia transplante de medula ossea (1 vaga) hemoterapia (1 vaga) oncologia (1 vaga) "
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "",
+      "uf": "PA",
       "cidade": "",
-      "remuneracao_faixa_texto": "R$ 4.277,48 a R$ 12.579,96",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "",
       "cargos_compativeis": [
         {
-          "cargo": "Engenharia de Produção",
+          "cargo": "Área de Ciência e Tecnologia Engenharia da Computação",
           "vagas_texto": "1 vaga",
           "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
+          "confianca": "alta"
         },
         {
-          "cargo": "Engenharia Eletrônica",
+          "cargo": "Ciência da Computação/Engenharia da Computação/Engenharia de Software",
           "vagas_texto": "1 vaga",
           "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Engenharia Mecânica",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Engenharia Mecânica - Estruturas ou Tubulações",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
+          "confianca": "alta"
         }
       ]
     },
@@ -245,33 +176,24 @@
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "",
+      "uf": "AC",
       "cidade": "",
-      "remuneracao_faixa_texto": "R$ 4.277,48 a R$ 12.579,96",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "",
       "cargos_compativeis": [
         {
-          "cargo": "Médico Clínico Geral",
-          "vagas_texto": "1 vaga",
+          "cargo": "Analista de Tecnologia da Informação/Sistemas",
+          "vagas_texto": "2 vagas",
           "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
+          "confianca": "alta"
         },
         {
-          "cargo": "Médico Psiquiatra",
-          "vagas_texto": "2 vaga",
+          "cargo": "Analista de Tecnologia da Informação/Infraestrutura",
+          "vagas_texto": "2 vagas",
           "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Médico Veterinário/Cirurgia de Pequenos Animais",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Zootecnista",
-          "vagas_texto": "2 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
+          "confianca": "alta"
         }
       ]
     },
@@ -290,33 +212,18 @@
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "",
+      "uf": "AC",
       "cidade": "",
-      "remuneracao_faixa_texto": "R$ 2.235,35 a R$ 21.138,26",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "",
       "cargos_compativeis": [
         {
-          "cargo": "Engenheiro de Segurança do Trabalho",
+          "cargo": "Técnico em Informática",
           "vagas_texto": "1 vaga",
           "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Engenheiro Químico",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Psicólogo",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Químico",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
+          "confianca": "alta"
         }
       ]
     },
@@ -335,36 +242,18 @@
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "",
-      "cidade": "",
+      "uf": "MG",
+      "cidade": "Capelinha",
       "inscricoes_inicio_texto": "21 de setembro de 2026",
       "inscricoes_fim_texto": "21 de outubro de 2026",
       "inscricoes_texto": "21 de setembro de 2026 a 21 de outubro de 2026",
-      "remuneracao_faixa_texto": "R$ 1.914,05 a R$ 21.138,26",
+      "remuneracao_faixa_texto": "",
       "cargos_compativeis": [
         {
-          "cargo": "Tradutor e Intérprete de Libras",
+          "cargo": "Técnico em Informática",
           "vagas_texto": "1 vaga",
           "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Agente de Serviços Externos",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Auxiliar de Serviços Gerais",
-          "vagas_texto": "2 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Zelador",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
+          "confianca": "alta"
         }
       ]
     },
@@ -383,63 +272,18 @@
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "",
-      "cidade": "",
-      "remuneracao_faixa_texto": "R$ 4.000,00 a R$ 21.138,26",
+      "uf": "MG",
+      "cidade": "Passos",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "",
       "cargos_compativeis": [
-        {
-          "cargo": "Agente de Comunicação Social",
-          "vagas_texto": "3 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
-        },
         {
           "cargo": "Agente de Tecnologia da Informação",
-          "vagas_texto": "2 vaga",
+          "vagas_texto": "2 vagas",
           "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Analista Técnico-Jurídico",
-          "vagas_texto": "2 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Contador",
-          "vagas_texto": "2 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
-        }
-      ]
-    },
-    {
-      "titulo": "FJP - Fundação João Pinheiro",
-      "url": "https://www.pciconcursos.com.br/noticias/fundacao-joao-pinheiro-mg-abre-concurso-publico-para-especialista-em-politicas-publicas-e-gestao-governamental",
-      "formacoes_compativeis": [
-        "Administração"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Administração",
-          "nivel": "superior",
-          "evidencia": " regulares, inscritos no cadunico ou que tenham prestado servicos eleitorais, no periodo de 24 de agosto de 2026 a 3 de setembro de 2026. o processo de selecao tera tres etapas: participacao no enem 2026 (provas objetivas e redacao), habilitacao documental dos classificados e realizacao do curso de graduacao em administracao publica (csap). o candidato aprovado sera contratado sob regime estatutario. o concurso tem validade de 2 anos, a contar da homologacao, podendo ser prorrogado uma unica vez por igual periodo. mais informacoes podem ser obtidas no edital completo. estude de forma inteligente com o material basico p"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "",
-      "cidade": "",
-      "inscricoes_inicio_texto": "24 de agosto de 2026",
-      "inscricoes_fim_texto": "28 de setembro de 2026",
-      "inscricoes_texto": "24 de agosto de 2026 a 28 de setembro de 2026",
-      "remuneracao_faixa_texto": "R$ 4.000,00 a R$ 21.138,26",
-      "cargos_compativeis": [
-        {
-          "cargo": "líticas Públicas e Gestão Governamental",
-          "vagas_texto": "30 vaga",
-          "formacao": "Administração",
-          "confianca": "media"
+          "confianca": "alta"
         }
       ]
     },
@@ -447,8 +291,8 @@
       "titulo": "FUMEP - Fundação Municipal de Ensino Profissionalizante de Sete Lagoas",
       "url": "https://www.pciconcursos.com.br/noticias/fumep-de-sete-lagoas-mg-abre-concurso-publico-para-diversos-niveis-de-escolaridade",
       "formacoes_compativeis": [
-        "Sistemas de Informação / Computação",
-        "Engenharia de Automação"
+        "Engenharia de Automação",
+        "Sistemas de Informação / Computação"
       ],
       "evidencias_formacao": [
         {
@@ -464,51 +308,24 @@
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "",
+      "uf": "MG",
       "cidade": "",
-      "remuneracao_faixa_texto": "R$ 1.621,00 a R$ 21.138,26",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "R$ 23,68",
       "cargos_compativeis": [
         {
-          "cargo": "Professor de Ensino Profissionalizante - Engenharia Mecânica",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Professor de Ensino Profissionalizante - Engenharia Metalúrgica",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Professor de Ensino Profissionalizante - Engenharia Ambiental",
-          "vagas_texto": "CR",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Professor de Ensino Profissionalizante - Química",
-          "vagas_texto": "CR",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Professor de Ensino Profissionalizante - Enfermagem",
+          "cargo": "Professor de Ensino Profissionalizante - Engenharia de Automação e Controle",
           "vagas_texto": "1 vaga",
           "formacao": "Engenharia de Automação",
-          "confianca": "media"
+          "confianca": "alta"
         },
         {
           "cargo": "Professor de Ensino Profissionalizante - Engenharia da Computação",
           "vagas_texto": "1 vaga",
-          "formacao": "Engenharia de Automação",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Professor de Ensino Profissionalizante - Tecnólogo em Rede de Computadores",
-          "vagas_texto": "1 vaga",
-          "formacao": "Engenharia de Automação",
-          "confianca": "media"
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
         }
       ]
     },
@@ -533,48 +350,24 @@
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "",
+      "uf": "PA",
       "cidade": "",
       "inscricoes_inicio_texto": "9 de setembro de 2026",
       "inscricoes_fim_texto": "8 de outubro de 2026",
       "inscricoes_texto": "9 de setembro de 2026 a 8 de outubro de 2026",
-      "remuneracao_faixa_texto": "R$ 2.003,25 a R$ 21.138,26",
+      "remuneracao_faixa_texto": "",
       "cargos_compativeis": [
         {
-          "cargo": "Técnico de Serviços de Saúde - Técnico em Nutrição",
-          "vagas_texto": "5 vaga",
+          "cargo": "Técnico de Nível Médio - Técnico em Administração",
+          "vagas_texto": "2 vagas",
           "formacao": "Técnico em Administração",
-          "confianca": "media"
+          "confianca": "alta"
         },
         {
-          "cargo": "Técnico de Serviços de Saúde - Técnico em Patologia Clínica",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Administração",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Técnico de Serviços de Saúde - Técnico em Radiologia",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Administração",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Cirurgião Dentista Clínico Geral",
-          "vagas_texto": "3 vaga",
-          "formacao": "Técnico em Administração",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Enfermeiro 24 horas",
+          "cargo": "Técnico de Nível Médio - Técnico em Eletrônica",
           "vagas_texto": "1 vaga",
           "formacao": "Técnico em Eletrônica",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Enfermeiro 30 horas",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Eletrônica",
-          "confianca": "media"
+          "confianca": "alta"
         }
       ]
     },
@@ -593,36 +386,18 @@
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "",
-      "cidade": "",
+      "uf": "MG",
+      "cidade": "Tombos",
       "inscricoes_inicio_texto": "3 de agosto de 2026",
       "inscricoes_fim_texto": "3 de setembro de 2026",
       "inscricoes_texto": "3 de agosto de 2026 a 3 de setembro de 2026",
-      "remuneracao_faixa_texto": "R$ 1.750,00 a R$ 21.138,26",
+      "remuneracao_faixa_texto": "",
       "cargos_compativeis": [
         {
-          "cargo": "Nutricionista",
-          "vagas_texto": "3 vaga",
+          "cargo": "Técnico em Informática",
+          "vagas_texto": "1 vaga",
           "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Odontólogo",
-          "vagas_texto": "CR",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Odontólogo PSF",
-          "vagas_texto": "4 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Pedagogo - CAPS",
-          "vagas_texto": "CR",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
+          "confianca": "alta"
         }
       ]
     },
@@ -641,33 +416,18 @@
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "",
-      "cidade": "",
-      "remuneracao_faixa_texto": "R$ 1.745,00 a R$ 21.138,26",
+      "uf": "MG",
+      "cidade": "Belo Vale",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "",
       "cargos_compativeis": [
         {
-          "cargo": "Educador Físico",
-          "vagas_texto": "3 vaga",
+          "cargo": "Técnico em Informática",
+          "vagas_texto": "2 vagas",
           "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Enfermeiro II",
-          "vagas_texto": "2 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Enfermeiro III",
-          "vagas_texto": "4 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Farmacêutico",
-          "vagas_texto": "2 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
+          "confianca": "alta"
         }
       ]
     },
@@ -686,36 +446,18 @@
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "",
-      "cidade": "",
+      "uf": "MG",
+      "cidade": "Carmo da Mata",
       "inscricoes_inicio_texto": "2 de setembro de 2026",
       "inscricoes_fim_texto": "2 de outubro de 2026",
       "inscricoes_texto": "2 de setembro de 2026 a 2 de outubro de 2026",
-      "remuneracao_faixa_texto": "R$ 1.629,09 a R$ 21.138,26",
+      "remuneracao_faixa_texto": "",
       "cargos_compativeis": [
         {
-          "cargo": "Fisioterapeuta",
-          "vagas_texto": "cadastro de reserva",
+          "cargo": "Técnico em Informática",
+          "vagas_texto": "Cadastro de Reserva",
           "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Maestro",
-          "vagas_texto": "cadastro de reserva",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Procurador Municipal",
-          "vagas_texto": "2 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Psicólogo",
-          "vagas_texto": "cadastro de reserva",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
+          "confianca": "alta"
         }
       ]
     },
@@ -734,36 +476,18 @@
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "",
-      "cidade": "",
+      "uf": "MG",
+      "cidade": "Contagem",
       "inscricoes_inicio_texto": "19 de outubro de 2026",
       "inscricoes_fim_texto": "17 de novembro de 2026",
       "inscricoes_texto": "19 de outubro de 2026 a 17 de novembro de 2026",
-      "remuneracao_faixa_texto": "R$ 2.698,73 a R$ 21.138,26",
+      "remuneracao_faixa_texto": "",
       "cargos_compativeis": [
         {
-          "cargo": "Engenheiro de Automação",
+          "cargo": "Auditor de Controle Interno - Tecnologia da Informação",
           "vagas_texto": "1 vaga",
           "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Engenheiro Eletricista",
-          "vagas_texto": "3 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Engenheiro Florestal",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Engenheiro Geotécnico",
-          "vagas_texto": "2 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
+          "confianca": "alta"
         }
       ]
     },
@@ -782,33 +506,18 @@
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "",
-      "cidade": "",
-      "remuneracao_faixa_texto": "R$ 1.621,00 a R$ 21.138,26",
+      "uf": "PA",
+      "cidade": "Coromandel",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "",
       "cargos_compativeis": [
         {
           "cargo": "Analista de Tecnologia da Informação",
           "vagas_texto": "1 vaga",
           "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Contador",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Controlador Interno",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Engenheiro Civil",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
+          "confianca": "alta"
         }
       ]
     },
@@ -827,36 +536,24 @@
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "",
-      "cidade": "",
+      "uf": "MG",
+      "cidade": "Dores do Indaiá",
       "inscricoes_inicio_texto": "2 de setembro de 2026",
       "inscricoes_fim_texto": "2 de outubro de 2026",
       "inscricoes_texto": "2 de setembro de 2026 a 2 de outubro de 2026",
-      "remuneracao_faixa_texto": "R$ 1.469,88 a R$ 21.138,26",
+      "remuneracao_faixa_texto": "",
       "cargos_compativeis": [
         {
-          "cargo": "Engenheiro Agrônomo",
+          "cargo": "Técnico em Informática",
           "vagas_texto": "1 vaga",
           "formacao": "Técnico em Informática",
-          "confianca": "media"
+          "confianca": "alta"
         },
         {
-          "cargo": "Farmacêutico",
+          "cargo": "Técnico em Informática - Saúde",
           "vagas_texto": "1 vaga",
           "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Médico Generalista - 20h",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Médico Generalista - 40h",
-          "vagas_texto": "2 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
+          "confianca": "alta"
         }
       ]
     },
@@ -875,33 +572,18 @@
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "",
-      "cidade": "",
-      "remuneracao_faixa_texto": "R$ 1.650,00 a R$ 21.138,26",
+      "uf": "MG",
+      "cidade": "Faria Lemos",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "",
       "cargos_compativeis": [
         {
-          "cargo": "Farmacêutico 20h",
+          "cargo": "Técnico em Informática",
           "vagas_texto": "1 vaga",
           "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Farmacêutico 40h",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Fisioterapeuta",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Fonoaudiólogo 20h",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
+          "confianca": "alta"
         }
       ]
     },
@@ -920,36 +602,18 @@
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "",
-      "cidade": "",
+      "uf": "MG",
+      "cidade": "Ipaba",
       "inscricoes_inicio_texto": "9 de setembro de 2026",
       "inscricoes_fim_texto": "8 de outubro de 2026",
       "inscricoes_texto": "9 de setembro de 2026 a 8 de outubro de 2026",
-      "remuneracao_faixa_texto": "R$ 1.621,00 a R$ 21.138,26",
+      "remuneracao_faixa_texto": "",
       "cargos_compativeis": [
         {
-          "cargo": "Engenheiro Civil",
+          "cargo": "Técnico em Informática",
           "vagas_texto": "1 vaga",
           "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Farmacêutico",
-          "vagas_texto": "2 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Fiscal Tributário",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Fisioterapeuta",
-          "vagas_texto": "2 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
+          "confianca": "alta"
         }
       ]
     },
@@ -968,36 +632,18 @@
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "",
-      "cidade": "",
+      "uf": "MG",
+      "cidade": "Pedro Teixeira",
       "inscricoes_inicio_texto": "30 de setembro de 2026",
       "inscricoes_fim_texto": "30 de outubro de 2026",
       "inscricoes_texto": "30 de setembro de 2026 a 30 de outubro de 2026",
-      "remuneracao_faixa_texto": "R$ 1.621,00 a R$ 21.138,26",
+      "remuneracao_faixa_texto": "",
       "cargos_compativeis": [
-        {
-          "cargo": "Técnico em Enfermagem 40h",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
-        },
         {
           "cargo": "Técnico em Tecnologia da Informação",
           "vagas_texto": "1 vaga",
           "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Vigia de Repartições Públicas",
-          "vagas_texto": "4 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Zelador de Repartição",
-          "vagas_texto": "2 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
+          "confianca": "alta"
         }
       ]
     },
@@ -1016,33 +662,18 @@
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "",
-      "cidade": "",
-      "remuneracao_faixa_texto": "R$ 1.621,00 a R$ 21.138,26",
+      "uf": "MG",
+      "cidade": "Piracema",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "",
       "cargos_compativeis": [
         {
-          "cargo": "Nutricionista - Saúde",
+          "cargo": "Técnico em Informática",
           "vagas_texto": "1 vaga",
           "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Professor da Educação Básica - Regente de Turma",
-          "vagas_texto": "5 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Psicólogo - Educação",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Psicólogo - Saúde",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
+          "confianca": "alta"
         }
       ]
     },
@@ -1061,84 +692,24 @@
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "",
-      "cidade": "",
+      "uf": "MG",
+      "cidade": "São Félix de Minas",
       "inscricoes_inicio_texto": "3 de agosto de 2026",
       "inscricoes_fim_texto": "2 de setembro de 2026",
       "inscricoes_texto": "3 de agosto de 2026 a 2 de setembro de 2026",
-      "remuneracao_faixa_texto": "R$ 1.621,00 a R$ 21.138,26",
+      "remuneracao_faixa_texto": "",
       "cargos_compativeis": [
         {
-          "cargo": "Farmacêutico Bioquímico",
+          "cargo": "Analista de Tecnologia da Informação",
           "vagas_texto": "1 vaga",
           "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
+          "confianca": "alta"
         },
         {
-          "cargo": "Fisioterapeuta",
+          "cargo": "Técnico em Tecnologia da Informação",
           "vagas_texto": "1 vaga",
           "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Fonoaudiólogo",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Gari",
-          "vagas_texto": "2 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
-        }
-      ]
-    },
-    {
-      "titulo": "Prefeitura de Coronel Vivida",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-coronel-vivida-pr-retifica-edital-de-concurso-publico-com-salarios-de-ate-21525",
-      "formacoes_compativeis": [
-        "Sistemas de Informação / Computação"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Sistemas de Informação / Computação",
-          "nivel": "superior",
-          "evidencia": "cnico em seguranca do trabalho (1 vaga + cr) agente comunitario de saude - equipe esf n.o 011 - unidade basica de saude madalosso (1 vaga + cr) assistente administrativo (cr) auxiliar de odontologia (cr) secretario escolar da educacao basica (4 vagas + cr ampla concorrencia; 1 vaga pcd) analista de tecnologia da informacao (1 vaga + cr) assistente social (3 vagas + cr) contador (cr) enfermeiro (cr) engenheiro civil (cr) farmaceutico (2 vagas + cr) fiscal tributario (1 vaga + cr) fonoaudiologo (2 vagas + cr) medico da familia (cr) nutricionista (2 vagas + cr) procurador juridico (cr) professor municipal 20h (18 vagas "
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "",
-      "cidade": "",
-      "inscricoes_inicio_texto": "11 de agosto de 2026",
-      "inscricoes_fim_texto": "8 de outubro de 2026",
-      "inscricoes_texto": "11 de agosto de 2026 a 8 de outubro de 2026",
-      "remuneracao_faixa_texto": "R$ 2.565,32 a R$ 21.525,56",
-      "cargos_compativeis": [
-        {
-          "cargo": "Médico da Família",
-          "vagas_texto": "CR",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Nutricionista",
-          "vagas_texto": "2 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Procurador Jurídico",
-          "vagas_texto": "CR",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Professor Municipal 20h",
-          "vagas_texto": "18 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
+          "confianca": "alta"
         }
       ]
     },
@@ -1157,123 +728,18 @@
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "",
-      "cidade": "",
-      "remuneracao_faixa_texto": "R$ 1.621,00 a R$ 21.525,56",
+      "uf": "PA",
+      "cidade": "Matinhos",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "",
       "cargos_compativeis": [
         {
-          "cargo": "Engenheiro Civil",
+          "cargo": "Técnico em Informática/Manutenção de Computadores",
           "vagas_texto": "1 vaga",
           "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Fonoaudiólogo",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Médico Anestesista Plantonista",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Médico Cardiologista",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
-        }
-      ]
-    },
-    {
-      "titulo": "Prefeitura de Ponta Grossa",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-ponta-grossa-pr-divulga-retificacao-do-concurso-publico",
-      "formacoes_compativeis": [
-        "Sistemas de Informação / Computação"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Sistemas de Informação / Computação",
-          "nivel": "superior",
-          "evidencia": "de educacao (1 vaga + cr) fiscal de transportes (1 vaga + cr) fiscal de tributos ii (1 vaga + cr) inspetor sanitario (1 vaga + cr) tecnico administrativo (1 vaga + cr) auxiliar de farmacia plantonista (1 vaga + cr) auxiliar em saude bucal (1 vaga + cr) fiscal de edificacoes (1 vaga + cr) tecnico em tecnologia da informacao e comunicacao (1 vaga + cr) tecnico em enfermagem (1 vaga + cr) tecnico em saude bucal (1 vaga + cr) tecnico em seguranca do trabalho (1 vaga + cr) arquiteto (1 vaga + cr) dentista (1 vaga + cr) engenheiro agronomo (1 vaga + cr) engenheiro ambiental (1 vaga + cr) engenheiro ambiental e sanitarista "
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "",
-      "cidade": "",
-      "remuneracao_faixa_texto": "R$ 2.021,95 a R$ 21.525,56",
-      "cargos_compativeis": [
-        {
-          "cargo": "Engenheiro Agrônomo",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Engenheiro Ambiental",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Engenheiro Ambiental e Sanitarista",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Engenheiro de Alimentos",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
-        }
-      ]
-    },
-    {
-      "titulo": "Prefeitura de Quitandinha",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-quitandinha-pr-lanca-concurso-publico-com-salarios-de-ate-12111",
-      "formacoes_compativeis": [
-        "Técnico em Informática"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Técnico em Informática",
-          "nivel": "tecnico",
-          "evidencia": "ultorio dentario (1 vaga + cr) operador de maquinas (8 vagas + cr) orientador social (cr) assistente administrativo (cr) auxiliar administrativo (5 vagas + cr) fiscal de obras e posturas (cr) tecnico agricola (2 vagas + cr) tecnico em agrimensura (1 vaga + cr) tecnico em enfermagem a (3 vagas + cr) tecnico em informatica (1 vaga + cr) tecnico em topografia (1 vaga + cr) advogado (cr) arquiteto (1 vaga + cr) assistente social (2 vagas + cr) biologo (2 vagas + cr) contador i (cr) enfermeiro (cr) engenheiro agronomo (cr) engenheiro agrimensor (1 vaga + cr) engenheiro civil (1 vaga + cr) farmaceutico (1 vaga + cr) fisi"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "",
-      "cidade": "",
-      "remuneracao_faixa_texto": "R$ 1.731,14 a R$ 21.525,56",
-      "cargos_compativeis": [
-        {
-          "cargo": "Farmacêutico",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Fisioterapeuta",
-          "vagas_texto": "2 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Médico III",
-          "vagas_texto": "CR",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Médico Veterinário",
-          "vagas_texto": "CR",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
+          "confianca": "alta"
         }
       ]
     },
@@ -1292,36 +758,24 @@
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "",
+      "uf": "AC",
       "cidade": "",
       "inscricoes_inicio_texto": "15 de julho de 2026",
       "inscricoes_fim_texto": "17 de agosto de 2026",
       "inscricoes_texto": "15 de julho de 2026 a 17 de agosto de 2026",
-      "remuneracao_faixa_texto": "R$ 4.134,40 a R$ 21.525,56",
+      "remuneracao_faixa_texto": "",
       "cargos_compativeis": [
         {
-          "cargo": "Técnico em Laboratório/Biologia - Campus de Cornélio Procópio",
-          "vagas_texto": "1 vaga",
+          "cargo": "Técnico em Informática - Campus de Cornélio Procópio",
+          "vagas_texto": "2 vagas",
           "formacao": "Técnico em Informática",
-          "confianca": "media"
+          "confianca": "alta"
         },
         {
-          "cargo": "Técnico em Laboratório/Biologia - Campus de Jacarezinho",
+          "cargo": "Técnico em Informática - Campus de Jacarezinho",
           "vagas_texto": "1 vaga",
           "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Técnico em Laboratório/Biologia - Campus Luiz Meneghel de Bandeirantes",
-          "vagas_texto": "2 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Técnico em Radiologia - Campus de Jacarezinho",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
+          "confianca": "alta"
         }
       ]
     },
@@ -1335,14 +789,25 @@
         {
           "nome": "Técnico em Informática",
           "nivel": "tecnico",
-          "evidencia": "trabalho d. humanos q. comentadas + varias aulas --> organizadoras colaborar contato pesquisar nacional sudeste sul centro-oeste norte nordeste uenp - pr abre processo seletivo para agentes universitarios oportunidades com salarios de ate r$ 7.997,72 contemplam cargos de enfermeiro, bibliotecario e tecnico em informatica. a selecao sera realizada por meio de analise de curriculo e prova de titulos. concursos › noticias › sul segunda-feira, 3 de agosto de 2026 a universidade estadual do norte do parana (uenp) lancou um processo seletivo para preencher 3 vagas temporarias de agente universitario, nos niveis medio pro"
+          "evidencia": "uenp - pr abre processo seletivo para agentes universitarios oportunidades com salarios de ate r$ 7.997,72 contemplam cargos de enfermeiro, bibliotecario e tecnico em informatica. a selecao sera realizada por meio de analise de curriculo e prova de titulos. concursos › noticias › sul segunda-feira, 3 de agosto de 2026 a universidade estadual do norte do parana (uenp) lancou um processo seletivo para preencher 3 vagas temporarias de agente universitario, nos niveis medio pro"
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "",
+      "uf": "PA",
       "cidade": "",
-      "remuneracao_faixa_texto": "R$ 4.134,40 a R$ 21.525,56"
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "",
+      "cargos_compativeis": [
+        {
+          "cargo": "Agente Universitário de Execução/Técnico em Informática - Campus de Cornélio Procópio",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "alta"
+        }
+      ]
     },
     {
       "titulo": "Prefeitura de Silveira Martins",
@@ -1359,81 +824,18 @@
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "",
-      "cidade": "",
-      "remuneracao_faixa_texto": "R$ 1.386,47 a R$ 19.535,28",
+      "uf": "PA",
+      "cidade": "Silveira Martins",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "",
       "cargos_compativeis": [
         {
-          "cargo": "Operador de Máquinas",
+          "cargo": "Agente Técnico em Informática",
           "vagas_texto": "1 vaga",
           "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Professor de Anos Iniciais",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Professor de Artes",
-          "vagas_texto": "CR",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Professor de Ciências",
-          "vagas_texto": "CR",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
-        }
-      ]
-    },
-    {
-      "titulo": "Prefeitura de Calmon",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-calmon-sc-abre-concurso-publico-com-salarios-de-ate-7314",
-      "formacoes_compativeis": [
-        "Sistemas de Informação / Computação"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Sistemas de Informação / Computação",
-          "nivel": "superior",
-          "evidencia": " agente de defesa civil (1 vaga + cr) agente de portaria escolar (1 vaga + cr) agente de recepcao (1 vaga + cr) agente de recursos humanos (1 vaga + cr) agente de tributacao e fiscalizacao (cr) agente de vigilancia sanitaria (cr) assistente administrativo (4 vagas ac + cr, 1 vaga pcd) assistente de tecnologia da informacao (1 vaga + cr) atendente de farmacia (1 vaga + cr) auxiliar de consultorio dentario (1 vaga + cr) auxiliar educacional i (1 vaga + cr) auxiliar educacional ii (8 vagas ac + cr, 1 vaga pcd) educador social (1 vaga + cr) fiscal de obras e posturas (1 vaga + cr) monitor escolar (1 vaga + cr) secretario"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "",
-      "cidade": "",
-      "inscricoes_inicio_texto": "23 de agosto de 2026",
-      "inscricoes_fim_texto": "14 de setembro de 2026",
-      "inscricoes_texto": "23 de agosto de 2026 a 14 de setembro de 2026",
-      "remuneracao_faixa_texto": "R$ 1.631,77 a R$ 36.619,86",
-      "cargos_compativeis": [
-        {
-          "cargo": "Fiscal de Obras e Posturas",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Monitor Escolar",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Secretário Escolar",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Técnico em Agropecuária",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "media"
+          "confianca": "alta"
         }
       ]
     },
@@ -1452,36 +854,18 @@
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "",
+      "uf": "PA",
       "cidade": "",
       "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "28 de agosto de 2026",
-      "inscricoes_texto": "até 28 de agosto de 2026",
-      "remuneracao_faixa_texto": "R$ 4.448,15 a R$ 36.619,86",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "",
       "cargos_compativeis": [
-        {
-          "cargo": "Médico Especialista em Radiologia e Diagnóstico por Imagem Ultrassonografia Geral",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Terapeuta Ocupacional Hospitalar",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
-        {
-          "cargo": "Maternidade Darcy Vargas-MDV Engenheiro Mecânico - Área da Saúde",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "media"
-        },
         {
           "cargo": "Técnico em Informática",
           "vagas_texto": "1 vaga",
           "formacao": "Técnico em Informática",
-          "confianca": "media"
+          "confianca": "alta"
         }
       ]
     }
