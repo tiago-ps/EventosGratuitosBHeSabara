@@ -1,5 +1,368 @@
 <!doctype html>
 <html lang="pt-BR" data-theme="original">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="color-scheme" content="dark"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests"><meta name="theme-color" content="#07111f"><meta name="application-name" content="Mural Cultural"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Mural Cultural"><title>Mural Cultural</title><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="imagens/app-icons/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="imagens/app-icons/favicon-32.png"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="stylesheet" href="css/styles.css?v=63"><link rel="stylesheet" href="css/eventos-manuais-ui.css?v=42"></head>
-<body><main id="app" class="app" aria-live="polite"><section class="loading" id="loading"><div class="spinner" aria-hidden="true"></div><p>Carregando programação…</p></section></main>
-<template id="slide-template"><article class="slide" aria-roledescription="slide"><div class="media"><img class="event-image" alt=""><div class="image-fallback" aria-hidden="true"><span class="fallback-icon"></span><span class="fallback-label"></span></div><div class="media-overlay"></div><div class="controls" aria-label="Controles da apresentação"><button class="control-btn filter-btn" aria-label="Configurar painel" title="Configurar painel" aria-expanded="false">⚙</button><button class="control-btn prev-btn" aria-label="Slide anterior" title="Anterior">‹</button><div class="navigation-counter counter"></div><button class="control-btn next-btn" aria-label="Próximo slide" title="Próximo">›</button><button class="control-btn play-pause-btn" aria-label="Pausar" title="Pausar"><svg class="pause-icon" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg><svg class="play-icon" viewBox="0 0 24 24" fill="currentColor" style="display:none"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></button></div></div><div class="content"><header class="topbar"><div class="panel-brand"><img class="panel-logo" src="imagens/marca/logo-mural-cultural.png" alt="Mural Cultural"><p class="panel-subtitle"></p></div><aside class="site-qr-wrap"><div class="site-qr-copy"><strong>Mural Cultural no celular</strong><span>Explore a agenda e outros conteúdos</span></div><div class="site-qr-code"></div></aside></header><div class="event-copy"><div class="badges"><span class="badge category"></span><span class="badge free">GRATUITO</span><span class="badge rating" hidden></span><span class="badge city"></span></div><h1 class="event-title"></h1><p class="description"></p><dl class="details"><div><dt>Quando</dt><dd class="when"></dd></div><div><dt>Onde</dt><dd class="where"><span class="where-text"></span><a class="map-link" target="_blank" rel="noopener noreferrer" hidden><span>Abrir no Google Maps</span></a></dd></div></dl></div><div class="book-copy" hidden><div class="badges book-badges"><span class="badge category">LIVRO</span><span class="badge book-access"></span></div><p class="book-eyebrow">Sugestão de Leitura</p><h1 class="book-question"></h1><p class="book-support"></p><div class="book-identification"><h2 class="book-title"></h2><p class="book-author"></p></div><dl class="book-details"><div class="book-call-row"><dt>Localização no acervo</dt><dd class="book-call"></dd></div><div class="book-availability-row"><dt>Disponível no acervo</dt><dd class="book-availability"></dd></div></dl><div class="book-themes"></div><figure class="book-user-opinion" hidden><figcaption>Opinião de leitor(a)</figcaption><blockquote></blockquote><cite></cite></figure><div class="book-actions"><a class="book-physical-link" target="_blank" rel="noopener noreferrer">Ver no catálogo físico</a><a class="book-virtual-link" target="_blank" rel="noopener noreferrer">Acessar edição virtual</a><a class="book-opinion-link" target="_blank" rel="noopener noreferrer" hidden>Opine sobre este livro</a></div></div><footer class="footer"><div class="source-block"><p class="source-label">Programação e inscrição</p><p class="source-url"></p><p class="updated"></p></div><div class="qr-wrap"><div class="qr-code"></div><span class="qr-item-label">Abrir este conteúdo</span></div></footer></div><div class="filter-overlay" hidden><section class="filter-panel panel-composer" role="dialog" aria-modal="true"><header class="filter-header"><div><p class="filter-eyebrow">Modo painel</p><h2 id="filter-title">Montar programação</h2><p class="filter-intro">Combine diferentes conteúdos e defina filtros próprios para cada módulo.</p></div><button class="filter-close" type="button">×</button></header><p class="panel-validation" role="alert" hidden></p><section class="panel-profile-section"><div class="panel-profile-grid"><label><span>Perfil do painel</span><select class="panel-profile-select"><option value="">Configuração atual</option></select></label><label><span>Nome para salvar</span><input class="panel-profile-name" type="text" maxlength="60"></label><button class="panel-profile-save" type="button">Salvar perfil</button><button class="panel-profile-delete" type="button">Excluir perfil</button></div></section><section class="panel-config-section panel-modules-section"><div class="panel-section-heading"><div><h3>Exibir no painel</h3><p>Ative os tipos de conteúdo que farão parte da rotação.</p></div></div><div class="panel-module-switches"><label class="panel-module-toggle"><input class="panel-module-events" type="checkbox" checked><span>Eventos</span></label><label class="panel-module-toggle"><input class="panel-module-books" type="checkbox" checked><span>Livros</span></label><label class="panel-module-toggle"><input class="panel-module-courses" type="checkbox" checked><span>Cursos</span></label></div></section><section class="panel-config-section"><div class="panel-section-heading"><div><h3>Configuração geral</h3></div></div><div class="filter-grid panel-general-grid"><label><span>Tema</span><select class="filter-theme"><option value="">Todos os temas</option></select></label><label><span>Tempo dos slides</span><select class="filter-slide-duration"><option value="0">Padrão</option><option value="5">5 segundos</option><option value="8">8 segundos</option><option value="10">10 segundos</option><option value="12">12 segundos</option><option value="15">15 segundos</option><option value="20">20 segundos</option><option value="30">30 segundos</option></select></label></div></section><section class="panel-config-section panel-event-section"><div class="panel-section-heading"><div><h3>Eventos</h3></div><label class="panel-weight-field"><span>Frequência</span><select class="panel-event-weight"><option>1</option><option>2</option><option>3</option><option>4</option><option selected>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select></label></div><div class="panel-multiselect-field"><span>Cidades</span><div class="panel-checkbox-list panel-city-options"></div></div><div class="filter-grid"><label><span>Categoria / linguagem</span><select class="filter-category"><option value="">Todas as categorias</option></select></label><label><span>Instituição / programa</span><select class="filter-program"><option value="">Todas as instituições</option></select></label><label><span>Espaço</span><select class="filter-unit"><option value="">Todos os espaços</option></select></label></div></section><section class="panel-config-section panel-book-section"><div class="panel-section-heading"><div><h3>Livros</h3></div><label class="panel-weight-field"><span>Frequência</span><select class="panel-book-weight"><option selected>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select></label></div><div class="panel-multiselect-field"><span>Campus / acervo</span><div class="panel-checkbox-list panel-campus-options"></div></div><div class="filter-grid panel-book-grid"><label><span>Forma de acesso</span><select class="filter-book-access"><option value="">Físico ou virtual</option><option value="physical">Acervo físico</option><option value="virtual">Biblioteca virtual</option><option value="both">Físico e virtual</option></select></label></div></section><section class="panel-config-section panel-course-section"><div class="panel-section-heading"><div><h3>Cursos</h3><p>Cursos online e gratuitos disponíveis no catálogo.</p></div><label class="panel-weight-field"><span>Frequência</span><select class="panel-course-weight"><option selected>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select></label></div></section><p class="panel-frequency-help">A frequência define o peso de Eventos, Livros e Cursos na rotação.</p><div class="filter-actions"><button class="filter-clear" type="button">Carregar padrão</button><button class="filter-apply" type="button">Aplicar programação</button></div></section></div><div class="progress"><span></span></div></article></template><script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script><script src="js/app.js?v=63" defer></script><script src="js/cursos-nativo.js?v=1" defer></script><script src="js/eventos-manuais-ui.js?v=42" defer></script><script src="js/ios-install.js?v=1" defer></script></body></html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+  <meta name="theme-color" content="#07111f">
+  <meta name="application-name" content="Mural Cultural">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Mural Cultural">
+  <title>Mural Cultural</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="imagens/app-icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="imagens/app-icons/favicon-32.png">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="css/styles.css?v=63">
+  <link rel="stylesheet" href="css/eventos-manuais-ui.css?v=42">
+</head>
+<body>
+  <main id="app" class="app" aria-live="polite">
+    <section class="loading" id="loading">
+      <div class="spinner" aria-hidden="true"></div>
+      <p>Carregando programação…</p>
+    </section>
+  </main>
+
+  <template id="slide-template">
+    <article class="slide" aria-roledescription="slide">
+      <div class="media">
+        <img class="event-image" alt="">
+        <div class="image-fallback" aria-hidden="true">
+          <span class="fallback-icon"></span>
+          <span class="fallback-label"></span>
+        </div>
+        <div class="media-overlay"></div>
+        
+        <div class="controls" aria-label="Controles da apresentação">
+          <button
+            class="control-btn filter-btn"
+            aria-label="Configurar painel"
+            title="Configurar painel"
+            aria-expanded="false"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M4 5h16l-6.2 7.1v5.2l-3.6 1.8v-7L4 5Z"></path>
+            </svg>
+            <span class="filter-count" hidden></span>
+          </button>
+          <button class="control-btn prev-btn" aria-label="Slide anterior" title="Anterior">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <div class="navigation-counter counter" aria-label="posição do conteúdo"></div>
+          <button class="control-btn next-btn" aria-label="Próximo slide" title="Próximo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+          <button class="control-btn play-pause-btn" aria-label="Pausar" title="Pausar">
+            <svg class="pause-icon" viewBox="0 0 24 24" fill="currentColor">
+              <rect x="6" y="4" width="4" height="16"></rect>
+              <rect x="14" y="4" width="4" height="16"></rect>
+            </svg>
+            <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="content">
+        <header class="topbar">
+          <div class="panel-brand">
+            <img
+              class="panel-logo"
+              src="imagens/marca/logo-mural-cultural.png"
+              alt="Mural Cultural"
+            >
+            <p class="panel-subtitle"></p>
+          </div>
+          <aside class="site-qr-wrap" aria-label="Acesse o Mural Cultural no celular">
+            <div class="site-qr-copy">
+              <strong>Mural Cultural no celular</strong>
+              <span>Explore a agenda e outros conteúdos</span>
+            </div>
+            <div class="site-qr-code" aria-label="QR Code do Mural Cultural"></div>
+          </aside>
+        </header>
+
+        <div class="event-copy">
+          <div class="badges">
+            <span class="badge category"></span>
+            <span class="badge free">GRATUITO</span>
+            <span class="badge rating" hidden></span>
+            <span class="badge city" aria-hidden="true"></span>
+          </div>
+
+          <h1 class="event-title"></h1>
+          <p class="description"></p>
+
+          <dl class="details">
+            <div>
+              <dt>Quando</dt>
+              <dd class="when"></dd>
+            </div>
+            <div>
+              <dt>Onde</dt>
+              <dd class="where">
+                <span class="where-text"></span>
+                <a
+                  class="map-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  hidden
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    aria-hidden="true"
+                  >
+                    <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+                    <circle cx="12" cy="10" r="2.5"></circle>
+                  </svg>
+                  <span>Abrir no Google Maps</span>
+                </a>
+              </dd>
+            </div>
+            <!--
+              FUNCIONALIDADE SOB ANÁLISE DE VIABILIDADE
+
+              A caixa "Participação" foi temporariamente retirada da interface,
+              pois normalmente repetia orientações de retirada ou inscrição
+              gratuita já disponíveis na página oficial acessada pelo QR Code.
+
+              Para reativar, remova este comentário e reative também o bloco
+              correspondente em js/app.js e a regra em css/styles.css.
+
+              <div class="registration-row">
+                <dt>Participação</dt>
+                <dd class="registration"></dd>
+              </div>
+            -->
+          </dl>
+        </div>
+
+        <div class="book-copy" hidden>
+          <div class="badges book-badges">
+            <span class="badge category">LIVRO</span>
+            <span class="badge book-access"></span>
+          </div>
+          <p class="book-eyebrow">Sugestão de Leitura</p>
+          <h1 class="book-question"></h1>
+          <p class="book-support"></p>
+          <div class="book-identification">
+            <h2 class="book-title"></h2>
+            <p class="book-author"></p>
+          </div>
+          <dl class="book-details">
+            <div class="book-call-row">
+              <dt>Localização no acervo</dt>
+              <dd class="book-call"></dd>
+            </div>
+            <div class="book-availability-row">
+              <dt>Disponível no acervo</dt>
+              <dd class="book-availability"></dd>
+            </div>
+          </dl>
+          <div class="book-themes" aria-label="Temas do livro"></div>
+          <figure class="book-user-opinion" hidden>
+            <figcaption>Opinião de leitor(a)</figcaption>
+            <blockquote></blockquote>
+            <cite></cite>
+          </figure>
+          <div class="book-actions">
+            <a class="book-physical-link" target="_blank" rel="noopener noreferrer">Ver no catálogo físico</a>
+            <a class="book-virtual-link" target="_blank" rel="noopener noreferrer">Acessar edição virtual</a>
+            <a class="book-opinion-link" target="_blank" rel="noopener noreferrer" hidden>Opine sobre este livro</a>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <div class="source-block">
+            <p class="source-label">Programação e inscrição</p>
+            <p class="source-url"></p>
+            <p class="updated"></p>
+          </div>
+          <div class="qr-wrap">
+            <div class="qr-code" aria-label="QR Code deste conteúdo"></div>
+            <span class="qr-item-label">Abrir este conteúdo</span>
+          </div>
+        </footer>
+      </div>
+
+      <div class="filter-overlay" hidden>
+        <section
+          class="filter-panel panel-composer"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="filter-title"
+        >
+          <header class="filter-header">
+            <div>
+              <p class="filter-eyebrow">Modo painel</p>
+              <h2 id="filter-title">Montar programação</h2>
+              <p class="filter-intro">Combine diferentes conteúdos e defina filtros próprios para cada módulo.</p>
+            </div>
+            <button class="filter-close" type="button" aria-label="Fechar filtros" title="Fechar">×</button>
+          </header>
+          <p class="panel-validation" role="alert" hidden></p>
+
+          <section class="panel-profile-section" aria-label="Perfis do painel">
+            <div class="panel-profile-grid">
+              <label>
+                <span>Perfil do painel</span>
+                <select class="panel-profile-select">
+                  <option value="">Configuração atual</option>
+                </select>
+              </label>
+              <label>
+                <span>Nome para salvar</span>
+                <input class="panel-profile-name" type="text" maxlength="60" placeholder="Ex.: IFMG Betim">
+              </label>
+              <button class="panel-profile-save" type="button">Salvar perfil</button>
+              <button class="panel-profile-delete" type="button">Excluir perfil</button>
+            </div>
+          </section>
+
+          <section class="panel-config-section panel-modules-section">
+            <div class="panel-section-heading">
+              <div>
+                <h3>Exibir no painel</h3>
+                <p>Ative os tipos de conteúdo que farão parte da rotação.</p>
+              </div>
+            </div>
+            <div class="panel-module-switches">
+              <label class="panel-module-toggle">
+                <input class="panel-module-events" type="checkbox" checked>
+                <span>Eventos</span>
+              </label>
+              <label class="panel-module-toggle">
+                <input class="panel-module-books" type="checkbox" checked>
+                <span>Livros</span>
+              </label>
+            </div>
+          </section>
+
+          <section class="panel-config-section">
+            <div class="panel-section-heading">
+              <div>
+                <h3>Configuração geral</h3>
+                <p>Estas opções se aplicam a todos os conteúdos ativos.</p>
+              </div>
+            </div>
+            <div class="filter-grid panel-general-grid">
+              <label>
+                <span>Tema</span>
+                <select class="filter-theme"><option value="">Todos os temas</option></select>
+              </label>
+              <label>
+                <span>Tempo dos slides</span>
+                <select class="filter-slide-duration">
+                  <option value="0">Padrão de cada conteúdo</option>
+                  <option value="5">5 segundos</option>
+                  <option value="8">8 segundos</option>
+                  <option value="10">10 segundos</option>
+                  <option value="12">12 segundos</option>
+                  <option value="15">15 segundos</option>
+                  <option value="20">20 segundos</option>
+                  <option value="30">30 segundos</option>
+                </select>
+              </label>
+            </div>
+          </section>
+
+          <section class="panel-config-section panel-event-section">
+            <div class="panel-section-heading">
+              <div>
+                <h3>Eventos</h3>
+                <p>Escolha as cidades e, se quiser, restrinja linguagem, instituição ou espaço.</p>
+              </div>
+              <label class="panel-weight-field">
+                <span>Frequência</span>
+                <select class="panel-event-weight">
+                  <option value="1">1</option><option value="2">2</option><option value="3">3</option>
+                  <option value="4">4</option><option value="5">5</option><option value="6">6</option>
+                  <option value="7">7</option><option value="8">8</option><option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </label>
+            </div>
+            <div class="panel-multiselect-field">
+              <span>Cidades</span>
+              <div class="panel-checkbox-list panel-city-options" aria-label="Cidades dos eventos"></div>
+            </div>
+            <div class="filter-grid">
+              <label>
+                <span>Categoria / linguagem</span>
+                <select class="filter-category"><option value="">Todas as categorias</option></select>
+              </label>
+              <label>
+                <span>Instituição / programa</span>
+                <select class="filter-program"><option value="">Todas as instituições</option></select>
+              </label>
+              <label>
+                <span>Espaço</span>
+                <select class="filter-unit"><option value="">Todos os espaços</option></select>
+              </label>
+            </div>
+          </section>
+
+          <section class="panel-config-section panel-book-section">
+            <div class="panel-section-heading">
+              <div>
+                <h3>Livros</h3>
+                <p>O acervo é independente das cidades selecionadas para os eventos.</p>
+              </div>
+              <label class="panel-weight-field">
+                <span>Frequência</span>
+                <select class="panel-book-weight">
+                  <option value="1">1</option><option value="2">2</option><option value="3">3</option>
+                  <option value="4">4</option><option value="5">5</option><option value="6">6</option>
+                  <option value="7">7</option><option value="8">8</option><option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </label>
+            </div>
+            <div class="panel-multiselect-field">
+              <span>Campus / acervo</span>
+              <div class="panel-checkbox-list panel-campus-options" aria-label="Campus ou acervos dos livros"></div>
+            </div>
+            <div class="filter-grid panel-book-grid">
+              <label>
+                <span>Forma de acesso</span>
+                <select class="filter-book-access">
+                  <option value="">Físico ou virtual</option>
+                  <option value="physical">Acervo físico</option>
+                  <option value="virtual">Biblioteca virtual</option>
+                  <option value="both">Físico e virtual</option>
+                </select>
+              </label>
+            </div>
+          </section>
+
+          <p class="panel-frequency-help">A frequência define o peso de cada módulo na rotação. Ex.: Eventos 5 + Livros 1 reproduz aproximadamente cinco eventos para cada sugestão de leitura.</p>
+
+          <div class="filter-actions">
+            <button class="filter-clear" type="button">Carregar padrão</button>
+            <button class="filter-apply" type="button">Aplicar programação</button>
+          </div>
+        </section>
+      </div>
+
+      <div class="progress" aria-hidden="true"><span></span></div>
+    </article>
+  </template>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+  <script src="js/app.js?v=63" defer></script>
+  <script src="js/eventos-manuais-ui.js?v=42" defer></script>
+  <script src="js/ios-install.js?v=1" defer></script>
+
+</body>
+</html>
