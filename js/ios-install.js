@@ -1,4 +1,11 @@
 (() => {
+  const runtime=document.createElement('script');
+  runtime.src='js/cursos-runtime-fix.js?v=1';
+  runtime.dataset.cursosRuntimeFix='1';
+  document.head.append(runtime);
+})();
+
+(() => {
   'use strict';
 
   // Correções complementares para os cursos já integrados nativamente ao Mural.
@@ -17,30 +24,9 @@
     const style = document.createElement('style');
     style.id = 'course-panel-fixes';
     style.textContent = `
-      .course-slide .event-image {
-        width: 100% !important;
-        height: 100% !important;
-        object-fit: cover !important;
-        object-position: center !important;
-      }
-      .course-slide .badge.city {
-        display: inline-flex !important;
-        align-items: center;
-        justify-content: center;
-        width: auto !important;
-        min-width: 0 !important;
-        max-width: none !important;
-        white-space: nowrap !important;
-        overflow: visible !important;
-        text-overflow: clip !important;
-        line-height: 1 !important;
-      }
-      .course-slide .source-url a {
-        color: inherit;
-        text-decoration: underline;
-        text-underline-offset: .18em;
-        overflow-wrap: anywhere;
-      }
+      .course-slide .event-image { width:100%!important; height:100%!important; object-fit:cover!important; object-position:center!important; }
+      .course-slide .badge.city { display:inline-flex!important; align-items:center; justify-content:center; width:auto!important; min-width:0!important; max-width:none!important; white-space:nowrap!important; overflow:visible!important; text-overflow:clip!important; line-height:1!important; }
+      .course-slide .source-url a { color:inherit; text-decoration:underline; text-underline-offset:.18em; overflow-wrap:anywhere; }
     `;
     document.head.append(style);
   }
@@ -58,11 +44,7 @@
         }
         return coursesByTitle;
       })
-      .catch(error => {
-        console.warn('Não foi possível carregar os links dos cursos.', error);
-        coursesByTitle = new Map();
-        return coursesByTitle;
-      });
+      .catch(error => { console.warn('Não foi possível carregar os links dos cursos.', error); coursesByTitle = new Map(); return coursesByTitle; });
     return loadingCourses;
   }
 
@@ -70,40 +52,21 @@
     const slide = document.querySelector('#app .slide');
     if (!slide) return;
     const category = slide.querySelector('.badge.category');
-    if (normalize(category?.textContent) !== 'curso') {
-      slide.classList.remove('course-slide');
-      return;
-    }
-
+    if (normalize(category?.textContent) !== 'curso') { slide.classList.remove('course-slide'); return; }
     slide.classList.add('course-slide');
     const city = slide.querySelector('.badge.city');
-    if (city) {
-      city.hidden = false;
-      city.textContent = 'ONLINE';
-    }
-
-    const image = slide.querySelector('.event-image');
-    if (image) {
-      image.style.removeProperty('object-fit');
-      image.style.removeProperty('object-position');
-    }
-
+    if (city) { city.hidden = false; city.textContent = 'ONLINE'; }
     const title = normalize(slide.querySelector('.event-title')?.textContent);
     if (!title) return;
-
     loadCourses().then(map => {
-      const currentSlide = document.querySelector('#app .slide');
-      if (currentSlide !== slide || !slide.classList.contains('course-slide')) return;
+      if (!slide.isConnected || !slide.classList.contains('course-slide')) return;
       const course = map.get(title);
       const url = String(course?.url || course?.link || '').trim();
       if (!/^https?:\/\//i.test(url)) return;
       const source = slide.querySelector('.source-url');
       if (!source) return;
       const anchor = document.createElement('a');
-      anchor.href = url;
-      anchor.target = '_blank';
-      anchor.rel = 'noopener noreferrer';
-      anchor.textContent = 'Acessar página deste curso';
+      anchor.href = url; anchor.target = '_blank'; anchor.rel = 'noopener noreferrer'; anchor.textContent = 'Acessar página deste curso';
       source.replaceChildren(anchor);
     });
   }
@@ -111,7 +74,7 @@
   ensureCoursePanelStyles();
   patchCourseSlide();
   new MutationObserver(() => window.requestAnimationFrame(patchCourseSlide))
-    .observe(document.getElementById('app') || document.body, { childList: true, subtree: true, characterData: true });
+    .observe(document.getElementById('app') || document.body, { childList:true, subtree:true, characterData:true });
 })();
 
 (() => {
