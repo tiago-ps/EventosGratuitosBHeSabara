@@ -1775,54 +1775,147 @@
   }
 
   function renderCourseSlide(index) {
+    clearTimeout(state.timer);
     const course = state.events[index];
-    const slide = app.querySelector('.slide');
-    if (!slide || !course) return;
+    if (!course) return;
+
+    // Cursos seguem o mesmo ciclo de Eventos/Livros: cada navegação parte
+    // de um template novo, evitando herdar classes/hidden/estilos do slide anterior.
+    const slide = template.content.firstElementChild.cloneNode(true);
+    buildSiteQr(slide);
+
+    const seconds = slideDurationFor(course);
+    slide.style.setProperty('--slide-seconds', `${seconds}s`);
+    slide.querySelector('.counter').textContent = `${index + 1} de ${state.events.length}`;
+
     const eventCopy = slide.querySelector('.event-copy');
     const bookCopy = slide.querySelector('.book-copy');
     if (bookCopy) bookCopy.hidden = true;
     if (eventCopy) eventCopy.hidden = false;
+
     const category = slide.querySelector('.category');
-    if (category) category.textContent = 'CURSO';
+    if (category) {
+      category.hidden = false;
+      category.textContent = 'CURSO';
+    }
+
     const free = slide.querySelector('.free');
-    if (free) free.textContent = 'GRATUITO';
+    if (free) {
+      free.hidden = false;
+      free.textContent = 'GRATUITO';
+    }
+
     const rating = slide.querySelector('.rating');
-    if (rating) rating.hidden = true;
-    const city = slide.querySelector('.city');
-    if (city) { city.hidden = false; city.textContent = 'ONLINE'; }
-    slide.querySelector('.event-title').textContent = course.titulo || 'Curso online';
-    slide.querySelector('.description').textContent = course.descricao || course.competencias || '';
-    slide.querySelector('.when').textContent = course.carga_horaria ? `${course.carga_horaria} horas` : 'Curso online';
-    slide.querySelector('.where-text').textContent = course.instituicao || course.fonte || 'Instituição';
+    if (rating) {
+      rating.hidden = true;
+      rating.textContent = '';
+      rating.className = 'rating';
+    }
+
+    // A antiga classe .city é reaproveitada apenas como posição no template.
+    // Removemos classes/estilos residuais e aplicamos uma classe própria de curso.
+    const online = slide.querySelector('.city');
+    if (online) {
+      online.hidden = false;
+      online.className = 'city course-online';
+      online.textContent = 'ONLINE';
+      online.removeAttribute('style');
+    }
+
+    const title = slide.querySelector('.event-title');
+    if (title) title.textContent = course.titulo || 'Curso online';
+
+    const description = slide.querySelector('.description');
+    if (description) description.textContent = course.descricao || course.competencias || '';
+
+    const when = slide.querySelector('.when');
+    if (when) when.textContent = course.carga_horaria ? `${course.carga_horaria} horas` : 'Curso online';
+
+    const where = slide.querySelector('.where-text');
+    if (where) where.textContent = course.instituicao || course.fonte || 'Instituição';
+
     const mapLink = slide.querySelector('.map-link');
-    if (mapLink) mapLink.hidden = true;
-    const image = safeImageUrl(course.imagem);
-    const img = slide.querySelector('.event-image');
-    const fallback = slide.querySelector('.image-fallback');
-    if (img) {
-      img.hidden = !image;
-      if (image) { img.src = image; img.alt = `Imagem: ${course.titulo || 'Curso'}`; }
+    if (mapLink) {
+      mapLink.hidden = true;
+      mapLink.removeAttribute('href');
     }
-    if (fallback) {
-      fallback.hidden = Boolean(image);
-      fallback.querySelector('.fallback-icon').textContent = '🎓';
-      fallback.querySelector('.fallback-label').textContent = course.instituicao || 'Curso online';
-    }
+
     const link = safeExternalUrl(course.url || course.link);
-    slide.querySelector('.source-label').textContent = 'Curso online gratuito';
-    slide.querySelector('.source-url').textContent = link ? new URL(link).hostname : (course.instituicao || '');
-    slide.querySelector('.updated').textContent = course.area || '';
+    const sourceLabel = slide.querySelector('.source-label');
+    if (sourceLabel) sourceLabel.textContent = 'Curso online gratuito';
+
+    const source = slide.querySelector('.source-url');
+    if (source) {
+      if (link) {
+        const anchor = document.createElement('a');
+        anchor.href = link;
+        anchor.textContent = 'Acessar página deste curso';
+        anchor.target = '_blank';
+        anchor.rel = 'noopener noreferrer';
+        source.replaceChildren(anchor);
+      } else {
+        source.textContent = course.instituicao || '';
+      }
+    }
+
+    const updated = slide.querySelector('.updated');
+    if (updated) updated.textContent = course.area || '';
+
     const qr = slide.querySelector('.qr-code');
     configureItemQrLabel(slide, course, Boolean(link));
     if (qr && link) {
       buildQr(qr, link);
     } else if (qr) {
-      qr.innerHTML = '';
+      qr.replaceChildren();
     }
+
     const subtitle = slide.querySelector('.panel-subtitle');
     if (subtitle) subtitle.textContent = CONTENT_SUBTITLES.curso;
-    updateCounter();
-    restartProgress();
+
+    const image = safeImageUrl(course.imagem);
+    const img = slide.querySelector('.event-image');
+    const fallback = slide.querySelector('.image-fallback');
+    if (fallback) {
+      const fallbackIcon = fallback.querySelector('.fallback-icon');
+      const fallbackLabel = fallback.querySelector('.fallback-label');
+      if (fallbackIcon) fallbackIcon.textContent = '🎓';
+      if (fallbackLabel) fallbackLabel.textContent = course.instituicao || 'Curso online';
+      fallback.style.display = image ? 'none' : 'grid';
+      fallback.hidden = false;
+    }
+    if (img) {
+      img.alt = `Imagem: ${course.titulo || 'Curso'}`;
+      img.decoding = 'async';
+      img.loading = 'eager';
+      img.classList.remove('loaded');
+      img.style.display = image ? '' : 'none';
+      img.onload = () => {
+        img.classList.add('loaded');
+        if (fallback) fallback.style.display = 'none';
+      };
+      img.onerror = () => {
+        img.classList.remove('loaded');
+        img.style.display = 'none';
+        if (fallback) fallback.style.display = 'grid';
+      };
+      if (image) img.src = image;
+      else img.removeAttribute('src');
+    }
+
+    app.replaceChildren(slide);
+
+    state.btnNext = slide.querySelector('.next-btn');
+    state.btnPrev = slide.querySelector('.prev-btn');
+    state.btnPlayPause = slide.querySelector('.play-pause-btn');
+    state.btnFilter = slide.querySelector('.filter-btn');
+    state.filterOverlay = slide.querySelector('.filter-overlay');
+
+    setupControls();
+    setupFilterPanel(slide);
+    updateFilterButton();
+    updatePlayPauseButton();
+    addPanelViewToggle();
+    scheduleNextSlide();
   }
 
   function renderSlide(index) {
