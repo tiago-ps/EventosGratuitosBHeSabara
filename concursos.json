@@ -1,13 +1,14 @@
 {
-  "schema": 4,
+  "schema": 6,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-08-23T05:23:20.199066+00:00",
+  "coletado_em_utc": "2026-08-23T05:54:13.819034+00:00",
   "total": 27,
   "concursos": [
     {
       "titulo": "CaraguaPrev - Instituto de Previdência do Município de Caraguatatuba",
       "url": "https://www.pciconcursos.com.br/noticias/caraguaprev-sp-abre-concurso-publico-com-salarios-de-ate-7104",
+      "imagem": "https://cdn.pci.app.br/img/i/7c529274eb88ade342c2762f502e454c.png",
       "formacoes_compativeis": [
         "Técnico em Informática"
       ],
@@ -20,12 +21,12 @@
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "PA",
+      "uf": "SP",
       "cidade": "Caraguatatuba",
       "inscricoes_inicio_texto": "17 de agosto de 2026",
       "inscricoes_fim_texto": "29 de setembro de 2026",
       "inscricoes_texto": "17 de agosto de 2026 a 29 de setembro de 2026",
-      "remuneracao_faixa_texto": "",
+      "remuneracao_faixa_texto": "R$ 7.104,30",
       "cargos_compativeis": [
         {
           "cargo": "Técnico em Informática",
@@ -38,6 +39,7 @@
     {
       "titulo": "CONDERG - Consórcio de Desenvolvimento da Região de Governo de São João da Boa Vista",
       "url": "https://www.pciconcursos.com.br/noticias/conderg-sp-abre-processo-seletivo-com-salarios-de-ate-6009",
+      "imagem": "https://cdn.pci.app.br/img/i/fde4e50e44cefe2876fa68ca7c7349bb.png",
       "formacoes_compativeis": [
         "Sistemas de Informação / Computação"
       ],
@@ -50,12 +52,12 @@
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "PA",
+      "uf": "SP",
       "cidade": "",
       "inscricoes_inicio_texto": "18 de agosto de 2026",
       "inscricoes_fim_texto": "10 de setembro de 2026",
       "inscricoes_texto": "18 de agosto de 2026 a 10 de setembro de 2026",
-      "remuneracao_faixa_texto": "",
+      "remuneracao_faixa_texto": "R$ 1.621,00 a R$ 6.009,98",
       "cargos_compativeis": [
         {
           "cargo": "Técnico em Computação",
@@ -68,6 +70,7 @@
     {
       "titulo": "Prefeitura de Cafelândia",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-cafelandia-sp-abre-concurso-publico-com-salarios-de-ate-9028",
+      "imagem": "https://cdn.pci.app.br/img/i/c997d6f64360e76b877131bd14e667ca.png",
       "formacoes_compativeis": [
         "Técnico em Informática"
       ],
@@ -80,12 +83,12 @@
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "PA",
+      "uf": "SP",
       "cidade": "Cafelândia",
       "inscricoes_inicio_texto": "",
       "inscricoes_fim_texto": "",
       "inscricoes_texto": "",
-      "remuneracao_faixa_texto": "",
+      "remuneracao_faixa_texto": "R$ 9.028,49",
       "cargos_compativeis": [
         {
           "cargo": "Técnico em Informática",
@@ -98,6 +101,7 @@
     {
       "titulo": "TCESP - Tribunal de Contas do Estado de São Paulo",
       "url": "https://www.pciconcursos.com.br/noticias/tce-sp-divulga-retificacao-do-concurso-publico-para-auditor-de-controle-externo",
+      "imagem": "https://cdn.pci.app.br/img/i/7ea13a66a110a4658d8761ecab89a915.png",
       "formacoes_compativeis": [
         "Sistemas de Informação / Computação"
       ],
@@ -110,12 +114,12 @@
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "PA",
+      "uf": "SP",
       "cidade": "",
       "inscricoes_inicio_texto": "",
       "inscricoes_fim_texto": "",
       "inscricoes_texto": "",
-      "remuneracao_faixa_texto": "",
+      "remuneracao_faixa_texto": "R$ 115,00 a R$ 20.940,20",
       "cargos_compativeis": [
         {
           "cargo": "Auditor de Controle Externo - DIPE - Tecnologia da Informação",
@@ -128,6 +132,7 @@
     {
       "titulo": "Marinha do Brasil - Comando do 1º Distrito Naval",
       "url": "https://www.pciconcursos.com.br/noticias/comando-do-1-distrito-naval-da-marinha-rj-abre-processo-seletivo-para-oficiais-de-3-classe",
+      "imagem": "https://cdn.pci.app.br/img/i/f5ad74d356b674769c7967a7ade56276.png",
       "formacoes_compativeis": [
         "Sistemas de Informação / Computação"
       ],
@@ -140,7 +145,7 @@
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "PA",
+      "uf": "RJ",
       "cidade": "",
       "inscricoes_inicio_texto": "",
       "inscricoes_fim_texto": "",
@@ -164,6 +169,7 @@
     {
       "titulo": "UFRRJ - Universidade Federal Rural do Rio de Janeiro",
       "url": "https://www.pciconcursos.com.br/noticias/ufrrj-rj-abre-concurso-publico-para-cargos-tecnico-administrativos-de-nivel-superior",
+      "imagem": "https://cdn.pci.app.br/img/i/a155e6d329661fbee426b436071ea878.png",
       "formacoes_compativeis": [
         "Sistemas de Informação / Computação"
       ],
@@ -176,12 +182,12 @@
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "AC",
+      "uf": "RJ",
       "cidade": "",
       "inscricoes_inicio_texto": "",
       "inscricoes_fim_texto": "",
       "inscricoes_texto": "",
-      "remuneracao_faixa_texto": "",
+      "remuneracao_faixa_texto": "R$ 130,00 a R$ 5.215,39",
       "cargos_compativeis": [
         {
           "cargo": "Analista de Tecnologia da Informação/Sistemas",
@@ -200,6 +206,7 @@
     {
       "titulo": "DMAE - Departamento Municipal de Água e Esgoto de Uberlândia",
       "url": "https://www.pciconcursos.com.br/noticias/dmae-de-uberlandia-mg-abre-concurso-publico-com-vagas-para-diversos-niveis-de-escolaridade",
+      "imagem": "https://cdn.pci.app.br/img/i/eed57af4c8ee7b02770437af8c9a81aa.png",
       "formacoes_compativeis": [
         "Técnico em Informática"
       ],
@@ -212,7 +219,7 @@
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "AC",
+      "uf": "MG",
       "cidade": "",
       "inscricoes_inicio_texto": "",
       "inscricoes_fim_texto": "",
@@ -230,6 +237,7 @@
     {
       "titulo": "Câmara de Capelinha",
       "url": "https://www.pciconcursos.com.br/noticias/camara-de-capelinha-mg-retifica-edital-do-concurso-publico-com-salarios-de-ate-4527",
+      "imagem": "https://cdn.pci.app.br/img/i/a1d5b403f9ea399b00f7cb388788453a.png",
       "formacoes_compativeis": [
         "Técnico em Informática"
       ],
@@ -247,7 +255,7 @@
       "inscricoes_inicio_texto": "21 de setembro de 2026",
       "inscricoes_fim_texto": "21 de outubro de 2026",
       "inscricoes_texto": "21 de setembro de 2026 a 21 de outubro de 2026",
-      "remuneracao_faixa_texto": "",
+      "remuneracao_faixa_texto": "R$ 1.914,05 a R$ 4.527,60",
       "cargos_compativeis": [
         {
           "cargo": "Técnico em Informática",
@@ -260,6 +268,7 @@
     {
       "titulo": "Câmara de Passos",
       "url": "https://www.pciconcursos.com.br/noticias/camara-de-passos-mg-retifica-edital-de-concurso-publico",
+      "imagem": "https://cdn.pci.app.br/img/i/28d7a9f57542261b35e5e9d36d35b6ec.png",
       "formacoes_compativeis": [
         "Sistemas de Informação / Computação"
       ],
@@ -277,7 +286,7 @@
       "inscricoes_inicio_texto": "",
       "inscricoes_fim_texto": "",
       "inscricoes_texto": "",
-      "remuneracao_faixa_texto": "",
+      "remuneracao_faixa_texto": "R$ 4.585,17 a R$ 5.485,48",
       "cargos_compativeis": [
         {
           "cargo": "Agente de Tecnologia da Informação",
@@ -290,6 +299,7 @@
     {
       "titulo": "FUMEP - Fundação Municipal de Ensino Profissionalizante de Sete Lagoas",
       "url": "https://www.pciconcursos.com.br/noticias/fumep-de-sete-lagoas-mg-abre-concurso-publico-para-diversos-niveis-de-escolaridade",
+      "imagem": "https://cdn.pci.app.br/img/i/a08ecc9bdb956a3140668a2d27e53828.png",
       "formacoes_compativeis": [
         "Engenharia de Automação",
         "Sistemas de Informação / Computação"
@@ -313,7 +323,7 @@
       "inscricoes_inicio_texto": "",
       "inscricoes_fim_texto": "",
       "inscricoes_texto": "",
-      "remuneracao_faixa_texto": "R$ 23,68",
+      "remuneracao_faixa_texto": "R$ 1.621,00 a R$ 2.530,56",
       "cargos_compativeis": [
         {
           "cargo": "Professor de Ensino Profissionalizante - Engenharia de Automação e Controle",
@@ -332,6 +342,7 @@
     {
       "titulo": "HOB - Hospital Metropolitano Odilon Behrens",
       "url": "https://www.pciconcursos.com.br/noticias/hospital-metropolitano-odilon-behrens-mg-abre-concurso-publico-com-salarios-de-ate-7397",
+      "imagem": "https://cdn.pci.app.br/img/i/3cb9e27177bb7edb07261559df0f1c46.png",
       "formacoes_compativeis": [
         "Técnico em Administração",
         "Técnico em Eletrônica"
@@ -350,12 +361,12 @@
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "PA",
+      "uf": "MG",
       "cidade": "",
       "inscricoes_inicio_texto": "9 de setembro de 2026",
       "inscricoes_fim_texto": "8 de outubro de 2026",
       "inscricoes_texto": "9 de setembro de 2026 a 8 de outubro de 2026",
-      "remuneracao_faixa_texto": "",
+      "remuneracao_faixa_texto": "R$ 7.397,55",
       "cargos_compativeis": [
         {
           "cargo": "Técnico de Nível Médio - Técnico em Administração",
@@ -374,6 +385,7 @@
     {
       "titulo": "Município e Câmara de Tombos",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-e-camara-de-tombos-mg-abrem-concurso-publico-com-diversas-vagas-e-cadastro-de-reserva",
+      "imagem": "https://cdn.pci.app.br/img/i/33fd55a066f82a0af0cbdf134f0ac0d8.png",
       "formacoes_compativeis": [
         "Técnico em Informática"
       ],
@@ -391,7 +403,7 @@
       "inscricoes_inicio_texto": "3 de agosto de 2026",
       "inscricoes_fim_texto": "3 de setembro de 2026",
       "inscricoes_texto": "3 de agosto de 2026 a 3 de setembro de 2026",
-      "remuneracao_faixa_texto": "",
+      "remuneracao_faixa_texto": "R$ 100,00 a R$ 10.222,24",
       "cargos_compativeis": [
         {
           "cargo": "Técnico em Informática",
@@ -404,6 +416,7 @@
     {
       "titulo": "Prefeitura de Belo Vale",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-belo-vale-mg-abre-concurso-publico-com-diversas-vagas-e-salarios-de-ate-8000",
+      "imagem": "https://cdn.pci.app.br/img/i/c98e358f2031a5e4944772e59343e5a9.png",
       "formacoes_compativeis": [
         "Técnico em Informática"
       ],
@@ -421,7 +434,7 @@
       "inscricoes_inicio_texto": "",
       "inscricoes_fim_texto": "",
       "inscricoes_texto": "",
-      "remuneracao_faixa_texto": "",
+      "remuneracao_faixa_texto": "R$ 120,00 a R$ 8.000,00",
       "cargos_compativeis": [
         {
           "cargo": "Técnico em Informática",
@@ -434,6 +447,7 @@
     {
       "titulo": "Prefeitura de Carmo da Mata",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-carmo-da-mata-mg-abre-concurso-publico-para-diversos-cargos",
+      "imagem": "https://cdn.pci.app.br/img/i/ab66ad80592bf51690b5335716372bd0.png",
       "formacoes_compativeis": [
         "Técnico em Informática"
       ],
@@ -451,7 +465,7 @@
       "inscricoes_inicio_texto": "2 de setembro de 2026",
       "inscricoes_fim_texto": "2 de outubro de 2026",
       "inscricoes_texto": "2 de setembro de 2026 a 2 de outubro de 2026",
-      "remuneracao_faixa_texto": "",
+      "remuneracao_faixa_texto": "R$ 3.886,53",
       "cargos_compativeis": [
         {
           "cargo": "Técnico em Informática",
@@ -464,6 +478,7 @@
     {
       "titulo": "Prefeitura de Contagem",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-contagem-mg-abre-concurso-publico-com-salarios-de-ate-13305",
+      "imagem": "https://cdn.pci.app.br/img/i/7de2c0dbeff437f4cd0052b4d16f8acf.png",
       "formacoes_compativeis": [
         "Sistemas de Informação / Computação"
       ],
@@ -481,7 +496,7 @@
       "inscricoes_inicio_texto": "19 de outubro de 2026",
       "inscricoes_fim_texto": "17 de novembro de 2026",
       "inscricoes_texto": "19 de outubro de 2026 a 17 de novembro de 2026",
-      "remuneracao_faixa_texto": "",
+      "remuneracao_faixa_texto": "R$ 2.698,73 a R$ 13.305,57",
       "cargos_compativeis": [
         {
           "cargo": "Auditor de Controle Interno - Tecnologia da Informação",
@@ -494,6 +509,7 @@
     {
       "titulo": "Prefeitura de Coromandel",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-coromandel-mg-abre-concurso-publico-com-salarios-de-ate-7821",
+      "imagem": "https://cdn.pci.app.br/img/i/175e8ccb2ed451d783e4714f0aa2f8c1.png",
       "formacoes_compativeis": [
         "Sistemas de Informação / Computação"
       ],
@@ -506,12 +522,12 @@
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "PA",
+      "uf": "MG",
       "cidade": "Coromandel",
       "inscricoes_inicio_texto": "",
       "inscricoes_fim_texto": "",
       "inscricoes_texto": "",
-      "remuneracao_faixa_texto": "",
+      "remuneracao_faixa_texto": "R$ 7.821,98",
       "cargos_compativeis": [
         {
           "cargo": "Analista de Tecnologia da Informação",
@@ -524,6 +540,7 @@
     {
       "titulo": "Prefeitura de Dores do Indaiá",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-dores-do-indaia-mg-abre-concurso-publico-com-salarios-de-ate-18702",
+      "imagem": "https://cdn.pci.app.br/img/i/232efc3c99ca77c691a9eef47ecda1b3.png",
       "formacoes_compativeis": [
         "Técnico em Informática"
       ],
@@ -541,7 +558,7 @@
       "inscricoes_inicio_texto": "2 de setembro de 2026",
       "inscricoes_fim_texto": "2 de outubro de 2026",
       "inscricoes_texto": "2 de setembro de 2026 a 2 de outubro de 2026",
-      "remuneracao_faixa_texto": "",
+      "remuneracao_faixa_texto": "R$ 100,00 a R$ 18.702,17",
       "cargos_compativeis": [
         {
           "cargo": "Técnico em Informática",
@@ -560,6 +577,7 @@
     {
       "titulo": "Prefeitura de Faria Lemos",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-faria-lemos-mg-abre-concurso-publico-com-remuneracoes-de-ate-16803",
+      "imagem": "https://cdn.pci.app.br/img/i/55abba28207b646554c552c0eead6799.png",
       "formacoes_compativeis": [
         "Técnico em Informática"
       ],
@@ -590,6 +608,7 @@
     {
       "titulo": "Prefeitura de Ipaba",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-ipaba-mg-abre-concurso-publico-com-salarios-de-ate-5275",
+      "imagem": "https://cdn.pci.app.br/img/i/307411641985d6cc48a5320cc173849e.png",
       "formacoes_compativeis": [
         "Técnico em Informática"
       ],
@@ -607,7 +626,7 @@
       "inscricoes_inicio_texto": "9 de setembro de 2026",
       "inscricoes_fim_texto": "8 de outubro de 2026",
       "inscricoes_texto": "9 de setembro de 2026 a 8 de outubro de 2026",
-      "remuneracao_faixa_texto": "",
+      "remuneracao_faixa_texto": "R$ 5.275,34",
       "cargos_compativeis": [
         {
           "cargo": "Técnico em Informática",
@@ -620,6 +639,7 @@
     {
       "titulo": "Prefeitura de Pedro Teixeira",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-pedro-teixeira-mg-publica-edital-de-concurso-publico-com-salarios-de-ate-5494",
+      "imagem": "https://cdn.pci.app.br/img/i/b7726c9aae144008454dee3887826030.png",
       "formacoes_compativeis": [
         "Sistemas de Informação / Computação"
       ],
@@ -637,7 +657,7 @@
       "inscricoes_inicio_texto": "30 de setembro de 2026",
       "inscricoes_fim_texto": "30 de outubro de 2026",
       "inscricoes_texto": "30 de setembro de 2026 a 30 de outubro de 2026",
-      "remuneracao_faixa_texto": "",
+      "remuneracao_faixa_texto": "R$ 5.494,76",
       "cargos_compativeis": [
         {
           "cargo": "Técnico em Tecnologia da Informação",
@@ -650,6 +670,7 @@
     {
       "titulo": "Prefeitura de Piracema",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-piracema-mg-abre-concurso-e-processo-seletivo-com-diversas-vagas",
+      "imagem": "https://cdn.pci.app.br/img/i/3d740a107e7990d7db076db948811802.png",
       "formacoes_compativeis": [
         "Técnico em Informática"
       ],
@@ -667,7 +688,7 @@
       "inscricoes_inicio_texto": "",
       "inscricoes_fim_texto": "",
       "inscricoes_texto": "",
-      "remuneracao_faixa_texto": "",
+      "remuneracao_faixa_texto": "R$ 100,00 a R$ 18.647,01",
       "cargos_compativeis": [
         {
           "cargo": "Técnico em Informática",
@@ -680,6 +701,7 @@
     {
       "titulo": "Prefeitura de São Félix de Minas",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-sao-felix-de-minas-mg-abre-concurso-publico-com-salarios-de-ate-12-mil",
+      "imagem": "https://cdn.pci.app.br/img/i/f09d58a5cf37d7a9ac0f5a450d377b6f.png",
       "formacoes_compativeis": [
         "Sistemas de Informação / Computação"
       ],
@@ -697,7 +719,7 @@
       "inscricoes_inicio_texto": "3 de agosto de 2026",
       "inscricoes_fim_texto": "2 de setembro de 2026",
       "inscricoes_texto": "3 de agosto de 2026 a 2 de setembro de 2026",
-      "remuneracao_faixa_texto": "",
+      "remuneracao_faixa_texto": "R$ 1.621,00 a R$ 12.003,20",
       "cargos_compativeis": [
         {
           "cargo": "Analista de Tecnologia da Informação",
@@ -716,6 +738,7 @@
     {
       "titulo": "Prefeitura de Matinhos",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-matinhos-pr-publica-edital-de-concurso-publico-com-salarios-de-ate-20330",
+      "imagem": "https://cdn.pci.app.br/img/i/f52fb22268410a97b67e145ddbda1ada.png",
       "formacoes_compativeis": [
         "Técnico em Informática"
       ],
@@ -728,12 +751,12 @@
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "PA",
+      "uf": "PR",
       "cidade": "Matinhos",
       "inscricoes_inicio_texto": "",
       "inscricoes_fim_texto": "",
       "inscricoes_texto": "",
-      "remuneracao_faixa_texto": "",
+      "remuneracao_faixa_texto": "R$ 20.330,16",
       "cargos_compativeis": [
         {
           "cargo": "Técnico em Informática/Manutenção de Computadores",
@@ -746,6 +769,7 @@
     {
       "titulo": "UENP - Universidade Estadual do Norte do Paraná",
       "url": "https://www.pciconcursos.com.br/noticias/uenp-pr-retifica-concursos-com-vagas-para-agentes-universitarios-de-execucao-e-profissionais",
+      "imagem": "https://cdn.pci.app.br/img/i/73c4c5005120e61070cc90a9c2aab278.png",
       "formacoes_compativeis": [
         "Técnico em Informática"
       ],
@@ -758,12 +782,12 @@
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "AC",
+      "uf": "PR",
       "cidade": "",
       "inscricoes_inicio_texto": "15 de julho de 2026",
       "inscricoes_fim_texto": "17 de agosto de 2026",
       "inscricoes_texto": "15 de julho de 2026 a 17 de agosto de 2026",
-      "remuneracao_faixa_texto": "",
+      "remuneracao_faixa_texto": "R$ 4.443,18 a R$ 7.997,72",
       "cargos_compativeis": [
         {
           "cargo": "Técnico em Informática - Campus de Cornélio Procópio",
@@ -782,6 +806,7 @@
     {
       "titulo": "UENP - Universidade Estadual do Norte do Paraná",
       "url": "https://www.pciconcursos.com.br/noticias/uenp-pr-abre-processo-seletivo-para-agentes-universitarios",
+      "imagem": "https://cdn.pci.app.br/img/i/73c4c5005120e61070cc90a9c2aab278.png",
       "formacoes_compativeis": [
         "Técnico em Informática"
       ],
@@ -794,12 +819,12 @@
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "PA",
+      "uf": "PR",
       "cidade": "",
       "inscricoes_inicio_texto": "",
       "inscricoes_fim_texto": "",
       "inscricoes_texto": "",
-      "remuneracao_faixa_texto": "",
+      "remuneracao_faixa_texto": "R$ 100,00 a R$ 7.997,72",
       "cargos_compativeis": [
         {
           "cargo": "Agente Universitário de Execução/Técnico em Informática - Campus de Cornélio Procópio",
@@ -812,6 +837,7 @@
     {
       "titulo": "Prefeitura de Silveira Martins",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-silveira-martins-rs-retifica-concurso-publico-e-mantem-processo-seletivo-inalterado",
+      "imagem": "https://cdn.pci.app.br/img/i/7312a33e3527331a81215d3c8fb83c0a.png",
       "formacoes_compativeis": [
         "Técnico em Informática"
       ],
@@ -824,12 +850,12 @@
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "PA",
+      "uf": "RS",
       "cidade": "Silveira Martins",
       "inscricoes_inicio_texto": "",
       "inscricoes_fim_texto": "",
       "inscricoes_texto": "",
-      "remuneracao_faixa_texto": "",
+      "remuneracao_faixa_texto": "R$ 150,00 a R$ 6.757,44",
       "cargos_compativeis": [
         {
           "cargo": "Agente Técnico em Informática",
@@ -842,6 +868,7 @@
     {
       "titulo": "SES - Secretaria de Estado da Saúde de Santa Catarina",
       "url": "https://www.pciconcursos.com.br/noticias/ses-sc-abre-processo-seletivo-para-profissionais-de-saude-em-joinville",
+      "imagem": "https://cdn.pci.app.br/img/i/bf56624401433deefeba225fe6a5a0af.png",
       "formacoes_compativeis": [
         "Técnico em Informática"
       ],
@@ -854,7 +881,7 @@
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "PA",
+      "uf": "SC",
       "cidade": "",
       "inscricoes_inicio_texto": "",
       "inscricoes_fim_texto": "",
