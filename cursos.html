@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07111f">
+  <title>Cursos gratuitos — Mural Cultural</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="imagens/app-icons/favicon-32.png">
+  <link rel="stylesheet" href="css/cursos.css?v=1">
+</head>
+<body>
+  <header class="topo">
+    <a class="marca" href="./"><img src="imagens/marca/logo-mural-cultural.png" alt="Mural Cultural"></a>
+    <div><p class="eyebrow">Formação e oportunidades</p><h1>Cursos online gratuitos</h1><p class="intro">Cursos de instituições consolidadas reunidos pelo Mural Cultural.</p></div>
+    <a class="voltar" href="./">← Agenda cultural</a>
+  </header>
+  <main>
+    <section class="filtros" aria-label="Filtros de cursos">
+      <label class="busca"><span>Pesquisar</span><input id="busca" type="search" placeholder="Título, instituição, área ou tema"></label>
+      <label><span>Área</span><select id="area"><option value="">Todas as áreas</option></select></label>
+      <label><span>Instituição</span><select id="instituicao"><option value="">Todas as instituições</option></select></label>
+      <label><span>Carga horária</span><select id="carga"><option value="">Qualquer duração</option><option value="curto">Até 10 h</option><option value="medio">11 a 40 h</option><option value="longo">Mais de 40 h</option></select></label>
+    </section>
+    <div class="resumo"><strong id="total">Carregando…</strong><span id="atualizado"></span></div>
+    <section id="lista" class="grade" aria-live="polite"></section>
+    <div id="erro" class="erro" hidden><h2>Não foi possível carregar os cursos</h2><p>O arquivo de cursos ainda não está disponível no site de teste.</p></div>
+  </main>
+  <script src="js/cursos.js?v=1"></script>
+</body>
+</html>
