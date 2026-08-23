@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#07111f">
   <title>Cursos gratuitos — Mural Cultural</title>
   <link rel="icon" type="image/png" sizes="32x32" href="imagens/app-icons/favicon-32.png">
-  <link rel="stylesheet" href="css/cursos.css?v=1">
+  <link rel="stylesheet" href="css/cursos.css?v=2">
 </head>
 <body>
   <header class="topo">
@@ -23,8 +23,10 @@
     </section>
     <div class="resumo"><strong id="total">Carregando…</strong><span id="atualizado"></span></div>
     <section id="lista" class="grade" aria-live="polite"></section>
+    <div class="mais-wrap"><button id="mais" class="mais" type="button" hidden>Mostrar mais cursos</button></div>
     <div id="erro" class="erro" hidden><h2>Não foi possível carregar os cursos</h2><p>O arquivo de cursos ainda não está disponível no site de teste.</p></div>
   </main>
-  <script src="js/cursos.js?v=1"></script>
+  <dialog id="detalhes" class="detalhes"><button id="fechar" class="fechar" type="button" aria-label="Fechar">×</button><div id="detalhes-conteudo"></div></dialog>
+  <script src="js/cursos.js?v=2"></script>
 </body>
 </html>
