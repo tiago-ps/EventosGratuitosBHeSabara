@@ -544,10 +544,26 @@
     return Boolean(course && course.titulo && course.exibicao_ativa !== false);
   }
 
+  const PANEL_COURSE_LIMIT = 15;
+
   function filterCourses(courses) {
     return courses.filter(courseIsPublishable).sort((a, b) =>
       String(a.titulo || '').localeCompare(String(b.titulo || ''), 'pt-BR')
     );
+  }
+
+  function sampleCoursesForPanel(courses, limit = PANEL_COURSE_LIMIT) {
+    const available = filterCourses(courses);
+    if (available.length <= limit) return available;
+
+    // Embaralhamento parcial de Fisher-Yates: sorteia somente o que o Painel
+    // realmente vai exibir, sem inserir mais de mil cursos na rotação.
+    const sample = available.slice();
+    for (let i = 0; i < limit; i += 1) {
+      const j = i + Math.floor(Math.random() * (sample.length - i));
+      [sample[i], sample[j]] = [sample[j], sample[i]];
+    }
+    return sample.slice(0, limit);
   }
 
   function hasEventFilters() {
@@ -570,7 +586,7 @@
     const coursesEnabled = state.panelModules.courses && state.config?.modulos?.cursos !== false;
     const events = eventsEnabled ? visibleEventsForFilters() : [];
     const books = booksEnabled ? filterBooks(state.allBooks) : [];
-    const courses = coursesEnabled ? filterCourses(state.allCourses) : [];
+    const courses = coursesEnabled ? sampleCoursesForPanel(state.allCourses) : [];
     state.events = interleaveContents([
       { items: events, weight: state.panelWeights.events },
       { items: books, weight: state.panelWeights.books },
