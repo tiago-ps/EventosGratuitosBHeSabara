@@ -1173,6 +1173,7 @@
     return ({
       evento: 'Abrir este evento',
       livro: 'Ver este livro',
+      curso: 'Abrir este curso',
       filme: 'Ver este filme',
       jogo: 'Ver este jogo',
       passeio: 'Ver este passeio'
@@ -1812,9 +1813,12 @@
     slide.querySelector('.source-url').textContent = link ? new URL(link).hostname : (course.instituicao || '');
     slide.querySelector('.updated').textContent = course.area || '';
     const qr = slide.querySelector('.qr-code');
-    if (qr) qr.innerHTML = '';
-    const qrWrap = slide.querySelector('.qr-wrap');
-    if (qrWrap) qrWrap.hidden = true;
+    configureItemQrLabel(slide, course, Boolean(link));
+    if (qr && link) {
+      buildQr(qr, link);
+    } else if (qr) {
+      qr.innerHTML = '';
+    }
     const subtitle = slide.querySelector('.panel-subtitle');
     if (subtitle) subtitle.textContent = CONTENT_SUBTITLES.curso;
     updateCounter();
