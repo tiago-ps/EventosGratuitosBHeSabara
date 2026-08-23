@@ -3,6 +3,7 @@
 
   const DATA_URL = 'eventos.json';
   const BOOKS_URL = 'livros.json';
+  const COURSES_URL = 'cursos.json';
   const CONFIG_URL = 'configuracao-mural.json';
   const app = document.getElementById('app');
   const SCHOOL_ROTATION_SIZE = 6;
@@ -14,6 +15,7 @@
   const CONTENT_SUBTITLES = Object.freeze({
     evento: 'Agenda Cultural',
     livro: 'Sugestão de Leitura',
+    curso: 'Curso Online Gratuito',
     filme: 'Sugestão de Filme',
     jogo: 'Sugestão de Jogo',
     passeio: 'Sugestão de Passeio'
@@ -71,9 +73,11 @@
   let state = {
     data: null,
     booksData: null,
+    coursesData: null,
     config: null,
     allEvents: [],
     allBooks: [],
+    allCourses: [],
     events: [],
     index: 0,
     timer: null,
@@ -83,10 +87,10 @@
     btnPlayPause: null,
     btnFilter: null,
     filterOverlay: null,
-    panelModules: { events: true, books: true },
+    panelModules: { events: true, books: true, courses: false },
     panelEventCities: [],
     panelBookCampuses: [],
-    panelWeights: { events: 5, books: 1 },
+    panelWeights: { events: 5, books: 1, courses: 1 },
     filters: {
       content: 'all',
       theme: '',
@@ -520,28 +524,30 @@
       );
   }
 
-  function interleaveContents(events, books, eventWeight = 5, bookWeight = 1) {
-    if (!books.length) return events;
-    if (!events.length) return books;
-
-    const eventsPerTurn = Math.max(1, Number(eventWeight) || 5);
-    const booksPerTurn = Math.max(1, Number(bookWeight) || 1);
+  function interleaveContents(groups) {
+    const active = groups
+      .map(group => ({ items: group.items || [], weight: Math.max(1, Number(group.weight) || 1), index: 0 }))
+      .filter(group => group.items.length);
+    if (!active.length) return [];
     const combined = [];
-    let eventIndex = 0;
-    let bookIndex = 0;
-
-    while (eventIndex < events.length || bookIndex < books.length) {
-      for (let i = 0; i < eventsPerTurn && eventIndex < events.length; i += 1) {
-        combined.push(events[eventIndex]);
-        eventIndex += 1;
-      }
-      for (let i = 0; i < booksPerTurn && bookIndex < books.length; i += 1) {
-        combined.push(books[bookIndex]);
-        bookIndex += 1;
+    while (active.some(group => group.index < group.items.length)) {
+      for (const group of active) {
+        for (let i = 0; i < group.weight && group.index < group.items.length; i += 1) {
+          combined.push(group.items[group.index++]);
+        }
       }
     }
-
     return combined;
+  }
+
+  function courseIsPublishable(course) {
+    return Boolean(course && course.titulo && course.exibicao_ativa !== false);
+  }
+
+  function filterCourses(courses) {
+    return courses.filter(courseIsPublishable).sort((a, b) =>
+      String(a.titulo || '').localeCompare(String(b.titulo || ''), 'pt-BR')
+    );
   }
 
   function hasEventFilters() {
@@ -561,21 +567,15 @@
   function rebuildVisibleItems() {
     const eventsEnabled = state.panelModules.events && state.config?.modulos?.eventos !== false;
     const booksEnabled = state.panelModules.books && state.config?.modulos?.livros !== false;
+    const coursesEnabled = state.panelModules.courses && state.config?.modulos?.cursos !== false;
     const events = eventsEnabled ? visibleEventsForFilters() : [];
     const books = booksEnabled ? filterBooks(state.allBooks) : [];
-
-    if (eventsEnabled && booksEnabled) {
-      state.events = interleaveContents(
-        events, books, state.panelWeights.events, state.panelWeights.books
-      );
-    } else if (eventsEnabled) {
-      state.events = events;
-    } else if (booksEnabled) {
-      state.events = books;
-    } else {
-      state.events = [];
-    }
-
+    const courses = coursesEnabled ? filterCourses(state.allCourses) : [];
+    state.events = interleaveContents([
+      { items: events, weight: state.panelWeights.events },
+      { items: books, weight: state.panelWeights.books },
+      { items: courses, weight: state.panelWeights.courses }
+    ]);
     return state.events;
   }
 
@@ -1757,10 +1757,59 @@
     scheduleNextSlide();
   }
 
+  function renderCourseSlide(index) {
+    const course = state.events[index];
+    const slide = app.querySelector('.slide');
+    if (!slide || !course) return;
+    const eventCopy = slide.querySelector('.event-copy');
+    const bookCopy = slide.querySelector('.book-copy');
+    if (bookCopy) bookCopy.hidden = true;
+    if (eventCopy) eventCopy.hidden = false;
+    const category = slide.querySelector('.category');
+    if (category) category.textContent = 'CURSO';
+    const free = slide.querySelector('.free');
+    if (free) free.textContent = 'GRATUITO';
+    const rating = slide.querySelector('.rating');
+    if (rating) rating.hidden = true;
+    const city = slide.querySelector('.city');
+    if (city) { city.hidden = false; city.textContent = 'ONLINE'; }
+    slide.querySelector('.event-title').textContent = course.titulo || 'Curso online';
+    slide.querySelector('.description').textContent = course.descricao || course.competencias || '';
+    slide.querySelector('.when').textContent = course.carga_horaria ? `${course.carga_horaria} horas` : 'Curso online';
+    slide.querySelector('.where-text').textContent = course.instituicao || course.fonte || 'Instituição';
+    const mapLink = slide.querySelector('.map-link');
+    if (mapLink) mapLink.hidden = true;
+    const image = safeImageUrl(course.imagem);
+    const img = slide.querySelector('.event-image');
+    const fallback = slide.querySelector('.image-fallback');
+    if (img) {
+      img.hidden = !image;
+      if (image) { img.src = image; img.alt = `Imagem: ${course.titulo || 'Curso'}`; }
+    }
+    if (fallback) {
+      fallback.hidden = Boolean(image);
+      fallback.querySelector('.fallback-icon').textContent = '🎓';
+      fallback.querySelector('.fallback-label').textContent = course.instituicao || 'Curso online';
+    }
+    const link = safeExternalUrl(course.url || course.link);
+    slide.querySelector('.source-label').textContent = 'Curso online gratuito';
+    slide.querySelector('.source-url').textContent = link ? new URL(link).hostname : (course.instituicao || '');
+    slide.querySelector('.updated').textContent = course.area || '';
+    const qr = slide.querySelector('.qr-code');
+    if (qr) qr.innerHTML = '';
+    const qrWrap = slide.querySelector('.qr-wrap');
+    if (qrWrap) qrWrap.hidden = true;
+    const subtitle = slide.querySelector('.panel-subtitle');
+    if (subtitle) subtitle.textContent = CONTENT_SUBTITLES.curso;
+    updateCounter();
+    restartProgress();
+  }
+
   function renderSlide(index) {
     const item = state.events[index];
     if (!item) return;
     if (item.tipo_conteudo === 'livro') renderBookSlide(index);
+    else if (item.tipo_conteudo === 'curso') renderCourseSlide(index);
     else renderEventSlide(index);
   }
 
@@ -1863,6 +1912,7 @@
     const panelModules = panel.modulos_ativos || {};
     const eventConfig = panel.eventos || {};
     const bookConfig = panel.livros || {};
+    const courseConfig = panel.cursos || {};
     const frequency = panel.frequencia || {};
     return {
       modules: {
@@ -1871,7 +1921,8 @@
           : state.config?.modulos?.eventos !== false,
         books: panelModules.livros !== undefined
           ? Boolean(panelModules.livros)
-          : state.config?.modulos?.livros !== false
+          : state.config?.modulos?.livros !== false,
+        courses: panelModules.cursos !== undefined ? Boolean(panelModules.cursos) : false
       },
       theme: String(panel.tema || ''),
       eventCities: Array.isArray(eventConfig.cidades) ? eventConfig.cidades.map(normalizeText).filter(Boolean) : [],
@@ -1882,7 +1933,8 @@
       bookAccess: String(bookConfig.acesso || ''),
       weights: {
         events: Math.max(1, Number(frequency.eventos ?? state.config?.proporcao?.eventos_por_livro) || 5),
-        books: Math.max(1, Number(frequency.livros) || 1)
+        books: Math.max(1, Number(frequency.livros) || 1),
+        courses: Math.max(1, Number(frequency.cursos) || 1)
       },
       slideDuration: ALLOWED_SLIDE_DURATIONS.has(Number(panel.tempo_slides)) ? Number(panel.tempo_slides) : 0
     };
@@ -1897,7 +1949,8 @@
     return {
       modules: {
         events: modules.events !== undefined ? Boolean(modules.events) : defaults.modules.events,
-        books: modules.books !== undefined ? Boolean(modules.books) : defaults.modules.books
+        books: modules.books !== undefined ? Boolean(modules.books) : defaults.modules.books,
+        courses: modules.courses !== undefined ? Boolean(modules.courses) : defaults.modules.courses
       },
       theme: String(value.theme || ''),
       eventCities: Array.isArray(value.eventCities) ? value.eventCities.map(normalizeText).filter(Boolean) : [],
@@ -1908,7 +1961,8 @@
       bookAccess: String(value.bookAccess || ''),
       weights: {
         events: clampWeight(weights.events ?? defaults.weights.events),
-        books: clampWeight(weights.books ?? defaults.weights.books)
+        books: clampWeight(weights.books ?? defaults.weights.books),
+        courses: clampWeight(weights.courses ?? defaults.weights.courses)
       },
       slideDuration: ALLOWED_SLIDE_DURATIONS.has(Number(value.slideDuration))
         ? Number(value.slideDuration)
@@ -2105,10 +2159,28 @@
     if (message) box.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
   }
 
+  function ensureCoursePanelControls(slide) {
+    const switches = slide.querySelector('.panel-module-switches');
+    if (switches && !switches.querySelector('.panel-module-courses')) {
+      const label = document.createElement('label');
+      label.className = 'panel-module-toggle';
+      label.innerHTML = '<input class="panel-module-courses" type="checkbox"><span>Cursos</span>';
+      switches.append(label);
+    }
+    const bookSection = slide.querySelector('.panel-book-section');
+    if (bookSection && !slide.querySelector('.panel-course-section')) {
+      const section = document.createElement('section');
+      section.className = 'panel-config-section panel-course-section';
+      section.innerHTML = `<div class="panel-section-heading"><div><h3>Cursos</h3><p>Cursos online gratuitos de instituições consolidadas.</p></div><label class="panel-weight-field"><span>Frequência</span><select class="panel-course-weight">${Array.from({length:10}, (_, i) => `<option value="${i+1}">${i+1}</option>`).join('')}</select></label></div>`;
+      bookSection.after(section);
+    }
+  }
+
   function readPanelSettingsFromOverlay(slide) {
     const eventsEnabled = Boolean(slide.querySelector('.panel-module-events')?.checked);
     const booksEnabled = Boolean(slide.querySelector('.panel-module-books')?.checked);
-    if (!eventsEnabled && !booksEnabled) {
+    const coursesEnabled = Boolean(slide.querySelector('.panel-module-courses')?.checked);
+    if (!eventsEnabled && !booksEnabled && !coursesEnabled) {
       throw new Error('Ative pelo menos um tipo de conteúdo para o painel.');
     }
 
@@ -2124,7 +2196,7 @@
     }
 
     return normalizePanelSettings({
-      modules: { events: eventsEnabled, books: booksEnabled },
+      modules: { events: eventsEnabled, books: booksEnabled, courses: coursesEnabled },
       theme: slide.querySelector('.filter-theme')?.value || '',
       eventCities: checkedFilterValues(cityContainer),
       eventCategory: slide.querySelector('.filter-category')?.value || '',
@@ -2134,7 +2206,8 @@
       bookAccess: slide.querySelector('.filter-book-access')?.value || '',
       weights: {
         events: slide.querySelector('.panel-event-weight')?.value || 5,
-        books: slide.querySelector('.panel-book-weight')?.value || 1
+        books: slide.querySelector('.panel-book-weight')?.value || 1,
+        courses: slide.querySelector('.panel-course-weight')?.value || 1
       },
       slideDuration: slide.querySelector('.filter-slide-duration')?.value || 0
     });
@@ -2143,13 +2216,17 @@
   function updatePanelModuleVisibility(slide) {
     const eventsEnabled = Boolean(slide.querySelector('.panel-module-events')?.checked);
     const booksEnabled = Boolean(slide.querySelector('.panel-module-books')?.checked);
+    const coursesEnabled = Boolean(slide.querySelector('.panel-module-courses')?.checked);
     const eventSection = slide.querySelector('.panel-event-section');
     const bookSection = slide.querySelector('.panel-book-section');
+    const courseSection = slide.querySelector('.panel-course-section');
     if (eventSection) eventSection.hidden = !eventsEnabled;
     if (bookSection) bookSection.hidden = !booksEnabled;
+    if (courseSection) courseSection.hidden = !coursesEnabled;
   }
 
   function populateFilterPanel(slide, settings = currentPanelSettings()) {
+    ensureCoursePanelControls(slide);
     const value = normalizePanelSettings(settings);
     const themeSelect = slide.querySelector('.filter-theme');
     const categorySelect = slide.querySelector('.filter-category');
@@ -2160,13 +2237,17 @@
 
     const eventsToggle = slide.querySelector('.panel-module-events');
     const booksToggle = slide.querySelector('.panel-module-books');
+    const coursesToggle = slide.querySelector('.panel-module-courses');
     if (eventsToggle) eventsToggle.checked = value.modules.events;
     if (booksToggle) booksToggle.checked = value.modules.books;
+    if (coursesToggle) coursesToggle.checked = value.modules.courses;
     if (durationSelect) durationSelect.value = String(value.slideDuration || 0);
     const eventWeight = slide.querySelector('.panel-event-weight');
     const bookWeight = slide.querySelector('.panel-book-weight');
+    const courseWeight = slide.querySelector('.panel-course-weight');
     if (eventWeight) eventWeight.value = String(value.weights.events);
     if (bookWeight) bookWeight.value = String(value.weights.books);
+    if (courseWeight) courseWeight.value = String(value.weights.courses);
 
     populateDynamicSelect(themeSelect, 'Todos os temas', universalThemeOptions(), value.theme);
 
@@ -2325,6 +2406,7 @@
 
     slide.querySelector('.panel-module-events')?.addEventListener('change', () => updatePanelModuleVisibility(slide));
     slide.querySelector('.panel-module-books')?.addEventListener('change', () => updatePanelModuleVisibility(slide));
+    slide.querySelector('.panel-module-courses')?.addEventListener('change', () => updatePanelModuleVisibility(slide));
     slide.querySelector('.panel-profile-save')?.addEventListener('click', () => savePanelProfile(slide));
     slide.querySelector('.panel-profile-delete')?.addEventListener('click', () => deletePanelProfile(slide));
     slide.querySelector('.panel-profile-select')?.addEventListener('change', event => {
@@ -2580,10 +2662,22 @@
       );
   }
 
+  function agendaCourseQueryMatches(course, query) {
+    if (!query) return true;
+    return normalizeText([course.titulo, course.instituicao, course.instituicao_parceira, course.area, course.competencias, course.descricao, course.publico_alvo].filter(Boolean).join(' ')).includes(query);
+  }
+
+  function agendaVisibleCourses() {
+    if (!['all', 'courses'].includes(state.mobileContent) || state.config?.modulos?.cursos === false) return [];
+    const query = normalizeText(state.mobileQuery);
+    return filterCourses(state.allCourses).filter(course => agendaCourseQueryMatches(course, query));
+  }
+
   function agendaVisibleContents() {
     const events = agendaVisibleEvents();
     const books = agendaVisibleBooks();
-    return { events, books, total: events.length + books.length };
+    const courses = agendaVisibleCourses();
+    return { events, books, courses, total: events.length + books.length + courses.length };
   }
 
   function agendaActiveFilterCount() {
@@ -2665,12 +2759,21 @@
   function agendaSubtitleLabel() {
     if (state.mobileContent === 'events') return 'Agenda Cultural';
     if (state.mobileContent === 'books') return 'Sugestão de Leitura';
+    if (state.mobileContent === 'courses') return 'Cursos Online Gratuitos';
     return 'Descobertas culturais';
   }
 
   function renderAgendaCard(item) {
     const article = document.createElement('article');
     article.className = `agenda-card ${item.tipo_conteudo === 'livro' ? 'agenda-book-card' : ''}`;
+
+    if (item.tipo_conteudo === 'curso') {
+      const link = safeExternalUrl(item.url || item.link);
+      const image = safeImageUrl(item.imagem);
+      article.classList.add('agenda-course-card');
+      article.innerHTML = `<div class="agenda-card-media course-media">${image ? `<img src="${escapeHtml(image)}" alt="Imagem: ${escapeHtml(item.titulo || 'Curso')}" loading="lazy">` : ''}</div><div class="agenda-card-body"><div class="agenda-card-badges"><span>Curso</span><span>Online</span><span>Gratuito</span></div><p class="agenda-card-date">${escapeHtml(item.carga_horaria ? `${item.carga_horaria} horas` : 'Formação online')}</p><h2>${escapeHtml(item.titulo || 'Curso')}</h2><p class="agenda-card-place">${escapeHtml(item.instituicao || item.fonte || 'Instituição')}</p><p class="agenda-card-description">${escapeHtml(item.descricao || item.competencias || '')}</p><div class="agenda-card-actions">${link ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer">Acessar curso</a>` : ''}</div></div>`;
+      return article;
+    }
 
     if (item.tipo_conteudo === 'livro') {
       const holdingsHtml = agendaBookHoldingsHtml(item);
@@ -2768,7 +2871,7 @@
     const commonControls = `
       <label class="agenda-search"><span>Pesquisar</span><input type="search" placeholder="Título, autor, instituição ou tema" value="${escapeHtml(state.mobileQuery)}"></label>
       <label><span>Conteúdo</span><select class="agenda-content">
-        <option value="all">Todos</option><option value="events">Eventos</option><option value="books">Livros</option>
+        <option value="all">Todos</option><option value="events">Eventos</option><option value="books">Livros</option><option value="courses">Cursos</option>
       </select></label>
       <label><span>Tema</span><select class="agenda-theme"><option value="">Todos os temas</option></select></label>
     `;
@@ -2843,10 +2946,11 @@
     } else if (state.mobileContent === 'all') {
       appendAgendaSection(resultsContainer, 'Agenda Cultural', results.events, 'events', 'Ver somente eventos');
       appendAgendaSection(resultsContainer, 'Sugestões de Leitura', results.books, 'books', 'Ver somente livros');
+      appendAgendaSection(resultsContainer, 'Cursos Online Gratuitos', results.courses, 'courses', 'Ver somente cursos');
     } else {
       const list = document.createElement('section');
       list.className = 'agenda-list';
-      const items = state.mobileContent === 'events' ? results.events : results.books;
+      const items = state.mobileContent === 'events' ? results.events : state.mobileContent === 'books' ? results.books : results.courses;
       items.forEach(item => list.append(renderAgendaCard(item)));
       resultsContainer.append(list);
     }
@@ -2947,9 +3051,10 @@
 
   async function load() {
     try {
-      const [response, booksData, config] = await Promise.all([
+      const [response, booksData, coursesData, config] = await Promise.all([
         fetch(`${DATA_URL}?v=${Date.now()}`, { cache: 'no-store' }),
         loadOptionalJson(BOOKS_URL, { livros: [] }),
+        loadOptionalJson(COURSES_URL, { cursos: [] }),
         loadOptionalJson(CONFIG_URL, {
           nome: 'Mural Cultural',
           modulos: { eventos: true, livros: false },
@@ -2965,9 +3070,11 @@
 
       state.data = data;
       state.booksData = booksData && Array.isArray(booksData.livros) ? booksData : { livros: [] };
+      state.coursesData = coursesData && Array.isArray(coursesData.cursos) ? coursesData : { cursos: [] };
       state.config = config || {};
       state.allEvents = filterAndSort(data.eventos).map(event => ({ ...event, tipo_conteudo: 'evento' }));
       state.allBooks = (state.booksData.livros || []).map(book => ({ ...book, tipo_conteudo: 'livro' }));
+      state.allCourses = (state.coursesData.cursos || []).map(course => ({ ...course, tipo_conteudo: 'curso' }));
       state.schoolRotationBatch = readStoredSchoolBatch();
       loadStoredPanelSettings();
       rebuildVisibleItems();
