@@ -1,6 +1,117 @@
 (() => {
-  const css=document.createElement('link');css.rel='stylesheet';css.href='css/cursos-mural.css?v=1';css.dataset.cursosMural='1';document.head.append(css);
-  const js=document.createElement('script');js.src='js/cursos-mural.js?v=1';js.dataset.cursosMural='1';document.head.append(js);
+  'use strict';
+
+  // Correções complementares para os cursos já integrados nativamente ao Mural.
+  // Não interfere nos QR Codes.
+  let coursesByTitle = null;
+  let loadingCourses = null;
+
+  const normalize = value => String(value || '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .trim();
+
+  function ensureCoursePanelStyles() {
+    if (document.getElementById('course-panel-fixes')) return;
+    const style = document.createElement('style');
+    style.id = 'course-panel-fixes';
+    style.textContent = `
+      .course-slide .event-image {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center !important;
+      }
+      .course-slide .badge.city {
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        width: auto !important;
+        min-width: 0 !important;
+        max-width: none !important;
+        white-space: nowrap !important;
+        overflow: visible !important;
+        text-overflow: clip !important;
+        line-height: 1 !important;
+      }
+      .course-slide .source-url a {
+        color: inherit;
+        text-decoration: underline;
+        text-underline-offset: .18em;
+        overflow-wrap: anywhere;
+      }
+    `;
+    document.head.append(style);
+  }
+
+  function loadCourses() {
+    if (coursesByTitle) return Promise.resolve(coursesByTitle);
+    if (loadingCourses) return loadingCourses;
+    loadingCourses = fetch(`cursos.json?v=${Date.now()}`, { cache: 'no-store' })
+      .then(response => response.ok ? response.json() : Promise.reject(new Error(`HTTP ${response.status}`)))
+      .then(data => {
+        coursesByTitle = new Map();
+        for (const course of Array.isArray(data?.cursos) ? data.cursos : []) {
+          const key = normalize(course?.titulo);
+          if (key) coursesByTitle.set(key, course);
+        }
+        return coursesByTitle;
+      })
+      .catch(error => {
+        console.warn('Não foi possível carregar os links dos cursos.', error);
+        coursesByTitle = new Map();
+        return coursesByTitle;
+      });
+    return loadingCourses;
+  }
+
+  function patchCourseSlide() {
+    const slide = document.querySelector('#app .slide');
+    if (!slide) return;
+    const category = slide.querySelector('.badge.category');
+    if (normalize(category?.textContent) !== 'curso') {
+      slide.classList.remove('course-slide');
+      return;
+    }
+
+    slide.classList.add('course-slide');
+    const city = slide.querySelector('.badge.city');
+    if (city) {
+      city.hidden = false;
+      city.textContent = 'ONLINE';
+    }
+
+    const image = slide.querySelector('.event-image');
+    if (image) {
+      image.style.removeProperty('object-fit');
+      image.style.removeProperty('object-position');
+    }
+
+    const title = normalize(slide.querySelector('.event-title')?.textContent);
+    if (!title) return;
+
+    loadCourses().then(map => {
+      const currentSlide = document.querySelector('#app .slide');
+      if (currentSlide !== slide || !slide.classList.contains('course-slide')) return;
+      const course = map.get(title);
+      const url = String(course?.url || course?.link || '').trim();
+      if (!/^https?:\/\//i.test(url)) return;
+      const source = slide.querySelector('.source-url');
+      if (!source) return;
+      const anchor = document.createElement('a');
+      anchor.href = url;
+      anchor.target = '_blank';
+      anchor.rel = 'noopener noreferrer';
+      anchor.textContent = 'Acessar página deste curso';
+      source.replaceChildren(anchor);
+    });
+  }
+
+  ensureCoursePanelStyles();
+  patchCourseSlide();
+  new MutationObserver(() => window.requestAnimationFrame(patchCourseSlide))
+    .observe(document.getElementById('app') || document.body, { childList: true, subtree: true, characterData: true });
 })();
 
 (() => {
