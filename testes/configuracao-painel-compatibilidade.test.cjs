@@ -13,8 +13,14 @@ const config = JSON.parse(
 assert.deepEqual(config.painel.modulos_ativos, {
   eventos: true,
   livros: true,
-  cursos: false,
-  concursos: false
+  cursos: true,
+  concursos: true
+});
+assert.deepEqual(config.modulos, {
+  eventos: true,
+  livros: true,
+  cursos: true,
+  concursos: true
 });
 assert.equal(config.painel.frequencia.concursos, 1);
 
@@ -26,6 +32,18 @@ assert.match(
 );
 assert.match(
   appSource,
+  /courses: modules\.courses !== undefined \? Boolean\(modules\.courses\) : defaults\.modules\.courses/
+);
+assert.match(
+  appSource,
+  /courses: panelModules\.cursos !== undefined\s*\? Boolean\(panelModules\.cursos\)\s*: state\.config\?\.modulos\?\.cursos !== false/
+);
+assert.match(
+  appSource,
+  /contests: panelModules\.concursos !== undefined\s*\? Boolean\(panelModules\.concursos\)\s*: state\.config\?\.modulos\?\.concursos !== false/
+);
+assert.match(
+  appSource,
   /contests: clampWeight\(weights\.contests \?\? defaults\.weights\.contests\)/
 );
 
@@ -34,6 +52,14 @@ assert.match(
 assert.match(appSource, /const contestsEnabled = Boolean\(slide\.querySelector\('\.panel-module-contests'\)\?\.checked\)/);
 assert.match(appSource, /contests: contestsEnabled/);
 assert.match(appSource, /localStorage\.setItem\(PANEL_SETTINGS_KEY, JSON\.stringify\(value\)\)/);
+assert.match(
+  appSource,
+  /if \(!stored\) \{\s*defaults\.slideDuration = storedSlideDuration\(\);\s*applyPanelSettings\(defaults, false\);/
+);
+assert.match(
+  appSource,
+  /stored = JSON\.parse\(localStorage\.getItem\(PANEL_SETTINGS_KEY\) \|\| 'null'\);\s*\} catch \{\s*stored = null;/
+);
 
 const indexSource = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 assert.match(indexSource, /class="panel-module-contests"/);

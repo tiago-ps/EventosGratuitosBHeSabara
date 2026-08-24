@@ -4,6 +4,7 @@
   "modulos": {
     "eventos": true,
     "livros": true,
+    "cursos": true,
     "concursos": true
   },
   "proporcao": {
@@ -18,8 +19,8 @@
     "modulos_ativos": {
       "eventos": true,
       "livros": true,
-      "cursos": false,
-      "concursos": false
+      "cursos": true,
+      "concursos": true
     },
     "frequencia": {
       "eventos": 5,

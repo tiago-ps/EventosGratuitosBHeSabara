@@ -93,7 +93,7 @@
     btnPlayPause: null,
     btnFilter: null,
     filterOverlay: null,
-    panelModules: { events: true, books: true, courses: false, contests: false },
+    panelModules: { events: true, books: true, courses: true, contests: true },
     panelEventCities: [],
     panelBookCampuses: [],
     panelWeights: { events: 5, books: 1, courses: 1, contests: 1 },
@@ -1940,8 +1940,12 @@
         books: panelModules.livros !== undefined
           ? Boolean(panelModules.livros)
           : state.config?.modulos?.livros !== false,
-        courses: panelModules.cursos !== undefined ? Boolean(panelModules.cursos) : false,
-        contests: panelModules.concursos !== undefined ? Boolean(panelModules.concursos) : false
+        courses: panelModules.cursos !== undefined
+          ? Boolean(panelModules.cursos)
+          : state.config?.modulos?.cursos !== false,
+        contests: panelModules.concursos !== undefined
+          ? Boolean(panelModules.concursos)
+          : state.config?.modulos?.concursos !== false
       },
       theme: String(panel.tema || ''),
       eventCities: Array.isArray(eventConfig.cidades) ? eventConfig.cidades.map(normalizeText).filter(Boolean) : [],

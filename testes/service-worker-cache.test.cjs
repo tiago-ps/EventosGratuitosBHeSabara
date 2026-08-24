@@ -81,13 +81,13 @@ async function dispatch(type, event) {
 }
 
 (async () => {
-  assert.equal(sw.CACHE_VERSION, 'mural-cultural-v70-contests-final');
+  assert.equal(sw.CACHE_VERSION, 'mural-cultural-v71-all-modules-default');
   for (const asset of [
     './css/concursos-mural.css?v=2',
     './js/core/rotacao.js?v=1',
     './js/conteudos/cursos.js?v=1',
     './js/conteudos/concursos.js?v=2',
-    './js/app.js?v=70'
+    './js/app.js?v=71'
   ]) {
     assert.ok(sw.CORE_ASSETS.includes(asset), `Precache ausente: ${asset}`);
   }
