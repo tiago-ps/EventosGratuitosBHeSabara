@@ -252,6 +252,10 @@
                 <input class="panel-module-books" type="checkbox" checked>
                 <span>Livros</span>
               </label>
+              <label class="panel-module-toggle">
+                <input class="panel-module-courses" type="checkbox">
+                <span>Cursos</span>
+              </label>
             </div>
           </section>
 
@@ -352,6 +356,24 @@
             </div>
           </section>
 
+          <section class="panel-config-section panel-course-section" hidden>
+            <div class="panel-section-heading">
+              <div>
+                <h3>Cursos</h3>
+                <p>Cursos online gratuitos de instituições consolidadas.</p>
+              </div>
+              <label class="panel-weight-field">
+                <span>Frequência</span>
+                <select class="panel-course-weight">
+                  <option value="1">1</option><option value="2">2</option><option value="3">3</option>
+                  <option value="4">4</option><option value="5">5</option><option value="6">6</option>
+                  <option value="7">7</option><option value="8">8</option><option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </label>
+            </div>
+          </section>
+
           <p class="panel-frequency-help">A frequência define o peso de cada módulo na rotação. Ex.: Eventos 5 + Livros 1 reproduz aproximadamente cinco eventos para cada sugestão de leitura.</p>
 
           <div class="filter-actions">
@@ -366,7 +388,9 @@
   </template>
 
   <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
-  <script src="js/app.js?v=67" defer></script>
+  <script src="js/core/rotacao.js?v=1" defer></script>
+  <script src="js/conteudos/cursos.js?v=1" defer></script>
+  <script src="js/app.js?v=68" defer></script>
   <script src="js/eventos-manuais-ui.js?v=42" defer></script>
   <script src="js/ios-install.js?v=1" defer></script>
 

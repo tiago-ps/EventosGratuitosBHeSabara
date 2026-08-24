@@ -21,6 +21,8 @@
     passeio: 'Sugestão de Passeio'
   });
   const template = document.getElementById('slide-template');
+  const muralCore = window.MuralCultural.core;
+  const coursesContent = window.MuralCultural.contents.courses;
   let deferredInstallPrompt = null;
 
   // O tema original é fixo; remove preferências antigas salvas pelo seletor.
@@ -524,48 +526,6 @@
       );
   }
 
-  function interleaveContents(groups) {
-    const active = groups
-      .map(group => ({ items: group.items || [], weight: Math.max(1, Number(group.weight) || 1), index: 0 }))
-      .filter(group => group.items.length);
-    if (!active.length) return [];
-    const combined = [];
-    while (active.some(group => group.index < group.items.length)) {
-      for (const group of active) {
-        for (let i = 0; i < group.weight && group.index < group.items.length; i += 1) {
-          combined.push(group.items[group.index++]);
-        }
-      }
-    }
-    return combined;
-  }
-
-  function courseIsPublishable(course) {
-    return Boolean(course && course.titulo && course.exibicao_ativa !== false);
-  }
-
-  const PANEL_COURSE_LIMIT = 15;
-
-  function filterCourses(courses) {
-    return courses.filter(courseIsPublishable).sort((a, b) =>
-      String(a.titulo || '').localeCompare(String(b.titulo || ''), 'pt-BR')
-    );
-  }
-
-  function sampleCoursesForPanel(courses, limit = PANEL_COURSE_LIMIT) {
-    const available = filterCourses(courses);
-    if (available.length <= limit) return available;
-
-    // Embaralhamento parcial de Fisher-Yates: sorteia somente o que o Painel
-    // realmente vai exibir, sem inserir mais de mil cursos na rotação.
-    const sample = available.slice();
-    for (let i = 0; i < limit; i += 1) {
-      const j = i + Math.floor(Math.random() * (sample.length - i));
-      [sample[i], sample[j]] = [sample[j], sample[i]];
-    }
-    return sample.slice(0, limit);
-  }
-
   function hasEventFilters() {
     return Boolean(
       state.filters.theme || state.panelEventCities.length ||
@@ -586,8 +546,8 @@
     const coursesEnabled = state.panelModules.courses && state.config?.modulos?.cursos !== false;
     const events = eventsEnabled ? visibleEventsForFilters() : [];
     const books = booksEnabled ? filterBooks(state.allBooks) : [];
-    const courses = coursesEnabled ? sampleCoursesForPanel(state.allCourses) : [];
-    state.events = interleaveContents([
+    const courses = coursesEnabled ? coursesContent.sampleForPanel(state.allCourses) : [];
+    state.events = muralCore.interleaveContents([
       { items: events, weight: state.panelWeights.events },
       { items: books, weight: state.panelWeights.books },
       { items: courses, weight: state.panelWeights.courses }
@@ -1779,128 +1739,20 @@
     const course = state.events[index];
     if (!course) return;
 
-    // Cursos seguem o mesmo ciclo de Eventos/Livros: cada navegação parte
-    // de um template novo, evitando herdar classes/hidden/estilos do slide anterior.
-    const slide = template.content.firstElementChild.cloneNode(true);
-    buildSiteQr(slide);
-
-    const seconds = slideDurationFor(course);
-    slide.style.setProperty('--slide-seconds', `${seconds}s`);
-    slide.querySelector('.counter').textContent = `${index + 1} de ${state.events.length}`;
-
-    const eventCopy = slide.querySelector('.event-copy');
-    const bookCopy = slide.querySelector('.book-copy');
-    if (bookCopy) bookCopy.hidden = true;
-    if (eventCopy) eventCopy.hidden = false;
-
-    const category = slide.querySelector('.category');
-    if (category) {
-      category.hidden = false;
-      category.textContent = 'CURSO';
-    }
-
-    const free = slide.querySelector('.free');
-    if (free) {
-      free.hidden = false;
-      free.textContent = 'GRATUITO';
-    }
-
-    const rating = slide.querySelector('.rating');
-    if (rating) {
-      rating.hidden = true;
-      rating.textContent = '';
-      rating.className = 'rating';
-    }
-
-    // A antiga classe .city é reaproveitada apenas como posição no template.
-    // Removemos classes/estilos residuais e aplicamos uma classe própria de curso.
-    const online = slide.querySelector('.city');
-    if (online) {
-      online.hidden = false;
-      online.className = 'badge course-online';
-      online.textContent = 'ONLINE';
-      online.removeAttribute('style');
-    }
-
-    const title = slide.querySelector('.event-title');
-    if (title) title.textContent = course.titulo || 'Curso online';
-
-    const description = slide.querySelector('.description');
-    if (description) description.textContent = course.descricao || course.competencias || '';
-
-    const when = slide.querySelector('.when');
-    if (when) when.textContent = course.carga_horaria ? `${course.carga_horaria} horas` : 'Curso online';
-
-    const where = slide.querySelector('.where-text');
-    if (where) where.textContent = course.instituicao || course.fonte || 'Instituição';
-
-    const mapLink = slide.querySelector('.map-link');
-    if (mapLink) {
-      mapLink.hidden = true;
-      mapLink.removeAttribute('href');
-    }
-
-    const link = safeExternalUrl(course.url || course.link);
-    const sourceLabel = slide.querySelector('.source-label');
-    if (sourceLabel) sourceLabel.textContent = 'Curso online gratuito';
-
-    const source = slide.querySelector('.source-url');
-    if (source) {
-      if (link) {
-        const anchor = document.createElement('a');
-        anchor.href = link;
-        anchor.textContent = 'Acessar página deste curso';
-        anchor.target = '_blank';
-        anchor.rel = 'noopener noreferrer';
-        source.replaceChildren(anchor);
-      } else {
-        source.textContent = course.instituicao || '';
+    const slide = coursesContent.createPanelSlide({
+      course,
+      index,
+      total: state.events.length,
+      template,
+      helpers: {
+        buildSiteQr,
+        slideDurationFor,
+        configureItemQrLabel,
+        buildQr,
+        safeExternalUrl,
+        safeImageUrl
       }
-    }
-
-    const updated = slide.querySelector('.updated');
-    if (updated) updated.textContent = course.area || '';
-
-    const qr = slide.querySelector('.qr-code');
-    configureItemQrLabel(slide, course, Boolean(link));
-    if (qr && link) {
-      buildQr(qr, link);
-    } else if (qr) {
-      qr.replaceChildren();
-    }
-
-    const subtitle = slide.querySelector('.panel-subtitle');
-    if (subtitle) subtitle.textContent = CONTENT_SUBTITLES.curso;
-
-    const image = safeImageUrl(course.imagem);
-    const img = slide.querySelector('.event-image');
-    const fallback = slide.querySelector('.image-fallback');
-    if (fallback) {
-      const fallbackIcon = fallback.querySelector('.fallback-icon');
-      const fallbackLabel = fallback.querySelector('.fallback-label');
-      if (fallbackIcon) fallbackIcon.textContent = '🎓';
-      if (fallbackLabel) fallbackLabel.textContent = course.instituicao || 'Curso online';
-      fallback.style.display = image ? 'none' : 'grid';
-      fallback.hidden = false;
-    }
-    if (img) {
-      img.alt = `Imagem: ${course.titulo || 'Curso'}`;
-      img.decoding = 'async';
-      img.loading = 'eager';
-      img.classList.remove('loaded');
-      img.style.display = image ? '' : 'none';
-      img.onload = () => {
-        img.classList.add('loaded');
-        if (fallback) fallback.style.display = 'none';
-      };
-      img.onerror = () => {
-        img.classList.remove('loaded');
-        img.style.display = 'none';
-        if (fallback) fallback.style.display = 'grid';
-      };
-      if (image) img.src = image;
-      else img.removeAttribute('src');
-    }
+    });
 
     app.replaceChildren(slide);
 
@@ -2272,23 +2124,6 @@
     if (message) box.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
   }
 
-  function ensureCoursePanelControls(slide) {
-    const switches = slide.querySelector('.panel-module-switches');
-    if (switches && !switches.querySelector('.panel-module-courses')) {
-      const label = document.createElement('label');
-      label.className = 'panel-module-toggle';
-      label.innerHTML = '<input class="panel-module-courses" type="checkbox"><span>Cursos</span>';
-      switches.append(label);
-    }
-    const bookSection = slide.querySelector('.panel-book-section');
-    if (bookSection && !slide.querySelector('.panel-course-section')) {
-      const section = document.createElement('section');
-      section.className = 'panel-config-section panel-course-section';
-      section.innerHTML = `<div class="panel-section-heading"><div><h3>Cursos</h3><p>Cursos online gratuitos de instituições consolidadas.</p></div><label class="panel-weight-field"><span>Frequência</span><select class="panel-course-weight">${Array.from({length:10}, (_, i) => `<option value="${i+1}">${i+1}</option>`).join('')}</select></label></div>`;
-      bookSection.after(section);
-    }
-  }
-
   function readPanelSettingsFromOverlay(slide) {
     const eventsEnabled = Boolean(slide.querySelector('.panel-module-events')?.checked);
     const booksEnabled = Boolean(slide.querySelector('.panel-module-books')?.checked);
@@ -2339,7 +2174,6 @@
   }
 
   function populateFilterPanel(slide, settings = currentPanelSettings()) {
-    ensureCoursePanelControls(slide);
     const value = normalizePanelSettings(settings);
     const themeSelect = slide.querySelector('.filter-theme');
     const categorySelect = slide.querySelector('.filter-category');
@@ -2775,15 +2609,11 @@
       );
   }
 
-  function agendaCourseQueryMatches(course, query) {
-    if (!query) return true;
-    return normalizeText([course.titulo, course.instituicao, course.instituicao_parceira, course.area, course.competencias, course.descricao, course.publico_alvo].filter(Boolean).join(' ')).includes(query);
-  }
-
   function agendaVisibleCourses() {
     if (!['all', 'courses'].includes(state.mobileContent) || state.config?.modulos?.cursos === false) return [];
     const query = normalizeText(state.mobileQuery);
-    return filterCourses(state.allCourses).filter(course => agendaCourseQueryMatches(course, query));
+    return coursesContent.filter(state.allCourses)
+      .filter(course => coursesContent.agendaQueryMatches(course, query, normalizeText));
   }
 
   function agendaVisibleContents() {
@@ -2877,16 +2707,16 @@
   }
 
   function renderAgendaCard(item) {
+    if (item.tipo_conteudo === 'curso') {
+      return coursesContent.createAgendaCard(item, {
+        safeExternalUrl,
+        safeImageUrl,
+        escapeHtml
+      });
+    }
+
     const article = document.createElement('article');
     article.className = `agenda-card ${item.tipo_conteudo === 'livro' ? 'agenda-book-card' : ''}`;
-
-    if (item.tipo_conteudo === 'curso') {
-      const link = safeExternalUrl(item.url || item.link);
-      const image = safeImageUrl(item.imagem);
-      article.classList.add('agenda-course-card');
-      article.innerHTML = `<div class="agenda-card-media course-media">${image ? `<img src="${escapeHtml(image)}" alt="Imagem: ${escapeHtml(item.titulo || 'Curso')}" loading="lazy">` : ''}</div><div class="agenda-card-body"><div class="agenda-card-badges"><span>Curso</span><span>Online</span><span>Gratuito</span></div><p class="agenda-card-date">${escapeHtml(item.carga_horaria ? `${item.carga_horaria} horas` : 'Formação online')}</p><h2>${escapeHtml(item.titulo || 'Curso')}</h2><p class="agenda-card-place">${escapeHtml(item.instituicao || item.fonte || 'Instituição')}</p><p class="agenda-card-description">${escapeHtml(item.descricao || item.competencias || '')}</p><div class="agenda-card-actions">${link ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer">Acessar curso</a>` : ''}</div></div>`;
-      return article;
-    }
 
     if (item.tipo_conteudo === 'livro') {
       const holdingsHtml = agendaBookHoldingsHtml(item);
