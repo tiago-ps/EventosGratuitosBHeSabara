@@ -2562,13 +2562,40 @@
       const value = normalizeText(text);
       if (text && value && !values.has(value)) values.set(value, text);
     };
-    if (content !== 'books') {
+    if (content === 'events') {
       for (const event of state.allEvents) eventThemeLabels(event).forEach(add);
     }
-    if (content !== 'events') {
+    if (content === 'books') {
       for (const book of state.allBooks) (Array.isArray(book.temas) ? book.temas : []).forEach(add);
     }
     return [...values.entries()].sort((a, b) => a[1].localeCompare(b[1], 'pt-BR'));
+  }
+
+  function normalizeAgendaFiltersForContent(content = state.mobileContent) {
+    const allowedContents = new Set(['all', 'events', 'books', 'courses', 'contests']);
+    state.mobileContent = allowedContents.has(content) ? content : 'all';
+
+    if (!['events', 'books'].includes(state.mobileContent)) {
+      state.mobileTheme = '';
+    } else {
+      const allowedThemes = new Set(agendaThemeOptions(state.mobileContent).map(([value]) => value));
+      if (state.mobileTheme && !allowedThemes.has(state.mobileTheme)) state.mobileTheme = '';
+    }
+
+    if (state.mobileContent !== 'events') {
+      state.mobilePeriod = 'all';
+      state.mobileCategory = '';
+      state.mobileCity = '';
+      state.mobileSpace = '';
+      state.mobileInstitution = '';
+      state.mobileRegistration = '';
+    }
+    if (state.mobileContent !== 'books') state.mobileBookAccess = '';
+    if (state.mobileContent !== 'contests') {
+      state.mobileContestFormation = '';
+      state.mobileContestUf = '';
+      state.mobileContestDeadline = '';
+    }
   }
 
   function agendaCategoryOptions() {
@@ -2643,7 +2670,7 @@
   }
 
   function agendaVisibleEvents() {
-    if (state.mobileContent === 'books' || state.mobileContent === 'contests') return [];
+    if (!['all', 'events'].includes(state.mobileContent)) return [];
     const query = normalizeText(state.mobileQuery);
     const specific = state.mobileContent === 'events';
     return agendaEventSource().filter(event => {
@@ -2664,7 +2691,7 @@
   }
 
   function agendaVisibleBooks() {
-    if (['events', 'contests'].includes(state.mobileContent) || state.config?.modulos?.livros === false) return [];
+    if (!['all', 'books'].includes(state.mobileContent) || state.config?.modulos?.livros === false) return [];
     const query = normalizeText(state.mobileQuery);
     const today = todayAtMidnight();
     const specific = state.mobileContent === 'books';
@@ -2728,16 +2755,17 @@
       ].filter(Boolean).length;
     }
 
-    const common = [state.mobileQuery, state.mobileTheme];
+    const common = [state.mobileQuery];
     if (state.mobileContent !== 'all') common.push(state.mobileContent);
     if (state.mobileContent === 'events') {
       common.push(
+        state.mobileTheme,
         state.mobilePeriod !== 'all' ? state.mobilePeriod : '',
         state.mobileCategory, state.mobileCity, state.mobileSpace,
         state.mobileInstitution, state.mobileRegistration
       );
     } else if (state.mobileContent === 'books') {
-      common.push(state.mobileBookAccess);
+      common.push(state.mobileTheme, state.mobileBookAccess);
     }
     return common.filter(Boolean).length;
   }
@@ -2913,6 +2941,8 @@
     document.body.classList.add('agenda-mode');
     document.body.classList.remove('panel-mode');
 
+    normalizeAgendaFiltersForContent();
+
     const results = agendaVisibleContents();
     const activeFilters = agendaActiveFilterCount();
     const header = document.createElement('header');
@@ -2934,12 +2964,19 @@
     controls.setAttribute('aria-label', 'Pesquisar e filtrar conteúdos');
 
     const contestMode = state.mobileContent === 'contests';
+    const themeMode = ['events', 'books'].includes(state.mobileContent);
     const searchPlaceholder = contestMode
       ? 'Órgão, cargo, cidade, formação…'
-      : 'Título, autor, instituição ou tema';
-    const themeControl = contestMode ? '' : `
+      : state.mobileContent === 'courses'
+        ? 'Título, instituição, área ou descrição…'
+        : state.mobileContent === 'events'
+          ? 'Título, local, instituição ou tema…'
+          : state.mobileContent === 'books'
+            ? 'Título, autor ou tema…'
+            : 'Título, autor ou instituição…';
+    const themeControl = themeMode ? `
       <label><span>Tema</span><select class="agenda-theme"><option value="">Todos os temas</option></select></label>
-    `;
+    ` : '';
     const commonControls = `
       <label class="agenda-search"><span>Pesquisar</span><input type="search" placeholder="${escapeHtml(searchPlaceholder)}" value="${escapeHtml(state.mobileQuery)}"></label>
       <label><span>Conteúdo</span><select class="agenda-content">
@@ -3082,11 +3119,7 @@
       state.mobileSearchTimer = window.setTimeout(rerender, 180);
     });
     controls.querySelector('.agenda-content').addEventListener('change', event => {
-      state.mobileContent = event.target.value;
-      if (state.mobileContent !== 'contests') {
-        const allowedThemes = new Set(agendaThemeOptions(state.mobileContent).map(([value]) => value));
-        if (state.mobileTheme && !allowedThemes.has(state.mobileTheme)) state.mobileTheme = '';
-      }
+      normalizeAgendaFiltersForContent(event.target.value);
       rerender();
     });
     controls.querySelector('.agenda-theme')?.addEventListener('change', event => { state.mobileTheme = event.target.value; rerender(); });
@@ -3114,11 +3147,7 @@
 
     resultsContainer.querySelectorAll('.agenda-section-action').forEach(button => {
       button.addEventListener('click', () => {
-        state.mobileContent = button.dataset.content || 'all';
-        if (state.mobileContent !== 'contests') {
-          const allowedThemes = new Set(agendaThemeOptions(state.mobileContent).map(([value]) => value));
-          if (state.mobileTheme && !allowedThemes.has(state.mobileTheme)) state.mobileTheme = '';
-        }
+        normalizeAgendaFiltersForContent(button.dataset.content || 'all');
         rerender();
       });
     });
