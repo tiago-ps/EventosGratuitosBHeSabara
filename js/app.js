@@ -3079,7 +3079,10 @@
     if (!results.total) {
       resultsContainer.innerHTML = '<div class="agenda-empty"><h2>Nenhum conteúdo encontrado</h2><p>Tente alterar a busca ou os filtros.</p></div>';
     } else if (state.mobileContent === 'all') {
-      appendAgendaSection(resultsContainer, 'Agenda Cultural', results.events, 'events', 'Ver somente eventos');
+      const eventsGrid = document.createElement('div');
+      eventsGrid.className = 'agenda-section-grid';
+      results.events.forEach(item => eventsGrid.append(renderAgendaCard(item)));
+      resultsContainer.append(eventsGrid);
       appendAgendaSection(resultsContainer, 'Sugestões de Leitura', results.books, 'books', 'Ver somente livros');
       appendAgendaSection(resultsContainer, 'Cursos Online Gratuitos', results.courses, 'courses', 'Ver somente cursos');
       appendAgendaSection(resultsContainer, 'Concursos públicos', results.contests, 'contests', 'Ver somente concursos');

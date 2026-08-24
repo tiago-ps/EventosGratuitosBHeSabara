@@ -117,4 +117,15 @@ assert.match(appSource, /const common = \[state\.mobileQuery\];/);
 assert.match(appSource, /common\.push\(\s*state\.mobileTheme,\s*state\.mobilePeriod/);
 assert.match(appSource, /common\.push\(state\.mobileTheme, state\.mobileBookAccess\);/);
 
+// Em Todos, Eventos permanecem na primeira posição, mas sem cabeçalho,
+// contador parcial ou atalho redundante para o filtro de conteúdo.
+assert.doesNotMatch(
+  appSource,
+  /appendAgendaSection\(resultsContainer, 'Agenda Cultural', results\.events/
+);
+assert.match(
+  appSource,
+  /const eventsGrid = document\.createElement\('div'\);\s*eventsGrid\.className = 'agenda-section-grid';\s*results\.events\.forEach\(item => eventsGrid\.append\(renderAgendaCard\(item\)\)\);\s*resultsContainer\.append\(eventsGrid\);/
+);
+
 console.log('Testes funcionais e contextuais da Agenda de Cursos aprovados.');
