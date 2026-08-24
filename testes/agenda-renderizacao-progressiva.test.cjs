@@ -13,17 +13,17 @@ const coursesData = JSON.parse(fs.readFileSync(path.join(root, 'cursos.json'), '
 const booksData = JSON.parse(fs.readFileSync(path.join(root, 'livros.json'), 'utf8'));
 const contestsData = JSON.parse(fs.readFileSync(path.join(root, 'concursos.json'), 'utf8'));
 
-const batchMatch = appSource.match(/const AGENDA_COURSE_BATCH_SIZE = (\d+);/);
+const batchMatch = appSource.match(/const AGENDA_BATCH_SIZE = (\d+);/);
 assert.ok(batchMatch, 'Tamanho do lote da Agenda não encontrado.');
 const batchSize = Number(batchMatch[1]);
 assert.equal(batchSize, 24);
 
 const nextCountMatch = appSource.match(
-  /function nextAgendaCourseCount\(visibleCount, total\) \{[\s\S]*?\n  \}/
+  /function nextAgendaVisibleCount\(visibleCount, total\) \{[\s\S]*?\n  \}/
 );
 assert.ok(nextCountMatch, 'Função de avanço do lote não encontrada.');
-const context = vm.createContext({ AGENDA_COURSE_BATCH_SIZE: batchSize });
-vm.runInContext(`${nextCountMatch[0]}; globalThis.nextCount = nextAgendaCourseCount;`, context);
+const context = vm.createContext({ AGENDA_BATCH_SIZE: batchSize });
+vm.runInContext(`${nextCountMatch[0]}; globalThis.nextCount = nextAgendaVisibleCount;`, context);
 const nextCount = context.nextCount;
 
 const courseTotal = coursesData.cursos.length;
@@ -75,13 +75,15 @@ assert.deepEqual(searchedCatalog.batches.slice(0, 4), [24, 48, 72, leadershipRes
 assert.equal(renderedIndexes(0).indexes.length, 0);
 assert.equal(renderedIndexes(courseTotal).batches[0], 24, 'Limpar a busca deve voltar ao primeiro lote.');
 
-assert.match(appSource, /agendaVisibleCourseCount: AGENDA_COURSE_BATCH_SIZE/);
+for (const content of ['events', 'books', 'courses', 'contests']) {
+  assert.match(appSource, new RegExp(`${content}: AGENDA_BATCH_SIZE`));
+}
 assert.match(appSource, /const results = agendaVisibleContents\(\);/);
 assert.match(appSource, /<strong>\$\{results\.total\}<\/strong>/);
 assert.match(appSource, /document\.createDocumentFragment\(\)/);
 assert.match(appSource, /items\.slice\(start, end\)\.forEach/);
-assert.match(appSource, /appendAgendaCardRange\(grid, courses, previousCount, visibleCount\);/);
-assert.match(appSource, /const rerender = \(\) => \{\s*resetAgendaCourseBatch\(\);\s*renderAgenda\(\);/);
+assert.match(appSource, /appendAgendaCardRange\(grid, items, previousCount, visibleCount, renderItem\);/);
+assert.match(appSource, /const rerender = \(\) => \{\s*resetAgendaBatches\(\);\s*renderAgenda\(\);/);
 
 const allModeStart = appSource.indexOf("} else if (state.mobileContent === 'all') {");
 const exclusiveModeStart = appSource.indexOf('    } else {', allModeStart);
@@ -93,16 +95,31 @@ const coursesIndex = allModeSource.indexOf("'Cursos Online Gratuitos'");
 const contestsIndex = allModeSource.indexOf("'Concursos públicos'");
 assert.ok(eventsIndex < booksIndex && booksIndex < coursesIndex && coursesIndex < contestsIndex);
 assert.match(allModeSource, /results\.events\.forEach\(item => eventsGrid\.append\(renderAgendaCard\(item\)\)\)/);
-assert.match(allModeSource, /'Sugestões de Leitura', results\.books, 'books', 'Ver somente livros'\)/);
-assert.match(allModeSource, /'Cursos Online Gratuitos', results\.courses, 'courses', 'Ver somente cursos', true\)/);
-assert.match(allModeSource, /'Concursos públicos', results\.contests, 'contests', 'Ver somente concursos'\)/);
+assert.match(allModeSource, /appendAgendaSection\(resultsContainer, 'Sugestões de Leitura', results\.books, 'books', 'Ver somente livros'\)/);
+assert.match(allModeSource, /appendAgendaSection\(resultsContainer, 'Cursos Online Gratuitos', results\.courses, 'courses', 'Ver somente cursos'\)/);
+assert.match(allModeSource, /appendAgendaSection\(resultsContainer, 'Concursos públicos', results\.contests, 'contests', 'Ver somente concursos'\)/);
 
-assert.match(appSource, /state\.mobileContent === 'courses'\s*\? createAgendaCourseProgressiveControl\(list, items\)/);
-assert.match(appSource, /if \(state\.mobileContent !== 'courses'\) \{\s*items\.forEach/);
-assert.match(appSource, /aria-label="Mostrar mais cursos">Mostrar mais<\/button>/);
+assert.match(appSource, /createAgendaProgressiveControl\(grid, items, contentValue\)/);
+assert.match(appSource, /state\.mobileContent === 'events'\s*\? null\s*: createAgendaProgressiveControl\(list, items, state\.mobileContent\)/);
+assert.match(appSource, /if \(state\.mobileContent === 'events'\) \{\s*items\.forEach/);
+assert.match(appSource, /aria-label="Mostrar mais \$\{labels\.plural\}" aria-controls="\$\{grid\.id\}"/);
 assert.match(appSource, /role="status" aria-live="polite" aria-atomic="true"/);
 assert.match(appSource, /button\.setAttribute\('aria-disabled', 'true'\)/);
-assert.match(stylesSource, /\.agenda-course-more \{[\s\S]*?min-height: 44px;/);
+assert.match(stylesSource, /\.agenda-more \{[\s\S]*?min-height: 44px;/);
+
+const totalsByContent = {
+  books: booksData.livros.length,
+  courses: courseTotal,
+  contests: contestsData.concursos.length
+};
+for (const [content, total] of Object.entries(totalsByContent)) {
+  const rendering = renderedIndexes(total);
+  assert.equal(rendering.indexes.length, total, `${content}: catálogo completo deve ser alcançável.`);
+  assert.equal(new Set(rendering.indexes).size, total, `${content}: cards não podem ser duplicados.`);
+  assert.equal(rendering.batches[0], Math.min(batchSize, total));
+}
+assert.deepEqual(renderedIndexes(booksData.livros.length).batches, [booksData.livros.length]);
+assert.deepEqual(renderedIndexes(contestsData.concursos.length).batches, [24, 27]);
 
 assert.match(
   eventsUiSource,

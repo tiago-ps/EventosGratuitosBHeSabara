@@ -12,7 +12,13 @@
   const SLIDE_DURATION_KEY = 'mural-cultural-tempo-slides';
   const PANEL_SETTINGS_KEY = 'mural-cultural-configuracao-painel-v1';
   const PANEL_PROFILES_KEY = 'mural-cultural-perfis-painel-v1';
-  const AGENDA_COURSE_BATCH_SIZE = 24;
+  const AGENDA_BATCH_SIZE = 24;
+  const AGENDA_CONTENT_LABELS = Object.freeze({
+    events: { singular: 'evento', plural: 'eventos' },
+    books: { singular: 'livro', plural: 'livros' },
+    courses: { singular: 'curso', plural: 'cursos' },
+    contests: { singular: 'concurso', plural: 'concursos' }
+  });
   const ALLOWED_SLIDE_DURATIONS = new Set([0, 5, 8, 10, 12, 15, 20, 30]);
   const CONTENT_SUBTITLES = Object.freeze({
     evento: 'Agenda Cultural',
@@ -124,7 +130,12 @@
     mobileContestFormation: '',
     mobileContestUf: '',
     mobileContestDeadline: '',
-    agendaVisibleCourseCount: AGENDA_COURSE_BATCH_SIZE
+    agendaVisibleCounts: {
+      events: AGENDA_BATCH_SIZE,
+      books: AGENDA_BATCH_SIZE,
+      courses: AGENDA_BATCH_SIZE,
+      contests: AGENDA_BATCH_SIZE
+    }
   };
 
   function normalizeText(value = '') {
@@ -2915,54 +2926,58 @@
     return article;
   }
 
-  function resetAgendaCourseBatch() {
-    state.agendaVisibleCourseCount = AGENDA_COURSE_BATCH_SIZE;
+  function resetAgendaBatches() {
+    for (const content of Object.keys(AGENDA_CONTENT_LABELS)) {
+      state.agendaVisibleCounts[content] = AGENDA_BATCH_SIZE;
+    }
   }
 
-  function nextAgendaCourseCount(visibleCount, total) {
-    return Math.min(visibleCount + AGENDA_COURSE_BATCH_SIZE, total);
+  function nextAgendaVisibleCount(visibleCount, total) {
+    return Math.min(visibleCount + AGENDA_BATCH_SIZE, total);
   }
 
-  function appendAgendaCardRange(container, items, start, end) {
+  function appendAgendaCardRange(container, items, start, end, renderItem = renderAgendaCard) {
     const fragment = document.createDocumentFragment();
-    items.slice(start, end).forEach(item => fragment.append(renderAgendaCard(item)));
+    items.slice(start, end).forEach(item => fragment.append(renderItem(item)));
     container.append(fragment);
   }
 
-  function createAgendaCourseProgressiveControl(grid, courses) {
-    const total = courses.length;
-    let visibleCount = Math.min(state.agendaVisibleCourseCount, total);
+  function createAgendaProgressiveControl(grid, items, content, renderItem = renderAgendaCard) {
+    const labels = AGENDA_CONTENT_LABELS[content];
+    const total = items.length;
+    let visibleCount = Math.min(state.agendaVisibleCounts[content], total);
+    grid.id = `agenda-grid-${content}`;
     grid.setAttribute('aria-live', 'off');
-    appendAgendaCardRange(grid, courses, 0, visibleCount);
+    appendAgendaCardRange(grid, items, 0, visibleCount, renderItem);
 
     if (visibleCount >= total) return null;
 
     const control = document.createElement('div');
-    control.className = 'agenda-course-progressive';
+    control.className = 'agenda-progressive';
     control.innerHTML = `
-      <p class="agenda-course-progress">Mostrando <strong>${visibleCount}</strong> de <strong>${total}</strong> cursos</p>
-      <button type="button" class="agenda-course-more" aria-label="Mostrar mais cursos">Mostrar mais</button>
-      <p class="agenda-course-status" role="status" aria-live="polite" aria-atomic="true"></p>
+      <p class="agenda-progress">Mostrando <strong>${visibleCount}</strong> de <strong>${total}</strong> ${labels.plural}</p>
+      <button type="button" class="agenda-more" aria-label="Mostrar mais ${labels.plural}" aria-controls="${grid.id}">Mostrar mais ${labels.plural}</button>
+      <p class="agenda-progress-status" role="status" aria-live="polite" aria-atomic="true"></p>
     `;
 
-    const progress = control.querySelector('.agenda-course-progress');
-    const button = control.querySelector('.agenda-course-more');
-    const status = control.querySelector('.agenda-course-status');
+    const progress = control.querySelector('.agenda-progress');
+    const button = control.querySelector('.agenda-more');
+    const status = control.querySelector('.agenda-progress-status');
 
     button.addEventListener('click', () => {
       if (button.getAttribute('aria-disabled') === 'true') return;
 
       const previousCount = visibleCount;
-      visibleCount = nextAgendaCourseCount(previousCount, total);
-      appendAgendaCardRange(grid, courses, previousCount, visibleCount);
-      state.agendaVisibleCourseCount = visibleCount;
+      visibleCount = nextAgendaVisibleCount(previousCount, total);
+      appendAgendaCardRange(grid, items, previousCount, visibleCount, renderItem);
+      state.agendaVisibleCounts[content] = visibleCount;
 
-      progress.innerHTML = `Mostrando <strong>${visibleCount}</strong> de <strong>${total}</strong> cursos`;
-      status.textContent = `Mais ${visibleCount - previousCount} cursos carregados. ${visibleCount} de ${total} exibidos.`;
+      progress.innerHTML = `Mostrando <strong>${visibleCount}</strong> de <strong>${total}</strong> ${labels.plural}`;
+      status.textContent = `Mais ${visibleCount - previousCount} ${labels.plural} carregados. ${visibleCount} de ${total} exibidos.`;
 
       if (visibleCount >= total) {
-        button.textContent = 'Todos os cursos exibidos';
-        button.setAttribute('aria-label', 'Todos os cursos estão exibidos');
+        button.textContent = `Todos os ${labels.plural} exibidos`;
+        button.setAttribute('aria-label', `Todos os ${labels.plural} estão exibidos`);
         button.setAttribute('aria-disabled', 'true');
         button.classList.add('is-complete');
       }
@@ -2971,7 +2986,7 @@
     return control;
   }
 
-  function appendAgendaSection(container, title, items, contentValue, actionLabel, progressiveCourses = false) {
+  function appendAgendaSection(container, title, items, contentValue, actionLabel) {
     if (!items.length) return;
     const section = document.createElement('section');
     section.className = 'agenda-content-section';
@@ -2988,10 +3003,7 @@
 
     const grid = document.createElement('div');
     grid.className = 'agenda-section-grid';
-    const progressiveControl = progressiveCourses
-      ? createAgendaCourseProgressiveControl(grid, items)
-      : null;
-    if (!progressiveCourses) items.forEach(item => grid.append(renderAgendaCard(item)));
+    const progressiveControl = createAgendaProgressiveControl(grid, items, contentValue);
     section.append(heading, grid);
     if (progressiveControl) section.append(progressiveControl);
     container.append(section);
@@ -3146,7 +3158,7 @@
       results.events.forEach(item => eventsGrid.append(renderAgendaCard(item)));
       resultsContainer.append(eventsGrid);
       appendAgendaSection(resultsContainer, 'Sugestões de Leitura', results.books, 'books', 'Ver somente livros');
-      appendAgendaSection(resultsContainer, 'Cursos Online Gratuitos', results.courses, 'courses', 'Ver somente cursos', true);
+      appendAgendaSection(resultsContainer, 'Cursos Online Gratuitos', results.courses, 'courses', 'Ver somente cursos');
       appendAgendaSection(resultsContainer, 'Concursos públicos', results.contests, 'contests', 'Ver somente concursos');
     } else {
       const list = document.createElement('section');
@@ -3158,10 +3170,10 @@
           : state.mobileContent === 'contests'
             ? results.contests
             : results.courses;
-      const progressiveControl = state.mobileContent === 'courses'
-        ? createAgendaCourseProgressiveControl(list, items)
-        : null;
-      if (state.mobileContent !== 'courses') {
+      const progressiveControl = state.mobileContent === 'events'
+        ? null
+        : createAgendaProgressiveControl(list, items, state.mobileContent);
+      if (state.mobileContent === 'events') {
         items.forEach(item => list.append(renderAgendaCard(item)));
       }
       resultsContainer.append(list);
@@ -3178,14 +3190,14 @@
     refreshInstallButtons();
 
     header.querySelector('.view-toggle').addEventListener('click', () => {
-      resetAgendaCourseBatch();
+      resetAgendaBatches();
       saveViewMode('painel');
       state.isPaused = false;
       renderCurrentView();
     });
 
     const rerender = () => {
-      resetAgendaCourseBatch();
+      resetAgendaBatches();
       renderAgenda();
     };
     controls.querySelector('.agenda-search input').addEventListener('input', event => {
@@ -3238,7 +3250,7 @@
     button.setAttribute('aria-label', 'Abrir modo agenda');
     button.textContent = '☷';
     button.addEventListener('click', () => {
-      resetAgendaCourseBatch();
+      resetAgendaBatches();
       saveViewMode('agenda');
       renderCurrentView();
     });
