@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v63.4-fresh-data';
+const CACHE_VERSION = 'mural-cultural-v70-contests-final';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -6,10 +6,27 @@ const MAX_IMAGE_CACHE_ITEMS = 140;
 const BRAND_LOGO_PATH = '/imagens/marca/logo-mural-cultural.png';
 
 const CORE_ASSETS = [
-  './', './index.html', './css/styles.css', './css/eventos-manuais-ui.css',
-  './js/app.js', './js/eventos-manuais-ui.js', './js/ios-install.js', './manifest.webmanifest',
+  './', './index.html',
+  './css/styles.css?v=63',
+  './css/eventos-manuais-ui.css?v=42',
+  './css/concursos-mural.css?v=2',
+  './js/core/rotacao.js?v=1',
+  './js/conteudos/cursos.js?v=1',
+  './js/conteudos/concursos.js?v=2',
+  './js/app.js?v=70',
+  './js/eventos-manuais-ui.js?v=42',
+  './js/ios-install.js?v=1',
+  './manifest.webmanifest',
   './imagens/app-icons/icon-192.png', './imagens/app-icons/icon-512.png',
   './imagens/app-icons/apple-touch-icon.png'
+];
+
+const DATA_PATHS = [
+  '/eventos.json',
+  '/livros.json',
+  '/cursos.json',
+  '/concursos.json',
+  '/configuracao-mural.json'
 ];
 
 self.addEventListener('install', event => {
@@ -81,7 +98,7 @@ self.addEventListener('fetch', event => {
 
   if (request.mode === 'navigate') {
     event.respondWith(networkFirst(request, CORE_CACHE, './index.html', 'text/html'));
-  } else if (['/eventos.json', '/livros.json', '/configuracao-mural.json'].some(path => url.pathname.endsWith(path))) {
+  } else if (DATA_PATHS.some(path => url.pathname.endsWith(path))) {
     const fileName = url.pathname.split('/').pop();
     // Sempre consulta a rede sem reutilizar a resposta HTTP anterior. O Cache
     // Storage continua servindo como fallback somente quando a rede falha.
