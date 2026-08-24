@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v73-all-agenda-list';
+const CACHE_VERSION = 'mural-cultural-v74-progressive-courses';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -7,14 +7,14 @@ const BRAND_LOGO_PATH = '/imagens/marca/logo-mural-cultural.png';
 
 const CORE_ASSETS = [
   './', './index.html',
-  './css/styles.css?v=63',
-  './css/eventos-manuais-ui.css?v=42',
+  './css/styles.css?v=64',
+  './css/eventos-manuais-ui.css?v=43',
   './css/concursos-mural.css?v=2',
   './js/core/rotacao.js?v=1',
   './js/conteudos/cursos.js?v=1',
   './js/conteudos/concursos.js?v=2',
-  './js/app.js?v=73',
-  './js/eventos-manuais-ui.js?v=42',
+  './js/app.js?v=74',
+  './js/eventos-manuais-ui.js?v=43',
   './js/ios-install.js?v=1',
   './manifest.webmanifest',
   './imagens/app-icons/icon-192.png', './imagens/app-icons/icon-512.png',

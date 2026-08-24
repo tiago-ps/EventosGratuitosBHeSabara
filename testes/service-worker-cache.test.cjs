@@ -81,13 +81,16 @@ async function dispatch(type, event) {
 }
 
 (async () => {
-  assert.equal(sw.CACHE_VERSION, 'mural-cultural-v73-all-agenda-list');
+  assert.equal(sw.CACHE_VERSION, 'mural-cultural-v74-progressive-courses');
   for (const asset of [
+    './css/styles.css?v=64',
+    './css/eventos-manuais-ui.css?v=43',
     './css/concursos-mural.css?v=2',
     './js/core/rotacao.js?v=1',
     './js/conteudos/cursos.js?v=1',
     './js/conteudos/concursos.js?v=2',
-    './js/app.js?v=73'
+    './js/app.js?v=74',
+    './js/eventos-manuais-ui.js?v=43'
   ]) {
     assert.ok(sw.CORE_ASSETS.includes(asset), `Precache ausente: ${asset}`);
   }
