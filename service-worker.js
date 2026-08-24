@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v71-all-modules-default';
+const CACHE_VERSION = 'mural-cultural-v72-course-agenda';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -13,7 +13,7 @@ const CORE_ASSETS = [
   './js/core/rotacao.js?v=1',
   './js/conteudos/cursos.js?v=1',
   './js/conteudos/concursos.js?v=2',
-  './js/app.js?v=71',
+  './js/app.js?v=72',
   './js/eventos-manuais-ui.js?v=42',
   './js/ios-install.js?v=1',
   './manifest.webmanifest',
