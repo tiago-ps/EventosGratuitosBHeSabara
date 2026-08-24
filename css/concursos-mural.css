@@ -1,0 +1,126 @@
+/* Concursos integrados à Agenda do Mural Cultural. */
+.agenda-tools-contests {
+  grid-template-columns: minmax(260px, 2fr) repeat(4, minmax(145px, 1fr));
+}
+
+.agenda-contest-card {
+  border-color: rgba(66, 106, 148, .72);
+  background: linear-gradient(155deg, rgba(13, 27, 44, .98), rgba(8, 20, 35, .98));
+}
+
+.agenda-contest-card .contest-media {
+  background: #e9eef3;
+}
+
+.agenda-contest-card .contest-media img {
+  object-fit: cover;
+}
+
+.agenda-contest-card .contest-badges > span:first-child {
+  background: #1b426b;
+  color: #eef5ff;
+}
+
+.agenda-contest-card .contest-badges {
+  margin-bottom: 12px;
+}
+
+.agenda-contest-card .contest-badges .contest-formation-badge {
+  background: #173b34;
+  color: #c8f2e3;
+}
+
+.contest-remuneration {
+  margin: 10px 0 0;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.contest-remuneration strong,
+.agenda-contest-card .agenda-card-place strong {
+  color: var(--detail-heading);
+}
+
+.contest-positions {
+  margin-top: 14px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background: rgba(255, 255, 255, .04);
+}
+
+.contest-positions h3 {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .055em;
+  text-transform: uppercase;
+}
+
+.contest-positions ul {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.contest-positions li {
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.contest-positions li span {
+  color: var(--muted);
+  font-weight: 650;
+}
+
+.contest-source {
+  margin: 12px 0 0;
+  color: #8195aa;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.agenda-contest-count strong {
+  color: var(--accent);
+}
+
+@media (max-width: 980px) {
+  .agenda-tools-contests {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .agenda-tools-contests .agenda-search {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 760px) {
+  .agenda-contest-card {
+    display: block;
+  }
+
+  .agenda-contest-card .contest-media {
+    aspect-ratio: 16 / 9;
+    min-height: 0;
+  }
+
+  .agenda-contest-card .contest-media img {
+    position: static;
+    min-height: 0;
+  }
+}
+
+@media (max-width: 430px) {
+  .agenda-tools-contests {
+    grid-template-columns: 1fr;
+  }
+
+  .agenda-tools-contests .agenda-search {
+    grid-column: auto;
+  }
+}

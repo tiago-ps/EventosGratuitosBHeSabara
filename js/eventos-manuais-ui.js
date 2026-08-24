@@ -479,7 +479,7 @@
   function enhanceAgendaCards() {
     expandUnfilteredAgendaEvents();
 
-    document.querySelectorAll('#app .agenda-card:not(.agenda-book-card)').forEach(card => {
+    document.querySelectorAll('#app .agenda-card:not(.agenda-book-card):not(.agenda-contest-card)').forEach(card => {
       const event = findAgendaCardEvent(card);
       if (!event) return;
 

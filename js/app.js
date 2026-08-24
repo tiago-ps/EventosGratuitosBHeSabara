@@ -4,6 +4,7 @@
   const DATA_URL = 'eventos.json';
   const BOOKS_URL = 'livros.json';
   const COURSES_URL = 'cursos.json';
+  const CONTESTS_URL = 'concursos.json';
   const CONFIG_URL = 'configuracao-mural.json';
   const app = document.getElementById('app');
   const SCHOOL_ROTATION_SIZE = 6;
@@ -23,6 +24,7 @@
   const template = document.getElementById('slide-template');
   const muralCore = window.MuralCultural.core;
   const coursesContent = window.MuralCultural.contents.courses;
+  const contestsContent = window.MuralCultural.contents.contests;
   let deferredInstallPrompt = null;
 
   // O tema original é fixo; remove preferências antigas salvas pelo seletor.
@@ -76,10 +78,12 @@
     data: null,
     booksData: null,
     coursesData: null,
+    contestsData: null,
     config: null,
     allEvents: [],
     allBooks: [],
     allCourses: [],
+    allContests: [],
     events: [],
     index: 0,
     timer: null,
@@ -115,7 +119,10 @@
     mobileSpace: '',
     mobileInstitution: '',
     mobileRegistration: '',
-    mobileBookAccess: ''
+    mobileBookAccess: '',
+    mobileContestFormation: '',
+    mobileContestUf: '',
+    mobileContestDeadline: ''
   };
 
   function normalizeText(value = '') {
@@ -2567,7 +2574,7 @@
   }
 
   function agendaVisibleEvents() {
-    if (state.mobileContent === 'books') return [];
+    if (state.mobileContent === 'books' || state.mobileContent === 'contests') return [];
     const query = normalizeText(state.mobileQuery);
     const specific = state.mobileContent === 'events';
     return agendaEventSource().filter(event => {
@@ -2588,7 +2595,7 @@
   }
 
   function agendaVisibleBooks() {
-    if (state.mobileContent === 'events' || state.config?.modulos?.livros === false) return [];
+    if (['events', 'contests'].includes(state.mobileContent) || state.config?.modulos?.livros === false) return [];
     const query = normalizeText(state.mobileQuery);
     const today = todayAtMidnight();
     const specific = state.mobileContent === 'books';
@@ -2616,14 +2623,42 @@
       .filter(course => coursesContent.agendaQueryMatches(course, query, normalizeText));
   }
 
+  function agendaVisibleContests() {
+    if (!['all', 'contests'].includes(state.mobileContent) || state.config?.modulos?.concursos === false) {
+      return [];
+    }
+    return contestsContent.filter(state.allContests, {
+      query: state.mobileQuery,
+      formation: state.mobileContent === 'contests' ? state.mobileContestFormation : '',
+      uf: state.mobileContent === 'contests' ? state.mobileContestUf : '',
+      deadline: state.mobileContent === 'contests' ? state.mobileContestDeadline : ''
+    });
+  }
+
   function agendaVisibleContents() {
     const events = agendaVisibleEvents();
     const books = agendaVisibleBooks();
     const courses = agendaVisibleCourses();
-    return { events, books, courses, total: events.length + books.length + courses.length };
+    const contests = agendaVisibleContests();
+    return {
+      events,
+      books,
+      courses,
+      contests,
+      total: events.length + books.length + courses.length + contests.length
+    };
   }
 
   function agendaActiveFilterCount() {
+    if (state.mobileContent === 'contests') {
+      return [
+        state.mobileQuery,
+        state.mobileContestFormation,
+        state.mobileContestUf,
+        state.mobileContestDeadline
+      ].filter(Boolean).length;
+    }
+
     const common = [state.mobileQuery, state.mobileTheme];
     if (state.mobileContent !== 'all') common.push(state.mobileContent);
     if (state.mobileContent === 'events') {
@@ -2649,6 +2684,16 @@
     state.mobileInstitution = '';
     state.mobileRegistration = '';
     state.mobileBookAccess = '';
+    state.mobileContestFormation = '';
+    state.mobileContestUf = '';
+    state.mobileContestDeadline = '';
+  }
+
+  function clearContestAgendaFilters() {
+    state.mobileQuery = '';
+    state.mobileContestFormation = '';
+    state.mobileContestUf = '';
+    state.mobileContestDeadline = '';
   }
 
   function mobileSelectOptions(events, field) {
@@ -2703,10 +2748,18 @@
     if (state.mobileContent === 'events') return 'Agenda Cultural';
     if (state.mobileContent === 'books') return 'Sugestão de Leitura';
     if (state.mobileContent === 'courses') return 'Cursos Online Gratuitos';
+    if (state.mobileContent === 'contests') return 'Concursos públicos';
     return 'Descobertas culturais';
   }
 
   function renderAgendaCard(item) {
+    if (item.tipo_conteudo === 'concurso') {
+      return contestsContent.createAgendaCard(item, {
+        safeExternalUrl,
+        safeImageUrl
+      });
+    }
+
     if (item.tipo_conteudo === 'curso') {
       return coursesContent.createAgendaCard(item, {
         safeExternalUrl,
@@ -2811,12 +2864,19 @@
     controls.className = `agenda-tools agenda-tools-${state.mobileContent}`;
     controls.setAttribute('aria-label', 'Pesquisar e filtrar conteúdos');
 
-    const commonControls = `
-      <label class="agenda-search"><span>Pesquisar</span><input type="search" placeholder="Título, autor, instituição ou tema" value="${escapeHtml(state.mobileQuery)}"></label>
-      <label><span>Conteúdo</span><select class="agenda-content">
-        <option value="all">Todos</option><option value="events">Eventos</option><option value="books">Livros</option><option value="courses">Cursos</option>
-      </select></label>
+    const contestMode = state.mobileContent === 'contests';
+    const searchPlaceholder = contestMode
+      ? 'Órgão, cargo, cidade, formação…'
+      : 'Título, autor, instituição ou tema';
+    const themeControl = contestMode ? '' : `
       <label><span>Tema</span><select class="agenda-theme"><option value="">Todos os temas</option></select></label>
+    `;
+    const commonControls = `
+      <label class="agenda-search"><span>Pesquisar</span><input type="search" placeholder="${escapeHtml(searchPlaceholder)}" value="${escapeHtml(state.mobileQuery)}"></label>
+      <label><span>Conteúdo</span><select class="agenda-content">
+        <option value="all">Todos</option><option value="events">Eventos</option><option value="books">Livros</option><option value="courses">Cursos</option><option value="contests">Concursos</option>
+      </select></label>
+      ${themeControl}
     `;
 
     const eventControls = state.mobileContent === 'events' ? `
@@ -2842,7 +2902,16 @@
       </select></label>
     ` : '';
 
-    controls.innerHTML = commonControls + eventControls + bookControls;
+    const contestControls = contestMode ? `
+      <label><span>Formação</span><select class="agenda-contest-formation"><option value="">Todas as formações</option></select></label>
+      <label><span>UF</span><select class="agenda-contest-uf"><option value="">Todos os estados</option></select></label>
+      <label><span>Prazo</span><select class="agenda-contest-deadline">
+        <option value="">Todos os prazos</option><option value="com-data">Com data de inscrição</option>
+        <option value="sem-data">Sem data informada</option>
+      </select></label>
+    ` : '';
+
+    controls.innerHTML = commonControls + eventControls + bookControls + contestControls;
 
     controls.querySelector('.agenda-content').value = state.mobileContent;
     populateDynamicSelect(
@@ -2871,11 +2940,28 @@
       controls.querySelector('.agenda-registration').value = state.mobileRegistration;
     } else if (state.mobileContent === 'books') {
       controls.querySelector('.agenda-book-access').value = state.mobileBookAccess;
+    } else if (contestMode) {
+      populateDynamicSelect(
+        controls.querySelector('.agenda-contest-formation'),
+        'Todas as formações',
+        contestsContent.formationOptions(state.allContests),
+        state.mobileContestFormation
+      );
+      populateDynamicSelect(
+        controls.querySelector('.agenda-contest-uf'),
+        'Todos os estados',
+        contestsContent.ufOptions(state.allContests),
+        state.mobileContestUf
+      );
+      controls.querySelector('.agenda-contest-deadline').value = state.mobileContestDeadline;
     }
 
     const count = document.createElement('div');
     count.className = 'agenda-count';
-    count.innerHTML = `
+    count.innerHTML = contestMode ? `
+      <span><strong>${results.total}</strong> de ${state.allContests.length} oportunidades compatíveis com as formações acompanhadas.${activeFilters ? ` · ${activeFilters} ${activeFilters === 1 ? 'filtro ativo' : 'filtros ativos'}` : ''}</span>
+      ${activeFilters ? '<button type="button" class="agenda-clear-filters">Limpar filtros</button>' : ''}
+    ` : `
       <span><strong>${results.total}</strong> ${results.total === 1 ? 'conteúdo encontrado' : 'conteúdos encontrados'}${activeFilters ? ` · ${activeFilters} ${activeFilters === 1 ? 'filtro ativo' : 'filtros ativos'}` : ''}</span>
       ${activeFilters ? '<button type="button" class="agenda-clear-filters">Limpar filtros</button>' : ''}
     `;
@@ -2890,10 +2976,17 @@
       appendAgendaSection(resultsContainer, 'Agenda Cultural', results.events, 'events', 'Ver somente eventos');
       appendAgendaSection(resultsContainer, 'Sugestões de Leitura', results.books, 'books', 'Ver somente livros');
       appendAgendaSection(resultsContainer, 'Cursos Online Gratuitos', results.courses, 'courses', 'Ver somente cursos');
+      appendAgendaSection(resultsContainer, 'Concursos públicos', results.contests, 'contests', 'Ver somente concursos');
     } else {
       const list = document.createElement('section');
       list.className = 'agenda-list';
-      const items = state.mobileContent === 'events' ? results.events : state.mobileContent === 'books' ? results.books : results.courses;
+      const items = state.mobileContent === 'events'
+        ? results.events
+        : state.mobileContent === 'books'
+          ? results.books
+          : state.mobileContent === 'contests'
+            ? results.contests
+            : results.courses;
       items.forEach(item => list.append(renderAgendaCard(item)));
       resultsContainer.append(list);
     }
@@ -2921,11 +3014,13 @@
     });
     controls.querySelector('.agenda-content').addEventListener('change', event => {
       state.mobileContent = event.target.value;
-      const allowedThemes = new Set(agendaThemeOptions(state.mobileContent).map(([value]) => value));
-      if (state.mobileTheme && !allowedThemes.has(state.mobileTheme)) state.mobileTheme = '';
+      if (state.mobileContent !== 'contests') {
+        const allowedThemes = new Set(agendaThemeOptions(state.mobileContent).map(([value]) => value));
+        if (state.mobileTheme && !allowedThemes.has(state.mobileTheme)) state.mobileTheme = '';
+      }
       rerender();
     });
-    controls.querySelector('.agenda-theme').addEventListener('change', event => { state.mobileTheme = event.target.value; rerender(); });
+    controls.querySelector('.agenda-theme')?.addEventListener('change', event => { state.mobileTheme = event.target.value; rerender(); });
 
     if (state.mobileContent === 'events') {
       controls.querySelector('.agenda-period').addEventListener('change', event => { state.mobilePeriod = event.target.value; rerender(); });
@@ -2936,18 +3031,25 @@
       controls.querySelector('.agenda-registration').addEventListener('change', event => { state.mobileRegistration = event.target.value; rerender(); });
     } else if (state.mobileContent === 'books') {
       controls.querySelector('.agenda-book-access').addEventListener('change', event => { state.mobileBookAccess = event.target.value; rerender(); });
+    } else if (contestMode) {
+      controls.querySelector('.agenda-contest-formation').addEventListener('change', event => { state.mobileContestFormation = event.target.value; rerender(); });
+      controls.querySelector('.agenda-contest-uf').addEventListener('change', event => { state.mobileContestUf = event.target.value; rerender(); });
+      controls.querySelector('.agenda-contest-deadline').addEventListener('change', event => { state.mobileContestDeadline = event.target.value; rerender(); });
     }
 
     count.querySelector('.agenda-clear-filters')?.addEventListener('click', () => {
-      clearAgendaFilters();
+      if (contestMode) clearContestAgendaFilters();
+      else clearAgendaFilters();
       rerender();
     });
 
     resultsContainer.querySelectorAll('.agenda-section-action').forEach(button => {
       button.addEventListener('click', () => {
         state.mobileContent = button.dataset.content || 'all';
-        const allowedThemes = new Set(agendaThemeOptions(state.mobileContent).map(([value]) => value));
-        if (state.mobileTheme && !allowedThemes.has(state.mobileTheme)) state.mobileTheme = '';
+        if (state.mobileContent !== 'contests') {
+          const allowedThemes = new Set(agendaThemeOptions(state.mobileContent).map(([value]) => value));
+          if (state.mobileTheme && !allowedThemes.has(state.mobileTheme)) state.mobileTheme = '';
+        }
         rerender();
       });
     });
@@ -2994,10 +3096,11 @@
 
   async function load() {
     try {
-      const [response, booksData, coursesData, config] = await Promise.all([
+      const [response, booksData, coursesData, contestsData, config] = await Promise.all([
         fetch(`${DATA_URL}?v=${Date.now()}`, { cache: 'no-store' }),
         loadOptionalJson(BOOKS_URL, { livros: [] }),
         loadOptionalJson(COURSES_URL, { cursos: [] }),
+        loadOptionalJson(CONTESTS_URL, { concursos: [] }),
         loadOptionalJson(CONFIG_URL, {
           nome: 'Mural Cultural',
           modulos: { eventos: true, livros: false },
@@ -3014,10 +3117,19 @@
       state.data = data;
       state.booksData = booksData && Array.isArray(booksData.livros) ? booksData : { livros: [] };
       state.coursesData = coursesData && Array.isArray(coursesData.cursos) ? coursesData : { cursos: [] };
+      state.contestsData = contestsData && Array.isArray(contestsData.concursos)
+        ? contestsData
+        : { concursos: [] };
       state.config = config || {};
       state.allEvents = filterAndSort(data.eventos).map(event => ({ ...event, tipo_conteudo: 'evento' }));
       state.allBooks = (state.booksData.livros || []).map(book => ({ ...book, tipo_conteudo: 'livro' }));
       state.allCourses = (state.coursesData.cursos || []).map(course => ({ ...course, tipo_conteudo: 'curso' }));
+      state.allContests = (state.contestsData.concursos || [])
+        .filter(contestsContent.isValid)
+        .map(contest => ({
+          ...contestsContent.publicRecord(contest),
+          tipo_conteudo: 'concurso'
+        }));
       state.schoolRotationBatch = readStoredSchoolBatch();
       loadStoredPanelSettings();
       rebuildVisibleItems();
