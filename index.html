@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="stylesheet" href="css/styles.css?v=63">
   <link rel="stylesheet" href="css/eventos-manuais-ui.css?v=42">
-  <link rel="stylesheet" href="css/concursos-mural.css?v=1">
+  <link rel="stylesheet" href="css/concursos-mural.css?v=2">
 <style>
     .slide .badge.course-online {
       background: #4f9cf9;
@@ -257,6 +257,10 @@
                 <input class="panel-module-courses" type="checkbox">
                 <span>Cursos</span>
               </label>
+              <label class="panel-module-toggle">
+                <input class="panel-module-contests" type="checkbox">
+                <span>Concursos</span>
+              </label>
             </div>
           </section>
 
@@ -375,6 +379,24 @@
             </div>
           </section>
 
+          <section class="panel-config-section panel-contest-section" hidden>
+            <div class="panel-section-heading">
+              <div>
+                <h3>Concursos</h3>
+                <p>A programação recebe uma amostra de até 15 concursos do catálogo completo.</p>
+              </div>
+              <label class="panel-weight-field">
+                <span>Frequência</span>
+                <select class="panel-contest-weight">
+                  <option value="1">1</option><option value="2">2</option><option value="3">3</option>
+                  <option value="4">4</option><option value="5">5</option><option value="6">6</option>
+                  <option value="7">7</option><option value="8">8</option><option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </label>
+            </div>
+          </section>
+
           <p class="panel-frequency-help">A frequência define o peso de cada módulo na rotação. Ex.: Eventos 5 + Livros 1 reproduz aproximadamente cinco eventos para cada sugestão de leitura.</p>
 
           <div class="filter-actions">
@@ -391,8 +413,8 @@
   <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
   <script src="js/core/rotacao.js?v=1" defer></script>
   <script src="js/conteudos/cursos.js?v=1" defer></script>
-  <script src="js/conteudos/concursos.js?v=1" defer></script>
-  <script src="js/app.js?v=69" defer></script>
+  <script src="js/conteudos/concursos.js?v=2" defer></script>
+  <script src="js/app.js?v=70" defer></script>
   <script src="js/eventos-manuais-ui.js?v=42" defer></script>
   <script src="js/ios-install.js?v=1" defer></script>
 

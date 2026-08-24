@@ -1,4 +1,49 @@
-/* Concursos integrados à Agenda do Mural Cultural. */
+/* Concursos integrados ao Mural Cultural. */
+.contest-slide .badge.contest-uf {
+  background: #1b426b;
+  color: #eef5ff;
+}
+
+.contest-slide .badge.contest-formation {
+  max-width: min(40vw, 420px);
+  overflow: hidden;
+  background: #173b34;
+  color: #c8f2e3;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.contest-slide .description {
+  color: var(--text);
+  font-weight: 720;
+}
+
+.contest-slide .details > div {
+  border-color: rgba(66, 106, 148, .72);
+  background: linear-gradient(145deg, rgba(16, 39, 63, .86), rgba(10, 27, 45, .92));
+}
+
+.contest-slide .source-url a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: .42em .78em;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.contest-slide .source-url a:hover {
+  color: var(--accent-contrast);
+  filter: brightness(1.08);
+}
+
+.contest-slide .image-fallback {
+  background: radial-gradient(circle at 35% 35%, #274e70, #0a1b2d 68%);
+}
+
 .agenda-tools-contests {
   grid-template-columns: minmax(260px, 2fr) repeat(4, minmax(145px, 1fr));
 }
@@ -100,6 +145,10 @@
 }
 
 @media (max-width: 760px) {
+  .contest-slide .badge.contest-formation {
+    max-width: 62vw;
+  }
+
   .agenda-contest-card {
     display: block;
   }

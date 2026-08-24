@@ -93,10 +93,10 @@
     btnPlayPause: null,
     btnFilter: null,
     filterOverlay: null,
-    panelModules: { events: true, books: true, courses: false },
+    panelModules: { events: true, books: true, courses: false, contests: false },
     panelEventCities: [],
     panelBookCampuses: [],
-    panelWeights: { events: 5, books: 1, courses: 1 },
+    panelWeights: { events: 5, books: 1, courses: 1, contests: 1 },
     filters: {
       content: 'all',
       theme: '',
@@ -551,13 +551,16 @@
     const eventsEnabled = state.panelModules.events && state.config?.modulos?.eventos !== false;
     const booksEnabled = state.panelModules.books && state.config?.modulos?.livros !== false;
     const coursesEnabled = state.panelModules.courses && state.config?.modulos?.cursos !== false;
+    const contestsEnabled = state.panelModules.contests && state.config?.modulos?.concursos !== false;
     const events = eventsEnabled ? visibleEventsForFilters() : [];
     const books = booksEnabled ? filterBooks(state.allBooks) : [];
     const courses = coursesEnabled ? coursesContent.sampleForPanel(state.allCourses) : [];
+    const contests = contestsEnabled ? contestsContent.sampleForPanel(state.allContests) : [];
     state.events = muralCore.interleaveContents([
       { items: events, weight: state.panelWeights.events },
       { items: books, weight: state.panelWeights.books },
-      { items: courses, weight: state.panelWeights.courses }
+      { items: courses, weight: state.panelWeights.courses },
+      { items: contests, weight: state.panelWeights.contests }
     ]);
     return state.events;
   }
@@ -843,7 +846,8 @@
     const defaults = defaultPanelSettings();
     let count = 0;
     if (state.panelModules.events !== defaults.modules.events ||
-        state.panelModules.books !== defaults.modules.books) count += 1;
+        state.panelModules.books !== defaults.modules.books ||
+        state.panelModules.contests !== defaults.modules.contests) count += 1;
     if (state.filters.theme) count += 1;
     if (state.panelModules.events) {
       if (state.panelEventCities.length) count += 1;
@@ -856,7 +860,8 @@
       if (state.filters.bookAccess) count += 1;
     }
     if (state.panelWeights.events !== defaults.weights.events ||
-        state.panelWeights.books !== defaults.weights.books) count += 1;
+        state.panelWeights.books !== defaults.weights.books ||
+        state.panelWeights.contests !== defaults.weights.contests) count += 1;
     if (state.slideDuration !== defaults.slideDuration) count += 1;
     return count;
   }
@@ -1141,6 +1146,7 @@
       evento: 'Abrir este evento',
       livro: 'Ver este livro',
       curso: 'Abrir este curso',
+      concurso: 'Ver este concurso',
       filme: 'Ver este filme',
       jogo: 'Ver este jogo',
       passeio: 'Ver este passeio'
@@ -1189,9 +1195,12 @@
 
   function slideDurationFor(item) {
     if (state.slideDuration >= 5) return state.slideDuration;
-    const defaultSeconds = item?.tipo_conteudo === 'livro'
+    const type = String(item?.tipo_conteudo || 'evento').toLowerCase();
+    const defaultSeconds = type === 'livro'
       ? state.config?.tempo_slide?.livro
-      : state.config?.tempo_slide?.evento;
+      : type === 'concurso'
+        ? state.config?.tempo_slide?.concurso
+        : state.config?.tempo_slide?.evento;
     return Math.max(
       5,
       Number(item?.tempo_slide) ||
@@ -1777,11 +1786,48 @@
     scheduleNextSlide();
   }
 
+  function renderContestSlide(index) {
+    clearTimeout(state.timer);
+    const contest = state.events[index];
+    if (!contest) return;
+
+    const slide = contestsContent.createPanelSlide({
+      contest,
+      index,
+      total: state.events.length,
+      template,
+      helpers: {
+        buildSiteQr,
+        slideDurationFor,
+        configureItemQrLabel,
+        buildQr,
+        safeExternalUrl,
+        safeImageUrl
+      }
+    });
+
+    app.replaceChildren(slide);
+
+    state.btnNext = slide.querySelector('.next-btn');
+    state.btnPrev = slide.querySelector('.prev-btn');
+    state.btnPlayPause = slide.querySelector('.play-pause-btn');
+    state.btnFilter = slide.querySelector('.filter-btn');
+    state.filterOverlay = slide.querySelector('.filter-overlay');
+
+    setupControls();
+    setupFilterPanel(slide);
+    updateFilterButton();
+    updatePlayPauseButton();
+    addPanelViewToggle();
+    scheduleNextSlide();
+  }
+
   function renderSlide(index) {
     const item = state.events[index];
     if (!item) return;
     if (item.tipo_conteudo === 'livro') renderBookSlide(index);
     else if (item.tipo_conteudo === 'curso') renderCourseSlide(index);
+    else if (item.tipo_conteudo === 'concurso') renderContestSlide(index);
     else renderEventSlide(index);
   }
 
@@ -1894,7 +1940,8 @@
         books: panelModules.livros !== undefined
           ? Boolean(panelModules.livros)
           : state.config?.modulos?.livros !== false,
-        courses: panelModules.cursos !== undefined ? Boolean(panelModules.cursos) : false
+        courses: panelModules.cursos !== undefined ? Boolean(panelModules.cursos) : false,
+        contests: panelModules.concursos !== undefined ? Boolean(panelModules.concursos) : false
       },
       theme: String(panel.tema || ''),
       eventCities: Array.isArray(eventConfig.cidades) ? eventConfig.cidades.map(normalizeText).filter(Boolean) : [],
@@ -1906,7 +1953,8 @@
       weights: {
         events: Math.max(1, Number(frequency.eventos ?? state.config?.proporcao?.eventos_por_livro) || 5),
         books: Math.max(1, Number(frequency.livros) || 1),
-        courses: Math.max(1, Number(frequency.cursos) || 1)
+        courses: Math.max(1, Number(frequency.cursos) || 1),
+        contests: Math.max(1, Number(frequency.concursos) || 1)
       },
       slideDuration: ALLOWED_SLIDE_DURATIONS.has(Number(panel.tempo_slides)) ? Number(panel.tempo_slides) : 0
     };
@@ -1922,7 +1970,8 @@
       modules: {
         events: modules.events !== undefined ? Boolean(modules.events) : defaults.modules.events,
         books: modules.books !== undefined ? Boolean(modules.books) : defaults.modules.books,
-        courses: modules.courses !== undefined ? Boolean(modules.courses) : defaults.modules.courses
+        courses: modules.courses !== undefined ? Boolean(modules.courses) : defaults.modules.courses,
+        contests: modules.contests !== undefined ? Boolean(modules.contests) : defaults.modules.contests
       },
       theme: String(value.theme || ''),
       eventCities: Array.isArray(value.eventCities) ? value.eventCities.map(normalizeText).filter(Boolean) : [],
@@ -1934,7 +1983,8 @@
       weights: {
         events: clampWeight(weights.events ?? defaults.weights.events),
         books: clampWeight(weights.books ?? defaults.weights.books),
-        courses: clampWeight(weights.courses ?? defaults.weights.courses)
+        courses: clampWeight(weights.courses ?? defaults.weights.courses),
+        contests: clampWeight(weights.contests ?? defaults.weights.contests)
       },
       slideDuration: ALLOWED_SLIDE_DURATIONS.has(Number(value.slideDuration))
         ? Number(value.slideDuration)
@@ -2135,7 +2185,8 @@
     const eventsEnabled = Boolean(slide.querySelector('.panel-module-events')?.checked);
     const booksEnabled = Boolean(slide.querySelector('.panel-module-books')?.checked);
     const coursesEnabled = Boolean(slide.querySelector('.panel-module-courses')?.checked);
-    if (!eventsEnabled && !booksEnabled && !coursesEnabled) {
+    const contestsEnabled = Boolean(slide.querySelector('.panel-module-contests')?.checked);
+    if (!eventsEnabled && !booksEnabled && !coursesEnabled && !contestsEnabled) {
       throw new Error('Ative pelo menos um tipo de conteúdo para o painel.');
     }
 
@@ -2151,7 +2202,12 @@
     }
 
     return normalizePanelSettings({
-      modules: { events: eventsEnabled, books: booksEnabled, courses: coursesEnabled },
+      modules: {
+        events: eventsEnabled,
+        books: booksEnabled,
+        courses: coursesEnabled,
+        contests: contestsEnabled
+      },
       theme: slide.querySelector('.filter-theme')?.value || '',
       eventCities: checkedFilterValues(cityContainer),
       eventCategory: slide.querySelector('.filter-category')?.value || '',
@@ -2162,7 +2218,8 @@
       weights: {
         events: slide.querySelector('.panel-event-weight')?.value || 5,
         books: slide.querySelector('.panel-book-weight')?.value || 1,
-        courses: slide.querySelector('.panel-course-weight')?.value || 1
+        courses: slide.querySelector('.panel-course-weight')?.value || 1,
+        contests: slide.querySelector('.panel-contest-weight')?.value || 1
       },
       slideDuration: slide.querySelector('.filter-slide-duration')?.value || 0
     });
@@ -2172,12 +2229,15 @@
     const eventsEnabled = Boolean(slide.querySelector('.panel-module-events')?.checked);
     const booksEnabled = Boolean(slide.querySelector('.panel-module-books')?.checked);
     const coursesEnabled = Boolean(slide.querySelector('.panel-module-courses')?.checked);
+    const contestsEnabled = Boolean(slide.querySelector('.panel-module-contests')?.checked);
     const eventSection = slide.querySelector('.panel-event-section');
     const bookSection = slide.querySelector('.panel-book-section');
     const courseSection = slide.querySelector('.panel-course-section');
+    const contestSection = slide.querySelector('.panel-contest-section');
     if (eventSection) eventSection.hidden = !eventsEnabled;
     if (bookSection) bookSection.hidden = !booksEnabled;
     if (courseSection) courseSection.hidden = !coursesEnabled;
+    if (contestSection) contestSection.hidden = !contestsEnabled;
   }
 
   function populateFilterPanel(slide, settings = currentPanelSettings()) {
@@ -2192,16 +2252,20 @@
     const eventsToggle = slide.querySelector('.panel-module-events');
     const booksToggle = slide.querySelector('.panel-module-books');
     const coursesToggle = slide.querySelector('.panel-module-courses');
+    const contestsToggle = slide.querySelector('.panel-module-contests');
     if (eventsToggle) eventsToggle.checked = value.modules.events;
     if (booksToggle) booksToggle.checked = value.modules.books;
     if (coursesToggle) coursesToggle.checked = value.modules.courses;
+    if (contestsToggle) contestsToggle.checked = value.modules.contests;
     if (durationSelect) durationSelect.value = String(value.slideDuration || 0);
     const eventWeight = slide.querySelector('.panel-event-weight');
     const bookWeight = slide.querySelector('.panel-book-weight');
     const courseWeight = slide.querySelector('.panel-course-weight');
+    const contestWeight = slide.querySelector('.panel-contest-weight');
     if (eventWeight) eventWeight.value = String(value.weights.events);
     if (bookWeight) bookWeight.value = String(value.weights.books);
     if (courseWeight) courseWeight.value = String(value.weights.courses);
+    if (contestWeight) contestWeight.value = String(value.weights.contests);
 
     populateDynamicSelect(themeSelect, 'Todos os temas', universalThemeOptions(), value.theme);
 
@@ -2361,6 +2425,7 @@
     slide.querySelector('.panel-module-events')?.addEventListener('change', () => updatePanelModuleVisibility(slide));
     slide.querySelector('.panel-module-books')?.addEventListener('change', () => updatePanelModuleVisibility(slide));
     slide.querySelector('.panel-module-courses')?.addEventListener('change', () => updatePanelModuleVisibility(slide));
+    slide.querySelector('.panel-module-contests')?.addEventListener('change', () => updatePanelModuleVisibility(slide));
     slide.querySelector('.panel-profile-save')?.addEventListener('click', () => savePanelProfile(slide));
     slide.querySelector('.panel-profile-delete')?.addEventListener('click', () => deletePanelProfile(slide));
     slide.querySelector('.panel-profile-select')?.addEventListener('change', event => {
