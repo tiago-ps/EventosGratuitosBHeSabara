@@ -125,7 +125,7 @@ assert.doesNotMatch(
 );
 assert.match(
   appSource,
-  /const eventsGrid = document\.createElement\('div'\);\s*eventsGrid\.className = 'agenda-section-grid';\s*results\.events\.forEach\(item => eventsGrid\.append\(renderAgendaCard\(item\)\)\);\s*resultsContainer\.append\(eventsGrid\);/
+  /const eventsGrid = document\.createElement\('div'\);\s*eventsGrid\.className = 'agenda-section-grid';\s*const eventsProgressiveControl = createAgendaProgressiveControl\(eventsGrid, results\.events, 'events'\);\s*resultsContainer\.append\(eventsGrid\);/
 );
 
 console.log('Testes funcionais e contextuais da Agenda de Cursos aprovados.');

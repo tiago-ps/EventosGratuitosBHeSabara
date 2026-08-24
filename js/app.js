@@ -2554,6 +2554,21 @@
       .filter(Boolean);
   }
 
+  function exclusiveAgendaEventImage(event) {
+    const explicit = [event.imagem, event.imagem_local, event.imagem_programa]
+      .map(safeImageUrl)
+      .find(Boolean);
+    if (explicit) return explicit;
+
+    if (normalizeText(event.local).includes('cine santa tereza')) {
+      return safeImageUrl('imagens/CineSantaTerezaBH.png');
+    }
+    if (normalizeText(event.programa).includes('escola livre de artes arena da cultura')) {
+      return safeImageUrl('imagens/eventos-manuais/escola-livre-de-artes.png');
+    }
+    return '';
+  }
+
   function mobileDateLabel(event) {
     const start = safeDate(event.data);
     if (!start) return event.data || 'Data não informada';
@@ -2633,7 +2648,18 @@
     );
   }
 
+  function agendaHasSpecificEventFilters() {
+    return Boolean(
+      state.mobileQuery || state.mobileTheme || state.mobilePeriod !== 'all' ||
+      state.mobileCity || state.mobileCategory || state.mobileSpace ||
+      state.mobileInstitution || state.mobileRegistration
+    );
+  }
+
   function agendaEventSource() {
+    if (state.mobileContent === 'events' && !agendaHasSpecificEventFilters()) {
+      return state.allEvents;
+    }
     return agendaUsesDetailedEventRecords()
       ? state.allEvents
       : buildDefaultEvents(state.allEvents);
@@ -2862,7 +2888,7 @@
     return 'Descobertas culturais';
   }
 
-  function renderAgendaCard(item) {
+  function renderAgendaCard(item, options = {}) {
     if (item.tipo_conteudo === 'concurso') {
       return contestsContent.createAgendaCard(item, {
         safeExternalUrl,
@@ -2879,7 +2905,7 @@
     }
 
     const article = document.createElement('article');
-    article.className = `agenda-card ${item.tipo_conteudo === 'livro' ? 'agenda-book-card' : ''}`;
+    article.className = `agenda-card ${item.tipo_conteudo === 'livro' ? 'agenda-book-card' : 'agenda-event-card'}`;
 
     if (item.tipo_conteudo === 'livro') {
       const holdingsHtml = agendaBookHoldingsHtml(item);
@@ -2922,7 +2948,20 @@
           ${map ? `<a class="secondary" href="${escapeHtml(map)}" target="_blank" rel="noopener noreferrer">Como chegar</a>` : ''}
         </div>
       </div>`;
-    setMobileCardImage(article.querySelector('img'), event);
+    const image = article.querySelector('img');
+    if (options.exclusiveUnfilteredEvent) {
+      const source = exclusiveAgendaEventImage(event);
+      if (source) {
+        image.src = source;
+        image.alt = `Imagem de divulgação: ${event.titulo || ''}`;
+        image.loading = 'lazy';
+        image.decoding = 'async';
+      } else {
+        image.closest('.agenda-card-media')?.remove();
+      }
+    } else {
+      setMobileCardImage(image, event);
+    }
     return article;
   }
 
@@ -3155,8 +3194,9 @@
     } else if (state.mobileContent === 'all') {
       const eventsGrid = document.createElement('div');
       eventsGrid.className = 'agenda-section-grid';
-      results.events.forEach(item => eventsGrid.append(renderAgendaCard(item)));
+      const eventsProgressiveControl = createAgendaProgressiveControl(eventsGrid, results.events, 'events');
       resultsContainer.append(eventsGrid);
+      if (eventsProgressiveControl) resultsContainer.append(eventsProgressiveControl);
       appendAgendaSection(resultsContainer, 'Sugestões de Leitura', results.books, 'books', 'Ver somente livros');
       appendAgendaSection(resultsContainer, 'Cursos Online Gratuitos', results.courses, 'courses', 'Ver somente cursos');
       appendAgendaSection(resultsContainer, 'Concursos públicos', results.contests, 'contests', 'Ver somente concursos');
@@ -3170,12 +3210,15 @@
           : state.mobileContent === 'contests'
             ? results.contests
             : results.courses;
-      const progressiveControl = state.mobileContent === 'events'
-        ? null
-        : createAgendaProgressiveControl(list, items, state.mobileContent);
-      if (state.mobileContent === 'events') {
-        items.forEach(item => list.append(renderAgendaCard(item)));
-      }
+      const renderItem = state.mobileContent === 'events' && !agendaHasSpecificEventFilters()
+        ? item => renderAgendaCard(item, { exclusiveUnfilteredEvent: true })
+        : renderAgendaCard;
+      const progressiveControl = createAgendaProgressiveControl(
+        list,
+        items,
+        state.mobileContent,
+        renderItem
+      );
       resultsContainer.append(list);
       if (progressiveControl) resultsContainer.append(progressiveControl);
     }

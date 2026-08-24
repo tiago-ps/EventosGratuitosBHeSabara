@@ -89,19 +89,19 @@ const allModeStart = appSource.indexOf("} else if (state.mobileContent === 'all'
 const exclusiveModeStart = appSource.indexOf('    } else {', allModeStart);
 const allModeSource = appSource.slice(allModeStart, exclusiveModeStart);
 assert.ok(allModeStart >= 0 && exclusiveModeStart > allModeStart);
-const eventsIndex = allModeSource.indexOf('results.events.forEach');
+const eventsIndex = allModeSource.indexOf("createAgendaProgressiveControl(eventsGrid, results.events, 'events')");
 const booksIndex = allModeSource.indexOf("'Sugestões de Leitura'");
 const coursesIndex = allModeSource.indexOf("'Cursos Online Gratuitos'");
 const contestsIndex = allModeSource.indexOf("'Concursos públicos'");
 assert.ok(eventsIndex < booksIndex && booksIndex < coursesIndex && coursesIndex < contestsIndex);
-assert.match(allModeSource, /results\.events\.forEach\(item => eventsGrid\.append\(renderAgendaCard\(item\)\)\)/);
+assert.match(allModeSource, /createAgendaProgressiveControl\(eventsGrid, results\.events, 'events'\)/);
 assert.match(allModeSource, /appendAgendaSection\(resultsContainer, 'Sugestões de Leitura', results\.books, 'books', 'Ver somente livros'\)/);
 assert.match(allModeSource, /appendAgendaSection\(resultsContainer, 'Cursos Online Gratuitos', results\.courses, 'courses', 'Ver somente cursos'\)/);
 assert.match(allModeSource, /appendAgendaSection\(resultsContainer, 'Concursos públicos', results\.contests, 'contests', 'Ver somente concursos'\)/);
 
 assert.match(appSource, /createAgendaProgressiveControl\(grid, items, contentValue\)/);
-assert.match(appSource, /state\.mobileContent === 'events'\s*\? null\s*: createAgendaProgressiveControl\(list, items, state\.mobileContent\)/);
-assert.match(appSource, /if \(state\.mobileContent === 'events'\) \{\s*items\.forEach/);
+assert.match(appSource, /const renderItem = state\.mobileContent === 'events' && !agendaHasSpecificEventFilters\(\)/);
+assert.match(appSource, /createAgendaProgressiveControl\(\s*list,\s*items,\s*state\.mobileContent,\s*renderItem\s*\)/);
 assert.match(appSource, /aria-label="Mostrar mais \$\{labels\.plural\}" aria-controls="\$\{grid\.id\}"/);
 assert.match(appSource, /role="status" aria-live="polite" aria-atomic="true"/);
 assert.match(appSource, /button\.setAttribute\('aria-disabled', 'true'\)/);
@@ -121,9 +121,12 @@ for (const [content, total] of Object.entries(totalsByContent)) {
 assert.deepEqual(renderedIndexes(booksData.livros.length).batches, [booksData.livros.length]);
 assert.deepEqual(renderedIndexes(contestsData.concursos.length).batches, [24, 27]);
 
-assert.match(
-  eventsUiSource,
-  /\.agenda-card:not\(\.agenda-book-card\):not\(\.agenda-course-card\):not\(\.agenda-contest-card\)/
-);
+assert.match(appSource, /agenda-card[^`]*agenda-event-card/);
+assert.match(appSource, /state\.mobileContent === 'events' && !agendaHasSpecificEventFilters\(\)[\s\S]*?return state\.allEvents;/);
+assert.match(appSource, /\[event\.imagem, event\.imagem_local, event\.imagem_programa\][\s\S]*?\.find\(Boolean\)/);
+assert.match(eventsUiSource, /document\.querySelectorAll\('#app \.agenda-event-card'\)/);
+assert.doesNotMatch(eventsUiSource, /agenda-card:not\(/);
+assert.doesNotMatch(eventsUiSource, /expandUnfilteredAgendaEvents/);
+assert.doesNotMatch(eventsUiSource, /createAgendaEventCard/);
 
 console.log('Testes da renderização progressiva da Agenda aprovados.');
