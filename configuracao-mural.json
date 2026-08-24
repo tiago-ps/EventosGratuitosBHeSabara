@@ -3,14 +3,31 @@
   "nome": "Mural Cultural",
   "modulos": {
     "eventos": true,
-    "livros": true
+    "livros": true,
+    "cursos": true,
+    "concursos": true
   },
   "proporcao": {
     "eventos_por_livro": 5
   },
   "tempo_slide": {
     "evento": 12,
-    "livro": 15
+    "livro": 15,
+    "concurso": 15
+  },
+  "painel": {
+    "modulos_ativos": {
+      "eventos": true,
+      "livros": true,
+      "cursos": true,
+      "concursos": true
+    },
+    "frequencia": {
+      "eventos": 5,
+      "livros": 1,
+      "cursos": 1,
+      "concursos": 1
+    }
   },
   "filtros": {
     "conteudo_padrao": "todos"

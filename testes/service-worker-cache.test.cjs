@@ -81,22 +81,24 @@ async function dispatch(type, event) {
 }
 
 (async () => {
-  assert.equal(sw.CACHE_VERSION, 'mural-cultural-v75-progressive-agenda');
+  assert.equal(sw.CACHE_VERSION, 'mural-cultural-v78-filmes');
   for (const asset of [
-    './css/styles.css?v=65',
+    './css/styles.css?v=67',
     './css/eventos-manuais-ui.css?v=43',
     './css/concursos-mural.css?v=2',
     './js/core/rotacao.js?v=1',
     './js/conteudos/cursos.js?v=1',
     './js/conteudos/concursos.js?v=2',
-    './js/app.js?v=75',
+    './js/conteudos/filmes.js?v=2',
+    './js/app.js?v=78',
     './js/eventos-manuais-ui.js?v=44'
   ]) {
     assert.ok(sw.CORE_ASSETS.includes(asset), `Precache ausente: ${asset}`);
   }
   assert.ok(sw.DATA_PATHS.includes('/cursos.json'));
   assert.ok(sw.DATA_PATHS.includes('/concursos.json'));
-  assert.equal(sw.CORE_ASSETS.some(asset => /(?:cursos|concursos)\.json/.test(asset)), false);
+  assert.ok(sw.DATA_PATHS.includes('/filmes.json'));
+  assert.equal(sw.CORE_ASSETS.some(asset => /(?:cursos|concursos|filmes)\.json/.test(asset)), false);
 
   await dispatch('install', {});
   assert.deepEqual(installedAssets, Array.from(sw.CORE_ASSETS));
@@ -123,6 +125,7 @@ async function dispatch(type, event) {
   const appSource = fs.readFileSync(path.join(root, 'js/app.js'), 'utf8');
   assert.match(appSource, /loadOptionalJson\(COURSES_URL, \{ cursos: \[\] \}\)/);
   assert.match(appSource, /loadOptionalJson\(CONTESTS_URL, \{ concursos: \[\] \}\)/);
+  assert.match(appSource, /loadOptionalJson\(FILMS_URL, \{ filmes: \[\] \}\)/);
 
   console.log('Testes de cache e dados opcionais do service worker aprovados.');
 })().catch(error => {

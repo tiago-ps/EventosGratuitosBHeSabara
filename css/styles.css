@@ -737,7 +737,7 @@ dd { margin: 0; font-size: clamp(14px, 1.15vw, 23px); line-height: 1.25; overflo
 
 /* v53 — modo agenda responsivo para celulares */
 body.agenda-mode { overflow: auto; background: #07111f; }
-body.agenda-mode .app { min-height: 100dvh; height: auto; display: block; }
+body.agenda-mode .app { width: 100%; min-height: 100dvh; height: auto; display: block; }
 .agenda-shell { width: min(1080px, 100%); margin: 0 auto; padding: max(18px, env(safe-area-inset-top)) 16px calc(32px + env(safe-area-inset-bottom)); }
 .agenda-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 18px; }
 .agenda-eyebrow { margin: 0 0 4px; color: var(--accent); font-size: 12px; font-weight: 900; letter-spacing: .09em; text-transform: uppercase; }
@@ -1230,3 +1230,41 @@ body.agenda-mode .app { min-height: 100dvh; height: auto; display: block; }
 .agenda-book-record-actions a{display:inline-flex;align-items:center;min-height:34px;padding:6px 10px;border-radius:9px;background:var(--accent);color:#07111f;font-size:.82rem;font-weight:900;text-decoration:none}
 .agenda-book-record-actions a.secondary{background:#79dfc2}
 @media(max-width:680px){.agenda-book-holdings{padding:10px}.agenda-book-record-actions a{width:100%;justify-content:center}}
+
+/* Catálogo experimental de filmes */
+.agenda-tools-films{grid-template-columns:repeat(4,minmax(0,1fr))}
+.agenda-tools-films .agenda-search{grid-column:span 2}
+.film-source-notice{margin:0 2px 14px;color:var(--muted);font-size:.86rem;line-height:1.45}
+.film-source-notice a{color:var(--accent);font-weight:850}
+.agenda-film-card .film-media{aspect-ratio:2/3;background:radial-gradient(circle at 50% 34%,#173b60,#07111f 72%)}
+.agenda-film-card .film-media img{width:100%;height:100%;object-fit:contain;background:#07111f}
+.agenda-film-card .agenda-card-description{-webkit-line-clamp:4}
+.film-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.film-tags span{padding:4px 8px;border:1px solid var(--line);border-radius:999px;color:var(--detail-heading);font-size:.72rem;font-weight:800}
+.film-poster-fallback{display:grid;width:100%;height:100%;min-height:260px;place-content:center;gap:12px;padding:24px;background:linear-gradient(145deg,#173b60,#07111f);color:var(--muted);text-align:center}
+.film-poster-fallback span{font-size:3rem}
+.film-poster-fallback strong{font-size:.88rem}
+.agenda-card-actions button,.agenda-empty-clear{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--text);font:inherit;font-size:12px;font-weight:900;cursor:pointer}
+.agenda-empty-clear{margin-top:12px;background:var(--accent);color:var(--accent-contrast)}
+.agenda-card-actions button:hover,.agenda-empty-clear:hover{filter:brightness(1.12)}
+.agenda-card-actions button:focus-visible,.agenda-empty-clear:focus-visible,.film-dialog-close:focus-visible,.film-watch-link:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.film-dialog{width:min(960px,calc(100% - 24px));max-width:none;max-height:calc(100dvh - 24px);padding:0;overflow:auto;border:1px solid var(--line);border-radius:22px;background:#0b1d32;color:var(--text);box-shadow:0 28px 90px rgba(0,0,0,.72)}
+.film-dialog::backdrop{background:rgba(2,8,16,.82);backdrop-filter:blur(5px)}
+.film-dialog-shell{position:relative;display:grid;grid-template-columns:minmax(240px,34%) minmax(0,1fr)}
+.film-dialog-close{position:absolute;z-index:2;top:12px;right:12px;width:44px;height:44px;border:1px solid var(--line);border-radius:50%;background:#07111f;color:var(--text);font-size:1.8rem;line-height:1;cursor:pointer}
+.film-dialog-poster{min-height:100%;background:#07111f}
+.film-dialog-poster>img{display:block;width:100%;height:100%;max-height:calc(100dvh - 24px);object-fit:contain}
+.film-dialog-copy{min-width:0;padding:clamp(26px,4vw,48px);overflow-wrap:anywhere}
+.film-dialog-copy h2{margin:0;font-size:clamp(2rem,5vw,3.8rem);line-height:1.02}
+.film-dialog-facts{margin:12px 0 0;color:var(--accent);font-weight:850}
+.film-dialog-synopsis{margin:20px 0 0;color:var(--detail-heading);font-size:1rem;line-height:1.65}
+.film-dialog-sections{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:22px}
+.film-dialog-sections section{min-width:0;padding:12px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.04)}
+.film-dialog-sections h3{margin:0;color:var(--muted);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase}
+.film-dialog-sections p{margin:6px 0 0;line-height:1.45}
+.film-watch-link{display:inline-flex;align-items:center;justify-content:center;min-height:46px;margin-top:22px;padding:10px 16px;border-radius:999px;background:var(--accent);color:var(--accent-contrast);font-weight:900;text-decoration:none}
+.film-rights-note{margin:14px 0 0;color:var(--muted);font-size:.78rem;line-height:1.45}
+@media(max-width:980px){.agenda-tools-films{grid-template-columns:repeat(2,minmax(0,1fr))}.agenda-tools-films .agenda-search{grid-column:1/-1}}
+@media(max-width:760px){.agenda-film-card{grid-template-columns:128px minmax(0,1fr)}.agenda-film-card .film-media{aspect-ratio:2/3;min-height:100%}.agenda-film-card .film-media img{position:static;min-height:0}.agenda-film-card .film-poster-fallback{min-height:100%;padding:12px}.film-dialog-shell{grid-template-columns:1fr}.film-dialog-poster{max-height:46dvh}.film-dialog-poster>img{height:46dvh}.film-dialog-copy{padding:24px 18px 28px}.film-dialog-sections{grid-template-columns:1fr}}
+@media(max-width:430px){.agenda-tools-films{grid-template-columns:1fr}.agenda-tools-films .agenda-search{grid-column:auto}.agenda-film-card{grid-template-columns:104px minmax(0,1fr)}.agenda-film-card .agenda-card-actions{display:grid}.agenda-film-card .agenda-card-actions>*{width:100%}.film-dialog{width:100%;max-height:100dvh;border-radius:0}.film-dialog-poster>img{height:40dvh}.film-dialog-copy h2{padding-right:38px}}
+@media(prefers-reduced-motion:reduce){.film-dialog::backdrop{backdrop-filter:none}.film-dialog,.film-dialog *{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
