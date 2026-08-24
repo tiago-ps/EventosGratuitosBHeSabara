@@ -12,6 +12,7 @@
   const SLIDE_DURATION_KEY = 'mural-cultural-tempo-slides';
   const PANEL_SETTINGS_KEY = 'mural-cultural-configuracao-painel-v1';
   const PANEL_PROFILES_KEY = 'mural-cultural-perfis-painel-v1';
+  const AGENDA_COURSE_BATCH_SIZE = 24;
   const ALLOWED_SLIDE_DURATIONS = new Set([0, 5, 8, 10, 12, 15, 20, 30]);
   const CONTENT_SUBTITLES = Object.freeze({
     evento: 'Agenda Cultural',
@@ -122,7 +123,8 @@
     mobileBookAccess: '',
     mobileContestFormation: '',
     mobileContestUf: '',
-    mobileContestDeadline: ''
+    mobileContestDeadline: '',
+    agendaVisibleCourseCount: AGENDA_COURSE_BATCH_SIZE
   };
 
   function normalizeText(value = '') {
@@ -2913,7 +2915,63 @@
     return article;
   }
 
-  function appendAgendaSection(container, title, items, contentValue, actionLabel) {
+  function resetAgendaCourseBatch() {
+    state.agendaVisibleCourseCount = AGENDA_COURSE_BATCH_SIZE;
+  }
+
+  function nextAgendaCourseCount(visibleCount, total) {
+    return Math.min(visibleCount + AGENDA_COURSE_BATCH_SIZE, total);
+  }
+
+  function appendAgendaCardRange(container, items, start, end) {
+    const fragment = document.createDocumentFragment();
+    items.slice(start, end).forEach(item => fragment.append(renderAgendaCard(item)));
+    container.append(fragment);
+  }
+
+  function createAgendaCourseProgressiveControl(grid, courses) {
+    const total = courses.length;
+    let visibleCount = Math.min(state.agendaVisibleCourseCount, total);
+    grid.setAttribute('aria-live', 'off');
+    appendAgendaCardRange(grid, courses, 0, visibleCount);
+
+    if (visibleCount >= total) return null;
+
+    const control = document.createElement('div');
+    control.className = 'agenda-course-progressive';
+    control.innerHTML = `
+      <p class="agenda-course-progress">Mostrando <strong>${visibleCount}</strong> de <strong>${total}</strong> cursos</p>
+      <button type="button" class="agenda-course-more" aria-label="Mostrar mais cursos">Mostrar mais</button>
+      <p class="agenda-course-status" role="status" aria-live="polite" aria-atomic="true"></p>
+    `;
+
+    const progress = control.querySelector('.agenda-course-progress');
+    const button = control.querySelector('.agenda-course-more');
+    const status = control.querySelector('.agenda-course-status');
+
+    button.addEventListener('click', () => {
+      if (button.getAttribute('aria-disabled') === 'true') return;
+
+      const previousCount = visibleCount;
+      visibleCount = nextAgendaCourseCount(previousCount, total);
+      appendAgendaCardRange(grid, courses, previousCount, visibleCount);
+      state.agendaVisibleCourseCount = visibleCount;
+
+      progress.innerHTML = `Mostrando <strong>${visibleCount}</strong> de <strong>${total}</strong> cursos`;
+      status.textContent = `Mais ${visibleCount - previousCount} cursos carregados. ${visibleCount} de ${total} exibidos.`;
+
+      if (visibleCount >= total) {
+        button.textContent = 'Todos os cursos exibidos';
+        button.setAttribute('aria-label', 'Todos os cursos estão exibidos');
+        button.setAttribute('aria-disabled', 'true');
+        button.classList.add('is-complete');
+      }
+    });
+
+    return control;
+  }
+
+  function appendAgendaSection(container, title, items, contentValue, actionLabel, progressiveCourses = false) {
     if (!items.length) return;
     const section = document.createElement('section');
     section.className = 'agenda-content-section';
@@ -2930,8 +2988,12 @@
 
     const grid = document.createElement('div');
     grid.className = 'agenda-section-grid';
-    items.forEach(item => grid.append(renderAgendaCard(item)));
+    const progressiveControl = progressiveCourses
+      ? createAgendaCourseProgressiveControl(grid, items)
+      : null;
+    if (!progressiveCourses) items.forEach(item => grid.append(renderAgendaCard(item)));
     section.append(heading, grid);
+    if (progressiveControl) section.append(progressiveControl);
     container.append(section);
   }
 
@@ -3084,7 +3146,7 @@
       results.events.forEach(item => eventsGrid.append(renderAgendaCard(item)));
       resultsContainer.append(eventsGrid);
       appendAgendaSection(resultsContainer, 'Sugestões de Leitura', results.books, 'books', 'Ver somente livros');
-      appendAgendaSection(resultsContainer, 'Cursos Online Gratuitos', results.courses, 'courses', 'Ver somente cursos');
+      appendAgendaSection(resultsContainer, 'Cursos Online Gratuitos', results.courses, 'courses', 'Ver somente cursos', true);
       appendAgendaSection(resultsContainer, 'Concursos públicos', results.contests, 'contests', 'Ver somente concursos');
     } else {
       const list = document.createElement('section');
@@ -3096,8 +3158,14 @@
           : state.mobileContent === 'contests'
             ? results.contests
             : results.courses;
-      items.forEach(item => list.append(renderAgendaCard(item)));
+      const progressiveControl = state.mobileContent === 'courses'
+        ? createAgendaCourseProgressiveControl(list, items)
+        : null;
+      if (state.mobileContent !== 'courses') {
+        items.forEach(item => list.append(renderAgendaCard(item)));
+      }
       resultsContainer.append(list);
+      if (progressiveControl) resultsContainer.append(progressiveControl);
     }
 
     const shell = document.createElement('div');
@@ -3110,12 +3178,16 @@
     refreshInstallButtons();
 
     header.querySelector('.view-toggle').addEventListener('click', () => {
+      resetAgendaCourseBatch();
       saveViewMode('painel');
       state.isPaused = false;
       renderCurrentView();
     });
 
-    const rerender = () => renderAgenda();
+    const rerender = () => {
+      resetAgendaCourseBatch();
+      renderAgenda();
+    };
     controls.querySelector('.agenda-search input').addEventListener('input', event => {
       state.mobileQuery = event.target.value;
       window.clearTimeout(state.mobileSearchTimer);
@@ -3166,6 +3238,7 @@
     button.setAttribute('aria-label', 'Abrir modo agenda');
     button.textContent = '☷';
     button.addEventListener('click', () => {
+      resetAgendaCourseBatch();
       saveViewMode('agenda');
       renderCurrentView();
     });
