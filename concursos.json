@@ -2,7 +2,7 @@
   "schema": 9,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-08-23T10:44:02.880878+00:00",
+  "coletado_em_utc": "2026-08-24T09:38:54.835990+00:00",
   "total": 27,
   "concursos": [
     {
@@ -860,38 +860,6 @@
       ]
     },
     {
-      "titulo": "Prefeitura de Silveira Martins",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-silveira-martins-rs-retifica-concurso-publico-e-mantem-processo-seletivo-inalterado",
-      "imagem": "https://cdn.pci.app.br/img/i/7312a33e3527331a81215d3c8fb83c0a.png",
-      "formacoes_compativeis": [
-        "Técnico em Informática"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Técnico em Informática",
-          "nivel": "tecnico",
-          "evidencia": "as mencoes atualizadas nos editais. alem disso, foram alterados os requisitos para professor de educacao especial e professor de educacao infantil. segundo os editais, as oportunidades sao para os cargos de: concurso publico 01/2026 agente de manutencao (2 vagas) agente de servicos (5 vagas) agente tecnico em informatica (1 vaga) almoxarife (1 vaga) enfermeiro (1 vaga) engenheiro civil (1 vaga) farmaceutico bioquimico (cr) medico (5 vagas) medico veterinario (cr) monitor (6 vagas) motorista (2 vagas) nutricionista (cr) oficial administrativo (3 vagas) operador de maquinas (1 vaga) professor de anos iniciais (1 vaga"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "RS",
-      "cidade": "Silveira Martins",
-      "inscricoes_inicio_texto": "26 de agosto de 2026",
-      "inscricoes_fim_texto": "23 de agosto de 2026",
-      "inscricoes_texto": "26 de agosto de 2026 a 23 de agosto de 2026",
-      "remuneracao_faixa_texto": "R$ 6.757,44",
-      "remuneracao_fonte": "catalogo",
-      "cargos_compativeis": [
-        {
-          "cargo": "Agente Técnico em Informática",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "alta"
-        }
-      ]
-    },
-    {
       "titulo": "SES - Secretaria de Estado da Saúde de Santa Catarina",
       "url": "https://www.pciconcursos.com.br/noticias/ses-sc-abre-processo-seletivo-para-profissionais-de-saude-em-joinville",
       "imagem": "https://cdn.pci.app.br/img/i/bf56624401433deefeba225fe6a5a0af.png",
@@ -918,6 +886,38 @@
         {
           "cargo": "Técnico em Informática",
           "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "alta"
+        }
+      ]
+    },
+    {
+      "titulo": "Câmara de Rio Verde",
+      "url": "https://www.pciconcursos.com.br/noticias/camara-de-rio-verde-go-abre-concursos-publicos-com-salarios-de-ate-7241",
+      "imagem": "https://cdn.pci.app.br/img/i/fe407be121567c6856ec34592af651da.png",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": "xiliar de copa e cozinha (6 vagas) motorista (2 vagas) motorista de veiculos pesados (3 vagas) agente de manutencao predial (2 vagas) assistente administrativo (19 vagas) editor de audio e video (2 vagas) fotografo (2 vagas) auxiliar tecnico de audio e video (3 vagas) produtor audiovisual (2 vagas) tecnico em informatica (3 vagas) analista administrativo (10 vagas) analista de controle interno (2 vagas) analista legislativo (6 vagas) assistente social (2 vagas) jornalista (2 vagas) tradutor e interprete da lingua brasileira de sinais - libras (2 vagas) a jornada de trabalho varia de 30 a 40 horas semanais, conforme"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "GO",
+      "cidade": "Rio Verde",
+      "inscricoes_inicio_texto": "26 de setembro de 2026",
+      "inscricoes_fim_texto": "21 de setembro de 2026",
+      "inscricoes_texto": "26 de setembro de 2026 a 21 de setembro de 2026",
+      "remuneracao_faixa_texto": "R$ 7.241,14",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico em Informática",
+          "vagas_texto": "3 vagas",
           "formacao": "Técnico em Informática",
           "confianca": "alta"
         }
