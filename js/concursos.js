@@ -1,14 +1,64 @@
 (() => {
   'use strict';
-  const lista=document.getElementById('lista'),busca=document.getElementById('busca'),formacao=document.getElementById('formacao'),uf=document.getElementById('uf'),prazo=document.getElementById('prazo'),resumo=document.getElementById('resumo'),estado=document.getElementById('estado'); let concursos=[];
-  const FALLBACK='https://raw.githubusercontent.com/tiago-ps/ColetorEventosGratuitos/main/imagens/concursos/concurso-fallback.png';
-  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  const norm=s=>String(s??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
-  function render(){
-    const q=norm(busca.value),f=formacao.value,u=uf.value,p=prazo.value;
-    const itens=concursos.filter(c=>{const cargos=(c.cargos_compativeis||[]).map(x=>x.cargo).join(' '),temData=!!c.inscricoes_texto;return (!f||(c.formacoes_compativeis||[]).includes(f))&&(!u||c.uf===u)&&(!p||(p==='com-data'?temData:!temData))&&(!q||norm([c.titulo,c.cidade,c.uf,cargos,...(c.formacoes_compativeis||[])].join(' ')).includes(q))});
-    resumo.textContent=`${itens.length} de ${concursos.length} oportunidades compatíveis com as formações acompanhadas.`;estado.hidden=itens.length>0;estado.textContent=itens.length?'':'Nenhum concurso corresponde aos filtros.';
-    lista.innerHTML=itens.map(c=>{const local=[c.cidade,c.uf].filter(Boolean).join(' / '),cargos=(c.cargos_compativeis||[]).slice(0,5),img=c.imagem||FALLBACK;return `<article class="card"><img class="card-imagem" src="${esc(img)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='${FALLBACK}'"><div class="card-corpo"><div class="badges"><span>CONCURSO</span>${(c.formacoes_compativeis||[]).map(x=>`<span class="formacao">${esc(x)}</span>`).join('')}</div><h2>${esc(c.titulo)}</h2>${local?`<p><strong>Localidade:</strong> ${esc(local)}</p>`:''}${c.inscricoes_texto?`<p><strong>Inscrições:</strong> ${esc(c.inscricoes_texto)}</p>`:`<p class="dado-pendente"><strong>Inscrições:</strong> consulte o edital</p>`}${c.remuneracao_faixa_texto?`<p><strong>Faixa de remuneração do concurso:</strong> ${esc(c.remuneracao_faixa_texto)}</p>`:''}${cargos.length?`<div class="cargos"><strong>Cargos possivelmente compatíveis:</strong><ul>${cargos.map(x=>`<li>${esc(x.cargo)}${x.vagas_texto?` — ${esc(x.vagas_texto)}`:''}</li>`).join('')}</ul></div>`:''}<p class="fonte">Fonte: PCI Concursos · seleção automática. Confirme requisitos, remuneração e vagas no edital.</p><a href="${esc(c.url)}" target="_blank" rel="noopener noreferrer">Ver concurso e edital ↗</a></div></article>`}).join('');}
-  fetch('concursos.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error(`HTTP ${r.status}`);return r.json()}).then(data=>{concursos=Array.isArray(data.concursos)?data.concursos:[];const fs=[...new Set(concursos.flatMap(c=>c.formacoes_compativeis||[]))].sort((a,b)=>a.localeCompare(b,'pt-BR')),ufs=[...new Set(concursos.map(c=>c.uf).filter(Boolean))].sort();formacao.insertAdjacentHTML('beforeend',fs.map(f=>`<option>${esc(f)}</option>`).join(''));uf.insertAdjacentHTML('beforeend',ufs.map(x=>`<option>${esc(x)}</option>`).join(''));render()}).catch(e=>{resumo.textContent='Não foi possível carregar a base de concursos.';estado.hidden=false;estado.textContent=`Erro: ${e.message}`});
-  [busca,formacao,uf,prazo].forEach(el=>el.addEventListener(el===busca?'input':'change',render));
+
+  const contestsContent = window.MuralCultural.contents.contests;
+  const list = document.getElementById('lista');
+  const search = document.getElementById('busca');
+  const formation = document.getElementById('formacao');
+  const uf = document.getElementById('uf');
+  const deadline = document.getElementById('prazo');
+  const summary = document.getElementById('resumo');
+  const status = document.getElementById('estado');
+  let contests = [];
+
+  function render() {
+    const items = contestsContent.filter(contests, {
+      query: search.value,
+      formation: formation.value,
+      uf: uf.value,
+      deadline: deadline.value
+    });
+
+    summary.textContent = `${items.length} de ${contests.length} oportunidades compatíveis com as formações acompanhadas.`;
+    status.hidden = items.length > 0;
+    status.textContent = items.length ? '' : 'Nenhum concurso corresponde aos filtros.';
+
+    list.innerHTML = items.map(contest => {
+      const location = [contest.cidade, contest.uf].filter(Boolean).join(' / ');
+      const positions = (contest.cargos_compativeis || []).slice(0, 5);
+      const image = contest.imagem || contestsContent.FALLBACK_IMAGE;
+      const escape = contestsContent.escapeHtml;
+
+      return `<article class="card"><img class="card-imagem" src="${escape(image)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.src='${contestsContent.FALLBACK_IMAGE}'"><div class="card-corpo"><div class="badges"><span>CONCURSO</span>${(contest.formacoes_compativeis || []).map(item => `<span class="formacao">${escape(item)}</span>`).join('')}</div><h2>${escape(contest.titulo)}</h2>${location ? `<p><strong>Localidade:</strong> ${escape(location)}</p>` : ''}${contest.inscricoes_texto ? `<p><strong>Inscrições:</strong> ${escape(contest.inscricoes_texto)}</p>` : '<p class="dado-pendente"><strong>Inscrições:</strong> consulte o edital</p>'}${contest.remuneracao_faixa_texto ? `<p><strong>Faixa de remuneração do concurso:</strong> ${escape(contest.remuneracao_faixa_texto)}</p>` : ''}${positions.length ? `<div class="cargos"><strong>Cargos possivelmente compatíveis:</strong><ul>${positions.map(item => `<li>${escape(item.cargo)}${item.vagas_texto ? ` — ${escape(item.vagas_texto)}` : ''}</li>`).join('')}</ul></div>` : ''}<p class="fonte">Fonte: PCI Concursos · seleção automática. Confirme requisitos, remuneração e vagas no edital.</p><a href="${escape(contest.url)}" target="_blank" rel="noopener noreferrer">Ver concurso e edital ↗</a></div></article>`;
+    }).join('');
+  }
+
+  fetch('concursos.json', { cache: 'no-store' })
+    .then(response => {
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      return response.json();
+    })
+    .then(data => {
+      const source = Array.isArray(data.concursos) ? data.concursos : [];
+      contests = source
+        .filter(contestsContent.isValid)
+        .map(contestsContent.publicRecord);
+
+      for (const [, label] of contestsContent.formationOptions(contests)) {
+        formation.add(new Option(label, label));
+      }
+      for (const [, label] of contestsContent.ufOptions(contests)) {
+        uf.add(new Option(label, label));
+      }
+      render();
+    })
+    .catch(error => {
+      summary.textContent = 'Não foi possível carregar a base de concursos.';
+      status.hidden = false;
+      status.textContent = `Erro: ${error.message}`;
+    });
+
+  [search, formation, uf, deadline].forEach(element => {
+    element.addEventListener(element === search ? 'input' : 'change', render);
+  });
 })();
