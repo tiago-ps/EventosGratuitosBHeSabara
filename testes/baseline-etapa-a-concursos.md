@@ -1,7 +1,7 @@
 # Baseline da Etapa A — modularização para Concursos
 
-Data da validação: 23/08/2026  
-Commit inicial: `bc981ce0eeff725008fa80d130dbbd33420d4dbc`  
+Data da validação: 23/08/2026
+Commit inicial: `bc981ce0eeff725008fa80d130dbbd33420d4dbc`
 Branch inicial: `main`
 
 O arquivo `INSTRUCOES_CODEX_CONCURSOS_MURAL.md` já aparecia como não rastreado antes da implementação. Nenhum outro arquivo estava modificado.
