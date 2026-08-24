@@ -97,6 +97,10 @@
     const dimensions = movie.imagem_largura && movie.imagem_altura
       ? ` width="${Number(movie.imagem_largura)}" height="${Number(movie.imagem_altura)}"`
       : '';
+    const imageRatio = Number(movie.imagem_largura) / Number(movie.imagem_altura);
+    const mediaClass = Number.isFinite(imageRatio) && imageRatio > 0 && imageRatio < 1.35
+      ? 'film-media film-media-atypical'
+      : 'film-media';
     const poster = movie.imagem
       ? `<img src="${escapeHtml(movie.imagem)}" alt="Cartaz do filme ${escapeHtml(movie.titulo)}" loading="lazy" decoding="async"${dimensions}>`
       : `<div class="film-poster-fallback" role="img" aria-label="Cartaz não disponível para o filme ${escapeHtml(movie.titulo)}"><span aria-hidden="true">🎬</span><strong>Cartaz não disponível</strong></div>`;
@@ -106,13 +110,17 @@
     ].join(' · ');
 
     article.innerHTML = `
-      <div class="agenda-card-media film-media">${poster}</div>
+      <div class="agenda-card-media ${mediaClass}">${poster}</div>
       <div class="agenda-card-body">
-        <div class="agenda-card-badges"><span>Filme</span><span>${escapeHtml(movie.classificacao || 'Não informada')}</span><span>${escapeHtml(movie.plataforma || 'LGBTFlix')}</span></div>
         <p class="agenda-card-date">${escapeHtml(metadata)}</p>
         <h2>${escapeHtml(movie.titulo || 'Filme')}</h2>
         ${direction ? `<p class="agenda-card-place">Direção: ${escapeHtml(direction)}</p>` : ''}
-        ${tags.length ? `<div class="film-tags" aria-label="Gêneros e temas">${tags.map(tag => `<span>${escapeHtml(tag)}</span>`).join('')}</div>` : ''}
+        <div class="film-tags" aria-label="Etiquetas do filme">
+          <span>Filme</span>
+          <span>${escapeHtml(movie.classificacao || 'Não informada')}</span>
+          <span>${escapeHtml(movie.plataforma || 'LGBTFlix')}</span>
+          ${tags.map(tag => `<span>${escapeHtml(tag)}</span>`).join('')}
+        </div>
         ${movie.sinopse ? `<p class="agenda-card-description">${escapeHtml(movie.sinopse)}</p>` : ''}
         <div class="agenda-card-actions">
           <button type="button" class="film-details-button">Ver detalhes</button>

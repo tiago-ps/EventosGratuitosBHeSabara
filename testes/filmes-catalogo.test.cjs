@@ -8,6 +8,7 @@ const vm = require('node:vm');
 const root = path.resolve(__dirname, '..');
 const data = JSON.parse(fs.readFileSync(path.join(root, 'filmes.json'), 'utf8'));
 const source = fs.readFileSync(path.join(root, 'js/conteudos/filmes.js'), 'utf8');
+const stylesSource = fs.readFileSync(path.join(root, 'css/styles.css'), 'utf8');
 const appSource = fs.readFileSync(path.join(root, 'js/app.js'), 'utf8');
 const indexSource = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 const swSource = fs.readFileSync(path.join(root, 'service-worker.js'), 'utf8');
@@ -72,7 +73,7 @@ assert.ok(data.filmes.filter(movie => movie.imagem).every(movie => {
   return fs.existsSync(imagePath) && movie.imagem_largura <= 800 && movie.imagem_altura <= 800;
 }));
 
-assert.match(indexSource, /js\/conteudos\/filmes\.js\?v=2/);
+assert.match(indexSource, /js\/conteudos\/filmes\.js\?v=3/);
 assert.doesNotMatch(indexSource, /filmes\.html/);
 assert.match(appSource, /<option value="films">Filmes<\/option>/);
 assert.match(appSource, /loadOptionalJson\(FILMS_URL, \{ filmes: \[\] \}\)/);
@@ -81,7 +82,11 @@ assert.match(source, /target="_blank" rel="noopener noreferrer"/);
 assert.doesNotMatch(source, /<(?:iframe|video)\b/i);
 assert.doesNotMatch(JSON.stringify(data), /youtube\.com\/embed|player\.vimeo\.com/i);
 assert.match(swSource, /'\/filmes\.json'/);
-assert.match(swSource, /'\.\/js\/conteudos\/filmes\.js\?v=2'/);
+assert.match(swSource, /'\.\/js\/conteudos\/filmes\.js\?v=3'/);
+assert.match(stylesSource, /\.agenda-film-card \.film-media\{[^}]*aspect-ratio:16\/9/);
+assert.match(stylesSource, /@media\(max-width:760px\)\{\.agenda-film-card\{display:flex;grid-template-columns:none;flex-direction:column/);
+assert.match(stylesSource, /\.agenda-film-card \.film-media img\{[^}]*position:static;[^}]*object-fit:cover/);
+assert.doesNotMatch(stylesSource, /\.agenda-film-card \.film-media\{[^}]*aspect-ratio:2\/3/);
 
 for (const existing of ['eventos.json', 'livros.json', 'cursos.json', 'concursos.json']) {
   assert.ok(fs.existsSync(path.join(root, existing)), `${existing} deve continuar disponível`);

@@ -749,7 +749,7 @@ body.agenda-mode .app { width: 100%; min-height: 100dvh; height: auto; display: 
 .agenda-tools label > span { display: block; margin: 0 0 5px; color: var(--detail-heading); font-size: 10px; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; }
 .agenda-tools input, .agenda-tools select { width: 100%; min-height: 44px; padding: 8px 10px; border: 1px solid var(--detail-border); border-radius: 11px; background: var(--panel-deep); color: var(--text); font: inherit; font-size: 14px; }
 .agenda-count { margin: 14px 2px 10px; color: var(--muted); font-size: 13px; }
-.agenda-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.agenda-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 14px; }
 .agenda-card { min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: linear-gradient(145deg, var(--panel), var(--panel-deep)); box-shadow: 0 10px 30px rgba(0,0,0,.22); }
 .agenda-card-media { aspect-ratio: 16/9; overflow: hidden; background: var(--panel-deep); }
 .agenda-card-media img { width: 100%; height: 100%; display: block; object-fit: cover; }
@@ -1232,16 +1232,21 @@ body.agenda-mode .app { width: 100%; min-height: 100dvh; height: auto; display: 
 @media(max-width:680px){.agenda-book-holdings{padding:10px}.agenda-book-record-actions a{width:100%;justify-content:center}}
 
 /* Catálogo experimental de filmes */
-.agenda-tools-films{grid-template-columns:repeat(4,minmax(0,1fr))}
+.agenda-tools-films{position:static;top:auto;grid-template-columns:repeat(4,minmax(0,1fr))}
 .agenda-tools-films .agenda-search{grid-column:span 2}
 .film-source-notice{margin:0 2px 14px;color:var(--muted);font-size:.86rem;line-height:1.45}
 .film-source-notice a{color:var(--accent);font-weight:850}
-.agenda-film-card .film-media{aspect-ratio:2/3;background:radial-gradient(circle at 50% 34%,#173b60,#07111f 72%)}
-.agenda-film-card .film-media img{width:100%;height:100%;object-fit:contain;background:#07111f}
+.agenda-film-card{display:flex;min-width:0;max-width:100%;flex-direction:column;height:auto;min-height:0;overflow:hidden}
+.agenda-film-card .film-media{position:relative;width:100%;height:auto;min-height:0;aspect-ratio:16/9;overflow:hidden;background:radial-gradient(circle at 50% 34%,#173b60,#07111f 72%)}
+.agenda-film-card .film-media img{position:static;display:block;width:100%;height:100%;min-width:0;min-height:0;max-width:100%;aspect-ratio:auto;object-fit:cover;object-position:center;background:#07111f;transform:none}
+.agenda-film-card .film-media-atypical img{object-fit:contain}
+.agenda-film-card .agenda-card-body{display:flex;min-width:0;max-width:100%;flex-direction:column;height:auto;padding:14px;overflow-wrap:anywhere}
+.agenda-film-card .agenda-card-date{margin-top:0}
 .agenda-film-card .agenda-card-description{-webkit-line-clamp:4}
-.film-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
-.film-tags span{padding:4px 8px;border:1px solid var(--line);border-radius:999px;color:var(--detail-heading);font-size:.72rem;font-weight:800}
-.film-poster-fallback{display:grid;width:100%;height:100%;min-height:260px;place-content:center;gap:12px;padding:24px;background:linear-gradient(145deg,#173b60,#07111f);color:var(--muted);text-align:center}
+.agenda-film-card .agenda-card-actions{margin-top:auto;padding-top:14px}
+.film-tags{display:flex;min-width:0;max-width:100%;flex-wrap:wrap;gap:6px;margin-top:10px}
+.film-tags span{max-width:100%;padding:4px 8px;border:1px solid var(--line);border-radius:999px;color:var(--detail-heading);font-size:.72rem;font-weight:800;overflow-wrap:anywhere}
+.film-poster-fallback{display:grid;width:100%;height:100%;min-height:0;place-content:center;gap:8px;padding:18px;background:linear-gradient(145deg,#173b60,#07111f);color:var(--muted);text-align:center}
 .film-poster-fallback span{font-size:3rem}
 .film-poster-fallback strong{font-size:.88rem}
 .agenda-card-actions button,.agenda-empty-clear{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--text);font:inherit;font-size:12px;font-weight:900;cursor:pointer}
@@ -1265,6 +1270,6 @@ body.agenda-mode .app { width: 100%; min-height: 100dvh; height: auto; display: 
 .film-watch-link{display:inline-flex;align-items:center;justify-content:center;min-height:46px;margin-top:22px;padding:10px 16px;border-radius:999px;background:var(--accent);color:var(--accent-contrast);font-weight:900;text-decoration:none}
 .film-rights-note{margin:14px 0 0;color:var(--muted);font-size:.78rem;line-height:1.45}
 @media(max-width:980px){.agenda-tools-films{grid-template-columns:repeat(2,minmax(0,1fr))}.agenda-tools-films .agenda-search{grid-column:1/-1}}
-@media(max-width:760px){.agenda-film-card{grid-template-columns:128px minmax(0,1fr)}.agenda-film-card .film-media{aspect-ratio:2/3;min-height:100%}.agenda-film-card .film-media img{position:static;min-height:0}.agenda-film-card .film-poster-fallback{min-height:100%;padding:12px}.film-dialog-shell{grid-template-columns:1fr}.film-dialog-poster{max-height:46dvh}.film-dialog-poster>img{height:46dvh}.film-dialog-copy{padding:24px 18px 28px}.film-dialog-sections{grid-template-columns:1fr}}
-@media(max-width:430px){.agenda-tools-films{grid-template-columns:1fr}.agenda-tools-films .agenda-search{grid-column:auto}.agenda-film-card{grid-template-columns:104px minmax(0,1fr)}.agenda-film-card .agenda-card-actions{display:grid}.agenda-film-card .agenda-card-actions>*{width:100%}.film-dialog{width:100%;max-height:100dvh;border-radius:0}.film-dialog-poster>img{height:40dvh}.film-dialog-copy h2{padding-right:38px}}
+@media(max-width:760px){.agenda-film-card{display:flex;grid-template-columns:none;flex-direction:column;width:100%;height:auto;min-height:0}.agenda-film-card .film-media{position:static;width:100%;height:auto;min-height:0;aspect-ratio:16/9;margin:0;transform:none}.agenda-film-card .film-media img{position:static;inset:auto;width:100%;height:100%;min-height:0;max-width:100%;aspect-ratio:auto;object-fit:cover;object-position:center;margin:0;transform:none}.agenda-film-card .film-media-atypical img{object-fit:contain}.agenda-film-card .film-poster-fallback{width:100%;height:100%;min-height:0;padding:12px}.agenda-film-card .agenda-card-body{width:100%;padding:14px}.agenda-film-card .agenda-card-actions{display:flex;max-width:100%;flex-wrap:wrap}.agenda-film-card .agenda-card-actions>*{max-width:100%}.film-dialog-shell{grid-template-columns:1fr}.film-dialog-poster{max-height:46dvh}.film-dialog-poster>img{height:46dvh}.film-dialog-copy{padding:24px 18px 28px}.film-dialog-sections{grid-template-columns:1fr}}
+@media(max-width:480px){.agenda-tools-films{grid-template-columns:1fr}.agenda-tools-films .agenda-search{grid-column:auto}.agenda-film-card .agenda-card-body{padding:12px}.agenda-film-card .agenda-card-actions{display:grid;grid-template-columns:1fr;width:100%}.agenda-film-card .agenda-card-actions>*{width:100%;white-space:normal;text-align:center;justify-content:center}.film-dialog{width:100%;max-height:100dvh;border-radius:0}.film-dialog-poster>img{height:40dvh}.film-dialog-copy h2{padding-right:38px}}
 @media(prefers-reduced-motion:reduce){.film-dialog::backdrop{backdrop-filter:none}.film-dialog,.film-dialog *{scroll-behavior:auto!important;transition:none!important;animation:none!important}}

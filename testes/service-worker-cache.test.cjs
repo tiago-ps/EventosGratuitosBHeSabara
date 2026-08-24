@@ -81,15 +81,15 @@ async function dispatch(type, event) {
 }
 
 (async () => {
-  assert.equal(sw.CACHE_VERSION, 'mural-cultural-v78-filmes');
+  assert.equal(sw.CACHE_VERSION, 'mural-cultural-v80-film-cards');
   for (const asset of [
-    './css/styles.css?v=67',
+    './css/styles.css?v=69',
     './css/eventos-manuais-ui.css?v=43',
     './css/concursos-mural.css?v=2',
     './js/core/rotacao.js?v=1',
     './js/conteudos/cursos.js?v=1',
     './js/conteudos/concursos.js?v=2',
-    './js/conteudos/filmes.js?v=2',
+    './js/conteudos/filmes.js?v=3',
     './js/app.js?v=78',
     './js/eventos-manuais-ui.js?v=44'
   ]) {

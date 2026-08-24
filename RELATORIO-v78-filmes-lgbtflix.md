@@ -36,13 +36,19 @@ O preparador reproduzível está em `scripts/preparar_filmes_lgbtflix.py`. Ele l
 
 ## PWA e cache
 
-O cache passou para `mural-cultural-v78-filmes`. `filmes.json` usa a mesma estratégia `network-first` dos demais dados opcionais. Os cartazes não são pré-carregados: entram apenas sob demanda no cache limitado de imagens.
+O cache passou para `mural-cultural-v80-film-cards`. `filmes.json` usa a mesma estratégia `network-first` dos demais dados opcionais. Os cartazes não são pré-carregados: entram apenas sob demanda no cache limitado de imagens.
 
 ## Validação
 
 Foram aprovados todos os sete testes `.test.cjs` e os dois testes Python do preparador. A inspeção em navegador real cobriu 1280×720, 820×1180 e 390×844, sem rolagem horizontal, imagens quebradas ou erros de console.
 
 Também foram conferidos pesquisa sem acentos, filtros combinados, limpeza, estado vazio, cinco ordenações, os 143 itens após carregamento progressivo, fallback sem cartaz, diálogo, `Escape`, retorno de foco, segurança do link externo, mudança entre os cinco conteúdos, painel, QR Codes, manifesto e recursos do service worker.
+
+### Ajuste responsivo dos cards
+
+Os cards de filmes passaram a ter altura intrínseca ao conteúdo e imagem superior em `16 / 9`. As 142 imagens disponíveis são horizontais; o padrão usa `object-fit: cover`, e uma classe de orientação preserva imagens verticais ou atípicas futuras com `object-fit: contain`. No mobile, o card é uma coluna única, a imagem permanece estática e todo o texto vem abaixo dela. O painel alto de filtros de filmes também deixou de ficar fixo sobre os cards.
+
+Foram feitas medições e capturas em 320, 360, 390, 412 e 480 px de largura, sempre com 844 px de altura, além de desktop em 1280×720. Em todas as larguras móveis, a largura rolável coincidiu com a largura útil, o primeiro card completo coube na tela e nenhuma interseção foi detectada entre imagem, metadados, título, direção, etiquetas, sinopse e ações. As evidências estão em `testes/capturas-filmes/`.
 
 ## Limitações e próximos passos
 
