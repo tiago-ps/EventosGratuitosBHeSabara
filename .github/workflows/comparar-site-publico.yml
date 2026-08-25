@@ -22,7 +22,7 @@ jobs:
           set -euo pipefail
           git clone --depth=1 https://github.com/BibliotecaIFMGSabara/MuralCultural.git /tmp/mural-publico
 
-      - name: Comparar árvores
+      - name: Comparar dados e arquivos ativos
         shell: bash
         run: |
           set -euo pipefail
@@ -30,6 +30,7 @@ jobs:
           from pathlib import Path
           import hashlib
           import json
+          import subprocess
 
           test = Path('.').resolve()
           public = Path('/tmp/mural-publico').resolve()
@@ -43,39 +44,78 @@ jobs:
                   rel = path.relative_to(root).as_posix()
                   if rel == self_path or rel.startswith('.git/'):
                       continue
-                  h = hashlib.sha256()
-                  with path.open('rb') as f:
-                      for chunk in iter(lambda: f.read(1024 * 1024), b''):
-                          h.update(chunk)
-                  out[rel] = (h.hexdigest(), path.stat().st_size)
+                  h = hashlib.sha256(path.read_bytes()).hexdigest()
+                  out[rel] = (h, path.stat().st_size)
               return out
 
           a = inventory(test)
           b = inventory(public)
-          only_test = sorted(set(a) - set(b))
-          only_public = sorted(set(b) - set(a))
           different = sorted(path for path in set(a) & set(b) if a[path][0] != b[path][0])
-          same = len(set(a) & set(b)) - len(different)
 
-          report = {
-              'test_commit': '${{ github.sha }}',
-              'public_commit': '',
-              'same_files': same,
-              'only_test_count': len(only_test),
-              'only_public_count': len(only_public),
-              'different_count': len(different),
-              'only_test': only_test,
-              'only_public': only_public,
-              'different': [
-                  {
-                      'path': p,
-                      'test_size': a[p][1],
-                      'public_size': b[p][1]
-                  }
-                  for p in different
-              ]
-          }
-          print('=== COMPARACAO_JSON_INICIO ===')
-          print(json.dumps(report, ensure_ascii=False, indent=2))
-          print('=== COMPARACAO_JSON_FIM ===')
+          def choose_id(item):
+              if not isinstance(item, dict):
+                  return None
+              for key in ('id', 'id_fonte', 'fonte_id', 'codigo', 'titulo'):
+                  value = item.get(key)
+                  if value not in (None, ''):
+                      return str(value)
+              return None
+
+          def semantic_json(name):
+              left = json.loads((test / name).read_text(encoding='utf-8'))
+              right = json.loads((public / name).read_text(encoding='utf-8'))
+              out = {'file': name}
+              if isinstance(left, dict) and isinstance(right, dict):
+                  out['top_level_changed'] = sorted(
+                      k for k in set(left) | set(right)
+                      if k not in ('eventos','filmes','livros','cursos','concursos') and left.get(k) != right.get(k)
+                  )
+                  collection_key = next((k for k in ('eventos','filmes','livros','cursos','concursos') if isinstance(left.get(k), list) and isinstance(right.get(k), list)), None)
+                  if collection_key:
+                      la, ra = left[collection_key], right[collection_key]
+                      li = {choose_id(x): x for x in la if choose_id(x) is not None}
+                      ri = {choose_id(x): x for x in ra if choose_id(x) is not None}
+                      only_left = sorted(set(li) - set(ri))
+                      only_right = sorted(set(ri) - set(li))
+                      changed = []
+                      for key in sorted(set(li) & set(ri)):
+                          if li[key] != ri[key]:
+                              fields = sorted(k for k in set(li[key]) | set(ri[key]) if li[key].get(k) != ri[key].get(k))
+                              changed.append({'id': key, 'fields': fields})
+                      out.update({
+                          'collection': collection_key,
+                          'test_count': len(la),
+                          'public_count': len(ra),
+                          'only_test_count': len(only_left),
+                          'only_public_count': len(only_right),
+                          'changed_count': len(changed),
+                          'only_test': only_left[:40],
+                          'only_public': only_right[:40],
+                          'changed': changed[:80],
+                      })
+              return out
+
+          data_reports = []
+          for name in ('eventos.json','livros.json','cursos.json','filmes.json','concursos.json','configuracao-mural.json'):
+              if name in a and name in b:
+                  data_reports.append(semantic_json(name))
+
+          print('=== SEMANTICA_JSON_INICIO ===')
+          print(json.dumps(data_reports, ensure_ascii=False, indent=2))
+          print('=== SEMANTICA_JSON_FIM ===')
+
+          print('=== DIFF_ATIVOS_INICIO ===')
+          for name in ('index.html','js/app.js','js/conteudos/cursos.js','js/temas-visuais.js','service-worker.js','manifest.webmanifest'):
+              if name not in a or name not in b or a[name][0] == b[name][0]:
+                  continue
+              print(f'--- {name} ---')
+              proc = subprocess.run(
+                  ['diff','-u',str(public/name),str(test/name)],
+                  text=True, capture_output=True
+              )
+              lines = proc.stdout.splitlines()
+              if len(lines) > 500:
+                  lines = lines[:500] + [f'... diff truncado; total {len(proc.stdout.splitlines())} linhas ...']
+              print('\n'.join(lines))
+          print('=== DIFF_ATIVOS_FIM ===')
           PY
