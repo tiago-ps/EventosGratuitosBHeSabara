@@ -2331,7 +2331,7 @@
     if (!select) return;
 
     const editorials = configuredPanelProfileEntries()
-      .filter(editorialProfileIsVisible)
+      .filter(profile => editorialProfileIsVisible(profile))
       .sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
     const personals = readPanelProfiles();
 
