@@ -1,6 +1,6 @@
 {
   "versao": 2,
-  "atualizado_em": "2026-08-25T11:28:46.251898+00:00",
+  "atualizado_em": "2026-08-25T13:38:52.920428+00:00",
   "titulo": "Descobertas de leitura",
   "origem": "Acervos consultados em catálogos públicos Pergamum e bases institucionais",
   "aviso": "Seleção construída progressivamente e sujeita a curadoria. Não representa a totalidade dos acervos. Consulte o registro oficial para confirmar localização e disponibilidade.",
@@ -106,7 +106,7 @@
       "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=217103&page=1&perPage=20&orderBy=obra&direction=C",
       "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=217103&page=1&perPage=20&orderBy=obra&direction=C",
       "tipo_link_principal": "virtual",
-      "imagem": "imagens/livros/capas/ajuste-capa-pendente-feminismo.webp",
+      "imagem": "imagens/livros/capas/ajuste-a-fantasia-da-historia-feminista.png",
       "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
       "imagem_url_origem": "",
       "qr_code": "imagens/livros/qrcodes/a-fantasia-da-historia-feminista.svg",
@@ -120,6 +120,7 @@
       "comentario_aprovado": "",
       "credito_comentario": "",
       "link_formulario_opiniao": "",
+      "observacoes": "Curadoria temática feminismo a partir dos acervos físico e virtual do IFMG Sabará; frase e texto de apoio pendentes.",
       "id_obra": "obra-fantasia-da-historia-feminista-23013932",
       "registros_ids": [
         "a-fantasia-da-historia-feminista"
@@ -188,9 +189,9 @@
       "link_virtual": "",
       "link": "https://catalogobiblioteca.ufmg.br/acervo/687412",
       "tipo_link_principal": "fisico",
-      "imagem": "imagens/livros/capas/bibliotecas-ufmg-687412.webp",
-      "imagem_fonte": "Capa exibida no registro do Pergamum de Bibliotecas UFMG; cópia local otimizada",
-      "imagem_url_origem": "https://pergamum.bu.ufmg.br/pergamumweb/download/585721DFCC4A7471E06309E6130AF9EE.jpg",
+      "imagem": "imagens/livros/capas/ajuste-bibliotecas-ufmg-687412.png",
+      "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
+      "imagem_url_origem": "",
       "qr_code": "imagens/livros/qrcodes/bibliotecas-ufmg-687412.svg",
       "fonte": "Bibliotecas UFMG",
       "exibicao_ativa": true,
@@ -377,7 +378,7 @@
       "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=223505&page=1&perPage=20&orderBy=obra&direction=C",
       "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=223505&page=1&perPage=20&orderBy=obra&direction=C",
       "tipo_link_principal": "virtual",
-      "imagem": "imagens/livros/capas/ajuste-capa-pendente-feminismo.webp",
+      "imagem": "imagens/livros/capas/ajuste-coisa-de-menino.png",
       "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
       "imagem_url_origem": "",
       "qr_code": "imagens/livros/qrcodes/coisa-de-menino.svg",
@@ -391,6 +392,7 @@
       "comentario_aprovado": "",
       "credito_comentario": "",
       "link_formulario_opiniao": "",
+      "observacoes": "Curadoria temática feminismo a partir dos acervos físico e virtual do IFMG Sabará; frase e texto de apoio pendentes.",
       "id_obra": "obra-coisa-de-menino-uma-conversa-sobre-masculinidade-sexualidade-mis-0a8b246b",
       "registros_ids": [
         "coisa-de-menino"
@@ -536,7 +538,7 @@
       "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=187563&page=1&perPage=20&orderBy=obra&direction=C",
       "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=187563&page=1&perPage=20&orderBy=obra&direction=C",
       "tipo_link_principal": "virtual",
-      "imagem": "imagens/livros/capas/ajuste-capa-pendente-feminismo.webp",
+      "imagem": "imagens/livros/capas/ajuste-cult-judith-butler-feminismo-como-provocacao.png",
       "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
       "imagem_url_origem": "",
       "qr_code": "imagens/livros/qrcodes/cult-judith-butler-feminismo-como-provocacao.svg",
@@ -550,6 +552,7 @@
       "comentario_aprovado": "",
       "credito_comentario": "",
       "link_formulario_opiniao": "",
+      "observacoes": "Curadoria temática feminismo a partir dos acervos físico e virtual do IFMG Sabará; frase e texto de apoio pendentes.",
       "id_obra": "obra-cult-dossie-judith-butler-feminismo-como-provocacao-6e4b21dd",
       "registros_ids": [
         "cult-judith-butler-feminismo-como-provocacao"
@@ -695,7 +698,7 @@
       "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=211413&page=1&perPage=20&orderBy=obra&direction=C",
       "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=211413&page=1&perPage=20&orderBy=obra&direction=C",
       "tipo_link_principal": "virtual",
-      "imagem": "imagens/livros/capas/ajuste-capa-pendente-feminismo.webp",
+      "imagem": "imagens/livros/capas/ajuste-desigualdade-de-genero.png",
       "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
       "imagem_url_origem": "",
       "qr_code": "imagens/livros/qrcodes/desigualdade-de-genero.svg",
@@ -709,6 +712,7 @@
       "comentario_aprovado": "",
       "credito_comentario": "",
       "link_formulario_opiniao": "",
+      "observacoes": "Curadoria temática feminismo a partir dos acervos físico e virtual do IFMG Sabará; frase e texto de apoio pendentes.",
       "id_obra": "obra-desigualdade-de-genero-igualdade-violencia-de-genero-direitos-hu-7a53b002",
       "registros_ids": [
         "desigualdade-de-genero"
@@ -772,9 +776,9 @@
       "link_virtual": "",
       "link": "https://pergamum.ifmg.edu.br/acervo/111021",
       "tipo_link_principal": "fisico",
-      "imagem": "imagens/livros/capas/111021.webp",
-      "imagem_fonte": "Capa exibida no registro do Pergamum de IFMG Sabará; cópia local otimizada",
-      "imagem_url_origem": "https://pergamum.ifmg.edu.br/imagens/background",
+      "imagem": "imagens/livros/capas/ajuste-dicionario-de-genero-corpo-e-sexualidade.png",
+      "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
+      "imagem_url_origem": "",
       "qr_code": "imagens/livros/qrcodes/dicionario-de-genero-corpo-e-sexualidade.svg",
       "fonte": "IFMG Sabará",
       "exibicao_ativa": true,
@@ -786,6 +790,7 @@
       "comentario_aprovado": "",
       "credito_comentario": "",
       "link_formulario_opiniao": "",
+      "observacoes": "Curadoria temática feminismo a partir dos acervos físico e virtual do IFMG Sabará; frase e texto de apoio pendentes.",
       "id_obra": "obra-dicionario-de-genero-corpo-e-sexualidade-de-a-a-z-87bef574",
       "registros_ids": [
         "dicionario-de-genero-corpo-e-sexualidade"
@@ -849,7 +854,7 @@
       "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=187304&page=1&perPage=20&orderBy=obra&direction=C",
       "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=187304&page=1&perPage=20&orderBy=obra&direction=C",
       "tipo_link_principal": "virtual",
-      "imagem": "imagens/livros/capas/ajuste-capa-pendente-feminismo.webp",
+      "imagem": "imagens/livros/capas/ajuste-discriminacao-de-genero-dados-pessoais.png",
       "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
       "imagem_url_origem": "",
       "qr_code": "imagens/livros/qrcodes/discriminacao-de-genero-dados-pessoais.svg",
@@ -863,6 +868,7 @@
       "comentario_aprovado": "",
       "credito_comentario": "",
       "link_formulario_opiniao": "",
+      "observacoes": "Curadoria temática feminismo a partir dos acervos físico e virtual do IFMG Sabará; frase e texto de apoio pendentes.",
       "id_obra": "obra-discriminacao-de-genero-no-tratamento-automatizado-de-dados-pess-34b15655",
       "registros_ids": [
         "discriminacao-de-genero-dados-pessoais"
@@ -1003,7 +1009,7 @@
       "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=222635&page=1&perPage=20&orderBy=obra&direction=C",
       "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=222635&page=1&perPage=20&orderBy=obra&direction=C",
       "tipo_link_principal": "virtual",
-      "imagem": "imagens/livros/capas/ajuste-capa-pendente-feminismo.webp",
+      "imagem": "imagens/livros/capas/ajuste-elas-nas-organizacoes.png",
       "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
       "imagem_url_origem": "",
       "qr_code": "imagens/livros/qrcodes/elas-nas-organizacoes.svg",
@@ -1017,6 +1023,7 @@
       "comentario_aprovado": "",
       "credito_comentario": "",
       "link_formulario_opiniao": "",
+      "observacoes": "Curadoria temática feminismo a partir dos acervos físico e virtual do IFMG Sabará; frase e texto de apoio pendentes.",
       "id_obra": "obra-elas-nas-organizacoes-passado-presente-futuro-e8e5326d",
       "registros_ids": [
         "elas-nas-organizacoes"
@@ -1431,7 +1438,7 @@
       "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=229103&page=1&perPage=20&orderBy=obra&direction=C",
       "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=229103&page=1&perPage=20&orderBy=obra&direction=C",
       "tipo_link_principal": "virtual",
-      "imagem": "imagens/livros/capas/ajuste-capa-pendente-feminismo.webp",
+      "imagem": "imagens/livros/capas/ajuste-equidade-de-genero.png",
       "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
       "imagem_url_origem": "",
       "qr_code": "imagens/livros/qrcodes/equidade-de-genero.svg",
@@ -1445,6 +1452,7 @@
       "comentario_aprovado": "",
       "credito_comentario": "",
       "link_formulario_opiniao": "",
+      "observacoes": "Curadoria temática feminismo a partir dos acervos físico e virtual do IFMG Sabará; frase e texto de apoio pendentes.",
       "id_obra": "obra-equidade-de-genero-barreiras-e-intervencoes-eacc4439",
       "registros_ids": [
         "equidade-de-genero"
@@ -1674,7 +1682,7 @@
       "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=47896&page=1&perPage=20&orderBy=obra&direction=C",
       "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=47896&page=1&perPage=20&orderBy=obra&direction=C",
       "tipo_link_principal": "virtual",
-      "imagem": "imagens/livros/capas/ajuste-capa-pendente-feminismo.webp",
+      "imagem": "imagens/livros/capas/ajuste-estudos-de-genero-literatura-criancas-jovens.png",
       "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
       "imagem_url_origem": "",
       "qr_code": "imagens/livros/qrcodes/estudos-de-genero-literatura-criancas-jovens.svg",
@@ -1688,6 +1696,7 @@
       "comentario_aprovado": "",
       "credito_comentario": "",
       "link_formulario_opiniao": "",
+      "observacoes": "Curadoria temática feminismo a partir dos acervos físico e virtual do IFMG Sabará; frase e texto de apoio pendentes.",
       "id_obra": "obra-estudos-de-genero-e-literatura-para-criancas-e-jovens-5b124ce4",
       "registros_ids": [
         "estudos-de-genero-literatura-criancas-jovens"
@@ -2012,8 +2021,8 @@
     },
     {
       "tipo_conteudo": "livro",
-      "id": "bibliotecas-ufmg-676236",
-      "titulo": "Feminismo é para todo mundo : políticas arrebatadoras",
+      "id": "bibliotecas-do-ifmg-103512",
+      "titulo": "Feminismo é para todo mundo : politicas arrebatadoras",
       "autor": "bell hooks",
       "pergunta_curiosidade": "Por que um livro sobre feminismo diz que os homens também precisam dele?",
       "texto_apoio": "bell hooks apresenta o feminismo como enfrentamento do sexismo e mostra como gênero, família, amor, trabalho e masculinidade afetam todas as pessoas.",
@@ -2026,23 +2035,23 @@
         "Agosto Lilás"
       ],
       "icone": "📚",
-      "numero_chamada": "305.42 H784f 18.ed. 2022",
-      "unidade": "",
-      "biblioteca_rede": "Bibliotecas UFMG",
-      "codigo_acervo": "676236",
-      "exemplares_fisicos_catalogados": 8,
+      "numero_chamada": "396 H781f 9. ed.",
+      "unidade": "Ipatinga",
+      "biblioteca_rede": "Bibliotecas do IFMG",
+      "codigo_acervo": "103512",
+      "exemplares_fisicos_catalogados": 9,
       "outras_edicoes_fisicas": 0,
       "acesso_fisico": true,
       "acesso_virtual": false,
-      "link_fisico": "https://catalogobiblioteca.ufmg.br/acervo/676236",
+      "link_fisico": "https://pergamum.ifmg.edu.br/acervo/103512",
       "link_virtual": "",
-      "link": "https://catalogobiblioteca.ufmg.br/acervo/676236",
+      "link": "https://pergamum.ifmg.edu.br/acervo/103512",
       "tipo_link_principal": "fisico",
-      "imagem": "imagens/livros/capas/bibliotecas-ufmg-676236.webp",
-      "imagem_fonte": "Capa exibida no registro do Pergamum de Bibliotecas UFMG; cópia local otimizada",
-      "imagem_url_origem": "https://pergamum.bu.ufmg.br/pergamumweb/download/535A70F61E0CD5FDE06309E6130A3EEB.jpg",
-      "qr_code": "imagens/livros/qrcodes/bibliotecas-ufmg-676236.svg",
-      "fonte": "Bibliotecas UFMG",
+      "imagem": "imagens/livros/capas/ajuste-bibliotecas-do-ifmg-103512.png",
+      "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
+      "imagem_url_origem": "",
+      "qr_code": "imagens/livros/qrcodes/bibliotecas-do-ifmg-103512.svg",
+      "fonte": "Bibliotecas do IFMG — Ipatinga",
       "exibicao_ativa": true,
       "exibir_de": "",
       "exibir_ate": "",
@@ -2055,12 +2064,40 @@
       "observacoes": "Seleção temática de feminismo para o piloto de 2026-08-25; revisar no fluxo editorial definitivo.",
       "id_obra": "obra-feminismo-e-para-todo-mundo-politicas-arrebatadoras-6ed2c9c4",
       "registros_ids": [
+        "bibliotecas-do-ifmg-103512",
         "bibliotecas-ufmg-658296",
         "bibliotecas-ufmg-676236",
         "bibliotecas-ufmg-694950",
         "bibliotecas-ufmg-704996"
       ],
       "acervos": [
+        {
+          "biblioteca": "Bibliotecas do IFMG — Ipatinga",
+          "biblioteca_rede": "Bibliotecas do IFMG",
+          "unidade": "Ipatinga",
+          "acesso_fisico": true,
+          "acesso_virtual": false,
+          "exemplares_fisicos_catalogados": 1,
+          "registros": [
+            {
+              "registro_id": "bibliotecas-do-ifmg-103512",
+              "titulo_registro": "Feminismo é para todo mundo : politicas arrebatadoras, O - 9. ed. / 2019",
+              "autor_registro": "bell hooks",
+              "biblioteca_rede": "Bibliotecas do IFMG",
+              "unidade": "Ipatinga",
+              "codigo_acervo": "103512",
+              "numero_chamada": "396 H781f 9. ed.",
+              "exemplares_fisicos_catalogados": 1,
+              "acesso_fisico": true,
+              "acesso_virtual": false,
+              "link_fisico": "https://pergamum.ifmg.edu.br/acervo/103512",
+              "link_virtual": "",
+              "link": "https://pergamum.ifmg.edu.br/acervo/103512",
+              "tipo_link_principal": "fisico",
+              "fonte": "Bibliotecas do IFMG — Ipatinga"
+            }
+          ]
+        },
         {
           "biblioteca": "Bibliotecas UFMG",
           "biblioteca_rede": "Bibliotecas UFMG",
@@ -2140,9 +2177,10 @@
           ]
         }
       ],
-      "acervos_quantidade": 1,
-      "registros_acervo_quantidade": 4,
+      "acervos_quantidade": 2,
+      "registros_acervo_quantidade": 5,
       "bibliotecas": [
+        "Bibliotecas do IFMG — Ipatinga",
         "Bibliotecas UFMG"
       ]
     },
@@ -2566,7 +2604,7 @@
       "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=222069&page=1&perPage=20&orderBy=obra&direction=C",
       "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=222069&page=1&perPage=20&orderBy=obra&direction=C",
       "tipo_link_principal": "virtual",
-      "imagem": "imagens/livros/capas/ajuste-capa-pendente-feminismo.webp",
+      "imagem": "imagens/livros/capas/ajuste-literatura-escrita-por-mulheres.png",
       "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
       "imagem_url_origem": "",
       "qr_code": "imagens/livros/qrcodes/literatura-escrita-por-mulheres.svg",
@@ -2580,6 +2618,7 @@
       "comentario_aprovado": "",
       "credito_comentario": "",
       "link_formulario_opiniao": "",
+      "observacoes": "Curadoria temática feminismo a partir dos acervos físico e virtual do IFMG Sabará; frase e texto de apoio pendentes.",
       "id_obra": "obra-literatura-escrita-por-mulheres-conceitos-e-trajetorias-4695bb08",
       "registros_ids": [
         "literatura-escrita-por-mulheres"
@@ -2874,7 +2913,7 @@
       "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=214177&page=1&perPage=20&orderBy=obra&direction=C",
       "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=214177&page=1&perPage=20&orderBy=obra&direction=C",
       "tipo_link_principal": "virtual",
-      "imagem": "imagens/livros/capas/ajuste-capa-pendente-feminismo.webp",
+      "imagem": "imagens/livros/capas/ajuste-mulheres-em-tecnologia.png",
       "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
       "imagem_url_origem": "",
       "qr_code": "imagens/livros/qrcodes/mulheres-em-tecnologia.svg",
@@ -2888,6 +2927,7 @@
       "comentario_aprovado": "",
       "credito_comentario": "",
       "link_formulario_opiniao": "",
+      "observacoes": "Curadoria temática feminismo a partir dos acervos físico e virtual do IFMG Sabará; frase e texto de apoio pendentes.",
       "id_obra": "obra-mulheres-em-tecnologia-como-a-diversidade-e-inclusao-vao-mudar-o-3424e376",
       "registros_ids": [
         "mulheres-em-tecnologia"
@@ -2951,7 +2991,7 @@
       "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=228409&page=1&perPage=20&orderBy=obra&direction=C",
       "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=228409&page=1&perPage=20&orderBy=obra&direction=C",
       "tipo_link_principal": "virtual",
-      "imagem": "imagens/livros/capas/ajuste-capa-pendente-feminismo.webp",
+      "imagem": "imagens/livros/capas/ajuste-mulheres-casas-e-cidades.png",
       "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
       "imagem_url_origem": "",
       "qr_code": "imagens/livros/qrcodes/mulheres-casas-e-cidades.svg",
@@ -2965,6 +3005,7 @@
       "comentario_aprovado": "",
       "credito_comentario": "",
       "link_formulario_opiniao": "",
+      "observacoes": "Curadoria temática feminismo a partir dos acervos físico e virtual do IFMG Sabará; frase e texto de apoio pendentes.",
       "id_obra": "obra-mulheres-casas-e-cidades-ccefbbd6",
       "registros_ids": [
         "mulheres-casas-e-cidades"
@@ -3028,7 +3069,7 @@
       "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=162882&page=1&perPage=20&orderBy=obra&direction=C",
       "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=162882&page=1&perPage=20&orderBy=obra&direction=C",
       "tipo_link_principal": "virtual",
-      "imagem": "imagens/livros/capas/ajuste-capa-pendente-feminismo.webp",
+      "imagem": "imagens/livros/capas/ajuste-mulheres-linguagem-e-poder.png",
       "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
       "imagem_url_origem": "",
       "qr_code": "imagens/livros/qrcodes/mulheres-linguagem-e-poder.svg",
@@ -3042,6 +3083,7 @@
       "comentario_aprovado": "",
       "credito_comentario": "",
       "link_formulario_opiniao": "",
+      "observacoes": "Curadoria temática feminismo a partir dos acervos físico e virtual do IFMG Sabará; frase e texto de apoio pendentes.",
       "id_obra": "obra-mulheres-linguagem-e-poder-estudos-de-genero-na-sociolinguistica-8b56be4d",
       "registros_ids": [
         "mulheres-linguagem-e-poder"
@@ -3187,7 +3229,7 @@
       "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=193521&page=1&perPage=20&orderBy=obra&direction=C",
       "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=193521&page=1&perPage=20&orderBy=obra&direction=C",
       "tipo_link_principal": "virtual",
-      "imagem": "imagens/livros/capas/ajuste-capa-pendente-feminismo.webp",
+      "imagem": "imagens/livros/capas/ajuste-narrativas-de-genero.png",
       "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
       "imagem_url_origem": "",
       "qr_code": "imagens/livros/qrcodes/narrativas-de-genero.svg",
@@ -3201,6 +3243,7 @@
       "comentario_aprovado": "",
       "credito_comentario": "",
       "link_formulario_opiniao": "",
+      "observacoes": "Curadoria temática feminismo a partir dos acervos físico e virtual do IFMG Sabará; frase e texto de apoio pendentes.",
       "id_obra": "obra-narrativas-de-genero-as-varias-faces-dos-estudos-de-genero-08eaa154",
       "registros_ids": [
         "narrativas-de-genero"
@@ -3264,9 +3307,9 @@
       "link_virtual": "",
       "link": "https://pergamum.ifmg.edu.br/acervo/106588",
       "tipo_link_principal": "fisico",
-      "imagem": "imagens/livros/capas/106588.webp",
-      "imagem_fonte": "Capa exibida no registro do Pergamum de IFMG Sabará; cópia local otimizada",
-      "imagem_url_origem": "https://pergamum.ifmg.edu.br/imagens/background",
+      "imagem": "imagens/livros/capas/ajuste-o-segundo-sexo.png",
+      "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
+      "imagem_url_origem": "",
       "qr_code": "imagens/livros/qrcodes/o-segundo-sexo.svg",
       "fonte": "IFMG Sabará",
       "exibicao_ativa": true,
@@ -3278,6 +3321,7 @@
       "comentario_aprovado": "",
       "credito_comentario": "",
       "link_formulario_opiniao": "",
+      "observacoes": "Curadoria temática feminismo a partir dos acervos físico e virtual do IFMG Sabará; frase e texto de apoio pendentes.",
       "id_obra": "obra-segundo-sexo-56e4b4cb",
       "registros_ids": [
         "o-segundo-sexo"
@@ -3903,7 +3947,7 @@
       "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=216354&page=1&perPage=20&orderBy=obra&direction=C",
       "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=216354&page=1&perPage=20&orderBy=obra&direction=C",
       "tipo_link_principal": "virtual",
-      "imagem": "imagens/livros/capas/ajuste-capa-pendente-feminismo.webp",
+      "imagem": "imagens/livros/capas/ajuste-territorios-das-mulheres.png",
       "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
       "imagem_url_origem": "",
       "qr_code": "imagens/livros/qrcodes/territorios-das-mulheres.svg",
@@ -3917,6 +3961,7 @@
       "comentario_aprovado": "",
       "credito_comentario": "",
       "link_formulario_opiniao": "",
+      "observacoes": "Curadoria temática feminismo a partir dos acervos físico e virtual do IFMG Sabará; frase e texto de apoio pendentes.",
       "id_obra": "obra-territorios-das-mulheres-enquetes-sobre-as-relacoes-entre-psican-72150395",
       "registros_ids": [
         "territorios-das-mulheres"
