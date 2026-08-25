@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v84-agosto-lilas-banner';
+const CACHE_VERSION = 'mural-cultural-v85-temas-visuais';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -10,16 +10,18 @@ const CORE_ASSETS = [
   './css/styles.css?v=69',
   './css/eventos-manuais-ui.css?v=43',
   './css/concursos-mural.css?v=2',
-  './css/curadoria-agosto-lilas.css?v=2',
-  './js/core/rotacao.js?v=1',
+  './css/temas-visuais.css?v=1',
+  './js/tema-visual-boot.js?v=1',
+'./js/core/rotacao.js?v=1',
   './js/conteudos/cursos.js?v=1',
   './js/conteudos/concursos.js?v=2',
   './js/conteudos/filmes.js?v=5',
   './js/app.js?v=80',
-  './js/curadoria-agosto-lilas.js?v=2',
-  './imagens/curadorias/agosto-lilas-banner.svg',
+  './js/temas-visuais.js?v=1',
+'./imagens/curadorias/agosto-lilas-banner.svg',
   './js/eventos-manuais-ui.js?v=44',
   './js/ios-install.js?v=1',
+  './imagens/curadorias/agosto-lilas-banner.svg',
   './manifest.webmanifest',
   './imagens/app-icons/icon-192.png', './imagens/app-icons/icon-512.png',
   './imagens/app-icons/apple-touch-icon.png'
