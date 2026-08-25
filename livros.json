@@ -1,6 +1,6 @@
 {
   "versao": 2,
-  "atualizado_em": "2026-08-25T07:02:39.056025+00:00",
+  "atualizado_em": "2026-08-25T07:13:03.962517+00:00",
   "titulo": "Descobertas de leitura",
   "origem": "Acervos consultados em catálogos públicos Pergamum e bases institucionais",
   "aviso": "Seleção construída progressivamente e sujeita a curadoria. Não representa a totalidade dos acervos. Consulte o registro oficial para confirmar localização e disponibilidade.",
@@ -10,8 +10,8 @@
       "id": "parem-de-nos-matar",
       "titulo": "#Parem de nos matar!",
       "autor": "Cidinha da Silva",
-      "pergunta_curiosidade": "[frase pendente]",
-      "texto_apoio": "[texto de apoio pendente]",
+      "pergunta_curiosidade": "O que muda quando a violência contra pessoas negras deixa de ser tratada como caso isolado?",
+      "texto_apoio": "Em crônicas, Cidinha da Silva discute racismo, violência, representação e resistência, mostrando como a desumanização pode aparecer tanto no cotidiano quanto nas estruturas sociais.",
       "temas": [
         "feminismo"
       ],
@@ -86,8 +86,8 @@
       "id": "a-fantasia-da-historia-feminista",
       "titulo": "A fantasia da história feminista",
       "autor": "Joan Wallach Scott",
-      "pergunta_curiosidade": "[frase pendente]",
-      "texto_apoio": "[texto de apoio pendente]",
+      "pergunta_curiosidade": "E se a história do gênero for menos estável e previsível do que costumamos imaginar?",
+      "texto_apoio": "Joan Wallach Scott aproxima história feminista e psicanálise para pensar gênero como algo mutável e investigar como fantasia, diferença sexual e identidade participam da construção histórica.",
       "temas": [
         "feminismo"
       ],
@@ -170,8 +170,7 @@
         "raça",
         "gênero",
         "cultura",
-        "representação",
-        "Agosto Lilás"
+        "representação"
       ],
       "icone": "📚",
       "numero_chamada": "305.8 H784y.Pd 2019",
@@ -281,8 +280,7 @@
         "cinema",
         "raça",
         "classe",
-        "gênero",
-        "Agosto Lilás"
+        "gênero"
       ],
       "icone": "📚",
       "numero_chamada": "791.430973 H784r.Pe 2023",
@@ -356,8 +354,8 @@
       "id": "coisa-de-menino",
       "titulo": "Coisa de menino? Uma conversa sobre masculinidade, sexualidade, misoginia e paternidade",
       "autor": "Contardo Calligaris e Maria Homem",
-      "pergunta_curiosidade": "[frase pendente]",
-      "texto_apoio": "[texto de apoio pendente]",
+      "pergunta_curiosidade": "Quanto do que chamamos de “ser homem” foi aprendido — e pode ser questionado?",
+      "texto_apoio": "Contardo Calligaris e Maria Homem conversam sobre a construção social da masculinidade e abordam corpo, sexualidade, repressão, misoginia e paternidade.",
       "temas": [
         "feminismo"
       ],
@@ -439,8 +437,7 @@
         "mulheres",
         "amor",
         "patriarcado",
-        "liberdade",
-        "Agosto Lilás"
+        "liberdade"
       ],
       "icone": "📚",
       "numero_chamada": "152.4 H784c.Pd 2024",
@@ -514,8 +511,8 @@
       "id": "cult-judith-butler-feminismo-como-provocacao",
       "titulo": "CULT — Dossiê: Judith Butler, feminismo como provocação",
       "autor": "Vários",
-      "pergunta_curiosidade": "[frase pendente]",
-      "texto_apoio": "[texto de apoio pendente]",
+      "pergunta_curiosidade": "Por que as ideias de Judith Butler provocaram tantos debates dentro e fora do feminismo?",
+      "texto_apoio": "Este dossiê da revista CULT reúne textos e entrevista com Judith Butler para apresentar questões de sua obra e os debates que ela provoca sobre gênero e feminismo.",
       "temas": [
         "feminismo"
       ],
@@ -597,8 +594,7 @@
         "cultura",
         "representação",
         "resistência",
-        "gênero",
-        "Agosto Lilás"
+        "gênero"
       ],
       "icone": "📚",
       "numero_chamada": "301.45196073 H784o.Ps 2023",
@@ -672,8 +668,8 @@
       "id": "desigualdade-de-genero",
       "titulo": "Desigualdade de gênero: igualdade, violência de gênero, direitos humanos",
       "autor": "Cleyson de Moraes Mello e Patrícia Bordinha",
-      "pergunta_curiosidade": "[frase pendente]",
-      "texto_apoio": "[texto de apoio pendente]",
+      "pergunta_curiosidade": "Se igualdade é um direito, por que tantas desigualdades entre homens e mulheres continuam sendo tratadas como normais?",
+      "texto_apoio": "A obra discute desigualdade de gênero, violência e direitos humanos, aproximando questões jurídicas e sociais que ajudam a pensar caminhos para relações mais igualitárias.",
       "temas": [
         "feminismo"
       ],
@@ -748,8 +744,8 @@
       "id": "dicionario-de-genero-corpo-e-sexualidade",
       "titulo": "Dicionário de gênero, corpo e sexualidade de A a Z",
       "autor": "Cláudia Beatriz Machado Monteiro de Lima",
-      "pergunta_curiosidade": "[frase pendente]",
-      "texto_apoio": "[texto de apoio pendente]",
+      "pergunta_curiosidade": "Quantas palavras precisamos entender melhor para conversar de verdade sobre gênero, corpo e sexualidade?",
+      "texto_apoio": "Organizado em formato de dicionário, o livro reúne conceitos e debates ligados a gênero, corpo e sexualidade para apoiar estudo, formação e discussão crítica.",
       "temas": [
         "feminismo"
       ],
@@ -824,8 +820,8 @@
       "id": "discriminacao-de-genero-dados-pessoais",
       "titulo": "Discriminação de gênero no tratamento automatizado de dados pessoais",
       "autor": "Maria Cristine Branco Lindoso",
-      "pergunta_curiosidade": "[frase pendente]",
-      "texto_apoio": "[texto de apoio pendente]",
+      "pergunta_curiosidade": "Um algoritmo pode reproduzir preconceitos mesmo sem “querer” discriminar alguém?",
+      "texto_apoio": "Maria Cristine Branco Lindoso investiga como sistemas automatizados e o tratamento massivo de dados podem reproduzir discriminações de gênero e desafiar a busca por igualdade.",
       "temas": [
         "feminismo"
       ],
@@ -900,8 +896,8 @@
       "id": "e-eu-nao-sou-uma-mulher-sojourner-truth",
       "titulo": "E eu não sou uma mulher? A narrativa de Sojourner Truth",
       "autor": "Sojourner Truth",
-      "pergunta_curiosidade": "[frase pendente]",
-      "texto_apoio": "[texto de apoio pendente]",
+      "pergunta_curiosidade": "O que acontece quando uma mulher a quem negaram educação e direitos decide enfrentar as leis e a sociedade de seu tempo?",
+      "texto_apoio": "A narrativa acompanha Sojourner Truth, ex-escravizada e ativista que transformou a própria trajetória em luta pelos direitos das pessoas negras e das mulheres nos Estados Unidos.",
       "temas": [
         "feminismo"
       ],
@@ -976,8 +972,8 @@
       "id": "elas-nas-organizacoes",
       "titulo": "Elas nas organizações: passado, presente, futuro",
       "autor": "Susane Petinelli-Souza",
-      "pergunta_curiosidade": "[frase pendente]",
-      "texto_apoio": "[texto de apoio pendente]",
+      "pergunta_curiosidade": "Por que chegar a uma empresa não significa ter as mesmas oportunidades de permanecer, crescer e liderar?",
+      "texto_apoio": "O livro examina a trajetória das mulheres na educação e no trabalho, discutindo desigualdades de gênero, raça, salário, linguagem e acesso a posições de poder.",
       "temas": [
         "feminismo"
       ],
@@ -1059,8 +1055,7 @@
         "educação",
         "liberdade",
         "raça",
-        "gênero",
-        "Agosto Lilás"
+        "gênero"
       ],
       "icone": "📚",
       "numero_chamada": "370.1 H784t.Pc 2017",
@@ -1217,8 +1212,7 @@
         "educação",
         "comunidade",
         "antirracismo",
-        "igualdade",
-        "Agosto Lilás"
+        "igualdade"
       ],
       "icone": "📚",
       "numero_chamada": "370.117 H784t.Pc 2021",
@@ -1299,8 +1293,7 @@
         "educação",
         "pensamento crítico",
         "raça",
-        "gênero",
-        "Agosto Lilás"
+        "gênero"
       ],
       "icone": "📚",
       "numero_chamada": "370 H784t.Pl 2020",
@@ -1403,8 +1396,8 @@
       "id": "equidade-de-genero",
       "titulo": "Equidade de gênero: barreiras e intervenções",
       "autor": "Brenno César Vulcão de Souza e Lelison Leite de Souza e Nicolli dos Santos Ferreira",
-      "pergunta_curiosidade": "[frase pendente]",
-      "texto_apoio": "[texto de apoio pendente]",
+      "pergunta_curiosidade": "Tratar todo mundo da mesma forma é suficiente quando as barreiras de partida são diferentes?",
+      "texto_apoio": "A cartilha discute equidade de gênero a partir de barreiras e intervenções em educação, trabalho e saúde, com atenção a desigualdades históricas e estruturais.",
       "temas": [
         "feminismo"
       ],
@@ -1487,8 +1480,7 @@
         "voz",
         "racismo",
         "educação",
-        "resistência",
-        "Agosto Lilás"
+        "resistência"
       ],
       "icone": "📚",
       "numero_chamada": "305.42 H787t.Pm 2019",
@@ -1570,8 +1562,7 @@
         "raça",
         "gênero",
         "classe",
-        "antirracismo",
-        "Agosto Lilás"
+        "antirracismo"
       ],
       "icone": "📚",
       "numero_chamada": "305.8 H784e 2022",
@@ -1645,8 +1636,8 @@
       "id": "estudos-de-genero-literatura-criancas-jovens",
       "titulo": "Estudos de gênero e literatura para crianças e jovens",
       "autor": "Cecil Jeanine Albert Zinani e Diógenes Bueno",
-      "pergunta_curiosidade": "[frase pendente]",
-      "texto_apoio": "[texto de apoio pendente]",
+      "pergunta_curiosidade": "Que ideias sobre meninas, meninos e identidades chegam às crianças antes mesmo de elas aprenderem a questioná-las?",
+      "texto_apoio": "A coletânea aproxima literatura infantil e juvenil dos estudos de gênero e da crítica feminista para analisar representações, identidades e desigualdades oferecidas a leitores em formação.",
       "temas": [
         "feminismo"
       ],
@@ -1729,8 +1720,7 @@
         "mulheres negras",
         "racismo",
         "sexismo",
-        "movimentos sociais",
-        "Agosto Lilás"
+        "movimentos sociais"
       ],
       "icone": "📚",
       "numero_chamada": "305.42 H776n 7. ed. 2020",
@@ -1927,8 +1917,8 @@
       "id": "eu-sou-malala",
       "titulo": "Eu sou Malala: como uma garota que defendeu o direito à educação e mudou o mundo",
       "autor": "Malala Yousafzai e Patricia McCormick",
-      "pergunta_curiosidade": "[frase pendente]",
-      "texto_apoio": "[texto de apoio pendente]",
+      "pergunta_curiosidade": "Até onde você iria para defender o direito de estudar?",
+      "texto_apoio": "Nesta edição juvenil, Malala Yousafzai conta como a defesa da educação de meninas no Paquistão mudou sua vida e a transformou em uma voz internacional pelo direito à escola.",
       "temas": [
         "feminismo"
       ],
@@ -2010,8 +2000,7 @@
         "sexismo",
         "igualdade",
         "masculinidades",
-        "relações",
-        "Agosto Lilás"
+        "relações"
       ],
       "icone": "📚",
       "numero_chamada": "305.42 H784f 18.ed. 2022",
@@ -2146,8 +2135,7 @@
         "masculinidades",
         "homens negros",
         "vulnerabilidade",
-        "amor",
-        "Agosto Lilás"
+        "amor"
       ],
       "icone": "📚",
       "numero_chamada": "305.3 H784w.Ps 2022",
@@ -2221,8 +2209,8 @@
       "id": "genero-e-diversidade-na-escola",
       "titulo": "Gênero e diversidade na escola",
       "autor": "Sérgio Carrara",
-      "pergunta_curiosidade": "[frase pendente]",
-      "texto_apoio": "[texto de apoio pendente]",
+      "pergunta_curiosidade": "O que a escola pode fazer quando preconceitos de gênero, raça e sexualidade aparecem dentro da sala de aula?",
+      "texto_apoio": "Voltado à formação docente, o livro articula gênero, sexualidade e relações étnico-raciais para discutir desigualdades, discriminação e práticas educativas.",
       "temas": [
         "feminismo"
       ],
@@ -2297,8 +2285,8 @@
       "id": "insubmissas-lagrimas-de-mulheres",
       "titulo": "Insubmissas lágrimas de mulheres",
       "autor": "Conceição Evaristo",
-      "pergunta_curiosidade": "[frase pendente]",
-      "texto_apoio": "[texto de apoio pendente]",
+      "pergunta_curiosidade": "O que acontece quando mulheres que foram silenciadas encontram alguém disposto a escutar suas histórias?",
+      "texto_apoio": "Nos contos de Conceição Evaristo, vozes de mulheres negras narram dores, afetos, violência e resistência, transformando experiência e memória em afirmação de vida.",
       "temas": [
         "feminismo"
       ],
@@ -2373,8 +2361,8 @@
       "id": "interseccionalidade",
       "titulo": "Interseccionalidade",
       "autor": "Carla Akotirene",
-      "pergunta_curiosidade": "[frase pendente]",
-      "texto_apoio": "[texto de apoio pendente]",
+      "pergunta_curiosidade": "Por que duas pessoas podem sofrer a mesma desigualdade de maneiras completamente diferentes?",
+      "texto_apoio": "Carla Akotirene apresenta a interseccionalidade como ferramenta para compreender como raça, gênero, classe e outras relações de poder se cruzam, especialmente na vida de mulheres negras.",
       "temas": [
         "feminismo"
       ],
@@ -2457,8 +2445,7 @@
         "mulheres negras",
         "autocuidado",
         "racismo",
-        "comunidade",
-        "Agosto Lilás"
+        "comunidade"
       ],
       "icone": "📚",
       "numero_chamada": "155.6523 H784s.Pf 2023",
@@ -2532,8 +2519,8 @@
       "id": "literatura-escrita-por-mulheres",
       "titulo": "Literatura escrita por mulheres: conceitos e trajetórias",
       "autor": "Daniele Santos e Emanuela Carla Siqueira e Gabriela Szabo",
-      "pergunta_curiosidade": "[frase pendente]",
-      "texto_apoio": "[texto de apoio pendente]",
+      "pergunta_curiosidade": "Quantas escritoras ficaram fora do que aprendemos a chamar de “grandes clássicos”?",
+      "texto_apoio": "A obra acompanha a literatura produzida por mulheres e apresenta debates da crítica feminista sobre autoria, cânone, feminismo negro, interseccionalidade e outras correntes.",
       "temas": [
         "feminismo"
       ],
@@ -2608,8 +2595,8 @@
       "id": "lelia-gonzalez",
       "titulo": "Lélia Gonzalez",
       "autor": "Alex Ratts e Flavia Rios",
-      "pergunta_curiosidade": "Quem foi a intelectual que colocou raça, gênero e democracia na mesma conversa?",
-      "texto_apoio": "A trajetória de uma das principais lideranças do movimento negro brasileiro do século XX.",
+      "pergunta_curiosidade": "Por que ideias formuladas por Lélia Gonzalez décadas atrás continuam tão presentes nas discussões sobre raça e gênero?",
+      "texto_apoio": "Alex Ratts e Flavia Rios apresentam a trajetória, a produção intelectual e o ativismo de Lélia Gonzalez, referência do movimento negro e do feminismo no Brasil.",
       "temas": [
         "feminismo"
       ],
@@ -2684,8 +2671,8 @@
       "id": "mais-mulheres-no-poder",
       "titulo": "Mais mulheres no poder: contribuição à formação política das mulheres",
       "autor": "Marlise Matos e Iáris Ramalho Cortês",
-      "pergunta_curiosidade": "[frase pendente]",
-      "texto_apoio": "[texto de apoio pendente]",
+      "pergunta_curiosidade": "Se as mulheres são maioria do eleitorado, por que ainda ocupam tão poucos espaços de decisão política?",
+      "texto_apoio": "O material reúne fundamentos sobre feminismo e participação política, além de instrumentos jurídicos e estratégicos para ampliar a presença das mulheres em partidos, eleições e espaços de poder.",
       "temas": [
         "feminismo"
       ],
@@ -2760,8 +2747,8 @@
       "id": "miss-davis",
       "titulo": "Miss Davis: a vida e as lutas de Angela Davis",
       "autor": "Sybille Titeux de la Croix",
-      "pergunta_curiosidade": "[frase pendente]",
-      "texto_apoio": "[texto de apoio pendente]",
+      "pergunta_curiosidade": "Como uma jovem criada sob a segregação racial se tornou um símbolo mundial de luta por direitos?",
+      "texto_apoio": "Esta biografia em quadrinhos acompanha Angela Davis da infância no Alabama às lutas antirracistas e feministas, passando por prisão, julgamento e mobilização internacional.",
       "temas": [
         "feminismo"
       ],
@@ -2836,8 +2823,8 @@
       "id": "mulheres-em-tecnologia",
       "titulo": "Mulheres em tecnologia: como a diversidade e inclusão vão mudar o jogo nas empresas e na sociedade",
       "autor": "Beatriz Oliveira e Mariana Carvalho",
-      "pergunta_curiosidade": "[frase pendente]",
-      "texto_apoio": "[texto de apoio pendente]",
+      "pergunta_curiosidade": "Quem fica de fora quando o futuro é criado por equipes que não representam a diversidade da sociedade?",
+      "texto_apoio": "As autoras discutem barreiras, vieses e estruturas de poder que dificultam a entrada e permanência de meninas e mulheres na tecnologia e defendem diversidade como parte da inovação.",
       "temas": [
         "feminismo"
       ],
@@ -2912,8 +2899,8 @@
       "id": "mulheres-casas-e-cidades",
       "titulo": "Mulheres, casas e cidades",
       "autor": "Zaida Muxí Martínez",
-      "pergunta_curiosidade": "[frase pendente]",
-      "texto_apoio": "[texto de apoio pendente]",
+      "pergunta_curiosidade": "Quem foi levado em conta quando as casas e cidades em que vivemos foram planejadas?",
+      "texto_apoio": "Zaida Muxí revisita a presença das mulheres na arquitetura e no urbanismo e discute como a ausência de perspectivas femininas influencia os espaços privados e públicos.",
       "temas": [
         "feminismo"
       ],
@@ -2988,8 +2975,8 @@
       "id": "mulheres-linguagem-e-poder",
       "titulo": "Mulheres, linguagem e poder: estudos de gênero na sociolinguística brasileira",
       "autor": "Cristine Gorski Severo e Raquel Meister Ko Freitag",
-      "pergunta_curiosidade": "[frase pendente]",
-      "texto_apoio": "[texto de apoio pendente]",
+      "pergunta_curiosidade": "A maneira como falamos pode revelar — ou reforçar — relações de poder entre homens e mulheres?",
+      "texto_apoio": "A obra reúne estudos de gênero na sociolinguística brasileira para investigar relações entre mulheres, linguagem, diferenças sociais e poder.",
       "temas": [
         "feminismo"
       ],
@@ -3065,14 +3052,13 @@
       "titulo": "Mulheres, raça e classe",
       "autor": "Angela Davis",
       "pergunta_curiosidade": "Todas as mulheres enfrentam a desigualdade do mesmo jeito?",
-      "texto_apoio": "Angela Davis cruza gênero, raça e classe para mostrar como diferentes experiências de mulheres desafiam versões simplificadas da história e da luta por direitos.",
+      "texto_apoio": "Angela Davis reconstrói debates sobre escravidão, sufrágio, trabalho e direitos para mostrar como raça, gênero e classe se combinam nas formas de opressão e resistência.",
       "temas": [
         "feminismo",
         "mulheres",
         "raça",
         "classe",
-        "direitos",
-        "Agosto Lilás"
+        "direitos"
       ],
       "icone": "♀️",
       "numero_chamada": "316.346.2-055.2 D261m 2016",
@@ -3146,8 +3132,8 @@
       "id": "narrativas-de-genero",
       "titulo": "Narrativas de gênero: as várias faces dos estudos de gênero",
       "autor": "Marlise Regina Meyrer e Mônica Karawejczyk",
-      "pergunta_curiosidade": "[frase pendente]",
-      "texto_apoio": "[texto de apoio pendente]",
+      "pergunta_curiosidade": "O que violência, educação, resistência e linguagem revelam quando são observadas pelas lentes do gênero?",
+      "texto_apoio": "A coletânea reúne quinze textos organizados em quatro eixos — violência, educação, resistência e diferentes linguagens — mostrando a variedade dos estudos de gênero.",
       "temas": [
         "feminismo"
       ],
@@ -3222,8 +3208,8 @@
       "id": "o-segundo-sexo",
       "titulo": "O segundo sexo",
       "autor": "Simone de Beauvoir",
-      "pergunta_curiosidade": "[frase pendente]",
-      "texto_apoio": "[texto de apoio pendente]",
+      "pergunta_curiosidade": "Quantas ideias sobre o que uma mulher “deve ser” parecem naturais só porque foram repetidas por muito tempo?",
+      "texto_apoio": "No primeiro volume de O segundo sexo, Simone de Beauvoir examina fatos e mitos usados para explicar a condição das mulheres, cruzando filosofia, história, biologia e outras áreas.",
       "temas": [
         "feminismo"
       ],
@@ -3306,8 +3292,7 @@
         "raça",
         "representação",
         "mídia",
-        "cultura",
-        "Agosto Lilás"
+        "cultura"
       ],
       "icone": "📚",
       "numero_chamada": "305.42 H784b.Pb 2019",
@@ -3381,8 +3366,8 @@
       "id": "pedagogias-feministas-decoloniais",
       "titulo": "Pedagogias feministas decoloniais",
       "autor": "Marlise Matos",
-      "pergunta_curiosidade": "[frase pendente]",
-      "texto_apoio": "[texto de apoio pendente]",
+      "pergunta_curiosidade": "A universidade pode aprender com os saberes produzidos fora dela?",
+      "texto_apoio": "A obra parte de projetos de extensão da UFMG com mulheres de Minas Gerais para discutir pedagogias feministas decoloniais, cidadania, autonomia e construção coletiva de conhecimento.",
       "temas": [
         "feminismo"
       ],
@@ -3465,8 +3450,7 @@
         "pertencimento",
         "ancestralidade",
         "raça",
-        "gênero",
-        "Agosto Lilás"
+        "gênero"
       ],
       "icone": "📚",
       "numero_chamada": "301.412 H784b.Pb 2022",
@@ -3540,8 +3524,8 @@
       "id": "por-um-feminismo-afro-latino-americano",
       "titulo": "Por um feminismo afro-latino-americano: ensaios, intervenções e diálogos",
       "autor": "Lélia Gonzalez",
-      "pergunta_curiosidade": "[frase pendente]",
-      "texto_apoio": "[texto de apoio pendente]",
+      "pergunta_curiosidade": "O que muda quando o feminismo é pensado a partir da experiência de mulheres negras da América Latina?",
+      "texto_apoio": "Lélia Gonzalez reúne ensaios, entrevistas e intervenções que conectam racismo, sexismo, cultura e política a partir do Brasil, da América Latina e do Caribe.",
       "temas": [
         "feminismo"
       ],
@@ -3616,8 +3600,8 @@
       "id": "racismo-sexismo-e-desigualdade-no-brasil",
       "titulo": "Racismo, sexismo e desigualdade no Brasil",
       "autor": "Sueli Carneiro",
-      "pergunta_curiosidade": "[frase pendente]",
-      "texto_apoio": "[texto de apoio pendente]",
+      "pergunta_curiosidade": "Como racismo e sexismo podem agir juntos mesmo quando parecem problemas separados?",
+      "texto_apoio": "Sueli Carneiro reúne artigos que discutem como racismo, sexismo e desigualdade estruturam relações sociais e políticas no Brasil.",
       "temas": [
         "feminismo"
       ],
@@ -3700,8 +3684,7 @@
         "amor",
         "negritude",
         "antirracismo",
-        "autodeterminação",
-        "Agosto Lilás"
+        "autodeterminação"
       ],
       "icone": "📚",
       "numero_chamada": "152.4 H784s.Ps 2024",
@@ -3782,8 +3765,7 @@
         "margem e centro",
         "raça",
         "classe",
-        "igualdade",
-        "Agosto Lilás"
+        "igualdade"
       ],
       "icone": "📚",
       "numero_chamada": "305.42 H784t 2019",
@@ -3857,8 +3839,8 @@
       "id": "territorios-das-mulheres",
       "titulo": "Territórios das mulheres: enquetes sobre as relações entre psicanálise e feminismos",
       "autor": "Urias Arantes",
-      "pergunta_curiosidade": "[frase pendente]",
-      "texto_apoio": "[texto de apoio pendente]",
+      "pergunta_curiosidade": "Por que feminismo e psicanálise, mesmo discutindo desejo, identidade e sociedade, tantas vezes entram em conflito?",
+      "texto_apoio": "Urias Arantes examina aproximações e tensões entre feminismos e psicanálise, retomando debates históricos e questões contemporâneas sobre feminino, política e sociedade.",
       "temas": [
         "feminismo"
       ],
@@ -3940,8 +3922,7 @@
         "amor",
         "relacionamentos",
         "cuidado",
-        "justiça",
-        "Agosto Lilás"
+        "justiça"
       ],
       "icone": "📚",
       "numero_chamada": "305.42 H784a.Pb 2021",
@@ -4040,8 +4021,7 @@
         "masculinidades",
         "patriarcado",
         "amor",
-        "violência",
-        "Agosto Lilás"
+        "violência"
       ],
       "icone": "📚",
       "numero_chamada": "155.332 H784w.Pq 2025",
@@ -4115,8 +4095,8 @@
       "id": "vozes-contemporaneas-o-feminino-em-cena",
       "titulo": "Vozes contemporâneas: o feminino em cena",
       "autor": "Gabriela Seben e Rafaela Degani",
-      "pergunta_curiosidade": "[frase pendente]",
-      "texto_apoio": "[texto de apoio pendente]",
+      "pergunta_curiosidade": "Existe uma única maneira de viver ou compreender o que chamamos de “feminino”?",
+      "texto_apoio": "A coletânea reúne diferentes perspectivas psicanalíticas sobre o feminino e aborda sexualidade, maternidade, raça, corpo, aborto e críticas às lógicas binárias.",
       "temas": [
         "feminismo"
       ],
