@@ -2,7 +2,7 @@
   "schema": 9,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-08-24T09:38:54.835990+00:00",
+  "coletado_em_utc": "2026-08-25T09:27:58.034444+00:00",
   "total": 27,
   "concursos": [
     {
@@ -625,7 +625,7 @@
     },
     {
       "titulo": "Prefeitura de Ipaba",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-ipaba-mg-abre-concurso-publico-com-salarios-de-ate-5275",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-ipaba-mg-retifica-edital-de-concurso-publico-com-salarios-de-ate-5275",
       "imagem": "https://cdn.pci.app.br/img/i/307411641985d6cc48a5320cc173849e.png",
       "formacoes_compativeis": [
         "Técnico em Informática"
