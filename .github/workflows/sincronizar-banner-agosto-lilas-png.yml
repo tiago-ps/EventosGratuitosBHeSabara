@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Baixar repositório
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
@@ -60,12 +60,14 @@ jobs:
 
           p = Path('scripts/aplicar_temas_visuais.py')
           text = p.read_text(encoding='utf-8')
+          # A limpeza do cache aceita tanto a versão antiga SVG quanto a nova PNG.
+          text = text.replace(
+              r'agosto-lilas-banner\.svg',
+              r'agosto-lilas-banner\.(?:svg|png)'
+          )
           text = text.replace('agosto-lilas-banner.svg', 'agosto-lilas-banner.png')
           text = text.replace('js/temas-visuais.js?v=1', 'js/temas-visuais.js?v=2')
           text = text.replace('mural-cultural-v85-temas-visuais', 'mural-cultural-v88-banner-png')
-          text = text.replace(
-              r'agosto-lilas-banner\\.png',[0] if False else r'agosto-lilas-banner\\.(?:svg|png)'
-          )
           p.write_text(text, encoding='utf-8')
 
           p = Path('index.html')
@@ -75,7 +77,7 @@ jobs:
 
           p = Path('service-worker.js')
           text = p.read_text(encoding='utf-8')
-          text = text.replace('agosto-lilas-banner.svg', 'agosto-lilas-banner.png')
+          # O integrador abaixo remove SVG/PNG antigos e reinsere uma única entrada PNG.
           text = re.sub(r"const CACHE_VERSION = '[^']+';",
                         "const CACHE_VERSION = 'mural-cultural-v88-banner-png';",
                         text, count=1)
@@ -92,7 +94,7 @@ jobs:
           node --check js/temas-visuais.js
           grep -q "BANNER_SRC = 'imagens/curadorias/agosto-lilas-banner.png'" js/temas-visuais.js
           grep -q "mural-cultural-v88-banner-png" service-worker.js
-          grep -q "./imagens/curadorias/agosto-lilas-banner.png" service-worker.js
+          test "$(grep -c "./imagens/curadorias/agosto-lilas-banner.png" service-worker.js)" -eq 1
           grep -q "js/temas-visuais.js?v=2" index.html
           git diff --check
 
