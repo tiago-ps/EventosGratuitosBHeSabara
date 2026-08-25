@@ -1,0 +1,314 @@
+/* Temas visuais do Mural Cultural.
+ *
+ * IMPORTANTE: aparência visual e curadoria de conteúdo são independentes.
+ * O filtro de conteúdo continua em .filter-theme; este arquivo altera somente
+ * cores, superfícies, brilhos, banner editorial e o seletor de aparência.
+ */
+
+/* Seletor flutuante de aparência */
+.visual-theme-switcher {
+  position: fixed;
+  left: max(12px, env(safe-area-inset-left));
+  bottom: max(12px, env(safe-area-inset-bottom));
+  z-index: 95;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  gap: 9px;
+  pointer-events: none;
+}
+
+.visual-theme-switcher > * { pointer-events: auto; }
+
+.visual-theme-toggle {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, .22);
+  border-radius: 50%;
+  background: rgba(8, 15, 29, .86);
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .34);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  cursor: pointer;
+  transition: transform .18s ease, background .18s ease, border-color .18s ease;
+}
+
+.visual-theme-toggle:hover { transform: translateY(-2px); background: rgba(18, 29, 50, .94); }
+.visual-theme-toggle:focus-visible,
+.visual-theme-option:focus-visible {
+  outline: 2px solid var(--accent, #f6b73c);
+  outline-offset: 3px;
+}
+.visual-theme-toggle svg { width: 22px; height: 22px; }
+
+.visual-theme-panel {
+  width: min(286px, calc(100vw - 24px));
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, .18);
+  border-radius: 18px;
+  background: rgba(8, 15, 29, .94);
+  color: #fff;
+  box-shadow: 0 18px 54px rgba(0, 0, 0, .44);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+.visual-theme-panel[hidden] { display: none; }
+.visual-theme-heading { margin: 0 0 3px; font-size: 14px; font-weight: 900; }
+.visual-theme-help { margin: 0 0 11px; color: #bac4d3; font-size: 11px; line-height: 1.35; }
+.visual-theme-options { display: grid; gap: 7px; }
+.visual-theme-option {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 10px;
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 13px;
+  background: rgba(255, 255, 255, .045);
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.visual-theme-option:hover { background: rgba(255, 255, 255, .085); }
+.visual-theme-option[aria-pressed="true"] {
+  border-color: rgba(207, 86, 255, .72);
+  background: linear-gradient(135deg, rgba(121, 43, 188, .32), rgba(199, 58, 255, .18));
+}
+.visual-theme-swatch {
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 9px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.15);
+}
+.visual-theme-swatch.is-default { background: linear-gradient(145deg, #07111f, #15243a 62%, #f6b73c); }
+.visual-theme-swatch.is-lilas {
+  background:
+    radial-gradient(circle at 75% 25%, #ea8cff 0 8%, transparent 27%),
+    linear-gradient(145deg, #09051b, #40106d 62%, #ce3cff);
+}
+.visual-theme-option-copy { min-width: 0; }
+.visual-theme-option-title { display: block; font-size: 12px; font-weight: 900; }
+.visual-theme-option-description { display: block; margin-top: 2px; color: #bfc8d7; font-size: 10px; line-height: 1.25; }
+.visual-theme-check { color: #df91ff; font-weight: 900; opacity: 0; }
+.visual-theme-option[aria-pressed="true"] .visual-theme-check { opacity: 1; }
+
+/* ======================== Agosto Lilás Glow ======================== */
+html[data-visual-theme="agosto-lilas-glow"] body {
+  --bg: #080418;
+  --panel: #12082b;
+  --panel-deep: #080419;
+  --panel-end: #28104b;
+  --media-bg: #1c0d36;
+  --text: #fbf8ff;
+  --muted: #d6c8e2;
+  --accent: #cf3fff;
+  --accent-soft: #e6a1ff;
+  --accent-contrast: #ffffff;
+  --category: #7f2ad1;
+  --category-contrast: #ffffff;
+  --date-highlight: #df8cff;
+  --detail-heading: #d9a2f5;
+  --line: rgba(197, 126, 236, .26);
+  --surface: rgba(116, 53, 160, .16);
+  --loading-glow: #501276;
+  --spinner-track: rgba(231, 190, 255, .20);
+  --overlay-side: rgba(12, 5, 29, .90);
+  --overlay-bottom: rgba(25, 8, 45, .48);
+  --fallback-glow-one: rgba(210, 65, 255, .34);
+  --fallback-glow-two: rgba(126, 45, 217, .34);
+  --fallback-start: #321052;
+  --fallback-end: #09051b;
+  --fallback-label: #f7eaff;
+  --counter-border: rgba(213, 137, 249, .42);
+  --detail-border: rgba(205, 128, 243, .28);
+  --link-decoration: rgba(217, 139, 255, .55);
+  --link-hover: #f0c5ff;
+  --controls-bg: rgba(22, 8, 43, .84);
+  --control-bg: rgba(132, 46, 195, .24);
+  --control-hover-bg: rgba(203, 62, 255, .34);
+  --mobile-overlay: rgba(13, 5, 30, .93);
+  --top-edge: #a538e1;
+  --progress-end: #e35bff;
+  background: #080418;
+}
+
+/* Painel: base roxo-noturna + bolhas de luz difusas inspiradas no mockup. */
+html[data-visual-theme="agosto-lilas-glow"] body.panel-mode .slide {
+  isolation: isolate;
+  background:
+    radial-gradient(circle 420px at 100% 100%, rgba(184, 47, 255, .22), transparent 72%),
+    linear-gradient(145deg, #080419 0%, #100728 54%, #1b0a3b 100%);
+  box-shadow: inset 0 4px 0 rgba(190, 86, 239, .72);
+}
+
+html[data-visual-theme="agosto-lilas-glow"] body.panel-mode .content {
+  position: relative;
+  isolation: isolate;
+}
+
+html[data-visual-theme="agosto-lilas-glow"] body.panel-mode .content::before {
+  content: '';
+  position: absolute;
+  inset: -11%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: .92;
+  background:
+    radial-gradient(circle 82px at 92% 13%, rgba(234, 116, 255, .58) 0%, rgba(206, 62, 255, .23) 30%, transparent 72%),
+    radial-gradient(circle 54px at 64% 10%, rgba(187, 101, 255, .36) 0%, rgba(148, 60, 220, .15) 34%, transparent 72%),
+    radial-gradient(circle 116px at 84% 72%, rgba(199, 62, 255, .42) 0%, rgba(162, 41, 225, .16) 33%, transparent 73%),
+    radial-gradient(circle 72px at 42% 78%, rgba(153, 70, 235, .31) 0%, rgba(106, 47, 190, .11) 35%, transparent 74%),
+    radial-gradient(circle 46px at 31% 22%, rgba(231, 143, 255, .24) 0%, rgba(179, 78, 234, .09) 35%, transparent 76%),
+    radial-gradient(circle 180px at 108% 108%, rgba(220, 64, 255, .32) 0%, rgba(161, 44, 222, .12) 42%, transparent 76%);
+  filter: blur(15px) saturate(1.12);
+  transform: translate3d(0, 0, 0);
+  animation: lilasGlowDrift 17s ease-in-out infinite alternate;
+}
+
+html[data-visual-theme="agosto-lilas-glow"] body.panel-mode .content::after {
+  content: '';
+  position: absolute;
+  right: -9vw;
+  bottom: -13vh;
+  z-index: 0;
+  width: min(62vw, 980px);
+  height: min(48vw, 760px);
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(ellipse, rgba(214, 65, 255, .14), rgba(139, 40, 205, .05) 44%, transparent 72%);
+  filter: blur(8px);
+}
+
+html[data-visual-theme="agosto-lilas-glow"] body.panel-mode .content > * { position: relative; z-index: 1; }
+
+@keyframes lilasGlowDrift {
+  from { transform: translate3d(-1.2%, .8%, 0) scale(1); opacity: .82; }
+  to { transform: translate3d(1.5%, -1%, 0) scale(1.045); opacity: 1; }
+}
+
+/* Superfícies e controles em estilo glass roxo. */
+html[data-visual-theme="agosto-lilas-glow"] .details > div,
+html[data-visual-theme="agosto-lilas-glow"] .book-details > div,
+html[data-visual-theme="agosto-lilas-glow"] .filter-panel,
+html[data-visual-theme="agosto-lilas-glow"] .agenda-card {
+  border-color: rgba(199, 117, 242, .27);
+  background: linear-gradient(145deg, rgba(55, 20, 88, .40), rgba(13, 6, 33, .64));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.055), 0 12px 38px rgba(30, 4, 50, .18);
+}
+
+html[data-visual-theme="agosto-lilas-glow"] .controls,
+html[data-visual-theme="agosto-lilas-glow"] .agenda-tools {
+  border-color: rgba(199, 117, 242, .24);
+  background: rgba(20, 7, 43, .86);
+  box-shadow: 0 10px 30px rgba(25, 3, 45, .25);
+}
+
+html[data-visual-theme="agosto-lilas-glow"] .control-btn,
+html[data-visual-theme="agosto-lilas-glow"] .view-toggle,
+html[data-visual-theme="agosto-lilas-glow"] .filter-close {
+  border-color: rgba(216, 143, 249, .28);
+  background: linear-gradient(145deg, rgba(124, 42, 190, .30), rgba(83, 28, 139, .20));
+  color: #eab7ff;
+}
+
+html[data-visual-theme="agosto-lilas-glow"] .control-btn:hover,
+html[data-visual-theme="agosto-lilas-glow"] .view-toggle:hover,
+html[data-visual-theme="agosto-lilas-glow"] .filter-close:hover {
+  background: linear-gradient(145deg, rgba(204, 60, 255, .42), rgba(119, 37, 185, .32));
+  color: #fff;
+}
+
+html[data-visual-theme="agosto-lilas-glow"] .filter-apply,
+html[data-visual-theme="agosto-lilas-glow"] .empty-clear-filters,
+html[data-visual-theme="agosto-lilas-glow"] .filter-btn.has-filters {
+  background: linear-gradient(135deg, #a333e2, #d13fff);
+  color: #fff;
+  box-shadow: 0 7px 20px rgba(175, 45, 231, .22);
+}
+
+html[data-visual-theme="agosto-lilas-glow"] .badge.category,
+html[data-visual-theme="agosto-lilas-glow"] .slide .badge.course-online,
+html[data-visual-theme="agosto-lilas-glow"] .book-themes > *,
+html[data-visual-theme="agosto-lilas-glow"] .agenda-card-badges span {
+  border: 1px solid rgba(229, 169, 255, .20);
+  background: linear-gradient(135deg, rgba(108, 35, 171, .94), rgba(151, 43, 211, .92));
+  color: #fff;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.10);
+}
+
+html[data-visual-theme="agosto-lilas-glow"] .badge.free {
+  border-color: rgba(242, 183, 255, .25);
+  background: linear-gradient(135deg, #b932ee, #dc4fff);
+  color: #fff;
+}
+
+html[data-visual-theme="agosto-lilas-glow"] .filter-grid select,
+html[data-visual-theme="agosto-lilas-glow"] .agenda-tools input,
+html[data-visual-theme="agosto-lilas-glow"] .agenda-tools select {
+  border-color: rgba(205, 128, 243, .25);
+  background: rgba(10, 5, 27, .78);
+}
+
+/* Agenda: a aparência também pode permanecer ativa sem qualquer filtro de conteúdo. */
+html[data-visual-theme="agosto-lilas-glow"] body.agenda-mode {
+  background:
+    radial-gradient(circle 180px at 92% 8%, rgba(217, 78, 255, .22), transparent 72%),
+    radial-gradient(circle 240px at 4% 55%, rgba(133, 50, 210, .14), transparent 74%),
+    radial-gradient(circle 280px at 94% 88%, rgba(189, 48, 255, .16), transparent 74%),
+    #080418;
+}
+
+/* Banner editorial: agora depende SOMENTE da aparência escolhida. */
+.campaign-agosto-lilas-badge {
+  position: absolute;
+  top: 1.25%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 6;
+  display: block;
+  width: auto;
+  height: 14.285%;
+  min-height: 64px;
+  max-height: 148px;
+  max-width: 94%;
+  object-fit: contain;
+  object-position: top center;
+  filter: drop-shadow(0 9px 16px rgba(24, 2, 42, .56));
+  pointer-events: none;
+  user-select: none;
+}
+
+html[data-visual-theme="agosto-lilas-glow"] .visual-theme-toggle {
+  border-color: rgba(223, 150, 255, .38);
+  background: linear-gradient(145deg, rgba(80, 22, 131, .92), rgba(153, 38, 212, .92));
+  color: #fff;
+  box-shadow: 0 10px 32px rgba(120, 27, 178, .34);
+}
+html[data-visual-theme="agosto-lilas-glow"] .visual-theme-panel {
+  border-color: rgba(205, 128, 243, .30);
+  background: linear-gradient(145deg, rgba(28, 8, 57, .96), rgba(9, 5, 25, .97));
+}
+
+@media (max-width: 720px) {
+  .visual-theme-switcher { left: max(9px, env(safe-area-inset-left)); bottom: max(9px, env(safe-area-inset-bottom)); }
+  .visual-theme-toggle { width: 42px; height: 42px; }
+  .campaign-agosto-lilas-badge {
+    top: 1%;
+    height: 15%;
+    min-height: 52px;
+    max-height: 96px;
+    max-width: 96%;
+  }
+  html[data-visual-theme="agosto-lilas-glow"] body.panel-mode .content::before { filter: blur(12px); opacity: .82; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-visual-theme="agosto-lilas-glow"] body.panel-mode .content::before { animation: none; }
+  .visual-theme-toggle { transition: none; }
+}
