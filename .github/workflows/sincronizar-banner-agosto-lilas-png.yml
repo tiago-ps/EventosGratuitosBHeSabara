@@ -1,0 +1,118 @@
+name: Sincronizar banner PNG do Agosto Lilás
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/sincronizar-banner-agosto-lilas-png.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sincronizar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Copiar PNG do site público
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p imagens/curadorias
+          curl --fail --location --retry 3 \
+            'https://raw.githubusercontent.com/BibliotecaIFMGSabara/MuralCultural/main/imagens/curadorias/agosto-lilas-banner.png' \
+            --output imagens/curadorias/agosto-lilas-banner.png
+          python - <<'PY'
+          from pathlib import Path
+          path = Path('imagens/curadorias/agosto-lilas-banner.png')
+          data = path.read_bytes()
+          if not data.startswith(b'\x89PNG\r\n\x1a\n'):
+              raise SystemExit('Arquivo baixado não é um PNG válido.')
+          print(f'PNG validado: {len(data)} bytes')
+          PY
+
+      - name: Atualizar referências e cache
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          def replace(path, old, new):
+              p = Path(path)
+              text = p.read_text(encoding='utf-8')
+              if old not in text:
+                  raise SystemExit(f'Referência esperada não encontrada em {path}: {old}')
+              p.write_text(text.replace(old, new), encoding='utf-8')
+
+          replace('js/temas-visuais.js',
+                  "imagens/curadorias/agosto-lilas-banner.svg",
+                  "imagens/curadorias/agosto-lilas-banner.png")
+          replace('.github/workflows/aplicar-temas-visuais.yml',
+                  "imagens/curadorias/agosto-lilas-banner.svg",
+                  "imagens/curadorias/agosto-lilas-banner.png")
+
+          p = Path('scripts/aplicar_temas_visuais.py')
+          text = p.read_text(encoding='utf-8')
+          text = text.replace('agosto-lilas-banner.svg', 'agosto-lilas-banner.png')
+          text = text.replace('js/temas-visuais.js?v=1', 'js/temas-visuais.js?v=2')
+          text = text.replace('mural-cultural-v85-temas-visuais', 'mural-cultural-v88-banner-png')
+          text = text.replace(
+              r'agosto-lilas-banner\\.png',[0] if False else r'agosto-lilas-banner\\.(?:svg|png)'
+          )
+          p.write_text(text, encoding='utf-8')
+
+          p = Path('index.html')
+          text = p.read_text(encoding='utf-8')
+          text = re.sub(r'js/temas-visuais\.js\?v=\d+', 'js/temas-visuais.js?v=2', text)
+          p.write_text(text, encoding='utf-8')
+
+          p = Path('service-worker.js')
+          text = p.read_text(encoding='utf-8')
+          text = text.replace('agosto-lilas-banner.svg', 'agosto-lilas-banner.png')
+          text = re.sub(r"const CACHE_VERSION = '[^']+';",
+                        "const CACHE_VERSION = 'mural-cultural-v88-banner-png';",
+                        text, count=1)
+          text = re.sub(r'js/temas-visuais\.js\?v=\d+', 'js/temas-visuais.js?v=2', text)
+          p.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Validar integração
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check js/temas-visuais.js
+          python scripts/aplicar_temas_visuais.py
+          node --check js/temas-visuais.js
+          grep -q "BANNER_SRC = 'imagens/curadorias/agosto-lilas-banner.png'" js/temas-visuais.js
+          grep -q "mural-cultural-v88-banner-png" service-worker.js
+          grep -q "./imagens/curadorias/agosto-lilas-banner.png" service-worker.js
+          grep -q "js/temas-visuais.js?v=2" index.html
+          git diff --check
+
+      - name: Salvar alterações
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            imagens/curadorias/agosto-lilas-banner.png \
+            js/temas-visuais.js \
+            scripts/aplicar_temas_visuais.py \
+            .github/workflows/aplicar-temas-visuais.yml \
+            index.html \
+            service-worker.js
+          if git diff --cached --quiet; then
+            echo 'Nenhuma alteração necessária.'
+            exit 0
+          fi
+          git commit -m 'fix(ui): usa banner PNG do Agosto Lilás [skip ci]'
+          git pull --rebase origin main
+          git push origin HEAD:main
