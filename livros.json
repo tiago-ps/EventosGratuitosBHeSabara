@@ -1,6 +1,6 @@
 {
   "versao": 2,
-  "atualizado_em": "2026-08-25T06:54:34.600952+00:00",
+  "atualizado_em": "2026-08-25T07:02:39.056025+00:00",
   "titulo": "Descobertas de leitura",
   "origem": "Acervos consultados em catálogos públicos Pergamum e bases institucionais",
   "aviso": "Seleção construída progressivamente e sujeita a curadoria. Não representa a totalidade dos acervos. Consulte o registro oficial para confirmar localização e disponibilidade.",
@@ -18,7 +18,7 @@
       "icone": "♀️",
       "numero_chamada": "821(81)-94 S586p 2019",
       "unidade": "",
-      "biblioteca_rede": "",
+      "biblioteca_rede": "IFMG Sabará",
       "codigo_acervo": "103267",
       "exemplares_fisicos_catalogados": 4,
       "outras_edicoes_fisicas": 0,
@@ -29,10 +29,10 @@
       "link": "https://pergamum.ifmg.edu.br/acervo/103267",
       "tipo_link_principal": "fisico",
       "imagem": "imagens/livros/capas/103267.webp",
-      "imagem_fonte": "Capa exibida no registro do Pergamum de biblioteca; cópia local otimizada",
+      "imagem_fonte": "Capa exibida no registro do Pergamum de IFMG Sabará; cópia local otimizada",
       "imagem_url_origem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000070/00007057.jpg",
       "qr_code": "imagens/livros/qrcodes/parem-de-nos-matar.svg",
-      "fonte": "Biblioteca não informada",
+      "fonte": "IFMG Sabará",
       "exibicao_ativa": true,
       "exibir_de": "",
       "exibir_ate": "",
@@ -48,8 +48,8 @@
       ],
       "acervos": [
         {
-          "biblioteca": "Biblioteca não informada",
-          "biblioteca_rede": "",
+          "biblioteca": "IFMG Sabará",
+          "biblioteca_rede": "IFMG Sabará",
           "unidade": "",
           "acesso_fisico": true,
           "acesso_virtual": false,
@@ -59,7 +59,7 @@
               "registro_id": "parem-de-nos-matar",
               "titulo_registro": "#Parem de nos matar!",
               "autor_registro": "Cidinha da Silva",
-              "biblioteca_rede": "",
+              "biblioteca_rede": "IFMG Sabará",
               "unidade": "",
               "codigo_acervo": "103267",
               "numero_chamada": "821(81)-94 S586p 2019",
@@ -70,7 +70,7 @@
               "link_virtual": "",
               "link": "https://pergamum.ifmg.edu.br/acervo/103267",
               "tipo_link_principal": "fisico",
-              "fonte": "Biblioteca não informada"
+              "fonte": "IFMG Sabará"
             }
           ]
         }
@@ -78,7 +78,7 @@
       "acervos_quantidade": 1,
       "registros_acervo_quantidade": 1,
       "bibliotecas": [
-        "Biblioteca não informada"
+        "IFMG Sabará"
       ]
     },
     {
@@ -94,7 +94,7 @@
       "icone": "♀️",
       "numero_chamada": "",
       "unidade": "",
-      "biblioteca_rede": "",
+      "biblioteca_rede": "IFMG",
       "codigo_acervo": "",
       "exemplares_fisicos_catalogados": 0,
       "outras_edicoes_fisicas": 0,
@@ -108,7 +108,7 @@
       "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
       "imagem_url_origem": "",
       "qr_code": "imagens/livros/qrcodes/a-fantasia-da-historia-feminista.svg",
-      "fonte": "Biblioteca não informada",
+      "fonte": "IFMG",
       "exibicao_ativa": true,
       "exibir_de": "",
       "exibir_ate": "",
@@ -124,8 +124,8 @@
       ],
       "acervos": [
         {
-          "biblioteca": "Biblioteca não informada",
-          "biblioteca_rede": "",
+          "biblioteca": "IFMG",
+          "biblioteca_rede": "IFMG",
           "unidade": "",
           "acesso_fisico": false,
           "acesso_virtual": true,
@@ -135,7 +135,7 @@
               "registro_id": "a-fantasia-da-historia-feminista",
               "titulo_registro": "A fantasia da história feminista",
               "autor_registro": "Joan Wallach Scott",
-              "biblioteca_rede": "",
+              "biblioteca_rede": "IFMG",
               "unidade": "",
               "codigo_acervo": "",
               "numero_chamada": "",
@@ -146,7 +146,7 @@
               "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=217103&page=1&perPage=20&orderBy=obra&direction=C",
               "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=217103&page=1&perPage=20&orderBy=obra&direction=C",
               "tipo_link_principal": "virtual",
-              "fonte": "Biblioteca não informada"
+              "fonte": "IFMG"
             }
           ]
         }
@@ -154,7 +154,7 @@
       "acervos_quantidade": 1,
       "registros_acervo_quantidade": 1,
       "bibliotecas": [
-        "Biblioteca não informada"
+        "IFMG"
       ]
     },
     {
@@ -170,8 +170,7 @@
         "raça",
         "gênero",
         "cultura",
-        "representação",
-        "Agosto Lilás"
+        "representação"
       ],
       "icone": "📚",
       "numero_chamada": "305.8 H784y.Pd 2019",
@@ -281,8 +280,7 @@
         "cinema",
         "raça",
         "classe",
-        "gênero",
-        "Agosto Lilás"
+        "gênero"
       ],
       "icone": "📚",
       "numero_chamada": "791.430973 H784r.Pe 2023",
@@ -364,7 +362,7 @@
       "icone": "♀️",
       "numero_chamada": "",
       "unidade": "",
-      "biblioteca_rede": "",
+      "biblioteca_rede": "IFMG",
       "codigo_acervo": "",
       "exemplares_fisicos_catalogados": 0,
       "outras_edicoes_fisicas": 0,
@@ -378,7 +376,7 @@
       "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
       "imagem_url_origem": "",
       "qr_code": "imagens/livros/qrcodes/coisa-de-menino.svg",
-      "fonte": "Biblioteca não informada",
+      "fonte": "IFMG",
       "exibicao_ativa": true,
       "exibir_de": "",
       "exibir_ate": "",
@@ -394,8 +392,8 @@
       ],
       "acervos": [
         {
-          "biblioteca": "Biblioteca não informada",
-          "biblioteca_rede": "",
+          "biblioteca": "IFMG",
+          "biblioteca_rede": "IFMG",
           "unidade": "",
           "acesso_fisico": false,
           "acesso_virtual": true,
@@ -405,7 +403,7 @@
               "registro_id": "coisa-de-menino",
               "titulo_registro": "Coisa de menino? Uma conversa sobre masculinidade, sexualidade, misoginia e paternidade",
               "autor_registro": "Contardo Calligaris e Maria Homem",
-              "biblioteca_rede": "",
+              "biblioteca_rede": "IFMG",
               "unidade": "",
               "codigo_acervo": "",
               "numero_chamada": "",
@@ -416,7 +414,7 @@
               "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=223505&page=1&perPage=20&orderBy=obra&direction=C",
               "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=223505&page=1&perPage=20&orderBy=obra&direction=C",
               "tipo_link_principal": "virtual",
-              "fonte": "Biblioteca não informada"
+              "fonte": "IFMG"
             }
           ]
         }
@@ -424,7 +422,7 @@
       "acervos_quantidade": 1,
       "registros_acervo_quantidade": 1,
       "bibliotecas": [
-        "Biblioteca não informada"
+        "IFMG"
       ]
     },
     {
@@ -439,8 +437,7 @@
         "mulheres",
         "amor",
         "patriarcado",
-        "liberdade",
-        "Agosto Lilás"
+        "liberdade"
       ],
       "icone": "📚",
       "numero_chamada": "152.4 H784c.Pd 2024",
@@ -522,7 +519,7 @@
       "icone": "♀️",
       "numero_chamada": "",
       "unidade": "",
-      "biblioteca_rede": "",
+      "biblioteca_rede": "IFMG",
       "codigo_acervo": "",
       "exemplares_fisicos_catalogados": 0,
       "outras_edicoes_fisicas": 0,
@@ -536,7 +533,7 @@
       "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
       "imagem_url_origem": "",
       "qr_code": "imagens/livros/qrcodes/cult-judith-butler-feminismo-como-provocacao.svg",
-      "fonte": "Biblioteca não informada",
+      "fonte": "IFMG",
       "exibicao_ativa": true,
       "exibir_de": "",
       "exibir_ate": "",
@@ -552,8 +549,8 @@
       ],
       "acervos": [
         {
-          "biblioteca": "Biblioteca não informada",
-          "biblioteca_rede": "",
+          "biblioteca": "IFMG",
+          "biblioteca_rede": "IFMG",
           "unidade": "",
           "acesso_fisico": false,
           "acesso_virtual": true,
@@ -563,7 +560,7 @@
               "registro_id": "cult-judith-butler-feminismo-como-provocacao",
               "titulo_registro": "CULT — Dossiê: Judith Butler, feminismo como provocação",
               "autor_registro": "Vários",
-              "biblioteca_rede": "",
+              "biblioteca_rede": "IFMG",
               "unidade": "",
               "codigo_acervo": "",
               "numero_chamada": "",
@@ -574,7 +571,7 @@
               "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=187563&page=1&perPage=20&orderBy=obra&direction=C",
               "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=187563&page=1&perPage=20&orderBy=obra&direction=C",
               "tipo_link_principal": "virtual",
-              "fonte": "Biblioteca não informada"
+              "fonte": "IFMG"
             }
           ]
         }
@@ -582,7 +579,7 @@
       "acervos_quantidade": 1,
       "registros_acervo_quantidade": 1,
       "bibliotecas": [
-        "Biblioteca não informada"
+        "IFMG"
       ]
     },
     {
@@ -597,8 +594,7 @@
         "cultura",
         "representação",
         "resistência",
-        "gênero",
-        "Agosto Lilás"
+        "gênero"
       ],
       "icone": "📚",
       "numero_chamada": "301.45196073 H784o.Ps 2023",
@@ -680,7 +676,7 @@
       "icone": "♀️",
       "numero_chamada": "",
       "unidade": "",
-      "biblioteca_rede": "",
+      "biblioteca_rede": "IFMG",
       "codigo_acervo": "",
       "exemplares_fisicos_catalogados": 0,
       "outras_edicoes_fisicas": 0,
@@ -694,7 +690,7 @@
       "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
       "imagem_url_origem": "",
       "qr_code": "imagens/livros/qrcodes/desigualdade-de-genero.svg",
-      "fonte": "Biblioteca não informada",
+      "fonte": "IFMG",
       "exibicao_ativa": true,
       "exibir_de": "",
       "exibir_ate": "",
@@ -710,8 +706,8 @@
       ],
       "acervos": [
         {
-          "biblioteca": "Biblioteca não informada",
-          "biblioteca_rede": "",
+          "biblioteca": "IFMG",
+          "biblioteca_rede": "IFMG",
           "unidade": "",
           "acesso_fisico": false,
           "acesso_virtual": true,
@@ -721,7 +717,7 @@
               "registro_id": "desigualdade-de-genero",
               "titulo_registro": "Desigualdade de gênero: igualdade, violência de gênero, direitos humanos",
               "autor_registro": "Cleyson de Moraes Mello e Patrícia Bordinha",
-              "biblioteca_rede": "",
+              "biblioteca_rede": "IFMG",
               "unidade": "",
               "codigo_acervo": "",
               "numero_chamada": "",
@@ -732,7 +728,7 @@
               "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=211413&page=1&perPage=20&orderBy=obra&direction=C",
               "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=211413&page=1&perPage=20&orderBy=obra&direction=C",
               "tipo_link_principal": "virtual",
-              "fonte": "Biblioteca não informada"
+              "fonte": "IFMG"
             }
           ]
         }
@@ -740,7 +736,7 @@
       "acervos_quantidade": 1,
       "registros_acervo_quantidade": 1,
       "bibliotecas": [
-        "Biblioteca não informada"
+        "IFMG"
       ]
     },
     {
@@ -756,7 +752,7 @@
       "icone": "♀️",
       "numero_chamada": "(038)305 D546 2025",
       "unidade": "",
-      "biblioteca_rede": "",
+      "biblioteca_rede": "IFMG Sabará",
       "codigo_acervo": "111021",
       "exemplares_fisicos_catalogados": 2,
       "outras_edicoes_fisicas": 0,
@@ -767,10 +763,10 @@
       "link": "https://pergamum.ifmg.edu.br/acervo/111021",
       "tipo_link_principal": "fisico",
       "imagem": "imagens/livros/capas/111021.webp",
-      "imagem_fonte": "Capa exibida no registro do Pergamum de biblioteca; cópia local otimizada",
+      "imagem_fonte": "Capa exibida no registro do Pergamum de IFMG Sabará; cópia local otimizada",
       "imagem_url_origem": "https://pergamum.ifmg.edu.br/imagens/background",
       "qr_code": "imagens/livros/qrcodes/dicionario-de-genero-corpo-e-sexualidade.svg",
-      "fonte": "Biblioteca não informada",
+      "fonte": "IFMG Sabará",
       "exibicao_ativa": true,
       "exibir_de": "",
       "exibir_ate": "",
@@ -786,8 +782,8 @@
       ],
       "acervos": [
         {
-          "biblioteca": "Biblioteca não informada",
-          "biblioteca_rede": "",
+          "biblioteca": "IFMG Sabará",
+          "biblioteca_rede": "IFMG Sabará",
           "unidade": "",
           "acesso_fisico": true,
           "acesso_virtual": false,
@@ -797,7 +793,7 @@
               "registro_id": "dicionario-de-genero-corpo-e-sexualidade",
               "titulo_registro": "Dicionário de gênero, corpo e sexualidade de A a Z",
               "autor_registro": "Cláudia Beatriz Machado Monteiro de Lima",
-              "biblioteca_rede": "",
+              "biblioteca_rede": "IFMG Sabará",
               "unidade": "",
               "codigo_acervo": "111021",
               "numero_chamada": "(038)305 D546 2025",
@@ -808,7 +804,7 @@
               "link_virtual": "",
               "link": "https://pergamum.ifmg.edu.br/acervo/111021",
               "tipo_link_principal": "fisico",
-              "fonte": "Biblioteca não informada"
+              "fonte": "IFMG Sabará"
             }
           ]
         }
@@ -816,7 +812,7 @@
       "acervos_quantidade": 1,
       "registros_acervo_quantidade": 1,
       "bibliotecas": [
-        "Biblioteca não informada"
+        "IFMG Sabará"
       ]
     },
     {
@@ -832,7 +828,7 @@
       "icone": "♀️",
       "numero_chamada": "",
       "unidade": "",
-      "biblioteca_rede": "",
+      "biblioteca_rede": "IFMG",
       "codigo_acervo": "",
       "exemplares_fisicos_catalogados": 0,
       "outras_edicoes_fisicas": 0,
@@ -846,7 +842,7 @@
       "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
       "imagem_url_origem": "",
       "qr_code": "imagens/livros/qrcodes/discriminacao-de-genero-dados-pessoais.svg",
-      "fonte": "Biblioteca não informada",
+      "fonte": "IFMG",
       "exibicao_ativa": true,
       "exibir_de": "",
       "exibir_ate": "",
@@ -862,8 +858,8 @@
       ],
       "acervos": [
         {
-          "biblioteca": "Biblioteca não informada",
-          "biblioteca_rede": "",
+          "biblioteca": "IFMG",
+          "biblioteca_rede": "IFMG",
           "unidade": "",
           "acesso_fisico": false,
           "acesso_virtual": true,
@@ -873,7 +869,7 @@
               "registro_id": "discriminacao-de-genero-dados-pessoais",
               "titulo_registro": "Discriminação de gênero no tratamento automatizado de dados pessoais",
               "autor_registro": "Maria Cristine Branco Lindoso",
-              "biblioteca_rede": "",
+              "biblioteca_rede": "IFMG",
               "unidade": "",
               "codigo_acervo": "",
               "numero_chamada": "",
@@ -884,7 +880,7 @@
               "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=187304&page=1&perPage=20&orderBy=obra&direction=C",
               "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=187304&page=1&perPage=20&orderBy=obra&direction=C",
               "tipo_link_principal": "virtual",
-              "fonte": "Biblioteca não informada"
+              "fonte": "IFMG"
             }
           ]
         }
@@ -892,7 +888,7 @@
       "acervos_quantidade": 1,
       "registros_acervo_quantidade": 1,
       "bibliotecas": [
-        "Biblioteca não informada"
+        "IFMG"
       ]
     },
     {
@@ -908,7 +904,7 @@
       "icone": "♀️",
       "numero_chamada": "929 T874e 2020",
       "unidade": "",
-      "biblioteca_rede": "",
+      "biblioteca_rede": "IFMG Sabará",
       "codigo_acervo": "106714",
       "exemplares_fisicos_catalogados": 1,
       "outras_edicoes_fisicas": 0,
@@ -919,10 +915,10 @@
       "link": "https://pergamum.ifmg.edu.br/acervo/106714",
       "tipo_link_principal": "fisico",
       "imagem": "imagens/livros/capas/106714.webp",
-      "imagem_fonte": "Capa exibida no registro do Pergamum de biblioteca; cópia local otimizada",
+      "imagem_fonte": "Capa exibida no registro do Pergamum de IFMG Sabará; cópia local otimizada",
       "imagem_url_origem": "https://pergamum.ifmg.edu.br/pergamumweb/download/9642FB49-D41E-4A1D-ABE7-D53A7424115D.PNG",
       "qr_code": "imagens/livros/qrcodes/e-eu-nao-sou-uma-mulher-sojourner-truth.svg",
-      "fonte": "Biblioteca não informada",
+      "fonte": "IFMG Sabará",
       "exibicao_ativa": true,
       "exibir_de": "",
       "exibir_ate": "",
@@ -938,8 +934,8 @@
       ],
       "acervos": [
         {
-          "biblioteca": "Biblioteca não informada",
-          "biblioteca_rede": "",
+          "biblioteca": "IFMG Sabará",
+          "biblioteca_rede": "IFMG Sabará",
           "unidade": "",
           "acesso_fisico": true,
           "acesso_virtual": false,
@@ -949,7 +945,7 @@
               "registro_id": "e-eu-nao-sou-uma-mulher-sojourner-truth",
               "titulo_registro": "E eu não sou uma mulher? A narrativa de Sojourner Truth",
               "autor_registro": "Sojourner Truth",
-              "biblioteca_rede": "",
+              "biblioteca_rede": "IFMG Sabará",
               "unidade": "",
               "codigo_acervo": "106714",
               "numero_chamada": "929 T874e 2020",
@@ -960,7 +956,7 @@
               "link_virtual": "",
               "link": "https://pergamum.ifmg.edu.br/acervo/106714",
               "tipo_link_principal": "fisico",
-              "fonte": "Biblioteca não informada"
+              "fonte": "IFMG Sabará"
             }
           ]
         }
@@ -968,7 +964,7 @@
       "acervos_quantidade": 1,
       "registros_acervo_quantidade": 1,
       "bibliotecas": [
-        "Biblioteca não informada"
+        "IFMG Sabará"
       ]
     },
     {
@@ -984,7 +980,7 @@
       "icone": "♀️",
       "numero_chamada": "",
       "unidade": "",
-      "biblioteca_rede": "",
+      "biblioteca_rede": "IFMG",
       "codigo_acervo": "",
       "exemplares_fisicos_catalogados": 0,
       "outras_edicoes_fisicas": 0,
@@ -998,7 +994,7 @@
       "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
       "imagem_url_origem": "",
       "qr_code": "imagens/livros/qrcodes/elas-nas-organizacoes.svg",
-      "fonte": "Biblioteca não informada",
+      "fonte": "IFMG",
       "exibicao_ativa": true,
       "exibir_de": "",
       "exibir_ate": "",
@@ -1014,8 +1010,8 @@
       ],
       "acervos": [
         {
-          "biblioteca": "Biblioteca não informada",
-          "biblioteca_rede": "",
+          "biblioteca": "IFMG",
+          "biblioteca_rede": "IFMG",
           "unidade": "",
           "acesso_fisico": false,
           "acesso_virtual": true,
@@ -1025,7 +1021,7 @@
               "registro_id": "elas-nas-organizacoes",
               "titulo_registro": "Elas nas organizações: passado, presente, futuro",
               "autor_registro": "Susane Petinelli-Souza",
-              "biblioteca_rede": "",
+              "biblioteca_rede": "IFMG",
               "unidade": "",
               "codigo_acervo": "",
               "numero_chamada": "",
@@ -1036,7 +1032,7 @@
               "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=222635&page=1&perPage=20&orderBy=obra&direction=C",
               "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=222635&page=1&perPage=20&orderBy=obra&direction=C",
               "tipo_link_principal": "virtual",
-              "fonte": "Biblioteca não informada"
+              "fonte": "IFMG"
             }
           ]
         }
@@ -1044,7 +1040,7 @@
       "acervos_quantidade": 1,
       "registros_acervo_quantidade": 1,
       "bibliotecas": [
-        "Biblioteca não informada"
+        "IFMG"
       ]
     },
     {
@@ -1059,8 +1055,7 @@
         "educação",
         "liberdade",
         "raça",
-        "gênero",
-        "Agosto Lilás"
+        "gênero"
       ],
       "icone": "📚",
       "numero_chamada": "370.1 H784t.Pc 2017",
@@ -1217,8 +1212,7 @@
         "educação",
         "comunidade",
         "antirracismo",
-        "igualdade",
-        "Agosto Lilás"
+        "igualdade"
       ],
       "icone": "📚",
       "numero_chamada": "370.117 H784t.Pc 2021",
@@ -1299,8 +1293,7 @@
         "educação",
         "pensamento crítico",
         "raça",
-        "gênero",
-        "Agosto Lilás"
+        "gênero"
       ],
       "icone": "📚",
       "numero_chamada": "370 H784t.Pl 2020",
@@ -1411,7 +1404,7 @@
       "icone": "♀️",
       "numero_chamada": "",
       "unidade": "",
-      "biblioteca_rede": "",
+      "biblioteca_rede": "IFMG",
       "codigo_acervo": "",
       "exemplares_fisicos_catalogados": 0,
       "outras_edicoes_fisicas": 0,
@@ -1425,7 +1418,7 @@
       "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
       "imagem_url_origem": "",
       "qr_code": "imagens/livros/qrcodes/equidade-de-genero.svg",
-      "fonte": "Biblioteca não informada",
+      "fonte": "IFMG",
       "exibicao_ativa": true,
       "exibir_de": "",
       "exibir_ate": "",
@@ -1441,8 +1434,8 @@
       ],
       "acervos": [
         {
-          "biblioteca": "Biblioteca não informada",
-          "biblioteca_rede": "",
+          "biblioteca": "IFMG",
+          "biblioteca_rede": "IFMG",
           "unidade": "",
           "acesso_fisico": false,
           "acesso_virtual": true,
@@ -1452,7 +1445,7 @@
               "registro_id": "equidade-de-genero",
               "titulo_registro": "Equidade de gênero: barreiras e intervenções",
               "autor_registro": "Brenno César Vulcão de Souza e Lelison Leite de Souza e Nicolli dos Santos Ferreira",
-              "biblioteca_rede": "",
+              "biblioteca_rede": "IFMG",
               "unidade": "",
               "codigo_acervo": "",
               "numero_chamada": "",
@@ -1463,7 +1456,7 @@
               "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=229103&page=1&perPage=20&orderBy=obra&direction=C",
               "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=229103&page=1&perPage=20&orderBy=obra&direction=C",
               "tipo_link_principal": "virtual",
-              "fonte": "Biblioteca não informada"
+              "fonte": "IFMG"
             }
           ]
         }
@@ -1471,7 +1464,7 @@
       "acervos_quantidade": 1,
       "registros_acervo_quantidade": 1,
       "bibliotecas": [
-        "Biblioteca não informada"
+        "IFMG"
       ]
     },
     {
@@ -1487,8 +1480,7 @@
         "voz",
         "racismo",
         "educação",
-        "resistência",
-        "Agosto Lilás"
+        "resistência"
       ],
       "icone": "📚",
       "numero_chamada": "305.42 H787t.Pm 2019",
@@ -1570,8 +1562,7 @@
         "raça",
         "gênero",
         "classe",
-        "antirracismo",
-        "Agosto Lilás"
+        "antirracismo"
       ],
       "icone": "📚",
       "numero_chamada": "305.8 H784e 2022",
@@ -1653,7 +1644,7 @@
       "icone": "♀️",
       "numero_chamada": "",
       "unidade": "",
-      "biblioteca_rede": "",
+      "biblioteca_rede": "IFMG",
       "codigo_acervo": "",
       "exemplares_fisicos_catalogados": 0,
       "outras_edicoes_fisicas": 0,
@@ -1667,7 +1658,7 @@
       "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
       "imagem_url_origem": "",
       "qr_code": "imagens/livros/qrcodes/estudos-de-genero-literatura-criancas-jovens.svg",
-      "fonte": "Biblioteca não informada",
+      "fonte": "IFMG",
       "exibicao_ativa": true,
       "exibir_de": "",
       "exibir_ate": "",
@@ -1683,8 +1674,8 @@
       ],
       "acervos": [
         {
-          "biblioteca": "Biblioteca não informada",
-          "biblioteca_rede": "",
+          "biblioteca": "IFMG",
+          "biblioteca_rede": "IFMG",
           "unidade": "",
           "acesso_fisico": false,
           "acesso_virtual": true,
@@ -1694,7 +1685,7 @@
               "registro_id": "estudos-de-genero-literatura-criancas-jovens",
               "titulo_registro": "Estudos de gênero e literatura para crianças e jovens",
               "autor_registro": "Cecil Jeanine Albert Zinani e Diógenes Bueno",
-              "biblioteca_rede": "",
+              "biblioteca_rede": "IFMG",
               "unidade": "",
               "codigo_acervo": "",
               "numero_chamada": "",
@@ -1705,7 +1696,7 @@
               "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=47896&page=1&perPage=20&orderBy=obra&direction=C",
               "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=47896&page=1&perPage=20&orderBy=obra&direction=C",
               "tipo_link_principal": "virtual",
-              "fonte": "Biblioteca não informada"
+              "fonte": "IFMG"
             }
           ]
         }
@@ -1713,7 +1704,7 @@
       "acervos_quantidade": 1,
       "registros_acervo_quantidade": 1,
       "bibliotecas": [
-        "Biblioteca não informada"
+        "IFMG"
       ]
     },
     {
@@ -1729,8 +1720,7 @@
         "mulheres negras",
         "racismo",
         "sexismo",
-        "movimentos sociais",
-        "Agosto Lilás"
+        "movimentos sociais"
       ],
       "icone": "📚",
       "numero_chamada": "305.42 H776n 7. ed. 2020",
@@ -1935,7 +1925,7 @@
       "icone": "♀️",
       "numero_chamada": "821(81)-94 Y82e 3. ed 2018",
       "unidade": "",
-      "biblioteca_rede": "",
+      "biblioteca_rede": "IFMG Sabará",
       "codigo_acervo": "99004",
       "exemplares_fisicos_catalogados": 1,
       "outras_edicoes_fisicas": 0,
@@ -1946,10 +1936,10 @@
       "link": "https://pergamum.ifmg.edu.br/acervo/99004",
       "tipo_link_principal": "fisico",
       "imagem": "imagens/livros/capas/99004.webp",
-      "imagem_fonte": "Capa exibida no registro do Pergamum de biblioteca; cópia local otimizada",
+      "imagem_fonte": "Capa exibida no registro do Pergamum de IFMG Sabará; cópia local otimizada",
       "imagem_url_origem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000062/00006226.jpg",
       "qr_code": "imagens/livros/qrcodes/eu-sou-malala.svg",
-      "fonte": "Biblioteca não informada",
+      "fonte": "IFMG Sabará",
       "exibicao_ativa": true,
       "exibir_de": "",
       "exibir_ate": "",
@@ -1965,8 +1955,8 @@
       ],
       "acervos": [
         {
-          "biblioteca": "Biblioteca não informada",
-          "biblioteca_rede": "",
+          "biblioteca": "IFMG Sabará",
+          "biblioteca_rede": "IFMG Sabará",
           "unidade": "",
           "acesso_fisico": true,
           "acesso_virtual": false,
@@ -1976,7 +1966,7 @@
               "registro_id": "eu-sou-malala",
               "titulo_registro": "Eu sou Malala: como uma garota que defendeu o direito à educação e mudou o mundo",
               "autor_registro": "Malala Yousafzai e Patricia McCormick",
-              "biblioteca_rede": "",
+              "biblioteca_rede": "IFMG Sabará",
               "unidade": "",
               "codigo_acervo": "99004",
               "numero_chamada": "821(81)-94 Y82e 3. ed 2018",
@@ -1987,7 +1977,7 @@
               "link_virtual": "",
               "link": "https://pergamum.ifmg.edu.br/acervo/99004",
               "tipo_link_principal": "fisico",
-              "fonte": "Biblioteca não informada"
+              "fonte": "IFMG Sabará"
             }
           ]
         }
@@ -1995,7 +1985,7 @@
       "acervos_quantidade": 1,
       "registros_acervo_quantidade": 1,
       "bibliotecas": [
-        "Biblioteca não informada"
+        "IFMG Sabará"
       ]
     },
     {
@@ -2010,8 +2000,7 @@
         "sexismo",
         "igualdade",
         "masculinidades",
-        "relações",
-        "Agosto Lilás"
+        "relações"
       ],
       "icone": "📚",
       "numero_chamada": "305.42 H784f 18.ed. 2022",
@@ -2146,8 +2135,7 @@
         "masculinidades",
         "homens negros",
         "vulnerabilidade",
-        "amor",
-        "Agosto Lilás"
+        "amor"
       ],
       "icone": "📚",
       "numero_chamada": "305.3 H784w.Ps 2022",
@@ -2229,7 +2217,7 @@
       "icone": "♀️",
       "numero_chamada": "371.13 G326 2009",
       "unidade": "",
-      "biblioteca_rede": "",
+      "biblioteca_rede": "IFMG Sabará",
       "codigo_acervo": "100410",
       "exemplares_fisicos_catalogados": 1,
       "outras_edicoes_fisicas": 0,
@@ -2240,10 +2228,10 @@
       "link": "https://pergamum.ifmg.edu.br/acervo/100410",
       "tipo_link_principal": "fisico",
       "imagem": "imagens/livros/capas/100410.webp",
-      "imagem_fonte": "Capa exibida no registro do Pergamum de biblioteca; cópia local otimizada",
+      "imagem_fonte": "Capa exibida no registro do Pergamum de IFMG Sabará; cópia local otimizada",
       "imagem_url_origem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000066/00006619.JPG",
       "qr_code": "imagens/livros/qrcodes/genero-e-diversidade-na-escola.svg",
-      "fonte": "Biblioteca não informada",
+      "fonte": "IFMG Sabará",
       "exibicao_ativa": true,
       "exibir_de": "",
       "exibir_ate": "",
@@ -2259,8 +2247,8 @@
       ],
       "acervos": [
         {
-          "biblioteca": "Biblioteca não informada",
-          "biblioteca_rede": "",
+          "biblioteca": "IFMG Sabará",
+          "biblioteca_rede": "IFMG Sabará",
           "unidade": "",
           "acesso_fisico": true,
           "acesso_virtual": false,
@@ -2270,7 +2258,7 @@
               "registro_id": "genero-e-diversidade-na-escola",
               "titulo_registro": "Gênero e diversidade na escola",
               "autor_registro": "Sérgio Carrara",
-              "biblioteca_rede": "",
+              "biblioteca_rede": "IFMG Sabará",
               "unidade": "",
               "codigo_acervo": "100410",
               "numero_chamada": "371.13 G326 2009",
@@ -2281,7 +2269,7 @@
               "link_virtual": "",
               "link": "https://pergamum.ifmg.edu.br/acervo/100410",
               "tipo_link_principal": "fisico",
-              "fonte": "Biblioteca não informada"
+              "fonte": "IFMG Sabará"
             }
           ]
         }
@@ -2289,7 +2277,7 @@
       "acervos_quantidade": 1,
       "registros_acervo_quantidade": 1,
       "bibliotecas": [
-        "Biblioteca não informada"
+        "IFMG Sabará"
       ]
     },
     {
@@ -2305,7 +2293,7 @@
       "icone": "♀️",
       "numero_chamada": "821(81)-34 E92i 2016",
       "unidade": "",
-      "biblioteca_rede": "",
+      "biblioteca_rede": "IFMG Sabará",
       "codigo_acervo": "99091",
       "exemplares_fisicos_catalogados": 2,
       "outras_edicoes_fisicas": 1,
@@ -2316,10 +2304,10 @@
       "link": "https://pergamum.ifmg.edu.br/acervo/99091",
       "tipo_link_principal": "fisico",
       "imagem": "imagens/livros/capas/99091.webp",
-      "imagem_fonte": "Capa exibida no registro do Pergamum de biblioteca; cópia local otimizada",
+      "imagem_fonte": "Capa exibida no registro do Pergamum de IFMG Sabará; cópia local otimizada",
       "imagem_url_origem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000061/00006160.jpg",
       "qr_code": "imagens/livros/qrcodes/insubmissas-lagrimas-de-mulheres.svg",
-      "fonte": "Biblioteca não informada",
+      "fonte": "IFMG Sabará",
       "exibicao_ativa": true,
       "exibir_de": "",
       "exibir_ate": "",
@@ -2335,8 +2323,8 @@
       ],
       "acervos": [
         {
-          "biblioteca": "Biblioteca não informada",
-          "biblioteca_rede": "",
+          "biblioteca": "IFMG Sabará",
+          "biblioteca_rede": "IFMG Sabará",
           "unidade": "",
           "acesso_fisico": true,
           "acesso_virtual": false,
@@ -2346,7 +2334,7 @@
               "registro_id": "insubmissas-lagrimas-de-mulheres",
               "titulo_registro": "Insubmissas lágrimas de mulheres",
               "autor_registro": "Conceição Evaristo",
-              "biblioteca_rede": "",
+              "biblioteca_rede": "IFMG Sabará",
               "unidade": "",
               "codigo_acervo": "99091",
               "numero_chamada": "821(81)-34 E92i 2016",
@@ -2357,7 +2345,7 @@
               "link_virtual": "",
               "link": "https://pergamum.ifmg.edu.br/acervo/99091",
               "tipo_link_principal": "fisico",
-              "fonte": "Biblioteca não informada"
+              "fonte": "IFMG Sabará"
             }
           ]
         }
@@ -2365,7 +2353,7 @@
       "acervos_quantidade": 1,
       "registros_acervo_quantidade": 1,
       "bibliotecas": [
-        "Biblioteca não informada"
+        "IFMG Sabará"
       ]
     },
     {
@@ -2381,7 +2369,7 @@
       "icone": "♀️",
       "numero_chamada": "396 A315i 2019",
       "unidade": "",
-      "biblioteca_rede": "",
+      "biblioteca_rede": "IFMG Sabará",
       "codigo_acervo": "105826",
       "exemplares_fisicos_catalogados": 1,
       "outras_edicoes_fisicas": 0,
@@ -2392,10 +2380,10 @@
       "link": "https://pergamum.ifmg.edu.br/acervo/105826",
       "tipo_link_principal": "fisico",
       "imagem": "imagens/livros/capas/105826.webp",
-      "imagem_fonte": "Capa exibida no registro do Pergamum de biblioteca; cópia local otimizada",
+      "imagem_fonte": "Capa exibida no registro do Pergamum de IFMG Sabará; cópia local otimizada",
       "imagem_url_origem": "https://pergamum.ifmg.edu.br/pergamumweb/download/33598D2C-65E1-4A72-9245-0B3451F53662.png",
       "qr_code": "imagens/livros/qrcodes/interseccionalidade.svg",
-      "fonte": "Biblioteca não informada",
+      "fonte": "IFMG Sabará",
       "exibicao_ativa": true,
       "exibir_de": "",
       "exibir_ate": "",
@@ -2411,8 +2399,8 @@
       ],
       "acervos": [
         {
-          "biblioteca": "Biblioteca não informada",
-          "biblioteca_rede": "",
+          "biblioteca": "IFMG Sabará",
+          "biblioteca_rede": "IFMG Sabará",
           "unidade": "",
           "acesso_fisico": true,
           "acesso_virtual": false,
@@ -2422,7 +2410,7 @@
               "registro_id": "interseccionalidade",
               "titulo_registro": "Interseccionalidade",
               "autor_registro": "Carla Akotirene",
-              "biblioteca_rede": "",
+              "biblioteca_rede": "IFMG Sabará",
               "unidade": "",
               "codigo_acervo": "105826",
               "numero_chamada": "396 A315i 2019",
@@ -2433,7 +2421,7 @@
               "link_virtual": "",
               "link": "https://pergamum.ifmg.edu.br/acervo/105826",
               "tipo_link_principal": "fisico",
-              "fonte": "Biblioteca não informada"
+              "fonte": "IFMG Sabará"
             }
           ]
         }
@@ -2441,7 +2429,7 @@
       "acervos_quantidade": 1,
       "registros_acervo_quantidade": 1,
       "bibliotecas": [
-        "Biblioteca não informada"
+        "IFMG Sabará"
       ]
     },
     {
@@ -2457,8 +2445,7 @@
         "mulheres negras",
         "autocuidado",
         "racismo",
-        "comunidade",
-        "Agosto Lilás"
+        "comunidade"
       ],
       "icone": "📚",
       "numero_chamada": "155.6523 H784s.Pf 2023",
@@ -2540,7 +2527,7 @@
       "icone": "♀️",
       "numero_chamada": "",
       "unidade": "",
-      "biblioteca_rede": "",
+      "biblioteca_rede": "IFMG",
       "codigo_acervo": "",
       "exemplares_fisicos_catalogados": 0,
       "outras_edicoes_fisicas": 0,
@@ -2554,7 +2541,7 @@
       "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
       "imagem_url_origem": "",
       "qr_code": "imagens/livros/qrcodes/literatura-escrita-por-mulheres.svg",
-      "fonte": "Biblioteca não informada",
+      "fonte": "IFMG",
       "exibicao_ativa": true,
       "exibir_de": "",
       "exibir_ate": "",
@@ -2570,8 +2557,8 @@
       ],
       "acervos": [
         {
-          "biblioteca": "Biblioteca não informada",
-          "biblioteca_rede": "",
+          "biblioteca": "IFMG",
+          "biblioteca_rede": "IFMG",
           "unidade": "",
           "acesso_fisico": false,
           "acesso_virtual": true,
@@ -2581,7 +2568,7 @@
               "registro_id": "literatura-escrita-por-mulheres",
               "titulo_registro": "Literatura escrita por mulheres: conceitos e trajetórias",
               "autor_registro": "Daniele Santos e Emanuela Carla Siqueira e Gabriela Szabo",
-              "biblioteca_rede": "",
+              "biblioteca_rede": "IFMG",
               "unidade": "",
               "codigo_acervo": "",
               "numero_chamada": "",
@@ -2592,7 +2579,7 @@
               "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=222069&page=1&perPage=20&orderBy=obra&direction=C",
               "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=222069&page=1&perPage=20&orderBy=obra&direction=C",
               "tipo_link_principal": "virtual",
-              "fonte": "Biblioteca não informada"
+              "fonte": "IFMG"
             }
           ]
         }
@@ -2600,7 +2587,7 @@
       "acervos_quantidade": 1,
       "registros_acervo_quantidade": 1,
       "bibliotecas": [
-        "Biblioteca não informada"
+        "IFMG"
       ]
     },
     {
@@ -2616,7 +2603,7 @@
       "icone": "✊🏿",
       "numero_chamada": "929 R237l 2010",
       "unidade": "",
-      "biblioteca_rede": "",
+      "biblioteca_rede": "IFMG Sabará",
       "codigo_acervo": "109262",
       "exemplares_fisicos_catalogados": 1,
       "outras_edicoes_fisicas": 0,
@@ -2627,10 +2614,10 @@
       "link": "https://pergamum.ifmg.edu.br/acervo/109262",
       "tipo_link_principal": "fisico",
       "imagem": "imagens/livros/capas/109262.webp",
-      "imagem_fonte": "Capa exibida no registro do Pergamum de biblioteca; cópia local otimizada",
+      "imagem_fonte": "Capa exibida no registro do Pergamum de IFMG Sabará; cópia local otimizada",
       "imagem_url_origem": "https://pergamum.ifmg.edu.br/pergamumweb/download/79524051-9663-4943-AED6-BD9AA2247695.PNG",
       "qr_code": "imagens/livros/qrcodes/lelia-gonzalez.svg",
-      "fonte": "Biblioteca não informada",
+      "fonte": "IFMG Sabará",
       "exibicao_ativa": true,
       "exibir_de": "",
       "exibir_ate": "",
@@ -2646,8 +2633,8 @@
       ],
       "acervos": [
         {
-          "biblioteca": "Biblioteca não informada",
-          "biblioteca_rede": "",
+          "biblioteca": "IFMG Sabará",
+          "biblioteca_rede": "IFMG Sabará",
           "unidade": "",
           "acesso_fisico": true,
           "acesso_virtual": true,
@@ -2657,7 +2644,7 @@
               "registro_id": "lelia-gonzalez",
               "titulo_registro": "Lélia Gonzalez",
               "autor_registro": "Alex Ratts e Flavia Rios",
-              "biblioteca_rede": "",
+              "biblioteca_rede": "IFMG Sabará",
               "unidade": "",
               "codigo_acervo": "109262",
               "numero_chamada": "929 R237l 2010",
@@ -2668,7 +2655,7 @@
               "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=123613&page=1&perPage=20&orderBy=obra&direction=C",
               "link": "https://pergamum.ifmg.edu.br/acervo/109262",
               "tipo_link_principal": "fisico",
-              "fonte": "Biblioteca não informada"
+              "fonte": "IFMG Sabará"
             }
           ]
         }
@@ -2676,7 +2663,7 @@
       "acervos_quantidade": 1,
       "registros_acervo_quantidade": 1,
       "bibliotecas": [
-        "Biblioteca não informada"
+        "IFMG Sabará"
       ]
     },
     {
@@ -2692,7 +2679,7 @@
       "icone": "♀️",
       "numero_chamada": "351 M231 2010",
       "unidade": "",
-      "biblioteca_rede": "",
+      "biblioteca_rede": "IFMG Sabará",
       "codigo_acervo": "100428",
       "exemplares_fisicos_catalogados": 1,
       "outras_edicoes_fisicas": 0,
@@ -2703,10 +2690,10 @@
       "link": "https://pergamum.ifmg.edu.br/acervo/100428",
       "tipo_link_principal": "fisico",
       "imagem": "imagens/livros/capas/100428.webp",
-      "imagem_fonte": "Capa exibida no registro do Pergamum de biblioteca; cópia local otimizada",
+      "imagem_fonte": "Capa exibida no registro do Pergamum de IFMG Sabará; cópia local otimizada",
       "imagem_url_origem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000066/0000662b.png",
       "qr_code": "imagens/livros/qrcodes/mais-mulheres-no-poder.svg",
-      "fonte": "Biblioteca não informada",
+      "fonte": "IFMG Sabará",
       "exibicao_ativa": true,
       "exibir_de": "",
       "exibir_ate": "",
@@ -2722,8 +2709,8 @@
       ],
       "acervos": [
         {
-          "biblioteca": "Biblioteca não informada",
-          "biblioteca_rede": "",
+          "biblioteca": "IFMG Sabará",
+          "biblioteca_rede": "IFMG Sabará",
           "unidade": "",
           "acesso_fisico": true,
           "acesso_virtual": false,
@@ -2733,7 +2720,7 @@
               "registro_id": "mais-mulheres-no-poder",
               "titulo_registro": "Mais mulheres no poder: contribuição à formação política das mulheres",
               "autor_registro": "Marlise Matos e Iáris Ramalho Cortês",
-              "biblioteca_rede": "",
+              "biblioteca_rede": "IFMG Sabará",
               "unidade": "",
               "codigo_acervo": "100428",
               "numero_chamada": "351 M231 2010",
@@ -2744,7 +2731,7 @@
               "link_virtual": "",
               "link": "https://pergamum.ifmg.edu.br/acervo/100428",
               "tipo_link_principal": "fisico",
-              "fonte": "Biblioteca não informada"
+              "fonte": "IFMG Sabará"
             }
           ]
         }
@@ -2752,7 +2739,7 @@
       "acervos_quantidade": 1,
       "registros_acervo_quantidade": 1,
       "bibliotecas": [
-        "Biblioteca não informada"
+        "IFMG Sabará"
       ]
     },
     {
@@ -2768,7 +2755,7 @@
       "icone": "♀️",
       "numero_chamada": "741.5(44) C942m 2020",
       "unidade": "",
-      "biblioteca_rede": "",
+      "biblioteca_rede": "IFMG Sabará",
       "codigo_acervo": "110588",
       "exemplares_fisicos_catalogados": 1,
       "outras_edicoes_fisicas": 0,
@@ -2779,10 +2766,10 @@
       "link": "https://pergamum.ifmg.edu.br/acervo/110588",
       "tipo_link_principal": "fisico",
       "imagem": "imagens/livros/capas/110588.webp",
-      "imagem_fonte": "Capa exibida no registro do Pergamum de biblioteca; cópia local otimizada",
+      "imagem_fonte": "Capa exibida no registro do Pergamum de IFMG Sabará; cópia local otimizada",
       "imagem_url_origem": "https://pergamum.ifmg.edu.br/pergamumweb/download/0950965B-0EF6-4637-A42B-0491EF481044.jpg",
       "qr_code": "imagens/livros/qrcodes/miss-davis.svg",
-      "fonte": "Biblioteca não informada",
+      "fonte": "IFMG Sabará",
       "exibicao_ativa": true,
       "exibir_de": "",
       "exibir_ate": "",
@@ -2798,8 +2785,8 @@
       ],
       "acervos": [
         {
-          "biblioteca": "Biblioteca não informada",
-          "biblioteca_rede": "",
+          "biblioteca": "IFMG Sabará",
+          "biblioteca_rede": "IFMG Sabará",
           "unidade": "",
           "acesso_fisico": true,
           "acesso_virtual": false,
@@ -2809,7 +2796,7 @@
               "registro_id": "miss-davis",
               "titulo_registro": "Miss Davis: a vida e as lutas de Angela Davis",
               "autor_registro": "Sybille Titeux de la Croix",
-              "biblioteca_rede": "",
+              "biblioteca_rede": "IFMG Sabará",
               "unidade": "",
               "codigo_acervo": "110588",
               "numero_chamada": "741.5(44) C942m 2020",
@@ -2820,7 +2807,7 @@
               "link_virtual": "",
               "link": "https://pergamum.ifmg.edu.br/acervo/110588",
               "tipo_link_principal": "fisico",
-              "fonte": "Biblioteca não informada"
+              "fonte": "IFMG Sabará"
             }
           ]
         }
@@ -2828,7 +2815,7 @@
       "acervos_quantidade": 1,
       "registros_acervo_quantidade": 1,
       "bibliotecas": [
-        "Biblioteca não informada"
+        "IFMG Sabará"
       ]
     },
     {
@@ -2844,7 +2831,7 @@
       "icone": "♀️",
       "numero_chamada": "",
       "unidade": "",
-      "biblioteca_rede": "",
+      "biblioteca_rede": "IFMG",
       "codigo_acervo": "",
       "exemplares_fisicos_catalogados": 0,
       "outras_edicoes_fisicas": 0,
@@ -2858,7 +2845,7 @@
       "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
       "imagem_url_origem": "",
       "qr_code": "imagens/livros/qrcodes/mulheres-em-tecnologia.svg",
-      "fonte": "Biblioteca não informada",
+      "fonte": "IFMG",
       "exibicao_ativa": true,
       "exibir_de": "",
       "exibir_ate": "",
@@ -2874,8 +2861,8 @@
       ],
       "acervos": [
         {
-          "biblioteca": "Biblioteca não informada",
-          "biblioteca_rede": "",
+          "biblioteca": "IFMG",
+          "biblioteca_rede": "IFMG",
           "unidade": "",
           "acesso_fisico": false,
           "acesso_virtual": true,
@@ -2885,7 +2872,7 @@
               "registro_id": "mulheres-em-tecnologia",
               "titulo_registro": "Mulheres em tecnologia: como a diversidade e inclusão vão mudar o jogo nas empresas e na sociedade",
               "autor_registro": "Beatriz Oliveira e Mariana Carvalho",
-              "biblioteca_rede": "",
+              "biblioteca_rede": "IFMG",
               "unidade": "",
               "codigo_acervo": "",
               "numero_chamada": "",
@@ -2896,7 +2883,7 @@
               "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=214177&page=1&perPage=20&orderBy=obra&direction=C",
               "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=214177&page=1&perPage=20&orderBy=obra&direction=C",
               "tipo_link_principal": "virtual",
-              "fonte": "Biblioteca não informada"
+              "fonte": "IFMG"
             }
           ]
         }
@@ -2904,7 +2891,7 @@
       "acervos_quantidade": 1,
       "registros_acervo_quantidade": 1,
       "bibliotecas": [
-        "Biblioteca não informada"
+        "IFMG"
       ]
     },
     {
@@ -2920,7 +2907,7 @@
       "icone": "♀️",
       "numero_chamada": "",
       "unidade": "",
-      "biblioteca_rede": "",
+      "biblioteca_rede": "IFMG",
       "codigo_acervo": "",
       "exemplares_fisicos_catalogados": 0,
       "outras_edicoes_fisicas": 0,
@@ -2934,7 +2921,7 @@
       "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
       "imagem_url_origem": "",
       "qr_code": "imagens/livros/qrcodes/mulheres-casas-e-cidades.svg",
-      "fonte": "Biblioteca não informada",
+      "fonte": "IFMG",
       "exibicao_ativa": true,
       "exibir_de": "",
       "exibir_ate": "",
@@ -2950,8 +2937,8 @@
       ],
       "acervos": [
         {
-          "biblioteca": "Biblioteca não informada",
-          "biblioteca_rede": "",
+          "biblioteca": "IFMG",
+          "biblioteca_rede": "IFMG",
           "unidade": "",
           "acesso_fisico": false,
           "acesso_virtual": true,
@@ -2961,7 +2948,7 @@
               "registro_id": "mulheres-casas-e-cidades",
               "titulo_registro": "Mulheres, casas e cidades",
               "autor_registro": "Zaida Muxí Martínez",
-              "biblioteca_rede": "",
+              "biblioteca_rede": "IFMG",
               "unidade": "",
               "codigo_acervo": "",
               "numero_chamada": "",
@@ -2972,7 +2959,7 @@
               "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=228409&page=1&perPage=20&orderBy=obra&direction=C",
               "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=228409&page=1&perPage=20&orderBy=obra&direction=C",
               "tipo_link_principal": "virtual",
-              "fonte": "Biblioteca não informada"
+              "fonte": "IFMG"
             }
           ]
         }
@@ -2980,7 +2967,7 @@
       "acervos_quantidade": 1,
       "registros_acervo_quantidade": 1,
       "bibliotecas": [
-        "Biblioteca não informada"
+        "IFMG"
       ]
     },
     {
@@ -2996,7 +2983,7 @@
       "icone": "♀️",
       "numero_chamada": "",
       "unidade": "",
-      "biblioteca_rede": "",
+      "biblioteca_rede": "IFMG",
       "codigo_acervo": "",
       "exemplares_fisicos_catalogados": 0,
       "outras_edicoes_fisicas": 0,
@@ -3010,7 +2997,7 @@
       "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
       "imagem_url_origem": "",
       "qr_code": "imagens/livros/qrcodes/mulheres-linguagem-e-poder.svg",
-      "fonte": "Biblioteca não informada",
+      "fonte": "IFMG",
       "exibicao_ativa": true,
       "exibir_de": "",
       "exibir_ate": "",
@@ -3026,8 +3013,8 @@
       ],
       "acervos": [
         {
-          "biblioteca": "Biblioteca não informada",
-          "biblioteca_rede": "",
+          "biblioteca": "IFMG",
+          "biblioteca_rede": "IFMG",
           "unidade": "",
           "acesso_fisico": false,
           "acesso_virtual": true,
@@ -3037,7 +3024,7 @@
               "registro_id": "mulheres-linguagem-e-poder",
               "titulo_registro": "Mulheres, linguagem e poder: estudos de gênero na sociolinguística brasileira",
               "autor_registro": "Cristine Gorski Severo e Raquel Meister Ko Freitag",
-              "biblioteca_rede": "",
+              "biblioteca_rede": "IFMG",
               "unidade": "",
               "codigo_acervo": "",
               "numero_chamada": "",
@@ -3048,7 +3035,7 @@
               "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=162882&page=1&perPage=20&orderBy=obra&direction=C",
               "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=162882&page=1&perPage=20&orderBy=obra&direction=C",
               "tipo_link_principal": "virtual",
-              "fonte": "Biblioteca não informada"
+              "fonte": "IFMG"
             }
           ]
         }
@@ -3056,7 +3043,7 @@
       "acervos_quantidade": 1,
       "registros_acervo_quantidade": 1,
       "bibliotecas": [
-        "Biblioteca não informada"
+        "IFMG"
       ]
     },
     {
@@ -3071,13 +3058,12 @@
         "mulheres",
         "raça",
         "classe",
-        "direitos",
-        "Agosto Lilás"
+        "direitos"
       ],
       "icone": "♀️",
       "numero_chamada": "316.346.2-055.2 D261m 2016",
       "unidade": "",
-      "biblioteca_rede": "",
+      "biblioteca_rede": "IFMG Sabará",
       "codigo_acervo": "107686",
       "exemplares_fisicos_catalogados": 1,
       "outras_edicoes_fisicas": 0,
@@ -3088,10 +3074,10 @@
       "link": "https://pergamum.ifmg.edu.br/acervo/107686",
       "tipo_link_principal": "fisico",
       "imagem": "imagens/livros/capas/107686.webp",
-      "imagem_fonte": "Capa exibida no registro do Pergamum de biblioteca; cópia local otimizada",
+      "imagem_fonte": "Capa exibida no registro do Pergamum de IFMG Sabará; cópia local otimizada",
       "imagem_url_origem": "https://pergamum.ifmg.edu.br/pergamumweb/download/065A72AD-500B-4335-BC09-AEFF43E9FD61.jpg",
       "qr_code": "imagens/livros/qrcodes/mulheres-raca-e-classe.svg",
-      "fonte": "Biblioteca não informada",
+      "fonte": "IFMG Sabará",
       "exibicao_ativa": true,
       "exibir_de": "",
       "exibir_ate": "",
@@ -3108,8 +3094,8 @@
       ],
       "acervos": [
         {
-          "biblioteca": "Biblioteca não informada",
-          "biblioteca_rede": "",
+          "biblioteca": "IFMG Sabará",
+          "biblioteca_rede": "IFMG Sabará",
           "unidade": "",
           "acesso_fisico": true,
           "acesso_virtual": false,
@@ -3119,7 +3105,7 @@
               "registro_id": "mulheres-raca-e-classe",
               "titulo_registro": "Mulheres, raça e classe",
               "autor_registro": "Angela Davis",
-              "biblioteca_rede": "",
+              "biblioteca_rede": "IFMG Sabará",
               "unidade": "",
               "codigo_acervo": "107686",
               "numero_chamada": "316.346.2-055.2 D261m 2016",
@@ -3130,7 +3116,7 @@
               "link_virtual": "",
               "link": "https://pergamum.ifmg.edu.br/acervo/107686",
               "tipo_link_principal": "fisico",
-              "fonte": "Biblioteca não informada"
+              "fonte": "IFMG Sabará"
             }
           ]
         }
@@ -3138,7 +3124,7 @@
       "acervos_quantidade": 1,
       "registros_acervo_quantidade": 1,
       "bibliotecas": [
-        "Biblioteca não informada"
+        "IFMG Sabará"
       ]
     },
     {
@@ -3154,7 +3140,7 @@
       "icone": "♀️",
       "numero_chamada": "",
       "unidade": "",
-      "biblioteca_rede": "",
+      "biblioteca_rede": "IFMG",
       "codigo_acervo": "",
       "exemplares_fisicos_catalogados": 0,
       "outras_edicoes_fisicas": 0,
@@ -3168,7 +3154,7 @@
       "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
       "imagem_url_origem": "",
       "qr_code": "imagens/livros/qrcodes/narrativas-de-genero.svg",
-      "fonte": "Biblioteca não informada",
+      "fonte": "IFMG",
       "exibicao_ativa": true,
       "exibir_de": "",
       "exibir_ate": "",
@@ -3184,8 +3170,8 @@
       ],
       "acervos": [
         {
-          "biblioteca": "Biblioteca não informada",
-          "biblioteca_rede": "",
+          "biblioteca": "IFMG",
+          "biblioteca_rede": "IFMG",
           "unidade": "",
           "acesso_fisico": false,
           "acesso_virtual": true,
@@ -3195,7 +3181,7 @@
               "registro_id": "narrativas-de-genero",
               "titulo_registro": "Narrativas de gênero: as várias faces dos estudos de gênero",
               "autor_registro": "Marlise Regina Meyrer e Mônica Karawejczyk",
-              "biblioteca_rede": "",
+              "biblioteca_rede": "IFMG",
               "unidade": "",
               "codigo_acervo": "",
               "numero_chamada": "",
@@ -3206,7 +3192,7 @@
               "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=193521&page=1&perPage=20&orderBy=obra&direction=C",
               "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=193521&page=1&perPage=20&orderBy=obra&direction=C",
               "tipo_link_principal": "virtual",
-              "fonte": "Biblioteca não informada"
+              "fonte": "IFMG"
             }
           ]
         }
@@ -3214,7 +3200,7 @@
       "acervos_quantidade": 1,
       "registros_acervo_quantidade": 1,
       "bibliotecas": [
-        "Biblioteca não informada"
+        "IFMG"
       ]
     },
     {
@@ -3230,7 +3216,7 @@
       "icone": "♀️",
       "numero_chamada": "396 B386s [1980]",
       "unidade": "",
-      "biblioteca_rede": "",
+      "biblioteca_rede": "IFMG Sabará",
       "codigo_acervo": "106588",
       "exemplares_fisicos_catalogados": 2,
       "outras_edicoes_fisicas": 1,
@@ -3241,10 +3227,10 @@
       "link": "https://pergamum.ifmg.edu.br/acervo/106588",
       "tipo_link_principal": "fisico",
       "imagem": "imagens/livros/capas/106588.webp",
-      "imagem_fonte": "Capa exibida no registro do Pergamum de biblioteca; cópia local otimizada",
+      "imagem_fonte": "Capa exibida no registro do Pergamum de IFMG Sabará; cópia local otimizada",
       "imagem_url_origem": "https://pergamum.ifmg.edu.br/imagens/background",
       "qr_code": "imagens/livros/qrcodes/o-segundo-sexo.svg",
-      "fonte": "Biblioteca não informada",
+      "fonte": "IFMG Sabará",
       "exibicao_ativa": true,
       "exibir_de": "",
       "exibir_ate": "",
@@ -3260,8 +3246,8 @@
       ],
       "acervos": [
         {
-          "biblioteca": "Biblioteca não informada",
-          "biblioteca_rede": "",
+          "biblioteca": "IFMG Sabará",
+          "biblioteca_rede": "IFMG Sabará",
           "unidade": "",
           "acesso_fisico": true,
           "acesso_virtual": false,
@@ -3271,7 +3257,7 @@
               "registro_id": "o-segundo-sexo",
               "titulo_registro": "O segundo sexo",
               "autor_registro": "Simone de Beauvoir",
-              "biblioteca_rede": "",
+              "biblioteca_rede": "IFMG Sabará",
               "unidade": "",
               "codigo_acervo": "106588",
               "numero_chamada": "396 B386s [1980]",
@@ -3282,7 +3268,7 @@
               "link_virtual": "",
               "link": "https://pergamum.ifmg.edu.br/acervo/106588",
               "tipo_link_principal": "fisico",
-              "fonte": "Biblioteca não informada"
+              "fonte": "IFMG Sabará"
             }
           ]
         }
@@ -3290,7 +3276,7 @@
       "acervos_quantidade": 1,
       "registros_acervo_quantidade": 1,
       "bibliotecas": [
-        "Biblioteca não informada"
+        "IFMG Sabará"
       ]
     },
     {
@@ -3306,8 +3292,7 @@
         "raça",
         "representação",
         "mídia",
-        "cultura",
-        "Agosto Lilás"
+        "cultura"
       ],
       "icone": "📚",
       "numero_chamada": "305.42 H784b.Pb 2019",
@@ -3389,7 +3374,7 @@
       "icone": "♀️",
       "numero_chamada": "396.1 P371 2018",
       "unidade": "",
-      "biblioteca_rede": "",
+      "biblioteca_rede": "IFMG Sabará",
       "codigo_acervo": "100380",
       "exemplares_fisicos_catalogados": 1,
       "outras_edicoes_fisicas": 0,
@@ -3400,10 +3385,10 @@
       "link": "https://pergamum.ifmg.edu.br/acervo/100380",
       "tipo_link_principal": "fisico",
       "imagem": "imagens/livros/capas/100380.webp",
-      "imagem_fonte": "Capa exibida no registro do Pergamum de biblioteca; cópia local otimizada",
+      "imagem_fonte": "Capa exibida no registro do Pergamum de IFMG Sabará; cópia local otimizada",
       "imagem_url_origem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000065/000065f5.JPG",
       "qr_code": "imagens/livros/qrcodes/pedagogias-feministas-decoloniais.svg",
-      "fonte": "Biblioteca não informada",
+      "fonte": "IFMG Sabará",
       "exibicao_ativa": true,
       "exibir_de": "",
       "exibir_ate": "",
@@ -3419,8 +3404,8 @@
       ],
       "acervos": [
         {
-          "biblioteca": "Biblioteca não informada",
-          "biblioteca_rede": "",
+          "biblioteca": "IFMG Sabará",
+          "biblioteca_rede": "IFMG Sabará",
           "unidade": "",
           "acesso_fisico": true,
           "acesso_virtual": false,
@@ -3430,7 +3415,7 @@
               "registro_id": "pedagogias-feministas-decoloniais",
               "titulo_registro": "Pedagogias feministas decoloniais",
               "autor_registro": "Marlise Matos",
-              "biblioteca_rede": "",
+              "biblioteca_rede": "IFMG Sabará",
               "unidade": "",
               "codigo_acervo": "100380",
               "numero_chamada": "396.1 P371 2018",
@@ -3441,7 +3426,7 @@
               "link_virtual": "",
               "link": "https://pergamum.ifmg.edu.br/acervo/100380",
               "tipo_link_principal": "fisico",
-              "fonte": "Biblioteca não informada"
+              "fonte": "IFMG Sabará"
             }
           ]
         }
@@ -3449,7 +3434,7 @@
       "acervos_quantidade": 1,
       "registros_acervo_quantidade": 1,
       "bibliotecas": [
-        "Biblioteca não informada"
+        "IFMG Sabará"
       ]
     },
     {
@@ -3465,8 +3450,7 @@
         "pertencimento",
         "ancestralidade",
         "raça",
-        "gênero",
-        "Agosto Lilás"
+        "gênero"
       ],
       "icone": "📚",
       "numero_chamada": "301.412 H784b.Pb 2022",
@@ -3548,7 +3532,7 @@
       "icone": "♀️",
       "numero_chamada": "396 G643p 2020",
       "unidade": "",
-      "biblioteca_rede": "",
+      "biblioteca_rede": "IFMG Sabará",
       "codigo_acervo": "109261",
       "exemplares_fisicos_catalogados": 1,
       "outras_edicoes_fisicas": 0,
@@ -3559,10 +3543,10 @@
       "link": "https://pergamum.ifmg.edu.br/acervo/109261",
       "tipo_link_principal": "fisico",
       "imagem": "imagens/livros/capas/109261.webp",
-      "imagem_fonte": "Capa exibida no registro do Pergamum de biblioteca; cópia local otimizada",
+      "imagem_fonte": "Capa exibida no registro do Pergamum de IFMG Sabará; cópia local otimizada",
       "imagem_url_origem": "https://pergamum.ifmg.edu.br/pergamumweb/download/E122795B-9084-4111-BE6B-CBC89ACB65A9.PNG",
       "qr_code": "imagens/livros/qrcodes/por-um-feminismo-afro-latino-americano.svg",
-      "fonte": "Biblioteca não informada",
+      "fonte": "IFMG Sabará",
       "exibicao_ativa": true,
       "exibir_de": "",
       "exibir_ate": "",
@@ -3578,8 +3562,8 @@
       ],
       "acervos": [
         {
-          "biblioteca": "Biblioteca não informada",
-          "biblioteca_rede": "",
+          "biblioteca": "IFMG Sabará",
+          "biblioteca_rede": "IFMG Sabará",
           "unidade": "",
           "acesso_fisico": true,
           "acesso_virtual": false,
@@ -3589,7 +3573,7 @@
               "registro_id": "por-um-feminismo-afro-latino-americano",
               "titulo_registro": "Por um feminismo afro-latino-americano: ensaios, intervenções e diálogos",
               "autor_registro": "Lélia Gonzalez",
-              "biblioteca_rede": "",
+              "biblioteca_rede": "IFMG Sabará",
               "unidade": "",
               "codigo_acervo": "109261",
               "numero_chamada": "396 G643p 2020",
@@ -3600,7 +3584,7 @@
               "link_virtual": "",
               "link": "https://pergamum.ifmg.edu.br/acervo/109261",
               "tipo_link_principal": "fisico",
-              "fonte": "Biblioteca não informada"
+              "fonte": "IFMG Sabará"
             }
           ]
         }
@@ -3608,7 +3592,7 @@
       "acervos_quantidade": 1,
       "registros_acervo_quantidade": 1,
       "bibliotecas": [
-        "Biblioteca não informada"
+        "IFMG Sabará"
       ]
     },
     {
@@ -3624,7 +3608,7 @@
       "icone": "♀️",
       "numero_chamada": "323.1(81) C289r 2011",
       "unidade": "",
-      "biblioteca_rede": "",
+      "biblioteca_rede": "IFMG Sabará",
       "codigo_acervo": "103956",
       "exemplares_fisicos_catalogados": 1,
       "outras_edicoes_fisicas": 0,
@@ -3635,10 +3619,10 @@
       "link": "https://pergamum.ifmg.edu.br/acervo/103956",
       "tipo_link_principal": "fisico",
       "imagem": "imagens/livros/capas/103956.webp",
-      "imagem_fonte": "Capa exibida no registro do Pergamum de biblioteca; cópia local otimizada",
+      "imagem_fonte": "Capa exibida no registro do Pergamum de IFMG Sabará; cópia local otimizada",
       "imagem_url_origem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000072/000072d1.jpg",
       "qr_code": "imagens/livros/qrcodes/racismo-sexismo-e-desigualdade-no-brasil.svg",
-      "fonte": "Biblioteca não informada",
+      "fonte": "IFMG Sabará",
       "exibicao_ativa": true,
       "exibir_de": "",
       "exibir_ate": "",
@@ -3654,8 +3638,8 @@
       ],
       "acervos": [
         {
-          "biblioteca": "Biblioteca não informada",
-          "biblioteca_rede": "",
+          "biblioteca": "IFMG Sabará",
+          "biblioteca_rede": "IFMG Sabará",
           "unidade": "",
           "acesso_fisico": true,
           "acesso_virtual": true,
@@ -3665,7 +3649,7 @@
               "registro_id": "racismo-sexismo-e-desigualdade-no-brasil",
               "titulo_registro": "Racismo, sexismo e desigualdade no Brasil",
               "autor_registro": "Sueli Carneiro",
-              "biblioteca_rede": "",
+              "biblioteca_rede": "IFMG Sabará",
               "unidade": "",
               "codigo_acervo": "103956",
               "numero_chamada": "323.1(81) C289r 2011",
@@ -3676,7 +3660,7 @@
               "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=36950&page=1&perPage=20&orderBy=obra&direction=C",
               "link": "https://pergamum.ifmg.edu.br/acervo/103956",
               "tipo_link_principal": "fisico",
-              "fonte": "Biblioteca não informada"
+              "fonte": "IFMG Sabará"
             }
           ]
         }
@@ -3684,7 +3668,7 @@
       "acervos_quantidade": 1,
       "registros_acervo_quantidade": 1,
       "bibliotecas": [
-        "Biblioteca não informada"
+        "IFMG Sabará"
       ]
     },
     {
@@ -3700,8 +3684,7 @@
         "amor",
         "negritude",
         "antirracismo",
-        "autodeterminação",
-        "Agosto Lilás"
+        "autodeterminação"
       ],
       "icone": "📚",
       "numero_chamada": "152.4 H784s.Ps 2024",
@@ -3782,8 +3765,7 @@
         "margem e centro",
         "raça",
         "classe",
-        "igualdade",
-        "Agosto Lilás"
+        "igualdade"
       ],
       "icone": "📚",
       "numero_chamada": "305.42 H784t 2019",
@@ -3865,7 +3847,7 @@
       "icone": "♀️",
       "numero_chamada": "",
       "unidade": "",
-      "biblioteca_rede": "",
+      "biblioteca_rede": "IFMG",
       "codigo_acervo": "",
       "exemplares_fisicos_catalogados": 0,
       "outras_edicoes_fisicas": 0,
@@ -3879,7 +3861,7 @@
       "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
       "imagem_url_origem": "",
       "qr_code": "imagens/livros/qrcodes/territorios-das-mulheres.svg",
-      "fonte": "Biblioteca não informada",
+      "fonte": "IFMG",
       "exibicao_ativa": true,
       "exibir_de": "",
       "exibir_ate": "",
@@ -3895,8 +3877,8 @@
       ],
       "acervos": [
         {
-          "biblioteca": "Biblioteca não informada",
-          "biblioteca_rede": "",
+          "biblioteca": "IFMG",
+          "biblioteca_rede": "IFMG",
           "unidade": "",
           "acesso_fisico": false,
           "acesso_virtual": true,
@@ -3906,7 +3888,7 @@
               "registro_id": "territorios-das-mulheres",
               "titulo_registro": "Territórios das mulheres: enquetes sobre as relações entre psicanálise e feminismos",
               "autor_registro": "Urias Arantes",
-              "biblioteca_rede": "",
+              "biblioteca_rede": "IFMG",
               "unidade": "",
               "codigo_acervo": "",
               "numero_chamada": "",
@@ -3917,7 +3899,7 @@
               "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=216354&page=1&perPage=20&orderBy=obra&direction=C",
               "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=216354&page=1&perPage=20&orderBy=obra&direction=C",
               "tipo_link_principal": "virtual",
-              "fonte": "Biblioteca não informada"
+              "fonte": "IFMG"
             }
           ]
         }
@@ -3925,7 +3907,7 @@
       "acervos_quantidade": 1,
       "registros_acervo_quantidade": 1,
       "bibliotecas": [
-        "Biblioteca não informada"
+        "IFMG"
       ]
     },
     {
@@ -3940,8 +3922,7 @@
         "amor",
         "relacionamentos",
         "cuidado",
-        "justiça",
-        "Agosto Lilás"
+        "justiça"
       ],
       "icone": "📚",
       "numero_chamada": "305.42 H784a.Pb 2021",
@@ -4040,8 +4021,7 @@
         "masculinidades",
         "patriarcado",
         "amor",
-        "violência",
-        "Agosto Lilás"
+        "violência"
       ],
       "icone": "📚",
       "numero_chamada": "155.332 H784w.Pq 2025",
@@ -4123,7 +4103,7 @@
       "icone": "♀️",
       "numero_chamada": "",
       "unidade": "",
-      "biblioteca_rede": "",
+      "biblioteca_rede": "IFMG",
       "codigo_acervo": "",
       "exemplares_fisicos_catalogados": 0,
       "outras_edicoes_fisicas": 0,
@@ -4137,7 +4117,7 @@
       "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
       "imagem_url_origem": "",
       "qr_code": "imagens/livros/qrcodes/vozes-contemporaneas-o-feminino-em-cena.svg",
-      "fonte": "Biblioteca não informada",
+      "fonte": "IFMG",
       "exibicao_ativa": true,
       "exibir_de": "",
       "exibir_ate": "",
@@ -4153,8 +4133,8 @@
       ],
       "acervos": [
         {
-          "biblioteca": "Biblioteca não informada",
-          "biblioteca_rede": "",
+          "biblioteca": "IFMG",
+          "biblioteca_rede": "IFMG",
           "unidade": "",
           "acesso_fisico": false,
           "acesso_virtual": true,
@@ -4164,7 +4144,7 @@
               "registro_id": "vozes-contemporaneas-o-feminino-em-cena",
               "titulo_registro": "Vozes contemporâneas: o feminino em cena",
               "autor_registro": "Gabriela Seben e Rafaela Degani",
-              "biblioteca_rede": "",
+              "biblioteca_rede": "IFMG",
               "unidade": "",
               "codigo_acervo": "",
               "numero_chamada": "",
@@ -4175,7 +4155,7 @@
               "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=230203&page=1&perPage=20&orderBy=obra&direction=C",
               "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=230203&page=1&perPage=20&orderBy=obra&direction=C",
               "tipo_link_principal": "virtual",
-              "fonte": "Biblioteca não informada"
+              "fonte": "IFMG"
             }
           ]
         }
@@ -4183,7 +4163,7 @@
       "acervos_quantidade": 1,
       "registros_acervo_quantidade": 1,
       "bibliotecas": [
-        "Biblioteca não informada"
+        "IFMG"
       ]
     }
   ]
