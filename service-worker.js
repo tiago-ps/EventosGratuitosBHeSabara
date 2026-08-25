@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v85-temas-visuais';
+const CACHE_VERSION = 'mural-cultural-v86-cursos-tema';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -13,7 +13,7 @@ const CORE_ASSETS = [
   './css/temas-visuais.css?v=1',
   './js/tema-visual-boot.js?v=1',
   './js/core/rotacao.js?v=1',
-  './js/conteudos/cursos.js?v=1',
+  './js/conteudos/cursos.js?v=2',
   './js/conteudos/concursos.js?v=2',
   './js/conteudos/filmes.js?v=5',
   './js/app.js?v=80',
