@@ -261,6 +261,10 @@
                 <input class="panel-module-contests" type="checkbox">
                 <span>Concursos</span>
               </label>
+              <label class="panel-module-toggle">
+                <input class="panel-module-films" type="checkbox" checked>
+                <span>Filmes</span>
+              </label>
             </div>
           </section>
 
@@ -397,6 +401,49 @@
             </div>
           </section>
 
+          <section class="panel-config-section panel-film-section">
+            <div class="panel-section-heading">
+              <div>
+                <h3>Filmes</h3>
+                <p>A programação recebe uma amostra de até 15 filmes do catálogo, com filtros próprios.</p>
+              </div>
+              <label class="panel-weight-field">
+                <span>Frequência</span>
+                <select class="panel-film-weight">
+                  <option value="1">1</option><option value="2">2</option><option value="3">3</option>
+                  <option value="4">4</option><option value="5">5</option><option value="6">6</option>
+                  <option value="7">7</option><option value="8">8</option><option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </label>
+            </div>
+            <div class="filter-grid panel-film-grid">
+              <label>
+                <span>Gênero</span>
+                <select class="filter-film-genre"><option value="">Todos os gêneros</option></select>
+              </label>
+              <label>
+                <span>Classificação</span>
+                <select class="filter-film-rating">
+                  <option value="">Todas as classificações</option>
+                  <option value="Livre">Livre</option><option value="10">10</option><option value="12">12</option>
+                  <option value="14">14</option><option value="16">16</option><option value="18">18</option>
+                  <option value="Não informada">Não informada</option>
+                </select>
+              </label>
+              <label>
+                <span>Duração</span>
+                <select class="filter-film-duration">
+                  <option value="">Todas as durações</option>
+                  <option value="ate-30">Até 30 min</option>
+                  <option value="31-60">31 a 60 min</option>
+                  <option value="mais-60">Mais de 60 min</option>
+                  <option value="nao-informada">Não informada</option>
+                </select>
+              </label>
+            </div>
+          </section>
+
           <p class="panel-frequency-help">A frequência define o peso de cada módulo na rotação. Ex.: Eventos 5 + Livros 1 reproduz aproximadamente cinco eventos para cada sugestão de leitura.</p>
 
           <div class="filter-actions">
@@ -414,8 +461,8 @@
   <script src="js/core/rotacao.js?v=1" defer></script>
   <script src="js/conteudos/cursos.js?v=1" defer></script>
   <script src="js/conteudos/concursos.js?v=2" defer></script>
-  <script src="js/conteudos/filmes.js?v=4" defer></script>
-  <script src="js/app.js?v=78" defer></script>
+  <script src="js/conteudos/filmes.js?v=5" defer></script>
+  <script src="js/app.js?v=79" defer></script>
   <script src="js/eventos-manuais-ui.js?v=44" defer></script>
   <script src="js/ios-install.js?v=1" defer></script>
 

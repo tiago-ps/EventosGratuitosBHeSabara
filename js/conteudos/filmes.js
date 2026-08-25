@@ -8,6 +8,7 @@
   const list = value => Array.isArray(value) ? value.map(text).filter(Boolean) : [];
   const titleCompare = (a, b) => text(a.titulo).localeCompare(text(b.titulo), 'pt-BR');
   const platformName = movie => text(movie?.plataforma) || 'plataforma oficial';
+  const PANEL_LIMIT = 15;
 
   function queryMatches(movie, query, normalizeText) {
     const needle = normalizeText(query);
@@ -88,6 +89,153 @@
       }
     }
     return [...values.values()].sort((a, b) => a.localeCompare(b, 'pt-BR'));
+  }
+
+  function sampleForPanel(movies, filters = {}, normalizeText = value => text(value).toLowerCase(), limit = PANEL_LIMIT) {
+    const available = filter(movies, { ...filters, sort: filters.sort || 'title-asc' }, normalizeText);
+    const sampler = root.core?.sampleForPanel;
+    return typeof sampler === 'function' ? sampler(available, limit) : available.slice(0, limit);
+  }
+
+  function createPanelSlide({ movie, index, total, template, helpers }) {
+    const {
+      buildSiteQr,
+      slideDurationFor,
+      configureItemQrLabel,
+      buildQr,
+      safeExternalUrl,
+      safeImageUrl,
+      normalizeRating
+    } = helpers;
+    const slide = template.content.firstElementChild.cloneNode(true);
+    buildSiteQr(slide);
+    slide.classList.add('film-slide');
+
+    const seconds = slideDurationFor(movie);
+    slide.style.setProperty('--slide-seconds', `${seconds}s`);
+    slide.querySelector('.counter').textContent = `${index + 1} de ${total}`;
+
+    const eventCopy = slide.querySelector('.event-copy');
+    const bookCopy = slide.querySelector('.book-copy');
+    if (bookCopy) bookCopy.hidden = true;
+    if (eventCopy) eventCopy.hidden = false;
+
+    const category = slide.querySelector('.category');
+    if (category) {
+      category.hidden = false;
+      category.textContent = 'FILME';
+    }
+    const free = slide.querySelector('.free');
+    if (free) {
+      free.hidden = false;
+      free.textContent = 'GRATUITO';
+    }
+
+    const ratingBadge = slide.querySelector('.badge.rating');
+    const rating = normalizeRating?.(movie.classificacao);
+    if (ratingBadge && rating) {
+      ratingBadge.hidden = false;
+      ratingBadge.className = `badge rating ${rating.className}`;
+      ratingBadge.textContent = rating.label;
+      ratingBadge.setAttribute('aria-label', `Classificação indicativa: ${rating.accessible}`);
+    } else if (ratingBadge) {
+      ratingBadge.hidden = true;
+      ratingBadge.textContent = '';
+    }
+
+    const platform = platformName(movie);
+    const platformBadge = slide.querySelector('.badge.city');
+    if (platformBadge) {
+      platformBadge.hidden = false;
+      platformBadge.className = 'badge film-platform';
+      platformBadge.textContent = platform;
+      platformBadge.removeAttribute('style');
+    }
+
+    const title = slide.querySelector('.event-title');
+    if (title) title.textContent = movie.titulo || 'Filme';
+    const description = slide.querySelector('.description');
+    if (description) description.textContent = movie.sinopse || movie.tagline || '';
+
+    const when = slide.querySelector('.when');
+    if (when) {
+      const label = when.closest('div')?.querySelector('dt');
+      if (label) label.textContent = 'Informações';
+      when.textContent = [
+        movie.ano ? String(movie.ano) : '',
+        movie.duracao_minutos ? `${movie.duracao_minutos} min` : ''
+      ].filter(Boolean).join(' · ') || 'Informações não disponíveis';
+    }
+
+    const where = slide.querySelector('.where-text');
+    if (where) {
+      const label = where.closest('div')?.querySelector('dt');
+      if (label) label.textContent = 'Direção';
+      const direction = list(movie.direcao).join(', ');
+      const genres = list(movie.generos).join(' · ');
+      where.textContent = direction || genres || 'Consulte a ficha do filme';
+    }
+    const mapLink = slide.querySelector('.map-link');
+    if (mapLink) mapLink.remove();
+
+    const link = safeExternalUrl(movie.pagina_oficial);
+    const sourceLabel = slide.querySelector('.source-label');
+    if (sourceLabel) sourceLabel.textContent = 'Filme gratuito na plataforma oficial';
+    const source = slide.querySelector('.source-url');
+    if (source) {
+      if (link) {
+        const anchor = document.createElement('a');
+        anchor.href = link;
+        anchor.textContent = `Acessar no ${platform}`;
+        anchor.target = '_blank';
+        anchor.rel = 'noopener noreferrer';
+        source.replaceChildren(anchor);
+      } else {
+        source.textContent = platform;
+      }
+    }
+    const updated = slide.querySelector('.updated');
+    if (updated) updated.textContent = list(movie.generos).slice(0, 3).join(' · ');
+
+    const qr = slide.querySelector('.qr-code');
+    configureItemQrLabel(slide, movie, Boolean(link));
+    if (qr && link) buildQr(qr, link);
+
+    const subtitle = slide.querySelector('.panel-subtitle');
+    if (subtitle) subtitle.textContent = 'Sugestão de Filme';
+
+    const imageUrl = safeImageUrl(movie.imagem);
+    const image = slide.querySelector('.event-image');
+    const fallback = slide.querySelector('.image-fallback');
+    const fallbackIcon = slide.querySelector('.fallback-icon');
+    const fallbackLabel = slide.querySelector('.fallback-label');
+    if (fallbackIcon) fallbackIcon.textContent = '🎬';
+    if (fallbackLabel) fallbackLabel.textContent = 'Filme';
+    if (fallback) {
+      fallback.hidden = false;
+      fallback.style.display = imageUrl ? 'none' : 'grid';
+    }
+    if (image) {
+      image.alt = `Cartaz do filme ${movie.titulo || 'Filme'}`;
+      image.decoding = 'async';
+      image.loading = 'eager';
+      image.referrerPolicy = 'no-referrer';
+      image.classList.remove('loaded');
+      image.style.display = imageUrl ? '' : 'none';
+      image.onload = () => {
+        image.classList.add('loaded');
+        if (fallback) fallback.style.display = 'none';
+      };
+      image.onerror = () => {
+        image.classList.remove('loaded');
+        image.style.display = 'none';
+        if (fallback) fallback.style.display = 'grid';
+      };
+      if (imageUrl) image.src = imageUrl;
+      else image.removeAttribute('src');
+    }
+
+    return slide;
   }
 
   function createAgendaCard(movie, helpers) {
@@ -202,12 +350,15 @@
   }
 
   root.contents.films = {
+    PANEL_LIMIT,
     createAgendaCard,
+    createPanelSlide,
     durationMatches,
     filter,
     options,
     platformName,
     queryMatches,
+    sampleForPanel,
     showDetails,
     sort
   };

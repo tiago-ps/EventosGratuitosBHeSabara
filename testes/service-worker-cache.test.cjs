@@ -89,8 +89,8 @@ async function dispatch(type, event) {
     './js/core/rotacao.js?v=1',
     './js/conteudos/cursos.js?v=1',
     './js/conteudos/concursos.js?v=2',
-    './js/conteudos/filmes.js?v=4',
-    './js/app.js?v=78',
+    './js/conteudos/filmes.js?v=5',
+    './js/app.js?v=79',
     './js/eventos-manuais-ui.js?v=44'
   ]) {
     assert.ok(sw.CORE_ASSETS.includes(asset), `Precache ausente: ${asset}`);
