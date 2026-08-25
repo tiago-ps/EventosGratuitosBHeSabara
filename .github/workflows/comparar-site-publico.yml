@@ -1,0 +1,81 @@
+name: Comparar site de teste com público
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/comparar-site-publico.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  comparar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar site de teste
+        uses: actions/checkout@v6
+
+      - name: Baixar site público
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --depth=1 https://github.com/BibliotecaIFMGSabara/MuralCultural.git /tmp/mural-publico
+
+      - name: Comparar árvores
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib
+          import json
+
+          test = Path('.').resolve()
+          public = Path('/tmp/mural-publico').resolve()
+          self_path = '.github/workflows/comparar-site-publico.yml'
+
+          def inventory(root):
+              out = {}
+              for path in root.rglob('*'):
+                  if not path.is_file():
+                      continue
+                  rel = path.relative_to(root).as_posix()
+                  if rel == self_path or rel.startswith('.git/'):
+                      continue
+                  h = hashlib.sha256()
+                  with path.open('rb') as f:
+                      for chunk in iter(lambda: f.read(1024 * 1024), b''):
+                          h.update(chunk)
+                  out[rel] = (h.hexdigest(), path.stat().st_size)
+              return out
+
+          a = inventory(test)
+          b = inventory(public)
+          only_test = sorted(set(a) - set(b))
+          only_public = sorted(set(b) - set(a))
+          different = sorted(path for path in set(a) & set(b) if a[path][0] != b[path][0])
+          same = len(set(a) & set(b)) - len(different)
+
+          report = {
+              'test_commit': '${{ github.sha }}',
+              'public_commit': '',
+              'same_files': same,
+              'only_test_count': len(only_test),
+              'only_public_count': len(only_public),
+              'different_count': len(different),
+              'only_test': only_test,
+              'only_public': only_public,
+              'different': [
+                  {
+                      'path': p,
+                      'test_size': a[p][1],
+                      'public_size': b[p][1]
+                  }
+                  for p in different
+              ]
+          }
+          print('=== COMPARACAO_JSON_INICIO ===')
+          print(json.dumps(report, ensure_ascii=False, indent=2))
+          print('=== COMPARACAO_JSON_FIM ===')
+          PY
