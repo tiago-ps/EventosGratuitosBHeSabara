@@ -57,7 +57,6 @@ jobs:
 
           p = Path('scripts/aplicar_temas_visuais.py')
           text = p.read_text(encoding='utf-8')
-          # A limpeza do cache aceita tanto a versão antiga SVG quanto a nova PNG.
           text = text.replace(
               r'agosto-lilas-banner\.svg',
               r'agosto-lilas-banner\.(?:svg|png)'
@@ -74,7 +73,6 @@ jobs:
 
           p = Path('service-worker.js')
           text = p.read_text(encoding='utf-8')
-          # O integrador abaixo remove SVG/PNG antigos e reinsere uma única entrada PNG.
           text = re.sub(r"const CACHE_VERSION = '[^']+';",
                         "const CACHE_VERSION = 'mural-cultural-v88-banner-png';",
                         text, count=1)
@@ -112,5 +110,4 @@ jobs:
             exit 0
           fi
           git commit -m 'fix(ui): usa banner PNG do Agosto Lilás [skip ci]'
-          git pull --rebase origin main
           git push origin HEAD:main
