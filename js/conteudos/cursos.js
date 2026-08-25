@@ -3,20 +3,39 @@
 
   const PANEL_LIMIT = 15;
 
+  function normalizeTheme(value = '') {
+    return String(value)
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+      .trim();
+  }
+
   function isPublishable(course) {
     return Boolean(course && course.titulo && course.exibicao_ativa !== false);
   }
 
-  function filter(courses) {
+  function matchesTheme(course, theme = '') {
+    const wanted = normalizeTheme(theme);
+    if (!wanted) return true;
+
+    return (Array.isArray(course?.temas) ? course.temas : [])
+      .map(normalizeTheme)
+      .some(value => value === wanted || value.includes(wanted));
+  }
+
+  function filter(courses, options = {}) {
+    const theme = options && typeof options === 'object' ? options.theme || '' : '';
     return (Array.isArray(courses) ? courses : [])
       .filter(isPublishable)
+      .filter(course => matchesTheme(course, theme))
       .sort((a, b) =>
         String(a.titulo || '').localeCompare(String(b.titulo || ''), 'pt-BR')
       );
   }
 
-  function sampleForPanel(courses, limit = PANEL_LIMIT) {
-    const available = filter(courses);
+  function sampleForPanel(courses, limit = PANEL_LIMIT, options = {}) {
+    const available = filter(courses, options);
     return window.MuralCultural.core.sampleForPanel(available, limit);
   }
 
@@ -202,6 +221,7 @@
   contents.courses = Object.freeze({
     PANEL_LIMIT,
     isPublishable,
+    matchesTheme,
     filter,
     sampleForPanel,
     agendaQueryMatches,
