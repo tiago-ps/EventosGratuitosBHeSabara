@@ -24,10 +24,10 @@ BANNER_PATH = "./imagens/curadorias/agosto-lilas-banner.svg"
 CACHE_VERSION = "mural-cultural-v85-temas-visuais"
 
 OLD_INDEX_PATTERNS = [
-    r'^\s*<link[^>]+curadoria-agosto-lilas\.css\?v=\d+[^>]*>\s*\n?',
-    r'^\s*<script[^>]+curadoria-agosto-lilas\.js\?v=\d+[^>]*></script>\s*\n?',
+    r'^[ \t]*<link[^>]+curadoria-agosto-lilas\.css\?v=\d+[^>]*>[ \t]*\n?',
+    r'^[ \t]*<script[^>]+curadoria-agosto-lilas\.js\?v=\d+[^>]*></script>[ \t]*\n?',
 ]
-OLD_SW_PATTERN = r"^\s*'\./(?:css|js)/curadoria-agosto-lilas\.(?:css|js)\?v=\d+',\s*\n?"
+OLD_SW_PATTERN = r"^[ \t]*'\./(?:css|js)/curadoria-agosto-lilas\.(?:css|js)\?v=\d+',[ \t]*\n?"
 
 
 def patch_index() -> None:
@@ -37,9 +37,9 @@ def patch_index() -> None:
         text = re.sub(pattern, "", text, flags=re.MULTILINE)
 
     # Remove versões anteriores do novo sistema para manter uma única referência.
-    text = re.sub(r'^\s*<link[^>]+css/temas-visuais\.css\?v=\d+[^>]*>\s*\n?', '', text, flags=re.MULTILINE)
-    text = re.sub(r'^\s*<script[^>]+js/tema-visual-boot\.js\?v=\d+[^>]*></script>\s*\n?', '', text, flags=re.MULTILINE)
-    text = re.sub(r'^\s*<script[^>]+js/temas-visuais\.js\?v=\d+[^>]*></script>\s*\n?', '', text, flags=re.MULTILINE)
+    text = re.sub(r'^[ \t]*<link[^>]+css/temas-visuais\.css\?v=\d+[^>]*>[ \t]*\n?', '', text, flags=re.MULTILINE)
+    text = re.sub(r'^[ \t]*<script[^>]+js/tema-visual-boot\.js\?v=\d+[^>]*></script>[ \t]*\n?', '', text, flags=re.MULTILINE)
+    text = re.sub(r'^[ \t]*<script[^>]+js/temas-visuais\.js\?v=\d+[^>]*></script>[ \t]*\n?', '', text, flags=re.MULTILINE)
 
     css_anchor = '  <link rel="stylesheet" href="css/concursos-mural.css?v=2">'
     if css_anchor not in text:
@@ -51,8 +51,8 @@ def patch_index() -> None:
         raise RuntimeError("Âncora js/app.js não encontrada em index.html")
     text = re.sub(js_pattern, rf'\1\n{JS_TAG}', text, count=1)
 
-    # Mantém a indentação do bloco final mesmo após remoções por regex.
-    text = re.sub(r'(?m)^<script src="js/eventos-manuais-ui\.js', '  <script src="js/eventos-manuais-ui.js', text)
+    # Mantém a indentação do bloco final mesmo após migrações antigas.
+    text = re.sub(r'(?m)^[ \t]*<script src="js/eventos-manuais-ui\.js', '  <script src="js/eventos-manuais-ui.js', text)
 
     INDEX.write_text(text, encoding="utf-8")
 
@@ -69,12 +69,17 @@ def patch_service_worker() -> None:
 
     text = re.sub(OLD_SW_PATTERN, '', text, flags=re.MULTILINE)
     for name in ('css/temas-visuais.css', 'js/tema-visual-boot.js', 'js/temas-visuais.js'):
-        text = re.sub(rf"^\s*'\./{re.escape(name)}\?v=\d+',\s*\n?", '', text, flags=re.MULTILINE)
+        text = re.sub(
+            rf"^[ \t]*'\./{re.escape(name)}\?v=\d+',[ \t]*\n?",
+            '',
+            text,
+            flags=re.MULTILINE,
+        )
 
     # O banner pode ter vindo do sistema anterior; remove todas as ocorrências
     # e insere exatamente uma no bloco de assets ativos.
     text = re.sub(
-        r"^\s*'\./imagens/curadorias/agosto-lilas-banner\.svg',\s*\n?",
+        r"^[ \t]*'\./imagens/curadorias/agosto-lilas-banner\.svg',[ \t]*\n?",
         '',
         text,
         flags=re.MULTILINE,
@@ -85,17 +90,19 @@ def patch_service_worker() -> None:
         raise RuntimeError("Âncora CSS não encontrada em service-worker.js")
     text = text.replace(css_anchor, f"{css_anchor}\n{CSS_ASSET}\n{BOOT_ASSET}", 1)
 
-    app_pattern = r"(\s*'\./js/app\.js\?v=\d+',)"
-    match = re.search(app_pattern, text)
-    if not match:
+    app_pattern = r"^[ \t]*'\./js/app\.js\?v=\d+',[ \t]*$"
+    app_match = re.search(app_pattern, text, flags=re.MULTILINE)
+    if not app_match:
         raise RuntimeError("Âncora js/app.js não encontrada em service-worker.js")
-    app_line = match.group(1).strip()
-    text = text[:match.start()] + f"  {app_line}\n{JS_ASSET}" + text[match.end():]
+    app_line = app_match.group(0).strip()
+    text = text[:app_match.start()] + f"  {app_line}\n{JS_ASSET}" + text[app_match.end():]
 
-    manifest_anchor = "  './manifest.webmanifest',"
-    if manifest_anchor not in text:
+    manifest_pattern = r"^[ \t]*'\./manifest\.webmanifest',[ \t]*$"
+    manifest_match = re.search(manifest_pattern, text, flags=re.MULTILINE)
+    if not manifest_match:
         raise RuntimeError("Âncora de manifest não encontrada em service-worker.js")
-    text = text.replace(manifest_anchor, f"{BANNER_ASSET}\n{manifest_anchor}", 1)
+    manifest_line = manifest_match.group(0).strip()
+    text = text[:manifest_match.start()] + f"{BANNER_ASSET}\n  {manifest_line}" + text[manifest_match.end():]
 
     # Corrige linhas de asset eventualmente desindentadas por migrações antigas.
     text = re.sub(r"(?m)^'\./", "  './", text)
