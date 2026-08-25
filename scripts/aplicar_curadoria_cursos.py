@@ -44,15 +44,17 @@ def aplicar_cursos() -> list[tuple[str, str]]:
 def integrar_app() -> None:
     app = APP.read_text(encoding="utf-8")
 
-    antigo = '''  function bookMatchesTheme(book, theme) {
+    app = substituir_uma_vez(
+        app,
+        '''  function bookMatchesTheme(book, theme) {
     if (!theme) return true;
     return (Array.isArray(book.temas) ? book.temas : [])
       .map(normalizeText)
       .some(value => value === theme || value.includes(theme));
   }
 
-  function universalThemeOptions() {'''
-    novo = '''  function bookMatchesTheme(book, theme) {
+  function universalThemeOptions() {''',
+        '''  function bookMatchesTheme(book, theme) {
     if (!theme) return true;
     return (Array.isArray(book.temas) ? book.temas : [])
       .map(normalizeText)
@@ -66,45 +68,88 @@ def integrar_app() -> None:
       .some(value => value === theme || value.includes(theme));
   }
 
-  function universalThemeOptions() {'''
-    app = substituir_uma_vez(app, antigo, novo, "courseMatchesTheme")
+  function universalThemeOptions() {''',
+        "courseMatchesTheme",
+    )
 
-    antigo = '''    for (const event of state.allEvents) eventThemeLabels(event).forEach(add);
+    app = substituir_uma_vez(
+        app,
+        '''    for (const event of state.allEvents) eventThemeLabels(event).forEach(add);
     for (const book of state.allBooks) (Array.isArray(book.temas) ? book.temas : []).forEach(add);
-    for (const movie of state.allFilms) (Array.isArray(movie.temas) ? movie.temas : []).forEach(add);'''
-    novo = '''    for (const event of state.allEvents) eventThemeLabels(event).forEach(add);
+    for (const movie of state.allFilms) (Array.isArray(movie.temas) ? movie.temas : []).forEach(add);''',
+        '''    for (const event of state.allEvents) eventThemeLabels(event).forEach(add);
     for (const book of state.allBooks) (Array.isArray(book.temas) ? book.temas : []).forEach(add);
     for (const course of state.allCourses) (Array.isArray(course.temas) ? course.temas : []).forEach(add);
-    for (const movie of state.allFilms) (Array.isArray(movie.temas) ? movie.temas : []).forEach(add);'''
-    app = substituir_uma_vez(app, antigo, novo, "universalThemeOptions/courses")
+    for (const movie of state.allFilms) (Array.isArray(movie.temas) ? movie.temas : []).forEach(add);''',
+        "universalThemeOptions/courses",
+    )
 
-    antigo = '''    const courses = coursesEnabled ? coursesContent.sampleForPanel(state.allCourses) : [];
-    const contests = contestsEnabled ? contestsContent.sampleForPanel(state.allContests) : [];'''
-    novo = '''    const themedCourses = state.filters.theme
+    app = substituir_uma_vez(
+        app,
+        '''    const courses = coursesEnabled ? coursesContent.sampleForPanel(state.allCourses) : [];
+    const contests = contestsEnabled ? contestsContent.sampleForPanel(state.allContests) : [];''',
+        '''    const themedCourses = state.filters.theme
       ? state.allCourses.filter(course => courseMatchesTheme(course, state.filters.theme))
       : state.allCourses;
     const courses = coursesEnabled ? coursesContent.sampleForPanel(themedCourses) : [];
     const contests = contestsEnabled && !state.filters.theme
       ? contestsContent.sampleForPanel(state.allContests)
-      : [];'''
-    app = substituir_uma_vez(app, antigo, novo, "rotação temática de cursos")
+      : [];''',
+        "rotação temática de cursos",
+    )
 
-    antigo = '''    return coursesContent.filter(state.allCourses)
-      .filter(course => coursesContent.agendaQueryMatches(course, query, normalizeText));'''
-    novo = '''    return coursesContent.filter(state.allCourses)
+    app = substituir_uma_vez(
+        app,
+        '''    return coursesContent.filter(state.allCourses)
+      .filter(course => coursesContent.agendaQueryMatches(course, query, normalizeText));''',
+        '''    return coursesContent.filter(state.allCourses)
       .filter(course => courseMatchesTheme(course, state.mobileTheme))
-      .filter(course => coursesContent.agendaQueryMatches(course, query, normalizeText));'''
-    app = substituir_uma_vez(app, antigo, novo, "Agenda/cursos por tema")
+      .filter(course => coursesContent.agendaQueryMatches(course, query, normalizeText));''',
+        "Agenda/cursos por tema",
+    )
 
-    antigo = '''  function agendaVisibleContests() {
+    app = substituir_uma_vez(
+        app,
+        '''  function agendaVisibleContests() {
     if (!['all', 'contests'].includes(state.mobileContent) || state.config?.modulos?.concursos === false) {
       return [];
-    }'''
-    novo = '''  function agendaVisibleContests() {
+    }''',
+        '''  function agendaVisibleContests() {
     if (state.mobileTheme || !['all', 'contests'].includes(state.mobileContent) || state.config?.modulos?.concursos === false) {
       return [];
-    }'''
-    app = substituir_uma_vez(app, antigo, novo, "Agenda/concursos durante tema")
+    }''',
+        "Agenda/concursos durante tema",
+    )
+
+    app = substituir_uma_vez(
+        app,
+        '''    if (content === 'books') {
+      for (const book of state.allBooks) (Array.isArray(book.temas) ? book.temas : []).forEach(add);
+    }
+    if (content === 'films') {''',
+        '''    if (content === 'books') {
+      for (const book of state.allBooks) (Array.isArray(book.temas) ? book.temas : []).forEach(add);
+    }
+    if (content === 'courses') {
+      for (const course of state.allCourses) (Array.isArray(course.temas) ? course.temas : []).forEach(add);
+    }
+    if (content === 'films') {''',
+        "agendaThemeOptions/courses",
+    )
+
+    app = substituir_uma_vez(
+        app,
+        "    if (!['events', 'books', 'films'].includes(state.mobileContent)) {",
+        "    if (!['events', 'books', 'courses', 'films'].includes(state.mobileContent)) {",
+        "normalização do tema móvel",
+    )
+
+    app = substituir_uma_vez(
+        app,
+        "    const themeMode = ['events', 'books', 'films'].includes(state.mobileContent);",
+        "    const themeMode = ['events', 'books', 'courses', 'films'].includes(state.mobileContent);",
+        "seletor de tema em cursos",
+    )
 
     APP.write_text(app, encoding="utf-8")
 
@@ -134,6 +179,8 @@ def validar(selecionados: list[tuple[str, str]]) -> None:
         "courseMatchesTheme(course, state.mobileTheme)",
         "contestsEnabled && !state.filters.theme",
         "if (state.mobileTheme || !['all', 'contests'].includes(state.mobileContent)",
+        "if (content === 'courses')",
+        "['events', 'books', 'courses', 'films'].includes(state.mobileContent)",
     ]
     ausentes = [trecho for trecho in obrigatorios if trecho not in app]
     if ausentes:
