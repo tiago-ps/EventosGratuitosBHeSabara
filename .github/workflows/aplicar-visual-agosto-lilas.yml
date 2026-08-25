@@ -1,0 +1,45 @@
+name: Aplicar visual Agosto Lilás
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'css/curadoria-agosto-lilas.css'
+      - 'js/curadoria-agosto-lilas.js'
+      - 'scripts/aplicar_visual_agosto_lilas.py'
+      - '.github/workflows/aplicar-visual-agosto-lilas.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  aplicar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v6
+
+      - name: Configurar Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Aplicar visual da campanha
+        run: python scripts/aplicar_visual_agosto_lilas.py
+
+      - name: Validar JavaScript
+        run: node --check js/curadoria-agosto-lilas.js
+
+      - name: Salvar integração
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html service-worker.js
+          if ! git diff --cached --quiet; then
+            git commit -m "feat(curadoria): ativa visual Agosto Lilás [skip ci]"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
