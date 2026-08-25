@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   integrar:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: Baixar repositório
         uses: actions/checkout@v4
