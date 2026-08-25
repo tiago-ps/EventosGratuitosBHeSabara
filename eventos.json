@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Janeiro a Dezembro de 2026",
-  "atualizado_em": "2026-08-24T08:31:06-03:00",
+  "atualizado_em": "2026-08-25T02:07:00-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -1592,7 +1592,8 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida Professor Alfredo Balena, 586, Santa Efigênia, Belo Horizonte - MG, 30130-100",
       "mapa": "https://maps.app.goo.gl/MtyButkEtXBbL1Ae8",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "espaco_interno": "Teatro Marilia"
     },
     {
       "id": "ela-africas-em-nos-dancas-e-outras-performatividades-negras-a15bcc06e4",
@@ -1638,7 +1639,8 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida Professor Alfredo Balena, 586, Santa Efigênia, Belo Horizonte - MG, 30130-100",
       "mapa": "https://maps.app.goo.gl/MtyButkEtXBbL1Ae8",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "espaco_interno": "Teatro Marilia"
     },
     {
       "id": "ela-unidade-centro-cultural-bairro-das-industrias",
@@ -2005,7 +2007,7 @@
       "descricao": "Atividade da Escola Livre de Artes. Público: A partir de 14anos. Modalidade: Presencial. Priorizando a prática instrumental individual e coletiva, o Laboratório aborda o Choro em seus aspectos interpretativos, estéticos e históricos, a partir de exposição, apreciação musical, referenciais teóricos, práticas de criação, debate e análise sobre o primeiro gênero musical urbano brasileiro",
       "imagem": "imagens/eventos-manuais/ela-roda-de-choro-13ef75b94c.png",
       "link": "https://form.jotform.com/261965053614661",
-      "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
+      "pagina": "https://form.jotform.com/261965053614661",
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
@@ -2016,14 +2018,7 @@
       "espaco_interno": "",
       "inscricao_inicio": "2026-07-17",
       "inscricao_fim": "",
-      "motivo_publicacao": "inscricao_disponivel",
-      "fontes": [
-        "Escola Livre de Artes Arena da Cultura"
-      ],
-      "ids_mesclados": [
-        "manual-ela-roda-de-choro-13ef75b94c-2026-08-19",
-        "ela-roda-de-choro-13ef75b94c"
-      ]
+      "motivo_publicacao": "inscricao_disponivel"
     },
     {
       "id": "ela-brincadeiras-circenses-ea4143ad6a",
@@ -2977,7 +2972,7 @@
       "descricao": "Oficina voltada para as práticas musicais com instrumentos de percussão com foco na música popular. Tem como objetivo proporcionar aos alunos e alunas uma vivência musical a partir de estudo de ritmos brasileiros, práticas em conjunto e desenvolvimento de repertório, em diálogo com manifestações populares, entre elas, o carnaval.",
       "imagem": "imagens/eventos-manuais/ela-praticas-percussivas-ritmos-brasileiros-2157c0200a.png",
       "link": "https://form.jotform.com/261965053614661",
-      "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
+      "pagina": "https://form.jotform.com/261965053614661",
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
@@ -2988,14 +2983,7 @@
       "espaco_interno": "",
       "inscricao_inicio": "2026-07-17",
       "inscricao_fim": "",
-      "motivo_publicacao": "inscricao_disponivel",
-      "fontes": [
-        "Escola Livre de Artes Arena da Cultura"
-      ],
-      "ids_mesclados": [
-        "manual-ela-praticas-percussivas-ritmos-brasileiros-2157c0200a-2026-08-24",
-        "ela-praticas-percussivas-ritmos-brasileiros-2157c0200a"
-      ]
+      "motivo_publicacao": "inscricao_disponivel"
     },
     {
       "id": "ela-arena-atelie-livre-68965bd217",
@@ -3322,7 +3310,8 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida Professor Alfredo Balena, 586, Santa Efigênia, Belo Horizonte - MG, 30130-100",
       "mapa": "https://maps.app.goo.gl/MtyButkEtXBbL1Ae8",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "espaco_interno": "Teatro Marilia"
     },
     {
       "id": "ela-grafite-e-bom-demais-stencil-lambes-pixo-arte-urbana-e91a057086",
@@ -5111,7 +5100,7 @@
       "descricao": "Sabe aquela ideia de projeto ligado à palavra - escrita, falada, desenhada, performada ou mediada - que está só esperando a vez de ganhar forma e circular por aí através de um sarau, fanzine, livro, performance, oficina, dentre outras materialidades e possibilidades? Pois é, chegou a hora de colocar no papel de forma estruturada, coerente e convincente aquele seu projeto ligado à literatura ou à leitura e que no momento é só uma ideia. Ao longo da oficina será abordado de forma prática e aprofundada o processo criativo por trás da elaboração de um projeto cultural que sonha em acontecer",
       "imagem": "imagens/eventos-manuais/ela-voa-palavra-elaboracao-de-projetos-culturais-em-literatura-e-leitura-d3a8ca75d9.png",
       "link": "https://form.jotform.com/261965053614661",
-      "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
+      "pagina": "https://form.jotform.com/261965053614661",
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
@@ -5122,14 +5111,7 @@
       "espaco_interno": "",
       "inscricao_inicio": "2026-07-17",
       "inscricao_fim": "",
-      "motivo_publicacao": "inscricao_disponivel",
-      "fontes": [
-        "Escola Livre de Artes Arena da Cultura"
-      ],
-      "ids_mesclados": [
-        "manual-ela-voa-palavra-elaboracao-de-projetos-culturais-em-literatura-e-leitura-d3a8ca75d9-2026-09-15",
-        "ela-voa-palavra-elaboracao-de-projetos-culturais-em-literatura-e-leitura-d3a8ca75d9"
-      ]
+      "motivo_publicacao": "inscricao_disponivel"
     },
     {
       "id": "ela-orquestra-transversal-vozes-instrumentos-samples-beats-e-som-d3862c5cae",
@@ -5730,62 +5712,6 @@
       "local_id": "casa-fiat-de-cultura",
       "endereco": "Praça da Liberdade, 10 - Funcionários, Belo Horizonte - MG, 30140-010",
       "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10+-+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG%2C+30140-010",
-      "espaco_interno": "",
-      "inscricao_inicio": "",
-      "inscricao_fim": "",
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
-    },
-    {
-      "id": "fcs-wp-37427",
-      "titulo": "Itinerância do 27º FestCurtasBH | Pólo Audiovisual do Noroeste",
-      "data": "2026-08-24",
-      "data_fim": "",
-      "horario": "16h às 22h",
-      "local": "Palácio das Artes",
-      "cidade": "Belo Horizonte",
-      "categoria": "Cinema",
-      "gratuito": true,
-      "inscricao": "Ingresso gratuito; consulte a página oficial",
-      "descricao": "A Itinerância do 27º FestCurtasBH – Festival Internacional de Curtas de Belo Horizonte chega ao Pólo Audiovisual do Noroeste, em São José do Rio Preto (SP), com uma programação especial composta por três sessões gratuitas, realizadas nos dias 10, 17 e 24 de agosto de 2026, sempre às 20h,",
-      "imagem": "https://fcs.mg.gov.br/wp-content/uploads/2026/07/itinerancia-card-1-1024x1024.png",
-      "link": "https://fcs.mg.gov.br/evento/itinerancia-do-27o-festcurtasbh-polo-audiovisual-do-noroeste/",
-      "fonte": "Fundação Clóvis Salgado",
-      "instituicao_id": "fcs",
-      "fonte_id": 37427,
-      "atualizado_na_fonte": "2026-07-31T19:49:16",
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "palacio-das-artes",
-      "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7"
-    },
-    {
-      "id": "manual-palco-giratorio-teatro-para-criancas-saude-mental-infancia-2026-08-24-2026-08-24",
-      "titulo": "Teatro para Crianças e Saúde Mental na Infância",
-      "data": "2026-08-24",
-      "data_fim": "",
-      "horario": "9h",
-      "local": "Auditório Álvaro Apocalypse — EBA/UFMG",
-      "cidade": "Belo Horizonte",
-      "categoria": "Debate",
-      "gratuito": true,
-      "inscricao": "Inscrição gratuita pelo formulário oficial.",
-      "criterio_exibicao": "realizacao",
-      "status_inscricao": "",
-      "exibicao_ativa": true,
-      "descricao": "Conversa com o Grupo Estação de Teatro e Juliana Saúde sobre teatro para crianças e saúde mental na infância.",
-      "imagem": "imagens/eventos-manuais/palco-giratorio-teatro-para-criancas-saude-mental-infancia-2026-08-24.png",
-      "link": "https://sescmg.com.br/wp-content/uploads/2026/08/programacao_cultura_palco-giratorio_2026_geral_v2.pdf",
-      "pagina": "https://sescmg.com.br/wp-content/uploads/2026/08/programacao_cultura_palco-giratorio_2026_geral_v2.pdf",
-      "link_inscricao": "https://forms.gle/6EfG5AhebVgNMqMz9",
-      "monitorar_formulario_google": false,
-      "url_formulario_google": "",
-      "acao_formulario_fechado": "marcar_encerrada",
-      "fonte": "Instagram — Sesc BH; programação oficial do Palco Giratório",
-      "instituicao_id": "sesc-mg",
-      "classificacao_indicativa": "",
-      "local_id": "feira-hippie-proximo-ao-sesc-mercado-das-flores",
-      "endereco": "Avenida Presidente Antônio Carlos, 6627, Campus Pampulha, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/Hpndme9z14uhYC5r9",
       "espaco_interno": "",
       "inscricao_inicio": "",
       "inscricao_fim": "",
