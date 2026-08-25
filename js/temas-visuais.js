@@ -3,7 +3,7 @@
 
   const STORAGE_KEY = 'mural:visual-theme';
   const DEFAULT_THEME = 'agosto-lilas-glow';
-  const BANNER_SRC = 'imagens/curadorias/agosto-lilas-banner.svg';
+  const BANNER_SRC = 'imagens/curadorias/agosto-lilas-banner.png';
   const BANNER_CLASS = 'campaign-agosto-lilas-badge';
 
   const THEMES = [

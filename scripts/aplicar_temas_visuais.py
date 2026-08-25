@@ -14,14 +14,14 @@ SW = ROOT / "service-worker.js"
 
 CSS_TAG = '  <link rel="stylesheet" href="css/temas-visuais.css?v=1">'
 BOOT_TAG = '  <script src="js/tema-visual-boot.js?v=1"></script>'
-JS_TAG = '  <script src="js/temas-visuais.js?v=1" defer></script>'
+JS_TAG = '  <script src="js/temas-visuais.js?v=2" defer></script>'
 
 CSS_ASSET = "  './css/temas-visuais.css?v=1',"
 BOOT_ASSET = "  './js/tema-visual-boot.js?v=1',"
-JS_ASSET = "  './js/temas-visuais.js?v=1',"
-BANNER_ASSET = "  './imagens/curadorias/agosto-lilas-banner.svg',"
-BANNER_PATH = "./imagens/curadorias/agosto-lilas-banner.svg"
-CACHE_VERSION = "mural-cultural-v85-temas-visuais"
+JS_ASSET = "  './js/temas-visuais.js?v=2',"
+BANNER_ASSET = "  './imagens/curadorias/agosto-lilas-banner.png',"
+BANNER_PATH = "./imagens/curadorias/agosto-lilas-banner.png"
+CACHE_VERSION = "mural-cultural-v88-banner-png"
 
 OLD_INDEX_PATTERNS = [
     r'^[ \t]*<link[^>]+curadoria-agosto-lilas\.css\?v=\d+[^>]*>[ \t]*\n?',
@@ -79,7 +79,7 @@ def patch_service_worker() -> None:
     # O banner pode ter vindo do sistema anterior; remove todas as ocorrências
     # e insere exatamente uma no bloco de assets ativos.
     text = re.sub(
-        r"^[ \t]*'\./imagens/curadorias/agosto-lilas-banner\.svg',[ \t]*\n?",
+        r"^[ \t]*'\./imagens/curadorias/agosto-lilas-banner\.(?:svg|png)',[ \t]*\n?",
         '',
         text,
         flags=re.MULTILINE,
