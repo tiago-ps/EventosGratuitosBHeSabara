@@ -54,9 +54,6 @@ jobs:
           replace('js/temas-visuais.js',
                   "imagens/curadorias/agosto-lilas-banner.svg",
                   "imagens/curadorias/agosto-lilas-banner.png")
-          replace('.github/workflows/aplicar-temas-visuais.yml',
-                  "imagens/curadorias/agosto-lilas-banner.svg",
-                  "imagens/curadorias/agosto-lilas-banner.png")
 
           p = Path('scripts/aplicar_temas_visuais.py')
           text = p.read_text(encoding='utf-8')
@@ -108,7 +105,6 @@ jobs:
             imagens/curadorias/agosto-lilas-banner.png \
             js/temas-visuais.js \
             scripts/aplicar_temas_visuais.py \
-            .github/workflows/aplicar-temas-visuais.yml \
             index.html \
             service-worker.js
           if git diff --cached --quiet; then
