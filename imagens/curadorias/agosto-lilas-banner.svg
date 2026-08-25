@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 260" role="img" aria-labelledby="title desc">
+  <title id="title">Agosto Lilás</title>
+  <desc id="desc">Faixa roxa da campanha Agosto Lilás com laço de conscientização.</desc>
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6f269d"/>
+      <stop offset="0.5" stop-color="#48126e"/>
+      <stop offset="1" stop-color="#2b0a46"/>
+    </linearGradient>
+    <linearGradient id="ribbon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d49afa"/>
+      <stop offset="0.35" stop-color="#a451df"/>
+      <stop offset="0.72" stop-color="#7822bd"/>
+      <stop offset="1" stop-color="#c278ef"/>
+    </linearGradient>
+    <linearGradient id="script" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f1c8ff"/>
+      <stop offset="1" stop-color="#c872f1"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-30%" width="140%" height="170%">
+      <feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#13031f" flood-opacity="0.6"/>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+  </defs>
+
+  <rect x="66" y="39" width="1090" height="174" rx="48" fill="url(#panel)" stroke="#a956d8" stroke-width="5" filter="url(#shadow)"/>
+  <path d="M89 72 C390 23 853 36 1136 55" fill="none" stroke="#d391f0" stroke-opacity="0.25" stroke-width="12" filter="url(#soft)"/>
+  <path d="M760 199 C915 171 1048 181 1141 137" fill="none" stroke="#b357df" stroke-opacity="0.16" stroke-width="18" filter="url(#soft)"/>
+
+  <!-- laço roxo estilizado -->
+  <g transform="translate(90 5)" filter="url(#shadow)">
+    <path d="M92 17 C42 20 37 78 70 112 C84 126 101 139 117 152 C130 139 145 126 159 110 C190 75 179 20 132 17 C116 16 106 23 100 35 C96 25 90 19 92 17 Z" fill="url(#ribbon)"/>
+    <path d="M101 36 C82 57 77 78 93 99 C106 116 124 130 142 145 L105 214 L63 238 L98 159 C77 141 53 122 41 99 C22 62 44 21 83 18 C91 18 97 25 101 36 Z" fill="url(#ribbon)"/>
+    <path d="M113 37 C130 58 137 78 122 99 C110 116 94 129 77 143 L114 213 L156 239 L122 158 C144 140 167 121 178 98 C196 61 175 21 137 18 C128 18 120 25 113 37 Z" fill="url(#ribbon)" opacity="0.92"/>
+    <path d="M65 236 L103 160 L117 179 L88 247 Z" fill="#6d1daf" opacity="0.82"/>
+    <path d="M156 238 L121 160 L108 180 L136 248 Z" fill="#8c32c7" opacity="0.76"/>
+    <path d="M76 69 C95 55 121 54 145 68" fill="none" stroke="#f1c7ff" stroke-opacity="0.42" stroke-width="5"/>
+  </g>
+
+  <g transform="translate(300 0)" filter="url(#shadow)">
+    <text x="0" y="166" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="116" font-weight="900" letter-spacing="-5">Agosto</text>
+    <text x="505" y="173" fill="url(#script)" font-family="Georgia, 'Times New Roman', serif" font-size="108" font-weight="700" font-style="italic" letter-spacing="-4">Lilás</text>
+    <path d="M502 189 C650 218 822 211 938 177" fill="none" stroke="#cf78ef" stroke-width="8" stroke-linecap="round" opacity="0.85"/>
+  </g>
+</svg>
