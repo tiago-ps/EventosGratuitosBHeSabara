@@ -1,10 +1,162 @@
 {
   "versao": 2,
-  "atualizado_em": "2026-08-25T05:51:53.901058+00:00",
+  "atualizado_em": "2026-08-25T06:54:34.600952+00:00",
   "titulo": "Descobertas de leitura",
   "origem": "Acervos consultados em catálogos públicos Pergamum e bases institucionais",
   "aviso": "Seleção construída progressivamente e sujeita a curadoria. Não representa a totalidade dos acervos. Consulte o registro oficial para confirmar localização e disponibilidade.",
   "livros": [
+    {
+      "tipo_conteudo": "livro",
+      "id": "parem-de-nos-matar",
+      "titulo": "#Parem de nos matar!",
+      "autor": "Cidinha da Silva",
+      "pergunta_curiosidade": "[frase pendente]",
+      "texto_apoio": "[texto de apoio pendente]",
+      "temas": [
+        "feminismo"
+      ],
+      "icone": "♀️",
+      "numero_chamada": "821(81)-94 S586p 2019",
+      "unidade": "",
+      "biblioteca_rede": "",
+      "codigo_acervo": "103267",
+      "exemplares_fisicos_catalogados": 4,
+      "outras_edicoes_fisicas": 0,
+      "acesso_fisico": true,
+      "acesso_virtual": false,
+      "link_fisico": "https://pergamum.ifmg.edu.br/acervo/103267",
+      "link_virtual": "",
+      "link": "https://pergamum.ifmg.edu.br/acervo/103267",
+      "tipo_link_principal": "fisico",
+      "imagem": "imagens/livros/capas/103267.webp",
+      "imagem_fonte": "Capa exibida no registro do Pergamum de biblioteca; cópia local otimizada",
+      "imagem_url_origem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000070/00007057.jpg",
+      "qr_code": "imagens/livros/qrcodes/parem-de-nos-matar.svg",
+      "fonte": "Biblioteca não informada",
+      "exibicao_ativa": true,
+      "exibir_de": "",
+      "exibir_ate": "",
+      "prioridade": 5,
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": "",
+      "id_obra": "obra-parem-de-nos-matar-b0fbddc7",
+      "registros_ids": [
+        "parem-de-nos-matar"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "Biblioteca não informada",
+          "biblioteca_rede": "",
+          "unidade": "",
+          "acesso_fisico": true,
+          "acesso_virtual": false,
+          "exemplares_fisicos_catalogados": 4,
+          "registros": [
+            {
+              "registro_id": "parem-de-nos-matar",
+              "titulo_registro": "#Parem de nos matar!",
+              "autor_registro": "Cidinha da Silva",
+              "biblioteca_rede": "",
+              "unidade": "",
+              "codigo_acervo": "103267",
+              "numero_chamada": "821(81)-94 S586p 2019",
+              "exemplares_fisicos_catalogados": 4,
+              "acesso_fisico": true,
+              "acesso_virtual": false,
+              "link_fisico": "https://pergamum.ifmg.edu.br/acervo/103267",
+              "link_virtual": "",
+              "link": "https://pergamum.ifmg.edu.br/acervo/103267",
+              "tipo_link_principal": "fisico",
+              "fonte": "Biblioteca não informada"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "Biblioteca não informada"
+      ]
+    },
+    {
+      "tipo_conteudo": "livro",
+      "id": "a-fantasia-da-historia-feminista",
+      "titulo": "A fantasia da história feminista",
+      "autor": "Joan Wallach Scott",
+      "pergunta_curiosidade": "[frase pendente]",
+      "texto_apoio": "[texto de apoio pendente]",
+      "temas": [
+        "feminismo"
+      ],
+      "icone": "♀️",
+      "numero_chamada": "",
+      "unidade": "",
+      "biblioteca_rede": "",
+      "codigo_acervo": "",
+      "exemplares_fisicos_catalogados": 0,
+      "outras_edicoes_fisicas": 0,
+      "acesso_fisico": false,
+      "acesso_virtual": true,
+      "link_fisico": "",
+      "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=217103&page=1&perPage=20&orderBy=obra&direction=C",
+      "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=217103&page=1&perPage=20&orderBy=obra&direction=C",
+      "tipo_link_principal": "virtual",
+      "imagem": "imagens/livros/capas/ajuste-capa-pendente-feminismo.webp",
+      "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
+      "imagem_url_origem": "",
+      "qr_code": "imagens/livros/qrcodes/a-fantasia-da-historia-feminista.svg",
+      "fonte": "Biblioteca não informada",
+      "exibicao_ativa": true,
+      "exibir_de": "",
+      "exibir_ate": "",
+      "prioridade": 5,
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": "",
+      "id_obra": "obra-fantasia-da-historia-feminista-23013932",
+      "registros_ids": [
+        "a-fantasia-da-historia-feminista"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "Biblioteca não informada",
+          "biblioteca_rede": "",
+          "unidade": "",
+          "acesso_fisico": false,
+          "acesso_virtual": true,
+          "exemplares_fisicos_catalogados": 0,
+          "registros": [
+            {
+              "registro_id": "a-fantasia-da-historia-feminista",
+              "titulo_registro": "A fantasia da história feminista",
+              "autor_registro": "Joan Wallach Scott",
+              "biblioteca_rede": "",
+              "unidade": "",
+              "codigo_acervo": "",
+              "numero_chamada": "",
+              "exemplares_fisicos_catalogados": 0,
+              "acesso_fisico": false,
+              "acesso_virtual": true,
+              "link_fisico": "",
+              "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=217103&page=1&perPage=20&orderBy=obra&direction=C",
+              "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=217103&page=1&perPage=20&orderBy=obra&direction=C",
+              "tipo_link_principal": "virtual",
+              "fonte": "Biblioteca não informada"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "Biblioteca não informada"
+      ]
+    },
     {
       "tipo_conteudo": "livro",
       "id": "bibliotecas-ufmg-687412",
@@ -18,8 +170,7 @@
         "raça",
         "gênero",
         "cultura",
-        "representação",
-        "Agosto Lilás"
+        "representação"
       ],
       "icone": "📚",
       "numero_chamada": "305.8 H784y.Pd 2019",
@@ -129,8 +280,7 @@
         "cinema",
         "raça",
         "classe",
-        "gênero",
-        "Agosto Lilás"
+        "gênero"
       ],
       "icone": "📚",
       "numero_chamada": "791.430973 H784r.Pe 2023",
@@ -201,6 +351,82 @@
     },
     {
       "tipo_conteudo": "livro",
+      "id": "coisa-de-menino",
+      "titulo": "Coisa de menino? Uma conversa sobre masculinidade, sexualidade, misoginia e paternidade",
+      "autor": "Contardo Calligaris e Maria Homem",
+      "pergunta_curiosidade": "[frase pendente]",
+      "texto_apoio": "[texto de apoio pendente]",
+      "temas": [
+        "feminismo"
+      ],
+      "icone": "♀️",
+      "numero_chamada": "",
+      "unidade": "",
+      "biblioteca_rede": "",
+      "codigo_acervo": "",
+      "exemplares_fisicos_catalogados": 0,
+      "outras_edicoes_fisicas": 0,
+      "acesso_fisico": false,
+      "acesso_virtual": true,
+      "link_fisico": "",
+      "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=223505&page=1&perPage=20&orderBy=obra&direction=C",
+      "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=223505&page=1&perPage=20&orderBy=obra&direction=C",
+      "tipo_link_principal": "virtual",
+      "imagem": "imagens/livros/capas/ajuste-capa-pendente-feminismo.webp",
+      "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
+      "imagem_url_origem": "",
+      "qr_code": "imagens/livros/qrcodes/coisa-de-menino.svg",
+      "fonte": "Biblioteca não informada",
+      "exibicao_ativa": true,
+      "exibir_de": "",
+      "exibir_ate": "",
+      "prioridade": 5,
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": "",
+      "id_obra": "obra-coisa-de-menino-uma-conversa-sobre-masculinidade-sexualidade-mis-0a8b246b",
+      "registros_ids": [
+        "coisa-de-menino"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "Biblioteca não informada",
+          "biblioteca_rede": "",
+          "unidade": "",
+          "acesso_fisico": false,
+          "acesso_virtual": true,
+          "exemplares_fisicos_catalogados": 0,
+          "registros": [
+            {
+              "registro_id": "coisa-de-menino",
+              "titulo_registro": "Coisa de menino? Uma conversa sobre masculinidade, sexualidade, misoginia e paternidade",
+              "autor_registro": "Contardo Calligaris e Maria Homem",
+              "biblioteca_rede": "",
+              "unidade": "",
+              "codigo_acervo": "",
+              "numero_chamada": "",
+              "exemplares_fisicos_catalogados": 0,
+              "acesso_fisico": false,
+              "acesso_virtual": true,
+              "link_fisico": "",
+              "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=223505&page=1&perPage=20&orderBy=obra&direction=C",
+              "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=223505&page=1&perPage=20&orderBy=obra&direction=C",
+              "tipo_link_principal": "virtual",
+              "fonte": "Biblioteca não informada"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "Biblioteca não informada"
+      ]
+    },
+    {
+      "tipo_conteudo": "livro",
       "id": "bibliotecas-ufmg-692739",
       "titulo": "Comunhão : a busca das mulheres pelo amor / 2024",
       "autor": "bell hooks",
@@ -211,8 +437,7 @@
         "mulheres",
         "amor",
         "patriarcado",
-        "liberdade",
-        "Agosto Lilás"
+        "liberdade"
       ],
       "icone": "📚",
       "numero_chamada": "152.4 H784c.Pd 2024",
@@ -283,6 +508,82 @@
     },
     {
       "tipo_conteudo": "livro",
+      "id": "cult-judith-butler-feminismo-como-provocacao",
+      "titulo": "CULT — Dossiê: Judith Butler, feminismo como provocação",
+      "autor": "Vários",
+      "pergunta_curiosidade": "[frase pendente]",
+      "texto_apoio": "[texto de apoio pendente]",
+      "temas": [
+        "feminismo"
+      ],
+      "icone": "♀️",
+      "numero_chamada": "",
+      "unidade": "",
+      "biblioteca_rede": "",
+      "codigo_acervo": "",
+      "exemplares_fisicos_catalogados": 0,
+      "outras_edicoes_fisicas": 0,
+      "acesso_fisico": false,
+      "acesso_virtual": true,
+      "link_fisico": "",
+      "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=187563&page=1&perPage=20&orderBy=obra&direction=C",
+      "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=187563&page=1&perPage=20&orderBy=obra&direction=C",
+      "tipo_link_principal": "virtual",
+      "imagem": "imagens/livros/capas/ajuste-capa-pendente-feminismo.webp",
+      "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
+      "imagem_url_origem": "",
+      "qr_code": "imagens/livros/qrcodes/cult-judith-butler-feminismo-como-provocacao.svg",
+      "fonte": "Biblioteca não informada",
+      "exibicao_ativa": true,
+      "exibir_de": "",
+      "exibir_ate": "",
+      "prioridade": 5,
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": "",
+      "id_obra": "obra-cult-dossie-judith-butler-feminismo-como-provocacao-6e4b21dd",
+      "registros_ids": [
+        "cult-judith-butler-feminismo-como-provocacao"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "Biblioteca não informada",
+          "biblioteca_rede": "",
+          "unidade": "",
+          "acesso_fisico": false,
+          "acesso_virtual": true,
+          "exemplares_fisicos_catalogados": 0,
+          "registros": [
+            {
+              "registro_id": "cult-judith-butler-feminismo-como-provocacao",
+              "titulo_registro": "CULT — Dossiê: Judith Butler, feminismo como provocação",
+              "autor_registro": "Vários",
+              "biblioteca_rede": "",
+              "unidade": "",
+              "codigo_acervo": "",
+              "numero_chamada": "",
+              "exemplares_fisicos_catalogados": 0,
+              "acesso_fisico": false,
+              "acesso_virtual": true,
+              "link_fisico": "",
+              "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=187563&page=1&perPage=20&orderBy=obra&direction=C",
+              "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=187563&page=1&perPage=20&orderBy=obra&direction=C",
+              "tipo_link_principal": "virtual",
+              "fonte": "Biblioteca não informada"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "Biblioteca não informada"
+      ]
+    },
+    {
+      "tipo_conteudo": "livro",
       "id": "bibliotecas-ufmg-687368",
       "titulo": "Cultura fora da lei : representações de resistência / 2023",
       "autor": "bell hooks",
@@ -293,8 +594,7 @@
         "cultura",
         "representação",
         "resistência",
-        "gênero",
-        "Agosto Lilás"
+        "gênero"
       ],
       "icone": "📚",
       "numero_chamada": "301.45196073 H784o.Ps 2023",
@@ -365,6 +665,386 @@
     },
     {
       "tipo_conteudo": "livro",
+      "id": "desigualdade-de-genero",
+      "titulo": "Desigualdade de gênero: igualdade, violência de gênero, direitos humanos",
+      "autor": "Cleyson de Moraes Mello e Patrícia Bordinha",
+      "pergunta_curiosidade": "[frase pendente]",
+      "texto_apoio": "[texto de apoio pendente]",
+      "temas": [
+        "feminismo"
+      ],
+      "icone": "♀️",
+      "numero_chamada": "",
+      "unidade": "",
+      "biblioteca_rede": "",
+      "codigo_acervo": "",
+      "exemplares_fisicos_catalogados": 0,
+      "outras_edicoes_fisicas": 0,
+      "acesso_fisico": false,
+      "acesso_virtual": true,
+      "link_fisico": "",
+      "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=211413&page=1&perPage=20&orderBy=obra&direction=C",
+      "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=211413&page=1&perPage=20&orderBy=obra&direction=C",
+      "tipo_link_principal": "virtual",
+      "imagem": "imagens/livros/capas/ajuste-capa-pendente-feminismo.webp",
+      "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
+      "imagem_url_origem": "",
+      "qr_code": "imagens/livros/qrcodes/desigualdade-de-genero.svg",
+      "fonte": "Biblioteca não informada",
+      "exibicao_ativa": true,
+      "exibir_de": "",
+      "exibir_ate": "",
+      "prioridade": 5,
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": "",
+      "id_obra": "obra-desigualdade-de-genero-igualdade-violencia-de-genero-direitos-hu-7a53b002",
+      "registros_ids": [
+        "desigualdade-de-genero"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "Biblioteca não informada",
+          "biblioteca_rede": "",
+          "unidade": "",
+          "acesso_fisico": false,
+          "acesso_virtual": true,
+          "exemplares_fisicos_catalogados": 0,
+          "registros": [
+            {
+              "registro_id": "desigualdade-de-genero",
+              "titulo_registro": "Desigualdade de gênero: igualdade, violência de gênero, direitos humanos",
+              "autor_registro": "Cleyson de Moraes Mello e Patrícia Bordinha",
+              "biblioteca_rede": "",
+              "unidade": "",
+              "codigo_acervo": "",
+              "numero_chamada": "",
+              "exemplares_fisicos_catalogados": 0,
+              "acesso_fisico": false,
+              "acesso_virtual": true,
+              "link_fisico": "",
+              "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=211413&page=1&perPage=20&orderBy=obra&direction=C",
+              "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=211413&page=1&perPage=20&orderBy=obra&direction=C",
+              "tipo_link_principal": "virtual",
+              "fonte": "Biblioteca não informada"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "Biblioteca não informada"
+      ]
+    },
+    {
+      "tipo_conteudo": "livro",
+      "id": "dicionario-de-genero-corpo-e-sexualidade",
+      "titulo": "Dicionário de gênero, corpo e sexualidade de A a Z",
+      "autor": "Cláudia Beatriz Machado Monteiro de Lima",
+      "pergunta_curiosidade": "[frase pendente]",
+      "texto_apoio": "[texto de apoio pendente]",
+      "temas": [
+        "feminismo"
+      ],
+      "icone": "♀️",
+      "numero_chamada": "(038)305 D546 2025",
+      "unidade": "",
+      "biblioteca_rede": "",
+      "codigo_acervo": "111021",
+      "exemplares_fisicos_catalogados": 2,
+      "outras_edicoes_fisicas": 0,
+      "acesso_fisico": true,
+      "acesso_virtual": false,
+      "link_fisico": "https://pergamum.ifmg.edu.br/acervo/111021",
+      "link_virtual": "",
+      "link": "https://pergamum.ifmg.edu.br/acervo/111021",
+      "tipo_link_principal": "fisico",
+      "imagem": "imagens/livros/capas/111021.webp",
+      "imagem_fonte": "Capa exibida no registro do Pergamum de biblioteca; cópia local otimizada",
+      "imagem_url_origem": "https://pergamum.ifmg.edu.br/imagens/background",
+      "qr_code": "imagens/livros/qrcodes/dicionario-de-genero-corpo-e-sexualidade.svg",
+      "fonte": "Biblioteca não informada",
+      "exibicao_ativa": true,
+      "exibir_de": "",
+      "exibir_ate": "",
+      "prioridade": 5,
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": "",
+      "id_obra": "obra-dicionario-de-genero-corpo-e-sexualidade-de-a-a-z-87bef574",
+      "registros_ids": [
+        "dicionario-de-genero-corpo-e-sexualidade"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "Biblioteca não informada",
+          "biblioteca_rede": "",
+          "unidade": "",
+          "acesso_fisico": true,
+          "acesso_virtual": false,
+          "exemplares_fisicos_catalogados": 2,
+          "registros": [
+            {
+              "registro_id": "dicionario-de-genero-corpo-e-sexualidade",
+              "titulo_registro": "Dicionário de gênero, corpo e sexualidade de A a Z",
+              "autor_registro": "Cláudia Beatriz Machado Monteiro de Lima",
+              "biblioteca_rede": "",
+              "unidade": "",
+              "codigo_acervo": "111021",
+              "numero_chamada": "(038)305 D546 2025",
+              "exemplares_fisicos_catalogados": 2,
+              "acesso_fisico": true,
+              "acesso_virtual": false,
+              "link_fisico": "https://pergamum.ifmg.edu.br/acervo/111021",
+              "link_virtual": "",
+              "link": "https://pergamum.ifmg.edu.br/acervo/111021",
+              "tipo_link_principal": "fisico",
+              "fonte": "Biblioteca não informada"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "Biblioteca não informada"
+      ]
+    },
+    {
+      "tipo_conteudo": "livro",
+      "id": "discriminacao-de-genero-dados-pessoais",
+      "titulo": "Discriminação de gênero no tratamento automatizado de dados pessoais",
+      "autor": "Maria Cristine Branco Lindoso",
+      "pergunta_curiosidade": "[frase pendente]",
+      "texto_apoio": "[texto de apoio pendente]",
+      "temas": [
+        "feminismo"
+      ],
+      "icone": "♀️",
+      "numero_chamada": "",
+      "unidade": "",
+      "biblioteca_rede": "",
+      "codigo_acervo": "",
+      "exemplares_fisicos_catalogados": 0,
+      "outras_edicoes_fisicas": 0,
+      "acesso_fisico": false,
+      "acesso_virtual": true,
+      "link_fisico": "",
+      "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=187304&page=1&perPage=20&orderBy=obra&direction=C",
+      "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=187304&page=1&perPage=20&orderBy=obra&direction=C",
+      "tipo_link_principal": "virtual",
+      "imagem": "imagens/livros/capas/ajuste-capa-pendente-feminismo.webp",
+      "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
+      "imagem_url_origem": "",
+      "qr_code": "imagens/livros/qrcodes/discriminacao-de-genero-dados-pessoais.svg",
+      "fonte": "Biblioteca não informada",
+      "exibicao_ativa": true,
+      "exibir_de": "",
+      "exibir_ate": "",
+      "prioridade": 5,
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": "",
+      "id_obra": "obra-discriminacao-de-genero-no-tratamento-automatizado-de-dados-pess-34b15655",
+      "registros_ids": [
+        "discriminacao-de-genero-dados-pessoais"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "Biblioteca não informada",
+          "biblioteca_rede": "",
+          "unidade": "",
+          "acesso_fisico": false,
+          "acesso_virtual": true,
+          "exemplares_fisicos_catalogados": 0,
+          "registros": [
+            {
+              "registro_id": "discriminacao-de-genero-dados-pessoais",
+              "titulo_registro": "Discriminação de gênero no tratamento automatizado de dados pessoais",
+              "autor_registro": "Maria Cristine Branco Lindoso",
+              "biblioteca_rede": "",
+              "unidade": "",
+              "codigo_acervo": "",
+              "numero_chamada": "",
+              "exemplares_fisicos_catalogados": 0,
+              "acesso_fisico": false,
+              "acesso_virtual": true,
+              "link_fisico": "",
+              "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=187304&page=1&perPage=20&orderBy=obra&direction=C",
+              "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=187304&page=1&perPage=20&orderBy=obra&direction=C",
+              "tipo_link_principal": "virtual",
+              "fonte": "Biblioteca não informada"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "Biblioteca não informada"
+      ]
+    },
+    {
+      "tipo_conteudo": "livro",
+      "id": "e-eu-nao-sou-uma-mulher-sojourner-truth",
+      "titulo": "E eu não sou uma mulher? A narrativa de Sojourner Truth",
+      "autor": "Sojourner Truth",
+      "pergunta_curiosidade": "[frase pendente]",
+      "texto_apoio": "[texto de apoio pendente]",
+      "temas": [
+        "feminismo"
+      ],
+      "icone": "♀️",
+      "numero_chamada": "929 T874e 2020",
+      "unidade": "",
+      "biblioteca_rede": "",
+      "codigo_acervo": "106714",
+      "exemplares_fisicos_catalogados": 1,
+      "outras_edicoes_fisicas": 0,
+      "acesso_fisico": true,
+      "acesso_virtual": false,
+      "link_fisico": "https://pergamum.ifmg.edu.br/acervo/106714",
+      "link_virtual": "",
+      "link": "https://pergamum.ifmg.edu.br/acervo/106714",
+      "tipo_link_principal": "fisico",
+      "imagem": "imagens/livros/capas/106714.webp",
+      "imagem_fonte": "Capa exibida no registro do Pergamum de biblioteca; cópia local otimizada",
+      "imagem_url_origem": "https://pergamum.ifmg.edu.br/pergamumweb/download/9642FB49-D41E-4A1D-ABE7-D53A7424115D.PNG",
+      "qr_code": "imagens/livros/qrcodes/e-eu-nao-sou-uma-mulher-sojourner-truth.svg",
+      "fonte": "Biblioteca não informada",
+      "exibicao_ativa": true,
+      "exibir_de": "",
+      "exibir_ate": "",
+      "prioridade": 5,
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": "",
+      "id_obra": "obra-eu-nao-sou-uma-mulher-a-narrativa-de-sojourner-truth-7e6848fb",
+      "registros_ids": [
+        "e-eu-nao-sou-uma-mulher-sojourner-truth"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "Biblioteca não informada",
+          "biblioteca_rede": "",
+          "unidade": "",
+          "acesso_fisico": true,
+          "acesso_virtual": false,
+          "exemplares_fisicos_catalogados": 1,
+          "registros": [
+            {
+              "registro_id": "e-eu-nao-sou-uma-mulher-sojourner-truth",
+              "titulo_registro": "E eu não sou uma mulher? A narrativa de Sojourner Truth",
+              "autor_registro": "Sojourner Truth",
+              "biblioteca_rede": "",
+              "unidade": "",
+              "codigo_acervo": "106714",
+              "numero_chamada": "929 T874e 2020",
+              "exemplares_fisicos_catalogados": 1,
+              "acesso_fisico": true,
+              "acesso_virtual": false,
+              "link_fisico": "https://pergamum.ifmg.edu.br/acervo/106714",
+              "link_virtual": "",
+              "link": "https://pergamum.ifmg.edu.br/acervo/106714",
+              "tipo_link_principal": "fisico",
+              "fonte": "Biblioteca não informada"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "Biblioteca não informada"
+      ]
+    },
+    {
+      "tipo_conteudo": "livro",
+      "id": "elas-nas-organizacoes",
+      "titulo": "Elas nas organizações: passado, presente, futuro",
+      "autor": "Susane Petinelli-Souza",
+      "pergunta_curiosidade": "[frase pendente]",
+      "texto_apoio": "[texto de apoio pendente]",
+      "temas": [
+        "feminismo"
+      ],
+      "icone": "♀️",
+      "numero_chamada": "",
+      "unidade": "",
+      "biblioteca_rede": "",
+      "codigo_acervo": "",
+      "exemplares_fisicos_catalogados": 0,
+      "outras_edicoes_fisicas": 0,
+      "acesso_fisico": false,
+      "acesso_virtual": true,
+      "link_fisico": "",
+      "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=222635&page=1&perPage=20&orderBy=obra&direction=C",
+      "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=222635&page=1&perPage=20&orderBy=obra&direction=C",
+      "tipo_link_principal": "virtual",
+      "imagem": "imagens/livros/capas/ajuste-capa-pendente-feminismo.webp",
+      "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
+      "imagem_url_origem": "",
+      "qr_code": "imagens/livros/qrcodes/elas-nas-organizacoes.svg",
+      "fonte": "Biblioteca não informada",
+      "exibicao_ativa": true,
+      "exibir_de": "",
+      "exibir_ate": "",
+      "prioridade": 5,
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": "",
+      "id_obra": "obra-elas-nas-organizacoes-passado-presente-futuro-e8e5326d",
+      "registros_ids": [
+        "elas-nas-organizacoes"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "Biblioteca não informada",
+          "biblioteca_rede": "",
+          "unidade": "",
+          "acesso_fisico": false,
+          "acesso_virtual": true,
+          "exemplares_fisicos_catalogados": 0,
+          "registros": [
+            {
+              "registro_id": "elas-nas-organizacoes",
+              "titulo_registro": "Elas nas organizações: passado, presente, futuro",
+              "autor_registro": "Susane Petinelli-Souza",
+              "biblioteca_rede": "",
+              "unidade": "",
+              "codigo_acervo": "",
+              "numero_chamada": "",
+              "exemplares_fisicos_catalogados": 0,
+              "acesso_fisico": false,
+              "acesso_virtual": true,
+              "link_fisico": "",
+              "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=222635&page=1&perPage=20&orderBy=obra&direction=C",
+              "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=222635&page=1&perPage=20&orderBy=obra&direction=C",
+              "tipo_link_principal": "virtual",
+              "fonte": "Biblioteca não informada"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "Biblioteca não informada"
+      ]
+    },
+    {
+      "tipo_conteudo": "livro",
       "id": "bibliotecas-ufmg-649563",
       "titulo": "Ensinando a transgredir : a educação como prática da liberdade",
       "autor": "bell hooks",
@@ -375,8 +1055,7 @@
         "educação",
         "liberdade",
         "raça",
-        "gênero",
-        "Agosto Lilás"
+        "gênero"
       ],
       "icone": "📚",
       "numero_chamada": "370.1 H784t.Pc 2017",
@@ -533,8 +1212,7 @@
         "educação",
         "comunidade",
         "antirracismo",
-        "igualdade",
-        "Agosto Lilás"
+        "igualdade"
       ],
       "icone": "📚",
       "numero_chamada": "370.117 H784t.Pc 2021",
@@ -615,8 +1293,7 @@
         "educação",
         "pensamento crítico",
         "raça",
-        "gênero",
-        "Agosto Lilás"
+        "gênero"
       ],
       "icone": "📚",
       "numero_chamada": "370 H784t.Pl 2020",
@@ -716,6 +1393,82 @@
     },
     {
       "tipo_conteudo": "livro",
+      "id": "equidade-de-genero",
+      "titulo": "Equidade de gênero: barreiras e intervenções",
+      "autor": "Brenno César Vulcão de Souza e Lelison Leite de Souza e Nicolli dos Santos Ferreira",
+      "pergunta_curiosidade": "[frase pendente]",
+      "texto_apoio": "[texto de apoio pendente]",
+      "temas": [
+        "feminismo"
+      ],
+      "icone": "♀️",
+      "numero_chamada": "",
+      "unidade": "",
+      "biblioteca_rede": "",
+      "codigo_acervo": "",
+      "exemplares_fisicos_catalogados": 0,
+      "outras_edicoes_fisicas": 0,
+      "acesso_fisico": false,
+      "acesso_virtual": true,
+      "link_fisico": "",
+      "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=229103&page=1&perPage=20&orderBy=obra&direction=C",
+      "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=229103&page=1&perPage=20&orderBy=obra&direction=C",
+      "tipo_link_principal": "virtual",
+      "imagem": "imagens/livros/capas/ajuste-capa-pendente-feminismo.webp",
+      "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
+      "imagem_url_origem": "",
+      "qr_code": "imagens/livros/qrcodes/equidade-de-genero.svg",
+      "fonte": "Biblioteca não informada",
+      "exibicao_ativa": true,
+      "exibir_de": "",
+      "exibir_ate": "",
+      "prioridade": 5,
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": "",
+      "id_obra": "obra-equidade-de-genero-barreiras-e-intervencoes-eacc4439",
+      "registros_ids": [
+        "equidade-de-genero"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "Biblioteca não informada",
+          "biblioteca_rede": "",
+          "unidade": "",
+          "acesso_fisico": false,
+          "acesso_virtual": true,
+          "exemplares_fisicos_catalogados": 0,
+          "registros": [
+            {
+              "registro_id": "equidade-de-genero",
+              "titulo_registro": "Equidade de gênero: barreiras e intervenções",
+              "autor_registro": "Brenno César Vulcão de Souza e Lelison Leite de Souza e Nicolli dos Santos Ferreira",
+              "biblioteca_rede": "",
+              "unidade": "",
+              "codigo_acervo": "",
+              "numero_chamada": "",
+              "exemplares_fisicos_catalogados": 0,
+              "acesso_fisico": false,
+              "acesso_virtual": true,
+              "link_fisico": "",
+              "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=229103&page=1&perPage=20&orderBy=obra&direction=C",
+              "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=229103&page=1&perPage=20&orderBy=obra&direction=C",
+              "tipo_link_principal": "virtual",
+              "fonte": "Biblioteca não informada"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "Biblioteca não informada"
+      ]
+    },
+    {
+      "tipo_conteudo": "livro",
       "id": "bibliotecas-ufmg-658681",
       "titulo": "Erguer a voz : pensar como feminista, pensar como negra / 2019",
       "autor": "bell hooks",
@@ -727,8 +1480,7 @@
         "voz",
         "racismo",
         "educação",
-        "resistência",
-        "Agosto Lilás"
+        "resistência"
       ],
       "icone": "📚",
       "numero_chamada": "305.42 H787t.Pm 2019",
@@ -810,8 +1562,7 @@
         "raça",
         "gênero",
         "classe",
-        "antirracismo",
-        "Agosto Lilás"
+        "antirracismo"
       ],
       "icone": "📚",
       "numero_chamada": "305.8 H784e 2022",
@@ -882,6 +1633,82 @@
     },
     {
       "tipo_conteudo": "livro",
+      "id": "estudos-de-genero-literatura-criancas-jovens",
+      "titulo": "Estudos de gênero e literatura para crianças e jovens",
+      "autor": "Cecil Jeanine Albert Zinani e Diógenes Bueno",
+      "pergunta_curiosidade": "[frase pendente]",
+      "texto_apoio": "[texto de apoio pendente]",
+      "temas": [
+        "feminismo"
+      ],
+      "icone": "♀️",
+      "numero_chamada": "",
+      "unidade": "",
+      "biblioteca_rede": "",
+      "codigo_acervo": "",
+      "exemplares_fisicos_catalogados": 0,
+      "outras_edicoes_fisicas": 0,
+      "acesso_fisico": false,
+      "acesso_virtual": true,
+      "link_fisico": "",
+      "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=47896&page=1&perPage=20&orderBy=obra&direction=C",
+      "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=47896&page=1&perPage=20&orderBy=obra&direction=C",
+      "tipo_link_principal": "virtual",
+      "imagem": "imagens/livros/capas/ajuste-capa-pendente-feminismo.webp",
+      "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
+      "imagem_url_origem": "",
+      "qr_code": "imagens/livros/qrcodes/estudos-de-genero-literatura-criancas-jovens.svg",
+      "fonte": "Biblioteca não informada",
+      "exibicao_ativa": true,
+      "exibir_de": "",
+      "exibir_ate": "",
+      "prioridade": 5,
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": "",
+      "id_obra": "obra-estudos-de-genero-e-literatura-para-criancas-e-jovens-5b124ce4",
+      "registros_ids": [
+        "estudos-de-genero-literatura-criancas-jovens"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "Biblioteca não informada",
+          "biblioteca_rede": "",
+          "unidade": "",
+          "acesso_fisico": false,
+          "acesso_virtual": true,
+          "exemplares_fisicos_catalogados": 0,
+          "registros": [
+            {
+              "registro_id": "estudos-de-genero-literatura-criancas-jovens",
+              "titulo_registro": "Estudos de gênero e literatura para crianças e jovens",
+              "autor_registro": "Cecil Jeanine Albert Zinani e Diógenes Bueno",
+              "biblioteca_rede": "",
+              "unidade": "",
+              "codigo_acervo": "",
+              "numero_chamada": "",
+              "exemplares_fisicos_catalogados": 0,
+              "acesso_fisico": false,
+              "acesso_virtual": true,
+              "link_fisico": "",
+              "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=47896&page=1&perPage=20&orderBy=obra&direction=C",
+              "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=47896&page=1&perPage=20&orderBy=obra&direction=C",
+              "tipo_link_principal": "virtual",
+              "fonte": "Biblioteca não informada"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "Biblioteca não informada"
+      ]
+    },
+    {
+      "tipo_conteudo": "livro",
       "id": "bibliotecas-do-ifmg-103266",
       "titulo": "Eu não sou uma mulher? mulheres negras e feminismo",
       "autor": "bell hooks",
@@ -893,8 +1720,7 @@
         "mulheres negras",
         "racismo",
         "sexismo",
-        "movimentos sociais",
-        "Agosto Lilás"
+        "movimentos sociais"
       ],
       "icone": "📚",
       "numero_chamada": "305.42 H776n 7. ed. 2020",
@@ -1088,6 +1914,82 @@
     },
     {
       "tipo_conteudo": "livro",
+      "id": "eu-sou-malala",
+      "titulo": "Eu sou Malala: como uma garota que defendeu o direito à educação e mudou o mundo",
+      "autor": "Malala Yousafzai e Patricia McCormick",
+      "pergunta_curiosidade": "[frase pendente]",
+      "texto_apoio": "[texto de apoio pendente]",
+      "temas": [
+        "feminismo"
+      ],
+      "icone": "♀️",
+      "numero_chamada": "821(81)-94 Y82e 3. ed 2018",
+      "unidade": "",
+      "biblioteca_rede": "",
+      "codigo_acervo": "99004",
+      "exemplares_fisicos_catalogados": 1,
+      "outras_edicoes_fisicas": 0,
+      "acesso_fisico": true,
+      "acesso_virtual": false,
+      "link_fisico": "https://pergamum.ifmg.edu.br/acervo/99004",
+      "link_virtual": "",
+      "link": "https://pergamum.ifmg.edu.br/acervo/99004",
+      "tipo_link_principal": "fisico",
+      "imagem": "imagens/livros/capas/99004.webp",
+      "imagem_fonte": "Capa exibida no registro do Pergamum de biblioteca; cópia local otimizada",
+      "imagem_url_origem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000062/00006226.jpg",
+      "qr_code": "imagens/livros/qrcodes/eu-sou-malala.svg",
+      "fonte": "Biblioteca não informada",
+      "exibicao_ativa": true,
+      "exibir_de": "",
+      "exibir_ate": "",
+      "prioridade": 5,
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": "",
+      "id_obra": "obra-eu-sou-malala-como-uma-garota-que-defendeu-o-direito-a-educacao--3f70b34a",
+      "registros_ids": [
+        "eu-sou-malala"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "Biblioteca não informada",
+          "biblioteca_rede": "",
+          "unidade": "",
+          "acesso_fisico": true,
+          "acesso_virtual": false,
+          "exemplares_fisicos_catalogados": 1,
+          "registros": [
+            {
+              "registro_id": "eu-sou-malala",
+              "titulo_registro": "Eu sou Malala: como uma garota que defendeu o direito à educação e mudou o mundo",
+              "autor_registro": "Malala Yousafzai e Patricia McCormick",
+              "biblioteca_rede": "",
+              "unidade": "",
+              "codigo_acervo": "99004",
+              "numero_chamada": "821(81)-94 Y82e 3. ed 2018",
+              "exemplares_fisicos_catalogados": 1,
+              "acesso_fisico": true,
+              "acesso_virtual": false,
+              "link_fisico": "https://pergamum.ifmg.edu.br/acervo/99004",
+              "link_virtual": "",
+              "link": "https://pergamum.ifmg.edu.br/acervo/99004",
+              "tipo_link_principal": "fisico",
+              "fonte": "Biblioteca não informada"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "Biblioteca não informada"
+      ]
+    },
+    {
+      "tipo_conteudo": "livro",
       "id": "bibliotecas-ufmg-676236",
       "titulo": "Feminismo é para todo mundo : políticas arrebatadoras",
       "autor": "bell hooks",
@@ -1098,8 +2000,7 @@
         "sexismo",
         "igualdade",
         "masculinidades",
-        "relações",
-        "Agosto Lilás"
+        "relações"
       ],
       "icone": "📚",
       "numero_chamada": "305.42 H784f 18.ed. 2022",
@@ -1234,8 +2135,7 @@
         "masculinidades",
         "homens negros",
         "vulnerabilidade",
-        "amor",
-        "Agosto Lilás"
+        "amor"
       ],
       "icone": "📚",
       "numero_chamada": "305.3 H784w.Ps 2022",
@@ -1306,6 +2206,234 @@
     },
     {
       "tipo_conteudo": "livro",
+      "id": "genero-e-diversidade-na-escola",
+      "titulo": "Gênero e diversidade na escola",
+      "autor": "Sérgio Carrara",
+      "pergunta_curiosidade": "[frase pendente]",
+      "texto_apoio": "[texto de apoio pendente]",
+      "temas": [
+        "feminismo"
+      ],
+      "icone": "♀️",
+      "numero_chamada": "371.13 G326 2009",
+      "unidade": "",
+      "biblioteca_rede": "",
+      "codigo_acervo": "100410",
+      "exemplares_fisicos_catalogados": 1,
+      "outras_edicoes_fisicas": 0,
+      "acesso_fisico": true,
+      "acesso_virtual": false,
+      "link_fisico": "https://pergamum.ifmg.edu.br/acervo/100410",
+      "link_virtual": "",
+      "link": "https://pergamum.ifmg.edu.br/acervo/100410",
+      "tipo_link_principal": "fisico",
+      "imagem": "imagens/livros/capas/100410.webp",
+      "imagem_fonte": "Capa exibida no registro do Pergamum de biblioteca; cópia local otimizada",
+      "imagem_url_origem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000066/00006619.JPG",
+      "qr_code": "imagens/livros/qrcodes/genero-e-diversidade-na-escola.svg",
+      "fonte": "Biblioteca não informada",
+      "exibicao_ativa": true,
+      "exibir_de": "",
+      "exibir_ate": "",
+      "prioridade": 5,
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": "",
+      "id_obra": "obra-genero-e-diversidade-na-escola-5718db48",
+      "registros_ids": [
+        "genero-e-diversidade-na-escola"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "Biblioteca não informada",
+          "biblioteca_rede": "",
+          "unidade": "",
+          "acesso_fisico": true,
+          "acesso_virtual": false,
+          "exemplares_fisicos_catalogados": 1,
+          "registros": [
+            {
+              "registro_id": "genero-e-diversidade-na-escola",
+              "titulo_registro": "Gênero e diversidade na escola",
+              "autor_registro": "Sérgio Carrara",
+              "biblioteca_rede": "",
+              "unidade": "",
+              "codigo_acervo": "100410",
+              "numero_chamada": "371.13 G326 2009",
+              "exemplares_fisicos_catalogados": 1,
+              "acesso_fisico": true,
+              "acesso_virtual": false,
+              "link_fisico": "https://pergamum.ifmg.edu.br/acervo/100410",
+              "link_virtual": "",
+              "link": "https://pergamum.ifmg.edu.br/acervo/100410",
+              "tipo_link_principal": "fisico",
+              "fonte": "Biblioteca não informada"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "Biblioteca não informada"
+      ]
+    },
+    {
+      "tipo_conteudo": "livro",
+      "id": "insubmissas-lagrimas-de-mulheres",
+      "titulo": "Insubmissas lágrimas de mulheres",
+      "autor": "Conceição Evaristo",
+      "pergunta_curiosidade": "[frase pendente]",
+      "texto_apoio": "[texto de apoio pendente]",
+      "temas": [
+        "feminismo"
+      ],
+      "icone": "♀️",
+      "numero_chamada": "821(81)-34 E92i 2016",
+      "unidade": "",
+      "biblioteca_rede": "",
+      "codigo_acervo": "99091",
+      "exemplares_fisicos_catalogados": 2,
+      "outras_edicoes_fisicas": 1,
+      "acesso_fisico": true,
+      "acesso_virtual": false,
+      "link_fisico": "https://pergamum.ifmg.edu.br/acervo/99091",
+      "link_virtual": "",
+      "link": "https://pergamum.ifmg.edu.br/acervo/99091",
+      "tipo_link_principal": "fisico",
+      "imagem": "imagens/livros/capas/99091.webp",
+      "imagem_fonte": "Capa exibida no registro do Pergamum de biblioteca; cópia local otimizada",
+      "imagem_url_origem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000061/00006160.jpg",
+      "qr_code": "imagens/livros/qrcodes/insubmissas-lagrimas-de-mulheres.svg",
+      "fonte": "Biblioteca não informada",
+      "exibicao_ativa": true,
+      "exibir_de": "",
+      "exibir_ate": "",
+      "prioridade": 5,
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": "",
+      "id_obra": "obra-insubmissas-lagrimas-de-mulheres-b47bc081",
+      "registros_ids": [
+        "insubmissas-lagrimas-de-mulheres"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "Biblioteca não informada",
+          "biblioteca_rede": "",
+          "unidade": "",
+          "acesso_fisico": true,
+          "acesso_virtual": false,
+          "exemplares_fisicos_catalogados": 2,
+          "registros": [
+            {
+              "registro_id": "insubmissas-lagrimas-de-mulheres",
+              "titulo_registro": "Insubmissas lágrimas de mulheres",
+              "autor_registro": "Conceição Evaristo",
+              "biblioteca_rede": "",
+              "unidade": "",
+              "codigo_acervo": "99091",
+              "numero_chamada": "821(81)-34 E92i 2016",
+              "exemplares_fisicos_catalogados": 2,
+              "acesso_fisico": true,
+              "acesso_virtual": false,
+              "link_fisico": "https://pergamum.ifmg.edu.br/acervo/99091",
+              "link_virtual": "",
+              "link": "https://pergamum.ifmg.edu.br/acervo/99091",
+              "tipo_link_principal": "fisico",
+              "fonte": "Biblioteca não informada"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "Biblioteca não informada"
+      ]
+    },
+    {
+      "tipo_conteudo": "livro",
+      "id": "interseccionalidade",
+      "titulo": "Interseccionalidade",
+      "autor": "Carla Akotirene",
+      "pergunta_curiosidade": "[frase pendente]",
+      "texto_apoio": "[texto de apoio pendente]",
+      "temas": [
+        "feminismo"
+      ],
+      "icone": "♀️",
+      "numero_chamada": "396 A315i 2019",
+      "unidade": "",
+      "biblioteca_rede": "",
+      "codigo_acervo": "105826",
+      "exemplares_fisicos_catalogados": 1,
+      "outras_edicoes_fisicas": 0,
+      "acesso_fisico": true,
+      "acesso_virtual": false,
+      "link_fisico": "https://pergamum.ifmg.edu.br/acervo/105826",
+      "link_virtual": "",
+      "link": "https://pergamum.ifmg.edu.br/acervo/105826",
+      "tipo_link_principal": "fisico",
+      "imagem": "imagens/livros/capas/105826.webp",
+      "imagem_fonte": "Capa exibida no registro do Pergamum de biblioteca; cópia local otimizada",
+      "imagem_url_origem": "https://pergamum.ifmg.edu.br/pergamumweb/download/33598D2C-65E1-4A72-9245-0B3451F53662.png",
+      "qr_code": "imagens/livros/qrcodes/interseccionalidade.svg",
+      "fonte": "Biblioteca não informada",
+      "exibicao_ativa": true,
+      "exibir_de": "",
+      "exibir_ate": "",
+      "prioridade": 5,
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": "",
+      "id_obra": "obra-interseccionalidade-3529a54f",
+      "registros_ids": [
+        "interseccionalidade"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "Biblioteca não informada",
+          "biblioteca_rede": "",
+          "unidade": "",
+          "acesso_fisico": true,
+          "acesso_virtual": false,
+          "exemplares_fisicos_catalogados": 1,
+          "registros": [
+            {
+              "registro_id": "interseccionalidade",
+              "titulo_registro": "Interseccionalidade",
+              "autor_registro": "Carla Akotirene",
+              "biblioteca_rede": "",
+              "unidade": "",
+              "codigo_acervo": "105826",
+              "numero_chamada": "396 A315i 2019",
+              "exemplares_fisicos_catalogados": 1,
+              "acesso_fisico": true,
+              "acesso_virtual": false,
+              "link_fisico": "https://pergamum.ifmg.edu.br/acervo/105826",
+              "link_virtual": "",
+              "link": "https://pergamum.ifmg.edu.br/acervo/105826",
+              "tipo_link_principal": "fisico",
+              "fonte": "Biblioteca não informada"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "Biblioteca não informada"
+      ]
+    },
+    {
+      "tipo_conteudo": "livro",
       "id": "bibliotecas-ufmg-695801",
       "titulo": "Irmãs do inhame: mulheres negras e autorrecuperação - 1. ed. / 2023",
       "autor": "bell hooks",
@@ -1317,8 +2445,7 @@
         "mulheres negras",
         "autocuidado",
         "racismo",
-        "comunidade",
-        "Agosto Lilás"
+        "comunidade"
       ],
       "icone": "📚",
       "numero_chamada": "155.6523 H784s.Pf 2023",
@@ -1389,17 +2516,89 @@
     },
     {
       "tipo_conteudo": "livro",
+      "id": "literatura-escrita-por-mulheres",
+      "titulo": "Literatura escrita por mulheres: conceitos e trajetórias",
+      "autor": "Daniele Santos e Emanuela Carla Siqueira e Gabriela Szabo",
+      "pergunta_curiosidade": "[frase pendente]",
+      "texto_apoio": "[texto de apoio pendente]",
+      "temas": [
+        "feminismo"
+      ],
+      "icone": "♀️",
+      "numero_chamada": "",
+      "unidade": "",
+      "biblioteca_rede": "",
+      "codigo_acervo": "",
+      "exemplares_fisicos_catalogados": 0,
+      "outras_edicoes_fisicas": 0,
+      "acesso_fisico": false,
+      "acesso_virtual": true,
+      "link_fisico": "",
+      "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=222069&page=1&perPage=20&orderBy=obra&direction=C",
+      "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=222069&page=1&perPage=20&orderBy=obra&direction=C",
+      "tipo_link_principal": "virtual",
+      "imagem": "imagens/livros/capas/ajuste-capa-pendente-feminismo.webp",
+      "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
+      "imagem_url_origem": "",
+      "qr_code": "imagens/livros/qrcodes/literatura-escrita-por-mulheres.svg",
+      "fonte": "Biblioteca não informada",
+      "exibicao_ativa": true,
+      "exibir_de": "",
+      "exibir_ate": "",
+      "prioridade": 5,
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": "",
+      "id_obra": "obra-literatura-escrita-por-mulheres-conceitos-e-trajetorias-4695bb08",
+      "registros_ids": [
+        "literatura-escrita-por-mulheres"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "Biblioteca não informada",
+          "biblioteca_rede": "",
+          "unidade": "",
+          "acesso_fisico": false,
+          "acesso_virtual": true,
+          "exemplares_fisicos_catalogados": 0,
+          "registros": [
+            {
+              "registro_id": "literatura-escrita-por-mulheres",
+              "titulo_registro": "Literatura escrita por mulheres: conceitos e trajetórias",
+              "autor_registro": "Daniele Santos e Emanuela Carla Siqueira e Gabriela Szabo",
+              "biblioteca_rede": "",
+              "unidade": "",
+              "codigo_acervo": "",
+              "numero_chamada": "",
+              "exemplares_fisicos_catalogados": 0,
+              "acesso_fisico": false,
+              "acesso_virtual": true,
+              "link_fisico": "",
+              "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=222069&page=1&perPage=20&orderBy=obra&direction=C",
+              "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=222069&page=1&perPage=20&orderBy=obra&direction=C",
+              "tipo_link_principal": "virtual",
+              "fonte": "Biblioteca não informada"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "Biblioteca não informada"
+      ]
+    },
+    {
+      "tipo_conteudo": "livro",
       "id": "lelia-gonzalez",
       "titulo": "Lélia Gonzalez",
       "autor": "Alex Ratts e Flavia Rios",
       "pergunta_curiosidade": "Quem foi a intelectual que colocou raça, gênero e democracia na mesma conversa?",
       "texto_apoio": "A trajetória de uma das principais lideranças do movimento negro brasileiro do século XX.",
       "temas": [
-        "feminismo",
-        "africanidades",
-        "mulheres",
-        "política",
-        "biografia"
+        "feminismo"
       ],
       "icone": "✊🏿",
       "numero_chamada": "929 R237l 2010",
@@ -1469,6 +2668,386 @@
     },
     {
       "tipo_conteudo": "livro",
+      "id": "mais-mulheres-no-poder",
+      "titulo": "Mais mulheres no poder: contribuição à formação política das mulheres",
+      "autor": "Marlise Matos e Iáris Ramalho Cortês",
+      "pergunta_curiosidade": "[frase pendente]",
+      "texto_apoio": "[texto de apoio pendente]",
+      "temas": [
+        "feminismo"
+      ],
+      "icone": "♀️",
+      "numero_chamada": "351 M231 2010",
+      "unidade": "",
+      "biblioteca_rede": "",
+      "codigo_acervo": "100428",
+      "exemplares_fisicos_catalogados": 1,
+      "outras_edicoes_fisicas": 0,
+      "acesso_fisico": true,
+      "acesso_virtual": false,
+      "link_fisico": "https://pergamum.ifmg.edu.br/acervo/100428",
+      "link_virtual": "",
+      "link": "https://pergamum.ifmg.edu.br/acervo/100428",
+      "tipo_link_principal": "fisico",
+      "imagem": "imagens/livros/capas/100428.webp",
+      "imagem_fonte": "Capa exibida no registro do Pergamum de biblioteca; cópia local otimizada",
+      "imagem_url_origem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000066/0000662b.png",
+      "qr_code": "imagens/livros/qrcodes/mais-mulheres-no-poder.svg",
+      "fonte": "Biblioteca não informada",
+      "exibicao_ativa": true,
+      "exibir_de": "",
+      "exibir_ate": "",
+      "prioridade": 5,
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": "",
+      "id_obra": "obra-mais-mulheres-no-poder-contribuicao-a-formacao-politica-das-mulh-5f712a65",
+      "registros_ids": [
+        "mais-mulheres-no-poder"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "Biblioteca não informada",
+          "biblioteca_rede": "",
+          "unidade": "",
+          "acesso_fisico": true,
+          "acesso_virtual": false,
+          "exemplares_fisicos_catalogados": 1,
+          "registros": [
+            {
+              "registro_id": "mais-mulheres-no-poder",
+              "titulo_registro": "Mais mulheres no poder: contribuição à formação política das mulheres",
+              "autor_registro": "Marlise Matos e Iáris Ramalho Cortês",
+              "biblioteca_rede": "",
+              "unidade": "",
+              "codigo_acervo": "100428",
+              "numero_chamada": "351 M231 2010",
+              "exemplares_fisicos_catalogados": 1,
+              "acesso_fisico": true,
+              "acesso_virtual": false,
+              "link_fisico": "https://pergamum.ifmg.edu.br/acervo/100428",
+              "link_virtual": "",
+              "link": "https://pergamum.ifmg.edu.br/acervo/100428",
+              "tipo_link_principal": "fisico",
+              "fonte": "Biblioteca não informada"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "Biblioteca não informada"
+      ]
+    },
+    {
+      "tipo_conteudo": "livro",
+      "id": "miss-davis",
+      "titulo": "Miss Davis: a vida e as lutas de Angela Davis",
+      "autor": "Sybille Titeux de la Croix",
+      "pergunta_curiosidade": "[frase pendente]",
+      "texto_apoio": "[texto de apoio pendente]",
+      "temas": [
+        "feminismo"
+      ],
+      "icone": "♀️",
+      "numero_chamada": "741.5(44) C942m 2020",
+      "unidade": "",
+      "biblioteca_rede": "",
+      "codigo_acervo": "110588",
+      "exemplares_fisicos_catalogados": 1,
+      "outras_edicoes_fisicas": 0,
+      "acesso_fisico": true,
+      "acesso_virtual": false,
+      "link_fisico": "https://pergamum.ifmg.edu.br/acervo/110588",
+      "link_virtual": "",
+      "link": "https://pergamum.ifmg.edu.br/acervo/110588",
+      "tipo_link_principal": "fisico",
+      "imagem": "imagens/livros/capas/110588.webp",
+      "imagem_fonte": "Capa exibida no registro do Pergamum de biblioteca; cópia local otimizada",
+      "imagem_url_origem": "https://pergamum.ifmg.edu.br/pergamumweb/download/0950965B-0EF6-4637-A42B-0491EF481044.jpg",
+      "qr_code": "imagens/livros/qrcodes/miss-davis.svg",
+      "fonte": "Biblioteca não informada",
+      "exibicao_ativa": true,
+      "exibir_de": "",
+      "exibir_ate": "",
+      "prioridade": 5,
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": "",
+      "id_obra": "obra-miss-davis-a-vida-e-as-lutas-de-angela-davis-5bef36a3",
+      "registros_ids": [
+        "miss-davis"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "Biblioteca não informada",
+          "biblioteca_rede": "",
+          "unidade": "",
+          "acesso_fisico": true,
+          "acesso_virtual": false,
+          "exemplares_fisicos_catalogados": 1,
+          "registros": [
+            {
+              "registro_id": "miss-davis",
+              "titulo_registro": "Miss Davis: a vida e as lutas de Angela Davis",
+              "autor_registro": "Sybille Titeux de la Croix",
+              "biblioteca_rede": "",
+              "unidade": "",
+              "codigo_acervo": "110588",
+              "numero_chamada": "741.5(44) C942m 2020",
+              "exemplares_fisicos_catalogados": 1,
+              "acesso_fisico": true,
+              "acesso_virtual": false,
+              "link_fisico": "https://pergamum.ifmg.edu.br/acervo/110588",
+              "link_virtual": "",
+              "link": "https://pergamum.ifmg.edu.br/acervo/110588",
+              "tipo_link_principal": "fisico",
+              "fonte": "Biblioteca não informada"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "Biblioteca não informada"
+      ]
+    },
+    {
+      "tipo_conteudo": "livro",
+      "id": "mulheres-em-tecnologia",
+      "titulo": "Mulheres em tecnologia: como a diversidade e inclusão vão mudar o jogo nas empresas e na sociedade",
+      "autor": "Beatriz Oliveira e Mariana Carvalho",
+      "pergunta_curiosidade": "[frase pendente]",
+      "texto_apoio": "[texto de apoio pendente]",
+      "temas": [
+        "feminismo"
+      ],
+      "icone": "♀️",
+      "numero_chamada": "",
+      "unidade": "",
+      "biblioteca_rede": "",
+      "codigo_acervo": "",
+      "exemplares_fisicos_catalogados": 0,
+      "outras_edicoes_fisicas": 0,
+      "acesso_fisico": false,
+      "acesso_virtual": true,
+      "link_fisico": "",
+      "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=214177&page=1&perPage=20&orderBy=obra&direction=C",
+      "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=214177&page=1&perPage=20&orderBy=obra&direction=C",
+      "tipo_link_principal": "virtual",
+      "imagem": "imagens/livros/capas/ajuste-capa-pendente-feminismo.webp",
+      "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
+      "imagem_url_origem": "",
+      "qr_code": "imagens/livros/qrcodes/mulheres-em-tecnologia.svg",
+      "fonte": "Biblioteca não informada",
+      "exibicao_ativa": true,
+      "exibir_de": "",
+      "exibir_ate": "",
+      "prioridade": 5,
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": "",
+      "id_obra": "obra-mulheres-em-tecnologia-como-a-diversidade-e-inclusao-vao-mudar-o-3424e376",
+      "registros_ids": [
+        "mulheres-em-tecnologia"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "Biblioteca não informada",
+          "biblioteca_rede": "",
+          "unidade": "",
+          "acesso_fisico": false,
+          "acesso_virtual": true,
+          "exemplares_fisicos_catalogados": 0,
+          "registros": [
+            {
+              "registro_id": "mulheres-em-tecnologia",
+              "titulo_registro": "Mulheres em tecnologia: como a diversidade e inclusão vão mudar o jogo nas empresas e na sociedade",
+              "autor_registro": "Beatriz Oliveira e Mariana Carvalho",
+              "biblioteca_rede": "",
+              "unidade": "",
+              "codigo_acervo": "",
+              "numero_chamada": "",
+              "exemplares_fisicos_catalogados": 0,
+              "acesso_fisico": false,
+              "acesso_virtual": true,
+              "link_fisico": "",
+              "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=214177&page=1&perPage=20&orderBy=obra&direction=C",
+              "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=214177&page=1&perPage=20&orderBy=obra&direction=C",
+              "tipo_link_principal": "virtual",
+              "fonte": "Biblioteca não informada"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "Biblioteca não informada"
+      ]
+    },
+    {
+      "tipo_conteudo": "livro",
+      "id": "mulheres-casas-e-cidades",
+      "titulo": "Mulheres, casas e cidades",
+      "autor": "Zaida Muxí Martínez",
+      "pergunta_curiosidade": "[frase pendente]",
+      "texto_apoio": "[texto de apoio pendente]",
+      "temas": [
+        "feminismo"
+      ],
+      "icone": "♀️",
+      "numero_chamada": "",
+      "unidade": "",
+      "biblioteca_rede": "",
+      "codigo_acervo": "",
+      "exemplares_fisicos_catalogados": 0,
+      "outras_edicoes_fisicas": 0,
+      "acesso_fisico": false,
+      "acesso_virtual": true,
+      "link_fisico": "",
+      "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=228409&page=1&perPage=20&orderBy=obra&direction=C",
+      "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=228409&page=1&perPage=20&orderBy=obra&direction=C",
+      "tipo_link_principal": "virtual",
+      "imagem": "imagens/livros/capas/ajuste-capa-pendente-feminismo.webp",
+      "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
+      "imagem_url_origem": "",
+      "qr_code": "imagens/livros/qrcodes/mulheres-casas-e-cidades.svg",
+      "fonte": "Biblioteca não informada",
+      "exibicao_ativa": true,
+      "exibir_de": "",
+      "exibir_ate": "",
+      "prioridade": 5,
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": "",
+      "id_obra": "obra-mulheres-casas-e-cidades-ccefbbd6",
+      "registros_ids": [
+        "mulheres-casas-e-cidades"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "Biblioteca não informada",
+          "biblioteca_rede": "",
+          "unidade": "",
+          "acesso_fisico": false,
+          "acesso_virtual": true,
+          "exemplares_fisicos_catalogados": 0,
+          "registros": [
+            {
+              "registro_id": "mulheres-casas-e-cidades",
+              "titulo_registro": "Mulheres, casas e cidades",
+              "autor_registro": "Zaida Muxí Martínez",
+              "biblioteca_rede": "",
+              "unidade": "",
+              "codigo_acervo": "",
+              "numero_chamada": "",
+              "exemplares_fisicos_catalogados": 0,
+              "acesso_fisico": false,
+              "acesso_virtual": true,
+              "link_fisico": "",
+              "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=228409&page=1&perPage=20&orderBy=obra&direction=C",
+              "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=228409&page=1&perPage=20&orderBy=obra&direction=C",
+              "tipo_link_principal": "virtual",
+              "fonte": "Biblioteca não informada"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "Biblioteca não informada"
+      ]
+    },
+    {
+      "tipo_conteudo": "livro",
+      "id": "mulheres-linguagem-e-poder",
+      "titulo": "Mulheres, linguagem e poder: estudos de gênero na sociolinguística brasileira",
+      "autor": "Cristine Gorski Severo e Raquel Meister Ko Freitag",
+      "pergunta_curiosidade": "[frase pendente]",
+      "texto_apoio": "[texto de apoio pendente]",
+      "temas": [
+        "feminismo"
+      ],
+      "icone": "♀️",
+      "numero_chamada": "",
+      "unidade": "",
+      "biblioteca_rede": "",
+      "codigo_acervo": "",
+      "exemplares_fisicos_catalogados": 0,
+      "outras_edicoes_fisicas": 0,
+      "acesso_fisico": false,
+      "acesso_virtual": true,
+      "link_fisico": "",
+      "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=162882&page=1&perPage=20&orderBy=obra&direction=C",
+      "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=162882&page=1&perPage=20&orderBy=obra&direction=C",
+      "tipo_link_principal": "virtual",
+      "imagem": "imagens/livros/capas/ajuste-capa-pendente-feminismo.webp",
+      "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
+      "imagem_url_origem": "",
+      "qr_code": "imagens/livros/qrcodes/mulheres-linguagem-e-poder.svg",
+      "fonte": "Biblioteca não informada",
+      "exibicao_ativa": true,
+      "exibir_de": "",
+      "exibir_ate": "",
+      "prioridade": 5,
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": "",
+      "id_obra": "obra-mulheres-linguagem-e-poder-estudos-de-genero-na-sociolinguistica-8b56be4d",
+      "registros_ids": [
+        "mulheres-linguagem-e-poder"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "Biblioteca não informada",
+          "biblioteca_rede": "",
+          "unidade": "",
+          "acesso_fisico": false,
+          "acesso_virtual": true,
+          "exemplares_fisicos_catalogados": 0,
+          "registros": [
+            {
+              "registro_id": "mulheres-linguagem-e-poder",
+              "titulo_registro": "Mulheres, linguagem e poder: estudos de gênero na sociolinguística brasileira",
+              "autor_registro": "Cristine Gorski Severo e Raquel Meister Ko Freitag",
+              "biblioteca_rede": "",
+              "unidade": "",
+              "codigo_acervo": "",
+              "numero_chamada": "",
+              "exemplares_fisicos_catalogados": 0,
+              "acesso_fisico": false,
+              "acesso_virtual": true,
+              "link_fisico": "",
+              "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=162882&page=1&perPage=20&orderBy=obra&direction=C",
+              "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=162882&page=1&perPage=20&orderBy=obra&direction=C",
+              "tipo_link_principal": "virtual",
+              "fonte": "Biblioteca não informada"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "Biblioteca não informada"
+      ]
+    },
+    {
+      "tipo_conteudo": "livro",
       "id": "mulheres-raca-e-classe",
       "titulo": "Mulheres, raça e classe",
       "autor": "Angela Davis",
@@ -1479,8 +3058,7 @@
         "mulheres",
         "raça",
         "classe",
-        "direitos",
-        "Agosto Lilás"
+        "direitos"
       ],
       "icone": "♀️",
       "numero_chamada": "316.346.2-055.2 D261m 2016",
@@ -1551,6 +3129,158 @@
     },
     {
       "tipo_conteudo": "livro",
+      "id": "narrativas-de-genero",
+      "titulo": "Narrativas de gênero: as várias faces dos estudos de gênero",
+      "autor": "Marlise Regina Meyrer e Mônica Karawejczyk",
+      "pergunta_curiosidade": "[frase pendente]",
+      "texto_apoio": "[texto de apoio pendente]",
+      "temas": [
+        "feminismo"
+      ],
+      "icone": "♀️",
+      "numero_chamada": "",
+      "unidade": "",
+      "biblioteca_rede": "",
+      "codigo_acervo": "",
+      "exemplares_fisicos_catalogados": 0,
+      "outras_edicoes_fisicas": 0,
+      "acesso_fisico": false,
+      "acesso_virtual": true,
+      "link_fisico": "",
+      "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=193521&page=1&perPage=20&orderBy=obra&direction=C",
+      "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=193521&page=1&perPage=20&orderBy=obra&direction=C",
+      "tipo_link_principal": "virtual",
+      "imagem": "imagens/livros/capas/ajuste-capa-pendente-feminismo.webp",
+      "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
+      "imagem_url_origem": "",
+      "qr_code": "imagens/livros/qrcodes/narrativas-de-genero.svg",
+      "fonte": "Biblioteca não informada",
+      "exibicao_ativa": true,
+      "exibir_de": "",
+      "exibir_ate": "",
+      "prioridade": 5,
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": "",
+      "id_obra": "obra-narrativas-de-genero-as-varias-faces-dos-estudos-de-genero-08eaa154",
+      "registros_ids": [
+        "narrativas-de-genero"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "Biblioteca não informada",
+          "biblioteca_rede": "",
+          "unidade": "",
+          "acesso_fisico": false,
+          "acesso_virtual": true,
+          "exemplares_fisicos_catalogados": 0,
+          "registros": [
+            {
+              "registro_id": "narrativas-de-genero",
+              "titulo_registro": "Narrativas de gênero: as várias faces dos estudos de gênero",
+              "autor_registro": "Marlise Regina Meyrer e Mônica Karawejczyk",
+              "biblioteca_rede": "",
+              "unidade": "",
+              "codigo_acervo": "",
+              "numero_chamada": "",
+              "exemplares_fisicos_catalogados": 0,
+              "acesso_fisico": false,
+              "acesso_virtual": true,
+              "link_fisico": "",
+              "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=193521&page=1&perPage=20&orderBy=obra&direction=C",
+              "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=193521&page=1&perPage=20&orderBy=obra&direction=C",
+              "tipo_link_principal": "virtual",
+              "fonte": "Biblioteca não informada"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "Biblioteca não informada"
+      ]
+    },
+    {
+      "tipo_conteudo": "livro",
+      "id": "o-segundo-sexo",
+      "titulo": "O segundo sexo",
+      "autor": "Simone de Beauvoir",
+      "pergunta_curiosidade": "[frase pendente]",
+      "texto_apoio": "[texto de apoio pendente]",
+      "temas": [
+        "feminismo"
+      ],
+      "icone": "♀️",
+      "numero_chamada": "396 B386s [1980]",
+      "unidade": "",
+      "biblioteca_rede": "",
+      "codigo_acervo": "106588",
+      "exemplares_fisicos_catalogados": 2,
+      "outras_edicoes_fisicas": 1,
+      "acesso_fisico": true,
+      "acesso_virtual": false,
+      "link_fisico": "https://pergamum.ifmg.edu.br/acervo/106588",
+      "link_virtual": "",
+      "link": "https://pergamum.ifmg.edu.br/acervo/106588",
+      "tipo_link_principal": "fisico",
+      "imagem": "imagens/livros/capas/106588.webp",
+      "imagem_fonte": "Capa exibida no registro do Pergamum de biblioteca; cópia local otimizada",
+      "imagem_url_origem": "https://pergamum.ifmg.edu.br/imagens/background",
+      "qr_code": "imagens/livros/qrcodes/o-segundo-sexo.svg",
+      "fonte": "Biblioteca não informada",
+      "exibicao_ativa": true,
+      "exibir_de": "",
+      "exibir_ate": "",
+      "prioridade": 5,
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": "",
+      "id_obra": "obra-segundo-sexo-56e4b4cb",
+      "registros_ids": [
+        "o-segundo-sexo"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "Biblioteca não informada",
+          "biblioteca_rede": "",
+          "unidade": "",
+          "acesso_fisico": true,
+          "acesso_virtual": false,
+          "exemplares_fisicos_catalogados": 2,
+          "registros": [
+            {
+              "registro_id": "o-segundo-sexo",
+              "titulo_registro": "O segundo sexo",
+              "autor_registro": "Simone de Beauvoir",
+              "biblioteca_rede": "",
+              "unidade": "",
+              "codigo_acervo": "106588",
+              "numero_chamada": "396 B386s [1980]",
+              "exemplares_fisicos_catalogados": 2,
+              "acesso_fisico": true,
+              "acesso_virtual": false,
+              "link_fisico": "https://pergamum.ifmg.edu.br/acervo/106588",
+              "link_virtual": "",
+              "link": "https://pergamum.ifmg.edu.br/acervo/106588",
+              "tipo_link_principal": "fisico",
+              "fonte": "Biblioteca não informada"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "Biblioteca não informada"
+      ]
+    },
+    {
+      "tipo_conteudo": "livro",
       "id": "bibliotecas-ufmg-655102",
       "titulo": "Olhares negros : raça e representação / 2019",
       "autor": "bell hooks",
@@ -1562,8 +3292,7 @@
         "raça",
         "representação",
         "mídia",
-        "cultura",
-        "Agosto Lilás"
+        "cultura"
       ],
       "icone": "📚",
       "numero_chamada": "305.42 H784b.Pb 2019",
@@ -1634,6 +3363,82 @@
     },
     {
       "tipo_conteudo": "livro",
+      "id": "pedagogias-feministas-decoloniais",
+      "titulo": "Pedagogias feministas decoloniais",
+      "autor": "Marlise Matos",
+      "pergunta_curiosidade": "[frase pendente]",
+      "texto_apoio": "[texto de apoio pendente]",
+      "temas": [
+        "feminismo"
+      ],
+      "icone": "♀️",
+      "numero_chamada": "396.1 P371 2018",
+      "unidade": "",
+      "biblioteca_rede": "",
+      "codigo_acervo": "100380",
+      "exemplares_fisicos_catalogados": 1,
+      "outras_edicoes_fisicas": 0,
+      "acesso_fisico": true,
+      "acesso_virtual": false,
+      "link_fisico": "https://pergamum.ifmg.edu.br/acervo/100380",
+      "link_virtual": "",
+      "link": "https://pergamum.ifmg.edu.br/acervo/100380",
+      "tipo_link_principal": "fisico",
+      "imagem": "imagens/livros/capas/100380.webp",
+      "imagem_fonte": "Capa exibida no registro do Pergamum de biblioteca; cópia local otimizada",
+      "imagem_url_origem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000065/000065f5.JPG",
+      "qr_code": "imagens/livros/qrcodes/pedagogias-feministas-decoloniais.svg",
+      "fonte": "Biblioteca não informada",
+      "exibicao_ativa": true,
+      "exibir_de": "",
+      "exibir_ate": "",
+      "prioridade": 5,
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": "",
+      "id_obra": "obra-pedagogias-feministas-decoloniais-09e53dab",
+      "registros_ids": [
+        "pedagogias-feministas-decoloniais"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "Biblioteca não informada",
+          "biblioteca_rede": "",
+          "unidade": "",
+          "acesso_fisico": true,
+          "acesso_virtual": false,
+          "exemplares_fisicos_catalogados": 1,
+          "registros": [
+            {
+              "registro_id": "pedagogias-feministas-decoloniais",
+              "titulo_registro": "Pedagogias feministas decoloniais",
+              "autor_registro": "Marlise Matos",
+              "biblioteca_rede": "",
+              "unidade": "",
+              "codigo_acervo": "100380",
+              "numero_chamada": "396.1 P371 2018",
+              "exemplares_fisicos_catalogados": 1,
+              "acesso_fisico": true,
+              "acesso_virtual": false,
+              "link_fisico": "https://pergamum.ifmg.edu.br/acervo/100380",
+              "link_virtual": "",
+              "link": "https://pergamum.ifmg.edu.br/acervo/100380",
+              "tipo_link_principal": "fisico",
+              "fonte": "Biblioteca não informada"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "Biblioteca não informada"
+      ]
+    },
+    {
+      "tipo_conteudo": "livro",
       "id": "bibliotecas-ufmg-681652",
       "titulo": "Pertencimento : uma cultura do lugar / 2022",
       "autor": "bell hooks",
@@ -1645,8 +3450,7 @@
         "pertencimento",
         "ancestralidade",
         "raça",
-        "gênero",
-        "Agosto Lilás"
+        "gênero"
       ],
       "icone": "📚",
       "numero_chamada": "301.412 H784b.Pb 2022",
@@ -1717,6 +3521,158 @@
     },
     {
       "tipo_conteudo": "livro",
+      "id": "por-um-feminismo-afro-latino-americano",
+      "titulo": "Por um feminismo afro-latino-americano: ensaios, intervenções e diálogos",
+      "autor": "Lélia Gonzalez",
+      "pergunta_curiosidade": "[frase pendente]",
+      "texto_apoio": "[texto de apoio pendente]",
+      "temas": [
+        "feminismo"
+      ],
+      "icone": "♀️",
+      "numero_chamada": "396 G643p 2020",
+      "unidade": "",
+      "biblioteca_rede": "",
+      "codigo_acervo": "109261",
+      "exemplares_fisicos_catalogados": 1,
+      "outras_edicoes_fisicas": 0,
+      "acesso_fisico": true,
+      "acesso_virtual": false,
+      "link_fisico": "https://pergamum.ifmg.edu.br/acervo/109261",
+      "link_virtual": "",
+      "link": "https://pergamum.ifmg.edu.br/acervo/109261",
+      "tipo_link_principal": "fisico",
+      "imagem": "imagens/livros/capas/109261.webp",
+      "imagem_fonte": "Capa exibida no registro do Pergamum de biblioteca; cópia local otimizada",
+      "imagem_url_origem": "https://pergamum.ifmg.edu.br/pergamumweb/download/E122795B-9084-4111-BE6B-CBC89ACB65A9.PNG",
+      "qr_code": "imagens/livros/qrcodes/por-um-feminismo-afro-latino-americano.svg",
+      "fonte": "Biblioteca não informada",
+      "exibicao_ativa": true,
+      "exibir_de": "",
+      "exibir_ate": "",
+      "prioridade": 5,
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": "",
+      "id_obra": "obra-por-um-feminismo-afro-latino-americano-ensaios-intervencoes-e-di-6b9d3c9d",
+      "registros_ids": [
+        "por-um-feminismo-afro-latino-americano"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "Biblioteca não informada",
+          "biblioteca_rede": "",
+          "unidade": "",
+          "acesso_fisico": true,
+          "acesso_virtual": false,
+          "exemplares_fisicos_catalogados": 1,
+          "registros": [
+            {
+              "registro_id": "por-um-feminismo-afro-latino-americano",
+              "titulo_registro": "Por um feminismo afro-latino-americano: ensaios, intervenções e diálogos",
+              "autor_registro": "Lélia Gonzalez",
+              "biblioteca_rede": "",
+              "unidade": "",
+              "codigo_acervo": "109261",
+              "numero_chamada": "396 G643p 2020",
+              "exemplares_fisicos_catalogados": 1,
+              "acesso_fisico": true,
+              "acesso_virtual": false,
+              "link_fisico": "https://pergamum.ifmg.edu.br/acervo/109261",
+              "link_virtual": "",
+              "link": "https://pergamum.ifmg.edu.br/acervo/109261",
+              "tipo_link_principal": "fisico",
+              "fonte": "Biblioteca não informada"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "Biblioteca não informada"
+      ]
+    },
+    {
+      "tipo_conteudo": "livro",
+      "id": "racismo-sexismo-e-desigualdade-no-brasil",
+      "titulo": "Racismo, sexismo e desigualdade no Brasil",
+      "autor": "Sueli Carneiro",
+      "pergunta_curiosidade": "[frase pendente]",
+      "texto_apoio": "[texto de apoio pendente]",
+      "temas": [
+        "feminismo"
+      ],
+      "icone": "♀️",
+      "numero_chamada": "323.1(81) C289r 2011",
+      "unidade": "",
+      "biblioteca_rede": "",
+      "codigo_acervo": "103956",
+      "exemplares_fisicos_catalogados": 1,
+      "outras_edicoes_fisicas": 0,
+      "acesso_fisico": true,
+      "acesso_virtual": true,
+      "link_fisico": "https://pergamum.ifmg.edu.br/acervo/103956",
+      "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=36950&page=1&perPage=20&orderBy=obra&direction=C",
+      "link": "https://pergamum.ifmg.edu.br/acervo/103956",
+      "tipo_link_principal": "fisico",
+      "imagem": "imagens/livros/capas/103956.webp",
+      "imagem_fonte": "Capa exibida no registro do Pergamum de biblioteca; cópia local otimizada",
+      "imagem_url_origem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000072/000072d1.jpg",
+      "qr_code": "imagens/livros/qrcodes/racismo-sexismo-e-desigualdade-no-brasil.svg",
+      "fonte": "Biblioteca não informada",
+      "exibicao_ativa": true,
+      "exibir_de": "",
+      "exibir_ate": "",
+      "prioridade": 5,
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": "",
+      "id_obra": "obra-racismo-sexismo-e-desigualdade-no-brasil-4149390e",
+      "registros_ids": [
+        "racismo-sexismo-e-desigualdade-no-brasil"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "Biblioteca não informada",
+          "biblioteca_rede": "",
+          "unidade": "",
+          "acesso_fisico": true,
+          "acesso_virtual": true,
+          "exemplares_fisicos_catalogados": 1,
+          "registros": [
+            {
+              "registro_id": "racismo-sexismo-e-desigualdade-no-brasil",
+              "titulo_registro": "Racismo, sexismo e desigualdade no Brasil",
+              "autor_registro": "Sueli Carneiro",
+              "biblioteca_rede": "",
+              "unidade": "",
+              "codigo_acervo": "103956",
+              "numero_chamada": "323.1(81) C289r 2011",
+              "exemplares_fisicos_catalogados": 1,
+              "acesso_fisico": true,
+              "acesso_virtual": true,
+              "link_fisico": "https://pergamum.ifmg.edu.br/acervo/103956",
+              "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=36950&page=1&perPage=20&orderBy=obra&direction=C",
+              "link": "https://pergamum.ifmg.edu.br/acervo/103956",
+              "tipo_link_principal": "fisico",
+              "fonte": "Biblioteca não informada"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "Biblioteca não informada"
+      ]
+    },
+    {
+      "tipo_conteudo": "livro",
       "id": "bibliotecas-ufmg-692934",
       "titulo": "Salvação : pessoas negras e o amor / 2024",
       "autor": "bell hooks",
@@ -1728,8 +3684,7 @@
         "amor",
         "negritude",
         "antirracismo",
-        "autodeterminação",
-        "Agosto Lilás"
+        "autodeterminação"
       ],
       "icone": "📚",
       "numero_chamada": "152.4 H784s.Ps 2024",
@@ -1810,8 +3765,7 @@
         "margem e centro",
         "raça",
         "classe",
-        "igualdade",
-        "Agosto Lilás"
+        "igualdade"
       ],
       "icone": "📚",
       "numero_chamada": "305.42 H784t 2019",
@@ -1882,6 +3836,82 @@
     },
     {
       "tipo_conteudo": "livro",
+      "id": "territorios-das-mulheres",
+      "titulo": "Territórios das mulheres: enquetes sobre as relações entre psicanálise e feminismos",
+      "autor": "Urias Arantes",
+      "pergunta_curiosidade": "[frase pendente]",
+      "texto_apoio": "[texto de apoio pendente]",
+      "temas": [
+        "feminismo"
+      ],
+      "icone": "♀️",
+      "numero_chamada": "",
+      "unidade": "",
+      "biblioteca_rede": "",
+      "codigo_acervo": "",
+      "exemplares_fisicos_catalogados": 0,
+      "outras_edicoes_fisicas": 0,
+      "acesso_fisico": false,
+      "acesso_virtual": true,
+      "link_fisico": "",
+      "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=216354&page=1&perPage=20&orderBy=obra&direction=C",
+      "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=216354&page=1&perPage=20&orderBy=obra&direction=C",
+      "tipo_link_principal": "virtual",
+      "imagem": "imagens/livros/capas/ajuste-capa-pendente-feminismo.webp",
+      "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
+      "imagem_url_origem": "",
+      "qr_code": "imagens/livros/qrcodes/territorios-das-mulheres.svg",
+      "fonte": "Biblioteca não informada",
+      "exibicao_ativa": true,
+      "exibir_de": "",
+      "exibir_ate": "",
+      "prioridade": 5,
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": "",
+      "id_obra": "obra-territorios-das-mulheres-enquetes-sobre-as-relacoes-entre-psican-72150395",
+      "registros_ids": [
+        "territorios-das-mulheres"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "Biblioteca não informada",
+          "biblioteca_rede": "",
+          "unidade": "",
+          "acesso_fisico": false,
+          "acesso_virtual": true,
+          "exemplares_fisicos_catalogados": 0,
+          "registros": [
+            {
+              "registro_id": "territorios-das-mulheres",
+              "titulo_registro": "Territórios das mulheres: enquetes sobre as relações entre psicanálise e feminismos",
+              "autor_registro": "Urias Arantes",
+              "biblioteca_rede": "",
+              "unidade": "",
+              "codigo_acervo": "",
+              "numero_chamada": "",
+              "exemplares_fisicos_catalogados": 0,
+              "acesso_fisico": false,
+              "acesso_virtual": true,
+              "link_fisico": "",
+              "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=216354&page=1&perPage=20&orderBy=obra&direction=C",
+              "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=216354&page=1&perPage=20&orderBy=obra&direction=C",
+              "tipo_link_principal": "virtual",
+              "fonte": "Biblioteca não informada"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "Biblioteca não informada"
+      ]
+    },
+    {
+      "tipo_conteudo": "livro",
       "id": "bibliotecas-ufmg-687104",
       "titulo": "Tudo sobre o amor : novas perspectivas",
       "autor": "bell hooks",
@@ -1892,8 +3922,7 @@
         "amor",
         "relacionamentos",
         "cuidado",
-        "justiça",
-        "Agosto Lilás"
+        "justiça"
       ],
       "icone": "📚",
       "numero_chamada": "305.42 H784a.Pb 2021",
@@ -1992,8 +4021,7 @@
         "masculinidades",
         "patriarcado",
         "amor",
-        "violência",
-        "Agosto Lilás"
+        "violência"
       ],
       "icone": "📚",
       "numero_chamada": "155.332 H784w.Pq 2025",
@@ -2060,6 +4088,82 @@
       "registros_acervo_quantidade": 1,
       "bibliotecas": [
         "Bibliotecas UFMG"
+      ]
+    },
+    {
+      "tipo_conteudo": "livro",
+      "id": "vozes-contemporaneas-o-feminino-em-cena",
+      "titulo": "Vozes contemporâneas: o feminino em cena",
+      "autor": "Gabriela Seben e Rafaela Degani",
+      "pergunta_curiosidade": "[frase pendente]",
+      "texto_apoio": "[texto de apoio pendente]",
+      "temas": [
+        "feminismo"
+      ],
+      "icone": "♀️",
+      "numero_chamada": "",
+      "unidade": "",
+      "biblioteca_rede": "",
+      "codigo_acervo": "",
+      "exemplares_fisicos_catalogados": 0,
+      "outras_edicoes_fisicas": 0,
+      "acesso_fisico": false,
+      "acesso_virtual": true,
+      "link_fisico": "",
+      "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=230203&page=1&perPage=20&orderBy=obra&direction=C",
+      "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=230203&page=1&perPage=20&orderBy=obra&direction=C",
+      "tipo_link_principal": "virtual",
+      "imagem": "imagens/livros/capas/ajuste-capa-pendente-feminismo.webp",
+      "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
+      "imagem_url_origem": "",
+      "qr_code": "imagens/livros/qrcodes/vozes-contemporaneas-o-feminino-em-cena.svg",
+      "fonte": "Biblioteca não informada",
+      "exibicao_ativa": true,
+      "exibir_de": "",
+      "exibir_ate": "",
+      "prioridade": 5,
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": "",
+      "id_obra": "obra-vozes-contemporaneas-o-feminino-em-cena-46df82ef",
+      "registros_ids": [
+        "vozes-contemporaneas-o-feminino-em-cena"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "Biblioteca não informada",
+          "biblioteca_rede": "",
+          "unidade": "",
+          "acesso_fisico": false,
+          "acesso_virtual": true,
+          "exemplares_fisicos_catalogados": 0,
+          "registros": [
+            {
+              "registro_id": "vozes-contemporaneas-o-feminino-em-cena",
+              "titulo_registro": "Vozes contemporâneas: o feminino em cena",
+              "autor_registro": "Gabriela Seben e Rafaela Degani",
+              "biblioteca_rede": "",
+              "unidade": "",
+              "codigo_acervo": "",
+              "numero_chamada": "",
+              "exemplares_fisicos_catalogados": 0,
+              "acesso_fisico": false,
+              "acesso_virtual": true,
+              "link_fisico": "",
+              "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=230203&page=1&perPage=20&orderBy=obra&direction=C",
+              "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=230203&page=1&perPage=20&orderBy=obra&direction=C",
+              "tipo_link_principal": "virtual",
+              "fonte": "Biblioteca não informada"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "Biblioteca não informada"
       ]
     }
   ]
