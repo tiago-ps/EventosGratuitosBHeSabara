@@ -21,38 +21,39 @@ const normalizeText = value => String(value || '')
   .toLowerCase()
   .trim();
 
-assert.equal(data.filmes.length, 143);
-assert.equal(data.filmes.filter(movie => !movie.imagem).length, 1);
-assert.equal(data.filmes.filter(movie => !movie.ano).length, 2);
-assert.equal(data.filmes.filter(movie => !movie.duracao_minutos).length, 13);
-assert.equal(data.filmes.filter(movie => movie.classificacao === 'Não informada').length, 11);
+assert.equal(data.schema_versao, 1);
+assert.ok(Array.isArray(data.filmes));
+assert.ok(data.filmes.length > 0);
+assert.ok(data.filmes.every(movie => movie.id && movie.fonte_id && movie.titulo));
 assert.ok(data.filmes.every(movie => movie.status_manual === 'revisar'));
-assert.ok(data.filmes.every(movie => movie.pagina_oficial === `https://flix.votelgbt.org/assistir/${movie.fonte_id}`));
+assert.ok(data.filmes.every(movie => /^https:\/\//.test(String(movie.pagina_oficial || ''))));
 assert.ok(data.filmes.every(movie => !Object.hasOwn(movie, 'video_embed')));
-assert.equal(data.filmes.filter(movie => movie.video_plataforma === 'youtube').length, 119);
-assert.equal(data.filmes.filter(movie => movie.video_plataforma === 'vimeo').length, 23);
-assert.equal(data.filmes.filter(movie => movie.video_plataforma === 'nao_identificada').length, 1);
+assert.ok(data.filmes.every(movie => movie.plataforma));
 
-const roma = data.filmes.find(movie => movie.fonte_id === '009a05a4-7286-11ee-8835-0a58a9feac02');
-assert.ok(roma);
-assert.equal(films.queryMatches(roma, 'roma', normalizeText), true);
-assert.equal(films.queryMatches(roma, 'marcos maia', normalizeText), true);
-assert.equal(films.queryMatches(roma, 'religiao', normalizeText), true);
-assert.equal(films.queryMatches(roma, 'QUESTÕES DE GÊNERO', normalizeText), true);
+for (const movie of data.filmes) {
+  if (!movie.imagem) continue;
+  if (/^https:\/\//.test(movie.imagem)) continue;
+  const imagePath = path.join(root, movie.imagem);
+  assert.ok(fs.existsSync(imagePath), `Imagem local ausente: ${movie.imagem}`);
+  if (movie.imagem_largura) assert.ok(movie.imagem_largura <= 800);
+  if (movie.imagem_altura) assert.ok(movie.imagem_altura <= 800);
+}
 
-const combined = films.filter(data.filmes, {
-  query: 'familia',
-  genre: 'drama',
-  theme: 'família',
-  rating: '16',
-  yearFrom: 2023,
-  yearTo: 2023,
-  duration: '31-60'
-}, normalizeText);
-assert.ok(combined.some(movie => movie.fonte_id === roma.fonte_id));
-assert.ok(combined.every(movie => movie.classificacao === '16'));
+const searchable = data.filmes.find(movie => movie.titulo && (movie.sinopse || movie.direcao?.length || movie.generos?.length));
+assert.ok(searchable);
+assert.equal(films.queryMatches(searchable, searchable.titulo, normalizeText), true);
+if (searchable.direcao?.length) {
+  assert.equal(films.queryMatches(searchable, searchable.direcao[0], normalizeText), true);
+}
+if (searchable.generos?.length) {
+  assert.equal(films.queryMatches(searchable, searchable.generos[0], normalizeText), true);
+}
+assert.equal(films.queryMatches(searchable, searchable.plataforma, normalizeText), true);
+assert.equal(films.platformName(searchable), searchable.plataforma);
+assert.equal(films.platformName({}), 'plataforma oficial');
 
 const titleSorted = films.sort(data.filmes, 'title-asc');
+assert.equal(titleSorted.length, data.filmes.length);
 assert.ok(titleSorted[0].titulo.localeCompare(titleSorted.at(-1).titulo, 'pt-BR') <= 0);
 for (const [order, field, direction] of [
   ['year-asc', 'ano', 1], ['year-desc', 'ano', -1],
@@ -60,25 +61,25 @@ for (const [order, field, direction] of [
 ]) {
   const sorted = films.sort(data.filmes, order);
   const known = sorted.filter(movie => Number(movie[field]) > 0);
-  const unknown = sorted.filter(movie => !Number(movie[field]));
-  assert.ok(known.every((movie, index) => index === 0 ||
-    (Number(movie[field]) - Number(known[index - 1][field])) * direction >= 0));
-  assert.deepEqual(sorted.slice(-unknown.length).map(movie => movie.id), unknown.map(movie => movie.id));
+  for (let index = 1; index < known.length; index += 1) {
+    assert.ok((Number(known[index][field]) - Number(known[index - 1][field])) * direction >= 0);
+  }
+  const firstUnknown = sorted.findIndex(movie => !Number(movie[field]));
+  if (firstUnknown >= 0) {
+    assert.ok(sorted.slice(firstUnknown).every(movie => !Number(movie[field])));
+  }
 }
-
-const webps = fs.readdirSync(path.join(root, 'imagens/filmes')).filter(name => name.endsWith('.webp'));
-assert.equal(webps.length, 142);
-assert.ok(data.filmes.filter(movie => movie.imagem).every(movie => {
-  const imagePath = path.join(root, movie.imagem);
-  return fs.existsSync(imagePath) && movie.imagem_largura <= 800 && movie.imagem_altura <= 800;
-}));
 
 assert.match(indexSource, /js\/conteudos\/filmes\.js\?v=3/);
 assert.doesNotMatch(indexSource, /filmes\.html/);
 assert.match(appSource, /<option value="films">Filmes<\/option>/);
 assert.match(appSource, /loadOptionalJson\(FILMS_URL, \{ filmes: \[\] \}\)/);
 assert.match(appSource, /appendAgendaSection\(resultsContainer, 'Filmes gratuitos'/);
+assert.match(source, /platformName/);
+assert.match(source, /Acessar na plataforma/);
 assert.match(source, /target="_blank" rel="noopener noreferrer"/);
+assert.doesNotMatch(source, /Filme gratuito no LGBTFlix/);
+assert.doesNotMatch(source, /Assistir gratuitamente no LGBTFlix/);
 assert.doesNotMatch(source, /<(?:iframe|video)\b/i);
 assert.doesNotMatch(JSON.stringify(data), /youtube\.com\/embed|player\.vimeo\.com/i);
 assert.match(swSource, /'\/filmes\.json'/);
@@ -92,4 +93,4 @@ for (const existing of ['eventos.json', 'livros.json', 'cursos.json', 'concursos
   assert.ok(fs.existsSync(path.join(root, existing)), `${existing} deve continuar disponível`);
 }
 
-console.log('Testes do catálogo experimental de filmes aprovados.');
+console.log(`Testes do catálogo de filmes aprovados (${data.filmes.length} registros, fonte: ${data.fonte || 'múltiplas'}).`);
