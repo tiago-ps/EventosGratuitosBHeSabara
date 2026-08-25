@@ -9,7 +9,7 @@ on:
       - 'js/temas-visuais.js'
       - 'scripts/aplicar_temas_visuais.py'
       - '.github/workflows/aplicar-temas-visuais.yml'
-      - 'imagens/curadorias/agosto-lilas-banner.svg'
+      - 'imagens/curadorias/agosto-lilas-banner.png'
   workflow_dispatch:
 
 permissions:
