@@ -317,7 +317,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/421",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:737",
@@ -838,7 +839,8 @@
       "temas": [
         "Africanidade",
         "Sociedade",
-        "Relacionamentos"
+        "Relacionamentos",
+        "Agosto Lilás"
       ],
       "acessibilidade": [
         "Libras",
@@ -1311,7 +1313,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/408",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:530",
@@ -1405,7 +1408,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/426",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:717",
@@ -2000,7 +2004,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/526",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:86",
@@ -2082,7 +2087,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/419",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:423",
@@ -2134,7 +2140,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/423",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:529",
@@ -2262,7 +2269,8 @@
         "História",
         "Sociedade",
         "Literatura",
-        "Jornalismo"
+        "Jornalismo",
+        "Agosto Lilás"
       ],
       "acessibilidade": [
         "Libras",
@@ -2467,7 +2475,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/405",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:644",
@@ -3078,7 +3087,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/219",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:454",
@@ -3242,7 +3252,10 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/293",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": [
+        "Agosto Lilás"
+      ]
     },
     {
       "id": "telabrasil:552",
@@ -3362,7 +3375,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/202",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:686",
@@ -3970,7 +3984,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/420",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:389",
@@ -4106,7 +4121,8 @@
       ],
       "temas": [
         "Africanidade",
-        "Sociedade"
+        "Sociedade",
+        "Agosto Lilás"
       ],
       "acessibilidade": [
         "Libras",
@@ -4362,7 +4378,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/430",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:238",
@@ -4385,7 +4402,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/238",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:311",
@@ -5152,7 +5170,8 @@
         "Sociedade",
         "Comovente",
         "Comportamento",
-        "Quilombo"
+        "Quilombo",
+        "Agosto Lilás"
       ],
       "acessibilidade": [
         "Libras",
@@ -5210,7 +5229,8 @@
       "temas": [
         "Sociedade",
         "Cidadania",
-        "Democracia"
+        "Democracia",
+        "Agosto Lilás"
       ],
       "acessibilidade": [
         "Libras",
@@ -5386,7 +5406,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/427",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:233",
@@ -5412,7 +5433,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/233",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:429",
@@ -5454,7 +5476,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/429",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:94",
@@ -6144,7 +6167,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/740",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:379",
@@ -6389,7 +6413,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/193",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:370",
@@ -6535,7 +6560,8 @@
       ],
       "temas": [
         "Relacionamentos",
-        "Cidadania"
+        "Cidadania",
+        "Agosto Lilás"
       ],
       "acessibilidade": [
         "Libras",
@@ -6777,7 +6803,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/406",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:651",
@@ -6810,7 +6837,8 @@
       ],
       "temas": [
         "Sociedade",
-        "Maternidade"
+        "Maternidade",
+        "Agosto Lilás"
       ],
       "acessibilidade": [
         "Libras",
@@ -7463,7 +7491,8 @@
       "temas": [
         "Sociedade",
         "Preconceito",
-        "Obesidade"
+        "Obesidade",
+        "Agosto Lilás"
       ],
       "acessibilidade": [
         "Libras",
@@ -7582,7 +7611,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/741",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:330",
@@ -7930,7 +7960,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/739",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:312",
@@ -8121,7 +8152,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/432",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:628",
@@ -8165,7 +8197,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/628",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:381",
@@ -9263,7 +9296,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/199",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:489",
@@ -9569,7 +9603,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/754",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:647",
@@ -9646,7 +9681,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/236",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:462",
@@ -9797,7 +9833,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/404",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:167",
@@ -10132,7 +10169,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/378",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:749",
@@ -10155,7 +10193,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/749",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:709",
@@ -10520,7 +10559,8 @@
         "Cidadania",
         "Democracia",
         "Meio Ambiente",
-        "História do Brasil"
+        "História do Brasil",
+        "Agosto Lilás"
       ],
       "acessibilidade": [
         "Libras",
@@ -10582,7 +10622,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/391",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:318",
@@ -10792,7 +10833,8 @@
         "Sociedade",
         "Ditadura",
         "Democracia",
-        "História do Brasil"
+        "História do Brasil",
+        "Agosto Lilás"
       ],
       "acessibilidade": [
         "Libras",
@@ -11010,7 +11052,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/417",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:331",
@@ -11050,7 +11093,8 @@
         "Sociedade",
         "Cidadania",
         "Comovente",
-        "Democracia"
+        "Democracia",
+        "Agosto Lilás"
       ],
       "acessibilidade": [
         "Libras",
@@ -11600,7 +11644,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/418",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:679",
@@ -12198,7 +12243,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/415",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:694",
@@ -12623,7 +12669,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/424",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:488",
@@ -12815,7 +12862,8 @@
         "Conflitos Sociais",
         "Abuso Sexual",
         "Desigualdade Social",
-        "Diversidade Sexual"
+        "Diversidade Sexual",
+        "Agosto Lilás"
       ],
       "acessibilidade": [
         "Libras",
@@ -12994,7 +13042,8 @@
         "Desmatamento",
         "Centro-Oeste",
         "Aldeias",
-        "Movimentos Sociais"
+        "Movimentos Sociais",
+        "Agosto Lilás"
       ],
       "acessibilidade": [
         "Libras",
@@ -13370,7 +13419,8 @@
         "Experimental"
       ],
       "temas": [
-        "Sociedade"
+        "Sociedade",
+        "Agosto Lilás"
       ],
       "acessibilidade": [
         "Libras",
@@ -13472,7 +13522,8 @@
       "temas": [
         "Sociedade",
         "Ditadura",
-        "Cidadania"
+        "Cidadania",
+        "Agosto Lilás"
       ],
       "acessibilidade": [
         "Libras",
@@ -15069,7 +15120,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/403",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:302",
@@ -15451,7 +15503,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/201",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:169",
@@ -16005,7 +16058,8 @@
       "temas": [
         "Relacionamentos",
         "Maternidade",
-        "Sororidade"
+        "Sororidade",
+        "Agosto Lilás"
       ],
       "acessibilidade": [
         "Libras",
@@ -16132,7 +16186,8 @@
         "Esporte",
         "Cidadania",
         "Amizade",
-        "Meio Ambiente"
+        "Meio Ambiente",
+        "Agosto Lilás"
       ],
       "acessibilidade": [
         "Libras",
@@ -16196,7 +16251,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/416",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:600",
@@ -16514,7 +16570,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/409",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:118",
@@ -17356,7 +17413,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/257",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:541",
@@ -18281,7 +18339,8 @@
         "Meio Ambiente",
         "Agricultura",
         "Gastronomia",
-        "Sustentabilidade"
+        "Sustentabilidade",
+        "Agosto Lilás"
       ],
       "acessibilidade": [
         "Libras",
@@ -19661,7 +19720,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/433",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:451",
@@ -20166,7 +20226,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/431",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:555",
@@ -20277,7 +20338,8 @@
       "temas": [
         "História",
         "Africanidade",
-        "Sociedade"
+        "Sociedade",
+        "Agosto Lilás"
       ],
       "acessibilidade": [
         "Libras",
@@ -20407,7 +20469,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/209",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:135",
@@ -20785,7 +20848,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/215",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:598",
@@ -21369,7 +21433,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/527",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:425",
@@ -21610,7 +21675,8 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/401",
-      "status_manual": "revisar"
+      "status_manual": "revisar",
+      "temas": []
     },
     {
       "id": "telabrasil:547",
