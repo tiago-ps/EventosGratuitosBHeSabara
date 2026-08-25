@@ -295,7 +295,7 @@ def update_versions() -> None:
     sw = SW.read_text(encoding="utf-8")
     sw = re.sub(
         r"const CACHE_VERSION = 'mural-cultural-v[^']+';",
-        "const CACHE_VERSION = 'mural-cultural-v87-perfis-editoriais';",
+        "const CACHE_VERSION = 'mural-cultural-v89-perfis-editoriais';",
         sw,
         count=1,
     )
@@ -326,8 +326,11 @@ def validate() -> None:
 
     assert "js/app.js?v=81" in INDEX.read_text(encoding="utf-8")
     sw = SW.read_text(encoding="utf-8")
-    assert "mural-cultural-v87-perfis-editoriais" in sw
+    assert "mural-cultural-v89-perfis-editoriais" in sw
     assert "./js/app.js?v=81" in sw
+    assert "./js/conteudos/cursos.js?v=2" in sw
+    assert "./js/temas-visuais.js?v=2" in sw
+    assert "./imagens/curadorias/agosto-lilas-banner.png" in sw
 
 
 if __name__ == "__main__":
