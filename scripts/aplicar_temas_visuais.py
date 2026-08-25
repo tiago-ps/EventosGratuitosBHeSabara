@@ -20,6 +20,7 @@ CSS_ASSET = "  './css/temas-visuais.css?v=1',"
 BOOT_ASSET = "  './js/tema-visual-boot.js?v=1',"
 JS_ASSET = "  './js/temas-visuais.js?v=1',"
 BANNER_ASSET = "  './imagens/curadorias/agosto-lilas-banner.svg',"
+BANNER_PATH = "./imagens/curadorias/agosto-lilas-banner.svg"
 CACHE_VERSION = "mural-cultural-v85-temas-visuais"
 
 OLD_INDEX_PATTERNS = [
@@ -50,6 +51,9 @@ def patch_index() -> None:
         raise RuntimeError("Âncora js/app.js não encontrada em index.html")
     text = re.sub(js_pattern, rf'\1\n{JS_TAG}', text, count=1)
 
+    # Mantém a indentação do bloco final mesmo após remoções por regex.
+    text = re.sub(r'(?m)^<script src="js/eventos-manuais-ui\.js', '  <script src="js/eventos-manuais-ui.js', text)
+
     INDEX.write_text(text, encoding="utf-8")
 
 
@@ -67,21 +71,34 @@ def patch_service_worker() -> None:
     for name in ('css/temas-visuais.css', 'js/tema-visual-boot.js', 'js/temas-visuais.js'):
         text = re.sub(rf"^\s*'\./{re.escape(name)}\?v=\d+',\s*\n?", '', text, flags=re.MULTILINE)
 
+    # O banner pode ter vindo do sistema anterior; remove todas as ocorrências
+    # e insere exatamente uma no bloco de assets ativos.
+    text = re.sub(
+        r"^\s*'\./imagens/curadorias/agosto-lilas-banner\.svg',\s*\n?",
+        '',
+        text,
+        flags=re.MULTILINE,
+    )
+
     css_anchor = "  './css/concursos-mural.css?v=2',"
     if css_anchor not in text:
         raise RuntimeError("Âncora CSS não encontrada em service-worker.js")
     text = text.replace(css_anchor, f"{css_anchor}\n{CSS_ASSET}\n{BOOT_ASSET}", 1)
 
-    app_pattern = r"(  '\./js/app\.js\?v=\d+',)"
-    if not re.search(app_pattern, text):
+    app_pattern = r"(\s*'\./js/app\.js\?v=\d+',)"
+    match = re.search(app_pattern, text)
+    if not match:
         raise RuntimeError("Âncora js/app.js não encontrada em service-worker.js")
-    text = re.sub(app_pattern, rf'\1\n{JS_ASSET}', text, count=1)
+    app_line = match.group(1).strip()
+    text = text[:match.start()] + f"  {app_line}\n{JS_ASSET}" + text[match.end():]
 
-    if BANNER_ASSET not in text:
-        manifest_anchor = "  './manifest.webmanifest',"
-        if manifest_anchor not in text:
-            raise RuntimeError("Âncora de manifest não encontrada em service-worker.js")
-        text = text.replace(manifest_anchor, f"{BANNER_ASSET}\n{manifest_anchor}", 1)
+    manifest_anchor = "  './manifest.webmanifest',"
+    if manifest_anchor not in text:
+        raise RuntimeError("Âncora de manifest não encontrada em service-worker.js")
+    text = text.replace(manifest_anchor, f"{BANNER_ASSET}\n{manifest_anchor}", 1)
+
+    # Corrige linhas de asset eventualmente desindentadas por migrações antigas.
+    text = re.sub(r"(?m)^'\./", "  './", text)
 
     SW.write_text(text, encoding="utf-8")
 
@@ -111,6 +128,8 @@ def validate() -> None:
     if missing:
         raise RuntimeError(f"Integração de temas visuais incompleta: {missing}")
 
+    if sw.count(BANNER_PATH) != 1:
+        raise RuntimeError(f'Banner deve aparecer uma vez no cache; encontrado {sw.count(BANNER_PATH)}')
     if 'curadoria-agosto-lilas.css' in index or 'curadoria-agosto-lilas.js' in index:
         raise RuntimeError('Módulo visual antigo ainda está carregado no index')
     if 'curadoria-agosto-lilas.css' in sw or 'curadoria-agosto-lilas.js' in sw:
