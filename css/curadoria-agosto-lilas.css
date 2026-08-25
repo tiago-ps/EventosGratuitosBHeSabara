@@ -1,0 +1,86 @@
+/* Identidade visual editorial da curadoria Agosto Lilás.
+ * Ativada apenas pelo módulo js/curadoria-agosto-lilas.js quando o filtro
+ * temático correspondente está selecionado no modo Painel.
+ */
+
+body.panel-mode.theme-agosto-lilas .slide {
+  background:
+    radial-gradient(
+      circle at 100% 100%,
+      rgba(190, 118, 224, .34) 0%,
+      rgba(145, 78, 190, .23) 22%,
+      rgba(92, 46, 128, .11) 42%,
+      rgba(7, 17, 31, 0) 64%
+    ),
+    linear-gradient(145deg, #100c18 0%, #150f21 63%, #21142f 100%);
+}
+
+body.panel-mode.theme-agosto-lilas .content {
+  position: relative;
+}
+
+body.panel-mode.theme-agosto-lilas .content::after {
+  content: '';
+  position: absolute;
+  right: -12vw;
+  bottom: -18vh;
+  width: min(62vw, 900px);
+  height: min(62vw, 900px);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(190, 118, 224, .13) 0%, rgba(145, 78, 190, .055) 38%, transparent 70%);
+  filter: blur(2px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+body.panel-mode.theme-agosto-lilas .content > * {
+  position: relative;
+  z-index: 1;
+}
+
+.campaign-agosto-lilas-badge {
+  position: absolute;
+  top: clamp(10px, 1.7vh, 20px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  max-width: calc(100% - 32px);
+  padding: clamp(5px, .65vh, 8px) clamp(12px, 1.15vw, 18px);
+  border: 1px solid rgba(255, 255, 255, .28);
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(183, 105, 219, .96), rgba(126, 63, 171, .96));
+  box-shadow: 0 7px 22px rgba(81, 34, 118, .38), inset 0 1px 0 rgba(255, 255, 255, .16);
+  color: #fff;
+  font-size: clamp(11px, .86vw, 16px);
+  font-weight: 850;
+  line-height: 1;
+  letter-spacing: .075em;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+  pointer-events: none;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+@media (max-width: 720px) {
+  body.panel-mode.theme-agosto-lilas .slide {
+    background:
+      radial-gradient(circle at 100% 100%, rgba(190, 118, 224, .30) 0%, rgba(145, 78, 190, .17) 25%, transparent 58%),
+      linear-gradient(160deg, #100c18 0%, #171021 68%, #21142f 100%);
+  }
+
+  .campaign-agosto-lilas-badge {
+    top: 8px;
+    max-width: calc(100% - 24px);
+    padding: 6px 12px;
+    font-size: 11px;
+    letter-spacing: .055em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .campaign-agosto-lilas-badge {
+    transition: none;
+  }
+}
