@@ -4,6 +4,7 @@
   const THEME = 'agosto lilas';
   const BODY_CLASS = 'theme-agosto-lilas';
   const BADGE_CLASS = 'campaign-agosto-lilas-badge';
+  const BANNER_SRC = 'imagens/curadorias/agosto-lilas-banner.svg';
 
   function normalize(value = '') {
     return String(value)
@@ -25,9 +26,11 @@
     let badge = media.querySelector(`.${BADGE_CLASS}`);
     if (badge) return badge;
 
-    badge = document.createElement('div');
+    badge = document.createElement('img');
     badge.className = BADGE_CLASS;
-    badge.textContent = 'Agosto Lilás';
+    badge.src = BANNER_SRC;
+    badge.alt = 'Agosto Lilás';
+    badge.decoding = 'async';
     badge.setAttribute('aria-label', 'Curadoria temática: Agosto Lilás');
     media.appendChild(badge);
     return badge;
