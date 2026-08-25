@@ -7,6 +7,7 @@
   const text = value => String(value || '').trim();
   const list = value => Array.isArray(value) ? value.map(text).filter(Boolean) : [];
   const titleCompare = (a, b) => text(a.titulo).localeCompare(text(b.titulo), 'pt-BR');
+  const platformName = movie => text(movie?.plataforma) || 'plataforma oficial';
 
   function queryMatches(movie, query, normalizeText) {
     const needle = normalizeText(query);
@@ -14,9 +15,12 @@
     const haystack = normalizeText([
       movie.titulo,
       ...list(movie.direcao),
+      ...list(movie.elenco),
       movie.sinopse,
       ...list(movie.generos),
-      ...list(movie.temas)
+      ...list(movie.temas),
+      ...list(movie.acessibilidade),
+      platformName(movie)
     ].join(' '));
     return haystack.includes(needle);
   }
@@ -94,6 +98,7 @@
     const themes = list(movie.temas);
     const tags = [...genres, ...themes].slice(0, 3);
     const direction = list(movie.direcao).join(', ');
+    const platform = platformName(movie);
     const dimensions = movie.imagem_largura && movie.imagem_altura
       ? ` width="${Number(movie.imagem_largura)}" height="${Number(movie.imagem_altura)}"`
       : '';
@@ -118,13 +123,13 @@
         <div class="film-tags" aria-label="Etiquetas do filme">
           <span>Filme</span>
           <span>${escapeHtml(movie.classificacao || 'Não informada')}</span>
-          <span>${escapeHtml(movie.plataforma || 'LGBTFlix')}</span>
+          <span>${escapeHtml(platform)}</span>
           ${tags.map(tag => `<span>${escapeHtml(tag)}</span>`).join('')}
         </div>
         ${movie.sinopse ? `<p class="agenda-card-description">${escapeHtml(movie.sinopse)}</p>` : ''}
         <div class="agenda-card-actions">
           <button type="button" class="film-details-button">Ver detalhes</button>
-          <a href="${escapeHtml(movie.pagina_oficial)}" target="_blank" rel="noopener noreferrer" aria-label="Assistir gratuitamente ${escapeHtml(movie.titulo)} no LGBTFlix (abre em nova guia)">Assistir gratuitamente</a>
+          <a href="${escapeHtml(movie.pagina_oficial)}" target="_blank" rel="noopener noreferrer" aria-label="Acessar ${escapeHtml(movie.titulo)} no ${escapeHtml(platform)} (abre em nova guia)">Acessar na plataforma</a>
         </div>
       </div>`;
     article.querySelector('.film-details-button').addEventListener('click', event => {
@@ -154,6 +159,7 @@
       });
       document.body.append(dialog);
     }
+    const platform = platformName(movie);
     const poster = movie.imagem
       ? `<img src="${escapeHtml(movie.imagem)}" alt="Cartaz do filme ${escapeHtml(movie.titulo)}">`
       : `<div class="film-poster-fallback" role="img" aria-label="Cartaz não disponível para o filme ${escapeHtml(movie.titulo)}"><span aria-hidden="true">🎬</span><strong>Cartaz não disponível</strong></div>`;
@@ -167,22 +173,25 @@
         <button type="button" class="film-dialog-close" aria-label="Fechar detalhes">×</button>
         <div class="film-dialog-poster">${poster}</div>
         <div class="film-dialog-copy">
-          <p class="agenda-eyebrow">Filme gratuito no LGBTFlix</p>
+          <p class="agenda-eyebrow">Filme gratuito em ${escapeHtml(platform)}</p>
           <h2 id="film-dialog-title">${escapeHtml(movie.titulo)}</h2>
           ${facts ? `<p class="film-dialog-facts">${escapeHtml(facts)}</p>` : ''}
+          ${movie.tagline ? `<p class="film-dialog-tagline">${escapeHtml(movie.tagline)}</p>` : ''}
           ${movie.sinopse ? `<p class="film-dialog-synopsis">${escapeHtml(movie.sinopse)}</p>` : ''}
           <div class="film-dialog-sections">
             ${detailSection('Direção', movie.direcao, escapeHtml)}
+            ${detailSection('Elenco', movie.elenco, escapeHtml)}
             ${detailSection('Gêneros', movie.generos, escapeHtml)}
             ${detailSection('Temas', movie.temas, escapeHtml)}
+            ${detailSection('Acessibilidade', movie.acessibilidade, escapeHtml)}
             ${detailSection('Letras', movie.letras, escapeHtml)}
             ${detailSection('Coleções', movie.colecoes, escapeHtml)}
             ${detailSection('Alertas de conteúdo', movie.alertas, escapeHtml)}
             ${detailSection('Prêmios', movie.premios, escapeHtml)}
-            ${detailSection('Plataforma', movie.plataforma, escapeHtml)}
+            ${detailSection('Plataforma', platform, escapeHtml)}
           </div>
-          <a class="film-watch-link" href="${escapeHtml(movie.pagina_oficial)}" target="_blank" rel="noopener noreferrer">Assistir gratuitamente no LGBTFlix <span aria-hidden="true">↗</span></a>
-          <p class="film-rights-note">O Mural Cultural não hospeda este filme. ${movie.imagem ? 'Imagem oficial do LGBTFlix; licença não verificada.' : 'Cartaz não fornecido pela fonte.'}</p>
+          <a class="film-watch-link" href="${escapeHtml(movie.pagina_oficial)}" target="_blank" rel="noopener noreferrer">Acessar no ${escapeHtml(platform)} <span aria-hidden="true">↗</span></a>
+          <p class="film-rights-note">O Mural Cultural não hospeda este filme. ${movie.imagem ? `Imagem fornecida pela plataforma ${escapeHtml(platform)}; licença específica de reutilização não verificada.` : 'Cartaz não fornecido pela fonte.'}</p>
         </div>
       </div>`;
     const close = dialog.querySelector('.film-dialog-close');
@@ -197,6 +206,7 @@
     durationMatches,
     filter,
     options,
+    platformName,
     queryMatches,
     showDetails,
     sort
