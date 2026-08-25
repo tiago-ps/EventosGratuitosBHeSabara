@@ -38,29 +38,28 @@ body.panel-mode.theme-agosto-lilas .content > * {
   z-index: 1;
 }
 
+/*
+ * O banner ocupa aproximadamente 1/7 da altura da mídia. A largura é
+ * limitada para preservar margens e não encobrir excessivamente cartazes,
+ * capas e imagens dos conteúdos.
+ */
 .campaign-agosto-lilas-badge {
   position: absolute;
-  top: clamp(10px, 1.7vh, 20px);
+  top: 1.25%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 5;
-  max-width: calc(100% - 32px);
-  padding: clamp(5px, .65vh, 8px) clamp(12px, 1.15vw, 18px);
-  border: 1px solid rgba(255, 255, 255, .28);
-  border-radius: 999px;
-  background: linear-gradient(135deg, rgba(183, 105, 219, .96), rgba(126, 63, 171, .96));
-  box-shadow: 0 7px 22px rgba(81, 34, 118, .38), inset 0 1px 0 rgba(255, 255, 255, .16);
-  color: #fff;
-  font-size: clamp(11px, .86vw, 16px);
-  font-weight: 850;
-  line-height: 1;
-  letter-spacing: .075em;
-  text-transform: uppercase;
-  text-align: center;
-  white-space: nowrap;
+  display: block;
+  width: auto;
+  height: 14.285%;
+  min-height: 64px;
+  max-height: 148px;
+  max-width: 94%;
+  object-fit: contain;
+  object-position: top center;
+  filter: drop-shadow(0 8px 14px rgba(25, 4, 42, .48));
   pointer-events: none;
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
+  user-select: none;
 }
 
 @media (max-width: 720px) {
@@ -71,11 +70,12 @@ body.panel-mode.theme-agosto-lilas .content > * {
   }
 
   .campaign-agosto-lilas-badge {
-    top: 8px;
-    max-width: calc(100% - 24px);
-    padding: 6px 12px;
-    font-size: 11px;
-    letter-spacing: .055em;
+    top: 1%;
+    height: 15%;
+    min-height: 52px;
+    max-height: 96px;
+    max-width: 96%;
+    filter: drop-shadow(0 5px 10px rgba(25, 4, 42, .42));
   }
 }
 
