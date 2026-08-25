@@ -5894,7 +5894,10 @@
       "organizador": "",
       "endereco": "Rua Comendador Vianna, 119 Centro, Sabará, MG",
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Secretaria+de+Desenvolvimento+Social+de+Sabar%C3%A1%2C+Rua+Comendador+Vianna%2C+119+Centro%2C+Sabar%C3%A1%2C+MG"
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Secretaria+de+Desenvolvimento+Social+de+Sabar%C3%A1%2C+Rua+Comendador+Vianna%2C+119+Centro%2C+Sabar%C3%A1%2C+MG",
+      "temas": [
+        "Agosto Lilás"
+      ]
     },
     {
       "id": "manual-caipora-guardia-das-muitas-vozes-2026-08-26-2026-08-26",
