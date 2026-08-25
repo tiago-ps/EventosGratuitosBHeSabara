@@ -2729,6 +2729,9 @@
     if (content === 'books') {
       for (const book of state.allBooks) (Array.isArray(book.temas) ? book.temas : []).forEach(add);
     }
+    if (content === 'courses') {
+      for (const course of state.allCourses) (Array.isArray(course.temas) ? course.temas : []).forEach(add);
+    }
     if (content === 'films') {
       for (const movie of state.allFilms) (Array.isArray(movie.temas) ? movie.temas : []).forEach(add);
     }
@@ -2739,7 +2742,7 @@
     const allowedContents = new Set(['all', 'events', 'books', 'courses', 'contests', 'films']);
     state.mobileContent = allowedContents.has(content) ? content : 'all';
 
-    if (!['events', 'books', 'films'].includes(state.mobileContent)) {
+    if (!['events', 'books', 'courses', 'films'].includes(state.mobileContent)) {
       state.mobileTheme = '';
     } else {
       const allowedThemes = new Set(agendaThemeOptions(state.mobileContent).map(([value]) => value));
@@ -3296,7 +3299,7 @@
 
     const contestMode = state.mobileContent === 'contests';
     const filmMode = state.mobileContent === 'films';
-    const themeMode = ['events', 'books', 'films'].includes(state.mobileContent);
+    const themeMode = ['events', 'books', 'courses', 'films'].includes(state.mobileContent);
     const searchPlaceholder = contestMode
       ? 'Órgão, cargo, cidade, formação…'
       : state.mobileContent === 'courses'
