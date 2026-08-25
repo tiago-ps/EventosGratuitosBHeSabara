@@ -70,7 +70,7 @@ for (const [order, field, direction] of [
   }
 }
 
-assert.match(indexSource, /js\/conteudos\/filmes\.js\?v=3/);
+assert.match(indexSource, /js\/conteudos\/filmes\.js\?v=4/);
 assert.doesNotMatch(indexSource, /filmes\.html/);
 assert.match(appSource, /<option value="films">Filmes<\/option>/);
 assert.match(appSource, /loadOptionalJson\(FILMS_URL, \{ filmes: \[\] \}\)/);
@@ -83,7 +83,7 @@ assert.doesNotMatch(source, /Assistir gratuitamente no LGBTFlix/);
 assert.doesNotMatch(source, /<(?:iframe|video)\b/i);
 assert.doesNotMatch(JSON.stringify(data), /youtube\.com\/embed|player\.vimeo\.com/i);
 assert.match(swSource, /'\/filmes\.json'/);
-assert.match(swSource, /'\.\/js\/conteudos\/filmes\.js\?v=3'/);
+assert.match(swSource, /'\.\/js\/conteudos\/filmes\.js\?v=4'/);
 assert.match(stylesSource, /\.agenda-film-card \.film-media\{[^}]*aspect-ratio:16\/9/);
 assert.match(stylesSource, /@media\(max-width:760px\)\{\.agenda-film-card\{display:flex;grid-template-columns:none;flex-direction:column/);
 assert.match(stylesSource, /\.agenda-film-card \.film-media img\{[^}]*position:static;[^}]*object-fit:cover/);
