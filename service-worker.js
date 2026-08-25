@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v81-tela-brasil';
+const CACHE_VERSION = 'mural-cultural-v82-agosto-lilas';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -14,7 +14,7 @@ const CORE_ASSETS = [
   './js/conteudos/cursos.js?v=1',
   './js/conteudos/concursos.js?v=2',
   './js/conteudos/filmes.js?v=5',
-  './js/app.js?v=79',
+  './js/app.js?v=80',
   './js/eventos-manuais-ui.js?v=44',
   './js/ios-install.js?v=1',
   './manifest.webmanifest',

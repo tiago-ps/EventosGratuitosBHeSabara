@@ -584,8 +584,13 @@
     const filmsEnabled = state.panelModules.films && state.config?.modulos?.filmes !== false;
     const events = eventsEnabled ? visibleEventsForFilters() : [];
     const books = booksEnabled ? filterBooks(state.allBooks) : [];
-    const courses = coursesEnabled ? coursesContent.sampleForPanel(state.allCourses) : [];
-    const contests = contestsEnabled ? contestsContent.sampleForPanel(state.allContests) : [];
+    const themedCourses = state.filters.theme
+      ? state.allCourses.filter(course => courseMatchesTheme(course, state.filters.theme))
+      : state.allCourses;
+    const courses = coursesEnabled ? coursesContent.sampleForPanel(themedCourses) : [];
+    const contests = contestsEnabled && !state.filters.theme
+      ? contestsContent.sampleForPanel(state.allContests)
+      : [];
     const films = filmsEnabled ? filmsContent.sampleForPanel(state.allFilms, {
       genre: state.filters.filmGenre,
       theme: state.filters.theme,
@@ -802,6 +807,13 @@
       .some(value => value === theme || value.includes(theme));
   }
 
+  function courseMatchesTheme(course, theme) {
+    if (!theme) return true;
+    return (Array.isArray(course.temas) ? course.temas : [])
+      .map(normalizeText)
+      .some(value => value === theme || value.includes(theme));
+  }
+
   function universalThemeOptions() {
     const values = new Map();
     const add = label => {
@@ -811,6 +823,7 @@
     };
     for (const event of state.allEvents) eventThemeLabels(event).forEach(add);
     for (const book of state.allBooks) (Array.isArray(book.temas) ? book.temas : []).forEach(add);
+    for (const course of state.allCourses) (Array.isArray(course.temas) ? course.temas : []).forEach(add);
     for (const movie of state.allFilms) (Array.isArray(movie.temas) ? movie.temas : []).forEach(add);
     return [...values.entries()].sort((a, b) => a[1].localeCompare(b[1], 'pt-BR'));
   }
@@ -2887,11 +2900,12 @@
     if (!['all', 'courses'].includes(state.mobileContent) || state.config?.modulos?.cursos === false) return [];
     const query = normalizeText(state.mobileQuery);
     return coursesContent.filter(state.allCourses)
+      .filter(course => courseMatchesTheme(course, state.mobileTheme))
       .filter(course => coursesContent.agendaQueryMatches(course, query, normalizeText));
   }
 
   function agendaVisibleContests() {
-    if (!['all', 'contests'].includes(state.mobileContent) || state.config?.modulos?.concursos === false) {
+    if (state.mobileTheme || !['all', 'contests'].includes(state.mobileContent) || state.config?.modulos?.concursos === false) {
       return [];
     }
     return contestsContent.filter(state.allContests, {
