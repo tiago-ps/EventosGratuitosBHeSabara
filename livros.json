@@ -1,6 +1,6 @@
 {
   "versao": 2,
-  "atualizado_em": "2026-08-25T13:38:52.920428+00:00",
+  "atualizado_em": "2026-08-25T13:46:17.173096+00:00",
   "titulo": "Descobertas de leitura",
   "origem": "Acervos consultados em catálogos públicos Pergamum e bases institucionais",
   "aviso": "Seleção construída progressivamente e sujeita a curadoria. Não representa a totalidade dos acervos. Consulte o registro oficial para confirmar localização e disponibilidade.",
@@ -4207,7 +4207,7 @@
       "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=230203&page=1&perPage=20&orderBy=obra&direction=C",
       "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=230203&page=1&perPage=20&orderBy=obra&direction=C",
       "tipo_link_principal": "virtual",
-      "imagem": "imagens/livros/capas/ajuste-capa-pendente-feminismo.webp",
+      "imagem": "imagens/livros/capas/ajuste-vozes-contemporaneas-o-feminino-em-cena.png",
       "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
       "imagem_url_origem": "",
       "qr_code": "imagens/livros/qrcodes/vozes-contemporaneas-o-feminino-em-cena.svg",
@@ -4221,6 +4221,7 @@
       "comentario_aprovado": "",
       "credito_comentario": "",
       "link_formulario_opiniao": "",
+      "observacoes": "Curadoria temática feminismo a partir dos acervos físico e virtual do IFMG Sabará; frase e texto de apoio pendentes.",
       "id_obra": "obra-vozes-contemporaneas-o-feminino-em-cena-46df82ef",
       "registros_ids": [
         "vozes-contemporaneas-o-feminino-em-cena"
