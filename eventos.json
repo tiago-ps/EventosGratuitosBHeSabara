@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Janeiro a Dezembro de 2026",
-  "atualizado_em": "2026-08-26T13:49:43-03:00",
+  "atualizado_em": "2026-08-26T18:03:06-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -5770,10 +5770,7 @@
       "organizador": "",
       "endereco": "Rua Comendador Vianna, 119 Centro, Sabará, MG",
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Secretaria+de+Desenvolvimento+Social+de+Sabar%C3%A1%2C+Rua+Comendador+Vianna%2C+119+Centro%2C+Sabar%C3%A1%2C+MG",
-      "temas": [
-        "Agosto Lilás"
-      ]
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Secretaria+de+Desenvolvimento+Social+de+Sabar%C3%A1%2C+Rua+Comendador+Vianna%2C+119+Centro%2C+Sabar%C3%A1%2C+MG"
     },
     {
       "id": "manual-caipora-guardia-das-muitas-vozes-2026-08-26-2026-08-26",
@@ -8260,35 +8257,6 @@
       "espaco_interno": "",
       "inscricao_inicio": "",
       "inscricao_fim": "",
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
-    },
-    {
-      "id": "manual-projeto-solidario-grupo-de-bordadeiras-2026-12-31",
-      "titulo": "Projeto Solidário: Grupo de Bordadeiras",
-      "data": "2026-12-31",
-      "data_fim": "",
-      "horario": "13h às 16h",
-      "local": "Solar Padre Correia",
-      "cidade": "Sabará",
-      "categoria": "Encontro",
-      "gratuito": true,
-      "inscricao": "",
-      "descricao": "Grupo de Bordadeiras: encontros na sede da Secretaria para praticar e compartilhar a arte do bordado. Atividade gratuita, aberta ao público e com caráter solidário.",
-      "imagem": "imagens/eventos-manuais/projeto-solidario-grupo-de-bordadeiras.png",
-      "link": "https://www.instagram.com/cultura.sabara/",
-      "pagina": "https://www.instagram.com/cultura.sabara/",
-      "link_inscricao": "",
-      "fonte": "Cadastro manual",
-      "instituicao_id": "Secretaria de Cultura de Sabará",
-      "classificacao_indicativa": "",
-      "local_id": "solar-padre-correia",
-      "endereco": "R. Dom Pedro II, 200 - Centro, Sabará - MG, 34505-000",
-      "mapa": "https://maps.app.goo.gl/fNCH9XLpCY5V4z2j6",
-      "espaco_interno": "",
-      "inscricao_inicio": "",
-      "inscricao_fim": "",
-      "status_inscricao": "",
-      "criterio_exibicao": "realizacao",
       "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     }
   ]
