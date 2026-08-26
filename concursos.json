@@ -2,8 +2,8 @@
   "schema": 9,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-08-25T09:27:58.034444+00:00",
-  "total": 27,
+  "coletado_em_utc": "2026-08-26T09:30:47.667887+00:00",
+  "total": 28,
   "concursos": [
     {
       "titulo": "CaraguaPrev - Instituto de Previdência do Município de Caraguatatuba",
@@ -65,6 +65,38 @@
           "cargo": "Técnico em Computação",
           "vagas_texto": "Cadastro de Reserva",
           "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ]
+    },
+    {
+      "titulo": "Prefeitura de Anhembi",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-anhembi-sp-abre-concurso-publico-com-salarios-de-ate-6407",
+      "imagem": "https://cdn.pci.app.br/img/i/4f433fb9d7703d1d0533c5818bc79bf4.png",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": "argos de: agente de defesa civil (1 vaga) almoxarife (1 vaga + cr) assistente administrativo de rh (1 vaga) auxiliar de cozinha (1 vaga + cr) auxiliar de manutencao e conservacao da frota municipal (1 vaga + cr) gari (1 vaga + cr) monitor (1 vaga + cr) motorista (cr) tecnico em agricultura (1 vaga) tecnico em informatica (1 vaga) tecnico de enfermagem (1 vaga + cr) analista de compras (1 vaga) analista de contabilidade (1 vaga) analista de expediente legislativo (1 vaga) analista de licitacao (1 vaga) analista de meio ambiente (1 vaga) arquiteto (1 vaga) contador (1 vaga) coordenador do cras (1 vaga) engenheiro civ"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "SP",
+      "cidade": "Anhembi",
+      "inscricoes_inicio_texto": "11 de outubro de 2026",
+      "inscricoes_fim_texto": "18 de outubro de 2026",
+      "inscricoes_texto": "11 de outubro de 2026 a 18 de outubro de 2026",
+      "remuneracao_faixa_texto": "R$ 1.989,68 a R$ 6.407,17",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico em Informática",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
           "confianca": "alta"
         }
       ]
