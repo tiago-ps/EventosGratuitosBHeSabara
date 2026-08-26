@@ -19,40 +19,5 @@
     "habilitado": false,
     "url_formulario": "",
     "aviso_privacidade": "As respostas são recebidas em formulário institucional privado e só aparecem no mural após revisão e anonimização."
-  },
-  "perfis_painel": {
-    "agosto-lilas-2026": {
-      "nome": "Agosto Lilás — curadoria do mês",
-      "destaque": "Sugestão do mês",
-      "ativo_de": "2026-08-01",
-      "ativo_ate": "2026-08-31",
-      "configuracao": {
-        "modules": {
-          "events": true,
-          "books": true,
-          "courses": true,
-          "contests": false,
-          "films": true
-        },
-        "theme": "agosto lilas",
-        "eventCities": [],
-        "eventCategory": "",
-        "eventProgram": "",
-        "eventUnit": "",
-        "bookCampuses": [],
-        "bookAccess": "",
-        "filmGenre": "",
-        "filmRating": "",
-        "filmDuration": "",
-        "weights": {
-          "events": 5,
-          "books": 1,
-          "courses": 1,
-          "contests": 1,
-          "films": 1
-        },
-        "slideDuration": 0
-      }
-    }
   }
 }

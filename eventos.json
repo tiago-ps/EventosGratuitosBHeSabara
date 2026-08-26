@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Janeiro a Dezembro de 2026",
-  "atualizado_em": "2026-08-25T16:26:52-03:00",
+  "atualizado_em": "2026-08-26T07:15:17-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -1592,8 +1592,7 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida Professor Alfredo Balena, 586, Santa Efigênia, Belo Horizonte - MG, 30130-100",
       "mapa": "https://maps.app.goo.gl/MtyButkEtXBbL1Ae8",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
-      "espaco_interno": "Teatro Marilia"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-africas-em-nos-dancas-e-outras-performatividades-negras-a15bcc06e4",
@@ -1639,8 +1638,7 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida Professor Alfredo Balena, 586, Santa Efigênia, Belo Horizonte - MG, 30130-100",
       "mapa": "https://maps.app.goo.gl/MtyButkEtXBbL1Ae8",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
-      "espaco_interno": "Teatro Marilia"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-unidade-centro-cultural-bairro-das-industrias",
@@ -2007,7 +2005,7 @@
       "descricao": "Atividade da Escola Livre de Artes. Público: A partir de 14anos. Modalidade: Presencial. Priorizando a prática instrumental individual e coletiva, o Laboratório aborda o Choro em seus aspectos interpretativos, estéticos e históricos, a partir de exposição, apreciação musical, referenciais teóricos, práticas de criação, debate e análise sobre o primeiro gênero musical urbano brasileiro",
       "imagem": "imagens/eventos-manuais/ela-roda-de-choro-13ef75b94c.png",
       "link": "https://form.jotform.com/261965053614661",
-      "pagina": "https://form.jotform.com/261965053614661",
+      "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
@@ -2018,7 +2016,14 @@
       "espaco_interno": "",
       "inscricao_inicio": "2026-07-17",
       "inscricao_fim": "",
-      "motivo_publicacao": "inscricao_disponivel"
+      "motivo_publicacao": "inscricao_disponivel",
+      "fontes": [
+        "Escola Livre de Artes Arena da Cultura"
+      ],
+      "ids_mesclados": [
+        "manual-ela-roda-de-choro-13ef75b94c-2026-08-19",
+        "ela-roda-de-choro-13ef75b94c"
+      ]
     },
     {
       "id": "ela-brincadeiras-circenses-ea4143ad6a",
@@ -2972,7 +2977,7 @@
       "descricao": "Oficina voltada para as práticas musicais com instrumentos de percussão com foco na música popular. Tem como objetivo proporcionar aos alunos e alunas uma vivência musical a partir de estudo de ritmos brasileiros, práticas em conjunto e desenvolvimento de repertório, em diálogo com manifestações populares, entre elas, o carnaval.",
       "imagem": "imagens/eventos-manuais/ela-praticas-percussivas-ritmos-brasileiros-2157c0200a.png",
       "link": "https://form.jotform.com/261965053614661",
-      "pagina": "https://form.jotform.com/261965053614661",
+      "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
@@ -2983,7 +2988,14 @@
       "espaco_interno": "",
       "inscricao_inicio": "2026-07-17",
       "inscricao_fim": "",
-      "motivo_publicacao": "inscricao_disponivel"
+      "motivo_publicacao": "inscricao_disponivel",
+      "fontes": [
+        "Escola Livre de Artes Arena da Cultura"
+      ],
+      "ids_mesclados": [
+        "manual-ela-praticas-percussivas-ritmos-brasileiros-2157c0200a-2026-08-24",
+        "ela-praticas-percussivas-ritmos-brasileiros-2157c0200a"
+      ]
     },
     {
       "id": "ela-arena-atelie-livre-68965bd217",
@@ -3310,8 +3322,7 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida Professor Alfredo Balena, 586, Santa Efigênia, Belo Horizonte - MG, 30130-100",
       "mapa": "https://maps.app.goo.gl/MtyButkEtXBbL1Ae8",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
-      "espaco_interno": "Teatro Marilia"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
     },
     {
       "id": "ela-grafite-e-bom-demais-stencil-lambes-pixo-arte-urbana-e91a057086",
@@ -5100,7 +5111,7 @@
       "descricao": "Sabe aquela ideia de projeto ligado à palavra - escrita, falada, desenhada, performada ou mediada - que está só esperando a vez de ganhar forma e circular por aí através de um sarau, fanzine, livro, performance, oficina, dentre outras materialidades e possibilidades? Pois é, chegou a hora de colocar no papel de forma estruturada, coerente e convincente aquele seu projeto ligado à literatura ou à leitura e que no momento é só uma ideia. Ao longo da oficina será abordado de forma prática e aprofundada o processo criativo por trás da elaboração de um projeto cultural que sonha em acontecer",
       "imagem": "imagens/eventos-manuais/ela-voa-palavra-elaboracao-de-projetos-culturais-em-literatura-e-leitura-d3a8ca75d9.png",
       "link": "https://form.jotform.com/261965053614661",
-      "pagina": "https://form.jotform.com/261965053614661",
+      "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
@@ -5111,7 +5122,14 @@
       "espaco_interno": "",
       "inscricao_inicio": "2026-07-17",
       "inscricao_fim": "",
-      "motivo_publicacao": "inscricao_disponivel"
+      "motivo_publicacao": "inscricao_disponivel",
+      "fontes": [
+        "Escola Livre de Artes Arena da Cultura"
+      ],
+      "ids_mesclados": [
+        "manual-ela-voa-palavra-elaboracao-de-projetos-culturais-em-literatura-e-leitura-d3a8ca75d9-2026-09-15",
+        "ela-voa-palavra-elaboracao-de-projetos-culturais-em-literatura-e-leitura-d3a8ca75d9"
+      ]
     },
     {
       "id": "ela-orquestra-transversal-vozes-instrumentos-samples-beats-e-som-d3862c5cae",
@@ -5718,130 +5736,6 @@
       "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
-      "id": "manual-prosa-poetica-2026-08-25-10h-2026-08-25",
-      "titulo": "Prosa Poética — Oficina de Escrita Criativa",
-      "data": "2026-08-25",
-      "data_fim": "",
-      "horario": "10h",
-      "local": "Biblioteca Pública Infantil e Juvenil de Belo Horizonte",
-      "cidade": "Belo Horizonte",
-      "categoria": "Oficina",
-      "gratuito": true,
-      "inscricao": "",
-      "criterio_exibicao": "realizacao",
-      "status_inscricao": "",
-      "exibicao_ativa": true,
-      "descricao": "Oficina de escrita criativa com troca de ideias e experiências, mediada pela equipe da BPIJ-BH.",
-      "imagem": "imagens/eventos-manuais/prosa-poetica-2026-08-25-10h.png",
-      "link": "https://www.instagram.com/p/DcBpp14KRsY/",
-      "pagina": "https://www.instagram.com/p/DcBpp14KRsY/",
-      "link_inscricao": "",
-      "monitorar_formulario_google": false,
-      "url_formulario_google": "",
-      "acao_formulario_fechado": "marcar_encerrada",
-      "fonte": "Instagram — BPIJ-BH",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "classificacao_indicativa": "Livre",
-      "local_id": "biblioteca-publica-infantil-e-juvenil-de-belo-horizonte",
-      "endereco": "Rua Espírito Santo, 593, Centro, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/CthGmeJQMPXaxfni6",
-      "espaco_interno": "",
-      "inscricao_inicio": "",
-      "inscricao_fim": "",
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
-    },
-    {
-      "id": "manual-laboratorio-da-escrita-2026-08-25-2026-08-25",
-      "titulo": "Laboratório da Escrita",
-      "data": "2026-08-25",
-      "data_fim": "",
-      "horario": "18h",
-      "local": "Biblioteca Pública Infantil e Juvenil de Belo Horizonte",
-      "cidade": "Belo Horizonte",
-      "categoria": "Oficina",
-      "gratuito": true,
-      "inscricao": "",
-      "criterio_exibicao": "realizacao",
-      "status_inscricao": "",
-      "exibicao_ativa": true,
-      "descricao": "Encontro de formação em escrita literária, com técnicas em diferentes gêneros e mediação de Samuel Medina.",
-      "imagem": "imagens/eventos-manuais/laboratorio-da-escrita-2026-08-25.png",
-      "link": "https://www.instagram.com/p/DcBpYtKqRlo/",
-      "pagina": "https://www.instagram.com/p/DcBpYtKqRlo/",
-      "link_inscricao": "",
-      "monitorar_formulario_google": false,
-      "url_formulario_google": "",
-      "acao_formulario_fechado": "marcar_encerrada",
-      "fonte": "Instagram — BPIJ-BH",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "classificacao_indicativa": "Livre",
-      "local_id": "biblioteca-publica-infantil-e-juvenil-de-belo-horizonte",
-      "endereco": "Rua Espírito Santo, 593, Centro, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/CthGmeJQMPXaxfni6",
-      "espaco_interno": "",
-      "inscricao_inicio": "",
-      "inscricao_fim": "",
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
-    },
-    {
-      "id": "cine-santa-tereza-bileto-125396",
-      "titulo": "DIAS DE CINEMA UCRANIANO - Dovbush",
-      "data": "2026-08-25",
-      "data_fim": "",
-      "horario": "19h",
-      "local": "Cine Santa Tereza",
-      "cidade": "Belo Horizonte",
-      "categoria": "Cinema",
-      "gratuito": true,
-      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial. Também há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade.",
-      "descricao": "Dovbush (Oles Sanin | Ucrânia | Ação épica, Histórico, Aventura, Drama | 2023 |124 min) Superprodução histórica inspirada na vida de Oleksa Dovbush, lendário líder popular dos Cárpatos do século XVIII. O filme revisita temas de liberdade, justiça e resistência através de uma narrativa épica. Classificação indicativa: 16 anos",
-      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/2luaiig8456cuee6fau68n46d2l630qkvsd66ilshq21caf7qeabc0sacla0crsqitcr3deja9irgoeept579o3nd597si3r9f7einc.webp",
-      "link": "https://bileto.sympla.com.br/event/125396/d/407098/s/2657412",
-      "fonte": "Cine Santa Tereza",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "fonte_id": "125396",
-      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
-      "classificacao_indicativa": "16 anos",
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
-    },
-    {
-      "id": "portal-bh-cd1a4782f643-2026-08-25-1900",
-      "titulo": "RUA – Restos Urbanos Aleatórios | TEATRO MARÍLIA",
-      "data": "2026-08-25",
-      "data_fim": "",
-      "horario": "19h às 21h",
-      "local": "Teatro Marília",
-      "cidade": "Belo Horizonte",
-      "categoria": "Teatro",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "RUA – Restos Urbanos Aleatórios A rua dá. A rua toma. Do corpo do Carnaval à rotina cinza: o que fica? RUA – Restos Urbanos Aleatórios é uma criação do Grupo Contemporâneo de Dança Livre, desenvolvida pelos artistas Duna Dias e Leonardo Augusto, unindo suas investigações sobre danças populares, espaço urbano e máscaras. O espetáculo fez pré-estreia na Costa Rica,",
-      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-07/recorte-de-2021_09_23_teatro_marilia_foto_ricardo_laf_01-1_0.jpg",
-      "link": "https://portalbelohorizonte.com.br/2026/eventos/apresentacao-artistica/artes-cenicas/rua-restos-urbanos-aleatorios-teatro-marilia",
-      "fonte": "Portal Belo Horizonte",
-      "fonte_id": "cd1a4782f643",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "endereco": "Av. Professor Alfredo Balena, 586 - Santa Efigênia - Belo Horizonte/MG",
-      "tags_fonte": [
-        "60+",
-        "Acessibilidade",
-        "Acessível para cadeirantes",
-        "Artes Cênicas",
-        "BH Grátis",
-        "Cultural",
-        "Cultura PBH",
-        "Ingressos on-line",
-        "Gratuito",
-        "Teatro"
-      ],
-      "classificacao_indicativa": "Livre",
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "teatro-marilia",
-      "mapa": "https://maps.app.goo.gl/MtyButkEtXBbL1Ae8"
-    },
-    {
       "id": "manual-clube-de-leitura-violencia-e-paixao-2026-08-26-2026-08-26",
       "titulo": "Clube de Leitura — Violência e Paixão",
       "data": "2026-08-26",
@@ -5894,10 +5788,7 @@
       "organizador": "",
       "endereco": "Rua Comendador Vianna, 119 Centro, Sabará, MG",
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Secretaria+de+Desenvolvimento+Social+de+Sabar%C3%A1%2C+Rua+Comendador+Vianna%2C+119+Centro%2C+Sabar%C3%A1%2C+MG",
-      "temas": [
-        "Agosto Lilás"
-      ]
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Secretaria+de+Desenvolvimento+Social+de+Sabar%C3%A1%2C+Rua+Comendador+Vianna%2C+119+Centro%2C+Sabar%C3%A1%2C+MG"
     },
     {
       "id": "manual-caipora-guardia-das-muitas-vozes-2026-08-26-2026-08-26",
@@ -5975,7 +5866,7 @@
       "cidade": "Belo Horizonte",
       "categoria": "Cinema",
       "gratuito": true,
-      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial. Também há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade.",
       "descricao": "Evento da programação do Cine Santa Tereza. Classificação indicativa: Livre. Consulte a programação completa e a disponibilidade de ingressos no link oficial.",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/21qsr3hgp8q91q7r4psip2f9tmucrkf7i1hrvnutg6uktejau9i3sf0dav2t07s143l796vcshtsu2inr9o9d7t25k71kev6cg57mt0.webp",
       "link": "https://bileto.sympla.com.br/event/125881/d/408824/s/2662547",
@@ -6147,7 +6038,7 @@
       "cidade": "Belo Horizonte",
       "categoria": "Cinema",
       "gratuito": true,
-      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial. Também há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade.",
       "descricao": "Evento da programação do Cine Santa Tereza. Classificação indicativa: 10 anos. Consulte a programação completa e a disponibilidade de ingressos no link oficial.",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/21qsr3hgp8q91q7r4psip2f9tmucrkf7i1hrvnutg6uktejau9i3sf0dav2t07s143l796vcshtsu2inr9o9d7t25k71kev6cg57mt0.webp",
       "link": "https://bileto.sympla.com.br/event/125882/d/408825/s/2662549",
@@ -6526,6 +6417,29 @@
       "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
+      "id": "cine-santa-tereza-bileto-125885",
+      "titulo": "DIAS DE CINEMA UCRANIANO - Pamfir",
+      "data": "2026-08-28",
+      "data_fim": "",
+      "horario": "19h",
+      "local": "Cine Santa Tereza",
+      "cidade": "Belo Horizonte",
+      "categoria": "Cinema",
+      "gratuito": true,
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "descricao": "Pamfir (Dmytro Sukholytkyy-Sobchuk | Ucrânia, Polônia, França | Ação, Drama, Suspense | 2022 | 107 min) Estreado na Quinzena dos Realizadores do Festival de Cannes, acompanha o retorno de um homem à sua comunidade na fronteira oeste da Ucrânia, explorando questões de família, tradição e sobrevivência. É uma das produções ucranianas mais reconhecidas da última década. Classificação indicativa: 16 anos",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/17ca4n29mgsf68dkrf3o4iidrc7auf38m9dvoacbhc4vcj7t1bsk95hfsoq83fghto8fderfnahn3s7mccdgeae7q5bahqde42hm1rf.jpeg",
+      "link": "https://bileto.sympla.com.br/event/125885/d/408828/s/2662555",
+      "fonte": "Cine Santa Tereza",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "fonte_id": "125885",
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "classificacao_indicativa": "16 anos",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
+    },
+    {
       "id": "portal-bh-cf43fbe00a5b-2026-08-28-0830",
       "titulo": "Encontro: Museus, Arte e Emergência Climática, com Micrópolis",
       "data": "2026-08-28",
@@ -6765,6 +6679,29 @@
       "inscricao_inicio": "2026-07-30",
       "inscricao_fim": "",
       "motivo_publicacao": "realizacao_em_andamento_ou_futura"
+    },
+    {
+      "id": "cine-santa-tereza-bileto-125886",
+      "titulo": "DIAS DE CINEMA UCRANIANO - Nós, Nossos Pets e a Guerra",
+      "data": "2026-08-29",
+      "data_fim": "",
+      "horario": "16h30",
+      "local": "Cine Santa Tereza",
+      "cidade": "Belo Horizonte",
+      "categoria": "Cinema",
+      "gratuito": true,
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "descricao": "Nós, Nossos Pets e a Guerra (Anton Ptushkin | Ucrânia, Canadá | Documentário, Drama | 2024 | 79 min) Documentário dirigido por Anton Ptushkin que acompanha histórias de pessoas e animais afetados pela invasão russa da Ucrânia. Através de resgates de cães, gatos, animais de zoológicos e abrigos, o filme revela como os laços entre seres humanos e seus companheiros se tornam fonte de esperança, solidariedade e resistência em tempos de guerra. Estreou no Doc Kyiv Fest em 2024 e tornou-se uma das produções documentais ucranianas de maior projeção internacional do ano. Classificação indicativa: livre",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/17ca4n29mgsf68dkrf3o4iidrc7auf38m9dvoacbhc4vcj7t1bsk95hfsoq83fghto8fderfnahn3s7mccdgeae7q5bahqde42hm1rf.jpeg",
+      "link": "https://bileto.sympla.com.br/event/125886/d/408829/s/2662557",
+      "fonte": "Cine Santa Tereza",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "fonte_id": "125886",
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "classificacao_indicativa": "Livre",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
     {
       "id": "manual-deh-muss-virada-cultural-2026-08-29-2026-08-29",
@@ -7565,6 +7502,37 @@
       "inscricao_fim": "2026-09-03",
       "inscricao_inicio": "",
       "motivo_publicacao": "realizacao_em_andamento_ou_futura"
+    },
+    {
+      "titulo": "5ª Mostra CRDançaBH, com um encontro potente de processos criativos, pesquisa e partil",
+      "titulo_origem": "legenda",
+      "data": "2026-09-05",
+      "data_fim": "2026-08-28",
+      "horario": "19h",
+      "local": "Teatro Marília",
+      "cidade": "Belo Horizonte",
+      "categoria": "Dança",
+      "gratuito": true,
+      "inscricao": "A apresentação integra a programação da 5ª Mostra CRDançaBH, com um encontro potente de processos criativos, pesquisa e partilha de experiências em dança e performance. Garanta seu ingresso gratuito pelo link na bio!",
+      "descricao": "No dia 5 de setembro, o Teatro Marília recebe a Mostra de Resultados das Residências Artísticas “AfroMetáforas – Dança, Cognição e Ancestralidade” (Hugo Martins), “Movediço - Conexão” (Jai Bispo) e “ODÚS: Narrativas Historiográficas de Corpos” (Agnaldo Fonseca).\n\nA apresentação integra a programação da 5ª Mostra CRDançaBH, com um encontro potente de processos criativos, pesquisa e partilha de experiências em dança e performance. Garanta seu ingresso gratuito pelo link na bio!\n\nE atenção, o resultado da seleção das Residências Artísticas será publicada no dia 28 de agosto em nossas redes sociais. Siga acompanhando o Circuito Municipal de Cultura para não perder.\n\nMostra de Resultados das Residências Artísticas\nAfroMetáforas - Dança, Cognição e Ancestralidade | Movediço - Conexão | ODÚS: Narrativas Historiográficas de Corpos\n5/9 | 19h | Teatro Marília\nAv. Prof. Alfredo Balena, 586 - Santa Efigênia\nClassificação: Livre\n\n#circuitomunicipaldecultura #culturabh #programacaoculturalbh #prefeiturabh",
+      "link": "https://www.instagram.com/p/DceTDvlCe38/",
+      "pagina": "https://www.instagram.com/p/DceTDvlCe38/",
+      "link_inscricao": "",
+      "classificacao_indicativa": "Livre",
+      "endereco": "Av. Prof. Alfredo Balena, 586 - Santa Efigênia",
+      "instituicao_id": "",
+      "local_id": "teatro-marilia",
+      "espaco_interno": "",
+      "id": "manual-instagram-5-mostra-crdancabh-com-um-encontro-potente-de-processos-criativos-pesqui-2438185995-2026-09-05",
+      "criterio_exibicao": "realizacao",
+      "exibicao_ativa": true,
+      "fonte": "Instagram · @circuitomunicipaldecultura",
+      "imagem": "imagens/eventos-manuais/instagram-5-mostra-crdancabh-com-um-encontro-potente-de-processos-criativos-pesqui-2438185995.jpg",
+      "inscricao_inicio": "",
+      "inscricao_fim": "",
+      "status_inscricao": "",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "mapa": "https://maps.app.goo.gl/MtyButkEtXBbL1Ae8"
     },
     {
       "id": "manual-gesta-25-anos-2026-09-09-2026-09-09",
