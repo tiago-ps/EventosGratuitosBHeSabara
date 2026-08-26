@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Janeiro a Dezembro de 2026",
-  "atualizado_em": "2026-08-26T07:15:17-03:00",
+  "atualizado_em": "2026-08-26T11:55:33-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -1592,7 +1592,8 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida Professor Alfredo Balena, 586, Santa Efigênia, Belo Horizonte - MG, 30130-100",
       "mapa": "https://maps.app.goo.gl/MtyButkEtXBbL1Ae8",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "espaco_interno": "Teatro Marilia"
     },
     {
       "id": "ela-africas-em-nos-dancas-e-outras-performatividades-negras-a15bcc06e4",
@@ -1638,7 +1639,8 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida Professor Alfredo Balena, 586, Santa Efigênia, Belo Horizonte - MG, 30130-100",
       "mapa": "https://maps.app.goo.gl/MtyButkEtXBbL1Ae8",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "espaco_interno": "Teatro Marilia"
     },
     {
       "id": "ela-unidade-centro-cultural-bairro-das-industrias",
@@ -2005,7 +2007,7 @@
       "descricao": "Atividade da Escola Livre de Artes. Público: A partir de 14anos. Modalidade: Presencial. Priorizando a prática instrumental individual e coletiva, o Laboratório aborda o Choro em seus aspectos interpretativos, estéticos e históricos, a partir de exposição, apreciação musical, referenciais teóricos, práticas de criação, debate e análise sobre o primeiro gênero musical urbano brasileiro",
       "imagem": "imagens/eventos-manuais/ela-roda-de-choro-13ef75b94c.png",
       "link": "https://form.jotform.com/261965053614661",
-      "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
+      "pagina": "https://form.jotform.com/261965053614661",
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
@@ -2016,14 +2018,7 @@
       "espaco_interno": "",
       "inscricao_inicio": "2026-07-17",
       "inscricao_fim": "",
-      "motivo_publicacao": "inscricao_disponivel",
-      "fontes": [
-        "Escola Livre de Artes Arena da Cultura"
-      ],
-      "ids_mesclados": [
-        "manual-ela-roda-de-choro-13ef75b94c-2026-08-19",
-        "ela-roda-de-choro-13ef75b94c"
-      ]
+      "motivo_publicacao": "inscricao_disponivel"
     },
     {
       "id": "ela-brincadeiras-circenses-ea4143ad6a",
@@ -2977,7 +2972,7 @@
       "descricao": "Oficina voltada para as práticas musicais com instrumentos de percussão com foco na música popular. Tem como objetivo proporcionar aos alunos e alunas uma vivência musical a partir de estudo de ritmos brasileiros, práticas em conjunto e desenvolvimento de repertório, em diálogo com manifestações populares, entre elas, o carnaval.",
       "imagem": "imagens/eventos-manuais/ela-praticas-percussivas-ritmos-brasileiros-2157c0200a.png",
       "link": "https://form.jotform.com/261965053614661",
-      "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
+      "pagina": "https://form.jotform.com/261965053614661",
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
@@ -2988,14 +2983,7 @@
       "espaco_interno": "",
       "inscricao_inicio": "2026-07-17",
       "inscricao_fim": "",
-      "motivo_publicacao": "inscricao_disponivel",
-      "fontes": [
-        "Escola Livre de Artes Arena da Cultura"
-      ],
-      "ids_mesclados": [
-        "manual-ela-praticas-percussivas-ritmos-brasileiros-2157c0200a-2026-08-24",
-        "ela-praticas-percussivas-ritmos-brasileiros-2157c0200a"
-      ]
+      "motivo_publicacao": "inscricao_disponivel"
     },
     {
       "id": "ela-arena-atelie-livre-68965bd217",
@@ -3322,7 +3310,8 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida Professor Alfredo Balena, 586, Santa Efigênia, Belo Horizonte - MG, 30130-100",
       "mapa": "https://maps.app.goo.gl/MtyButkEtXBbL1Ae8",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "espaco_interno": "Teatro Marilia"
     },
     {
       "id": "ela-grafite-e-bom-demais-stencil-lambes-pixo-arte-urbana-e91a057086",
@@ -5111,7 +5100,7 @@
       "descricao": "Sabe aquela ideia de projeto ligado à palavra - escrita, falada, desenhada, performada ou mediada - que está só esperando a vez de ganhar forma e circular por aí através de um sarau, fanzine, livro, performance, oficina, dentre outras materialidades e possibilidades? Pois é, chegou a hora de colocar no papel de forma estruturada, coerente e convincente aquele seu projeto ligado à literatura ou à leitura e que no momento é só uma ideia. Ao longo da oficina será abordado de forma prática e aprofundada o processo criativo por trás da elaboração de um projeto cultural que sonha em acontecer",
       "imagem": "imagens/eventos-manuais/ela-voa-palavra-elaboracao-de-projetos-culturais-em-literatura-e-leitura-d3a8ca75d9.png",
       "link": "https://form.jotform.com/261965053614661",
-      "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
+      "pagina": "https://form.jotform.com/261965053614661",
       "link_inscricao": "https://form.jotform.com/261965053614661",
       "fonte": "Escola Livre de Artes Arena da Cultura",
       "instituicao_id": "fundacao-municipal-cultura-bh",
@@ -5122,14 +5111,7 @@
       "espaco_interno": "",
       "inscricao_inicio": "2026-07-17",
       "inscricao_fim": "",
-      "motivo_publicacao": "inscricao_disponivel",
-      "fontes": [
-        "Escola Livre de Artes Arena da Cultura"
-      ],
-      "ids_mesclados": [
-        "manual-ela-voa-palavra-elaboracao-de-projetos-culturais-em-literatura-e-leitura-d3a8ca75d9-2026-09-15",
-        "ela-voa-palavra-elaboracao-de-projetos-culturais-em-literatura-e-leitura-d3a8ca75d9"
-      ]
+      "motivo_publicacao": "inscricao_disponivel"
     },
     {
       "id": "ela-orquestra-transversal-vozes-instrumentos-samples-beats-e-som-d3862c5cae",
@@ -5788,10 +5770,7 @@
       "organizador": "",
       "endereco": "Rua Comendador Vianna, 119 Centro, Sabará, MG",
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Secretaria+de+Desenvolvimento+Social+de+Sabar%C3%A1%2C+Rua+Comendador+Vianna%2C+119+Centro%2C+Sabar%C3%A1%2C+MG",
-      "temas": [
-        "Agosto Lilás"
-      ]
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Secretaria+de+Desenvolvimento+Social+de+Sabar%C3%A1%2C+Rua+Comendador+Vianna%2C+119+Centro%2C+Sabar%C3%A1%2C+MG"
     },
     {
       "id": "manual-caipora-guardia-das-muitas-vozes-2026-08-26-2026-08-26",
@@ -6462,6 +6441,39 @@
       "endereco": "",
       "tags_fonte": [],
       "classificacao_indicativa": "Livre",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
+    },
+    {
+      "id": "manual-flis-2026-festa-literaria-de-sabara-2026-08-28",
+      "titulo": "FLIS 2026 - Festa Literária de Sabará",
+      "data": "2026-08-28",
+      "data_fim": "",
+      "horario": "8h30 • 13h30 • 19h30",
+      "local": "Borrachalioteca",
+      "cidade": "Sabará",
+      "categoria": "Teatro",
+      "gratuito": true,
+      "inscricao": "Projeto Festa Literária de Sabará - 2026 - Edital 04/2026 - Execução Cultural - SECULT/ MG - Inscrição n° 26675, com recursos da Política Nacional Aldir Blanc, Ministério da Cultura, Governo Federal.",
+      "criterio_exibicao": "realizacao",
+      "status_inscricao": "",
+      "exibicao_ativa": true,
+      "descricao": "FLIS 2026!\n\n Programação de Sexta-feira - 28/8\n\nNo segundo dia da Festa Literária de Sabará teremos uma programação muito bacana, pensada para proporcionar encontros e novas formas de ver o mundo.\n\nConfira:\n8h30, no Teatro Municipal de Sabará- Lançamento do Pão e Poesia edição especial “Crianças na Cidade”\n\n13h30, no Teatro Municipal de Sabará- Bate Papo com as autoras Nádia Fonseca, Éle Fernandes e Silas Fonseca, mediação de Dan Oliver\n\n19h30, na Casa Borba Gato - Bate Papo com o autor Lucas Galvão, mediação de Valéria Silva\n\n✨Atividades gratuitas e abertas ao publico em geral\n\nProjeto Festa Literária de Sabará - 2026 - Edital 04/2026 - Execução Cultural - SECULT/ MG - Inscrição n° 26675, com recursos da Política Nacional Aldir Blanc, Ministério da Cultura, Governo Federal.",
+      "imagem": "imagens/eventos-manuais/flis-2026-festa-literaria-de-sabara.jpg",
+      "link": "https://www.instagram.com/p/DcdvBOGESvA/",
+      "pagina": "https://www.instagram.com/p/DcdvBOGESvA/",
+      "link_inscricao": "",
+      "monitorar_formulario_google": false,
+      "url_formulario_google": "",
+      "acao_formulario_fechado": "marcar_encerrada",
+      "fonte": "Instagram · @borrachalioteca",
+      "instituicao_id": "",
+      "classificacao_indicativa": "",
+      "local_id": "borrachalioteca",
+      "endereco": "R. Marieta Machado, 164 - Centro, Sabará - MG, 34505-390",
+      "mapa": "https://maps.app.goo.gl/8g53s5xeU3nU4E1j6",
+      "espaco_interno": "",
+      "inscricao_inicio": "",
+      "inscricao_fim": "",
       "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
@@ -7536,6 +7548,39 @@
       "status_inscricao": "",
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "mapa": "https://maps.app.goo.gl/MtyButkEtXBbL1Ae8"
+    },
+    {
+      "id": "manual-17-festival-da-banana-2026-09-06",
+      "titulo": "17º Festival da Banana",
+      "data": "2026-09-06",
+      "data_fim": "",
+      "horario": "",
+      "local": "Ravena — Sabará/MG",
+      "cidade": "Sabará",
+      "categoria": "Festival",
+      "gratuito": true,
+      "inscricao": "",
+      "criterio_exibicao": "realizacao",
+      "status_inscricao": "",
+      "exibicao_ativa": true,
+      "descricao": "Vai participar do 17º Festival da Banana?!🍌 \n\nPreparamos este guia para ajudar você a se organizar e aproveitar o Festival em Ravena com mais tranquilidade.\n\n📍 Ravena — Sabará/MG\n📅 5 e 6 de setembro\n\nConfira as dicas de acesso, estacionamento, transporte e o que levar para aproveitar esse fim de semana de sabores, cultura e tradição.\n\nCompartilhe este guia com quem vai acompanhar você nessa experiência!\n\n#FestivalDaBanana #Sabará #Ravena #TurismoSabará #MinasGerais",
+      "imagem": "imagens/eventos-manuais/17-festival-da-banana.jpg",
+      "link": "https://www.instagram.com/p/DceXZnNEQxP/",
+      "pagina": "https://www.instagram.com/p/DceXZnNEQxP/",
+      "link_inscricao": "",
+      "monitorar_formulario_google": false,
+      "url_formulario_google": "",
+      "acao_formulario_fechado": "marcar_encerrada",
+      "fonte": "Instagram · @descubra.sabara",
+      "instituicao_id": "",
+      "classificacao_indicativa": "",
+      "local_id": "",
+      "endereco": "Ravena — Sabará/MG",
+      "mapa": "https://maps.app.goo.gl/FWNwAFj3m4Se54F76",
+      "espaco_interno": "",
+      "inscricao_inicio": "",
+      "inscricao_fim": "",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
       "id": "manual-gesta-25-anos-2026-09-09-2026-09-09",
