@@ -13,6 +13,7 @@
   const SLIDE_DURATION_KEY = 'mural-cultural-tempo-slides';
   const PANEL_SETTINGS_KEY = 'mural-cultural-configuracao-painel-v1';
   const PANEL_PROFILES_KEY = 'mural-cultural-perfis-painel-v1';
+  const PANEL_PROFILE_ATTRIBUTE = 'panelProfile';
   const BUILTIN_PANEL_PROFILES = Object.freeze({
     'agosto-lilas-2026': {
       nome: 'Agosto Lilás — curadoria do mês',
@@ -2326,6 +2327,32 @@ function eventProgram(event) {
     return null;
   }
 
+  function panelSettingsMatch(first, second) {
+    return JSON.stringify(normalizePanelSettings(first)) === JSON.stringify(normalizePanelSettings(second));
+  }
+
+  function activeEditorialPanelProfileId(settings = currentPanelSettings()) {
+    return configuredPanelProfileEntries()
+      .find(profile => panelSettingsMatch(settings, profile.settings))?.id || '';
+  }
+
+  function syncActivePanelProfile(slide = state.filterOverlay) {
+    const profileId = activeEditorialPanelProfileId();
+    if (profileId) document.documentElement.dataset[PANEL_PROFILE_ATTRIBUTE] = profileId;
+    else delete document.documentElement.dataset[PANEL_PROFILE_ATTRIBUTE];
+
+    const select = slide?.querySelector('.panel-profile-select');
+    const selectedValue = profileId ? profileOptionValue('editorial', profileId) : '';
+    if (select && [...select.options].some(option => option.value === selectedValue)) {
+      select.value = selectedValue;
+    }
+
+    window.dispatchEvent(new CustomEvent('mural:panel-profile-change', {
+      detail: { profile: profileId }
+    }));
+    return profileId;
+  }
+
   function findRequestedPanelProfile() {
     const requested = requestedPanelProfile();
     if (!requested) return null;
@@ -2622,11 +2649,12 @@ function eventProgram(event) {
 
   function restoreDefaultPanelSettings(render = true) {
     const defaults = defaultPanelSettings();
+    if (render) {
+      applyPanelSettingsAndRender(defaults);
+      return;
+    }
     applyPanelSettings(defaults, true);
-    if (!render) return;
-    rebuildVisibleItems();
-    state.index = 0;
-    renderCurrentView();
+    syncActivePanelProfile();
   }
 
   function showFilteredEmpty() {
@@ -2643,27 +2671,36 @@ function eventProgram(event) {
     `;
 
     app.querySelector('.empty-clear-filters')?.addEventListener('click', () => {
-      restoreDefaultPanelSettings(false);
-      rebuildVisibleItems();
-      state.index = 0;
-      renderCurrentView();
+      restoreDefaultPanelSettings();
     });
+  }
+
+  function applyPanelSettingsAndRender(settings) {
+    applyPanelSettings(settings, true);
+    rebuildVisibleItems();
+    state.index = 0;
+    syncActivePanelProfile();
+
+    if (!state.events.length) {
+      showFilteredEmpty();
+      return;
+    }
+
+    renderCurrentView();
+  }
+
+  function applyEditorialPanelProfile(profileId) {
+    const profile = editorialProfileById(String(profileId || ''));
+    if (!profile || !editorialProfileIsVisible(profile)) return false;
+    applyPanelSettingsAndRender(profile.settings);
+    return true;
   }
 
   function applyFiltersFromPanel() {
     if (!state.filterOverlay) return;
     try {
       const settings = readPanelSettingsFromOverlay(state.filterOverlay);
-      applyPanelSettings(settings, true);
-      rebuildVisibleItems();
-      state.index = 0;
-
-      if (!state.events.length) {
-        showFilteredEmpty();
-        return;
-      }
-
-      renderCurrentView();
+      applyPanelSettingsAndRender(settings);
     } catch (error) {
       showPanelValidation(state.filterOverlay, error.message || 'Revise a configuração do painel.');
     }
@@ -2702,7 +2739,12 @@ function eventProgram(event) {
 
   function setupFilterPanel(slide) {
     populateFilterPanel(slide);
-    populateProfileSelect(slide);
+    const activeProfile = activeEditorialPanelProfileId();
+    populateProfileSelect(
+      slide,
+      activeProfile ? profileOptionValue('editorial', activeProfile) : ''
+    );
+    syncActivePanelProfile(slide);
 
     const overlay = slide.querySelector('.filter-overlay');
     const closeButton = slide.querySelector('.filter-close');
@@ -3868,6 +3910,10 @@ function eventProgram(event) {
       });
     });
   }
+
+  window.addEventListener('mural:panel-profile-request', event => {
+    applyEditorialPanelProfile(event.detail?.profile);
+  });
 
   // Adicionar listeners de teclado
   document.addEventListener('keydown', handleKeyPress);
