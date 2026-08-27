@@ -3,8 +3,7 @@
 
   const STORAGE_KEY = 'mural:visual-theme';
   const DEFAULT_THEME = 'agosto-lilas-glow';
-  const BANNER_SRC = 'imagens/curadorias/agosto-lilas-banner.png';
-  const BANNER_CLASS = 'campaign-agosto-lilas-badge';
+  const BANNER_CLASS = 'campaign-profile-banner';
 
   const THEMES = [
     {
@@ -17,7 +16,13 @@
       id: 'agosto-lilas-glow',
       label: 'Agosto Lilás Glow',
       description: 'Roxo noturno, brilhos difusos e laço',
-      swatch: 'is-lilas'
+      swatch: 'is-lilas',
+      panelProfile: 'agosto-lilas-2026',
+      profileLabel: 'Agosto Lilás',
+      banner: {
+        src: 'imagens/curadorias/agosto-lilas-banner.png',
+        alt: 'Agosto Lilás'
+      }
     }
   ];
 
@@ -45,25 +50,66 @@
     meta.content = theme === 'agosto-lilas-glow' ? '#120626' : defaultThemeColor;
   }
 
-  function ensureBanner(media) {
-    let banner = media.querySelector(`.${BANNER_CLASS}`);
-    if (banner) return banner;
+  function activePanelProfile() {
+    return root.dataset.panelProfile || '';
+  }
 
-    banner = document.createElement('img');
-    banner.className = BANNER_CLASS;
-    banner.src = BANNER_SRC;
-    banner.alt = 'Agosto Lilás';
-    banner.decoding = 'async';
-    banner.setAttribute('aria-label', 'Identidade visual Agosto Lilás');
+  function syncBannerSelection(banner) {
+    const active = banner.dataset.panelProfile === activePanelProfile();
+    const profileLabel = banner.dataset.profileLabel || 'temático';
+    const label = active ? `Perfil ${profileLabel} ativo` : `Ativar perfil ${profileLabel}`;
+    banner.classList.toggle('is-profile-active', active);
+    banner.setAttribute('aria-pressed', String(active));
+    banner.setAttribute('aria-label', label);
+    const tooltip = banner.querySelector('.campaign-profile-tooltip');
+    if (tooltip) tooltip.textContent = label;
+  }
+
+  function ensureBanner(media, theme) {
+    let banner = media.querySelector(`.${BANNER_CLASS}`);
+    if (banner && banner.dataset.panelProfile !== theme.panelProfile) {
+      banner.remove();
+      banner = null;
+    }
+    if (banner) {
+      syncBannerSelection(banner);
+      return banner;
+    }
+
+    banner = document.createElement('button');
+    banner.type = 'button';
+    banner.className = `${BANNER_CLASS} campaign-agosto-lilas-badge`;
+    banner.dataset.panelProfile = theme.panelProfile;
+    banner.dataset.profileLabel = theme.profileLabel;
+    banner.innerHTML = `
+      <img class="campaign-profile-banner-image" src="${theme.banner.src}" alt="${theme.banner.alt}" decoding="async">
+      <span class="campaign-profile-check" aria-hidden="true">✓</span>
+      <span class="campaign-profile-tooltip" role="tooltip"></span>`;
+    const requestPanelProfile = () => {
+      if (banner.getAttribute('aria-pressed') === 'true') return;
+      window.dispatchEvent(new CustomEvent('mural:panel-profile-request', {
+        detail: { profile: banner.dataset.panelProfile }
+      }));
+    };
+    banner.addEventListener('click', requestPanelProfile);
+    banner.addEventListener('keydown', event => {
+      if (event.key !== 'Enter' && event.key !== ' ') return;
+      event.preventDefault();
+      requestPanelProfile();
+    });
+    syncBannerSelection(banner);
     media.appendChild(banner);
     return banner;
   }
 
   function syncBanner(theme) {
-    const active = theme === 'agosto-lilas-glow' && document.body.classList.contains('panel-mode');
+    const themeConfig = THEMES.find(item => item.id === theme);
+    const active = Boolean(
+      themeConfig?.banner && themeConfig.panelProfile && document.body.classList.contains('panel-mode')
+    );
     document.querySelectorAll('.slide .media').forEach(media => {
       const banner = media.querySelector(`.${BANNER_CLASS}`);
-      if (active) ensureBanner(media);
+      if (active) ensureBanner(media, themeConfig);
       else if (banner) banner.remove();
     });
   }
@@ -180,6 +226,8 @@
   }
 
   const observer = new MutationObserver(scheduleSync);
+
+  window.addEventListener('mural:panel-profile-change', scheduleSync);
 
   function start() {
     buildSwitcher();

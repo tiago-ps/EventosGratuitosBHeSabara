@@ -264,7 +264,7 @@ html[data-visual-theme="agosto-lilas-glow"] body.agenda-mode {
     #080418;
 }
 
-/* Banner editorial: agora depende SOMENTE da aparência escolhida. */
+/* O tema controla a visibilidade; o perfil editorial controla somente o estado selecionado. */
 .campaign-agosto-lilas-badge {
   position: absolute;
   top: 1.25%;
@@ -277,11 +277,85 @@ html[data-visual-theme="agosto-lilas-glow"] body.agenda-mode {
   min-height: 64px;
   max-height: 148px;
   max-width: 94%;
+  padding: 0;
+  border: 0;
+  border-radius: 14px;
+  background: transparent;
+  filter: drop-shadow(0 9px 16px rgba(24, 2, 42, .56));
+  cursor: pointer;
+  user-select: none;
+}
+
+.campaign-profile-banner-image {
+  display: block;
+  width: auto;
+  height: 100%;
+  max-width: 100%;
   object-fit: contain;
   object-position: top center;
-  filter: drop-shadow(0 9px 16px rgba(24, 2, 42, .56));
   pointer-events: none;
-  user-select: none;
+}
+
+.campaign-profile-banner:focus-visible {
+  outline: 2px solid #f0c5ff;
+  outline-offset: 4px;
+}
+
+.campaign-profile-check {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border: 0;
+  background: transparent;
+  color: #22c55e;
+  font: 900 18px/1 system-ui, sans-serif;
+  text-shadow: 0 2px 5px rgba(4, 24, 12, .72);
+  opacity: 0;
+  transform: scale(.78);
+  transition: opacity .16s ease, transform .16s ease;
+}
+
+.campaign-profile-banner.is-profile-active .campaign-profile-check {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.campaign-profile-tooltip {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  z-index: 2;
+  width: max-content;
+  max-width: min(260px, 88vw);
+  padding: 6px 9px;
+  border: 1px solid rgba(229, 169, 255, .28);
+  border-radius: 8px;
+  background: rgba(20, 7, 43, .94);
+  color: #fbf8ff;
+  font: 700 11px/1.25 system-ui, sans-serif;
+  letter-spacing: normal;
+  white-space: normal;
+  box-shadow: 0 7px 20px rgba(15, 2, 29, .34);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -3px);
+  transition: opacity .14s ease, transform .14s ease;
+}
+
+@media (hover: hover) {
+  .campaign-profile-banner:hover .campaign-profile-tooltip {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+.campaign-profile-banner:focus-visible .campaign-profile-tooltip {
+  opacity: 1;
+  transform: translate(-50%, 0);
 }
 
 html[data-visual-theme="agosto-lilas-glow"] .visual-theme-toggle {
