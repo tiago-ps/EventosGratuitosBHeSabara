@@ -1,0 +1,66 @@
+name: One-off — Ajustar visual da categoria Informação
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/oneoff-informacao-visual.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  ajustar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+
+      - name: Registrar categoria Informação e renovar cache
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          app = Path('js/app.js')
+          text = app.read_text(encoding='utf-8')
+          old = "    palestra: ['🎤', 'Palestra'],\n    literatura: ['📖', 'Literatura'],"
+          new = "    palestra: ['🎤', 'Palestra'],\n    informação: ['ℹ️', 'Informação'],\n    informacao: ['ℹ️', 'Informação'],\n    literatura: ['📖', 'Literatura'],"
+          if old not in text:
+              raise SystemExit('Bloco categoryVisuals esperado não encontrado')
+          app.write_text(text.replace(old, new, 1), encoding='utf-8')
+
+          index = Path('index.html')
+          text = index.read_text(encoding='utf-8')
+          if 'js/app.js?v=84' not in text:
+              raise SystemExit('Versão esperada do app.js não encontrada no index')
+          index.write_text(text.replace('js/app.js?v=84', 'js/app.js?v=85'), encoding='utf-8')
+
+          sw = Path('service-worker.js')
+          text = sw.read_text(encoding='utf-8')
+          if "mural-cultural-v92-filtro-instituicoes" not in text or 'js/app.js?v=84' not in text:
+              raise SystemExit('Versão esperada do service worker não encontrada')
+          text = text.replace('mural-cultural-v92-filtro-instituicoes', 'mural-cultural-v93-categoria-informacao', 1)
+          text = text.replace('js/app.js?v=84', 'js/app.js?v=85')
+          sw.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Validar alteração
+        shell: bash
+        run: |
+          grep -F "informação: ['ℹ️', 'Informação']" js/app.js
+          grep -F 'js/app.js?v=85' index.html
+          grep -F 'mural-cultural-v93-categoria-informacao' service-worker.js
+          grep -F 'js/app.js?v=85' service-worker.js
+
+      - name: Publicar e remover workflow temporário
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          rm .github/workflows/oneoff-informacao-visual.yml
+          git add js/app.js index.html service-worker.js .github/workflows/oneoff-informacao-visual.yml
+          git commit -m "Exibe categoria Informação com identidade própria"
+          git push origin HEAD:main
