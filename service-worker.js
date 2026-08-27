@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v94-banner-perfil-tematico';
+const CACHE_VERSION = 'mural-cultural-v95-check-verde';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -10,7 +10,7 @@ const CORE_ASSETS = [
   './css/styles.css?v=69',
   './css/eventos-manuais-ui.css?v=43',
   './css/concursos-mural.css?v=2',
-  './css/temas-visuais.css?v=2',
+  './css/temas-visuais.css?v=3',
   './js/tema-visual-boot.js?v=1',
   './js/core/rotacao.js?v=1',
   './js/conteudos/cursos.js?v=2',

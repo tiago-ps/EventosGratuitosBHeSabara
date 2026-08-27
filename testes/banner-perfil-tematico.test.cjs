@@ -49,8 +49,9 @@ assert.match(appSource, /new CustomEvent\('mural:panel-profile-change'/);
 assert.match(appSource, /profileOptionValue\('editorial', activeProfile\)/);
 assert.match(appSource, /window\.addEventListener\('mural:panel-profile-request'/);
 
-// O realce é discreto, o foco é visível e o tooltip depende de hover/foco.
-assert.match(themesCss, /\.campaign-profile-banner\.is-profile-active\s*\{[\s\S]*outline:/);
+// O estado ativo usa somente um check verde; o foco continua visível e o tooltip depende de hover/foco.
+assert.doesNotMatch(themesCss, /\.campaign-profile-banner\.is-profile-active\s*\{[\s\S]*outline:/);
+assert.match(themesCss, /\.campaign-profile-check\s*\{[\s\S]*border: 0;[\s\S]*background: transparent;[\s\S]*color: #22c55e;/);
 assert.match(themesCss, /\.campaign-profile-banner:focus-visible\s*\{[\s\S]*outline:/);
 assert.match(themesCss, /\.campaign-profile-banner\.is-profile-active \.campaign-profile-check/);
 assert.match(themesCss, /@media \(hover: hover\)[\s\S]*:hover \.campaign-profile-tooltip/);
@@ -58,7 +59,7 @@ assert.match(themesCss, /:focus-visible \.campaign-profile-tooltip/);
 
 // O bump mínimo mantém HTML e precache apontando para os mesmos artefatos.
 for (const asset of [
-  'css/temas-visuais.css?v=2',
+  'css/temas-visuais.css?v=3',
   'js/app.js?v=86',
   'js/temas-visuais.js?v=3'
 ]) {

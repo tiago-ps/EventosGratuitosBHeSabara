@@ -301,16 +301,6 @@ html[data-visual-theme="agosto-lilas-glow"] body.agenda-mode {
   outline-offset: 4px;
 }
 
-.campaign-profile-banner.is-profile-active {
-  outline: 1px solid rgba(240, 197, 255, .72);
-  outline-offset: 3px;
-}
-
-.campaign-profile-banner.is-profile-active:focus-visible {
-  outline-width: 2px;
-  outline-color: #f0c5ff;
-}
-
 .campaign-profile-check {
   position: absolute;
   top: 6px;
@@ -319,12 +309,11 @@ html[data-visual-theme="agosto-lilas-glow"] body.agenda-mode {
   place-items: center;
   width: 20px;
   height: 20px;
-  border: 1px solid rgba(255, 255, 255, .58);
-  border-radius: 50%;
-  background: rgba(50, 12, 82, .88);
-  color: #fff;
-  font: 900 13px/1 system-ui, sans-serif;
-  box-shadow: 0 3px 10px rgba(15, 2, 29, .45);
+  border: 0;
+  background: transparent;
+  color: #22c55e;
+  font: 900 18px/1 system-ui, sans-serif;
+  text-shadow: 0 2px 5px rgba(4, 24, 12, .72);
   opacity: 0;
   transform: scale(.78);
   transition: opacity .16s ease, transform .16s ease;
