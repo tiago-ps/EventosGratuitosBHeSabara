@@ -85,7 +85,6 @@ jobs:
           node --check js/app.js
           grep -q "EVENT_INSTITUTION_NAMES" js/app.js
           grep -q "instituicao_id" js/app.js
-          grep -q "^instagram" /dev/null || true
           grep -q "js/app.js?v=84" index.html
           grep -q "mural-cultural-v92-filtro-instituicoes" service-worker.js
 
@@ -103,3 +102,5 @@ jobs:
           git commit -m "Corrige instituições no filtro de eventos"
           git pull --rebase origin main
           git push origin HEAD:main
+
+# disparo
