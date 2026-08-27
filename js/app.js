@@ -863,9 +863,31 @@
     return [...values.entries()].sort((a, b) => a[1].localeCompare(b[1], 'pt-BR'));
   }
 
-  function eventProgram(event) {
-    return event.programa || event.fonte || '';
+  const EVENT_INSTITUTION_NAMES = Object.freeze({
+  'ccbb-bh': 'CCBB Belo Horizonte',
+  'espaco-conhecimento-ufmg': 'Espaço do Conhecimento UFMG',
+  'fcs': 'Fundação Clóvis Salgado',
+  'fundacao-municipal-cultura-bh': 'Fundação Municipal de Cultura de Belo Horizonte',
+  'prefeitura-sabara': 'Prefeitura Municipal de Sabará',
+  'Secretaria de Cultura de Sabará': 'Secretaria de Cultura de Sabará',
+  'sesc-mg': 'Sesc em Minas',
+  'sesiminas-bh': 'Centro Cultural SESIMINAS BH',
+  'associacao-social-paroquia-santa-ines': 'Associação Social Paróquia Santa Inês'
+});
+
+function eventProgram(event) {
+  const program = String(event?.programa || '').trim();
+  if (program) return program;
+
+  const institutionId = String(event?.instituicao_id || '').trim();
+  if (institutionId && EVENT_INSTITUTION_NAMES[institutionId]) {
+    return EVENT_INSTITUTION_NAMES[institutionId];
   }
+
+  const source = String(event?.fonte || '').trim();
+  if (!source || /^instagram\s*(?:—|-|$)/i.test(source)) return '';
+  return source;
+}
 
   function eventUnit(event) {
     return event.unidade || event.local || '';
