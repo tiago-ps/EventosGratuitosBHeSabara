@@ -25,11 +25,17 @@ jobs:
 
           app = Path('js/app.js')
           text = app.read_text(encoding='utf-8')
-          old = """  function eventProgram(event) {
-            return event.programa || event.fonte || '';
-          }
-          """
-          new = """  const EVENT_INSTITUTION_NAMES = Object.freeze({
+          marker = 'const EVENT_INSTITUTION_NAMES = Object.freeze({'
+          if marker not in text:
+              start = text.find('function eventProgram(event) {')
+              if start < 0:
+                  raise SystemExit('Função eventProgram não encontrada.')
+              line_start = text.rfind('\n', 0, start) + 1
+              end_marker = '\n  function eventUnit(event) {'
+              end = text.find(end_marker, start)
+              if end < 0:
+                  raise SystemExit('Limite da função eventProgram não encontrado.')
+              new = """  const EVENT_INSTITUTION_NAMES = Object.freeze({
             'ccbb-bh': 'CCBB Belo Horizonte',
             'espaco-conhecimento-ufmg': 'Espaço do Conhecimento UFMG',
             'fcs': 'Fundação Clóvis Salgado',
@@ -55,10 +61,7 @@ jobs:
             return source;
           }
           """
-          if old in text:
-              text = text.replace(old, new, 1)
-          elif 'const EVENT_INSTITUTION_NAMES = Object.freeze({' not in text:
-              raise SystemExit('Função eventProgram esperada não encontrada.')
+              text = text[:line_start] + new + text[end:]
           app.write_text(text, encoding='utf-8')
 
           index = Path('index.html')
@@ -71,20 +74,64 @@ jobs:
 
           sw = Path('service-worker.js')
           text = sw.read_text(encoding='utf-8')
-          text = text.replace('mural-cultural-v91-perfil-editorial-visivel', 'mural-cultural-v92-filtro-instituicoes')
-          text = text.replace('./js/app.js?v=83', './js/app.js?v=84')
+          if 'mural-cultural-v91-perfil-editorial-visivel' in text:
+              text = text.replace('mural-cultural-v91-perfil-editorial-visivel', 'mural-cultural-v92-filtro-instituicoes')
+          if './js/app.js?v=83' in text:
+              text = text.replace('./js/app.js?v=83', './js/app.js?v=84')
           if 'mural-cultural-v92-filtro-instituicoes' not in text or './js/app.js?v=84' not in text:
               raise SystemExit('Service worker não foi atualizado corretamente.')
           sw.write_text(text, encoding='utf-8')
           PY
 
-      - name: Validar JavaScript e comportamento esperado
+      - name: Validar JavaScript e catálogo atual
         shell: bash
         run: |
           set -euo pipefail
           node --check js/app.js
-          grep -q "EVENT_INSTITUTION_NAMES" js/app.js
-          grep -q "instituicao_id" js/app.js
+          python - <<'PY'
+          import json
+          import re
+          from pathlib import Path
+
+          source = Path('js/app.js').read_text(encoding='utf-8')
+          assert 'EVENT_INSTITUTION_NAMES' in source
+          assert "event?.instituicao_id" in source
+          assert "/^instagram\\s*(?:—|-|$)/i.test(source)" in source
+
+          names = {
+              'ccbb-bh': 'CCBB Belo Horizonte',
+              'espaco-conhecimento-ufmg': 'Espaço do Conhecimento UFMG',
+              'fcs': 'Fundação Clóvis Salgado',
+              'fundacao-municipal-cultura-bh': 'Fundação Municipal de Cultura de Belo Horizonte',
+              'prefeitura-sabara': 'Prefeitura Municipal de Sabará',
+              'Secretaria de Cultura de Sabará': 'Secretaria de Cultura de Sabará',
+              'sesc-mg': 'Sesc em Minas',
+              'sesiminas-bh': 'Centro Cultural SESIMINAS BH',
+              'associacao-social-paroquia-santa-ines': 'Associação Social Paróquia Santa Inês',
+          }
+          instagram = re.compile(r'^instagram\s*(?:—|-|$)', re.I)
+          events = json.loads(Path('eventos.json').read_text(encoding='utf-8')).get('eventos', [])
+
+          def label(event):
+              program = str(event.get('programa') or '').strip()
+              if program:
+                  return program
+              institution_id = str(event.get('instituicao_id') or '').strip()
+              if institution_id in names:
+                  return names[institution_id]
+              source = str(event.get('fonte') or '').strip()
+              if not source or instagram.search(source):
+                  return ''
+              return source
+
+          options = sorted({label(event) for event in events if label(event)})
+          if any(instagram.search(option) for option in options):
+              raise SystemExit('Fonte Instagram ainda apareceu como instituição/programa.')
+          mapped = [event for event in events if instagram.search(str(event.get('fonte') or '')) and not event.get('programa') and event.get('instituicao_id') in names]
+          if not mapped:
+              raise SystemExit('Nenhum evento Instagram associado a instituição foi encontrado para validar.')
+          print(f'Validação concluída: {len(options)} opções e {len(mapped)} eventos Instagram associados corretamente.')
+          PY
           grep -q "js/app.js?v=84" index.html
           grep -q "mural-cultural-v92-filtro-instituicoes" service-worker.js
 
@@ -103,4 +150,4 @@ jobs:
           git pull --rebase origin main
           git push origin HEAD:main
 
-# disparo
+# disparo robusto
