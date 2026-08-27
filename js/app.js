@@ -89,6 +89,8 @@
     exposição: ['🖼️', 'Exposição'],
     exposicao: ['🖼️', 'Exposição'],
     palestra: ['🎤', 'Palestra'],
+    informação: ['ℹ️', 'Informação'],
+    informacao: ['ℹ️', 'Informação'],
     literatura: ['📖', 'Literatura'],
     dança: ['💃', 'Dança'],
     danca: ['💃', 'Dança'],
