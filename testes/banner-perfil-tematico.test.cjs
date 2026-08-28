@@ -62,7 +62,7 @@ assert.match(themesCss, /:focus-visible \.campaign-profile-tooltip/);
 
 // O bump mínimo mantém HTML e precache apontando para os mesmos artefatos.
 for (const asset of [
-  'css/temas-visuais.css?v=3',
+  'css/temas-visuais.css?v=1',
   'js/app.js?v=87',
   'js/temas-visuais.js?v=4'
 ]) {
