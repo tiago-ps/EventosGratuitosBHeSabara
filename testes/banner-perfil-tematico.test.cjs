@@ -34,20 +34,23 @@ assert.match(themesSource, /document\.createElement\('button'\)/);
 assert.match(themesSource, /banner\.type = 'button'/);
 assert.match(themesSource, /banner\.setAttribute\('aria-pressed', String\(active\)\)/);
 assert.match(themesSource, /Ativar perfil \$\{profileLabel\}/);
-assert.match(themesSource, /Perfil \$\{profileLabel\} ativo/);
+assert.match(themesSource, /Desativar perfil \$\{profileLabel\}/);
 assert.match(themesSource, /new CustomEvent\('mural:panel-profile-request'/);
-assert.match(themesSource, /if \(banner\.getAttribute\('aria-pressed'\) === 'true'\) return/);
+assert.doesNotMatch(themesSource, /if \(banner\.getAttribute\('aria-pressed'\) === 'true'\) return/);
 assert.match(themesSource, /event\.key !== 'Enter' && event\.key !== ' '/);
-assert.match(themesSource, /event\.preventDefault\(\);\s*requestPanelProfile\(\)/);
+assert.match(themesSource, /event\.preventDefault\(\);\s*togglePanelProfile\(\)/);
 
 // A aplicação pelo banner e pelo compositor converge no mesmo caminho e reconstrói uma única vez.
 const applyBody = functionBody(appSource, 'applyPanelSettingsAndRender');
 assert.equal((applyBody.match(/rebuildVisibleItems\(\)/g) || []).length, 1);
 assert.match(functionBody(appSource, 'applyEditorialPanelProfile'), /applyPanelSettingsAndRender\(profile\.settings\)/);
+assert.match(functionBody(appSource, 'toggleEditorialPanelProfile'), /activeEditorialPanelProfileId\(\) === id/);
+assert.match(functionBody(appSource, 'toggleEditorialPanelProfile'), /applyPanelSettingsAndRender\(defaultPanelSettings\(\)\)/);
+assert.match(functionBody(appSource, 'toggleEditorialPanelProfile'), /applyEditorialPanelProfile\(id\)/);
 assert.match(functionBody(appSource, 'applyFiltersFromPanel'), /applyPanelSettingsAndRender\(settings\)/);
 assert.match(appSource, /new CustomEvent\('mural:panel-profile-change'/);
 assert.match(appSource, /profileOptionValue\('editorial', activeProfile\)/);
-assert.match(appSource, /window\.addEventListener\('mural:panel-profile-request'/);
+assert.match(appSource, /window\.addEventListener\('mural:panel-profile-request',[\s\S]*toggleEditorialPanelProfile\(event\.detail\?\.profile\)/);
 
 // O estado ativo usa somente um check verde; o foco continua visível e o tooltip depende de hover/foco.
 assert.doesNotMatch(themesCss, /\.campaign-profile-banner\.is-profile-active\s*\{[\s\S]*outline:/);
@@ -60,8 +63,8 @@ assert.match(themesCss, /:focus-visible \.campaign-profile-tooltip/);
 // O bump mínimo mantém HTML e precache apontando para os mesmos artefatos.
 for (const asset of [
   'css/temas-visuais.css?v=3',
-  'js/app.js?v=86',
-  'js/temas-visuais.js?v=3'
+  'js/app.js?v=87',
+  'js/temas-visuais.js?v=4'
 ]) {
   assert.ok(indexSource.includes(asset), `Referência ausente no HTML: ${asset}`);
   assert.ok(serviceWorkerSource.includes(`./${asset}`), `Referência ausente no precache: ${asset}`);

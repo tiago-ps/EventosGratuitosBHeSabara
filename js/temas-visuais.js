@@ -57,7 +57,7 @@
   function syncBannerSelection(banner) {
     const active = banner.dataset.panelProfile === activePanelProfile();
     const profileLabel = banner.dataset.profileLabel || 'temático';
-    const label = active ? `Perfil ${profileLabel} ativo` : `Ativar perfil ${profileLabel}`;
+    const label = active ? `Desativar perfil ${profileLabel}` : `Ativar perfil ${profileLabel}`;
     banner.classList.toggle('is-profile-active', active);
     banner.setAttribute('aria-pressed', String(active));
     banner.setAttribute('aria-label', label);
@@ -85,17 +85,16 @@
       <img class="campaign-profile-banner-image" src="${theme.banner.src}" alt="${theme.banner.alt}" decoding="async">
       <span class="campaign-profile-check" aria-hidden="true">✓</span>
       <span class="campaign-profile-tooltip" role="tooltip"></span>`;
-    const requestPanelProfile = () => {
-      if (banner.getAttribute('aria-pressed') === 'true') return;
+    const togglePanelProfile = () => {
       window.dispatchEvent(new CustomEvent('mural:panel-profile-request', {
         detail: { profile: banner.dataset.panelProfile }
       }));
     };
-    banner.addEventListener('click', requestPanelProfile);
+    banner.addEventListener('click', togglePanelProfile);
     banner.addEventListener('keydown', event => {
       if (event.key !== 'Enter' && event.key !== ' ') return;
       event.preventDefault();
-      requestPanelProfile();
+      togglePanelProfile();
     });
     syncBannerSelection(banner);
     media.appendChild(banner);

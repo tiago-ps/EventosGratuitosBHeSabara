@@ -2696,6 +2696,15 @@ function eventProgram(event) {
     return true;
   }
 
+  function toggleEditorialPanelProfile(profileId) {
+    const id = String(profileId || '');
+    if (activeEditorialPanelProfileId() === id) {
+      applyPanelSettingsAndRender(defaultPanelSettings());
+      return false;
+    }
+    return applyEditorialPanelProfile(id);
+  }
+
   function applyFiltersFromPanel() {
     if (!state.filterOverlay) return;
     try {
@@ -3912,7 +3921,7 @@ function eventProgram(event) {
   }
 
   window.addEventListener('mural:panel-profile-request', event => {
-    applyEditorialPanelProfile(event.detail?.profile);
+    toggleEditorialPanelProfile(event.detail?.profile);
   });
 
   // Adicionar listeners de teclado
