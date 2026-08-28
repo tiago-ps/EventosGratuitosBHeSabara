@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Janeiro a Dezembro de 2026",
-  "atualizado_em": "2026-08-28T00:59:43-03:00",
+  "atualizado_em": "2026-08-28T01:15:20-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -6911,7 +6911,7 @@
       "gratuito": true,
       "inscricao": "Entrada gratuita; consulte a página oficial",
       "descricao": ": Sessão direcionada ao público infantil, com contação da história da princesa Andrômeda e do herói Perseu a partir de constelações que podem ser reconhecidas no céu noturno. Além disso, os planetas do Sistema Solar serão identificados da maneira como são vistos a olho nu da superfície terrestre,",
-      "imagem": "",
+      "imagem": "imagens/ajustes-eventos/ufmg-ec-sessao-netuno-tea-era-uma-vez-no-ceu-andromeda-e-perseu-domingo.webp",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/sessao-netuno-tea-era-uma-vez-no-ceu-andromeda-e-perseu-domingo/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg",
@@ -6920,7 +6920,14 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "espaco_interno": "Planetário"
+      "espaco_interno": "Planetário",
+      "criterio_exibicao": "realizacao",
+      "exibicao_ativa": true,
+      "acao_formulario_fechado": "marcar_encerrada",
+      "pagina": "https://www.ufmg.br/espacodoconhecimento/programacao/sessao-netuno-tea-era-uma-vez-no-ceu-andromeda-e-perseu-domingo/",
+      "imagem_fonte": "site oficial",
+      "monitorar_formulario_google": false,
+      "ajuste_editor_aplicado": true
     },
     {
       "id": "ufmg-ec-visita-mediada-a-exposicao-demasiado-humano-domingo-3",
