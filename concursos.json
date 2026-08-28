@@ -2,8 +2,8 @@
   "schema": 9,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-08-27T19:22:59.705525+00:00",
-  "total": 25,
+  "coletado_em_utc": "2026-08-28T20:31:55.911024+00:00",
+  "total": 27,
   "concursos": [
     {
       "titulo": "CaraguaPrev - Instituto de Previdência do Município de Caraguatatuba",
@@ -123,6 +123,38 @@
       "inscricoes_fim_texto": "31 de agosto de 2026",
       "inscricoes_texto": "19 de agosto de 2026 a 31 de agosto de 2026",
       "remuneracao_faixa_texto": "R$ 9.028,49",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico em Informática",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "alta"
+        }
+      ]
+    },
+    {
+      "titulo": "Prefeitura de Estância Turística de Brotas",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-brotas-sp-reabre-inscricoes-para-o-concurso-com-salarios-de-ate-19354",
+      "imagem": "https://cdn.pci.app.br/img/i/b36e8292128eb2bc94aab344ab575f48.png",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": " creche (1 vaga) auxiliar de saude bucal (1 vaga) escriturario (1 vaga) fiscal tributario (1 vaga) monitor de transporte escolar (1 vaga) ouvidor (1 vaga) secretario de escola (1 vaga) tecnico de enfermagem (1 vaga) tecnico de seguranca do trabalho (cadastro de reserva) tecnico em farmacia (1 vaga) tecnico em informatica (1 vaga) advogado (1 vaga) assistente social (cadastro de reserva) bibliotecario (1 vaga) coordenador do sistema de controle interno (cadastro de reserva) enfermeiro (cadastro de reserva) fonoaudiologo (1 vaga) medico especialista - cardiologista (cadastro de reserva) medico especialista - ortopedi"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "SP",
+      "cidade": "Estância Turística de Brotas",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "28 de agosto de 2026",
+      "inscricoes_texto": "até 28 de agosto de 2026",
+      "remuneracao_faixa_texto": "R$ 1.783,65 a R$ 19.354,81",
       "remuneracao_fonte": "noticia",
       "cargos_compativeis": [
         {
@@ -790,38 +822,6 @@
       ]
     },
     {
-      "titulo": "Prefeitura de Matinhos",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-matinhos-pr-publica-edital-de-concurso-publico-com-salarios-de-ate-20330",
-      "imagem": "https://cdn.pci.app.br/img/i/f52fb22268410a97b67e145ddbda1ada.png",
-      "formacoes_compativeis": [
-        "Técnico em Informática"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Técnico em Informática",
-          "nivel": "tecnico",
-          "evidencia": "os de: atendente infantil (10 vagas) motorista de veiculos pesados/cargas e onibus (9 vagas) vigia/vigilante (8 vagas) cuidador social (1 vaga) desenhista cadista (1 vaga) monitor de transporte escolar (4 vagas) secretario escolar (1 vaga) tecnico administrativo (5 vagas) tecnico em enfermagem (cr) tecnico em informatica/manutencao de computadores (1 vaga) tecnico em seguranca do trabalho (1 vaga) topografo (1 vaga) arquiteto (1 vaga) contador (1 vaga) enfermeiro (1 vaga) engenheiro ambiental (1 vaga) engenheiro agrimensor (1 vaga) engenheiro civil (1 vaga) fonoaudiologo (1 vaga) medico anestesista plantonista (1 v"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "PR",
-      "cidade": "Matinhos",
-      "inscricoes_inicio_texto": "28 de julho de 2026",
-      "inscricoes_fim_texto": "27 de agosto de 2026",
-      "inscricoes_texto": "28 de julho de 2026 a 27 de agosto de 2026",
-      "remuneracao_faixa_texto": "R$ 20.330,16",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Técnico em Informática/Manutenção de Computadores",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "alta"
-        }
-      ]
-    },
-    {
       "titulo": "UENP - Universidade Estadual do Norte do Paraná",
       "url": "https://www.pciconcursos.com.br/noticias/uenp-pr-retifica-concursos-com-vagas-para-agentes-universitarios-de-execucao-e-profissionais",
       "imagem": "https://cdn.pci.app.br/img/i/73c4c5005120e61070cc90a9c2aab278.png",
@@ -853,6 +853,70 @@
         },
         {
           "cargo": "Técnico em Informática - Campus de Jacarezinho",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "alta"
+        }
+      ]
+    },
+    {
+      "titulo": "Prefeitura de Alvorada",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-alvorada-rs-anuncia-concurso-publico-com-salarios-de-ate-18974",
+      "imagem": "https://cdn.pci.app.br/img/i/00f5df785afbb7b0d109128451d5ac79.png",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": " historia (cr) professor de lingua estrangeira - ingles (cr) professor de lingua portuguesa (cr) professor de matematica (cr) programador de informatica (cr) secretario de escola (cr) supervisor educacional (cr) tecnico ambiental (cr) tecnico de seguranca do trabalho (cr) tecnico em enfermagem (cr) tecnico em informatica (cr) tecnico em saude bucal (cr) topografo (cr) tradutor e interprete de libras (cr) a jornada de trabalho varia de 20 a 40 horas semanais, conforme o cargo, com remuneracoes que vao de r$ 1.738,24 a r$ 18.974,55. as inscricoes devem ser realizadas exclusivamente pela internet, no site www.institut"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "RS",
+      "cidade": "Alvorada",
+      "inscricoes_inicio_texto": "26 de setembro de 2026",
+      "inscricoes_fim_texto": "4 de setembro de 2026",
+      "inscricoes_texto": "26 de setembro de 2026 a 4 de setembro de 2026",
+      "remuneracao_faixa_texto": "R$ 18.974,55",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico em Informática",
+          "vagas_texto": "Cadastro de Reserva",
+          "formacao": "Técnico em Informática",
+          "confianca": "alta"
+        }
+      ]
+    },
+    {
+      "titulo": "SES - Secretaria de Estado da Saúde de Santa Catarina",
+      "url": "https://www.pciconcursos.com.br/noticias/ses-sc-abre-processo-seletivo-para-profissionais-de-saude-em-joinville",
+      "imagem": "https://cdn.pci.app.br/img/i/bf56624401433deefeba225fe6a5a0af.png",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": " especialista em medicina de emergencia (1 vaga) medico especialista em pneumologia (1 vaga) medico especialista em radiologia e diagnostico por imagem ultrassonografia geral (1 vaga) terapeuta ocupacional hospitalar (1 vaga) maternidade darcy vargas-mdv engenheiro mecanico - area da saude (1 vaga) tecnico em informatica (1 vaga) a jornada e de 30 horas semanais para enfermeiro, engenheiro, terapeuta ocupacional e tecnico em informatica, e de 20 horas semanais para medico. as remuneracoes variam de r$ 4.448,15 a r$ 10.581,16, incluindo gratificacoes, auxilio-alimentacao e insalubridade, conforme o cargo. beneficios"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "SC",
+      "cidade": "",
+      "inscricoes_inicio_texto": "17 de agosto de 2026",
+      "inscricoes_fim_texto": "28 de agosto de 2026",
+      "inscricoes_texto": "17 de agosto de 2026 a 28 de agosto de 2026",
+      "remuneracao_faixa_texto": "R$ 10.581,16",
+      "remuneracao_fonte": "catalogo",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico em Informática",
           "vagas_texto": "1 vaga",
           "formacao": "Técnico em Informática",
           "confianca": "alta"
