@@ -2,8 +2,8 @@
   "schema": 9,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-08-31T05:21:10.372651+00:00",
-  "total": 30,
+  "coletado_em_utc": "2026-08-31T12:31:52.125558+00:00",
+  "total": 29,
   "concursos": [
     {
       "titulo": "CaraguaPrev - Instituto de Previdência do Município de Caraguatatuba",
@@ -23,9 +23,9 @@
       "status_manual": "revisar",
       "uf": "SP",
       "cidade": "Caraguatatuba",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "",
-      "inscricoes_texto": "",
+      "inscricoes_inicio_texto": "17 de agosto de 2026",
+      "inscricoes_fim_texto": "29 de setembro de 2026",
+      "inscricoes_texto": "17 de agosto de 2026 a 29 de setembro de 2026",
       "remuneracao_faixa_texto": "R$ 7.104,30",
       "remuneracao_fonte": "noticia",
       "cargos_compativeis": [
@@ -55,9 +55,9 @@
       "status_manual": "revisar",
       "uf": "SP",
       "cidade": "",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "",
-      "inscricoes_texto": "",
+      "inscricoes_inicio_texto": "18 de agosto de 2026",
+      "inscricoes_fim_texto": "10 de setembro de 2026",
+      "inscricoes_texto": "18 de agosto de 2026 a 10 de setembro de 2026",
       "remuneracao_faixa_texto": "R$ 1.621,00 a R$ 6.009,98",
       "remuneracao_fonte": "noticia",
       "cargos_compativeis": [
@@ -119,9 +119,9 @@
       "status_manual": "revisar",
       "uf": "SP",
       "cidade": "Cafelândia",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "",
-      "inscricoes_texto": "",
+      "inscricoes_inicio_texto": "19 de agosto de 2026",
+      "inscricoes_fim_texto": "31 de agosto de 2026",
+      "inscricoes_texto": "19 de agosto de 2026 a 31 de agosto de 2026",
       "remuneracao_faixa_texto": "R$ 9.028,49",
       "remuneracao_fonte": "noticia",
       "cargos_compativeis": [
@@ -183,9 +183,9 @@
       "status_manual": "revisar",
       "uf": "SP",
       "cidade": "",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "",
-      "inscricoes_texto": "",
+      "inscricoes_inicio_texto": "13 de julho de 2026",
+      "inscricoes_fim_texto": "20 de agosto de 2026",
+      "inscricoes_texto": "13 de julho de 2026 a 20 de agosto de 2026",
       "remuneracao_faixa_texto": "R$ 20.940,20",
       "remuneracao_fonte": "noticia",
       "cargos_compativeis": [
@@ -215,9 +215,9 @@
       "status_manual": "revisar",
       "uf": "RJ",
       "cidade": "",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "",
-      "inscricoes_texto": "",
+      "inscricoes_inicio_texto": "17 de agosto de 2026",
+      "inscricoes_fim_texto": "8 de setembro de 2026",
+      "inscricoes_texto": "17 de agosto de 2026 a 8 de setembro de 2026",
       "remuneracao_faixa_texto": "R$ 3.242,00",
       "remuneracao_fonte": "catalogo",
       "cargos_compativeis": [
@@ -323,9 +323,9 @@
       "status_manual": "revisar",
       "uf": "MG",
       "cidade": "Contagem",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "",
-      "inscricoes_texto": "",
+      "inscricoes_inicio_texto": "19 de outubro de 2026",
+      "inscricoes_fim_texto": "17 de novembro de 2026",
+      "inscricoes_texto": "19 de outubro de 2026 a 17 de novembro de 2026",
       "remuneracao_faixa_texto": "R$ 13.305,57",
       "remuneracao_fonte": "noticia",
       "cargos_compativeis": [
@@ -469,9 +469,9 @@
       "status_manual": "revisar",
       "uf": "MG",
       "cidade": "",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "",
-      "inscricoes_texto": "",
+      "inscricoes_inicio_texto": "9 de setembro de 2026",
+      "inscricoes_fim_texto": "8 de outubro de 2026",
+      "inscricoes_texto": "9 de setembro de 2026 a 8 de outubro de 2026",
       "remuneracao_faixa_texto": "R$ 7.397,55",
       "remuneracao_fonte": "noticia",
       "cargos_compativeis": [
@@ -539,9 +539,9 @@
       "status_manual": "revisar",
       "uf": "MG",
       "cidade": "Belo Vale",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "",
-      "inscricoes_texto": "",
+      "inscricoes_inicio_texto": "2 de outubro de 2026",
+      "inscricoes_fim_texto": "3 de novembro de 2026",
+      "inscricoes_texto": "2 de outubro de 2026 a 3 de novembro de 2026",
       "remuneracao_faixa_texto": "R$ 1.745,00 a R$ 8.000,00",
       "remuneracao_fonte": "noticia",
       "cargos_compativeis": [
@@ -769,9 +769,9 @@
       "status_manual": "revisar",
       "uf": "MG",
       "cidade": "Piracema",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "",
-      "inscricoes_texto": "",
+      "inscricoes_inicio_texto": "20 de outubro de 2026",
+      "inscricoes_fim_texto": "18 de novembro de 2026",
+      "inscricoes_texto": "20 de outubro de 2026 a 18 de novembro de 2026",
       "remuneracao_faixa_texto": "R$ 1.621,00 a R$ 18.647,01",
       "remuneracao_fonte": "noticia",
       "cargos_compativeis": [
@@ -801,9 +801,9 @@
       "status_manual": "revisar",
       "uf": "MG",
       "cidade": "São Félix de Minas",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "",
-      "inscricoes_texto": "",
+      "inscricoes_inicio_texto": "3 de agosto de 2026",
+      "inscricoes_fim_texto": "2 de setembro de 2026",
+      "inscricoes_texto": "3 de agosto de 2026 a 2 de setembro de 2026",
       "remuneracao_faixa_texto": "R$ 1.621,00 a R$ 12.003,20",
       "remuneracao_fonte": "noticia",
       "cargos_compativeis": [
@@ -877,9 +877,9 @@
       "status_manual": "revisar",
       "uf": "RS",
       "cidade": "Alvorada",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "",
-      "inscricoes_texto": "",
+      "inscricoes_inicio_texto": "28 de agosto de 2026",
+      "inscricoes_fim_texto": "26 de setembro de 2026",
+      "inscricoes_texto": "28 de agosto de 2026 a 26 de setembro de 2026",
       "remuneracao_faixa_texto": "R$ 18.974,55",
       "remuneracao_fonte": "noticia",
       "cargos_compativeis": [
@@ -941,9 +941,9 @@
       "status_manual": "revisar",
       "uf": "GO",
       "cidade": "",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "",
-      "inscricoes_texto": "",
+      "inscricoes_inicio_texto": "5 de outubro de 2026",
+      "inscricoes_fim_texto": "6 de novembro de 2026",
+      "inscricoes_texto": "5 de outubro de 2026 a 6 de novembro de 2026",
       "remuneracao_faixa_texto": "R$ 11.862,19",
       "remuneracao_fonte": "noticia",
       "cargos_compativeis": [
@@ -973,42 +973,10 @@
       "status_manual": "revisar",
       "uf": "MS",
       "cidade": "Ponta Porã",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "",
-      "inscricoes_texto": "",
+      "inscricoes_inicio_texto": "21 de agosto de 2026",
+      "inscricoes_fim_texto": "10 de setembro de 2026",
+      "inscricoes_texto": "21 de agosto de 2026 a 10 de setembro de 2026",
       "remuneracao_faixa_texto": "R$ 3.896,67 a R$ 7.999,59",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Técnico em Informática",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "alta"
-        }
-      ]
-    },
-    {
-      "titulo": "Prefeitura de Abaetetuba",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-abaetetuba-pa-divulga-nova-retificacao-de-concurso-publico",
-      "imagem": "https://cdn.pci.app.br/img/i/5db6bfa25f7a20b8cae061baeeede361.png",
-      "formacoes_compativeis": [
-        "Técnico em Informática"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Técnico em Informática",
-          "nivel": "tecnico",
-          "evidencia": "fiteiro (1 vaga) motorista cnh b (4 vagas) motorista de guincho (2 vagas) pedreiro (2 vagas) pintor (2 vagas) soldador (1 vaga) vigia (10 vagas) agente administrativo (25 vagas) agente de transito (5 vagas) educador social (2 vagas) fiscal de obras e posturas (2 vagas) professor de musica (2 vagas) tecnico em informatica (1 vaga) tecnico em seguranca do trabalho (1 vaga) advogado (2 vagas) analista de sistemas (4 vagas) assistente social (2 vagas) jornalista (2 vagas) medico do trabalho (1 vaga) pedagogo (2 vagas) professor de educacao fisica (1 vaga) psicologo (1 vaga) secretaria municipal de agricultura - semagri"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "PA",
-      "cidade": "Abaetetuba",
-      "inscricoes_inicio_texto": "12 de agosto de 2026",
-      "inscricoes_fim_texto": "13 de setembro de 2026",
-      "inscricoes_texto": "12 de agosto de 2026 a 13 de setembro de 2026",
-      "remuneracao_faixa_texto": "R$ 1.621,00 a R$ 3.242,00",
       "remuneracao_fonte": "noticia",
       "cargos_compativeis": [
         {
