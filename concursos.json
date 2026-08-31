@@ -2,8 +2,8 @@
   "schema": 9,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-08-31T12:31:52.125558+00:00",
-  "total": 29,
+  "coletado_em_utc": "2026-08-31T16:29:09.705969+00:00",
+  "total": 28,
   "concursos": [
     {
       "titulo": "CaraguaPrev - Instituto de Previdência do Município de Caraguatatuba",
@@ -230,6 +230,38 @@
         {
           "cargo": "Ciência da Computação/Engenharia da Computação/Engenharia de Software",
           "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ]
+    },
+    {
+      "titulo": "SEPLAG - Secretaria de Estado de Planejamento e Gestão",
+      "url": "https://www.pciconcursos.com.br/noticias/seplag-rj-abre-concurso-com-60-vagas-para-cargos-de-nivel-superior",
+      "imagem": "https://cdn.pci.app.br/img/i/02a0902e96add5bdcef15c892a527dbb.png",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "ecialista em politicas publicas e gestao governamental - gestao e governanca publica (15 vagas) especialista em politicas publicas e gestao governamental - politicas publicas (15 vagas) analista de planejamento e orcamento - planejamento e orcamento (25 vagas) analista de planejamento e orcamento - tecnologia da informacao (5 vagas) a jornada de trabalho sera de 40 horas semanais. a remuneracao inicial e composta por vencimento-base de r$ 7.572,50, gratificacao de desempenho de ate r$ 3.786,25 e adicional de qualificacao (ate r$ 3.029,00 para doutorado), podendo chegar a r$ 14.387,75, de acordo com titulacao. as insc"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "RJ",
+      "cidade": "",
+      "inscricoes_inicio_texto": "10 de setembro de 2026",
+      "inscricoes_fim_texto": "8 de outubro de 2026",
+      "inscricoes_texto": "10 de setembro de 2026 a 8 de outubro de 2026",
+      "remuneracao_faixa_texto": "R$ 3.029,00 a R$ 14.387,75",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Analista de Planejamento e Orçamento - Tecnologia da Informação",
+          "vagas_texto": "5 vagas",
           "formacao": "Sistemas de Informação / Computação",
           "confianca": "alta"
         }
@@ -918,70 +950,6 @@
         {
           "cargo": "Técnico em Informática",
           "vagas_texto": "3 vagas",
-          "formacao": "Técnico em Informática",
-          "confianca": "alta"
-        }
-      ]
-    },
-    {
-      "titulo": "TCE - Tribunal de Contas do Estado de Goiás",
-      "url": "https://www.pciconcursos.com.br/noticias/tce-go-abre-concurso-publico-para-tecnicos-de-controle-externo",
-      "imagem": "https://cdn.pci.app.br/img/i/49d0f07f837fcc4f15672d89520c62f4.png",
-      "formacoes_compativeis": [
-        "Sistemas de Informação / Computação"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Sistemas de Informação / Computação",
-          "nivel": "superior",
-          "evidencia": "tce - go abre concurso publico para tecnicos de controle externo oportunidades contemplam cargos de nivel medio nas areas administrativas e de tecnologia da informacao, com remuneracao inicial de r$ 11.862,19 e selecao composta por provas objetivas e discursivas. concursos › noticias › centro-oeste terca-feira, 25 de agosto de 2026 o tribunal de contas do estado de goias (tce-go) abriu um concurso publico visando o preenchimento de vagas para profissionais de niv"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "GO",
-      "cidade": "",
-      "inscricoes_inicio_texto": "5 de outubro de 2026",
-      "inscricoes_fim_texto": "6 de novembro de 2026",
-      "inscricoes_texto": "5 de outubro de 2026 a 6 de novembro de 2026",
-      "remuneracao_faixa_texto": "R$ 11.862,19",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Tecnologia da Informação",
-          "vagas_texto": "10 vagas",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        }
-      ]
-    },
-    {
-      "titulo": "Câmara de Ponta Porã",
-      "url": "https://www.pciconcursos.com.br/noticias/camara-de-ponta-pora-ms-abre-concurso-publico-com-salarios-de-ate-7999",
-      "imagem": "https://cdn.pci.app.br/img/i/7b07707bbfc00efd330774d4eb0fa052.png",
-      "formacoes_compativeis": [
-        "Técnico em Informática"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Técnico em Informática",
-          "nivel": "tecnico",
-          "evidencia": "urso publico para o preenchimento de vagas em funcoes de nivel medio, tecnico e superior. segundo o edital, as oportunidades sao para os cargos de: analista de licitacao e contratos (2 vagas) analista de sistemas (1 vaga) consultor legislativo (1 vaga) contador (1 vaga) controlador interno (1 vaga) tecnico em informatica (1 vaga) assistente administrativo (12 vagas) os cargos possuem jornada de trabalho de 30 horas semanais. a remuneracao varia de r$ 3.896,67 a r$ 7.999,59, conforme o cargo. as inscricoes devem ser realizadas exclusivamente pelo site www.cebraspe.org.br/concursos/camara_municipal_pontapora_ms_26 , "
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "MS",
-      "cidade": "Ponta Porã",
-      "inscricoes_inicio_texto": "21 de agosto de 2026",
-      "inscricoes_fim_texto": "10 de setembro de 2026",
-      "inscricoes_texto": "21 de agosto de 2026 a 10 de setembro de 2026",
-      "remuneracao_faixa_texto": "R$ 3.896,67 a R$ 7.999,59",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Técnico em Informática",
-          "vagas_texto": "1 vaga",
           "formacao": "Técnico em Informática",
           "confianca": "alta"
         }
