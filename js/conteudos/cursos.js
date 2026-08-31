@@ -36,7 +36,7 @@
 
   function sampleForPanel(courses, limit = PANEL_LIMIT, options = {}) {
     const available = filter(courses, options);
-    return window.MuralCultural.core.sampleForPanel(available, limit);
+    return window.MuralCultural.core.sampleForPanel(available, limit, options);
   }
 
   function agendaQueryMatches(course, query, normalizeText) {

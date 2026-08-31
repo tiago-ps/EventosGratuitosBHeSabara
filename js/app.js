@@ -135,6 +135,7 @@
     allContests: [],
     allFilms: [],
     events: [],
+    panelRoundSamples: { courses: [], contests: [], films: [] },
     index: 0,
     timer: null,
     isPaused: false,
@@ -614,7 +615,9 @@
       : buildDefaultEvents(state.allEvents);
   }
 
-  function rebuildVisibleItems() {
+  // Centraliza o início de uma rodada do Painel. Ela é chamada ao carregar,
+  // quando filtros/perfis mudam e somente após chegar ao último slide.
+  function createPanelRound() {
     const eventsEnabled = state.panelModules.events && state.config?.modulos?.eventos !== false;
     const booksEnabled = state.panelModules.books && state.config?.modulos?.livros !== false;
     const coursesEnabled = state.panelModules.courses && state.config?.modulos?.cursos !== false;
@@ -625,9 +628,13 @@
     const themedCourses = state.filters.theme
       ? state.allCourses.filter(course => courseMatchesTheme(course, state.filters.theme))
       : state.allCourses;
-    const courses = coursesEnabled ? coursesContent.sampleForPanel(themedCourses) : [];
+    const courses = coursesEnabled ? coursesContent.sampleForPanel(themedCourses, undefined, {
+      previousItems: state.panelRoundSamples.courses
+    }) : [];
     const contests = contestsEnabled && !state.filters.theme
-      ? contestsContent.sampleForPanel(state.allContests)
+      ? contestsContent.sampleForPanel(state.allContests, undefined, {
+        previousItems: state.panelRoundSamples.contests
+      })
       : [];
     const films = filmsEnabled ? filmsContent.sampleForPanel(state.allFilms, {
       genre: state.filters.filmGenre,
@@ -635,7 +642,10 @@
       rating: state.filters.filmRating,
       duration: state.filters.filmDuration,
       sort: 'title-asc'
-    }, normalizeText) : [];
+    }, normalizeText, undefined, {
+      previousItems: state.panelRoundSamples.films
+    }) : [];
+    state.panelRoundSamples = { courses, contests, films };
     state.events = muralCore.interleaveContents([
       { items: events, weight: state.panelWeights.events },
       { items: books, weight: state.panelWeights.books },
@@ -644,6 +654,10 @@
       { items: films, weight: state.panelWeights.films }
     ]);
     return state.events;
+  }
+
+  function rebuildVisibleItems() {
+    return createPanelRound();
   }
 
   function parseCalendarDate(value, endOfDay = false) {
@@ -1996,7 +2010,12 @@ function eventProgram(event) {
 
   function goToNext() {
     if (!state.events.length) return;
-    state.index = (state.index + 1) % state.events.length;
+    if (state.index === state.events.length - 1) {
+      createPanelRound();
+      state.index = 0;
+    } else {
+      state.index += 1;
+    }
     renderSlide(state.index);
   }
 
@@ -3075,7 +3094,38 @@ function eventProgram(event) {
         if (!eventMatchesRegistrationFilter(event, state.mobileRegistration)) return false;
       }
       return agendaEventQueryMatches(event, query);
-    });
+    }).sort(compareAgendaEvents);
+  }
+
+  function agendaTitleCompare(first, second) {
+    return String(first?.titulo || '').localeCompare(String(second?.titulo || ''), 'pt-BR');
+  }
+
+  function agendaDateValue(value) {
+    const parsed = parseCalendarDate(value);
+    return parsed ? parsed.getTime() : Number.POSITIVE_INFINITY;
+  }
+
+  function contestDeadlineValue(contest) {
+    const value = String(contest?.inscricoes_fim || contest?.inscricoes_fim_texto || '').trim();
+    const isoDate = agendaDateValue(value);
+    if (Number.isFinite(isoDate)) return isoDate;
+
+    const match = value.toLocaleLowerCase('pt-BR').match(/(\d{1,2})\s+de\s+([a-zç]+)\s+de\s+(\d{4})/i);
+    const months = {
+      janeiro: 0, fevereiro: 1, marco: 2, março: 2, abril: 3, maio: 4, junho: 5,
+      julho: 6, agosto: 7, setembro: 8, outubro: 9, novembro: 10, dezembro: 11
+    };
+    if (!match || months[match[2]] === undefined) return Number.POSITIVE_INFINITY;
+    return new Date(Number(match[3]), months[match[2]], Number(match[1])).getTime();
+  }
+
+  function compareAgendaEvents(first, second) {
+    return agendaDateValue(first?.data) - agendaDateValue(second?.data) || agendaTitleCompare(first, second);
+  }
+
+  function compareAgendaContests(first, second) {
+    return contestDeadlineValue(first) - contestDeadlineValue(second) || agendaTitleCompare(first, second);
   }
 
   function agendaVisibleBooks() {
@@ -3094,10 +3144,7 @@ function eventProgram(event) {
         return true;
       })
       .filter(book => agendaBookQueryMatches(book, query))
-      .sort((a, b) =>
-        Number(b.prioridade || 0) - Number(a.prioridade || 0) ||
-        String(a.titulo || '').localeCompare(String(b.titulo || ''), 'pt-BR')
-      );
+      .sort(agendaTitleCompare);
   }
 
   function agendaVisibleCourses() {
@@ -3105,7 +3152,8 @@ function eventProgram(event) {
     const query = normalizeText(state.mobileQuery);
     return coursesContent.filter(state.allCourses)
       .filter(course => courseMatchesTheme(course, state.mobileTheme))
-      .filter(course => coursesContent.agendaQueryMatches(course, query, normalizeText));
+      .filter(course => coursesContent.agendaQueryMatches(course, query, normalizeText))
+      .sort(agendaTitleCompare);
   }
 
   function agendaVisibleContests() {
@@ -3117,7 +3165,7 @@ function eventProgram(event) {
       formation: state.mobileContent === 'contests' ? state.mobileContestFormation : '',
       uf: state.mobileContent === 'contests' ? state.mobileContestUf : '',
       deadline: state.mobileContent === 'contests' ? state.mobileContestDeadline : ''
-    });
+    }).sort(compareAgendaContests);
   }
 
   function agendaVisibleFilms() {

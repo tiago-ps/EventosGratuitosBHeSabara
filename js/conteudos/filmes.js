@@ -91,10 +91,10 @@
     return [...values.values()].sort((a, b) => a.localeCompare(b, 'pt-BR'));
   }
 
-  function sampleForPanel(movies, filters = {}, normalizeText = value => text(value).toLowerCase(), limit = PANEL_LIMIT) {
+  function sampleForPanel(movies, filters = {}, normalizeText = value => text(value).toLowerCase(), limit = PANEL_LIMIT, sampleOptions = {}) {
     const available = filter(movies, { ...filters, sort: filters.sort || 'title-asc' }, normalizeText);
     const sampler = root.core?.sampleForPanel;
-    return typeof sampler === 'function' ? sampler(available, limit) : available.slice(0, limit);
+    return typeof sampler === 'function' ? sampler(available, limit, sampleOptions) : available.slice(0, limit);
   }
 
   function createPanelSlide({ movie, index, total, template, helpers }) {

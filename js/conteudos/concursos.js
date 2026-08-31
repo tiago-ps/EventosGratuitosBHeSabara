@@ -94,11 +94,11 @@
       .map(label => [label, label]);
   }
 
-  function sampleForPanel(contests, limit = PANEL_CONTEST_LIMIT) {
+  function sampleForPanel(contests, limit = PANEL_CONTEST_LIMIT, options = {}) {
     const available = (Array.isArray(contests) ? contests : [])
       .filter(isValid)
       .map(publicRecord);
-    return window.MuralCultural.core.sampleForPanel(available, limit);
+    return window.MuralCultural.core.sampleForPanel(available, limit, options);
   }
 
   function summarizedList(items, limit = 2) {
