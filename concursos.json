@@ -2,8 +2,8 @@
   "schema": 9,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-08-30T14:05:33.209443+00:00",
-  "total": 29,
+  "coletado_em_utc": "2026-08-31T04:58:39.004539+00:00",
+  "total": 30,
   "concursos": [
     {
       "titulo": "CaraguaPrev - Instituto de Previdência do Município de Caraguatatuba",
@@ -306,6 +306,38 @@
       ]
     },
     {
+      "titulo": "Prefeitura de Contagem",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-contagem-mg-abre-concurso-publico-com-salarios-de-ate-13305",
+      "imagem": "https://cdn.pci.app.br/img/i/7de2c0dbeff437f4cd0052b4d16f8acf.png",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "alho (3 vagas) analista de ti (1 vaga) arquiteto (14 vagas) arquivista (2 vagas) assistente social (5 vagas) auditor de controle interno - ciencias contabeis (1 vaga) auditor de controle interno - direito (1 vaga) auditor de controle interno - engenharia civil (1 vaga) auditor de controle interno - tecnologia da informacao (1 vaga) biologo (7 vagas) contador (3 vagas) economista (1 vaga) engenheiro agrimensor (1 vaga) engenheiro agronomo (1 vaga) engenheiro ambiental (5 vagas) engenheiro cartografico (1 vaga) engenheiro civil (18 vagas) engenheiro de automacao (1 vaga) engenheiro eletricista (3 vagas) engenheiro flor"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "MG",
+      "cidade": "Contagem",
+      "inscricoes_inicio_texto": "19 de outubro de 2026",
+      "inscricoes_fim_texto": "21 de outubro de 2026",
+      "inscricoes_texto": "19 de outubro de 2026 a 21 de outubro de 2026",
+      "remuneracao_faixa_texto": "R$ 13.305,57",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Auditor de Controle Interno - Tecnologia da Informação",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ]
+    },
+    {
       "titulo": "Câmara de Capelinha",
       "url": "https://www.pciconcursos.com.br/noticias/camara-de-capelinha-mg-retifica-edital-do-concurso-publico-com-salarios-de-ate-4527",
       "imagem": "https://cdn.pci.app.br/img/i/a1d5b403f9ea399b00f7cb388788453a.png",
@@ -549,38 +581,6 @@
           "cargo": "Técnico em Informática",
           "vagas_texto": "Cadastro de Reserva",
           "formacao": "Técnico em Informática",
-          "confianca": "alta"
-        }
-      ]
-    },
-    {
-      "titulo": "Prefeitura de Contagem",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-contagem-mg-abre-concurso-publico-com-salarios-de-ate-13305",
-      "imagem": "https://cdn.pci.app.br/img/i/7de2c0dbeff437f4cd0052b4d16f8acf.png",
-      "formacoes_compativeis": [
-        "Sistemas de Informação / Computação"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Sistemas de Informação / Computação",
-          "nivel": "superior",
-          "evidencia": "alho (3 vagas) analista de ti (1 vaga) arquiteto (14 vagas) arquivista (2 vagas) assistente social (5 vagas) auditor de controle interno - ciencias contabeis (1 vaga) auditor de controle interno - direito (1 vaga) auditor de controle interno - engenharia civil (1 vaga) auditor de controle interno - tecnologia da informacao (1 vaga) biologo (7 vagas) contador (3 vagas) economista (1 vaga) engenheiro agrimensor (1 vaga) engenheiro agronomo (1 vaga) engenheiro ambiental (5 vagas) engenheiro cartografico (1 vaga) engenheiro civil (18 vagas) engenheiro de automacao (1 vaga) engenheiro eletricista (3 vagas) engenheiro flor"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "MG",
-      "cidade": "Contagem",
-      "inscricoes_inicio_texto": "19 de outubro de 2026",
-      "inscricoes_fim_texto": "21 de outubro de 2026",
-      "inscricoes_texto": "19 de outubro de 2026 a 21 de outubro de 2026",
-      "remuneracao_faixa_texto": "R$ 13.305,57",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Auditor de Controle Interno - Tecnologia da Informação",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
           "confianca": "alta"
         }
       ]
@@ -977,6 +977,38 @@
       "inscricoes_fim_texto": "28 de agosto de 2026",
       "inscricoes_texto": "21 de agosto de 2026 a 28 de agosto de 2026",
       "remuneracao_faixa_texto": "R$ 3.896,67 a R$ 7.999,59",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico em Informática",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "alta"
+        }
+      ]
+    },
+    {
+      "titulo": "Prefeitura de Abaetetuba",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-abaetetuba-pa-divulga-nova-retificacao-de-concurso-publico",
+      "imagem": "https://cdn.pci.app.br/img/i/5db6bfa25f7a20b8cae061baeeede361.png",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": "fiteiro (1 vaga) motorista cnh b (4 vagas) motorista de guincho (2 vagas) pedreiro (2 vagas) pintor (2 vagas) soldador (1 vaga) vigia (10 vagas) agente administrativo (25 vagas) agente de transito (5 vagas) educador social (2 vagas) fiscal de obras e posturas (2 vagas) professor de musica (2 vagas) tecnico em informatica (1 vaga) tecnico em seguranca do trabalho (1 vaga) advogado (2 vagas) analista de sistemas (4 vagas) assistente social (2 vagas) jornalista (2 vagas) medico do trabalho (1 vaga) pedagogo (2 vagas) professor de educacao fisica (1 vaga) psicologo (1 vaga) secretaria municipal de agricultura - semagri"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "PA",
+      "cidade": "Abaetetuba",
+      "inscricoes_inicio_texto": "26 de setembro de 2026",
+      "inscricoes_fim_texto": "13 de setembro de 2026",
+      "inscricoes_texto": "26 de setembro de 2026 a 13 de setembro de 2026",
+      "remuneracao_faixa_texto": "R$ 1.621,00 a R$ 3.242,00",
       "remuneracao_fonte": "noticia",
       "cargos_compativeis": [
         {
