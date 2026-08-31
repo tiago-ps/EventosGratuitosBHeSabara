@@ -2,8 +2,8 @@
   "schema_versao": 1,
   "fonte": "Tela Brasil",
   "fonte_site": "https://telabrasil.cultura.gov.br/",
-  "origem_commit": "27407a5439d1",
-  "origem_execucao": "2026-08-25T01:22:21.383388-03:00",
+  "origem_commit": "ef25ba822fb8",
+  "origem_execucao": "2026-08-31T18:14:19.551243-03:00",
   "status_catalogo": "experimental_em_revisao",
   "filmes": [
     {
@@ -3233,6 +3233,9 @@
       "generos": [
         "Documentário"
       ],
+      "temas": [
+        "Agosto Lilás"
+      ],
       "acessibilidade": [
         "Libras",
         "Audiodescrição",
@@ -3252,10 +3255,7 @@
       "plataforma": "Tela Brasil",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "pagina_oficial": "https://telabrasil.cultura.gov.br/obra/293",
-      "status_manual": "revisar",
-      "temas": [
-        "Agosto Lilás"
-      ]
+      "status_manual": "revisar"
     },
     {
       "id": "telabrasil:552",
@@ -4659,7 +4659,6 @@
       ],
       "temas": [
         "História",
-        "Musica",
         "Cinema"
       ],
       "alertas": [
@@ -12428,13 +12427,13 @@
         "Amácio Mazzaropi",
         "Ludy Veloso",
         "A. C. Carvalho",
-        "Nieta Junqueira",
         "Abílio Pereira de Almeida",
         "Álvaro Novais",
         "Germano Arlindo",
         "Walter Vitaliano",
         "Simone de Moura",
-        "Vicente Leporace"
+        "Vicente Leporace",
+        "Nieta Junqueira"
       ],
       "sinopse": "Isidoro Colepicola, um caminhoneiro do centro de São Paulo, torna-se milionário após um acidente revelar sua herança. Transformado em mecenas excêntrico, ele se envolve em divertidas aventuras ao financiar invenções inusitadas e banquetes extravagantes.",
       "classificacao": "10",
@@ -12444,7 +12443,6 @@
       "temas": [
         "Sociedade",
         "Relacionamentos",
-        "Familia",
         "Acidente",
         "Tecnologia",
         "Dinheiro"
@@ -13273,10 +13271,10 @@
       ],
       "elenco": [
         "Ellen Silva",
-        "Tamirys Rodrigues",
         "Gab Lourenzato",
         "Rodrigo Mercadante",
-        "Cyda Baú"
+        "Cyda Baú",
+        "Tamirys Rodrigues"
       ],
       "sinopse": "Uma longa e cruel tempestade se aproxima. Ela sumiu. Em busca de pistas do paradeiro Dela, com a perspectiva de quem acaba de descobrir o mundo, Madu observa atentamente a cidade e suas relações de poder.",
       "classificacao": "Livre",
@@ -14608,12 +14606,12 @@
         "Cid Moreira",
         "Dorvalino Machado",
         "Carlos Chagas",
-        "Gumercindo Rocha Dorea",
         "Gabriel F. Marinho",
         "Paulo Eduardo Barbosa",
         "Gabriel Catta Preta",
         "Clovis Molinari",
-        "Wilson Figueiredo."
+        "Wilson Figueiredo.",
+        "Gumercindo Rocha Dorea"
       ],
       "sinopse": "\"O Prólogo\" discute o uso da propaganda política por meio do cinema e da televisão nos anos de 1960, e desvenda a cultura dos curtas-metragens que passavam antes das sessões de cinema no Brasil. A partir de depoimentos e imagens de arquivo, conta a história dos cinejornais feitos naquela época, a maioria encomendada pelo Instituto de Pesquisa e Estudos Sociais, entidade cuja finalidade era integrar os diversos movimentos sociais de direita para “deter o avanço do comunismo soviético no Ocidente”.",
       "classificacao": "12",
@@ -14621,7 +14619,6 @@
         "Documentário"
       ],
       "temas": [
-        "História",
         "Ditadura",
         "Democracia",
         "Jornalismo"
@@ -14762,9 +14759,9 @@
         "Fernanda Torres",
         "Alan Arkin",
         "Selton Mello",
-        "Fernanda Montenegro",
         "Leopoldo Serran",
-        "Isabelle Rathery"
+        "Isabelle Rathery",
+        "Fernanda Montenegro"
       ],
       "sinopse": "O jornalista Fernando e seu amigo César abraçam a luta armada contra a ditadura militar no final da década de 60, após a publicação do AI-5. Os dois se alistam em um grupo guerrilheiro de esquerda e, em uma das ações do grupo militante, César é ferido e capturado pelos militares. Fernando então planeja o sequestro do embaixador dos Estados Unidos no Brasil, Charles Burke Elbrick, para negociar a liberdade de César e de outros companheiros presos.",
       "classificacao": "16",
@@ -14809,12 +14806,12 @@
       ],
       "elenco": [
         "Sebastião Salgado",
-        "Lélia Deluiz Wanick Salgado",
         "Wim Wenders",
         "Juliano Ribeiro Salgado",
         "David Rosier",
         "Maxine Goedicke",
-        "Rob Myers"
+        "Rob Myers",
+        "Lélia Deluiz Wanick Salgado"
       ],
       "sinopse": "O fotógrafo Sebastião Salgado viajou pelo mundo, seguindo os rastros de uma humanidade em constante mutação. Ele testemunhou alguns dos principais eventos de nossa história recente, como conflitos internacionais, a fome, o êxodo. E agora embarca na descoberta de territórios imaculados, da flora e da fauna selvagem.",
       "classificacao": "12",
@@ -18561,7 +18558,6 @@
         "Catharina Scarpellini"
       ],
       "elenco": [
-        "Coring",
         "Ana Leia Casarote Milan",
         "Elisabette Aparecida Florencida",
         "Coringa",
@@ -19262,7 +19258,8 @@
         "Adercio Garcia",
         "Ricardo Arroyo",
         "Anderson Macário",
-        "Ivo Jr"
+        "Ivo Jr",
+        "Joao Ricardo Costa"
       ],
       "sinopse": "Isah está desanimada ao recordar a nota baixa que recebeu na avaliação. Nesse instante, seu pai surge de dentro do livro escolar e a convida para uma viagem por uma rota educacional que se desenrola entre as páginas. Ao lado de Dinorah e Robobo, Isah embarca com o Papai em uma aventura pedagógica repleta de descobertas e aprendizados.",
       "classificacao": "Livre",
