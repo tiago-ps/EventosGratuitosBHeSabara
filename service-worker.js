@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v88-banner-png';
+const CACHE_VERSION = 'mural-cultural-v96-toggle-perfil-tematico';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -17,7 +17,7 @@ const CORE_ASSETS = [
   './js/conteudos/concursos.js?v=2',
   './js/conteudos/filmes.js?v=5',
   './js/app.js?v=87',
-  './js/temas-visuais.js?v=2',
+  './js/temas-visuais.js?v=4',
   './js/eventos-manuais-ui.js?v=44',
   './js/ios-install.js?v=1',
   './imagens/curadorias/agosto-lilas-banner.png',
