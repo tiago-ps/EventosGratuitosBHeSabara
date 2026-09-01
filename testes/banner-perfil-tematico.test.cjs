@@ -33,7 +33,7 @@ assert.match(themesSource, /id: 'setembro-amarelo-glow',[\s\S]*panelProfile: 'se
 assert.doesNotMatch(themesSource, /theme:\s*'setembro amarelo'/);
 assert.match(appSource, /'setembro-amarelo-2026':\s*\{[\s\S]*theme: 'setembro amarelo'/);
 assert.match(appSource, /destaque: 'Se precisar, peça ajuda!'/);
-assert.match(themesSource, /setembro-amarelo-banner\.svg/);
+assert.match(themesSource, /setembro-amarelo-banner\.png/);
 assert.match(themesSource, /Setembro Amarelo — Se precisar, peça ajuda\. CVV 188\./);
 
 // O banner é um botão nativo, com estado, rótulo e tooltip sincronizados.
@@ -86,6 +86,6 @@ for (const asset of [
   assert.ok(indexSource.includes(asset), `Referência ausente no HTML: ${asset}`);
   assert.ok(serviceWorkerSource.includes(`./${asset}`), `Referência ausente no precache: ${asset}`);
 }
-assert.ok(serviceWorkerSource.includes('./imagens/curadorias/setembro-amarelo-banner.svg'));
+assert.ok(serviceWorkerSource.includes('./imagens/curadorias/setembro-amarelo-banner.png'));
 
 console.log('Testes do atalho de perfil pelo banner aprovados.');
