@@ -1,13 +1,6 @@
 name: Integrar filtro temático de cursos
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'js/conteudos/cursos.js'
-      - 'scripts/integrar_filtro_cursos.py'
-      - '.github/workflows/integrar-filtro-cursos.yml'
   workflow_dispatch:
 
 permissions:

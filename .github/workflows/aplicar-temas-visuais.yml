@@ -1,15 +1,6 @@
 name: Aplicar temas visuais
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'css/temas-visuais.css'
-      - 'js/tema-visual-boot.js'
-      - 'js/temas-visuais.js'
-      - 'scripts/aplicar_temas_visuais.py'
-      - '.github/workflows/aplicar-temas-visuais.yml'
-      - 'imagens/curadorias/agosto-lilas-banner.png'
   workflow_dispatch:
 
 permissions:
