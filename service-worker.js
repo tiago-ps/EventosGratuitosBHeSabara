@@ -4,6 +4,7 @@ const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
 const MAX_IMAGE_CACHE_ITEMS = 140;
 const BRAND_LOGO_PATH = '/imagens/marca/logo-mural-cultural.png';
+const SEPTEMBER_BANNER_PATH = '/imagens/curadorias/setembro-amarelo-banner.png';
 
 const CORE_ASSETS = [
   './', './index.html',
@@ -81,7 +82,7 @@ async function networkFirst(request, cacheName, fallbackUrl = '', expectedConten
   }
 }
 
-async function networkFirstBrandImage(request) {
+async function networkFirstMutableImage(request) {
   const freshRequest = new Request(request, { cache: 'no-store' });
   return networkFirst(freshRequest, IMAGE_CACHE, '', 'image/');
 }
@@ -117,10 +118,10 @@ self.addEventListener('fetch', event => {
       cache: 'no-store'
     });
     event.respondWith(networkFirst(stableRequest, DATA_CACHE, '', 'application/json'));
-  } else if (url.pathname.endsWith(BRAND_LOGO_PATH)) {
-    // A marca pode ser trocada no repositório mantendo o mesmo nome.
-    // Busca sempre a versão da rede e usa a cópia local apenas se estiver offline.
-    event.respondWith(networkFirstBrandImage(request));
+  } else if (url.pathname.endsWith(BRAND_LOGO_PATH) || url.pathname.endsWith(SEPTEMBER_BANNER_PATH)) {
+    // Imagens mutáveis podem ser substituídas no repositório mantendo o mesmo nome.
+    // Busca sempre a versão atual da rede e usa a cópia local apenas se estiver offline.
+    event.respondWith(networkFirstMutableImage(request));
   } else if (request.destination === 'image') {
     event.respondWith(cacheFirstImage(request));
   } else if (['style', 'script', 'manifest', 'font'].includes(request.destination)) {
