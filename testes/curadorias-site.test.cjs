@@ -36,13 +36,20 @@ assert.equal(curations.isValidPayload({ schema: 1, escopo: 'site-only' }), false
 assert.equal(JSON.stringify(catalogs), snapshot, 'A fusão não pode mutar os catálogos centrais');
 assert.deepEqual(Array.from(merged.curadoriasAtivas), ['setembro-amarelo-2026']);
 
-const event = merged.eventos.find(item => item.id === 'sympla-sabara-3534680');
-assert.ok(event);
-assert.deepEqual(
-  Array.from(event.temas),
-  ['Setembro Amarelo', 'Saúde mental', 'Prevenção do suicídio']
-);
-assert.equal(eventsData.eventos.find(item => item.id === event.id).temas, undefined);
+const eventId = 'sympla-sabara-3534680';
+const centralEvent = eventsData.eventos.find(item => item.id === eventId);
+const event = merged.eventos.find(item => item.id === eventId);
+if (centralEvent) {
+  assert.ok(event);
+  assert.deepEqual(
+    Array.from(event.temas),
+    ['Setembro Amarelo', 'Saúde mental', 'Prevenção do suicídio']
+  );
+  assert.equal(centralEvent.temas, undefined);
+} else {
+  assert.equal(event, undefined);
+  assert.ok(warnings.some(message => message.includes(eventId) && message.includes('não encontrado')));
+}
 
 const expectedCourses = new Map([
   ['1089', 'Saúde mental, atenção psicossocial e interculturalidade nas migrações'],
@@ -68,14 +75,33 @@ assert.ok(externalCourses.every(item => item.origem === 'site-only' && item.id.s
 assert.ok(externalCourses.every(item => !item.id_fonte));
 assert.equal(new Set(externalCourses.map(item => item.id)).size, 3);
 assert.equal(externalCourses.filter(item => item.temas.some(theme => curations.normalizeLabel(theme) === 'setembro amarelo')).length, 3);
+assert.ok(externalCourses.every(item => item.descricao && item.nivel));
+assert.ok(externalCourses.every(item => /^https:\/\/www\.unasus\.gov\.br\/cursos\/curso\//.test(item.url)));
 
 const externalFilms = merged.filmes.filter(item => item.site_only);
 assert.equal(externalFilms.length, 3);
-assert.ok(externalFilms.every(item => item.origem === 'site-only' && !item.pagina_oficial));
+assert.ok(externalFilms.every(item => item.origem === 'site-only'));
 assert.ok(externalFilms.every(item => item.imagem && fs.existsSync(path.join(root, item.imagem))));
 for (const id of externalFilms.map(item => item.fonte_id)) {
   assert.equal(filmsData.filmes.some(item => item.fonte_id === id), false);
 }
+const poderia = externalFilms.find(item => item.fonte_id === 'd1aaf5ea-78da-11ee-bcc6-0a58a9feac02');
+assert.equal(poderia?.direcao?.[0], 'Ava Scherdien');
+assert.equal(poderia?.duracao_minutos, 30);
+assert.match(poderia?.pagina_oficial || '', /^https:\/\/flix\.votelgbt\.org\/assistir\//);
+const deus = externalFilms.find(item => item.fonte_id === '84e6ab8c-453a-11ef-b555-0a58a9feac02');
+assert.equal(deus?.direcao?.[0], 'Marcos Paulo');
+assert.match(deus?.pagina_oficial || '', /^https:\/\/flix\.votelgbt\.org\/assistir\//);
+const borboletas = externalFilms.find(item => item.fonte_id === '12326640-3314-11ef-a594-0a58a9feac02');
+assert.equal(borboletas?.direcao?.[0], 'Daniel Terra');
+assert.equal(borboletas?.duracao_minutos, 40);
+assert.equal(borboletas?.pagina_oficial, undefined);
+
+const audit = payload.curadorias[0].auditoria_dados;
+assert.equal(audit?.revisado_em, '2026-09-01');
+assert.ok(Array.isArray(audit?.pendencias_manuais));
+assert.ok(audit.pendencias_manuais.some(item => item.id === eventId));
+assert.ok(audit.pendencias_manuais.some(item => item.id === 'site:lgbtflix:12326640-3314-11ef-a594-0a58a9feac02'));
 
 assert.ok(merged.apoio);
 assert.equal(merged.apoio.site_only, true);
@@ -101,7 +127,8 @@ assert.equal(outside.curadoriasAtivas.length, 0);
 assert.equal(outside.cursos.length, catalogs.cursos.length);
 assert.equal(outside.filmes.length, catalogs.filmes.length);
 assert.equal(outside.apoio, null);
-assert.equal(outside.eventos.find(item => item.id === event.id).temas, undefined);
+if (centralEvent) assert.equal(outside.eventos.find(item => item.id === eventId).temas, undefined);
+else assert.equal(outside.eventos.find(item => item.id === eventId), undefined);
 
 const missingTargetPayload = JSON.parse(JSON.stringify(payload));
 missingTargetPayload.curadorias[0].overlays.eventos['nao-existe'] = { temas: ['Setembro Amarelo'] };
@@ -118,4 +145,4 @@ assert.match(appSource, /siteCurationsContent\.apply\(siteCurationsData/);
 assert.match(appSource, /siteCurationsContent\.mountSupportArea\(siteLayer\.apoio\)/);
 assert.doesNotMatch(appSource, /(?:write|post|put).*curadorias-site\.json/i);
 
-console.log('Testes da camada site-only Setembro Amarelo aprovados (overlays, complementos, janela temporal e isolamento).');
+console.log('Testes da camada site-only Setembro Amarelo aprovados (overlays, complementos, janela temporal, auditoria e isolamento).');
