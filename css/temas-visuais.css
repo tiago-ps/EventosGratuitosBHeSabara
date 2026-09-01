@@ -570,7 +570,7 @@ html[data-visual-theme="setembro-amarelo-glow"] .campaign-profile-tooltip {
 .campaign-help-button:hover { background: #ffe27a; }
 .media > .campaign-help-button {
   position: absolute;
-  top: calc(1.25% + 14.285% + 12px);
+  top: calc(1.25% + min(14.285%, 64px) + 8px);
   right: auto;
   left: 50%;
   z-index: 7;
@@ -655,7 +655,7 @@ html[data-visual-theme="setembro-amarelo-glow"] .campaign-profile-tooltip {
     max-width: 96%;
   }
   body > .campaign-help-button { top: max(8px, env(safe-area-inset-top)); right: max(8px, env(safe-area-inset-right)); padding: 8px 11px; font-size: 11px; }
-  .media > .campaign-help-button { top: calc(1% + 15% + 12px); padding: 8px 12px; font-size: 12px; }
+  .media > .campaign-help-button { top: calc(1% + min(15%, 52px) + 8px); padding: 8px 12px; font-size: 12px; }
   .support-help-sections { grid-template-columns: 1fr; }
   .support-help-shell { padding: 17px; }
   html[data-visual-theme="agosto-lilas-glow"] body.panel-mode .content::before { filter: blur(12px); opacity: .82; }
