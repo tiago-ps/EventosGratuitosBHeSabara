@@ -39,16 +39,21 @@ assert.deepEqual(Array.from(merged.curadoriasAtivas), ['setembro-amarelo-2026'])
 const eventId = 'sympla-sabara-3534680';
 const centralEvent = eventsData.eventos.find(item => item.id === eventId);
 const event = merged.eventos.find(item => item.id === eventId);
+assert.ok(event);
+assert.deepEqual(
+  Array.from(event.temas),
+  ['Setembro Amarelo', 'Saúde mental', 'Prevenção do suicídio']
+);
 if (centralEvent) {
-  assert.ok(event);
-  assert.deepEqual(
-    Array.from(event.temas),
-    ['Setembro Amarelo', 'Saúde mental', 'Prevenção do suicídio']
-  );
   assert.equal(centralEvent.temas, undefined);
 } else {
-  assert.equal(event, undefined);
-  assert.ok(warnings.some(message => message.includes(eventId) && message.includes('não encontrado')));
+  assert.equal(event.site_only, true);
+  assert.equal(event.origem, 'site-only');
+  assert.equal(event.gratuito, true);
+  assert.equal(event.data, '2026-09-10');
+  assert.equal(event.horario, '14h45 às 17h');
+  assert.match(event.link || '', /sympla\.com\.br/);
+  assert.equal(warnings.some(message => message.includes(eventId) && message.includes('não encontrado')), false);
 }
 
 const expectedCourses = new Map([
@@ -99,8 +104,10 @@ assert.equal(borboletas?.pagina_oficial, undefined);
 
 const audit = payload.curadorias[0].auditoria_dados;
 assert.equal(audit?.revisado_em, '2026-09-01');
+assert.ok(Array.isArray(audit?.confirmacoes));
+assert.ok(audit.confirmacoes.some(item => item.id === eventId && item.confirmado.includes('gratuidade')));
 assert.ok(Array.isArray(audit?.pendencias_manuais));
-assert.ok(audit.pendencias_manuais.some(item => item.id === eventId));
+assert.equal(audit.pendencias_manuais.some(item => item.id === eventId), false);
 assert.ok(audit.pendencias_manuais.some(item => item.id === 'site:lgbtflix:12326640-3314-11ef-a594-0a58a9feac02'));
 
 assert.ok(merged.apoio);
@@ -114,6 +121,12 @@ assert.match(JSON.stringify(merged.apoio), /CERSAM/);
 assert.match(JSON.stringify(merged.apoio), /CEAP/);
 assert.match(JSON.stringify(merged.apoio), /PUC Minas/);
 assert.match(JSON.stringify(merged.apoio), /FUMEC/);
+assert.ok(Array.isArray(merged.apoio.recursos_informativos));
+assert.equal(merged.apoio.recursos_informativos.length, 8);
+assert.ok(merged.apoio.recursos_informativos.some(item => item.id === 'setembro-amarelo-materiais-2026'));
+assert.ok(merged.apoio.recursos_informativos.some(item => item.id === 'ms-guia-crise-raps-2026'));
+assert.ok(merged.apoio.recursos_informativos.some(item => item.id === 'cfp-suicidio-desafios-psicologia-2013'));
+assert.ok(merged.apoio.recursos_informativos.some(item => item.id === 'oms-prevencao-suicidio-escolas-2000'));
 assert.equal(merged.eventos.some(item => item.nome === 'CVV — Centro de Valorização da Vida'), false);
 
 const absent = curations.apply(null, catalogs, { today: new Date(2026, 8, 15) });
@@ -137,12 +150,15 @@ const missingTarget = curations.apply(missingTargetPayload, catalogs, {
   today: new Date(2026, 8, 15),
   warn: message => missingWarnings.push(message)
 });
-assert.equal(missingTarget.eventos.length, catalogs.eventos.length);
+const expectedEventCount = catalogs.eventos.length + (centralEvent ? 0 : 1);
+assert.equal(missingTarget.eventos.length, expectedEventCount);
 assert.ok(missingWarnings.some(message => message.includes('não encontrado')));
 
+assert.match(source, /fallbackTitleMatches/);
+assert.match(source, /Materiais informativos gratuitos/);
 assert.match(appSource, /loadOptionalJson\(SITE_CURATIONS_URL, null\)/);
 assert.match(appSource, /siteCurationsContent\.apply\(siteCurationsData/);
 assert.match(appSource, /siteCurationsContent\.mountSupportArea\(siteLayer\.apoio\)/);
 assert.doesNotMatch(appSource, /(?:write|post|put).*curadorias-site\.json/i);
 
-console.log('Testes da camada site-only Setembro Amarelo aprovados (overlays, complementos, janela temporal, auditoria e isolamento).');
+console.log('Testes da camada site-only Setembro Amarelo aprovados (overlays, fallback, complementos, materiais, janela temporal, auditoria e isolamento).');
