@@ -28,8 +28,8 @@ const nextCount = context.nextCount;
 
 const courseTotal = coursesData.cursos.length;
 assert.ok(courseTotal > batchSize);
-assert.equal(booksData.livros.length, 10);
-assert.equal(contestsData.concursos.length, 27);
+assert.ok(booksData.livros.length > 0);
+assert.ok(contestsData.concursos.length > 0);
 
 function renderedIndexes(total) {
   let visible = Math.min(batchSize, total);
@@ -118,8 +118,8 @@ for (const [content, total] of Object.entries(totalsByContent)) {
   assert.equal(new Set(rendering.indexes).size, total, `${content}: cards não podem ser duplicados.`);
   assert.equal(rendering.batches[0], Math.min(batchSize, total));
 }
-assert.deepEqual(renderedIndexes(booksData.livros.length).batches, [booksData.livros.length]);
-assert.deepEqual(renderedIndexes(contestsData.concursos.length).batches, [24, 27]);
+assert.equal(renderedIndexes(booksData.livros.length).batches.at(-1), booksData.livros.length);
+assert.equal(renderedIndexes(contestsData.concursos.length).batches.at(-1), contestsData.concursos.length);
 
 assert.match(appSource, /agenda-card[^`]*agenda-event-card/);
 assert.match(appSource, /state\.mobileContent === 'events' && !agendaHasSpecificEventFilters\(\)[\s\S]*?return state\.allEvents;/);

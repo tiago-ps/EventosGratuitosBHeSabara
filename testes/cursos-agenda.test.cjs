@@ -94,17 +94,17 @@ assert.match(
 );
 assert.match(
   appSource,
-  /function agendaVisibleContests\(\) \{\s*if \(!\['all', 'contests'\]\.includes\(state\.mobileContent\)/
+  /function agendaVisibleContests\(\) \{\s*if \(state\.mobileTheme \|\| !\['all', 'contests'\]\.includes\(state\.mobileContent\)/
 );
 
 // Tema existe apenas nos contextos que possuem taxonomia própria.
 assert.match(appSource, /if \(content === 'events'\) \{\s*for \(const event of state\.allEvents\)/);
 assert.match(appSource, /if \(content === 'books'\) \{\s*for \(const book of state\.allBooks\)/);
-assert.match(appSource, /const themeMode = \['events', 'books', 'films'\]\.includes\(state\.mobileContent\);/);
+assert.match(appSource, /const themeMode = \['events', 'books', 'courses', 'films'\]\.includes\(state\.mobileContent\);/);
 
 // Toda troca de conteúdo passa pelo mesmo normalizador e limpa filtros ocultos.
 assert.match(appSource, /function normalizeAgendaFiltersForContent\(content = state\.mobileContent\)/);
-assert.match(appSource, /if \(!\['events', 'books', 'films'\]\.includes\(state\.mobileContent\)\) \{\s*state\.mobileTheme = '';/);
+assert.match(appSource, /if \(!\['events', 'books', 'courses', 'films'\]\.includes\(state\.mobileContent\)\) \{\s*state\.mobileTheme = '';/);
 assert.match(appSource, /if \(state\.mobileContent !== 'events'\) \{\s*state\.mobilePeriod = 'all';/);
 assert.match(appSource, /if \(state\.mobileContent !== 'books'\) state\.mobileBookAccess = '';/);
 assert.match(appSource, /if \(state\.mobileContent !== 'contests'\) \{\s*state\.mobileContestFormation = '';/);

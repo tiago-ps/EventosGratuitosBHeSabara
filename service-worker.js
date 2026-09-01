@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v86-cursos-tema';
+const CACHE_VERSION = 'mural-cultural-v87-setembro-amarelo';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -10,17 +10,19 @@ const CORE_ASSETS = [
   './css/styles.css?v=69',
   './css/eventos-manuais-ui.css?v=43',
   './css/concursos-mural.css?v=2',
-  './css/temas-visuais.css?v=1',
-  './js/tema-visual-boot.js?v=1',
+  './css/temas-visuais.css?v=4',
+  './js/tema-visual-boot.js?v=2',
   './js/core/rotacao.js?v=1',
-  './js/conteudos/cursos.js?v=2',
+  './js/conteudos/cursos.js?v=3',
   './js/conteudos/concursos.js?v=2',
-  './js/conteudos/filmes.js?v=5',
-  './js/app.js?v=87',
-  './js/temas-visuais.js?v=2',
+  './js/conteudos/filmes.js?v=6',
+  './js/curadorias-site.js?v=1',
+  './js/app.js?v=88',
+  './js/temas-visuais.js?v=5',
   './js/eventos-manuais-ui.js?v=44',
   './js/ios-install.js?v=1',
   './imagens/curadorias/agosto-lilas-banner.png',
+  './imagens/curadorias/setembro-amarelo-banner.svg',
   './manifest.webmanifest',
   './imagens/app-icons/icon-192.png', './imagens/app-icons/icon-512.png',
   './imagens/app-icons/apple-touch-icon.png'
@@ -32,6 +34,7 @@ const DATA_PATHS = [
   '/cursos.json',
   '/concursos.json',
   '/filmes.json',
+  '/curadorias-site.json',
   '/configuracao-mural.json'
 ];
 

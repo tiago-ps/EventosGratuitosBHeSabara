@@ -139,7 +139,11 @@
 
     const link = safeExternalUrl(course.url || course.link);
     const sourceLabel = slide.querySelector('.source-label');
-    if (sourceLabel) sourceLabel.textContent = 'Curso online gratuito';
+    if (sourceLabel) {
+      sourceLabel.textContent = course.site_only
+        ? 'Curso externo • Curadoria site-only'
+        : 'Curso online gratuito';
+    }
 
     const source = slide.querySelector('.source-url');
     if (source) {
@@ -156,7 +160,7 @@
     }
 
     const updated = slide.querySelector('.updated');
-    if (updated) updated.textContent = course.area || '';
+    if (updated) updated.textContent = course.situacao || course.area || '';
 
     const qr = slide.querySelector('.qr-code');
     configureItemQrLabel(slide, course, Boolean(link));
@@ -211,7 +215,12 @@
 
     const link = safeExternalUrl(item.url || item.link);
     const image = safeImageUrl(item.imagem);
-    article.innerHTML = `<div class="agenda-card-media course-media">${image ? `<img src="${escapeHtml(image)}" alt="Imagem: ${escapeHtml(item.titulo || 'Curso')}" loading="lazy">` : ''}</div><div class="agenda-card-body"><div class="agenda-card-badges"><span>Curso</span><span>Online</span><span>Gratuito</span></div><p class="agenda-card-date">${escapeHtml(item.carga_horaria ? `${item.carga_horaria} horas` : 'Formação online')}</p><h2>${escapeHtml(item.titulo || 'Curso')}</h2><p class="agenda-card-place">${escapeHtml(item.instituicao || item.fonte || 'Instituição')}</p><p class="agenda-card-description">${escapeHtml(item.descricao || item.competencias || '')}</p><div class="agenda-card-actions">${link ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer">Acessar curso</a>` : ''}</div></div>`;
+    const summary = item.descricao || item.competencias || item.publico_alvo || '';
+    const schedule = [
+      item.carga_horaria ? `${item.carga_horaria} horas` : 'Formação online',
+      item.situacao || ''
+    ].filter(Boolean).join(' · ');
+    article.innerHTML = `<div class="agenda-card-media course-media">${image ? `<img src="${escapeHtml(image)}" alt="Imagem: ${escapeHtml(item.titulo || 'Curso')}" loading="lazy">` : '<div class="film-poster-fallback" role="img" aria-label="Imagem não disponível para este curso"><span aria-hidden="true">🎓</span><strong>Imagem não disponível</strong></div>'}</div><div class="agenda-card-body"><div class="agenda-card-badges"><span>Curso</span><span>Online</span><span>Gratuito</span>${item.site_only ? '<span>Curadoria site-only</span>' : ''}</div><p class="agenda-card-date">${escapeHtml(schedule)}</p><h2>${escapeHtml(item.titulo || 'Curso')}</h2><p class="agenda-card-place">${escapeHtml([item.instituicao, item.fonte].filter(Boolean).join(' · ') || 'Instituição')}</p><p class="agenda-card-description">${escapeHtml(summary)}</p><div class="agenda-card-actions">${link ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer">Acessar curso</a>` : ''}</div></div>`;
 
     return article;
   }

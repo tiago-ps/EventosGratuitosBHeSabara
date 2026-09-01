@@ -10,6 +10,7 @@ const themesSource = fs.readFileSync(path.join(root, 'js/temas-visuais.js'), 'ut
 const themesCss = fs.readFileSync(path.join(root, 'css/temas-visuais.css'), 'utf8');
 const indexSource = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 const serviceWorkerSource = fs.readFileSync(path.join(root, 'service-worker.js'), 'utf8');
+const siteCurationsSource = fs.readFileSync(path.join(root, 'js/curadorias-site.js'), 'utf8');
 
 function functionBody(source, name) {
   const start = source.indexOf(`function ${name}(`);
@@ -28,6 +29,12 @@ function functionBody(source, name) {
 assert.match(themesSource, /id: 'agosto-lilas-glow',[\s\S]*panelProfile: 'agosto-lilas-2026'/);
 assert.doesNotMatch(themesSource, /theme:\s*'agosto lilas'/);
 assert.match(appSource, /'agosto-lilas-2026':\s*\{[\s\S]*theme: 'agosto lilas'/);
+assert.match(themesSource, /id: 'setembro-amarelo-glow',[\s\S]*panelProfile: 'setembro-amarelo-2026'/);
+assert.doesNotMatch(themesSource, /theme:\s*'setembro amarelo'/);
+assert.match(appSource, /'setembro-amarelo-2026':\s*\{[\s\S]*theme: 'setembro amarelo'/);
+assert.match(appSource, /destaque: 'Se precisar, peça ajuda!'/);
+assert.match(themesSource, /setembro-amarelo-banner\.svg/);
+assert.match(themesSource, /Setembro Amarelo — Se precisar, peça ajuda\. CVV 188\./);
 
 // O banner é um botão nativo, com estado, rótulo e tooltip sincronizados.
 assert.match(themesSource, /document\.createElement\('button'\)/);
@@ -39,6 +46,10 @@ assert.match(themesSource, /new CustomEvent\('mural:panel-profile-request'/);
 assert.doesNotMatch(themesSource, /if \(banner\.getAttribute\('aria-pressed'\) === 'true'\) return/);
 assert.match(themesSource, /event\.key !== 'Enter' && event\.key !== ' '/);
 assert.match(themesSource, /event\.preventDefault\(\);\s*togglePanelProfile\(\)/);
+assert.match(themesSource, /new CustomEvent\('mural:support-help-request'/);
+assert.match(themesSource, /button\.setAttribute\('aria-label', `\$\{themeConfig\.helpLabel\} — Setembro Amarelo`\)/);
+assert.match(siteCurationsSource, /dialog\.setAttribute\('aria-labelledby', 'support-help-title'\)/);
+assert.match(siteCurationsSource, /dialog\.addEventListener\('close',[\s\S]*supportOpener\?\.focus/);
 
 // A aplicação pelo banner e pelo compositor converge no mesmo caminho e reconstrói uma única vez.
 const applyBody = functionBody(appSource, 'applyPanelSettingsAndRender');
@@ -62,12 +73,15 @@ assert.match(themesCss, /:focus-visible \.campaign-profile-tooltip/);
 
 // O bump mínimo mantém HTML e precache apontando para os mesmos artefatos.
 for (const asset of [
-  'css/temas-visuais.css?v=3',
-  'js/app.js?v=87',
-  'js/temas-visuais.js?v=4'
+  'css/temas-visuais.css?v=4',
+  'js/tema-visual-boot.js?v=2',
+  'js/curadorias-site.js?v=1',
+  'js/app.js?v=88',
+  'js/temas-visuais.js?v=5'
 ]) {
   assert.ok(indexSource.includes(asset), `Referência ausente no HTML: ${asset}`);
   assert.ok(serviceWorkerSource.includes(`./${asset}`), `Referência ausente no precache: ${asset}`);
 }
+assert.ok(serviceWorkerSource.includes('./imagens/curadorias/setembro-amarelo-banner.svg'));
 
 console.log('Testes do atalho de perfil pelo banner aprovados.');

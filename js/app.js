@@ -6,6 +6,7 @@
   const COURSES_URL = 'cursos.json';
   const CONTESTS_URL = 'concursos.json';
   const FILMS_URL = 'filmes.json';
+  const SITE_CURATIONS_URL = 'curadorias-site.json';
   const CONFIG_URL = 'configuracao-mural.json';
   const app = document.getElementById('app');
   const SCHOOL_ROTATION_SIZE = 6;
@@ -29,6 +30,39 @@
           films: true
         },
         theme: 'agosto lilas',
+        eventCities: [],
+        eventCategory: '',
+        eventProgram: '',
+        eventUnit: '',
+        bookCampuses: [],
+        bookAccess: '',
+        filmGenre: '',
+        filmRating: '',
+        filmDuration: '',
+        weights: {
+          events: 5,
+          books: 1,
+          courses: 1,
+          contests: 1,
+          films: 1
+        },
+        slideDuration: 0
+      }
+    },
+    'setembro-amarelo-2026': {
+      nome: 'Setembro Amarelo — curadoria do mês',
+      destaque: 'Se precisar, peça ajuda!',
+      ativo_de: '2026-09-01',
+      ativo_ate: '2026-09-30',
+      configuracao: {
+        modules: {
+          events: true,
+          books: true,
+          courses: true,
+          contests: false,
+          films: true
+        },
+        theme: 'setembro amarelo',
         eventCities: [],
         eventCategory: '',
         eventProgram: '',
@@ -71,6 +105,7 @@
   const coursesContent = window.MuralCultural.contents.courses;
   const contestsContent = window.MuralCultural.contents.contests;
   const filmsContent = window.MuralCultural.contents.films;
+  const siteCurationsContent = window.MuralCultural.siteCurations;
   let deferredInstallPrompt = null;
 
   // O tema original é fixo; remove preferências antigas salvas pelo seletor.
@@ -128,6 +163,7 @@
     coursesData: null,
     contestsData: null,
     filmsData: null,
+    siteCurationsData: null,
     config: null,
     allEvents: [],
     allBooks: [],
@@ -3333,7 +3369,8 @@ function eventProgram(event) {
     if (item.tipo_conteudo === 'filme') {
       return filmsContent.createAgendaCard(item, {
         escapeHtml,
-        showDetails: (movie, opener) => filmsContent.showDetails(movie, opener, escapeHtml)
+        safeExternalUrl,
+        showDetails: (movie, opener) => filmsContent.showDetails(movie, opener, escapeHtml, safeExternalUrl)
       });
     }
 
@@ -3862,12 +3899,13 @@ function eventProgram(event) {
 
   async function load() {
     try {
-      const [response, booksData, coursesData, contestsData, filmsData, config] = await Promise.all([
+      const [response, booksData, coursesData, contestsData, filmsData, siteCurationsData, config] = await Promise.all([
         fetch(`${DATA_URL}?v=${Date.now()}`, { cache: 'no-store' }),
         loadOptionalJson(BOOKS_URL, { livros: [] }),
         loadOptionalJson(COURSES_URL, { cursos: [] }),
         loadOptionalJson(CONTESTS_URL, { concursos: [] }),
         loadOptionalJson(FILMS_URL, { filmes: [] }),
+        loadOptionalJson(SITE_CURATIONS_URL, null),
         loadOptionalJson(CONFIG_URL, {
           nome: 'Mural Cultural',
           modulos: { eventos: true, livros: false },
@@ -3888,20 +3926,29 @@ function eventProgram(event) {
         ? contestsData
         : { concursos: [] };
       state.filmsData = filmsData && Array.isArray(filmsData.filmes) ? filmsData : { filmes: [] };
+      state.siteCurationsData = siteCurationsData;
       state.config = config || {};
-      state.allEvents = filterAndSort(data.eventos).map(event => ({ ...event, tipo_conteudo: 'evento' }));
-      state.allBooks = (state.booksData.livros || []).map(book => ({ ...book, tipo_conteudo: 'livro' }));
-      state.allCourses = (state.coursesData.cursos || []).map(course => ({ ...course, tipo_conteudo: 'curso' }));
+      const siteLayer = siteCurationsContent.apply(siteCurationsData, {
+        eventos: data.eventos,
+        livros: state.booksData.livros,
+        cursos: state.coursesData.cursos,
+        filmes: state.filmsData.filmes
+      });
+      state.allEvents = filterAndSort(siteLayer.eventos).map(event => ({ ...event, tipo_conteudo: 'evento' }));
+      state.allBooks = siteLayer.livros.map(book => ({ ...book, tipo_conteudo: 'livro' }));
+      state.allCourses = siteLayer.cursos.map(course => ({ ...course, tipo_conteudo: 'curso' }));
       state.allContests = (state.contestsData.concursos || [])
         .filter(contestsContent.isValid)
         .map(contest => ({
           ...contestsContent.publicRecord(contest),
           tipo_conteudo: 'concurso'
         }));
-      state.allFilms = (state.filmsData.filmes || []).map(movie => ({
+      state.allFilms = siteLayer.filmes.map(movie => ({
         ...movie,
         tipo_conteudo: 'filme'
       }));
+      siteCurationsContent.mountSupportArea(siteLayer.apoio);
+      siteCurationsContent.bindSupportRequest();
       state.schoolRotationBatch = readStoredSchoolBatch();
       loadStoredPanelSettings();
       rebuildVisibleItems();

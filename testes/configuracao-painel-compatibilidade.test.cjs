@@ -10,19 +10,11 @@ const config = JSON.parse(
   fs.readFileSync(path.join(root, 'configuracao-mural.json'), 'utf8')
 );
 
-assert.deepEqual(config.painel.modulos_ativos, {
-  eventos: true,
-  livros: true,
-  cursos: true,
-  concursos: true
-});
 assert.deepEqual(config.modulos, {
   eventos: true,
-  livros: true,
-  cursos: true,
-  concursos: true
+  livros: true
 });
-assert.equal(config.painel.frequencia.concursos, 1);
+assert.equal(config.painel, undefined, 'A configuração enxuta do publicador central deve continuar válida.');
 
 // Configurações/perfis antigos não possuem `modules.contests`. O contrato
 // real deve herdar o padrão global somente quando a propriedade está ausente.
@@ -46,6 +38,8 @@ assert.match(
   appSource,
   /contests: clampWeight\(weights\.contests \?\? defaults\.weights\.contests\)/
 );
+assert.match(appSource, /const panel = state\.config\?\.painel \|\| \{\};/);
+assert.match(appSource, /const panelModules = panel\.modulos_ativos \|\| \{\};/);
 
 // Uma escolha explícita do usuário deve ser lida do compositor e persistida
 // junto das demais configurações normalizadas.

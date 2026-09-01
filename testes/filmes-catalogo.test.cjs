@@ -50,7 +50,8 @@ if (searchable.generos?.length) {
 }
 assert.equal(films.queryMatches(searchable, searchable.plataforma, normalizeText), true);
 assert.equal(films.platformName(searchable), searchable.plataforma);
-assert.equal(films.platformName({}), 'plataforma oficial');
+assert.equal(films.platformName({}), 'Origem não informada');
+assert.equal(films.platformName({ site_only: true }), 'Curadoria site-only');
 
 const titleSorted = films.sort(data.filmes, 'title-asc');
 assert.equal(titleSorted.length, data.filmes.length);
@@ -70,7 +71,7 @@ for (const [order, field, direction] of [
   }
 }
 
-assert.match(indexSource, /js\/conteudos\/filmes\.js\?v=5/);
+assert.match(indexSource, /js\/conteudos\/filmes\.js\?v=6/);
 assert.doesNotMatch(indexSource, /filmes\.html/);
 assert.match(appSource, /<option value="films">Filmes<\/option>/);
 assert.match(appSource, /loadOptionalJson\(FILMS_URL, \{ filmes: \[\] \}\)/);
@@ -85,12 +86,14 @@ assert.match(appSource, /panel-film-weight/);
 assert.match(appSource, /tipo_conteudo === 'filme'/);
 assert.match(source, /Acessar na plataforma/);
 assert.match(source, /target="_blank" rel="noopener noreferrer"/);
+assert.match(source, /Página oficial não confirmada no piloto/);
+assert.doesNotMatch(source, /href="\$\{escapeHtml\(movie\.pagina_oficial\)\}"/);
 assert.doesNotMatch(source, /Filme gratuito no LGBTFlix/);
 assert.doesNotMatch(source, /Assistir gratuitamente no LGBTFlix/);
 assert.doesNotMatch(source, /<(?:iframe|video)\b/i);
 assert.doesNotMatch(JSON.stringify(data), /youtube\.com\/embed|player\.vimeo\.com/i);
 assert.match(swSource, /'\/filmes\.json'/);
-assert.match(swSource, /'\.\/js\/conteudos\/filmes\.js\?v=5'/);
+assert.match(swSource, /'\.\/js\/conteudos\/filmes\.js\?v=6'/);
 assert.match(stylesSource, /\.agenda-film-card \.film-media\{[^}]*aspect-ratio:16\/9/);
 assert.match(stylesSource, /@media\(max-width:760px\)\{\.agenda-film-card\{display:flex;grid-template-columns:none;flex-direction:column/);
 assert.match(stylesSource, /\.agenda-film-card \.film-media img\{[^}]*position:static;[^}]*object-fit:cover/);

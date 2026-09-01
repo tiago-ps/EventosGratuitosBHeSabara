@@ -2,8 +2,25 @@
   'use strict';
 
   const STORAGE_KEY = 'mural:visual-theme';
-  const DEFAULT_THEME = 'agosto-lilas-glow';
+  const SEPTEMBER_AUTO_THEME_KEY = 'mural:visual-theme:auto:setembro-2026';
   const BANNER_CLASS = 'campaign-profile-banner';
+  const HELP_BUTTON_CLASS = 'campaign-help-button';
+
+  function dateKey(date = new Date()) {
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  }
+
+  function seasonalDefaultTheme(date = new Date()) {
+    const current = dateKey(date);
+    if (current >= '2026-09-01' && current <= '2026-09-30') return 'setembro-amarelo-glow';
+    if (current >= '2026-08-01' && current <= '2026-08-31') return 'agosto-lilas-glow';
+    return 'padrao';
+  }
+
+  const DEFAULT_THEME = seasonalDefaultTheme();
 
   const THEMES = [
     {
@@ -23,6 +40,19 @@
         src: 'imagens/curadorias/agosto-lilas-banner.png',
         alt: 'Agosto Lilás'
       }
+    },
+    {
+      id: 'setembro-amarelo-glow',
+      label: 'Setembro Amarelo Glow',
+      description: 'Amarelo acolhedor, dourado e fundo profundo',
+      swatch: 'is-setembro-amarelo',
+      panelProfile: 'setembro-amarelo-2026',
+      profileLabel: 'Setembro Amarelo',
+      helpLabel: 'Onde buscar ajuda',
+      banner: {
+        src: 'imagens/curadorias/setembro-amarelo-banner.svg',
+        alt: 'Setembro Amarelo — Se precisar, peça ajuda. CVV 188.'
+      }
     }
   ];
 
@@ -41,13 +71,18 @@
   }
 
   function persistTheme(theme) {
-    try { localStorage.setItem(STORAGE_KEY, theme); } catch (_) {}
+    try {
+      localStorage.setItem(STORAGE_KEY, theme);
+      localStorage.removeItem(SEPTEMBER_AUTO_THEME_KEY);
+    } catch (_) {}
   }
 
   function updateBrowserColor(theme) {
     const meta = document.querySelector('meta[name="theme-color"]');
     if (!meta) return;
-    meta.content = theme === 'agosto-lilas-glow' ? '#120626' : defaultThemeColor;
+    if (theme === 'agosto-lilas-glow') meta.content = '#120626';
+    else if (theme === 'setembro-amarelo-glow') meta.content = '#151308';
+    else meta.content = defaultThemeColor;
   }
 
   function activePanelProfile() {
@@ -78,7 +113,7 @@
 
     banner = document.createElement('button');
     banner.type = 'button';
-    banner.className = `${BANNER_CLASS} campaign-agosto-lilas-badge`;
+    banner.className = `${BANNER_CLASS} campaign-profile-badge campaign-${theme.id}-badge`;
     banner.dataset.panelProfile = theme.panelProfile;
     banner.dataset.profileLabel = theme.profileLabel;
     banner.innerHTML = `
@@ -113,6 +148,37 @@
     });
   }
 
+  function syncHelpButton(theme) {
+    const themeConfig = THEMES.find(item => item.id === theme);
+    const available = Boolean(
+      themeConfig?.helpLabel && themeConfig.panelProfile &&
+      root.dataset.siteCurationHelp === themeConfig.panelProfile
+    );
+    let button = document.querySelector(`.${HELP_BUTTON_CLASS}`);
+    if (!available) {
+      button?.remove();
+      return;
+    }
+    if (!button) {
+      button = document.createElement('button');
+      button.type = 'button';
+      button.className = HELP_BUTTON_CLASS;
+      button.addEventListener('click', () => {
+        window.dispatchEvent(new CustomEvent('mural:support-help-request', {
+          detail: { opener: button }
+        }));
+      });
+      document.body.appendChild(button);
+    }
+    button.textContent = themeConfig.helpLabel;
+    button.setAttribute('aria-label', `${themeConfig.helpLabel} — Setembro Amarelo`);
+  }
+
+  function syncThemeExperience(theme) {
+    syncBanner(theme);
+    syncHelpButton(theme);
+  }
+
   function syncOptions(theme) {
     document.querySelectorAll('[data-visual-theme-option]').forEach(button => {
       button.setAttribute('aria-pressed', String(button.dataset.visualThemeOption === theme));
@@ -125,7 +191,7 @@
     if (persist) persistTheme(next);
     updateBrowserColor(next);
     syncOptions(next);
-    syncBanner(next);
+    syncThemeExperience(next);
     window.dispatchEvent(new CustomEvent('mural:visual-theme-change', { detail: { theme: next } }));
   }
 
@@ -220,13 +286,14 @@
       scheduled = false;
       const theme = readTheme();
       syncOptions(theme);
-      syncBanner(theme);
+      syncThemeExperience(theme);
     });
   }
 
   const observer = new MutationObserver(scheduleSync);
 
   window.addEventListener('mural:panel-profile-change', scheduleSync);
+  window.addEventListener('mural:site-curation-change', scheduleSync);
 
   function start() {
     buildSwitcher();

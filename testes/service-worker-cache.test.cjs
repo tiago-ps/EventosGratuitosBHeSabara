@@ -81,16 +81,20 @@ async function dispatch(type, event) {
 }
 
 (async () => {
-  assert.equal(sw.CACHE_VERSION, 'mural-cultural-v81-tela-brasil');
+  assert.equal(sw.CACHE_VERSION, 'mural-cultural-v87-setembro-amarelo');
   for (const asset of [
     './css/styles.css?v=69',
     './css/eventos-manuais-ui.css?v=43',
     './css/concursos-mural.css?v=2',
     './js/core/rotacao.js?v=1',
-    './js/conteudos/cursos.js?v=1',
+    './css/temas-visuais.css?v=4',
+    './js/tema-visual-boot.js?v=2',
+    './js/conteudos/cursos.js?v=3',
     './js/conteudos/concursos.js?v=2',
-    './js/conteudos/filmes.js?v=5',
-    './js/app.js?v=79',
+    './js/conteudos/filmes.js?v=6',
+    './js/curadorias-site.js?v=1',
+    './js/app.js?v=88',
+    './js/temas-visuais.js?v=5',
     './js/eventos-manuais-ui.js?v=44'
   ]) {
     assert.ok(sw.CORE_ASSETS.includes(asset), `Precache ausente: ${asset}`);
@@ -98,7 +102,9 @@ async function dispatch(type, event) {
   assert.ok(sw.DATA_PATHS.includes('/cursos.json'));
   assert.ok(sw.DATA_PATHS.includes('/concursos.json'));
   assert.ok(sw.DATA_PATHS.includes('/filmes.json'));
-  assert.equal(sw.CORE_ASSETS.some(asset => /(?:cursos|concursos|filmes)\.json/.test(asset)), false);
+  assert.ok(sw.DATA_PATHS.includes('/curadorias-site.json'));
+  assert.equal(sw.CORE_ASSETS.some(asset => /(?:cursos|concursos|filmes|curadorias-site)\.json/.test(asset)), false);
+  assert.ok(sw.CORE_ASSETS.includes('./imagens/curadorias/setembro-amarelo-banner.svg'));
 
   await dispatch('install', {});
   assert.deepEqual(installedAssets, Array.from(sw.CORE_ASSETS));
@@ -126,6 +132,7 @@ async function dispatch(type, event) {
   assert.match(appSource, /loadOptionalJson\(COURSES_URL, \{ cursos: \[\] \}\)/);
   assert.match(appSource, /loadOptionalJson\(CONTESTS_URL, \{ concursos: \[\] \}\)/);
   assert.match(appSource, /loadOptionalJson\(FILMS_URL, \{ filmes: \[\] \}\)/);
+  assert.match(appSource, /loadOptionalJson\(SITE_CURATIONS_URL, null\)/);
 
   console.log('Testes de cache e dados opcionais do service worker aprovados.');
 })().catch(error => {

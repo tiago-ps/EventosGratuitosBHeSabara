@@ -7,7 +7,7 @@
   const text = value => String(value || '').trim();
   const list = value => Array.isArray(value) ? value.map(text).filter(Boolean) : [];
   const titleCompare = (a, b) => text(a.titulo).localeCompare(text(b.titulo), 'pt-BR');
-  const platformName = movie => text(movie?.plataforma) || 'plataforma oficial';
+  const platformName = movie => text(movie?.plataforma) || text(movie?.fonte) || (movie?.site_only ? 'Curadoria site-only' : 'Origem não informada');
   const PANEL_LIMIT = 15;
 
   function queryMatches(movie, query, normalizeText) {
@@ -180,7 +180,11 @@
 
     const link = safeExternalUrl(movie.pagina_oficial);
     const sourceLabel = slide.querySelector('.source-label');
-    if (sourceLabel) sourceLabel.textContent = 'Filme gratuito na plataforma oficial';
+    if (sourceLabel) {
+      sourceLabel.textContent = link
+        ? 'Filme gratuito na plataforma oficial'
+        : 'Filme da curadoria site-only';
+    }
     const source = slide.querySelector('.source-url');
     if (source) {
       if (link) {
@@ -191,7 +195,7 @@
         anchor.rel = 'noopener noreferrer';
         source.replaceChildren(anchor);
       } else {
-        source.textContent = platform;
+        source.textContent = 'Página oficial não confirmada no piloto.';
       }
     }
     const updated = slide.querySelector('.updated');
@@ -240,6 +244,7 @@
 
   function createAgendaCard(movie, helpers) {
     const escapeHtml = helpers.escapeHtml;
+    const link = helpers.safeExternalUrl(movie.pagina_oficial);
     const article = document.createElement('article');
     article.className = 'agenda-card agenda-film-card';
     const genres = list(movie.generos);
@@ -277,7 +282,7 @@
         ${movie.sinopse ? `<p class="agenda-card-description">${escapeHtml(movie.sinopse)}</p>` : ''}
         <div class="agenda-card-actions">
           <button type="button" class="film-details-button">Ver detalhes</button>
-          <a href="${escapeHtml(movie.pagina_oficial)}" target="_blank" rel="noopener noreferrer" aria-label="Acessar ${escapeHtml(movie.titulo)} no ${escapeHtml(platform)} (abre em nova guia)">Acessar na plataforma</a>
+          ${link ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer" aria-label="Acessar ${escapeHtml(movie.titulo)} no ${escapeHtml(platform)} (abre em nova guia)">Acessar na plataforma</a>` : ''}
         </div>
       </div>`;
     article.querySelector('.film-details-button').addEventListener('click', event => {
@@ -292,7 +297,7 @@
     return `<section><h3>${escapeHtml(label)}</h3><p>${escapeHtml(values.join(' · '))}</p></section>`;
   }
 
-  function showDetails(movie, opener, escapeHtml) {
+  function showDetails(movie, opener, escapeHtml, safeExternalUrl) {
     let dialog = document.getElementById('film-details-dialog');
     if (!dialog) {
       dialog = document.createElement('dialog');
@@ -308,6 +313,7 @@
       document.body.append(dialog);
     }
     const platform = platformName(movie);
+    const link = safeExternalUrl(movie.pagina_oficial);
     const poster = movie.imagem
       ? `<img src="${escapeHtml(movie.imagem)}" alt="Cartaz do filme ${escapeHtml(movie.titulo)}">`
       : `<div class="film-poster-fallback" role="img" aria-label="Cartaz não disponível para o filme ${escapeHtml(movie.titulo)}"><span aria-hidden="true">🎬</span><strong>Cartaz não disponível</strong></div>`;
@@ -321,7 +327,7 @@
         <button type="button" class="film-dialog-close" aria-label="Fechar detalhes">×</button>
         <div class="film-dialog-poster">${poster}</div>
         <div class="film-dialog-copy">
-          <p class="agenda-eyebrow">Filme gratuito em ${escapeHtml(platform)}</p>
+          <p class="agenda-eyebrow">${link ? `Filme gratuito em ${escapeHtml(platform)}` : 'Filme da curadoria site-only'}</p>
           <h2 id="film-dialog-title">${escapeHtml(movie.titulo)}</h2>
           ${facts ? `<p class="film-dialog-facts">${escapeHtml(facts)}</p>` : ''}
           ${movie.tagline ? `<p class="film-dialog-tagline">${escapeHtml(movie.tagline)}</p>` : ''}
@@ -338,8 +344,8 @@
             ${detailSection('Prêmios', movie.premios, escapeHtml)}
             ${detailSection('Plataforma', platform, escapeHtml)}
           </div>
-          <a class="film-watch-link" href="${escapeHtml(movie.pagina_oficial)}" target="_blank" rel="noopener noreferrer">Acessar no ${escapeHtml(platform)} <span aria-hidden="true">↗</span></a>
-          <p class="film-rights-note">O Mural Cultural não hospeda este filme. ${movie.imagem ? `Imagem fornecida pela plataforma ${escapeHtml(platform)}; licença específica de reutilização não verificada.` : 'Cartaz não fornecido pela fonte.'}</p>
+          ${link ? `<a class="film-watch-link" href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer">Acessar no ${escapeHtml(platform)} <span aria-hidden="true">↗</span></a>` : '<p class="film-link-unavailable">Página oficial não confirmada no piloto; nenhum link ou QR Code foi criado.</p>'}
+          <p class="film-rights-note">O Mural Cultural não hospeda este filme. ${link ? (movie.imagem ? `Imagem fornecida pela plataforma ${escapeHtml(platform)}; licença específica de reutilização não verificada.` : 'Cartaz não fornecido pela fonte.') : 'Metadados e acesso ainda precisam de validação institucional.'}</p>
         </div>
       </div>`;
     const close = dialog.querySelector('.film-dialog-close');

@@ -92,6 +92,11 @@
     radial-gradient(circle at 75% 25%, #ea8cff 0 8%, transparent 27%),
     linear-gradient(145deg, #09051b, #40106d 62%, #ce3cff);
 }
+.visual-theme-swatch.is-setembro-amarelo {
+  background:
+    radial-gradient(circle at 75% 25%, #ffe27a 0 8%, transparent 28%),
+    linear-gradient(145deg, #0b0b08, #4c4008 62%, #f5c518);
+}
 .visual-theme-option-copy { min-width: 0; }
 .visual-theme-option-title { display: block; font-size: 12px; font-weight: 900; }
 .visual-theme-option-description { display: block; margin-top: 2px; color: #bfc8d7; font-size: 10px; line-height: 1.25; }
@@ -264,8 +269,179 @@ html[data-visual-theme="agosto-lilas-glow"] body.agenda-mode {
     #080418;
 }
 
+/* ======================== Setembro Amarelo Glow ======================== */
+html[data-visual-theme="setembro-amarelo-glow"] body {
+  --bg: #0b0b08;
+  --panel: #211d09;
+  --panel-deep: #151308;
+  --panel-end: #2e2809;
+  --media-bg: #181608;
+  --text: #fffdf5;
+  --muted: #e5ddba;
+  --accent: #f5c518;
+  --accent-soft: #ffe27a;
+  --accent-contrast: #151308;
+  --category: #d6a900;
+  --category-contrast: #151308;
+  --date-highlight: #ffe27a;
+  --detail-heading: #ffe27a;
+  --line: rgba(245, 197, 24, .30);
+  --surface: rgba(214, 169, 0, .13);
+  --loading-glow: #6b5700;
+  --spinner-track: rgba(255, 226, 122, .22);
+  --overlay-side: rgba(11, 11, 8, .92);
+  --overlay-bottom: rgba(33, 29, 9, .56);
+  --fallback-glow-one: rgba(245, 197, 24, .30);
+  --fallback-glow-two: rgba(214, 169, 0, .22);
+  --fallback-start: #302908;
+  --fallback-end: #0b0b08;
+  --fallback-label: #fff7cf;
+  --counter-border: rgba(255, 226, 122, .43);
+  --detail-border: rgba(245, 197, 24, .30);
+  --link-decoration: rgba(255, 226, 122, .58);
+  --link-hover: #fff1b0;
+  --controls-bg: rgba(21, 19, 8, .88);
+  --control-bg: rgba(214, 169, 0, .20);
+  --control-hover-bg: rgba(245, 197, 24, .32);
+  --mobile-overlay: rgba(11, 11, 8, .94);
+  --top-edge: #d6a900;
+  --progress-end: #ffe27a;
+  background: #0b0b08;
+}
+
+html[data-visual-theme="setembro-amarelo-glow"] body.panel-mode .slide {
+  isolation: isolate;
+  background:
+    radial-gradient(circle 430px at 100% 100%, rgba(245, 197, 24, .18), transparent 72%),
+    linear-gradient(145deg, #0b0b08 0%, #151308 54%, #211d09 100%);
+  box-shadow: inset 0 4px 0 rgba(245, 197, 24, .72);
+}
+
+html[data-visual-theme="setembro-amarelo-glow"] body.panel-mode .content {
+  position: relative;
+  isolation: isolate;
+}
+
+html[data-visual-theme="setembro-amarelo-glow"] body.panel-mode .content::before {
+  content: '';
+  position: absolute;
+  inset: -11%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: .88;
+  background:
+    radial-gradient(circle 82px at 92% 13%, rgba(255, 226, 122, .48) 0%, rgba(245, 197, 24, .18) 31%, transparent 72%),
+    radial-gradient(circle 56px at 64% 10%, rgba(245, 197, 24, .28) 0%, rgba(214, 169, 0, .12) 35%, transparent 72%),
+    radial-gradient(circle 116px at 84% 72%, rgba(245, 197, 24, .30) 0%, rgba(214, 169, 0, .12) 34%, transparent 73%),
+    radial-gradient(circle 74px at 42% 78%, rgba(214, 169, 0, .23) 0%, rgba(96, 77, 0, .10) 36%, transparent 74%);
+  filter: blur(15px) saturate(1.08);
+  transform: translate3d(0, 0, 0);
+  animation: amareloGlowDrift 17s ease-in-out infinite alternate;
+}
+
+html[data-visual-theme="setembro-amarelo-glow"] body.panel-mode .content::after {
+  content: '';
+  position: absolute;
+  right: -9vw;
+  bottom: -13vh;
+  z-index: 0;
+  width: min(62vw, 980px);
+  height: min(48vw, 760px);
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(ellipse, rgba(245, 197, 24, .13), rgba(94, 76, 0, .04) 44%, transparent 72%);
+  filter: blur(8px);
+}
+
+html[data-visual-theme="setembro-amarelo-glow"] body.panel-mode .content > * { position: relative; z-index: 1; }
+
+@keyframes amareloGlowDrift {
+  from { transform: translate3d(-1.2%, .8%, 0) scale(1); opacity: .80; }
+  to { transform: translate3d(1.5%, -1%, 0) scale(1.045); opacity: 1; }
+}
+
+html[data-visual-theme="setembro-amarelo-glow"] .details > div,
+html[data-visual-theme="setembro-amarelo-glow"] .book-details > div,
+html[data-visual-theme="setembro-amarelo-glow"] .filter-panel,
+html[data-visual-theme="setembro-amarelo-glow"] .agenda-card {
+  border-color: rgba(245, 197, 24, .27);
+  background: linear-gradient(145deg, rgba(62, 53, 10, .42), rgba(15, 14, 7, .68));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.05), 0 12px 38px rgba(0, 0, 0, .24);
+}
+
+html[data-visual-theme="setembro-amarelo-glow"] .controls,
+html[data-visual-theme="setembro-amarelo-glow"] .agenda-tools {
+  border-color: rgba(245, 197, 24, .25);
+  background: rgba(21, 19, 8, .88);
+}
+
+html[data-visual-theme="setembro-amarelo-glow"] .control-btn,
+html[data-visual-theme="setembro-amarelo-glow"] .view-toggle,
+html[data-visual-theme="setembro-amarelo-glow"] .filter-close {
+  border-color: rgba(255, 226, 122, .30);
+  background: linear-gradient(145deg, rgba(214, 169, 0, .24), rgba(91, 73, 0, .18));
+  color: #ffe27a;
+}
+
+html[data-visual-theme="setembro-amarelo-glow"] .control-btn:hover,
+html[data-visual-theme="setembro-amarelo-glow"] .view-toggle:hover,
+html[data-visual-theme="setembro-amarelo-glow"] .filter-close:hover {
+  background: linear-gradient(145deg, rgba(245, 197, 24, .38), rgba(158, 126, 0, .28));
+  color: #fffdf5;
+}
+
+html[data-visual-theme="setembro-amarelo-glow"] .filter-apply,
+html[data-visual-theme="setembro-amarelo-glow"] .empty-clear-filters,
+html[data-visual-theme="setembro-amarelo-glow"] .filter-btn.has-filters {
+  background: linear-gradient(135deg, #d6a900, #f5c518);
+  color: #151308;
+  box-shadow: 0 7px 20px rgba(214, 169, 0, .24);
+}
+
+html[data-visual-theme="setembro-amarelo-glow"] .badge.category,
+html[data-visual-theme="setembro-amarelo-glow"] .slide .badge.course-online,
+html[data-visual-theme="setembro-amarelo-glow"] .book-themes > *,
+html[data-visual-theme="setembro-amarelo-glow"] .agenda-card-badges span {
+  border: 1px solid rgba(255, 226, 122, .24);
+  background: linear-gradient(135deg, rgba(117, 93, 0, .96), rgba(178, 141, 0, .94));
+  color: #fffdf5;
+}
+
+html[data-visual-theme="setembro-amarelo-glow"] .badge.free {
+  border-color: rgba(255, 226, 122, .30);
+  background: linear-gradient(135deg, #d6a900, #f5c518);
+  color: #151308;
+}
+
+html[data-visual-theme="setembro-amarelo-glow"] .filter-grid select,
+html[data-visual-theme="setembro-amarelo-glow"] .agenda-tools input,
+html[data-visual-theme="setembro-amarelo-glow"] .agenda-tools select {
+  border-color: rgba(245, 197, 24, .27);
+  background: rgba(11, 11, 8, .82);
+}
+
+html[data-visual-theme="setembro-amarelo-glow"] body.agenda-mode {
+  background:
+    radial-gradient(circle 180px at 92% 8%, rgba(245, 197, 24, .20), transparent 72%),
+    radial-gradient(circle 240px at 4% 55%, rgba(214, 169, 0, .12), transparent 74%),
+    radial-gradient(circle 280px at 94% 88%, rgba(245, 197, 24, .13), transparent 74%),
+    #0b0b08;
+}
+
+html[data-visual-theme="setembro-amarelo-glow"] .visual-theme-toggle {
+  border-color: rgba(255, 226, 122, .40);
+  background: linear-gradient(145deg, rgba(82, 67, 5, .94), rgba(181, 143, 0, .92));
+  color: #fffdf5;
+  box-shadow: 0 10px 32px rgba(107, 84, 0, .32);
+}
+
+html[data-visual-theme="setembro-amarelo-glow"] .visual-theme-panel {
+  border-color: rgba(245, 197, 24, .32);
+  background: linear-gradient(145deg, rgba(34, 30, 9, .97), rgba(11, 11, 8, .98));
+}
+
 /* O tema controla a visibilidade; o perfil editorial controla somente o estado selecionado. */
-.campaign-agosto-lilas-badge {
+.campaign-profile-badge {
   position: absolute;
   top: 1.25%;
   left: 50%;
@@ -369,20 +545,110 @@ html[data-visual-theme="agosto-lilas-glow"] .visual-theme-panel {
   background: linear-gradient(145deg, rgba(28, 8, 57, .96), rgba(9, 5, 25, .97));
 }
 
+html[data-visual-theme="setembro-amarelo-glow"] .campaign-profile-tooltip {
+  border-color: rgba(245, 197, 24, .32);
+  background: rgba(21, 19, 8, .96);
+  color: #fffdf5;
+}
+
+.campaign-help-button {
+  position: fixed;
+  top: max(12px, env(safe-area-inset-top));
+  right: max(12px, env(safe-area-inset-right));
+  z-index: 94;
+  padding: 10px 15px;
+  border: 1px solid rgba(255, 226, 122, .48);
+  border-radius: 999px;
+  background: linear-gradient(135deg, #d6a900, #f5c518);
+  color: #151308;
+  font: 800 13px/1.2 system-ui, sans-serif;
+  box-shadow: 0 9px 28px rgba(0, 0, 0, .34);
+  cursor: pointer;
+}
+
+.campaign-help-button:hover { background: #ffe27a; }
+.campaign-help-button:focus-visible,
+.support-help-close:focus-visible,
+.support-help-dialog a:focus-visible {
+  outline: 3px solid #ffe27a;
+  outline-offset: 3px;
+}
+
+.support-help-dialog {
+  width: min(920px, calc(100vw - 24px));
+  max-height: min(88vh, 900px);
+  padding: 0;
+  border: 1px solid rgba(245, 197, 24, .42);
+  border-radius: 22px;
+  background: #151308;
+  color: #fffdf5;
+  box-shadow: 0 28px 90px rgba(0, 0, 0, .68);
+}
+
+.support-help-dialog::backdrop { background: rgba(3, 3, 2, .78); backdrop-filter: blur(5px); }
+.support-help-shell { padding: clamp(18px, 3vw, 34px); overflow: auto; max-height: inherit; }
+.support-help-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; }
+.support-help-header h2 { margin: 4px 0 8px; font-size: clamp(27px, 5vw, 45px); }
+.support-help-eyebrow { margin: 0; color: #ffe27a; font-weight: 800; }
+.support-help-intro { max-width: 70ch; margin: 0; color: #e5ddba; line-height: 1.55; }
+.support-help-close {
+  flex: 0 0 auto;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255, 226, 122, .34);
+  border-radius: 50%;
+  background: rgba(245, 197, 24, .10);
+  color: #fffdf5;
+  font: 500 28px/1 system-ui, sans-serif;
+  cursor: pointer;
+}
+.support-help-emergency {
+  margin: 22px 0;
+  padding: 16px 18px;
+  border: 1px solid rgba(255, 226, 122, .45);
+  border-radius: 16px;
+  background: rgba(245, 197, 24, .09);
+}
+.support-help-emergency h3 { margin: 0 0 6px; color: #ffe27a; }
+.support-help-emergency p { margin: 0 0 8px; line-height: 1.5; }
+.support-help-dialog a { color: #ffe27a; font-weight: 750; text-underline-offset: 3px; }
+.support-help-sections { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.support-help-section {
+  padding: 17px;
+  border: 1px solid rgba(245, 197, 24, .20);
+  border-radius: 17px;
+  background: rgba(255, 255, 255, .035);
+}
+.support-help-section h3 { margin: 0 0 12px; color: #ffe27a; font-size: 19px; }
+.support-help-section-intro { color: #e5ddba; }
+.support-help-service + .support-help-service { margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(245, 197, 24, .16); }
+.support-help-service h4 { margin: 0 0 6px; font-size: 16px; }
+.support-help-service p { margin: 5px 0; color: #e5ddba; line-height: 1.48; }
+.support-help-address { color: #fffdf5 !important; }
+.support-help-contacts { margin: 7px 0; padding-left: 20px; color: #fffdf5; }
+.support-help-note { font-size: 13px; }
+.support-help-disclaimer { margin: 22px 0 0; padding: 14px; border-left: 4px solid #f5c518; background: rgba(245, 197, 24, .07); line-height: 1.5; }
+.support-help-future { margin: 12px 0 0; color: #bfb794; font-size: 13px; line-height: 1.5; }
+
 @media (max-width: 720px) {
   .visual-theme-switcher { left: max(9px, env(safe-area-inset-left)); bottom: max(9px, env(safe-area-inset-bottom)); }
   .visual-theme-toggle { width: 42px; height: 42px; }
-  .campaign-agosto-lilas-badge {
+  .campaign-profile-badge {
     top: 1%;
     height: 15%;
     min-height: 52px;
     max-height: 96px;
     max-width: 96%;
   }
+  .campaign-help-button { top: max(8px, env(safe-area-inset-top)); right: max(8px, env(safe-area-inset-right)); padding: 8px 11px; font-size: 11px; }
+  .support-help-sections { grid-template-columns: 1fr; }
+  .support-help-shell { padding: 17px; }
   html[data-visual-theme="agosto-lilas-glow"] body.panel-mode .content::before { filter: blur(12px); opacity: .82; }
+  html[data-visual-theme="setembro-amarelo-glow"] body.panel-mode .content::before { filter: blur(12px); opacity: .80; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html[data-visual-theme="agosto-lilas-glow"] body.panel-mode .content::before { animation: none; }
+  html[data-visual-theme="setembro-amarelo-glow"] body.panel-mode .content::before { animation: none; }
   .visual-theme-toggle { transition: none; }
 }
