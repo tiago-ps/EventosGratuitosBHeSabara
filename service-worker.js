@@ -124,6 +124,9 @@ self.addEventListener('fetch', event => {
   } else if (request.destination === 'image') {
     event.respondWith(cacheFirstImage(request));
   } else if (['style', 'script', 'manifest', 'font'].includes(request.destination)) {
-    event.respondWith(networkFirst(request, CORE_CACHE));
+    const coreRequest = ['style', 'script'].includes(request.destination)
+      ? new Request(request, { cache: 'no-store' })
+      : request;
+    event.respondWith(networkFirst(coreRequest, CORE_CACHE));
   }
 });
