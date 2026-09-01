@@ -22,7 +22,7 @@ const CORE_ASSETS = [
   './js/eventos-manuais-ui.js?v=44',
   './js/ios-install.js?v=1',
   './imagens/curadorias/agosto-lilas-banner.png',
-  './imagens/curadorias/setembro-amarelo-banner.svg',
+  './imagens/curadorias/setembro-amarelo-banner.png',
   './manifest.webmanifest',
   './imagens/app-icons/icon-192.png', './imagens/app-icons/icon-512.png',
   './imagens/app-icons/apple-touch-icon.png'
