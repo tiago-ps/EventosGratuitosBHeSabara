@@ -2,7 +2,7 @@
   "schema": 9,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-08-31T16:29:09.705969+00:00",
+  "coletado_em_utc": "2026-09-01T13:47:34.661669+00:00",
   "total": 28,
   "concursos": [
     {
@@ -91,38 +91,6 @@
       "inscricoes_fim_texto": "",
       "inscricoes_texto": "",
       "remuneracao_faixa_texto": "R$ 1.989,68 a R$ 6.407,17",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Técnico em Informática",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "alta"
-        }
-      ]
-    },
-    {
-      "titulo": "Prefeitura de Cafelândia",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-cafelandia-sp-abre-concurso-publico-com-salarios-de-ate-9028",
-      "imagem": "https://cdn.pci.app.br/img/i/c997d6f64360e76b877131bd14e667ca.png",
-      "formacoes_compativeis": [
-        "Técnico em Informática"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Técnico em Informática",
-          "nivel": "tecnico",
-          "evidencia": "portunidades sao para os cargos de: agente de atividade infantil (1 vaga) artesao (1 vaga) motorista (1 vaga) operador de maquinas (1 vaga) agente administrativo (1 vaga) agente comunitario esf (1 vaga) agente de organizacao escolar (1 vaga) orientador social (1 vaga) tecnico em enfermagem (1 vaga) tecnico em informatica (1 vaga) tecnico em servicos juridicos (1 vaga) assistente social (1 vaga) bibliotecario (1 vaga) controlador interno (1 vaga) dentista esf (1 vaga) enfermeiro esf (1 vaga) engenheiro agronomo (1 vaga) engenheiro civil (1 vaga) farmaceutico (1 vaga) fiscal de tributos (1 vaga) fisioterapeuta (1 vag"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "SP",
-      "cidade": "Cafelândia",
-      "inscricoes_inicio_texto": "19 de agosto de 2026",
-      "inscricoes_fim_texto": "31 de agosto de 2026",
-      "inscricoes_texto": "19 de agosto de 2026 a 31 de agosto de 2026",
-      "remuneracao_faixa_texto": "R$ 9.028,49",
       "remuneracao_fonte": "noticia",
       "cargos_compativeis": [
         {
@@ -848,6 +816,56 @@
         {
           "cargo": "Técnico em Tecnologia da Informação",
           "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ]
+    },
+    {
+      "titulo": "CRM - Conselho Regional de Medicina do Estado do Paraná",
+      "url": "https://www.pciconcursos.com.br/noticias/crm-pr-abre-concurso-publico-com-salarios-de-ate-6994",
+      "imagem": "https://cdn.pci.app.br/img/i/3e0ab25b80d247b64f33af998889a991.png",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": " de medicina do estado do parana (crm-pr) publicou um edital de concurso publico visando preencher 2 vagas imediatas e formar cadastro de reserva para profissionais de nivel medio, tecnico e superior. segundo o edital, as oportunidades sao para os cargos de: operador audiovisual (1 vaga) tecnico em tecnologia da informacao (1 vaga) analista em tecnologia da informacao (cadastro de reserva) programador em tecnologia da informacao back-end (cadastro de reserva) programador em tecnologia da informacao front-end (cadastro de reserva) a jornada de trabalho e de 40 horas semanais. as remuneracoes variam de r$ 3.341,33 a r$"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "PR",
+      "cidade": "",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "R$ 6.994,40",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico em Tecnologia da Informação",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        },
+        {
+          "cargo": "Analista em Tecnologia da Informação",
+          "vagas_texto": "Cadastro de Reserva",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        },
+        {
+          "cargo": "Programador em Tecnologia da Informação Back-End",
+          "vagas_texto": "Cadastro de Reserva",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        },
+        {
+          "cargo": "Programador em Tecnologia da Informação Front-End",
+          "vagas_texto": "Cadastro de Reserva",
           "formacao": "Sistemas de Informação / Computação",
           "confianca": "alta"
         }
