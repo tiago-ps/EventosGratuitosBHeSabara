@@ -5,6 +5,36 @@
   const SEPTEMBER_AUTO_THEME_KEY = 'mural:visual-theme:auto:setembro-2026';
   const BANNER_CLASS = 'campaign-profile-banner';
   const HELP_BUTTON_CLASS = 'campaign-help-button';
+  const CAMPAIGN_LAYOUT_STYLE_ID = 'campaign-layout-overrides';
+
+  function ensureCampaignLayoutStyles() {
+    if (document.getElementById(CAMPAIGN_LAYOUT_STYLE_ID)) return;
+    const style = document.createElement('style');
+    style.id = CAMPAIGN_LAYOUT_STYLE_ID;
+    style.textContent = `
+      /* O botão acompanha a altura real do banner: mesma porcentagem e mesmos limites. */
+      html[data-visual-theme="setembro-amarelo-glow"] body.panel-mode .media > .campaign-help-button {
+        top: calc(1.25% + clamp(64px, 14.285%, 148px) + 8px);
+      }
+
+      /* O tooltip do botão-banner fica depois do atalho de ajuda, sem disputar o mesmo espaço. */
+      html[data-visual-theme="setembro-amarelo-glow"] body.panel-mode .campaign-profile-tooltip {
+        top: calc(100% + 60px);
+      }
+
+      /* Sem URL utilizável não deve restar quadrado, QR ou chamada de ação vazia. */
+      .qr-wrap[hidden] {
+        display: none !important;
+      }
+
+      @media (max-width: 720px) {
+        html[data-visual-theme="setembro-amarelo-glow"] body.panel-mode .media > .campaign-help-button {
+          top: calc(1% + clamp(52px, 15%, 96px) + 8px);
+        }
+      }
+    `;
+    document.head.appendChild(style);
+  }
 
   function dateKey(date = new Date()) {
     const year = date.getFullYear();
@@ -298,6 +328,7 @@
   window.addEventListener('mural:site-curation-change', scheduleSync);
 
   function start() {
+    ensureCampaignLayoutStyles();
     buildSwitcher();
     const theme = readTheme();
     applyTheme(theme, { persist: false });
