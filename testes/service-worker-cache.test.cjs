@@ -81,7 +81,7 @@ async function dispatch(type, event) {
 }
 
 (async () => {
-  assert.equal(sw.CACHE_VERSION, 'mural-cultural-v93-banner-png-valido');
+  assert.equal(sw.CACHE_VERSION, 'mural-cultural-v94-setembro-recursos');
   for (const asset of [
     './css/styles.css?v=69',
     './css/eventos-manuais-ui.css?v=43',
