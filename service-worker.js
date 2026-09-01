@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v93-banner-png-valido';
+const CACHE_VERSION = 'mural-cultural-v94-setembro-recursos';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
