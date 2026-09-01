@@ -65,6 +65,20 @@
     for (const [identifier, overlay] of entries) {
       const target = result.find(item => String(item?.[options.idField] || '') === String(identifier));
       if (!target) {
+        const fallback = overlay?.fallback;
+        const fallbackId = String(fallback?.[options.idField] || '');
+        const fallbackTitleMatches = !overlay?.titulo_esperado ||
+          normalizeLabel(fallback?.titulo) === normalizeLabel(overlay.titulo_esperado);
+        if (fallback && typeof fallback === 'object' && fallbackId === String(identifier) && fallbackTitleMatches) {
+          const item = {
+            ...cloneRecord(fallback),
+            origem: 'site-only',
+            site_only: true
+          };
+          item.temas = mergeLabels(item.temas, overlay?.temas);
+          result.push(item);
+          continue;
+        }
         options.warn(`Curadoria site-only: ${options.label} ${identifier} não encontrado.`);
         continue;
       }
@@ -237,6 +251,32 @@
       sections.appendChild(section);
     }
     shell.appendChild(sections);
+
+    if (Array.isArray(data.recursos_informativos) && data.recursos_informativos.length) {
+      const resources = document.createElement('section');
+      resources.className = 'support-help-section support-help-resources';
+      appendText(resources, 'h3', 'Materiais informativos gratuitos');
+      appendText(
+        resources,
+        'p',
+        'Publicações e materiais de instituições oficiais para leitura e aprofundamento. Não substituem atendimento profissional.',
+        'support-help-section-intro'
+      );
+      for (const resourceData of data.recursos_informativos) {
+        const resource = document.createElement('article');
+        resource.className = 'support-help-service support-help-resource';
+        appendText(resource, 'h4', resourceData.titulo);
+        const sourceLine = [resourceData.fonte, resourceData.ano].filter(Boolean).join(' • ');
+        appendText(resource, 'p', sourceLine, 'support-help-address');
+        appendText(resource, 'p', resourceData.descricao);
+        appendText(resource, 'p', resourceData.observacao, 'support-help-note');
+        const link = officialLink(resourceData.url, resourceData.cta || 'Acessar material oficial');
+        if (link) resource.appendChild(link);
+        resources.appendChild(resource);
+      }
+      shell.appendChild(resources);
+    }
+
     appendText(shell, 'p', data.aviso_institucional, 'support-help-disclaimer');
     appendText(shell, 'p', data.chamada_futura, 'support-help-future');
     dialog.appendChild(shell);
