@@ -50,7 +50,7 @@
       profileLabel: 'Setembro Amarelo',
       helpLabel: 'Onde buscar ajuda',
       banner: {
-        src: 'imagens/curadorias/setembro-amarelo-banner.svg',
+        src: 'imagens/curadorias/setembro-amarelo-banner.png',
         alt: 'Setembro Amarelo — Se precisar, peça ajuda. CVV 188.'
       }
     }
