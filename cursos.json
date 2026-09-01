@@ -2,7 +2,7 @@
   "schema": 4,
   "status": "catalogo_completo",
   "fonte": "Escola Virtual de Governo (EV.G)",
-  "atualizado_em": "2026-08-31T17:01:43.920444+00:00",
+  "atualizado_em": "2026-09-01T14:06:49.257371+00:00",
   "total": 1041,
   "cursos": [
     {
@@ -10226,6 +10226,26 @@
       "fonte": "Escola Virtual de Governo (EV.G)"
     },
     {
+      "id_fonte": "76",
+      "titulo": "Acesso à Informação",
+      "area": "Participação e Cidadania / Gestão da Informação e do Conhecimento",
+      "competencias": "",
+      "instituicao": "Enap - Escola Nacional de Administração Pública",
+      "instituicao_parceira": "Controladoria Geral da União",
+      "carga_horaria": "25",
+      "prazo_conclusao_dias": "30",
+      "tipo": "Curso Aberto",
+      "descricao": "Conheça o direito de acesso à informação e atue com transparência no serviço público! O curso aborda o contexto e os conceitos da LAI, as hipóteses legais de negativa ou não atendimento de pedidos, a classificação de informações sigilosas e a abertura de dados como pilar da transparência pública. Destinado a servidores e gestores que lidam com pedidos de informação e precisam garantir o cumprimento da Lei de Acesso à Informação com segurança jurídica.",
+      "publico_alvo": "Destina-se especialmente a servidores e empregados públicos que desenvolvem atividades em ouvidoria, integridade e corregedoria ou em áreas que tratem de temas afins. No entanto, agentes públicos de qualquer esfera e Poder, bem como cidadãos em geral, estão convidados a realizar o curso.",
+      "conteudo_programatico": "Módulo 1: O direito de acesso à informação no Brasil: contexto, conceitos, abrangência e operacionalização.Módulo 2: Hipóteses legais de negativa de acesso e de não atendimento aos pedidos de acesso à informação.Módulo 3: Classificação de Informações e abertura de dados como pilar do direito de acesso à informação.",
+      "data_lancamento": "06/06/17",
+      "url": "https://www.escolavirtual.gov.br/curso/76",
+      "imagem": "https://cdn.evg.gov.br/cursos/76_EVG/banner.svg",
+      "modalidade": "online",
+      "gratuito": true,
+      "fonte": "Escola Virtual de Governo (EV.G)"
+    },
+    {
       "id_fonte": "405",
       "titulo": "Lei nº 8112/90 e suas alterações",
       "area": "Direito e Legislação",
@@ -18337,26 +18357,6 @@
       "data_lancamento": "10/01/23",
       "url": "https://www.escolavirtual.gov.br/curso/912",
       "imagem": "https://cdn.evg.gov.br/cursos/912_EVG/imagem_curso_912.png",
-      "modalidade": "online",
-      "gratuito": true,
-      "fonte": "Escola Virtual de Governo (EV.G)"
-    },
-    {
-      "id_fonte": "76",
-      "titulo": "Acesso à Informação",
-      "area": "Participação e Cidadania / Gestão da Informação e do Conhecimento",
-      "competencias": "",
-      "instituicao": "Enap - Escola Nacional de Administração Pública",
-      "instituicao_parceira": "Controladoria Geral da União",
-      "carga_horaria": "25",
-      "prazo_conclusao_dias": "30",
-      "tipo": "Curso Aberto",
-      "descricao": "Conheça o direito de acesso à informação e atue com transparência no serviço público! O curso aborda o contexto e os conceitos da LAI, as hipóteses legais de negativa ou não atendimento de pedidos, a classificação de informações sigilosas e a abertura de dados como pilar da transparência pública. Destinado a servidores e gestores que lidam com pedidos de informação e precisam garantir o cumprimento da Lei de Acesso à Informação com segurança jurídica.",
-      "publico_alvo": "Servidores e empregados públicos que tenham atuação no âmbito do Poder Executivo federal e desenvolvam atividades em ouvidorias ou em áreas que tratem de temas afins. Curso aberto, gratuito e com certificado, qualquer pessoa pode se inscrever.",
-      "conteudo_programatico": "Módulo 1: O direito de acesso à informação no Brasil: contexto, conceitos, abrangência e operacionalização.Módulo 2: Hipóteses legais de negativa de acesso e de não atendimento aos pedidos de acesso à informação.Módulo 3: Classificação de Informações e abertura de dados como pilar do direito de acesso à informação.",
-      "data_lancamento": "06/06/17",
-      "url": "https://www.escolavirtual.gov.br/curso/76",
-      "imagem": "https://cdn.evg.gov.br/cursos/76_EVG/banner.svg",
       "modalidade": "online",
       "gratuito": true,
       "fonte": "Escola Virtual de Governo (EV.G)"
