@@ -556,6 +556,7 @@ html[data-visual-theme="setembro-amarelo-glow"] .campaign-profile-tooltip {
   top: max(12px, env(safe-area-inset-top));
   right: max(12px, env(safe-area-inset-right));
   z-index: 94;
+  min-height: 44px;
   padding: 10px 15px;
   border: 1px solid rgba(255, 226, 122, .48);
   border-radius: 999px;
@@ -567,7 +568,20 @@ html[data-visual-theme="setembro-amarelo-glow"] .campaign-profile-tooltip {
 }
 
 .campaign-help-button:hover { background: #ffe27a; }
-.campaign-help-button:focus-visible,
+.media > .campaign-help-button {
+  position: absolute;
+  top: calc(1.25% + 14.285% + 12px);
+  right: auto;
+  left: 50%;
+  z-index: 7;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+.campaign-help-button:focus-visible {
+  outline: 3px solid #fffdf5;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px #151308, 0 9px 28px rgba(0, 0, 0, .34);
+}
 .support-help-close:focus-visible,
 .support-help-dialog a:focus-visible {
   outline: 3px solid #ffe27a;
@@ -640,7 +654,8 @@ html[data-visual-theme="setembro-amarelo-glow"] .campaign-profile-tooltip {
     max-height: 96px;
     max-width: 96%;
   }
-  .campaign-help-button { top: max(8px, env(safe-area-inset-top)); right: max(8px, env(safe-area-inset-right)); padding: 8px 11px; font-size: 11px; }
+  body > .campaign-help-button { top: max(8px, env(safe-area-inset-top)); right: max(8px, env(safe-area-inset-right)); padding: 8px 11px; font-size: 11px; }
+  .media > .campaign-help-button { top: calc(1% + 15% + 12px); padding: 8px 12px; font-size: 12px; }
   .support-help-sections { grid-template-columns: 1fr; }
   .support-help-shell { padding: 17px; }
   html[data-visual-theme="agosto-lilas-glow"] body.panel-mode .content::before { filter: blur(12px); opacity: .82; }

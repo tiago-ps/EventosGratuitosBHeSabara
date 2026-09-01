@@ -40,6 +40,8 @@ assert.match(themesSource, /Setembro Amarelo — Se precisar, peça ajuda\. CVV 
 assert.match(themesSource, /document\.createElement\('button'\)/);
 assert.match(themesSource, /banner\.type = 'button'/);
 assert.match(themesSource, /banner\.setAttribute\('aria-pressed', String\(active\)\)/);
+assert.match(themesSource, /document\.querySelector\(`\.\$\{BANNER_CLASS\}`\)\?\.closest\('\.media'\)/);
+assert.match(themesSource, /if \(button\.parentElement !== container\) container\.appendChild\(button\)/);
 assert.match(themesSource, /Ativar perfil \$\{profileLabel\}/);
 assert.match(themesSource, /Desativar perfil \$\{profileLabel\}/);
 assert.match(themesSource, /new CustomEvent\('mural:panel-profile-request'/);
@@ -67,17 +69,19 @@ assert.match(appSource, /window\.addEventListener\('mural:panel-profile-request'
 assert.doesNotMatch(themesCss, /\.campaign-profile-banner\.is-profile-active\s*\{[\s\S]*outline:/);
 assert.match(themesCss, /\.campaign-profile-check\s*\{[\s\S]*border: 0;[\s\S]*background: transparent;[\s\S]*color: #22c55e;/);
 assert.match(themesCss, /\.campaign-profile-banner:focus-visible\s*\{[\s\S]*outline:/);
+assert.match(themesCss, /\.media > \.campaign-help-button\s*\{[\s\S]*position: absolute;[\s\S]*left: 50%;/);
+assert.match(themesCss, /\.campaign-help-button:focus-visible\s*\{[\s\S]*outline: 3px solid #fffdf5;[\s\S]*box-shadow:/);
 assert.match(themesCss, /\.campaign-profile-banner\.is-profile-active \.campaign-profile-check/);
 assert.match(themesCss, /@media \(hover: hover\)[\s\S]*:hover \.campaign-profile-tooltip/);
 assert.match(themesCss, /:focus-visible \.campaign-profile-tooltip/);
 
 // O bump mínimo mantém HTML e precache apontando para os mesmos artefatos.
 for (const asset of [
-  'css/temas-visuais.css?v=4',
+  'css/temas-visuais.css?v=5',
   'js/tema-visual-boot.js?v=2',
   'js/curadorias-site.js?v=1',
   'js/app.js?v=88',
-  'js/temas-visuais.js?v=5'
+  'js/temas-visuais.js?v=6'
 ]) {
   assert.ok(indexSource.includes(asset), `Referência ausente no HTML: ${asset}`);
   assert.ok(serviceWorkerSource.includes(`./${asset}`), `Referência ausente no precache: ${asset}`);

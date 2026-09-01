@@ -168,8 +168,10 @@
           detail: { opener: button }
         }));
       });
-      document.body.appendChild(button);
     }
+    const bannerMedia = document.querySelector(`.${BANNER_CLASS}`)?.closest('.media');
+    const container = bannerMedia || document.body;
+    if (button.parentElement !== container) container.appendChild(button);
     button.textContent = themeConfig.helpLabel;
     button.setAttribute('aria-label', `${themeConfig.helpLabel} — Setembro Amarelo`);
   }
