@@ -92,7 +92,10 @@
             "gratuito": true,
             "condicao_acesso": "Gratuito",
             "descricao": "Atividade presencial dedicada ao cuidado, ao bem-estar emocional e ao fortalecimento de redes de apoio.",
-            "fonte": "Biblioteca Pública Estadual de Minas Gerais",
+            "fonte": "PRINEA",
+            "link": "https://www.sympla.com.br/evento/juntos-pela-vida/3562866",
+            "pagina": "https://www.sympla.com.br/evento/juntos-pela-vida/3562866",
+            "link_inscricao": "https://www.sympla.com.br/evento/juntos-pela-vida/3562866",
             "criterio_exibicao": "realizacao",
             "exibicao_ativa": true,
             "temas": ["Setembro Amarelo", "Saúde mental", "Cuidado", "Bem-estar emocional", "Redes de apoio"]
@@ -108,7 +111,10 @@
             "categoria": "Encontro",
             "condicao_acesso": "Acesso não informado",
             "descricao": "Encontro sobre cultura do cuidado, saúde mental, gestão de conflitos e construção de ambientes profissionais mais saudáveis.",
-            "fonte": "CREA-MG",
+            "fonte": "Unniversa Soluções Multiportas de Conflitos",
+            "link": "https://www.sympla.com.br/evento/cultura-do-cuidado-prevencao-saude-mental-e-gestao-estrategica-de-conflitos-nas-organizacoes/3562532",
+            "pagina": "https://www.sympla.com.br/evento/cultura-do-cuidado-prevencao-saude-mental-e-gestao-estrategica-de-conflitos-nas-organizacoes/3562532",
+            "link_inscricao": "https://www.sympla.com.br/evento/cultura-do-cuidado-prevencao-saude-mental-e-gestao-estrategica-de-conflitos-nas-organizacoes/3562532",
             "criterio_exibicao": "realizacao",
             "exibicao_ativa": true,
             "temas": ["Setembro Amarelo", "Saúde mental", "Cuidado", "Saúde mental e trabalho"]
@@ -125,7 +131,10 @@
             "gratuito": true,
             "condicao_acesso": "Gratuito",
             "descricao": "Palestra online sobre proteção, acolhimento e saúde mental no contexto da mobilidade humana.",
-            "fonte": "Curadoria Setembro Amarelo 2026",
+            "fonte": "Comissão de Direito Internacional e Migratório da OAB Barro Preto",
+            "link": "https://www.sympla.com.br/evento-online/a-saude-mental-na-mobilidade-humana-perspectivas-contemporaneas-de-protecao-e-acolhimento/3499200",
+            "pagina": "https://www.sympla.com.br/evento-online/a-saude-mental-na-mobilidade-humana-perspectivas-contemporaneas-de-protecao-e-acolhimento/3499200",
+            "link_inscricao": "https://www.sympla.com.br/evento-online/a-saude-mental-na-mobilidade-humana-perspectivas-contemporaneas-de-protecao-e-acolhimento/3499200",
             "criterio_exibicao": "realizacao",
             "exibicao_ativa": true,
             "temas": ["Setembro Amarelo", "Saúde mental", "Escuta e acolhimento", "Direitos humanos", "Redes de apoio"]
@@ -622,13 +631,6 @@
             "titulo": "Nossa Dança; Cancha — Domingo É Dia de Jogo; No Céu Não Tem Caldo de Cana; (R)EXISTÊNCIA",
             "campos": ["pagina_oficial"],
             "motivo": "Não foi localizada URL de exibição confirmável em fonte suficientemente confiável; os itens ficam sem CTA."
-          },
-          {
-            "tipo": "eventos-site-only",
-            "id": "setembro-2026-sem-url-confirmada",
-            "titulo": "Juntos pela Vida; Cultura do Cuidado; A Saúde Mental na Mobilidade Humana",
-            "campos": ["url"],
-            "motivo": "Os dados editoriais aprovados foram materializados, mas não foi inventado link sem página específica confirmada. A condição de acesso de Cultura do Cuidado permanece como não informada."
           },
           {
             "tipo": "material-informativo",
