@@ -2,8 +2,8 @@
   "schema": 9,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-09-01T13:47:34.661669+00:00",
-  "total": 28,
+  "coletado_em_utc": "2026-09-02T13:04:10.004330+00:00",
+  "total": 27,
   "concursos": [
     {
       "titulo": "CaraguaPrev - Instituto de Previdência do Município de Caraguatatuba",
@@ -91,38 +91,6 @@
       "inscricoes_fim_texto": "",
       "inscricoes_texto": "",
       "remuneracao_faixa_texto": "R$ 1.989,68 a R$ 6.407,17",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Técnico em Informática",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "alta"
-        }
-      ]
-    },
-    {
-      "titulo": "Prefeitura de Estância Turística de Brotas",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-brotas-sp-reabre-inscricoes-para-o-concurso-com-salarios-de-ate-19354",
-      "imagem": "https://cdn.pci.app.br/img/i/b36e8292128eb2bc94aab344ab575f48.png",
-      "formacoes_compativeis": [
-        "Técnico em Informática"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Técnico em Informática",
-          "nivel": "tecnico",
-          "evidencia": " creche (1 vaga) auxiliar de saude bucal (1 vaga) escriturario (1 vaga) fiscal tributario (1 vaga) monitor de transporte escolar (1 vaga) ouvidor (1 vaga) secretario de escola (1 vaga) tecnico de enfermagem (1 vaga) tecnico de seguranca do trabalho (cadastro de reserva) tecnico em farmacia (1 vaga) tecnico em informatica (1 vaga) advogado (1 vaga) assistente social (cadastro de reserva) bibliotecario (1 vaga) coordenador do sistema de controle interno (cadastro de reserva) enfermeiro (cadastro de reserva) fonoaudiologo (1 vaga) medico especialista - cardiologista (cadastro de reserva) medico especialista - ortopedi"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "SP",
-      "cidade": "Estância Turística de Brotas",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "",
-      "inscricoes_texto": "",
-      "remuneracao_faixa_texto": "R$ 1.783,65 a R$ 19.354,81",
       "remuneracao_fonte": "noticia",
       "cargos_compativeis": [
         {
@@ -872,44 +840,6 @@
       ]
     },
     {
-      "titulo": "UENP - Universidade Estadual do Norte do Paraná",
-      "url": "https://www.pciconcursos.com.br/noticias/uenp-pr-retifica-concursos-com-vagas-para-agentes-universitarios-de-execucao-e-profissionais",
-      "imagem": "https://cdn.pci.app.br/img/i/73c4c5005120e61070cc90a9c2aab278.png",
-      "formacoes_compativeis": [
-        "Técnico em Informática"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Técnico em Informática",
-          "nivel": "tecnico",
-          "evidencia": "strativo - campus de cornelio procopio (11 vagas) tecnico administrativo - campus de jacarezinho (23 vagas) tecnico administrativo - campus luiz meneghel de bandeirantes (3 vagas) tecnico em anatomia e necropsia - campus de jacarezinho (1 vaga) tecnico em enfermagem - campus de jacarezinho (1 vaga) tecnico em informatica - campus de cornelio procopio (2 vagas) tecnico em informatica - campus de jacarezinho (1 vaga) tecnico em laboratorio/biologia - campus de cornelio procopio (1 vaga) tecnico em laboratorio/biologia - campus de jacarezinho (1 vaga) tecnico em laboratorio/biologia - campus luiz meneghel de bandeiran"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "PR",
-      "cidade": "",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "",
-      "inscricoes_texto": "",
-      "remuneracao_faixa_texto": "R$ 4.443,18 a R$ 7.997,72",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Técnico em Informática - Campus de Cornélio Procópio",
-          "vagas_texto": "2 vagas",
-          "formacao": "Técnico em Informática",
-          "confianca": "alta"
-        },
-        {
-          "cargo": "Técnico em Informática - Campus de Jacarezinho",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "alta"
-        }
-      ]
-    },
-    {
       "titulo": "Prefeitura de Alvorada",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-alvorada-rs-anuncia-concurso-publico-com-salarios-de-ate-18974",
       "imagem": "https://cdn.pci.app.br/img/i/00f5df785afbb7b0d109128451d5ac79.png",
@@ -942,9 +872,9 @@
       ]
     },
     {
-      "titulo": "Câmara de Rio Verde",
-      "url": "https://www.pciconcursos.com.br/noticias/camara-de-rio-verde-go-abre-concursos-publicos-com-salarios-de-ate-7241",
-      "imagem": "https://cdn.pci.app.br/img/i/fe407be121567c6856ec34592af651da.png",
+      "titulo": "Prefeitura de Massaranduba",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-massaranduba-sc-abre-concurso-com-salarios-de-ate-24722",
+      "imagem": "https://cdn.pci.app.br/img/i/b362c7f66ff3bc7b091b909ff20454f1.png",
       "formacoes_compativeis": [
         "Técnico em Informática"
       ],
@@ -952,23 +882,55 @@
         {
           "nome": "Técnico em Informática",
           "nivel": "tecnico",
-          "evidencia": "xiliar de copa e cozinha (6 vagas) motorista (2 vagas) motorista de veiculos pesados (3 vagas) agente de manutencao predial (2 vagas) assistente administrativo (19 vagas) editor de audio e video (2 vagas) fotografo (2 vagas) auxiliar tecnico de audio e video (3 vagas) produtor audiovisual (2 vagas) tecnico em informatica (3 vagas) analista administrativo (10 vagas) analista de controle interno (2 vagas) analista legislativo (6 vagas) assistente social (2 vagas) jornalista (2 vagas) tradutor e interprete da lingua brasileira de sinais - libras (2 vagas) a jornada de trabalho varia de 30 a 40 horas semanais, conforme"
+          "evidencia": "sf 06 (cr) agente comunitario de saude - esf 07 (cr) agente de combate as endemias (1 vaga + cr) auxiliar administrativo (3 vagas + cr) educador social (cr) eletricista predial (cr) mestre de obras (cr) motorista de ambulancia (cr) tecnico agricola (1 vaga + cr) tecnico de enfermagem (3 vagas + cr) tecnico em informatica (cr) tecnico em saude bucal (2 vagas + cr) cargos de nivel superior advogado (cr) arquiteto (cr) assistente social (1 vaga + cr) cirurgiao-dentista - 20h (cr) cirurgiao-dentista - 40h (1 vaga + cr) enfermeiro (cr) engenheiro agronomo (1 vaga + cr) engenheiro civil (cr) engenheiro florestal (1 vaga "
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
-      "uf": "GO",
-      "cidade": "Rio Verde",
-      "inscricoes_inicio_texto": "21 de agosto de 2026",
-      "inscricoes_fim_texto": "21 de setembro de 2026",
-      "inscricoes_texto": "21 de agosto de 2026 a 21 de setembro de 2026",
-      "remuneracao_faixa_texto": "R$ 7.241,14",
+      "uf": "SC",
+      "cidade": "Massaranduba",
+      "inscricoes_inicio_texto": "8 de setembro de 2026",
+      "inscricoes_fim_texto": "9 de outubro de 2026",
+      "inscricoes_texto": "8 de setembro de 2026 a 9 de outubro de 2026",
+      "remuneracao_faixa_texto": "R$ 2.371,80 a R$ 24.722,94",
       "remuneracao_fonte": "noticia",
       "cargos_compativeis": [
         {
-          "cargo": "Técnico em Informática",
-          "vagas_texto": "3 vagas",
+          "cargo": "Técnico Agrícola (1 vaga + CR) Técnico de Enfermagem (3 vagas + CR) Técnico em Informática",
+          "vagas_texto": "Cadastro de Reserva",
           "formacao": "Técnico em Informática",
+          "confianca": "alta"
+        }
+      ]
+    },
+    {
+      "titulo": "SEFAZ - Secretaria de Estado da Fazenda de Santa Catarina",
+      "url": "https://www.pciconcursos.com.br/noticias/sefaz-sc-abre-concurso-publico-para-o-cargo-de-auditor-estadual-de-financas-publicas",
+      "imagem": "https://cdn.pci.app.br/img/i/bf56624401433deefeba225fe6a5a0af.png",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "mento de vagas para o cargo de auditor estadual de financas publicas, com exigencia de nivel superior completo. segundo o edital, as oportunidades sao para os cargos de: auditor estadual de financas publicas - administracao e engenharias (6 vagas) auditor estadual de financas publicas - ciencias da computacao (12 vagas) auditor estadual de financas publicas - ciencias contabeis (20 vagas) auditor estadual de financas publicas - ciencias economicas (4 vagas) auditor estadual de financas publicas - direito (8 vagas) a jornada de trabalho e de 40 horas semanais. a remuneracao inicial e de r$ 25.337,61. as "
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "SC",
+      "cidade": "",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "5 de outubro de 2026",
+      "inscricoes_texto": "até 5 de outubro de 2026",
+      "remuneracao_faixa_texto": "R$ 25.337,61",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Auditor Estadual de Finanças Públicas - Ciências da Computação",
+          "vagas_texto": "12 vagas",
+          "formacao": "Sistemas de Informação / Computação",
           "confianca": "alta"
         }
       ]
