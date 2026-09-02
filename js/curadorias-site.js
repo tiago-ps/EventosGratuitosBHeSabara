@@ -63,12 +63,54 @@
     'link', 'pagina', 'link_inscricao', 'link_virtual', 'url', 'pagina_oficial'
   ]);
 
+  const OVERLAY_IMAGE_FIELDS = Object.freeze([
+    'imagem',
+    'imagem_fonte',
+    'imagem_origem_url',
+    'imagem_credito',
+    'imagem_observacao'
+  ]);
+
   function safeExternalUrl(value) {
     try {
       const parsed = new URL(String(value || ''));
       return ['http:', 'https:'].includes(parsed.protocol) ? parsed.href : '';
     } catch {
       return '';
+    }
+  }
+
+  function safeImage(value) {
+    const candidate = typeof value === 'string' ? value.trim() : '';
+    if (!candidate) return '';
+    if (/^[a-z][a-z\d+.-]*:/i.test(candidate)) return safeExternalUrl(candidate);
+    if (candidate.startsWith('//') || candidate.startsWith('\\')) return '';
+    return candidate;
+  }
+
+  function applyOverlayImageMetadata(target, overlay, warn, label) {
+    if (!overlay || typeof overlay !== 'object') return;
+
+    for (const field of OVERLAY_IMAGE_FIELDS) {
+      if (!Object.prototype.hasOwnProperty.call(overlay, field)) continue;
+      const value = overlay[field];
+
+      if (field === 'imagem') {
+        const safeValue = safeImage(value);
+        if (safeValue) target[field] = safeValue;
+        else warn(`Curadoria site-only: imagem inválida ignorada para ${label}.`);
+        continue;
+      }
+
+      if (field === 'imagem_origem_url') {
+        const safeValue = safeExternalUrl(value);
+        if (safeValue) target[field] = safeValue;
+        else warn(`Curadoria site-only: URL de origem da imagem inválida ignorada para ${label}.`);
+        continue;
+      }
+
+      if (typeof value === 'string') target[field] = value;
+      else warn(`Curadoria site-only: metadado textual inválido ignorado para ${label} (${field}).`);
     }
   }
 
@@ -120,6 +162,7 @@
         continue;
       }
       target.temas = mergeLabels(target.temas, overlay?.temas);
+      applyOverlayImageMetadata(target, overlay, options.warn, `${options.label} ${identifier}`);
     }
     return result;
   }
@@ -680,6 +723,7 @@
     mountSupportArea,
     normalizeLabel,
     openSupportArea,
-    safeExternalUrl
+    safeExternalUrl,
+    safeImage
   });
 })();

@@ -171,6 +171,115 @@ assert.ok(unsafeWarnings.some(message => message.includes('URL inválida removid
 assert.equal(curations.safeExternalUrl('javascript:alert(1)'), '');
 assert.match(curations.safeExternalUrl('https://example.org/path'), /^https:\/\/example\.org\/path$/);
 
+const overlayCatalogs = {
+  eventos: [{
+    id: 'evento-overlay-imagem',
+    titulo: 'Evento com Imagem',
+    descricao: 'Descrição central',
+    link: 'https://central.example/evento',
+    imagem: 'imagens/central.jpg'
+  }],
+  livros: [],
+  cursos: [],
+  filmes: []
+};
+const overlayCatalogsSnapshot = JSON.stringify(overlayCatalogs);
+const overlayPayload = {
+  schema: 1,
+  escopo: 'site-only',
+  curadorias: [{
+    id: 'teste-overlay-imagem',
+    ativo_de: '2026-09-01',
+    ativo_ate: '2026-09-30',
+    overlays: {
+      eventos: {
+        'evento-overlay-imagem': {
+          titulo_esperado: '  EVENTO com imagem ',
+          temas: ['Setembro Amarelo'],
+          imagem: 'imagens/curadorias/setembro-amarelo-2026/evento.jpg',
+          imagem_fonte: 'Fonte <strong>editorial</strong>',
+          imagem_origem_url: 'https://example.org/pagina-da-imagem',
+          imagem_credito: 'Crédito <img src=x onerror=alert(1)>',
+          imagem_observacao: 'Observação & texto',
+          titulo: 'Título adulterado',
+          descricao: 'Descrição adulterada',
+          link: 'https://malicioso.example/'
+        }
+      }
+    },
+    complementos: {
+      eventos: [{
+        id: 'site:complemento-com-imagem',
+        titulo: 'Complemento com imagem',
+        data: '2026-09-30',
+        imagem: 'imagens/curadorias/setembro-amarelo-2026/complemento.jpg'
+      }]
+    }
+  }]
+};
+const overlayWarnings = [];
+const overlayMerged = curations.apply(overlayPayload, overlayCatalogs, {
+  today: new Date(2026, 8, 15),
+  warn: message => overlayWarnings.push(message)
+});
+const overlayEvent = overlayMerged.eventos.find(item => item.id === 'evento-overlay-imagem');
+assert.equal(overlayEvent.imagem, 'imagens/curadorias/setembro-amarelo-2026/evento.jpg');
+assert.match(curations.safeImage('https://example.org/imagem.jpg'), /^https:\/\/example\.org\/imagem\.jpg$/);
+assert.equal(curations.safeImage('javascript:alert(1)'), '');
+assert.equal(curations.safeImage('data:image/png;base64,AAAA'), '');
+assert.equal(curations.safeImage('//cdn.example.org/imagem.jpg'), '');
+assert.equal(curations.safeImage('\\\\cdn.example.org\\imagem.jpg'), '');
+assert.equal(overlayEvent.imagem_origem_url, 'https://example.org/pagina-da-imagem');
+assert.equal(overlayEvent.imagem_fonte, 'Fonte <strong>editorial</strong>');
+assert.equal(overlayEvent.imagem_credito, 'Crédito <img src=x onerror=alert(1)>');
+assert.equal(overlayEvent.imagem_observacao, 'Observação & texto');
+assert.equal(overlayEvent.titulo, 'Evento com Imagem');
+assert.equal(overlayEvent.descricao, 'Descrição central');
+assert.equal(overlayEvent.link, 'https://central.example/evento');
+assert.ok(overlayEvent.temas.includes('Setembro Amarelo'));
+assert.equal(JSON.stringify(overlayCatalogs), overlayCatalogsSnapshot);
+assert.equal(
+  overlayMerged.eventos.find(item => item.id === 'site:complemento-com-imagem').imagem,
+  'imagens/curadorias/setembro-amarelo-2026/complemento.jpg'
+);
+
+const httpsImagePayload = JSON.parse(JSON.stringify(overlayPayload));
+httpsImagePayload.curadorias[0].overlays.eventos['evento-overlay-imagem'].imagem = 'https://cdn.example.org/evento.jpg';
+const httpsImageMerged = curations.apply(httpsImagePayload, overlayCatalogs, {
+  today: new Date(2026, 8, 15), warn() {}
+});
+assert.equal(httpsImageMerged.eventos[0].imagem, 'https://cdn.example.org/evento.jpg');
+
+for (const unsafeImage of ['javascript:alert(1)', 'data:image/png;base64,AAAA']) {
+  const unsafeImagePayload = JSON.parse(JSON.stringify(overlayPayload));
+  unsafeImagePayload.curadorias[0].overlays.eventos['evento-overlay-imagem'].imagem = unsafeImage;
+  const unsafeImageWarnings = [];
+  const unsafeImageMerged = curations.apply(unsafeImagePayload, overlayCatalogs, {
+    today: new Date(2026, 8, 15),
+    warn: message => unsafeImageWarnings.push(message)
+  });
+  assert.equal(unsafeImageMerged.eventos[0].imagem, 'imagens/central.jpg');
+  assert.ok(unsafeImageWarnings.some(message => message.includes('imagem inválida ignorada')));
+}
+
+const invalidOriginPayload = JSON.parse(JSON.stringify(overlayPayload));
+invalidOriginPayload.curadorias[0].overlays.eventos['evento-overlay-imagem'].imagem_origem_url = 'file:///segredo.jpg';
+const invalidOriginWarnings = [];
+const invalidOriginMerged = curations.apply(invalidOriginPayload, overlayCatalogs, {
+  today: new Date(2026, 8, 15),
+  warn: message => invalidOriginWarnings.push(message)
+});
+assert.equal(invalidOriginMerged.eventos[0].imagem_origem_url, undefined);
+assert.ok(invalidOriginWarnings.some(message => message.includes('URL de origem da imagem inválida ignorada')));
+
+const divergentTitlePayload = JSON.parse(JSON.stringify(overlayPayload));
+divergentTitlePayload.curadorias[0].overlays.eventos['evento-overlay-imagem'].titulo_esperado = 'Outro evento';
+const divergentTitleMerged = curations.apply(divergentTitlePayload, overlayCatalogs, {
+  today: new Date(2026, 8, 15), warn() {}
+});
+assert.equal(divergentTitleMerged.eventos[0].imagem, 'imagens/central.jpg');
+assert.equal(divergentTitleMerged.eventos[0].temas, undefined);
+
 const collisionPayload = JSON.parse(JSON.stringify(payload));
 const firstCentralEvent = catalogs.eventos[0];
 const firstCentralBook = catalogs.livros[0];
