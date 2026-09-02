@@ -413,6 +413,12 @@ html[data-visual-theme="setembro-amarelo-glow"] .badge.free {
   color: #151308;
 }
 
+html[data-visual-theme="setembro-amarelo-glow"] .badge.free.access-unknown {
+  border-color: rgba(255, 226, 122, .34);
+  background: rgba(45, 41, 24, .94);
+  color: #fffdf5;
+}
+
 html[data-visual-theme="setembro-amarelo-glow"] .filter-grid select,
 html[data-visual-theme="setembro-amarelo-glow"] .agenda-tools input,
 html[data-visual-theme="setembro-amarelo-glow"] .agenda-tools select {
@@ -641,6 +647,21 @@ html[data-visual-theme="setembro-amarelo-glow"] .campaign-profile-tooltip {
 .support-help-address { color: #fffdf5 !important; }
 .support-help-contacts { margin: 7px 0; padding-left: 20px; color: #fffdf5; }
 .support-help-note { font-size: 13px; }
+.support-help-resource-section {
+  color: #ffe27a !important;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+.support-help-sensitive {
+  display: inline-block;
+  padding: 3px 7px;
+  border: 1px solid rgba(255, 226, 122, .3);
+  border-radius: 999px;
+  color: #fff4bc !important;
+  font-size: 12px;
+}
 .support-help-disclaimer { margin: 22px 0 0; padding: 14px; border-left: 4px solid #f5c518; background: rgba(245, 197, 24, .07); line-height: 1.5; }
 .support-help-future { margin: 12px 0 0; color: #bfb794; font-size: 13px; line-height: 1.5; }
 

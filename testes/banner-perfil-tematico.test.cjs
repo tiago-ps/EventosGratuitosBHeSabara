@@ -32,7 +32,8 @@ assert.match(appSource, /'agosto-lilas-2026':\s*\{[\s\S]*theme: 'agosto lilas'/)
 assert.match(themesSource, /id: 'setembro-amarelo-glow',[\s\S]*panelProfile: 'setembro-amarelo-2026'/);
 assert.doesNotMatch(themesSource, /theme:\s*'setembro amarelo'/);
 assert.match(appSource, /'setembro-amarelo-2026':\s*\{[\s\S]*theme: 'setembro amarelo'/);
-assert.match(appSource, /destaque: 'Se precisar, peça ajuda!'/);
+assert.match(appSource, /nome: 'Setembro Amarelo — cuidado e saúde mental'/);
+assert.match(appSource, /destaque: 'Se precisar, peça ajuda\.'/);
 assert.match(themesSource, /setembro-amarelo-banner\.png/);
 assert.match(themesSource, /Setembro Amarelo — Se precisar, peça ajuda\. CVV 188\./);
 
@@ -77,10 +78,10 @@ assert.match(themesCss, /:focus-visible \.campaign-profile-tooltip/);
 
 // O bump mínimo mantém HTML e precache apontando para os mesmos artefatos.
 for (const asset of [
-  'css/temas-visuais.css?v=5',
+  'css/temas-visuais.css?v=6',
   'js/tema-visual-boot.js?v=2',
-  'js/curadorias-site.js?v=1',
-  'js/app.js?v=88',
+  'js/curadorias-site.js?v=2',
+  'js/app.js?v=89',
   'js/temas-visuais.js?v=6'
 ]) {
   assert.ok(indexSource.includes(asset), `Referência ausente no HTML: ${asset}`);

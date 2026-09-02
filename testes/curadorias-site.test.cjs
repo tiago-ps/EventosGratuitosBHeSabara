@@ -6,11 +6,12 @@ const path = require('node:path');
 const vm = require('node:vm');
 
 const root = path.resolve(__dirname, '..');
-const payload = JSON.parse(fs.readFileSync(path.join(root, 'curadorias-site.json'), 'utf8'));
-const eventsData = JSON.parse(fs.readFileSync(path.join(root, 'eventos.json'), 'utf8'));
-const booksData = JSON.parse(fs.readFileSync(path.join(root, 'livros.json'), 'utf8'));
-const coursesData = JSON.parse(fs.readFileSync(path.join(root, 'cursos.json'), 'utf8'));
-const filmsData = JSON.parse(fs.readFileSync(path.join(root, 'filmes.json'), 'utf8'));
+const readJson = file => JSON.parse(fs.readFileSync(path.join(root, file), 'utf8'));
+const payload = readJson('curadorias-site.json');
+const eventsData = readJson('eventos.json');
+const booksData = readJson('livros.json');
+const coursesData = readJson('cursos.json');
+const filmsData = readJson('filmes.json');
 const source = fs.readFileSync(path.join(root, 'js/curadorias-site.js'), 'utf8');
 const appSource = fs.readFileSync(path.join(root, 'js/app.js'), 'utf8');
 const context = vm.createContext({ window: {}, URL, console });
@@ -36,25 +37,36 @@ assert.equal(curations.isValidPayload({ schema: 1, escopo: 'site-only' }), false
 assert.equal(JSON.stringify(catalogs), snapshot, 'A fusão não pode mutar os catálogos centrais');
 assert.deepEqual(Array.from(merged.curadoriasAtivas), ['setembro-amarelo-2026']);
 
+const curation = payload.curadorias[0];
+assert.equal(curation.titulo_editorial, 'Setembro Amarelo — cuidado e saúde mental');
+assert.equal(curation.subtitulo_editorial, 'Cuidado, bem-estar e redes de apoio');
+assert.match(curation.texto_introdutorio, /pertencimento, escuta, acolhimento e redes de apoio/);
+assert.equal(curation.eixos_editoriais[0].titulo, 'Saúde mental e trabalho');
+assert.equal(curation.eixos_editoriais[0].descricao, 'Conteúdos sobre condições de trabalho, riscos psicossociais, relações organizacionais e construção de ambientes profissionais mais saudáveis.');
+
 const eventId = 'sympla-sabara-3534680';
 const centralEvent = eventsData.eventos.find(item => item.id === eventId);
 const event = merged.eventos.find(item => item.id === eventId);
 assert.ok(event);
-assert.deepEqual(
-  Array.from(event.temas),
-  ['Setembro Amarelo', 'Saúde mental', 'Prevenção do suicídio']
-);
-if (centralEvent) {
-  assert.equal(centralEvent.temas, undefined);
-} else {
+assert.deepEqual(Array.from(event.temas), ['Setembro Amarelo', 'Saúde mental', 'Cuidado', 'Bem-estar emocional']);
+assert.equal(event.descricao, 'Palestra promovida pela AMUSA em alusão ao Setembro Amarelo, com foco em saúde mental, cultura do cuidado, acolhimento e valorização da vida.');
+if (centralEvent) assert.equal(centralEvent.temas, undefined);
+else {
   assert.equal(event.site_only, true);
-  assert.equal(event.origem, 'site-only');
   assert.equal(event.gratuito, true);
-  assert.equal(event.data, '2026-09-10');
-  assert.equal(event.horario, '14h45 às 17h');
-  assert.match(event.link || '', /sympla\.com\.br/);
-  assert.equal(warnings.some(message => message.includes(eventId) && message.includes('não encontrado')), false);
+  assert.match(event.link || '', /^https:\/\/www\.sympla\.com\.br\//);
 }
+
+const eventIdsAtMidmonth = merged.eventos.map(item => item.id);
+assert.ok(eventIdsAtMidmonth.includes('site:setembro-2026:cultura-do-cuidado-crea-mg'));
+assert.ok(eventIdsAtMidmonth.includes('site:setembro-2026:juntos-pela-vida'));
+assert.equal(eventIdsAtMidmonth.includes('site:setembro-2026:saude-mental-mobilidade-humana'), false);
+const unknownAccess = merged.eventos.find(item => item.id === 'site:setembro-2026:cultura-do-cuidado-crea-mg');
+assert.equal(unknownAccess.gratuito, undefined);
+assert.equal(unknownAccess.condicao_acesso, 'Acesso não informado');
+const earlySeptember = curations.apply(payload, catalogs, { today: new Date(2026, 8, 2), warn() {} });
+assert.ok(earlySeptember.eventos.some(item => item.id === 'site:setembro-2026:saude-mental-mobilidade-humana'));
+assert.equal(curations.eventIsCurrent({ data: '2026-09-09' }, new Date(2026, 8, 10)), false);
 
 const expectedCourses = new Map([
   ['1089', 'Saúde mental, atenção psicossocial e interculturalidade nas migrações'],
@@ -69,64 +81,66 @@ for (const [id, title] of expectedCourses) {
   assert.equal(coursesData.cursos.find(item => item.id_fonte === id).temas, undefined);
 }
 
-assert.deepEqual(
-  Array.from(curations.mergeLabels(['Cultura', 'Saúde Mental'], [' setembro amarelo ', 'saude mental', 'CULTURA'])),
-  ['Cultura', 'Saúde Mental', 'setembro amarelo']
-);
+assert.deepEqual(Array.from(curations.mergeLabels(['Cultura', 'Saúde Mental'], [' setembro amarelo ', 'saude mental', 'CULTURA'])), ['Cultura', 'Saúde Mental', 'setembro amarelo']);
 
 const externalCourses = merged.cursos.filter(item => item.site_only);
-assert.equal(externalCourses.length, 3);
-assert.ok(externalCourses.every(item => item.origem === 'site-only' && item.id.startsWith('site:unasus:')));
-assert.ok(externalCourses.every(item => !item.id_fonte));
-assert.equal(new Set(externalCourses.map(item => item.id)).size, 3);
-assert.equal(externalCourses.filter(item => item.temas.some(theme => curations.normalizeLabel(theme) === 'setembro amarelo')).length, 3);
-assert.ok(externalCourses.every(item => item.descricao && item.nivel));
-assert.ok(externalCourses.every(item => /^https:\/\/www\.unasus\.gov\.br\/cursos\/curso\//.test(item.url)));
+assert.equal(externalCourses.length, 5);
+assert.ok(externalCourses.every(item => item.origem === 'site-only' && item.id.startsWith('site:')));
+assert.equal(new Set(externalCourses.map(item => item.id)).size, 5);
+assert.equal(externalCourses.filter(item => item.temas.some(theme => curations.normalizeLabel(theme) === 'setembro amarelo')).length, 4);
+assert.ok(externalCourses.every(item => item.descricao && item.nivel && /^https:\/\//.test(item.url)));
+const sensitiveCourse = externalCourses.find(item => item.id === 'site:unasus:prevencao-suicidio-2026');
+assert.equal(sensitiveCourse.temas.includes('Setembro Amarelo'), false);
+assert.equal(sensitiveCourse.eixo_curadoria, 'Formação profissional');
+assert.equal(sensitiveCourse.conteudo_sensivel, 'Suicídio');
+const workCourse = externalCourses.find(item => item.id === 'site:fiocruz:saude-mental-trabalho-2026');
+assert.equal(workCourse.carga_horaria, '20');
+assert.equal(workCourse.modalidade, 'Autoinstrucional');
+assert.match(workCourse.descricao, /condições e organização do trabalho/);
+
+const externalBooks = merged.livros.filter(item => item.site_only);
+assert.equal(externalBooks.length, 5);
+assert.deepEqual(Array.from(externalBooks.map(item => item.codigo_acervo).sort()), ['230639', '231118', '231508', '232152', '232509']);
+assert.ok(externalBooks.every(item => item.acesso_virtual === true && /pergamum\.ifmg\.edu\.br/.test(item.link_virtual)));
+assert.ok(externalBooks.every(item => !item.imagem));
 
 const externalFilms = merged.filmes.filter(item => item.site_only);
-assert.equal(externalFilms.length, 3);
+assert.equal(externalFilms.length, 6);
+assert.equal(new Set(externalFilms.map(item => item.id)).size, 6);
 assert.ok(externalFilms.every(item => item.origem === 'site-only'));
-assert.ok(externalFilms.every(item => item.imagem && fs.existsSync(path.join(root, item.imagem))));
-for (const id of externalFilms.map(item => item.fonte_id)) {
-  assert.equal(filmsData.filmes.some(item => item.fonte_id === id), false);
+assert.ok(externalFilms.every(item => item.temas.includes('Setembro Amarelo')));
+assert.equal(externalFilms.some(item => item.titulo === 'Poderia me Chamar Adeus'), false);
+assert.equal(externalFilms.some(item => item.titulo === 'DEUS AMA TODAS AS PESSOAS'), false);
+assert.equal(externalFilms.some(item => item.titulo === 'A solidão das borboletas'), false);
+assert.match(externalFilms.find(item => item.titulo === 'Aos Cuidados Dela').pagina_oficial, /^https:\/\/embaubaplay\.com\//);
+assert.match(externalFilms.find(item => item.titulo === 'Casa da Água').pagina_oficial, /^https:\/\/vimeo\.com\//);
+for (const title of ['Nossa Dança', 'Cancha — Domingo É Dia de Jogo', 'No Céu Não Tem Caldo de Cana', '(R)EXISTÊNCIA']) {
+  assert.equal(externalFilms.find(item => item.titulo === title).pagina_oficial, undefined);
 }
-const poderia = externalFilms.find(item => item.fonte_id === 'd1aaf5ea-78da-11ee-bcc6-0a58a9feac02');
-assert.equal(poderia?.direcao?.[0], 'Ava Scherdien');
-assert.equal(poderia?.duracao_minutos, 30);
-assert.match(poderia?.pagina_oficial || '', /^https:\/\/flix\.votelgbt\.org\/assistir\//);
-const deus = externalFilms.find(item => item.fonte_id === '84e6ab8c-453a-11ef-b555-0a58a9feac02');
-assert.equal(deus?.direcao?.[0], 'Marcos Paulo');
-assert.match(deus?.pagina_oficial || '', /^https:\/\/flix\.votelgbt\.org\/assistir\//);
-const borboletas = externalFilms.find(item => item.fonte_id === '12326640-3314-11ef-a594-0a58a9feac02');
-assert.equal(borboletas?.direcao?.[0], 'Daniel Terra');
-assert.equal(borboletas?.duracao_minutos, 40);
-assert.equal(borboletas?.pagina_oficial, undefined);
+const friendshipFilm = merged.filmes.find(item => item.id === 'telabrasil:412');
+assert.ok(friendshipFilm?.temas.includes('Setembro Amarelo'));
+assert.equal(friendshipFilm.temas.includes('Saúde mental'), false);
 
-const audit = payload.curadorias[0].auditoria_dados;
-assert.equal(audit?.revisado_em, '2026-09-01');
-assert.ok(Array.isArray(audit?.confirmacoes));
+const audit = curation.auditoria_dados;
+assert.equal(audit?.revisado_em, '2026-09-02');
 assert.ok(audit.confirmacoes.some(item => item.id === eventId && item.confirmado.includes('gratuidade')));
-assert.ok(Array.isArray(audit?.pendencias_manuais));
-assert.equal(audit.pendencias_manuais.some(item => item.id === eventId), false);
-assert.ok(audit.pendencias_manuais.some(item => item.id === 'site:lgbtflix:12326640-3314-11ef-a594-0a58a9feac02'));
+assert.ok(audit.confirmacoes.some(item => item.id === 'apoio-informacao-setembro-2026'));
+assert.ok(audit.pendencias_manuais.some(item => item.id === 'setembro-2026-sem-url-confirmada'));
 
 assert.ok(merged.apoio);
 assert.equal(merged.apoio.site_only, true);
 assert.equal(merged.apoio.secoes.length, 3);
-assert.match(JSON.stringify(merged.apoio), /CVV/);
-assert.match(JSON.stringify(merged.apoio), /188/);
-assert.match(JSON.stringify(merged.apoio), /SAMU/);
-assert.match(JSON.stringify(merged.apoio), /192/);
-assert.match(JSON.stringify(merged.apoio), /CERSAM/);
-assert.match(JSON.stringify(merged.apoio), /CEAP/);
-assert.match(JSON.stringify(merged.apoio), /PUC Minas/);
-assert.match(JSON.stringify(merged.apoio), /FUMEC/);
-assert.ok(Array.isArray(merged.apoio.recursos_informativos));
-assert.equal(merged.apoio.recursos_informativos.length, 8);
-assert.ok(merged.apoio.recursos_informativos.some(item => item.id === 'setembro-amarelo-materiais-2026'));
-assert.ok(merged.apoio.recursos_informativos.some(item => item.id === 'ms-guia-crise-raps-2026'));
-assert.ok(merged.apoio.recursos_informativos.some(item => item.id === 'cfp-suicidio-desafios-psicologia-2013'));
-assert.ok(merged.apoio.recursos_informativos.some(item => item.id === 'oms-prevencao-suicidio-escolas-2000'));
+const supportText = JSON.stringify(merged.apoio);
+for (const expected of ['CVV', '188', 'SAMU', '192', 'UPA Sabará', '3671-9850', 'Pode Falar', 'CERSAM', 'CEAP', 'PUC Minas', 'FUMEC']) {
+  assert.ok(supportText.includes(expected), `Conteúdo de apoio ausente: ${expected}`);
+}
+assert.equal(merged.apoio.informacao_confiavel.titulo, 'Informação confiável');
+assert.equal(merged.apoio.recursos_informativos.length, 11);
+assert.ok(merged.apoio.recursos_informativos.some(item => item.id === 'see-mg-cuidando-da-sua-mente-15-18'));
+assert.ok(merged.apoio.recursos_informativos.some(item => item.id === 'see-mg-saude-mental-acoes-escola'));
+const selfHarm = merged.apoio.recursos_informativos.find(item => item.id === 'ufrgs-enfrentando-autolesao-familias');
+assert.equal(selfHarm.subsecao, 'Para famílias e responsáveis');
+assert.equal(selfHarm.conteudo_sensivel, 'Conteúdo sensível: autolesão');
 assert.equal(merged.eventos.some(item => item.nome === 'CVV — Centro de Valorização da Vida'), false);
 
 const absent = curations.apply(null, catalogs, { today: new Date(2026, 8, 15) });
@@ -137,28 +151,49 @@ assert.equal(invalid.eventos.length, catalogs.eventos.length);
 
 const outside = curations.apply(payload, catalogs, { today: new Date(2026, 9, 1) });
 assert.equal(outside.curadoriasAtivas.length, 0);
+assert.equal(outside.eventos.length, catalogs.eventos.length);
+assert.equal(outside.livros.length, catalogs.livros.length);
 assert.equal(outside.cursos.length, catalogs.cursos.length);
 assert.equal(outside.filmes.length, catalogs.filmes.length);
 assert.equal(outside.apoio, null);
-if (centralEvent) assert.equal(outside.eventos.find(item => item.id === eventId).temas, undefined);
-else assert.equal(outside.eventos.find(item => item.id === eventId), undefined);
 
-const missingTargetPayload = JSON.parse(JSON.stringify(payload));
-missingTargetPayload.curadorias[0].overlays.eventos['nao-existe'] = { temas: ['Setembro Amarelo'] };
-const missingWarnings = [];
-const missingTarget = curations.apply(missingTargetPayload, catalogs, {
-  today: new Date(2026, 8, 15),
-  warn: message => missingWarnings.push(message)
+const unsafePayload = JSON.parse(JSON.stringify(payload));
+unsafePayload.curadorias[0].complementos.cursos.push({
+  id: 'site:teste:url-perigosa', titulo: '<img src=x onerror=alert(1)>', nivel: 'Teste', descricao: 'Teste',
+  url: 'javascript:alert(1)', temas: ['Setembro Amarelo']
 });
-const expectedEventCount = catalogs.eventos.length + (centralEvent ? 0 : 1);
-assert.equal(missingTarget.eventos.length, expectedEventCount);
-assert.ok(missingWarnings.some(message => message.includes('não encontrado')));
+const unsafeWarnings = [];
+const unsafe = curations.apply(unsafePayload, catalogs, { today: new Date(2026, 8, 15), warn: message => unsafeWarnings.push(message) });
+const unsafeCourse = unsafe.cursos.find(item => item.id === 'site:teste:url-perigosa');
+assert.equal(unsafeCourse.url, undefined);
+assert.equal(unsafeCourse.titulo, '<img src=x onerror=alert(1)>');
+assert.ok(unsafeWarnings.some(message => message.includes('URL inválida removida')));
+assert.equal(curations.safeExternalUrl('javascript:alert(1)'), '');
+assert.match(curations.safeExternalUrl('https://example.org/path'), /^https:\/\/example\.org\/path$/);
+
+const collisionPayload = JSON.parse(JSON.stringify(payload));
+const firstCentralEvent = catalogs.eventos[0];
+const firstCentralBook = catalogs.livros[0];
+const firstCentralFilm = catalogs.filmes[0];
+if (firstCentralEvent) collisionPayload.curadorias[0].complementos.eventos.push({ id: firstCentralEvent.id, titulo: 'Não substituir', data: '2026-09-30' });
+if (firstCentralBook) collisionPayload.curadorias[0].complementos.livros.push({ id: firstCentralBook.id, titulo: 'Não substituir' });
+if (firstCentralFilm) collisionPayload.curadorias[0].complementos.filmes.push({ id: firstCentralFilm.id, titulo: 'Não substituir' });
+collisionPayload.curadorias[0].complementos.cursos.push({ id: 'site:colisao-curso', id_fonte: '1089', titulo: 'Não substituir' });
+const collisionWarnings = [];
+const collision = curations.apply(collisionPayload, catalogs, { today: new Date(2026, 8, 15), warn: message => collisionWarnings.push(message) });
+if (firstCentralEvent) assert.equal(collision.eventos.filter(item => item.id === firstCentralEvent.id).length, 1);
+if (firstCentralBook) assert.equal(collision.livros.filter(item => item.id === firstCentralBook.id).length, 1);
+if (firstCentralFilm) assert.equal(collision.filmes.filter(item => item.id === firstCentralFilm.id).length, 1);
+assert.equal(collision.cursos.some(item => item.id === 'site:colisao-curso'), false);
+assert.ok(collisionWarnings.some(message => message.includes('colisão')));
 
 assert.match(source, /fallbackTitleMatches/);
-assert.match(source, /Materiais informativos gratuitos/);
+assert.match(source, /textContent = text/);
+assert.match(source, /support-help-sensitive/);
 assert.match(appSource, /loadOptionalJson\(SITE_CURATIONS_URL, null\)/);
 assert.match(appSource, /siteCurationsContent\.apply\(siteCurationsData/);
 assert.match(appSource, /siteCurationsContent\.mountSupportArea\(siteLayer\.apoio\)/);
+assert.match(appSource, /Acesso não informado/);
 assert.doesNotMatch(appSource, /(?:write|post|put).*curadorias-site\.json/i);
 
-console.log('Testes da camada site-only Setembro Amarelo aprovados (overlays, fallback, complementos, materiais, janela temporal, auditoria e isolamento).');
+console.log('Testes da camada site-only Setembro Amarelo aprovados: conteúdo, temporalidade, segurança, colisões, apoio e isolamento dos catálogos centrais.');

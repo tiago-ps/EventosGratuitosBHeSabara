@@ -50,8 +50,8 @@
       }
     },
     'setembro-amarelo-2026': {
-      nome: 'Setembro Amarelo — curadoria do mês',
-      destaque: 'Se precisar, peça ajuda!',
+      nome: 'Setembro Amarelo — cuidado e saúde mental',
+      destaque: 'Se precisar, peça ajuda.',
       ativo_de: '2026-09-01',
       ativo_ate: '2026-09-30',
       configuracao: {
@@ -473,7 +473,7 @@
     const end = parseCalendarDate(book.exibir_ate, true);
     if (start && today < start) return false;
     if (end && today > end) return false;
-    return Boolean(book.link && book.imagem);
+    return Boolean(book.link && (book.imagem || book.site_only));
   }
 
   function bookAcervos(book) {
@@ -1461,6 +1461,15 @@ function eventProgram(event) {
       ratingBadge.remove();
     }
 
+    const accessBadge = slide.querySelector('.badge.free');
+    if (accessBadge) {
+      const isFree = event.gratuito === true;
+      accessBadge.textContent = isFree
+        ? 'GRATUITO'
+        : String(event.condicao_acesso || 'Acesso não informado').toUpperCase();
+      accessBadge.classList.toggle('access-unknown', !isFree);
+    }
+
     // cidade: badge ao lado do "GRATUITO"
     const cityBadge = slide.querySelector('.badge.city');
     const cityRaw = event.cidade || '';
@@ -1908,9 +1917,15 @@ function eventProgram(event) {
     image.alt = `Capa do livro ${book.titulo}`;
     image.decoding = 'async';
     image.classList.add('loaded');
+    const imageUrl = safeImageUrl(book.imagem);
     image.onload = () => { fallback.style.display = 'none'; };
     image.onerror = () => { image.classList.remove('loaded'); image.style.display = 'none'; fallback.style.display = 'grid'; };
-    image.src = book.imagem || '';
+    if (imageUrl) image.src = imageUrl;
+    else {
+      image.classList.remove('loaded');
+      image.style.display = 'none';
+      fallback.style.display = 'grid';
+    }
 
     app.replaceChildren(slide);
     scheduleBookFit(slide);
@@ -3395,11 +3410,14 @@ function eventProgram(event) {
     if (item.tipo_conteudo === 'livro') {
       const holdingsHtml = agendaBookHoldingsHtml(item);
       const acervosCount = bookAcervos(item).length;
+      const bookImage = safeImageUrl(item.imagem);
       const opinionUrl = state.config?.opinioes_livros?.habilitado === true
         ? safeExternalUrl(item.link_formulario_opiniao || state.config?.opinioes_livros?.url_formulario)
         : '';
       article.innerHTML = `
-        <div class="agenda-card-media book-media"><img src="${escapeHtml(item.imagem || '')}" alt="Capa: ${escapeHtml(item.titulo || '')}" loading="lazy"></div>
+        <div class="agenda-card-media book-media">${bookImage
+          ? `<img src="${escapeHtml(bookImage)}" alt="Capa: ${escapeHtml(item.titulo || '')}" loading="lazy">`
+          : `<div class="agenda-book-placeholder" role="img" aria-label="Livro sem capa disponível"><span aria-hidden="true">${escapeHtml(item.icone || '📚')}</span><strong>Livro</strong></div>`}</div>
         <div class="agenda-card-body">
           <div class="agenda-card-badges"><span>Livro</span>${item.acesso_fisico ? '<span>Físico</span>' : ''}${item.acesso_virtual ? '<span>Virtual</span>' : ''}${acervosCount > 1 ? `<span>${acervosCount} acervos</span>` : ''}</div>
           <p class="agenda-card-date">Sugestão de Leitura</p>
@@ -3418,11 +3436,12 @@ function eventProgram(event) {
     const map = safeExternalUrl(event.mapa);
     const closedRegistration = registrationIsClosed(event);
     const rating = normalizeRating(event.classificacao_indicativa);
+    const accessLabel = event.gratuito === true ? 'Gratuito' : (event.condicao_acesso || 'Acesso não informado');
     article.innerHTML = `
       <div class="agenda-card-media"><img></div>
       <div class="agenda-card-body">
         <div class="agenda-card-badges">
-          <span>${escapeHtml(event.categoria || 'Evento')}</span><span>Gratuito</span>${rating ? `<span>${escapeHtml(rating.label)}</span>` : ''}
+          <span>${escapeHtml(event.categoria || 'Evento')}</span><span>${escapeHtml(accessLabel)}</span>${rating ? `<span>${escapeHtml(rating.label)}</span>` : ''}
         </div>
         <p class="agenda-card-date">${escapeHtml(mobileDateLabel(event))}${event.horario ? ` • ${escapeHtml(event.horario)}` : ''}</p>
         <h2>${escapeHtml(event.titulo || 'Evento cultural')}</h2>

@@ -821,6 +821,7 @@ body.agenda-mode .app { width: 100%; min-height: 100dvh; height: auto; display: 
 .book-slide .source-label{color:var(--accent)}
 .book-filter-field[hidden],.event-filter-field[hidden]{display:none}
 .agenda-book-card .book-media{background:#102a48;padding:16px}.agenda-book-card .book-media img{object-fit:contain}.agenda-book-card .agenda-card-place strong{color:var(--accent)}.agenda-card-call{font-weight:800;color:var(--text)}
+.agenda-book-placeholder{width:100%;height:100%;min-height:160px;display:grid;place-content:center;gap:8px;text-align:center;color:#eaf4ff}.agenda-book-placeholder span{font-size:52px}.agenda-book-placeholder strong{font-size:14px;letter-spacing:.08em;text-transform:uppercase}
 @media(max-width:980px){.book-question{font-size:clamp(30px,6vw,58px)}.book-details{grid-template-columns:1fr}.book-slide .media{padding:28px}}
 @media(max-width:680px){.book-slide .media{padding:20px}.book-question{font-size:clamp(29px,8vw,48px)}.book-support{font-size:16px}.book-details{gap:8px}.book-actions a{width:100%;justify-content:center}}
 /* compactação do slide de livro para telas 16:9 */

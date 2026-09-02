@@ -59,6 +59,39 @@
     };
   }
 
+  const EXTERNAL_URL_FIELDS = Object.freeze([
+    'link', 'pagina', 'link_inscricao', 'link_virtual', 'url', 'pagina_oficial'
+  ]);
+
+  function safeExternalUrl(value) {
+    try {
+      const parsed = new URL(String(value || ''));
+      return ['http:', 'https:'].includes(parsed.protocol) ? parsed.href : '';
+    } catch {
+      return '';
+    }
+  }
+
+  function sanitizeUntrustedRecord(record, warn, label) {
+    const item = cloneRecord(record);
+    for (const field of EXTERNAL_URL_FIELDS) {
+      if (!String(item?.[field] || '').trim()) continue;
+      const safeUrl = safeExternalUrl(item[field]);
+      if (safeUrl) item[field] = safeUrl;
+      else {
+        delete item[field];
+        warn(`Curadoria site-only: URL inválida removida de ${label} (${field}).`);
+      }
+    }
+    return item;
+  }
+
+  function eventIsCurrent(event, today = new Date()) {
+    const end = String(event?.data_fim || event?.data || '').slice(0, 10);
+    const current = dateKey(today);
+    return !end || !current || end >= current;
+  }
+
   function applyOverlayCollection(records, overlays, options) {
     const result = (Array.isArray(records) ? records : []).map(cloneRecord);
     const entries = overlays && typeof overlays === 'object' ? Object.entries(overlays) : [];
@@ -71,7 +104,7 @@
           normalizeLabel(fallback?.titulo) === normalizeLabel(overlay.titulo_esperado);
         if (fallback && typeof fallback === 'object' && fallbackId === String(identifier) && fallbackTitleMatches) {
           const item = {
-            ...cloneRecord(fallback),
+            ...sanitizeUntrustedRecord(fallback, options.warn, `${options.label} ${identifier}`),
             origem: 'site-only',
             site_only: true
           };
@@ -95,13 +128,14 @@
     const result = [...records];
     const identifiers = new Set(result.flatMap(item => options.identifiers(item)).filter(Boolean).map(String));
     for (const complement of Array.isArray(complements) ? complements : []) {
+      if (typeof options.include === 'function' && !options.include(complement)) continue;
       const complementIds = options.identifiers(complement).filter(Boolean).map(String);
       if (!complementIds.length || complementIds.some(identifier => identifiers.has(identifier))) {
         options.warn(`Curadoria site-only: complemento de ${options.label} sem ID próprio ou com colisão; item ignorado.`);
         continue;
       }
       const item = {
-        ...cloneRecord(complement),
+        ...sanitizeUntrustedRecord(complement, options.warn, `complemento de ${options.label}`),
         origem: 'site-only',
         site_only: true
       };
@@ -255,6 +289,15 @@
       });
       result.filmes = applyOverlayCollection(result.filmes, overlays.filmes, {
         idField: 'id', label: 'filme', warn
+      });
+      result.eventos = appendComplements(result.eventos, complements.eventos, {
+        label: 'evento', warn,
+        identifiers: item => [item?.id],
+        include: item => eventIsCurrent(item, options.today || new Date())
+      });
+      result.livros = appendComplements(result.livros, complements.livros, {
+        label: 'livro', warn,
+        identifiers: item => [item?.id]
       });
       result.cursos = appendComplements(result.cursos, complements.cursos, {
         label: 'curso', warn,
@@ -521,6 +564,12 @@
       emergency.className = 'support-help-emergency';
       appendText(emergency, 'h3', data.emergencia.titulo || 'Emergência');
       appendText(emergency, 'p', data.emergencia.texto);
+      if (Array.isArray(data.emergencia.contatos) && data.emergencia.contatos.length) {
+        const contacts = document.createElement('ul');
+        contacts.className = 'support-help-contacts';
+        for (const contact of data.emergencia.contatos) appendText(contacts, 'li', contact);
+        emergency.appendChild(contacts);
+      }
       const emergencyLink = officialLink(data.emergencia.url, data.emergencia.cta);
       if (emergencyLink) emergency.appendChild(emergencyLink);
       shell.appendChild(emergency);
@@ -557,19 +606,21 @@
     if (Array.isArray(data.recursos_informativos) && data.recursos_informativos.length) {
       const resources = document.createElement('section');
       resources.className = 'support-help-section support-help-resources';
-      appendText(resources, 'h3', 'Materiais informativos gratuitos');
+      appendText(resources, 'h3', data.informacao_confiavel?.titulo || 'Informação confiável');
       appendText(
         resources,
         'p',
-        'Publicações e materiais de instituições oficiais para leitura e aprofundamento. Não substituem atendimento profissional.',
+        data.informacao_confiavel?.apresentacao || 'Materiais gratuitos de instituições públicas e organizações de referência para conhecer melhor temas relacionados a saúde mental, cuidado e vida escolar.',
         'support-help-section-intro'
       );
       for (const resourceData of data.recursos_informativos) {
         const resource = document.createElement('article');
         resource.className = 'support-help-service support-help-resource';
+        appendText(resource, 'p', resourceData.subsecao, 'support-help-resource-section');
         appendText(resource, 'h4', resourceData.titulo);
         const sourceLine = [resourceData.fonte, resourceData.ano].filter(Boolean).join(' • ');
         appendText(resource, 'p', sourceLine, 'support-help-address');
+        appendText(resource, 'p', resourceData.conteudo_sensivel, 'support-help-sensitive');
         appendText(resource, 'p', resourceData.descricao);
         appendText(resource, 'p', resourceData.observacao, 'support-help-note');
         const link = officialLink(resourceData.url, resourceData.cta || 'Acessar material oficial');
@@ -622,11 +673,13 @@
     bindSupportRequest,
     buildPanelSupportItems,
     dateKey,
+    eventIsCurrent,
     isActive,
     isValidPayload,
     mergeLabels,
     mountSupportArea,
     normalizeLabel,
-    openSupportArea
+    openSupportArea,
+    safeExternalUrl
   });
 })();

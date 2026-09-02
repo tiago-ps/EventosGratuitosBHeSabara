@@ -81,19 +81,19 @@ async function dispatch(type, event) {
 }
 
 (async () => {
-  assert.equal(sw.CACHE_VERSION, 'mural-cultural-v94-setembro-recursos');
+  assert.equal(sw.CACHE_VERSION, 'mural-cultural-v95-setembro-final');
   for (const asset of [
-    './css/styles.css?v=69',
+    './css/styles.css?v=70',
     './css/eventos-manuais-ui.css?v=43',
     './css/concursos-mural.css?v=2',
     './js/core/rotacao.js?v=1',
-    './css/temas-visuais.css?v=5',
+    './css/temas-visuais.css?v=6',
     './js/tema-visual-boot.js?v=2',
     './js/conteudos/cursos.js?v=3',
     './js/conteudos/concursos.js?v=2',
     './js/conteudos/filmes.js?v=6',
-    './js/curadorias-site.js?v=1',
-    './js/app.js?v=88',
+    './js/curadorias-site.js?v=2',
+    './js/app.js?v=89',
     './js/temas-visuais.js?v=6',
     './js/eventos-manuais-ui.js?v=44'
   ]) {

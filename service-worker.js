@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v94-setembro-recursos';
+const CACHE_VERSION = 'mural-cultural-v95-setembro-final';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -8,17 +8,17 @@ const SEPTEMBER_BANNER_PATH = '/imagens/curadorias/setembro-amarelo-banner.png';
 
 const CORE_ASSETS = [
   './', './index.html',
-  './css/styles.css?v=69',
+  './css/styles.css?v=70',
   './css/eventos-manuais-ui.css?v=43',
   './css/concursos-mural.css?v=2',
-  './css/temas-visuais.css?v=5',
+  './css/temas-visuais.css?v=6',
   './js/tema-visual-boot.js?v=2',
   './js/core/rotacao.js?v=1',
   './js/conteudos/cursos.js?v=3',
   './js/conteudos/concursos.js?v=2',
   './js/conteudos/filmes.js?v=6',
-  './js/curadorias-site.js?v=1',
-  './js/app.js?v=88',
+  './js/curadorias-site.js?v=2',
+  './js/app.js?v=89',
   './js/temas-visuais.js?v=6',
   './js/eventos-manuais-ui.js?v=44',
   './js/ios-install.js?v=1',
