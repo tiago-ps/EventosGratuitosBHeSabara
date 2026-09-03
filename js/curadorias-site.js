@@ -114,6 +114,16 @@
     }
   }
 
+  function applyOverlayUrlMetadata(target, overlay, warn, label) {
+    if (!overlay || typeof overlay !== 'object') return;
+    for (const field of EXTERNAL_URL_FIELDS) {
+      if (!Object.prototype.hasOwnProperty.call(overlay, field)) continue;
+      const safeValue = safeExternalUrl(overlay[field]);
+      if (safeValue) target[field] = safeValue;
+      else warn(`Curadoria site-only: URL inválida ignorada para ${label} (${field}).`);
+    }
+  }
+
   function sanitizeUntrustedRecord(record, warn, label) {
     const item = cloneRecord(record);
     for (const field of EXTERNAL_URL_FIELDS) {
@@ -123,6 +133,14 @@
       else {
         delete item[field];
         warn(`Curadoria site-only: URL inválida removida de ${label} (${field}).`);
+      }
+    }
+    if (Object.prototype.hasOwnProperty.call(item, 'imagem')) {
+      const safeValue = safeImage(item.imagem);
+      if (safeValue) item.imagem = safeValue;
+      else {
+        delete item.imagem;
+        warn(`Curadoria site-only: imagem inválida removida de ${label}.`);
       }
     }
     return item;
@@ -162,6 +180,7 @@
         continue;
       }
       target.temas = mergeLabels(target.temas, overlay?.temas);
+      applyOverlayUrlMetadata(target, overlay, options.warn, `${options.label} ${identifier}`);
       applyOverlayImageMetadata(target, overlay, options.warn, `${options.label} ${identifier}`);
     }
     return result;
@@ -217,12 +236,14 @@
       {
         id: 'site:apoio:setembro-cvv-188',
         painel_apoio: true,
+        support_target: 'apoio-emocional',
         titulo: 'Se precisar conversar, peça ajuda.',
-        descricao: cvv?.descricao || 'O CVV oferece apoio emocional gratuito, 24 horas por dia, todos os dias.',
-        destaque: 'CVV • 188',
-        detalhe: 'Apoio emocional gratuito • 24 horas por dia • todos os dias',
-        fonte_label: cvv?.nome || 'CVV — Centro de Valorização da Vida',
-        url: cvv?.url || 'https://cvv.org.br/ligue-188/',
+        descricao: 'Há diferentes caminhos de escuta e apoio. Consulte no Mural os canais do CVV, o serviço Pode Falar e o acesso pelo Meu SUS Digital.',
+        destaque: 'CVV • 188 • Pode Falar',
+        detalhe: 'Apoio emocional e orientação para adolescentes e jovens',
+        fonte_label: 'Canais de apoio emocional',
+        imagem: data.imagens_cards?.apoio_emocional,
+        termos_busca: ['CVV', '188', 'Pode Falar', 'Meu SUS Digital', 'apoio emocional', 'escuta'],
         observacao: 'Em situação de emergência ou risco imediato, procure um serviço de urgência ou acione o SAMU pelo telefone 192.',
         icone: '💛',
         temas: ['Setembro Amarelo'],
@@ -231,6 +252,7 @@
       {
         id: 'site:apoio:setembro-rede-publica',
         painel_apoio: true,
+        support_target: 'rede-publica',
         titulo: 'Onde buscar atendimento em saúde mental',
         descricao: 'A rede pública oferece serviços de atenção psicossocial. Os contatos completos e orientações estão disponíveis em “Onde buscar ajuda”.',
         destaque: publicNames.filter(name => normalizeLabel(name).includes('sabara')).length
@@ -238,6 +260,8 @@
           : 'CAPS e serviços da rede pública',
         detalhe: 'Belo Horizonte: CERSAM / CERSAMi • Emergência: SAMU 192',
         fonte_label: 'Rede pública de saúde mental',
+        imagem: data.imagens_cards?.rede_publica,
+        termos_busca: ['CAPS', 'CERSAM', 'CERSAMi', 'SAMU', 'UPA', 'rede pública', 'atendimento'],
         observacao: 'Confirme diretamente com cada serviço as condições atuais de atendimento e disponibilidade.',
         icone: '🤝',
         temas: ['Setembro Amarelo'],
@@ -246,6 +270,7 @@
       {
         id: 'site:apoio:setembro-universidades',
         painel_apoio: true,
+        support_target: 'atendimento-universitario',
         titulo: 'Atendimento psicológico universitário',
         descricao: 'Clínicas-escola e serviços universitários podem oferecer atendimento psicológico à comunidade, conforme triagem, vagas e condições de cada instituição.',
         destaque: universityNames.length
@@ -258,6 +283,8 @@
           : 'UFMG • PUC Minas • FUMEC',
         detalhe: 'Atendimento sujeito a triagem, disponibilidade e condições atuais da instituição.',
         fonte_label: 'Serviços universitários de Psicologia',
+        imagem: data.imagens_cards?.atendimento_universitario,
+        termos_busca: ['UFMG', 'PUC Minas', 'FUMEC', 'clínica-escola', 'psicologia', 'universidade'],
         observacao: 'Esses serviços não substituem CERSAM, SAMU ou pronto atendimento em situações de emergência.',
         icone: '🧠',
         temas: ['Setembro Amarelo'],
@@ -266,6 +293,7 @@
       {
         id: 'site:apoio:setembro-informacao-confiavel',
         painel_apoio: true,
+        support_target: 'informacao-confiavel',
         titulo: 'Informação confiável sobre saúde mental',
         descricao: 'O Mural reúne materiais gratuitos de instituições oficiais para leitura e aprofundamento sobre saúde mental, prevenção, acolhimento e redes de apoio.',
         destaque: resourceSources.length
@@ -280,6 +308,8 @@
           : 'Ministério da Saúde • CFP • OMS • Setembro Amarelo®',
         detalhe: `${resources.length || 0} materiais informativos gratuitos disponíveis em “Onde buscar ajuda”.`,
         fonte_label: 'Materiais informativos gratuitos',
+        imagem: data.imagens_cards?.informacao_confiavel,
+        termos_busca: ['saúde mental', 'materiais', 'informação', 'Ministério da Saúde', 'CFP', 'OMS'],
         observacao: 'Materiais informativos não substituem avaliação ou atendimento profissional.',
         icone: '📚',
         temas: ['Setembro Amarelo'],
@@ -298,7 +328,8 @@
       }
       result.push({
         ...cloneRecord(item),
-        origem: 'site-only'
+        origem: 'site-only',
+        site_only: true
       });
       existingIds.add(String(item.id));
     }
@@ -317,6 +348,19 @@
     };
 
     if (!isValidPayload(payload)) return result;
+
+    const permanentCuration = payload.curadorias.find(curation =>
+      curation?.complementos?.servicos_apoio?.permanente === true
+    );
+    if (permanentCuration) {
+      result.apoio = {
+        ...permanentCuration.complementos.servicos_apoio,
+        curationId: permanentCuration.id,
+        campaignActive: isActive(permanentCuration, options.today || new Date()),
+        site_only: true
+      };
+      result.filmes = appendPanelSupportItems(result.filmes, result.apoio, warn);
+    }
 
     for (const curation of payload.curadorias.filter(item => isActive(item, options.today || new Date()))) {
       const overlays = curation.overlays || {};
@@ -354,9 +398,12 @@
         result.apoio = {
           ...complements.servicos_apoio,
           curationId: curation.id,
+          campaignActive: true,
           site_only: true
         };
-        result.filmes = appendPanelSupportItems(result.filmes, result.apoio, warn);
+        if (complements.servicos_apoio.permanente !== true) {
+          result.filmes = appendPanelSupportItems(result.filmes, result.apoio, warn);
+        }
       }
       result.curadoriasAtivas.push(curation.id);
     }
@@ -399,8 +446,7 @@
     const {
       buildSiteQr,
       slideDurationFor,
-      buildQr,
-      safeExternalUrl
+      safeImageUrl
     } = helpers;
     const slide = template.content.firstElementChild.cloneNode(true);
     buildSiteQr(slide);
@@ -465,43 +511,28 @@
     const sourceLabel = slide.querySelector('.source-label');
     if (sourceLabel) sourceLabel.textContent = movie.fonte_label || 'Onde buscar ajuda';
     const source = slide.querySelector('.source-url');
-    const link = safeExternalUrl(movie.url);
     if (source) {
-      if (link) {
-        const anchor = document.createElement('a');
-        anchor.href = link;
-        anchor.textContent = 'Acessar informação oficial';
-        anchor.target = '_blank';
-        anchor.rel = 'noopener noreferrer';
-        source.replaceChildren(anchor);
-      } else {
-        source.textContent = 'No celular, abra “Onde buscar ajuda” para consultar endereços, telefones e materiais.';
-      }
+      const action = document.createElement('button');
+      action.type = 'button';
+      action.className = 'support-card-action';
+      action.textContent = 'Ver informações, contatos e endereços';
+      action.addEventListener('click', () => openSupportArea(action, movie.support_target));
+      source.replaceChildren(action);
     }
     const updated = slide.querySelector('.updated');
     if (updated) updated.textContent = movie.observacao || '';
 
     const qrWrap = slide.querySelector('.qr-wrap');
-    const qr = slide.querySelector('.qr-code');
-    const qrLabel = slide.querySelector('.qr-item-label');
-    if (link && qrWrap && qr) {
-      qrWrap.hidden = false;
-      if (qrLabel) qrLabel.textContent = 'Acessar informação oficial';
-      qr.setAttribute('aria-label', 'Acessar informação oficial por QR Code');
-      buildQr(qr, link);
-    } else if (qrWrap) {
+    if (qrWrap) {
       qrWrap.hidden = true;
-      qr?.replaceChildren();
+      slide.querySelector('.qr-code')?.replaceChildren();
     }
 
     const subtitle = slide.querySelector('.panel-subtitle');
     if (subtitle) subtitle.textContent = 'Informação de apoio';
 
     const image = slide.querySelector('.event-image');
-    if (image) {
-      image.removeAttribute('src');
-      image.style.display = 'none';
-    }
+    const imageUrl = safeImageUrl(movie.imagem);
     const fallback = slide.querySelector('.image-fallback');
     const fallbackIcon = slide.querySelector('.fallback-icon');
     const fallbackLabel = slide.querySelector('.fallback-label');
@@ -512,8 +543,91 @@
     }
     if (fallbackIcon) fallbackIcon.textContent = movie.icone || '💛';
     if (fallbackLabel) fallbackLabel.textContent = 'Setembro Amarelo';
+    if (image && imageUrl) {
+      image.alt = movie.titulo ? `Imagem de apoio: ${movie.titulo}` : 'Imagem de apoio';
+      image.onload = () => {
+        image.style.display = '';
+        if (fallback) fallback.hidden = true;
+      };
+      image.onerror = () => {
+        image.removeAttribute('src');
+        image.style.display = 'none';
+        if (fallback) fallback.hidden = false;
+      };
+      image.src = imageUrl;
+    } else if (image) {
+      image.removeAttribute('src');
+      image.style.display = 'none';
+    }
 
     return slide;
+  }
+
+  function appendSupportImage(parent, value, alt) {
+    const source = safeImage(value);
+    if (!source) return null;
+    const image = document.createElement('img');
+    image.className = 'support-help-image';
+    image.alt = alt || '';
+    image.loading = 'lazy';
+    image.decoding = 'async';
+    image.addEventListener('error', () => image.remove());
+    image.src = source;
+    parent.appendChild(image);
+    return image;
+  }
+
+  function createAgendaSupportCard(movie) {
+    const article = document.createElement('article');
+    article.className = 'agenda-card agenda-support-card';
+
+    const media = document.createElement('div');
+    media.className = 'agenda-card-media support-card-media';
+    const fallback = document.createElement('div');
+    fallback.className = 'film-poster-fallback';
+    fallback.setAttribute('role', 'img');
+    fallback.setAttribute('aria-label', `Imagem não disponível para ${movie.titulo || 'informação de apoio'}`);
+    const fallbackIcon = document.createElement('span');
+    fallbackIcon.setAttribute('aria-hidden', 'true');
+    fallbackIcon.textContent = movie.icone || '💛';
+    const fallbackText = document.createElement('strong');
+    fallbackText.textContent = 'Informação de apoio';
+    fallback.append(fallbackIcon, fallbackText);
+    media.appendChild(fallback);
+    const imageUrl = safeImage(movie.imagem);
+    if (imageUrl) {
+      const image = document.createElement('img');
+      image.alt = movie.titulo ? `Imagem de apoio: ${movie.titulo}` : 'Imagem de apoio';
+      image.loading = 'lazy';
+      image.decoding = 'async';
+      image.addEventListener('load', () => fallback.remove());
+      image.addEventListener('error', () => image.remove());
+      image.src = imageUrl;
+      media.appendChild(image);
+    }
+
+    const body = document.createElement('div');
+    body.className = 'agenda-card-body';
+    appendText(body, 'p', 'UTILIDADE PÚBLICA', 'agenda-card-date');
+    appendText(body, 'h2', movie.titulo || 'Informação');
+    appendText(body, 'p', movie.descricao, 'agenda-card-description');
+    const tags = document.createElement('div');
+    tags.className = 'film-tags';
+    tags.setAttribute('aria-label', 'Tipo de conteúdo');
+    appendText(tags, 'span', 'Informação');
+    appendText(tags, 'span', 'Utilidade pública');
+    body.appendChild(tags);
+    const actions = document.createElement('div');
+    actions.className = 'agenda-card-actions';
+    const action = document.createElement('button');
+    action.type = 'button';
+    action.className = 'support-card-action';
+    action.textContent = 'Ver informações, contatos e endereços';
+    action.addEventListener('click', () => openSupportArea(action, movie.support_target));
+    actions.appendChild(action);
+    body.appendChild(actions);
+    article.append(media, body);
+    return article;
   }
 
   function installPanelSupportAdapter() {
@@ -524,7 +638,8 @@
     const originalOptions = films.options;
     const originalSampleForPanel = films.sampleForPanel;
     const originalCreatePanelSlide = films.createPanelSlide;
-    if (![originalFilter, originalOptions, originalSampleForPanel, originalCreatePanelSlide].every(fn => typeof fn === 'function')) {
+    const originalCreateAgendaCard = films.createAgendaCard;
+    if (![originalFilter, originalOptions, originalSampleForPanel, originalCreatePanelSlide, originalCreateAgendaCard].every(fn => typeof fn === 'function')) {
       return false;
     }
 
@@ -535,7 +650,18 @@
       ...films,
       __panelSupportAdapter: true,
       filter(movies, filters = {}, normalizeText) {
-        return originalFilter(culturalOnly(movies), filters, normalizeText);
+        const cultural = originalFilter(culturalOnly(movies), filters, normalizeText);
+        const normalize = typeof normalizeText === 'function' ? normalizeText : normalizeLabel;
+        const needle = normalize(filters.query || '');
+        if (!needle) return cultural;
+        const matchingSupport = supportOnly(movies).filter(movie => normalize([
+          movie.titulo,
+          movie.descricao,
+          movie.destaque,
+          movie.detalhe,
+          ...(Array.isArray(movie.termos_busca) ? movie.termos_busca : [])
+        ].join(' ')).includes(needle));
+        return [...cultural, ...matchingSupport];
       },
       options(movies, field) {
         return originalOptions(culturalOnly(movies), field);
@@ -566,6 +692,11 @@
         return isPanelSupportMovie(args?.movie)
           ? createPanelSupportSlide(args)
           : originalCreatePanelSlide(args);
+      },
+      createAgendaCard(movie, helpers) {
+        return isPanelSupportMovie(movie)
+          ? createAgendaSupportCard(movie)
+          : originalCreateAgendaCard(movie, helpers);
       }
     });
     return true;
@@ -623,11 +754,14 @@
     for (const sectionData of data.secoes) {
       const section = document.createElement('section');
       section.className = 'support-help-section';
-      appendText(section, 'h3', sectionData.titulo);
+      if (sectionData.id) section.dataset.supportTarget = sectionData.id;
+      const sectionTitle = appendText(section, 'h3', sectionData.titulo);
+      if (sectionTitle) sectionTitle.tabIndex = -1;
       appendText(section, 'p', sectionData.descricao, 'support-help-section-intro');
       for (const serviceData of Array.isArray(sectionData.servicos) ? sectionData.servicos : []) {
         const service = document.createElement('article');
         service.className = 'support-help-service';
+        appendSupportImage(service, serviceData.imagem, serviceData.nome ? `Imagem de ${serviceData.nome}` : 'Imagem do serviço');
         appendText(service, 'h4', serviceData.nome);
         appendText(service, 'p', serviceData.descricao);
         appendText(service, 'p', serviceData.endereco, 'support-help-address');
@@ -640,6 +774,10 @@
         appendText(service, 'p', serviceData.observacao, 'support-help-note');
         const link = officialLink(serviceData.url, serviceData.cta);
         if (link) service.appendChild(link);
+        for (const additional of Array.isArray(serviceData.links_adicionais) ? serviceData.links_adicionais : []) {
+          const additionalLink = officialLink(additional?.url, additional?.cta);
+          if (additionalLink) service.appendChild(additionalLink);
+        }
         section.appendChild(service);
       }
       sections.appendChild(section);
@@ -649,7 +787,9 @@
     if (Array.isArray(data.recursos_informativos) && data.recursos_informativos.length) {
       const resources = document.createElement('section');
       resources.className = 'support-help-section support-help-resources';
-      appendText(resources, 'h3', data.informacao_confiavel?.titulo || 'Informação confiável');
+      resources.dataset.supportTarget = data.informacao_confiavel?.id || 'informacao-confiavel';
+      const resourcesTitle = appendText(resources, 'h3', data.informacao_confiavel?.titulo || 'Informação confiável');
+      if (resourcesTitle) resourcesTitle.tabIndex = -1;
       appendText(
         resources,
         'p',
@@ -687,17 +827,28 @@
       supportOpener = null;
     });
     supportDialog = dialog;
-    document.documentElement.dataset.siteCurationHelp = data.curationId || 'available';
+    document.documentElement.dataset.siteCurationHelp = data.campaignActive
+      ? (data.curationId || 'available')
+      : 'available';
     window.dispatchEvent(new CustomEvent('mural:site-curation-change'));
     return dialog;
   }
 
-  function openSupportArea(opener = document.activeElement) {
+  function openSupportArea(opener = document.activeElement, target = '') {
     if (!supportDialog) return false;
     supportOpener = opener;
     if (typeof supportDialog.showModal === 'function') supportDialog.showModal();
     else supportDialog.setAttribute('open', '');
-    supportDialog.querySelector('.support-help-close')?.focus();
+    const targetSection = target
+      ? [...supportDialog.querySelectorAll('[data-support-target]')]
+        .find(section => section.dataset.supportTarget === target)
+      : null;
+    if (targetSection) {
+      targetSection.scrollIntoView?.({ block: 'start' });
+      targetSection.querySelector('h3')?.focus();
+    } else {
+      supportDialog.querySelector('.support-help-close')?.focus();
+    }
     return true;
   }
 
@@ -705,7 +856,7 @@
     if (supportListenerBound) return;
     supportListenerBound = true;
     window.addEventListener('mural:support-help-request', event => {
-      openSupportArea(event.detail?.opener || document.activeElement);
+      openSupportArea(event.detail?.opener || document.activeElement, event.detail?.target || '');
     });
   }
 

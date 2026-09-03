@@ -589,7 +589,8 @@ html[data-visual-theme="setembro-amarelo-glow"] .campaign-profile-tooltip {
   box-shadow: 0 0 0 6px #151308, 0 9px 28px rgba(0, 0, 0, .34);
 }
 .support-help-close:focus-visible,
-.support-help-dialog a:focus-visible {
+.support-help-dialog a:focus-visible,
+.support-card-action:focus-visible {
   outline: 3px solid #ffe27a;
   outline-offset: 3px;
 }
@@ -632,6 +633,26 @@ html[data-visual-theme="setembro-amarelo-glow"] .campaign-profile-tooltip {
 .support-help-emergency h3 { margin: 0 0 6px; color: #ffe27a; }
 .support-help-emergency p { margin: 0 0 8px; line-height: 1.5; }
 .support-help-dialog a { color: #ffe27a; font-weight: 750; text-underline-offset: 3px; }
+.support-help-image {
+  float: right;
+  width: min(116px, 34%);
+  max-height: 92px;
+  margin: 0 0 10px 14px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.support-card-action {
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  padding: 8px 13px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-weight: 750;
+  cursor: pointer;
+}
+.support-slide .support-card-action { color: #ffe27a; }
+.agenda-support-card .support-card-media { background: #211d09; }
 .support-help-sections { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .support-help-section {
   padding: 17px;

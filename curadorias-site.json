@@ -55,19 +55,23 @@
         "cursos": {
           "1089": {
             "titulo_esperado": "Saúde mental, atenção psicossocial e interculturalidade nas migrações",
-            "temas": ["Setembro Amarelo", "Saúde mental"]
+            "temas": ["Setembro Amarelo", "Saúde mental"],
+            "url": "https://www.escolavirtual.gov.br/curso/1089"
           },
           "881": {
             "titulo_esperado": "Direitos Humanos e saúde mental - Curso permanente Damião Ximenes Lopes",
-            "temas": ["Setembro Amarelo", "Saúde mental"]
+            "temas": ["Setembro Amarelo", "Saúde mental"],
+            "url": "https://www.escolavirtual.gov.br/curso/881"
           },
           "1207": {
             "titulo_esperado": "Mídias Digitais e Saúde Mental de Crianças e Adolescentes",
-            "temas": ["Setembro Amarelo", "Saúde mental"]
+            "temas": ["Setembro Amarelo", "Saúde mental"],
+            "url": "https://www.escolavirtual.gov.br/curso/1207"
           },
           "817": {
             "titulo_esperado": "Propósito e Qualidade de vida: Descobertas para o Desenvolvimento Pessoal",
-            "temas": ["Setembro Amarelo", "Bem-estar emocional"]
+            "temas": ["Setembro Amarelo", "Bem-estar emocional"],
+            "url": "https://www.escolavirtual.gov.br/curso/817"
           }
         },
         "livros": {},
@@ -93,6 +97,8 @@
             "condicao_acesso": "Gratuito",
             "descricao": "Atividade presencial dedicada ao cuidado, ao bem-estar emocional e ao fortalecimento de redes de apoio.",
             "fonte": "PRINEA",
+            "endereco": "Praça da Liberdade, 21 - Savassi, Belo Horizonte - MG, 30140-010",
+            "mapa": "https://maps.app.goo.gl/93jy5mVtUwoy3e7G7",
             "link": "https://www.sympla.com.br/evento/juntos-pela-vida/3562866",
             "pagina": "https://www.sympla.com.br/evento/juntos-pela-vida/3562866",
             "link_inscricao": "https://www.sympla.com.br/evento/juntos-pela-vida/3562866",
@@ -106,12 +112,15 @@
             "data": "2026-09-21",
             "data_fim": "2026-09-21",
             "horario": "14h às 18h",
-            "local": "CREA-MG",
+            "local": "CREA",
             "cidade": "Belo Horizonte",
             "categoria": "Encontro",
             "condicao_acesso": "Acesso não informado",
             "descricao": "Encontro sobre cultura do cuidado, saúde mental, gestão de conflitos e construção de ambientes profissionais mais saudáveis.",
             "fonte": "Unniversa Soluções Multiportas de Conflitos",
+            "endereco": "Av. Álvares Cabral, 1600 - Santo Agostinho, Belo Horizonte - MG, 30170-917",
+            "mapa": "https://maps.app.goo.gl/e8NY1ky8bKJjAuMh6",
+            "imagem": "imagens/curadorias/crea.jpg",
             "link": "https://www.sympla.com.br/evento/cultura-do-cuidado-prevencao-saude-mental-e-gestao-estrategica-de-conflitos-nas-organizacoes/3562532",
             "pagina": "https://www.sympla.com.br/evento/cultura-do-cuidado-prevencao-saude-mental-e-gestao-estrategica-de-conflitos-nas-organizacoes/3562532",
             "link_inscricao": "https://www.sympla.com.br/evento/cultura-do-cuidado-prevencao-saude-mental-e-gestao-estrategica-de-conflitos-nas-organizacoes/3562532",
@@ -150,8 +159,9 @@
             "codigo_acervo": "231118",
             "acesso_fisico": false,
             "acesso_virtual": true,
-            "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=231118&page=1&perPage=20&orderBy=obra&direction=C",
-            "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=231118&page=1&perPage=20&orderBy=obra&direction=C",
+            "link_virtual": "https://pergamum.ifmg.edu.br/acervo/5065368",
+            "link": "https://pergamum.ifmg.edu.br/acervo/5065368",
+            "imagem": "imagens/curadorias/cult.jpg",
             "tipo_link_principal": "virtual",
             "fonte": "Biblioteca Virtual/Pergamum — IFMG",
             "exibicao_ativa": true
@@ -165,23 +175,25 @@
             "codigo_acervo": "232509",
             "acesso_fisico": false,
             "acesso_virtual": true,
-            "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=232509&page=1&perPage=20&orderBy=obra&direction=C",
-            "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=232509&page=1&perPage=20&orderBy=obra&direction=C",
+            "link_virtual": "https://pergamum.ifmg.edu.br/acervo/5066485",
+            "link": "https://pergamum.ifmg.edu.br/acervo/5066485",
+            "imagem": "imagens/curadorias/a-escola-que-queremos.jpg",
             "tipo_link_principal": "virtual",
             "fonte": "Biblioteca Virtual/Pergamum — IFMG",
             "exibicao_ativa": true
           },
           {
             "id": "site:pergamum:232152",
-            "titulo": "A infância sequestrada pelas telas",
+            "titulo": "A infância sequestrada pelas telas: o desafio de educar na era digital",
             "temas": ["Setembro Amarelo", "Bem-estar digital", "Infância", "Cuidado"],
             "icone": "📚",
             "biblioteca_rede": "Biblioteca Virtual/Pergamum — IFMG",
             "codigo_acervo": "232152",
             "acesso_fisico": false,
             "acesso_virtual": true,
-            "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=232152&page=1&perPage=20&orderBy=obra&direction=C",
-            "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=232152&page=1&perPage=20&orderBy=obra&direction=C",
+            "link_virtual": "https://pergamum.ifmg.edu.br/acervo/5064759",
+            "link": "https://pergamum.ifmg.edu.br/acervo/5064759",
+            "imagem": "imagens/curadorias/a-infancia-sequestrada-pelas-telas.jpg",
             "tipo_link_principal": "virtual",
             "fonte": "Biblioteca Virtual/Pergamum — IFMG",
             "exibicao_ativa": true
@@ -195,8 +207,9 @@
             "codigo_acervo": "231508",
             "acesso_fisico": false,
             "acesso_virtual": true,
-            "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=231508&page=1&perPage=20&orderBy=obra&direction=C",
-            "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=231508&page=1&perPage=20&orderBy=obra&direction=C",
+            "link_virtual": "https://pergamum.ifmg.edu.br/acervo/5064668",
+            "link": "https://pergamum.ifmg.edu.br/acervo/5064668",
+            "imagem": "imagens/curadorias/desenvolvimento-positivo-no-esporte.jpg",
             "tipo_link_principal": "virtual",
             "fonte": "Biblioteca Virtual/Pergamum — IFMG",
             "exibicao_ativa": true
@@ -210,8 +223,9 @@
             "codigo_acervo": "230639",
             "acesso_fisico": false,
             "acesso_virtual": true,
-            "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=230639&page=1&perPage=20&orderBy=obra&direction=C",
-            "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=230639&page=1&perPage=20&orderBy=obra&direction=C",
+            "link_virtual": "https://pergamum.ifmg.edu.br/acervo/5069029",
+            "link": "https://pergamum.ifmg.edu.br/acervo/5069029",
+            "imagem": "imagens/curadorias/o-culto-do-bem-estar.jpg",
             "tipo_link_principal": "virtual",
             "fonte": "Biblioteca Virtual/Pergamum — IFMG",
             "exibicao_ativa": true
@@ -249,6 +263,7 @@
             "publico_alvo": "Profissionais e trabalhadores que atendem adolescentes e jovens, especialmente nas áreas de educação, saúde, assistência social e segurança pública, além de demais interessados na temática.",
             "situacao": "Matrículas até 04/10/2026",
             "url": "https://www.unasus.gov.br/cursos/curso/46813",
+            "imagem": "imagens/curadorias/saude-mental-e-atencao-psicossocial-de-adolescentes-e-jovens.jpg",
             "gratuito": true,
             "temas": ["Setembro Amarelo", "Saúde mental", "Adolescência e juventude", "Escuta e acolhimento", "Redes de apoio"],
             "nivel": "Extensão",
@@ -264,7 +279,8 @@
             "modalidade": "Curso de curta duração",
             "publico_alvo": "Pessoas interessadas na promoção da saúde mental no contexto escolar",
             "situacao": "Edição atual disponível na plataforma Lúmina",
-            "url": "https://lumina.ufrgs.br/course/view.php?id=189",
+            "url": "https://lumina.ufrgs.br/course/view.php?id=570",
+            "imagem": "imagens/curadorias/saude-mental-na-escola.jpg",
             "gratuito": true,
             "temas": ["Setembro Amarelo", "Saúde mental", "Cuidado", "Bem-estar emocional", "Adolescência e juventude", "Escuta e acolhimento"],
             "nivel": "Extensão",
@@ -281,6 +297,7 @@
             "publico_alvo": "Profissionais e estudantes interessados na temática",
             "situacao": "Inscrições abertas",
             "url": "https://cursosqualificacao.campusvirtual.fiocruz.br/hotsite/saudemental-trabalho/12736",
+            "imagem": "imagens/curadorias/saude-mental-no-trabalho.png",
             "gratuito": true,
             "temas": ["Setembro Amarelo", "Saúde mental", "Saúde mental e trabalho", "Cuidado", "Direitos humanos"],
             "nivel": "Desenvolvimento",
@@ -298,6 +315,7 @@
             "publico_alvo": "Profissionais de Saúde",
             "situacao": "Matrículas até 18/04/2027",
             "url": "https://www.unasus.gov.br/cursos/curso/45601",
+            "imagem": "imagens/curadorias/atencao-a-saude-mental-do-homem.jpg",
             "gratuito": true,
             "temas": ["Setembro Amarelo", "Saúde mental", "Saúde do homem", "Redes de apoio"],
             "instituicao_parceira": "Ministério da Saúde",
@@ -309,11 +327,14 @@
           {
             "id": "site:setembro-filme:nossa-danca",
             "titulo": "Nossa Dança",
-            "ano": 2021,
+            "ano": 2022,
             "direcao": ["Lua Vicentini", "Lavínia Lima", "Luiz Mad"],
-            "duracao_minutos": 21,
+            "duracao_minutos": 22,
             "generos": ["Romance", "Curta-metragem"],
+            "classificacao": "Livre",
             "pais": "Brasil",
+            "plataforma": "LGBTFlix",
+            "pagina_oficial": "https://flix.votelgbt.org/assistir/81fe277e-8a05-11ee-ab4c-0a58a9feac02",
             "sinopse": "Duas jovens estudantes de dança se aproximam ao preparar juntas um vídeo para um concurso escolar.",
             "temas": ["Setembro Amarelo", "Pertencimento", "Vínculos", "Amizade", "Diversidade", "Juventude"]
           },
@@ -322,10 +343,13 @@
             "titulo": "Cancha — Domingo É Dia de Jogo",
             "ano": 2020,
             "direcao": ["Welyton Crestani"],
-            "duracao_minutos": 22,
+            "duracao_minutos": 18,
             "generos": ["Documentário", "Curta-metragem"],
-            "classificacao": "12",
+            "classificacao": "Livre",
             "pais": "Brasil",
+            "plataforma": "YouTube",
+            "pagina_oficial": "https://www.youtube.com/watch?v=ifhZ0bKW2Bk",
+            "imagem": "imagens/curadorias/cancha.jpg",
             "sinopse": "Documentário sobre o futebol de várzea e a organização comunitária da Vila Verde.",
             "temas": ["Setembro Amarelo", "Comunidade", "Pertencimento", "Vínculos", "Amizade"]
           },
@@ -340,30 +364,40 @@
             "pais": "Brasil",
             "plataforma": "Embaúba Play",
             "pagina_oficial": "https://embaubaplay.com/catalogo/aos-cuidados-dela/",
+            "imagem": "imagens/curadorias/aos-cuidados-dela.jpg",
             "sinopse": "Um neto visita a avó no interior de São Paulo em busca de suas receitas favoritas.",
             "temas": ["Setembro Amarelo", "Cuidado", "Família", "Vínculos", "Pertencimento"]
           },
           {
             "id": "site:setembro-filme:casa-da-agua",
             "titulo": "Casa da Água",
-            "plataforma": "Vimeo",
-            "pagina_oficial": "https://vimeo.com/1164353383",
+            "plataforma": "LGBTFlix",
+            "pagina_oficial": "https://flix.votelgbt.org/assistir/d7c75b84-7a6a-11ef-a39a-0a58a9feac02",
             "temas": ["Setembro Amarelo", "Cuidado", "Comunidade", "Pertencimento", "Vínculos"]
-          },
-          {
-            "id": "site:setembro-filme:no-ceu-nao-tem-caldo-cana",
-            "titulo": "No Céu Não Tem Caldo de Cana",
-            "eixo_curadoria": "Complementar",
-            "temas": ["Setembro Amarelo", "Família", "Vínculos", "Cuidado", "Pertencimento"]
           },
           {
             "id": "site:setembro-filme:rexistencia",
             "titulo": "(R)EXISTÊNCIA",
+            "ano": 2024,
+            "direcao": ["Rycleson Rodrigues"],
+            "duracao_minutos": 2,
+            "classificacao": "10 anos",
+            "pais": "Brasil",
+            "plataforma": "LGBTFlix",
+            "pagina_oficial": "https://flix.votelgbt.org/assistir/80f32336-326e-11ef-a208-0a58a9feac02",
+            "sinopse": "Lana, Léo e Rycleson, pessoas LGBTs de Fortaleza, contam sua visão sobre o significado da palavra resistência enquanto dão close pela cidade numa mistura de documentário e fashion filme.",
             "eixo_curadoria": "Complementar",
             "temas": ["Setembro Amarelo", "Diversidade", "Pertencimento", "Comunidade", "Juventude"]
           }
         ],
         "servicos_apoio": {
+          "permanente": true,
+          "imagens_cards": {
+            "apoio_emocional": "imagens/curadorias/pode-falar.png",
+            "rede_publica": "imagens/curadorias/onde-buscar-atendimento.png",
+            "atendimento_universitario": "imagens/curadorias/universidades.png",
+            "informacao_confiavel": "imagens/curadorias/informacao-confiavel.png"
+          },
           "titulo": "Onde buscar ajuda",
           "selo": "Piloto no site de teste • versão em avaliação institucional e psicossocial",
           "introducao": "Informações para apoio emocional e acesso a serviços. O Mural Cultural não realiza triagem, diagnóstico ou atendimento em saúde.",
@@ -376,25 +410,34 @@
           },
           "secoes": [
             {
+              "id": "apoio-emocional",
               "titulo": "Preciso conversar / apoio emocional",
               "servicos": [
                 {
                   "nome": "CVV — Centro de Valorização da Vida",
                   "descricao": "Apoio emocional gratuito, 24 horas por dia, todos os dias. Não é pronto atendimento médico nem serviço de emergência.",
                   "contatos": ["Telefone: 188"],
-                  "url": "https://cvv.org.br/ligue-188/",
+                  "url": "https://cvv.org.br/",
+                  "imagem": "imagens/curadorias/CVV.png",
                   "cta": "Conhecer os canais oficiais do CVV"
                 },
                 {
                   "nome": "Pode Falar",
                   "descricao": "Serviço gratuito de escuta e orientação em saúde mental para adolescentes e jovens de 13 a 24 anos, com atendimento humano de segunda a sábado, das 8h às 22h, também disponível pelo Meu SUS Digital.",
                   "observacao": "Não substitui atendimento profissional ou emergencial.",
-                  "url": "https://www.gov.br/saude/pt-br/assuntos/noticias-ms/2026/julho/projeto-pode-falar-chega-ao-meu-sus-digital-e-amplia-acesso-de-jovens-ao-cuidado-em-saude-mental",
-                  "cta": "Consultar informações oficiais do Pode Falar"
+                  "url": "https://www.podefalar.org.br/",
+                  "cta": "Acessar o site Pode Falar",
+                  "links_adicionais": [
+                    {
+                      "url": "https://www.gov.br/saude/pt-br/assuntos/noticias-ms/2026/julho/projeto-pode-falar-chega-ao-meu-sus-digital-e-amplia-acesso-de-jovens-ao-cuidado-em-saude-mental",
+                      "cta": "Entender o acesso pelo Meu SUS Digital"
+                    }
+                  ]
                 }
               ]
             },
             {
+              "id": "rede-publica",
               "titulo": "Preciso de atendimento na rede pública",
               "servicos": [
                 {
@@ -422,6 +465,7 @@
               ]
             },
             {
+              "id": "atendimento-universitario",
               "titulo": "Procuro atendimento psicológico universitário",
               "servicos": [
                 {
@@ -461,6 +505,7 @@
             }
           ],
           "informacao_confiavel": {
+            "id": "informacao-confiavel",
             "titulo": "Informação confiável",
             "apresentacao": "Materiais gratuitos de instituições públicas e organizações de referência para conhecer melhor temas relacionados a saúde mental, cuidado e vida escolar."
           },
@@ -610,27 +655,6 @@
             "titulo": "Prevenção ao suicídio",
             "campos": ["imagem"],
             "motivo": "A página oficial do curso foi confirmada, mas não foi incluída imagem externa sem confirmação clara de reutilização. O Mural usa fallback visual."
-          },
-          {
-            "tipo": "curso-site-only",
-            "id": "site:unasus:saude-mental-adolescentes-jovens-2026",
-            "titulo": "Aperfeiçoamento em Saúde Mental e Atenção Psicossocial de Adolescentes e Jovens",
-            "campos": ["imagem"],
-            "motivo": "A página oficial do curso foi confirmada, mas não foi incluída imagem externa sem confirmação clara de reutilização. O Mural usa fallback visual."
-          },
-          {
-            "tipo": "curso-site-only",
-            "id": "site:unasus:saude-mental-homem",
-            "titulo": "Atenção à Saúde Mental do Homem",
-            "campos": ["imagem"],
-            "motivo": "A página oficial do curso foi confirmada, mas não foi incluída imagem externa sem confirmação clara de reutilização. O Mural usa fallback visual."
-          },
-          {
-            "tipo": "filmes-site-only",
-            "id": "setembro-2026-sem-url-confirmada",
-            "titulo": "Nossa Dança; Cancha — Domingo É Dia de Jogo; No Céu Não Tem Caldo de Cana; (R)EXISTÊNCIA",
-            "campos": ["pagina_oficial"],
-            "motivo": "Não foi localizada URL de exibição confirmável em fonte suficientemente confiável; os itens ficam sem CTA."
           },
           {
             "tipo": "material-informativo",

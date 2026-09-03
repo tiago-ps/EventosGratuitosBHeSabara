@@ -74,10 +74,17 @@ const expectedCourses = new Map([
   ['1207', 'Mídias Digitais e Saúde Mental de Crianças e Adolescentes'],
   ['817', 'Propósito e Qualidade de vida: Descobertas para o Desenvolvimento Pessoal']
 ]);
+const expectedCourseUrls = new Map([
+  ['1207', 'https://www.escolavirtual.gov.br/curso/1207'],
+  ['1089', 'https://www.escolavirtual.gov.br/curso/1089'],
+  ['817', 'https://www.escolavirtual.gov.br/curso/817'],
+  ['881', 'https://www.escolavirtual.gov.br/curso/881']
+]);
 for (const [id, title] of expectedCourses) {
   const course = merged.cursos.find(item => item.id_fonte === id);
   assert.equal(course?.titulo, title);
   assert.ok(course.temas.includes('Setembro Amarelo'));
+  assert.equal(course.url, expectedCourseUrls.get(id));
   assert.equal(coursesData.cursos.find(item => item.id_fonte === id).temas, undefined);
 }
 
@@ -102,21 +109,33 @@ const externalBooks = merged.livros.filter(item => item.site_only);
 assert.equal(externalBooks.length, 5);
 assert.deepEqual(Array.from(externalBooks.map(item => item.codigo_acervo).sort()), ['230639', '231118', '231508', '232152', '232509']);
 assert.ok(externalBooks.every(item => item.acesso_virtual === true && /pergamum\.ifmg\.edu\.br/.test(item.link_virtual)));
-assert.ok(externalBooks.every(item => !item.imagem));
+assert.ok(externalBooks.every(item => /^https:\/\/pergamum\.ifmg\.edu\.br\/acervo\/\d+$/.test(item.link_virtual)));
+assert.ok(externalBooks.every(item => item.imagem?.startsWith('imagens/curadorias/')));
+assert.deepEqual(
+  Array.from(externalBooks.map(item => item.link_virtual).sort()),
+  ['5064668', '5064759', '5065368', '5066485', '5069029'].map(id => `https://pergamum.ifmg.edu.br/acervo/${id}`).sort()
+);
 
-const externalFilms = merged.filmes.filter(item => item.site_only);
-assert.equal(externalFilms.length, 6);
-assert.equal(new Set(externalFilms.map(item => item.id)).size, 6);
+const externalFilms = merged.filmes.filter(item => item.site_only && !item.painel_apoio);
+assert.equal(externalFilms.length, 5);
+assert.equal(new Set(externalFilms.map(item => item.id)).size, 5);
 assert.ok(externalFilms.every(item => item.origem === 'site-only'));
 assert.ok(externalFilms.every(item => item.temas.includes('Setembro Amarelo')));
 assert.equal(externalFilms.some(item => item.titulo === 'Poderia me Chamar Adeus'), false);
 assert.equal(externalFilms.some(item => item.titulo === 'DEUS AMA TODAS AS PESSOAS'), false);
 assert.equal(externalFilms.some(item => item.titulo === 'A solidão das borboletas'), false);
 assert.match(externalFilms.find(item => item.titulo === 'Aos Cuidados Dela').pagina_oficial, /^https:\/\/embaubaplay\.com\//);
-assert.match(externalFilms.find(item => item.titulo === 'Casa da Água').pagina_oficial, /^https:\/\/vimeo\.com\//);
-for (const title of ['Nossa Dança', 'Cancha — Domingo É Dia de Jogo', 'No Céu Não Tem Caldo de Cana', '(R)EXISTÊNCIA']) {
-  assert.equal(externalFilms.find(item => item.titulo === title).pagina_oficial, undefined);
-}
+assert.match(externalFilms.find(item => item.titulo === 'Casa da Água').pagina_oficial, /^https:\/\/flix\.votelgbt\.org\//);
+assert.equal(externalFilms.some(item => item.titulo === 'No Céu Não Tem Caldo de Cana'), false);
+const nossaDanca = externalFilms.find(item => item.titulo === 'Nossa Dança');
+assert.deepEqual([nossaDanca.ano, nossaDanca.duracao_minutos, nossaDanca.classificacao], [2022, 22, 'Livre']);
+assert.match(nossaDanca.pagina_oficial, /81fe277e-8a05-11ee-ab4c-0a58a9feac02/);
+const cancha = externalFilms.find(item => item.titulo === 'Cancha — Domingo É Dia de Jogo');
+assert.deepEqual([cancha.ano, cancha.duracao_minutos, cancha.classificacao, cancha.plataforma], [2020, 18, 'Livre', 'YouTube']);
+assert.equal(cancha.pagina_oficial, 'https://www.youtube.com/watch?v=ifhZ0bKW2Bk');
+const rexistencia = externalFilms.find(item => item.titulo === '(R)EXISTÊNCIA');
+assert.deepEqual([rexistencia.ano, rexistencia.duracao_minutos, rexistencia.classificacao, rexistencia.direcao[0]], [2024, 2, '10 anos', 'Rycleson Rodrigues']);
+assert.match(rexistencia.pagina_oficial, /80f32336-326e-11ef-a208-0a58a9feac02/);
 const friendshipFilm = merged.filmes.find(item => item.id === 'telabrasil:412');
 assert.ok(friendshipFilm?.temas.includes('Setembro Amarelo'));
 assert.equal(friendshipFilm.temas.includes('Saúde mental'), false);
@@ -125,16 +144,24 @@ const audit = curation.auditoria_dados;
 assert.equal(audit?.revisado_em, '2026-09-02');
 assert.ok(audit.confirmacoes.some(item => item.id === eventId && item.confirmado.includes('gratuidade')));
 assert.ok(audit.confirmacoes.some(item => item.id === 'apoio-informacao-setembro-2026'));
-assert.ok(audit.pendencias_manuais.some(item => item.id === 'setembro-2026-sem-url-confirmada'));
+assert.equal(audit.pendencias_manuais.some(item => item.id === 'setembro-2026-sem-url-confirmada'), false);
 
 assert.ok(merged.apoio);
 assert.equal(merged.apoio.site_only, true);
+assert.equal(merged.apoio.campaignActive, true);
 assert.equal(merged.apoio.secoes.length, 3);
 const supportText = JSON.stringify(merged.apoio);
 for (const expected of ['CVV', '188', 'SAMU', '192', 'UPA Sabará', '3671-9850', 'Pode Falar', 'CERSAM', 'CEAP', 'PUC Minas', 'FUMEC']) {
   assert.ok(supportText.includes(expected), `Conteúdo de apoio ausente: ${expected}`);
 }
 assert.equal(merged.apoio.informacao_confiavel.titulo, 'Informação confiável');
+assert.equal(merged.apoio.secoes[0].id, 'apoio-emocional');
+assert.equal(merged.apoio.secoes[1].id, 'rede-publica');
+assert.equal(merged.apoio.secoes[2].id, 'atendimento-universitario');
+assert.equal(merged.apoio.informacao_confiavel.id, 'informacao-confiavel');
+const cvv = merged.apoio.secoes[0].servicos.find(item => item.nome.startsWith('CVV'));
+assert.equal(cvv.url, 'https://cvv.org.br/');
+assert.equal(cvv.imagem, 'imagens/curadorias/CVV.png');
 assert.equal(merged.apoio.recursos_informativos.length, 11);
 assert.ok(merged.apoio.recursos_informativos.some(item => item.id === 'see-mg-cuidando-da-sua-mente-15-18'));
 assert.ok(merged.apoio.recursos_informativos.some(item => item.id === 'see-mg-saude-mental-acoes-escola'));
@@ -154,8 +181,30 @@ assert.equal(outside.curadoriasAtivas.length, 0);
 assert.equal(outside.eventos.length, catalogs.eventos.length);
 assert.equal(outside.livros.length, catalogs.livros.length);
 assert.equal(outside.cursos.length, catalogs.cursos.length);
-assert.equal(outside.filmes.length, catalogs.filmes.length);
-assert.equal(outside.apoio, null);
+assert.equal(outside.filmes.length, catalogs.filmes.length + 4);
+assert.ok(outside.apoio);
+assert.equal(outside.apoio.campaignActive, false);
+
+const cultureEvent = merged.eventos.find(item => item.id === 'site:setembro-2026:cultura-do-cuidado-crea-mg');
+assert.deepEqual(
+  [cultureEvent.local, cultureEvent.endereco, cultureEvent.mapa, cultureEvent.imagem],
+  ['CREA', 'Av. Álvares Cabral, 1600 - Santo Agostinho, Belo Horizonte - MG, 30170-917', 'https://maps.app.goo.gl/e8NY1ky8bKJjAuMh6', 'imagens/curadorias/crea.jpg']
+);
+const togetherEvent = merged.eventos.find(item => item.id === 'site:setembro-2026:juntos-pela-vida');
+assert.deepEqual(
+  [togetherEvent.local, togetherEvent.endereco, togetherEvent.mapa],
+  ['Biblioteca Pública Estadual de Minas Gerais', 'Praça da Liberdade, 21 - Savassi, Belo Horizonte - MG, 30140-010', 'https://maps.app.goo.gl/93jy5mVtUwoy3e7G7']
+);
+
+for (const image of [
+  'saude-mental-no-trabalho.png', 'CVV.png', 'aos-cuidados-dela.jpg', 'saude-mental-na-escola.jpg',
+  'o-culto-do-bem-estar.jpg', 'cult.jpg', 'desenvolvimento-positivo-no-esporte.jpg',
+  'a-infancia-sequestrada-pelas-telas.jpg', 'a-escola-que-queremos.jpg', 'crea.jpg',
+  'atencao-a-saude-mental-do-homem.jpg', 'saude-mental-e-atencao-psicossocial-de-adolescentes-e-jovens.jpg',
+  'cancha.jpg', 'pode-falar.png', 'informacao-confiavel.png', 'universidades.png', 'onde-buscar-atendimento.png'
+]) {
+  assert.ok(JSON.stringify(payload).includes(`imagens/curadorias/${image}`), `Imagem ausente no JSON: ${image}`);
+}
 
 const unsafePayload = JSON.parse(JSON.stringify(payload));
 unsafePayload.curadorias[0].complementos.cursos.push({
@@ -203,7 +252,7 @@ const overlayPayload = {
           imagem_observacao: 'Observação & texto',
           titulo: 'Título adulterado',
           descricao: 'Descrição adulterada',
-          link: 'https://malicioso.example/'
+          link: 'https://aprovado.example/evento'
         }
       }
     },
@@ -235,7 +284,7 @@ assert.equal(overlayEvent.imagem_credito, 'Crédito <img src=x onerror=alert(1)>
 assert.equal(overlayEvent.imagem_observacao, 'Observação & texto');
 assert.equal(overlayEvent.titulo, 'Evento com Imagem');
 assert.equal(overlayEvent.descricao, 'Descrição central');
-assert.equal(overlayEvent.link, 'https://central.example/evento');
+assert.equal(overlayEvent.link, 'https://aprovado.example/evento');
 assert.ok(overlayEvent.temas.includes('Setembro Amarelo'));
 assert.equal(JSON.stringify(overlayCatalogs), overlayCatalogsSnapshot);
 assert.equal(
@@ -249,6 +298,11 @@ const httpsImageMerged = curations.apply(httpsImagePayload, overlayCatalogs, {
   today: new Date(2026, 8, 15), warn() {}
 });
 assert.equal(httpsImageMerged.eventos[0].imagem, 'https://cdn.example.org/evento.jpg');
+
+const unsafeUrlPayload = JSON.parse(JSON.stringify(overlayPayload));
+unsafeUrlPayload.curadorias[0].overlays.eventos['evento-overlay-imagem'].link = 'javascript:alert(1)';
+const unsafeUrlMerged = curations.apply(unsafeUrlPayload, overlayCatalogs, { today: new Date(2026, 8, 15), warn() {} });
+assert.equal(unsafeUrlMerged.eventos[0].link, 'https://central.example/evento');
 
 for (const unsafeImage of ['javascript:alert(1)', 'data:image/png;base64,AAAA']) {
   const unsafeImagePayload = JSON.parse(JSON.stringify(overlayPayload));
@@ -299,6 +353,10 @@ assert.ok(collisionWarnings.some(message => message.includes('colisão')));
 assert.match(source, /fallbackTitleMatches/);
 assert.match(source, /textContent = text/);
 assert.match(source, /support-help-sensitive/);
+assert.match(source, /openSupportArea\(opener = document\.activeElement, target = ''\)/);
+assert.match(source, /section\.dataset\.supportTarget === target/);
+assert.match(source, /Ver informações, contatos e endereços/);
+assert.doesNotMatch(source, /No celular, abra “Onde buscar ajuda”/);
 assert.match(appSource, /loadOptionalJson\(SITE_CURATIONS_URL, null\)/);
 assert.match(appSource, /siteCurationsContent\.apply\(siteCurationsData/);
 assert.match(appSource, /siteCurationsContent\.mountSupportArea\(siteLayer\.apoio\)/);
