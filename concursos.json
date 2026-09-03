@@ -2,7 +2,7 @@
   "schema": 9,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-09-02T13:04:10.004330+00:00",
+  "coletado_em_utc": "2026-09-03T13:06:20.689825+00:00",
   "total": 27,
   "concursos": [
     {
@@ -752,44 +752,6 @@
       ]
     },
     {
-      "titulo": "Prefeitura de São Félix de Minas",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-sao-felix-de-minas-mg-abre-concurso-publico-com-salarios-de-ate-12-mil",
-      "imagem": "https://cdn.pci.app.br/img/i/f09d58a5cf37d7a9ac0f5a450d377b6f.png",
-      "formacoes_compativeis": [
-        "Sistemas de Informação / Computação"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Sistemas de Informação / Computação",
-          "nivel": "superior",
-          "evidencia": "erais, divulgou um concurso publico com o objetivo de preencher vagas em funcoes de nivel alfabetizado, fundamental, medio, tecnico e superior. segundo o edital, as oportunidades sao para os cargos de: agente administrativo (2 vagas) agente fiscal (1 vaga) ajudante de pedreiro (2 vagas) analista de tecnologia da informacao (1 vaga) assistente de secretaria (2 vagas) atendente de saude (2 vagas) auxiliar administrativo (2 vagas) auxiliar de servicos gerais (3 vagas, 1 pcd) cantineira (2 vagas) carpinteiro (1 vaga) enfermeiro (1 vaga) engenheiro civil (1 vaga) escriturario (2 vagas) farmaceutico bioquimico (1 vaga) fis"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "MG",
-      "cidade": "São Félix de Minas",
-      "inscricoes_inicio_texto": "3 de agosto de 2026",
-      "inscricoes_fim_texto": "2 de setembro de 2026",
-      "inscricoes_texto": "3 de agosto de 2026 a 2 de setembro de 2026",
-      "remuneracao_faixa_texto": "R$ 1.621,00 a R$ 12.003,20",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Analista de Tecnologia da Informação",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        },
-        {
-          "cargo": "Técnico em Tecnologia da Informação",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        }
-      ]
-    },
-    {
       "titulo": "CRM - Conselho Regional de Medicina do Estado do Paraná",
       "url": "https://www.pciconcursos.com.br/noticias/crm-pr-abre-concurso-publico-com-salarios-de-ate-6994",
       "imagem": "https://cdn.pci.app.br/img/i/3e0ab25b80d247b64f33af998889a991.png",
@@ -931,6 +893,38 @@
           "cargo": "Auditor Estadual de Finanças Públicas - Ciências da Computação",
           "vagas_texto": "12 vagas",
           "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ]
+    },
+    {
+      "titulo": "Câmara de Rio Verde",
+      "url": "https://www.pciconcursos.com.br/noticias/camara-de-rio-verde-go-abre-concursos-publicos-com-salarios-de-ate-7241",
+      "imagem": "https://cdn.pci.app.br/img/i/fe407be121567c6856ec34592af651da.png",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": "xiliar de copa e cozinha (6 vagas) motorista (2 vagas) motorista de veiculos pesados (3 vagas) agente de manutencao predial (2 vagas) assistente administrativo (19 vagas) editor de audio e video (2 vagas) fotografo (2 vagas) auxiliar tecnico de audio e video (3 vagas) produtor audiovisual (2 vagas) tecnico em informatica (3 vagas) analista administrativo (10 vagas) analista de controle interno (2 vagas) analista legislativo (6 vagas) assistente social (2 vagas) jornalista (2 vagas) tradutor e interprete da lingua brasileira de sinais - libras (2 vagas) a jornada de trabalho varia de 30 a 40 horas semanais, conforme"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "GO",
+      "cidade": "Rio Verde",
+      "inscricoes_inicio_texto": "21 de agosto de 2026",
+      "inscricoes_fim_texto": "21 de setembro de 2026",
+      "inscricoes_texto": "21 de agosto de 2026 a 21 de setembro de 2026",
+      "remuneracao_faixa_texto": "R$ 7.241,14",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico em Informática",
+          "vagas_texto": "3 vagas",
+          "formacao": "Técnico em Informática",
           "confianca": "alta"
         }
       ]
