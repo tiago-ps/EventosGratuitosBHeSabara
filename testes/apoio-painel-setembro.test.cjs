@@ -122,4 +122,25 @@ assert.equal(films.filter(october.filmes, { query: 'universidade' }, value => St
 assert.equal(typeof curations.buildPanelSupportItems, 'function');
 assert.equal(films.__panelSupportAdapter, true);
 
+const classes = new Set();
+const image = {
+  classList: {
+    add(value) { classes.add(value); },
+    remove(value) { classes.delete(value); }
+  },
+  style: { display: 'none' },
+  src: 'imagens/curadorias/pode-falar.png',
+  removeAttribute(name) { if (name === 'src') delete this.src; }
+};
+const fallback = { hidden: false };
+curations.setPanelSupportImageState(image, fallback, true);
+assert.equal(classes.has('loaded'), true);
+assert.equal(image.style.display, '');
+assert.equal(fallback.hidden, true);
+curations.setPanelSupportImageState(image, fallback, false);
+assert.equal(classes.has('loaded'), false);
+assert.equal(image.src, undefined);
+assert.equal(image.style.display, 'none');
+assert.equal(fallback.hidden, false);
+
 console.log('Slides rotativos de utilidade pública do Setembro Amarelo aprovados.');

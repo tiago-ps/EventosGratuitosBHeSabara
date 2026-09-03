@@ -438,6 +438,20 @@
     return movie?.painel_apoio === true;
   }
 
+  function setPanelSupportImageState(image, fallback, loaded) {
+    if (!image) return;
+    if (loaded) {
+      image.classList.add('loaded');
+      image.style.display = '';
+      if (fallback) fallback.hidden = true;
+      return;
+    }
+    image.classList.remove('loaded');
+    image.removeAttribute('src');
+    image.style.display = 'none';
+    if (fallback) fallback.hidden = false;
+  }
+
   function supportThemeIsActive(filters = {}) {
     return normalizeLabel(filters?.theme) === 'setembro amarelo';
   }
@@ -545,15 +559,8 @@
     if (fallbackLabel) fallbackLabel.textContent = 'Setembro Amarelo';
     if (image && imageUrl) {
       image.alt = movie.titulo ? `Imagem de apoio: ${movie.titulo}` : 'Imagem de apoio';
-      image.onload = () => {
-        image.style.display = '';
-        if (fallback) fallback.hidden = true;
-      };
-      image.onerror = () => {
-        image.removeAttribute('src');
-        image.style.display = 'none';
-        if (fallback) fallback.hidden = false;
-      };
+      image.onload = () => setPanelSupportImageState(image, fallback, true);
+      image.onerror = () => setPanelSupportImageState(image, fallback, false);
       image.src = imageUrl;
     } else if (image) {
       image.removeAttribute('src');
@@ -875,6 +882,7 @@
     normalizeLabel,
     openSupportArea,
     safeExternalUrl,
-    safeImage
+    safeImage,
+    setPanelSupportImageState
   });
 })();

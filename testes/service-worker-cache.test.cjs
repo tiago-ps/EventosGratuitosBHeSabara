@@ -92,7 +92,7 @@ async function dispatch(type, event) {
     './js/conteudos/cursos.js?v=3',
     './js/conteudos/concursos.js?v=2',
     './js/conteudos/filmes.js?v=6',
-    './js/curadorias-site.js?v=3',
+    './js/curadorias-site.js?v=4',
     './js/app.js?v=89',
     './js/temas-visuais.js?v=6',
     './js/eventos-manuais-ui.js?v=44'

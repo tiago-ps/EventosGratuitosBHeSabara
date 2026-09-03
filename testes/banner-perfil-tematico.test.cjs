@@ -80,7 +80,7 @@ assert.match(themesCss, /:focus-visible \.campaign-profile-tooltip/);
 for (const asset of [
   'css/temas-visuais.css?v=7',
   'js/tema-visual-boot.js?v=2',
-  'js/curadorias-site.js?v=3',
+  'js/curadorias-site.js?v=4',
   'js/app.js?v=89',
   'js/temas-visuais.js?v=6'
 ]) {
