@@ -113,6 +113,13 @@ assert.deepEqual(Array.from(externalBooks.map(item => item.codigo_acervo).sort()
 assert.ok(externalBooks.every(item => item.acesso_virtual === true && /pergamum\.ifmg\.edu\.br/.test(item.link_virtual)));
 assert.ok(externalBooks.every(item => /^https:\/\/pergamum\.ifmg\.edu\.br\/acervo\/\d+$/.test(item.link_virtual)));
 assert.ok(externalBooks.every(item => item.imagem?.startsWith('imagens/curadorias/')));
+assert.ok(externalBooks.every(item => item.pergunta_curiosidade && !item.pergunta_curiosidade.includes('?')));
+assert.ok(externalBooks.every(item => item.texto_apoio));
+assert.match(externalBooks.find(item => item.codigo_acervo === '231118').texto_apoio, /escuta, liberdade, expressão artística/);
+assert.match(externalBooks.find(item => item.codigo_acervo === '232509').texto_apoio, /bem-estar de quem aprende e de quem ensina/);
+assert.match(externalBooks.find(item => item.codigo_acervo === '232152').texto_apoio, /limites, confiança, brincadeira, criatividade/);
+assert.match(externalBooks.find(item => item.codigo_acervo === '231508').texto_apoio, /impactos do esporte sobre a saúde mental/);
+assert.match(externalBooks.find(item => item.codigo_acervo === '230639').texto_apoio, /dimensões sociais e coletivas/);
 assert.deepEqual(
   Array.from(externalBooks.map(item => item.link_virtual).sort()),
   ['5064668', '5064759', '5065368', '5066485', '5069029'].map(id => `https://pergamum.ifmg.edu.br/acervo/${id}`).sort()
