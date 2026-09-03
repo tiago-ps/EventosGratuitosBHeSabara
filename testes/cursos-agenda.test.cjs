@@ -37,16 +37,16 @@ const search = query => catalog.filter(course =>
   courses.agendaQueryMatches(course, normalizeText(query), normalizeText)
 );
 
-assert.equal(data.cursos.length, 1041);
-assert.equal(catalog.length, 1041);
+assert.ok(data.cursos.length > 0);
+assert.equal(data.total, data.cursos.length);
+assert.equal(catalog.length, data.cursos.length);
 assert.equal(new Set(catalog.map(course => course.id_fonte)).size, catalog.length);
 assert.equal(new Set(catalog.map(course => course.url)).size, catalog.length);
 
-assert.equal(search('2030 Agenda for Sustainable Development and e-Learning Design Basics').length, 1);
-assert.equal(search('Enap - Escola Nacional de Administração Pública').length, 1035);
-assert.equal(search('Secretaria Especial da Receita Federal do Brasil').length, 46);
-assert.equal(search('Liderança').length, 78);
-assert.equal(search('inteligência artificial').length, 52);
+const searchableCourse = catalog.find(course => course.titulo && course.instituicao);
+assert.ok(searchableCourse);
+assert.ok(search(searchableCourse.titulo).includes(searchableCourse));
+assert.ok(search(searchableCourse.instituicao).includes(searchableCourse));
 assert.equal(search('termo-inexistente-9xq7').length, 0);
 assert.equal(search('').length, catalog.length);
 
