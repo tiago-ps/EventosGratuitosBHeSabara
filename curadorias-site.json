@@ -29,6 +29,7 @@
               "Cuidado",
               "Bem-estar emocional"
             ],
+            "imagem": "imagens/curadorias/amusa_setembro_amarelo_e_a_importancia_da_saude.png",
             "fallback": {
               "id": "sympla-sabara-3534680",
               "titulo": "Amusa Setembro Amarelo e a Importância da Saúde Mental",
@@ -99,6 +100,7 @@
             "fonte": "PRINEA",
             "endereco": "Praça da Liberdade, 21 - Savassi, Belo Horizonte - MG, 30140-010",
             "mapa": "https://maps.app.goo.gl/93jy5mVtUwoy3e7G7",
+            "imagem": "imagens/curadorias/juntos_pela_vida.jpg",
             "link": "https://www.sympla.com.br/evento/juntos-pela-vida/3562866",
             "pagina": "https://www.sympla.com.br/evento/juntos-pela-vida/3562866",
             "link_inscricao": "https://www.sympla.com.br/evento/juntos-pela-vida/3562866",
@@ -141,6 +143,7 @@
             "condicao_acesso": "Gratuito",
             "descricao": "Palestra online sobre proteção, acolhimento e saúde mental no contexto da mobilidade humana.",
             "fonte": "Comissão de Direito Internacional e Migratório da OAB Barro Preto",
+            "imagem": "imagens/curadorias/a_saude_mental_na_mobilidade_humana_perspectivas.jpg",
             "link": "https://www.sympla.com.br/evento-online/a-saude-mental-na-mobilidade-humana-perspectivas-contemporaneas-de-protecao-e-acolhimento/3499200",
             "pagina": "https://www.sympla.com.br/evento-online/a-saude-mental-na-mobilidade-humana-perspectivas-contemporaneas-de-protecao-e-acolhimento/3499200",
             "link_inscricao": "https://www.sympla.com.br/evento-online/a-saude-mental-na-mobilidade-humana-perspectivas-contemporaneas-de-protecao-e-acolhimento/3499200",
