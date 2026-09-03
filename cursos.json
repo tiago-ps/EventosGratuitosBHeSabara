@@ -2,8 +2,8 @@
   "schema": 4,
   "status": "catalogo_completo",
   "fonte": "Escola Virtual de Governo (EV.G)",
-  "atualizado_em": "2026-09-02T13:33:49.057564+00:00",
-  "total": 1041,
+  "atualizado_em": "2026-09-03T13:31:27.111500+00:00",
+  "total": 1042,
   "cursos": [
     {
       "id_fonte": "410",
@@ -10261,6 +10261,26 @@
       "data_lancamento": "01/06/21",
       "url": "https://www.escolavirtual.gov.br/curso/405",
       "imagem": "https://cdn.evg.gov.br/cursos/405_EVG/imagem_curso_405.png",
+      "modalidade": "online",
+      "gratuito": true,
+      "fonte": "Escola Virtual de Governo (EV.G)"
+    },
+    {
+      "id_fonte": "1590",
+      "titulo": "Sala de Conferências - Programa de Desenvolvimento Inicial para Cargos de Nível Superior",
+      "area": "",
+      "competencias": "",
+      "instituicao": "Enap - Escola Nacional de Administração Pública",
+      "instituicao_parceira": "Fundação Escola Nacional de Administração Pública",
+      "carga_horaria": "0",
+      "prazo_conclusao_dias": "3650",
+      "tipo": "Curso Aberto",
+      "descricao": "Sala de Conferências do Programa de Desenvolvimento Inicial.",
+      "publico_alvo": "Servidores federais em estágio probatório",
+      "conteudo_programatico": "Sala de Conferências do Programa de Desenvolvimento Inicial.",
+      "data_lancamento": "",
+      "url": "https://www.escolavirtual.gov.br/curso/1590",
+      "imagem": "https://cdn.evg.gov.br/cursos/878_EVG/imagem_curso_878.jpg",
       "modalidade": "online",
       "gratuito": true,
       "fonte": "Escola Virtual de Governo (EV.G)"
