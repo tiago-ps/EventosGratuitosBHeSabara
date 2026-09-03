@@ -16,7 +16,6 @@
         {
           "id": "saude-mental-trabalho",
           "titulo": "Saúde mental e trabalho",
-          "imagem": "imagens/curadorias/amusa_setembro_amarelo_e_a_importancia_da_saude.png",
           "descricao": "Conteúdos sobre condições de trabalho, riscos psicossociais, relações organizacionais e construção de ambientes profissionais mais saudáveis."
         }
       ],
@@ -33,6 +32,7 @@
             "fallback": {
               "id": "sympla-sabara-3534680",
               "titulo": "Amusa Setembro Amarelo e a Importância da Saúde Mental",
+              "imagem": "imagens/curadorias/amusa_setembro_amarelo_e_a_importancia_da_saude.png",
               "data": "2026-09-10",
               "data_fim": "2026-09-10",
               "horario": "14h45 às 17h",

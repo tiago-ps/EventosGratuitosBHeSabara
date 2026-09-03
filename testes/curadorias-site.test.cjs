@@ -50,6 +50,8 @@ const event = merged.eventos.find(item => item.id === eventId);
 assert.ok(event);
 assert.deepEqual(Array.from(event.temas), ['Setembro Amarelo', 'Saúde mental', 'Cuidado', 'Bem-estar emocional']);
 assert.equal(event.descricao, 'Palestra promovida pela AMUSA em alusão ao Setembro Amarelo, com foco em saúde mental, cultura do cuidado, acolhimento e valorização da vida.');
+assert.equal(event.imagem, 'imagens/curadorias/amusa_setembro_amarelo_e_a_importancia_da_saude.png');
+assert.ok(fs.existsSync(path.join(root, event.imagem)), `Imagem local ausente para o evento AMUSA: ${event.imagem}`);
 if (centralEvent) assert.equal(centralEvent.temas, undefined);
 else {
   assert.equal(event.site_only, true);
