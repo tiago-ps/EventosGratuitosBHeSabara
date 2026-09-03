@@ -338,6 +338,7 @@
             "pais": "Brasil",
             "plataforma": "LGBTFlix",
             "pagina_oficial": "https://flix.votelgbt.org/assistir/81fe277e-8a05-11ee-ab4c-0a58a9feac02",
+            "imagem": "imagens/curadorias/nossa-danca.jpg",
             "sinopse": "Duas jovens estudantes de dança se aproximam ao preparar juntas um vídeo para um concurso escolar.",
             "temas": ["Setembro Amarelo", "Pertencimento", "Vínculos", "Amizade", "Diversidade", "Juventude"]
           },
@@ -376,6 +377,7 @@
             "titulo": "Casa da Água",
             "plataforma": "LGBTFlix",
             "pagina_oficial": "https://flix.votelgbt.org/assistir/d7c75b84-7a6a-11ef-a39a-0a58a9feac02",
+            "imagem": "imagens/curadorias/casa-da-agua.jpg",
             "temas": ["Setembro Amarelo", "Cuidado", "Comunidade", "Pertencimento", "Vínculos"]
           },
           {
@@ -388,6 +390,7 @@
             "pais": "Brasil",
             "plataforma": "LGBTFlix",
             "pagina_oficial": "https://flix.votelgbt.org/assistir/80f32336-326e-11ef-a208-0a58a9feac02",
+            "imagem": "imagens/curadorias/r-existencia.jpg",
             "sinopse": "Lana, Léo e Rycleson, pessoas LGBTs de Fortaleza, contam sua visão sobre o significado da palavra resistência enquanto dão close pela cidade numa mistura de documentário e fashion filme.",
             "eixo_curadoria": "Complementar",
             "temas": ["Setembro Amarelo", "Diversidade", "Pertencimento", "Comunidade", "Juventude"]
