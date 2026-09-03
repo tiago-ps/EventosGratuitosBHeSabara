@@ -58,12 +58,22 @@
     if (city) { city.hidden = false; city.textContent = 'ONLINE'; }
     const title = normalize(slide.querySelector('.event-title')?.textContent);
     if (!title) return;
+
+    // O renderizador nativo de cursos já cria o link correto, inclusive após
+    // overlays site-only. Preservá-lo evita sobrescrever a URL e, sobretudo,
+    // impede um ciclo de MutationObserver em que o próprio replaceChildren()
+    // recriava continuamente o <a>, podendo removê-lo entre pointerdown e click.
+    const source = slide.querySelector('.source-url');
+    const currentAnchor = source?.querySelector('a[href]');
+    const currentUrl = String(currentAnchor?.href || '').trim();
+    if (/^https?:\/\//i.test(currentUrl)) return;
+
+    // Fallback legado: só completa o link quando o renderizador não criou um.
     loadCourses().then(map => {
       if (!slide.isConnected || !slide.classList.contains('course-slide')) return;
       const course = map.get(title);
       const url = String(course?.url || course?.link || '').trim();
       if (!/^https?:\/\//i.test(url)) return;
-      const source = slide.querySelector('.source-url');
       if (!source) return;
       const anchor = document.createElement('a');
       anchor.href = url; anchor.target = '_blank'; anchor.rel = 'noopener noreferrer'; anchor.textContent = 'Acessar página deste curso';
