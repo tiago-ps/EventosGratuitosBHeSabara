@@ -121,6 +121,12 @@ assert.equal(externalFilms.length, 5);
 assert.equal(new Set(externalFilms.map(item => item.id)).size, 5);
 assert.ok(externalFilms.every(item => item.origem === 'site-only'));
 assert.ok(externalFilms.every(item => item.temas.includes('Setembro Amarelo')));
+for (const film of externalFilms) {
+  assert.ok(
+    film.imagem && fs.existsSync(path.join(root, film.imagem)),
+    `Imagem local ausente para o filme ${film.titulo}: ${film.imagem || 'caminho não informado'}`
+  );
+}
 assert.equal(externalFilms.some(item => item.titulo === 'Poderia me Chamar Adeus'), false);
 assert.equal(externalFilms.some(item => item.titulo === 'DEUS AMA TODAS AS PESSOAS'), false);
 assert.equal(externalFilms.some(item => item.titulo === 'A solidão das borboletas'), false);
