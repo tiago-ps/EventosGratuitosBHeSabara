@@ -40,6 +40,10 @@
   filter: brightness(1.08);
 }
 
+.contest-slide .media {
+  background: #fff;
+}
+
 .contest-slide .image-fallback {
   background: radial-gradient(circle at 35% 35%, #274e70, #0a1b2d 68%);
 }
@@ -54,7 +58,7 @@
 }
 
 .agenda-contest-card .contest-media {
-  background: #e9eef3;
+  background: #fff;
 }
 
 .agenda-contest-card .contest-media img {
