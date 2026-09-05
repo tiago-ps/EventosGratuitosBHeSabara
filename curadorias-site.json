@@ -681,6 +681,282 @@
           }
         ]
       }
+    },
+    {
+      "id": "vestibular-ufmg-seriado-2026",
+      "nome": "Seriado UFMG 2026 — Obras para Vestibular",
+      "ativo_de": "2026-09-01",
+      "ativo_ate": "2026-12-13",
+      "tema": "Vestibular UFMG",
+      "instituicao": "UFMG",
+      "processo": "Seriado UFMG",
+      "ano_prova": 2026,
+      "titulo_editorial": "Obras para Vestibular — Seriado UFMG 2026",
+      "subtitulo_editorial": "Livros, documentário e álbum musical cobrados nas Etapas 1 e 2",
+      "texto_introdutorio": "Curadoria das obras literárias e artísticas indicadas para as provas do Seriado UFMG 2026, organizadas por ciclo e etapa. Nesta primeira versão, o álbum Txai é representado tecnicamente na estrutura de filmes até a criação futura de uma categoria própria para música.",
+      "overlays": {
+        "eventos": {},
+        "cursos": {},
+        "livros": {},
+        "filmes": {}
+      },
+      "complementos": {
+        "eventos": [],
+        "livros": [
+          {
+            "id": "site:vestibular-ufmg:sao-bernardo",
+            "titulo": "São Bernardo",
+            "autor": "Graciliano Ramos",
+            "ano": 1934,
+            "pergunta_curiosidade": "Obra obrigatória do Seriado UFMG 2026 — Etapa 2.",
+            "texto_apoio": "Romance de Graciliano Ramos incluído na Etapa 2 do ciclo 2025–2027. Há exemplar físico catalogado no IFMG Sabará e acesso integral em domínio público.",
+            "temas": [
+              "Vestibular UFMG",
+              "Seriado UFMG 2026",
+              "Etapa 2",
+              "Ciclo 2025-2027"
+            ],
+            "icone": "📚",
+            "biblioteca_rede": "IFMG Sabará / acesso aberto",
+            "codigo_acervo": "86891",
+            "exemplares_fisicos_catalogados": 1,
+            "acesso_fisico": true,
+            "acesso_virtual": true,
+            "link_fisico": "https://pergamum.ifmg.edu.br/acervo/86891",
+            "link_virtual": "https://pt.wikisource.org/wiki/S._Bernardo_(1934)",
+            "link": "https://pt.wikisource.org/wiki/S._Bernardo_(1934)",
+            "tipo_link_principal": "virtual",
+            "fonte": "UFMG / IFMG Sabará / Wikisource",
+            "exibicao_ativa": true,
+            "vestibular": {
+              "instituicao": "UFMG",
+              "processo": "Seriado UFMG",
+              "ano_prova": 2026,
+              "ciclo": "2025-2027",
+              "etapa": 2,
+              "obrigatoria": true,
+              "tipo_obra": "Livro — romance"
+            }
+          },
+          {
+            "id": "site:vestibular-ufmg:sobrevivendo-ao-racismo",
+            "titulo": "Sobrevivendo ao racismo: memórias, cartas e o cotidiano da discriminação no Brasil",
+            "autor": "Luana Tolentino",
+            "ano": 2023,
+            "pergunta_curiosidade": "Obra obrigatória do Seriado UFMG 2026 — Etapa 2.",
+            "texto_apoio": "Livro de Luana Tolentino incluído na Etapa 2 do ciclo 2025–2027. A Biblioteca Virtual do IFMG registra versões em PDF e ePUB.",
+            "temas": [
+              "Vestibular UFMG",
+              "Seriado UFMG 2026",
+              "Etapa 2",
+              "Ciclo 2025-2027"
+            ],
+            "icone": "📚",
+            "biblioteca_rede": "Biblioteca Virtual/Pergamum — IFMG",
+            "codigo_acervo": "211229",
+            "acesso_fisico": false,
+            "acesso_virtual": true,
+            "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=211229&page=1&perPage=20&orderBy=obra&direction=C",
+            "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=211229&page=1&perPage=20&orderBy=obra&direction=C",
+            "tipo_link_principal": "virtual",
+            "fonte": "UFMG / Biblioteca Virtual do IFMG",
+            "exibicao_ativa": true,
+            "vestibular": {
+              "instituicao": "UFMG",
+              "processo": "Seriado UFMG",
+              "ano_prova": 2026,
+              "ciclo": "2025-2027",
+              "etapa": 2,
+              "obrigatoria": true,
+              "tipo_obra": "Livro"
+            }
+          },
+          {
+            "id": "site:vestibular-ufmg:o-quinze",
+            "titulo": "O quinze",
+            "autor": "Rachel de Queiroz",
+            "ano": 1930,
+            "pergunta_curiosidade": "Obra obrigatória do Seriado UFMG 2026 — Etapa 1.",
+            "texto_apoio": "Romance de Rachel de Queiroz incluído na Etapa 1 do ciclo 2026–2028. Não foi localizado nos inventários físico ou virtual do IFMG Sabará consultados até abril de 2026.",
+            "temas": [
+              "Vestibular UFMG",
+              "Seriado UFMG 2026",
+              "Etapa 1",
+              "Ciclo 2026-2028"
+            ],
+            "icone": "📚",
+            "biblioteca_rede": "Não localizado no acervo IFMG Sabará consultado",
+            "acesso_fisico": false,
+            "acesso_virtual": false,
+            "link": "https://www.record.com.br/products/o-quinze/",
+            "pagina_oficial": "https://www.record.com.br/products/o-quinze/",
+            "fonte": "UFMG / Editora José Olympio",
+            "exibicao_ativa": true,
+            "vestibular": {
+              "instituicao": "UFMG",
+              "processo": "Seriado UFMG",
+              "ano_prova": 2026,
+              "ciclo": "2026-2028",
+              "etapa": 1,
+              "obrigatoria": true,
+              "tipo_obra": "Livro — romance"
+            }
+          },
+          {
+            "id": "site:vestibular-ufmg:ideias-para-adiar-o-fim-do-mundo",
+            "titulo": "Ideias para adiar o fim do mundo",
+            "autor": "Ailton Krenak",
+            "ano": 2019,
+            "pergunta_curiosidade": "Obra obrigatória do Seriado UFMG 2026 — Etapa 1.",
+            "texto_apoio": "Ensaio de Ailton Krenak incluído na Etapa 1 do ciclo 2026–2028. Há exemplar físico catalogado na Biblioteca do IFMG Campus Sabará.",
+            "temas": [
+              "Vestibular UFMG",
+              "Seriado UFMG 2026",
+              "Etapa 1",
+              "Ciclo 2026-2028"
+            ],
+            "icone": "📚",
+            "biblioteca_rede": "IFMG Sabará",
+            "codigo_acervo": "102547",
+            "exemplares_fisicos_catalogados": 1,
+            "acesso_fisico": true,
+            "acesso_virtual": false,
+            "link_fisico": "https://pergamum.ifmg.edu.br/acervo/102547",
+            "link": "https://pergamum.ifmg.edu.br/acervo/102547",
+            "tipo_link_principal": "fisico",
+            "pagina_oficial": "https://www.companhiadasletras.com.br/livro/9788535933581/ideias-para-adiar-o-fim-do-mundo-nova-edicao",
+            "fonte": "UFMG / IFMG Sabará",
+            "exibicao_ativa": true,
+            "vestibular": {
+              "instituicao": "UFMG",
+              "processo": "Seriado UFMG",
+              "ano_prova": 2026,
+              "ciclo": "2026-2028",
+              "etapa": 1,
+              "obrigatoria": true,
+              "tipo_obra": "Livro — ensaio"
+            }
+          }
+        ],
+        "cursos": [],
+        "filmes": [
+          {
+            "id": "site:vestibular-ufmg:bale-de-pe-no-chao",
+            "titulo": "Balé de Pé no Chão — a dança afro de Mercedes Baptista",
+            "ano": 2005,
+            "direcao": [
+              "Lilian Solá Santiago",
+              "Marianna Monteiro"
+            ],
+            "generos": [
+              "Documentário",
+              "Obra para vestibular"
+            ],
+            "plataforma": "TV Câmara",
+            "pagina_oficial": "https://www.camara.leg.br/tv/401867-bale-de-pe-no-chao-a-danca-afro-de-mercedes-baptista/",
+            "sinopse": "Documentário sobre a dança afro-brasileira e a trajetória artística de Mercedes Baptista, incluído na Etapa 2 do ciclo 2025–2027 do Seriado UFMG.",
+            "temas": [
+              "Vestibular UFMG",
+              "Seriado UFMG 2026",
+              "Etapa 2",
+              "Ciclo 2025-2027"
+            ],
+            "icone": "🎬",
+            "fonte": "UFMG / TV Câmara",
+            "exibicao_ativa": true,
+            "vestibular": {
+              "instituicao": "UFMG",
+              "processo": "Seriado UFMG",
+              "ano_prova": 2026,
+              "ciclo": "2025-2027",
+              "etapa": 2,
+              "obrigatoria": true,
+              "tipo_obra": "Documentário"
+            }
+          },
+          {
+            "id": "site:vestibular-ufmg:txai",
+            "titulo": "Txai",
+            "ano": 1990,
+            "generos": [
+              "Álbum musical",
+              "Música brasileira",
+              "Obra para vestibular"
+            ],
+            "plataforma": "Spotify",
+            "pagina_oficial": "https://open.spotify.com/intl-pt/album/37EITqrt8brFFMNvVDQmrR",
+            "sinopse": "Álbum de Milton Nascimento incluído na Etapa 1 do ciclo 2026–2028 do Seriado UFMG. Está representado provisoriamente na estrutura técnica de filmes até a criação da categoria de música.",
+            "temas": [
+              "Vestibular UFMG",
+              "Seriado UFMG 2026",
+              "Etapa 1",
+              "Ciclo 2026-2028"
+            ],
+            "icone": "🎵",
+            "fonte": "UFMG / Spotify",
+            "exibicao_ativa": true,
+            "tipo_conteudo_real": "album_musical",
+            "representacao_temporaria": "filmes",
+            "autoria": [
+              "Milton Nascimento"
+            ],
+            "vestibular": {
+              "instituicao": "UFMG",
+              "processo": "Seriado UFMG",
+              "ano_prova": 2026,
+              "ciclo": "2026-2028",
+              "etapa": 1,
+              "obrigatoria": true,
+              "tipo_obra": "Álbum musical"
+            }
+          }
+        ]
+      },
+      "auditoria_dados": {
+        "revisado_em": "2026-09-05",
+        "confirmacoes": [
+          {
+            "tipo": "lista-oficial",
+            "id": "seriado-ufmg-2026",
+            "confirmado": [
+              "seis obras",
+              "ciclos",
+              "etapas",
+              "tipos de obra"
+            ],
+            "observacao": "Curadoria criada a partir da lista oficial do Seriado UFMG 2026 e da verificação de acesso realizada para o Mural Cultural."
+          },
+          {
+            "tipo": "acervo-ifmg-sabara",
+            "id": "levantamento-ate-2026-04",
+            "confirmado": [
+              "São Bernardo físico",
+              "Sobrevivendo ao racismo virtual",
+              "Ideias para adiar o fim do mundo físico"
+            ],
+            "observacao": "O quinze não foi localizado nos inventários físico ou virtual consultados."
+          }
+        ],
+        "pendencias_manuais": [
+          {
+            "tipo": "imagem",
+            "id": "vestibular-ufmg-banner",
+            "campos": [
+              "arquivo"
+            ],
+            "motivo": "Adicionar manualmente imagens/curadorias/vestibular-ufmg-banner.png ao repositório."
+          },
+          {
+            "tipo": "modelo",
+            "id": "categoria-musica",
+            "campos": [
+              "catalogo",
+              "renderizador"
+            ],
+            "motivo": "Txai permanece provisoriamente na estrutura de filmes até futura implementação de música."
+          }
+        ]
+      }
     }
   ]
 }

@@ -81,6 +81,39 @@
         },
         slideDuration: 0
       }
+    },
+    'vestibular-ufmg-seriado-2026': {
+      nome: 'Seriado UFMG 2026 — Obras para Vestibular',
+      destaque: 'Obras obrigatórias',
+      ativo_de: '2026-09-01',
+      ativo_ate: '2026-12-13',
+      configuracao: {
+        modules: {
+          events: false,
+          books: true,
+          courses: false,
+          contests: false,
+          films: true
+        },
+        theme: 'vestibular ufmg',
+        eventCities: [],
+        eventCategory: '',
+        eventProgram: '',
+        eventUnit: '',
+        bookCampuses: [],
+        bookAccess: '',
+        filmGenre: '',
+        filmRating: '',
+        filmDuration: '',
+        weights: {
+          events: 1,
+          books: 2,
+          courses: 1,
+          contests: 1,
+          films: 1
+        },
+        slideDuration: 0
+      }
     }
   });
   const AGENDA_BATCH_SIZE = 24;

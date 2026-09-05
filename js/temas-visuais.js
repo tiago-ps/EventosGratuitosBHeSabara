@@ -83,6 +83,18 @@
         src: 'imagens/curadorias/setembro-amarelo-banner.png',
         alt: 'Setembro Amarelo — Se precisar, peça ajuda. CVV 188.'
       }
+    },
+    {
+      id: 'vestibular-ufmg',
+      label: 'Vestibular UFMG',
+      description: 'Obras do Seriado UFMG 2026',
+      swatch: 'is-default',
+      panelProfile: 'vestibular-ufmg-seriado-2026',
+      profileLabel: 'Vestibular UFMG',
+      banner: {
+        src: 'imagens/curadorias/vestibular-ufmg-banner.png',
+        alt: 'Obra para Vestibular — UFMG'
+      }
     }
   ];
 
