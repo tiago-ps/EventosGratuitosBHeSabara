@@ -114,6 +114,20 @@
         },
         slideDuration: 0
       }
+    },
+    'vestibular-fuvest-2027': {
+      nome: 'Vestibular FUVEST 2027 — Leituras obrigatórias',
+      destaque: 'Leituras obrigatórias',
+      ativo_de: '2026-08-17',
+      ativo_ate: '2026-12-07',
+      configuracao: {
+        modules: { events: false, books: true, courses: false, contests: false, films: false },
+        theme: 'vestibular fuvest',
+        eventCities: [], eventCategory: '', eventProgram: '', eventUnit: '',
+        bookCampuses: [], bookAccess: '', filmGenre: '', filmRating: '', filmDuration: '',
+        weights: { events: 1, books: 1, courses: 1, contests: 1, films: 1 },
+        slideDuration: 0
+      }
     }
   });
   const AGENDA_BATCH_SIZE = 24;
