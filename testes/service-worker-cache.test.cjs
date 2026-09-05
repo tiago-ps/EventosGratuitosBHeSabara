@@ -65,7 +65,8 @@ const context = vm.createContext({
 
 const source = fs.readFileSync(path.join(root, 'service-worker.js'), 'utf8');
 vm.runInContext(`${source}\n;globalThis.__sw = {
-  CACHE_VERSION, CORE_CACHE, DATA_CACHE, CORE_ASSETS, DATA_PATHS
+  CACHE_VERSION, CORE_CACHE, DATA_CACHE, IMAGE_CACHE, CORE_ASSETS, DATA_PATHS,
+  VESTIBULAR_UFMG_IMAGE_PREFIX
 };`, context, { filename: 'service-worker.js' });
 
 const sw = context.__sw;
@@ -81,7 +82,8 @@ async function dispatch(type, event) {
 }
 
 (async () => {
-  assert.equal(sw.CACHE_VERSION, 'mural-cultural-v95-setembro-final');
+  assert.equal(sw.CACHE_VERSION, 'mural-cultural-v96-vestibular-images');
+  assert.equal(sw.VESTIBULAR_UFMG_IMAGE_PREFIX, '/imagens/curadorias/vestibular-ufmg/');
   for (const asset of [
     './css/styles.css?v=70',
     './css/eventos-manuais-ui.css?v=43',
@@ -127,6 +129,20 @@ async function dispatch(type, event) {
     request: new Request('http://localhost:8765/cursos.json?v=789')
   });
   assert.equal(uncachedOptional.type, 'error');
+
+  // Imagens da curadoria de vestibular são mutáveis: sempre tentam a rede primeiro.
+  const imageUrl = 'http://localhost:8765/imagens/curadorias/vestibular-ufmg/o-quinze.png';
+  const imageRequest = new Request(imageUrl);
+  await cacheFor(sw.IMAGE_CACHE).put(imageRequest, new CacheableResponse('imagem-antiga', 'image/png'));
+
+  fetchImplementation = async request => new CacheableResponse(`imagem-nova:${request.url}`, 'image/png');
+  const freshImage = await dispatch('fetch', { request: imageRequest });
+  assert.equal(freshImage.body, `imagem-nova:${imageUrl}`);
+  assert.equal(stores.get(sw.IMAGE_CACHE).get(imageUrl).body, `imagem-nova:${imageUrl}`);
+
+  fetchImplementation = async () => { throw new Error('offline'); };
+  const offlineImage = await dispatch('fetch', { request: imageRequest });
+  assert.equal(offlineImage.body, `imagem-nova:${imageUrl}`);
 
   const appSource = fs.readFileSync(path.join(root, 'js/app.js'), 'utf8');
   assert.match(appSource, /loadOptionalJson\(COURSES_URL, \{ cursos: \[\] \}\)/);
