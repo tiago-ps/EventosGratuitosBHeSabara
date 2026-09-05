@@ -1,0 +1,56 @@
+name: Corrigir links Vestibular UFMG
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/corrigir_links_vestibular_ufmg.py'
+      - '.github/workflows/corrigir-links-vestibular-ufmg.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  corrigir:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Aplicar correções
+        run: python scripts/corrigir_links_vestibular_ufmg.py
+
+      - name: Validar Python
+        run: python -m py_compile scripts/integrar_curadoria_vestibular_ufmg.py scripts/corrigir_links_vestibular_ufmg.py
+
+      - name: Validar JSON
+        run: python -m json.tool curadorias-site.json > /dev/null
+
+      - name: Testar curadoria
+        run: node testes/vestibular-ufmg-curadoria.test.cjs
+
+      - name: Conferir alterações
+        run: |
+          git diff --check
+          git diff -- curadorias-site.json scripts/integrar_curadoria_vestibular_ufmg.py testes/vestibular-ufmg-curadoria.test.cjs
+
+      - name: Salvar correções
+        shell: bash
+        run: |
+          if git diff --quiet -- curadorias-site.json scripts/integrar_curadoria_vestibular_ufmg.py testes/vestibular-ufmg-curadoria.test.cjs; then
+            echo 'Nenhuma alteração necessária.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add curadorias-site.json scripts/integrar_curadoria_vestibular_ufmg.py testes/vestibular-ufmg-curadoria.test.cjs
+          git commit -m 'fix(curadoria): corrige links do Vestibular UFMG [skip ci]'
+          git push origin main
