@@ -1,10 +1,11 @@
-const CACHE_VERSION = 'mural-cultural-v95-setembro-final';
+const CACHE_VERSION = 'mural-cultural-v96-vestibular-images';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
 const MAX_IMAGE_CACHE_ITEMS = 140;
 const BRAND_LOGO_PATH = '/imagens/marca/logo-mural-cultural.png';
 const SEPTEMBER_BANNER_PATH = '/imagens/curadorias/setembro-amarelo-banner.png';
+const VESTIBULAR_UFMG_IMAGE_PREFIX = '/imagens/curadorias/vestibular-ufmg/';
 
 const CORE_ASSETS = [
   './', './index.html',
@@ -118,7 +119,11 @@ self.addEventListener('fetch', event => {
       cache: 'no-store'
     });
     event.respondWith(networkFirst(stableRequest, DATA_CACHE, '', 'application/json'));
-  } else if (url.pathname.endsWith(BRAND_LOGO_PATH) || url.pathname.endsWith(SEPTEMBER_BANNER_PATH)) {
+  } else if (
+    url.pathname.endsWith(BRAND_LOGO_PATH) ||
+    url.pathname.endsWith(SEPTEMBER_BANNER_PATH) ||
+    url.pathname.includes(VESTIBULAR_UFMG_IMAGE_PREFIX)
+  ) {
     // Imagens mutáveis podem ser substituídas no repositório mantendo o mesmo nome.
     // Busca sempre a versão atual da rede e usa a cópia local apenas se estiver offline.
     event.respondWith(networkFirstMutableImage(request));
