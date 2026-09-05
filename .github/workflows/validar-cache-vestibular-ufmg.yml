@@ -1,0 +1,31 @@
+name: Validar cache Vestibular UFMG
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'service-worker.js'
+      - 'testes/service-worker-cache.test.cjs'
+      - '.github/workflows/validar-cache-vestibular-ufmg.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Validar service worker
+        run: node --check service-worker.js
+
+      - name: Testar política de cache
+        run: node testes/service-worker-cache.test.cjs
