@@ -64,4 +64,18 @@ assert.match(appSource, /'setembro-amarelo-2026':/);
 assert.match(themesSource, /panelProfile: 'agosto-lilas-2026'/);
 assert.match(themesSource, /panelProfile: 'setembro-amarelo-2026'/);
 
+// Links corrigidos e protegidos por regressão.
+const baleLinkCheck = curation.complementos.filmes.find(item => item.id === 'site:vestibular-ufmg:bale-de-pe-no-chao');
+assert.ok(baleLinkCheck, 'Balé de Pé no Chão ausente');
+assert.equal(baleLinkCheck.plataforma, 'YouTube');
+assert.equal(baleLinkCheck.link, 'https://www.youtube.com/watch?v=x9CMU4aayjU');
+assert.equal(baleLinkCheck.pagina_oficial, 'https://www.youtube.com/watch?v=x9CMU4aayjU');
+
+const quinzeLinkCheck = curation.complementos.livros.find(item => item.id === 'site:vestibular-ufmg:o-quinze');
+assert.ok(quinzeLinkCheck, 'O quinze ausente');
+const quinzeUrls = quinzeLinkCheck.acervos.flatMap(acervo => acervo.registros || []).map(registro => registro.link || registro.link_fisico || registro.link_virtual || '');
+assert.ok(quinzeUrls.includes('https://pergamum.ifmg.edu.br/pesquisa_avancada?q=quinze&for=TITULO&condition=AND&q2=queiroz&for2=AUTOR&tipo_obra=49%252C&keyword_type=P&cr=N&orderBy=obra&direction=C'), 'Link avançado do IFMG para O quinze ausente');
+assert.ok(quinzeUrls.includes('https://bibliotecasfmc.pbh.gov.br/pesquisa_avancada?q=quinze&for=TITULO&condition=AND&q2=queiroz&for2=AUTOR&keyword_type=P&cr=N&orderBy=obra&direction=C'), 'Link avançado da FMC-PBH para O quinze ausente');
+assert.ok(quinzeUrls.includes('http://200.198.28.214/pesquisa_avancada?for=TITULO&q=quinze&condition=AND&for2=AUTOR&q2=queiroz&keyword_type=P'), 'Link avançado da BPEMG para O quinze ausente');
+
 console.log('Curadoria Vestibular UFMG 2026 validada.');

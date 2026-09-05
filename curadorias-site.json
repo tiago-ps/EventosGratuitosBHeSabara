@@ -1016,7 +1016,7 @@
                     "numero_chamada": "",
                     "acesso_fisico": false,
                     "acesso_virtual": false,
-                    "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=INDICE_1&q=O%2520quinze&page=1&perPage=20&orderBy=obra&direction=C"
+                    "link": "https://pergamum.ifmg.edu.br/pesquisa_avancada?q=quinze&for=TITULO&condition=AND&q2=queiroz&for2=AUTOR&tipo_obra=49%252C&keyword_type=P&cr=N&orderBy=obra&direction=C"
                   }
                 ]
               },
@@ -1037,7 +1037,7 @@
                     "numero_chamada": "",
                     "acesso_fisico": false,
                     "acesso_virtual": false,
-                    "link": "https://bibliotecasfmc.pbh.gov.br/pesquisa_geral?for=INDICE_1&q=O%2520quinze&page=1&perPage=20&orderBy=obra&direction=C"
+                    "link": "https://bibliotecasfmc.pbh.gov.br/pesquisa_avancada?q=quinze&for=TITULO&condition=AND&q2=queiroz&for2=AUTOR&keyword_type=P&cr=N&orderBy=obra&direction=C"
                   }
                 ]
               },
@@ -1058,7 +1058,7 @@
                     "numero_chamada": "",
                     "acesso_fisico": false,
                     "acesso_virtual": false,
-                    "link": "http://200.198.28.214/?q=O%20quinze&for=INDICE_1"
+                    "link": "http://200.198.28.214/pesquisa_avancada?for=TITULO&q=quinze&condition=AND&for2=AUTOR&q2=queiroz&keyword_type=P"
                   }
                 ]
               }
@@ -1205,9 +1205,9 @@
               "Obra para vestibular"
             ],
             "imagem": "imagens/curadorias/vestibular-ufmg/bale-de-pe-no-chao.png",
-            "plataforma": "TV Câmara",
-            "pagina_oficial": "https://www.camara.leg.br/tv/401867-bale-de-pe-no-chao-a-danca-afro-de-mercedes-baptista/",
-            "link": "https://www.camara.leg.br/tv/401867-bale-de-pe-no-chao-a-danca-afro-de-mercedes-baptista/",
+            "plataforma": "YouTube",
+            "pagina_oficial": "https://www.youtube.com/watch?v=x9CMU4aayjU",
+            "link": "https://www.youtube.com/watch?v=x9CMU4aayjU",
             "sinopse": "Documentário sobre a dança afro-brasileira e a trajetória artística de Mercedes Baptista, incluído na Etapa 2 do ciclo 2025–2027 do Seriado UFMG.",
             "temas": [
               "Vestibular UFMG",

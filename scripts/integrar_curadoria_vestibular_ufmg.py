@@ -184,7 +184,7 @@ def curation_payload() -> dict:
                 titulo=quinze_titulo,
                 autor=quinze_autor,
                 biblioteca="IFMG",
-                link="https://pergamum.ifmg.edu.br/pesquisa_geral?for=INDICE_1&q=O%2520quinze&page=1&perPage=20&orderBy=obra&direction=C",
+                link="https://pergamum.ifmg.edu.br/pesquisa_avancada?q=quinze&for=TITULO&condition=AND&q2=queiroz&for2=AUTOR&tipo_obra=49%252C&keyword_type=P&cr=N&orderBy=obra&direction=C",
             )
         ]),
         acervo("FMC-PBH", [
@@ -193,7 +193,7 @@ def curation_payload() -> dict:
                 titulo=quinze_titulo,
                 autor=quinze_autor,
                 biblioteca="FMC-PBH",
-                link="https://bibliotecasfmc.pbh.gov.br/pesquisa_geral?for=INDICE_1&q=O%2520quinze&page=1&perPage=20&orderBy=obra&direction=C",
+                link="https://bibliotecasfmc.pbh.gov.br/pesquisa_avancada?q=quinze&for=TITULO&condition=AND&q2=queiroz&for2=AUTOR&keyword_type=P&cr=N&orderBy=obra&direction=C",
             )
         ]),
         acervo("Biblioteca Pública Estadual de Minas Gerais", [
@@ -202,7 +202,7 @@ def curation_payload() -> dict:
                 titulo=quinze_titulo,
                 autor=quinze_autor,
                 biblioteca="Biblioteca Pública Estadual de Minas Gerais",
-                link="http://200.198.28.214/?q=O%20quinze&for=INDICE_1",
+                link="http://200.198.28.214/pesquisa_avancada?for=TITULO&q=quinze&condition=AND&for2=AUTOR&q2=queiroz&keyword_type=P",
             )
         ]),
     ]
@@ -389,9 +389,9 @@ def curation_payload() -> dict:
                     "direcao": ["Lilian Solá Santiago", "Marianna Monteiro"],
                     "generos": ["Documentário", "Obra para vestibular"],
                     "imagem": f"{IMAGE_BASE}/bale-de-pe-no-chao.png",
-                    "plataforma": "TV Câmara",
-                    "pagina_oficial": "https://www.camara.leg.br/tv/401867-bale-de-pe-no-chao-a-danca-afro-de-mercedes-baptista/",
-                    "link": "https://www.camara.leg.br/tv/401867-bale-de-pe-no-chao-a-danca-afro-de-mercedes-baptista/",
+                    "plataforma": "YouTube",
+                    "pagina_oficial": "https://www.youtube.com/watch?v=x9CMU4aayjU",
+                    "link": "https://www.youtube.com/watch?v=x9CMU4aayjU",
                     "sinopse": (
                         "Documentário sobre a dança afro-brasileira e a trajetória artística de Mercedes Baptista, "
                         "incluído na Etapa 2 do ciclo 2025–2027 do Seriado UFMG."
@@ -646,6 +646,20 @@ assert.match(appSource, /'agosto-lilas-2026':/);
 assert.match(appSource, /'setembro-amarelo-2026':/);
 assert.match(themesSource, /panelProfile: 'agosto-lilas-2026'/);
 assert.match(themesSource, /panelProfile: 'setembro-amarelo-2026'/);
+
+// Links corrigidos e protegidos por regressão.
+const baleLinkCheck = curation.complementos.filmes.find(item => item.id === 'site:vestibular-ufmg:bale-de-pe-no-chao');
+assert.ok(baleLinkCheck, 'Balé de Pé no Chão ausente');
+assert.equal(baleLinkCheck.plataforma, 'YouTube');
+assert.equal(baleLinkCheck.link, 'https://www.youtube.com/watch?v=x9CMU4aayjU');
+assert.equal(baleLinkCheck.pagina_oficial, 'https://www.youtube.com/watch?v=x9CMU4aayjU');
+
+const quinzeLinkCheck = curation.complementos.livros.find(item => item.id === 'site:vestibular-ufmg:o-quinze');
+assert.ok(quinzeLinkCheck, 'O quinze ausente');
+const quinzeUrls = quinzeLinkCheck.acervos.flatMap(acervo => acervo.registros || []).map(registro => registro.link || registro.link_fisico || registro.link_virtual || '');
+assert.ok(quinzeUrls.includes('https://pergamum.ifmg.edu.br/pesquisa_avancada?q=quinze&for=TITULO&condition=AND&q2=queiroz&for2=AUTOR&tipo_obra=49%252C&keyword_type=P&cr=N&orderBy=obra&direction=C'), 'Link avançado do IFMG para O quinze ausente');
+assert.ok(quinzeUrls.includes('https://bibliotecasfmc.pbh.gov.br/pesquisa_avancada?q=quinze&for=TITULO&condition=AND&q2=queiroz&for2=AUTOR&keyword_type=P&cr=N&orderBy=obra&direction=C'), 'Link avançado da FMC-PBH para O quinze ausente');
+assert.ok(quinzeUrls.includes('http://200.198.28.214/pesquisa_avancada?for=TITULO&q=quinze&condition=AND&for2=AUTOR&q2=queiroz&keyword_type=P'), 'Link avançado da BPEMG para O quinze ausente');
 
 console.log('Curadoria Vestibular UFMG 2026 validada.');
 """
