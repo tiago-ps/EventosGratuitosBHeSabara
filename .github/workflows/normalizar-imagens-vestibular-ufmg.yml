@@ -1,0 +1,153 @@
+name: Normalizar imagens da curadoria UFMG
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/normalizar-imagens-vestibular-ufmg.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: normalizar-imagens-vestibular-ufmg
+  cancel-in-progress: false
+
+jobs:
+  normalizar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Mover imagens e atualizar referências
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+
+          root = Path('.')
+          old_dir = Path('imagens/curadorias/vestibular-ufmg')
+          new_dir = Path('imagens/curadorias/vestibular-ufmg-seriado-2026')
+          old_banner = Path('imagens/curadorias/vestibular-ufmg-banner.png')
+          new_banner = new_dir / 'vestibular-ufmg-banner.png'
+
+          if new_dir.exists():
+              raise SystemExit(f'Destino já existe: {new_dir}')
+          if not old_dir.is_dir():
+              raise SystemExit(f'Pasta de origem ausente: {old_dir}')
+          if not old_banner.is_file():
+              raise SystemExit(f'Banner de origem ausente: {old_banner}')
+
+          files = sorted(p for p in old_dir.iterdir() if p.is_file())
+          if len(files) != 6:
+              raise SystemExit(f'Esperadas 6 imagens da UFMG, encontradas {len(files)}: {[p.name for p in files]}')
+
+          new_dir.mkdir(parents=True)
+          for source in files:
+              source.rename(new_dir / source.name)
+          old_dir.rmdir()
+          old_banner.rename(new_banner)
+
+          old_prefix = 'imagens/curadorias/vestibular-ufmg/'
+          new_prefix = 'imagens/curadorias/vestibular-ufmg-seriado-2026/'
+          old_banner_ref = 'imagens/curadorias/vestibular-ufmg-banner.png'
+          new_banner_ref = 'imagens/curadorias/vestibular-ufmg-seriado-2026/vestibular-ufmg-banner.png'
+          old_image_base = 'IMAGE_BASE = "imagens/curadorias/vestibular-ufmg"'
+          new_image_base = 'IMAGE_BASE = "imagens/curadorias/vestibular-ufmg-seriado-2026"'
+
+          suffixes = {'.json', '.js', '.cjs', '.mjs', '.py', '.yml', '.yaml', '.md', '.html', '.css', '.txt', '.webmanifest'}
+          changed = []
+          for path in root.rglob('*'):
+              if not path.is_file() or '.git' in path.parts or path.suffix.lower() not in suffixes:
+                  continue
+              try:
+                  text = path.read_text(encoding='utf-8')
+              except UnicodeDecodeError:
+                  continue
+              updated = text.replace(old_banner_ref, new_banner_ref)
+              updated = updated.replace(old_prefix, new_prefix)
+              updated = updated.replace(old_image_base, new_image_base)
+              if updated != text:
+                  path.write_text(updated, encoding='utf-8')
+                  changed.append(path.as_posix())
+
+          print('Imagens movidas:')
+          for path in sorted(new_dir.iterdir()):
+              print(f'  {path}')
+          print('Referências atualizadas:')
+          for path in changed:
+              print(f'  {path}')
+          PY
+
+      - name: Validar curadoria, caminhos e cache
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m json.tool curadorias/vestibular-ufmg-seriado-2026.json > /dev/null
+          node --check js/app.js
+          node --check js/curadorias-site.js
+          node --check js/temas-visuais.js
+          node --check service-worker.js
+          node testes/curadorias-separadas.test.cjs
+          node testes/vestibular-ufmg-curadoria.test.cjs
+          node testes/vestibular-fuvest-curadoria.test.cjs
+          node testes/service-worker-cache.test.cjs
+          git diff --check
+
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          target = Path('imagens/curadorias/vestibular-ufmg-seriado-2026')
+          files = sorted(p.name for p in target.iterdir() if p.is_file())
+          expected = sorted([
+              'bale-de-pe-no-chao.png',
+              'ideias-para-adiar-o-fim-do-mundo.png',
+              'o-quinze.png',
+              'sao-bernardo.png',
+              'sobrevivendo-ao-racismo.png',
+              'txai.png',
+              'vestibular-ufmg-banner.png',
+          ])
+          assert files == expected, (files, expected)
+          assert not Path('imagens/curadorias/vestibular-ufmg').exists()
+          assert not Path('imagens/curadorias/vestibular-ufmg-banner.png').exists()
+
+          data = json.loads(Path('curadorias/vestibular-ufmg-seriado-2026.json').read_text(encoding='utf-8'))
+          prefix = 'imagens/curadorias/vestibular-ufmg-seriado-2026/'
+          item_images = []
+          for group in ('livros', 'filmes'):
+              for item in data.get('complementos', {}).get(group, []):
+                  if item.get('imagem'):
+                      item_images.append(item['imagem'])
+          assert len(item_images) == 6, item_images
+          assert all(x.startswith(prefix) for x in item_images), item_images
+          assert all(Path(x).exists() for x in item_images), item_images
+          print('Curadoria UFMG usa 6 imagens válidas na pasta normalizada.')
+          PY
+
+          if grep -R --line-number --fixed-strings 'imagens/curadorias/vestibular-ufmg/' . \
+              --exclude-dir=.git; then
+            echo 'Referência antiga à pasta UFMG encontrada.'
+            exit 1
+          fi
+          if grep -R --line-number --fixed-strings 'imagens/curadorias/vestibular-ufmg-banner.png' . \
+              --exclude-dir=.git; then
+            echo 'Referência antiga ao banner UFMG encontrada.'
+            exit 1
+          fi
+
+      - name: Salvar reorganização e remover workflow temporário
+        shell: bash
+        run: |
+          set -euo pipefail
+          git rm .github/workflows/normalizar-imagens-vestibular-ufmg.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'refactor(curadoria): normaliza pasta de imagens da UFMG [skip ci]'
+          git push origin HEAD:main
