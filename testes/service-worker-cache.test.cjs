@@ -82,10 +82,10 @@ async function dispatch(type, event) {
 }
 
 (async () => {
-  assert.equal(sw.CACHE_VERSION, 'mural-cultural-v97-curadorias-separadas');
+  assert.equal(sw.CACHE_VERSION, 'mural-cultural-v98-modal-multiacervos');
   assert.equal(sw.VESTIBULAR_UFMG_IMAGE_PREFIX, '/imagens/curadorias/vestibular-ufmg-seriado-2026/');
   for (const asset of [
-    './css/styles.css?v=70',
+    './css/styles.css?v=71',
     './css/eventos-manuais-ui.css?v=43',
     './css/concursos-mural.css?v=2',
     './js/core/rotacao.js?v=1',
@@ -95,7 +95,7 @@ async function dispatch(type, event) {
     './js/conteudos/concursos.js?v=2',
     './js/conteudos/filmes.js?v=6',
     './js/curadorias-site.js?v=4',
-    './js/app.js?v=89',
+    './js/app.js?v=90',
     './js/temas-visuais.js?v=6',
     './js/eventos-manuais-ui.js?v=44'
   ]) {

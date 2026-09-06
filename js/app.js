@@ -154,6 +154,7 @@
   const filmsContent = window.MuralCultural.contents.films;
   const siteCurationsContent = window.MuralCultural.siteCurations;
   let deferredInstallPrompt = null;
+  let bookLocationsDialog = null;
 
   // O tema original é fixo; remove preferências antigas salvas pelo seletor.
   try {
@@ -603,6 +604,136 @@
       if (url) return url;
     }
     return safeExternalUrl(book?.[field]);
+  }
+
+  function panelBookRecordLinks(record) {
+    const links = new Map();
+    const virtualLabel = record?.tipo_registro === 'acesso_integral_legal'
+      ? 'Abrir acesso integral legal' : 'Abrir edição virtual';
+    for (const [field, label] of [
+      ['link_fisico', 'Abrir catálogo'],
+      ['link_virtual', virtualLabel],
+      ['link', record?.tipo_registro === 'acesso_integral_legal' ? virtualLabel : 'Abrir catálogo']
+    ]) {
+      const url = safeExternalUrl(record?.[field]);
+      if (url && !links.has(url)) links.set(url, label);
+    }
+    return [...links];
+  }
+
+  function panelBookLocations(book) {
+    // Mantém os acervos e seus registros; uma busca também é um local de consulta.
+    return bookAcervos(book).filter(acervo =>
+      acervo.registros.some(record => panelBookRecordLinks(record).length)
+    );
+  }
+
+  function createBookLocationsButton(book, locations) {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'book-locations-button';
+    button.textContent = 'Ver locais disponíveis';
+    button.setAttribute('aria-haspopup', 'dialog');
+    button.setAttribute('aria-controls', 'panel-book-locations');
+    button.addEventListener('click', () => openBookLocations(book, locations, button));
+    return button;
+  }
+
+  function openBookLocations(book, locations, opener) {
+    if (!bookLocationsDialog) {
+      bookLocationsDialog = document.createElement('dialog');
+      bookLocationsDialog.id = 'panel-book-locations';
+      bookLocationsDialog.className = 'book-locations-dialog';
+      bookLocationsDialog.setAttribute('aria-modal', 'true');
+      bookLocationsDialog.setAttribute('aria-labelledby', 'panel-book-locations-title');
+      bookLocationsDialog.setAttribute('aria-describedby', 'panel-book-locations-book');
+      document.body.append(bookLocationsDialog);
+      bookLocationsDialog.addEventListener('click', event => {
+        const bounds = bookLocationsDialog.getBoundingClientRect();
+        if (event.target === bookLocationsDialog && (
+          event.clientX < bounds.left || event.clientX > bounds.right ||
+          event.clientY < bounds.top || event.clientY > bounds.bottom
+        )) bookLocationsDialog.close();
+      });
+      bookLocationsDialog.addEventListener('keydown', event => {
+        if (event.key !== 'Tab') return;
+        const controls = [...bookLocationsDialog.querySelectorAll('a[href], button')];
+        const first = controls[0];
+        const last = controls[controls.length - 1];
+        if (event.shiftKey && (document.activeElement === first || !controls.includes(document.activeElement))) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      });
+    }
+    if (bookLocationsDialog.open) return;
+
+    const appendText = (parent, tag, text) => {
+      const element = document.createElement(tag);
+      element.textContent = text;
+      parent.append(element);
+      return element;
+    };
+    bookLocationsDialog.replaceChildren();
+    const title = appendText(bookLocationsDialog, 'h2', 'Onde encontrar este livro');
+    title.id = 'panel-book-locations-title';
+    title.tabIndex = -1;
+    appendText(bookLocationsDialog, 'p', book.titulo || '').id = 'panel-book-locations-book';
+    const list = document.createElement('ul');
+    bookLocationsDialog.append(list);
+    for (const location of locations) {
+      const entry = document.createElement('li');
+      list.append(entry);
+      appendText(entry, 'h3', bookHoldingLabel(location));
+      for (const [index, record] of location.registros.entries()) {
+        const links = panelBookRecordLinks(record);
+        const details = [...new Set([
+          record.instituicao || location.instituicao || record.biblioteca_rede || location.biblioteca_rede,
+          record.unidade || location.unidade || record.campus || location.campus,
+          record.localidade || location.localidade || record.cidade || location.cidade
+        ].map(value => String(value || '').trim()).filter(value => value && value !== bookHoldingLabel(location)))];
+        if (details.length) appendText(entry, 'p', details.join(' • '));
+        if (location.registros.length > 1) {
+          appendText(entry, 'p', `Registro ${index + 1}${record.codigo_acervo ? ` · ${record.codigo_acervo}` : ''}`);
+        }
+        if (record.numero_chamada) appendText(entry, 'p', `Número de chamada: ${record.numero_chamada}`);
+        if (record.disponibilidade_confirmada === false || record.tipo_registro === 'consulta_catalogo' ||
+            (!record.acesso_fisico && !record.acesso_virtual &&
+             !['exemplar_fisico_confirmado', 'acesso_integral_legal'].includes(record.tipo_registro))) {
+          appendText(entry, 'p', 'Consulta ao catálogo; disponibilidade não confirmada.');
+        } else if (record.tipo_registro === 'exemplar_fisico_confirmado' || record.acesso_fisico) {
+          const count = Number(record.exemplares_fisicos_catalogados || 0);
+          appendText(entry, 'p', count > 0
+            ? `${count} ${count === 1 ? 'exemplar físico catalogado' : 'exemplares físicos catalogados'}`
+            : 'Exemplar físico catalogado.');
+        }
+        if (!links.length) appendText(entry, 'p', 'Link de catálogo não informado.');
+        for (const [url, label] of links) {
+          const link = appendText(entry, 'a', label);
+          link.href = url;
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+          link.setAttribute('aria-label', `${label} — ${bookHoldingLabel(location)} — registro ${index + 1}`);
+        }
+      }
+    }
+    const close = appendText(bookLocationsDialog, 'button', 'Fechar');
+    close.type = 'button';
+    close.className = 'book-locations-close';
+    close.addEventListener('click', () => bookLocationsDialog.close());
+    bookLocationsDialog.addEventListener('close', () => {
+      document.body.classList.remove('book-locations-open');
+      if (opener.isConnected) opener.focus();
+      if (!state.isPaused && !document.hidden) scheduleNextSlide();
+    }, { once: true });
+    // showModal torna o restante da página inerte e oferece fechamento nativo com Esc.
+    bookLocationsDialog.showModal();
+    clearTimeout(state.timer);
+    document.body.classList.add('book-locations-open');
+    title.focus();
   }
 
   function bookLocationsSummary(book) {
@@ -1454,7 +1585,7 @@ function eventProgram(event) {
   }
 
   function scheduleNextSlide() {
-    if (state.isPaused) return;
+    if (state.isPaused || bookLocationsDialog?.open) return;
 
     clearTimeout(state.timer);
 
@@ -1861,6 +1992,12 @@ function eventProgram(event) {
     copy.querySelector('.book-author').textContent = book.autor || '';
     const holdings = bookHoldings(book);
     const acervos = bookAcervos(book);
+    const locations = panelBookLocations(book);
+    // Edições ou destinos distintos no mesmo acervo também permitem escolha.
+    const destinations = new Set(locations.flatMap(location =>
+      location.registros.flatMap(record => panelBookRecordLinks(record).map(([url]) => url))
+    ));
+    const hasMultipleLocations = locations.length > 1 || destinations.size > 1;
     const callText = bookLocationsSummary(book);
     copy.querySelector('.book-call').textContent = callText;
 
@@ -1911,14 +2048,19 @@ function eventProgram(event) {
     const virtualUrl = firstBookHoldingUrl(book, 'link_virtual');
     const physicalLinksCount = new Set(holdings.map(item => safeExternalUrl(item.link_fisico)).filter(Boolean)).size;
     const virtualLinksCount = new Set(holdings.map(item => safeExternalUrl(item.link_virtual)).filter(Boolean)).size;
-    if (physicalUrl) {
-      physicalLink.href = physicalUrl;
-      if (physicalLinksCount > 1) physicalLink.textContent = 'Ver um dos catálogos físicos';
-    } else physicalLink.remove();
-    if (virtualUrl) {
-      virtualLink.href = virtualUrl;
-      if (virtualLinksCount > 1) virtualLink.textContent = 'Acessar uma edição virtual';
-    } else virtualLink.remove();
+    if (hasMultipleLocations) {
+      physicalLink.replaceWith(createBookLocationsButton(book, locations));
+      virtualLink.remove();
+    } else {
+      if (physicalUrl) {
+        physicalLink.href = physicalUrl;
+        if (physicalLinksCount > 1) physicalLink.textContent = 'Ver um dos catálogos físicos';
+      } else physicalLink.remove();
+      if (virtualUrl) {
+        virtualLink.href = virtualUrl;
+        if (virtualLinksCount > 1) virtualLink.textContent = 'Acessar uma edição virtual';
+      } else virtualLink.remove();
+    }
     const opinionLink = copy.querySelector('.book-opinion-link');
     const opinionUrl = safeExternalUrl(book.link_formulario_opiniao || state.config?.opinioes_livros?.url_formulario);
     const opinionsEnabled = state.config?.opinioes_livros?.habilitado === true;
@@ -1930,7 +2072,9 @@ function eventProgram(event) {
     const link = safeExternalUrl(book.link || book.link_fisico || book.link_virtual);
     slide.querySelector('.source-label').textContent = 'Encontre este livro';
     const source = slide.querySelector('.source-url');
-    if (link) {
+    if (hasMultipleLocations) {
+      source.replaceChildren(createBookLocationsButton(book, locations));
+    } else if (link) {
       const anchor = document.createElement('a');
       anchor.href = link;
       anchor.textContent = acervos.length > 1
@@ -2107,6 +2251,7 @@ function eventProgram(event) {
   }
 
   function goToNext() {
+    if (bookLocationsDialog?.open) return;
     if (!state.events.length) return;
     if (state.index === state.events.length - 1) {
       createPanelRound();
@@ -2118,6 +2263,7 @@ function eventProgram(event) {
   }
 
   function goToPrevious() {
+    if (bookLocationsDialog?.open) return;
     if (!state.events.length) return;
     state.index = (state.index - 1 + state.events.length) % state.events.length;
     renderSlide(state.index);
@@ -2930,6 +3076,7 @@ function eventProgram(event) {
   }
 
   function handleKeyPress(event) {
+    if (bookLocationsDialog?.open) return;
     if (state.filterOverlay && !state.filterOverlay.hidden && event.key === 'Escape') {
       event.preventDefault();
       closeFilterPanel();
@@ -4071,7 +4218,7 @@ function eventProgram(event) {
     () => {
       if (document.hidden) {
         clearTimeout(state.timer);
-      } else if (state.events.length && !state.isPaused) {
+      } else if (state.events.length && !state.isPaused && !bookLocationsDialog?.open) {
         renderSlide(state.index);
       }
     }
@@ -4079,7 +4226,7 @@ function eventProgram(event) {
 
   let resizeFitTimer = null;
   window.addEventListener('resize', () => {
-    if (state.viewMode === 'auto' && state.data) {
+    if (state.viewMode === 'auto' && state.data && !bookLocationsDialog?.open) {
       renderCurrentView();
       return;
     }

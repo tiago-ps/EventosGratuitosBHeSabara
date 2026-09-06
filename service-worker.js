@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v97-curadorias-separadas';
+const CACHE_VERSION = 'mural-cultural-v98-modal-multiacervos';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -10,7 +10,7 @@ const VESTIBULAR_FUVEST_IMAGE_PREFIX = '/imagens/curadorias/vestibular-fuvest-20
 
 const CORE_ASSETS = [
   './', './index.html',
-  './css/styles.css?v=70',
+  './css/styles.css?v=71',
   './css/eventos-manuais-ui.css?v=43',
   './css/concursos-mural.css?v=2',
   './css/temas-visuais.css?v=7',
@@ -20,7 +20,7 @@ const CORE_ASSETS = [
   './js/conteudos/concursos.js?v=2',
   './js/conteudos/filmes.js?v=6',
   './js/curadorias-site.js?v=4',
-  './js/app.js?v=89',
+  './js/app.js?v=90',
   './js/temas-visuais.js?v=6',
   './js/eventos-manuais-ui.js?v=44',
   './js/ios-install.js?v=1',
