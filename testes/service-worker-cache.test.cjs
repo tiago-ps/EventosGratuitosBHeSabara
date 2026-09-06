@@ -83,7 +83,7 @@ async function dispatch(type, event) {
 
 (async () => {
   assert.equal(sw.CACHE_VERSION, 'mural-cultural-v97-curadorias-separadas');
-  assert.equal(sw.VESTIBULAR_UFMG_IMAGE_PREFIX, '/imagens/curadorias/vestibular-ufmg/');
+  assert.equal(sw.VESTIBULAR_UFMG_IMAGE_PREFIX, '/imagens/curadorias/vestibular-ufmg-seriado-2026/');
   for (const asset of [
     './css/styles.css?v=70',
     './css/eventos-manuais-ui.css?v=43',
@@ -145,7 +145,7 @@ async function dispatch(type, event) {
   assert.equal(curationOffline.body, `curadoria:${stableCurationUrl}`);
 
   // Imagens da curadoria de vestibular são mutáveis: sempre tentam a rede primeiro.
-  const imageUrl = 'http://localhost:8765/imagens/curadorias/vestibular-ufmg/o-quinze.png';
+  const imageUrl = 'http://localhost:8765/imagens/curadorias/vestibular-ufmg-seriado-2026/o-quinze.png';
   const imageRequest = new Request(imageUrl);
   await cacheFor(sw.IMAGE_CACHE).put(imageRequest, new CacheableResponse('imagem-antiga', 'image/png'));
 

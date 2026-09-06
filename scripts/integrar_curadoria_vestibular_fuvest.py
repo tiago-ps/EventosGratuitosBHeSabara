@@ -272,8 +272,8 @@ def update_sw():
     if "VESTIBULAR_FUVEST_IMAGE_PREFIX" in src:
         return
     src = src.replace(
-        "const VESTIBULAR_UFMG_IMAGE_PREFIX = '/imagens/curadorias/vestibular-ufmg/';",
-        "const VESTIBULAR_UFMG_IMAGE_PREFIX = '/imagens/curadorias/vestibular-ufmg/';\n"
+        "const VESTIBULAR_UFMG_IMAGE_PREFIX = '/imagens/curadorias/vestibular-ufmg-seriado-2026/';",
+        "const VESTIBULAR_UFMG_IMAGE_PREFIX = '/imagens/curadorias/vestibular-ufmg-seriado-2026/';\n"
         "const VESTIBULAR_FUVEST_IMAGE_PREFIX = '/imagens/curadorias/vestibular-fuvest-2027/';",
         1,
     )

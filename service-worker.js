@@ -5,7 +5,7 @@ const IMAGE_CACHE = `${CACHE_VERSION}-images`;
 const MAX_IMAGE_CACHE_ITEMS = 140;
 const BRAND_LOGO_PATH = '/imagens/marca/logo-mural-cultural.png';
 const SEPTEMBER_BANNER_PATH = '/imagens/curadorias/setembro-amarelo-2026/setembro-amarelo-banner.png';
-const VESTIBULAR_UFMG_IMAGE_PREFIX = '/imagens/curadorias/vestibular-ufmg/';
+const VESTIBULAR_UFMG_IMAGE_PREFIX = '/imagens/curadorias/vestibular-ufmg-seriado-2026/';
 const VESTIBULAR_FUVEST_IMAGE_PREFIX = '/imagens/curadorias/vestibular-fuvest-2027/';
 
 const CORE_ASSETS = [

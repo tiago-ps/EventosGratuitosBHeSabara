@@ -92,7 +92,7 @@
       panelProfile: 'vestibular-ufmg-seriado-2026',
       profileLabel: 'Vestibular UFMG',
       banner: {
-        src: 'imagens/curadorias/vestibular-ufmg-banner.png',
+        src: 'imagens/curadorias/vestibular-ufmg-seriado-2026/vestibular-ufmg-banner.png',
         alt: 'Obra para Vestibular — UFMG'
       }
     }

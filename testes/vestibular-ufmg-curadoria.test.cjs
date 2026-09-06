@@ -19,12 +19,12 @@ assert.equal(curation.complementos.filmes.length, 2);
 const allItems = [...curation.complementos.livros, ...curation.complementos.filmes];
 assert.equal(allItems.length, 6);
 const expectedImages = new Map([
-  ['São Bernardo', 'imagens/curadorias/vestibular-ufmg/sao-bernardo.png'],
-  ['Sobrevivendo ao racismo: memórias, cartas e o cotidiano da discriminação no Brasil', 'imagens/curadorias/vestibular-ufmg/sobrevivendo-ao-racismo.png'],
-  ['O quinze', 'imagens/curadorias/vestibular-ufmg/o-quinze.png'],
-  ['Ideias para adiar o fim do mundo', 'imagens/curadorias/vestibular-ufmg/ideias-para-adiar-o-fim-do-mundo.png'],
-  ['Balé de Pé no Chão — a dança afro de Mercedes Baptista', 'imagens/curadorias/vestibular-ufmg/bale-de-pe-no-chao.png'],
-  ['Txai', 'imagens/curadorias/vestibular-ufmg/txai.png'],
+  ['São Bernardo', 'imagens/curadorias/vestibular-ufmg-seriado-2026/sao-bernardo.png'],
+  ['Sobrevivendo ao racismo: memórias, cartas e o cotidiano da discriminação no Brasil', 'imagens/curadorias/vestibular-ufmg-seriado-2026/sobrevivendo-ao-racismo.png'],
+  ['O quinze', 'imagens/curadorias/vestibular-ufmg-seriado-2026/o-quinze.png'],
+  ['Ideias para adiar o fim do mundo', 'imagens/curadorias/vestibular-ufmg-seriado-2026/ideias-para-adiar-o-fim-do-mundo.png'],
+  ['Balé de Pé no Chão — a dança afro de Mercedes Baptista', 'imagens/curadorias/vestibular-ufmg-seriado-2026/bale-de-pe-no-chao.png'],
+  ['Txai', 'imagens/curadorias/vestibular-ufmg-seriado-2026/txai.png'],
 ]);
 
 for (const item of allItems) {
@@ -55,7 +55,7 @@ assert.equal(txai.link, 'https://open.spotify.com/intl-pt/album/37EITqrt8brFFMNv
 
 assert.match(appSource, /'vestibular-ufmg-seriado-2026':\s*\{[\s\S]*theme: 'vestibular ufmg'/);
 assert.match(themesSource, /id: 'vestibular-ufmg',[\s\S]*panelProfile: 'vestibular-ufmg-seriado-2026'/);
-assert.match(themesSource, /src: 'imagens\/curadorias\/vestibular-ufmg-banner\.png'/);
+assert.match(themesSource, /src: 'imagens\/curadorias\/vestibular-ufmg-seriado-2026\/vestibular-ufmg-banner\.png'/);
 
 // Protege os perfis já existentes contra remoção acidental.
 assert.match(appSource, /'agosto-lilas-2026':/);
