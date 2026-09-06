@@ -58,6 +58,8 @@ jobs:
           new_banner_ref = 'imagens/curadorias/vestibular-ufmg-seriado-2026/vestibular-ufmg-banner.png'
           old_image_base = 'IMAGE_BASE = "imagens/curadorias/vestibular-ufmg"'
           new_image_base = 'IMAGE_BASE = "imagens/curadorias/vestibular-ufmg-seriado-2026"'
+          old_banner_regex = "imagens\\/curadorias\\/vestibular-ufmg-banner\\.png"
+          new_banner_regex = "imagens\\/curadorias\\/vestibular-ufmg-seriado-2026\\/vestibular-ufmg-banner\\.png"
 
           suffixes = {'.json', '.js', '.cjs', '.mjs', '.py', '.yml', '.yaml', '.md', '.html', '.css', '.txt', '.webmanifest'}
           changed = []
@@ -71,6 +73,7 @@ jobs:
               updated = text.replace(old_banner_ref, new_banner_ref)
               updated = updated.replace(old_prefix, new_prefix)
               updated = updated.replace(old_image_base, new_image_base)
+              updated = updated.replace(old_banner_regex, new_banner_regex)
               if updated != text:
                   path.write_text(updated, encoding='utf-8')
                   changed.append(path.as_posix())
