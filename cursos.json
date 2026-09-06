@@ -2,8 +2,8 @@
   "schema": 4,
   "status": "catalogo_completo",
   "fonte": "Escola Virtual de Governo (EV.G)",
-  "atualizado_em": "2026-09-03T13:31:27.111500+00:00",
-  "total": 1042,
+  "atualizado_em": "2026-09-06T17:45:12.274753+00:00",
+  "total": 1041,
   "cursos": [
     {
       "id_fonte": "410",
@@ -7529,26 +7529,6 @@
       "data_lancamento": "04/06/25",
       "url": "https://www.escolavirtual.gov.br/curso/1390",
       "imagem": "https://cdn.evg.gov.br/cursos/1404_EVG/imagem_curso_1404.png",
-      "modalidade": "online",
-      "gratuito": true,
-      "fonte": "Escola Virtual de Governo (EV.G)"
-    },
-    {
-      "id_fonte": "870",
-      "titulo": "Conhecendo o PROARTE",
-      "area": "Gestão Pública",
-      "competencias": "",
-      "instituicao": "Enap - Escola Nacional de Administração Pública",
-      "instituicao_parceira": "Departamento Nacional de Infraestrutura de Transportes - DNIT",
-      "carga_horaria": "30",
-      "prazo_conclusao_dias": "30",
-      "tipo": "Curso Aberto",
-      "descricao": "Conheça o PROARTE e utilize-o para priorizar intervenções em estruturas de arte viária! O curso aborda os sistemas de gerenciamento de estruturas, as bases do programa PROARTE, a priorização para intervenções e a elaboração do plano de trabalho para manutenção. Destinado a engenheiros, técnicos e gestores de infraestrutura viária que precisam estruturar planos de manutenção preventiva e corretiva de obras de arte especiais com base em inspeções sistematizadas.",
-      "publico_alvo": "Profissionais dos órgãos e entidades da administração pública federal que atuam na área de infraestrutura de transportes. Curso aberto, gratuito e com certificado, qualquer pessoa pode se inscrever.",
-      "conteudo_programatico": "Módulo 1: Introdução - Sistemas de gerenciamento de estruturasMódulo 2: PROARTE - Bases do programaMódulo 3: PROARTE - Priorização para as intervençõesMódulo 4: Plano de trabalho para manutenção",
-      "data_lancamento": "30/08/22",
-      "url": "https://www.escolavirtual.gov.br/curso/870",
-      "imagem": "https://cdn.evg.gov.br/cursos/870_EVG/imagem_curso_870.jpeg",
       "modalidade": "online",
       "gratuito": true,
       "fonte": "Escola Virtual de Governo (EV.G)"

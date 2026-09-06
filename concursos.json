@@ -2,8 +2,8 @@
   "schema": 9,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-09-03T13:06:20.689825+00:00",
-  "total": 27,
+  "coletado_em_utc": "2026-09-06T17:44:46.260704+00:00",
+  "total": 23,
   "concursos": [
     {
       "titulo": "CaraguaPrev - Instituto de Previdência do Município de Caraguatatuba",
@@ -102,38 +102,6 @@
       ]
     },
     {
-      "titulo": "TCESP - Tribunal de Contas do Estado de São Paulo",
-      "url": "https://www.pciconcursos.com.br/noticias/tce-sp-divulga-retificacao-do-concurso-publico-para-auditor-de-controle-externo",
-      "imagem": "https://cdn.pci.app.br/img/i/7ea13a66a110a4658d8761ecab89a915.png",
-      "formacoes_compativeis": [
-        "Sistemas de Informação / Computação"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Sistemas de Informação / Computação",
-          "nivel": "superior",
-          "evidencia": ", 13 de agosto de 2026 o tribunal de contas do estado de sao paulo ( tce-sp ) publicou um edital de concurso publico para preencher vagas no cargo de auditor de controle externo - dipe, com exigencia de nivel superior. o edital atualizou a lista de especialidades de formacao exigidas para a area de tecnologia da informacao (ti). alem disso, topicos relacionados as provas e ao conteudo programatico tambem foram atualizados. segundo o edital, as oportunidades sao para os cargos de: auditor de controle externo - dipe - ciencias atuariais (2 vagas) auditor de controle externo - dipe - ciencias contabeis (11 vagas) audito"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "SP",
-      "cidade": "",
-      "inscricoes_inicio_texto": "13 de julho de 2026",
-      "inscricoes_fim_texto": "20 de agosto de 2026",
-      "inscricoes_texto": "13 de julho de 2026 a 20 de agosto de 2026",
-      "remuneracao_faixa_texto": "R$ 20.940,20",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Auditor de Controle Externo - DIPE - Tecnologia da Informação",
-          "vagas_texto": "5 vagas",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        }
-      ]
-    },
-    {
       "titulo": "Marinha do Brasil - Comando do 1º Distrito Naval",
       "url": "https://www.pciconcursos.com.br/noticias/comando-do-1-distrito-naval-da-marinha-rj-abre-processo-seletivo-para-oficiais-de-3-classe",
       "imagem": "https://cdn.pci.app.br/img/i/f5ad74d356b674769c7967a7ade56276.png",
@@ -154,7 +122,7 @@
       "inscricoes_inicio_texto": "17 de agosto de 2026",
       "inscricoes_fim_texto": "8 de setembro de 2026",
       "inscricoes_texto": "17 de agosto de 2026 a 8 de setembro de 2026",
-      "remuneracao_faixa_texto": "R$ 3.242,00",
+      "remuneracao_faixa_texto": "R$ 17.842,83",
       "remuneracao_fonte": "catalogo",
       "cargos_compativeis": [
         {
@@ -338,38 +306,6 @@
       ]
     },
     {
-      "titulo": "Câmara de Passos",
-      "url": "https://www.pciconcursos.com.br/noticias/camara-de-passos-mg-retifica-edital-de-concurso-publico",
-      "imagem": "https://cdn.pci.app.br/img/i/28d7a9f57542261b35e5e9d36d35b6ec.png",
-      "formacoes_compativeis": [
-        "Sistemas de Informação / Computação"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Sistemas de Informação / Computação",
-          "nivel": "superior",
-          "evidencia": "ria, sendo incluidos os cargos de oficial administrativo e agente de apoio legislativo e administrativo. segundo o edital, as oportunidades sao para os cargos de: oficial administrativo (3 vagas) agente de apoio legislativo e administrativo (4 vagas) agente de comunicacao social (3 vagas) agente de tecnologia da informacao (2 vagas) analista tecnico-juridico (2 vagas) contador (2 vagas) a jornada de trabalho para todos os cargos sera de 40 horas semanais. a remuneracao ofertada varia de r$ 4.585,17 a r$ 5.485,48. as inscricoes deverao ser realizadas exclusivamente via internet, no site www.gestaodeconcursos.com.br , "
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "MG",
-      "cidade": "Passos",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "",
-      "inscricoes_texto": "",
-      "remuneracao_faixa_texto": "R$ 4.585,17 a R$ 5.485,48",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Agente de Tecnologia da Informação",
-          "vagas_texto": "2 vagas",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        }
-      ]
-    },
-    {
       "titulo": "FUMEP - Fundação Municipal de Ensino Profissionalizante de Sete Lagoas",
       "url": "https://www.pciconcursos.com.br/noticias/fumep-de-sete-lagoas-mg-abre-concurso-publico-para-diversos-niveis-de-escolaridade",
       "imagem": "https://cdn.pci.app.br/img/i/a08ecc9bdb956a3140668a2d27e53828.png",
@@ -458,38 +394,6 @@
       ]
     },
     {
-      "titulo": "Município e Câmara de Tombos",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-e-camara-de-tombos-mg-abrem-concurso-publico-com-diversas-vagas-e-cadastro-de-reserva",
-      "imagem": "https://cdn.pci.app.br/img/i/33fd55a066f82a0af0cbdf134f0ac0d8.png",
-      "formacoes_compativeis": [
-        "Técnico em Informática"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Técnico em Informática",
-          "nivel": "tecnico",
-          "evidencia": "ficial eletricista (1 vaga) oficial calceteiro (1 vaga) oficial carpinteiro (cr) oficial pedreiro (2 vagas) operador de maquinas (7 vagas) agente de administracao escolar (cr) agente administrativo (2 vagas) monitor de educacao infantil (4 vagas) motorista (12 vagas) tecnico em enfermagem (4 vagas) tecnico em informatica (1 vaga) tecnico em saude bucal (cr) analista de sistemas (1 vaga) assistente social (3 vagas) enfermeiro 20h (1 vaga) enfermeiro 40h (4 vagas) especialista em educacao basica (cr) farmaceutico (2 vagas) fisioterapeuta (3 vagas) fonoaudiologo (2 vagas) medico psf (2 vagas) nutricionista (3 vagas) o"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "MG",
-      "cidade": "Tombos",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "",
-      "inscricoes_texto": "",
-      "remuneracao_faixa_texto": "R$ 1.750,00 a R$ 10.222,24",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Técnico em Informática",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "alta"
-        }
-      ]
-    },
-    {
       "titulo": "Prefeitura de Belo Vale",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-belo-vale-mg-abre-concurso-publico-com-diversas-vagas-e-salarios-de-ate-8000",
       "imagem": "https://cdn.pci.app.br/img/i/c98e358f2031a5e4944772e59343e5a9.png",
@@ -523,7 +427,7 @@
     },
     {
       "titulo": "Prefeitura de Carmo da Mata",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-carmo-da-mata-mg-abre-concurso-publico-para-diversos-cargos",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-carmo-da-mata-mg-divulga-retificacao-de-concurso-publico",
       "imagem": "https://cdn.pci.app.br/img/i/ab66ad80592bf51690b5335716372bd0.png",
       "formacoes_compativeis": [
         "Técnico em Informática"
@@ -587,7 +491,7 @@
     },
     {
       "titulo": "Prefeitura de Dores do Indaiá",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-dores-do-indaia-mg-abre-concurso-publico-com-salarios-de-ate-18702",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-dores-do-indaia-mg-retifica-edital-de-concurso-publico-com-salarios-de-ate-18702",
       "imagem": "https://cdn.pci.app.br/img/i/232efc3c99ca77c691a9eef47ecda1b3.png",
       "formacoes_compativeis": [
         "Técnico em Informática"
@@ -617,38 +521,6 @@
         },
         {
           "cargo": "Técnico em Informática - Saúde",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "alta"
-        }
-      ]
-    },
-    {
-      "titulo": "Prefeitura de Faria Lemos",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-faria-lemos-mg-abre-concurso-publico-com-remuneracoes-de-ate-16803",
-      "imagem": "https://cdn.pci.app.br/img/i/55abba28207b646554c552c0eead6799.png",
-      "formacoes_compativeis": [
-        "Técnico em Informática"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Técnico em Informática",
-          "nivel": "tecnico",
-          "evidencia": "arquivo (1 vaga) auxiliar de farmacia (1 vaga) auxiliar de secretaria (1 vaga) auxiliar em saude bucal (1 vaga) escriturario (1 vaga) monitor (2 vagas) oficial administrativo (1 vaga) secretario escolar (3 vagas) tesoureiro (1 vaga) tecnico em ar-condicionado (1 vaga) tecnico em enfermagem (1 vaga) tecnico em informatica (1 vaga) tecnico em saude bucal (1 vaga) assistente social 20h (1 vaga) assistente social 30h (1 vaga) bibliotecario (1 vaga) contador (1 vaga) controlador interno (1 vaga) enfermeiro (1 vaga) enfermeiro psf (1 vaga) engenheiro civil (1 vaga) farmaceutico 20h (1 vaga) farmaceutico 40h (1 vaga) fisi"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "MG",
-      "cidade": "Faria Lemos",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "",
-      "inscricoes_texto": "",
-      "remuneracao_faixa_texto": "R$ 16.803,20",
-      "remuneracao_fonte": "catalogo",
-      "cargos_compativeis": [
-        {
-          "cargo": "Técnico em Informática",
           "vagas_texto": "1 vaga",
           "formacao": "Técnico em Informática",
           "confianca": "alta"
