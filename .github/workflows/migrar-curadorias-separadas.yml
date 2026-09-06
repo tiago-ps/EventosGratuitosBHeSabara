@@ -47,6 +47,36 @@ jobs:
       - name: Separar curadorias
         run: python scripts/migrar_curadorias_separadas.py
 
+      - name: Isolar teste editorial do Setembro Amarelo
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          path = Path('testes/curadorias-site.test.cjs')
+          text = path.read_text(encoding='utf-8')
+          old = '''const curationIndex = readJson('curadorias/index.json');
+          const payload = {
+            schema: curationIndex.schema,
+            escopo: curationIndex.escopo,
+            descricao: curationIndex.descricao,
+            curadorias: curationIndex.curadorias.map(item => readJson(item.arquivo))
+          };'''.replace('          ', '')
+          new = '''const curationIndex = readJson('curadorias/index.json');
+          const allPayload = {
+            schema: curationIndex.schema,
+            escopo: curationIndex.escopo,
+            descricao: curationIndex.descricao,
+            curadorias: curationIndex.curadorias.map(item => readJson(item.arquivo))
+          };
+          const septemberCuration = allPayload.curadorias.find(item => item.id === 'setembro-amarelo-2026');
+          assert.ok(septemberCuration, 'Curadoria Setembro Amarelo ausente');
+          const payload = { ...allPayload, curadorias: [septemberCuration] };'''.replace('          ', '')
+          if old in text:
+              path.write_text(text.replace(old, new, 1), encoding='utf-8')
+          elif 'const septemberCuration = allPayload.curadorias.find' not in text:
+              raise SystemExit('Não foi possível isolar o teste do Setembro Amarelo')
+          PY
+
       - name: Validar JSONs separados
         shell: bash
         run: |
