@@ -1,0 +1,93 @@
+name: Migrar curadorias para arquivos separados
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/migrar_curadorias_separadas.py'
+      - '.github/workflows/migrar-curadorias-separadas.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: migrar-curadorias-separadas
+  cancel-in-progress: false
+
+jobs:
+  migrar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Separar curadorias
+        run: python scripts/migrar_curadorias_separadas.py
+
+      - name: Validar JSONs separados
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m json.tool curadorias/index.json > /dev/null
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          index = json.loads(Path('curadorias/index.json').read_text(encoding='utf-8'))
+          assert index['schema'] == 1
+          assert index['escopo'] == 'site-only'
+          assert index['curadorias']
+          for entry in index['curadorias']:
+              path = Path(entry['arquivo'])
+              data = json.loads(path.read_text(encoding='utf-8'))
+              assert data['id'] == entry['id'], (path, data.get('id'), entry['id'])
+          print(f"{len(index['curadorias'])} curadorias validadas.")
+          PY
+
+      - name: Validar JavaScript
+        run: |
+          node --check js/app.js
+          node --check js/curadorias-site.js
+          node --check service-worker.js
+
+      - name: Testar arquitetura de curadorias
+        run: |
+          node testes/curadorias-separadas.test.cjs
+          node testes/curadorias-site.test.cjs
+          node testes/apoio-painel-setembro.test.cjs
+          node testes/vestibular-ufmg-curadoria.test.cjs
+          node testes/vestibular-fuvest-curadoria.test.cjs
+          node testes/service-worker-cache.test.cjs
+
+      - name: Conferir referências legadas no runtime e testes
+        shell: bash
+        run: |
+          set -euo pipefail
+          if grep -R --line-number --fixed-strings 'curadorias-site.json' js service-worker.js testes; then
+            echo 'Referência legada encontrada no runtime ou nos testes.'
+            exit 1
+          fi
+
+      - name: Conferir alterações
+        run: git diff --check
+
+      - name: Salvar migração
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A curadorias curadorias-site.json js/app.js service-worker.js testes
+          if git diff --cached --quiet; then
+            echo 'Nenhuma alteração necessária.'
+            exit 0
+          fi
+          git commit -m 'refactor(curadorias): separa curadorias por arquivo [skip ci]'
+          git push origin HEAD:main
