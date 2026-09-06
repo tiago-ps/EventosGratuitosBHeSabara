@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v96-vestibular-images';
+const CACHE_VERSION = 'mural-cultural-v97-curadorias-separadas';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -37,7 +37,7 @@ const DATA_PATHS = [
   '/cursos.json',
   '/concursos.json',
   '/filmes.json',
-  '/curadorias-site.json',
+  '/curadorias/index.json',
   '/configuracao-mural.json'
 ];
 
@@ -110,11 +110,18 @@ self.addEventListener('fetch', event => {
 
   if (request.mode === 'navigate') {
     event.respondWith(networkFirst(request, CORE_CACHE, './index.html', 'text/html'));
-  } else if (DATA_PATHS.some(path => url.pathname.endsWith(path))) {
-    const fileName = url.pathname.split('/').pop();
+  } else if (
+    DATA_PATHS.some(path => url.pathname.endsWith(path)) ||
+    (url.pathname.includes('/curadorias/') && url.pathname.endsWith('.json'))
+  ) {
+    const scopePath = new URL(self.registration.scope).pathname;
+    const normalizedScope = scopePath.endsWith('/') ? scopePath : `${scopePath}/`;
+    const relativePath = url.pathname.startsWith(normalizedScope)
+      ? url.pathname.slice(normalizedScope.length)
+      : url.pathname.replace(/^\/+/, '');
     // Sempre consulta a rede sem reutilizar a resposta HTTP anterior. O Cache
     // Storage continua servindo como fallback somente quando a rede falha.
-    const stableRequest = new Request(new URL(`./${fileName}`, self.registration.scope), {
+    const stableRequest = new Request(new URL(`./${relativePath}`, self.registration.scope), {
       mode: 'same-origin',
       credentials: 'same-origin',
       cache: 'no-store'

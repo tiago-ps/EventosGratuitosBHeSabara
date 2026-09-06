@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "escopo": "site-only",
+  "descricao": "Dados editoriais complementares exclusivos da interface de teste. Não substituem nem alteram os catálogos centrais.",
+  "curadorias": [
+    {
+      "id": "setembro-amarelo-2026",
+      "arquivo": "curadorias/setembro-amarelo-2026.json",
+      "nome": "Setembro Amarelo — curadoria do mês",
+      "ativo_de": "2026-09-01",
+      "ativo_ate": "2026-09-30",
+      "tema": "Setembro Amarelo",
+      "ordem": 10
+    },
+    {
+      "id": "vestibular-ufmg-seriado-2026",
+      "arquivo": "curadorias/vestibular-ufmg-seriado-2026.json",
+      "nome": "Seriado UFMG 2026 — Obras para Vestibular",
+      "ativo_de": "2026-09-01",
+      "ativo_ate": "2026-12-13",
+      "tema": "Vestibular UFMG",
+      "ordem": 20
+    },
+    {
+      "id": "vestibular-fuvest-2027",
+      "arquivo": "curadorias/vestibular-fuvest-2027.json",
+      "nome": "Vestibular FUVEST 2027 — Leituras obrigatórias",
+      "ativo_de": "2026-08-17",
+      "ativo_ate": "2026-12-07",
+      "tema": "Vestibular FUVEST",
+      "ordem": 30,
+      "banner": "imagens/curadorias/vestibular-fuvest-2027/banner.png",
+      "perfil_visual": null
+    }
+  ]
+}

@@ -348,6 +348,8 @@ console.log('Arquitetura de uma curadoria por JSON validada.');
 def ensure_tests_no_legacy_reference() -> None:
     offenders = []
     for path in TESTS.glob("*.cjs"):
+        if path.name == "curadorias-separadas.test.cjs":
+            continue
         if "curadorias-site.json" in path.read_text(encoding="utf-8"):
             offenders.append(path.name)
     if offenders:

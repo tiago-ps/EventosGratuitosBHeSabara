@@ -82,7 +82,7 @@ async function dispatch(type, event) {
 }
 
 (async () => {
-  assert.equal(sw.CACHE_VERSION, 'mural-cultural-v96-vestibular-images');
+  assert.equal(sw.CACHE_VERSION, 'mural-cultural-v97-curadorias-separadas');
   assert.equal(sw.VESTIBULAR_UFMG_IMAGE_PREFIX, '/imagens/curadorias/vestibular-ufmg/');
   for (const asset of [
     './css/styles.css?v=70',
@@ -104,8 +104,8 @@ async function dispatch(type, event) {
   assert.ok(sw.DATA_PATHS.includes('/cursos.json'));
   assert.ok(sw.DATA_PATHS.includes('/concursos.json'));
   assert.ok(sw.DATA_PATHS.includes('/filmes.json'));
-  assert.ok(sw.DATA_PATHS.includes('/curadorias-site.json'));
-  assert.equal(sw.CORE_ASSETS.some(asset => /(?:cursos|concursos|filmes|curadorias-site)\.json/.test(asset)), false);
+  assert.ok(sw.DATA_PATHS.includes('/curadorias/index.json'));
+  assert.equal(sw.CORE_ASSETS.some(asset => /(?:cursos|concursos|filmes|curadorias)\.json/.test(asset)), false);
   assert.ok(sw.CORE_ASSETS.includes('./imagens/curadorias/setembro-amarelo-banner.png'));
 
   await dispatch('install', {});
@@ -130,6 +130,20 @@ async function dispatch(type, event) {
   });
   assert.equal(uncachedOptional.type, 'error');
 
+  fetchImplementation = async request => new CacheableResponse(`curadoria:${request.url}`);
+  const curationOnline = await dispatch('fetch', {
+    request: new Request('http://localhost:8765/curadorias/vestibular-fuvest-2027.json?v=1')
+  });
+  assert.equal(curationOnline.ok, true);
+  const stableCurationUrl = 'http://localhost:8765/curadorias/vestibular-fuvest-2027.json';
+  assert.ok(stores.get(sw.DATA_CACHE).has(stableCurationUrl));
+
+  fetchImplementation = async () => { throw new Error('offline'); };
+  const curationOffline = await dispatch('fetch', {
+    request: new Request('http://localhost:8765/curadorias/vestibular-fuvest-2027.json?v=2')
+  });
+  assert.equal(curationOffline.body, `curadoria:${stableCurationUrl}`);
+
   // Imagens da curadoria de vestibular são mutáveis: sempre tentam a rede primeiro.
   const imageUrl = 'http://localhost:8765/imagens/curadorias/vestibular-ufmg/o-quinze.png';
   const imageRequest = new Request(imageUrl);
@@ -148,7 +162,8 @@ async function dispatch(type, event) {
   assert.match(appSource, /loadOptionalJson\(COURSES_URL, \{ cursos: \[\] \}\)/);
   assert.match(appSource, /loadOptionalJson\(CONTESTS_URL, \{ concursos: \[\] \}\)/);
   assert.match(appSource, /loadOptionalJson\(FILMS_URL, \{ filmes: \[\] \}\)/);
-  assert.match(appSource, /loadOptionalJson\(SITE_CURATIONS_URL, null\)/);
+  assert.match(appSource, /loadSiteCurations\(\)/);
+  assert.match(appSource, /SITE_CURATIONS_INDEX_URL = 'curadorias\/index\.json'/);
 
   console.log('Testes de cache e dados opcionais do service worker aprovados.');
 })().catch(error => {

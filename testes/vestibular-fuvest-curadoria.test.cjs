@@ -3,10 +3,9 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const root = path.resolve(__dirname, '..');
-const data = JSON.parse(fs.readFileSync(path.join(root, 'curadorias-site.json'), 'utf8'));
+const c = JSON.parse(fs.readFileSync(path.join(root, 'curadorias', 'vestibular-fuvest-2027.json'), 'utf8'));
 const app = fs.readFileSync(path.join(root, 'js/app.js'), 'utf8');
 const sw = fs.readFileSync(path.join(root, 'service-worker.js'), 'utf8');
-const c = data.curadorias.find(x => x.id === 'vestibular-fuvest-2027');
 assert.ok(c); assert.equal(c.ativo_de, '2026-08-17'); assert.equal(c.ativo_ate, '2026-12-07');
 assert.equal(c.perfil_visual, null); assert.equal(c.complementos.livros.length, 9);
 const expected = [

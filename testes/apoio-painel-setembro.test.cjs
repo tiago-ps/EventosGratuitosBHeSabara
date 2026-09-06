@@ -6,7 +6,17 @@ const path = require('node:path');
 const vm = require('node:vm');
 
 const root = path.resolve(__dirname, '..');
-const payload = JSON.parse(fs.readFileSync(path.join(root, 'curadorias-site.json'), 'utf8'));
+const readJson = file => JSON.parse(fs.readFileSync(path.join(root, file), 'utf8'));
+const curationIndex = readJson('curadorias/index.json');
+const allPayload = {
+  schema: curationIndex.schema,
+  escopo: curationIndex.escopo,
+  descricao: curationIndex.descricao,
+  curadorias: curationIndex.curadorias.map(item => readJson(item.arquivo))
+};
+const septemberCuration = allPayload.curadorias.find(item => item.id === 'setembro-amarelo-2026');
+assert.ok(septemberCuration, 'Curadoria Setembro Amarelo ausente');
+const payload = { ...allPayload, curadorias: [septemberCuration] };
 const source = fs.readFileSync(path.join(root, 'js/curadorias-site.js'), 'utf8');
 
 const originalFilms = {

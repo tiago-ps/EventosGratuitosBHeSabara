@@ -5,11 +5,10 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 const root = path.resolve(__dirname, '..');
-const payload = JSON.parse(fs.readFileSync(path.join(root, 'curadorias-site.json'), 'utf8'));
+const curation = JSON.parse(fs.readFileSync(path.join(root, 'curadorias', 'vestibular-ufmg-seriado-2026.json'), 'utf8'));
 const appSource = fs.readFileSync(path.join(root, 'js', 'app.js'), 'utf8');
 const themesSource = fs.readFileSync(path.join(root, 'js', 'temas-visuais.js'), 'utf8');
 
-const curation = payload.curadorias.find(item => item.id === 'vestibular-ufmg-seriado-2026');
 assert.ok(curation, 'Curadoria Vestibular UFMG ausente');
 assert.equal(curation.tema, 'Vestibular UFMG');
 assert.equal(curation.ativo_de, '2026-09-01');

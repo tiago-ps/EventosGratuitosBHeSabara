@@ -7,7 +7,16 @@ const vm = require('node:vm');
 
 const root = path.resolve(__dirname, '..');
 const readJson = file => JSON.parse(fs.readFileSync(path.join(root, file), 'utf8'));
-const payload = readJson('curadorias-site.json');
+const curationIndex = readJson('curadorias/index.json');
+const allPayload = {
+  schema: curationIndex.schema,
+  escopo: curationIndex.escopo,
+  descricao: curationIndex.descricao,
+  curadorias: curationIndex.curadorias.map(item => readJson(item.arquivo))
+};
+const septemberCuration = allPayload.curadorias.find(item => item.id === 'setembro-amarelo-2026');
+assert.ok(septemberCuration, 'Curadoria Setembro Amarelo ausente');
+const payload = { ...allPayload, curadorias: [septemberCuration] };
 const eventsData = readJson('eventos.json');
 const booksData = readJson('livros.json');
 const coursesData = readJson('cursos.json');
@@ -372,10 +381,11 @@ assert.match(source, /openSupportArea\(opener = document\.activeElement, target 
 assert.match(source, /section\.dataset\.supportTarget === target/);
 assert.match(source, /Ver informações, contatos e endereços/);
 assert.doesNotMatch(source, /No celular, abra “Onde buscar ajuda”/);
-assert.match(appSource, /loadOptionalJson\(SITE_CURATIONS_URL, null\)/);
+assert.match(appSource, /loadSiteCurations\(\)/);
+assert.match(appSource, /SITE_CURATIONS_INDEX_URL = 'curadorias\/index\.json'/);
 assert.match(appSource, /siteCurationsContent\.apply\(siteCurationsData/);
 assert.match(appSource, /siteCurationsContent\.mountSupportArea\(siteLayer\.apoio\)/);
 assert.match(appSource, /Acesso não informado/);
-assert.doesNotMatch(appSource, /(?:write|post|put).*curadorias-site\.json/i);
+assert.doesNotMatch(appSource, /curadorias-site\.json/i);
 
 console.log('Testes da camada site-only Setembro Amarelo aprovados: conteúdo, temporalidade, segurança, colisões, apoio e isolamento dos catálogos centrais.');

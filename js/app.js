@@ -6,7 +6,7 @@
   const COURSES_URL = 'cursos.json';
   const CONTESTS_URL = 'concursos.json';
   const FILMS_URL = 'filmes.json';
-  const SITE_CURATIONS_URL = 'curadorias-site.json';
+  const SITE_CURATIONS_INDEX_URL = 'curadorias/index.json';
   const CONFIG_URL = 'configuracao-mural.json';
   const app = document.getElementById('app');
   const SCHOOL_ROTATION_SIZE = 6;
@@ -3963,6 +3963,36 @@ function eventProgram(event) {
     }
   }
 
+  async function loadSiteCurations() {
+    const index = await loadOptionalJson(SITE_CURATIONS_INDEX_URL, null);
+    if (!index || index.schema !== 1 || index.escopo !== 'site-only' || !Array.isArray(index.curadorias)) {
+      console.warn('Índice de curadorias indisponível ou inválido.');
+      return null;
+    }
+
+    const loaded = await Promise.all(index.curadorias.map(async entry => {
+      const id = String(entry?.id || '').trim();
+      const file = String(entry?.arquivo || '').trim();
+      if (!id || !/^curadorias\/[a-z0-9][a-z0-9._-]*\.json$/i.test(file) || file.includes('..')) {
+        console.warn(`Entrada inválida no índice de curadorias: ${id || '(sem id)'}`);
+        return null;
+      }
+      const curation = await loadOptionalJson(file, null);
+      if (!curation || typeof curation !== 'object' || String(curation.id || '') !== id) {
+        console.warn(`Curadoria ${id} ausente, inválida ou com ID divergente.`);
+        return null;
+      }
+      return curation;
+    }));
+
+    return {
+      schema: 1,
+      escopo: 'site-only',
+      descricao: String(index.descricao || ''),
+      curadorias: loaded.filter(Boolean)
+    };
+  }
+
   async function load() {
     try {
       const [response, booksData, coursesData, contestsData, filmsData, siteCurationsData, config] = await Promise.all([
@@ -3971,7 +4001,7 @@ function eventProgram(event) {
         loadOptionalJson(COURSES_URL, { cursos: [] }),
         loadOptionalJson(CONTESTS_URL, { concursos: [] }),
         loadOptionalJson(FILMS_URL, { filmes: [] }),
-        loadOptionalJson(SITE_CURATIONS_URL, null),
+        loadSiteCurations(),
         loadOptionalJson(CONFIG_URL, {
           nome: 'Mural Cultural',
           modulos: { eventos: true, livros: false },
