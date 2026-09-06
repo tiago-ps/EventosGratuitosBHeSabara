@@ -148,7 +148,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          git rm .github/workflows/normalizar-imagens-vestibular-ufmg.yml
+          git rm -f .github/workflows/normalizar-imagens-vestibular-ufmg.yml
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -A
