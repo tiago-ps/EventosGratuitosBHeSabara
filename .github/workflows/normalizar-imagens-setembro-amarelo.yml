@@ -1,0 +1,219 @@
+name: Normalizar imagens do Setembro Amarelo
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/normalizar-imagens-setembro-amarelo.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: normalizar-imagens-setembro-amarelo
+  cancel-in-progress: false
+
+jobs:
+  normalizar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Normalizar imagens e referências
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from __future__ import annotations
+
+          import json
+          from pathlib import Path
+
+          ROOT = Path('.')
+          CURATION_PATH = ROOT / 'curadorias/setembro-amarelo-2026.json'
+          BASE = 'imagens/curadorias/'
+          TARGET = 'imagens/curadorias/setembro-amarelo-2026/'
+          TEXT_SUFFIXES = {
+              '.json', '.js', '.cjs', '.mjs', '.html', '.css', '.md',
+              '.yml', '.yaml', '.py', '.txt', '.webmanifest'
+          }
+
+          payload = json.loads(CURATION_PATH.read_text(encoding='utf-8'))
+
+          def collect_strings(value):
+              if isinstance(value, dict):
+                  for item in value.values():
+                      yield from collect_strings(item)
+              elif isinstance(value, list):
+                  for item in value:
+                      yield from collect_strings(item)
+              elif isinstance(value, str):
+                  yield value
+
+          referenced = sorted({
+              value for value in collect_strings(payload)
+              if value.startswith(BASE)
+          })
+
+          mapping: dict[str, str] = {}
+          for old in referenced:
+              relative = old[len(BASE):]
+              # Só normaliza imagens ainda soltas diretamente na pasta geral.
+              if '/' in relative:
+                  continue
+              mapping[old] = TARGET + relative
+
+          # O banner é parte da própria curadoria, embora hoje seja referenciado
+          # principalmente pela infraestrutura visual e não pelo JSON editorial.
+          banner_old = BASE + 'setembro-amarelo-banner.png'
+          banner_new = TARGET + 'setembro-amarelo-banner.png'
+          if Path(banner_old).exists() or Path(banner_new).exists():
+              mapping[banner_old] = banner_new
+
+          if not mapping:
+              raise SystemExit('Nenhuma imagem do Setembro Amarelo encontrada para normalizar.')
+
+          Path(TARGET).mkdir(parents=True, exist_ok=True)
+
+          moved = []
+          already_moved = []
+          for old, new in sorted(mapping.items()):
+              old_path = Path(old)
+              new_path = Path(new)
+              if old_path.exists():
+                  if new_path.exists():
+                      raise SystemExit(f'Colisão: origem e destino existem: {old} -> {new}')
+                  new_path.parent.mkdir(parents=True, exist_ok=True)
+                  old_path.rename(new_path)
+                  moved.append((old, new))
+              elif new_path.exists():
+                  already_moved.append((old, new))
+              else:
+                  raise SystemExit(f'Imagem referenciada não encontrada nem na origem nem no destino: {old}')
+
+          # Atualiza todas as referências textuais aos caminhos movidos.
+          changed_text_files = []
+          for path in ROOT.rglob('*'):
+              if not path.is_file() or '.git' in path.parts:
+                  continue
+              if path.suffix.lower() not in TEXT_SUFFIXES:
+                  continue
+              try:
+                  text = path.read_text(encoding='utf-8')
+              except UnicodeDecodeError:
+                  continue
+              updated = text
+              for old, new in mapping.items():
+                  updated = updated.replace(old, new)
+              if updated != text:
+                  path.write_text(updated, encoding='utf-8')
+                  changed_text_files.append(path.as_posix())
+
+          # O teste histórico lista os nomes das imagens separadamente do diretório.
+          # Como essa lista é exclusiva da curadoria de Setembro, aponta-a para a nova pasta.
+          test_path = Path('testes/curadorias-site.test.cjs')
+          if test_path.exists():
+              text = test_path.read_text(encoding='utf-8')
+              old_join = "path.join(root, 'imagens', 'curadorias', image)"
+              new_join = "path.join(root, 'imagens', 'curadorias', 'setembro-amarelo-2026', image)"
+              if old_join in text:
+                  text = text.replace(old_join, new_join)
+                  test_path.write_text(text, encoding='utf-8')
+                  if test_path.as_posix() not in changed_text_files:
+                      changed_text_files.append(test_path.as_posix())
+
+          # Verifica que todas as imagens locais da curadoria agora estão contidas
+          # na pasta própria. URLs externas não entram nesta regra.
+          payload_after = json.loads(CURATION_PATH.read_text(encoding='utf-8'))
+          local_after = sorted({
+              value for value in collect_strings(payload_after)
+              if value.startswith(BASE)
+          })
+          wrong = [value for value in local_after if not value.startswith(TARGET)]
+          if wrong:
+              raise SystemExit('Ainda há imagens da curadoria fora da pasta própria:\n' + '\n'.join(wrong))
+
+          missing = [value for value in local_after if not Path(value).exists()]
+          if missing:
+              raise SystemExit('Referências apontam para imagens inexistentes:\n' + '\n'.join(missing))
+
+          # Garante que nenhuma referência conhecida ao banner permaneceu na raiz.
+          leftovers = []
+          for path in ROOT.rglob('*'):
+              if not path.is_file() or '.git' in path.parts or path.suffix.lower() not in TEXT_SUFFIXES:
+                  continue
+              try:
+                  text = path.read_text(encoding='utf-8')
+              except UnicodeDecodeError:
+                  continue
+              for old in mapping:
+                  if old in text:
+                      leftovers.append(f'{path}: {old}')
+          if leftovers:
+              raise SystemExit('Referências antigas ainda encontradas:\n' + '\n'.join(leftovers))
+
+          print(f'Imagens movidas: {len(moved)}')
+          for old, new in moved:
+              print(f'  MOVE {old} -> {new}')
+          print(f'Já movidas manualmente: {len(already_moved)}')
+          for old, new in already_moved:
+              print(f'  OK   {old} -> {new}')
+          print(f'Arquivos textuais atualizados: {len(changed_text_files)}')
+          for path in sorted(changed_text_files):
+              print(f'  REF  {path}')
+          PY
+
+      - name: Validar sintaxe e testes da curadoria
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m json.tool curadorias/setembro-amarelo-2026.json > /dev/null
+          node --check js/app.js
+          node --check js/curadorias-site.js
+          node --check js/temas-visuais.js
+          node --check service-worker.js
+          node testes/curadorias-separadas.test.cjs
+          node testes/curadorias-site.test.cjs
+          node testes/apoio-painel-setembro.test.cjs
+          node testes/service-worker-cache.test.cjs
+          git diff --check
+
+      - name: Conferir isolamento das imagens
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          data = json.loads(Path('curadorias/setembro-amarelo-2026.json').read_text(encoding='utf-8'))
+          prefix = 'imagens/curadorias/setembro-amarelo-2026/'
+
+          def walk(v):
+              if isinstance(v, dict):
+                  for x in v.values(): yield from walk(x)
+              elif isinstance(v, list):
+                  for x in v: yield from walk(x)
+              elif isinstance(v, str):
+                  yield v
+
+          images = sorted({x for x in walk(data) if x.startswith('imagens/curadorias/')})
+          assert images, 'Nenhuma imagem local encontrada na curadoria'
+          assert all(x.startswith(prefix) for x in images), images
+          assert all(Path(x).exists() for x in images), [x for x in images if not Path(x).exists()]
+          print(f'{len(images)} imagens locais da curadoria isoladas em {prefix}')
+          PY
+
+      - name: Salvar reorganização e remover workflow temporário
+        shell: bash
+        run: |
+          set -euo pipefail
+          git rm .github/workflows/normalizar-imagens-setembro-amarelo.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'refactor(curadoria): isola imagens do Setembro Amarelo [skip ci]'
+          git push origin HEAD:main
