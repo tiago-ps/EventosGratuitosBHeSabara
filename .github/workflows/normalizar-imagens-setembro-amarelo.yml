@@ -61,13 +61,10 @@ jobs:
           mapping: dict[str, str] = {}
           for old in referenced:
               relative = old[len(BASE):]
-              # Só normaliza imagens ainda soltas diretamente na pasta geral.
               if '/' in relative:
                   continue
               mapping[old] = TARGET + relative
 
-          # O banner é parte da própria curadoria, embora hoje seja referenciado
-          # principalmente pela infraestrutura visual e não pelo JSON editorial.
           banner_old = BASE + 'setembro-amarelo-banner.png'
           banner_new = TARGET + 'setembro-amarelo-banner.png'
           if Path(banner_old).exists() or Path(banner_new).exists():
@@ -94,7 +91,6 @@ jobs:
               else:
                   raise SystemExit(f'Imagem referenciada não encontrada nem na origem nem no destino: {old}')
 
-          # Atualiza todas as referências textuais aos caminhos movidos.
           changed_text_files = []
           for path in ROOT.rglob('*'):
               if not path.is_file() or '.git' in path.parts:
@@ -112,21 +108,24 @@ jobs:
                   path.write_text(updated, encoding='utf-8')
                   changed_text_files.append(path.as_posix())
 
-          # O teste histórico lista os nomes das imagens separadamente do diretório.
-          # Como essa lista é exclusiva da curadoria de Setembro, aponta-a para a nova pasta.
+          # O teste histórico monta alguns caminhos dinamicamente a partir do basename.
           test_path = Path('testes/curadorias-site.test.cjs')
           if test_path.exists():
               text = test_path.read_text(encoding='utf-8')
-              old_join = "path.join(root, 'imagens', 'curadorias', image)"
-              new_join = "path.join(root, 'imagens', 'curadorias', 'setembro-amarelo-2026', image)"
-              if old_join in text:
-                  text = text.replace(old_join, new_join)
-                  test_path.write_text(text, encoding='utf-8')
+              replacements = {
+                  "path.join(root, 'imagens', 'curadorias', image)":
+                      "path.join(root, 'imagens', 'curadorias', 'setembro-amarelo-2026', image)",
+                  "JSON.stringify(payload).includes(`imagens/curadorias/${image}`)":
+                      "JSON.stringify(payload).includes(`imagens/curadorias/setembro-amarelo-2026/${image}`)",
+              }
+              updated = text
+              for old, new in replacements.items():
+                  updated = updated.replace(old, new)
+              if updated != text:
+                  test_path.write_text(updated, encoding='utf-8')
                   if test_path.as_posix() not in changed_text_files:
                       changed_text_files.append(test_path.as_posix())
 
-          # Verifica que todas as imagens locais da curadoria agora estão contidas
-          # na pasta própria. URLs externas não entram nesta regra.
           payload_after = json.loads(CURATION_PATH.read_text(encoding='utf-8'))
           local_after = sorted({
               value for value in collect_strings(payload_after)
@@ -140,7 +139,6 @@ jobs:
           if missing:
               raise SystemExit('Referências apontam para imagens inexistentes:\n' + '\n'.join(missing))
 
-          # Garante que nenhuma referência conhecida ao banner permaneceu na raiz.
           leftovers = []
           for path in ROOT.rglob('*'):
               if not path.is_file() or '.git' in path.parts or path.suffix.lower() not in TEXT_SUFFIXES:
