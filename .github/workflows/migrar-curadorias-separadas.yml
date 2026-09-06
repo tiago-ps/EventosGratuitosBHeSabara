@@ -29,6 +29,21 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Corrigir validação autorreferente da migração
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          path = Path('scripts/migrar_curadorias_separadas.py')
+          text = path.read_text(encoding='utf-8')
+          old = '''    for path in TESTS.glob("*.cjs"):\n        if "curadorias-site.json" in path.read_text(encoding="utf-8"):\n            offenders.append(path.name)'''
+          new = '''    for path in TESTS.glob("*.cjs"):\n        if path.name == "curadorias-separadas.test.cjs":\n            continue\n        if "curadorias-site.json" in path.read_text(encoding="utf-8"):\n            offenders.append(path.name)'''
+          if old not in text and 'path.name == "curadorias-separadas.test.cjs"' not in text:
+              raise SystemExit('Trecho de validação não encontrado')
+          if old in text:
+              path.write_text(text.replace(old, new, 1), encoding='utf-8')
+          PY
+
       - name: Separar curadorias
         run: python scripts/migrar_curadorias_separadas.py
 
@@ -70,7 +85,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          if grep -R --line-number --fixed-strings 'curadorias-site.json' js service-worker.js testes; then
+          if grep -R --line-number --fixed-strings 'curadorias-site.json' js service-worker.js testes --exclude='curadorias-separadas.test.cjs'; then
             echo 'Referência legada encontrada no runtime ou nos testes.'
             exit 1
           fi
@@ -84,7 +99,7 @@ jobs:
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -A curadorias curadorias-site.json js/app.js service-worker.js testes
+          git add -A curadorias curadorias-site.json js/app.js service-worker.js testes scripts/migrar_curadorias_separadas.py
           if git diff --cached --quiet; then
             echo 'Nenhuma alteração necessária.'
             exit 0
