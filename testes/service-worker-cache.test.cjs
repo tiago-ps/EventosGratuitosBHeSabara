@@ -66,7 +66,7 @@ const context = vm.createContext({
 const source = fs.readFileSync(path.join(root, 'service-worker.js'), 'utf8');
 vm.runInContext(`${source}\n;globalThis.__sw = {
   CACHE_VERSION, CORE_CACHE, DATA_CACHE, IMAGE_CACHE, CORE_ASSETS, DATA_PATHS,
-  VESTIBULAR_UFMG_IMAGE_PREFIX
+  CURATION_IMAGE_PREFIX
 };`, context, { filename: 'service-worker.js' });
 
 const sw = context.__sw;
@@ -82,21 +82,21 @@ async function dispatch(type, event) {
 }
 
 (async () => {
-  assert.equal(sw.CACHE_VERSION, 'mural-cultural-v98-modal-multiacervos');
-  assert.equal(sw.VESTIBULAR_UFMG_IMAGE_PREFIX, '/imagens/curadorias/vestibular-ufmg-seriado-2026/');
+  assert.equal(sw.CACHE_VERSION, 'mural-cultural-v99-perfis-declarativos');
+  assert.equal(sw.CURATION_IMAGE_PREFIX, '/imagens/curadorias/');
   for (const asset of [
     './css/styles.css?v=71',
     './css/eventos-manuais-ui.css?v=43',
     './css/concursos-mural.css?v=2',
     './js/core/rotacao.js?v=1',
     './css/temas-visuais.css?v=7',
-    './js/tema-visual-boot.js?v=2',
+    './js/tema-visual-boot.js?v=3',
     './js/conteudos/cursos.js?v=3',
     './js/conteudos/concursos.js?v=2',
     './js/conteudos/filmes.js?v=6',
     './js/curadorias-site.js?v=4',
-    './js/app.js?v=90',
-    './js/temas-visuais.js?v=6',
+    './js/app.js?v=91',
+    './js/temas-visuais.js?v=7',
     './js/eventos-manuais-ui.js?v=44'
   ]) {
     assert.ok(sw.CORE_ASSETS.includes(asset), `Precache ausente: ${asset}`);
@@ -106,7 +106,7 @@ async function dispatch(type, event) {
   assert.ok(sw.DATA_PATHS.includes('/filmes.json'));
   assert.ok(sw.DATA_PATHS.includes('/curadorias/index.json'));
   assert.equal(sw.CORE_ASSETS.some(asset => /(?:cursos|concursos|filmes|curadorias)\.json/.test(asset)), false);
-  assert.ok(sw.CORE_ASSETS.includes('./imagens/curadorias/setembro-amarelo-2026/setembro-amarelo-banner.png'));
+  assert.equal(sw.CORE_ASSETS.includes('./imagens/curadorias/setembro-amarelo-2026/setembro-amarelo-banner.png'), false);
 
   await dispatch('install', {});
   assert.deepEqual(installedAssets, Array.from(sw.CORE_ASSETS));

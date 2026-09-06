@@ -1,5 +1,36 @@
 {
   "id": "vestibular-fuvest-2027",
+  "status_editorial": "aprovada",
+  "perfil_painel": {
+    "destaque": "Leituras obrigatórias",
+    "configuracao": {
+      "modules": {
+        "events": false,
+        "books": true,
+        "courses": false,
+        "contests": false,
+        "films": false
+      },
+      "theme": "vestibular fuvest",
+      "eventCities": [],
+      "eventCategory": "",
+      "eventProgram": "",
+      "eventUnit": "",
+      "bookCampuses": [],
+      "bookAccess": "",
+      "filmGenre": "",
+      "filmRating": "",
+      "filmDuration": "",
+      "weights": {
+        "events": 1,
+        "books": 1,
+        "courses": 1,
+        "contests": 1,
+        "films": 1
+      },
+      "slideDuration": 0
+    }
+  },
   "nome": "Vestibular FUVEST 2027 — Leituras obrigatórias",
   "ativo_de": "2026-08-17",
   "ativo_ate": "2026-12-07",

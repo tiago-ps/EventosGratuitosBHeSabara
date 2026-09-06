@@ -2,7 +2,6 @@
   'use strict';
 
   const STORAGE_KEY = 'mural:visual-theme';
-  const SEPTEMBER_AUTO_THEME_KEY = 'mural:visual-theme:auto:setembro-2026';
   const BANNER_CLASS = 'campaign-profile-banner';
   const HELP_BUTTON_CLASS = 'campaign-help-button';
   const CAMPAIGN_LAYOUT_STYLE_ID = 'campaign-layout-overrides';
@@ -13,12 +12,12 @@
     style.id = CAMPAIGN_LAYOUT_STYLE_ID;
     style.textContent = `
       /* O botão acompanha a altura real do banner: mesma porcentagem e mesmos limites. */
-      html[data-visual-theme="setembro-amarelo-glow"] body.panel-mode .media > .campaign-help-button {
+      html[data-visual-help="true"] body.panel-mode .media > .campaign-help-button {
         top: calc(1.25% + clamp(64px, 14.285%, 148px) + 8px);
       }
 
       /* O tooltip do botão-banner fica depois do atalho de ajuda, sem disputar o mesmo espaço. */
-      html[data-visual-theme="setembro-amarelo-glow"] body.panel-mode .campaign-profile-tooltip {
+      html[data-visual-help="true"] body.panel-mode .campaign-profile-tooltip {
         top: calc(100% + 60px);
       }
 
@@ -28,7 +27,7 @@
       }
 
       @media (max-width: 720px) {
-        html[data-visual-theme="setembro-amarelo-glow"] body.panel-mode .media > .campaign-help-button {
+        html[data-visual-help="true"] body.panel-mode .media > .campaign-help-button {
           top: calc(1% + clamp(52px, 15%, 96px) + 8px);
         }
       }
@@ -45,14 +44,13 @@
 
   function seasonalDefaultTheme(date = new Date()) {
     const current = dateKey(date);
-    if (current >= '2026-09-01' && current <= '2026-09-30') return 'setembro-amarelo-glow';
     if (current >= '2026-08-01' && current <= '2026-08-31') return 'agosto-lilas-glow';
     return 'padrao';
   }
 
   const DEFAULT_THEME = seasonalDefaultTheme();
 
-  const THEMES = [
+  const BASE_THEMES = [
     {
       id: 'padrao',
       label: 'Padrão',
@@ -64,43 +62,88 @@
       label: 'Agosto Lilás Glow',
       description: 'Roxo noturno, brilhos difusos e laço',
       swatch: 'is-lilas',
+      themeColor: '#120626',
       panelProfile: 'agosto-lilas-2026',
       profileLabel: 'Agosto Lilás',
       banner: {
         src: 'imagens/curadorias/agosto-lilas-banner.png',
         alt: 'Agosto Lilás'
       }
-    },
-    {
-      id: 'setembro-amarelo-glow',
-      label: 'Setembro Amarelo Glow',
-      description: 'Amarelo acolhedor, dourado e fundo profundo',
-      swatch: 'is-setembro-amarelo',
-      panelProfile: 'setembro-amarelo-2026',
-      profileLabel: 'Setembro Amarelo',
-      helpLabel: 'Onde buscar ajuda',
-      banner: {
-        src: 'imagens/curadorias/setembro-amarelo-2026/setembro-amarelo-banner.png',
-        alt: 'Setembro Amarelo — Se precisar, peça ajuda. CVV 188.'
-      }
-    },
-    {
-      id: 'vestibular-ufmg',
-      label: 'Vestibular UFMG',
-      description: 'Obras do Seriado UFMG 2026',
-      swatch: 'is-default',
-      panelProfile: 'vestibular-ufmg-seriado-2026',
-      profileLabel: 'Vestibular UFMG',
-      banner: {
-        src: 'imagens/curadorias/vestibular-ufmg-seriado-2026/vestibular-ufmg-banner.png',
-        alt: 'Obra para Vestibular — UFMG'
-      }
     }
   ];
 
+  let THEMES = [...BASE_THEMES];
   const allowed = new Set(THEMES.map(theme => theme.id));
+  let selectedTheme = null;
   const root = document.documentElement;
   const defaultThemeColor = document.querySelector('meta[name="theme-color"]')?.content || '#07111f';
+
+  function escapeMarkup(value) {
+    return String(value || '').replace(/[&<>"']/g, char => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    })[char]);
+  }
+
+  function registerLoadedThemes() {
+    const curations = window.MuralCultural?.loadedCurations;
+    if (!Array.isArray(curations)) return;
+    const nextThemes = [...BASE_THEMES];
+    const ids = new Set(nextThemes.map(theme => theme.id));
+    for (const curation of curations) {
+      const profile = curation?.perfil_visual;
+      if (!profile || typeof profile !== 'object' || Array.isArray(profile) || !curation.id) continue;
+      const id = String(profile.id || '');
+      if (!/^[a-z0-9][a-z0-9-]*$/.test(id) || ids.has(id)) continue;
+      let banner = null;
+      if (profile.banner?.src) {
+        try {
+          const url = new URL(profile.banner.src, window.location.href);
+          if (['http:', 'https:'].includes(url.protocol)) {
+            banner = { src: url.href, alt: String(profile.banner.alt || curation.nome || '') };
+          }
+        } catch (_) {}
+      }
+      nextThemes.push({
+        id,
+        label: String(profile.label || curation.nome || id),
+        description: String(profile.description || ''),
+        swatch: /^[a-z][a-z0-9-]*$/.test(profile.swatch || '') ? profile.swatch : 'is-default',
+        panelProfile: curation.perfil_painel ? String(curation.id) : '',
+        profileLabel: String(profile.profileLabel || curation.nome || ''),
+        helpLabel: String(profile.helpLabel || ''),
+        themeColor: String(profile.themeColor || defaultThemeColor),
+        banner,
+        auto_ativar: profile.auto_ativar === true,
+        start: String(curation.ativo_de || ''),
+        end: String(curation.ativo_ate || '')
+      });
+      ids.add(id);
+    }
+    THEMES = nextThemes;
+    allowed.clear();
+    THEMES.forEach(theme => allowed.add(theme.id));
+    const current = dateKey();
+    const automatic = THEMES.find(theme => theme.auto_ativar &&
+      /^\d{4}-\d{2}-\d{2}$/.test(theme.start) && /^\d{4}-\d{2}-\d{2}$/.test(theme.end) &&
+      current >= theme.start && current <= theme.end
+    );
+    let next = automatic?.id || DEFAULT_THEME;
+    let saved = selectedTheme;
+    try { saved = saved || localStorage.getItem(STORAGE_KEY); } catch (_) {}
+    if (saved) {
+      next = allowed.has(saved) ? saved : 'padrao';
+      if (!allowed.has(saved)) {
+        selectedTheme = 'padrao';
+        try { localStorage.removeItem(STORAGE_KEY); } catch (_) {}
+      }
+    }
+    // Reconstrói apenas as opções; listeners e estado aberto do seletor são preservados.
+    const panel = document.getElementById('visual-theme-panel');
+    const toggle = document.querySelector('.visual-theme-toggle');
+    if (panel && toggle) populateThemeOptions(panel.querySelector('.visual-theme-options'), panel, toggle);
+    document.querySelectorAll(`.${BANNER_CLASS}`).forEach(banner => banner.remove());
+    applyTheme(next, { persist: false });
+  }
 
   function readTheme() {
     const current = root.dataset.visualTheme;
@@ -115,16 +158,13 @@
   function persistTheme(theme) {
     try {
       localStorage.setItem(STORAGE_KEY, theme);
-      localStorage.removeItem(SEPTEMBER_AUTO_THEME_KEY);
     } catch (_) {}
   }
 
   function updateBrowserColor(theme) {
     const meta = document.querySelector('meta[name="theme-color"]');
     if (!meta) return;
-    if (theme === 'agosto-lilas-glow') meta.content = '#120626';
-    else if (theme === 'setembro-amarelo-glow') meta.content = '#151308';
-    else meta.content = defaultThemeColor;
+    meta.content = THEMES.find(item => item.id === theme)?.themeColor || defaultThemeColor;
   }
 
   function activePanelProfile() {
@@ -159,7 +199,7 @@
     banner.dataset.panelProfile = theme.panelProfile;
     banner.dataset.profileLabel = theme.profileLabel;
     banner.innerHTML = `
-      <img class="campaign-profile-banner-image" src="${theme.banner.src}" alt="${theme.banner.alt}" decoding="async">
+      <img class="campaign-profile-banner-image" src="${escapeMarkup(theme.banner.src)}" alt="${escapeMarkup(theme.banner.alt)}" decoding="async">
       <span class="campaign-profile-check" aria-hidden="true">✓</span>
       <span class="campaign-profile-tooltip" role="tooltip"></span>`;
     const togglePanelProfile = () => {
@@ -196,6 +236,7 @@
       themeConfig?.helpLabel && themeConfig.panelProfile &&
       root.dataset.siteCurationHelp === themeConfig.panelProfile
     );
+    root.dataset.visualHelp = String(available);
     let button = document.querySelector(`.${HELP_BUTTON_CLASS}`);
     if (!available) {
       button?.remove();
@@ -215,7 +256,7 @@
     const container = bannerMedia || document.body;
     if (button.parentElement !== container) container.appendChild(button);
     button.textContent = themeConfig.helpLabel;
-    button.setAttribute('aria-label', `${themeConfig.helpLabel} — Setembro Amarelo`);
+    button.setAttribute('aria-label', `${themeConfig.helpLabel} — ${themeConfig.profileLabel || themeConfig.label}`);
   }
 
   function syncThemeExperience(theme) {
@@ -232,7 +273,10 @@
   function applyTheme(theme, { persist = true } = {}) {
     const next = allowed.has(theme) ? theme : DEFAULT_THEME;
     root.dataset.visualTheme = next;
-    if (persist) persistTheme(next);
+    if (persist) {
+      selectedTheme = next;
+      persistTheme(next);
+    }
     updateBrowserColor(next);
     syncOptions(next);
     syncThemeExperience(next);
@@ -248,6 +292,31 @@
         <circle cx="14.2" cy="7" r="1"></circle>
         <circle cx="16.5" cy="10.2" r="1"></circle>
       </svg>`;
+  }
+
+  function populateThemeOptions(options, panel, toggle) {
+    options.replaceChildren();
+    THEMES.forEach(theme => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'visual-theme-option';
+      button.dataset.visualThemeOption = theme.id;
+      button.setAttribute('aria-pressed', 'false');
+      button.innerHTML = `
+        <span class="visual-theme-swatch ${escapeMarkup(theme.swatch)}" aria-hidden="true"></span>
+        <span class="visual-theme-option-copy">
+          <span class="visual-theme-option-title">${escapeMarkup(theme.label)}</span>
+          <span class="visual-theme-option-description">${escapeMarkup(theme.description)}</span>
+        </span>
+        <span class="visual-theme-check" aria-hidden="true">✓</span>`;
+      button.addEventListener('click', () => {
+        applyTheme(theme.id);
+        panel.hidden = true;
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.focus();
+      });
+      options.appendChild(button);
+    });
   }
 
   function buildSwitcher() {
@@ -276,27 +345,7 @@
       <div class="visual-theme-options"></div>`;
 
     const options = panel.querySelector('.visual-theme-options');
-    THEMES.forEach(theme => {
-      const button = document.createElement('button');
-      button.type = 'button';
-      button.className = 'visual-theme-option';
-      button.dataset.visualThemeOption = theme.id;
-      button.setAttribute('aria-pressed', 'false');
-      button.innerHTML = `
-        <span class="visual-theme-swatch ${theme.swatch}" aria-hidden="true"></span>
-        <span class="visual-theme-option-copy">
-          <span class="visual-theme-option-title">${theme.label}</span>
-          <span class="visual-theme-option-description">${theme.description}</span>
-        </span>
-        <span class="visual-theme-check" aria-hidden="true">✓</span>`;
-      button.addEventListener('click', () => {
-        applyTheme(theme.id);
-        panel.hidden = true;
-        toggle.setAttribute('aria-expanded', 'false');
-        toggle.focus();
-      });
-      options.appendChild(button);
-    });
+    populateThemeOptions(options, panel, toggle);
 
     toggle.addEventListener('click', () => {
       const open = panel.hidden;
@@ -336,14 +385,15 @@
 
   const observer = new MutationObserver(scheduleSync);
 
+  window.addEventListener('mural:curations-loaded', registerLoadedThemes);
   window.addEventListener('mural:panel-profile-change', scheduleSync);
   window.addEventListener('mural:site-curation-change', scheduleSync);
 
   function start() {
     ensureCampaignLayoutStyles();
     buildSwitcher();
-    const theme = readTheme();
-    applyTheme(theme, { persist: false });
+    if (Array.isArray(window.MuralCultural?.loadedCurations)) registerLoadedThemes();
+    else applyTheme(readTheme(), { persist: false });
 
     observer.observe(document.body, {
       childList: true,

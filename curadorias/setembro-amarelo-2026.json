@@ -1,5 +1,50 @@
 {
   "id": "setembro-amarelo-2026",
+  "status_editorial": "em_analise",
+  "perfil_painel": {
+    "destaque": "Se precisar, peça ajuda.",
+    "configuracao": {
+      "modules": {
+        "events": true,
+        "books": true,
+        "courses": true,
+        "contests": false,
+        "films": true
+      },
+      "theme": "setembro amarelo",
+      "eventCities": [],
+      "eventCategory": "",
+      "eventProgram": "",
+      "eventUnit": "",
+      "bookCampuses": [],
+      "bookAccess": "",
+      "filmGenre": "",
+      "filmRating": "",
+      "filmDuration": "",
+      "weights": {
+        "events": 5,
+        "books": 1,
+        "courses": 1,
+        "contests": 1,
+        "films": 1
+      },
+      "slideDuration": 0
+    }
+  },
+  "perfil_visual": {
+    "id": "setembro-amarelo-glow",
+    "label": "Setembro Amarelo Glow",
+    "description": "Amarelo acolhedor, dourado e fundo profundo",
+    "swatch": "is-setembro-amarelo",
+    "profileLabel": "Setembro Amarelo",
+    "helpLabel": "Onde buscar ajuda",
+    "banner": {
+      "src": "imagens/curadorias/setembro-amarelo-2026/setembro-amarelo-banner.png",
+      "alt": "Setembro Amarelo — Se precisar, peça ajuda. CVV 188."
+    },
+    "auto_ativar": true,
+    "themeColor": "#151308"
+  },
   "nome": "Setembro Amarelo — curadoria do mês",
   "ativo_de": "2026-09-01",
   "ativo_ate": "2026-09-30",

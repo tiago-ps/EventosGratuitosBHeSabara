@@ -1,12 +1,10 @@
-const CACHE_VERSION = 'mural-cultural-v98-modal-multiacervos';
+const CACHE_VERSION = 'mural-cultural-v99-perfis-declarativos';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
 const MAX_IMAGE_CACHE_ITEMS = 140;
 const BRAND_LOGO_PATH = '/imagens/marca/logo-mural-cultural.png';
-const SEPTEMBER_BANNER_PATH = '/imagens/curadorias/setembro-amarelo-2026/setembro-amarelo-banner.png';
-const VESTIBULAR_UFMG_IMAGE_PREFIX = '/imagens/curadorias/vestibular-ufmg-seriado-2026/';
-const VESTIBULAR_FUVEST_IMAGE_PREFIX = '/imagens/curadorias/vestibular-fuvest-2027/';
+const CURATION_IMAGE_PREFIX = '/imagens/curadorias/';
 
 const CORE_ASSETS = [
   './', './index.html',
@@ -14,18 +12,17 @@ const CORE_ASSETS = [
   './css/eventos-manuais-ui.css?v=43',
   './css/concursos-mural.css?v=2',
   './css/temas-visuais.css?v=7',
-  './js/tema-visual-boot.js?v=2',
+  './js/tema-visual-boot.js?v=3',
   './js/core/rotacao.js?v=1',
   './js/conteudos/cursos.js?v=3',
   './js/conteudos/concursos.js?v=2',
   './js/conteudos/filmes.js?v=6',
   './js/curadorias-site.js?v=4',
-  './js/app.js?v=90',
-  './js/temas-visuais.js?v=6',
+  './js/app.js?v=91',
+  './js/temas-visuais.js?v=7',
   './js/eventos-manuais-ui.js?v=44',
   './js/ios-install.js?v=1',
   './imagens/curadorias/agosto-lilas-banner.png',
-  './imagens/curadorias/setembro-amarelo-2026/setembro-amarelo-banner.png',
   './manifest.webmanifest',
   './imagens/app-icons/icon-192.png', './imagens/app-icons/icon-512.png',
   './imagens/app-icons/apple-touch-icon.png'
@@ -129,9 +126,7 @@ self.addEventListener('fetch', event => {
     event.respondWith(networkFirst(stableRequest, DATA_CACHE, '', 'application/json'));
   } else if (
     url.pathname.endsWith(BRAND_LOGO_PATH) ||
-    url.pathname.endsWith(SEPTEMBER_BANNER_PATH) ||
-    url.pathname.includes(VESTIBULAR_UFMG_IMAGE_PREFIX) ||
-    url.pathname.includes(VESTIBULAR_FUVEST_IMAGE_PREFIX)
+    url.pathname.includes(CURATION_IMAGE_PREFIX)
   ) {
     // Imagens mutáveis podem ser substituídas no repositório mantendo o mesmo nome.
     // Busca sempre a versão atual da rede e usa a cópia local apenas se estiver offline.

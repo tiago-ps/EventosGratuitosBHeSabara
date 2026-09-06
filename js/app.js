@@ -48,86 +48,6 @@
         },
         slideDuration: 0
       }
-    },
-    'setembro-amarelo-2026': {
-      nome: 'Setembro Amarelo — cuidado e saúde mental',
-      destaque: 'Se precisar, peça ajuda.',
-      ativo_de: '2026-09-01',
-      ativo_ate: '2026-09-30',
-      configuracao: {
-        modules: {
-          events: true,
-          books: true,
-          courses: true,
-          contests: false,
-          films: true
-        },
-        theme: 'setembro amarelo',
-        eventCities: [],
-        eventCategory: '',
-        eventProgram: '',
-        eventUnit: '',
-        bookCampuses: [],
-        bookAccess: '',
-        filmGenre: '',
-        filmRating: '',
-        filmDuration: '',
-        weights: {
-          events: 5,
-          books: 1,
-          courses: 1,
-          contests: 1,
-          films: 1
-        },
-        slideDuration: 0
-      }
-    },
-    'vestibular-ufmg-seriado-2026': {
-      nome: 'Seriado UFMG 2026 — Obras para Vestibular',
-      destaque: 'Obras obrigatórias',
-      ativo_de: '2026-09-01',
-      ativo_ate: '2026-12-13',
-      configuracao: {
-        modules: {
-          events: false,
-          books: true,
-          courses: false,
-          contests: false,
-          films: true
-        },
-        theme: 'vestibular ufmg',
-        eventCities: [],
-        eventCategory: '',
-        eventProgram: '',
-        eventUnit: '',
-        bookCampuses: [],
-        bookAccess: '',
-        filmGenre: '',
-        filmRating: '',
-        filmDuration: '',
-        weights: {
-          events: 1,
-          books: 2,
-          courses: 1,
-          contests: 1,
-          films: 1
-        },
-        slideDuration: 0
-      }
-    },
-    'vestibular-fuvest-2027': {
-      nome: 'Vestibular FUVEST 2027 — Leituras obrigatórias',
-      destaque: 'Leituras obrigatórias',
-      ativo_de: '2026-08-17',
-      ativo_ate: '2026-12-07',
-      configuracao: {
-        modules: { events: false, books: true, courses: false, contests: false, films: false },
-        theme: 'vestibular fuvest',
-        eventCities: [], eventCategory: '', eventProgram: '', eventUnit: '',
-        bookCampuses: [], bookAccess: '', filmGenre: '', filmRating: '', filmDuration: '',
-        weights: { events: 1, books: 1, courses: 1, contests: 1, films: 1 },
-        slideDuration: 0
-      }
     }
   });
   const AGENDA_BATCH_SIZE = 24;
@@ -2536,7 +2456,18 @@ function eventProgram(event) {
     const profiles = configured && typeof configured === 'object' && !Array.isArray(configured)
       ? configured
       : {};
-    return { ...BUILTIN_PANEL_PROFILES, ...profiles };
+    const curations = (state.siteCurationsData?.curadorias || []).filter(curation =>
+      curation?.id && curation.perfil_painel?.configuracao &&
+      typeof curation.perfil_painel.configuracao === 'object' &&
+      !Array.isArray(curation.perfil_painel.configuracao)
+    );
+    const declared = Object.fromEntries(curations.map(curation => [curation.id, {
+      ...curation.perfil_painel,
+      nome: curation.nome,
+      ativo_de: curation.ativo_de,
+      ativo_ate: curation.ativo_ate
+    }]));
+    return { ...BUILTIN_PANEL_PROFILES, ...profiles, ...declared };
   }
 
   function configuredPanelProfileEntries() {
@@ -4111,10 +4042,15 @@ function eventProgram(event) {
   }
 
   async function loadSiteCurations() {
+    const publish = payload => {
+      window.MuralCultural.loadedCurations = payload?.curadorias || [];
+      window.dispatchEvent(new CustomEvent('mural:curations-loaded'));
+      return payload;
+    };
     const index = await loadOptionalJson(SITE_CURATIONS_INDEX_URL, null);
     if (!index || index.schema !== 1 || index.escopo !== 'site-only' || !Array.isArray(index.curadorias)) {
       console.warn('Índice de curadorias indisponível ou inválido.');
-      return null;
+      return publish(null);
     }
 
     const loaded = await Promise.all(index.curadorias.map(async entry => {
@@ -4132,12 +4068,12 @@ function eventProgram(event) {
       return curation;
     }));
 
-    return {
+    return publish({
       schema: 1,
       escopo: 'site-only',
       descricao: String(index.descricao || ''),
       curadorias: loaded.filter(Boolean)
-    };
+    });
   }
 
   async function load() {
