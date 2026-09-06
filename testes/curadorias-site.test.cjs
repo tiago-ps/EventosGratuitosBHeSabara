@@ -59,7 +59,7 @@ const event = merged.eventos.find(item => item.id === eventId);
 assert.ok(event);
 assert.deepEqual(Array.from(event.temas), ['Setembro Amarelo', 'Saúde mental', 'Cuidado', 'Bem-estar emocional']);
 assert.equal(event.descricao, 'Palestra promovida pela AMUSA em alusão ao Setembro Amarelo, com foco em saúde mental, cultura do cuidado, acolhimento e valorização da vida.');
-assert.equal(event.imagem, 'imagens/curadorias/amusa_setembro_amarelo_e_a_importancia_da_saude.png');
+assert.equal(event.imagem, 'imagens/curadorias/setembro-amarelo-2026/amusa_setembro_amarelo_e_a_importancia_da_saude.png');
 assert.ok(fs.existsSync(path.join(root, event.imagem)), `Imagem local ausente para o evento AMUSA: ${event.imagem}`);
 if (centralEvent) assert.equal(centralEvent.temas, undefined);
 else {
@@ -185,7 +185,7 @@ assert.equal(merged.apoio.secoes[2].id, 'atendimento-universitario');
 assert.equal(merged.apoio.informacao_confiavel.id, 'informacao-confiavel');
 const cvv = merged.apoio.secoes[0].servicos.find(item => item.nome.startsWith('CVV'));
 assert.equal(cvv.url, 'https://cvv.org.br/');
-assert.equal(cvv.imagem, 'imagens/curadorias/CVV.png');
+assert.equal(cvv.imagem, 'imagens/curadorias/setembro-amarelo-2026/CVV.png');
 assert.equal(merged.apoio.recursos_informativos.length, 11);
 assert.ok(merged.apoio.recursos_informativos.some(item => item.id === 'see-mg-cuidando-da-sua-mente-15-18'));
 assert.ok(merged.apoio.recursos_informativos.some(item => item.id === 'see-mg-saude-mental-acoes-escola'));
@@ -212,7 +212,7 @@ assert.equal(outside.apoio.campaignActive, false);
 const cultureEvent = merged.eventos.find(item => item.id === 'site:setembro-2026:cultura-do-cuidado-crea-mg');
 assert.deepEqual(
   [cultureEvent.local, cultureEvent.endereco, cultureEvent.mapa, cultureEvent.imagem],
-  ['CREA', 'Av. Álvares Cabral, 1600 - Santo Agostinho, Belo Horizonte - MG, 30170-917', 'https://maps.app.goo.gl/e8NY1ky8bKJjAuMh6', 'imagens/curadorias/crea.jpg']
+  ['CREA', 'Av. Álvares Cabral, 1600 - Santo Agostinho, Belo Horizonte - MG, 30170-917', 'https://maps.app.goo.gl/e8NY1ky8bKJjAuMh6', 'imagens/curadorias/setembro-amarelo-2026/crea.jpg']
 );
 const togetherEvent = merged.eventos.find(item => item.id === 'site:setembro-2026:juntos-pela-vida');
 assert.deepEqual(
@@ -227,7 +227,7 @@ for (const image of [
   'atencao-a-saude-mental-do-homem.jpg', 'saude-mental-e-atencao-psicossocial-de-adolescentes-e-jovens.jpg',
   'cancha.jpg', 'pode-falar.png', 'informacao-confiavel.png', 'universidades.png', 'onde-buscar-atendimento.png'
 ]) {
-  assert.ok(JSON.stringify(payload).includes(`imagens/curadorias/${image}`), `Imagem ausente no JSON: ${image}`);
+  assert.ok(JSON.stringify(payload).includes(`imagens/curadorias/setembro-amarelo-2026/${image}`), `Imagem ausente no JSON: ${image}`);
 }
 
 const unsafePayload = JSON.parse(JSON.stringify(payload));

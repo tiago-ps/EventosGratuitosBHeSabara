@@ -27,7 +27,7 @@
         "fallback": {
           "id": "sympla-sabara-3534680",
           "titulo": "Amusa Setembro Amarelo e a Importância da Saúde Mental",
-          "imagem": "imagens/curadorias/amusa_setembro_amarelo_e_a_importancia_da_saude.png",
+          "imagem": "imagens/curadorias/setembro-amarelo-2026/amusa_setembro_amarelo_e_a_importancia_da_saude.png",
           "data": "2026-09-10",
           "data_fim": "2026-09-10",
           "horario": "14h45 às 17h",
@@ -114,7 +114,7 @@
         "fonte": "PRINEA",
         "endereco": "Praça da Liberdade, 21 - Savassi, Belo Horizonte - MG, 30140-010",
         "mapa": "https://maps.app.goo.gl/93jy5mVtUwoy3e7G7",
-        "imagem": "imagens/curadorias/juntos_pela_vida.jpg",
+        "imagem": "imagens/curadorias/setembro-amarelo-2026/juntos_pela_vida.jpg",
         "link": "https://www.sympla.com.br/evento/juntos-pela-vida/3562866",
         "pagina": "https://www.sympla.com.br/evento/juntos-pela-vida/3562866",
         "link_inscricao": "https://www.sympla.com.br/evento/juntos-pela-vida/3562866",
@@ -142,7 +142,7 @@
         "fonte": "Unniversa Soluções Multiportas de Conflitos",
         "endereco": "Av. Álvares Cabral, 1600 - Santo Agostinho, Belo Horizonte - MG, 30170-917",
         "mapa": "https://maps.app.goo.gl/e8NY1ky8bKJjAuMh6",
-        "imagem": "imagens/curadorias/crea.jpg",
+        "imagem": "imagens/curadorias/setembro-amarelo-2026/crea.jpg",
         "link": "https://www.sympla.com.br/evento/cultura-do-cuidado-prevencao-saude-mental-e-gestao-estrategica-de-conflitos-nas-organizacoes/3562532",
         "pagina": "https://www.sympla.com.br/evento/cultura-do-cuidado-prevencao-saude-mental-e-gestao-estrategica-de-conflitos-nas-organizacoes/3562532",
         "link_inscricao": "https://www.sympla.com.br/evento/cultura-do-cuidado-prevencao-saude-mental-e-gestao-estrategica-de-conflitos-nas-organizacoes/3562532",
@@ -168,7 +168,7 @@
         "condicao_acesso": "Gratuito",
         "descricao": "Palestra online sobre proteção, acolhimento e saúde mental no contexto da mobilidade humana.",
         "fonte": "Comissão de Direito Internacional e Migratório da OAB Barro Preto",
-        "imagem": "imagens/curadorias/a_saude_mental_na_mobilidade_humana_perspectivas.jpg",
+        "imagem": "imagens/curadorias/setembro-amarelo-2026/a_saude_mental_na_mobilidade_humana_perspectivas.jpg",
         "link": "https://www.sympla.com.br/evento-online/a-saude-mental-na-mobilidade-humana-perspectivas-contemporaneas-de-protecao-e-acolhimento/3499200",
         "pagina": "https://www.sympla.com.br/evento-online/a-saude-mental-na-mobilidade-humana-perspectivas-contemporaneas-de-protecao-e-acolhimento/3499200",
         "link_inscricao": "https://www.sympla.com.br/evento-online/a-saude-mental-na-mobilidade-humana-perspectivas-contemporaneas-de-protecao-e-acolhimento/3499200",
@@ -202,7 +202,7 @@
         "acesso_virtual": true,
         "link_virtual": "https://pergamum.ifmg.edu.br/acervo/5065368",
         "link": "https://pergamum.ifmg.edu.br/acervo/5065368",
-        "imagem": "imagens/curadorias/cult.jpg",
+        "imagem": "imagens/curadorias/setembro-amarelo-2026/cult.jpg",
         "tipo_link_principal": "virtual",
         "fonte": "Biblioteca Virtual/Pergamum — IFMG",
         "exibicao_ativa": true
@@ -225,7 +225,7 @@
         "acesso_virtual": true,
         "link_virtual": "https://pergamum.ifmg.edu.br/acervo/5066485",
         "link": "https://pergamum.ifmg.edu.br/acervo/5066485",
-        "imagem": "imagens/curadorias/a-escola-que-queremos.jpg",
+        "imagem": "imagens/curadorias/setembro-amarelo-2026/a-escola-que-queremos.jpg",
         "tipo_link_principal": "virtual",
         "fonte": "Biblioteca Virtual/Pergamum — IFMG",
         "exibicao_ativa": true
@@ -248,7 +248,7 @@
         "acesso_virtual": true,
         "link_virtual": "https://pergamum.ifmg.edu.br/acervo/5064759",
         "link": "https://pergamum.ifmg.edu.br/acervo/5064759",
-        "imagem": "imagens/curadorias/a-infancia-sequestrada-pelas-telas.jpg",
+        "imagem": "imagens/curadorias/setembro-amarelo-2026/a-infancia-sequestrada-pelas-telas.jpg",
         "tipo_link_principal": "virtual",
         "fonte": "Biblioteca Virtual/Pergamum — IFMG",
         "exibicao_ativa": true
@@ -272,7 +272,7 @@
         "acesso_virtual": true,
         "link_virtual": "https://pergamum.ifmg.edu.br/acervo/5064668",
         "link": "https://pergamum.ifmg.edu.br/acervo/5064668",
-        "imagem": "imagens/curadorias/desenvolvimento-positivo-no-esporte.jpg",
+        "imagem": "imagens/curadorias/setembro-amarelo-2026/desenvolvimento-positivo-no-esporte.jpg",
         "tipo_link_principal": "virtual",
         "fonte": "Biblioteca Virtual/Pergamum — IFMG",
         "exibicao_ativa": true
@@ -295,7 +295,7 @@
         "acesso_virtual": true,
         "link_virtual": "https://pergamum.ifmg.edu.br/acervo/5069029",
         "link": "https://pergamum.ifmg.edu.br/acervo/5069029",
-        "imagem": "imagens/curadorias/o-culto-do-bem-estar.jpg",
+        "imagem": "imagens/curadorias/setembro-amarelo-2026/o-culto-do-bem-estar.jpg",
         "tipo_link_principal": "virtual",
         "fonte": "Biblioteca Virtual/Pergamum — IFMG",
         "exibicao_ativa": true
@@ -338,7 +338,7 @@
         "publico_alvo": "Profissionais e trabalhadores que atendem adolescentes e jovens, especialmente nas áreas de educação, saúde, assistência social e segurança pública, além de demais interessados na temática.",
         "situacao": "Matrículas até 04/10/2026",
         "url": "https://www.unasus.gov.br/cursos/curso/46813",
-        "imagem": "imagens/curadorias/saude-mental-e-atencao-psicossocial-de-adolescentes-e-jovens.jpg",
+        "imagem": "imagens/curadorias/setembro-amarelo-2026/saude-mental-e-atencao-psicossocial-de-adolescentes-e-jovens.jpg",
         "gratuito": true,
         "temas": [
           "Setembro Amarelo",
@@ -361,7 +361,7 @@
         "publico_alvo": "Pessoas interessadas na promoção da saúde mental no contexto escolar",
         "situacao": "Edição atual disponível na plataforma Lúmina",
         "url": "https://lumina.ufrgs.br/course/view.php?id=570",
-        "imagem": "imagens/curadorias/saude-mental-na-escola.jpg",
+        "imagem": "imagens/curadorias/setembro-amarelo-2026/saude-mental-na-escola.jpg",
         "gratuito": true,
         "temas": [
           "Setembro Amarelo",
@@ -385,7 +385,7 @@
         "publico_alvo": "Profissionais e estudantes interessados na temática",
         "situacao": "Inscrições abertas",
         "url": "https://cursosqualificacao.campusvirtual.fiocruz.br/hotsite/saudemental-trabalho/12736",
-        "imagem": "imagens/curadorias/saude-mental-no-trabalho.png",
+        "imagem": "imagens/curadorias/setembro-amarelo-2026/saude-mental-no-trabalho.png",
         "gratuito": true,
         "temas": [
           "Setembro Amarelo",
@@ -409,7 +409,7 @@
         "publico_alvo": "Profissionais de Saúde",
         "situacao": "Matrículas até 18/04/2027",
         "url": "https://www.unasus.gov.br/cursos/curso/45601",
-        "imagem": "imagens/curadorias/atencao-a-saude-mental-do-homem.jpg",
+        "imagem": "imagens/curadorias/setembro-amarelo-2026/atencao-a-saude-mental-do-homem.jpg",
         "gratuito": true,
         "temas": [
           "Setembro Amarelo",
@@ -441,7 +441,7 @@
         "pais": "Brasil",
         "plataforma": "LGBTFlix",
         "pagina_oficial": "https://flix.votelgbt.org/assistir/81fe277e-8a05-11ee-ab4c-0a58a9feac02",
-        "imagem": "imagens/curadorias/nossa-danca.png",
+        "imagem": "imagens/curadorias/setembro-amarelo-2026/nossa-danca.png",
         "sinopse": "Duas jovens estudantes de dança se aproximam ao preparar juntas um vídeo para um concurso escolar.",
         "temas": [
           "Setembro Amarelo",
@@ -468,7 +468,7 @@
         "pais": "Brasil",
         "plataforma": "YouTube",
         "pagina_oficial": "https://www.youtube.com/watch?v=ifhZ0bKW2Bk",
-        "imagem": "imagens/curadorias/cancha.jpg",
+        "imagem": "imagens/curadorias/setembro-amarelo-2026/cancha.jpg",
         "sinopse": "Documentário sobre o futebol de várzea e a organização comunitária da Vila Verde.",
         "temas": [
           "Setembro Amarelo",
@@ -493,7 +493,7 @@
         "pais": "Brasil",
         "plataforma": "Embaúba Play",
         "pagina_oficial": "https://embaubaplay.com/catalogo/aos-cuidados-dela/",
-        "imagem": "imagens/curadorias/aos-cuidados-dela.jpg",
+        "imagem": "imagens/curadorias/setembro-amarelo-2026/aos-cuidados-dela.jpg",
         "sinopse": "Um neto visita a avó no interior de São Paulo em busca de suas receitas favoritas.",
         "temas": [
           "Setembro Amarelo",
@@ -508,7 +508,7 @@
         "titulo": "Casa da Água",
         "plataforma": "LGBTFlix",
         "pagina_oficial": "https://flix.votelgbt.org/assistir/d7c75b84-7a6a-11ef-a39a-0a58a9feac02",
-        "imagem": "imagens/curadorias/casa-da-agua.png",
+        "imagem": "imagens/curadorias/setembro-amarelo-2026/casa-da-agua.png",
         "temas": [
           "Setembro Amarelo",
           "Cuidado",
@@ -529,7 +529,7 @@
         "pais": "Brasil",
         "plataforma": "LGBTFlix",
         "pagina_oficial": "https://flix.votelgbt.org/assistir/80f32336-326e-11ef-a208-0a58a9feac02",
-        "imagem": "imagens/curadorias/r-existencia.png",
+        "imagem": "imagens/curadorias/setembro-amarelo-2026/r-existencia.png",
         "sinopse": "Lana, Léo e Rycleson, pessoas LGBTs de Fortaleza, contam sua visão sobre o significado da palavra resistência enquanto dão close pela cidade numa mistura de documentário e fashion filme.",
         "eixo_curadoria": "Complementar",
         "temas": [
@@ -544,10 +544,10 @@
     "servicos_apoio": {
       "permanente": true,
       "imagens_cards": {
-        "apoio_emocional": "imagens/curadorias/pode-falar.png",
-        "rede_publica": "imagens/curadorias/onde-buscar-atendimento.png",
-        "atendimento_universitario": "imagens/curadorias/universidades.png",
-        "informacao_confiavel": "imagens/curadorias/informacao-confiavel.png"
+        "apoio_emocional": "imagens/curadorias/setembro-amarelo-2026/pode-falar.png",
+        "rede_publica": "imagens/curadorias/setembro-amarelo-2026/onde-buscar-atendimento.png",
+        "atendimento_universitario": "imagens/curadorias/setembro-amarelo-2026/universidades.png",
+        "informacao_confiavel": "imagens/curadorias/setembro-amarelo-2026/informacao-confiavel.png"
       },
       "titulo": "Onde buscar ajuda",
       "selo": "Piloto no site de teste • versão em avaliação institucional e psicossocial",
@@ -574,7 +574,7 @@
                 "Telefone: 188"
               ],
               "url": "https://cvv.org.br/",
-              "imagem": "imagens/curadorias/CVV.png",
+              "imagem": "imagens/curadorias/setembro-amarelo-2026/CVV.png",
               "cta": "Conhecer os canais oficiais do CVV"
             },
             {

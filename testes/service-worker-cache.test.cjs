@@ -106,7 +106,7 @@ async function dispatch(type, event) {
   assert.ok(sw.DATA_PATHS.includes('/filmes.json'));
   assert.ok(sw.DATA_PATHS.includes('/curadorias/index.json'));
   assert.equal(sw.CORE_ASSETS.some(asset => /(?:cursos|concursos|filmes|curadorias)\.json/.test(asset)), false);
-  assert.ok(sw.CORE_ASSETS.includes('./imagens/curadorias/setembro-amarelo-banner.png'));
+  assert.ok(sw.CORE_ASSETS.includes('./imagens/curadorias/setembro-amarelo-2026/setembro-amarelo-banner.png'));
 
   await dispatch('install', {});
   assert.deepEqual(installedAssets, Array.from(sw.CORE_ASSETS));

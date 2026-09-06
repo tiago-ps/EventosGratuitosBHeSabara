@@ -87,6 +87,6 @@ for (const asset of [
   assert.ok(indexSource.includes(asset), `Referência ausente no HTML: ${asset}`);
   assert.ok(serviceWorkerSource.includes(`./${asset}`), `Referência ausente no precache: ${asset}`);
 }
-assert.ok(serviceWorkerSource.includes('./imagens/curadorias/setembro-amarelo-banner.png'));
+assert.ok(serviceWorkerSource.includes('./imagens/curadorias/setembro-amarelo-2026/setembro-amarelo-banner.png'));
 
 console.log('Testes do atalho de perfil pelo banner aprovados.');

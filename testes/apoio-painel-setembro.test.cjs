@@ -139,7 +139,7 @@ const image = {
     remove(value) { classes.delete(value); }
   },
   style: { display: 'none' },
-  src: 'imagens/curadorias/pode-falar.png',
+  src: 'imagens/curadorias/setembro-amarelo-2026/pode-falar.png',
   removeAttribute(name) { if (name === 'src') delete this.src; }
 };
 const fallback = { hidden: false };

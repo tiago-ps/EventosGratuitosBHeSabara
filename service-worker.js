@@ -4,7 +4,7 @@ const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
 const MAX_IMAGE_CACHE_ITEMS = 140;
 const BRAND_LOGO_PATH = '/imagens/marca/logo-mural-cultural.png';
-const SEPTEMBER_BANNER_PATH = '/imagens/curadorias/setembro-amarelo-banner.png';
+const SEPTEMBER_BANNER_PATH = '/imagens/curadorias/setembro-amarelo-2026/setembro-amarelo-banner.png';
 const VESTIBULAR_UFMG_IMAGE_PREFIX = '/imagens/curadorias/vestibular-ufmg/';
 const VESTIBULAR_FUVEST_IMAGE_PREFIX = '/imagens/curadorias/vestibular-fuvest-2027/';
 
@@ -25,7 +25,7 @@ const CORE_ASSETS = [
   './js/eventos-manuais-ui.js?v=44',
   './js/ios-install.js?v=1',
   './imagens/curadorias/agosto-lilas-banner.png',
-  './imagens/curadorias/setembro-amarelo-banner.png',
+  './imagens/curadorias/setembro-amarelo-2026/setembro-amarelo-banner.png',
   './manifest.webmanifest',
   './imagens/app-icons/icon-192.png', './imagens/app-icons/icon-512.png',
   './imagens/app-icons/apple-touch-icon.png'
