@@ -6,6 +6,7 @@
   const COURSES_URL = 'cursos.json';
   const CONTESTS_URL = 'concursos.json';
   const FILMS_URL = 'filmes.json';
+  const UTILITY_URL = 'utilidade-publica.json';
   const SITE_CURATIONS_INDEX_URL = 'curadorias/index.json';
   const CONFIG_URL = 'configuracao-mural.json';
   const app = document.getElementById('app');
@@ -60,12 +61,6 @@
     utility: { singular: 'item de utilidade pública', plural: 'itens de utilidade pública' }
   });
   const PANEL_UTILITY_LIMIT = 4;
-  const UTILITY_RESOURCE_TYPES = Object.freeze({
-    'apoio-emocional': ['Informação de apoio', 'Onde buscar ajuda'],
-    'rede-publica': ['Onde buscar ajuda', 'Serviço público'],
-    'atendimento-universitario': ['Onde buscar ajuda', 'Serviço'],
-    'informacao-confiavel': ['Informação de apoio', 'Material informativo']
-  });
   const ALLOWED_SLIDE_DURATIONS = new Set([0, 5, 8, 10, 12, 15, 20, 30]);
   const CONTENT_SUBTITLES = Object.freeze({
     evento: 'Agenda Cultural',
@@ -139,6 +134,7 @@
     coursesData: null,
     contestsData: null,
     filmsData: null,
+    utilityData: null,
     siteCurationsData: null,
     config: null,
     allEvents: [],
@@ -146,6 +142,7 @@
     allCourses: [],
     allContests: [],
     allFilms: [],
+    allUtility: [],
     events: [],
     panelRoundSamples: { courses: [], contests: [], films: [], utility: [] },
     index: 0,
@@ -783,7 +780,7 @@
         previousItems: state.panelRoundSamples.contests
       })
       : [];
-    const films = filmsEnabled ? filmsContent.sampleForPanel(state.allFilms.filter(item => item.painel_apoio !== true), {
+    const films = filmsEnabled ? filmsContent.sampleForPanel(state.allFilms, {
       genre: state.filters.filmGenre,
       theme: state.filters.theme,
       rating: state.filters.filmRating,
@@ -1032,6 +1029,7 @@
     for (const book of state.allBooks) (Array.isArray(book.temas) ? book.temas : []).forEach(add);
     for (const course of state.allCourses) (Array.isArray(course.temas) ? course.temas : []).forEach(add);
     for (const movie of state.allFilms) (Array.isArray(movie.temas) ? movie.temas : []).forEach(add);
+    for (const item of state.allUtility) (Array.isArray(item.temas) ? item.temas : []).forEach(add);
     return [...values.entries()].sort((a, b) => a[1].localeCompare(b[1], 'pt-BR'));
   }
 
@@ -3197,7 +3195,7 @@ function eventProgram(event) {
       for (const course of state.allCourses) (Array.isArray(course.temas) ? course.temas : []).forEach(add);
     }
     if (content === 'films') {
-      for (const movie of state.allFilms.filter(item => item.painel_apoio !== true)) {
+      for (const movie of state.allFilms) {
         (Array.isArray(movie.temas) ? movie.temas : []).forEach(add);
       }
     }
@@ -3425,7 +3423,7 @@ function eventProgram(event) {
 
   function agendaVisibleFilms() {
     if (!['all', 'films'].includes(state.mobileContent)) return [];
-    return filmsContent.filter(state.allFilms.filter(item => item.painel_apoio !== true), {
+    return filmsContent.filter(state.allFilms, {
       query: state.mobileQuery,
       genre: state.mobileContent === 'films' ? state.mobileFilmGenre : '',
       theme: state.mobileContent === 'films' ? state.mobileTheme : '',
@@ -3439,18 +3437,7 @@ function eventProgram(event) {
   }
 
   function utilitySource() {
-    // Fonte lógica compartilhada; os registros originais permanecem na coleção técnica atual.
-    return state.allFilms.filter(item => item.painel_apoio === true).map(item => {
-      const resourceTypes = UTILITY_RESOURCE_TYPES[item.support_target];
-      return {
-        ...item,
-        tipo_conteudo: 'utilidade_publica',
-        areas_utilidade: Array.isArray(item.areas_utilidade)
-          ? [...item.areas_utilidade] : resourceTypes ? ['Saúde Mental'] : [],
-        tipos_recurso: Array.isArray(item.tipos_recurso)
-          ? [...item.tipos_recurso] : [...(resourceTypes || [])]
-      };
-    });
+    return state.allUtility;
   }
 
   function agendaUtilityOptions(field) {
@@ -4250,12 +4237,13 @@ function eventProgram(event) {
 
   async function load() {
     try {
-      const [response, booksData, coursesData, contestsData, filmsData, siteCurationsData, config] = await Promise.all([
+      const [response, booksData, coursesData, contestsData, filmsData, utilityData, siteCurationsData, config] = await Promise.all([
         fetch(`${DATA_URL}?v=${Date.now()}`, { cache: 'no-store' }),
         loadOptionalJson(BOOKS_URL, { livros: [] }),
         loadOptionalJson(COURSES_URL, { cursos: [] }),
         loadOptionalJson(CONTESTS_URL, { concursos: [] }),
         loadOptionalJson(FILMS_URL, { filmes: [] }),
+        loadOptionalJson(UTILITY_URL, { itens: [] }),
         loadSiteCurations(),
         loadOptionalJson(CONFIG_URL, {
           nome: 'Mural Cultural',
@@ -4277,13 +4265,15 @@ function eventProgram(event) {
         ? contestsData
         : { concursos: [] };
       state.filmsData = filmsData && Array.isArray(filmsData.filmes) ? filmsData : { filmes: [] };
+      state.utilityData = utilityData && Array.isArray(utilityData.itens) ? utilityData : { itens: [] };
       state.siteCurationsData = siteCurationsData;
       state.config = config || {};
       const siteLayer = siteCurationsContent.apply(siteCurationsData, {
         eventos: data.eventos,
         livros: state.booksData.livros,
         cursos: state.coursesData.cursos,
-        filmes: state.filmsData.filmes
+        filmes: state.filmsData.filmes,
+        utilidade_publica: state.utilityData.itens
       });
       state.allEvents = filterAndSort(siteLayer.eventos).map(event => ({ ...event, tipo_conteudo: 'evento' }));
       state.allBooks = siteLayer.livros.map(book => ({ ...book, tipo_conteudo: 'livro' }));
@@ -4298,6 +4288,13 @@ function eventProgram(event) {
         ...movie,
         tipo_conteudo: 'filme'
       }));
+      state.allUtility = siteLayer.utilidade_publica
+        .filter(item => item?.tipo_conteudo === 'utilidade_publica' && item.id && item.titulo)
+        .map(item => ({
+          ...item,
+          areas_utilidade: Array.isArray(item.areas_utilidade) ? [...item.areas_utilidade] : [],
+          tipos_recurso: Array.isArray(item.tipos_recurso) ? [...item.tipos_recurso] : []
+        }));
       siteCurationsContent.mountSupportArea(siteLayer.apoio);
       siteCurationsContent.bindSupportRequest();
       state.schoolRotationBatch = readStoredSchoolBatch();

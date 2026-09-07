@@ -207,135 +207,6 @@
     return result;
   }
 
-  function findSupportSection(data, term) {
-    const needle = normalizeLabel(term);
-    return (Array.isArray(data?.secoes) ? data.secoes : [])
-      .find(section => normalizeLabel(section?.titulo).includes(needle)) || null;
-  }
-
-  function supportServiceNames(section) {
-    return (Array.isArray(section?.servicos) ? section.servicos : [])
-      .map(service => String(service?.nome || '').trim())
-      .filter(Boolean);
-  }
-
-  function buildPanelSupportItems(data) {
-    if (!data || !Array.isArray(data.secoes)) return [];
-
-    const emotionalSection = findSupportSection(data, 'apoio emocional');
-    const publicSection = findSupportSection(data, 'rede publica');
-    const universitySection = findSupportSection(data, 'universitario');
-    const cvv = (Array.isArray(emotionalSection?.servicos) ? emotionalSection.servicos : [])
-      .find(service => normalizeLabel(service?.nome).includes('cvv')) || emotionalSection?.servicos?.[0] || null;
-    const publicNames = supportServiceNames(publicSection);
-    const universityNames = supportServiceNames(universitySection);
-    const resources = Array.isArray(data.recursos_informativos) ? data.recursos_informativos : [];
-    const resourceSources = [...new Set(resources.map(item => String(item?.fonte || '').trim()).filter(Boolean))];
-
-    return [
-      {
-        id: 'site:apoio:setembro-cvv-188',
-        painel_apoio: true,
-        support_target: 'apoio-emocional',
-        titulo: 'Se precisar conversar, peça ajuda.',
-        descricao: 'Há diferentes caminhos de escuta e apoio. Consulte no Mural os canais do CVV, o serviço Pode Falar e o acesso pelo Meu SUS Digital.',
-        destaque: 'CVV • 188 • Pode Falar',
-        detalhe: 'Apoio emocional e orientação para adolescentes e jovens',
-        fonte_label: 'Canais de apoio emocional',
-        imagem: data.imagens_cards?.apoio_emocional,
-        termos_busca: ['CVV', '188', 'Pode Falar', 'Meu SUS Digital', 'apoio emocional', 'escuta'],
-        observacao: 'Em situação de emergência ou risco imediato, procure um serviço de urgência ou acione o SAMU pelo telefone 192.',
-        icone: '💛',
-        temas: ['Setembro Amarelo'],
-        tempo_slide: 15
-      },
-      {
-        id: 'site:apoio:setembro-rede-publica',
-        painel_apoio: true,
-        support_target: 'rede-publica',
-        titulo: 'Onde buscar atendimento em saúde mental',
-        descricao: 'A rede pública oferece serviços de atenção psicossocial. Os contatos completos e orientações estão disponíveis em “Onde buscar ajuda”.',
-        destaque: publicNames.filter(name => normalizeLabel(name).includes('sabara')).length
-          ? 'Sabará: CAPS Adulto e CAPS Infantil'
-          : 'CAPS e serviços da rede pública',
-        detalhe: 'Belo Horizonte: CERSAM / CERSAMi • Emergência: SAMU 192',
-        fonte_label: 'Rede pública de saúde mental',
-        imagem: data.imagens_cards?.rede_publica,
-        termos_busca: ['CAPS', 'CERSAM', 'CERSAMi', 'SAMU', 'UPA', 'rede pública', 'atendimento'],
-        observacao: 'Confirme diretamente com cada serviço as condições atuais de atendimento e disponibilidade.',
-        icone: '🤝',
-        temas: ['Setembro Amarelo'],
-        tempo_slide: 15
-      },
-      {
-        id: 'site:apoio:setembro-universidades',
-        painel_apoio: true,
-        support_target: 'atendimento-universitario',
-        titulo: 'Atendimento psicológico universitário',
-        descricao: 'Clínicas-escola e serviços universitários podem oferecer atendimento psicológico à comunidade, conforme triagem, vagas e condições de cada instituição.',
-        destaque: universityNames.length
-          ? universityNames.map(name => {
-            if (normalizeLabel(name).includes('ufmg')) return 'UFMG';
-            if (normalizeLabel(name).includes('puc minas')) return 'PUC Minas';
-            if (normalizeLabel(name).includes('fumec')) return 'FUMEC';
-            return name;
-          }).filter((value, index, values) => values.indexOf(value) === index).join(' • ')
-          : 'UFMG • PUC Minas • FUMEC',
-        detalhe: 'Atendimento sujeito a triagem, disponibilidade e condições atuais da instituição.',
-        fonte_label: 'Serviços universitários de Psicologia',
-        imagem: data.imagens_cards?.atendimento_universitario,
-        termos_busca: ['UFMG', 'PUC Minas', 'FUMEC', 'clínica-escola', 'psicologia', 'universidade'],
-        observacao: 'Esses serviços não substituem CERSAM, SAMU ou pronto atendimento em situações de emergência.',
-        icone: '🧠',
-        temas: ['Setembro Amarelo'],
-        tempo_slide: 15
-      },
-      {
-        id: 'site:apoio:setembro-informacao-confiavel',
-        painel_apoio: true,
-        support_target: 'informacao-confiavel',
-        titulo: 'Informação confiável sobre saúde mental',
-        descricao: 'O Mural reúne materiais gratuitos de instituições oficiais para leitura e aprofundamento sobre saúde mental, prevenção, acolhimento e redes de apoio.',
-        destaque: resourceSources.length
-          ? resourceSources.slice(0, 4).map(source => {
-            const normalized = normalizeLabel(source);
-            if (normalized.includes('ministerio da saude')) return 'Ministério da Saúde';
-            if (normalized.includes('conselho federal de psicologia')) return 'CFP';
-            if (normalized.includes('organizacao mundial da saude')) return 'OMS';
-            if (normalized.includes('associacao brasileira de psiquiatria')) return 'Setembro Amarelo®';
-            return source;
-          }).filter((value, index, values) => values.indexOf(value) === index).join(' • ')
-          : 'Ministério da Saúde • CFP • OMS • Setembro Amarelo®',
-        detalhe: `${resources.length || 0} materiais informativos gratuitos disponíveis em “Onde buscar ajuda”.`,
-        fonte_label: 'Materiais informativos gratuitos',
-        imagem: data.imagens_cards?.informacao_confiavel,
-        termos_busca: ['saúde mental', 'materiais', 'informação', 'Ministério da Saúde', 'CFP', 'OMS'],
-        observacao: 'Materiais informativos não substituem avaliação ou atendimento profissional.',
-        icone: '📚',
-        temas: ['Setembro Amarelo'],
-        tempo_slide: 15
-      }
-    ];
-  }
-
-  function appendPanelSupportItems(records, supportData, warn) {
-    const result = [...records];
-    const existingIds = new Set(result.map(item => String(item?.id || '')).filter(Boolean));
-    for (const item of buildPanelSupportItems(supportData)) {
-      if (!item.id || existingIds.has(String(item.id))) {
-        warn(`Curadoria site-only: apoio de painel ${item.id || '(sem ID)'} ignorado por colisão.`);
-        continue;
-      }
-      result.push({
-        ...cloneRecord(item),
-        origem: 'site-only',
-        site_only: true
-      });
-      existingIds.add(String(item.id));
-    }
-    return result;
-  }
-
   function apply(payload, catalogs = {}, options = {}) {
     const warn = typeof options.warn === 'function' ? options.warn : message => console.warn(message);
     let result = {
@@ -343,6 +214,7 @@
       livros: (Array.isArray(catalogs.livros) ? catalogs.livros : []).map(cloneRecord),
       cursos: (Array.isArray(catalogs.cursos) ? catalogs.cursos : []).map(cloneRecord),
       filmes: (Array.isArray(catalogs.filmes) ? catalogs.filmes : []).map(cloneRecord),
+      utilidade_publica: (Array.isArray(catalogs.utilidade_publica) ? catalogs.utilidade_publica : []).map(cloneRecord),
       apoio: null,
       curadoriasAtivas: []
     };
@@ -359,7 +231,6 @@
         campaignActive: isActive(permanentCuration, options.today || new Date()),
         site_only: true
       };
-      result.filmes = appendPanelSupportItems(result.filmes, result.apoio, warn);
     }
 
     for (const curation of payload.curadorias.filter(item => isActive(item, options.today || new Date()))) {
@@ -401,9 +272,6 @@
           campaignActive: true,
           site_only: true
         };
-        if (complements.servicos_apoio.permanente !== true) {
-          result.filmes = appendPanelSupportItems(result.filmes, result.apoio, warn);
-        }
       }
       result.curadoriasAtivas.push(curation.id);
     }
@@ -432,10 +300,6 @@
     } catch {
       return null;
     }
-  }
-
-  function isPanelSupportMovie(movie) {
-    return movie?.painel_apoio === true;
   }
 
   function setPanelSupportImageState(image, fallback, loaded) {
@@ -636,56 +500,6 @@
     return article;
   }
 
-  function installPanelSupportAdapter() {
-    const films = root.contents?.films;
-    if (!films || films.__panelSupportAdapter === true) return false;
-
-    const originalFilter = films.filter;
-    const originalOptions = films.options;
-    const originalSampleForPanel = films.sampleForPanel;
-    const originalCreatePanelSlide = films.createPanelSlide;
-    const originalCreateAgendaCard = films.createAgendaCard;
-    if (![originalFilter, originalOptions, originalSampleForPanel, originalCreatePanelSlide, originalCreateAgendaCard].every(fn => typeof fn === 'function')) {
-      return false;
-    }
-
-    const culturalOnly = movies => (Array.isArray(movies) ? movies : []).filter(movie => !isPanelSupportMovie(movie));
-
-    root.contents.films = Object.freeze({
-      ...films,
-      __panelSupportAdapter: true,
-      filter(movies, filters = {}, normalizeText) {
-        return originalFilter(culturalOnly(movies), filters, normalizeText);
-      },
-      options(movies, field) {
-        return originalOptions(culturalOnly(movies), field);
-      },
-      sampleForPanel(movies, filters = {}, normalizeText, limit, sampleOptions = {}) {
-        const culturalPrevious = Array.isArray(sampleOptions?.previousItems)
-          ? sampleOptions.previousItems.filter(item => !isPanelSupportMovie(item))
-          : sampleOptions?.previousItems;
-        return originalSampleForPanel(
-          culturalOnly(movies),
-          filters,
-          normalizeText,
-          limit,
-          { ...sampleOptions, previousItems: culturalPrevious }
-        );
-      },
-      createPanelSlide(args) {
-        return isPanelSupportMovie(args?.movie)
-          ? createPanelSupportSlide(args)
-          : originalCreatePanelSlide(args);
-      },
-      createAgendaCard(movie, helpers) {
-        return isPanelSupportMovie(movie)
-          ? createAgendaSupportCard(movie)
-          : originalCreateAgendaCard(movie, helpers);
-      }
-    });
-    return true;
-  }
-
   function mountSupportArea(data) {
     document.getElementById('support-help-dialog')?.remove();
     supportDialog = null;
@@ -844,12 +658,9 @@
     });
   }
 
-  installPanelSupportAdapter();
-
   root.siteCurations = Object.freeze({
     apply,
     bindSupportRequest,
-    buildPanelSupportItems,
     createAgendaSupportCard,
     createPanelSupportSlide,
     dateKey,
