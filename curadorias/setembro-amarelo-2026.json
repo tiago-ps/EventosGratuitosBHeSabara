@@ -13,7 +13,8 @@
         "books": true,
         "courses": true,
         "contests": false,
-        "films": true
+        "films": true,
+        "utility": true
       },
       "theme": "setembro amarelo",
       "eventCities": [],
@@ -30,7 +31,8 @@
         "books": 1,
         "courses": 1,
         "contests": 1,
-        "films": 1
+        "films": 1,
+        "utility": 1
       },
       "slideDuration": 0
     }

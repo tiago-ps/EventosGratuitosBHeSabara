@@ -452,10 +452,6 @@
     if (fallback) fallback.hidden = false;
   }
 
-  function supportThemeIsActive(filters = {}) {
-    return normalizeLabel(filters?.theme) === 'setembro amarelo';
-  }
-
   function createPanelSupportSlide({ movie, index, total, template, helpers }) {
     const {
       buildSiteQr,
@@ -654,24 +650,12 @@
     }
 
     const culturalOnly = movies => (Array.isArray(movies) ? movies : []).filter(movie => !isPanelSupportMovie(movie));
-    const supportOnly = movies => (Array.isArray(movies) ? movies : []).filter(isPanelSupportMovie);
 
     root.contents.films = Object.freeze({
       ...films,
       __panelSupportAdapter: true,
       filter(movies, filters = {}, normalizeText) {
-        const cultural = originalFilter(culturalOnly(movies), filters, normalizeText);
-        const normalize = typeof normalizeText === 'function' ? normalizeText : normalizeLabel;
-        const needle = normalize(filters.query || '');
-        if (!needle) return cultural;
-        const matchingSupport = supportOnly(movies).filter(movie => normalize([
-          movie.titulo,
-          movie.descricao,
-          movie.destaque,
-          movie.detalhe,
-          ...(Array.isArray(movie.termos_busca) ? movie.termos_busca : [])
-        ].join(' ')).includes(needle));
-        return [...cultural, ...matchingSupport];
+        return originalFilter(culturalOnly(movies), filters, normalizeText);
       },
       options(movies, field) {
         return originalOptions(culturalOnly(movies), field);
@@ -680,23 +664,13 @@
         const culturalPrevious = Array.isArray(sampleOptions?.previousItems)
           ? sampleOptions.previousItems.filter(item => !isPanelSupportMovie(item))
           : sampleOptions?.previousItems;
-        const cultural = originalSampleForPanel(
+        return originalSampleForPanel(
           culturalOnly(movies),
           filters,
           normalizeText,
           limit,
           { ...sampleOptions, previousItems: culturalPrevious }
         );
-        if (!supportThemeIsActive(filters)) return cultural;
-
-        const support = supportOnly(movies);
-        const combined = [];
-        const maximum = Math.max(cultural.length, support.length);
-        for (let index = 0; index < maximum; index += 1) {
-          if (support[index]) combined.push(support[index]);
-          if (cultural[index]) combined.push(cultural[index]);
-        }
-        return combined;
       },
       createPanelSlide(args) {
         return isPanelSupportMovie(args?.movie)
@@ -877,6 +851,7 @@
     bindSupportRequest,
     buildPanelSupportItems,
     createAgendaSupportCard,
+    createPanelSupportSlide,
     dateKey,
     eventIsCurrent,
     isActive,

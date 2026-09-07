@@ -59,7 +59,8 @@
     films: { singular: 'filme', plural: 'filmes' },
     utility: { singular: 'item de utilidade pública', plural: 'itens de utilidade pública' }
   });
-  const AGENDA_UTILITY_RESOURCE_TYPES = Object.freeze({
+  const PANEL_UTILITY_LIMIT = 4;
+  const UTILITY_RESOURCE_TYPES = Object.freeze({
     'apoio-emocional': ['Informação de apoio', 'Onde buscar ajuda'],
     'rede-publica': ['Onde buscar ajuda', 'Serviço público'],
     'atendimento-universitario': ['Onde buscar ajuda', 'Serviço'],
@@ -146,7 +147,7 @@
     allContests: [],
     allFilms: [],
     events: [],
-    panelRoundSamples: { courses: [], contests: [], films: [] },
+    panelRoundSamples: { courses: [], contests: [], films: [], utility: [] },
     index: 0,
     timer: null,
     isPaused: false,
@@ -155,10 +156,10 @@
     btnPlayPause: null,
     btnFilter: null,
     filterOverlay: null,
-    panelModules: { events: true, books: true, courses: true, contests: true, films: true },
+    panelModules: { events: true, books: true, courses: true, contests: true, films: true, utility: false },
     panelEventCities: [],
     panelBookCampuses: [],
-    panelWeights: { events: 5, books: 1, courses: 1, contests: 1, films: 1 },
+    panelWeights: { events: 5, books: 1, courses: 1, contests: 1, films: 1, utility: 1 },
     filters: {
       content: 'all',
       theme: '',
@@ -768,6 +769,7 @@
     const coursesEnabled = state.panelModules.courses && state.config?.modulos?.cursos !== false;
     const contestsEnabled = state.panelModules.contests && state.config?.modulos?.concursos !== false;
     const filmsEnabled = state.panelModules.films && state.config?.modulos?.filmes !== false;
+    const utilityEnabled = state.panelModules.utility && state.config?.modulos?.utilidade_publica !== false;
     const events = eventsEnabled ? visibleEventsForFilters() : [];
     const books = booksEnabled ? filterBooks(state.allBooks) : [];
     const themedCourses = state.filters.theme
@@ -781,7 +783,7 @@
         previousItems: state.panelRoundSamples.contests
       })
       : [];
-    const films = filmsEnabled ? filmsContent.sampleForPanel(state.allFilms, {
+    const films = filmsEnabled ? filmsContent.sampleForPanel(state.allFilms.filter(item => item.painel_apoio !== true), {
       genre: state.filters.filmGenre,
       theme: state.filters.theme,
       rating: state.filters.filmRating,
@@ -790,13 +792,21 @@
     }, normalizeText, undefined, {
       previousItems: state.panelRoundSamples.films
     }) : [];
-    state.panelRoundSamples = { courses, contests, films };
+    const utilityTheme = normalizeText(state.filters.theme);
+    const utility = utilityEnabled ? muralCore.sampleForPanel(
+      utilitySource().filter(item => !utilityTheme ||
+        (Array.isArray(item.temas) ? item.temas : []).some(theme => normalizeText(theme) === utilityTheme)),
+      PANEL_UTILITY_LIMIT,
+      { previousItems: state.panelRoundSamples.utility }
+    ) : [];
+    state.panelRoundSamples = { courses, contests, films, utility };
     state.events = muralCore.interleaveContents([
       { items: events, weight: state.panelWeights.events },
       { items: books, weight: state.panelWeights.books },
       { items: courses, weight: state.panelWeights.courses },
       { items: contests, weight: state.panelWeights.contests },
-      { items: films, weight: state.panelWeights.films }
+      { items: films, weight: state.panelWeights.films },
+      { items: utility, weight: state.panelWeights.utility }
     ]);
     return state.events;
   }
@@ -898,7 +908,7 @@
   function hasUserFilters() {
     return Boolean(
       !state.panelModules.events || !state.panelModules.books || !state.panelModules.courses ||
-      !state.panelModules.contests || !state.panelModules.films ||
+      !state.panelModules.contests || !state.panelModules.films || state.panelModules.utility ||
       state.filters.theme || state.panelEventCities.length ||
       state.filters.category || state.filters.program || state.filters.unit ||
       state.filters.rating || state.filters.period !== 'all' ||
@@ -1122,7 +1132,8 @@ function eventProgram(event) {
         state.panelModules.books !== defaults.modules.books ||
         state.panelModules.courses !== defaults.modules.courses ||
         state.panelModules.contests !== defaults.modules.contests ||
-        state.panelModules.films !== defaults.modules.films) count += 1;
+        state.panelModules.films !== defaults.modules.films ||
+        state.panelModules.utility !== defaults.modules.utility) count += 1;
     if (state.filters.theme) count += 1;
     if (state.panelModules.events) {
       if (state.panelEventCities.length) count += 1;
@@ -1143,7 +1154,8 @@ function eventProgram(event) {
         state.panelWeights.books !== defaults.weights.books ||
         state.panelWeights.courses !== defaults.weights.courses ||
         state.panelWeights.contests !== defaults.weights.contests ||
-        state.panelWeights.films !== defaults.weights.films) count += 1;
+        state.panelWeights.films !== defaults.weights.films ||
+        state.panelWeights.utility !== defaults.weights.utility) count += 1;
     if (state.slideDuration !== defaults.slideDuration) count += 1;
     return count;
   }
@@ -1482,11 +1494,13 @@ function eventProgram(event) {
       ? state.config?.tempo_slide?.livro
       : type === 'concurso'
         ? state.config?.tempo_slide?.concurso
-        : type === 'filme'
-          ? state.config?.tempo_slide?.filme
-          : type === 'curso'
-            ? state.config?.tempo_slide?.curso
-            : state.config?.tempo_slide?.evento;
+        : type === 'utilidade_publica'
+          ? state.config?.tempo_slide?.utilidade_publica
+          : type === 'filme'
+            ? state.config?.tempo_slide?.filme
+            : type === 'curso'
+              ? state.config?.tempo_slide?.curso
+              : state.config?.tempo_slide?.evento;
     return Math.max(
       5,
       Number(item?.tempo_slide) ||
@@ -2136,12 +2150,12 @@ function eventProgram(event) {
     scheduleNextSlide();
   }
 
-  function renderFilmSlide(index) {
+  function renderMediaSlide(index, createSlide) {
     clearTimeout(state.timer);
     const movie = state.events[index];
     if (!movie) return;
 
-    const slide = filmsContent.createPanelSlide({
+    const slide = createSlide({
       movie,
       index,
       total: state.events.length,
@@ -2171,6 +2185,14 @@ function eventProgram(event) {
     scheduleNextSlide();
   }
 
+  function renderFilmSlide(index) {
+    renderMediaSlide(index, filmsContent.createPanelSlide);
+  }
+
+  function renderUtilitySlide(index) {
+    renderMediaSlide(index, siteCurationsContent.createPanelSupportSlide);
+  }
+
   function renderSlide(index) {
     const item = state.events[index];
     if (!item) return;
@@ -2178,6 +2200,7 @@ function eventProgram(event) {
     else if (item.tipo_conteudo === 'curso') renderCourseSlide(index);
     else if (item.tipo_conteudo === 'concurso') renderContestSlide(index);
     else if (item.tipo_conteudo === 'filme') renderFilmSlide(index);
+    else if (item.tipo_conteudo === 'utilidade_publica') renderUtilitySlide(index);
     else renderEventSlide(index);
   }
 
@@ -2305,7 +2328,9 @@ function eventProgram(event) {
           : state.config?.modulos?.concursos !== false,
         films: panelModules.filmes !== undefined
           ? Boolean(panelModules.filmes)
-          : state.config?.modulos?.filmes !== false
+          : state.config?.modulos?.filmes !== false,
+        // Perfis precisam declarar Utility explicitamente; a presença de dados não o ativa.
+        utility: false
       },
       theme: String(panel.tema || ''),
       eventCities: Array.isArray(eventConfig.cidades) ? eventConfig.cidades.map(normalizeText).filter(Boolean) : [],
@@ -2322,7 +2347,8 @@ function eventProgram(event) {
         books: Math.max(1, Number(frequency.livros) || 1),
         courses: Math.max(1, Number(frequency.cursos) || 1),
         contests: Math.max(1, Number(frequency.concursos) || 1),
-        films: Math.max(1, Number(frequency.filmes) || 1)
+        films: Math.max(1, Number(frequency.filmes) || 1),
+        utility: 1
       },
       slideDuration: ALLOWED_SLIDE_DURATIONS.has(Number(panel.tempo_slides)) ? Number(panel.tempo_slides) : 0
     };
@@ -2340,7 +2366,8 @@ function eventProgram(event) {
         books: modules.books !== undefined ? Boolean(modules.books) : defaults.modules.books,
         courses: modules.courses !== undefined ? Boolean(modules.courses) : defaults.modules.courses,
         contests: modules.contests !== undefined ? Boolean(modules.contests) : defaults.modules.contests,
-        films: modules.films !== undefined ? Boolean(modules.films) : defaults.modules.films
+        films: modules.films !== undefined ? Boolean(modules.films) : defaults.modules.films,
+        utility: modules.utility !== undefined ? Boolean(modules.utility) : defaults.modules.utility
       },
       theme: String(value.theme || ''),
       eventCities: Array.isArray(value.eventCities) ? value.eventCities.map(normalizeText).filter(Boolean) : [],
@@ -2357,7 +2384,8 @@ function eventProgram(event) {
         books: clampWeight(weights.books ?? defaults.weights.books),
         courses: clampWeight(weights.courses ?? defaults.weights.courses),
         contests: clampWeight(weights.contests ?? defaults.weights.contests),
-        films: clampWeight(weights.films ?? defaults.weights.films)
+        films: clampWeight(weights.films ?? defaults.weights.films),
+        utility: clampWeight(weights.utility ?? defaults.weights.utility)
       },
       slideDuration: ALLOWED_SLIDE_DURATIONS.has(Number(value.slideDuration))
         ? Number(value.slideDuration)
@@ -2692,7 +2720,8 @@ function eventProgram(event) {
     const coursesEnabled = Boolean(slide.querySelector('.panel-module-courses')?.checked);
     const contestsEnabled = Boolean(slide.querySelector('.panel-module-contests')?.checked);
     const filmsEnabled = Boolean(slide.querySelector('.panel-module-films')?.checked);
-    if (!eventsEnabled && !booksEnabled && !coursesEnabled && !contestsEnabled && !filmsEnabled) {
+    const utilityEnabled = Boolean(slide.querySelector('.panel-module-utility')?.checked);
+    if (!eventsEnabled && !booksEnabled && !coursesEnabled && !contestsEnabled && !filmsEnabled && !utilityEnabled) {
       throw new Error('Ative pelo menos um tipo de conteúdo para o painel.');
     }
 
@@ -2713,7 +2742,8 @@ function eventProgram(event) {
         books: booksEnabled,
         courses: coursesEnabled,
         contests: contestsEnabled,
-        films: filmsEnabled
+        films: filmsEnabled,
+        utility: utilityEnabled
       },
       theme: slide.querySelector('.filter-theme')?.value || '',
       eventCities: checkedFilterValues(cityContainer),
@@ -2730,7 +2760,8 @@ function eventProgram(event) {
         books: slide.querySelector('.panel-book-weight')?.value || 1,
         courses: slide.querySelector('.panel-course-weight')?.value || 1,
         contests: slide.querySelector('.panel-contest-weight')?.value || 1,
-        films: slide.querySelector('.panel-film-weight')?.value || 1
+        films: slide.querySelector('.panel-film-weight')?.value || 1,
+        utility: slide.querySelector('.panel-utility-weight')?.value || 1
       },
       slideDuration: slide.querySelector('.filter-slide-duration')?.value || 0
     });
@@ -2742,16 +2773,19 @@ function eventProgram(event) {
     const coursesEnabled = Boolean(slide.querySelector('.panel-module-courses')?.checked);
     const contestsEnabled = Boolean(slide.querySelector('.panel-module-contests')?.checked);
     const filmsEnabled = Boolean(slide.querySelector('.panel-module-films')?.checked);
+    const utilityEnabled = Boolean(slide.querySelector('.panel-module-utility')?.checked);
     const eventSection = slide.querySelector('.panel-event-section');
     const bookSection = slide.querySelector('.panel-book-section');
     const courseSection = slide.querySelector('.panel-course-section');
     const contestSection = slide.querySelector('.panel-contest-section');
     const filmSection = slide.querySelector('.panel-film-section');
+    const utilitySection = slide.querySelector('.panel-utility-section');
     if (eventSection) eventSection.hidden = !eventsEnabled;
     if (bookSection) bookSection.hidden = !booksEnabled;
     if (courseSection) courseSection.hidden = !coursesEnabled;
     if (contestSection) contestSection.hidden = !contestsEnabled;
     if (filmSection) filmSection.hidden = !filmsEnabled;
+    if (utilitySection) utilitySection.hidden = !utilityEnabled;
   }
 
   function populateFilterPanel(slide, settings = currentPanelSettings()) {
@@ -2771,22 +2805,26 @@ function eventProgram(event) {
     const coursesToggle = slide.querySelector('.panel-module-courses');
     const contestsToggle = slide.querySelector('.panel-module-contests');
     const filmsToggle = slide.querySelector('.panel-module-films');
+    const utilityToggle = slide.querySelector('.panel-module-utility');
     if (eventsToggle) eventsToggle.checked = value.modules.events;
     if (booksToggle) booksToggle.checked = value.modules.books;
     if (coursesToggle) coursesToggle.checked = value.modules.courses;
     if (contestsToggle) contestsToggle.checked = value.modules.contests;
     if (filmsToggle) filmsToggle.checked = value.modules.films;
+    if (utilityToggle) utilityToggle.checked = value.modules.utility;
     if (durationSelect) durationSelect.value = String(value.slideDuration || 0);
     const eventWeight = slide.querySelector('.panel-event-weight');
     const bookWeight = slide.querySelector('.panel-book-weight');
     const courseWeight = slide.querySelector('.panel-course-weight');
     const contestWeight = slide.querySelector('.panel-contest-weight');
     const filmWeight = slide.querySelector('.panel-film-weight');
+    const utilityWeight = slide.querySelector('.panel-utility-weight');
     if (eventWeight) eventWeight.value = String(value.weights.events);
     if (bookWeight) bookWeight.value = String(value.weights.books);
     if (courseWeight) courseWeight.value = String(value.weights.courses);
     if (contestWeight) contestWeight.value = String(value.weights.contests);
     if (filmWeight) filmWeight.value = String(value.weights.films);
+    if (utilityWeight) utilityWeight.value = String(value.weights.utility);
 
     populateDynamicSelect(themeSelect, 'Todos os temas', universalThemeOptions(), value.theme);
 
@@ -2976,6 +3014,7 @@ function eventProgram(event) {
     slide.querySelector('.panel-module-courses')?.addEventListener('change', () => updatePanelModuleVisibility(slide));
     slide.querySelector('.panel-module-contests')?.addEventListener('change', () => updatePanelModuleVisibility(slide));
     slide.querySelector('.panel-module-films')?.addEventListener('change', () => updatePanelModuleVisibility(slide));
+    slide.querySelector('.panel-module-utility')?.addEventListener('change', () => updatePanelModuleVisibility(slide));
     slide.querySelector('.panel-profile-save')?.addEventListener('click', () => savePanelProfile(slide));
     slide.querySelector('.panel-profile-delete')?.addEventListener('click', () => deletePanelProfile(slide));
     slide.querySelector('.panel-profile-select')?.addEventListener('change', event => {
@@ -3399,10 +3438,10 @@ function eventProgram(event) {
     }, normalizeText);
   }
 
-  function agendaUtilitySource() {
-    // Cópias exclusivas da Agenda: a coleção técnica e os registros do Painel permanecem intactos.
+  function utilitySource() {
+    // Fonte lógica compartilhada; os registros originais permanecem na coleção técnica atual.
     return state.allFilms.filter(item => item.painel_apoio === true).map(item => {
-      const resourceTypes = AGENDA_UTILITY_RESOURCE_TYPES[item.support_target];
+      const resourceTypes = UTILITY_RESOURCE_TYPES[item.support_target];
       return {
         ...item,
         tipo_conteudo: 'utilidade_publica',
@@ -3416,7 +3455,7 @@ function eventProgram(event) {
 
   function agendaUtilityOptions(field) {
     const values = new Map();
-    for (const item of agendaUtilitySource()) {
+    for (const item of utilitySource()) {
       for (const label of item[field]) {
         const text = String(label || '').trim();
         const value = normalizeText(text);
@@ -3430,7 +3469,7 @@ function eventProgram(event) {
     if (!['all', 'utility'].includes(state.mobileContent)) return [];
     const query = normalizeText(state.mobileQuery);
     const specific = state.mobileContent === 'utility';
-    return agendaUtilitySource().filter(item => {
+    return utilitySource().filter(item => {
       if (specific && state.mobileUtilityArea &&
           !item.areas_utilidade.some(area => normalizeText(area) === state.mobileUtilityArea)) return false;
       if (specific && state.mobileUtilityType &&
