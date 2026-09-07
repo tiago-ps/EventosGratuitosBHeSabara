@@ -192,6 +192,7 @@ html[data-visual-theme="agosto-lilas-glow"] body.agenda-mode {
   max-width: 100%;
   min-width: 0;
 }
+.campaign-profile-banner[hidden] { display: none; }
 .campaign-profile-banner {
   position: relative;
   display: inline-flex;
@@ -203,9 +204,9 @@ html[data-visual-theme="agosto-lilas-glow"] body.agenda-mode {
   max-width: 100%;
   min-width: 44px;
   min-height: 44px;
-  padding: 2px;
-  border: 2px solid transparent;
-  border-radius: 12px;
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
   background: transparent;
   cursor: pointer;
 }
@@ -218,11 +219,8 @@ html[data-visual-theme="agosto-lilas-glow"] body.agenda-mode {
   object-fit: contain;
   pointer-events: none;
 }
-.campaign-profile-banner.is-profile-active {
-  border-color: var(--accent);
-  background: var(--surface);
-}
-.campaign-profile-banner:hover:not(:disabled) { background: var(--surface); }
+.campaign-profile-banner.is-profile-active { background: transparent; }
+.campaign-profile-banner:hover:not(:disabled) { background: transparent; filter: brightness(1.06); }
 .campaign-profile-banner:disabled { opacity: .5; cursor: default; }
 .campaign-profile-banner:focus-visible {
   outline: 2px solid var(--accent);
