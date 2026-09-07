@@ -622,7 +622,10 @@
     tags.className = 'film-tags';
     tags.setAttribute('aria-label', 'Tipo de conteúdo');
     appendText(tags, 'span', 'Informação');
-    appendText(tags, 'span', 'Utilidade pública');
+    appendText(tags, 'span', 'Utilidade Pública');
+    for (const area of Array.isArray(movie.areas_utilidade) ? movie.areas_utilidade : []) {
+      appendText(tags, 'span', area);
+    }
     body.appendChild(tags);
     const actions = document.createElement('div');
     actions.className = 'agenda-card-actions';
@@ -873,6 +876,7 @@
     apply,
     bindSupportRequest,
     buildPanelSupportItems,
+    createAgendaSupportCard,
     dateKey,
     eventIsCurrent,
     isActive,
