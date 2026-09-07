@@ -127,14 +127,19 @@
 
   function automaticTheme() {
     const profile = activePanelProfile();
-    // A escolha de conteúdo sempre prevalece, inclusive quando não há tema próprio.
-    if (profile) return THEMES.find(theme => theme.panelProfile === profile)?.id || 'padrao';
+    if (profile) {
+      const selectedTheme = THEMES.find(theme => theme.panelProfile === profile);
+      return selectedTheme && panelProfileMatchesCurrentSlide(profile) ? selectedTheme.id : 'padrao';
+    }
+
+    // Temas editoriais automáticos acompanham o item da própria curadoria.
+    // A janela de datas continua válida, mas não colore itens sem relação com ela.
     const current = dateKey();
-    const seasonal = THEMES.find(theme => theme.auto_ativar &&
-      /^\d{4}-\d{2}-\d{2}$/.test(theme.start) && /^\d{4}-\d{2}-\d{2}$/.test(theme.end) &&
-      current >= theme.start && current <= theme.end
+    const contextual = THEMES.find(theme => theme.auto_ativar && theme.panelProfile &&
+      (!theme.start || current >= theme.start) && (!theme.end || current <= theme.end) &&
+      panelProfileMatchesCurrentSlide(theme.panelProfile)
     );
-    return seasonal?.id || seasonalDefaultTheme();
+    return contextual?.id || seasonalDefaultTheme();
   }
 
   function updateBrowserColor(theme) {
@@ -306,6 +311,16 @@
       .find(element => element.getClientRects().length > 0) || null;
   }
 
+  function panelProfileMatchesCurrentSlide(profileId) {
+    if (!profileId || !bannerContainer) return false;
+    const media = currentPanelMedia();
+    const slide = media?.closest('.slide') || null;
+    if (!slide) return false;
+    const banner = [...bannerContainer.querySelectorAll(`.${BANNER_CLASS}`)]
+      .find(item => item.dataset.panelProfile === profileId);
+    return Boolean(banner && bannerMatchesSlide(banner, slide));
+  }
+
   function syncBanners() {
     const container = bannerContainer;
     const banners = [...(container?.querySelectorAll(`.${BANNER_CLASS}`) || [])];
@@ -330,17 +345,32 @@
 
   function syncHelpButton(theme) {
     const themeConfig = THEMES.find(item => item.id === theme);
+    const selectors = bannerContainer;
+    const matchingBanner = themeConfig?.panelProfile && selectors
+      ? [...selectors.querySelectorAll(`.${BANNER_CLASS}`)]
+        .find(item => item.dataset.panelProfile === themeConfig.panelProfile && !item.hidden)
+      : null;
+    const bannerVisible = Boolean(
+      matchingBanner && selectors && !selectors.hidden && selectors.isConnected
+    );
     const available = Boolean(
-      themeConfig?.helpLabel && themeConfig.panelProfile &&
+      themeConfig?.helpLabel && themeConfig.panelProfile && bannerVisible &&
       root.dataset.siteCurationHelp === themeConfig.panelProfile
     );
     root.dataset.visualHelp = String(available);
     let button = document.querySelector(`.${HELP_BUTTON_CLASS}`) ||
-      bannerContainer?.querySelector(`.${HELP_BUTTON_CLASS}`);
+      selectors?.querySelector(`.${HELP_BUTTON_CLASS}`);
+
     if (!available) {
       button?.remove();
+      if (selectors) {
+        selectors.style.flexDirection = '';
+        selectors.style.alignItems = '';
+        selectors.style.gap = '';
+      }
       return;
     }
+
     if (!button) {
       button = document.createElement('button');
       button.type = 'button';
@@ -351,32 +381,30 @@
         }));
       });
     }
-    const selectors = bannerContainer;
-    const media = currentPanelMedia();
-    const container = selectors && !selectors.hidden ? selectors : media;
-    if (!container) {
-      button.remove();
-      return;
-    }
-    if (button.parentElement !== container) container.appendChild(button);
 
-    const insideSelectors = container === selectors;
-    button.style.position = insideSelectors ? '' : 'absolute';
-    button.style.top = insideSelectors ? '' : '8px';
-    button.style.right = insideSelectors ? '' : '8px';
-    button.style.zIndex = insideSelectors ? '' : '9';
+    // Ajuda e banner são uma unidade visual da curadoria: o botão nunca vive sozinho.
+    if (button.parentElement !== selectors) selectors.appendChild(button);
+    selectors.style.flexDirection = 'column';
+    selectors.style.alignItems = 'center';
+    selectors.style.gap = '8px';
+    button.style.position = 'static';
+    button.style.top = '';
+    button.style.right = '';
+    button.style.zIndex = '';
+    button.style.alignSelf = 'center';
 
     button.textContent = themeConfig.helpLabel;
     button.setAttribute('aria-label', `${themeConfig.helpLabel} — ${themeConfig.profileLabel || themeConfig.label}`);
   }
 
   function syncExperience() {
+    // Primeiro sincroniza a curadoria visível; depois visual e ajuda derivam dela.
+    syncBanners();
     const requested = automaticTheme();
     const next = allowed.has(requested) ? requested : 'padrao';
     const changed = root.dataset.visualTheme !== next;
     root.dataset.visualTheme = next;
     updateBrowserColor(next);
-    syncBanners();
     syncHelpButton(next);
     if (changed) {
       window.dispatchEvent(new CustomEvent('mural:visual-theme-change', { detail: { theme: next } }));
