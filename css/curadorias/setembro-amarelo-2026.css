@@ -163,6 +163,11 @@ html[data-visual-theme="setembro-amarelo-glow"] body.agenda-mode {
     #0b0b08;
 }
 
+/* O acesso à ajuda é complementar ao banner de Setembro: sem o banner, não há botão. */
+html[data-visual-theme="setembro-amarelo-glow"] body.panel-mode .media > .campaign-help-button {
+  display: none;
+}
+
 @media (max-width: 720px) {
   html[data-visual-theme="setembro-amarelo-glow"] body.panel-mode .content::before { filter: blur(12px); opacity: .80; }
 }
