@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v102-seletores-media';
+const CACHE_VERSION = 'mural-cultural-v103-seletores-maiores';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -11,7 +11,7 @@ const CORE_ASSETS = [
   './css/styles.css?v=71',
   './css/eventos-manuais-ui.css?v=43',
   './css/concursos-mural.css?v=2',
-  './css/temas-visuais.css?v=10',
+  './css/temas-visuais.css?v=11',
   './js/tema-visual-boot.js?v=4',
   './js/core/rotacao.js?v=1',
   './js/conteudos/cursos.js?v=3',
