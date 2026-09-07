@@ -300,13 +300,16 @@
     syncBanners();
   }
 
+  function currentPanelMedia() {
+    if (!document.body.classList.contains('panel-mode')) return null;
+    return [...document.querySelectorAll('#app > .slide:not([hidden]):not([aria-hidden="true"]) > .media')]
+      .find(element => element.getClientRects().length > 0) || null;
+  }
+
   function syncBanners() {
     const container = bannerContainer;
     const banners = [...(container?.querySelectorAll(`.${BANNER_CLASS}`) || [])];
-    const media = document.body.classList.contains('panel-mode')
-      ? [...document.querySelectorAll('#app > .slide:not([hidden]):not([aria-hidden="true"]) > .media')]
-        .find(element => element.getClientRects().length > 0)
-      : null;
+    const media = currentPanelMedia();
     const slide = media?.closest('.slide') || null;
     let visibleCount = 0;
 
@@ -349,8 +352,20 @@
       });
     }
     const selectors = bannerContainer;
-    const container = selectors && !selectors.hidden ? selectors : document.body;
+    const media = currentPanelMedia();
+    const container = selectors && !selectors.hidden ? selectors : media;
+    if (!container) {
+      button.remove();
+      return;
+    }
     if (button.parentElement !== container) container.appendChild(button);
+
+    const insideSelectors = container === selectors;
+    button.style.position = insideSelectors ? '' : 'absolute';
+    button.style.top = insideSelectors ? '' : '8px';
+    button.style.right = insideSelectors ? '' : '8px';
+    button.style.zIndex = insideSelectors ? '' : '9';
+
     button.textContent = themeConfig.helpLabel;
     button.setAttribute('aria-label', `${themeConfig.helpLabel} — ${themeConfig.profileLabel || themeConfig.label}`);
   }
