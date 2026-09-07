@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Janeiro a Dezembro de 2026",
-  "atualizado_em": "2026-09-07T12:04:48-03:00",
+  "atualizado_em": "2026-09-07T12:23:44-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -5763,6 +5763,29 @@
       "mapa": "https://maps.app.goo.gl/69GL5ydEpAtcwDgv7"
     },
     {
+      "id": "cine-santa-tereza-bileto-126616",
+      "titulo": "CINECIPÓ - Encontro com a cineasta Ana Carolina",
+      "data": "2026-09-11",
+      "data_fim": "",
+      "horario": "19h",
+      "local": "Cine Santa Tereza",
+      "cidade": "Belo Horizonte",
+      "categoria": "Cinema",
+      "gratuito": true,
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "descricao": "Encontro com a cineasta Ana Carolina Sessão comentada por Ana Carolina",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/1jdu84c3mffekjiaub09m2cmcaf09u6dmhdh47b0bmgokj7kermlvevpg1nuh1n3lj8p7o2a2udf6ki6sjr04nkk2ig0gsd45oq10nb.jpeg",
+      "link": "https://bileto.sympla.com.br/event/126616/d/412596/s/2689391",
+      "fonte": "Cine Santa Tereza",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "fonte_id": "126616",
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "classificacao_indicativa": "Livre",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
+    },
+    {
       "id": "fcs-wp-37558",
       "titulo": "Cinema e Psicanálise | O Homem Urso",
       "data": "2026-09-11",
@@ -5866,6 +5889,29 @@
       "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Arte+da+Pampulha+-+MAP%2C+Av.+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+16.585%2C+Belo+Horizonte"
     },
     {
+      "id": "sesiminas-bh-bileto-126328",
+      "titulo": "Leitura divertida na Biblioteca SESIMINAS - Edição de setembro: “Marcelo, marmelo, martelo”.",
+      "data": "2026-09-12",
+      "data_fim": "",
+      "horario": "11h",
+      "local": "SESI Cultura",
+      "cidade": "Belo Horizonte",
+      "categoria": "Literatura",
+      "gratuito": true,
+      "inscricao": "Ingressos gratuitos disponíveis on-line, conforme disponibilidade",
+      "descricao": "Nome do evento: Leitura divertida na Biblioteca SESIMINAS - Edição de setembro: “Marcelo, marmelo, martelo”. Data: 12/09 Horário: 11h Duração: 45 minutos SINOPSE Topa brincar de criar novas palavras para as coisas? Vamos entender por que o Marcelo, personagem criado pela Ruth Rocha, gosta tanto de questionar os nomes dos objetos e inventar a sua própria língua! Atividade: leitura a história “Marcelo, marmelo, martelo” . Após a leitura, teremos um momento interativo de desenho com as crianças. TIPO DE EVENTO: Oficina (leitura para crianças e atividade recreativa) Idade: 03 a 08 anos.",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/3vu718cr5iqco1opvui0jilfsk2nilsrf2qu300n68c3qp9k8hq06kjtrd2quu5blp2ves3frs12g5aibfdcf6cdc2hnt3mafkk422h.webp",
+      "link": "https://bileto.sympla.com.br/event/126328/d/410887/s/2681418",
+      "fonte": "Centro Cultural SESIMINAS BH",
+      "instituicao_id": "sesiminas-bh",
+      "fonte_id": "126328",
+      "endereco": "Rua Álvares Maciel,59 – Belo Horizonte – Minas Gerais",
+      "classificacao_indicativa": "Livre",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "sesi-cultura-biblioteca-sesiminas",
+      "mapa": "https://maps.app.goo.gl/8JZjtbjNSJVHuXrh8"
+    },
+    {
       "id": "ufmg-ec-sabado-com-libras-jogos-e-brincadeiras-teatrais-acessa-bh",
       "titulo": "Sábado com Libras: Jogos e Brincadeiras Teatrais – Acessa BH",
       "data": "2026-09-12",
@@ -5950,6 +5996,29 @@
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "sesc-palladium",
       "mapa": "https://maps.app.goo.gl/69GL5ydEpAtcwDgv7"
+    },
+    {
+      "id": "cine-santa-tereza-bileto-126614",
+      "titulo": "CINECIPÓ - Encontro com a cineasta Ana Carolina",
+      "data": "2026-09-12",
+      "data_fim": "",
+      "horario": "19h",
+      "local": "Cine Santa Tereza",
+      "cidade": "Belo Horizonte",
+      "categoria": "Cinema",
+      "gratuito": true,
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "descricao": "Encontro com a cineasta Ana Carolina Sessão comentada por Ana Carolina",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/1jdu84c3mffekjiaub09m2cmcaf09u6dmhdh47b0bmgokj7kermlvevpg1nuh1n3lj8p7o2a2udf6ki6sjr04nkk2ig0gsd45oq10nb.jpeg",
+      "link": "https://bileto.sympla.com.br/event/126614/d/412594/s/2689387",
+      "fonte": "Cine Santa Tereza",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "fonte_id": "126614",
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "classificacao_indicativa": "Livre",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
     {
       "id": "ufmg-ec-observacao-noturna-dos-astros-com-telescopios-2",
