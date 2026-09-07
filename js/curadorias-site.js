@@ -233,7 +233,9 @@
       };
     }
 
-    for (const curation of payload.curadorias.filter(item => isActive(item, options.today || new Date()))) {
+    // A janela editorial controla a campanha, não a vida útil dos conteúdos.
+    for (const curation of payload.curadorias.filter(Boolean)) {
+      const active = isActive(curation, options.today || new Date());
       const overlays = curation.overlays || {};
       const complements = curation.complementos || {};
       result.eventos = applyOverlayCollection(result.eventos, overlays.eventos, {
@@ -265,7 +267,7 @@
         label: 'filme', warn,
         identifiers: item => [item?.id]
       });
-      if (complements.servicos_apoio && typeof complements.servicos_apoio === 'object') {
+      if (active && complements.servicos_apoio && typeof complements.servicos_apoio === 'object') {
         result.apoio = {
           ...complements.servicos_apoio,
           curationId: curation.id,
@@ -273,7 +275,7 @@
           site_only: true
         };
       }
-      result.curadoriasAtivas.push(curation.id);
+      if (active) result.curadoriasAtivas.push(curation.id);
     }
     return result;
   }

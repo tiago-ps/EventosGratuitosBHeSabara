@@ -61,6 +61,7 @@
     utility: { singular: 'item de utilidade pública', plural: 'itens de utilidade pública' }
   });
   const PANEL_UTILITY_LIMIT = 4;
+  const PANEL_BOOK_LIMIT = 15;
   const ALLOWED_SLIDE_DURATIONS = new Set([0, 5, 8, 10, 12, 15, 20, 30]);
   const CONTENT_SUBTITLES = Object.freeze({
     evento: 'Agenda Cultural',
@@ -144,7 +145,10 @@
     allFilms: [],
     allUtility: [],
     events: [],
-    panelRoundSamples: { courses: [], contests: [], films: [], utility: [] },
+    panelRoundSamples: { books: [], courses: [], contests: [], films: [], utility: [] },
+    panelMemory: muralCore.createPanelMemory(),
+    panelRoundSteps: [],
+    panelSeenSteps: new WeakSet(),
     index: 0,
     timer: null,
     isPaused: false,
@@ -768,43 +772,77 @@
     const filmsEnabled = state.panelModules.films && state.config?.modulos?.filmes !== false;
     const utilityEnabled = state.panelModules.utility && state.config?.modulos?.utilidade_publica !== false;
     const events = eventsEnabled ? visibleEventsForFilters() : [];
-    const books = booksEnabled ? filterBooks(state.allBooks) : [];
+    const eligibleBooks = booksEnabled ? filterBooks(state.allBooks) : [];
+    const sampleOptions = module => ({
+      previousItems: state.panelRoundSamples[module],
+      exposure: state.panelMemory.exposure
+    });
+    const books = muralCore.sampleForPanel(eligibleBooks, PANEL_BOOK_LIMIT, sampleOptions('books'));
     const themedCourses = state.filters.theme
       ? state.allCourses.filter(course => courseMatchesTheme(course, state.filters.theme))
       : state.allCourses;
-    const courses = coursesEnabled ? coursesContent.sampleForPanel(themedCourses, undefined, {
-      previousItems: state.panelRoundSamples.courses
-    }) : [];
+    const courses = coursesEnabled ? coursesContent.sampleForPanel(themedCourses, undefined, sampleOptions('courses')) : [];
     const contests = contestsEnabled && !state.filters.theme
-      ? contestsContent.sampleForPanel(state.allContests, undefined, {
-        previousItems: state.panelRoundSamples.contests
-      })
+      ? contestsContent.sampleForPanel(state.allContests, undefined, sampleOptions('contests'))
       : [];
-    const films = filmsEnabled ? filmsContent.sampleForPanel(state.allFilms, {
+    const filmFilters = {
       genre: state.filters.filmGenre,
       theme: state.filters.theme,
       rating: state.filters.filmRating,
       duration: state.filters.filmDuration,
       sort: 'title-asc'
-    }, normalizeText, undefined, {
-      previousItems: state.panelRoundSamples.films
-    }) : [];
+    };
+    const films = filmsEnabled ? filmsContent.sampleForPanel(state.allFilms, filmFilters,
+      normalizeText, undefined, sampleOptions('films')) : [];
     const utilityTheme = normalizeText(state.filters.theme);
-    const utility = utilityEnabled ? muralCore.sampleForPanel(
-      utilitySource().filter(item => !utilityTheme ||
-        (Array.isArray(item.temas) ? item.temas : []).some(theme => normalizeText(theme) === utilityTheme)),
+    const eligibleUtility = utilityEnabled ? utilitySource().filter(item => !utilityTheme ||
+      (Array.isArray(item.temas) ? item.temas : []).some(theme => normalizeText(theme) === utilityTheme)) : [];
+    const utility = muralCore.sampleForPanel(
+      eligibleUtility,
       PANEL_UTILITY_LIMIT,
-      { previousItems: state.panelRoundSamples.utility }
-    ) : [];
-    state.panelRoundSamples = { courses, contests, films, utility };
-    state.events = muralCore.interleaveContents([
-      { items: events, weight: state.panelWeights.events },
-      { items: books, weight: state.panelWeights.books },
-      { items: courses, weight: state.panelWeights.courses },
-      { items: contests, weight: state.panelWeights.contests },
-      { items: films, weight: state.panelWeights.films },
-      { items: utility, weight: state.panelWeights.utility }
-    ]);
+      sampleOptions('utility')
+    );
+    state.panelRoundSamples = { books, courses, contests, films, utility };
+    // Perfil temático explícito conserva a composição e os pesos já configurados.
+    if (state.filters.theme || activeEditorialPanelProfileId()) {
+      state.events = muralCore.interleaveContents([
+        { items: events, weight: state.panelWeights.events },
+        { items: books, weight: state.panelWeights.books },
+        { items: courses, weight: state.panelWeights.courses },
+        { items: contests, weight: state.panelWeights.contests },
+        { items: films, weight: state.panelWeights.films },
+        { items: utility, weight: state.panelWeights.utility }
+      ]);
+      state.panelRoundSteps = state.events.map(item => ({ item }));
+    } else {
+      // Microblocos usam o catálogo elegível completo, não apenas a amostra geral.
+      const eligible = {
+        events, books: eligibleBooks,
+        courses: coursesEnabled ? coursesContent.filter(themedCourses) : [],
+        contests: contestsEnabled ? contestsContent.filter(state.allContests).map(contestsContent.publicRecord) : [],
+        films: filmsEnabled ? filmsContent.filter(state.allFilms, filmFilters, normalizeText) : [],
+        utility: eligibleUtility
+      };
+      const curations = (state.siteCurationsData?.curadorias || [])
+        .filter(curation => siteCurationsContent.isActive(curation))
+        .map(curation => {
+          const settings = curation.perfil_painel?.configuracao;
+          const theme = normalizeText(settings?.theme || curation.tema || '');
+          return {
+            id: curation.id,
+            items: theme ? Object.entries(eligible)
+              .filter(([module]) => settings?.modules?.[module] !== false)
+              .flatMap(([, items]) => items)
+              .filter(item => (Array.isArray(item.temas) ? item.temas : [])
+                .some(value => normalizeText(value) === theme)) : []
+          };
+        });
+      state.panelRoundSteps = muralCore.createPanelSequence(events,
+        Object.entries(state.panelRoundSamples).map(([id, items]) => ({ id, items })),
+        curations, state.panelMemory);
+      state.events = state.panelRoundSteps.map(step => step.item);
+    }
+    state.panelSeenSteps = new WeakSet();
     return state.events;
   }
 
@@ -2194,6 +2232,13 @@ function eventProgram(event) {
   function renderSlide(index) {
     const item = state.events[index];
     if (!item) return;
+    const step = state.panelRoundSteps[index];
+    if (step && !state.panelSeenSteps.has(step)) {
+      muralCore.recordPanelExposure(state.panelMemory, step);
+      state.panelSeenSteps.add(step);
+    } else {
+      muralCore.recordPanelExposure(state.panelMemory, { item });
+    }
     if (item.tipo_conteudo === 'livro') renderBookSlide(index);
     else if (item.tipo_conteudo === 'curso') renderCourseSlide(index);
     else if (item.tipo_conteudo === 'concurso') renderContestSlide(index);
@@ -4224,7 +4269,7 @@ function eventProgram(event) {
         console.warn(`Curadoria ${id} ausente, inválida ou com ID divergente.`);
         return null;
       }
-      return curation;
+      return { ...curation, ativo_de: entry.ativo_de, ativo_ate: entry.ativo_ate };
     }));
 
     return publish({
