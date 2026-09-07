@@ -171,11 +171,13 @@ html[data-visual-theme="agosto-lilas-glow"] body.agenda-mode {
 .campaign-profile-selectors {
   position: absolute;
   top: 8px;
-  left: 8px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 8;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  justify-content: center;
   gap: 6px;
   width: max-content;
   max-width: calc(100% - 16px);
@@ -187,6 +189,7 @@ html[data-visual-theme="agosto-lilas-glow"] body.agenda-mode {
   flex: 0 1 auto;
   flex-wrap: wrap;
   align-items: flex-start;
+  justify-content: center;
   gap: 6px;
   width: max-content;
   max-width: 100%;
@@ -389,8 +392,14 @@ html[data-visual-theme="agosto-lilas-glow"] body.agenda-mode {
 }
 
 @media (max-width: 720px) {
-  .campaign-profile-selectors { top: 6px; left: 6px; max-width: calc(100% - 12px); gap: 4px; }
-  .campaign-profile-options { gap: 4px; }
+  .campaign-profile-selectors {
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: calc(100% - 12px);
+    gap: 4px;
+  }
+  .campaign-profile-options { gap: 4px; justify-content: center; }
   .campaign-profile-banner-image { max-height: 54px; }
   .campaign-profile-selectors > .campaign-help-button {
     min-height: 40px;
