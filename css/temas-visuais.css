@@ -166,45 +166,44 @@ html[data-visual-theme="agosto-lilas-glow"] body.agenda-mode {
     #080418;
 }
 
-/* Conjunto persistente fora dos slides, com espaço próprio no fluxo do painel. */
+/* Um único conjunto sobre a mídia atual, sem reservar espaço no layout global. */
 .campaign-profile-selectors[hidden] { display: none; }
 .campaign-profile-selectors {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 8;
   display: flex;
-  flex: 0 0 auto;
-  align-items: center;
-  gap: 12px;
-  width: 100%;
-  padding: 6px max(10px, env(safe-area-inset-right)) 6px max(10px, env(safe-area-inset-left));
-  border-bottom: 1px solid var(--line);
-  background: var(--panel-deep);
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 6px;
+  width: max-content;
+  max-width: calc(100% - 16px);
+  padding: 0;
+  background: transparent;
 }
 .campaign-profile-options {
   display: flex;
-  flex: 1 1 auto;
-  align-items: center;
-  gap: 12px;
+  flex: 0 1 auto;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 6px;
+  width: max-content;
+  max-width: 100%;
   min-width: 0;
-  padding: 6px;
-  overflow-x: auto;
-  overscroll-behavior-x: contain;
-}
-body.panel-mode.has-profile-banners {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  height: 100dvh;
-}
-body.panel-mode.has-profile-banners > .app {
-  flex: 1 1 0;
-  min-height: 0;
-  height: auto;
 }
 .campaign-profile-banner {
   position: relative;
-  flex: 0 1 280px;
-  min-width: min(180px, 75vw);
-  height: clamp(56px, 9vh, 96px);
-  padding: 3px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: max-content;
+  height: max-content;
+  max-width: 100%;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 2px;
   border: 2px solid transparent;
   border-radius: 12px;
   background: transparent;
@@ -212,8 +211,10 @@ body.panel-mode.has-profile-banners > .app {
 }
 .campaign-profile-banner-image {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 56px;
   object-fit: contain;
   pointer-events: none;
 }
@@ -389,15 +390,11 @@ body.panel-mode.has-profile-banners > .app {
   html[data-visual-theme="agosto-lilas-glow"] body.panel-mode .content::before { animation: none; }
 }
 
-@media (max-aspect-ratio: 5/4), (max-width: 850px) {
-  body.panel-mode.has-profile-banners { height: auto; min-height: 100dvh; }
-  body.panel-mode.has-profile-banners > .app { flex: none; }
-}
 @media (max-width: 720px) {
-  .campaign-profile-selectors { flex-wrap: wrap; gap: 4px; }
-  .campaign-profile-options { flex-basis: 100%; }
+  .campaign-profile-selectors { top: 6px; left: 6px; max-width: calc(100% - 12px); gap: 4px; }
+  .campaign-profile-options { gap: 4px; }
+  .campaign-profile-banner-image { max-height: 48px; }
   .campaign-profile-selectors > .campaign-help-button {
-    margin-left: auto;
     min-height: 40px;
     padding: 8px 12px;
     font-size: 12px;

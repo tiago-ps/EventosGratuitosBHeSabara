@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v101-perfis-conteudo';
+const CACHE_VERSION = 'mural-cultural-v102-seletores-media';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -11,7 +11,7 @@ const CORE_ASSETS = [
   './css/styles.css?v=71',
   './css/eventos-manuais-ui.css?v=43',
   './css/concursos-mural.css?v=2',
-  './css/temas-visuais.css?v=9',
+  './css/temas-visuais.css?v=10',
   './js/tema-visual-boot.js?v=4',
   './js/core/rotacao.js?v=1',
   './js/conteudos/cursos.js?v=3',
@@ -19,7 +19,7 @@ const CORE_ASSETS = [
   './js/conteudos/filmes.js?v=6',
   './js/curadorias-site.js?v=4',
   './js/app.js?v=92',
-  './js/temas-visuais.js?v=9',
+  './js/temas-visuais.js?v=10',
   './js/eventos-manuais-ui.js?v=44',
   './js/ios-install.js?v=1',
   './imagens/curadorias/agosto-lilas-banner.png',

@@ -4,6 +4,8 @@
   const BANNER_CLASS = 'campaign-profile-banner';
   const BANNERS_ID = 'panel-profile-banners';
   const HELP_BUTTON_CLASS = 'campaign-help-button';
+  // Mantém o mesmo conjunto e seus listeners quando app.js substitui o slide.
+  let bannerContainer = null;
 
   function dateKey(date = new Date()) {
     const year = date.getFullYear();
@@ -159,7 +161,7 @@
   }
 
   function registerPanelBanners(curations) {
-    let container = document.getElementById(BANNERS_ID);
+    let container = bannerContainer;
     if (!container) {
       container = document.createElement('section');
       container.id = BANNERS_ID;
@@ -171,7 +173,7 @@
       options.setAttribute('role', 'group');
       options.setAttribute('aria-label', 'Selecionar perfil de conteúdo');
       container.appendChild(options);
-      document.getElementById('app').before(container);
+      bannerContainer = container;
     }
     const options = container.querySelector('.campaign-profile-options');
     options.replaceChildren();
@@ -210,6 +212,8 @@
         window.dispatchEvent(new CustomEvent('mural:panel-profile-request', {
           detail: { profile: banner.dataset.panelProfile }
         }));
+        // A troca do slide pode desconectar o botão durante o clique por teclado.
+        if (banner.isConnected) banner.focus({ preventScroll: true });
       });
       syncBannerSelection(banner);
       options.appendChild(banner);
@@ -219,12 +223,17 @@
   }
 
   function syncBanners() {
-    const container = document.getElementById(BANNERS_ID);
+    const container = bannerContainer;
     const banners = container?.querySelectorAll(`.${BANNER_CLASS}`) || [];
-    const visible = banners.length > 0 && document.body.classList.contains('panel-mode');
-    if (container) container.hidden = !visible;
-    if (document.body.classList.contains('has-profile-banners') !== visible) {
-      document.body.classList.toggle('has-profile-banners', visible);
+    const media = document.body.classList.contains('panel-mode')
+      ? [...document.querySelectorAll('#app > .slide:not([hidden]):not([aria-hidden="true"]) > .media')]
+        .find(element => element.getClientRects().length > 0)
+      : null;
+    const visible = banners.length > 0 && Boolean(media);
+    if (container) {
+      container.hidden = !visible;
+      if (visible && container.parentElement !== media) media.appendChild(container);
+      else if (!visible) container.remove();
     }
     banners.forEach(syncBannerSelection);
   }
@@ -236,7 +245,8 @@
       root.dataset.siteCurationHelp === themeConfig.panelProfile
     );
     root.dataset.visualHelp = String(available);
-    let button = document.querySelector(`.${HELP_BUTTON_CLASS}`);
+    let button = document.querySelector(`.${HELP_BUTTON_CLASS}`) ||
+      bannerContainer?.querySelector(`.${HELP_BUTTON_CLASS}`);
     if (!available) {
       button?.remove();
       return;
@@ -251,7 +261,7 @@
         }));
       });
     }
-    const selectors = document.getElementById(BANNERS_ID);
+    const selectors = bannerContainer;
     const container = selectors && !selectors.hidden ? selectors : document.body;
     if (button.parentElement !== container) container.appendChild(button);
     button.textContent = themeConfig.helpLabel;
@@ -296,6 +306,9 @@
       attributes: true,
       attributeFilter: ['class']
     });
+    // Observa só a troca do conteúdo principal, sem reagir às próprias atualizações.
+    const app = document.getElementById('app');
+    if (app) observer.observe(app, { childList: true });
   }
 
   if (document.readyState === 'loading') {
