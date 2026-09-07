@@ -49,7 +49,7 @@
 }
 
 .agenda-tools-contests {
-  grid-template-columns: minmax(260px, 2fr) repeat(4, minmax(145px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .agenda-contest-card {

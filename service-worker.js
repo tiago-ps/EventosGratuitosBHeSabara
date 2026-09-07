@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v103-seletores-maiores';
+const CACHE_VERSION = 'mural-cultural-v104-curadoria-agenda';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -10,7 +10,7 @@ const CORE_ASSETS = [
   './', './index.html',
   './css/styles.css?v=71',
   './css/eventos-manuais-ui.css?v=43',
-  './css/concursos-mural.css?v=2',
+  './css/concursos-mural.css?v=3',
   './css/temas-visuais.css?v=11',
   './js/tema-visual-boot.js?v=4',
   './js/core/rotacao.js?v=1',
@@ -18,7 +18,7 @@ const CORE_ASSETS = [
   './js/conteudos/concursos.js?v=2',
   './js/conteudos/filmes.js?v=6',
   './js/curadorias-site.js?v=4',
-  './js/app.js?v=92',
+  './js/app.js?v=93',
   './js/temas-visuais.js?v=10',
   './js/eventos-manuais-ui.js?v=44',
   './js/ios-install.js?v=1',

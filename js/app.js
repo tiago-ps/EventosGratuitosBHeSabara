@@ -170,6 +170,7 @@
     slideDuration: 0,
     mobileQuery: '',
     mobileContent: 'all',
+    mobileCuration: '',
     mobileTheme: '',
     mobilePeriod: 'all',
     mobileCategory: '',
@@ -3110,6 +3111,26 @@ function eventProgram(event) {
     }).format(start).replace('.', '');
   }
 
+  function agendaCurationEntries() {
+    const curations = state.siteCurationsData?.curadorias;
+    if (!Array.isArray(curations)) return [];
+    return curations.map(curation => ({
+      id: String(curation?.id || '').trim(),
+      name: String(curation?.nome || curation?.id || '').trim(),
+      theme: normalizeText(curation?.perfil_painel?.configuracao?.theme || '') ||
+        normalizeText(curation?.tema || ''),
+      start: String(curation?.ativo_de || '').trim(),
+      end: String(curation?.ativo_ate || '').trim()
+    })).filter(curation => curation.id && curation.theme && editorialProfileIsVisible(curation));
+  }
+
+  function agendaItemMatchesCuration(item, curation) {
+    if (!state.mobileCuration) return true;
+    if (!curation) return false;
+    return (Array.isArray(item.temas) ? item.temas : [])
+      .some(theme => normalizeText(theme) === curation.theme);
+  }
+
   function agendaThemeOptions(content = state.mobileContent) {
     const values = new Map();
     const add = label => {
@@ -3135,6 +3156,11 @@ function eventProgram(event) {
   function normalizeAgendaFiltersForContent(content = state.mobileContent) {
     const allowedContents = new Set(['all', 'events', 'books', 'courses', 'contests', 'films']);
     state.mobileContent = allowedContents.has(content) ? content : 'all';
+
+    // A troca de conteúdo preserva a curadoria; apenas uma opção indisponível expira.
+    if (state.mobileCuration && !agendaCurationEntries().some(curation => curation.id === state.mobileCuration)) {
+      state.mobileCuration = '';
+    }
 
     if (!['events', 'books', 'courses', 'films'].includes(state.mobileContent)) {
       state.mobileTheme = '';
@@ -3185,14 +3211,14 @@ function eventProgram(event) {
 
   function agendaUsesDetailedEventRecords() {
     return Boolean(
-      state.mobileQuery || state.mobileTheme || state.mobileCategory ||
+      state.mobileQuery || state.mobileCuration || state.mobileTheme || state.mobileCategory ||
       state.mobileSpace || state.mobileInstitution
     );
   }
 
   function agendaHasSpecificEventFilters() {
     return Boolean(
-      state.mobileQuery || state.mobileTheme || state.mobilePeriod !== 'all' ||
+      state.mobileQuery || state.mobileCuration || state.mobileTheme || state.mobilePeriod !== 'all' ||
       state.mobileCity || state.mobileCategory || state.mobileSpace ||
       state.mobileInstitution || state.mobileRegistration
     );
@@ -3358,11 +3384,13 @@ function eventProgram(event) {
   }
 
   function agendaVisibleContents() {
-    const events = agendaVisibleEvents();
-    const books = agendaVisibleBooks();
-    const courses = agendaVisibleCourses();
-    const contests = agendaVisibleContests();
-    const films = agendaVisibleFilms();
+    const curation = agendaCurationEntries().find(entry => entry.id === state.mobileCuration);
+    const matchesCuration = item => agendaItemMatchesCuration(item, curation);
+    const events = agendaVisibleEvents().filter(matchesCuration);
+    const books = agendaVisibleBooks().filter(matchesCuration);
+    const courses = agendaVisibleCourses().filter(matchesCuration);
+    const contests = agendaVisibleContests().filter(matchesCuration);
+    const films = agendaVisibleFilms().filter(matchesCuration);
     return {
       events,
       books,
@@ -3377,6 +3405,7 @@ function eventProgram(event) {
     if (state.mobileContent === 'contests') {
       return [
         state.mobileQuery,
+        state.mobileCuration,
         state.mobileContestFormation,
         state.mobileContestUf,
         state.mobileContestDeadline
@@ -3385,6 +3414,7 @@ function eventProgram(event) {
     if (state.mobileContent === 'films') {
       return [
         state.mobileQuery,
+        state.mobileCuration,
         state.mobileFilmGenre,
         state.mobileTheme,
         state.mobileFilmLetter,
@@ -3396,7 +3426,7 @@ function eventProgram(event) {
       ].filter(Boolean).length;
     }
 
-    const common = [state.mobileQuery];
+    const common = [state.mobileQuery, state.mobileCuration];
     if (state.mobileContent !== 'all') common.push(state.mobileContent);
     if (state.mobileContent === 'events') {
       common.push(
@@ -3413,6 +3443,7 @@ function eventProgram(event) {
 
   function clearAgendaFilters() {
     state.mobileQuery = '';
+    state.mobileCuration = '';
     state.mobileContent = 'all';
     state.mobileTheme = '';
     state.mobilePeriod = 'all';
@@ -3429,6 +3460,7 @@ function eventProgram(event) {
 
   function clearContestAgendaFilters() {
     state.mobileQuery = '';
+    state.mobileCuration = '';
     state.mobileContestFormation = '';
     state.mobileContestUf = '';
     state.mobileContestDeadline = '';
@@ -3436,6 +3468,7 @@ function eventProgram(event) {
 
   function clearFilmAgendaFilters() {
     state.mobileQuery = '';
+    state.mobileCuration = '';
     state.mobileFilmGenre = '';
     state.mobileTheme = '';
     state.mobileFilmLetter = '';
@@ -3747,6 +3780,7 @@ function eventProgram(event) {
       <label><span>Conteúdo</span><select class="agenda-content">
         <option value="all">Todos</option><option value="events">Eventos</option><option value="books">Livros</option><option value="courses">Cursos</option><option value="contests">Concursos</option><option value="films">Filmes</option>
       </select></label>
+      <label><span>Curadoria</span><select class="agenda-curation"><option value="">Todas as curadorias</option></select></label>
       ${themeControl}
     `;
 
@@ -3801,6 +3835,12 @@ function eventProgram(event) {
     controls.innerHTML = commonControls + eventControls + bookControls + contestControls + filmControls;
 
     controls.querySelector('.agenda-content').value = state.mobileContent;
+    populateDynamicSelect(
+      controls.querySelector('.agenda-curation'),
+      'Todas as curadorias',
+      agendaCurationEntries().map(curation => [curation.id, curation.name]),
+      state.mobileCuration
+    );
     populateDynamicSelect(
       controls.querySelector('.agenda-theme'),
       'Todos os temas',
@@ -3945,6 +3985,7 @@ function eventProgram(event) {
       normalizeAgendaFiltersForContent(event.target.value);
       rerender();
     });
+    controls.querySelector('.agenda-curation').addEventListener('change', event => { state.mobileCuration = event.target.value; rerender(); });
     controls.querySelector('.agenda-theme')?.addEventListener('change', event => { state.mobileTheme = event.target.value; rerender(); });
 
     if (state.mobileContent === 'events') {
