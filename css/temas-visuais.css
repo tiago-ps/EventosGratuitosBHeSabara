@@ -218,7 +218,7 @@ html[data-visual-theme="agosto-lilas-glow"] body.agenda-mode {
   width: auto;
   height: auto;
   max-width: 100%;
-  max-height: 64px;
+  max-height: clamp(52px, 5vw, 82px);
   object-fit: contain;
   pointer-events: none;
 }
@@ -400,7 +400,6 @@ html[data-visual-theme="agosto-lilas-glow"] body.agenda-mode {
     gap: 4px;
   }
   .campaign-profile-options { gap: 4px; justify-content: center; }
-  .campaign-profile-banner-image { max-height: 54px; }
   .campaign-profile-selectors > .campaign-help-button {
     min-height: 40px;
     padding: 8px 12px;
