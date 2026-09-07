@@ -147,6 +147,82 @@
     return root.dataset.panelProfile || '';
   }
 
+  function normalizeContentKey(value = '') {
+    return String(value)
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/\s+/g, ' ')
+      .trim()
+      .toLowerCase();
+  }
+
+  function curationTitleKeys(curation) {
+    const keys = new Set();
+    const add = value => {
+      const key = normalizeContentKey(value);
+      if (key) keys.add(key);
+    };
+
+    const complements = curation?.complementos;
+    if (complements && typeof complements === 'object') {
+      for (const collection of Object.values(complements)) {
+        if (!Array.isArray(collection)) continue;
+        for (const item of collection) add(item?.titulo);
+      }
+    }
+
+    const overlays = curation?.overlays;
+    if (overlays && typeof overlays === 'object') {
+      for (const collection of Object.values(overlays)) {
+        if (!collection || typeof collection !== 'object' || Array.isArray(collection)) continue;
+        for (const overlay of Object.values(collection)) {
+          add(overlay?.titulo_esperado);
+          add(overlay?.titulo);
+          add(overlay?.fallback?.titulo);
+        }
+      }
+    }
+
+    return keys;
+  }
+
+  function visibleSlideTitle(slide) {
+    const selectors = [
+      '.book-copy:not([hidden]) .book-title',
+      '.event-copy:not([hidden]) .event-title',
+      '.book-title',
+      '.event-title'
+    ];
+    for (const selector of selectors) {
+      const text = slide?.querySelector(selector)?.textContent;
+      const key = normalizeContentKey(text);
+      if (key) return key;
+    }
+    return '';
+  }
+
+  function visibleSlideThemeKeys(slide) {
+    return new Set(
+      [...(slide?.querySelectorAll('.book-themes > *') || [])]
+        .map(element => normalizeContentKey(element.textContent))
+        .filter(Boolean)
+    );
+  }
+
+  function bannerMatchesSlide(banner, slide) {
+    if (!banner || !slide) return false;
+    const profileId = banner.dataset.panelProfile || '';
+    if (slide.classList.contains('support-slide') && root.dataset.siteCurationHelp === profileId) {
+      return true;
+    }
+
+    const title = visibleSlideTitle(slide);
+    if (title && banner._curationTitleKeys?.has(title)) return true;
+
+    const themeKey = banner._curationThemeKey || '';
+    return Boolean(themeKey && visibleSlideThemeKeys(slide).has(themeKey));
+  }
+
   function syncBannerSelection(banner) {
     const active = banner.dataset.panelProfile === activePanelProfile();
     const profileLabel = banner.dataset.profileLabel || 'temático';
@@ -192,6 +268,8 @@
       banner.className = BANNER_CLASS;
       banner.dataset.panelProfile = String(curation.id);
       banner.dataset.profileLabel = String(curation.nome || curation.id);
+      banner._curationTitleKeys = curationTitleKeys(curation);
+      banner._curationThemeKey = normalizeContentKey(curation.tema);
       const today = dateKey();
       banner.disabled = Boolean(
         (curation.ativo_de && today < curation.ativo_de) ||
@@ -224,18 +302,27 @@
 
   function syncBanners() {
     const container = bannerContainer;
-    const banners = container?.querySelectorAll(`.${BANNER_CLASS}`) || [];
+    const banners = [...(container?.querySelectorAll(`.${BANNER_CLASS}`) || [])];
     const media = document.body.classList.contains('panel-mode')
       ? [...document.querySelectorAll('#app > .slide:not([hidden]):not([aria-hidden="true"]) > .media')]
         .find(element => element.getClientRects().length > 0)
       : null;
-    const visible = banners.length > 0 && Boolean(media);
+    const slide = media?.closest('.slide') || null;
+    let visibleCount = 0;
+
+    for (const banner of banners) {
+      const visibleForItem = Boolean(slide && bannerMatchesSlide(banner, slide));
+      banner.hidden = !visibleForItem;
+      if (visibleForItem) visibleCount += 1;
+      syncBannerSelection(banner);
+    }
+
+    const visible = visibleCount > 0 && Boolean(media);
     if (container) {
       container.hidden = !visible;
       if (visible && container.parentElement !== media) media.appendChild(container);
       else if (!visible) container.remove();
     }
-    banners.forEach(syncBannerSelection);
   }
 
   function syncHelpButton(theme) {
