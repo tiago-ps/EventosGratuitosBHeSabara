@@ -33,6 +33,7 @@
   },
   "perfil_visual": {
     "id": "setembro-amarelo-glow",
+    "stylesheet": "css/curadorias/setembro-amarelo-2026.css",
     "label": "Setembro Amarelo Glow",
     "description": "Amarelo acolhedor, dourado e fundo profundo",
     "swatch": "is-setembro-amarelo",

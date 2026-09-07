@@ -82,21 +82,21 @@ async function dispatch(type, event) {
 }
 
 (async () => {
-  assert.equal(sw.CACHE_VERSION, 'mural-cultural-v99-perfis-declarativos');
+  assert.equal(sw.CACHE_VERSION, 'mural-cultural-v100-stylesheets-curadorias');
   assert.equal(sw.CURATION_IMAGE_PREFIX, '/imagens/curadorias/');
   for (const asset of [
     './css/styles.css?v=71',
     './css/eventos-manuais-ui.css?v=43',
     './css/concursos-mural.css?v=2',
     './js/core/rotacao.js?v=1',
-    './css/temas-visuais.css?v=7',
+    './css/temas-visuais.css?v=8',
     './js/tema-visual-boot.js?v=3',
     './js/conteudos/cursos.js?v=3',
     './js/conteudos/concursos.js?v=2',
     './js/conteudos/filmes.js?v=6',
     './js/curadorias-site.js?v=4',
     './js/app.js?v=91',
-    './js/temas-visuais.js?v=7',
+    './js/temas-visuais.js?v=8',
     './js/eventos-manuais-ui.js?v=44'
   ]) {
     assert.ok(sw.CORE_ASSETS.includes(asset), `Precache ausente: ${asset}`);

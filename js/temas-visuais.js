@@ -75,6 +75,8 @@
   let THEMES = [...BASE_THEMES];
   const allowed = new Set(THEMES.map(theme => theme.id));
   let selectedTheme = null;
+  let themeRegistrationVersion = 0;
+  const stylesheetLoads = new Map();
   const root = document.documentElement;
   const defaultThemeColor = document.querySelector('meta[name="theme-color"]')?.content || '#07111f';
 
@@ -84,9 +86,41 @@
     })[char]);
   }
 
+  function loadCurationStylesheet(path) {
+    if (stylesheetLoads.has(path)) return stylesheetLoads.get(path);
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = path;
+    link.dataset.curationStylesheet = path;
+    const entry = { link, loaded: null, cancel: null, promise: null };
+    entry.promise = new Promise(resolve => {
+      let settled = false;
+      let timeout;
+      const finish = (loaded, warn = false) => {
+        if (settled) return;
+        settled = true;
+        clearTimeout(timeout);
+        link.onload = null;
+        link.onerror = null;
+        entry.loaded = loaded;
+        if (!loaded) link.remove();
+        if (warn) console.warn(`Stylesheet de curadoria indisponível: ${path}; tema não registrado.`);
+        resolve(loaded);
+      };
+      entry.cancel = () => finish(false);
+      link.onload = () => finish(true);
+      link.onerror = () => finish(false, true);
+      timeout = setTimeout(() => finish(false, true), 10000);
+    });
+    stylesheetLoads.set(path, entry);
+    document.head.appendChild(link);
+    return entry;
+  }
+
   function registerLoadedThemes() {
     const curations = window.MuralCultural?.loadedCurations;
     if (!Array.isArray(curations)) return;
+    const version = ++themeRegistrationVersion;
     const nextThemes = [...BASE_THEMES];
     const ids = new Set(nextThemes.map(theme => theme.id));
     for (const curation of curations) {
@@ -94,6 +128,16 @@
       if (!profile || typeof profile !== 'object' || Array.isArray(profile) || !curation.id) continue;
       const id = String(profile.id || '');
       if (!/^[a-z0-9][a-z0-9-]*$/.test(id) || ids.has(id)) continue;
+      let stylesheet = '';
+      if (profile.stylesheet !== undefined) {
+        const curationId = String(curation.id);
+        if (!/^[a-z0-9][a-z0-9-]*$/.test(curationId) ||
+            profile.stylesheet !== `css/curadorias/${curationId}.css`) {
+          console.warn(`Stylesheet inválido para a curadoria ${curationId}; tema não registrado.`);
+          continue;
+        }
+        stylesheet = profile.stylesheet;
+      }
       let banner = null;
       if (profile.banner?.src) {
         try {
@@ -113,12 +157,35 @@
         helpLabel: String(profile.helpLabel || ''),
         themeColor: String(profile.themeColor || defaultThemeColor),
         banner,
+        stylesheet,
         auto_ativar: profile.auto_ativar === true,
         start: String(curation.ativo_de || ''),
         end: String(curation.ativo_ate || '')
       });
       ids.add(id);
     }
+    const paths = new Set(nextThemes.map(theme => theme.stylesheet).filter(Boolean));
+    for (const [path, entry] of stylesheetLoads) {
+      if (paths.has(path)) continue;
+      entry.cancel();
+      entry.link.remove();
+      stylesheetLoads.delete(path);
+    }
+    const refresh = () => {
+      if (version !== themeRegistrationVersion) return;
+      const ready = nextThemes.filter(theme => !theme.stylesheet || stylesheetLoads.get(theme.stylesheet)?.loaded === true);
+      const pending = new Set(nextThemes.filter(theme => theme.stylesheet &&
+        stylesheetLoads.get(theme.stylesheet)?.loaded === null).map(theme => theme.id));
+      updateRegisteredThemes(ready, pending);
+    };
+    for (const path of paths) {
+      const entry = loadCurationStylesheet(path);
+      if (entry.loaded === null) entry.promise.then(refresh);
+    }
+    refresh();
+  }
+
+  function updateRegisteredThemes(nextThemes, pending = new Set()) {
     THEMES = nextThemes;
     allowed.clear();
     THEMES.forEach(theme => allowed.add(theme.id));
@@ -132,7 +199,7 @@
     try { saved = saved || localStorage.getItem(STORAGE_KEY); } catch (_) {}
     if (saved) {
       next = allowed.has(saved) ? saved : 'padrao';
-      if (!allowed.has(saved)) {
+      if (!allowed.has(saved) && !pending.has(saved)) {
         selectedTheme = 'padrao';
         try { localStorage.removeItem(STORAGE_KEY); } catch (_) {}
       }
