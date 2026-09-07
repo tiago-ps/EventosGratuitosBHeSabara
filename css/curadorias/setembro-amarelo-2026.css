@@ -1,9 +1,3 @@
-.visual-theme-swatch.is-setembro-amarelo {
-  background:
-    radial-gradient(circle at 75% 25%, #ffe27a 0 8%, transparent 28%),
-    linear-gradient(145deg, #0b0b08, #4c4008 62%, #f5c518);
-}
-
 /* ======================== Setembro Amarelo Glow ======================== */
 html[data-visual-theme="setembro-amarelo-glow"] body {
   --bg: #0b0b08;
@@ -167,24 +161,6 @@ html[data-visual-theme="setembro-amarelo-glow"] body.agenda-mode {
     radial-gradient(circle 240px at 4% 55%, rgba(214, 169, 0, .12), transparent 74%),
     radial-gradient(circle 280px at 94% 88%, rgba(245, 197, 24, .13), transparent 74%),
     #0b0b08;
-}
-
-html[data-visual-theme="setembro-amarelo-glow"] .visual-theme-toggle {
-  border-color: rgba(255, 226, 122, .40);
-  background: linear-gradient(145deg, rgba(82, 67, 5, .94), rgba(181, 143, 0, .92));
-  color: #fffdf5;
-  box-shadow: 0 10px 32px rgba(107, 84, 0, .32);
-}
-
-html[data-visual-theme="setembro-amarelo-glow"] .visual-theme-panel {
-  border-color: rgba(245, 197, 24, .32);
-  background: linear-gradient(145deg, rgba(34, 30, 9, .97), rgba(11, 11, 8, .98));
-}
-
-html[data-visual-theme="setembro-amarelo-glow"] .campaign-profile-tooltip {
-  border-color: rgba(245, 197, 24, .32);
-  background: rgba(21, 19, 8, .96);
-  color: #fffdf5;
 }
 
 @media (max-width: 720px) {

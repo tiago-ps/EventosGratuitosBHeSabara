@@ -1,102 +1,4 @@
-/* Temas visuais do Mural Cultural.
- *
- * IMPORTANTE: aparência visual e curadoria de conteúdo são independentes.
- * O filtro de conteúdo continua em .filter-theme; este arquivo altera somente
- * cores, superfícies, brilhos, banner editorial e o seletor de aparência.
- */
-
-/* Seletor flutuante de aparência */
-.visual-theme-switcher {
-  position: fixed;
-  left: max(12px, env(safe-area-inset-left));
-  bottom: max(12px, env(safe-area-inset-bottom));
-  z-index: 95;
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: flex-start;
-  gap: 9px;
-  pointer-events: none;
-}
-
-.visual-theme-switcher > * { pointer-events: auto; }
-
-.visual-theme-toggle {
-  width: 46px;
-  height: 46px;
-  display: grid;
-  place-items: center;
-  padding: 0;
-  border: 1px solid rgba(255, 255, 255, .22);
-  border-radius: 50%;
-  background: rgba(8, 15, 29, .86);
-  color: #fff;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, .34);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  cursor: pointer;
-  transition: transform .18s ease, background .18s ease, border-color .18s ease;
-}
-
-.visual-theme-toggle:hover { transform: translateY(-2px); background: rgba(18, 29, 50, .94); }
-.visual-theme-toggle:focus-visible,
-.visual-theme-option:focus-visible {
-  outline: 2px solid var(--accent, #f6b73c);
-  outline-offset: 3px;
-}
-.visual-theme-toggle svg { width: 22px; height: 22px; }
-
-.visual-theme-panel {
-  width: min(286px, calc(100vw - 24px));
-  padding: 14px;
-  border: 1px solid rgba(255, 255, 255, .18);
-  border-radius: 18px;
-  background: rgba(8, 15, 29, .94);
-  color: #fff;
-  box-shadow: 0 18px 54px rgba(0, 0, 0, .44);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-}
-.visual-theme-panel[hidden] { display: none; }
-.visual-theme-heading { margin: 0 0 3px; font-size: 14px; font-weight: 900; }
-.visual-theme-help { margin: 0 0 11px; color: #bac4d3; font-size: 11px; line-height: 1.35; }
-.visual-theme-options { display: grid; gap: 7px; }
-.visual-theme-option {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 30px minmax(0, 1fr) auto;
-  align-items: center;
-  gap: 9px;
-  padding: 9px 10px;
-  border: 1px solid rgba(255, 255, 255, .12);
-  border-radius: 13px;
-  background: rgba(255, 255, 255, .045);
-  color: inherit;
-  text-align: left;
-  cursor: pointer;
-}
-.visual-theme-option:hover { background: rgba(255, 255, 255, .085); }
-.visual-theme-option[aria-pressed="true"] {
-  border-color: rgba(207, 86, 255, .72);
-  background: linear-gradient(135deg, rgba(121, 43, 188, .32), rgba(199, 58, 255, .18));
-}
-.visual-theme-swatch {
-  width: 30px;
-  height: 30px;
-  border: 1px solid rgba(255,255,255,.22);
-  border-radius: 9px;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.15);
-}
-.visual-theme-swatch.is-default { background: linear-gradient(145deg, #07111f, #15243a 62%, #f6b73c); }
-.visual-theme-swatch.is-lilas {
-  background:
-    radial-gradient(circle at 75% 25%, #ea8cff 0 8%, transparent 27%),
-    linear-gradient(145deg, #09051b, #40106d 62%, #ce3cff);
-}
-.visual-theme-option-copy { min-width: 0; }
-.visual-theme-option-title { display: block; font-size: 12px; font-weight: 900; }
-.visual-theme-option-description { display: block; margin-top: 2px; color: #bfc8d7; font-size: 10px; line-height: 1.25; }
-.visual-theme-check { color: #df91ff; font-weight: 900; opacity: 0; }
-.visual-theme-option[aria-pressed="true"] .visual-theme-check { opacity: 1; }
+/* Temas automáticos e seletores gráficos de perfis de conteúdo do Mural. */
 
 /* ======================== Agosto Lilás Glow ======================== */
 html[data-visual-theme="agosto-lilas-glow"] body {
@@ -264,42 +166,69 @@ html[data-visual-theme="agosto-lilas-glow"] body.agenda-mode {
     #080418;
 }
 
-/* O tema controla a visibilidade; o perfil editorial controla somente o estado selecionado. */
-.campaign-profile-badge {
-  position: absolute;
-  top: 1.25%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 6;
-  display: block;
-  width: auto;
-  height: 14.285%;
-  min-height: 64px;
-  max-height: 148px;
-  max-width: 94%;
-  padding: 0;
-  border: 0;
-  border-radius: 14px;
-  background: transparent;
-  filter: drop-shadow(0 9px 16px rgba(24, 2, 42, .56));
-  cursor: pointer;
-  user-select: none;
+/* Conjunto persistente fora dos slides, com espaço próprio no fluxo do painel. */
+.campaign-profile-selectors[hidden] { display: none; }
+.campaign-profile-selectors {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 6px max(10px, env(safe-area-inset-right)) 6px max(10px, env(safe-area-inset-left));
+  border-bottom: 1px solid var(--line);
+  background: var(--panel-deep);
 }
-
+.campaign-profile-options {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  padding: 6px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+}
+body.panel-mode.has-profile-banners {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: 100dvh;
+}
+body.panel-mode.has-profile-banners > .app {
+  flex: 1 1 0;
+  min-height: 0;
+  height: auto;
+}
+.campaign-profile-banner {
+  position: relative;
+  flex: 0 1 280px;
+  min-width: min(180px, 75vw);
+  height: clamp(56px, 9vh, 96px);
+  padding: 3px;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  background: transparent;
+  cursor: pointer;
+}
 .campaign-profile-banner-image {
   display: block;
-  width: auto;
+  width: 100%;
   height: 100%;
-  max-width: 100%;
   object-fit: contain;
-  object-position: top center;
   pointer-events: none;
 }
-
-.campaign-profile-banner:focus-visible {
-  outline: 2px solid #f0c5ff;
-  outline-offset: 4px;
+.campaign-profile-banner.is-profile-active {
+  border-color: var(--accent);
+  background: var(--surface);
 }
+.campaign-profile-banner:hover:not(:disabled) { background: var(--surface); }
+.campaign-profile-banner:disabled { opacity: .5; cursor: default; }
+.campaign-profile-banner:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+/* Sem URL utilizável não deve restar QR ou chamada de ação vazia. */
+.qr-wrap[hidden] { display: none !important; }
 
 .campaign-profile-check {
   position: absolute;
@@ -324,52 +253,6 @@ html[data-visual-theme="agosto-lilas-glow"] body.agenda-mode {
   transform: scale(1);
 }
 
-.campaign-profile-tooltip {
-  position: absolute;
-  top: calc(100% + 8px);
-  left: 50%;
-  z-index: 2;
-  width: max-content;
-  max-width: min(260px, 88vw);
-  padding: 6px 9px;
-  border: 1px solid rgba(229, 169, 255, .28);
-  border-radius: 8px;
-  background: rgba(20, 7, 43, .94);
-  color: #fbf8ff;
-  font: 700 11px/1.25 system-ui, sans-serif;
-  letter-spacing: normal;
-  white-space: normal;
-  box-shadow: 0 7px 20px rgba(15, 2, 29, .34);
-  opacity: 0;
-  pointer-events: none;
-  transform: translate(-50%, -3px);
-  transition: opacity .14s ease, transform .14s ease;
-}
-
-@media (hover: hover) {
-  .campaign-profile-banner:hover .campaign-profile-tooltip {
-    opacity: 1;
-    transform: translate(-50%, 0);
-  }
-}
-
-.campaign-profile-banner:focus-visible .campaign-profile-tooltip {
-  opacity: 1;
-  transform: translate(-50%, 0);
-}
-
-html[data-visual-theme="agosto-lilas-glow"] .visual-theme-toggle {
-  border-color: rgba(223, 150, 255, .38);
-  background: linear-gradient(145deg, rgba(80, 22, 131, .92), rgba(153, 38, 212, .92));
-  color: #fff;
-  box-shadow: 0 10px 32px rgba(120, 27, 178, .34);
-}
-html[data-visual-theme="agosto-lilas-glow"] .visual-theme-panel {
-  border-color: rgba(205, 128, 243, .30);
-  background: linear-gradient(145deg, rgba(28, 8, 57, .96), rgba(9, 5, 25, .97));
-}
-
-
 .campaign-help-button {
   position: fixed;
   top: max(12px, env(safe-area-inset-top));
@@ -387,14 +270,10 @@ html[data-visual-theme="agosto-lilas-glow"] .visual-theme-panel {
 }
 
 .campaign-help-button:hover { background: #ffe27a; }
-.media > .campaign-help-button {
-  position: absolute;
-  top: calc(1.25% + min(14.285%, 64px) + 8px);
-  right: auto;
-  left: 50%;
-  z-index: 7;
-  transform: translateX(-50%);
-  white-space: nowrap;
+.campaign-profile-selectors > .campaign-help-button {
+  position: static;
+  flex: 0 0 auto;
+  max-width: 100%;
 }
 .campaign-help-button:focus-visible {
   outline: 3px solid #fffdf5;
@@ -500,17 +379,7 @@ html[data-visual-theme="agosto-lilas-glow"] .visual-theme-panel {
 .support-help-future { margin: 12px 0 0; color: #bfb794; font-size: 13px; line-height: 1.5; }
 
 @media (max-width: 720px) {
-  .visual-theme-switcher { left: max(9px, env(safe-area-inset-left)); bottom: max(9px, env(safe-area-inset-bottom)); }
-  .visual-theme-toggle { width: 42px; height: 42px; }
-  .campaign-profile-badge {
-    top: 1%;
-    height: 15%;
-    min-height: 52px;
-    max-height: 96px;
-    max-width: 96%;
-  }
   body > .campaign-help-button { top: max(8px, env(safe-area-inset-top)); right: max(8px, env(safe-area-inset-right)); padding: 8px 11px; font-size: 11px; }
-  .media > .campaign-help-button { top: calc(1% + min(15%, 52px) + 8px); padding: 8px 12px; font-size: 12px; }
   .support-help-sections { grid-template-columns: 1fr; }
   .support-help-shell { padding: 17px; }
   html[data-visual-theme="agosto-lilas-glow"] body.panel-mode .content::before { filter: blur(12px); opacity: .82; }
@@ -518,5 +387,19 @@ html[data-visual-theme="agosto-lilas-glow"] .visual-theme-panel {
 
 @media (prefers-reduced-motion: reduce) {
   html[data-visual-theme="agosto-lilas-glow"] body.panel-mode .content::before { animation: none; }
-  .visual-theme-toggle { transition: none; }
+}
+
+@media (max-aspect-ratio: 5/4), (max-width: 850px) {
+  body.panel-mode.has-profile-banners { height: auto; min-height: 100dvh; }
+  body.panel-mode.has-profile-banners > .app { flex: none; }
+}
+@media (max-width: 720px) {
+  .campaign-profile-selectors { flex-wrap: wrap; gap: 4px; }
+  .campaign-profile-options { flex-basis: 100%; }
+  .campaign-profile-selectors > .campaign-help-button {
+    margin-left: auto;
+    min-height: 40px;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
 }

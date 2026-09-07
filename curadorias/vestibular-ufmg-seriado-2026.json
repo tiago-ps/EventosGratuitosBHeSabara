@@ -2,6 +2,10 @@
   "id": "vestibular-ufmg-seriado-2026",
   "status_editorial": "aprovada",
   "perfil_painel": {
+    "banner": {
+      "src": "imagens/curadorias/vestibular-ufmg-seriado-2026/vestibular-ufmg-banner.png",
+      "alt": "Obra para Vestibular — UFMG"
+    },
     "destaque": "Obras obrigatórias",
     "configuracao": {
       "modules": {
@@ -31,18 +35,7 @@
       "slideDuration": 0
     }
   },
-  "perfil_visual": {
-    "id": "vestibular-ufmg",
-    "label": "Vestibular UFMG",
-    "description": "Obras do Seriado UFMG 2026",
-    "swatch": "is-default",
-    "profileLabel": "Vestibular UFMG",
-    "banner": {
-      "src": "imagens/curadorias/vestibular-ufmg-seriado-2026/vestibular-ufmg-banner.png",
-      "alt": "Obra para Vestibular — UFMG"
-    },
-    "auto_ativar": false
-  },
+  "perfil_visual": null,
   "nome": "Seriado UFMG 2026 — Obras para Vestibular",
   "ativo_de": "2026-09-01",
   "ativo_ate": "2026-12-13",

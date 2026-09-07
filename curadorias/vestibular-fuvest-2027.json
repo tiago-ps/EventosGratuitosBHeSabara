@@ -2,6 +2,10 @@
   "id": "vestibular-fuvest-2027",
   "status_editorial": "aprovada",
   "perfil_painel": {
+    "banner": {
+      "src": "imagens/curadorias/vestibular-fuvest-2027/banner.png",
+      "alt": "Vestibular FUVEST 2027 — Leituras obrigatórias"
+    },
     "destaque": "Leituras obrigatórias",
     "configuracao": {
       "modules": {

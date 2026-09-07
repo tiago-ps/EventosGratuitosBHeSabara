@@ -2957,11 +2957,7 @@ function eventProgram(event) {
     closeButton?.addEventListener('click', closeFilterPanel);
     applyButton?.addEventListener('click', applyFiltersFromPanel);
     clearButton?.addEventListener('click', () => {
-      const defaults = defaultPanelSettings();
-      populateFilterPanel(slide, defaults);
-      const profileSelect = slide.querySelector('.panel-profile-select');
-      if (profileSelect) profileSelect.value = '';
-      showPanelValidation(slide, '');
+      restoreDefaultPanelSettings();
     });
 
     slide.querySelector('.panel-module-events')?.addEventListener('change', () => updatePanelModuleVisibility(slide));
@@ -2974,10 +2970,12 @@ function eventProgram(event) {
     slide.querySelector('.panel-profile-select')?.addEventListener('change', event => {
       const selected = event.target.value;
       const settings = selectedProfileSettings(selected);
-      if (settings) populateFilterPanel(slide, settings);
-      const deleteButton = slide.querySelector('.panel-profile-delete');
-      if (deleteButton) {
-        deleteButton.disabled = parseProfileOptionValue(selected).source !== 'personal';
+      // Perfis são escolhas imediatas; filtros individuais continuam usando Aplicar.
+      applyPanelSettingsAndRender(settings || defaultPanelSettings());
+      if (state.filterOverlay?.isConnected) {
+        // Preserva o menu aberto e o acesso a excluir perfis pessoais após renderizar.
+        populateProfileSelect(state.filterOverlay, selected);
+        openFilterPanel();
       }
     });
 
@@ -4130,6 +4128,7 @@ function eventProgram(event) {
       siteCurationsContent.bindSupportRequest();
       state.schoolRotationBatch = readStoredSchoolBatch();
       loadStoredPanelSettings();
+      syncActivePanelProfile();
       rebuildVisibleItems();
 
       if (!state.events.length) {

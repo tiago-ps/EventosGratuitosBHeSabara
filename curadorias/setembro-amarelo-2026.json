@@ -2,6 +2,10 @@
   "id": "setembro-amarelo-2026",
   "status_editorial": "em_analise",
   "perfil_painel": {
+    "banner": {
+      "src": "imagens/curadorias/setembro-amarelo-2026/setembro-amarelo-banner.png",
+      "alt": "Setembro Amarelo — Se precisar, peça ajuda. CVV 188."
+    },
     "destaque": "Se precisar, peça ajuda.",
     "configuracao": {
       "modules": {
@@ -39,10 +43,6 @@
     "swatch": "is-setembro-amarelo",
     "profileLabel": "Setembro Amarelo",
     "helpLabel": "Onde buscar ajuda",
-    "banner": {
-      "src": "imagens/curadorias/setembro-amarelo-2026/setembro-amarelo-banner.png",
-      "alt": "Setembro Amarelo — Se precisar, peça ajuda. CVV 188."
-    },
     "auto_ativar": true,
     "themeColor": "#151308"
   },
