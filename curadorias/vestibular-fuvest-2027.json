@@ -360,8 +360,8 @@
             ]
           },
           {
-            "biblioteca": "IFMG",
-            "biblioteca_rede": "IFMG",
+            "biblioteca": "IFMG Betim",
+            "biblioteca_rede": "IFMG Betim",
             "unidade": "",
             "acesso_fisico": false,
             "acesso_virtual": false,
@@ -496,8 +496,8 @@
             ]
           },
           {
-            "biblioteca": "IFMG",
-            "biblioteca_rede": "IFMG",
+            "biblioteca": "IFMG Betim",
+            "biblioteca_rede": "IFMG Betim",
             "unidade": "",
             "acesso_fisico": false,
             "acesso_virtual": false,
@@ -1175,8 +1175,31 @@
         "exibicao_ativa": true,
         "acervos": [
           {
-            "biblioteca": "IFMG",
-            "biblioteca_rede": "IFMG",
+            "biblioteca": "IFMG Betim",
+            "biblioteca_rede": "IFMG Betim",
+            "unidade": "",
+            "acesso_fisico": false,
+            "acesso_virtual": false,
+            "registros": [
+              {
+                "registro_id": "ifmg:busca:balada-de-amor-ao-vento",
+                "titulo_registro": "Balada de amor ao vento",
+                "autor_registro": "Paulina Chiziane",
+                "biblioteca_rede": "IFMG",
+                "unidade": "",
+                "codigo_acervo": "",
+                "numero_chamada": "",
+                "acesso_fisico": false,
+                "acesso_virtual": false,
+                "tipo_registro": "consulta_catalogo",
+                "disponibilidade_confirmada": false,
+                "link": "https://pergamum.ifmg.edu.br/pesquisa_avancada?q=Balada%20de%20amor%20ao%20vento&for=TITULO&condition=AND&q2=Paulina%20Chiziane&for2=AUTOR&keyword_type=P&cr=N&orderBy=obra&direction=C"
+              }
+            ]
+          },
+                    {
+            "biblioteca": "IFMG Pimhui",
+            "biblioteca_rede": "IFMG Pimhui",
             "unidade": "",
             "acesso_fisico": false,
             "acesso_virtual": false,
