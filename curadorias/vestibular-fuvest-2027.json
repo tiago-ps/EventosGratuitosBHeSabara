@@ -106,8 +106,54 @@
             ]
           },
           {
-            "biblioteca": "IFMG",
-            "biblioteca_rede": "IFMG",
+            "biblioteca": "IFMG Ouro Branco",
+            "biblioteca_rede": "IFMG Ouro Branco",
+            "unidade": "",
+            "acesso_fisico": false,
+            "acesso_virtual": false,
+            "registros": [
+              {
+                "registro_id": "ifmg:busca:opusculo-humanitario",
+                "titulo_registro": "Opúsculo Humanitário",
+                "autor_registro": "Nísia Floresta",
+                "biblioteca_rede": "IFMG",
+                "unidade": "",
+                "codigo_acervo": "",
+                "numero_chamada": "",
+                "acesso_fisico": false,
+                "acesso_virtual": false,
+                "tipo_registro": "consulta_catalogo",
+                "disponibilidade_confirmada": false,
+                "link": "https://pergamum.ifmg.edu.br/pesquisa_avancada?q=Op%C3%BAsculo%20Humanit%C3%A1rio&for=TITULO&condition=AND&q2=N%C3%ADsia%20Floresta&for2=AUTOR&keyword_type=P&cr=N&orderBy=obra&direction=C"
+              }
+            ]
+          },
+                    {
+            "biblioteca": "IFMG Betim",
+            "biblioteca_rede": "IFMG Betim",
+            "unidade": "",
+            "acesso_fisico": false,
+            "acesso_virtual": false,
+            "registros": [
+              {
+                "registro_id": "ifmg:busca:opusculo-humanitario",
+                "titulo_registro": "Opúsculo Humanitário",
+                "autor_registro": "Nísia Floresta",
+                "biblioteca_rede": "IFMG",
+                "unidade": "",
+                "codigo_acervo": "",
+                "numero_chamada": "",
+                "acesso_fisico": false,
+                "acesso_virtual": false,
+                "tipo_registro": "consulta_catalogo",
+                "disponibilidade_confirmada": false,
+                "link": "https://pergamum.ifmg.edu.br/pesquisa_avancada?q=Op%C3%BAsculo%20Humanit%C3%A1rio&for=TITULO&condition=AND&q2=N%C3%ADsia%20Floresta&for2=AUTOR&keyword_type=P&cr=N&orderBy=obra&direction=C"
+              }
+            ]
+          },
+                    {
+            "biblioteca": "IFMG Pimhui",
+            "biblioteca_rede": "IFMG Pimhui",
             "unidade": "",
             "acesso_fisico": false,
             "acesso_virtual": false,
