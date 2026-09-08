@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v108-saude-mental';
+const CACHE_VERSION = 'mural-cultural-v109-curadorias-membros';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -17,7 +17,7 @@ const CORE_ASSETS = [
   './js/conteudos/cursos.js?v=3',
   './js/conteudos/concursos.js?v=2',
   './js/conteudos/filmes.js?v=6',
-  './js/curadorias-site.js?v=8',
+  './js/curadorias-site.js?v=9',
   './js/app.js?v=97',
   './js/temas-visuais.js?v=11',
   './js/eventos-manuais-ui.js?v=44',

@@ -179,6 +179,52 @@
     return !end || !current || end >= current;
   }
 
+  const MEMBER_ID_FIELDS = Object.freeze({
+    eventos: 'id',
+    livros: 'id',
+    cursos: 'id_fonte',
+    filmes: 'id',
+    utilidade_publica: 'id'
+  });
+
+  function applyMembers(catalogs, curation, warn) {
+    const members = curation.membros;
+    if (members === undefined) return;
+    if (!members || typeof members !== 'object' || Array.isArray(members)) {
+      warn(`Curadoria site-only: membros inválidos para ${curation.id}; associações ignoradas.`);
+      return;
+    }
+
+    for (const [collection, idField] of Object.entries(MEMBER_ID_FIELDS)) {
+      const identifiers = members[collection];
+      if (identifiers === undefined) continue;
+      if (!Array.isArray(identifiers)) {
+        warn(`Curadoria site-only: membros.${collection} deve ser uma lista em ${curation.id}; associações ignoradas.`);
+        continue;
+      }
+      const recordsById = new Map(catalogs[collection]
+        .filter(item => item?.[idField] !== undefined && item?.[idField] !== null)
+        .map(item => [String(item[idField]), item]));
+      const seen = new Set();
+      for (const identifier of identifiers) {
+        if (!((typeof identifier === 'string' && identifier.trim()) ||
+          (typeof identifier === 'number' && Number.isFinite(identifier)))) {
+          warn(`Curadoria site-only: ID inválido em membros.${collection} de ${curation.id}; associação ignorada.`);
+          continue;
+        }
+        const id = String(identifier);
+        if (seen.has(id)) continue;
+        seen.add(id);
+        const target = recordsById.get(id);
+        if (!target) {
+          warn(`Curadoria site-only: membro ${collection} ${id} de ${curation.id} não encontrado no catálogo canônico.`);
+          continue;
+        }
+        target.curadoria_ids = mergeCurationIds(target.curadoria_ids, curation.id);
+      }
+    }
+  }
+
   function applyOverlayCollection(records, overlays, options) {
     const result = (Array.isArray(records) ? records : []).map(cloneRecord);
     const entries = overlays && typeof overlays === 'object' ? Object.entries(overlays) : [];
@@ -256,6 +302,11 @@
     };
 
     if (!isValidPayload(payload)) return result;
+
+    // Resolve membros somente nos catálogos canônicos, antes de qualquer fallback ou complemento.
+    for (const curation of payload.curadorias.filter(Boolean)) {
+      applyMembers(result, curation, warn);
+    }
 
     const permanentCuration = payload.curadorias.find(curation =>
       curation?.complementos?.servicos_apoio?.permanente === true
