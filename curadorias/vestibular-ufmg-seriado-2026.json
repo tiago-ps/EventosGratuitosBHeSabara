@@ -352,27 +352,6 @@
         "exibicao_ativa": true,
         "acervos": [
           {
-            "biblioteca": "IFMG",
-            "biblioteca_rede": "IFMG",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "ifmg:busca:o-quinze",
-                "titulo_registro": "O quinze",
-                "autor_registro": "Rachel de Queiroz",
-                "biblioteca_rede": "IFMG",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "link": "https://pergamum.ifmg.edu.br/pesquisa_avancada?q=quinze&for=TITULO&condition=AND&q2=queiroz&for2=AUTOR&tipo_obra=49%252C&keyword_type=P&cr=N&orderBy=obra&direction=C"
-              }
-            ]
-          },
-          {
             "biblioteca": "FMC-PBH",
             "biblioteca_rede": "FMC-PBH",
             "unidade": "",
