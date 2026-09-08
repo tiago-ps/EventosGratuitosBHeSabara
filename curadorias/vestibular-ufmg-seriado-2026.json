@@ -84,9 +84,9 @@
         "exibicao_ativa": true,
         "acervos": [
           {
-            "biblioteca": "IFMG Sabará",
-            "biblioteca_rede": "IFMG Sabará",
-            "unidade": "",
+            "biblioteca": "IFMG — Campus Sabará",
+            "biblioteca_rede": "IFMG",
+            "unidade": "Campus Sabará",
             "acesso_fisico": true,
             "acesso_virtual": false,
             "registros": [
@@ -94,8 +94,8 @@
                 "registro_id": "ifmg:86891",
                 "titulo_registro": "São Bernardo",
                 "autor_registro": "Graciliano Ramos",
-                "biblioteca_rede": "IFMG Sabará",
-                "unidade": "",
+                "biblioteca_rede": "IFMG",
+                "unidade": "Campus Sabará",
                 "codigo_acervo": "86891",
                 "numero_chamada": "821(81)-3 R175s 2008 (SB)",
                 "acesso_fisico": true,
@@ -213,7 +213,7 @@
         "acervos_quantidade": 6,
         "registros_acervo_quantidade": 6,
         "bibliotecas": [
-          "IFMG Sabará",
+          "IFMG — Campus Sabará",
           "FMC-PBH",
           "Biblioteca Pública Estadual de Minas Gerais",
           "BibliON",
@@ -257,9 +257,9 @@
         "exibicao_ativa": true,
         "acervos": [
           {
-            "biblioteca": "Biblioteca Virtual/Pergamum — IFMG",
-            "biblioteca_rede": "Biblioteca Virtual/Pergamum — IFMG",
-            "unidade": "",
+            "biblioteca": "IFMG — Biblioteca Virtual/Pergamum",
+            "biblioteca_rede": "IFMG",
+            "unidade": "Biblioteca Virtual/Pergamum",
             "acesso_fisico": false,
             "acesso_virtual": true,
             "registros": [
@@ -267,8 +267,8 @@
                 "registro_id": "ifmg:211229",
                 "titulo_registro": "Sobrevivendo ao racismo: memórias, cartas e o cotidiano da discriminação no Brasil",
                 "autor_registro": "Luana Tolentino",
-                "biblioteca_rede": "Biblioteca Virtual/Pergamum — IFMG",
-                "unidade": "",
+                "biblioteca_rede": "IFMG",
+                "unidade": "Biblioteca Virtual/Pergamum",
                 "codigo_acervo": "211229",
                 "numero_chamada": "",
                 "acesso_fisico": false,
@@ -279,8 +279,8 @@
                 "registro_id": "ifmg:211228",
                 "titulo_registro": "Sobrevivendo ao racismo: memórias, cartas e o cotidiano da discriminação no Brasil",
                 "autor_registro": "Luana Tolentino",
-                "biblioteca_rede": "Biblioteca Virtual/Pergamum — IFMG",
-                "unidade": "",
+                "biblioteca_rede": "IFMG",
+                "unidade": "Biblioteca Virtual/Pergamum",
                 "codigo_acervo": "211228",
                 "numero_chamada": "",
                 "acesso_fisico": false,
@@ -314,7 +314,7 @@
         "acervos_quantidade": 2,
         "registros_acervo_quantidade": 3,
         "bibliotecas": [
-          "Biblioteca Virtual/Pergamum — IFMG",
+          "IFMG — Biblioteca Virtual/Pergamum",
           "FMC-PBH"
         ],
         "vestibular": {
@@ -335,7 +335,7 @@
         "ano": 1930,
         "imagem": "imagens/curadorias/vestibular-ufmg-seriado-2026/o-quinze.png",
         "pergunta_curiosidade": "Obra obrigatória do Seriado UFMG 2026 — Etapa 1.",
-        "texto_apoio": "Romance de Rachel de Queiroz incluído na Etapa 1 do ciclo 2026–2028. A lista-base reúne consultas aos catálogos do IFMG, FMC-PBH e Biblioteca Pública Estadual de Minas Gerais.",
+        "texto_apoio": "Romance de Rachel de Queiroz incluído na Etapa 1 do ciclo 2026–2028. A lista-base reúne consultas aos catálogos da FMC-PBH e da Biblioteca Pública Estadual de Minas Gerais.",
         "temas": [
           "Vestibular UFMG",
           "Seriado UFMG 2026",
@@ -343,7 +343,7 @@
           "Ciclo 2026-2028"
         ],
         "icone": "📚",
-        "biblioteca_rede": "Catálogos IFMG / FMC-PBH / BPEMG",
+        "biblioteca_rede": "Catálogos FMC-PBH / BPEMG",
         "acesso_fisico": false,
         "acesso_virtual": false,
         "link": "https://www.record.com.br/products/o-quinze/",
@@ -394,10 +394,9 @@
             ]
           }
         ],
-        "acervos_quantidade": 3,
-        "registros_acervo_quantidade": 3,
+        "acervos_quantidade": 2,
+        "registros_acervo_quantidade": 2,
         "bibliotecas": [
-          "IFMG",
           "FMC-PBH",
           "Biblioteca Pública Estadual de Minas Gerais"
         ],
@@ -440,9 +439,9 @@
         "exibicao_ativa": true,
         "acervos": [
           {
-            "biblioteca": "IFMG Sabará",
-            "biblioteca_rede": "IFMG Sabará",
-            "unidade": "",
+            "biblioteca": "IFMG — Campus Sabará",
+            "biblioteca_rede": "IFMG",
+            "unidade": "Campus Sabará",
             "acesso_fisico": true,
             "acesso_virtual": false,
             "registros": [
@@ -450,8 +449,8 @@
                 "registro_id": "ifmg:102547",
                 "titulo_registro": "Ideias para adiar o fim do mundo",
                 "autor_registro": "Ailton Krenak",
-                "biblioteca_rede": "IFMG Sabará",
-                "unidade": "",
+                "biblioteca_rede": "IFMG",
+                "unidade": "Campus Sabará",
                 "codigo_acervo": "102547",
                 "numero_chamada": "",
                 "acesso_fisico": true,
@@ -506,7 +505,7 @@
         "acervos_quantidade": 3,
         "registros_acervo_quantidade": 3,
         "bibliotecas": [
-          "IFMG Sabará",
+          "IFMG — Campus Sabará",
           "FMC-PBH",
           "Biblioteca Pública Estadual de Minas Gerais"
         ],

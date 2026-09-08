@@ -106,18 +106,18 @@
             ]
           },
           {
-            "biblioteca": "IFMG Ouro Branco",
-            "biblioteca_rede": "IFMG Ouro Branco",
-            "unidade": "",
+            "biblioteca": "IFMG — Campus Ouro Branco",
+            "biblioteca_rede": "IFMG",
+            "unidade": "Campus Ouro Branco",
             "acesso_fisico": false,
             "acesso_virtual": false,
             "registros": [
               {
-                "registro_id": "ifmg:busca:opusculo-humanitario",
+                "registro_id": "ifmg:busca:opusculo-humanitario:ouro-branco",
                 "titulo_registro": "Opúsculo Humanitário",
                 "autor_registro": "Nísia Floresta",
                 "biblioteca_rede": "IFMG",
-                "unidade": "",
+                "unidade": "Campus Ouro Branco",
                 "codigo_acervo": "",
                 "numero_chamada": "",
                 "acesso_fisico": false,
@@ -128,19 +128,19 @@
               }
             ]
           },
-                    {
-            "biblioteca": "IFMG Betim",
-            "biblioteca_rede": "IFMG Betim",
-            "unidade": "",
+          {
+            "biblioteca": "IFMG — Campus Betim",
+            "biblioteca_rede": "IFMG",
+            "unidade": "Campus Betim",
             "acesso_fisico": false,
             "acesso_virtual": false,
             "registros": [
               {
-                "registro_id": "ifmg:busca:opusculo-humanitario",
+                "registro_id": "ifmg:busca:opusculo-humanitario:betim",
                 "titulo_registro": "Opúsculo Humanitário",
                 "autor_registro": "Nísia Floresta",
                 "biblioteca_rede": "IFMG",
-                "unidade": "",
+                "unidade": "Campus Betim",
                 "codigo_acervo": "",
                 "numero_chamada": "",
                 "acesso_fisico": false,
@@ -151,19 +151,19 @@
               }
             ]
           },
-                    {
-            "biblioteca": "IFMG Pimhui",
-            "biblioteca_rede": "IFMG Pimhui",
-            "unidade": "",
+          {
+            "biblioteca": "IFMG — Campus Piumhi",
+            "biblioteca_rede": "IFMG",
+            "unidade": "Campus Piumhi",
             "acesso_fisico": false,
             "acesso_virtual": false,
             "registros": [
               {
-                "registro_id": "ifmg:busca:opusculo-humanitario",
+                "registro_id": "ifmg:busca:opusculo-humanitario:piumhi",
                 "titulo_registro": "Opúsculo Humanitário",
                 "autor_registro": "Nísia Floresta",
                 "biblioteca_rede": "IFMG",
-                "unidade": "",
+                "unidade": "Campus Piumhi",
                 "codigo_acervo": "",
                 "numero_chamada": "",
                 "acesso_fisico": false,
@@ -290,11 +290,13 @@
             ]
           }
         ],
-        "acervos_quantidade": 7,
-        "registros_acervo_quantidade": 7,
+        "acervos_quantidade": 9,
+        "registros_acervo_quantidade": 9,
         "bibliotecas": [
           "Biblioteca Digital do Senado Federal",
-          "IFMG",
+          "IFMG — Campus Ouro Branco",
+          "IFMG — Campus Betim",
+          "IFMG — Campus Piumhi",
           "Biblioteca Pública Estadual de Minas Gerais",
           "BibliON",
           "MEC Livros",
@@ -360,9 +362,9 @@
             ]
           },
           {
-            "biblioteca": "IFMG Betim",
-            "biblioteca_rede": "IFMG Betim",
-            "unidade": "",
+            "biblioteca": "IFMG — Campus Betim",
+            "biblioteca_rede": "IFMG",
+            "unidade": "Campus Betim",
             "acesso_fisico": false,
             "acesso_virtual": false,
             "registros": [
@@ -371,7 +373,7 @@
                 "titulo_registro": "Nebulosas",
                 "autor_registro": "Narcisa Amália",
                 "biblioteca_rede": "IFMG",
-                "unidade": "",
+                "unidade": "Campus Betim",
                 "codigo_acervo": "",
                 "numero_chamada": "",
                 "acesso_fisico": false,
@@ -433,7 +435,7 @@
         "registros_acervo_quantidade": 4,
         "bibliotecas": [
           "Biblioteca Brasiliana Guita e José Mindlin — USP",
-          "IFMG",
+          "IFMG — Campus Betim",
           "BibliON",
           "MEC Livros"
         ],
@@ -496,9 +498,9 @@
             ]
           },
           {
-            "biblioteca": "IFMG Betim",
-            "biblioteca_rede": "IFMG Betim",
-            "unidade": "",
+            "biblioteca": "IFMG — Campus Betim",
+            "biblioteca_rede": "IFMG",
+            "unidade": "Campus Betim",
             "acesso_fisico": false,
             "acesso_virtual": false,
             "registros": [
@@ -507,7 +509,7 @@
                 "titulo_registro": "Memórias de Martha",
                 "autor_registro": "Julia Lopes de Almeida",
                 "biblioteca_rede": "IFMG",
-                "unidade": "",
+                "unidade": "Campus Betim",
                 "codigo_acervo": "",
                 "numero_chamada": "",
                 "acesso_fisico": false,
@@ -638,7 +640,7 @@
         "registros_acervo_quantidade": 7,
         "bibliotecas": [
           "Biblioteca Brasiliana Guita e José Mindlin — USP",
-          "IFMG",
+          "IFMG — Campus Betim",
           "BibliON",
           "MEC Livros",
           "UFMG",
@@ -865,9 +867,9 @@
         "exibicao_ativa": true,
         "acervos": [
           {
-            "biblioteca": "IFMG Sabará",
-            "biblioteca_rede": "IFMG Sabará",
-            "unidade": "",
+            "biblioteca": "IFMG — Campus Sabará",
+            "biblioteca_rede": "IFMG",
+            "unidade": "Campus Sabará",
             "acesso_fisico": true,
             "acesso_virtual": false,
             "registros": [
@@ -875,8 +877,8 @@
                 "registro_id": "ifmg:109238",
                 "titulo_registro": "A paixão segundo G. H.",
                 "autor_registro": "Clarice Lispector",
-                "biblioteca_rede": "IFMG Sabará",
-                "unidade": "",
+                "biblioteca_rede": "IFMG",
+                "unidade": "Campus Sabará",
                 "codigo_acervo": "109238",
                 "numero_chamada": "821(81)-3 L771p 2020 (SB)",
                 "acesso_fisico": true,
@@ -890,7 +892,7 @@
                 "titulo_registro": "A paixão segundo G. H.",
                 "autor_registro": "Clarice Lispector",
                 "biblioteca_rede": "IFMG",
-                "unidade": "",
+                "unidade": "Campus Sabará",
                 "codigo_acervo": "",
                 "numero_chamada": "",
                 "acesso_fisico": false,
@@ -1043,7 +1045,7 @@
         "acervos_quantidade": 7,
         "registros_acervo_quantidade": 8,
         "bibliotecas": [
-          "IFMG Sabará",
+          "IFMG — Campus Sabará",
           "FMC-PBH",
           "Biblioteca Pública Estadual de Minas Gerais",
           "BibliON",
@@ -1175,18 +1177,18 @@
         "exibicao_ativa": true,
         "acervos": [
           {
-            "biblioteca": "IFMG Betim",
-            "biblioteca_rede": "IFMG Betim",
-            "unidade": "",
+            "biblioteca": "IFMG — Campus Betim",
+            "biblioteca_rede": "IFMG",
+            "unidade": "Campus Betim",
             "acesso_fisico": false,
             "acesso_virtual": false,
             "registros": [
               {
-                "registro_id": "ifmg:busca:balada-de-amor-ao-vento",
+                "registro_id": "ifmg:busca:balada-de-amor-ao-vento:betim",
                 "titulo_registro": "Balada de amor ao vento",
                 "autor_registro": "Paulina Chiziane",
                 "biblioteca_rede": "IFMG",
-                "unidade": "",
+                "unidade": "Campus Betim",
                 "codigo_acervo": "",
                 "numero_chamada": "",
                 "acesso_fisico": false,
@@ -1197,19 +1199,19 @@
               }
             ]
           },
-                    {
-            "biblioteca": "IFMG Pimhui",
-            "biblioteca_rede": "IFMG Pimhui",
-            "unidade": "",
+          {
+            "biblioteca": "IFMG — Campus Piumhi",
+            "biblioteca_rede": "IFMG",
+            "unidade": "Campus Piumhi",
             "acesso_fisico": false,
             "acesso_virtual": false,
             "registros": [
               {
-                "registro_id": "ifmg:busca:balada-de-amor-ao-vento",
+                "registro_id": "ifmg:busca:balada-de-amor-ao-vento:piumhi",
                 "titulo_registro": "Balada de amor ao vento",
                 "autor_registro": "Paulina Chiziane",
                 "biblioteca_rede": "IFMG",
-                "unidade": "",
+                "unidade": "Campus Piumhi",
                 "codigo_acervo": "",
                 "numero_chamada": "",
                 "acesso_fisico": false,
@@ -1313,10 +1315,11 @@
             ]
           }
         ],
-        "acervos_quantidade": 5,
-        "registros_acervo_quantidade": 5,
+        "acervos_quantidade": 6,
+        "registros_acervo_quantidade": 6,
         "bibliotecas": [
-          "IFMG",
+          "IFMG — Campus Betim",
+          "IFMG — Campus Piumhi",
           "FMC-PBH",
           "BibliON",
           "UFMG",
@@ -1358,9 +1361,9 @@
         "exibicao_ativa": true,
         "acervos": [
           {
-            "biblioteca": "IFMG Sabará",
-            "biblioteca_rede": "IFMG Sabará",
-            "unidade": "",
+            "biblioteca": "IFMG — Campus Sabará",
+            "biblioteca_rede": "IFMG",
+            "unidade": "Campus Sabará",
             "acesso_fisico": true,
             "acesso_virtual": false,
             "registros": [
@@ -1368,8 +1371,8 @@
                 "registro_id": "ifmg:108962",
                 "titulo_registro": "Canção para ninar menino grande",
                 "autor_registro": "Conceição Evaristo",
-                "biblioteca_rede": "IFMG Sabará",
-                "unidade": "",
+                "biblioteca_rede": "IFMG",
+                "unidade": "Campus Sabará",
                 "codigo_acervo": "108962",
                 "numero_chamada": "821(81)-31 E92c 2024 (OB)",
                 "acesso_fisico": true,
@@ -1383,7 +1386,7 @@
                 "titulo_registro": "Canção para ninar menino grande",
                 "autor_registro": "Conceição Evaristo",
                 "biblioteca_rede": "IFMG",
-                "unidade": "",
+                "unidade": "Campus Sabará",
                 "codigo_acervo": "",
                 "numero_chamada": "",
                 "acesso_fisico": false,
@@ -1559,7 +1562,7 @@
         "acervos_quantidade": 8,
         "registros_acervo_quantidade": 9,
         "bibliotecas": [
-          "IFMG Sabará",
+          "IFMG — Campus Sabará",
           "FMC-PBH",
           "Biblioteca Pública Estadual de Minas Gerais",
           "BibliON",
