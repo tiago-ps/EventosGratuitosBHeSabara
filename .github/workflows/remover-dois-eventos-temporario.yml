@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Remover somente os dois eventos indicados
+      - name: Remover somente os dois registros indicados
         shell: python
         run: |
           import json
@@ -27,16 +27,40 @@ jobs:
           data = json.loads(p.read_text(encoding='utf-8'))
           antes = len(data.get('eventos', []))
           data['eventos'] = [e for e in data.get('eventos', []) if e.get('id') != alvo_agenda]
-          assert len(data['eventos']) == antes - 1, f'Esperava remover exatamente 1 evento de eventos.json; removidos={antes-len(data["eventos"])}'
+          removidos_agenda = antes - len(data['eventos'])
+          assert removidos_agenda == 1, f'Esperava remover exatamente 1 registro de eventos.json; removidos={removidos_agenda}'
           p.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+          def remover_id(obj, alvo):
+              removidos = 0
+              if isinstance(obj, list):
+                  novos = []
+                  for item in obj:
+                      if isinstance(item, dict) and item.get('id') == alvo:
+                          removidos += 1
+                          continue
+                      item, n = remover_id(item, alvo)
+                      removidos += n
+                      novos.append(item)
+                  return novos, removidos
+              if isinstance(obj, dict):
+                  novo = {}
+                  for chave, valor in obj.items():
+                      if chave == alvo:
+                          removidos += 1
+                          continue
+                      valor, n = remover_id(valor, alvo)
+                      removidos += n
+                      novo[chave] = valor
+                  return novo, removidos
+              return obj, 0
 
           p = Path('curadorias/saude-mental.json')
           data = json.loads(p.read_text(encoding='utf-8'))
-          eventos = data.get('complementos', {}).get('eventos', [])
-          antes = len(eventos)
-          data['complementos']['eventos'] = [e for e in eventos if e.get('id') != alvo_curadoria]
-          assert len(data['complementos']['eventos']) == antes - 1, f'Esperava remover exatamente 1 evento da curadoria; removidos={antes-len(data["complementos"]["eventos"])}'
+          data, removidos_curadoria = remover_id(data, alvo_curadoria)
+          assert removidos_curadoria >= 1, 'O registro da UNA-SUS não foi encontrado na curadoria'
           p.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          print(f'Removidos da curadoria: {removidos_curadoria} ocorrência(s) do mesmo ID')
 
       - name: Validar e publicar alteração
         run: |
@@ -46,5 +70,5 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -- eventos.json curadorias/saude-mental.json
           git diff --cached --quiet && { echo 'Nenhuma alteração detectada'; exit 1; }
-          git commit -m 'Remove dois eventos do site de teste'
+          git commit -m 'Remove dois registros do site de teste'
           git push
