@@ -677,4 +677,151 @@
     safeImage,
     setPanelSupportImageState
   });
+
+  (() => {
+    const CURATION_QUERY_PARAM = 'curadoria';
+    const initialRequestedCuration = (() => {
+      try {
+        return String(new URL(window.location.href).searchParams.get(CURATION_QUERY_PARAM) || '').trim();
+      } catch {
+        return '';
+      }
+    })();
+    let pendingInitialCuration = initialRequestedCuration;
+    let curationsLoaded = false;
+    let enhancementScheduled = false;
+
+    function curationUrl(curationId = '') {
+      const url = new URL(window.location.href);
+      const id = String(curationId || '').trim();
+      if (id) url.searchParams.set(CURATION_QUERY_PARAM, id);
+      else url.searchParams.delete(CURATION_QUERY_PARAM);
+      return url;
+    }
+
+    function replaceCurationUrl(curationId = '') {
+      try {
+        const url = curationUrl(curationId);
+        if (url.href !== window.location.href) history.replaceState(history.state, '', url);
+      } catch {
+        /* A Agenda continua funcional mesmo sem sincronização de URL. */
+      }
+    }
+
+    async function copyText(value) {
+      if (navigator.clipboard?.writeText) {
+        try {
+          await navigator.clipboard.writeText(value);
+          return true;
+        } catch {
+          /* Usa fallback compatível com navegadores mais antigos. */
+        }
+      }
+      const textarea = document.createElement('textarea');
+      textarea.value = value;
+      textarea.setAttribute('readonly', '');
+      textarea.style.position = 'fixed';
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.select();
+      let copied = false;
+      try {
+        copied = document.execCommand('copy');
+      } catch {
+        copied = false;
+      }
+      textarea.remove();
+      return copied;
+    }
+
+    async function shareCuration(button, select) {
+      const curationId = String(select?.value || '').trim();
+      if (!curationId) return;
+      const option = select.selectedOptions?.[0];
+      const title = String(option?.textContent || 'Curadoria do Mural Cultural').trim();
+      const url = curationUrl(curationId).href;
+
+      if (typeof navigator.share === 'function') {
+        try {
+          await navigator.share({
+            title,
+            text: 'Confira esta curadoria no Mural Cultural.',
+            url
+          });
+          return;
+        } catch (error) {
+          if (error?.name === 'AbortError') return;
+        }
+      }
+
+      const copied = await copyText(url);
+      if (!button?.isConnected) return;
+      const original = button.textContent;
+      button.textContent = copied ? 'Link copiado' : 'Copie o link da barra de endereço';
+      window.setTimeout(() => {
+        if (button.isConnected) button.textContent = original;
+      }, 2200);
+    }
+
+    function enhanceAgendaCurationControls() {
+      enhancementScheduled = false;
+      const select = document.querySelector('.agenda-curation');
+      if (!select) return;
+
+      const optionValues = new Set([...select.options].map(option => String(option.value || '')));
+      if (pendingInitialCuration) {
+        if (optionValues.has(pendingInitialCuration)) {
+          const requested = pendingInitialCuration;
+          pendingInitialCuration = '';
+          if (select.value !== requested) {
+            select.value = requested;
+            select.dispatchEvent(new Event('change', { bubbles: true }));
+            return;
+          }
+        } else if (curationsLoaded && select.options.length > 1) {
+          pendingInitialCuration = '';
+          replaceCurationUrl(select.value);
+        }
+      } else {
+        replaceCurationUrl(select.value);
+      }
+
+      const label = select.closest('label');
+      if (!label?.parentElement) return;
+      let button = label.parentElement.querySelector('.agenda-curation-share');
+      if (!button) {
+        button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'agenda-section-action agenda-curation-share';
+        button.textContent = 'Compartilhar curadoria';
+        label.insertAdjacentElement('afterend', button);
+        button.addEventListener('click', () => shareCuration(button, select));
+      }
+      button.hidden = !select.value;
+    }
+
+    function scheduleEnhancement() {
+      if (enhancementScheduled) return;
+      enhancementScheduled = true;
+      queueMicrotask(enhanceAgendaCurationControls);
+    }
+
+    document.addEventListener('change', event => {
+      if (!event.target?.matches?.('.agenda-curation')) return;
+      replaceCurationUrl(event.target.value);
+      scheduleEnhancement();
+    }, true);
+
+    window.addEventListener('mural:curations-loaded', () => {
+      curationsLoaded = true;
+      scheduleEnhancement();
+    });
+
+    const app = document.getElementById('app');
+    if (app) {
+      const observer = new MutationObserver(scheduleEnhancement);
+      observer.observe(app, { childList: true, subtree: true });
+    }
+    scheduleEnhancement();
+  })();
 })();
