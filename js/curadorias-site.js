@@ -38,10 +38,36 @@
   }
 
   function isActive(curation, today = new Date()) {
+    if (curation?.permanente === true) return true;
     const current = dateKey(today);
     const start = String(curation?.ativo_de || '');
     const end = String(curation?.ativo_ate || '');
     return Boolean(current && start && end && current >= start && current <= end);
+  }
+
+  // Disponibilidade e promoção são decisões independentes.
+  function isPromoted(curation, today = new Date()) {
+    if (!isActive(curation, today)) return false;
+    const months = curation?.promocao_painel?.meses;
+    if (!Array.isArray(months)) return true;
+    const date = today instanceof Date ? today : new Date(today);
+    return months.includes(date.getMonth() + 1);
+  }
+
+  function mergeCurationIds(...collections) {
+    return [...new Set(collections.flatMap(value => Array.isArray(value) ? value : [value])
+      .map(value => normalizeLabel(value || '').replace(/\s+/g, '-')).filter(Boolean))];
+  }
+
+  function matchesCuration(item, curation) {
+    const id = mergeCurationIds(curation?.id)[0];
+    if (!id) return false;
+    if (mergeCurationIds(item?.curadoria_ids).includes(id)) return true;
+    // Compatibilidade com as curadorias legadas; permanentes usam associação explícita.
+    if (curation.permanente) return false;
+    const theme = normalizeLabel(curation.perfil_painel?.configuracao?.theme || curation.tema || curation.theme);
+    return Boolean(theme && (Array.isArray(item?.temas) ? item.temas : [])
+      .some(value => normalizeLabel(value) === theme));
   }
 
   function isValidPayload(payload) {
@@ -55,6 +81,7 @@
   function cloneRecord(record) {
     return {
       ...record,
+      curadoria_ids: mergeCurationIds(record?.curadoria_ids),
       temas: Array.isArray(record?.temas) ? [...record.temas] : record?.temas
     };
   }
@@ -169,6 +196,7 @@
             site_only: true
           };
           item.temas = mergeLabels(item.temas, overlay?.temas);
+          item.curadoria_ids = mergeCurationIds(item.curadoria_ids, overlay?.curadoria_ids, options.curationId);
           result.push(item);
           continue;
         }
@@ -180,6 +208,7 @@
         continue;
       }
       target.temas = mergeLabels(target.temas, overlay?.temas);
+      target.curadoria_ids = mergeCurationIds(target.curadoria_ids, overlay?.curadoria_ids, options.curationId);
       applyOverlayUrlMetadata(target, overlay, options.warn, `${options.label} ${identifier}`);
       applyOverlayImageMetadata(target, overlay, options.warn, `${options.label} ${identifier}`);
     }
@@ -193,7 +222,13 @@
       if (typeof options.include === 'function' && !options.include(complement)) continue;
       const complementIds = options.identifiers(complement).filter(Boolean).map(String);
       if (!complementIds.length || complementIds.some(identifier => identifiers.has(identifier))) {
-        options.warn(`Curadoria site-only: complemento de ${options.label} sem ID próprio ou com colisão; item ignorado.`);
+        // Reutiliza a identidade já integrada sem sobrescrever seus dados ou associações.
+        const existing = result.find(item => options.identifiers(item).filter(Boolean)
+          .some(identifier => complementIds.includes(String(identifier))));
+        if (existing && normalizeLabel(existing.titulo) === normalizeLabel(complement.titulo)) {
+          existing.curadoria_ids = mergeCurationIds(existing.curadoria_ids, complement.curadoria_ids, options.curationId);
+        }
+        options.warn(`Curadoria site-only: complemento de ${options.label} sem ID próprio ou com colisão; dados do item ignorados.`);
         continue;
       }
       const item = {
@@ -201,6 +236,7 @@
         origem: 'site-only',
         site_only: true
       };
+      item.curadoria_ids = mergeCurationIds(item.curadoria_ids, options.curationId);
       result.push(item);
       complementIds.forEach(identifier => identifiers.add(identifier));
     }
@@ -228,7 +264,7 @@
       result.apoio = {
         ...permanentCuration.complementos.servicos_apoio,
         curationId: permanentCuration.id,
-        campaignActive: isActive(permanentCuration, options.today || new Date()),
+        campaignActive: isPromoted(permanentCuration, options.today || new Date()),
         site_only: true
       };
     }
@@ -236,38 +272,39 @@
     // A janela editorial controla a campanha, não a vida útil dos conteúdos.
     for (const curation of payload.curadorias.filter(Boolean)) {
       const active = isActive(curation, options.today || new Date());
+      const promoted = isPromoted(curation, options.today || new Date());
       const overlays = curation.overlays || {};
       const complements = curation.complementos || {};
       result.eventos = applyOverlayCollection(result.eventos, overlays.eventos, {
-        idField: 'id', label: 'evento', warn
+        idField: 'id', label: 'evento', curationId: curation.id, warn
       });
       result.livros = applyOverlayCollection(result.livros, overlays.livros, {
-        idField: 'id', label: 'livro', warn
+        idField: 'id', label: 'livro', curationId: curation.id, warn
       });
       result.cursos = applyOverlayCollection(result.cursos, overlays.cursos, {
-        idField: 'id_fonte', label: 'curso', warn
+        idField: 'id_fonte', label: 'curso', curationId: curation.id, warn
       });
       result.filmes = applyOverlayCollection(result.filmes, overlays.filmes, {
-        idField: 'id', label: 'filme', warn
+        idField: 'id', label: 'filme', curationId: curation.id, warn
       });
       result.eventos = appendComplements(result.eventos, complements.eventos, {
-        label: 'evento', warn,
+        label: 'evento', curationId: curation.id, warn,
         identifiers: item => [item?.id],
         include: item => eventIsCurrent(item, options.today || new Date())
       });
       result.livros = appendComplements(result.livros, complements.livros, {
-        label: 'livro', warn,
+        label: 'livro', curationId: curation.id, warn,
         identifiers: item => [item?.id]
       });
       result.cursos = appendComplements(result.cursos, complements.cursos, {
-        label: 'curso', warn,
+        label: 'curso', curationId: curation.id, warn,
         identifiers: item => [item?.id, item?.id_fonte]
       });
       result.filmes = appendComplements(result.filmes, complements.filmes, {
-        label: 'filme', warn,
+        label: 'filme', curationId: curation.id, warn,
         identifiers: item => [item?.id]
       });
-      if (active && complements.servicos_apoio && typeof complements.servicos_apoio === 'object') {
+      if (promoted && complements.servicos_apoio && typeof complements.servicos_apoio === 'object') {
         result.apoio = {
           ...complements.servicos_apoio,
           curationId: curation.id,
@@ -327,7 +364,7 @@
     const slide = template.content.firstElementChild.cloneNode(true);
     buildSiteQr(slide);
     slide.classList.add('support-slide');
-    slide.setAttribute('aria-label', `Informação de apoio: ${movie.titulo || 'Setembro Amarelo'}`);
+    slide.setAttribute('aria-label', `Informação de apoio: ${movie.titulo || 'Saúde Mental'}`);
 
     const seconds = slideDurationFor(movie);
     slide.style.setProperty('--slide-seconds', `${seconds}s`);
@@ -359,7 +396,7 @@
     if (campaign) {
       campaign.hidden = false;
       campaign.className = 'badge support-campaign';
-      campaign.textContent = 'SETEMBRO AMARELO';
+      campaign.textContent = 'SAÚDE MENTAL';
       campaign.removeAttribute('style');
       campaign.style.background = '#ffe27a';
       campaign.style.color = '#151308';
@@ -418,7 +455,7 @@
       fallback.style.background = 'radial-gradient(circle at 35% 28%, rgba(245,197,24,.32), transparent 34%), linear-gradient(145deg, #0b0b08 0%, #211d09 58%, #151308 100%)';
     }
     if (fallbackIcon) fallbackIcon.textContent = movie.icone || '💛';
-    if (fallbackLabel) fallbackLabel.textContent = 'Setembro Amarelo';
+    if (fallbackLabel) fallbackLabel.textContent = 'Saúde Mental';
     if (image && imageUrl) {
       image.alt = movie.titulo ? `Imagem de apoio: ${movie.titulo}` : 'Imagem de apoio';
       image.onload = () => setPanelSupportImageState(image, fallback, true);
@@ -668,6 +705,9 @@
     dateKey,
     eventIsCurrent,
     isActive,
+    isPromoted,
+    mergeCurationIds,
+    matchesCuration,
     isValidPayload,
     mergeLabels,
     mountSupportArea,

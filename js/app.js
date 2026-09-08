@@ -795,8 +795,12 @@
     const films = filmsEnabled ? filmsContent.sampleForPanel(state.allFilms, filmFilters,
       normalizeText, undefined, sampleOptions('films')) : [];
     const utilityTheme = normalizeText(state.filters.theme);
-    const eligibleUtility = utilityEnabled ? utilitySource().filter(item => !utilityTheme ||
-      (Array.isArray(item.temas) ? item.temas : []).some(theme => normalizeText(theme) === utilityTheme)) : [];
+    const eligibleUtility = utilityEnabled ? utilitySource().filter(item => {
+      if (item.support_target && !(state.siteCurationsData?.curadorias || []).some(curation =>
+        siteCurationsContent.matchesCuration(item, curation) && siteCurationsContent.isPromoted(curation))) return false;
+      return !utilityTheme || (Array.isArray(item.temas) ? item.temas : [])
+        .some(theme => normalizeText(theme) === utilityTheme);
+    }) : [];
     const utility = muralCore.sampleForPanel(
       eligibleUtility,
       PANEL_UTILITY_LIMIT,
@@ -824,17 +828,15 @@
         utility: eligibleUtility
       };
       const curations = (state.siteCurationsData?.curadorias || [])
-        .filter(curation => siteCurationsContent.isActive(curation))
+        .filter(curation => siteCurationsContent.isPromoted(curation))
         .map(curation => {
           const settings = curation.perfil_painel?.configuracao;
-          const theme = normalizeText(settings?.theme || curation.tema || '');
           return {
             id: curation.id,
-            items: theme ? Object.entries(eligible)
+            items: Object.entries(eligible)
               .filter(([module]) => settings?.modules?.[module] !== false)
               .flatMap(([, items]) => items)
-              .filter(item => (Array.isArray(item.temas) ? item.temas : [])
-                .some(value => normalizeText(value) === theme)) : []
+              .filter(item => siteCurationsContent.matchesCuration(item, curation))
           };
         });
       state.panelRoundSteps = muralCore.createPanelSequence(events,
@@ -1881,6 +1883,7 @@ function eventProgram(event) {
       showIframe();
     }
 
+    slide.dataset.curadoriaIds = JSON.stringify(siteCurationsContent.mergeCurationIds(state.events[index]?.curadoria_ids));
     app.replaceChildren(slide);
 
     // Atualizar referências dos botões após renderizar o slide
@@ -2099,6 +2102,7 @@ function eventProgram(event) {
       fallback.style.display = 'grid';
     }
 
+    slide.dataset.curadoriaIds = JSON.stringify(siteCurationsContent.mergeCurationIds(state.events[index]?.curadoria_ids));
     app.replaceChildren(slide);
     scheduleBookFit(slide);
     state.btnNext = slide.querySelector('.next-btn');
@@ -2134,6 +2138,7 @@ function eventProgram(event) {
       }
     });
 
+    slide.dataset.curadoriaIds = JSON.stringify(siteCurationsContent.mergeCurationIds(state.events[index]?.curadoria_ids));
     app.replaceChildren(slide);
 
     state.btnNext = slide.querySelector('.next-btn');
@@ -2170,6 +2175,7 @@ function eventProgram(event) {
       }
     });
 
+    slide.dataset.curadoriaIds = JSON.stringify(siteCurationsContent.mergeCurationIds(state.events[index]?.curadoria_ids));
     app.replaceChildren(slide);
 
     state.btnNext = slide.querySelector('.next-btn');
@@ -2207,6 +2213,7 @@ function eventProgram(event) {
       }
     });
 
+    slide.dataset.curadoriaIds = JSON.stringify(siteCurationsContent.mergeCurationIds(state.events[index]?.curadoria_ids));
     app.replaceChildren(slide);
     state.btnNext = slide.querySelector('.next-btn');
     state.btnPrev = slide.querySelector('.prev-btn');
@@ -3209,18 +3216,18 @@ function eventProgram(event) {
     return curations.map(curation => ({
       id: String(curation?.id || '').trim(),
       name: String(curation?.nome || curation?.id || '').trim(),
+      permanente: curation?.permanente === true,
       theme: normalizeText(curation?.perfil_painel?.configuracao?.theme || '') ||
         normalizeText(curation?.tema || ''),
       start: String(curation?.ativo_de || '').trim(),
       end: String(curation?.ativo_ate || '').trim()
-    })).filter(curation => curation.id && curation.theme && editorialProfileIsVisible(curation));
+    })).filter(curation => curation.id && (curation.permanente || editorialProfileIsVisible(curation)));
   }
 
   function agendaItemMatchesCuration(item, curation) {
     if (!state.mobileCuration) return true;
     if (!curation) return false;
-    return (Array.isArray(item.temas) ? item.temas : [])
-      .some(theme => normalizeText(theme) === curation.theme);
+    return siteCurationsContent.matchesCuration(item, curation);
   }
 
   function agendaThemeOptions(content = state.mobileContent) {

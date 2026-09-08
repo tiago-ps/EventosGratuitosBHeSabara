@@ -94,6 +94,7 @@
         themeColor: String(profile.themeColor || defaultThemeColor),
         stylesheet,
         auto_ativar: profile.auto_ativar === true,
+        curation,
         start: String(curation.ativo_de || ''),
         end: String(curation.ativo_ate || '')
       });
@@ -125,17 +126,22 @@
     syncExperience();
   }
 
+  function promotionAllowsTheme(theme) {
+    return !theme.curation?.promocao_painel ||
+      window.MuralCultural.siteCurations.isPromoted(theme.curation);
+  }
+
   function automaticTheme() {
     const profile = activePanelProfile();
     if (profile) {
       const selectedTheme = THEMES.find(theme => theme.panelProfile === profile);
-      return selectedTheme && panelProfileMatchesCurrentSlide(profile) ? selectedTheme.id : 'padrao';
+      return selectedTheme && promotionAllowsTheme(selectedTheme) && panelProfileMatchesCurrentSlide(profile) ? selectedTheme.id : 'padrao';
     }
 
     // Temas editoriais automáticos acompanham o item da própria curadoria.
     // A janela de datas continua válida, mas não colore itens sem relação com ela.
     const current = dateKey();
-    const contextual = THEMES.find(theme => theme.auto_ativar && theme.panelProfile &&
+    const contextual = THEMES.find(theme => theme.auto_ativar && theme.panelProfile && promotionAllowsTheme(theme) &&
       (!theme.start || current >= theme.start) && (!theme.end || current <= theme.end) &&
       panelProfileMatchesCurrentSlide(theme.panelProfile)
     );
@@ -217,6 +223,12 @@
   function bannerMatchesSlide(banner, slide) {
     if (!banner || !slide) return false;
     const profileId = banner.dataset.panelProfile || '';
+    if (banner._curation?.promocao_painel) {
+      if (!window.MuralCultural.siteCurations.isPromoted(banner._curation)) return false;
+      let ids = [];
+      try { ids = JSON.parse(slide.dataset.curadoriaIds || '[]'); } catch (_) { /* Sem associação. */ }
+      return window.MuralCultural.siteCurations.mergeCurationIds(ids).includes(profileId);
+    }
     if (slide.classList.contains('support-slide') && root.dataset.siteCurationHelp === profileId) {
       return true;
     }
@@ -273,6 +285,7 @@
       banner.className = BANNER_CLASS;
       banner.dataset.panelProfile = String(curation.id);
       banner.dataset.profileLabel = String(curation.nome || curation.id);
+      banner._curation = curation;
       banner._curationTitleKeys = curationTitleKeys(curation);
       banner._curationThemeKey = normalizeContentKey(curation.tema);
       const today = dateKey();
@@ -329,7 +342,11 @@
     let visibleCount = 0;
 
     for (const banner of banners) {
-      const visibleForItem = Boolean(slide && bannerMatchesSlide(banner, slide));
+      const promotional = Boolean(banner._curation?.promocao_painel);
+      const profile = activePanelProfile();
+      const visualReady = !promotional || THEMES.some(theme => theme.panelProfile === banner.dataset.panelProfile);
+      const selected = !promotional || !profile || profile === banner.dataset.panelProfile;
+      const visibleForItem = Boolean(visualReady && selected && slide && bannerMatchesSlide(banner, slide));
       banner.hidden = !visibleForItem;
       if (visibleForItem) visibleCount += 1;
       syncBannerSelection(banner);

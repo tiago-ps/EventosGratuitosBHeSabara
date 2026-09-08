@@ -1,5 +1,5 @@
-/* ======================== Setembro Amarelo Glow ======================== */
-html[data-visual-theme="setembro-amarelo-glow"] body {
+/* ======================== Saúde Mental Glow ======================== */
+html[data-visual-theme="saude-mental-glow"] body {
   --bg: #0b0b08;
   --panel: #211d09;
   --panel-deep: #151308;
@@ -38,7 +38,7 @@ html[data-visual-theme="setembro-amarelo-glow"] body {
   background: #0b0b08;
 }
 
-html[data-visual-theme="setembro-amarelo-glow"] body.panel-mode .slide {
+html[data-visual-theme="saude-mental-glow"] body.panel-mode .slide {
   isolation: isolate;
   background:
     radial-gradient(circle 430px at 100% 100%, rgba(245, 197, 24, .18), transparent 72%),
@@ -46,12 +46,12 @@ html[data-visual-theme="setembro-amarelo-glow"] body.panel-mode .slide {
   box-shadow: inset 0 4px 0 rgba(245, 197, 24, .72);
 }
 
-html[data-visual-theme="setembro-amarelo-glow"] body.panel-mode .content {
+html[data-visual-theme="saude-mental-glow"] body.panel-mode .content {
   position: relative;
   isolation: isolate;
 }
 
-html[data-visual-theme="setembro-amarelo-glow"] body.panel-mode .content::before {
+html[data-visual-theme="saude-mental-glow"] body.panel-mode .content::before {
   content: '';
   position: absolute;
   inset: -11%;
@@ -68,7 +68,7 @@ html[data-visual-theme="setembro-amarelo-glow"] body.panel-mode .content::before
   animation: amareloGlowDrift 17s ease-in-out infinite alternate;
 }
 
-html[data-visual-theme="setembro-amarelo-glow"] body.panel-mode .content::after {
+html[data-visual-theme="saude-mental-glow"] body.panel-mode .content::after {
   content: '';
   position: absolute;
   right: -9vw;
@@ -82,80 +82,80 @@ html[data-visual-theme="setembro-amarelo-glow"] body.panel-mode .content::after 
   filter: blur(8px);
 }
 
-html[data-visual-theme="setembro-amarelo-glow"] body.panel-mode .content > * { position: relative; z-index: 1; }
+html[data-visual-theme="saude-mental-glow"] body.panel-mode .content > * { position: relative; z-index: 1; }
 
 @keyframes amareloGlowDrift {
   from { transform: translate3d(-1.2%, .8%, 0) scale(1); opacity: .80; }
   to { transform: translate3d(1.5%, -1%, 0) scale(1.045); opacity: 1; }
 }
 
-html[data-visual-theme="setembro-amarelo-glow"] .details > div,
-html[data-visual-theme="setembro-amarelo-glow"] .book-details > div,
-html[data-visual-theme="setembro-amarelo-glow"] .filter-panel,
-html[data-visual-theme="setembro-amarelo-glow"] .agenda-card {
+html[data-visual-theme="saude-mental-glow"] .details > div,
+html[data-visual-theme="saude-mental-glow"] .book-details > div,
+html[data-visual-theme="saude-mental-glow"] .filter-panel,
+html[data-visual-theme="saude-mental-glow"] .agenda-card {
   border-color: rgba(245, 197, 24, .27);
   background: linear-gradient(145deg, rgba(62, 53, 10, .42), rgba(15, 14, 7, .68));
   box-shadow: inset 0 1px 0 rgba(255,255,255,.05), 0 12px 38px rgba(0, 0, 0, .24);
 }
 
-html[data-visual-theme="setembro-amarelo-glow"] .controls,
-html[data-visual-theme="setembro-amarelo-glow"] .agenda-tools {
+html[data-visual-theme="saude-mental-glow"] .controls,
+html[data-visual-theme="saude-mental-glow"] .agenda-tools {
   border-color: rgba(245, 197, 24, .25);
   background: rgba(21, 19, 8, .88);
 }
 
-html[data-visual-theme="setembro-amarelo-glow"] .control-btn,
-html[data-visual-theme="setembro-amarelo-glow"] .view-toggle,
-html[data-visual-theme="setembro-amarelo-glow"] .filter-close {
+html[data-visual-theme="saude-mental-glow"] .control-btn,
+html[data-visual-theme="saude-mental-glow"] .view-toggle,
+html[data-visual-theme="saude-mental-glow"] .filter-close {
   border-color: rgba(255, 226, 122, .30);
   background: linear-gradient(145deg, rgba(214, 169, 0, .24), rgba(91, 73, 0, .18));
   color: #ffe27a;
 }
 
-html[data-visual-theme="setembro-amarelo-glow"] .control-btn:hover,
-html[data-visual-theme="setembro-amarelo-glow"] .view-toggle:hover,
-html[data-visual-theme="setembro-amarelo-glow"] .filter-close:hover {
+html[data-visual-theme="saude-mental-glow"] .control-btn:hover,
+html[data-visual-theme="saude-mental-glow"] .view-toggle:hover,
+html[data-visual-theme="saude-mental-glow"] .filter-close:hover {
   background: linear-gradient(145deg, rgba(245, 197, 24, .38), rgba(158, 126, 0, .28));
   color: #fffdf5;
 }
 
-html[data-visual-theme="setembro-amarelo-glow"] .filter-apply,
-html[data-visual-theme="setembro-amarelo-glow"] .empty-clear-filters,
-html[data-visual-theme="setembro-amarelo-glow"] .filter-btn.has-filters {
+html[data-visual-theme="saude-mental-glow"] .filter-apply,
+html[data-visual-theme="saude-mental-glow"] .empty-clear-filters,
+html[data-visual-theme="saude-mental-glow"] .filter-btn.has-filters {
   background: linear-gradient(135deg, #d6a900, #f5c518);
   color: #151308;
   box-shadow: 0 7px 20px rgba(214, 169, 0, .24);
 }
 
-html[data-visual-theme="setembro-amarelo-glow"] .badge.category,
-html[data-visual-theme="setembro-amarelo-glow"] .slide .badge.course-online,
-html[data-visual-theme="setembro-amarelo-glow"] .book-themes > *,
-html[data-visual-theme="setembro-amarelo-glow"] .agenda-card-badges span {
+html[data-visual-theme="saude-mental-glow"] .badge.category,
+html[data-visual-theme="saude-mental-glow"] .slide .badge.course-online,
+html[data-visual-theme="saude-mental-glow"] .book-themes > *,
+html[data-visual-theme="saude-mental-glow"] .agenda-card-badges span {
   border: 1px solid rgba(255, 226, 122, .24);
   background: linear-gradient(135deg, rgba(117, 93, 0, .96), rgba(178, 141, 0, .94));
   color: #fffdf5;
 }
 
-html[data-visual-theme="setembro-amarelo-glow"] .badge.free {
+html[data-visual-theme="saude-mental-glow"] .badge.free {
   border-color: rgba(255, 226, 122, .30);
   background: linear-gradient(135deg, #d6a900, #f5c518);
   color: #151308;
 }
 
-html[data-visual-theme="setembro-amarelo-glow"] .badge.free.access-unknown {
+html[data-visual-theme="saude-mental-glow"] .badge.free.access-unknown {
   border-color: rgba(255, 226, 122, .34);
   background: rgba(45, 41, 24, .94);
   color: #fffdf5;
 }
 
-html[data-visual-theme="setembro-amarelo-glow"] .filter-grid select,
-html[data-visual-theme="setembro-amarelo-glow"] .agenda-tools input,
-html[data-visual-theme="setembro-amarelo-glow"] .agenda-tools select {
+html[data-visual-theme="saude-mental-glow"] .filter-grid select,
+html[data-visual-theme="saude-mental-glow"] .agenda-tools input,
+html[data-visual-theme="saude-mental-glow"] .agenda-tools select {
   border-color: rgba(245, 197, 24, .27);
   background: rgba(11, 11, 8, .82);
 }
 
-html[data-visual-theme="setembro-amarelo-glow"] body.agenda-mode {
+html[data-visual-theme="saude-mental-glow"] body.agenda-mode {
   background:
     radial-gradient(circle 180px at 92% 8%, rgba(245, 197, 24, .20), transparent 72%),
     radial-gradient(circle 240px at 4% 55%, rgba(214, 169, 0, .12), transparent 74%),
@@ -163,15 +163,15 @@ html[data-visual-theme="setembro-amarelo-glow"] body.agenda-mode {
     #0b0b08;
 }
 
-/* O acesso à ajuda é complementar ao banner de Setembro: sem o banner, não há botão. */
-html[data-visual-theme="setembro-amarelo-glow"] body.panel-mode .media > .campaign-help-button {
+/* O acesso à ajuda é complementar ao banner da curadoria: sem o banner, não há botão. */
+html[data-visual-theme="saude-mental-glow"] body.panel-mode .media > .campaign-help-button {
   display: none;
 }
 
 @media (max-width: 720px) {
-  html[data-visual-theme="setembro-amarelo-glow"] body.panel-mode .content::before { filter: blur(12px); opacity: .80; }
+  html[data-visual-theme="saude-mental-glow"] body.panel-mode .content::before { filter: blur(12px); opacity: .80; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html[data-visual-theme="setembro-amarelo-glow"] body.panel-mode .content::before { animation: none; }
+  html[data-visual-theme="saude-mental-glow"] body.panel-mode .content::before { animation: none; }
 }

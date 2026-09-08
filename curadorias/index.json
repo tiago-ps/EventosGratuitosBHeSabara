@@ -4,12 +4,10 @@
   "descricao": "Dados editoriais complementares exclusivos da interface de teste. Não substituem nem alteram os catálogos centrais.",
   "curadorias": [
     {
-      "id": "setembro-amarelo-2026",
-      "arquivo": "curadorias/setembro-amarelo-2026.json",
-      "nome": "Setembro Amarelo — curadoria do mês",
-      "ativo_de": "2026-09-01",
-      "ativo_ate": "2026-09-30",
-      "tema": "Setembro Amarelo",
+      "id": "saude-mental",
+      "arquivo": "curadorias/saude-mental.json",
+      "nome": "Saúde Mental",
+      "tema": "Saúde Mental",
       "ordem": 10
     },
     {
