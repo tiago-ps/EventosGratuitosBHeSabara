@@ -2,8 +2,8 @@
   "schema": 9,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-09-07T14:36:23.412819+00:00",
-  "total": 23,
+  "coletado_em_utc": "2026-09-08T13:11:08.176693+00:00",
+  "total": 26,
   "concursos": [
     {
       "titulo": "CaraguaPrev - Instituto de Previdência do Município de Caraguatatuba",
@@ -528,6 +528,38 @@
       ]
     },
     {
+      "titulo": "Prefeitura de Faria Lemos",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-faria-lemos-mg-divulga-retificacao-e-prorroga-as-inscricoes-do-concurso-publico",
+      "imagem": "https://cdn.pci.app.br/img/i/55abba28207b646554c552c0eead6799.png",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": "nte tributario (1 vaga) auxiliar de arquivo (1 vaga) auxiliar de farmacia (1 vaga) auxiliar de secretaria (1 vaga) auxiliar em saude bucal (1 vaga) escriturario (1 vaga) monitor (2 vagas) oficial administrativo (1 vaga) secretario escolar (2 vagas) tesoureiro (1 vaga) tecnico em enfermagem (1 vaga) tecnico em informatica (1 vaga) tecnico em saude bucal (1 vaga) assistente social 20h (1 vaga) assistente social 30h (1 vaga) bibliotecario (1 vaga) contador (1 vaga) controlador interno (1 vaga) enfermeiro (1 vaga) enfermeiro psf (1 vaga) engenheiro civil (1 vaga) farmaceutico 20h (1 vaga) farmaceutico 40h (1 vaga) fisi"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "MG",
+      "cidade": "Faria Lemos",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "R$ 16.803,20",
+      "remuneracao_fonte": "catalogo",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico em Informática",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "alta"
+        }
+      ]
+    },
+    {
       "titulo": "Prefeitura de Ipaba",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-ipaba-mg-retifica-edital-de-concurso-publico-com-salarios-de-ate-5275",
       "imagem": "https://cdn.pci.app.br/img/i/307411641985d6cc48a5320cc173849e.png",
@@ -796,6 +828,70 @@
         {
           "cargo": "Técnico em Informática",
           "vagas_texto": "3 vagas",
+          "formacao": "Técnico em Informática",
+          "confianca": "alta"
+        }
+      ]
+    },
+    {
+      "titulo": "TCE - Tribunal de Contas do Estado de Goiás",
+      "url": "https://www.pciconcursos.com.br/noticias/tce-go-abre-concurso-publico-para-tecnicos-de-controle-externo",
+      "imagem": "https://cdn.pci.app.br/img/i/49d0f07f837fcc4f15672d89520c62f4.png",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "tce - go abre concurso publico para tecnicos de controle externo oportunidades contemplam cargos de nivel medio nas areas administrativas e de tecnologia da informacao, com remuneracao inicial de r$ 11.862,19 e selecao composta por provas objetivas e discursivas. concursos › noticias › centro-oeste terca-feira, 25 de agosto de 2026 o tribunal de contas do estado de goias (tce-go) abriu um concurso publico visando o preenchimento de vagas para profissionais de niv"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "GO",
+      "cidade": "",
+      "inscricoes_inicio_texto": "5 de outubro de 2026",
+      "inscricoes_fim_texto": "6 de novembro de 2026",
+      "inscricoes_texto": "5 de outubro de 2026 a 6 de novembro de 2026",
+      "remuneracao_faixa_texto": "R$ 11.862,19",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Tecnologia da Informação",
+          "vagas_texto": "10 vagas",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ]
+    },
+    {
+      "titulo": "Câmara de Ponta Porã",
+      "url": "https://www.pciconcursos.com.br/noticias/camara-de-ponta-pora-ms-abre-concurso-publico-com-salarios-de-ate-7999",
+      "imagem": "https://cdn.pci.app.br/img/i/7b07707bbfc00efd330774d4eb0fa052.png",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": "urso publico para o preenchimento de vagas em funcoes de nivel medio, tecnico e superior. segundo o edital, as oportunidades sao para os cargos de: analista de licitacao e contratos (2 vagas) analista de sistemas (1 vaga) consultor legislativo (1 vaga) contador (1 vaga) controlador interno (1 vaga) tecnico em informatica (1 vaga) assistente administrativo (12 vagas) os cargos possuem jornada de trabalho de 30 horas semanais. a remuneracao varia de r$ 3.896,67 a r$ 7.999,59, conforme o cargo. as inscricoes devem ser realizadas exclusivamente pelo site www.cebraspe.org.br/concursos/camara_municipal_pontapora_ms_26 , "
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "MS",
+      "cidade": "Ponta Porã",
+      "inscricoes_inicio_texto": "21 de agosto de 2026",
+      "inscricoes_fim_texto": "10 de setembro de 2026",
+      "inscricoes_texto": "21 de agosto de 2026 a 10 de setembro de 2026",
+      "remuneracao_faixa_texto": "R$ 3.896,67 a R$ 7.999,59",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico em Informática",
+          "vagas_texto": "1 vaga",
           "formacao": "Técnico em Informática",
           "confianca": "alta"
         }

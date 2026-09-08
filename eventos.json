@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Janeiro a Dezembro de 2026",
-  "atualizado_em": "2026-09-07T12:23:44-03:00",
+  "atualizado_em": "2026-09-08T10:13:32-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -5506,36 +5506,6 @@
       "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
-      "id": "portal-bh-58ce34c7c668-2026-09-07-0900",
-      "titulo": "Aniversário Mercado Central 97 anos",
-      "data": "2026-09-07",
-      "data_fim": "",
-      "horario": "9h às 17h",
-      "local": "Entorno do Mercado Central",
-      "cidade": "Belo Horizonte",
-      "categoria": "Festival",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "O Mercado Central nasceu em 7 de setembro de 1929, ainda como Mercado Municipal, reunindo cerca de uma centena de comerciantes em um terreno que havia abrigado o campo do América Futebol Clube. Naqueles primeiros anos, produtos hortifrutigranjeiros ocupavam o centro de uma operação criada para abastecer uma Belo Horizonte ainda jovem. Hoje,",
-      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-08/731484217_18570249238071491_6018933747709339018_n.jpg",
-      "link": "https://portalbelohorizonte.com.br/2026/eventos/festa/lazer/aniversario-mercado-central-97-anos",
-      "fonte": "Portal Belo Horizonte",
-      "fonte_id": "58ce34c7c668",
-      "instituicao_id": "",
-      "endereco": "Avenida Augusto de Lima, 744 - Centro",
-      "tags_fonte": [
-        "Acessibilidade",
-        "Show e Festa",
-        "Música",
-        "Gastronomia",
-        "Gratuito",
-        "Ingressos on-line",
-        "Próximos eventos"
-      ],
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Entorno+do+Mercado+Central%2C+Avenida+Augusto+de+Lima%2C+744+-+Centro%2C+Belo+Horizonte"
-    },
-    {
       "id": "manual-manual-instagram-18617695261027534-2026-09-08",
       "titulo": "5ª mostra CRDançaBH",
       "data": "2026-09-08",
@@ -6404,6 +6374,27 @@
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
       "espaco_interno": "Terraço Astronômico"
+    },
+    {
+      "id": "ufmg-ec-horario-de-funcionamento-excepcional-10h-as-17h",
+      "titulo": "Horário de funcionamento excepcional (10h às 17h)",
+      "data": "2026-09-19",
+      "data_fim": "",
+      "horario": "10h",
+      "local": "Espaço do Conhecimento UFMG",
+      "cidade": "Belo Horizonte",
+      "categoria": "Atividade educativa",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "No dia 19 de setembro de 2026 (sábado), o Espaço do Conhecimento UFMG funcionará em horário excepcional, das 10h às 17h.",
+      "imagem": "",
+      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/horario-de-funcionamento-excepcional-10h-as-17h/",
+      "fonte": "Espaço do Conhecimento UFMG",
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
     },
     {
       "id": "portal-bh-569df759e53e-2026-09-19-1000",
