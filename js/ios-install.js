@@ -89,6 +89,80 @@
 
 (() => {
   'use strict';
+
+  const CURATION_QUERY_PARAM = 'curadoria';
+  let profileRequestInFlight = '';
+
+  function requestedCuration() {
+    try {
+      const url = new URL(window.location.href);
+      // Um perfil explicitamente informado continua tendo precedência no Painel.
+      if (url.searchParams.get('perfil')) return '';
+      return String(url.searchParams.get(CURATION_QUERY_PARAM) || '').trim();
+    } catch {
+      return '';
+    }
+  }
+
+  function curationHasPanelProfile(curationId) {
+    const curations = window.MuralCultural?.loadedCurations;
+    if (!Array.isArray(curations)) return false;
+    return curations.some(curation => {
+      if (String(curation?.id || '').trim() !== curationId) return false;
+      const settings = curation?.perfil_painel?.configuracao;
+      return Boolean(settings && typeof settings === 'object' && !Array.isArray(settings));
+    });
+  }
+
+  function syncSharedCurationWithPanel() {
+    const curationId = requestedCuration();
+    if (!curationId || !document.body.classList.contains('panel-mode')) {
+      profileRequestInFlight = '';
+      return;
+    }
+    if (!curationHasPanelProfile(curationId)) return;
+
+    const activeProfile = String(document.documentElement.dataset.panelProfile || '').trim();
+    if (activeProfile === curationId) {
+      profileRequestInFlight = '';
+      return;
+    }
+    if (profileRequestInFlight === curationId) return;
+
+    profileRequestInFlight = curationId;
+    window.dispatchEvent(new CustomEvent('mural:panel-profile-request', {
+      detail: { profile: curationId }
+    }));
+
+    window.setTimeout(() => {
+      if (String(document.documentElement.dataset.panelProfile || '').trim() !== curationId) {
+        profileRequestInFlight = '';
+      }
+    }, 250);
+  }
+
+  function scheduleSync() {
+    queueMicrotask(syncSharedCurationWithPanel);
+  }
+
+  window.addEventListener('mural:curations-loaded', scheduleSync);
+  window.addEventListener('mural:panel-profile-change', event => {
+    if (String(event.detail?.profile || '') === requestedCuration()) profileRequestInFlight = '';
+  });
+  window.addEventListener('popstate', scheduleSync);
+  document.addEventListener('change', event => {
+    if (event.target?.matches?.('.agenda-curation')) scheduleSync();
+  }, true);
+
+  new MutationObserver(scheduleSync).observe(document.body, {
+    attributes: true,
+    attributeFilter: ['class']
+  });
+  scheduleSync();
+})();
+
+(() => {
+  'use strict';
   function isIosDevice(){const ua=navigator.userAgent||'',platform=navigator.platform||'',touchMac=platform==='MacIntel'&&navigator.maxTouchPoints>1;return /iPad|iPhone|iPod/.test(ua)||touchMac}
   function isStandalone(){return window.matchMedia('(display-mode: standalone)').matches||navigator.standalone===true}
   function ensureStyles(){if(document.getElementById('ios-install-styles'))return;const style=document.createElement('style');style.id='ios-install-styles';style.textContent=`.ios-install-overlay[hidden]{display:none!important}.ios-install-overlay{position:fixed;inset:0;z-index:9999;display:grid;align-items:end;background:rgba(3,10,18,.72);backdrop-filter:blur(6px);padding:16px}.ios-install-panel{width:min(100%,520px);margin:0 auto;background:#0d1b2a;color:#f4f7fb;border:1px solid rgba(255,255,255,.14);border-radius:22px;box-shadow:0 22px 70px rgba(0,0,0,.42);padding:20px}.ios-install-header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:14px}.ios-install-header h2{margin:0;font-size:1.28rem}.ios-install-header p{margin:6px 0 0;color:rgba(244,247,251,.72);line-height:1.45}.ios-install-close{border:0;background:rgba(255,255,255,.09);color:inherit;width:38px;height:38px;border-radius:999px;font-size:1.35rem}.ios-install-steps{list-style:none;padding:0;margin:0;display:grid;gap:10px;counter-reset:ios-install-step}.ios-install-steps li{counter-increment:ios-install-step;display:grid;grid-template-columns:34px 1fr;align-items:start;gap:10px;padding:12px;border-radius:14px;background:rgba(255,255,255,.06);line-height:1.4}.ios-install-steps li::before{content:counter(ios-install-step);display:grid;place-items:center;width:28px;height:28px;border-radius:999px;background:rgba(255,255,255,.13);font-weight:700}.ios-install-share-icon{display:inline-block;margin:0 4px;font-size:1.15em}.ios-install-note{margin:14px 2px 0;color:rgba(244,247,251,.68);font-size:.9rem;line-height:1.45}@media(min-width:700px){.ios-install-overlay{align-items:center}}`;document.head.append(style)}
