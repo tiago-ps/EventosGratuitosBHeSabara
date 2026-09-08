@@ -345,30 +345,6 @@
     ],
     "cursos": [
       {
-        "id": "site:unasus:prevencao-suicidio-2026",
-        "titulo": "Prevenção ao suicídio",
-        "instituicao": "Universidade Federal de Santa Catarina",
-        "fonte": "UNA-SUS",
-        "carga_horaria": "30",
-        "formato": "Ensino a Distância",
-        "modalidade": "Qualificação Profissional",
-        "publico_alvo": "Gestores e profissionais da saúde do SUS",
-        "situacao": "Matrículas até 30/11/2026",
-        "url": "https://www.unasus.gov.br/cursos/curso/46264",
-        "gratuito": true,
-        "temas": [
-          "Saúde Mental",
-          "Prevenção do suicídio",
-          "Redes de apoio",
-          "Formação profissional"
-        ],
-        "eixo_curadoria": "Formação profissional",
-        "conteudo_sensivel": "Suicídio",
-        "instituicao_parceira": "Ministério da Saúde",
-        "nivel": "Educação Profissional e Tecnológica",
-        "descricao": "Formação voltada à prevenção do comportamento suicida na Atenção Primária à Saúde, abordando fatores de risco, acompanhamento de casos, cuidado em rede e o papel dos profissionais de saúde na mobilização de fontes de apoio."
-      },
-      {
         "id": "site:unasus:saude-mental-adolescentes-jovens-2026",
         "titulo": "Aperfeiçoamento em Saúde Mental e Atenção Psicossocial de Adolescentes e Jovens",
         "instituicao": "Fundação Oswaldo Cruz - Mato Grosso do Sul",
@@ -875,15 +851,6 @@
           "area"
         ],
         "motivo": "O campo está vazio no cursos.json central. A camada site-only não altera o catálogo central."
-      },
-      {
-        "tipo": "curso-site-only",
-        "id": "site:unasus:prevencao-suicidio-2026",
-        "titulo": "Prevenção ao suicídio",
-        "campos": [
-          "imagem"
-        ],
-        "motivo": "A página oficial do curso foi confirmada, mas não foi incluída imagem externa sem confirmação clara de reutilização. O Mural usa fallback visual."
       },
       {
         "tipo": "material-informativo",

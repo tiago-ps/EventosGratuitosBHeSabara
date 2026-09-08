@@ -6406,27 +6406,6 @@
       "espaco_interno": "Terraço Astronômico"
     },
     {
-      "id": "ufmg-ec-horario-de-funcionamento-excepcional-10h-as-17h",
-      "titulo": "Horário de funcionamento excepcional (10h às 17h)",
-      "data": "2026-09-19",
-      "data_fim": "",
-      "horario": "10h",
-      "local": "Espaço do Conhecimento UFMG",
-      "cidade": "Belo Horizonte",
-      "categoria": "Atividade educativa",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "No dia 19 de setembro de 2026 (sábado), o Espaço do Conhecimento UFMG funcionará em horário excepcional, das 10h às 17h.",
-      "imagem": "",
-      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/horario-de-funcionamento-excepcional-10h-as-17h/",
-      "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg",
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "espaco-conhecimento-ufmg",
-      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
-    },
-    {
       "id": "portal-bh-569df759e53e-2026-09-19-1000",
       "titulo": "Oficina de Introdução à Rotoscopia",
       "data": "2026-09-19",
