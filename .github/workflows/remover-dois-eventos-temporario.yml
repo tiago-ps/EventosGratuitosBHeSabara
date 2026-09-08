@@ -1,0 +1,50 @@
+name: Remover dois eventos temporariamente
+
+on:
+  push:
+    paths:
+      - '.github/workflows/remover-dois-eventos-temporario.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  remover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Remover somente os dois eventos indicados
+        shell: python
+        run: |
+          import json
+          from pathlib import Path
+
+          alvo_agenda = 'ufmg-ec-horario-de-funcionamento-excepcional-10h-as-17h'
+          alvo_curadoria = 'site:unasus:prevencao-suicidio-2026'
+
+          p = Path('eventos.json')
+          data = json.loads(p.read_text(encoding='utf-8'))
+          antes = len(data.get('eventos', []))
+          data['eventos'] = [e for e in data.get('eventos', []) if e.get('id') != alvo_agenda]
+          assert len(data['eventos']) == antes - 1, f'Esperava remover exatamente 1 evento de eventos.json; removidos={antes-len(data["eventos"])}'
+          p.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+          p = Path('curadorias/saude-mental.json')
+          data = json.loads(p.read_text(encoding='utf-8'))
+          eventos = data.get('complementos', {}).get('eventos', [])
+          antes = len(eventos)
+          data['complementos']['eventos'] = [e for e in eventos if e.get('id') != alvo_curadoria]
+          assert len(data['complementos']['eventos']) == antes - 1, f'Esperava remover exatamente 1 evento da curadoria; removidos={antes-len(data["complementos"]["eventos"])}'
+          p.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+      - name: Validar e publicar alteração
+        run: |
+          python -m json.tool eventos.json >/dev/null
+          python -m json.tool curadorias/saude-mental.json >/dev/null
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- eventos.json curadorias/saude-mental.json
+          git diff --cached --quiet && { echo 'Nenhuma alteração detectada'; exit 1; }
+          git commit -m 'Remove dois eventos do site de teste'
+          git push
