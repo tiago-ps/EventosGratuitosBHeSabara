@@ -69,29 +69,37 @@ após a C2. Seus acervos, registros, links, condições de disponibilidade e fon
 foram preservados; os contadores, `bibliotecas` e `registros_ids` foram derivados
 dos acervos estruturados. Não houve nova pesquisa bibliográfica.
 
-Os novos IDs canônicos são os slugs abaixo. O `id_obra` segue o formato
-`obra-<id>-<hash de 8 caracteres>`. Para estas 13 obras, o sufixo corresponde aos
-primeiros oito dígitos hexadecimais do SHA-256 de `id + "|" + autor_normalizado`,
-em UTF-8. A normalização do autor usa NFKD, remove caracteres combinantes,
-aplica `casefold` e reduz espaços consecutivos a um espaço, sem espaços nas
-extremidades. Essa regra é determinística; os `id_obra` anteriores não mudaram.
-Os identificadores atribuídos devem ser preservados em futuras sincronizações.
+Os IDs principais são os slugs abaixo. Os `id_obra` seguem exatamente
+`id_obra_publica()` de `gerar_publicacao_livros.py`, o gerador normativo de
+`tiago-ps/ColetorEventosGratuitos`:
+
+- `titulo_norm = titulo_canonico(titulo)`;
+- `autor_norm = autor_canonico(autor)`;
+- slug derivado de `titulo_norm`, limitado a 64 caracteres;
+- digest formado pelos primeiros oito hexadecimais do SHA-1 de
+  `titulo_norm + "|" + autor_norm`;
+- resultado: `obra-<slug>-<digest>`.
+
+A regra é determinística e usa o título canônico, não o ID principal do livro.
+Somente os 13 `id_obra` incluídos na C2.5A foram alinhados ao gerador; os IDs
+principais e os 32 registros anteriores permanecem inalterados. Os valores
+abaixo devem ser preservados em futuras sincronizações.
 
 | ID canônico | id_obra |
 | --- | --- |
-| `sao-bernardo` | `obra-sao-bernardo-8312ff00` |
-| `sobrevivendo-ao-racismo` | `obra-sobrevivendo-ao-racismo-b9f8fa73` |
-| `o-quinze` | `obra-o-quinze-e4faba50` |
-| `ideias-para-adiar-o-fim-do-mundo` | `obra-ideias-para-adiar-o-fim-do-mundo-e5e72014` |
-| `opusculo-humanitario` | `obra-opusculo-humanitario-aa89f20c` |
-| `nebulosas` | `obra-nebulosas-ef7f0010` |
-| `memorias-de-martha` | `obra-memorias-de-martha-4a2353e9` |
-| `caminho-de-pedras` | `obra-caminho-de-pedras-fc31546e` |
-| `a-paixao-segundo-g-h` | `obra-a-paixao-segundo-g-h-e514c4c2` |
-| `geografia` | `obra-geografia-304ec609` |
-| `balada-de-amor-ao-vento` | `obra-balada-de-amor-ao-vento-cd282bc2` |
-| `cancao-para-ninar-menino-grande` | `obra-cancao-para-ninar-menino-grande-96f0cf55` |
-| `a-visao-das-plantas` | `obra-a-visao-das-plantas-894b1acb` |
+| `sao-bernardo` | `obra-sao-bernardo-8f83bf1a` |
+| `sobrevivendo-ao-racismo` | `obra-sobrevivendo-ao-racismo-memorias-cartas-e-o-cotidiano-da-discrim-ffb60d25` |
+| `o-quinze` | `obra-quinze-16a88be0` |
+| `ideias-para-adiar-o-fim-do-mundo` | `obra-ideias-para-adiar-o-fim-do-mundo-aa9fdb12` |
+| `opusculo-humanitario` | `obra-opusculo-humanitario-c50c9277` |
+| `nebulosas` | `obra-nebulosas-1245f6f2` |
+| `memorias-de-martha` | `obra-memorias-de-martha-767c6063` |
+| `caminho-de-pedras` | `obra-caminho-de-pedras-4a83bce7` |
+| `a-paixao-segundo-g-h` | `obra-paixao-segundo-g-h-836998a2` |
+| `geografia` | `obra-geografia-e67d0b69` |
+| `balada-de-amor-ao-vento` | `obra-balada-de-amor-ao-vento-e2bbc50b` |
+| `cancao-para-ninar-menino-grande` | `obra-cancao-para-ninar-menino-grande-fde17c78` |
+| `a-visao-das-plantas` | `obra-visao-das-plantas-be1555d5` |
 
 As capas existentes foram copiadas, sem conversão, para
 `imagens/livros/capas/<id>.<extensão real>`. São JPEG (`.jpg`) as capas de
