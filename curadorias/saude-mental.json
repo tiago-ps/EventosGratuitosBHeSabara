@@ -60,6 +60,27 @@
       "descricao": "Conteúdos sobre condições de trabalho, riscos psicossociais, relações organizacionais e construção de ambientes profissionais mais saudáveis."
     }
   ],
+  "membros": {
+    "eventos": [
+      "sympla-sabara-3534680"
+    ],
+    "livros": [],
+    "cursos": [
+      "1089",
+      "881",
+      "1207",
+      "817"
+    ],
+    "filmes": [
+      "telabrasil:412"
+    ],
+    "utilidade_publica": [
+      "site:apoio:setembro-cvv-188",
+      "site:apoio:setembro-rede-publica",
+      "site:apoio:setembro-universidades",
+      "site:apoio:setembro-informacao-confiavel"
+    ]
+  },
   "overlays": {
     "eventos": {
       "sympla-sabara-3534680": {
@@ -99,30 +120,26 @@
         "titulo_esperado": "Saúde mental, atenção psicossocial e interculturalidade nas migrações",
         "temas": [
           "Saúde Mental"
-        ],
-        "url": "https://www.escolavirtual.gov.br/curso/1089"
+        ]
       },
       "881": {
         "titulo_esperado": "Direitos Humanos e saúde mental - Curso permanente Damião Ximenes Lopes",
         "temas": [
           "Saúde Mental"
-        ],
-        "url": "https://www.escolavirtual.gov.br/curso/881"
+        ]
       },
       "1207": {
         "titulo_esperado": "Mídias Digitais e Saúde Mental de Crianças e Adolescentes",
         "temas": [
           "Saúde Mental"
-        ],
-        "url": "https://www.escolavirtual.gov.br/curso/1207"
+        ]
       },
       "817": {
         "titulo_esperado": "Propósito e Qualidade de vida: Descobertas para o Desenvolvimento Pessoal",
         "temas": [
           "Bem-estar emocional",
           "Saúde Mental"
-        ],
-        "url": "https://www.escolavirtual.gov.br/curso/817"
+        ]
       }
     },
     "livros": {},

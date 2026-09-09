@@ -153,3 +153,45 @@ Quando um perfil anteriormente selecionado fica fora do período, suas opções
 salvas permanecem como configuração comum, sem identidade editorial ativa.
 Perfis pessoais e seu formato persistido não são alterados. A Agenda continua
 independente da promoção: Agosto Lilás permanece disponível durante todo o ano.
+
+## Saúde Mental — C3C
+
+Saúde Mental formaliza a seleção canônica em `membros`: 1 evento, nenhum livro,
+4 cursos por `id_fonte`, 1 filme e 4 cartões de utilidade pública. Esses cartões
+já pertenciam explicitamente à curadoria no catálogo central; não foram
+selecionados por tema nem convertidos a partir de `servicos_apoio`.
+
+Membro referencia conteúdo canônico; overlay contém dados editoriais específicos;
+complemento mantém conteúdo ausente do catálogo. Os 3 eventos, 5 livros, 4 cursos
+e 5 filmes complementares não têm contraparte inequívoca e permanecem intactos.
+Temas e títulos esperados dos overlays foram preservados. As quatro URLs dos
+overlays de cursos, idênticas às canônicas, foram removidas como redundância.
+
+As opções compartilhadas dos overlays de eventos, livros, cursos e filmes usam
+`associateByOverlay: !curation.membros`. Em curadorias formais, overlays não
+criam associações e seus fallbacks não geram itens. Sem `membros`, permanece a
+compatibilidade legada. O runtime não oferece overlays de utilidade pública.
+Associações de membros continuam sendo unidas em runtime, sem sobrescrever
+outras curadorias. Complementos mantêm sua associação explícita no runtime.
+
+O evento AMUSA existe uma única vez no catálogo e passa a membro. Seu título
+factual e os temas foram preservados. O fallback antigo foi conservado como
+registro histórico inerte, pois contém fatos ausentes do catálogo, como o
+horário, mas não é mais executado nesta curadoria formal, mesmo se o alvo
+canônico desaparecer. Não foi criada uma cópia em complementos. A consolidação
+futura desses fatos e a retirada desse registro ficam pendentes; o comentário
+anterior em `auditoria_dados` documenta o comportamento histórico.
+
+`complementos.servicos_apoio` permanece uma exceção site-only com contrato próprio,
+com todos os contatos, materiais, avisos e conteúdo preservados. `auditoria_dados`
+também permanece intacta, inclusive suas pendências. Ocorrências factuais de
+Setembro Amarelo e metadados sensíveis não foram renomeados nem removidos.
+
+A existência permanente e a Agenda continuam independentes da promoção em
+janeiro/setembro (`[1, 9]`). Perfis, banner, visual, ajuda e CSS não foram alterados.
+O status permanece `em_analise`; esta migração não representa aprovação editorial.
+
+Nenhum catálogo central foi alterado. Os quatro cartões centrais de utilidade
+pública já continham `curadoria_ids` persistidos antes da C3C: essa dívida foi
+preservada por estar fora do escopo, sem introduzir novas gravações desse campo.
+UFMG, FUVEST, Agosto Lilás e o index permanecem intactos. C4 não foi iniciada.

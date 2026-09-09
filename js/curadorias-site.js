@@ -267,7 +267,8 @@
         const fallbackId = String(fallback?.[options.idField] || '');
         const fallbackTitleMatches = !overlay?.titulo_esperado ||
           normalizeLabel(fallback?.titulo) === normalizeLabel(overlay.titulo_esperado);
-        if (fallback && typeof fallback === 'object' && fallbackId === String(identifier) && fallbackTitleMatches) {
+        if (options.associateByOverlay !== false && fallback && typeof fallback === 'object' &&
+          fallbackId === String(identifier) && fallbackTitleMatches) {
           const item = {
             ...sanitizeUntrustedRecord(fallback, options.warn, `${options.label} ${identifier}`),
             origem: 'site-only',
@@ -364,18 +365,18 @@
       const promoted = isPromoted(curation, options.today || new Date());
       const overlays = curation.overlays || {};
       const complements = curation.complementos || {};
+      const overlayOptions = { curationId: curation.id, warn, associateByOverlay: !curation.membros };
       result.eventos = applyOverlayCollection(result.eventos, overlays.eventos, {
-        idField: 'id', label: 'evento', curationId: curation.id, warn
+        ...overlayOptions, idField: 'id', label: 'evento'
       });
       result.livros = applyOverlayCollection(result.livros, overlays.livros, {
-        idField: 'id', label: 'livro', curationId: curation.id, warn,
-        editorial: true, associateByOverlay: !curation.membros
+        ...overlayOptions, idField: 'id', label: 'livro', editorial: true
       });
       result.cursos = applyOverlayCollection(result.cursos, overlays.cursos, {
-        idField: 'id_fonte', label: 'curso', curationId: curation.id, warn
+        ...overlayOptions, idField: 'id_fonte', label: 'curso'
       });
       result.filmes = applyOverlayCollection(result.filmes, overlays.filmes, {
-        idField: 'id', label: 'filme', curationId: curation.id, warn
+        ...overlayOptions, idField: 'id', label: 'filme'
       });
       result.eventos = appendComplements(result.eventos, complements.eventos, {
         label: 'evento', curationId: curation.id, warn,
