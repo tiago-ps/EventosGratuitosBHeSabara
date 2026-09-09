@@ -2519,6 +2519,7 @@ function eventProgram(event) {
     );
     const declared = Object.fromEntries(curations.map(curation => [curation.id, {
       ...curation.perfil_painel,
+      curation,
       nome: curation.perfil_painel.nome || curation.nome,
       ativo_de: curation.ativo_de,
       ativo_ate: curation.ativo_ate
@@ -2539,6 +2540,7 @@ function eventProgram(event) {
         badge: String(enriched ? (raw.destaque || '') : '').trim(),
         start: String(enriched ? (raw.ativo_de || '') : '').trim(),
         end: String(enriched ? (raw.ativo_ate || '') : '').trim(),
+        curation: enriched ? raw.curation : undefined,
         settings
       };
     });
@@ -2549,6 +2551,9 @@ function eventProgram(event) {
     const end = parseCalendarDate(profile.end, true);
     if (start && today < start) return false;
     if (end && today > end) return false;
+    if (profile.curation?.promocao_painel) {
+      return siteCurationsContent.isPromoted(profile.curation, today);
+    }
     return true;
   }
 
@@ -2572,7 +2577,10 @@ function eventProgram(event) {
 
   function selectedProfileSettings(value = '') {
     const { source, key } = parseProfileOptionValue(value);
-    if (source === 'editorial') return editorialProfileById(key)?.settings || null;
+    if (source === 'editorial') {
+      const profile = editorialProfileById(key);
+      return profile && editorialProfileIsVisible(profile) ? profile.settings : null;
+    }
     if (source === 'personal') return readPanelProfiles()[key] || null;
     return null;
   }
@@ -2583,7 +2591,7 @@ function eventProgram(event) {
 
   function activeEditorialPanelProfileId(settings = currentPanelSettings()) {
     return configuredPanelProfileEntries()
-      .find(profile => panelSettingsMatch(settings, profile.settings))?.id || '';
+      .find(profile => editorialProfileIsVisible(profile) && panelSettingsMatch(settings, profile.settings))?.id || '';
   }
 
   function syncActivePanelProfile(slide = state.filterOverlay) {
@@ -2608,6 +2616,7 @@ function eventProgram(event) {
     if (!requested) return null;
 
     for (const profile of configuredPanelProfileEntries()) {
+      if (!editorialProfileIsVisible(profile)) continue;
       if (panelProfileSlug(profile.id) === requested || panelProfileSlug(profile.name) === requested) {
         return profile.settings;
       }

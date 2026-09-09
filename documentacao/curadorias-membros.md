@@ -140,3 +140,16 @@ controlam a promoção; o fallback visual é `padrao`.
 Os JS/CSS, scripts e workflows históricos de Agosto Lilás foram preservados,
 sem execução, para limpeza futura. Saúde Mental e UFMG/FUVEST não foram alteradas.
 C3C, C4 e Editor permanecem fora desta etapa.
+
+Na C3B.1, curadoria permanente não significa perfil de Painel permanente.
+Os perfis declarativos mantêm uma referência em memória à curadoria de origem.
+`editorialProfileIsVisible()` preserva as janelas de datas e, quando há
+`promocao_painel`, também exige `isPromoted(curation)`. Isso controla a oferta
+manual, a seleção por URL e o reconhecimento de perfil editorial ativo,
+genericamente para todas as curadorias com promoção. Sem promoção declarada,
+permanece a regra anterior de datas.
+
+Quando um perfil anteriormente selecionado fica fora do período, suas opções
+salvas permanecem como configuração comum, sem identidade editorial ativa.
+Perfis pessoais e seu formato persistido não são alterados. A Agenda continua
+independente da promoção: Agosto Lilás permanece disponível durante todo o ano.
