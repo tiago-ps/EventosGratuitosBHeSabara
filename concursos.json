@@ -2,8 +2,8 @@
   "schema": 9,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-09-08T13:11:08.176693+00:00",
-  "total": 26,
+  "coletado_em_utc": "2026-09-09T21:26:39.747955+00:00",
+  "total": 24,
   "concursos": [
     {
       "titulo": "CaraguaPrev - Instituto de Previdência do Município de Caraguatatuba",
@@ -97,44 +97,6 @@
           "cargo": "Técnico em Informática",
           "vagas_texto": "1 vaga",
           "formacao": "Técnico em Informática",
-          "confianca": "alta"
-        }
-      ]
-    },
-    {
-      "titulo": "Marinha do Brasil - Comando do 1º Distrito Naval",
-      "url": "https://www.pciconcursos.com.br/noticias/comando-do-1-distrito-naval-da-marinha-rj-abre-processo-seletivo-para-oficiais-de-3-classe",
-      "imagem": "https://cdn.pci.app.br/img/i/f5ad74d356b674769c7967a7ade56276.png",
-      "formacoes_compativeis": [
-        "Sistemas de Informação / Computação"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Sistemas de Informação / Computação",
-          "nivel": "superior",
-          "evidencia": "cina/ciencias biologicas - modalidade medica/biotecnologia/bioquimica/farmacia (1 vaga + cr) engenharia eletronica ou engenharia acustica (1 vaga) engenharia de producao (1 vaga + cr) engenharia eletronica (1 vaga) engenharia mecanica (1 vaga) engenharia mecanica - estruturas ou tubulacoes (1 vaga) ciencia da computacao (ia/machine learning) (1 vaga + cr) ciencia da computacao (arquitetura de software orientada a servicos) (1 vaga) ciencia da computacao/engenharia da computacao/engenharia de software (1 vaga) area de medicina hematologia transplante de medula ossea (1 vaga) hemoterapia (1 vaga) oncologia (1 vaga) "
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "RJ",
-      "cidade": "",
-      "inscricoes_inicio_texto": "17 de agosto de 2026",
-      "inscricoes_fim_texto": "8 de setembro de 2026",
-      "inscricoes_texto": "17 de agosto de 2026 a 8 de setembro de 2026",
-      "remuneracao_faixa_texto": "R$ 17.842,83",
-      "remuneracao_fonte": "catalogo",
-      "cargos_compativeis": [
-        {
-          "cargo": "Área de Ciência e Tecnologia Engenharia da Computação",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        },
-        {
-          "cargo": "Ciência da Computação/Engenharia da Computação/Engenharia de Software",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
           "confianca": "alta"
         }
       ]
@@ -521,38 +483,6 @@
         },
         {
           "cargo": "Técnico em Informática - Saúde",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "alta"
-        }
-      ]
-    },
-    {
-      "titulo": "Prefeitura de Faria Lemos",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-faria-lemos-mg-divulga-retificacao-e-prorroga-as-inscricoes-do-concurso-publico",
-      "imagem": "https://cdn.pci.app.br/img/i/55abba28207b646554c552c0eead6799.png",
-      "formacoes_compativeis": [
-        "Técnico em Informática"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Técnico em Informática",
-          "nivel": "tecnico",
-          "evidencia": "nte tributario (1 vaga) auxiliar de arquivo (1 vaga) auxiliar de farmacia (1 vaga) auxiliar de secretaria (1 vaga) auxiliar em saude bucal (1 vaga) escriturario (1 vaga) monitor (2 vagas) oficial administrativo (1 vaga) secretario escolar (2 vagas) tesoureiro (1 vaga) tecnico em enfermagem (1 vaga) tecnico em informatica (1 vaga) tecnico em saude bucal (1 vaga) assistente social 20h (1 vaga) assistente social 30h (1 vaga) bibliotecario (1 vaga) contador (1 vaga) controlador interno (1 vaga) enfermeiro (1 vaga) enfermeiro psf (1 vaga) engenheiro civil (1 vaga) farmaceutico 20h (1 vaga) farmaceutico 40h (1 vaga) fisi"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "MG",
-      "cidade": "Faria Lemos",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "",
-      "inscricoes_texto": "",
-      "remuneracao_faixa_texto": "R$ 16.803,20",
-      "remuneracao_fonte": "catalogo",
-      "cargos_compativeis": [
-        {
-          "cargo": "Técnico em Informática",
           "vagas_texto": "1 vaga",
           "formacao": "Técnico em Informática",
           "confianca": "alta"
