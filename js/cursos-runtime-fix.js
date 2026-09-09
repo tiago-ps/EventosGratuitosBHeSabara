@@ -25,6 +25,16 @@
   'use strict';
 
   const CURATION_QUERY_PARAM = 'curadoria';
+  const initialRequestedCuration = (() => {
+    try {
+      return String(new URL(window.location.href).searchParams.get(CURATION_QUERY_PARAM) || '').trim();
+    } catch {
+      return '';
+    }
+  })();
+
+  let pendingInitialCuration = initialRequestedCuration;
+  let curationsResolved = Array.isArray(window.MuralCultural?.loadedCurations);
 
   function loadedPanelCuration(profileId = '') {
     const id = String(profileId || '').trim();
@@ -34,6 +44,35 @@
     const curation = curations.find(item => String(item?.id || '').trim() === id);
     const settings = curation?.perfil_painel?.configuracao;
     return settings && typeof settings === 'object' && !Array.isArray(settings) ? id : '';
+  }
+
+  function applyPendingInitialCuration() {
+    const requested = String(pendingInitialCuration || '').trim();
+    if (!requested) return false;
+
+    const curationId = loadedPanelCuration(requested);
+    if (!curationId) {
+      // Antes do carregamento das curadorias, preserve o parâmetro da URL.
+      if (curationsResolved) pendingInitialCuration = '';
+      return false;
+    }
+
+    const select = document.querySelector('.panel-profile-select');
+    if (!select) return false;
+
+    const value = `editorial:${curationId}`;
+    const hasOption = [...select.options].some(option => option.value === value);
+    if (!hasOption) return false;
+
+    // Limpa antes do change para evitar recursão quando o Painel publicar o novo perfil.
+    pendingInitialCuration = '';
+    if (select.value !== value) {
+      select.value = value;
+      select.dispatchEvent(new Event('change', { bubbles: true }));
+      return true;
+    }
+
+    return false;
   }
 
   function syncCurationUrlFromPanel(profileId = '') {
@@ -54,10 +93,31 @@
     }
   }
 
-  // O link de curadoria serve para inicializar o estado. Depois disso, o estado
-  // real do Painel passa a atualizar a URL: outra curadoria substitui o id e
-  // filtros personalizados removem ?curadoria=, evitando reativação automática.
-  window.addEventListener('mural:panel-profile-change', event => {
-    syncCurationUrlFromPanel(event.detail?.profile);
+  // Um link ?curadoria= precisa funcionar também em sessão limpa/anônima. Ele fica
+  // pendente até o perfil editorial correspondente existir no seletor do Painel;
+  // então usa o mesmo evento change da seleção manual, sem depender de localStorage.
+  window.addEventListener('mural:curations-loaded', () => {
+    curationsResolved = true;
+    applyPendingInitialCuration();
   });
+
+  window.addEventListener('mural:panel-profile-change', event => {
+    const profileId = String(event.detail?.profile || '').trim();
+
+    if (pendingInitialCuration) {
+      // Se o próprio Painel já resolveu a curadoria, basta encerrar a pendência.
+      if (profileId === pendingInitialCuration) {
+        pendingInitialCuration = '';
+      } else {
+        const applied = applyPendingInitialCuration();
+        // Enquanto a inicialização ainda não terminou, não deixe o perfil padrão
+        // apagar ?curadoria= da URL.
+        if (applied || pendingInitialCuration) return;
+      }
+    }
+
+    syncCurationUrlFromPanel(profileId);
+  });
+
+  queueMicrotask(applyPendingInitialCuration);
 })();
