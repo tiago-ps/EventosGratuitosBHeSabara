@@ -834,7 +834,7 @@
           "descrição",
           "gratuidade"
         ],
-        "observacao": "Data, horário, local, endereço e descrição conferidos na página pública da Sympla. Gratuidade confirmada manualmente em 01/09/2026. O fallback site-only é usado somente quando o catálogo central não contém o evento."
+        "observacao": "Data, horário, local, endereço e descrição conferidos na página pública da Sympla. Gratuidade confirmada manualmente em 01/09/2026. O evento existe atualmente no catálogo central e é membro formal da curadoria. O fallback site-only foi preservado apenas como registro histórico porque contém fatos ainda ausentes do catálogo, como o horário. Em curadorias com membros, esse fallback não cria item nem associação. Se o item canônico deixar de existir, o fallback continua inerte e o runtime deve registrar a ausência do membro, em vez de recriá-lo."
       },
       {
         "tipo": "fontes-oficiais",
