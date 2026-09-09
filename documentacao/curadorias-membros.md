@@ -106,3 +106,37 @@ associação por overlays legados permanecem para curadorias sem membros formais
 `curadoria_ids` e `curadoria_overlays` não devem ser persistidos em
 `livros.json`. Saúde Mental e Agosto Lilás não foram migradas: C3B/C3C, C4 e
 Editor permanecem fora desta etapa. `status_editorial` foi preservado.
+
+## Agosto Lilás — C3B
+
+Agosto Lilás passa a ser a curadoria declarativa `curadorias/agosto-lilas.json`,
+com ID permanente `agosto-lilas`, status aprovado e `permanente: true`. A entrada
+no index e a disponibilidade no filtro Curadoria da Agenda valem o ano inteiro.
+A promoção é independente da existência: `promocao_painel.meses: [8]` permite
+banner e visual automático somente em agosto, acompanhando um item associado.
+Fora desse mês, os conteúdos continuam disponíveis pelos filtros normais.
+
+`membros` referencia conteúdos canônicos: 32 livros históricos anteriores à
+C2.5A, 1 evento, 15 cursos (por `id_fonte`) e 20 filmes; utilidade pública fica
+vazia. Os temas legados foram usados apenas como evidência para esta migração.
+Nenhum membership desta curadoria depende de tema textual em runtime. Os 13
+livros canonicalizados para UFMG/FUVEST não integram esse conjunto. Os catálogos
+permanecem intactos; `curadoria_ids` é derivado em runtime, unindo associações.
+`overlays` e `complementos` ficam explicitamente vazios, sem cópias dos conteúdos
+nem novos textos editoriais. Conteúdo + Curadoria mantém a interseção existente.
+
+O `perfil_painel` preserva as opções do perfil legado, inclusive o filtro
+`theme: "agosto lilas"`, módulos, pesos e duração. O nome específico do perfil
+é lido de `perfil_painel.nome`, com fallback para o nome da curadoria. A definição
+builtin `agosto-lilas-2026` foi removida. O banner foi copiado byte a byte para
+`imagens/curadorias/agosto-lilas/agosto-lilas-banner.svg`; o original foi mantido.
+
+`perfil_visual` registra `agosto-lilas-glow` declarativamente, com ativação
+automática e cor `#120626`, reutilizando o CSS compartilhado sem stylesheet novo.
+O tema deixou de integrar `BASE_THEMES` e não há fallback sazonal fixo de 2026.
+A infraestrutura existente de `isPromoted()` e a associação explícita do slide
+controlam a promoção; o fallback visual é `padrao`.
+
+Os JS/CSS, scripts e workflows históricos de Agosto Lilás foram preservados,
+sem execução, para limpeza futura. Saúde Mental e UFMG/FUVEST não foram alteradas.
+C3C, C4 e Editor permanecem fora desta etapa.

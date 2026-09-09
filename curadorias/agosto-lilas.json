@@ -1,0 +1,145 @@
+{
+  "id": "agosto-lilas",
+  "status_editorial": "aprovada",
+  "nome": "Agosto Lilás",
+  "tema": "Agosto Lilás",
+  "permanente": true,
+  "promocao_painel": {
+    "meses": [
+      8
+    ]
+  },
+  "perfil_painel": {
+    "nome": "Agosto Lilás — curadoria do mês",
+    "banner": {
+      "src": "imagens/curadorias/agosto-lilas/agosto-lilas-banner.svg",
+      "alt": "Agosto Lilás"
+    },
+    "destaque": "Sugestão do mês",
+    "configuracao": {
+      "modules": {
+        "events": true,
+        "books": true,
+        "courses": true,
+        "contests": false,
+        "films": true
+      },
+      "theme": "agosto lilas",
+      "eventCities": [],
+      "eventCategory": "",
+      "eventProgram": "",
+      "eventUnit": "",
+      "bookCampuses": [],
+      "bookAccess": "",
+      "filmGenre": "",
+      "filmRating": "",
+      "filmDuration": "",
+      "weights": {
+        "events": 5,
+        "books": 1,
+        "courses": 1,
+        "contests": 1,
+        "films": 1
+      },
+      "slideDuration": 0
+    }
+  },
+  "perfil_visual": {
+    "id": "agosto-lilas-glow",
+    "label": "Agosto Lilás Glow",
+    "profileLabel": "Agosto Lilás",
+    "auto_ativar": true,
+    "themeColor": "#120626"
+  },
+  "membros": {
+    "eventos": [
+      "manual-miniguia-para-registrar-a-violencia-sem-colocar-sua-seguranca-em-risco-2026-01-01"
+    ],
+    "livros": [
+      "parem-de-nos-matar",
+      "a-fantasia-da-historia-feminista",
+      "coisa-de-menino",
+      "cult-judith-butler-feminismo-como-provocacao",
+      "desigualdade-de-genero",
+      "dicionario-de-genero-corpo-e-sexualidade",
+      "discriminacao-de-genero-dados-pessoais",
+      "e-eu-nao-sou-uma-mulher-sojourner-truth",
+      "elas-nas-organizacoes",
+      "equidade-de-genero",
+      "estudos-de-genero-literatura-criancas-jovens",
+      "bibliotecas-do-ifmg-103266",
+      "eu-sou-malala",
+      "bibliotecas-do-ifmg-103512",
+      "genero-e-diversidade-na-escola",
+      "insubmissas-lagrimas-de-mulheres",
+      "interseccionalidade",
+      "literatura-escrita-por-mulheres",
+      "lelia-gonzalez",
+      "mais-mulheres-no-poder",
+      "miss-davis",
+      "mulheres-em-tecnologia",
+      "mulheres-casas-e-cidades",
+      "mulheres-linguagem-e-poder",
+      "mulheres-raca-e-classe",
+      "narrativas-de-genero",
+      "o-segundo-sexo",
+      "pedagogias-feministas-decoloniais",
+      "por-um-feminismo-afro-latino-americano",
+      "racismo-sexismo-e-desigualdade-no-brasil",
+      "territorios-das-mulheres",
+      "vozes-contemporaneas-o-feminino-em-cena"
+    ],
+    "cursos": [
+      "924",
+      "1115",
+      "1518",
+      "1120",
+      "1452",
+      "653",
+      "1163",
+      "1511",
+      "834",
+      "1440",
+      "1430",
+      "1198",
+      "1204",
+      "1341",
+      "1189"
+    ],
+    "filmes": [
+      "telabrasil:545",
+      "telabrasil:624",
+      "telabrasil:293",
+      "telabrasil:336",
+      "telabrasil:594",
+      "telabrasil:596",
+      "telabrasil:604",
+      "telabrasil:651",
+      "telabrasil:477",
+      "telabrasil:634",
+      "telabrasil:620",
+      "telabrasil:331",
+      "telabrasil:491",
+      "telabrasil:716",
+      "telabrasil:214",
+      "telabrasil:661",
+      "telabrasil:486",
+      "telabrasil:677",
+      "telabrasil:363",
+      "telabrasil:313"
+    ],
+    "utilidade_publica": []
+  },
+  "overlays": {
+    "eventos": {},
+    "livros": {},
+    "cursos": {},
+    "filmes": {}
+  },
+  "complementos": {
+    "eventos": [],
+    "livros": [],
+    "cursos": [],
+    "filmes": []
+  }
+}

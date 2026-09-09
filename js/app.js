@@ -16,41 +16,6 @@
   const PANEL_SETTINGS_KEY = 'mural-cultural-configuracao-painel-v1';
   const PANEL_PROFILES_KEY = 'mural-cultural-perfis-painel-v1';
   const PANEL_PROFILE_ATTRIBUTE = 'panelProfile';
-  const BUILTIN_PANEL_PROFILES = Object.freeze({
-    'agosto-lilas-2026': {
-      nome: 'Agosto Lilás — curadoria do mês',
-      destaque: 'Sugestão do mês',
-      ativo_de: '2026-08-01',
-      ativo_ate: '2026-08-31',
-      configuracao: {
-        modules: {
-          events: true,
-          books: true,
-          courses: true,
-          contests: false,
-          films: true
-        },
-        theme: 'agosto lilas',
-        eventCities: [],
-        eventCategory: '',
-        eventProgram: '',
-        eventUnit: '',
-        bookCampuses: [],
-        bookAccess: '',
-        filmGenre: '',
-        filmRating: '',
-        filmDuration: '',
-        weights: {
-          events: 5,
-          books: 1,
-          courses: 1,
-          contests: 1,
-          films: 1
-        },
-        slideDuration: 0
-      }
-    }
-  });
   const AGENDA_BATCH_SIZE = 24;
   const AGENDA_CONTENT_LABELS = Object.freeze({
     events: { singular: 'evento', plural: 'eventos' },
@@ -2554,11 +2519,11 @@ function eventProgram(event) {
     );
     const declared = Object.fromEntries(curations.map(curation => [curation.id, {
       ...curation.perfil_painel,
-      nome: curation.nome,
+      nome: curation.perfil_painel.nome || curation.nome,
       ativo_de: curation.ativo_de,
       ativo_ate: curation.ativo_ate
     }]));
-    return { ...BUILTIN_PANEL_PROFILES, ...profiles, ...declared };
+    return { ...profiles, ...declared };
   }
 
   function configuredPanelProfileEntries() {

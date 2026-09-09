@@ -14,15 +14,8 @@
     return `${year}-${month}-${day}`;
   }
 
-  function seasonalDefaultTheme(date = new Date()) {
-    const current = dateKey(date);
-    if (current >= '2026-08-01' && current <= '2026-08-31') return 'agosto-lilas-glow';
-    return 'padrao';
-  }
-
   const BASE_THEMES = [
-    { id: 'padrao', label: 'Padrão' },
-    { id: 'agosto-lilas-glow', label: 'Agosto Lilás Glow', themeColor: '#120626' }
+    { id: 'padrao', label: 'Padrão' }
   ];
 
   let THEMES = [...BASE_THEMES];
@@ -145,7 +138,7 @@
       (!theme.start || current >= theme.start) && (!theme.end || current <= theme.end) &&
       panelProfileMatchesCurrentSlide(theme.panelProfile)
     );
-    return contextual?.id || seasonalDefaultTheme();
+    return contextual?.id || 'padrao';
   }
 
   function updateBrowserColor(theme) {

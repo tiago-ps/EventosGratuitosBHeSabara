@@ -28,6 +28,13 @@
       "tema": "Vestibular FUVEST",
       "ordem": 30,
       "banner": "imagens/curadorias/vestibular-fuvest-2027/banner.png"
+    },
+    {
+      "id": "agosto-lilas",
+      "arquivo": "curadorias/agosto-lilas.json",
+      "nome": "Agosto Lilás",
+      "tema": "Agosto Lilás",
+      "ordem": 40
     }
   ]
 }
