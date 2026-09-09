@@ -2570,7 +2570,7 @@
       "link": "https://pt.wikisource.org/wiki/S._Bernardo_(1934)",
       "tipo_link_principal": "virtual",
       "fonte": "UFMG / acervos de bibliotecas / Wikisource",
-      "exibicao_ativa": false,
+      "exibicao_ativa": true,
       "acervos": [
         {
           "biblioteca": "IFMG — Campus Sabará",
@@ -2738,7 +2738,7 @@
       "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=211229&page=1&perPage=20&orderBy=obra&direction=C",
       "tipo_link_principal": "virtual",
       "fonte": "UFMG / Biblioteca Virtual do IFMG / FMC-PBH",
-      "exibicao_ativa": false,
+      "exibicao_ativa": true,
       "acervos": [
         {
           "biblioteca": "IFMG — Biblioteca Virtual/Pergamum",
@@ -2825,7 +2825,7 @@
       "link": "https://www.record.com.br/products/o-quinze/",
       "pagina_oficial": "https://www.record.com.br/products/o-quinze/",
       "fonte": "UFMG / Editora José Olympio / catálogos de bibliotecas",
-      "exibicao_ativa": false,
+      "exibicao_ativa": true,
       "acervos": [
         {
           "biblioteca": "FMC-PBH",
@@ -2903,7 +2903,7 @@
       "tipo_link_principal": "fisico",
       "pagina_oficial": "https://www.companhiadasletras.com.br/livro/9788535933581/ideias-para-adiar-o-fim-do-mundo-nova-edicao",
       "fonte": "UFMG / IFMG Sabará / catálogos de bibliotecas",
-      "exibicao_ativa": false,
+      "exibicao_ativa": true,
       "acervos": [
         {
           "biblioteca": "IFMG — Campus Sabará",
@@ -3001,7 +3001,7 @@
       "link": "https://www2.senado.leg.br/bdsf/bitstream/handle/id/658727/Opusculo_humanitario_3.ed.pdf",
       "tipo_link_principal": "virtual",
       "fonte": "FUVEST / acervos de bibliotecas",
-      "exibicao_ativa": false,
+      "exibicao_ativa": true,
       "acervos": [
         {
           "biblioteca": "Biblioteca Digital do Senado Federal",
@@ -3255,7 +3255,7 @@
       "link": "https://digital.bbm.usp.br/handle/bbm/8413",
       "tipo_link_principal": "virtual",
       "fonte": "FUVEST / acervos de bibliotecas",
-      "exibicao_ativa": false,
+      "exibicao_ativa": true,
       "acervos": [
         {
           "biblioteca": "Biblioteca Brasiliana Guita e José Mindlin — USP",
@@ -3384,7 +3384,7 @@
       "link": "https://digital.bbm.usp.br/handle/bbm/7037",
       "tipo_link_principal": "virtual",
       "fonte": "FUVEST / acervos de bibliotecas",
-      "exibicao_ativa": false,
+      "exibicao_ativa": true,
       "acervos": [
         {
           "biblioteca": "Biblioteca Brasiliana Guita e José Mindlin — USP",
@@ -3588,7 +3588,7 @@
       "link": "https://bibliotecasfmc.pbh.gov.br/pesquisa_avancada?q=Caminho%20de%20pedras&for=TITULO&condition=AND&q2=Rachel%20de%20Queiroz&for2=AUTOR&keyword_type=P&cr=N&orderBy=obra&direction=C",
       "tipo_link_principal": "catalogo",
       "fonte": "FUVEST / acervos de bibliotecas",
-      "exibicao_ativa": false,
+      "exibicao_ativa": true,
       "acervos": [
         {
           "biblioteca": "FMC-PBH",
@@ -3767,7 +3767,7 @@
       "link": "https://pergamum.ifmg.edu.br/acervo/109238",
       "tipo_link_principal": "fisico",
       "fonte": "FUVEST / acervos de bibliotecas",
-      "exibicao_ativa": false,
+      "exibicao_ativa": true,
       "acervos": [
         {
           "biblioteca": "IFMG — Campus Sabará",
@@ -3986,7 +3986,7 @@
       "link": "http://200.198.28.214/pesquisa_avancada?for=TITULO&q=Geografia&condition=AND&for2=AUTOR&q2=Sophia%20de%20Mello%20Breyner%20Andresen&keyword_type=P",
       "tipo_link_principal": "catalogo",
       "fonte": "FUVEST / acervos de bibliotecas",
-      "exibicao_ativa": false,
+      "exibicao_ativa": true,
       "acervos": [
         {
           "biblioteca": "Biblioteca Pública Estadual de Minas Gerais",
@@ -4065,7 +4065,7 @@
       "link": "https://pergamum.ifmg.edu.br/pesquisa_avancada?q=Balada%20de%20amor%20ao%20vento&for=TITULO&condition=AND&q2=Paulina%20Chiziane&for2=AUTOR&keyword_type=P&cr=N&orderBy=obra&direction=C",
       "tipo_link_principal": "catalogo",
       "fonte": "FUVEST / acervos de bibliotecas",
-      "exibicao_ativa": false,
+      "exibicao_ativa": true,
       "acervos": [
         {
           "biblioteca": "IFMG — Campus Betim",
@@ -4244,7 +4244,7 @@
       "link": "https://pergamum.ifmg.edu.br/acervo/108962",
       "tipo_link_principal": "fisico",
       "fonte": "FUVEST / acervos de bibliotecas",
-      "exibicao_ativa": false,
+      "exibicao_ativa": true,
       "acervos": [
         {
           "biblioteca": "IFMG — Campus Sabará",
@@ -4488,7 +4488,7 @@
       "link": "https://bibliotecasfmc.pbh.gov.br/pesquisa_avancada?q=A%20vis%C3%A3o%20das%20plantas&for=TITULO&condition=AND&q2=Djaimilia%20Pereira%20de%20Almeida&for2=AUTOR&keyword_type=P&cr=N&orderBy=obra&direction=C",
       "tipo_link_principal": "catalogo",
       "fonte": "FUVEST / acervos de bibliotecas",
-      "exibicao_ativa": false,
+      "exibicao_ativa": true,
       "acervos": [
         {
           "biblioteca": "FMC-PBH",

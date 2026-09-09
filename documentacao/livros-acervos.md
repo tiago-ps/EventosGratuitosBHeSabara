@@ -1,4 +1,4 @@
-# Livros, acervos e localizações — C2 e C2.5A
+# Livros, acervos e localizações — C2, C2.5A e C3A
 
 Uma obra é um conteúdo único, identificado pelo ID do livro. Campus, biblioteca,
 edição ou link adicional não justificam criar outra cópia da obra. Suas
@@ -111,23 +111,26 @@ nenhum crédito ou metadado de imagem sem fonte registrada foi inventado.
 Os textos atuais são específicos dos vestibulares. Por isso os novos registros
 canônicos usam `pergunta_curiosidade: ""`, `texto_apoio: ""` e `temas: []`, sem
 metadados `vestibular` ou associações `curadoria_ids` persistidas. Os textos
-editoriais e a vinculação às provas continuam nos complementos existentes.
+editoriais e a vinculação às provas, preservados inicialmente nos complementos,
+passaram para `overlays.livros[id].editorial` de UFMG/FUVEST na C3A; os temas
+específicos permanecem no campo `temas` de cada overlay.
 O campo `qr_code` é opcional: o frontend já gera o QR a partir do link quando
 necessário, portanto nenhum arquivo de QR Code foi criado.
 
-### Transição sem duplicação visual
+### Migração dos vestibulares — C3A
 
-Os 13 novos registros usam temporariamente **`exibicao_ativa: false`**.
-Painel e Agenda aplicam `bookIsPublishable`, que exclui esses registros da
-exibição. O carregador recebe o catálogo completo antes desse filtro, portanto
-os IDs continuam disponíveis para resolução. Os complementos mantêm seus IDs
-legados distintos e continuam sendo exibidos pelo comportamento atual.
+Os 13 registros, inicialmente ocultos na C2.5A, agora usam
+**`exibicao_ativa: true`**. UFMG os referencia por quatro IDs em `membros.livros`
+e FUVEST por nove. As 13 cópias completas foram removidas dos complementos,
+evitando duplicação visual; os arrays `complementos.livros` foram mantidos vazios.
+Balé de Pé no Chão e Txai permanecem nos complementos não literários da UFMG.
 
-UFMG/FUVEST permanecem intactas em `complementos.livros`: nenhuma curadoria foi
-migrada para `membros` e nenhum overlay novo foi criado. A C3 deverá ativar os
-registros canônicos ao substituir os complementos por membros e preservar os
-textos específicos da curadoria na camada editorial apropriada. Não remover
-as capas antigas antes dessa migração e de uma verificação específica.
+Os textos específicos são aplicados por contexto de curadoria, conforme
+`curadorias-membros.md`. Dados factuais, IDs normativos e acervos permanecem
+inalterados no catálogo; `curadoria_ids` continua derivado em runtime.
+Os 32 livros anteriores foram preservados. Nenhuma capa foi removida: a limpeza
+das cópias antigas depende de tarefa posterior e verificação específica.
+Saúde Mental e Agosto Lilás não foram migradas nesta C3A.
 
 Os catálogos centrais são a fonte canônica dos conteúdos. Esta canonicalização
 ocorreu somente no TESTE: **`ColetorEventosGratuitos` não foi atualizado**.

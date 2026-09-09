@@ -1956,7 +1956,9 @@ function eventProgram(event) {
 
   function renderBookSlide(index) {
     clearTimeout(state.timer);
-    const book = state.events[index];
+    const book = siteCurationsContent.effectiveItemForCuration(
+      state.events[index], activeEditorialPanelProfileId()
+    );
     const slide = template.content.firstElementChild.cloneNode(true);
     buildSiteQr(slide);
     slide.classList.add('book-slide');
@@ -3217,6 +3219,7 @@ function eventProgram(event) {
       id: String(curation?.id || '').trim(),
       name: String(curation?.nome || curation?.id || '').trim(),
       permanente: curation?.permanente === true,
+      membros: curation?.membros,
       theme: normalizeText(curation?.perfil_painel?.configuracao?.theme || '') ||
         normalizeText(curation?.tema || ''),
       start: String(curation?.ativo_de || '').trim(),
@@ -3448,6 +3451,7 @@ function eventProgram(event) {
         if (state.mobileBookAccess === 'both' && !(book.acesso_fisico && book.acesso_virtual)) return false;
         return true;
       })
+      .map(book => siteCurationsContent.effectiveItemForCuration(book, state.mobileCuration))
       .filter(book => agendaBookQueryMatches(book, query))
       .sort(agendaTitleCompare);
   }

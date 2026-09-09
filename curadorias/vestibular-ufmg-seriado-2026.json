@@ -46,480 +46,116 @@
   "titulo_editorial": "Obras para Vestibular — Seriado UFMG 2026",
   "subtitulo_editorial": "Livros, documentário e álbum musical cobrados nas Etapas 1 e 2",
   "texto_introdutorio": "Curadoria das obras literárias e artísticas indicadas para as provas do Seriado UFMG 2026, organizadas por ciclo e etapa. Nesta primeira versão, o álbum Txai é representado tecnicamente na estrutura de filmes até a criação futura de uma categoria própria para música.",
+  "membros": {
+    "eventos": [],
+    "livros": [
+      "sao-bernardo",
+      "sobrevivendo-ao-racismo",
+      "o-quinze",
+      "ideias-para-adiar-o-fim-do-mundo"
+    ],
+    "cursos": [],
+    "filmes": [],
+    "utilidade_publica": []
+  },
   "overlays": {
     "eventos": {},
     "cursos": {},
-    "livros": {},
+    "livros": {
+      "sao-bernardo": {
+        "titulo_esperado": "São Bernardo",
+        "temas": [
+          "Vestibular UFMG",
+          "Seriado UFMG 2026",
+          "Etapa 2",
+          "Ciclo 2025-2027"
+        ],
+        "editorial": {
+          "pergunta_curiosidade": "Obra obrigatória do Seriado UFMG 2026 — Etapa 2.",
+          "texto_apoio": "Romance de Graciliano Ramos incluído na Etapa 2 do ciclo 2025–2027. Há exemplar físico catalogado no IFMG Sabará, além de outros catálogos e acessos digitais reunidos abaixo.",
+          "vestibular": {
+            "instituicao": "UFMG",
+            "processo": "Seriado UFMG",
+            "ano_prova": 2026,
+            "ciclo": "2025-2027",
+            "etapa": 2,
+            "obrigatoria": true,
+            "tipo_obra": "Livro — romance"
+          }
+        }
+      },
+      "sobrevivendo-ao-racismo": {
+        "titulo_esperado": "Sobrevivendo ao racismo: memórias, cartas e o cotidiano da discriminação no Brasil",
+        "temas": [
+          "Vestibular UFMG",
+          "Seriado UFMG 2026",
+          "Etapa 2",
+          "Ciclo 2025-2027"
+        ],
+        "editorial": {
+          "pergunta_curiosidade": "Obra obrigatória do Seriado UFMG 2026 — Etapa 2.",
+          "texto_apoio": "Livro de Luana Tolentino incluído na Etapa 2 do ciclo 2025–2027. A Biblioteca Virtual do IFMG registra versões em PDF e ePUB; a curadoria também inclui o catálogo da FMC-PBH informado na lista-base.",
+          "vestibular": {
+            "instituicao": "UFMG",
+            "processo": "Seriado UFMG",
+            "ano_prova": 2026,
+            "ciclo": "2025-2027",
+            "etapa": 2,
+            "obrigatoria": true,
+            "tipo_obra": "Livro"
+          }
+        }
+      },
+      "o-quinze": {
+        "titulo_esperado": "O quinze",
+        "temas": [
+          "Vestibular UFMG",
+          "Seriado UFMG 2026",
+          "Etapa 1",
+          "Ciclo 2026-2028"
+        ],
+        "editorial": {
+          "pergunta_curiosidade": "Obra obrigatória do Seriado UFMG 2026 — Etapa 1.",
+          "texto_apoio": "Romance de Rachel de Queiroz incluído na Etapa 1 do ciclo 2026–2028. A lista-base reúne consultas aos catálogos da FMC-PBH e da Biblioteca Pública Estadual de Minas Gerais.",
+          "vestibular": {
+            "instituicao": "UFMG",
+            "processo": "Seriado UFMG",
+            "ano_prova": 2026,
+            "ciclo": "2026-2028",
+            "etapa": 1,
+            "obrigatoria": true,
+            "tipo_obra": "Livro — romance"
+          }
+        }
+      },
+      "ideias-para-adiar-o-fim-do-mundo": {
+        "titulo_esperado": "Ideias para adiar o fim do mundo",
+        "temas": [
+          "Vestibular UFMG",
+          "Seriado UFMG 2026",
+          "Etapa 1",
+          "Ciclo 2026-2028"
+        ],
+        "editorial": {
+          "pergunta_curiosidade": "Obra obrigatória do Seriado UFMG 2026 — Etapa 1.",
+          "texto_apoio": "Ensaio de Ailton Krenak incluído na Etapa 1 do ciclo 2026–2028. Há exemplar físico catalogado no IFMG Sabará e links de consulta também para FMC-PBH e Biblioteca Pública Estadual de Minas Gerais.",
+          "vestibular": {
+            "instituicao": "UFMG",
+            "processo": "Seriado UFMG",
+            "ano_prova": 2026,
+            "ciclo": "2026-2028",
+            "etapa": 1,
+            "obrigatoria": true,
+            "tipo_obra": "Livro — ensaio"
+          }
+        }
+      }
+    },
     "filmes": {}
   },
   "complementos": {
     "eventos": [],
-    "livros": [
-      {
-        "id": "site:vestibular-ufmg:sao-bernardo",
-        "tipo_conteudo": "livro",
-        "titulo": "São Bernardo",
-        "autor": "Graciliano Ramos",
-        "ano": 1934,
-        "imagem": "imagens/curadorias/vestibular-ufmg-seriado-2026/sao-bernardo.png",
-        "pergunta_curiosidade": "Obra obrigatória do Seriado UFMG 2026 — Etapa 2.",
-        "texto_apoio": "Romance de Graciliano Ramos incluído na Etapa 2 do ciclo 2025–2027. Há exemplar físico catalogado no IFMG Sabará, além de outros catálogos e acessos digitais reunidos abaixo.",
-        "temas": [
-          "Vestibular UFMG",
-          "Seriado UFMG 2026",
-          "Etapa 2",
-          "Ciclo 2025-2027"
-        ],
-        "icone": "📚",
-        "biblioteca_rede": "IFMG Sabará e outros acervos",
-        "codigo_acervo": "86891",
-        "exemplares_fisicos_catalogados": 1,
-        "acesso_fisico": true,
-        "acesso_virtual": true,
-        "link_fisico": "https://pergamum.ifmg.edu.br/acervo/86891",
-        "link_virtual": "https://pt.wikisource.org/wiki/S._Bernardo_(1934)",
-        "link": "https://pt.wikisource.org/wiki/S._Bernardo_(1934)",
-        "tipo_link_principal": "virtual",
-        "fonte": "UFMG / acervos de bibliotecas / Wikisource",
-        "exibicao_ativa": true,
-        "acervos": [
-          {
-            "biblioteca": "IFMG — Campus Sabará",
-            "biblioteca_rede": "IFMG",
-            "unidade": "Campus Sabará",
-            "acesso_fisico": true,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "ifmg:86891",
-                "titulo_registro": "São Bernardo",
-                "autor_registro": "Graciliano Ramos",
-                "biblioteca_rede": "IFMG",
-                "unidade": "Campus Sabará",
-                "codigo_acervo": "86891",
-                "numero_chamada": "821(81)-3 R175s 2008 (SB)",
-                "acesso_fisico": true,
-                "acesso_virtual": false,
-                "link_fisico": "https://pergamum.ifmg.edu.br/acervo/86891"
-              }
-            ]
-          },
-          {
-            "biblioteca": "FMC-PBH",
-            "biblioteca_rede": "FMC-PBH",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "fmc-pbh:busca:sao-bernardo",
-                "titulo_registro": "São Bernardo",
-                "autor_registro": "Graciliano Ramos",
-                "biblioteca_rede": "FMC-PBH",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "link": "https://bibliotecasfmc.pbh.gov.br/pesquisa_geral?for=INDICE_1&q=S%25C3%25A3o%2520Bernardo&page=1&perPage=20&orderBy=obra&direction=C"
-              }
-            ]
-          },
-          {
-            "biblioteca": "Biblioteca Pública Estadual de Minas Gerais",
-            "biblioteca_rede": "Biblioteca Pública Estadual de Minas Gerais",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "bpemg:busca:sao-bernardo",
-                "titulo_registro": "São Bernardo",
-                "autor_registro": "Graciliano Ramos",
-                "biblioteca_rede": "Biblioteca Pública Estadual de Minas Gerais",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "link": "http://200.198.28.214/?q=S%C3%A3o%20Bernardo&for=INDICE_1"
-              }
-            ]
-          },
-          {
-            "biblioteca": "BibliON",
-            "biblioteca_rede": "BibliON",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": true,
-            "registros": [
-              {
-                "registro_id": "biblion:65277808",
-                "titulo_registro": "São Bernardo",
-                "autor_registro": "Graciliano Ramos",
-                "biblioteca_rede": "BibliON",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": true,
-                "link_virtual": "https://biblion.arvore.com.br/biblioteca/ler/livros?hsf=65277808"
-              }
-            ]
-          },
-          {
-            "biblioteca": "MEC Livros",
-            "biblioteca_rede": "MEC Livros",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "mec-livros:busca:sao-bernardo",
-                "titulo_registro": "São Bernardo",
-                "autor_registro": "Graciliano Ramos",
-                "biblioteca_rede": "MEC Livros",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "link": "https://meclivros.mec.gov.br/search?search=S%C3%A3o+Bernardo"
-              }
-            ]
-          },
-          {
-            "biblioteca": "Wikisource — domínio público",
-            "biblioteca_rede": "Wikisource — domínio público",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": true,
-            "registros": [
-              {
-                "registro_id": "wikisource:sao-bernardo-1934",
-                "titulo_registro": "São Bernardo",
-                "autor_registro": "Graciliano Ramos",
-                "biblioteca_rede": "Wikisource — domínio público",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": true,
-                "link_virtual": "https://pt.wikisource.org/wiki/S._Bernardo_(1934)"
-              }
-            ]
-          }
-        ],
-        "acervos_quantidade": 6,
-        "registros_acervo_quantidade": 6,
-        "bibliotecas": [
-          "IFMG — Campus Sabará",
-          "FMC-PBH",
-          "Biblioteca Pública Estadual de Minas Gerais",
-          "BibliON",
-          "MEC Livros",
-          "Wikisource — domínio público"
-        ],
-        "vestibular": {
-          "instituicao": "UFMG",
-          "processo": "Seriado UFMG",
-          "ano_prova": 2026,
-          "ciclo": "2025-2027",
-          "etapa": 2,
-          "obrigatoria": true,
-          "tipo_obra": "Livro — romance"
-        }
-      },
-      {
-        "id": "site:vestibular-ufmg:sobrevivendo-ao-racismo",
-        "tipo_conteudo": "livro",
-        "titulo": "Sobrevivendo ao racismo: memórias, cartas e o cotidiano da discriminação no Brasil",
-        "autor": "Luana Tolentino",
-        "ano": 2023,
-        "imagem": "imagens/curadorias/vestibular-ufmg-seriado-2026/sobrevivendo-ao-racismo.png",
-        "pergunta_curiosidade": "Obra obrigatória do Seriado UFMG 2026 — Etapa 2.",
-        "texto_apoio": "Livro de Luana Tolentino incluído na Etapa 2 do ciclo 2025–2027. A Biblioteca Virtual do IFMG registra versões em PDF e ePUB; a curadoria também inclui o catálogo da FMC-PBH informado na lista-base.",
-        "temas": [
-          "Vestibular UFMG",
-          "Seriado UFMG 2026",
-          "Etapa 2",
-          "Ciclo 2025-2027"
-        ],
-        "icone": "📚",
-        "biblioteca_rede": "Biblioteca Virtual/Pergamum — IFMG e FMC-PBH",
-        "codigo_acervo": "211229",
-        "acesso_fisico": false,
-        "acesso_virtual": true,
-        "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=211229&page=1&perPage=20&orderBy=obra&direction=C",
-        "link": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=211229&page=1&perPage=20&orderBy=obra&direction=C",
-        "tipo_link_principal": "virtual",
-        "fonte": "UFMG / Biblioteca Virtual do IFMG / FMC-PBH",
-        "exibicao_ativa": true,
-        "acervos": [
-          {
-            "biblioteca": "IFMG — Biblioteca Virtual/Pergamum",
-            "biblioteca_rede": "IFMG",
-            "unidade": "Biblioteca Virtual/Pergamum",
-            "acesso_fisico": false,
-            "acesso_virtual": true,
-            "registros": [
-              {
-                "registro_id": "ifmg:211229",
-                "titulo_registro": "Sobrevivendo ao racismo: memórias, cartas e o cotidiano da discriminação no Brasil",
-                "autor_registro": "Luana Tolentino",
-                "biblioteca_rede": "IFMG",
-                "unidade": "Biblioteca Virtual/Pergamum",
-                "codigo_acervo": "211229",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": true,
-                "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=211229&page=1&perPage=20&orderBy=obra&direction=C"
-              },
-              {
-                "registro_id": "ifmg:211228",
-                "titulo_registro": "Sobrevivendo ao racismo: memórias, cartas e o cotidiano da discriminação no Brasil",
-                "autor_registro": "Luana Tolentino",
-                "biblioteca_rede": "IFMG",
-                "unidade": "Biblioteca Virtual/Pergamum",
-                "codigo_acervo": "211228",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": true,
-                "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=211228&page=1&perPage=20&orderBy=obra&direction=C"
-              }
-            ]
-          },
-          {
-            "biblioteca": "FMC-PBH",
-            "biblioteca_rede": "FMC-PBH",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "fmc-pbh:busca:sobrevivendo-ao-racismo",
-                "titulo_registro": "Sobrevivendo ao racismo: memórias, cartas e o cotidiano da discriminação no Brasil",
-                "autor_registro": "Luana Tolentino",
-                "biblioteca_rede": "FMC-PBH",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "link": "https://bibliotecasfmc.pbh.gov.br/pesquisa_geral?for=INDICE_1&q=Sobrevivendo%2520ao%2520racismo%253A%2520mem%25C3%25B3rias%252C%2520cartas%2520e%2520o%2520cotidiano%2520da%2520discrimina%25C3%25A7%25C3%25A3o%2520no%2520Brasil&page=1&perPage=20&orderBy=obra&direction=C"
-              }
-            ]
-          }
-        ],
-        "acervos_quantidade": 2,
-        "registros_acervo_quantidade": 3,
-        "bibliotecas": [
-          "IFMG — Biblioteca Virtual/Pergamum",
-          "FMC-PBH"
-        ],
-        "vestibular": {
-          "instituicao": "UFMG",
-          "processo": "Seriado UFMG",
-          "ano_prova": 2026,
-          "ciclo": "2025-2027",
-          "etapa": 2,
-          "obrigatoria": true,
-          "tipo_obra": "Livro"
-        }
-      },
-      {
-        "id": "site:vestibular-ufmg:o-quinze",
-        "tipo_conteudo": "livro",
-        "titulo": "O quinze",
-        "autor": "Rachel de Queiroz",
-        "ano": 1930,
-        "imagem": "imagens/curadorias/vestibular-ufmg-seriado-2026/o-quinze.png",
-        "pergunta_curiosidade": "Obra obrigatória do Seriado UFMG 2026 — Etapa 1.",
-        "texto_apoio": "Romance de Rachel de Queiroz incluído na Etapa 1 do ciclo 2026–2028. A lista-base reúne consultas aos catálogos da FMC-PBH e da Biblioteca Pública Estadual de Minas Gerais.",
-        "temas": [
-          "Vestibular UFMG",
-          "Seriado UFMG 2026",
-          "Etapa 1",
-          "Ciclo 2026-2028"
-        ],
-        "icone": "📚",
-        "biblioteca_rede": "Catálogos FMC-PBH / BPEMG",
-        "acesso_fisico": false,
-        "acesso_virtual": false,
-        "link": "https://www.record.com.br/products/o-quinze/",
-        "pagina_oficial": "https://www.record.com.br/products/o-quinze/",
-        "fonte": "UFMG / Editora José Olympio / catálogos de bibliotecas",
-        "exibicao_ativa": true,
-        "acervos": [
-          {
-            "biblioteca": "FMC-PBH",
-            "biblioteca_rede": "FMC-PBH",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "fmc-pbh:busca:o-quinze",
-                "titulo_registro": "O quinze",
-                "autor_registro": "Rachel de Queiroz",
-                "biblioteca_rede": "FMC-PBH",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "link": "https://bibliotecasfmc.pbh.gov.br/pesquisa_avancada?q=quinze&for=TITULO&condition=AND&q2=queiroz&for2=AUTOR&keyword_type=P&cr=N&orderBy=obra&direction=C"
-              }
-            ]
-          },
-          {
-            "biblioteca": "Biblioteca Pública Estadual de Minas Gerais",
-            "biblioteca_rede": "Biblioteca Pública Estadual de Minas Gerais",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "bpemg:busca:o-quinze",
-                "titulo_registro": "O quinze",
-                "autor_registro": "Rachel de Queiroz",
-                "biblioteca_rede": "Biblioteca Pública Estadual de Minas Gerais",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "link": "http://200.198.28.214/pesquisa_avancada?for=TITULO&q=quinze&condition=AND&for2=AUTOR&q2=queiroz&keyword_type=P"
-              }
-            ]
-          }
-        ],
-        "acervos_quantidade": 2,
-        "registros_acervo_quantidade": 2,
-        "bibliotecas": [
-          "FMC-PBH",
-          "Biblioteca Pública Estadual de Minas Gerais"
-        ],
-        "vestibular": {
-          "instituicao": "UFMG",
-          "processo": "Seriado UFMG",
-          "ano_prova": 2026,
-          "ciclo": "2026-2028",
-          "etapa": 1,
-          "obrigatoria": true,
-          "tipo_obra": "Livro — romance"
-        }
-      },
-      {
-        "id": "site:vestibular-ufmg:ideias-para-adiar-o-fim-do-mundo",
-        "tipo_conteudo": "livro",
-        "titulo": "Ideias para adiar o fim do mundo",
-        "autor": "Ailton Krenak",
-        "ano": 2019,
-        "imagem": "imagens/curadorias/vestibular-ufmg-seriado-2026/ideias-para-adiar-o-fim-do-mundo.png",
-        "pergunta_curiosidade": "Obra obrigatória do Seriado UFMG 2026 — Etapa 1.",
-        "texto_apoio": "Ensaio de Ailton Krenak incluído na Etapa 1 do ciclo 2026–2028. Há exemplar físico catalogado no IFMG Sabará e links de consulta também para FMC-PBH e Biblioteca Pública Estadual de Minas Gerais.",
-        "temas": [
-          "Vestibular UFMG",
-          "Seriado UFMG 2026",
-          "Etapa 1",
-          "Ciclo 2026-2028"
-        ],
-        "icone": "📚",
-        "biblioteca_rede": "IFMG Sabará e outros acervos",
-        "codigo_acervo": "102547",
-        "exemplares_fisicos_catalogados": 1,
-        "acesso_fisico": true,
-        "acesso_virtual": false,
-        "link_fisico": "https://pergamum.ifmg.edu.br/acervo/102547",
-        "link": "https://pergamum.ifmg.edu.br/acervo/102547",
-        "tipo_link_principal": "fisico",
-        "pagina_oficial": "https://www.companhiadasletras.com.br/livro/9788535933581/ideias-para-adiar-o-fim-do-mundo-nova-edicao",
-        "fonte": "UFMG / IFMG Sabará / catálogos de bibliotecas",
-        "exibicao_ativa": true,
-        "acervos": [
-          {
-            "biblioteca": "IFMG — Campus Sabará",
-            "biblioteca_rede": "IFMG",
-            "unidade": "Campus Sabará",
-            "acesso_fisico": true,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "ifmg:102547",
-                "titulo_registro": "Ideias para adiar o fim do mundo",
-                "autor_registro": "Ailton Krenak",
-                "biblioteca_rede": "IFMG",
-                "unidade": "Campus Sabará",
-                "codigo_acervo": "102547",
-                "numero_chamada": "",
-                "acesso_fisico": true,
-                "acesso_virtual": false,
-                "link_fisico": "https://pergamum.ifmg.edu.br/acervo/102547"
-              }
-            ]
-          },
-          {
-            "biblioteca": "FMC-PBH",
-            "biblioteca_rede": "FMC-PBH",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "fmc-pbh:busca:ideias-para-adiar-o-fim-do-mundo",
-                "titulo_registro": "Ideias para adiar o fim do mundo",
-                "autor_registro": "Ailton Krenak",
-                "biblioteca_rede": "FMC-PBH",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "link": "https://bibliotecasfmc.pbh.gov.br/pesquisa_geral?for=INDICE_1&q=Ideias%2520para%2520adiar%2520o%2520fim%2520do%2520mundo%2520&page=1&perPage=20&orderBy=obra&direction=C"
-              }
-            ]
-          },
-          {
-            "biblioteca": "Biblioteca Pública Estadual de Minas Gerais",
-            "biblioteca_rede": "Biblioteca Pública Estadual de Minas Gerais",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "bpemg:busca:ideias-para-adiar-o-fim-do-mundo",
-                "titulo_registro": "Ideias para adiar o fim do mundo",
-                "autor_registro": "Ailton Krenak",
-                "biblioteca_rede": "Biblioteca Pública Estadual de Minas Gerais",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "link": "http://200.198.28.214/?q=Ideias%20para%20adiar%20o%20fim%20do%20mundo%20&for=INDICE_1"
-              }
-            ]
-          }
-        ],
-        "acervos_quantidade": 3,
-        "registros_acervo_quantidade": 3,
-        "bibliotecas": [
-          "IFMG — Campus Sabará",
-          "FMC-PBH",
-          "Biblioteca Pública Estadual de Minas Gerais"
-        ],
-        "vestibular": {
-          "instituicao": "UFMG",
-          "processo": "Seriado UFMG",
-          "ano_prova": 2026,
-          "ciclo": "2026-2028",
-          "etapa": 1,
-          "obrigatoria": true,
-          "tipo_obra": "Livro — ensaio"
-        }
-      }
-    ],
+    "livros": [],
     "cursos": [],
     "filmes": [
       {

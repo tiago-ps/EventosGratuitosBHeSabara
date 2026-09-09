@@ -63,8 +63,8 @@
     const id = mergeCurationIds(curation?.id)[0];
     if (!id) return false;
     if (mergeCurationIds(item?.curadoria_ids).includes(id)) return true;
-    // Compatibilidade com as curadorias legadas; permanentes usam associação explícita.
-    if (curation.permanente) return false;
+    // Temas são apenas fallback legado; membros formais usam associação explícita.
+    if (curation.permanente || curation.membros) return false;
     const theme = normalizeLabel(curation.perfil_painel?.configuracao?.theme || curation.tema || curation.theme);
     return Boolean(theme && (Array.isArray(item?.temas) ? item.temas : [])
       .some(value => normalizeLabel(value) === theme));
@@ -84,6 +84,38 @@
       curadoria_ids: mergeCurationIds(record?.curadoria_ids),
       temas: Array.isArray(record?.temas) ? [...record.temas] : record?.temas
     };
+  }
+
+  function editorialFields(editorial) {
+    const fields = {};
+    if (!editorial || typeof editorial !== 'object' || Array.isArray(editorial)) return fields;
+    for (const field of ['pergunta_curiosidade', 'texto_apoio']) {
+      if (typeof editorial[field] === 'string') fields[field] = editorial[field];
+    }
+    if (editorial.vestibular && typeof editorial.vestibular === 'object' && !Array.isArray(editorial.vestibular)) {
+      fields.vestibular = structuredClone(editorial.vestibular);
+    }
+    return fields;
+  }
+
+  function storeEditorialOverlay(target, overlay, options) {
+    if (!options.editorial) return;
+    const curationId = mergeCurationIds(options.curationId)[0];
+    const editorial = editorialFields(overlay?.editorial);
+    if (!curationId || !Object.keys(editorial).length) return;
+    target.curadoria_overlays = {
+      ...target.curadoria_overlays,
+      [curationId]: editorial
+    };
+  }
+
+  function effectiveItemForCuration(item, curationId) {
+    const effective = structuredClone(item);
+    const id = mergeCurationIds(curationId)[0];
+    if (!id || !mergeCurationIds(item?.curadoria_ids).includes(id)) return effective;
+    const overlays = item?.curadoria_overlays;
+    if (!overlays || !Object.prototype.hasOwnProperty.call(overlays, id)) return effective;
+    return Object.assign(effective, editorialFields(overlays[id]));
   }
 
   const EXTERNAL_URL_FIELDS = Object.freeze([
@@ -242,7 +274,10 @@
             site_only: true
           };
           item.temas = mergeLabels(item.temas, overlay?.temas);
-          item.curadoria_ids = mergeCurationIds(item.curadoria_ids, overlay?.curadoria_ids, options.curationId);
+          if (options.associateByOverlay !== false) {
+            item.curadoria_ids = mergeCurationIds(item.curadoria_ids, overlay?.curadoria_ids, options.curationId);
+          }
+          storeEditorialOverlay(item, overlay, options);
           result.push(item);
           continue;
         }
@@ -254,7 +289,10 @@
         continue;
       }
       target.temas = mergeLabels(target.temas, overlay?.temas);
-      target.curadoria_ids = mergeCurationIds(target.curadoria_ids, overlay?.curadoria_ids, options.curationId);
+      if (options.associateByOverlay !== false) {
+        target.curadoria_ids = mergeCurationIds(target.curadoria_ids, overlay?.curadoria_ids, options.curationId);
+      }
+      storeEditorialOverlay(target, overlay, options);
       applyOverlayUrlMetadata(target, overlay, options.warn, `${options.label} ${identifier}`);
       applyOverlayImageMetadata(target, overlay, options.warn, `${options.label} ${identifier}`);
     }
@@ -330,7 +368,8 @@
         idField: 'id', label: 'evento', curationId: curation.id, warn
       });
       result.livros = applyOverlayCollection(result.livros, overlays.livros, {
-        idField: 'id', label: 'livro', curationId: curation.id, warn
+        idField: 'id', label: 'livro', curationId: curation.id, warn,
+        editorial: true, associateByOverlay: !curation.membros
       });
       result.cursos = applyOverlayCollection(result.cursos, overlays.cursos, {
         idField: 'id_fonte', label: 'curso', curationId: curation.id, warn
@@ -754,6 +793,7 @@
     createAgendaSupportCard,
     createPanelSupportSlide,
     dateKey,
+    effectiveItemForCuration,
     eventIsCurrent,
     isActive,
     isPromoted,

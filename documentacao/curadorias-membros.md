@@ -1,4 +1,4 @@
-# Curadorias: membros canônicos (Etapa C1)
+# Curadorias: membros canônicos e overlays contextuais (C1 e C3A)
 
 Cada arquivo de curadoria pode incluir, opcionalmente:
 
@@ -47,7 +47,62 @@ As associações de membros seguem a mesma separação entre vínculo de conteú
 e período da campanha já usada pelo carregador: disponibilidade e promoção
 continuam sendo decididas pelas regras existentes.
 
-Esta etapa não migra UFMG, FUVEST, Saúde Mental ou Agosto Lilás, não altera
-`status_editorial` e não cria uma interface no Editor. As associações legadas
-continuam compatíveis; nenhuma associação nova deve ser persistida em
-`curadoria_ids` dos catálogos para cadastrar membros.
+## Overlays editoriais contextuais — C3A
+
+UFMG seleciona quatro livros e FUVEST nove por `membros.livros`. Seus antigos
+livros completos foram retirados de `complementos.livros`, preservando os
+complementos não literários da UFMG (Balé de Pé no Chão e Txai). Os 13 livros
+canônicos estão ativos em `livros.json`.
+
+O catálogo descreve a obra; `membros` registra a seleção pela curadoria;
+`overlays` define sua apresentação editorial; `complementos` admite conteúdo
+ainda ausente do catálogo. Para livros, a forma contextual é:
+
+```json
+"overlays": {
+  "livros": {
+    "sao-bernardo": {
+      "titulo_esperado": "São Bernardo",
+      "temas": ["Vestibular UFMG"],
+      "editorial": {
+        "pergunta_curiosidade": "Obra obrigatória do Seriado UFMG 2026 — Etapa 2.",
+        "texto_apoio": "",
+        "vestibular": {}
+      }
+    }
+  }
+}
+```
+
+`editorial` aceita somente `pergunta_curiosidade` e `texto_apoio` como strings
+e `vestibular` como objeto. Outros campos são ignorados. Acervos, links, capas,
+disponibilidade e fontes factuais permanecem no catálogo, fora desse objeto.
+O exemplo acima ilustra o formato; a migração preserva integralmente os textos
+editoriais originais nos arquivos de cada curadoria.
+
+A integração armazena os campos permitidos em
+`item.curadoria_overlays[curationId]`, somente em memória. Acrescentar outra
+curadoria preserva as entradas anteriores; seus textos não sobrescrevem os
+campos gerais da obra. Os temas do overlay continuam sendo unidos aos temas
+integrados, sem substituir os existentes.
+
+`window.MuralCultural.siteCurations.effectiveItemForCuration(item, curationId)`
+retorna uma cópia independente do item. Se houver associação explícita em
+`curadoria_ids` e overlay para o ID solicitado, aplica apenas os três campos
+editoriais permitidos. Sem contexto ou overlay, retorna a cópia dos dados
+gerais. O objeto recebido permanece inalterado, inclusive os campos aninhados.
+
+O Painel usa o ID do perfil editorial ativo. A Agenda usa `state.mobileCuration`
+antes da busca por livros e da renderização dos resultados: pergunta, texto de
+apoio e temas integrados participam da busca. Com a opção Todas, usa os dados
+gerais. A interseção Conteúdo + Curadoria permanece no filtro existente.
+
+Nas curadorias com `membros`, `matchesCuration()` exige associação explícita;
+temas não criam membership. Os overlays de livros dessas curadorias também
+não acrescentam associações: elas vêm de `membros`. Complementos preservados
+continuam recebendo sua associação em runtime. O fallback por tema e a
+associação por overlays legados permanecem para curadorias sem membros formais.
+
+`curadoria_ids` e `curadoria_overlays` não devem ser persistidos em
+`livros.json`. Saúde Mental e Agosto Lilás não foram migradas: C3B/C3C, C4 e
+Editor permanecem fora desta etapa. `status_editorial` foi preservado.

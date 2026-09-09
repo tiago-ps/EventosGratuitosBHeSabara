@@ -48,1676 +48,231 @@
   "texto_introdutorio": "Curadoria das nove leituras obrigatórias do Vestibular FUVEST 2027. Reúne exemplares confirmados, obras integrais em fontes institucionais e links de consulta a diferentes catálogos de bibliotecas.",
   "banner": "imagens/curadorias/vestibular-fuvest-2027/banner.png",
   "perfil_visual": null,
+  "membros": {
+    "eventos": [],
+    "livros": [
+      "opusculo-humanitario",
+      "nebulosas",
+      "memorias-de-martha",
+      "caminho-de-pedras",
+      "a-paixao-segundo-g-h",
+      "geografia",
+      "balada-de-amor-ao-vento",
+      "cancao-para-ninar-menino-grande",
+      "a-visao-das-plantas"
+    ],
+    "cursos": [],
+    "filmes": [],
+    "utilidade_publica": []
+  },
   "overlays": {
     "eventos": {},
     "cursos": {},
-    "livros": {},
+    "livros": {
+      "opusculo-humanitario": {
+        "titulo_esperado": "Opúsculo Humanitário",
+        "temas": [
+          "Vestibular FUVEST",
+          "FUVEST 2027",
+          "USP",
+          "Leitura obrigatória"
+        ],
+        "editorial": {
+          "pergunta_curiosidade": "Leitura obrigatória do Vestibular FUVEST 2027.",
+          "texto_apoio": "Opúsculo Humanitário, de Nísia Floresta, integra a lista oficial de nove leituras obrigatórias do Vestibular FUVEST 2027. Os links distinguem acesso confirmado de consulta a catálogos.",
+          "vestibular": {
+            "instituicao": "FUVEST / USP",
+            "processo": "Vestibular FUVEST 2027",
+            "ano_vestibular": 2027,
+            "ano_prova": 2026,
+            "ciclo": "2027",
+            "obrigatoria": true,
+            "tipo_obra": "Livro"
+          }
+        }
+      },
+      "nebulosas": {
+        "titulo_esperado": "Nebulosas",
+        "temas": [
+          "Vestibular FUVEST",
+          "FUVEST 2027",
+          "USP",
+          "Leitura obrigatória"
+        ],
+        "editorial": {
+          "pergunta_curiosidade": "Leitura obrigatória do Vestibular FUVEST 2027.",
+          "texto_apoio": "Nebulosas, de Narcisa Amália, integra a lista oficial de nove leituras obrigatórias do Vestibular FUVEST 2027. Os links distinguem acesso confirmado de consulta a catálogos.",
+          "vestibular": {
+            "instituicao": "FUVEST / USP",
+            "processo": "Vestibular FUVEST 2027",
+            "ano_vestibular": 2027,
+            "ano_prova": 2026,
+            "ciclo": "2027",
+            "obrigatoria": true,
+            "tipo_obra": "Livro"
+          }
+        }
+      },
+      "memorias-de-martha": {
+        "titulo_esperado": "Memórias de Martha",
+        "temas": [
+          "Vestibular FUVEST",
+          "FUVEST 2027",
+          "USP",
+          "Leitura obrigatória"
+        ],
+        "editorial": {
+          "pergunta_curiosidade": "Leitura obrigatória do Vestibular FUVEST 2027.",
+          "texto_apoio": "Memórias de Martha, de Julia Lopes de Almeida, integra a lista oficial de nove leituras obrigatórias do Vestibular FUVEST 2027. Os links distinguem acesso confirmado de consulta a catálogos.",
+          "vestibular": {
+            "instituicao": "FUVEST / USP",
+            "processo": "Vestibular FUVEST 2027",
+            "ano_vestibular": 2027,
+            "ano_prova": 2026,
+            "ciclo": "2027",
+            "obrigatoria": true,
+            "tipo_obra": "Livro"
+          }
+        }
+      },
+      "caminho-de-pedras": {
+        "titulo_esperado": "Caminho de pedras",
+        "temas": [
+          "Vestibular FUVEST",
+          "FUVEST 2027",
+          "USP",
+          "Leitura obrigatória"
+        ],
+        "editorial": {
+          "pergunta_curiosidade": "Leitura obrigatória do Vestibular FUVEST 2027.",
+          "texto_apoio": "Caminho de pedras, de Rachel de Queiroz, integra a lista oficial de nove leituras obrigatórias do Vestibular FUVEST 2027. Os links distinguem acesso confirmado de consulta a catálogos.",
+          "vestibular": {
+            "instituicao": "FUVEST / USP",
+            "processo": "Vestibular FUVEST 2027",
+            "ano_vestibular": 2027,
+            "ano_prova": 2026,
+            "ciclo": "2027",
+            "obrigatoria": true,
+            "tipo_obra": "Livro"
+          }
+        }
+      },
+      "a-paixao-segundo-g-h": {
+        "titulo_esperado": "A paixão segundo G. H.",
+        "temas": [
+          "Vestibular FUVEST",
+          "FUVEST 2027",
+          "USP",
+          "Leitura obrigatória"
+        ],
+        "editorial": {
+          "pergunta_curiosidade": "Leitura obrigatória do Vestibular FUVEST 2027.",
+          "texto_apoio": "A paixão segundo G. H., de Clarice Lispector, integra a lista oficial de nove leituras obrigatórias do Vestibular FUVEST 2027. Os links distinguem acesso confirmado de consulta a catálogos.",
+          "vestibular": {
+            "instituicao": "FUVEST / USP",
+            "processo": "Vestibular FUVEST 2027",
+            "ano_vestibular": 2027,
+            "ano_prova": 2026,
+            "ciclo": "2027",
+            "obrigatoria": true,
+            "tipo_obra": "Livro"
+          }
+        }
+      },
+      "geografia": {
+        "titulo_esperado": "Geografia",
+        "temas": [
+          "Vestibular FUVEST",
+          "FUVEST 2027",
+          "USP",
+          "Leitura obrigatória"
+        ],
+        "editorial": {
+          "pergunta_curiosidade": "Leitura obrigatória do Vestibular FUVEST 2027.",
+          "texto_apoio": "Geografia, de Sophia de Mello Breyner Andresen, integra a lista oficial de nove leituras obrigatórias do Vestibular FUVEST 2027. Os links distinguem acesso confirmado de consulta a catálogos.",
+          "vestibular": {
+            "instituicao": "FUVEST / USP",
+            "processo": "Vestibular FUVEST 2027",
+            "ano_vestibular": 2027,
+            "ano_prova": 2026,
+            "ciclo": "2027",
+            "obrigatoria": true,
+            "tipo_obra": "Livro"
+          }
+        }
+      },
+      "balada-de-amor-ao-vento": {
+        "titulo_esperado": "Balada de amor ao vento",
+        "temas": [
+          "Vestibular FUVEST",
+          "FUVEST 2027",
+          "USP",
+          "Leitura obrigatória"
+        ],
+        "editorial": {
+          "pergunta_curiosidade": "Leitura obrigatória do Vestibular FUVEST 2027.",
+          "texto_apoio": "Balada de amor ao vento, de Paulina Chiziane, integra a lista oficial de nove leituras obrigatórias do Vestibular FUVEST 2027. Os links distinguem acesso confirmado de consulta a catálogos.",
+          "vestibular": {
+            "instituicao": "FUVEST / USP",
+            "processo": "Vestibular FUVEST 2027",
+            "ano_vestibular": 2027,
+            "ano_prova": 2026,
+            "ciclo": "2027",
+            "obrigatoria": true,
+            "tipo_obra": "Livro"
+          }
+        }
+      },
+      "cancao-para-ninar-menino-grande": {
+        "titulo_esperado": "Canção para ninar menino grande",
+        "temas": [
+          "Vestibular FUVEST",
+          "FUVEST 2027",
+          "USP",
+          "Leitura obrigatória"
+        ],
+        "editorial": {
+          "pergunta_curiosidade": "Leitura obrigatória do Vestibular FUVEST 2027.",
+          "texto_apoio": "Canção para ninar menino grande, de Conceição Evaristo, integra a lista oficial de nove leituras obrigatórias do Vestibular FUVEST 2027. Os links distinguem acesso confirmado de consulta a catálogos.",
+          "vestibular": {
+            "instituicao": "FUVEST / USP",
+            "processo": "Vestibular FUVEST 2027",
+            "ano_vestibular": 2027,
+            "ano_prova": 2026,
+            "ciclo": "2027",
+            "obrigatoria": true,
+            "tipo_obra": "Livro"
+          }
+        }
+      },
+      "a-visao-das-plantas": {
+        "titulo_esperado": "A visão das plantas",
+        "temas": [
+          "Vestibular FUVEST",
+          "FUVEST 2027",
+          "USP",
+          "Leitura obrigatória"
+        ],
+        "editorial": {
+          "pergunta_curiosidade": "Leitura obrigatória do Vestibular FUVEST 2027.",
+          "texto_apoio": "A visão das plantas, de Djaimilia Pereira de Almeida, integra a lista oficial de nove leituras obrigatórias do Vestibular FUVEST 2027. Os links distinguem acesso confirmado de consulta a catálogos.",
+          "vestibular": {
+            "instituicao": "FUVEST / USP",
+            "processo": "Vestibular FUVEST 2027",
+            "ano_vestibular": 2027,
+            "ano_prova": 2026,
+            "ciclo": "2027",
+            "obrigatoria": true,
+            "tipo_obra": "Livro"
+          }
+        }
+      }
+    },
     "filmes": {}
   },
   "complementos": {
     "eventos": [],
-    "livros": [
-      {
-        "id": "site:vestibular-fuvest:opusculo-humanitario",
-        "tipo_conteudo": "livro",
-        "titulo": "Opúsculo Humanitário",
-        "autor": "Nísia Floresta",
-        "ano": 1853,
-        "imagem": "imagens/curadorias/vestibular-fuvest-2027/opusculo-humanitario.png",
-        "pergunta_curiosidade": "Leitura obrigatória do Vestibular FUVEST 2027.",
-        "texto_apoio": "Opúsculo Humanitário, de Nísia Floresta, integra a lista oficial de nove leituras obrigatórias do Vestibular FUVEST 2027. Os links distinguem acesso confirmado de consulta a catálogos.",
-        "temas": [
-          "Vestibular FUVEST",
-          "FUVEST 2027",
-          "USP",
-          "Leitura obrigatória"
-        ],
-        "icone": "📚",
-        "biblioteca_rede": "Diversos acervos e bibliotecas",
-        "codigo_acervo": "",
-        "acesso_fisico": false,
-        "acesso_virtual": true,
-        "link": "https://www2.senado.leg.br/bdsf/bitstream/handle/id/658727/Opusculo_humanitario_3.ed.pdf",
-        "tipo_link_principal": "virtual",
-        "fonte": "FUVEST / acervos de bibliotecas",
-        "exibicao_ativa": true,
-        "acervos": [
-          {
-            "biblioteca": "Biblioteca Digital do Senado Federal",
-            "biblioteca_rede": "Biblioteca Digital do Senado Federal",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": true,
-            "registros": [
-              {
-                "registro_id": "senado:opusculo-humanitario",
-                "titulo_registro": "Opúsculo Humanitário",
-                "autor_registro": "Nísia Floresta",
-                "biblioteca_rede": "Biblioteca Digital do Senado Federal",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": true,
-                "tipo_registro": "acesso_integral_legal",
-                "disponibilidade_confirmada": true,
-                "link_virtual": "https://www2.senado.leg.br/bdsf/bitstream/handle/id/658727/Opusculo_humanitario_3.ed.pdf"
-              }
-            ]
-          },
-          {
-            "biblioteca": "IFMG — Campus Ouro Branco",
-            "biblioteca_rede": "IFMG",
-            "unidade": "Campus Ouro Branco",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "ifmg:busca:opusculo-humanitario:ouro-branco",
-                "titulo_registro": "Opúsculo Humanitário",
-                "autor_registro": "Nísia Floresta",
-                "biblioteca_rede": "IFMG",
-                "unidade": "Campus Ouro Branco",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://pergamum.ifmg.edu.br/pesquisa_avancada?q=Op%C3%BAsculo%20Humanit%C3%A1rio&for=TITULO&condition=AND&q2=N%C3%ADsia%20Floresta&for2=AUTOR&keyword_type=P&cr=N&orderBy=obra&direction=C"
-              }
-            ]
-          },
-          {
-            "biblioteca": "IFMG — Campus Betim",
-            "biblioteca_rede": "IFMG",
-            "unidade": "Campus Betim",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "ifmg:busca:opusculo-humanitario:betim",
-                "titulo_registro": "Opúsculo Humanitário",
-                "autor_registro": "Nísia Floresta",
-                "biblioteca_rede": "IFMG",
-                "unidade": "Campus Betim",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://pergamum.ifmg.edu.br/pesquisa_avancada?q=Op%C3%BAsculo%20Humanit%C3%A1rio&for=TITULO&condition=AND&q2=N%C3%ADsia%20Floresta&for2=AUTOR&keyword_type=P&cr=N&orderBy=obra&direction=C"
-              }
-            ]
-          },
-          {
-            "biblioteca": "IFMG — Campus Piumhi",
-            "biblioteca_rede": "IFMG",
-            "unidade": "Campus Piumhi",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "ifmg:busca:opusculo-humanitario:piumhi",
-                "titulo_registro": "Opúsculo Humanitário",
-                "autor_registro": "Nísia Floresta",
-                "biblioteca_rede": "IFMG",
-                "unidade": "Campus Piumhi",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://pergamum.ifmg.edu.br/pesquisa_avancada?q=Op%C3%BAsculo%20Humanit%C3%A1rio&for=TITULO&condition=AND&q2=N%C3%ADsia%20Floresta&for2=AUTOR&keyword_type=P&cr=N&orderBy=obra&direction=C"
-              }
-            ]
-          },
-          {
-            "biblioteca": "Biblioteca Pública Estadual de Minas Gerais",
-            "biblioteca_rede": "Biblioteca Pública Estadual de Minas Gerais",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "bpemg:busca:opusculo-humanitario",
-                "titulo_registro": "Opúsculo Humanitário",
-                "autor_registro": "Nísia Floresta",
-                "biblioteca_rede": "Biblioteca Pública Estadual de Minas Gerais",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "http://200.198.28.214/pesquisa_avancada?for=TITULO&q=Op%C3%BAsculo%20Humanit%C3%A1rio&condition=AND&for2=AUTOR&q2=N%C3%ADsia%20Floresta&keyword_type=P"
-              }
-            ]
-          },
-          {
-            "biblioteca": "BibliON",
-            "biblioteca_rede": "BibliON",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "biblion:busca:opusculo-humanitario",
-                "titulo_registro": "Opúsculo Humanitário",
-                "autor_registro": "Nísia Floresta",
-                "biblioteca_rede": "BibliON",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://biblion.arvore.com.br/biblioteca/busca/%22Op%C3%BAsculo%20Humanit%C3%A1rio%22%22N%C3%ADsia%20Floresta%22"
-              }
-            ]
-          },
-          {
-            "biblioteca": "MEC Livros",
-            "biblioteca_rede": "MEC Livros",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "mec:busca:opusculo-humanitario",
-                "titulo_registro": "Opúsculo Humanitário",
-                "autor_registro": "Nísia Floresta",
-                "biblioteca_rede": "MEC Livros",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://meclivros.mec.gov.br/search?search=%22Op%C3%BAsculo+Humanit%C3%A1rio%22%22N%C3%ADsia+Floresta%22"
-              }
-            ]
-          },
-          {
-            "biblioteca": "UFMG",
-            "biblioteca_rede": "UFMG",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "ufmg:busca:opusculo-humanitario",
-                "titulo_registro": "Opúsculo Humanitário",
-                "autor_registro": "Nísia Floresta",
-                "biblioteca_rede": "UFMG",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://catalogobiblioteca.ufmg.br/pesquisa_avancada?q=Op%C3%BAsculo%20Humanit%C3%A1rio&for=TITULO&q2=N%C3%ADsia%20Floresta&for2=AUTOR&condition=AND&keyword_type=P&cr=N"
-              }
-            ]
-          },
-          {
-            "biblioteca": "PUC Minas",
-            "biblioteca_rede": "PUC Minas",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "puc:busca:opusculo-humanitario",
-                "titulo_registro": "Opúsculo Humanitário",
-                "autor_registro": "Nísia Floresta",
-                "biblioteca_rede": "PUC Minas",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://bib.pucminas.br/pesquisa_avancada?q=Op%C3%BAsculo%20Humanit%C3%A1rio&for=TITULO&q2=N%C3%ADsia%20Floresta&for2=AUTOR&condition=AND&keyword_type=P&cr=N"
-              }
-            ]
-          }
-        ],
-        "acervos_quantidade": 9,
-        "registros_acervo_quantidade": 9,
-        "bibliotecas": [
-          "Biblioteca Digital do Senado Federal",
-          "IFMG — Campus Ouro Branco",
-          "IFMG — Campus Betim",
-          "IFMG — Campus Piumhi",
-          "Biblioteca Pública Estadual de Minas Gerais",
-          "BibliON",
-          "MEC Livros",
-          "UFMG",
-          "PUC Minas"
-        ],
-        "vestibular": {
-          "instituicao": "FUVEST / USP",
-          "processo": "Vestibular FUVEST 2027",
-          "ano_vestibular": 2027,
-          "ano_prova": 2026,
-          "ciclo": "2027",
-          "obrigatoria": true,
-          "tipo_obra": "Livro"
-        }
-      },
-      {
-        "id": "site:vestibular-fuvest:nebulosas",
-        "tipo_conteudo": "livro",
-        "titulo": "Nebulosas",
-        "autor": "Narcisa Amália",
-        "ano": 1872,
-        "imagem": "imagens/curadorias/vestibular-fuvest-2027/nebulosas.png",
-        "pergunta_curiosidade": "Leitura obrigatória do Vestibular FUVEST 2027.",
-        "texto_apoio": "Nebulosas, de Narcisa Amália, integra a lista oficial de nove leituras obrigatórias do Vestibular FUVEST 2027. Os links distinguem acesso confirmado de consulta a catálogos.",
-        "temas": [
-          "Vestibular FUVEST",
-          "FUVEST 2027",
-          "USP",
-          "Leitura obrigatória"
-        ],
-        "icone": "📚",
-        "biblioteca_rede": "Diversos acervos e bibliotecas",
-        "codigo_acervo": "",
-        "acesso_fisico": false,
-        "acesso_virtual": true,
-        "link": "https://digital.bbm.usp.br/handle/bbm/8413",
-        "tipo_link_principal": "virtual",
-        "fonte": "FUVEST / acervos de bibliotecas",
-        "exibicao_ativa": true,
-        "acervos": [
-          {
-            "biblioteca": "Biblioteca Brasiliana Guita e José Mindlin — USP",
-            "biblioteca_rede": "Biblioteca Brasiliana Guita e José Mindlin — USP",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": true,
-            "registros": [
-              {
-                "registro_id": "bbm:8413",
-                "titulo_registro": "Nebulosas",
-                "autor_registro": "Narcisa Amália",
-                "biblioteca_rede": "Biblioteca Brasiliana Guita e José Mindlin — USP",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": true,
-                "tipo_registro": "acesso_integral_legal",
-                "disponibilidade_confirmada": true,
-                "link_virtual": "https://digital.bbm.usp.br/handle/bbm/8413"
-              }
-            ]
-          },
-          {
-            "biblioteca": "IFMG — Campus Betim",
-            "biblioteca_rede": "IFMG",
-            "unidade": "Campus Betim",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "ifmg:busca:nebulosas",
-                "titulo_registro": "Nebulosas",
-                "autor_registro": "Narcisa Amália",
-                "biblioteca_rede": "IFMG",
-                "unidade": "Campus Betim",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://pergamum.ifmg.edu.br/pesquisa_avancada?q=Nebulosas&for=TITULO&condition=AND&q2=Narcisa%20Am%C3%A1lia&for2=AUTOR&keyword_type=P&cr=N&orderBy=obra&direction=C"
-              }
-            ]
-          },
-          {
-            "biblioteca": "BibliON",
-            "biblioteca_rede": "BibliON",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "biblion:busca:nebulosas",
-                "titulo_registro": "Nebulosas",
-                "autor_registro": "Narcisa Amália",
-                "biblioteca_rede": "BibliON",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://biblion.arvore.com.br/biblioteca/busca/%22Nebulosas%22%22Narcisa%20Am%C3%A1lia%22"
-              }
-            ]
-          },
-          {
-            "biblioteca": "MEC Livros",
-            "biblioteca_rede": "MEC Livros",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "mec:busca:nebulosas",
-                "titulo_registro": "Nebulosas",
-                "autor_registro": "Narcisa Amália",
-                "biblioteca_rede": "MEC Livros",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://meclivros.mec.gov.br/search?search=%22Nebulosas%22%22Narcisa+Am%C3%A1lia%22"
-              }
-            ]
-          }
-        ],
-        "acervos_quantidade": 4,
-        "registros_acervo_quantidade": 4,
-        "bibliotecas": [
-          "Biblioteca Brasiliana Guita e José Mindlin — USP",
-          "IFMG — Campus Betim",
-          "BibliON",
-          "MEC Livros"
-        ],
-        "vestibular": {
-          "instituicao": "FUVEST / USP",
-          "processo": "Vestibular FUVEST 2027",
-          "ano_vestibular": 2027,
-          "ano_prova": 2026,
-          "ciclo": "2027",
-          "obrigatoria": true,
-          "tipo_obra": "Livro"
-        }
-      },
-      {
-        "id": "site:vestibular-fuvest:memorias-de-martha",
-        "tipo_conteudo": "livro",
-        "titulo": "Memórias de Martha",
-        "autor": "Julia Lopes de Almeida",
-        "ano": 1899,
-        "imagem": "imagens/curadorias/vestibular-fuvest-2027/memorias-de-martha.png",
-        "pergunta_curiosidade": "Leitura obrigatória do Vestibular FUVEST 2027.",
-        "texto_apoio": "Memórias de Martha, de Julia Lopes de Almeida, integra a lista oficial de nove leituras obrigatórias do Vestibular FUVEST 2027. Os links distinguem acesso confirmado de consulta a catálogos.",
-        "temas": [
-          "Vestibular FUVEST",
-          "FUVEST 2027",
-          "USP",
-          "Leitura obrigatória"
-        ],
-        "icone": "📚",
-        "biblioteca_rede": "Diversos acervos e bibliotecas",
-        "codigo_acervo": "",
-        "acesso_fisico": false,
-        "acesso_virtual": true,
-        "link": "https://digital.bbm.usp.br/handle/bbm/7037",
-        "tipo_link_principal": "virtual",
-        "fonte": "FUVEST / acervos de bibliotecas",
-        "exibicao_ativa": true,
-        "acervos": [
-          {
-            "biblioteca": "Biblioteca Brasiliana Guita e José Mindlin — USP",
-            "biblioteca_rede": "Biblioteca Brasiliana Guita e José Mindlin — USP",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": true,
-            "registros": [
-              {
-                "registro_id": "bbm:7037",
-                "titulo_registro": "Memórias de Martha",
-                "autor_registro": "Julia Lopes de Almeida",
-                "biblioteca_rede": "Biblioteca Brasiliana Guita e José Mindlin — USP",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": true,
-                "tipo_registro": "acesso_integral_legal",
-                "disponibilidade_confirmada": true,
-                "link_virtual": "https://digital.bbm.usp.br/handle/bbm/7037"
-              }
-            ]
-          },
-          {
-            "biblioteca": "IFMG — Campus Betim",
-            "biblioteca_rede": "IFMG",
-            "unidade": "Campus Betim",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "ifmg:busca:memorias-de-martha",
-                "titulo_registro": "Memórias de Martha",
-                "autor_registro": "Julia Lopes de Almeida",
-                "biblioteca_rede": "IFMG",
-                "unidade": "Campus Betim",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://pergamum.ifmg.edu.br/pesquisa_avancada?q=Mem%C3%B3rias%20de%20Martha&for=TITULO&condition=AND&q2=Julia%20Lopes%20de%20Almeida&for2=AUTOR&keyword_type=P&cr=N&orderBy=obra&direction=C"
-              }
-            ]
-          },
-          {
-            "biblioteca": "BibliON",
-            "biblioteca_rede": "BibliON",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "biblion:busca:memorias-de-martha",
-                "titulo_registro": "Memórias de Martha",
-                "autor_registro": "Julia Lopes de Almeida",
-                "biblioteca_rede": "BibliON",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://biblion.arvore.com.br/biblioteca/busca/%22Mem%C3%B3rias%20de%20Martha%22%22Julia%20Lopes%20de%20Almeida%22"
-              }
-            ]
-          },
-          {
-            "biblioteca": "MEC Livros",
-            "biblioteca_rede": "MEC Livros",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "mec:busca:memorias-de-martha",
-                "titulo_registro": "Memórias de Martha",
-                "autor_registro": "Julia Lopes de Almeida",
-                "biblioteca_rede": "MEC Livros",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://meclivros.mec.gov.br/search?search=%22Mem%C3%B3rias+de+Martha%22%22Julia+Lopes+de+Almeida%22"
-              }
-            ]
-          },
-          {
-            "biblioteca": "UFMG",
-            "biblioteca_rede": "UFMG",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "ufmg:busca:memorias-de-martha",
-                "titulo_registro": "Memórias de Martha",
-                "autor_registro": "Julia Lopes de Almeida",
-                "biblioteca_rede": "UFMG",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://catalogobiblioteca.ufmg.br/pesquisa_avancada?q=Mem%C3%B3rias%20de%20Martha&for=TITULO&q2=Julia%20Lopes%20de%20Almeida&for2=AUTOR&condition=AND&keyword_type=P&cr=N"
-              }
-            ]
-          },
-          {
-            "biblioteca": "Bibliotecas Escolares da PBH",
-            "biblioteca_rede": "Bibliotecas Escolares da PBH",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "empbh:busca:memorias-de-martha",
-                "titulo_registro": "Memórias de Martha",
-                "autor_registro": "Julia Lopes de Almeida",
-                "biblioteca_rede": "Bibliotecas Escolares da PBH",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://bibliotecaspbh.pbh.gov.br/pesquisa_avancada?q=Mem%C3%B3rias%20de%20Martha&for=TITULO&condition=AND&q2=Julia%20Lopes%20de%20Almeida&for2=AUTOR&keyword_type=P&cr=N&orderBy=obra&direction=C"
-              }
-            ]
-          },
-          {
-            "biblioteca": "PUC Minas",
-            "biblioteca_rede": "PUC Minas",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "puc:busca:memorias-de-martha",
-                "titulo_registro": "Memórias de Martha",
-                "autor_registro": "Julia Lopes de Almeida",
-                "biblioteca_rede": "PUC Minas",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://bib.pucminas.br/pesquisa_avancada?q=Mem%C3%B3rias%20de%20Martha&for=TITULO&q2=Julia%20Lopes%20de%20Almeida&for2=AUTOR&condition=AND&keyword_type=P&cr=N"
-              }
-            ]
-          }
-        ],
-        "acervos_quantidade": 7,
-        "registros_acervo_quantidade": 7,
-        "bibliotecas": [
-          "Biblioteca Brasiliana Guita e José Mindlin — USP",
-          "IFMG — Campus Betim",
-          "BibliON",
-          "MEC Livros",
-          "UFMG",
-          "Bibliotecas Escolares da PBH",
-          "PUC Minas"
-        ],
-        "vestibular": {
-          "instituicao": "FUVEST / USP",
-          "processo": "Vestibular FUVEST 2027",
-          "ano_vestibular": 2027,
-          "ano_prova": 2026,
-          "ciclo": "2027",
-          "obrigatoria": true,
-          "tipo_obra": "Livro"
-        }
-      },
-      {
-        "id": "site:vestibular-fuvest:caminho-de-pedras",
-        "tipo_conteudo": "livro",
-        "titulo": "Caminho de pedras",
-        "autor": "Rachel de Queiroz",
-        "ano": 1937,
-        "imagem": "imagens/curadorias/vestibular-fuvest-2027/caminho-de-pedras.png",
-        "pergunta_curiosidade": "Leitura obrigatória do Vestibular FUVEST 2027.",
-        "texto_apoio": "Caminho de pedras, de Rachel de Queiroz, integra a lista oficial de nove leituras obrigatórias do Vestibular FUVEST 2027. Os links distinguem acesso confirmado de consulta a catálogos.",
-        "temas": [
-          "Vestibular FUVEST",
-          "FUVEST 2027",
-          "USP",
-          "Leitura obrigatória"
-        ],
-        "icone": "📚",
-        "biblioteca_rede": "Diversos acervos e bibliotecas",
-        "codigo_acervo": "",
-        "acesso_fisico": false,
-        "acesso_virtual": false,
-        "link": "https://bibliotecasfmc.pbh.gov.br/pesquisa_avancada?q=Caminho%20de%20pedras&for=TITULO&condition=AND&q2=Rachel%20de%20Queiroz&for2=AUTOR&keyword_type=P&cr=N&orderBy=obra&direction=C",
-        "tipo_link_principal": "catalogo",
-        "fonte": "FUVEST / acervos de bibliotecas",
-        "exibicao_ativa": true,
-        "acervos": [
-          {
-            "biblioteca": "FMC-PBH",
-            "biblioteca_rede": "FMC-PBH",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "fmc:busca:caminho-de-pedras",
-                "titulo_registro": "Caminho de pedras",
-                "autor_registro": "Rachel de Queiroz",
-                "biblioteca_rede": "FMC-PBH",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://bibliotecasfmc.pbh.gov.br/pesquisa_avancada?q=Caminho%20de%20pedras&for=TITULO&condition=AND&q2=Rachel%20de%20Queiroz&for2=AUTOR&keyword_type=P&cr=N&orderBy=obra&direction=C"
-              }
-            ]
-          },
-          {
-            "biblioteca": "Biblioteca Pública Estadual de Minas Gerais",
-            "biblioteca_rede": "Biblioteca Pública Estadual de Minas Gerais",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "bpemg:busca:caminho-de-pedras",
-                "titulo_registro": "Caminho de pedras",
-                "autor_registro": "Rachel de Queiroz",
-                "biblioteca_rede": "Biblioteca Pública Estadual de Minas Gerais",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "http://200.198.28.214/pesquisa_avancada?for=TITULO&q=Caminho%20de%20pedras&condition=AND&for2=AUTOR&q2=Rachel%20de%20Queiroz&keyword_type=P"
-              }
-            ]
-          },
-          {
-            "biblioteca": "BibliON",
-            "biblioteca_rede": "BibliON",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "biblion:busca:caminho-de-pedras",
-                "titulo_registro": "Caminho de pedras",
-                "autor_registro": "Rachel de Queiroz",
-                "biblioteca_rede": "BibliON",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://biblion.arvore.com.br/biblioteca/busca/%22Caminho%20de%20pedras%22%22Rachel%20de%20Queiroz%22"
-              }
-            ]
-          },
-          {
-            "biblioteca": "UFMG",
-            "biblioteca_rede": "UFMG",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "ufmg:busca:caminho-de-pedras",
-                "titulo_registro": "Caminho de pedras",
-                "autor_registro": "Rachel de Queiroz",
-                "biblioteca_rede": "UFMG",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://catalogobiblioteca.ufmg.br/pesquisa_avancada?q=Caminho%20de%20pedras&for=TITULO&q2=Rachel%20de%20Queiroz&for2=AUTOR&condition=AND&keyword_type=P&cr=N"
-              }
-            ]
-          },
-          {
-            "biblioteca": "Bibliotecas Escolares da PBH",
-            "biblioteca_rede": "Bibliotecas Escolares da PBH",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "empbh:busca:caminho-de-pedras",
-                "titulo_registro": "Caminho de pedras",
-                "autor_registro": "Rachel de Queiroz",
-                "biblioteca_rede": "Bibliotecas Escolares da PBH",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://bibliotecaspbh.pbh.gov.br/pesquisa_avancada?q=Caminho%20de%20pedras&for=TITULO&condition=AND&q2=Rachel%20de%20Queiroz&for2=AUTOR&keyword_type=P&cr=N&orderBy=obra&direction=C"
-              }
-            ]
-          },
-          {
-            "biblioteca": "PUC Minas",
-            "biblioteca_rede": "PUC Minas",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "puc:busca:caminho-de-pedras",
-                "titulo_registro": "Caminho de pedras",
-                "autor_registro": "Rachel de Queiroz",
-                "biblioteca_rede": "PUC Minas",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://bib.pucminas.br/pesquisa_avancada?q=Caminho%20de%20pedras&for=TITULO&q2=Rachel%20de%20Queiroz&for2=AUTOR&condition=AND&keyword_type=P&cr=N"
-              }
-            ]
-          }
-        ],
-        "acervos_quantidade": 6,
-        "registros_acervo_quantidade": 6,
-        "bibliotecas": [
-          "FMC-PBH",
-          "Biblioteca Pública Estadual de Minas Gerais",
-          "BibliON",
-          "UFMG",
-          "Bibliotecas Escolares da PBH",
-          "PUC Minas"
-        ],
-        "vestibular": {
-          "instituicao": "FUVEST / USP",
-          "processo": "Vestibular FUVEST 2027",
-          "ano_vestibular": 2027,
-          "ano_prova": 2026,
-          "ciclo": "2027",
-          "obrigatoria": true,
-          "tipo_obra": "Livro"
-        }
-      },
-      {
-        "id": "site:vestibular-fuvest:a-paixao-segundo-g-h",
-        "tipo_conteudo": "livro",
-        "titulo": "A paixão segundo G. H.",
-        "autor": "Clarice Lispector",
-        "ano": 1964,
-        "imagem": "imagens/curadorias/vestibular-fuvest-2027/a-paixao-segundo-g-h.png",
-        "pergunta_curiosidade": "Leitura obrigatória do Vestibular FUVEST 2027.",
-        "texto_apoio": "A paixão segundo G. H., de Clarice Lispector, integra a lista oficial de nove leituras obrigatórias do Vestibular FUVEST 2027. Os links distinguem acesso confirmado de consulta a catálogos.",
-        "temas": [
-          "Vestibular FUVEST",
-          "FUVEST 2027",
-          "USP",
-          "Leitura obrigatória"
-        ],
-        "icone": "📚",
-        "biblioteca_rede": "Diversos acervos e bibliotecas",
-        "codigo_acervo": "109238",
-        "acesso_fisico": true,
-        "acesso_virtual": false,
-        "link": "https://pergamum.ifmg.edu.br/acervo/109238",
-        "tipo_link_principal": "fisico",
-        "fonte": "FUVEST / acervos de bibliotecas",
-        "exibicao_ativa": true,
-        "acervos": [
-          {
-            "biblioteca": "IFMG — Campus Sabará",
-            "biblioteca_rede": "IFMG",
-            "unidade": "Campus Sabará",
-            "acesso_fisico": true,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "ifmg:109238",
-                "titulo_registro": "A paixão segundo G. H.",
-                "autor_registro": "Clarice Lispector",
-                "biblioteca_rede": "IFMG",
-                "unidade": "Campus Sabará",
-                "codigo_acervo": "109238",
-                "numero_chamada": "821(81)-3 L771p 2020 (SB)",
-                "acesso_fisico": true,
-                "acesso_virtual": false,
-                "tipo_registro": "exemplar_fisico_confirmado",
-                "disponibilidade_confirmada": true,
-                "link_fisico": "https://pergamum.ifmg.edu.br/acervo/109238"
-              },
-              {
-                "registro_id": "ifmg:busca:a-paixao-segundo-g-h",
-                "titulo_registro": "A paixão segundo G. H.",
-                "autor_registro": "Clarice Lispector",
-                "biblioteca_rede": "IFMG",
-                "unidade": "Campus Sabará",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://pergamum.ifmg.edu.br/pesquisa_avancada?q=A%20paix%C3%A3o%20segundo%20G.%20H.&for=TITULO&condition=AND&q2=Clarice%20Lispector&for2=AUTOR&keyword_type=P&cr=N&orderBy=obra&direction=C"
-              }
-            ]
-          },
-          {
-            "biblioteca": "FMC-PBH",
-            "biblioteca_rede": "FMC-PBH",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "fmc:busca:a-paixao-segundo-g-h",
-                "titulo_registro": "A paixão segundo G. H.",
-                "autor_registro": "Clarice Lispector",
-                "biblioteca_rede": "FMC-PBH",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://bibliotecasfmc.pbh.gov.br/pesquisa_avancada?q=A%20paix%C3%A3o%20segundo%20G.%20H.&for=TITULO&condition=AND&q2=Clarice%20Lispector&for2=AUTOR&keyword_type=P&cr=N&orderBy=obra&direction=C"
-              }
-            ]
-          },
-          {
-            "biblioteca": "Biblioteca Pública Estadual de Minas Gerais",
-            "biblioteca_rede": "Biblioteca Pública Estadual de Minas Gerais",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "bpemg:busca:a-paixao-segundo-g-h",
-                "titulo_registro": "A paixão segundo G. H.",
-                "autor_registro": "Clarice Lispector",
-                "biblioteca_rede": "Biblioteca Pública Estadual de Minas Gerais",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "http://200.198.28.214/pesquisa_avancada?for=TITULO&q=A%20paix%C3%A3o%20segundo%20G.%20H.&condition=AND&for2=AUTOR&q2=Clarice%20Lispector&keyword_type=P"
-              }
-            ]
-          },
-          {
-            "biblioteca": "BibliON",
-            "biblioteca_rede": "BibliON",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "biblion:busca:a-paixao-segundo-g-h",
-                "titulo_registro": "A paixão segundo G. H.",
-                "autor_registro": "Clarice Lispector",
-                "biblioteca_rede": "BibliON",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://biblion.arvore.com.br/biblioteca/busca/%22A%20paix%C3%A3o%20segundo%20G.%20H.%22%22Clarice%20Lispector%22"
-              }
-            ]
-          },
-          {
-            "biblioteca": "UFMG",
-            "biblioteca_rede": "UFMG",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "ufmg:busca:a-paixao-segundo-g-h",
-                "titulo_registro": "A paixão segundo G. H.",
-                "autor_registro": "Clarice Lispector",
-                "biblioteca_rede": "UFMG",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://catalogobiblioteca.ufmg.br/pesquisa_avancada?q=A%20paix%C3%A3o%20segundo%20G.%20H.&for=TITULO&q2=Clarice%20Lispector&for2=AUTOR&condition=AND&keyword_type=P&cr=N"
-              }
-            ]
-          },
-          {
-            "biblioteca": "Bibliotecas Escolares da PBH",
-            "biblioteca_rede": "Bibliotecas Escolares da PBH",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "empbh:busca:a-paixao-segundo-g-h",
-                "titulo_registro": "A paixão segundo G. H.",
-                "autor_registro": "Clarice Lispector",
-                "biblioteca_rede": "Bibliotecas Escolares da PBH",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://bibliotecaspbh.pbh.gov.br/pesquisa_avancada?q=A%20paix%C3%A3o%20segundo%20G.%20H.&for=TITULO&condition=AND&q2=Clarice%20Lispector&for2=AUTOR&keyword_type=P&cr=N&orderBy=obra&direction=C"
-              }
-            ]
-          },
-          {
-            "biblioteca": "PUC Minas",
-            "biblioteca_rede": "PUC Minas",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "puc:busca:a-paixao-segundo-g-h",
-                "titulo_registro": "A paixão segundo G. H.",
-                "autor_registro": "Clarice Lispector",
-                "biblioteca_rede": "PUC Minas",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://bib.pucminas.br/pesquisa_avancada?q=A%20paix%C3%A3o%20segundo%20G.%20H.&for=TITULO&q2=Clarice%20Lispector&for2=AUTOR&condition=AND&keyword_type=P&cr=N"
-              }
-            ]
-          }
-        ],
-        "acervos_quantidade": 7,
-        "registros_acervo_quantidade": 8,
-        "bibliotecas": [
-          "IFMG — Campus Sabará",
-          "FMC-PBH",
-          "Biblioteca Pública Estadual de Minas Gerais",
-          "BibliON",
-          "UFMG",
-          "Bibliotecas Escolares da PBH",
-          "PUC Minas"
-        ],
-        "vestibular": {
-          "instituicao": "FUVEST / USP",
-          "processo": "Vestibular FUVEST 2027",
-          "ano_vestibular": 2027,
-          "ano_prova": 2026,
-          "ciclo": "2027",
-          "obrigatoria": true,
-          "tipo_obra": "Livro"
-        }
-      },
-      {
-        "id": "site:vestibular-fuvest:geografia",
-        "tipo_conteudo": "livro",
-        "titulo": "Geografia",
-        "autor": "Sophia de Mello Breyner Andresen",
-        "ano": 1967,
-        "imagem": "imagens/curadorias/vestibular-fuvest-2027/geografia.png",
-        "pergunta_curiosidade": "Leitura obrigatória do Vestibular FUVEST 2027.",
-        "texto_apoio": "Geografia, de Sophia de Mello Breyner Andresen, integra a lista oficial de nove leituras obrigatórias do Vestibular FUVEST 2027. Os links distinguem acesso confirmado de consulta a catálogos.",
-        "temas": [
-          "Vestibular FUVEST",
-          "FUVEST 2027",
-          "USP",
-          "Leitura obrigatória"
-        ],
-        "icone": "📚",
-        "biblioteca_rede": "Diversos acervos e bibliotecas",
-        "codigo_acervo": "",
-        "acesso_fisico": false,
-        "acesso_virtual": false,
-        "link": "http://200.198.28.214/pesquisa_avancada?for=TITULO&q=Geografia&condition=AND&for2=AUTOR&q2=Sophia%20de%20Mello%20Breyner%20Andresen&keyword_type=P",
-        "tipo_link_principal": "catalogo",
-        "fonte": "FUVEST / acervos de bibliotecas",
-        "exibicao_ativa": true,
-        "acervos": [
-          {
-            "biblioteca": "Biblioteca Pública Estadual de Minas Gerais",
-            "biblioteca_rede": "Biblioteca Pública Estadual de Minas Gerais",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "bpemg:busca:geografia",
-                "titulo_registro": "Geografia",
-                "autor_registro": "Sophia de Mello Breyner Andresen",
-                "biblioteca_rede": "Biblioteca Pública Estadual de Minas Gerais",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "http://200.198.28.214/pesquisa_avancada?for=TITULO&q=Geografia&condition=AND&for2=AUTOR&q2=Sophia%20de%20Mello%20Breyner%20Andresen&keyword_type=P"
-              }
-            ]
-          },
-          {
-            "biblioteca": "UFMG",
-            "biblioteca_rede": "UFMG",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "ufmg:busca:geografia",
-                "titulo_registro": "Geografia",
-                "autor_registro": "Sophia de Mello Breyner Andresen",
-                "biblioteca_rede": "UFMG",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://catalogobiblioteca.ufmg.br/pesquisa_avancada?q=Geografia&for=TITULO&q2=Sophia%20de%20Mello%20Breyner%20Andresen&for2=AUTOR&condition=AND&keyword_type=P&cr=N"
-              }
-            ]
-          }
-        ],
-        "acervos_quantidade": 2,
-        "registros_acervo_quantidade": 2,
-        "bibliotecas": [
-          "Biblioteca Pública Estadual de Minas Gerais",
-          "UFMG"
-        ],
-        "vestibular": {
-          "instituicao": "FUVEST / USP",
-          "processo": "Vestibular FUVEST 2027",
-          "ano_vestibular": 2027,
-          "ano_prova": 2026,
-          "ciclo": "2027",
-          "obrigatoria": true,
-          "tipo_obra": "Livro"
-        }
-      },
-      {
-        "id": "site:vestibular-fuvest:balada-de-amor-ao-vento",
-        "tipo_conteudo": "livro",
-        "titulo": "Balada de amor ao vento",
-        "autor": "Paulina Chiziane",
-        "ano": 1990,
-        "imagem": "imagens/curadorias/vestibular-fuvest-2027/balada-de-amor-ao-vento.png",
-        "pergunta_curiosidade": "Leitura obrigatória do Vestibular FUVEST 2027.",
-        "texto_apoio": "Balada de amor ao vento, de Paulina Chiziane, integra a lista oficial de nove leituras obrigatórias do Vestibular FUVEST 2027. Os links distinguem acesso confirmado de consulta a catálogos.",
-        "temas": [
-          "Vestibular FUVEST",
-          "FUVEST 2027",
-          "USP",
-          "Leitura obrigatória"
-        ],
-        "icone": "📚",
-        "biblioteca_rede": "Diversos acervos e bibliotecas",
-        "codigo_acervo": "",
-        "acesso_fisico": false,
-        "acesso_virtual": false,
-        "link": "https://pergamum.ifmg.edu.br/pesquisa_avancada?q=Balada%20de%20amor%20ao%20vento&for=TITULO&condition=AND&q2=Paulina%20Chiziane&for2=AUTOR&keyword_type=P&cr=N&orderBy=obra&direction=C",
-        "tipo_link_principal": "catalogo",
-        "fonte": "FUVEST / acervos de bibliotecas",
-        "exibicao_ativa": true,
-        "acervos": [
-          {
-            "biblioteca": "IFMG — Campus Betim",
-            "biblioteca_rede": "IFMG",
-            "unidade": "Campus Betim",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "ifmg:busca:balada-de-amor-ao-vento:betim",
-                "titulo_registro": "Balada de amor ao vento",
-                "autor_registro": "Paulina Chiziane",
-                "biblioteca_rede": "IFMG",
-                "unidade": "Campus Betim",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://pergamum.ifmg.edu.br/pesquisa_avancada?q=Balada%20de%20amor%20ao%20vento&for=TITULO&condition=AND&q2=Paulina%20Chiziane&for2=AUTOR&keyword_type=P&cr=N&orderBy=obra&direction=C"
-              }
-            ]
-          },
-          {
-            "biblioteca": "IFMG — Campus Piumhi",
-            "biblioteca_rede": "IFMG",
-            "unidade": "Campus Piumhi",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "ifmg:busca:balada-de-amor-ao-vento:piumhi",
-                "titulo_registro": "Balada de amor ao vento",
-                "autor_registro": "Paulina Chiziane",
-                "biblioteca_rede": "IFMG",
-                "unidade": "Campus Piumhi",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://pergamum.ifmg.edu.br/pesquisa_avancada?q=Balada%20de%20amor%20ao%20vento&for=TITULO&condition=AND&q2=Paulina%20Chiziane&for2=AUTOR&keyword_type=P&cr=N&orderBy=obra&direction=C"
-              }
-            ]
-          },
-          {
-            "biblioteca": "FMC-PBH",
-            "biblioteca_rede": "FMC-PBH",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "fmc:busca:balada-de-amor-ao-vento",
-                "titulo_registro": "Balada de amor ao vento",
-                "autor_registro": "Paulina Chiziane",
-                "biblioteca_rede": "FMC-PBH",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://bibliotecasfmc.pbh.gov.br/pesquisa_avancada?q=Balada%20de%20amor%20ao%20vento&for=TITULO&condition=AND&q2=Paulina%20Chiziane&for2=AUTOR&keyword_type=P&cr=N&orderBy=obra&direction=C"
-              }
-            ]
-          },
-          {
-            "biblioteca": "BibliON",
-            "biblioteca_rede": "BibliON",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "biblion:busca:balada-de-amor-ao-vento",
-                "titulo_registro": "Balada de amor ao vento",
-                "autor_registro": "Paulina Chiziane",
-                "biblioteca_rede": "BibliON",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://biblion.arvore.com.br/biblioteca/busca/%22Balada%20de%20amor%20ao%20vento%22%22Paulina%20Chiziane%22"
-              }
-            ]
-          },
-          {
-            "biblioteca": "UFMG",
-            "biblioteca_rede": "UFMG",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "ufmg:busca:balada-de-amor-ao-vento",
-                "titulo_registro": "Balada de amor ao vento",
-                "autor_registro": "Paulina Chiziane",
-                "biblioteca_rede": "UFMG",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://catalogobiblioteca.ufmg.br/pesquisa_avancada?q=Balada%20de%20amor%20ao%20vento&for=TITULO&q2=Paulina%20Chiziane&for2=AUTOR&condition=AND&keyword_type=P&cr=N"
-              }
-            ]
-          },
-          {
-            "biblioteca": "PUC Minas",
-            "biblioteca_rede": "PUC Minas",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "puc:busca:balada-de-amor-ao-vento",
-                "titulo_registro": "Balada de amor ao vento",
-                "autor_registro": "Paulina Chiziane",
-                "biblioteca_rede": "PUC Minas",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://bib.pucminas.br/pesquisa_avancada?q=Balada%20de%20amor%20ao%20vento&for=TITULO&q2=Paulina%20Chiziane&for2=AUTOR&condition=AND&keyword_type=P&cr=N"
-              }
-            ]
-          }
-        ],
-        "acervos_quantidade": 6,
-        "registros_acervo_quantidade": 6,
-        "bibliotecas": [
-          "IFMG — Campus Betim",
-          "IFMG — Campus Piumhi",
-          "FMC-PBH",
-          "BibliON",
-          "UFMG",
-          "PUC Minas"
-        ],
-        "vestibular": {
-          "instituicao": "FUVEST / USP",
-          "processo": "Vestibular FUVEST 2027",
-          "ano_vestibular": 2027,
-          "ano_prova": 2026,
-          "ciclo": "2027",
-          "obrigatoria": true,
-          "tipo_obra": "Livro"
-        }
-      },
-      {
-        "id": "site:vestibular-fuvest:cancao-para-ninar-menino-grande",
-        "tipo_conteudo": "livro",
-        "titulo": "Canção para ninar menino grande",
-        "autor": "Conceição Evaristo",
-        "ano": 2018,
-        "imagem": "imagens/curadorias/vestibular-fuvest-2027/cancao-para-ninar-menino-grande.png",
-        "pergunta_curiosidade": "Leitura obrigatória do Vestibular FUVEST 2027.",
-        "texto_apoio": "Canção para ninar menino grande, de Conceição Evaristo, integra a lista oficial de nove leituras obrigatórias do Vestibular FUVEST 2027. Os links distinguem acesso confirmado de consulta a catálogos.",
-        "temas": [
-          "Vestibular FUVEST",
-          "FUVEST 2027",
-          "USP",
-          "Leitura obrigatória"
-        ],
-        "icone": "📚",
-        "biblioteca_rede": "Diversos acervos e bibliotecas",
-        "codigo_acervo": "108962",
-        "acesso_fisico": true,
-        "acesso_virtual": false,
-        "link": "https://pergamum.ifmg.edu.br/acervo/108962",
-        "tipo_link_principal": "fisico",
-        "fonte": "FUVEST / acervos de bibliotecas",
-        "exibicao_ativa": true,
-        "acervos": [
-          {
-            "biblioteca": "IFMG — Campus Sabará",
-            "biblioteca_rede": "IFMG",
-            "unidade": "Campus Sabará",
-            "acesso_fisico": true,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "ifmg:108962",
-                "titulo_registro": "Canção para ninar menino grande",
-                "autor_registro": "Conceição Evaristo",
-                "biblioteca_rede": "IFMG",
-                "unidade": "Campus Sabará",
-                "codigo_acervo": "108962",
-                "numero_chamada": "821(81)-31 E92c 2024 (OB)",
-                "acesso_fisico": true,
-                "acesso_virtual": false,
-                "tipo_registro": "exemplar_fisico_confirmado",
-                "disponibilidade_confirmada": true,
-                "link_fisico": "https://pergamum.ifmg.edu.br/acervo/108962"
-              },
-              {
-                "registro_id": "ifmg:busca:cancao-para-ninar-menino-grande",
-                "titulo_registro": "Canção para ninar menino grande",
-                "autor_registro": "Conceição Evaristo",
-                "biblioteca_rede": "IFMG",
-                "unidade": "Campus Sabará",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://pergamum.ifmg.edu.br/pesquisa_avancada?q=Can%C3%A7%C3%A3o%20para%20ninar%20menino%20grande&for=TITULO&condition=AND&q2=Concei%C3%A7%C3%A3o%20Evaristo&for2=AUTOR&keyword_type=P&cr=N&orderBy=obra&direction=C"
-              }
-            ]
-          },
-          {
-            "biblioteca": "FMC-PBH",
-            "biblioteca_rede": "FMC-PBH",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "fmc:busca:cancao-para-ninar-menino-grande",
-                "titulo_registro": "Canção para ninar menino grande",
-                "autor_registro": "Conceição Evaristo",
-                "biblioteca_rede": "FMC-PBH",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://bibliotecasfmc.pbh.gov.br/pesquisa_avancada?q=Can%C3%A7%C3%A3o%20para%20ninar%20menino%20grande&for=TITULO&condition=AND&q2=Concei%C3%A7%C3%A3o%20Evaristo&for2=AUTOR&keyword_type=P&cr=N&orderBy=obra&direction=C"
-              }
-            ]
-          },
-          {
-            "biblioteca": "Biblioteca Pública Estadual de Minas Gerais",
-            "biblioteca_rede": "Biblioteca Pública Estadual de Minas Gerais",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "bpemg:busca:cancao-para-ninar-menino-grande",
-                "titulo_registro": "Canção para ninar menino grande",
-                "autor_registro": "Conceição Evaristo",
-                "biblioteca_rede": "Biblioteca Pública Estadual de Minas Gerais",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "http://200.198.28.214/pesquisa_avancada?for=TITULO&q=Can%C3%A7%C3%A3o%20para%20ninar%20menino%20grande&condition=AND&for2=AUTOR&q2=Concei%C3%A7%C3%A3o%20Evaristo&keyword_type=P"
-              }
-            ]
-          },
-          {
-            "biblioteca": "BibliON",
-            "biblioteca_rede": "BibliON",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "biblion:busca:cancao-para-ninar-menino-grande",
-                "titulo_registro": "Canção para ninar menino grande",
-                "autor_registro": "Conceição Evaristo",
-                "biblioteca_rede": "BibliON",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://biblion.arvore.com.br/biblioteca/busca/%22Can%C3%A7%C3%A3o%20para%20ninar%20menino%20grande%22%22Concei%C3%A7%C3%A3o%20Evaristo%22"
-              }
-            ]
-          },
-          {
-            "biblioteca": "MEC Livros",
-            "biblioteca_rede": "MEC Livros",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "mec:busca:cancao-para-ninar-menino-grande",
-                "titulo_registro": "Canção para ninar menino grande",
-                "autor_registro": "Conceição Evaristo",
-                "biblioteca_rede": "MEC Livros",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://meclivros.mec.gov.br/search?search=%22Can%C3%A7%C3%A3o+para+ninar+menino+grande%22%22Concei%C3%A7%C3%A3o+Evaristo%22"
-              }
-            ]
-          },
-          {
-            "biblioteca": "UFMG",
-            "biblioteca_rede": "UFMG",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "ufmg:busca:cancao-para-ninar-menino-grande",
-                "titulo_registro": "Canção para ninar menino grande",
-                "autor_registro": "Conceição Evaristo",
-                "biblioteca_rede": "UFMG",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://catalogobiblioteca.ufmg.br/pesquisa_avancada?q=Can%C3%A7%C3%A3o%20para%20ninar%20menino%20grande&for=TITULO&q2=Concei%C3%A7%C3%A3o%20Evaristo&for2=AUTOR&condition=AND&keyword_type=P&cr=N"
-              }
-            ]
-          },
-          {
-            "biblioteca": "Bibliotecas Escolares da PBH",
-            "biblioteca_rede": "Bibliotecas Escolares da PBH",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "empbh:busca:cancao-para-ninar-menino-grande",
-                "titulo_registro": "Canção para ninar menino grande",
-                "autor_registro": "Conceição Evaristo",
-                "biblioteca_rede": "Bibliotecas Escolares da PBH",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://bibliotecaspbh.pbh.gov.br/pesquisa_avancada?q=Can%C3%A7%C3%A3o%20para%20ninar%20menino%20grande&for=TITULO&condition=AND&q2=Concei%C3%A7%C3%A3o%20Evaristo&for2=AUTOR&keyword_type=P&cr=N&orderBy=obra&direction=C"
-              }
-            ]
-          },
-          {
-            "biblioteca": "PUC Minas",
-            "biblioteca_rede": "PUC Minas",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "puc:busca:cancao-para-ninar-menino-grande",
-                "titulo_registro": "Canção para ninar menino grande",
-                "autor_registro": "Conceição Evaristo",
-                "biblioteca_rede": "PUC Minas",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://bib.pucminas.br/pesquisa_avancada?q=Can%C3%A7%C3%A3o%20para%20ninar%20menino%20grande&for=TITULO&q2=Concei%C3%A7%C3%A3o%20Evaristo&for2=AUTOR&condition=AND&keyword_type=P&cr=N"
-              }
-            ]
-          }
-        ],
-        "acervos_quantidade": 8,
-        "registros_acervo_quantidade": 9,
-        "bibliotecas": [
-          "IFMG — Campus Sabará",
-          "FMC-PBH",
-          "Biblioteca Pública Estadual de Minas Gerais",
-          "BibliON",
-          "MEC Livros",
-          "UFMG",
-          "Bibliotecas Escolares da PBH",
-          "PUC Minas"
-        ],
-        "vestibular": {
-          "instituicao": "FUVEST / USP",
-          "processo": "Vestibular FUVEST 2027",
-          "ano_vestibular": 2027,
-          "ano_prova": 2026,
-          "ciclo": "2027",
-          "obrigatoria": true,
-          "tipo_obra": "Livro"
-        }
-      },
-      {
-        "id": "site:vestibular-fuvest:a-visao-das-plantas",
-        "tipo_conteudo": "livro",
-        "titulo": "A visão das plantas",
-        "autor": "Djaimilia Pereira de Almeida",
-        "ano": 2019,
-        "imagem": "imagens/curadorias/vestibular-fuvest-2027/a-visao-das-plantas.png",
-        "pergunta_curiosidade": "Leitura obrigatória do Vestibular FUVEST 2027.",
-        "texto_apoio": "A visão das plantas, de Djaimilia Pereira de Almeida, integra a lista oficial de nove leituras obrigatórias do Vestibular FUVEST 2027. Os links distinguem acesso confirmado de consulta a catálogos.",
-        "temas": [
-          "Vestibular FUVEST",
-          "FUVEST 2027",
-          "USP",
-          "Leitura obrigatória"
-        ],
-        "icone": "📚",
-        "biblioteca_rede": "Diversos acervos e bibliotecas",
-        "codigo_acervo": "",
-        "acesso_fisico": false,
-        "acesso_virtual": false,
-        "link": "https://bibliotecasfmc.pbh.gov.br/pesquisa_avancada?q=A%20vis%C3%A3o%20das%20plantas&for=TITULO&condition=AND&q2=Djaimilia%20Pereira%20de%20Almeida&for2=AUTOR&keyword_type=P&cr=N&orderBy=obra&direction=C",
-        "tipo_link_principal": "catalogo",
-        "fonte": "FUVEST / acervos de bibliotecas",
-        "exibicao_ativa": true,
-        "acervos": [
-          {
-            "biblioteca": "FMC-PBH",
-            "biblioteca_rede": "FMC-PBH",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "fmc:busca:a-visao-das-plantas",
-                "titulo_registro": "A visão das plantas",
-                "autor_registro": "Djaimilia Pereira de Almeida",
-                "biblioteca_rede": "FMC-PBH",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://bibliotecasfmc.pbh.gov.br/pesquisa_avancada?q=A%20vis%C3%A3o%20das%20plantas&for=TITULO&condition=AND&q2=Djaimilia%20Pereira%20de%20Almeida&for2=AUTOR&keyword_type=P&cr=N&orderBy=obra&direction=C"
-              }
-            ]
-          },
-          {
-            "biblioteca": "BibliON",
-            "biblioteca_rede": "BibliON",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "biblion:busca:a-visao-das-plantas",
-                "titulo_registro": "A visão das plantas",
-                "autor_registro": "Djaimilia Pereira de Almeida",
-                "biblioteca_rede": "BibliON",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://biblion.arvore.com.br/biblioteca/busca/%22A%20vis%C3%A3o%20das%20plantas%22%22Djaimilia%20Pereira%20de%20Almeida%22"
-              }
-            ]
-          },
-          {
-            "biblioteca": "MEC Livros",
-            "biblioteca_rede": "MEC Livros",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "mec:busca:a-visao-das-plantas",
-                "titulo_registro": "A visão das plantas",
-                "autor_registro": "Djaimilia Pereira de Almeida",
-                "biblioteca_rede": "MEC Livros",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://meclivros.mec.gov.br/search?search=%22A+vis%C3%A3o+das+plantas%22%22Djaimilia+Pereira+de+Almeida%22"
-              }
-            ]
-          },
-          {
-            "biblioteca": "UFMG",
-            "biblioteca_rede": "UFMG",
-            "unidade": "",
-            "acesso_fisico": false,
-            "acesso_virtual": false,
-            "registros": [
-              {
-                "registro_id": "ufmg:busca:a-visao-das-plantas",
-                "titulo_registro": "A visão das plantas",
-                "autor_registro": "Djaimilia Pereira de Almeida",
-                "biblioteca_rede": "UFMG",
-                "unidade": "",
-                "codigo_acervo": "",
-                "numero_chamada": "",
-                "acesso_fisico": false,
-                "acesso_virtual": false,
-                "tipo_registro": "consulta_catalogo",
-                "disponibilidade_confirmada": false,
-                "link": "https://catalogobiblioteca.ufmg.br/pesquisa_avancada?q=A%20vis%C3%A3o%20das%20plantas&for=TITULO&q2=Djaimilia%20Pereira%20de%20Almeida&for2=AUTOR&condition=AND&keyword_type=P&cr=N"
-              }
-            ]
-          }
-        ],
-        "acervos_quantidade": 4,
-        "registros_acervo_quantidade": 4,
-        "bibliotecas": [
-          "FMC-PBH",
-          "BibliON",
-          "MEC Livros",
-          "UFMG"
-        ],
-        "vestibular": {
-          "instituicao": "FUVEST / USP",
-          "processo": "Vestibular FUVEST 2027",
-          "ano_vestibular": 2027,
-          "ano_prova": 2026,
-          "ciclo": "2027",
-          "obrigatoria": true,
-          "tipo_obra": "Livro"
-        }
-      }
-    ],
+    "livros": [],
     "cursos": [],
     "filmes": []
   }
