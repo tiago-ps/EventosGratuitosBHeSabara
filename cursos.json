@@ -2,8 +2,8 @@
   "schema": 4,
   "status": "catalogo_completo",
   "fonte": "Escola Virtual de Governo (EV.G)",
-  "atualizado_em": "2026-09-09T21:20:07.336112+00:00",
-  "total": 1042,
+  "atualizado_em": "2026-09-10T13:31:48.852456+00:00",
+  "total": 1043,
   "cursos": [
     {
       "id_fonte": "410",
@@ -10361,6 +10361,26 @@
       "data_lancamento": "30/07/13",
       "url": "https://www.escolavirtual.gov.br/curso/47",
       "imagem": "https://cdn.evg.gov.br/cursos/47_EVG/banner.svg",
+      "modalidade": "online",
+      "gratuito": true,
+      "fonte": "Escola Virtual de Governo (EV.G)"
+    },
+    {
+      "id_fonte": "1197",
+      "titulo": "Memória, Escravidão e Reparação Histórica",
+      "area": "Direitos Humanos e Cidadania / Ética / Educação e Docência / Políticas Sociais",
+      "competencias": "",
+      "instituicao": "Enap - Escola Nacional de Administração Pública",
+      "instituicao_parceira": "Ministério dos Direitos Humanos e Cidadania",
+      "carga_horaria": "30",
+      "prazo_conclusao_dias": "30",
+      "tipo": "Curso Aberto",
+      "descricao": "O curso \"Memória, Escravidão e Reparação Histórica\" propõe uma reflexão sobre os processos de reparação como instrumentos de justiça histórica. Ao compreender a história da escravidão e seus impactos no presente, você poderá reconhecer os desafios e as possibilidades de construção de um futuro mais justo e comprometido com a superação das desigualdades raciais.",
+      "publico_alvo": "Servidores Públicos dos três Poderes e de todas as esferas federativas, profissionais de educação, estudantes e demais pessoas interessadas no tema. Curso aberto, gratuito e com certificado, qualquer pessoa pode se inscrever.",
+      "conteudo_programatico": "Módulo 1 – Direito à memória e às políticas de reparação históricaMódulo 2 – África: patrimônio cultural da humanidadeMódulo 3 – Protagonismos negros nas lutas por liberdade e bem-viver, em contexto de escravidão e liberdade no BrasilMódulo 4 – Racismo e antirracismo na formação da sociedade brasileiraMódulo 5 - Ativismo negro e reparação histórica na sociedade brasileira",
+      "data_lancamento": "10/09/26",
+      "url": "https://www.escolavirtual.gov.br/curso/1197",
+      "imagem": "https://cdn.evg.gov.br/cursos/1197_EVG/imagem_curso_1197.png",
       "modalidade": "online",
       "gratuito": true,
       "fonte": "Escola Virtual de Governo (EV.G)"
