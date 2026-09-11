@@ -1,0 +1,108 @@
+/*
+ * Painel — ações contextuais por tipo de conteúdo.
+ *
+ * Mantém o QR geral do Mural no cabeçalho e elimina a ação/QR específico
+ * do rodapé. A ação principal de cada conteúdo passa a ficar junto das
+ * demais informações do próprio slide.
+ */
+
+.slide .qr-wrap {
+  display: none !important;
+}
+
+.slide .details.has-context-action {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.slide .panel-context-action {
+  min-width: 0;
+}
+
+.slide .panel-context-action dd {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.slide .panel-context-support {
+  margin: 0;
+  color: inherit;
+  opacity: .92;
+  line-height: 1.35;
+}
+
+.slide .panel-context-action-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  max-width: 100%;
+  padding: 8px 14px;
+  border: 1px solid var(--accent, #fbbf24);
+  border-radius: 999px;
+  background: var(--accent, #fbbf24);
+  color: #07111f;
+  font-weight: 800;
+  line-height: 1.15;
+  text-decoration: none;
+  text-align: center;
+}
+
+.slide .panel-context-action-link:hover,
+.slide .panel-context-action-link:focus-visible {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+.slide .footer.panel-provenance-footer {
+  min-height: 0;
+  padding-top: 12px;
+  align-items: flex-start;
+}
+
+.slide .panel-provenance-footer .source-block {
+  width: 100%;
+}
+
+.slide .panel-provenance-footer .source-label,
+.slide .panel-provenance-footer .updated {
+  margin: 0;
+}
+
+.slide .panel-provenance-footer .source-label {
+  font-weight: 500;
+  opacity: .92;
+}
+
+.slide .panel-provenance-footer .source-label strong {
+  color: var(--accent, #fbbf24);
+  font-weight: 800;
+}
+
+.slide .panel-provenance-footer .source-url {
+  display: none !important;
+}
+
+.slide .panel-provenance-footer .updated {
+  margin-top: 3px;
+  opacity: .72;
+  font-size: .82em;
+}
+
+@media (max-width: 1100px) {
+  .slide .details.has-context-action {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .slide .details.has-context-action {
+    grid-template-columns: 1fr;
+  }
+
+  .slide .panel-context-action-link {
+    width: 100%;
+  }
+}
