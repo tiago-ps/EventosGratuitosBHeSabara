@@ -119,6 +119,17 @@
     return '';
   }
 
+  function createActionLink(href, text) {
+    const action = document.createElement('a');
+    action.className = 'panel-context-action-link';
+    action.href = href;
+    action.target = '_blank';
+    action.rel = 'noopener noreferrer';
+    action.textContent = text;
+    action.setAttribute('aria-label', text);
+    return action;
+  }
+
   function appendDetail(details, label, value, className = '') {
     if (!details || !value) return;
     const row = document.createElement('div');
@@ -143,13 +154,30 @@
     updated.textContent = '';
   }
 
+  function integrateCourseAction(slide, details, href) {
+    const rows = [...details.children].filter(node => node instanceof HTMLElement);
+    const accessRow = rows[1];
+    if (!accessRow) return false;
+
+    const dt = accessRow.querySelector('dt');
+    const dd = accessRow.querySelector('dd');
+    if (!dt || !dd) return false;
+
+    dt.textContent = 'Acesso';
+    accessRow.classList.add('panel-context-action');
+    dd.appendChild(createActionLink(href, 'Acessar curso'));
+    details.classList.add('has-context-action');
+    moveCourseArea(slide, details);
+    return true;
+  }
+
   function addContextAction(slide, type, anchor, href) {
     if (type === 'book' || !href) return;
 
     const details = slide.querySelector('.details');
     if (!details || details.querySelector('.panel-context-action')) return;
 
-    moveCourseArea(slide, details);
+    if (type === 'course' && integrateCourseAction(slide, details, href)) return;
 
     const cfg = actionConfig(type, anchor?.textContent.trim() || '');
     const row = document.createElement('div');
@@ -167,15 +195,7 @@
       dd.appendChild(p);
     }
 
-    const action = document.createElement('a');
-    action.className = 'panel-context-action-link';
-    action.href = href;
-    action.target = '_blank';
-    action.rel = 'noopener noreferrer';
-    action.textContent = cfg.button;
-    action.setAttribute('aria-label', cfg.button);
-    dd.appendChild(action);
-
+    dd.appendChild(createActionLink(href, cfg.button));
     row.append(dt, dd);
     details.appendChild(row);
     details.classList.add('has-context-action');
@@ -203,11 +223,7 @@
 
     if (updated) {
       const text = updated.textContent.trim();
-      if (!text) {
-        updated.hidden = true;
-      } else {
-        updated.hidden = false;
-      }
+      updated.hidden = !text;
     }
   }
 
