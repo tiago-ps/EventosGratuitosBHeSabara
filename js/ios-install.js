@@ -1,6 +1,6 @@
 (() => {
   const runtime=document.createElement('script');
-  runtime.src='js/cursos-runtime-fix.js?v=1';
+  runtime.src='js/cursos-runtime-fix.js?v=2';
   runtime.dataset.cursosRuntimeFix='1';
   document.head.append(runtime);
 })();
@@ -90,17 +90,55 @@
 (() => {
   'use strict';
 
-  const CURATION_QUERY_PARAM = 'curadoria';
-  let profileRequestInFlight = '';
+  const LEGACY_CURATION_QUERY_PARAM = 'curadoria';
+  const SHORT_CURATION_QUERY_PARAM = 'c';
+  const PUBLIC_CURATION_ALIASES = Object.freeze({
+    'ufmg': 'vestibular-ufmg-seriado-2026',
+    'fuvest': 'vestibular-fuvest-2027',
+    'saude-mental': 'saude-mental',
+    'agosto-lilas': 'agosto-lilas'
+  });
+  const CURATION_PUBLIC_SLUGS = Object.freeze(
+    Object.fromEntries(Object.entries(PUBLIC_CURATION_ALIASES).map(([slug, id]) => [id, slug]))
+  );
 
-  function requestedCuration() {
+  let profileRequestInFlight = '';
+  let agendaInitialApplied = false;
+  let syncScheduled = false;
+
+  function curationFromUrl() {
     try {
       const url = new URL(window.location.href);
-      // Um perfil explicitamente informado continua tendo precedência no Painel.
+      // Um ?perfil= explícito continua tendo precedência no Painel.
       if (url.searchParams.get('perfil')) return '';
-      return String(url.searchParams.get(CURATION_QUERY_PARAM) || '').trim();
+      const slug = String(url.searchParams.get(SHORT_CURATION_QUERY_PARAM) || '').trim().toLowerCase();
+      if (slug) return PUBLIC_CURATION_ALIASES[slug] || '';
+      return String(url.searchParams.get(LEGACY_CURATION_QUERY_PARAM) || '').trim();
     } catch {
       return '';
+    }
+  }
+
+  let pendingInitialCuration = curationFromUrl();
+
+  function requestedCuration() {
+    return curationFromUrl() || pendingInitialCuration;
+  }
+
+  function normalizeSharedCurationUrl(curationId = '') {
+    try {
+      const id = String(curationId || '').trim();
+      if (!id) return;
+      const url = new URL(window.location.href);
+      if (url.searchParams.get('perfil')) return;
+      const slug = CURATION_PUBLIC_SLUGS[id] || '';
+      url.searchParams.delete(LEGACY_CURATION_QUERY_PARAM);
+      url.searchParams.delete(SHORT_CURATION_QUERY_PARAM);
+      if (slug) url.searchParams.set(SHORT_CURATION_QUERY_PARAM, slug);
+      else url.searchParams.set(LEGACY_CURATION_QUERY_PARAM, id);
+      if (url.href !== window.location.href) history.replaceState(history.state, '', url);
+    } catch {
+      /* A curadoria continua funcional mesmo sem normalização da URL. */
     }
   }
 
@@ -115,16 +153,15 @@
   }
 
   function syncSharedCurationWithPanel() {
+    if (!document.body.classList.contains('panel-mode')) return;
     const curationId = requestedCuration();
-    if (!curationId || !document.body.classList.contains('panel-mode')) {
-      profileRequestInFlight = '';
-      return;
-    }
-    if (!curationHasPanelProfile(curationId)) return;
+    if (!curationId || !curationHasPanelProfile(curationId)) return;
 
     const activeProfile = String(document.documentElement.dataset.panelProfile || '').trim();
     if (activeProfile === curationId) {
+      pendingInitialCuration = '';
       profileRequestInFlight = '';
+      normalizeSharedCurationUrl(curationId);
       return;
     }
     if (profileRequestInFlight === curationId) return;
@@ -135,29 +172,88 @@
     }));
 
     window.setTimeout(() => {
-      if (String(document.documentElement.dataset.panelProfile || '').trim() !== curationId) {
-        profileRequestInFlight = '';
+      const active = String(document.documentElement.dataset.panelProfile || '').trim();
+      profileRequestInFlight = '';
+      if (active === curationId) {
+        pendingInitialCuration = '';
+        normalizeSharedCurationUrl(curationId);
+        return;
       }
-    }, 250);
+      // Se a inicialização do Painel ainda não terminou, tente novamente sem perder
+      // a curadoria recebida originalmente pela URL.
+      if (pendingInitialCuration === curationId) scheduleSync();
+    }, 120);
+  }
+
+  function syncSharedCurationWithAgenda() {
+    if (!document.body.classList.contains('agenda-mode')) return;
+    const curationId = requestedCuration();
+    if (!curationId) return;
+
+    const select = document.querySelector('.agenda-curation');
+    if (!select) return;
+    if (![...select.options].some(option => String(option.value || '') === curationId)) return;
+
+    if (!agendaInitialApplied || select.value !== curationId) {
+      agendaInitialApplied = true;
+      select.value = curationId;
+      select.dispatchEvent(new Event('change', { bubbles: true }));
+    }
+
+    pendingInitialCuration = '';
+    normalizeSharedCurationUrl(curationId);
+  }
+
+  function syncSharedCuration() {
+    syncScheduled = false;
+    syncSharedCurationWithPanel();
+    syncSharedCurationWithAgenda();
   }
 
   function scheduleSync() {
-    queueMicrotask(syncSharedCurationWithPanel);
+    if (syncScheduled) return;
+    syncScheduled = true;
+    queueMicrotask(syncSharedCuration);
   }
 
   window.addEventListener('mural:curations-loaded', scheduleSync);
   window.addEventListener('mural:panel-profile-change', event => {
-    if (String(event.detail?.profile || '') === requestedCuration()) profileRequestInFlight = '';
+    const profileId = String(event.detail?.profile || '').trim();
+    if (profileId && profileId === requestedCuration()) {
+      pendingInitialCuration = '';
+      profileRequestInFlight = '';
+      normalizeSharedCurationUrl(profileId);
+      return;
+    }
+    if (pendingInitialCuration) scheduleSync();
   });
-  window.addEventListener('popstate', scheduleSync);
+  window.addEventListener('popstate', () => {
+    pendingInitialCuration = curationFromUrl();
+    agendaInitialApplied = false;
+    profileRequestInFlight = '';
+    scheduleSync();
+  });
+
   document.addEventListener('change', event => {
-    if (event.target?.matches?.('.agenda-curation')) scheduleSync();
+    if (!event.target?.matches?.('.agenda-curation')) return;
+    const selected = String(event.target.value || '').trim();
+    if (selected) {
+      pendingInitialCuration = '';
+      agendaInitialApplied = true;
+      normalizeSharedCurationUrl(selected);
+    }
+    scheduleSync();
   }, true);
 
+  const app = document.getElementById('app');
+  if (app) {
+    new MutationObserver(scheduleSync).observe(app, { childList: true, subtree: true });
+  }
   new MutationObserver(scheduleSync).observe(document.body, {
     attributes: true,
     attributeFilter: ['class']
   });
+
   scheduleSync();
 })();
 
