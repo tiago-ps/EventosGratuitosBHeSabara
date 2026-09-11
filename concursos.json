@@ -2,8 +2,8 @@
   "schema": 9,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-09-10T13:13:36.742637+00:00",
-  "total": 24,
+  "coletado_em_utc": "2026-09-11T13:07:23.844027+00:00",
+  "total": 21,
   "concursos": [
     {
       "titulo": "CaraguaPrev - Instituto de Previdência do Município de Caraguatatuba",
@@ -33,38 +33,6 @@
           "cargo": "Técnico em Informática",
           "vagas_texto": "1 vaga",
           "formacao": "Técnico em Informática",
-          "confianca": "alta"
-        }
-      ]
-    },
-    {
-      "titulo": "CONDERG - Consórcio de Desenvolvimento da Região de Governo de São João da Boa Vista",
-      "url": "https://www.pciconcursos.com.br/noticias/conderg-sp-abre-processo-seletivo-com-salarios-de-ate-6009",
-      "imagem": "https://cdn.pci.app.br/img/i/fde4e50e44cefe2876fa68ca7c7349bb.png",
-      "formacoes_compativeis": [
-        "Sistemas de Informação / Computação"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Sistemas de Informação / Computação",
-          "nivel": "superior",
-          "evidencia": "rmagem (cadastro de reserva) tecnico em radiologia (cadastro de reserva) telefonista (cadastro de reserva) terapeuta ocupacional (3 vagas) samu condutor de ambulancia (cadastro de reserva) radio operador (cadastro de reserva) tarm - telefonista auxiliar de regulacao (cadastro de reserva) tecnico em computacao (cadastro de reserva) sao joao da boa vista aplicador aba (cadastro de reserva) auxiliar de consultorio dentario (cadastro de reserva) auxiliar de servicos de farmacia (cadastro de reserva) auxiliar de servicos gerais (cadastro de reserva) cuidador de saude (cadastro de reserva) fonoaudiologo (1 va"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "SP",
-      "cidade": "",
-      "inscricoes_inicio_texto": "18 de agosto de 2026",
-      "inscricoes_fim_texto": "10 de setembro de 2026",
-      "inscricoes_texto": "18 de agosto de 2026 a 10 de setembro de 2026",
-      "remuneracao_faixa_texto": "R$ 1.621,00 a R$ 6.009,98",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Técnico em Computação",
-          "vagas_texto": "Cadastro de Reserva",
-          "formacao": "Sistemas de Informação / Computação",
           "confianca": "alta"
         }
       ]
@@ -103,7 +71,7 @@
     },
     {
       "titulo": "SEPLAG - Secretaria de Estado de Planejamento e Gestão",
-      "url": "https://www.pciconcursos.com.br/noticias/seplag-rj-abre-concurso-com-60-vagas-para-cargos-de-nivel-superior",
+      "url": "https://www.pciconcursos.com.br/noticias/seplag-rj-publica-retificacoes-do-concurso-com-60-vagas-para-cargos-de-nivel-superior",
       "imagem": "https://cdn.pci.app.br/img/i/02a0902e96add5bdcef15c892a527dbb.png",
       "formacoes_compativeis": [
         "Sistemas de Informação / Computação"
@@ -758,70 +726,6 @@
         {
           "cargo": "Técnico em Informática",
           "vagas_texto": "3 vagas",
-          "formacao": "Técnico em Informática",
-          "confianca": "alta"
-        }
-      ]
-    },
-    {
-      "titulo": "TCE - Tribunal de Contas do Estado de Goiás",
-      "url": "https://www.pciconcursos.com.br/noticias/tce-go-abre-concurso-publico-para-tecnicos-de-controle-externo",
-      "imagem": "https://cdn.pci.app.br/img/i/49d0f07f837fcc4f15672d89520c62f4.png",
-      "formacoes_compativeis": [
-        "Sistemas de Informação / Computação"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Sistemas de Informação / Computação",
-          "nivel": "superior",
-          "evidencia": "tce - go abre concurso publico para tecnicos de controle externo oportunidades contemplam cargos de nivel medio nas areas administrativas e de tecnologia da informacao, com remuneracao inicial de r$ 11.862,19 e selecao composta por provas objetivas e discursivas. concursos › noticias › centro-oeste terca-feira, 25 de agosto de 2026 o tribunal de contas do estado de goias (tce-go) abriu um concurso publico visando o preenchimento de vagas para profissionais de niv"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "GO",
-      "cidade": "",
-      "inscricoes_inicio_texto": "5 de outubro de 2026",
-      "inscricoes_fim_texto": "6 de novembro de 2026",
-      "inscricoes_texto": "5 de outubro de 2026 a 6 de novembro de 2026",
-      "remuneracao_faixa_texto": "R$ 11.862,19",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Tecnologia da Informação",
-          "vagas_texto": "10 vagas",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        }
-      ]
-    },
-    {
-      "titulo": "Câmara de Ponta Porã",
-      "url": "https://www.pciconcursos.com.br/noticias/camara-de-ponta-pora-ms-abre-concurso-publico-com-salarios-de-ate-7999",
-      "imagem": "https://cdn.pci.app.br/img/i/7b07707bbfc00efd330774d4eb0fa052.png",
-      "formacoes_compativeis": [
-        "Técnico em Informática"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Técnico em Informática",
-          "nivel": "tecnico",
-          "evidencia": "urso publico para o preenchimento de vagas em funcoes de nivel medio, tecnico e superior. segundo o edital, as oportunidades sao para os cargos de: analista de licitacao e contratos (2 vagas) analista de sistemas (1 vaga) consultor legislativo (1 vaga) contador (1 vaga) controlador interno (1 vaga) tecnico em informatica (1 vaga) assistente administrativo (12 vagas) os cargos possuem jornada de trabalho de 30 horas semanais. a remuneracao varia de r$ 3.896,67 a r$ 7.999,59, conforme o cargo. as inscricoes devem ser realizadas exclusivamente pelo site www.cebraspe.org.br/concursos/camara_municipal_pontapora_ms_26 , "
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "MS",
-      "cidade": "Ponta Porã",
-      "inscricoes_inicio_texto": "21 de agosto de 2026",
-      "inscricoes_fim_texto": "10 de setembro de 2026",
-      "inscricoes_texto": "21 de agosto de 2026 a 10 de setembro de 2026",
-      "remuneracao_faixa_texto": "R$ 3.896,67 a R$ 7.999,59",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Técnico em Informática",
-          "vagas_texto": "1 vaga",
           "formacao": "Técnico em Informática",
           "confianca": "alta"
         }
