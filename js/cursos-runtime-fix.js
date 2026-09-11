@@ -107,22 +107,21 @@
       return false;
     }
 
-    const select = document.querySelector('.panel-profile-select');
-    if (!select) return false;
-
-    const value = `editorial:${curationId}`;
-    const hasOption = [...select.options].some(option => option.value === value);
-    if (!hasOption) return false;
-
-    // Limpa antes do change para evitar recursão quando o Painel publicar o novo perfil.
-    pendingInitialCuration = '';
-    if (select.value !== value) {
-      select.value = value;
-      select.dispatchEvent(new Event('change', { bubbles: true }));
-      return true;
+    const activeProfile = String(document.documentElement.dataset.panelProfile || '').trim();
+    if (activeProfile === curationId) {
+      pendingInitialCuration = '';
+      return false;
     }
 
-    return false;
+    // O seletor visual pode existir antes de seus listeners estarem prontos. Para
+    // aplicar de fato módulos, tema e demais filtros, use a API interna do Painel.
+    // A pendência é limpa antes do evento porque a aplicação publica
+    // mural:panel-profile-change de forma síncrona.
+    pendingInitialCuration = '';
+    window.dispatchEvent(new CustomEvent('mural:panel-profile-request', {
+      detail: { profile: curationId }
+    }));
+    return true;
   }
 
   function applyShortLinkToAgenda() {
@@ -214,7 +213,8 @@
   }
 
   // Um link de curadoria precisa funcionar também em sessão limpa/anônima. Ele fica
-  // pendente até o perfil editorial correspondente existir no seletor do Painel.
+  // pendente até o perfil editorial correspondente existir e então aplica a mesma
+  // configuração usada pelos controles do Painel.
   window.addEventListener('mural:curations-loaded', () => {
     curationsResolved = true;
     applyPendingInitialCuration();
