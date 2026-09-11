@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v113-curadorias-c3c';
+const CACHE_VERSION = 'mural-cultural-v114-curadorias-links';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -21,7 +21,8 @@ const CORE_ASSETS = [
   './js/app.js?v=100',
   './js/temas-visuais.js?v=12',
   './js/eventos-manuais-ui.js?v=44',
-  './js/ios-install.js?v=1',
+  './js/ios-install.js?v=2',
+  './js/cursos-runtime-fix.js?v=2',
   './imagens/curadorias/agosto-lilas-banner.png',
   './manifest.webmanifest',
   './imagens/app-icons/icon-192.png', './imagens/app-icons/icon-512.png',
