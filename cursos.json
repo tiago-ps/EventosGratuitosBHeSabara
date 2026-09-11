@@ -2,8 +2,8 @@
   "schema": 4,
   "status": "catalogo_completo",
   "fonte": "Escola Virtual de Governo (EV.G)",
-  "atualizado_em": "2026-09-10T13:31:48.852456+00:00",
-  "total": 1043,
+  "atualizado_em": "2026-09-11T13:29:52.227824+00:00",
+  "total": 1044,
   "cursos": [
     {
       "id_fonte": "410",
@@ -1992,7 +1992,7 @@
     {
       "id_fonte": "1088",
       "titulo": "A História da IA",
-      "area": "Transformação e Governo Digital",
+      "area": "Inteligência Artificial / Transformação e Governo Digital",
       "competencias": "Mentalidade digital / Comunicação estratégica",
       "instituicao": "Enap - Escola Nacional de Administração Pública",
       "instituicao_parceira": "Microsoft",
@@ -2232,7 +2232,7 @@
     {
       "id_fonte": "1213",
       "titulo": "La evolución de las búsquedas online",
-      "area": "Transformação e Governo Digital",
+      "area": "Inteligência Artificial / Transformação e Governo Digital",
       "competencias": "Foco nos resultados para os cidadãos / Geração de valor para os usuários",
       "instituicao": "Enap - Escola Nacional de Administração Pública",
       "instituicao_parceira": "Microsoft",
@@ -2692,7 +2692,7 @@
     {
       "id_fonte": "1446",
       "titulo": "IA e clima: contrapartidas e transformação",
-      "area": "Políticas de Sustentabilidade e Clima",
+      "area": "Inteligência Artificial / Políticas de Sustentabilidade e Clima",
       "competencias": "",
       "instituicao": "Enap - Escola Nacional de Administração Pública",
       "instituicao_parceira": "Apolitical",
@@ -3072,7 +3072,7 @@
     {
       "id_fonte": "1174",
       "titulo": "Introdução à Ciência de Dados - Modelos de Agrupamento",
-      "area": "Inteligência Artificial",
+      "area": "Análise e Ciência de Dados",
       "competencias": "",
       "instituicao": "Enap - Escola Nacional de Administração Pública",
       "instituicao_parceira": "Serviço Federal de Processamento de Dados",
@@ -4076,7 +4076,7 @@
     {
       "id_fonte": "1232",
       "titulo": "Cómo ser más productivo usando Copilot",
-      "area": "Desenvolvimento Pessoal / Transformação e Governo Digital",
+      "area": "Inteligência Artificial / Desenvolvimento Pessoal / Transformação e Governo Digital",
       "competencias": "",
       "instituicao": "Enap - Escola Nacional de Administração Pública",
       "instituicao_parceira": "Microsoft",
@@ -4736,7 +4736,7 @@
     {
       "id_fonte": "861",
       "titulo": "Inteligência Artificial para simplificar o dia a dia",
-      "area": "Transformação e Governo Digital",
+      "area": "Inteligência Artificial / Transformação e Governo Digital",
       "competencias": "Mentalidade digital / Visão sistêmica / Visão de futuro / Inovação e mudança / Comunicação estratégica / Comunicação",
       "instituicao": "Enap - Escola Nacional de Administração Pública",
       "instituicao_parceira": "Enap - Escola Nacional de Administração Pública",
@@ -4920,7 +4920,7 @@
     {
       "id_fonte": "1395",
       "titulo": "IA - Aplicações no Governo Federal",
-      "area": "Transformação e Governo Digital",
+      "area": "Inteligência Artificial / Transformação e Governo Digital",
       "competencias": "",
       "instituicao": "Enap - Escola Nacional de Administração Pública",
       "instituicao_parceira": "Serviço Federal de Processamento de Dados",
@@ -4940,7 +4940,7 @@
     {
       "id_fonte": "1093",
       "titulo": "Como ser mais Produtivo usando o Bing Chat",
-      "area": "Desenvolvimento Pessoal / Transformação e Governo Digital",
+      "area": "Inteligência Artificial / Desenvolvimento Pessoal / Transformação e Governo Digital",
       "competencias": "Mentalidade digital / Comunicação estratégica",
       "instituicao": "Enap - Escola Nacional de Administração Pública",
       "instituicao_parceira": "Microsoft",
@@ -5000,7 +5000,7 @@
     {
       "id_fonte": "1374",
       "titulo": "Github Copilot",
-      "area": "Transformação e Governo Digital",
+      "area": "Inteligência Artificial / Transformação e Governo Digital",
       "competencias": "",
       "instituicao": "Enap - Escola Nacional de Administração Pública",
       "instituicao_parceira": "Microsoft",
@@ -5844,7 +5844,7 @@
     {
       "id_fonte": "1304",
       "titulo": "Visão Geral da IA no Azure",
-      "area": "Transformação e Governo Digital",
+      "area": "Inteligência Artificial / Transformação e Governo Digital",
       "competencias": "",
       "instituicao": "Enap - Escola Nacional de Administração Pública",
       "instituicao_parceira": "Microsoft",
@@ -6444,7 +6444,7 @@
     {
       "id_fonte": "1219",
       "titulo": "Ética en IA",
-      "area": "Ética e Integridade",
+      "area": "Ética e Integridade / Inteligência Artificial",
       "competencias": "",
       "instituicao": "Enap - Escola Nacional de Administração Pública",
       "instituicao_parceira": "Microsoft",
@@ -6704,7 +6704,7 @@
     {
       "id_fonte": "1039",
       "titulo": "Como Produzir Cursos à Distância com Inteligência Artificial Generativa",
-      "area": "Educação e Docência",
+      "area": "Inteligência Artificial / Educação e Docência",
       "competencias": "Mentalidade digital",
       "instituicao": "Enap - Escola Nacional de Administração Pública",
       "instituicao_parceira": "Enap - Escola Nacional de Administração Pública",
@@ -8116,7 +8116,7 @@
     {
       "id_fonte": "1177",
       "titulo": "Inteligencia artificial generativa - ESPAÑOL",
-      "area": "Transformação e Governo Digital",
+      "area": "Inteligência Artificial / Transformação e Governo Digital",
       "competencias": "",
       "instituicao": "Enap - Escola Nacional de Administração Pública",
       "instituicao_parceira": "Microsoft",
@@ -10386,6 +10386,26 @@
       "fonte": "Escola Virtual de Governo (EV.G)"
     },
     {
+      "id_fonte": "1591",
+      "titulo": "Política de Trabalho e Reintegração Social nas Políticas Penais",
+      "area": "Direitos Humanos",
+      "competencias": "",
+      "instituicao": "Enap - Escola Nacional de Administração Pública",
+      "instituicao_parceira": "Ministério da Justiça e Segurança Pública",
+      "carga_horaria": "40",
+      "prazo_conclusao_dias": "60",
+      "tipo": "Curso Aberto",
+      "descricao": "O curso aborda as políticas de trabalho e emprego no Brasil, sua evolução, legislação e relação com raça, gênero, classe, direitos sociais e trabalho decente. Também analisa políticas penais, trabalho no sistema prisional, direitos humanos, estigmas e a Política Nacional de Trabalho no Sistema Prisional, com foco na reintegração social.",
+      "publico_alvo": "Gestores do sistema prisional, policiais penais, equipes de reintegração e de serviços especializados de atenção à pessoa egressa e à sociedade civil.",
+      "conteudo_programatico": "Módulo 1 - Introdução aos Princípios do TrabalhoMódulo 2 - Normas e Legislações Aplicáveis ao Trabalho no Sistema PenalMódulo 3 - O Trabalho no Sistema Penal",
+      "data_lancamento": "11/09/26",
+      "url": "https://www.escolavirtual.gov.br/curso/1591",
+      "imagem": "https://cdn.evg.gov.br/cursos/1591_EVG/imagem_curso_1591.png",
+      "modalidade": "online",
+      "gratuito": true,
+      "fonte": "Escola Virtual de Governo (EV.G)"
+    },
+    {
       "id_fonte": "1297",
       "titulo": "Eixo 1 - Analisando cenários atuais e futuros Programa - Visão de Futuro",
       "area": "Gestão Pública",
@@ -10488,7 +10508,7 @@
     {
       "id_fonte": "377",
       "titulo": "Inteligência Artificial no Contexto do Serviço Público",
-      "area": "Transformação e Governo Digital",
+      "area": "Inteligência Artificial / Transformação e Governo Digital",
       "competencias": "Mentalidade digital",
       "instituicao": "Enap - Escola Nacional de Administração Pública",
       "instituicao_parceira": "Ministério da Fazenda",
@@ -11412,7 +11432,7 @@
     {
       "id_fonte": "1498",
       "titulo": "Liderança Estratégica com IA na Administração Pública",
-      "area": "Gestão Pública / Liderança",
+      "area": "Inteligência Artificial / Gestão Pública / Liderança",
       "competencias": "Mentalidade digital",
       "instituicao": "Enap - Escola Nacional de Administração Pública",
       "instituicao_parceira": "Secretaria de Governo Digital",
@@ -11672,7 +11692,7 @@
     {
       "id_fonte": "1172",
       "titulo": "Introdução à Ciência de Dados - Descoberta de Tópicos em Texto",
-      "area": "Inteligência Artificial",
+      "area": "Análise e Ciência de Dados",
       "competencias": "",
       "instituicao": "Enap - Escola Nacional de Administração Pública",
       "instituicao_parceira": "Serviço Federal de Processamento de Dados",
@@ -11952,7 +11972,7 @@
     {
       "id_fonte": "1449",
       "titulo": "IA para Profissionais da Justiça",
-      "area": "Direito e Legislação",
+      "area": "Inteligência Artificial / Direito e Legislação",
       "competencias": "",
       "instituicao": "Enap - Escola Nacional de Administração Pública",
       "instituicao_parceira": "Microsoft",
@@ -12676,7 +12696,7 @@
     {
       "id_fonte": "1442",
       "titulo": "IA e o futuro dos sistemas de saúde",
-      "area": "Políticas de Saúde",
+      "area": "Inteligência Artificial / Políticas de Saúde",
       "competencias": "",
       "instituicao": "Enap - Escola Nacional de Administração Pública",
       "instituicao_parceira": "Apolitical",
@@ -12736,7 +12756,7 @@
     {
       "id_fonte": "1165",
       "titulo": "Introdução à Ciência de Dados - Modelos de Classificação",
-      "area": "Inteligência Artificial",
+      "area": "Análise e Ciência de Dados",
       "competencias": "",
       "instituicao": "Enap - Escola Nacional de Administração Pública",
       "instituicao_parceira": "Serviço Federal de Processamento de Dados",
@@ -15036,7 +15056,7 @@
     {
       "id_fonte": "1432",
       "titulo": "Liderança em IA no governo",
-      "area": "Gestão Pública / Liderança",
+      "area": "Inteligência Artificial / Gestão Pública / Liderança",
       "competencias": "Mentalidade digital",
       "instituicao": "Enap - Escola Nacional de Administração Pública",
       "instituicao_parceira": "Apolitical",
@@ -16140,7 +16160,7 @@
     {
       "id_fonte": "1049",
       "titulo": "Soluções Preditivas Baseadas em Dados com o Uso do R e do Python",
-      "area": "Inteligência Artificial",
+      "area": "Análise e Ciência de Dados",
       "competencias": "Resolução de problemas com base em dados / Gestão para resultados",
       "instituicao": "Enap - Escola Nacional de Administração Pública",
       "instituicao_parceira": "Enap - Escola Nacional de Administração Pública",
@@ -16180,7 +16200,7 @@
     {
       "id_fonte": "1092",
       "titulo": "A Evolução das buscas Online",
-      "area": "Transformação e Governo Digital",
+      "area": "Inteligência Artificial / Transformação e Governo Digital",
       "competencias": "Mentalidade digital / Comunicação estratégica",
       "instituicao": "Enap - Escola Nacional de Administração Pública",
       "instituicao_parceira": "Microsoft",
@@ -16400,7 +16420,7 @@
     {
       "id_fonte": "1400",
       "titulo": "FluêncIA Empreendedores",
-      "area": "Desenvolvimento Pessoal / Inovação",
+      "area": "Inteligência Artificial / Desenvolvimento Pessoal / Inovação",
       "competencias": "",
       "instituicao": "Enap - Escola Nacional de Administração Pública",
       "instituicao_parceira": "Microsoft",
@@ -16920,7 +16940,7 @@
     {
       "id_fonte": "1447",
       "titulo": "IA para profissionais do direito",
-      "area": "Direito e Legislação",
+      "area": "Inteligência Artificial / Direito e Legislação",
       "competencias": "",
       "instituicao": "Enap - Escola Nacional de Administração Pública",
       "instituicao_parceira": "Microsoft",
@@ -17060,7 +17080,7 @@
     {
       "id_fonte": "1173",
       "titulo": "Introdução à Ciência de Dados - Modelos de Regressão",
-      "area": "Inteligência Artificial",
+      "area": "Análise e Ciência de Dados",
       "competencias": "",
       "instituicao": "Enap - Escola Nacional de Administração Pública",
       "instituicao_parceira": "Serviço Federal de Processamento de Dados",
@@ -17860,7 +17880,7 @@
     {
       "id_fonte": "1422",
       "titulo": "FluêncIA Estudantes",
-      "area": "Políticas de Educação",
+      "area": "Inteligência Artificial / Políticas de Educação",
       "competencias": "",
       "instituicao": "Enap - Escola Nacional de Administração Pública",
       "instituicao_parceira": "Microsoft",
@@ -18140,7 +18160,7 @@
     {
       "id_fonte": "810",
       "titulo": "Desvendando a Inteligência Artificial na Administração Pública",
-      "area": "Transformação e Governo Digital / Gestão Pública",
+      "area": "Inteligência Artificial / Transformação e Governo Digital / Gestão Pública",
       "competencias": "",
       "instituicao": "Enap - Escola Nacional de Administração Pública",
       "instituicao_parceira": "Secretaria de Governo Digital",
@@ -18404,7 +18424,7 @@
     {
       "id_fonte": "1167",
       "titulo": "IA Generativo da Microsoft - Copilot",
-      "area": "Transformação e Governo Digital",
+      "area": "Inteligência Artificial / Transformação e Governo Digital",
       "competencias": "Foco nos resultados para os cidadãos / Geração de valor para os usuários",
       "instituicao": "Enap - Escola Nacional de Administração Pública",
       "instituicao_parceira": "Microsoft",
@@ -18484,7 +18504,7 @@
     {
       "id_fonte": "1437",
       "titulo": "Entenda como a IA afeta você e o seu governo",
-      "area": "Transformação e Governo Digital",
+      "area": "Inteligência Artificial / Transformação e Governo Digital",
       "competencias": "",
       "instituicao": "Enap - Escola Nacional de Administração Pública",
       "instituicao_parceira": "Apolitical",
@@ -18964,7 +18984,7 @@
     {
       "id_fonte": "1043",
       "titulo": "Introdução ao Processamento de Linguagem Natural",
-      "area": "Inteligência Artificial",
+      "area": "Análise e Ciência de Dados",
       "competencias": "Resolução de problemas com base em dados",
       "instituicao": "Enap - Escola Nacional de Administração Pública",
       "instituicao_parceira": "Enap - Escola Nacional de Administração Pública",
@@ -19284,7 +19304,7 @@
     {
       "id_fonte": "1544",
       "titulo": "Como escrever bons prompts com Copilot",
-      "area": "Transformação e Governo Digital",
+      "area": "Inteligência Artificial / Transformação e Governo Digital",
       "competencias": "",
       "instituicao": "Enap - Escola Nacional de Administração Pública",
       "instituicao_parceira": "Microsoft",
@@ -20044,7 +20064,7 @@
     {
       "id_fonte": "1090",
       "titulo": "Ética em IA",
-      "area": "Ética e Integridade",
+      "area": "Ética e Integridade / Inteligência Artificial",
       "competencias": "Mentalidade digital / Comunicação estratégica",
       "instituicao": "Enap - Escola Nacional de Administração Pública",
       "instituicao_parceira": "Microsoft",
@@ -20064,7 +20084,7 @@
     {
       "id_fonte": "1091",
       "titulo": "Inteligência Artificial Generativa",
-      "area": "Transformação e Governo Digital",
+      "area": "Inteligência Artificial / Transformação e Governo Digital",
       "competencias": "Mentalidade digital / Comunicação estratégica",
       "instituicao": "Enap - Escola Nacional de Administração Pública",
       "instituicao_parceira": "Microsoft",
