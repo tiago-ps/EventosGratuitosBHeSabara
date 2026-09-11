@@ -128,14 +128,15 @@
   function normalizeSharedCurationUrl(curationId = '') {
     try {
       const id = String(curationId || '').trim();
-      if (!id) return;
       const url = new URL(window.location.href);
       if (url.searchParams.get('perfil')) return;
       const slug = CURATION_PUBLIC_SLUGS[id] || '';
       url.searchParams.delete(LEGACY_CURATION_QUERY_PARAM);
       url.searchParams.delete(SHORT_CURATION_QUERY_PARAM);
-      if (slug) url.searchParams.set(SHORT_CURATION_QUERY_PARAM, slug);
-      else url.searchParams.set(LEGACY_CURATION_QUERY_PARAM, id);
+      if (id) {
+        if (slug) url.searchParams.set(SHORT_CURATION_QUERY_PARAM, slug);
+        else url.searchParams.set(LEGACY_CURATION_QUERY_PARAM, id);
+      }
       if (url.href !== window.location.href) history.replaceState(history.state, '', url);
     } catch {
       /* A curadoria continua funcional mesmo sem normalização da URL. */
@@ -237,11 +238,10 @@
   document.addEventListener('change', event => {
     if (!event.target?.matches?.('.agenda-curation')) return;
     const selected = String(event.target.value || '').trim();
-    if (selected) {
-      pendingInitialCuration = '';
-      agendaInitialApplied = true;
-      normalizeSharedCurationUrl(selected);
-    }
+    pendingInitialCuration = '';
+    agendaInitialApplied = true;
+    profileRequestInFlight = '';
+    normalizeSharedCurationUrl(selected);
     scheduleSync();
   }, true);
 
