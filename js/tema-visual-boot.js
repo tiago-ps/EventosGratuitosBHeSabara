@@ -10,20 +10,30 @@
   // Aguarda o perfil de conteúdo e as curadorias carregadas antes de aplicar temas.
   document.documentElement.dataset.visualTheme = 'padrao';
 
-  // Experiência do Painel:
-  // - passivo é o padrão para TV/monitor/sala de espera;
-  // - interativo preserva controles e ações para terminais/balcões.
-  // A Agenda continua sendo decidida pelo app.js e não é afetada por este atributo.
+  // Modos explícitos pela URL:
+  // ?modo=agenda      -> busca e exploração completa;
+  // ?modo=passivo     -> Painel para TV/monitor/sala de espera;
+  // ?modo=interativo  -> Painel para terminal/balcão.
+  // Sem parâmetro, o mecanismo histórico do app continua decidindo Agenda/Painel,
+  // e qualquer Painel aberto usa a experiência passiva como padrão.
   let panelExperience = 'passivo';
+  let requestedMode = '';
   try {
-    const requestedMode = String(new URLSearchParams(window.location.search).get('modo') || '')
+    requestedMode = String(new URLSearchParams(window.location.search).get('modo') || '')
       .trim()
       .toLowerCase();
+
     if (['interativo', 'interactive', 'terminal'].includes(requestedMode)) {
       panelExperience = 'interativo';
+      localStorage.setItem('agenda-cultural-modo-visualizacao', 'painel');
+    } else if (['passivo', 'tv', 'painel'].includes(requestedMode)) {
+      panelExperience = 'passivo';
+      localStorage.setItem('agenda-cultural-modo-visualizacao', 'painel');
+    } else if (requestedMode === 'agenda') {
+      localStorage.setItem('agenda-cultural-modo-visualizacao', 'agenda');
     }
   } catch (_) {
-    // Mantém o padrão passivo quando a URL não puder ser interpretada.
+    // Mantém o comportamento histórico quando URL/storage não estiverem disponíveis.
   }
   document.documentElement.dataset.panelExperience = panelExperience;
 
