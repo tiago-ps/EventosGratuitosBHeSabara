@@ -39,8 +39,12 @@
 
   const panelModesStyles = document.createElement('link');
   panelModesStyles.rel = 'stylesheet';
-  panelModesStyles.href = 'css/painel-modos.css?v=1';
+  panelModesStyles.href = 'css/painel-modos.css?v=2';
   document.head.appendChild(panelModesStyles);
+
+  const panelModesNavigation = document.createElement('script');
+  panelModesNavigation.src = 'js/painel-navegacao-modos.js?v=1';
+  document.head.appendChild(panelModesNavigation);
 
   // Complemento progressivo da interface do Painel: mantém o QR geral e move
   // as ações específicas dos conteúdos para as respectivas caixas de informação.
