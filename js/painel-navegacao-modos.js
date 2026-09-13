@@ -84,13 +84,16 @@
     if (!document.body.classList.contains('panel-mode')) return;
     if (document.querySelector('.passive-mode-exit')) return;
 
+    const media = document.querySelector('.slide .media');
+    if (!media) return;
+
     const button = document.createElement('button');
     button.type = 'button';
     button.className = 'passive-mode-exit';
     button.textContent = 'Modo interativo';
     button.setAttribute('aria-label', 'Abrir Painel interativo');
     button.addEventListener('click', () => navigate('interativo'));
-    document.body.appendChild(button);
+    media.appendChild(button);
   }
 
   function showPassiveNavigation() {
