@@ -1,0 +1,44 @@
+/*
+ * Modos do Painel
+ *
+ * O mesmo conteúdo e a mesma rotação atendem a duas experiências:
+ * - passivo (padrão): TV/monitor/sala de espera, sem controles ou CTAs;
+ * - interativo: terminal/balcão, preservando controles e ações contextuais.
+ *
+ * A Agenda não é afetada por estas regras.
+ */
+
+/* Painel passivo: remove tudo que exige clique/toque ou compete com a leitura. */
+html[data-panel-experience="passivo"] body.panel-mode .controls,
+html[data-panel-experience="passivo"] body.panel-mode .filter-overlay,
+html[data-panel-experience="passivo"] body.panel-mode .map-link,
+html[data-panel-experience="passivo"] body.panel-mode .panel-context-action,
+html[data-panel-experience="passivo"] body.panel-mode .book-actions,
+html[data-panel-experience="passivo"] body.panel-mode .book-locations-button,
+html[data-panel-experience="passivo"] body.panel-mode .campaign-help-button,
+html[data-panel-experience="passivo"] body.panel-mode .support-card-action,
+html[data-panel-experience="passivo"] body.panel-mode .footer {
+  display: none !important;
+}
+
+/* Sem a caixa de ação, as caixas informativas voltam a ocupar a largura útil. */
+html[data-panel-experience="passivo"] body.panel-mode .details.has-context-action {
+  grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr)) !important;
+}
+
+/* O banner temático continua identificando a curadoria, mas deixa de funcionar
+   como botão no modo destinado a telas sem interação. */
+html[data-panel-experience="passivo"] body.panel-mode .campaign-profile-banner {
+  pointer-events: none;
+  cursor: default;
+}
+
+html[data-panel-experience="passivo"] body.panel-mode .campaign-profile-check {
+  display: none !important;
+}
+
+/* O QR geral é deliberadamente preservado: ele permite continuar a exploração
+   no celular sem transformar o slide em uma coleção de chamadas de ação. */
+html[data-panel-experience="passivo"] body.panel-mode .site-qr-wrap {
+  opacity: .92;
+}
