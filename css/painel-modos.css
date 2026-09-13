@@ -42,3 +42,62 @@ html[data-panel-experience="passivo"] body.panel-mode .campaign-profile-check {
 html[data-panel-experience="passivo"] body.panel-mode .site-qr-wrap {
   opacity: .92;
 }
+
+/* Agenda: o segundo botão explicita que existem duas experiências de Painel. */
+.agenda-header-actions .passive-view-toggle {
+  white-space: nowrap;
+}
+
+/* Painel interativo: atalho para a exibição passiva junto dos controles existentes. */
+.panel-passive-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Painel passivo: o único controle local fica invisível durante a exibição e
+   aparece temporariamente após movimento do mouse, toque ou uso do teclado. */
+.passive-mode-exit {
+  position: fixed;
+  right: max(14px, env(safe-area-inset-right));
+  bottom: max(14px, env(safe-area-inset-bottom));
+  z-index: 120;
+  min-height: 42px;
+  padding: 9px 14px;
+  border: 1px solid rgba(255, 255, 255, .26);
+  border-radius: 999px;
+  background: rgba(7, 17, 31, .86);
+  color: #fff;
+  font: 750 13px/1.2 system-ui, sans-serif;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, .34);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity .18s ease, transform .18s ease, visibility .18s ease;
+}
+
+html[data-panel-experience="passivo"] body.panel-mode.passive-navigation-visible .passive-mode-exit {
+  opacity: .9;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.passive-mode-exit:hover,
+.passive-mode-exit:focus-visible {
+  opacity: 1 !important;
+  border-color: rgba(255, 255, 255, .5);
+  background: rgba(7, 17, 31, .96);
+}
+
+.passive-mode-exit:focus-visible {
+  outline: 2px solid var(--accent, #fbbf24);
+  outline-offset: 3px;
+}
+
+@media (max-width: 760px) {
+  .passive-mode-exit {
+    right: max(10px, env(safe-area-inset-right));
+    bottom: max(10px, env(safe-area-inset-bottom));
+  }
+}
