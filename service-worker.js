@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v116-painel-modos';
+const CACHE_VERSION = 'mural-cultural-v117-painel-navegacao';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -12,7 +12,7 @@ const CORE_ASSETS = [
   './css/eventos-manuais-ui.css?v=43',
   './css/concursos-mural.css?v=3',
   './css/temas-visuais.css?v=11',
-  './css/painel-modos.css?v=1',
+  './css/painel-modos.css?v=2',
   './css/painel-acoes-contextuais.css?v=1',
   './js/tema-visual-boot.js?v=4',
   './js/core/rotacao.js?v=1',
@@ -24,6 +24,7 @@ const CORE_ASSETS = [
   './js/temas-visuais.js?v=12',
   './js/eventos-manuais-ui.js?v=44',
   './js/ios-install.js?v=2',
+  './js/painel-navegacao-modos.js?v=1',
   './js/painel-acoes-contextuais.js?v=2',
   './js/cursos-runtime-fix.js?v=2',
   './imagens/curadorias/agosto-lilas-banner.png',
