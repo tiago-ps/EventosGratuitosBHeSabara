@@ -3,8 +3,13 @@
     {
       "id": "site:apoio:setembro-cvv-188",
       "tipo_conteudo": "utilidade_publica",
-      "areas_utilidade": ["Saúde Mental"],
-      "tipos_recurso": ["Informação de apoio", "Onde buscar ajuda"],
+      "areas_utilidade": [
+        "Saúde Mental"
+      ],
+      "tipos_recurso": [
+        "Informação de apoio",
+        "Onde buscar ajuda"
+      ],
       "support_target": "apoio-emocional",
       "titulo": "Se precisar conversar, peça ajuda.",
       "descricao": "Há diferentes caminhos de escuta e apoio. Consulte no Mural os canais do CVV, o serviço Pode Falar e o acesso pelo Meu SUS Digital.",
@@ -12,11 +17,22 @@
       "detalhe": "Apoio emocional e orientação para adolescentes e jovens",
       "fonte_label": "Canais de apoio emocional",
       "imagem": "imagens/curadorias/saude-mental/pode-falar.png",
-      "termos_busca": ["CVV", "188", "Pode Falar", "Meu SUS Digital", "apoio emocional", "escuta"],
+      "termos_busca": [
+        "CVV",
+        "188",
+        "Pode Falar",
+        "Meu SUS Digital",
+        "apoio emocional",
+        "escuta"
+      ],
       "observacao": "Em situação de emergência ou risco imediato, procure um serviço de urgência ou acione o SAMU pelo telefone 192.",
       "icone": "💛",
-      "temas": ["Saúde Mental"],
-      "curadoria_ids": ["saude-mental"],
+      "temas": [
+        "Saúde Mental"
+      ],
+      "curadoria_ids": [
+        "saude-mental"
+      ],
       "tempo_slide": 15,
       "origem": "site-only",
       "site_only": true
@@ -24,8 +40,13 @@
     {
       "id": "site:apoio:setembro-rede-publica",
       "tipo_conteudo": "utilidade_publica",
-      "areas_utilidade": ["Saúde Mental"],
-      "tipos_recurso": ["Onde buscar ajuda", "Serviço público"],
+      "areas_utilidade": [
+        "Saúde Mental"
+      ],
+      "tipos_recurso": [
+        "Onde buscar ajuda",
+        "Serviço público"
+      ],
       "support_target": "rede-publica",
       "titulo": "Onde buscar atendimento em saúde mental",
       "descricao": "A rede pública oferece serviços de atenção psicossocial. Os contatos completos e orientações estão disponíveis em “Onde buscar ajuda”.",
@@ -33,11 +54,23 @@
       "detalhe": "Belo Horizonte: CERSAM / CERSAMi • Emergência: SAMU 192",
       "fonte_label": "Rede pública de saúde mental",
       "imagem": "imagens/curadorias/saude-mental/onde-buscar-atendimento.png",
-      "termos_busca": ["CAPS", "CERSAM", "CERSAMi", "SAMU", "UPA", "rede pública", "atendimento"],
+      "termos_busca": [
+        "CAPS",
+        "CERSAM",
+        "CERSAMi",
+        "SAMU",
+        "UPA",
+        "rede pública",
+        "atendimento"
+      ],
       "observacao": "Confirme diretamente com cada serviço as condições atuais de atendimento e disponibilidade.",
       "icone": "🤝",
-      "temas": ["Saúde Mental"],
-      "curadoria_ids": ["saude-mental"],
+      "temas": [
+        "Saúde Mental"
+      ],
+      "curadoria_ids": [
+        "saude-mental"
+      ],
       "tempo_slide": 15,
       "origem": "site-only",
       "site_only": true
@@ -45,8 +78,13 @@
     {
       "id": "site:apoio:setembro-universidades",
       "tipo_conteudo": "utilidade_publica",
-      "areas_utilidade": ["Saúde Mental"],
-      "tipos_recurso": ["Onde buscar ajuda", "Serviço"],
+      "areas_utilidade": [
+        "Saúde Mental"
+      ],
+      "tipos_recurso": [
+        "Onde buscar ajuda",
+        "Serviço"
+      ],
       "support_target": "atendimento-universitario",
       "titulo": "Atendimento psicológico universitário",
       "descricao": "Clínicas-escola e serviços universitários podem oferecer atendimento psicológico à comunidade, conforme triagem, vagas e condições de cada instituição.",
@@ -54,11 +92,22 @@
       "detalhe": "Atendimento sujeito a triagem, disponibilidade e condições atuais da instituição.",
       "fonte_label": "Serviços universitários de Psicologia",
       "imagem": "imagens/curadorias/saude-mental/universidades.png",
-      "termos_busca": ["UFMG", "PUC Minas", "FUMEC", "clínica-escola", "psicologia", "universidade"],
+      "termos_busca": [
+        "UFMG",
+        "PUC Minas",
+        "FUMEC",
+        "clínica-escola",
+        "psicologia",
+        "universidade"
+      ],
       "observacao": "Esses serviços não substituem CERSAM, SAMU ou pronto atendimento em situações de emergência.",
       "icone": "🧠",
-      "temas": ["Saúde Mental"],
-      "curadoria_ids": ["saude-mental"],
+      "temas": [
+        "Saúde Mental"
+      ],
+      "curadoria_ids": [
+        "saude-mental"
+      ],
       "tempo_slide": 15,
       "origem": "site-only",
       "site_only": true
@@ -66,8 +115,13 @@
     {
       "id": "site:apoio:setembro-informacao-confiavel",
       "tipo_conteudo": "utilidade_publica",
-      "areas_utilidade": ["Saúde Mental"],
-      "tipos_recurso": ["Informação de apoio", "Material informativo"],
+      "areas_utilidade": [
+        "Saúde Mental"
+      ],
+      "tipos_recurso": [
+        "Informação de apoio",
+        "Material informativo"
+      ],
       "support_target": "informacao-confiavel",
       "titulo": "Informação confiável sobre saúde mental",
       "descricao": "O Mural reúne materiais gratuitos de instituições oficiais para leitura e aprofundamento sobre saúde mental, prevenção, acolhimento e redes de apoio.",
@@ -75,13 +129,61 @@
       "detalhe": "11 materiais informativos gratuitos disponíveis em “Onde buscar ajuda”.",
       "fonte_label": "Materiais informativos gratuitos",
       "imagem": "imagens/curadorias/saude-mental/informacao-confiavel.png",
-      "termos_busca": ["saúde mental", "materiais", "informação", "Ministério da Saúde", "CFP", "OMS"],
+      "termos_busca": [
+        "saúde mental",
+        "materiais",
+        "informação",
+        "Ministério da Saúde",
+        "CFP",
+        "OMS"
+      ],
       "observacao": "Materiais informativos não substituem avaliação ou atendimento profissional.",
       "icone": "📚",
-      "temas": ["Saúde Mental"],
-      "curadoria_ids": ["saude-mental"],
+      "temas": [
+        "Saúde Mental"
+      ],
+      "curadoria_ids": [
+        "saude-mental"
+      ],
       "tempo_slide": 15,
       "origem": "site-only",
+      "site_only": true
+    },
+    {
+      "id": "utilidade:manual:miniguia-para-registrar-a-violencia-sem-colocar-sua-seguranca-em-risco",
+      "tipo_conteudo": "utilidade_publica",
+      "areas_utilidade": [
+        "Agosto Lilás",
+        "Enfrentamento à violência contra a mulher",
+        "Proteção e segurança"
+      ],
+      "tipos_recurso": [
+        "Material informativo"
+      ],
+      "titulo": "Miniguia para registrar a violência sem colocar sua segurança em risco",
+      "descricao": "Em uma situação de violência, ter informações sobre o que aconteceu pode fazer diferença.\n\nPor isso, sempre que for possível e seguro, preserve registros e documentos que possam ajudar a esclarecer os fatos e contribuir para a investigação.\n\nMas o mais importante é a sua segurança. Não se coloque em risco para guardar provas e, se estiver passando por uma situação de violência, procure ajuda.\n\nInformação também é uma forma de proteção.\n\nCompartilhe este post para que mais mulheres saibam disso.",
+      "destaque": "",
+      "detalhe": "Orientações para preservar informações sem colocar a própria segurança em risco.",
+      "fonte_label": "TJMG - Tribunal de Justiça do Estado de Minas Gerais",
+      "link": "https://www.instagram.com/p/Dcb5gpkjrwd/?img_index=1",
+      "imagem": "imagens/eventos-manuais/miniguia-para-registrar-a-violencia-sem-colocar-sua-seguranca-em-risco.webp",
+      "imagem_fonte": "",
+      "termos_busca": [
+        "Agosto Lilás",
+        "violência contra a mulher",
+        "registro de violência",
+        "preservação de provas",
+        "segurança",
+        "denúncia",
+        "TJMG"
+      ],
+      "observacao": "",
+      "icone": "ℹ️",
+      "temas": [
+        "Agosto Lilás"
+      ],
+      "tempo_slide": 15,
+      "origem": "reclassificacao-editor",
       "site_only": true
     }
   ]
