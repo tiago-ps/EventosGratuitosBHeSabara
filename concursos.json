@@ -2,8 +2,8 @@
   "schema": 9,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-09-14T02:17:02.755515+00:00",
-  "total": 23,
+  "coletado_em_utc": "2026-09-14T15:22:37.705391+00:00",
+  "total": 24,
   "concursos": [
     {
       "titulo": "CaraguaPrev - Instituto de Previdência do Município de Caraguatatuba",
@@ -134,6 +134,44 @@
         {
           "cargo": "Analista de Tecnologia da Informação/Infraestrutura",
           "vagas_texto": "2 vagas",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ]
+    },
+    {
+      "titulo": "UFRRJ - Universidade Federal Rural do Rio de Janeiro",
+      "url": "https://www.pciconcursos.com.br/noticias/ufrrj-publica-edital-de-concurso-publico-para-cargos-de-nivel-medio-e-tecnico",
+      "imagem": "https://cdn.pci.app.br/img/i/a155e6d329661fbee426b436071ea878.png",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "tunidades sao para os cargos de: assistente de aluno (2 vagas) tecnico de laboratorio/area - biologia/necropsia (3 vagas) tecnico de laboratorio/area - engenharia de materiais (1 vaga) tecnico de laboratorio/area - quimica/alimentos (2 vagas) tecnico de laboratorio/area - solos (2 vagas) tecnico de tecnologia da informacao - infraestrutura (2 vagas) tecnico de tecnologia da informacao - sistemas (1 vaga) a jornada de trabalho para todos os cargos e de 40 horas semanais. a remuneracao varia de r$ 2.607,70 a r$ 3.181,39, acrescida de incentivo a qualificacao de ate 75% e beneficios como auxilio-alimentacao de r$ 1.192,"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "RJ",
+      "cidade": "",
+      "inscricoes_inicio_texto": "14 de setembro de 2026",
+      "inscricoes_fim_texto": "13 de outubro de 2026",
+      "inscricoes_texto": "14 de setembro de 2026 a 13 de outubro de 2026",
+      "remuneracao_faixa_texto": "R$ 5.215,39",
+      "remuneracao_fonte": "catalogo",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico de Tecnologia da Informação - Infraestrutura",
+          "vagas_texto": "2 vagas",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        },
+        {
+          "cargo": "Técnico de Tecnologia da Informação - Sistemas",
+          "vagas_texto": "1 vaga",
           "formacao": "Sistemas de Informação / Computação",
           "confianca": "alta"
         }
@@ -637,7 +675,7 @@
     },
     {
       "titulo": "Prefeitura de Massaranduba",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-massaranduba-sc-abre-concurso-com-salarios-de-ate-24722",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-massaranduba-sc-retifica-edital-de-concurso-com-salarios-de-ate-24722",
       "imagem": "https://cdn.pci.app.br/img/i/b362c7f66ff3bc7b091b909ff20454f1.png",
       "formacoes_compativeis": [
         "Técnico em Informática"
@@ -653,9 +691,9 @@
       "status_manual": "revisar",
       "uf": "SC",
       "cidade": "Massaranduba",
-      "inscricoes_inicio_texto": "8 de setembro de 2026",
-      "inscricoes_fim_texto": "9 de outubro de 2026",
-      "inscricoes_texto": "8 de setembro de 2026 a 9 de outubro de 2026",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
       "remuneracao_faixa_texto": "R$ 2.371,80 a R$ 24.722,94",
       "remuneracao_fonte": "noticia",
       "cargos_compativeis": [
