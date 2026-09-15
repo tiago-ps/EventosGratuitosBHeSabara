@@ -2,8 +2,8 @@
   "schema": 9,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-09-14T15:22:37.705391+00:00",
-  "total": 24,
+  "coletado_em_utc": "2026-09-15T13:59:59.970275+00:00",
+  "total": 25,
   "concursos": [
     {
       "titulo": "CaraguaPrev - Instituto de Previdência do Município de Caraguatatuba",
@@ -668,6 +668,38 @@
         {
           "cargo": "Técnico em Informática",
           "vagas_texto": "Cadastro de Reserva",
+          "formacao": "Técnico em Informática",
+          "confianca": "alta"
+        }
+      ]
+    },
+    {
+      "titulo": "FAHECE - Fundação de Apoio ao Hemosc e Cepon",
+      "url": "https://www.pciconcursos.com.br/noticias/fahece-sc-abre-processo-seletivo-para-tecnico-em-informatica-no-cepon-de-florianopolis",
+      "imagem": "https://cdn.pci.app.br/img/i/1eadf081f48716c633c602d0544360fe.png",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": "fahece - sc abre processo seletivo para tecnico em informatica no cepon de florianopolis a oportunidade oferece remuneracao de r$ 3.066,92, incluindo beneficios como planos de saude e odontologicos, refeicao no local e premiacao por desempenho. concursos › noticias › sul segunda-feira, 14 de setembro de 2026 a fahece divulgou um processo seletivo para a contra"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "SC",
+      "cidade": "",
+      "inscricoes_inicio_texto": "14 de setembro de 2026",
+      "inscricoes_fim_texto": "19 de setembro de 2026",
+      "inscricoes_texto": "14 de setembro de 2026 a 19 de setembro de 2026",
+      "remuneracao_faixa_texto": "R$ 5.538,88",
+      "remuneracao_fonte": "catalogo",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico em Informática I",
+          "vagas_texto": "1 vaga",
           "formacao": "Técnico em Informática",
           "confianca": "alta"
         }
