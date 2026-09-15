@@ -467,3 +467,42 @@
   loadEvents();
   queueEnhancement();
 })();
+
+(() => {
+  'use strict';
+
+  function isMapUrl(value) {
+    try {
+      const url = new URL(value, window.location.href);
+      const host = url.hostname.toLowerCase().replace(/^www\./, '');
+      return host === 'maps.app.goo.gl' ||
+        (host.endsWith('google.com') && url.pathname.toLowerCase().includes('/maps'));
+    } catch {
+      return false;
+    }
+  }
+
+  function relabelBookMapLinks() {
+    document.querySelectorAll('.agenda-book-record a[href]').forEach(anchor => {
+      if (!isMapUrl(anchor.getAttribute('href') || '')) return;
+      if (anchor.textContent !== 'Ver endereço no mapa') {
+        anchor.textContent = 'Ver endereço no mapa';
+      }
+      anchor.setAttribute('aria-label', 'Ver endereço da biblioteca no mapa');
+    });
+  }
+
+  let queued = false;
+  function queueRelabel() {
+    if (queued) return;
+    queued = true;
+    window.requestAnimationFrame(() => {
+      queued = false;
+      relabelBookMapLinks();
+    });
+  }
+
+  const observer = new MutationObserver(queueRelabel);
+  observer.observe(document.body, { childList: true, subtree: true });
+  queueRelabel();
+})();
