@@ -1,6 +1,6 @@
 {
   "versao": 2,
-  "atualizado_em": "2026-09-14T16:07:50.228340+00:00",
+  "atualizado_em": "2026-09-15T02:26:48.403029+00:00",
   "titulo": "Descobertas de leitura",
   "origem": "Acervos consultados em catálogos públicos Pergamum e bases institucionais",
   "aviso": "Seleção construída progressivamente e sujeita a curadoria. Não representa a totalidade dos acervos. Consulte o registro oficial para confirmar localização e disponibilidade.",
@@ -3255,7 +3255,7 @@
       "codigo_acervo": "",
       "exemplares_fisicos_catalogados": 0,
       "outras_edicoes_fisicas": 0,
-      "acesso_fisico": false,
+      "acesso_fisico": true,
       "acesso_virtual": false,
       "link_fisico": "",
       "link_virtual": "",
@@ -3284,6 +3284,7 @@
         "bpemg:busca:caminho-de-pedras",
         "empbh:busca:caminho-de-pedras",
         "fmc:busca:caminho-de-pedras",
+        "manual:caete:caminho-de-pedras",
         "puc:busca:caminho-de-pedras",
         "ufmg:busca:caminho-de-pedras"
       ],
@@ -3343,6 +3344,36 @@
               "fonte": "Biblioteca Pública Estadual de Minas Gerais",
               "tipo_registro": "consulta_catalogo",
               "disponibilidade_confirmada": false
+            }
+          ]
+        },
+        {
+          "biblioteca": "Biblioteca Pública Municipal de Caeté",
+          "biblioteca_rede": "Biblioteca Pública Municipal de Caeté",
+          "unidade": "",
+          "acesso_fisico": true,
+          "acesso_virtual": false,
+          "exemplares_fisicos_catalogados": 0,
+          "registros": [
+            {
+              "registro_id": "manual:caete:caminho-de-pedras",
+              "biblioteca_rede": "Biblioteca Pública Municipal de Caeté",
+              "unidade": "",
+              "codigo_acervo": "",
+              "numero_chamada": "",
+              "exemplares_fisicos_catalogados": 0,
+              "acesso_fisico": true,
+              "acesso_virtual": false,
+              "link_fisico": "",
+              "link_virtual": "",
+              "link": "https://maps.app.goo.gl/7YAnWu4gBMTKt5YA8",
+              "tipo_link_principal": "mapa",
+              "tipo_registro": "confirmacao_manual",
+              "disponibilidade_confirmada": true,
+              "fonte": "Biblioteca Pública Municipal de Caeté",
+              "observacao": "Acervo confirmado manualmente; biblioteca sem catálogo online. Endereço: Praça Curumim - Caeté, MG, 34800-000. Confirme a disponibilidade diretamente com a biblioteca.",
+              "titulo_registro": "Caminho de pedras",
+              "autor_registro": "Rachel de Queiroz"
             }
           ]
         },
@@ -3463,11 +3494,12 @@
           ]
         }
       ],
-      "acervos_quantidade": 6,
-      "registros_acervo_quantidade": 6,
+      "acervos_quantidade": 7,
+      "registros_acervo_quantidade": 7,
       "bibliotecas": [
         "BibliON",
         "Biblioteca Pública Estadual de Minas Gerais",
+        "Biblioteca Pública Municipal de Caeté",
         "Bibliotecas Escolares da PBH",
         "FMC-PBH",
         "PUC Minas",
@@ -4490,7 +4522,7 @@
       "codigo_acervo": "",
       "exemplares_fisicos_catalogados": 0,
       "outras_edicoes_fisicas": 0,
-      "acesso_fisico": false,
+      "acesso_fisico": true,
       "acesso_virtual": false,
       "link_fisico": "",
       "link_virtual": "",
@@ -4517,7 +4549,8 @@
       "id_obra": "obra-quinze-16a88be0",
       "registros_ids": [
         "bpemg:busca:o-quinze",
-        "fmc-pbh:busca:o-quinze"
+        "fmc-pbh:busca:o-quinze",
+        "manual:caete:o-quinze"
       ],
       "acervos": [
         {
@@ -4546,6 +4579,36 @@
               "fonte": "Biblioteca Pública Estadual de Minas Gerais",
               "tipo_registro": "consulta_catalogo",
               "disponibilidade_confirmada": false
+            }
+          ]
+        },
+        {
+          "biblioteca": "Biblioteca Pública Municipal de Caeté",
+          "biblioteca_rede": "Biblioteca Pública Municipal de Caeté",
+          "unidade": "",
+          "acesso_fisico": true,
+          "acesso_virtual": false,
+          "exemplares_fisicos_catalogados": 0,
+          "registros": [
+            {
+              "registro_id": "manual:caete:o-quinze",
+              "biblioteca_rede": "Biblioteca Pública Municipal de Caeté",
+              "unidade": "",
+              "codigo_acervo": "",
+              "numero_chamada": "",
+              "exemplares_fisicos_catalogados": 0,
+              "acesso_fisico": true,
+              "acesso_virtual": false,
+              "link_fisico": "",
+              "link_virtual": "",
+              "link": "https://maps.app.goo.gl/7YAnWu4gBMTKt5YA8",
+              "tipo_link_principal": "mapa",
+              "tipo_registro": "confirmacao_manual",
+              "disponibilidade_confirmada": true,
+              "fonte": "Biblioteca Pública Municipal de Caeté",
+              "observacao": "Acervo confirmado manualmente; biblioteca sem catálogo online. Endereço: Praça Curumim - Caeté, MG, 34800-000. Confirme a disponibilidade diretamente com a biblioteca.",
+              "titulo_registro": "O quinze",
+              "autor_registro": "Rachel de Queiroz"
             }
           ]
         },
@@ -4579,10 +4642,11 @@
           ]
         }
       ],
-      "acervos_quantidade": 2,
-      "registros_acervo_quantidade": 2,
+      "acervos_quantidade": 3,
+      "registros_acervo_quantidade": 3,
       "bibliotecas": [
         "Biblioteca Pública Estadual de Minas Gerais",
+        "Biblioteca Pública Municipal de Caeté",
         "FMC-PBH"
       ]
     },
@@ -5083,6 +5147,7 @@
         "bpemg:busca:sao-bernardo",
         "fmc-pbh:busca:sao-bernardo",
         "ifmg:86891",
+        "manual:caete:sao-bernardo",
         "mec-livros:busca:sao-bernardo",
         "wikisource:sao-bernardo-1934"
       ],
@@ -5141,6 +5206,36 @@
               "fonte": "Biblioteca Pública Estadual de Minas Gerais",
               "tipo_registro": "consulta_catalogo",
               "disponibilidade_confirmada": false
+            }
+          ]
+        },
+        {
+          "biblioteca": "Biblioteca Pública Municipal de Caeté",
+          "biblioteca_rede": "Biblioteca Pública Municipal de Caeté",
+          "unidade": "",
+          "acesso_fisico": true,
+          "acesso_virtual": false,
+          "exemplares_fisicos_catalogados": 0,
+          "registros": [
+            {
+              "registro_id": "manual:caete:sao-bernardo",
+              "biblioteca_rede": "Biblioteca Pública Municipal de Caeté",
+              "unidade": "",
+              "codigo_acervo": "",
+              "numero_chamada": "",
+              "exemplares_fisicos_catalogados": 0,
+              "acesso_fisico": true,
+              "acesso_virtual": false,
+              "link_fisico": "",
+              "link_virtual": "",
+              "link": "https://maps.app.goo.gl/7YAnWu4gBMTKt5YA8",
+              "tipo_link_principal": "mapa",
+              "tipo_registro": "confirmacao_manual",
+              "disponibilidade_confirmada": true,
+              "fonte": "Biblioteca Pública Municipal de Caeté",
+              "observacao": "Acervo confirmado manualmente; biblioteca sem catálogo online. Endereço: Praça Curumim - Caeté, MG, 34800-000. Confirme a disponibilidade diretamente com a biblioteca.",
+              "titulo_registro": "São Bernardo",
+              "autor_registro": "Graciliano Ramos"
             }
           ]
         },
@@ -5258,11 +5353,12 @@
           ]
         }
       ],
-      "acervos_quantidade": 6,
-      "registros_acervo_quantidade": 6,
+      "acervos_quantidade": 7,
+      "registros_acervo_quantidade": 7,
       "bibliotecas": [
         "BibliON",
         "Biblioteca Pública Estadual de Minas Gerais",
+        "Biblioteca Pública Municipal de Caeté",
         "FMC-PBH",
         "IFMG — Campus Sabará",
         "MEC Livros",
