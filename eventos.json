@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Janeiro a Dezembro de 2026",
-  "atualizado_em": "2026-09-15T12:54:03-03:00",
+  "atualizado_em": "2026-09-15T14:31:41-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -4507,7 +4507,7 @@
       "url_formulario_google": "https://docs.google.com/forms/d/e/1FAIpQLSeTs0vSc6nioUmZlA_QEciQ2vAzy-_ZUUrB3trMtKp7fOWkJQ/viewform",
       "acao_formulario_fechado": "ocultar_automaticamente",
       "fonte": "Cadastro manual",
-      "instituicao_id": "ifmg-betim",
+      "instituicao_id": "instituto-federal-de-minas-gerais",
       "classificacao_indicativa": "16 anos",
       "local_id": "",
       "endereco": "",
