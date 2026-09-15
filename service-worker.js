@@ -68,7 +68,7 @@ async function trimCache(cacheName, maxItems) {
   const cache = await caches.open(cacheName);
   const keys = await cache.keys();
   const excess = keys.length - maxItems;
-  if (excess > 0) await Promise.all(keys.slice(0, excess).map(key => caches.delete(key)));
+  if (excess > 0) await Promise.all(keys.slice(0, excess).map(key => cache.delete(key)));
 }
 
 async function networkFirst(request, cacheName, fallbackUrl = '', expectedContentType = '') {
