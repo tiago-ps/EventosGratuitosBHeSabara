@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Janeiro a Dezembro de 2026",
-  "atualizado_em": "2026-09-15T11:21:15-03:00",
+  "atualizado_em": "2026-09-15T11:35:24-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -4483,6 +4483,46 @@
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+    },
+    {
+      "id": "manual-historia-e-monstruosidades-2026-09-22",
+      "titulo": "HISTÓRIA E MONSTRUOSIDADES",
+      "data": "2026-09-22",
+      "data_fim": "2026-12-11",
+      "horario": "",
+      "local": "On-line",
+      "cidade": "Belo Horizonte",
+      "categoria": "Curso",
+      "gratuito": true,
+      "inscricao": "Atividades no Moodle e encontros virtuais pelo Google Meet",
+      "criterio_exibicao": "inscricao",
+      "status_inscricao": "",
+      "exibicao_ativa": true,
+      "descricao": "O curso tem como objetivo fornecer uma base teórica e histórica para a análise das representações das monstruosidades, explorando suas relações com conceitos como alteridade, diferença, normalidade, poder, religião, moralidade e ciência.\n\nBusca-se estimular a reflexão sobre a maneira como as representações do monstruoso revelam concepções sociais acerca do “outro” e permitem compreender historicamente diferentes formas de inclusão, exclusão e marginalização.\n\nNesse sentido, o curso também pretende contribuir para a formação de agentes culturais locais, especialmente professores, bibliotecários, artistas, produtores culturais e educadores.\n\nModalidade: atividades no Moodle e encontros virtuais pelo Google Meet\n\nCertificação: certificado oficial de 60 horas emitido pelo IFMG para estudantes aprovados.",
+      "imagem": "imagens/eventos-manuais/historia-e-monstruosidades.webp",
+      "link": "https://www.ifmg.edu.br/ibirite/historia-e-monstruosidades",
+      "pagina": "https://www.ifmg.edu.br/ibirite/historia-e-monstruosidades",
+      "link_inscricao": "https://docs.google.com/forms/d/e/1FAIpQLSeTs0vSc6nioUmZlA_QEciQ2vAzy-_ZUUrB3trMtKp7fOWkJQ/viewform",
+      "monitorar_formulario_google": true,
+      "url_formulario_google": "https://docs.google.com/forms/d/e/1FAIpQLSeTs0vSc6nioUmZlA_QEciQ2vAzy-_ZUUrB3trMtKp7fOWkJQ/viewform",
+      "acao_formulario_fechado": "ocultar_automaticamente",
+      "fonte": "Cadastro manual",
+      "instituicao_id": "ifmg-betim",
+      "classificacao_indicativa": "16 anos",
+      "local_id": "",
+      "endereco": "",
+      "mapa": "",
+      "espaco_interno": "",
+      "inscricao_inicio": "2026-09-15",
+      "modalidade": "On-line",
+      "temas": [
+        "Monstros",
+        "Monstruosidade"
+      ],
+      "inscricao_fim": "",
+      "status_formulario_google": "indeterminado",
+      "formulario_google_motivo": "ainda não verificado",
+      "motivo_publicacao": "inscricao_disponivel"
     },
     {
       "id": "ela-criacao-e-producao-de-eventos-culturais-8b324801ac",
