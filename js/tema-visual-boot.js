@@ -46,6 +46,12 @@
   panelModesNavigation.src = 'js/painel-navegacao-modos.js?v=1';
   document.head.appendChild(panelModesNavigation);
 
+  // Preserva a mesma caixa de pesquisa da Agenda durante o debounce da busca,
+  // atualizando somente contador e resultados enquanto o usuário digita.
+  const agendaSearchFocus = document.createElement('script');
+  agendaSearchFocus.src = 'js/agenda-pesquisa-foco.js?v=1';
+  document.head.appendChild(agendaSearchFocus);
+
   // Complemento progressivo da interface do Painel: mantém o QR geral e move
   // as ações específicas dos conteúdos para as respectivas caixas de informação.
   const contextualStyles = document.createElement('link');
