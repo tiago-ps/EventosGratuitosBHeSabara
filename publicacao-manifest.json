@@ -14,20 +14,20 @@
     "configuracao-mural.json": "a900a4ac5490792f0a9b70d46a5acc561fa9cdadb29ddded966bbb779f89e5e7",
     "cursos.json": "78ff3c83a10fb8492e7d1e5df6f84e65c4fef3ccc074206fec23491ec962b3ac",
     "espacos_culturais.json": "4dc991501616e3ec922a46c4b86f5937007fade4f9a87afa10b4548cb2f9e8cf",
-    "eventos.json": "b7c1aa1216de97b65fcc1d6f4d4be93de9a515ee57d75a8861aaaeb905386447",
+    "eventos.json": "08582cb70e179e642f1be017478f6c1cf7ccd06988932aaf0969e514724701ee",
     "filmes.json": "d26c88040aafd172aaf0942c90f2dd4890ace3b21c04f380d967bb132b6694a8",
-    "livros.json": "a0f4f51461734ce7b90ea19bdabefe7c4bc39dcb104fca07b762aa894cda961b",
+    "livros.json": "1ec15ff90c71ffade55d2baee33b3664d4b437bb093586b44c9f4c95ec7995d4",
     "utilidade-publica.json": "2e4f9dbde55c62d7485231f25cbd4d1467d2ee1671faf8f7867f7e92e3fcb9f6"
   },
-  "published_at": "2026-09-16T22:09:49Z",
-  "request_id": "pub-85dd964e1909-d9f09fb6d5534194b9cd058dbffc39af",
+  "published_at": "2026-09-16T22:11:01Z",
+  "request_id": "pub-1d16c19e61f2-6739b6b3cbbe4f80bd688409dbb56f6e",
   "schema_version": "1.0",
   "source_repository": "tiago-ps/ColetorEventosGratuitos",
-  "source_sha": "85dd964e19091c7e866d0914393af7d36333b7a1",
+  "source_sha": "1d16c19e61f25b16b64966899d65e9fea5a9b9e2",
   "staging_repository": "tiago-ps/EventosGratuitosBHeSabara",
   "versions": {
     "manifest_schema": "1.0",
     "publication_validator": "central-v1"
   },
-  "workflow_run_id": "35156187739"
+  "workflow_run_id": "35156288929"
 }
