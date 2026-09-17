@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Janeiro a Dezembro de 2026",
-  "atualizado_em": "2026-09-17T13:38:58-03:00",
+  "atualizado_em": "2026-09-17T13:49:33-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -6310,6 +6310,38 @@
       "local_id": "museu-da-moda",
       "mapa": "https://maps.app.goo.gl/NSKCeznUnR3ooTQaA",
       "espaco_interno": "MUMO"
+    },
+    {
+      "imagem": "imagens/eventos-manuais/coleta-4e74180f20b4316b2792e08e01ff770ba472d8e3d6b227e0cd82213af77a79c4.jpg",
+      "titulo": "NÓS ou NINGUÉM PODIA OUVIR OS OLHOS DELA",
+      "data": "2026-10-02",
+      "data_fim": "2026-10-26",
+      "horario": "19h",
+      "local": "Centro Cultural Banco do Brasil",
+      "cidade": "Belo Horizonte",
+      "categoria": "Teatro",
+      "descricao": "Vem aí “NÓS ou NINGUÉM PODIA OUVIR OS OLHOS DELA”, espetáculo que combina dança-teatro e jazz para abordar a violência contra a mulher.\r\n\r\nA montagem da Cia. Entre Nós (SP), com atuação de Daniela Rosa e Rafael Bougleux, direção de Fernando Gimenes e trilha sonora executada ao vivo por Renata Prado e Wendel Dima, apresenta uma dramaturgia que revela estados de afeto, tensão e colisão entre um casal.\r\n\r\nPor meio da dança e da música ao vivo, o espetáculo investiga diferentes formas de violência de gênero e convida o público a refletir sobre situações que, muitas vezes, são silenciadas ou naturalizadas no cotidiano.\r\n\r\nVenha assistir a essa montagem conosco.\r\n\r\n🙅‍♀️ NÓS ou NINGUÉM PODIA OUVIR OS OLHOS DELA\r\n🗓️ 02/10 a 26/10\r\n⏰ às 19h\r\n📍 Teatro II\r\n🔴 Classificação indicativa: 16 anos\r\n🎟️ Ingressos gratuitos retirados na bilheteria e pelo site, a partir de 23/09 (quarta-feira). Um novo lote de ingressos será disponibilizado exclusivamente na bilheteria, uma hora antes de cada apresentação.",
+      "gratuito": true,
+      "link": "https://www.instagram.com/reel/DdPejbYCIqn/",
+      "link_inscricao": "",
+      "classificacao_indicativa": "16 anos",
+      "id": "manual-evento-instagram-17963803902177937-2026-10-02",
+      "fonte": "Instagram",
+      "pagina": "https://www.instagram.com/reel/DdPejbYCIqn/",
+      "mapa": "",
+      "criterio_exibicao": "realizacao",
+      "status_inscricao": "",
+      "monitorar_formulario_google": false,
+      "url_formulario_google": "",
+      "acao_formulario_fechado": "marcar_encerrada",
+      "instituicao_id": "",
+      "inscricao": "",
+      "inscricao_inicio": "",
+      "inscricao_fim": "",
+      "endereco": "",
+      "local_id": "",
+      "espaco_interno": "",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
       "id": "ccbb-bh-nos-ou-ninguem-podia-ouvir-os-olhos-dela",
