@@ -29,14 +29,35 @@
     object-position: right center;
   }
 
+  /* O subtítulo textual ("Agenda Cultural", "Curso Online Gratuito" etc.)
+     deixa de aparecer. As próprias etiquetas assumem essa função. */
   html[data-tem-sim-uai-test="1"] body.panel-mode .panel-subtitle {
+    display: none;
+  }
+
+  html[data-tem-sim-uai-test="1"] body.panel-mode .panel-badges {
     flex: 1 1 auto;
-    color: var(--accent);
-    font-size: clamp(16px, 1.42vw, 27px);
-    line-height: 1.05;
-    letter-spacing: .085em;
-    text-align: left;
-    white-space: nowrap;
+    min-width: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: clamp(7px, .65vw, 11px);
+    margin: 0;
+  }
+
+  html[data-tem-sim-uai-test="1"] body.panel-mode .panel-badges .badge {
+    min-height: clamp(30px, 3.6vh, 42px);
+    padding: .42em .86em;
+    font-size: clamp(11px, .86vw, 17px);
+    line-height: 1;
+  }
+
+  /* Só esconde as etiquetas originais depois que a cópia do cabeçalho
+     está pronta. Assim, em caso de falha do JS, o conteúdo continua legível. */
+  html[data-tem-sim-uai-test="1"] body.panel-mode .slide[data-panel-badges-docked="header"] .event-copy > .badges,
+  html[data-tem-sim-uai-test="1"] body.panel-mode .slide[data-panel-badges-docked="header"] .book-copy > .badges {
+    display: none;
   }
 
   html[data-tem-sim-uai-test="1"] body.panel-mode .event-copy {
