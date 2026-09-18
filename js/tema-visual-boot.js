@@ -76,11 +76,11 @@
 
       const testBrandLayout = document.createElement('link');
       testBrandLayout.rel = 'stylesheet';
-      testBrandLayout.href = 'imagens/marca/tem-sim-uai-painel-teste.css?v=2';
+      testBrandLayout.href = 'imagens/marca/tem-sim-uai-painel-teste.css?v=3';
       document.head.appendChild(testBrandLayout);
 
       const testPanelLayout = document.createElement('script');
-      testPanelLayout.src = 'imagens/marca/tem-sim-uai-painel-teste.js?v=1';
+      testPanelLayout.src = 'imagens/marca/tem-sim-uai-painel-teste.js?v=2';
       testPanelLayout.defer = true;
       document.head.appendChild(testPanelLayout);
     }
