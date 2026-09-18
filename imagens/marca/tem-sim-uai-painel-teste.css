@@ -1,0 +1,95 @@
+/*
+ * Tem Sim, Uai — composição experimental exclusiva do site de teste.
+ *
+ * Este arquivo fica em imagens/marca/, diretório preservado pelo workflow de
+ * promoção para o site público. Ele só é carregado no GitHub Pages de teste.
+ */
+
+@media (min-width: 851px) and (min-aspect-ratio: 5/4) {
+  html[data-tem-sim-uai-test="1"] body.panel-mode .topbar {
+    display: block;
+    min-width: 0;
+  }
+
+  html[data-tem-sim-uai-test="1"] body.panel-mode .panel-brand {
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(24px, 3vw, 56px);
+  }
+
+  html[data-tem-sim-uai-test="1"] body.panel-mode .panel-logo {
+    flex: 0 1 auto;
+    width: auto;
+    height: clamp(40px, 5.6vh, 64px);
+    max-width: min(31vw, 330px);
+    object-position: right center;
+  }
+
+  html[data-tem-sim-uai-test="1"] body.panel-mode .panel-subtitle {
+    flex: 1 1 auto;
+    color: var(--accent);
+    font-size: clamp(16px, 1.42vw, 27px);
+    line-height: 1.05;
+    letter-spacing: .085em;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  html[data-tem-sim-uai-test="1"] body.panel-mode .event-copy {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  html[data-tem-sim-uai-test="1"] body.panel-mode .event-copy .details {
+    margin-top: auto;
+    padding-top: clamp(18px, 2.1vh, 30px);
+  }
+
+  html[data-tem-sim-uai-test="1"] body.panel-mode .site-qr-wrap {
+    position: absolute;
+    right: clamp(18px, 2.4vw, 44px);
+    bottom: clamp(18px, 2.2vh, 34px);
+    z-index: 8;
+    margin: 0;
+    padding: clamp(7px, .65vw, 11px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: clamp(8px, .75vw, 13px);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: rgba(7, 17, 31, .84);
+    backdrop-filter: blur(8px);
+  }
+
+  html[data-tem-sim-uai-test="1"] body.panel-mode .site-qr-copy {
+    max-width: clamp(120px, 11.5vw, 190px);
+    text-align: right;
+  }
+
+  html[data-tem-sim-uai-test="1"] body.panel-mode .site-qr-copy strong {
+    font-size: clamp(10px, .78vw, 15px);
+    line-height: 1.05;
+  }
+
+  html[data-tem-sim-uai-test="1"] body.panel-mode .site-qr-copy span {
+    font-size: clamp(8px, .58vw, 11px);
+    line-height: 1.05;
+  }
+
+  html[data-tem-sim-uai-test="1"] body.panel-mode .site-qr-code {
+    width: clamp(56px, 4.5vw, 76px);
+    height: clamp(56px, 4.5vw, 76px);
+    border-radius: 7px;
+  }
+
+  html[data-tem-sim-uai-test="1"] body.panel-mode .footer {
+    padding-right: clamp(235px, 23vw, 350px);
+  }
+}
