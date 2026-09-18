@@ -5,6 +5,24 @@
  * promoção para o site público. Ele só é carregado no GitHub Pages de teste.
  */
 
+/* Em qualquer tamanho de painel, as etiquetas identificam o conteúdo.
+   O subtítulo textual (Agenda Cultural, Curso Online Gratuito, Sugestão de Filme
+   etc.) é redundante e deixa de ocupar espaço também no celular. */
+html[data-tem-sim-uai-test="1"] body.panel-mode .panel-subtitle {
+  display: none;
+}
+
+@media (max-width: 850px), (max-aspect-ratio: 5/4) {
+  html[data-tem-sim-uai-test="1"] body.panel-mode .panel-brand {
+    gap: 0;
+  }
+
+  html[data-tem-sim-uai-test="1"] body.panel-mode .event-copy > .badges,
+  html[data-tem-sim-uai-test="1"] body.panel-mode .book-copy > .badges {
+    margin-top: 0;
+  }
+}
+
 @media (min-width: 851px) and (min-aspect-ratio: 5/4) {
   html[data-tem-sim-uai-test="1"] body.panel-mode .topbar {
     display: block;
@@ -27,12 +45,6 @@
     height: clamp(40px, 5.6vh, 64px);
     max-width: min(31vw, 330px);
     object-position: right center;
-  }
-
-  /* O subtítulo textual ("Agenda Cultural", "Curso Online Gratuito" etc.)
-     deixa de aparecer. As próprias etiquetas assumem essa função. */
-  html[data-tem-sim-uai-test="1"] body.panel-mode .panel-subtitle {
-    display: none;
   }
 
   html[data-tem-sim-uai-test="1"] body.panel-mode .panel-badges {
