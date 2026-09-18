@@ -62,4 +62,23 @@
   const contextualActions = document.createElement('script');
   contextualActions.src = 'js/painel-acoes-contextuais.js?v=2';
   document.head.appendChild(contextualActions);
+
+  // Identidade e composição em avaliação no site de teste.
+  // O CSS vive em imagens/marca/, diretório excluído da promoção da interface.
+  // Mesmo que este boot seja promovido, o layout não é ativado no domínio público.
+  try {
+    const isTestSite =
+      window.location.hostname === 'tiago-ps.github.io' &&
+      /^\/EventosGratuitosBHeSabara(?:\/|$)/.test(window.location.pathname);
+
+    if (isTestSite) {
+      document.documentElement.dataset.temSimUaiTest = '1';
+      const testBrandLayout = document.createElement('link');
+      testBrandLayout.rel = 'stylesheet';
+      testBrandLayout.href = 'imagens/marca/tem-sim-uai-painel-teste.css?v=1';
+      document.head.appendChild(testBrandLayout);
+    }
+  } catch (_) {
+    // Falha silenciosa: o site mantém o layout público normal.
+  }
 })();
