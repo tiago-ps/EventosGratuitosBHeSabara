@@ -64,8 +64,8 @@
   document.head.appendChild(contextualActions);
 
   // Identidade e composição em avaliação no site de teste.
-  // O CSS vive em imagens/marca/, diretório excluído da promoção da interface.
-  // Mesmo que este boot seja promovido, o layout não é ativado no domínio público.
+  // CSS e JS específicos vivem em imagens/marca/, diretório excluído da promoção.
+  // Mesmo que este boot seja promovido, a experiência só é ativada no Pages de teste.
   try {
     const isTestSite =
       window.location.hostname === 'tiago-ps.github.io' &&
@@ -73,10 +73,16 @@
 
     if (isTestSite) {
       document.documentElement.dataset.temSimUaiTest = '1';
+
       const testBrandLayout = document.createElement('link');
       testBrandLayout.rel = 'stylesheet';
-      testBrandLayout.href = 'imagens/marca/tem-sim-uai-painel-teste.css?v=1';
+      testBrandLayout.href = 'imagens/marca/tem-sim-uai-painel-teste.css?v=2';
       document.head.appendChild(testBrandLayout);
+
+      const testPanelLayout = document.createElement('script');
+      testPanelLayout.src = 'imagens/marca/tem-sim-uai-painel-teste.js?v=1';
+      testPanelLayout.defer = true;
+      document.head.appendChild(testPanelLayout);
     }
   } catch (_) {
     // Falha silenciosa: o site mantém o layout público normal.
