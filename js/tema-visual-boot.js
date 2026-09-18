@@ -76,7 +76,7 @@
 
       const testBrandLayout = document.createElement('link');
       testBrandLayout.rel = 'stylesheet';
-      testBrandLayout.href = 'imagens/marca/tem-sim-uai-painel-teste.css?v=3';
+      testBrandLayout.href = 'imagens/marca/tem-sim-uai-painel-teste.css?v=4';
       document.head.appendChild(testBrandLayout);
 
       const testPanelLayout = document.createElement('script');
