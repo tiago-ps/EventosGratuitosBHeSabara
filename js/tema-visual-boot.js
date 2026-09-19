@@ -64,8 +64,8 @@
   document.head.appendChild(contextualActions);
 
   // Identidade e composição em avaliação no site de teste.
-  // CSS e JS específicos vivem em imagens/marca/, diretório excluído da promoção.
-  // Mesmo que este boot seja promovido, a experiência só é ativada no Pages de teste.
+  // Assets específicos vivem em imagens/marca/ e imagens/app-icons/, diretórios
+  // excluídos da promoção da interface para o site público.
   try {
     const isTestSite =
       window.location.hostname === 'tiago-ps.github.io' &&
@@ -74,9 +74,6 @@
     if (isTestSite) {
       document.documentElement.dataset.temSimUaiTest = '1';
 
-      // Nome e ícone do PWA em avaliação somente no GitHub Pages de teste.
-      // O manifest alternativo e o SVG ficam em imagens/app-icons/, área que
-      // não é promovida para o site público.
       document.title = 'Tem Sim, Uai';
 
       const applicationName = document.querySelector('meta[name="application-name"]');
@@ -87,14 +84,19 @@
 
       const manifestLink = document.querySelector('link[rel="manifest"]');
       if (manifestLink) {
-        manifestLink.href = 'imagens/app-icons/manifest-tem-sim-uai.webmanifest?v=1';
+        manifestLink.href = 'imagens/app-icons/manifest-tem-sim-uai.webmanifest?v=2';
       }
 
       const favicon = document.querySelector('link[rel="icon"]');
       if (favicon) {
-        favicon.type = 'image/svg+xml';
-        favicon.removeAttribute('sizes');
-        favicon.href = 'imagens/app-icons/icon-tem-sim-uai-90.svg?v=1';
+        favicon.type = 'image/png';
+        favicon.sizes = '32x32';
+        favicon.href = 'imagens/app-icons/favicon-tem-sim-uai-32.png?v=2';
+      }
+
+      const appleIcon = document.querySelector('link[rel="apple-touch-icon"]');
+      if (appleIcon) {
+        appleIcon.href = 'imagens/app-icons/apple-touch-icon-tem-sim-uai.png?v=2';
       }
 
       const testBrandLayout = document.createElement('link');
