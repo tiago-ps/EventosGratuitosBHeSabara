@@ -216,7 +216,8 @@
     livros: 'id',
     cursos: 'id_fonte',
     filmes: 'id',
-    utilidade_publica: 'id'
+    utilidade_publica: 'id',
+    concursos: 'id'
   });
 
   function applyMembers(catalogs, curation, warn) {
@@ -336,6 +337,7 @@
       cursos: (Array.isArray(catalogs.cursos) ? catalogs.cursos : []).map(cloneRecord),
       filmes: (Array.isArray(catalogs.filmes) ? catalogs.filmes : []).map(cloneRecord),
       utilidade_publica: (Array.isArray(catalogs.utilidade_publica) ? catalogs.utilidade_publica : []).map(cloneRecord),
+      concursos: (Array.isArray(catalogs.concursos) ? catalogs.concursos : []).map(cloneRecord),
       apoio: null,
       curadoriasAtivas: []
     };
