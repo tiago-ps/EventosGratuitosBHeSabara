@@ -74,6 +74,29 @@
     if (isTestSite) {
       document.documentElement.dataset.temSimUaiTest = '1';
 
+      // Nome e ícone do PWA em avaliação somente no GitHub Pages de teste.
+      // O manifest alternativo e o SVG ficam em imagens/app-icons/, área que
+      // não é promovida para o site público.
+      document.title = 'Tem Sim, Uai';
+
+      const applicationName = document.querySelector('meta[name="application-name"]');
+      if (applicationName) applicationName.content = 'Tem Sim, Uai';
+
+      const appleTitle = document.querySelector('meta[name="apple-mobile-web-app-title"]');
+      if (appleTitle) appleTitle.content = 'Tem Sim, Uai';
+
+      const manifestLink = document.querySelector('link[rel="manifest"]');
+      if (manifestLink) {
+        manifestLink.href = 'imagens/app-icons/manifest-tem-sim-uai.webmanifest?v=1';
+      }
+
+      const favicon = document.querySelector('link[rel="icon"]');
+      if (favicon) {
+        favicon.type = 'image/svg+xml';
+        favicon.removeAttribute('sizes');
+        favicon.href = 'imagens/app-icons/icon-tem-sim-uai-90.svg?v=1';
+      }
+
       const testBrandLayout = document.createElement('link');
       testBrandLayout.rel = 'stylesheet';
       testBrandLayout.href = 'imagens/marca/tem-sim-uai-painel-teste.css?v=4';
