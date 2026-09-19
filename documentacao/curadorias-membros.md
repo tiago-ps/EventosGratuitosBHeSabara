@@ -8,7 +8,8 @@ Cada arquivo de curadoria pode incluir, opcionalmente:
   "livros": [],
   "cursos": [],
   "filmes": [],
-  "utilidade_publica": []
+  "utilidade_publica": [],
+  "concursos": []
 }
 ```
 
@@ -23,9 +24,11 @@ Objetos de conteúdo não são aceitos como membros.
 | `cursos` | `cursos.json` | `id_fonte` |
 | `filmes` | `filmes.json` | `id` |
 | `utilidade_publica` | `utilidade-publica.json` | `id` |
+| `concursos` | `concursos.json` | `id` |
 
-Por exemplo, `"cursos": ["410"]` seleciona o curso cujo `id_fonte` é `410`
-no catálogo carregado. O conteúdo continua armazenado no catálogo central.
+Por exemplo, `"cursos": ["410"]` seleciona o curso cujo `id_fonte` é `410`,
+e `"concursos": ["pci:noticia:..."]` seleciona o concurso pelo ID canônico da
+notícia PCI. O conteúdo continua armazenado no catálogo central.
 
 O carregador resolve os membros de todas as curadorias nas cópias em memória
 dos catálogos, antes de aplicar overlays, fallbacks e complementos. Acrescenta
@@ -195,3 +198,15 @@ Nenhum catálogo central foi alterado. Os quatro cartões centrais de utilidade
 pública já continham `curadoria_ids` persistidos antes da C3C: essa dívida foi
 preservada por estar fora do escopo, sem introduzir novas gravações desse campo.
 UFMG, FUVEST, Agosto Lilás e o index permanecem intactos. C4 não foi iniciada.
+
+
+## Concursos — membership canônico
+
+Concursos participam das Curadorias exclusivamente por `membros.concursos`,
+resolvido contra `concursos.json` pelo campo `id`. A associação acrescenta
+`curadoria_ids` apenas em memória e não altera a fotografia PCI nem o catálogo
+publicado.
+
+Esta etapa não cria overlays nem complementos próprios para Concursos. Correções
+factuais continuam pertencendo ao Editor de Concursos e à camada editorial da
+fonte privada.
