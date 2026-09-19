@@ -1,0 +1,33 @@
+{
+  "id": "./",
+  "name": "Tem Sim, Uai",
+  "short_name": "Tem Sim, Uai",
+  "description": "Eventos culturais gratuitos e descobertas de leitura para bibliotecas, escolas e espaços públicos.",
+  "lang": "pt-BR",
+  "start_url": "../../?source=pwa",
+  "scope": "../../",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#07111f",
+  "theme_color": "#07111f",
+  "categories": [
+    "education",
+    "entertainment",
+    "events",
+    "books"
+  ],
+  "icons": [
+    {
+      "src": "icon-tem-sim-uai-90.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-tem-sim-uai-90.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}
