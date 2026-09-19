@@ -21,6 +21,7 @@ const eventsData = readJson('eventos.json');
 const booksData = readJson('livros.json');
 const coursesData = readJson('cursos.json');
 const filmsData = readJson('filmes.json');
+const contestsData = readJson('concursos.json');
 const source = fs.readFileSync(path.join(root, 'js/curadorias-site.js'), 'utf8');
 const appSource = fs.readFileSync(path.join(root, 'js/app.js'), 'utf8');
 const context = vm.createContext({ window: {}, URL, console });
@@ -31,7 +32,8 @@ const catalogs = {
   eventos: eventsData.eventos,
   livros: booksData.livros,
   cursos: coursesData.cursos,
-  filmes: filmsData.filmes
+  filmes: filmsData.filmes,
+  concursos: contestsData.concursos
 };
 const snapshot = JSON.stringify(catalogs);
 const warnings = [];
@@ -45,6 +47,33 @@ assert.equal(curations.isValidPayload(null), false);
 assert.equal(curations.isValidPayload({ schema: 1, escopo: 'site-only' }), false);
 assert.equal(JSON.stringify(catalogs), snapshot, 'A fusão não pode mutar os catálogos centrais');
 assert.deepEqual(Array.from(merged.curadoriasAtivas), ['setembro-amarelo-2026']);
+
+const contestId = 'pci:noticia:concurso-curadoria-teste';
+const contestCatalogs = {
+  eventos: [],
+  livros: [],
+  cursos: [],
+  filmes: [],
+  utilidade_publica: [],
+  concursos: [{
+    id: contestId,
+    titulo: 'Concurso de teste',
+    url: 'https://www.pciconcursos.com.br/noticias/concurso-curadoria-teste'
+  }]
+};
+const contestSnapshot = JSON.stringify(contestCatalogs);
+const contestMerged = curations.apply({
+  schema: 1,
+  escopo: 'site-only',
+  curadorias: [{
+    id: 'curadoria-concurso',
+    permanente: true,
+    membros: { concursos: [contestId] }
+  }]
+}, contestCatalogs, { today: new Date(2026, 8, 15), warn() {} });
+assert.deepEqual(Array.from(contestMerged.concursos[0].curadoria_ids), ['curadoria-concurso']);
+assert.equal(curations.matchesCuration(contestMerged.concursos[0], { id: 'curadoria-concurso', membros: {} }), true);
+assert.equal(JSON.stringify(contestCatalogs), contestSnapshot, 'Membership de Concurso não pode mutar o catálogo central');
 
 const curation = payload.curadorias[0];
 assert.equal(curation.titulo_editorial, 'Setembro Amarelo — cuidado e saúde mental');
@@ -384,6 +413,8 @@ assert.doesNotMatch(source, /No celular, abra “Onde buscar ajuda”/);
 assert.match(appSource, /loadSiteCurations\(\)/);
 assert.match(appSource, /SITE_CURATIONS_INDEX_URL = 'curadorias\/index\.json'/);
 assert.match(appSource, /siteCurationsContent\.apply\(siteCurationsData/);
+assert.match(appSource, /concursos: state\.contestsData\.concursos/);
+assert.match(appSource, /state\.allContests = \(siteLayer\.concursos \|\| \[\]\)/);
 assert.match(appSource, /siteCurationsContent\.mountSupportArea\(siteLayer\.apoio\)/);
 assert.match(appSource, /Acesso não informado/);
 assert.doesNotMatch(appSource, /curadorias-site\.json/i);
