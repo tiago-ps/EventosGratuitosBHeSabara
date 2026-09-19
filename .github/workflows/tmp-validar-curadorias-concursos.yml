@@ -21,5 +21,5 @@ jobs:
         run: |
           node --check js/curadorias-site.js
           node --check js/app.js
-      - name: Rodar testes da camada de Curadorias
-        run: node testes/curadorias-site.test.cjs
+      - name: Rodar teste direcionado de Concursos
+        run: node testes/curadorias-concursos.test.cjs
