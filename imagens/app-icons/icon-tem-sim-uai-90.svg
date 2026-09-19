@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Tem Sim, Uai">
+  <!-- Fundo mantém o mesmo vermelho da identidade atual. -->
+  <rect width="512" height="512" rx="72" fill="#e60d15"/>
+  <!-- O ícone atual é reduzido a 90%; como o fundo vermelho é o mesmo,
+       visualmente apenas o lettering branco ganha cerca de 10% de respiro. -->
+  <image href="icon-512.png" x="25.6" y="25.6" width="460.8" height="460.8" preserveAspectRatio="xMidYMid meet"/>
+</svg>
