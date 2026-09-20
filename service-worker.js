@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v120-book-layout-standard';
+const CACHE_VERSION = 'mural-cultural-v121-book-curation-editorial';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -20,7 +20,7 @@ const CORE_ASSETS = [
   './js/conteudos/concursos.js?v=2',
   './js/conteudos/filmes.js?v=6',
   './js/curadorias-site.js?v=11',
-  './js/app.js?v=100',
+  './js/app.js?v=101',
   './js/temas-visuais.js?v=12',
   './js/eventos-manuais-ui.js?v=44',
   './js/ios-install.js?v=2',
