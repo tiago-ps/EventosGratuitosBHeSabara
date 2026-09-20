@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v118-agenda-pesquisa-foco';
+const CACHE_VERSION = 'mural-cultural-v119-book-layout-cleanup';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -8,7 +8,7 @@ const CURATION_IMAGE_PREFIX = '/imagens/curadorias/';
 
 const CORE_ASSETS = [
   './', './index.html',
-  './css/styles.css?v=71',
+  './css/styles.css?v=72',
   './css/eventos-manuais-ui.css?v=43',
   './css/concursos-mural.css?v=3',
   './css/temas-visuais.css?v=11',
