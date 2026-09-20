@@ -201,6 +201,81 @@
     details.classList.add('has-context-action');
   }
 
+  function normalizeBookLayout(slide) {
+    const copy = slide.querySelector('.book-copy');
+    if (!copy || copy.classList.contains('book-standardized')) return;
+
+    const badges = copy.querySelector('.book-badges');
+    const identification = copy.querySelector('.book-identification');
+    const question = copy.querySelector('.book-question');
+    const support = copy.querySelector('.book-support');
+    const themes = copy.querySelector('.book-themes');
+    const opinion = copy.querySelector('.book-user-opinion');
+    const details = copy.querySelector('.book-details');
+    const actions = copy.querySelector('.book-actions');
+
+    // Aproxima o livro da mesma hierarquia usada pelos demais conteúdos:
+    // título real em primeiro plano, autor, chamada editorial e texto de apoio.
+    if (badges && identification) badges.after(identification);
+    if (identification && question) identification.after(question);
+    if (question && support) question.after(support);
+
+    // Temas e eventual opinião permanecem junto do conteúdo editorial; as
+    // caixas contextuais ficam ancoradas na zona inferior do slide.
+    let editorialTail = support || question || identification || badges;
+    if (editorialTail && themes) {
+      editorialTail.after(themes);
+      editorialTail = themes;
+    }
+    if (editorialTail && opinion) {
+      editorialTail.after(opinion);
+      editorialTail = opinion;
+    }
+    if (editorialTail && details) editorialTail.after(details);
+
+    if (details && actions) {
+      const availableActions = [...actions.children].filter(node => {
+        if (!(node instanceof HTMLElement)) return false;
+        return !node.hidden;
+      });
+
+      if (availableActions.length) {
+        const row = document.createElement('div');
+        row.className = 'panel-context-action book-context-action';
+
+        const dt = document.createElement('dt');
+        dt.textContent = availableActions.some(node => node.classList.contains('book-opinion-link'))
+          ? 'Acesso e participação'
+          : 'Acesso';
+
+        const dd = document.createElement('dd');
+        dd.className = 'book-context-action-buttons';
+
+        availableActions.forEach((node, index) => {
+          node.classList.add('panel-context-action-link');
+          if (node.classList.contains('book-opinion-link')) {
+            node.classList.add('book-context-secondary');
+          } else if (index === 0) {
+            node.classList.add('book-context-primary');
+          }
+          dd.appendChild(node);
+        });
+
+        row.append(dt, dd);
+        details.appendChild(row);
+        details.classList.add('has-context-action');
+        const visibleRows = [...details.children].filter(node =>
+          node instanceof HTMLElement && !node.hidden
+        ).length;
+        details.dataset.contextCount = String(visibleRows);
+      }
+
+      actions.hidden = true;
+    }
+
+    copy.classList.add('book-standardized');
+  }
+
   function simplifyFooter(slide, type, href) {
     const footer = slide.querySelector('.footer');
     if (!footer) return;
@@ -236,6 +311,7 @@
     const anchor = sourceAnchor(slide);
     const href = safeHref(anchor);
 
+    if (type === 'book') normalizeBookLayout(slide);
     addContextAction(slide, type, anchor, href);
     simplifyFooter(slide, type, href);
 
