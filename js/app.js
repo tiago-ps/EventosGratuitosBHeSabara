@@ -1919,10 +1919,20 @@ function eventProgram(event) {
     if (document.fonts?.ready) document.fonts.ready.then(execute).catch(() => {});
   }
 
+  function panelEditorialCurationId(index) {
+    const explicitProfileId = activeEditorialPanelProfileId();
+    if (explicitProfileId) return explicitProfileId;
+
+    // Na rotação normal, microblocos temáticos carregam a curadoria no próprio
+    // passo da sequência. Isso permite aplicar o texto editorial do vestibular
+    // mesmo sem o usuário ter ativado explicitamente aquele perfil.
+    return String(state.panelRoundSteps[index]?.curationId || '').trim();
+  }
+
   function renderBookSlide(index) {
     clearTimeout(state.timer);
     const book = siteCurationsContent.effectiveItemForCuration(
-      state.events[index], activeEditorialPanelProfileId()
+      state.events[index], panelEditorialCurationId(index)
     );
     const slide = template.content.firstElementChild.cloneNode(true);
     buildSiteQr(slide);
