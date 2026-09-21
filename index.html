@@ -15,7 +15,7 @@
   <link rel="apple-touch-icon" href="imagens/app-icons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="imagens/app-icons/favicon-32.png">
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="stylesheet" href="css/styles.css?v=77">
+  <link rel="stylesheet" href="css/styles.css?v=78">
   <link rel="stylesheet" href="css/eventos-manuais-ui.css?v=43">
   <link rel="stylesheet" href="css/concursos-mural.css?v=3">
   <link rel="stylesheet" href="css/temas-visuais.css?v=11">
@@ -355,7 +355,13 @@
               </label>
             </div>
             <div class="panel-multiselect-field">
-              <span>Campus / acervo</span>
+              <div class="panel-multiselect-heading">
+                <span>Campus / acervo</span>
+                <div class="panel-checkbox-actions" aria-label="Ações para campus e acervos">
+                  <button type="button" class="panel-checkbox-all" data-target=".panel-campus-options">Marcar todos</button>
+                  <button type="button" class="panel-checkbox-none" data-target=".panel-campus-options">Desmarcar todos</button>
+                </div>
+              </div>
               <div class="panel-checkbox-list panel-campus-options" aria-label="Campus ou acervos dos livros"></div>
             </div>
             <div class="filter-grid panel-book-grid">
@@ -487,7 +493,7 @@
   <script src="js/conteudos/concursos.js?v=2" defer></script>
   <script src="js/conteudos/filmes.js?v=6" defer></script>
   <script src="js/curadorias-site.js?v=11" defer></script>
-  <script src="js/app.js?v=103" defer></script>
+  <script src="js/app.js?v=104" defer></script>
   <script src="js/temas-visuais.js?v=12" defer></script>
   <script src="js/eventos-manuais-ui.js?v=44" defer></script>
   <script src="js/ios-install.js?v=2" defer></script>
