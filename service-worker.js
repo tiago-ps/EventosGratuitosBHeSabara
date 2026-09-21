@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v121-book-curation-editorial';
+const CACHE_VERSION = 'mural-cultural-v122-panel-text-and-brand-title';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -8,7 +8,7 @@ const CURATION_IMAGE_PREFIX = '/imagens/curadorias/';
 
 const CORE_ASSETS = [
   './', './index.html',
-  './css/styles.css?v=72',
+  './css/styles.css?v=73',
   './css/eventos-manuais-ui.css?v=43',
   './css/concursos-mural.css?v=3',
   './css/temas-visuais.css?v=11',
