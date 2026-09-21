@@ -2744,6 +2744,21 @@ function eventProgram(event) {
     return checked;
   }
 
+  function bindPanelCheckboxBulkActions(slide) {
+    slide.querySelectorAll('.panel-checkbox-actions button[data-target]').forEach(button => {
+      if (button.dataset.bulkBound === 'true') return;
+      button.dataset.bulkBound = 'true';
+      button.addEventListener('click', () => {
+        const container = slide.querySelector(button.dataset.target || '');
+        if (!container) return;
+        const inputs = [...container.querySelectorAll('input[type="checkbox"]')];
+        const checkAll = button.classList.contains('panel-checkbox-all');
+        inputs.forEach(input => { input.checked = checkAll; });
+        container.dataset.unrestricted = checkAll ? 'true' : 'false';
+      });
+    });
+  }
+
   function showPanelValidation(slide, message = '') {
     const box = slide.querySelector('.panel-validation');
     if (!box) return;
@@ -2894,6 +2909,7 @@ function eventProgram(event) {
 
     populateCheckboxOptions(slide.querySelector('.panel-city-options'), panelCityOptions(), value.eventCities);
     populateCheckboxOptions(slide.querySelector('.panel-campus-options'), panelCampusOptions(), value.bookCampuses);
+    bindPanelCheckboxBulkActions(slide);
     if (bookAccessSelect) bookAccessSelect.value = value.bookAccess;
     populateDynamicSelect(
       filmGenreSelect,
