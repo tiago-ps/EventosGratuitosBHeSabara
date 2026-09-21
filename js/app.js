@@ -654,7 +654,8 @@
   function agendaBookHoldingsHtml(book) {
     const acervos = bookAcervos(book);
     if (!acervos.length) return '';
-    const blocks = acervos.map(acervo => {
+    const collapseOnMobile = acervos.length > 3;
+    const blocks = acervos.map((acervo, acervoIndex) => {
       const label = bookHoldingLabel(acervo);
       const registros = Array.isArray(acervo.registros) ? acervo.registros : [];
       const recordsHtml = registros.map((registro, index) => {
@@ -675,15 +676,33 @@
           ${links ? `<div class="agenda-book-record-actions">${links}</div>` : ''}
         </div>`;
       }).join('');
-      return `<div class="agenda-book-holding">
+      const extraClass = collapseOnMobile && acervoIndex >= 3 ? ' agenda-book-holding-extra' : '';
+      return `<div class="agenda-book-holding${extraClass}">
         <strong>${escapeHtml(label)}</strong>
         ${recordsHtml}
       </div>`;
     }).join('');
-    return `<section class="agenda-book-holdings" aria-label="Bibliotecas onde encontrar este livro">
+    const toggle = collapseOnMobile
+      ? `<button type="button" class="agenda-book-holdings-toggle" aria-expanded="false">Ver todos os ${acervos.length} acervos</button>`
+      : '';
+    return `<section class="agenda-book-holdings${collapseOnMobile ? ' is-collapsible' : ''}" aria-label="Bibliotecas onde encontrar este livro">
       <h3>Onde encontrar</h3>
       ${blocks}
+      ${toggle}
     </section>`;
+  }
+
+  function bindAgendaBookHoldingsToggle(article) {
+    const holdings = article.querySelector('.agenda-book-holdings.is-collapsible');
+    const button = holdings?.querySelector('.agenda-book-holdings-toggle');
+    if (!holdings || !button) return;
+
+    button.addEventListener('click', () => {
+      const expanded = holdings.classList.toggle('is-expanded');
+      button.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+      const total = holdings.querySelectorAll('.agenda-book-holding').length;
+      button.textContent = expanded ? 'Mostrar menos acervos' : `Ver todos os ${total} acervos`;
+    });
   }
 
   function bookMatchesFilters(book) {
@@ -3794,6 +3813,7 @@ function eventProgram(event) {
           ${item.exibir_comentario && item.comentario_aprovado ? `<blockquote class="agenda-book-opinion">“${escapeHtml(item.comentario_aprovado)}”<cite>${escapeHtml(item.credito_comentario || 'Leitor(a) do IFMG')}</cite></blockquote>` : ''}
           ${opinionUrl ? `<div class="agenda-card-actions"><a class="secondary" href="${escapeHtml(opinionUrl)}" target="_blank" rel="noopener noreferrer">Opine sobre este livro</a></div>` : ''}
         </div>`;
+      bindAgendaBookHoldingsToggle(article);
       return article;
     }
 
