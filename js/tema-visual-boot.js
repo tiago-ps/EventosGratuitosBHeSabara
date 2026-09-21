@@ -105,7 +105,7 @@
 
       const appleIcon = document.querySelector('link[rel="apple-touch-icon"]');
       if (appleIcon) {
-        appleIcon.href = 'imagens/app-icons/icon-uai-tem-sim-192.png?v=1';
+        appleIcon.href = 'imagens/app-icons/apple-touch-icon-tem-sim-uai.png?v=3';
       }
     }
   } catch (_) {
