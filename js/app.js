@@ -143,6 +143,7 @@
     viewMode: 'auto',
     slideDuration: 0,
     mobileQuery: '',
+    mobileFiltersOpen: false,
     mobileContent: 'all',
     mobileCuration: '',
     mobileTheme: '',
@@ -3884,13 +3885,44 @@ function eventProgram(event) {
     const activeFilters = agendaActiveFilterCount();
     const header = document.createElement('header');
     header.className = 'agenda-header';
+    const agendaContentTabs = [
+      ['all', 'Todos'],
+      ['events', 'Eventos'],
+      ['books', 'Livros'],
+      ['courses', 'Cursos'],
+      ['contests', 'Concursos'],
+      ['films', 'Filmes'],
+      ['utility', 'Utilidade pública']
+    ];
     header.innerHTML = `
       <div class="agenda-heading">
-        <img class="agenda-logo" src="imagens/marca/logo-mural-cultural.png" alt="Mural Cultural">
-        <p class="agenda-eyebrow">${escapeHtml(agendaSubtitleLabel())}</p>
-        <p class="agenda-updated">${escapeHtml(formatUpdated(state.data?.atualizado_em))}</p>
+        <img class="agenda-logo" src="imagens/marca/logo-mural-cultural.png" alt="Tem Sim, Uai">
       </div>
+      <nav class="agenda-content-nav" aria-label="Tipos de conteúdo">
+        ${agendaContentTabs.map(([value, label]) => `
+          <button
+            type="button"
+            class="agenda-content-tab${state.mobileContent === value ? ' is-active' : ''}"
+            data-content="${escapeHtml(value)}"
+            aria-pressed="${state.mobileContent === value ? 'true' : 'false'}"
+          >${escapeHtml(label)}</button>
+        `).join('')}
+      </nav>
       <div class="agenda-header-actions">
+        <button
+          class="agenda-search-toggle"
+          type="button"
+          aria-label="${state.mobileFiltersOpen ? 'Fechar busca e filtros' : 'Abrir busca e filtros'}"
+          aria-expanded="${state.mobileFiltersOpen ? 'true' : 'false'}"
+          aria-controls="agenda-filter-panel"
+          title="Buscar e filtrar"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="6"></circle>
+            <path d="m16 16 4 4"></path>
+          </svg>
+          ${activeFilters ? `<span class="agenda-filter-badge" aria-label="${activeFilters} ${activeFilters === 1 ? 'filtro ativo' : 'filtros ativos'}">${activeFilters}</span>` : ''}
+        </button>
         <button class="install-app-btn" type="button" hidden>Instalar app</button>
         <button class="view-toggle" type="button" aria-label="Abrir modo painel">Modo painel</button>
       </div>
@@ -3898,6 +3930,8 @@ function eventProgram(event) {
 
     const controls = document.createElement('section');
     controls.className = `agenda-tools agenda-tools-${state.mobileContent}`;
+    controls.id = 'agenda-filter-panel';
+    controls.hidden = !state.mobileFiltersOpen;
     controls.setAttribute('aria-label', 'Pesquisar e filtrar conteúdos');
 
     const contestMode = state.mobileContent === 'contests';
@@ -3922,7 +3956,7 @@ function eventProgram(event) {
     ` : '';
     const commonControls = `
       <label class="agenda-search"><span>Pesquisar</span><input type="search" placeholder="${escapeHtml(searchPlaceholder)}" value="${escapeHtml(state.mobileQuery)}"></label>
-      <label><span>Conteúdo</span><select class="agenda-content">
+      <label class="agenda-content-field"><span>Conteúdo</span><select class="agenda-content">
         <option value="all">Todos</option><option value="events">Eventos</option><option value="books">Livros</option><option value="courses">Cursos</option><option value="contests">Concursos</option><option value="films">Filmes</option>
         <option value="utility">Utilidade Pública</option>
       </select></label>
@@ -4112,16 +4146,44 @@ function eventProgram(event) {
       if (progressiveControl) resultsContainer.append(progressiveControl);
     }
 
+    const footer = document.createElement('footer');
+    footer.className = 'agenda-footer';
+    footer.innerHTML = `
+      <div class="agenda-footer-brand">Tem Sim, Uai</div>
+      <p>Atualizado em ${escapeHtml(formatUpdated(state.data?.atualizado_em).replace(/^Atualizado em\s*/i, ''))}</p>
+    `;
+
     const shell = document.createElement('div');
     shell.className = 'agenda-shell';
     shell.append(header, controls, count);
     if (filmMode) shell.append(filmSourceNotice());
-    shell.append(resultsContainer);
+    shell.append(resultsContainer, footer);
     app.replaceChildren(shell);
 
     const installButton = header.querySelector('.install-app-btn');
     installButton.addEventListener('click', installApp);
     refreshInstallButtons();
+
+    const searchToggle = header.querySelector('.agenda-search-toggle');
+    searchToggle.addEventListener('click', () => {
+      state.mobileFiltersOpen = !state.mobileFiltersOpen;
+      controls.hidden = !state.mobileFiltersOpen;
+      searchToggle.setAttribute('aria-expanded', state.mobileFiltersOpen ? 'true' : 'false');
+      searchToggle.setAttribute('aria-label', state.mobileFiltersOpen ? 'Fechar busca e filtros' : 'Abrir busca e filtros');
+      if (state.mobileFiltersOpen) {
+        requestAnimationFrame(() => controls.querySelector('.agenda-search input')?.focus());
+      }
+    });
+
+    header.querySelectorAll('.agenda-content-tab').forEach(button => {
+      button.addEventListener('click', () => {
+        const nextContent = button.dataset.content || 'all';
+        if (nextContent === state.mobileContent) return;
+        normalizeAgendaFiltersForContent(nextContent);
+        resetAgendaBatches();
+        renderAgenda();
+      });
+    });
 
     header.querySelector('.view-toggle').addEventListener('click', () => {
       resetAgendaBatches();
@@ -4134,6 +4196,15 @@ function eventProgram(event) {
       resetAgendaBatches();
       renderAgenda();
     };
+
+    controls.addEventListener('keydown', event => {
+      if (event.key !== 'Escape') return;
+      state.mobileFiltersOpen = false;
+      controls.hidden = true;
+      searchToggle.setAttribute('aria-expanded', 'false');
+      searchToggle.setAttribute('aria-label', 'Abrir busca e filtros');
+      searchToggle.focus();
+    });
     controls.querySelector('.agenda-search input').addEventListener('input', event => {
       state.mobileQuery = event.target.value;
       window.clearTimeout(state.mobileSearchTimer);
