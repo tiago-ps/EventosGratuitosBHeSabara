@@ -17,6 +17,7 @@
   const PANEL_PROFILES_KEY = 'mural-cultural-perfis-painel-v1';
   const PANEL_PROFILE_ATTRIBUTE = 'panelProfile';
   const AGENDA_BATCH_SIZE = 24;
+  const AGENDA_COLOR_SCHEME_KEY = 'tem-sim-uai-agenda-color-scheme';
   const AGENDA_CONTENT_LABELS = Object.freeze({
     events: { singular: 'evento', plural: 'eventos' },
     books: { singular: 'livro', plural: 'livros' },
@@ -3665,6 +3666,56 @@ function eventProgram(event) {
     refreshInstallButtons();
   }
 
+  function storedAgendaColorScheme() {
+    try {
+      const stored = localStorage.getItem(AGENDA_COLOR_SCHEME_KEY);
+      if (stored === 'light' || stored === 'dark') return stored;
+    } catch {
+      // Sem armazenamento, segue a preferência do sistema.
+    }
+    return window.matchMedia?.('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  }
+
+  function applyAgendaColorScheme(scheme) {
+    const value = scheme === 'light' ? 'light' : 'dark';
+    document.body.classList.toggle('agenda-theme-light', value === 'light');
+    document.body.classList.toggle('agenda-theme-dark', value === 'dark');
+    document.body.style.colorScheme = value;
+    return value;
+  }
+
+  function saveAgendaColorScheme(scheme) {
+    const value = applyAgendaColorScheme(scheme);
+    try {
+      localStorage.setItem(AGENDA_COLOR_SCHEME_KEY, value);
+    } catch {
+      // A escolha continua válida nesta sessão mesmo sem persistência.
+    }
+    return value;
+  }
+
+  function agendaThemeToggleMarkup() {
+    const scheme = storedAgendaColorScheme();
+    const light = scheme === 'light';
+    return `
+      <button
+        class="agenda-theme-toggle"
+        type="button"
+        aria-label="${light ? 'Usar tema escuro na Agenda' : 'Usar tema claro na Agenda'}"
+        aria-pressed="${light ? 'true' : 'false'}"
+        title="${light ? 'Tema escuro' : 'Tema claro'}"
+      >
+        <svg class="agenda-theme-icon agenda-theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path>
+        </svg>
+        <svg class="agenda-theme-icon agenda-theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5 8.5 8.5 0 1 0 20.5 14.2Z"></path>
+        </svg>
+      </button>
+    `;
+  }
+
   function agendaSubtitleLabel() {
     if (state.mobileContent === 'events') return 'Agenda Cultural';
     if (state.mobileContent === 'books') return 'Sugestão de Leitura';
@@ -3878,6 +3929,7 @@ function eventProgram(event) {
     state.isPaused = true;
     document.body.classList.add('agenda-mode');
     document.body.classList.remove('panel-mode');
+    const agendaColorScheme = applyAgendaColorScheme(storedAgendaColorScheme());
 
     normalizeAgendaFiltersForContent();
 
@@ -3923,6 +3975,7 @@ function eventProgram(event) {
           </svg>
           ${activeFilters ? `<span class="agenda-filter-badge" aria-label="${activeFilters} ${activeFilters === 1 ? 'filtro ativo' : 'filtros ativos'}">${activeFilters}</span>` : ''}
         </button>
+        ${agendaThemeToggleMarkup()}
         <button class="install-app-btn" type="button" hidden>Instalar app</button>
         <button class="view-toggle" type="button" aria-label="Abrir modo painel">Modo painel</button>
       </div>
@@ -4175,6 +4228,16 @@ function eventProgram(event) {
       }
     });
 
+    const themeToggle = header.querySelector('.agenda-theme-toggle');
+    themeToggle.addEventListener('click', () => {
+      const next = document.body.classList.contains('agenda-theme-light') ? 'dark' : 'light';
+      const applied = saveAgendaColorScheme(next);
+      const isLight = applied === 'light';
+      themeToggle.setAttribute('aria-pressed', isLight ? 'true' : 'false');
+      themeToggle.setAttribute('aria-label', isLight ? 'Usar tema escuro na Agenda' : 'Usar tema claro na Agenda');
+      themeToggle.title = isLight ? 'Tema escuro' : 'Tema claro';
+    });
+
     header.querySelectorAll('.agenda-content-tab').forEach(button => {
       button.addEventListener('click', () => {
         const nextContent = button.dataset.content || 'all';
@@ -4293,8 +4356,9 @@ function eventProgram(event) {
       renderAgenda();
       return;
     }
-    document.body.classList.remove('agenda-mode');
+    document.body.classList.remove('agenda-mode', 'agenda-theme-light', 'agenda-theme-dark');
     document.body.classList.add('panel-mode');
+    document.body.style.colorScheme = 'dark';
     state.isPaused = false;
     renderSlide(Math.min(state.index, Math.max(0, state.events.length - 1)));
     addPanelViewToggle();
