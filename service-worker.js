@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v124-agenda-3-colunas';
+const CACHE_VERSION = 'mural-cultural-v125-agenda-header';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -8,7 +8,7 @@ const CURATION_IMAGE_PREFIX = '/imagens/curadorias/';
 
 const CORE_ASSETS = [
   './', './index.html',
-  './css/styles.css?v=74',
+  './css/styles.css?v=75',
   './css/eventos-manuais-ui.css?v=43',
   './css/concursos-mural.css?v=3',
   './css/temas-visuais.css?v=11',
@@ -21,7 +21,7 @@ const CORE_ASSETS = [
   './js/conteudos/concursos.js?v=2',
   './js/conteudos/filmes.js?v=6',
   './js/curadorias-site.js?v=11',
-  './js/app.js?v=101',
+  './js/app.js?v=102',
   './js/temas-visuais.js?v=12',
   './js/eventos-manuais-ui.js?v=44',
   './js/ios-install.js?v=2',
