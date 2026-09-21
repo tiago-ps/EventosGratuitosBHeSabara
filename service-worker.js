@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v130-mobile-cards-top-media';
+const CACHE_VERSION = 'mural-cultural-v131-book-holdings-mobile';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -8,7 +8,7 @@ const CURATION_IMAGE_PREFIX = '/imagens/curadorias/';
 
 const CORE_ASSETS = [
   './', './index.html',
-  './css/styles.css?v=79',
+  './css/styles.css?v=80',
   './css/eventos-manuais-ui.css?v=43',
   './css/concursos-mural.css?v=3',
   './css/temas-visuais.css?v=11',
@@ -21,7 +21,7 @@ const CORE_ASSETS = [
   './js/conteudos/concursos.js?v=2',
   './js/conteudos/filmes.js?v=6',
   './js/curadorias-site.js?v=11',
-  './js/app.js?v=104',
+  './js/app.js?v=105',
   './js/temas-visuais.js?v=12',
   './js/eventos-manuais-ui.js?v=44',
   './js/ios-install.js?v=2',
