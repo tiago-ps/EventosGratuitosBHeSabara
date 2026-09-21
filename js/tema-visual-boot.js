@@ -74,11 +74,7 @@
   temSimUaiPanelLayout.defer = true;
   document.head.appendChild(temSimUaiPanelLayout);
 
-  // Somente a identidade de instalação do ambiente de teste permanece exclusiva:
-  // favicon, Apple Touch Icon e ícones PWA próprios para evitar confusão com produção.
-
-  // Assets específicos vivem em imagens/marca/ e imagens/app-icons/, diretórios
-  // excluídos da promoção da interface para o site público.
+  // Somente a identidade de instalação do ambiente de teste permanece exclusiva.
   try {
     const isTestSite =
       window.location.hostname === 'tiago-ps.github.io' &&
@@ -87,31 +83,30 @@
     if (isTestSite) {
       document.documentElement.dataset.temSimUaiTest = '1';
 
-      document.title = 'Tem Sim, Uai';
+      document.title = 'Uai, Tem Sim';
 
       const applicationName = document.querySelector('meta[name="application-name"]');
-      if (applicationName) applicationName.content = 'Tem Sim, Uai';
+      if (applicationName) applicationName.content = 'Uai, Tem Sim';
 
       const appleTitle = document.querySelector('meta[name="apple-mobile-web-app-title"]');
-      if (appleTitle) appleTitle.content = 'Tem Sim, Uai';
+      if (appleTitle) appleTitle.content = 'Uai, Tem Sim';
 
       const manifestLink = document.querySelector('link[rel="manifest"]');
       if (manifestLink) {
-        manifestLink.href = 'imagens/app-icons/manifest-tem-sim-uai.webmanifest?v=4';
+        manifestLink.href = 'imagens/app-icons/manifest-uai-tem-sim.webmanifest?v=1';
       }
 
       const favicon = document.querySelector('link[rel="icon"]');
       if (favicon) {
         favicon.type = 'image/png';
-        favicon.sizes = '32x32';
-        favicon.href = 'imagens/app-icons/favicon-tem-sim-uai-32.png?v=3';
+        favicon.sizes = '192x192';
+        favicon.href = 'imagens/app-icons/icon-uai-tem-sim-192.png?v=1';
       }
 
       const appleIcon = document.querySelector('link[rel="apple-touch-icon"]');
       if (appleIcon) {
-        appleIcon.href = 'imagens/app-icons/apple-touch-icon-tem-sim-uai.png?v=4';
+        appleIcon.href = 'imagens/app-icons/icon-uai-tem-sim-192.png?v=1';
       }
-
     }
   } catch (_) {
     // Falha silenciosa: o site mantém o layout público normal.
