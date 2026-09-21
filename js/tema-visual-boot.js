@@ -83,24 +83,24 @@
     if (isTestSite) {
       document.documentElement.dataset.temSimUaiTest = '1';
 
-      document.title = 'Uai, Tem Sim';
+      document.title = 'Tem Sim, Uai';
 
       const applicationName = document.querySelector('meta[name="application-name"]');
-      if (applicationName) applicationName.content = 'Uai, Tem Sim';
+      if (applicationName) applicationName.content = 'Tem Sim, Uai';
 
       const appleTitle = document.querySelector('meta[name="apple-mobile-web-app-title"]');
-      if (appleTitle) appleTitle.content = 'Uai, Tem Sim';
+      if (appleTitle) appleTitle.content = 'Tem Sim, Uai';
 
       const manifestLink = document.querySelector('link[rel="manifest"]');
       if (manifestLink) {
-        manifestLink.href = 'imagens/app-icons/manifest-uai-tem-sim.webmanifest?v=1';
+        manifestLink.href = 'imagens/app-icons/manifest-tem-sim-uai.webmanifest?v=3';
       }
 
       const favicon = document.querySelector('link[rel="icon"]');
       if (favicon) {
         favicon.type = 'image/png';
-        favicon.sizes = '192x192';
-        favicon.href = 'imagens/app-icons/icon-uai-tem-sim-192.png?v=1';
+        favicon.sizes = '32x32';
+        favicon.href = 'imagens/app-icons/favicon-tem-sim-uai-32.png?v=3';
       }
 
       const appleIcon = document.querySelector('link[rel="apple-touch-icon"]');

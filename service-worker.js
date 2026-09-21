@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v131-book-holdings-mobile';
+const CACHE_VERSION = 'mural-cultural-v132-restore-tem-sim-uai';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -15,7 +15,7 @@ const CORE_ASSETS = [
   './css/painel-modos.css?v=2',
   './css/painel-acoes-contextuais.css?v=2',
   './css/tem-sim-uai-painel.css?v=1',
-  './js/tema-visual-boot.js?v=7',
+  './js/tema-visual-boot.js?v=8',
   './js/core/rotacao.js?v=1',
   './js/conteudos/cursos.js?v=3',
   './js/conteudos/concursos.js?v=2',
@@ -32,8 +32,8 @@ const CORE_ASSETS = [
   './js/cursos-runtime-fix.js?v=2',
   './imagens/curadorias/agosto-lilas-banner.png',
   './manifest.webmanifest',
-  './imagens/app-icons/icon-192.png', './imagens/app-icons/icon-512.png',
-  './imagens/app-icons/apple-touch-icon.png?v=2'
+  './imagens/app-icons/icon-192.png?v=3', './imagens/app-icons/icon-512.png?v=3',
+  './imagens/app-icons/apple-touch-icon.png?v=3'
 ];
 
 const DATA_PATHS = [
