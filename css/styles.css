@@ -1301,3 +1301,21 @@ body.panel-mode .slide .book-support {
   width: 100%;
   max-width: none;
 }
+
+
+/* Agenda — teste v124: mais resultados em telas largas e filtros no fluxo da página. */
+body.agenda-mode .agenda-shell {
+  width: min(1540px, 100%);
+}
+
+body.agenda-mode .agenda-tools {
+  position: static;
+  top: auto;
+}
+
+@media (min-width: 1360px) {
+  body.agenda-mode .agenda-list,
+  body.agenda-mode .agenda-section-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
