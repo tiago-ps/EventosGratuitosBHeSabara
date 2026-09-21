@@ -1568,12 +1568,16 @@ body.agenda-mode .agenda-tools .agenda-content-field {
   }
 
   body.agenda-mode .agenda-header-actions .view-toggle::before {
-    content: '▣';
     color: var(--text);
-    font-size: 18px;
+    font-size: 17px;
+    line-height: 1;
   }
 
-  body.agenda-mode .agenda-header-actions .passive-view-toggle {
-    display: none;
+  body.agenda-mode .agenda-header-actions .view-toggle:not(.passive-view-toggle)::before {
+    content: '⌨';
+  }
+
+  body.agenda-mode .agenda-header-actions .passive-view-toggle::before {
+    content: '▶';
   }
 }
