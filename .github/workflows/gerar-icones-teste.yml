@@ -1,0 +1,78 @@
+name: Gerar ícones pretos do ambiente de teste
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'imagens/app-icons/teste-base-preto-512.png'
+      - '.github/gerar-icones-teste.trigger'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gerar-icones-teste
+  cancel-in-progress: true
+
+jobs:
+  gerar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Gerar variantes exclusivas do teste
+        run: |
+          python -m pip install --disable-pip-version-check pillow
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+
+          pasta = Path('imagens/app-icons')
+          origem = Image.open(pasta / 'teste-base-preto-512.png').convert('RGBA')
+          resample = Image.Resampling.LANCZOS
+
+          normais = {
+              'icon-tem-sim-uai-512.png': 512,
+              'icon-tem-sim-uai-192.png': 192,
+              'apple-touch-icon-tem-sim-uai.png': 180,
+              'favicon-tem-sim-uai-32.png': 32,
+          }
+          for nome, tamanho in normais.items():
+              origem.resize((tamanho, tamanho), resample).save(
+                  pasta / nome, optimize=True
+              )
+
+          fundo = Image.new('RGBA', origem.size, (0, 0, 0, 255))
+          fundo.alpha_composite(origem)
+          for nome, tamanho in {
+              'icon-maskable-tem-sim-uai-512.png': 512,
+              'icon-maskable-tem-sim-uai-192.png': 192,
+          }.items():
+              fundo.resize((tamanho, tamanho), resample).save(
+                  pasta / nome, optimize=True
+              )
+          PY
+
+      - name: Commitar somente os ícones exclusivos do teste
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            imagens/app-icons/icon-tem-sim-uai-512.png \
+            imagens/app-icons/icon-tem-sim-uai-192.png \
+            imagens/app-icons/icon-maskable-tem-sim-uai-512.png \
+            imagens/app-icons/icon-maskable-tem-sim-uai-192.png \
+            imagens/app-icons/apple-touch-icon-tem-sim-uai.png \
+            imagens/app-icons/favicon-tem-sim-uai-32.png
+
+          if git diff --cached --quiet; then
+            echo 'Ícones de teste já estão atualizados.'
+          else
+            git commit -m 'chore: diferencia PWA de teste com icones pretos [skip ci]'
+            git push origin HEAD:main
+          fi
