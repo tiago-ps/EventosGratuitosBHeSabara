@@ -1293,3 +1293,11 @@ body.book-locations-open{overflow:hidden}
 @media(max-width:760px){.agenda-film-card{display:flex;grid-template-columns:none;flex-direction:column;width:100%;height:auto;min-height:0}.agenda-film-card .film-media{position:static;width:100%;height:auto;min-height:0;aspect-ratio:16/9;margin:0;transform:none}.agenda-film-card .film-media img{position:static;inset:auto;width:100%;height:100%;min-height:0;max-width:100%;aspect-ratio:auto;object-fit:cover;object-position:center;margin:0;transform:none}.agenda-film-card .film-media-atypical img{object-fit:contain}.agenda-film-card .film-poster-fallback{width:100%;height:100%;min-height:0;padding:12px}.agenda-film-card .agenda-card-body{width:100%;padding:14px}.agenda-film-card .agenda-card-actions{display:flex;max-width:100%;flex-wrap:wrap}.agenda-film-card .agenda-card-actions>*{max-width:100%}.film-dialog-shell{grid-template-columns:1fr}.film-dialog-poster{max-height:46dvh}.film-dialog-poster>img{height:46dvh}.film-dialog-copy{padding:24px 18px 28px}.film-dialog-sections{grid-template-columns:1fr}}
 @media(max-width:480px){.agenda-tools-films{grid-template-columns:1fr}.agenda-tools-films .agenda-search{grid-column:auto}.agenda-film-card .agenda-card-body{padding:12px}.agenda-film-card .agenda-card-actions{display:grid;grid-template-columns:1fr;width:100%}.agenda-film-card .agenda-card-actions>*{width:100%;white-space:normal;text-align:center;justify-content:center}.film-dialog{width:100%;max-height:100dvh;border-radius:0}.film-dialog-poster>img{height:40dvh}.film-dialog-copy h2{padding-right:38px}}
 @media(prefers-reduced-motion:reduce){.film-dialog::backdrop{backdrop-filter:none}.film-dialog,.film-dialog *{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+
+/* Painel — descrição usa a mesma largura horizontal disponível do título. */
+body.panel-mode .slide .description,
+body.panel-mode .slide .book-support {
+  width: 100%;
+  max-width: none;
+}
