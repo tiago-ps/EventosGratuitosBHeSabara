@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v122-panel-text-and-brand-title';
+const CACHE_VERSION = 'mural-cultural-v123-tem-sim-uai-interface';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -14,7 +14,8 @@ const CORE_ASSETS = [
   './css/temas-visuais.css?v=11',
   './css/painel-modos.css?v=2',
   './css/painel-acoes-contextuais.css?v=2',
-  './js/tema-visual-boot.js?v=5',
+  './css/tem-sim-uai-painel.css?v=1',
+  './js/tema-visual-boot.js?v=6',
   './js/core/rotacao.js?v=1',
   './js/conteudos/cursos.js?v=3',
   './js/conteudos/concursos.js?v=2',
@@ -27,6 +28,7 @@ const CORE_ASSETS = [
   './js/painel-navegacao-modos.js?v=1',
   './js/agenda-pesquisa-foco.js?v=1',
   './js/painel-acoes-contextuais.js?v=3',
+  './js/tem-sim-uai-painel.js?v=1',
   './js/cursos-runtime-fix.js?v=2',
   './imagens/curadorias/agosto-lilas-banner.png',
   './manifest.webmanifest',
