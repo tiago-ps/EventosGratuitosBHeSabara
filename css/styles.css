@@ -1694,3 +1694,56 @@ body.agenda-mode.agenda-theme-dark .agenda-theme-icon-sun {
     height: 38px;
   }
 }
+
+
+/* Painel v128 — seleção em massa dos campus/acervos de livros. */
+.panel-multiselect-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem;
+  margin-bottom: .55rem;
+}
+
+.panel-multiselect-heading > span {
+  margin: 0;
+}
+
+.panel-checkbox-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: .4rem;
+}
+
+.panel-checkbox-actions button {
+  min-height: 32px;
+  padding: .35rem .65rem;
+  border: 1px solid var(--detail-border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.panel-checkbox-actions button:hover,
+.panel-checkbox-actions button:focus-visible {
+  border-color: var(--accent);
+  color: var(--text);
+  background: var(--control-bg);
+}
+
+@media (max-width: 620px) {
+  .panel-multiselect-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .panel-checkbox-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
