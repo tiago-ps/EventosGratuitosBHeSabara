@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v128-panel-book-bulk';
+const CACHE_VERSION = 'mural-cultural-v129-mobile-icons';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -33,7 +33,7 @@ const CORE_ASSETS = [
   './imagens/curadorias/agosto-lilas-banner.png',
   './manifest.webmanifest',
   './imagens/app-icons/icon-192.png', './imagens/app-icons/icon-512.png',
-  './imagens/app-icons/apple-touch-icon.png'
+  './imagens/app-icons/apple-touch-icon.png?v=2'
 ];
 
 const DATA_PATHS = [
