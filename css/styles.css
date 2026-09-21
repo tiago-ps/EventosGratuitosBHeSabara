@@ -1747,3 +1747,65 @@ body.agenda-mode.agenda-theme-dark .agenda-theme-icon-sun {
     justify-content: flex-start;
   }
 }
+
+
+/* Agenda v130 — teste mobile: mídia superior e conteúdo inferior em todos os cards. */
+@media (max-width: 760px) {
+  body.agenda-mode .agenda-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+    grid-template-columns: none;
+  }
+
+  body.agenda-mode .agenda-card-media {
+    position: relative;
+    width: 100%;
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+  }
+
+  body.agenda-mode .agenda-card-media img {
+    position: static;
+    inset: auto;
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* Capas e materiais verticais preservam a imagem inteira no topo. */
+  body.agenda-mode .agenda-book-card .book-media,
+  body.agenda-mode .agenda-course-card .agenda-card-media {
+    background: var(--media-bg);
+  }
+
+  body.agenda-mode .agenda-book-card .book-media img,
+  body.agenda-mode .agenda-course-card .agenda-card-media img {
+    object-fit: contain;
+  }
+
+  body.agenda-mode .agenda-book-card .book-media {
+    padding: 14px;
+  }
+
+  body.agenda-mode .agenda-card-body {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Filmes já usam este padrão; apenas garante equivalência com os demais. */
+  body.agenda-mode .agenda-film-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  body.agenda-mode .agenda-film-card .film-media {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+}
