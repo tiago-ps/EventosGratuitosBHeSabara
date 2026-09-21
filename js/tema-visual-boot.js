@@ -97,7 +97,7 @@
 
       const manifestLink = document.querySelector('link[rel="manifest"]');
       if (manifestLink) {
-        manifestLink.href = 'imagens/app-icons/manifest-tem-sim-uai.webmanifest?v=3';
+        manifestLink.href = 'imagens/app-icons/manifest-tem-sim-uai.webmanifest?v=4';
       }
 
       const favicon = document.querySelector('link[rel="icon"]');
@@ -109,7 +109,7 @@
 
       const appleIcon = document.querySelector('link[rel="apple-touch-icon"]');
       if (appleIcon) {
-        appleIcon.href = 'imagens/app-icons/apple-touch-icon-tem-sim-uai.png?v=3';
+        appleIcon.href = 'imagens/app-icons/apple-touch-icon-tem-sim-uai.png?v=4';
       }
 
     }
