@@ -36,10 +36,10 @@ jobs:
           origem = Image.open(pasta / 'teste-base-preto-512.png').convert('RGBA')
           resample = Image.Resampling.LANCZOS
 
+          # Desktop/navegador: mantém exatamente a escala já aprovada.
           normais = {
               'icon-tem-sim-uai-512.png': 512,
               'icon-tem-sim-uai-192.png': 192,
-              'apple-touch-icon-tem-sim-uai.png': 180,
               'favicon-tem-sim-uai-32.png': 32,
           }
           for nome, tamanho in normais.items():
@@ -47,13 +47,28 @@ jobs:
                   pasta / nome, optimize=True
               )
 
-          fundo = Image.new('RGBA', origem.size, (0, 0, 0, 255))
-          fundo.alpha_composite(origem)
+          # Celular: reduz o lettering/conjunto em ~10% dentro do mesmo quadrado.
+          # Isso dá mais respiro no ícone instalado sem alterar os ícones de desktop.
+          mobile = Image.new('RGBA', origem.size, (0, 0, 0, 255))
+          reduzido = origem.resize(
+              (round(origem.width * 0.90), round(origem.height * 0.90)),
+              resample
+          )
+          mobile.alpha_composite(
+              reduzido,
+              ((origem.width - reduzido.width) // 2,
+               (origem.height - reduzido.height) // 2)
+          )
+
+          mobile.resize((180, 180), resample).save(
+              pasta / 'apple-touch-icon-tem-sim-uai.png', optimize=True
+          )
+
           for nome, tamanho in {
               'icon-maskable-tem-sim-uai-512.png': 512,
               'icon-maskable-tem-sim-uai-192.png': 192,
           }.items():
-              fundo.resize((tamanho, tamanho), resample).save(
+              mobile.resize((tamanho, tamanho), resample).save(
                   pasta / nome, optimize=True
               )
           PY
