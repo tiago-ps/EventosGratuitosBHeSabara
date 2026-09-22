@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v134-correct-tem-sim-uai-assets';
+const CACHE_VERSION = 'mural-cultural-v132-book-holdings-all-screens';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -8,7 +8,7 @@ const CURATION_IMAGE_PREFIX = '/imagens/curadorias/';
 
 const CORE_ASSETS = [
   './', './index.html',
-  './css/styles.css?v=80',
+  './css/styles.css?v=81',
   './css/eventos-manuais-ui.css?v=43',
   './css/concursos-mural.css?v=3',
   './css/temas-visuais.css?v=11',
