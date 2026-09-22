@@ -1,0 +1,42 @@
+name: Validar relações públicas de Eventos
+
+on:
+  pull_request:
+    paths:
+      - 'js/relacoes-eventos.js'
+      - 'js/app.js'
+      - 'index.html'
+      - 'service-worker.js'
+      - 'testes/relacoes-eventos.test.cjs'
+      - 'testes/service-worker-cache.test.cjs'
+      - '.github/workflows/validar-relacoes-eventos.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'js/relacoes-eventos.js'
+      - 'js/app.js'
+      - 'index.html'
+      - 'service-worker.js'
+      - 'testes/relacoes-eventos.test.cjs'
+      - 'testes/service-worker-cache.test.cjs'
+
+permissions:
+  contents: read
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validar sintaxe
+        run: |
+          node --check js/relacoes-eventos.js
+          node --check js/app.js
+          node --check service-worker.js
+      - name: Testar relações e cache
+        run: |
+          node testes/relacoes-eventos.test.cjs
+          node testes/service-worker-cache.test.cjs
