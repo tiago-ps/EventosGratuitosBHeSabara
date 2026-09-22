@@ -18,6 +18,12 @@
   const PANEL_PROFILE_ATTRIBUTE = 'panelProfile';
   const AGENDA_BATCH_SIZE = 24;
   const AGENDA_COLOR_SCHEME_KEY = 'tem-sim-uai-agenda-color-scheme';
+  const PUBLIC_CURATION_ALIASES = Object.freeze({
+    ufmg: 'vestibular-ufmg-seriado-2026',
+    fuvest: 'vestibular-fuvest-2027',
+    'saude-mental': 'saude-mental',
+    'agosto-lilas': 'agosto-lilas'
+  });
   const AGENDA_CONTENT_LABELS = Object.freeze({
     events: { singular: 'evento', plural: 'eventos' },
     books: { singular: 'livro', plural: 'livros' },
@@ -2497,6 +2503,19 @@ function eventProgram(event) {
       return;
     }
 
+    // Links públicos de curadoria são fonte de verdade na abertura.
+    // ?perfil= continua tendo precedência por ser um perfil explícito do Painel.
+    const requestedCurationId = requestedPanelProfile() ? '' : requestedCurationIdFromUrl();
+    if (requestedCurationId) {
+      const requestedCurationProfile = editorialProfileById(requestedCurationId);
+      if (requestedCurationProfile && editorialProfileIsVisible(requestedCurationProfile)) {
+        // Persiste a escolha para que o estado salvo passe a refletir o link aberto,
+        // em vez de restaurar uma curadoria anterior numa navegação futura.
+        applyPanelSettings(requestedCurationProfile.settings, true);
+        return;
+      }
+    }
+
     const defaults = defaultPanelSettings();
     let stored = null;
     try {
@@ -2528,6 +2547,17 @@ function eventProgram(event) {
     return normalizeText(value)
       .replace(/[^a-z0-9]+/g, '-')
       .replace(/^-+|-+$/g, '');
+  }
+
+  function requestedCurationIdFromUrl() {
+    try {
+      const url = new URL(window.location.href);
+      const short = String(url.searchParams.get('c') || '').trim().toLowerCase();
+      if (short) return PUBLIC_CURATION_ALIASES[short] || '';
+      return String(url.searchParams.get('curadoria') || '').trim();
+    } catch {
+      return '';
+    }
   }
 
   function requestedPanelProfile() {
@@ -4479,6 +4509,13 @@ function eventProgram(event) {
       state.utilityData = utilityData && Array.isArray(utilityData.itens) ? utilityData : { itens: [] };
       state.siteCurationsData = siteCurationsData;
       state.config = config || {};
+
+      const requestedAgendaCuration = requestedCurationIdFromUrl();
+      if (requestedAgendaCuration && agendaCurationEntries()
+        .some(curation => curation.id === requestedAgendaCuration)) {
+        state.mobileCuration = requestedAgendaCuration;
+      }
+
       const siteLayer = siteCurationsContent.apply(siteCurationsData, {
         eventos: data.eventos,
         livros: state.booksData.livros,
@@ -4577,7 +4614,9 @@ function eventProgram(event) {
   }
 
   window.addEventListener('mural:panel-profile-request', event => {
-    toggleEditorialPanelProfile(event.detail?.profile);
+    const profileId = String(event.detail?.profile || '').trim();
+    if (!profileId || activeEditorialPanelProfileId() === profileId) return;
+    applyEditorialPanelProfile(profileId);
   });
 
   // Adicionar listeners de teclado
