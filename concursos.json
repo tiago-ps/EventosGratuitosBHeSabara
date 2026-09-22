@@ -1,11 +1,12 @@
 {
-  "schema": 9,
+  "schema": 10,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-09-15T13:59:59.970275+00:00",
+  "coletado_em_utc": "2026-09-21T15:25:55.046956+00:00",
   "total": 25,
   "concursos": [
     {
+      "id": "pci:noticia:caraguaprev-sp-abre-concurso-publico-com-salarios-de-ate-7104",
       "titulo": "CaraguaPrev - Instituto de Previdência do Município de Caraguatatuba",
       "url": "https://www.pciconcursos.com.br/noticias/caraguaprev-sp-abre-concurso-publico-com-salarios-de-ate-7104",
       "imagem": "https://cdn.pci.app.br/img/i/7c529274eb88ade342c2762f502e454c.png",
@@ -38,6 +39,46 @@
       ]
     },
     {
+      "id": "pci:noticia:emdurb-de-bauru-sp-abre-processo-seletivo-para-diversos-cargos",
+      "titulo": "EMDURB - Empresa Municipal de Desenvolvimento Urbano e Rural de Bauru",
+      "url": "https://www.pciconcursos.com.br/noticias/emdurb-de-bauru-sp-abre-processo-seletivo-para-diversos-cargos",
+      "imagem": "https://cdn.pci.app.br/img/i/3cc9812558270dd2d74b62823d2e3237.png",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "deste quinta-feira, 17 de setembro de 2026 a empresa municipal de desenvolvimento urbano e rural de bauru ( emdurb ), no estado de sao paulo, abriu um processo seletivo para profissionais de nivel medio e superior. segundo o edital, as oportunidades sao para os cargos de: nivel superior analista de tecnologia da informacao (1 vaga) contador (1 vaga) nivel medio agente de fiscalizacao de transito got (1 vaga) agente de transporte (1 vaga) eletricista instalador (1 vaga) tecnico em seguranca do trabalho (1 vaga) tecnico em tecnologia da informacao (1 vaga) a carga horaria e de 44h semanais para todos os cargos. os sala"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "SP",
+      "cidade": "",
+      "inscricoes_inicio_texto": "17 de setembro de 2026",
+      "inscricoes_fim_texto": "4 de outubro de 2026",
+      "inscricoes_texto": "17 de setembro de 2026 a 4 de outubro de 2026",
+      "remuneracao_faixa_texto": "R$ 5.457,24",
+      "remuneracao_fonte": "catalogo",
+      "cargos_compativeis": [
+        {
+          "cargo": "NÍVEL SUPERIOR Analista de Tecnologia da Informação",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        },
+        {
+          "cargo": "Técnico em Tecnologia da Informação",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ]
+    },
+    {
+      "id": "pci:noticia:prefeitura-de-anhembi-sp-abre-concurso-publico-com-salarios-de-ate-6407",
       "titulo": "Prefeitura de Anhembi",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-anhembi-sp-abre-concurso-publico-com-salarios-de-ate-6407",
       "imagem": "https://cdn.pci.app.br/img/i/4f433fb9d7703d1d0533c5818bc79bf4.png",
@@ -70,6 +111,7 @@
       ]
     },
     {
+      "id": "pci:noticia:seplag-rj-publica-retificacoes-do-concurso-com-60-vagas-para-cargos-de-nivel-superior",
       "titulo": "SEPLAG - Secretaria de Estado de Planejamento e Gestão",
       "url": "https://www.pciconcursos.com.br/noticias/seplag-rj-publica-retificacoes-do-concurso-com-60-vagas-para-cargos-de-nivel-superior",
       "imagem": "https://cdn.pci.app.br/img/i/02a0902e96add5bdcef15c892a527dbb.png",
@@ -102,44 +144,7 @@
       ]
     },
     {
-      "titulo": "UFRRJ - Universidade Federal Rural do Rio de Janeiro",
-      "url": "https://www.pciconcursos.com.br/noticias/ufrrj-rj-abre-concurso-publico-para-cargos-tecnico-administrativos-de-nivel-superior",
-      "imagem": "https://cdn.pci.app.br/img/i/a155e6d329661fbee426b436071ea878.png",
-      "formacoes_compativeis": [
-        "Sistemas de Informação / Computação"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Sistemas de Informação / Computação",
-          "nivel": "superior",
-          "evidencia": "ificos. concursos › noticias › sudeste sexta-feira, 21 de agosto de 2026 a universidade federal rural do rio de janeiro (ufrrj) abriu um concurso publico para preencher vagas em cargos do quadro de pessoal tecnico-administrativo. segundo o edital, as oportunidades sao para os cargos de: analista de tecnologia da informacao/sistemas (2 vagas) analista de tecnologia da informacao/infraestrutura (2 vagas) engenheiro de seguranca do trabalho (1 vaga) fonoaudiologo (1 vaga) medico clinico geral (1 vaga) medico psiquiatra (2 vagas) medico veterinario/cirurgia de pequenos animais (1 vaga) zootecnista (2 vagas) a jornada de "
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "RJ",
-      "cidade": "",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "",
-      "inscricoes_texto": "",
-      "remuneracao_faixa_texto": "R$ 5.215,39",
-      "remuneracao_fonte": "catalogo",
-      "cargos_compativeis": [
-        {
-          "cargo": "Analista de Tecnologia da Informação/Sistemas",
-          "vagas_texto": "2 vagas",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        },
-        {
-          "cargo": "Analista de Tecnologia da Informação/Infraestrutura",
-          "vagas_texto": "2 vagas",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        }
-      ]
-    },
-    {
+      "id": "pci:noticia:ufrrj-publica-edital-de-concurso-publico-para-cargos-de-nivel-medio-e-tecnico",
       "titulo": "UFRRJ - Universidade Federal Rural do Rio de Janeiro",
       "url": "https://www.pciconcursos.com.br/noticias/ufrrj-publica-edital-de-concurso-publico-para-cargos-de-nivel-medio-e-tecnico",
       "imagem": "https://cdn.pci.app.br/img/i/a155e6d329661fbee426b436071ea878.png",
@@ -160,7 +165,7 @@
       "inscricoes_inicio_texto": "14 de setembro de 2026",
       "inscricoes_fim_texto": "13 de outubro de 2026",
       "inscricoes_texto": "14 de setembro de 2026 a 13 de outubro de 2026",
-      "remuneracao_faixa_texto": "R$ 5.215,39",
+      "remuneracao_faixa_texto": "R$ 3.181,39",
       "remuneracao_fonte": "catalogo",
       "cargos_compativeis": [
         {
@@ -178,6 +183,7 @@
       ]
     },
     {
+      "id": "pci:noticia:prefeitura-de-contagem-mg-abre-concurso-publico-com-salarios-de-ate-13305",
       "titulo": "Prefeitura de Contagem",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-contagem-mg-abre-concurso-publico-com-salarios-de-ate-13305",
       "imagem": "https://cdn.pci.app.br/img/i/7de2c0dbeff437f4cd0052b4d16f8acf.png",
@@ -210,6 +216,7 @@
       ]
     },
     {
+      "id": "pci:noticia:camara-de-capelinha-mg-retifica-edital-do-concurso-publico-com-salarios-de-ate-4527",
       "titulo": "Câmara de Capelinha",
       "url": "https://www.pciconcursos.com.br/noticias/camara-de-capelinha-mg-retifica-edital-do-concurso-publico-com-salarios-de-ate-4527",
       "imagem": "https://cdn.pci.app.br/img/i/a1d5b403f9ea399b00f7cb388788453a.png",
@@ -242,8 +249,9 @@
       ]
     },
     {
+      "id": "pci:noticia:dmae-de-uberlandia-mg-retifica-edital-de-concurso-publico",
       "titulo": "DMAE - Departamento Municipal de Água e Esgoto de Uberlândia",
-      "url": "https://www.pciconcursos.com.br/noticias/dmae-de-uberlandia-mg-abre-concurso-publico-com-vagas-para-diversos-niveis-de-escolaridade",
+      "url": "https://www.pciconcursos.com.br/noticias/dmae-de-uberlandia-mg-retifica-edital-de-concurso-publico",
       "imagem": "https://cdn.pci.app.br/img/i/eed57af4c8ee7b02770437af8c9a81aa.png",
       "formacoes_compativeis": [
         "Técnico em Informática"
@@ -274,8 +282,9 @@
       ]
     },
     {
+      "id": "pci:noticia:fumep-de-sete-lagoas-mg-retifica-concurso-publico-para-diversos-niveis-de-escolaridade",
       "titulo": "FUMEP - Fundação Municipal de Ensino Profissionalizante de Sete Lagoas",
-      "url": "https://www.pciconcursos.com.br/noticias/fumep-de-sete-lagoas-mg-abre-concurso-publico-para-diversos-niveis-de-escolaridade",
+      "url": "https://www.pciconcursos.com.br/noticias/fumep-de-sete-lagoas-mg-retifica-concurso-publico-para-diversos-niveis-de-escolaridade",
       "imagem": "https://cdn.pci.app.br/img/i/a08ecc9bdb956a3140668a2d27e53828.png",
       "formacoes_compativeis": [
         "Engenharia de Automação",
@@ -318,6 +327,7 @@
       ]
     },
     {
+      "id": "pci:noticia:hospital-metropolitano-odilon-behrens-mg-abre-concurso-publico-com-salarios-de-ate-7397",
       "titulo": "HOB - Hospital Metropolitano Odilon Behrens",
       "url": "https://www.pciconcursos.com.br/noticias/hospital-metropolitano-odilon-behrens-mg-abre-concurso-publico-com-salarios-de-ate-7397",
       "imagem": "https://cdn.pci.app.br/img/i/3cb9e27177bb7edb07261559df0f1c46.png",
@@ -362,6 +372,7 @@
       ]
     },
     {
+      "id": "pci:noticia:prefeitura-de-belo-vale-mg-abre-concurso-publico-com-diversas-vagas-e-salarios-de-ate-8000",
       "titulo": "Prefeitura de Belo Vale",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-belo-vale-mg-abre-concurso-publico-com-diversas-vagas-e-salarios-de-ate-8000",
       "imagem": "https://cdn.pci.app.br/img/i/c98e358f2031a5e4944772e59343e5a9.png",
@@ -394,6 +405,7 @@
       ]
     },
     {
+      "id": "pci:noticia:prefeitura-de-carmo-da-mata-mg-divulga-retificacao-de-concurso-publico",
       "titulo": "Prefeitura de Carmo da Mata",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-carmo-da-mata-mg-divulga-retificacao-de-concurso-publico",
       "imagem": "https://cdn.pci.app.br/img/i/ab66ad80592bf51690b5335716372bd0.png",
@@ -426,6 +438,7 @@
       ]
     },
     {
+      "id": "pci:noticia:prefeitura-de-coromandel-mg-abre-concurso-publico-com-salarios-de-ate-7821",
       "titulo": "Prefeitura de Coromandel",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-coromandel-mg-abre-concurso-publico-com-salarios-de-ate-7821",
       "imagem": "https://cdn.pci.app.br/img/i/175e8ccb2ed451d783e4714f0aa2f8c1.png",
@@ -458,6 +471,7 @@
       ]
     },
     {
+      "id": "pci:noticia:prefeitura-de-dores-do-indaia-mg-retifica-edital-de-concurso-publico-com-salarios-de-ate-18702",
       "titulo": "Prefeitura de Dores do Indaiá",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-dores-do-indaia-mg-retifica-edital-de-concurso-publico-com-salarios-de-ate-18702",
       "imagem": "https://cdn.pci.app.br/img/i/232efc3c99ca77c691a9eef47ecda1b3.png",
@@ -496,6 +510,7 @@
       ]
     },
     {
+      "id": "pci:noticia:prefeitura-de-ipaba-mg-retifica-edital-de-concurso-publico-com-salarios-de-ate-5275",
       "titulo": "Prefeitura de Ipaba",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-ipaba-mg-retifica-edital-de-concurso-publico-com-salarios-de-ate-5275",
       "imagem": "https://cdn.pci.app.br/img/i/307411641985d6cc48a5320cc173849e.png",
@@ -528,6 +543,7 @@
       ]
     },
     {
+      "id": "pci:noticia:prefeitura-de-pedro-teixeira-mg-publica-edital-de-concurso-publico-com-salarios-de-ate-5494",
       "titulo": "Prefeitura de Pedro Teixeira",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-pedro-teixeira-mg-publica-edital-de-concurso-publico-com-salarios-de-ate-5494",
       "imagem": "https://cdn.pci.app.br/img/i/b7726c9aae144008454dee3887826030.png",
@@ -560,6 +576,7 @@
       ]
     },
     {
+      "id": "pci:noticia:prefeitura-de-piracema-mg-abre-concurso-e-processo-seletivo-com-diversas-vagas",
       "titulo": "Prefeitura de Piracema",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-piracema-mg-abre-concurso-e-processo-seletivo-com-diversas-vagas",
       "imagem": "https://cdn.pci.app.br/img/i/3d740a107e7990d7db076db948811802.png",
@@ -592,6 +609,7 @@
       ]
     },
     {
+      "id": "pci:noticia:crm-pr-abre-concurso-publico-com-salarios-de-ate-6994",
       "titulo": "CRM - Conselho Regional de Medicina do Estado do Paraná",
       "url": "https://www.pciconcursos.com.br/noticias/crm-pr-abre-concurso-publico-com-salarios-de-ate-6994",
       "imagem": "https://cdn.pci.app.br/img/i/3e0ab25b80d247b64f33af998889a991.png",
@@ -642,8 +660,9 @@
       ]
     },
     {
+      "id": "pci:noticia:prefeitura-de-alvorada-rs-retifica-concurso-publico-com-salarios-de-ate-18974",
       "titulo": "Prefeitura de Alvorada",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-alvorada-rs-anuncia-concurso-publico-com-salarios-de-ate-18974",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-alvorada-rs-retifica-concurso-publico-com-salarios-de-ate-18974",
       "imagem": "https://cdn.pci.app.br/img/i/00f5df785afbb7b0d109128451d5ac79.png",
       "formacoes_compativeis": [
         "Técnico em Informática"
@@ -660,8 +679,8 @@
       "uf": "RS",
       "cidade": "Alvorada",
       "inscricoes_inicio_texto": "28 de agosto de 2026",
-      "inscricoes_fim_texto": "26 de setembro de 2026",
-      "inscricoes_texto": "28 de agosto de 2026 a 26 de setembro de 2026",
+      "inscricoes_fim_texto": "18 de outubro de 2026",
+      "inscricoes_texto": "28 de agosto de 2026 a 18 de outubro de 2026",
       "remuneracao_faixa_texto": "R$ 18.974,55",
       "remuneracao_fonte": "noticia",
       "cargos_compativeis": [
@@ -674,9 +693,10 @@
       ]
     },
     {
-      "titulo": "FAHECE - Fundação de Apoio ao Hemosc e Cepon",
-      "url": "https://www.pciconcursos.com.br/noticias/fahece-sc-abre-processo-seletivo-para-tecnico-em-informatica-no-cepon-de-florianopolis",
-      "imagem": "https://cdn.pci.app.br/img/i/1eadf081f48716c633c602d0544360fe.png",
+      "id": "pci:noticia:prefeitura-de-erval-velho-sc-retifica-concurso-publico-com-salarios-de-ate-22044",
+      "titulo": "Prefeitura de Erval Velho",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-erval-velho-sc-retifica-concurso-publico-com-salarios-de-ate-22044",
+      "imagem": "https://cdn.pci.app.br/img/i/98266ad095d144a964c6e9189a6c86f5.png",
       "formacoes_compativeis": [
         "Técnico em Informática"
       ],
@@ -684,28 +704,29 @@
         {
           "nome": "Técnico em Informática",
           "nivel": "tecnico",
-          "evidencia": "fahece - sc abre processo seletivo para tecnico em informatica no cepon de florianopolis a oportunidade oferece remuneracao de r$ 3.066,92, incluindo beneficios como planos de saude e odontologicos, refeicao no local e premiacao por desempenho. concursos › noticias › sul segunda-feira, 14 de setembro de 2026 a fahece divulgou um processo seletivo para a contra"
+          "evidencia": "professor de educacao fisica (cr) professor de lingua estrangeira - ingles (cr) professor de informatica (cr) psicologo (1 vaga + cr) tecnico agricola (cr) tecnico em atividades administrativas (cr) tecnico em contabilidade (cr) tecnico em edificacao e manutencao (1 + cr) tecnico em enfermagem (cr) tecnico em informatica (cr) tecnico em tesouraria (cr) a jornada semanal varia de 20 a 40 horas, com remuneracoes de r$ 1.892,66 a r$ 22.044,76, conforme o cargo. as inscricoes devem ser realizadas de 17 de setembro de 2026 ate as 14h do dia 1o de outubro de 2026, pelo site www.aprendersc.srv.br . as taxas de inscricao v"
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
       "uf": "SC",
-      "cidade": "",
-      "inscricoes_inicio_texto": "14 de setembro de 2026",
-      "inscricoes_fim_texto": "19 de setembro de 2026",
-      "inscricoes_texto": "14 de setembro de 2026 a 19 de setembro de 2026",
-      "remuneracao_faixa_texto": "R$ 5.538,88",
-      "remuneracao_fonte": "catalogo",
+      "cidade": "Erval Velho",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "R$ 22.044,76",
+      "remuneracao_fonte": "noticia",
       "cargos_compativeis": [
         {
-          "cargo": "Técnico em Informática I",
-          "vagas_texto": "1 vaga",
+          "cargo": "Técnico em Informática",
+          "vagas_texto": "Cadastro de Reserva",
           "formacao": "Técnico em Informática",
           "confianca": "alta"
         }
       ]
     },
     {
+      "id": "pci:noticia:prefeitura-de-massaranduba-sc-retifica-edital-de-concurso-com-salarios-de-ate-24722",
       "titulo": "Prefeitura de Massaranduba",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-massaranduba-sc-retifica-edital-de-concurso-com-salarios-de-ate-24722",
       "imagem": "https://cdn.pci.app.br/img/i/b362c7f66ff3bc7b091b909ff20454f1.png",
@@ -738,6 +759,7 @@
       ]
     },
     {
+      "id": "pci:noticia:sefaz-sc-abre-concurso-publico-para-o-cargo-de-auditor-estadual-de-financas-publicas",
       "titulo": "SEFAZ - Secretaria de Estado da Fazenda de Santa Catarina",
       "url": "https://www.pciconcursos.com.br/noticias/sefaz-sc-abre-concurso-publico-para-o-cargo-de-auditor-estadual-de-financas-publicas",
       "imagem": "https://cdn.pci.app.br/img/i/bf56624401433deefeba225fe6a5a0af.png",
@@ -770,6 +792,7 @@
       ]
     },
     {
+      "id": "pci:noticia:camara-de-rio-verde-go-abre-concursos-publicos-com-salarios-de-ate-7241",
       "titulo": "Câmara de Rio Verde",
       "url": "https://www.pciconcursos.com.br/noticias/camara-de-rio-verde-go-abre-concursos-publicos-com-salarios-de-ate-7241",
       "imagem": "https://cdn.pci.app.br/img/i/fe407be121567c6856ec34592af651da.png",
@@ -802,8 +825,9 @@
       ]
     },
     {
+      "id": "pci:noticia:tce-go-retifica-concurso-publico-para-tecnicos-de-controle-externo",
       "titulo": "TCE - Tribunal de Contas do Estado de Goiás",
-      "url": "https://www.pciconcursos.com.br/noticias/tce-go-abre-concurso-publico-para-tecnicos-de-controle-externo",
+      "url": "https://www.pciconcursos.com.br/noticias/tce-go-retifica-concurso-publico-para-tecnicos-de-controle-externo",
       "imagem": "https://cdn.pci.app.br/img/i/49d0f07f837fcc4f15672d89520c62f4.png",
       "formacoes_compativeis": [
         "Sistemas de Informação / Computação"
@@ -812,7 +836,7 @@
         {
           "nome": "Sistemas de Informação / Computação",
           "nivel": "superior",
-          "evidencia": "tce - go abre concurso publico para tecnicos de controle externo oportunidades contemplam cargos de nivel medio nas areas administrativas e de tecnologia da informacao, com remuneracao inicial de r$ 11.862,19 e selecao composta por provas objetivas e discursivas. concursos › noticias › centro-oeste terca-feira, 25 de agosto de 2026 o tribunal de contas do estado de goias (tce-go) abriu um concurso publico visando o preenchimento de vagas para profissionais de niv"
+          "evidencia": "tce - go retifica concurso publico para tecnicos de controle externo oportunidades contemplam cargos de nivel medio nas areas administrativas e de tecnologia da informacao, com remuneracao inicial de r$ 11.862,19 e selecao composta por provas objetivas e discursivas. concursos › noticias › centro-oeste quarta-feira, 16 de setembro de 2026 o tribunal de contas do estado de goias (tce-go) abriu um concurso publico visando o preenchimento de vagas para profissionais de "
         }
       ],
       "fonte": "PCI Concursos",
@@ -834,6 +858,7 @@
       ]
     },
     {
+      "id": "pci:noticia:camara-de-ponta-pora-ms-abre-concurso-publico-com-salarios-de-ate-7999",
       "titulo": "Câmara de Ponta Porã",
       "url": "https://www.pciconcursos.com.br/noticias/camara-de-ponta-pora-ms-abre-concurso-publico-com-salarios-de-ate-7999",
       "imagem": "https://cdn.pci.app.br/img/i/7b07707bbfc00efd330774d4eb0fa052.png",
