@@ -1,8 +1,14 @@
 {
   "itens": [
     {
+      "schema_version": 1,
       "id": "site:apoio:setembro-cvv-188",
       "tipo_conteudo": "utilidade_publica",
+      "natureza": "direito_orientacao",
+      "colecao": "saude-mental",
+      "ordem": 10,
+      "status_editorial": "ativo",
+      "publicar": true,
       "areas_utilidade": [
         "Saúde Mental"
       ],
@@ -38,8 +44,14 @@
       "site_only": true
     },
     {
+      "schema_version": 1,
       "id": "site:apoio:setembro-rede-publica",
       "tipo_conteudo": "utilidade_publica",
+      "natureza": "direito_orientacao",
+      "colecao": "saude-mental",
+      "ordem": 20,
+      "status_editorial": "ativo",
+      "publicar": true,
       "areas_utilidade": [
         "Saúde Mental"
       ],
@@ -76,8 +88,14 @@
       "site_only": true
     },
     {
+      "schema_version": 1,
       "id": "site:apoio:setembro-universidades",
       "tipo_conteudo": "utilidade_publica",
+      "natureza": "direito_orientacao",
+      "colecao": "saude-mental",
+      "ordem": 30,
+      "status_editorial": "ativo",
+      "publicar": true,
       "areas_utilidade": [
         "Saúde Mental"
       ],
@@ -113,8 +131,14 @@
       "site_only": true
     },
     {
+      "schema_version": 1,
       "id": "site:apoio:setembro-informacao-confiavel",
       "tipo_conteudo": "utilidade_publica",
+      "natureza": "direito_orientacao",
+      "colecao": "saude-mental",
+      "ordem": 40,
+      "status_editorial": "ativo",
+      "publicar": true,
       "areas_utilidade": [
         "Saúde Mental"
       ],
@@ -150,8 +174,14 @@
       "site_only": true
     },
     {
+      "schema_version": 1,
       "id": "utilidade:manual:miniguia-para-registrar-a-violencia-sem-colocar-sua-seguranca-em-risco",
       "tipo_conteudo": "utilidade_publica",
+      "natureza": "direito_orientacao",
+      "colecao": "protecao-seguranca",
+      "ordem": 10,
+      "status_editorial": "ativo",
+      "publicar": true,
       "areas_utilidade": [
         "Agosto Lilás",
         "Enfrentamento à violência contra a mulher",
