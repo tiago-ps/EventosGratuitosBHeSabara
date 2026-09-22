@@ -93,20 +93,48 @@
 
       const manifestLink = document.querySelector('link[rel="manifest"]');
       if (manifestLink) {
-        manifestLink.href = 'imagens/app-icons/manifest-tem-sim-uai.webmanifest?v=3';
+        manifestLink.href = 'imagens/app-icons/manifest-tem-sim-uai.webmanifest?v=4';
       }
 
       const favicon = document.querySelector('link[rel="icon"]');
       if (favicon) {
         favicon.type = 'image/png';
         favicon.sizes = '32x32';
-        favicon.href = 'imagens/app-icons/favicon-tem-sim-uai-32.png?v=3';
+        favicon.href = 'imagens/app-icons/favicon-tem-sim-uai-32.png?v=4';
       }
 
       const appleIcon = document.querySelector('link[rel="apple-touch-icon"]');
       if (appleIcon) {
-        appleIcon.href = 'imagens/app-icons/apple-touch-icon-tem-sim-uai.png?v=3';
+        appleIcon.href = 'imagens/app-icons/apple-touch-icon-tem-sim-uai.png?v=4';
       }
+
+      // A logo horizontal correta também fica restrita ao GitHub Pages de teste.
+      const testLogoSrc = 'imagens/marca/teste-tem-sim-uai/logo-mural-cultural.png?v=1';
+      const replaceTestLogos = (root = document) => {
+        const selector = 'img[src="imagens/marca/logo-mural-cultural.png"]';
+        if (root.matches && root.matches(selector)) {
+          root.src = testLogoSrc;
+          root.alt = 'Tem Sim, Uai';
+        }
+        if (root.querySelectorAll) {
+          root.querySelectorAll(selector).forEach((img) => {
+            img.src = testLogoSrc;
+            img.alt = 'Tem Sim, Uai';
+          });
+        }
+      };
+
+      document.addEventListener('DOMContentLoaded', () => {
+        replaceTestLogos(document);
+        const observer = new MutationObserver((mutations) => {
+          mutations.forEach((mutation) => {
+            mutation.addedNodes.forEach((node) => {
+              if (node && node.nodeType === 1) replaceTestLogos(node);
+            });
+          });
+        });
+        observer.observe(document.body, { childList: true, subtree: true });
+      });
     }
   } catch (_) {
     // Falha silenciosa: o site mantém o layout público normal.
