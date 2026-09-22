@@ -82,25 +82,18 @@ async function dispatch(type, event) {
 }
 
 (async () => {
-  assert.equal(sw.CACHE_VERSION, 'mural-cultural-v100-stylesheets-curadorias');
+  assert.equal(sw.CACHE_VERSION, 'mural-cultural-v133-relacoes-eventos');
   assert.equal(sw.CURATION_IMAGE_PREFIX, '/imagens/curadorias/');
   for (const asset of [
-    './css/styles.css?v=71',
-    './css/eventos-manuais-ui.css?v=43',
-    './css/concursos-mural.css?v=2',
-    './js/core/rotacao.js?v=1',
-    './css/temas-visuais.css?v=8',
-    './js/tema-visual-boot.js?v=3',
-    './js/conteudos/cursos.js?v=3',
-    './js/conteudos/concursos.js?v=2',
-    './js/conteudos/filmes.js?v=6',
-    './js/curadorias-site.js?v=4',
-    './js/app.js?v=91',
-    './js/temas-visuais.js?v=8',
+    './css/styles.css?v=81',
+    './js/curadorias-site.js?v=11',
+    './js/relacoes-eventos.js?v=1',
+    './js/app.js?v=106',
     './js/eventos-manuais-ui.js?v=44'
   ]) {
     assert.ok(sw.CORE_ASSETS.includes(asset), `Precache ausente: ${asset}`);
   }
+  assert.ok(sw.DATA_PATHS.includes('/relacoes-eventos.json'));
   assert.ok(sw.DATA_PATHS.includes('/cursos.json'));
   assert.ok(sw.DATA_PATHS.includes('/concursos.json'));
   assert.ok(sw.DATA_PATHS.includes('/filmes.json'));
@@ -159,6 +152,8 @@ async function dispatch(type, event) {
   assert.equal(offlineImage.body, `imagem-nova:${imageUrl}`);
 
   const appSource = fs.readFileSync(path.join(root, 'js/app.js'), 'utf8');
+  assert.match(appSource, /loadOptionalJson\(EVENT_RELATIONS_URL, \{ versao: 1, relacoes: \[\] \}\)/);
+  assert.match(appSource, /eventRelationsContent\.organizerName/);
   assert.match(appSource, /loadOptionalJson\(COURSES_URL, \{ cursos: \[\] \}\)/);
   assert.match(appSource, /loadOptionalJson\(CONTESTS_URL, \{ concursos: \[\] \}\)/);
   assert.match(appSource, /loadOptionalJson\(FILMS_URL, \{ filmes: \[\] \}\)/);

@@ -2,6 +2,7 @@
   'use strict';
 
   const DATA_URL = 'eventos.json';
+  const EVENT_RELATIONS_URL = 'relacoes-eventos.json';
   const BOOKS_URL = 'livros.json';
   const COURSES_URL = 'cursos.json';
   const CONTESTS_URL = 'concursos.json';
@@ -43,6 +44,7 @@
   const contestsContent = window.MuralCultural.contents.contests;
   const filmsContent = window.MuralCultural.contents.films;
   const siteCurationsContent = window.MuralCultural.siteCurations;
+  const eventRelationsContent = window.MuralCultural.eventRelations;
   let deferredInstallPrompt = null;
   let bookLocationsDialog = null;
 
@@ -103,6 +105,8 @@
     filmsData: null,
     utilityData: null,
     siteCurationsData: null,
+    eventRelationsData: null,
+    eventRelationsByEvent: new Map(),
     config: null,
     allEvents: [],
     allBooks: [],
@@ -1074,6 +1078,12 @@
 function eventProgram(event) {
   const program = String(event?.programa || '').trim();
   if (program) return program;
+
+  const organizerName = eventRelationsContent.organizerName(
+    state.eventRelationsByEvent,
+    event
+  );
+  if (organizerName) return organizerName;
 
   const institutionId = String(event?.instituicao_id || '').trim();
   if (institutionId && EVENT_INSTITUTION_NAMES[institutionId]) {
@@ -4448,8 +4458,19 @@ function eventProgram(event) {
 
   async function load() {
     try {
-      const [response, booksData, coursesData, contestsData, filmsData, utilityData, siteCurationsData, config] = await Promise.all([
+      const [
+        response,
+        eventRelationsData,
+        booksData,
+        coursesData,
+        contestsData,
+        filmsData,
+        utilityData,
+        siteCurationsData,
+        config
+      ] = await Promise.all([
         fetch(`${DATA_URL}?v=${Date.now()}`, { cache: 'no-store' }),
+        loadOptionalJson(EVENT_RELATIONS_URL, { versao: 1, relacoes: [] }),
         loadOptionalJson(BOOKS_URL, { livros: [] }),
         loadOptionalJson(COURSES_URL, { cursos: [] }),
         loadOptionalJson(CONTESTS_URL, { concursos: [] }),
@@ -4470,6 +4491,12 @@ function eventProgram(event) {
       if (!data || !Array.isArray(data.eventos)) throw new Error('Formato inválido');
 
       state.data = data;
+      state.eventRelationsData = (
+        eventRelationsData &&
+        eventRelationsData.versao === 1 &&
+        Array.isArray(eventRelationsData.relacoes)
+      ) ? eventRelationsData : { versao: 1, relacoes: [] };
+      state.eventRelationsByEvent = eventRelationsContent.buildIndex(state.eventRelationsData);
       state.booksData = booksData && Array.isArray(booksData.livros) ? booksData : { livros: [] };
       state.coursesData = coursesData && Array.isArray(coursesData.cursos) ? coursesData : { cursos: [] };
       state.contestsData = contestsData && Array.isArray(contestsData.concursos)
