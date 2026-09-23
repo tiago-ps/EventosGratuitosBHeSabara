@@ -299,7 +299,10 @@
       // Botão nativo: clique, Enter e Espaço usam o mesmo evento, sem duplicação.
       banner.addEventListener('click', () => {
         window.dispatchEvent(new CustomEvent('mural:panel-profile-request', {
-          detail: { profile: banner.dataset.panelProfile }
+          detail: {
+            profile: banner.dataset.panelProfile,
+            toggle: true
+          }
         }));
         // A troca do slide pode desconectar o botão durante o clique por teclado.
         if (banner.isConnected) banner.focus({ preventScroll: true });
