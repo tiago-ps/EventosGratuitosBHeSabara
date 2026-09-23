@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v134-shared-brand-logo';
+const CACHE_VERSION = 'mural-cultural-v135-banner-toggle';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -21,8 +21,8 @@ const CORE_ASSETS = [
   './js/conteudos/concursos.js?v=2',
   './js/conteudos/filmes.js?v=6',
   './js/curadorias-site.js?v=11',
-  './js/app.js?v=106',
-  './js/temas-visuais.js?v=12',
+  './js/app.js?v=107',
+  './js/temas-visuais.js?v=13',
   './js/eventos-manuais-ui.js?v=44',
   './js/ios-install.js?v=2',
   './js/painel-navegacao-modos.js?v=1',
