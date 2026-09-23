@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "descricao": "Metadados usados para previews de compartilhamento. Imagens reaproveitam assets PNG já existentes no site.",
+  "site": {
+    "title": "Tem Sim, Uai",
+    "description": "Descubra cultura, livros, cursos, oportunidades e informações úteis.",
+    "image": "imagens/marca/logo-mural-cultural.png",
+    "image_alt": "Tem Sim, Uai",
+    "url": "https://temsimuai.com.br/"
+  },
+  "aliases": {
+    "saude-mental": "saude-mental",
+    "fuvest": "vestibular-fuvest-2027",
+    "ufmg": "vestibular-ufmg-seriado-2026"
+  },
+  "curadorias": {
+    "saude-mental": {
+      "title": "Saúde Mental — Tem Sim, Uai",
+      "description": "Uma curadoria sobre saúde mental, bem-estar emocional, pertencimento, escuta, acolhimento e redes de apoio.",
+      "image": "imagens/curadorias/saude-mental/saude-mental-banner.png",
+      "image_alt": "Saúde Mental — cuidado, bem-estar e redes de apoio"
+    },
+    "vestibular-fuvest-2027": {
+      "title": "Vestibular FUVEST 2027 — Tem Sim, Uai",
+      "description": "Curadoria das nove leituras obrigatórias do Vestibular FUVEST 2027, com exemplares, obras integrais e links para catálogos de bibliotecas.",
+      "image": "imagens/curadorias/vestibular-fuvest-2027/banner.png",
+      "image_alt": "Vestibular FUVEST 2027 — Leituras obrigatórias"
+    },
+    "vestibular-ufmg-seriado-2026": {
+      "title": "Seriado UFMG 2026 — Tem Sim, Uai",
+      "description": "Curadoria das obras literárias e artísticas indicadas para as provas do Seriado UFMG 2026, organizadas por ciclo e etapa.",
+      "image": "imagens/curadorias/vestibular-ufmg-seriado-2026/vestibular-ufmg-banner.png",
+      "image_alt": "Obras para Vestibular — UFMG"
+    }
+  }
+}
