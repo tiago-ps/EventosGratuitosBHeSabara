@@ -52,9 +52,7 @@
     "themeColor": "#120626"
   },
   "membros": {
-    "eventos": [
-      "manual-miniguia-para-registrar-a-violencia-sem-colocar-sua-seguranca-em-risco-2026-01-01"
-    ],
+    "eventos": [],
     "livros": [
       "parem-de-nos-matar",
       "a-fantasia-da-historia-feminista",
@@ -128,7 +126,9 @@
       "telabrasil:363",
       "telabrasil:313"
     ],
-    "utilidade_publica": []
+    "utilidade_publica": [
+      "utilidade:manual:miniguia-para-registrar-a-violencia-sem-colocar-sua-seguranca-em-risco"
+    ]
   },
   "overlays": {
     "eventos": {},
