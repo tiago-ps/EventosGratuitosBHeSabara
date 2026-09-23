@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v133-curation-link-precedence';
+const CACHE_VERSION = 'mural-cultural-v134-shared-brand-logo';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -15,7 +15,7 @@ const CORE_ASSETS = [
   './css/painel-modos.css?v=2',
   './css/painel-acoes-contextuais.css?v=2',
   './css/tem-sim-uai-painel.css?v=1',
-  './js/tema-visual-boot.js?v=10',
+  './js/tema-visual-boot.js?v=11',
   './js/core/rotacao.js?v=1',
   './js/conteudos/cursos.js?v=3',
   './js/conteudos/concursos.js?v=2',
