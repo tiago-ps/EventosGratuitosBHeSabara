@@ -4,6 +4,16 @@
   "descricao": "Dados editoriais complementares exclusivos da interface de teste. Não substituem nem alteram os catálogos centrais.",
   "curadorias": [
     {
+      "id": "teste",
+      "arquivo": "curadorias/teste.json",
+      "nome": "teste",
+      "tema": "teste",
+      "permanente": false,
+      "ativo_de": "",
+      "ativo_ate": "",
+      "ordem": 0
+    },
+    {
       "id": "saude-mental",
       "arquivo": "curadorias/saude-mental.json",
       "nome": "Saúde Mental",

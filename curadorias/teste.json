@@ -1,0 +1,27 @@
+{
+  "id": "teste",
+  "status_editorial": "em_analise",
+  "membros": {
+    "concursos": [],
+    "cursos": [],
+    "eventos": [],
+    "filmes": [],
+    "livros": [
+      "poncia-vicencio",
+      "ifmg-sabara-fisico-88547",
+      "ifmg-sabara-fisico-96122",
+      "ifmg-virtual-228284",
+      "ifmg-virtual-184721"
+    ],
+    "utilidade_publica": []
+  },
+  "nome": "teste",
+  "tema": "teste",
+  "permanente": false,
+  "ativo_de": "",
+  "ativo_ate": "",
+  "ordem": 0,
+  "titulo_editorial": "",
+  "subtitulo_editorial": "",
+  "texto_introdutorio": ""
+}
