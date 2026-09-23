@@ -4615,7 +4615,17 @@ function eventProgram(event) {
 
   window.addEventListener('mural:panel-profile-request', event => {
     const profileId = String(event.detail?.profile || '').trim();
-    if (!profileId || activeEditorialPanelProfileId() === profileId) return;
+    if (!profileId) return;
+
+    // O banner é um controle de alternância: clicar novamente na curadoria ativa
+    // restaura a programação padrão. Pedidos de URL (?c=...) são idempotentes e
+    // nunca desativam um perfil que já esteja aplicado.
+    if (event.detail?.toggle === true) {
+      toggleEditorialPanelProfile(profileId);
+      return;
+    }
+
+    if (activeEditorialPanelProfileId() === profileId) return;
     applyEditorialPanelProfile(profileId);
   });
 
