@@ -75,8 +75,7 @@ assert.equal(ipeadLine.latestValues[0].value, 757.19);
 assert.ok(ipeadLine.maxValue >= 800.76);
 
 const app = fs.readFileSync(path.join(root, 'js/app.js'), 'utf8');
-assert.match(app, /preview_utilidade/);
-assert.match(app, /utilityPreviewId \? \[\.\.\.previewUtility\] : \[\.\.\.publishedUtility\]/);
+assert.doesNotMatch(app, /preview_utilidade|UTILITY_PREVIEW_URL|utilityPreviewId|previewUtility/);
 assert.match(app, /utilityContent\.createPanelSlide/);
 assert.match(app, /utilityContent\.createAgendaCard/);
 
