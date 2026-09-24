@@ -1,0 +1,321 @@
+{
+  "schema": 1,
+  "preview": "salario-minimo",
+  "descricao": "Prévia editorial dos indicadores de salário mínimo do DIEESE. Não faz parte do catálogo publicado.",
+  "itens": [
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "utilidade_publica",
+      "natureza": "indicador",
+      "colecao": "salario-minimo",
+      "status_editorial": "rascunho",
+      "publicar": false,
+      "areas_utilidade": [
+        "Trabalho e renda",
+        "Economia"
+      ],
+      "tipos_recurso": [
+        "Indicador econômico",
+        "Informação"
+      ],
+      "fonte_label": "DIEESE — Salário mínimo nominal e necessário",
+      "link": "https://www.dieese.org.br/analisecestabasica/salarioMinimo.html",
+      "termos_busca": [
+        "salário mínimo",
+        "salário mínimo necessário",
+        "DIEESE",
+        "custo de vida",
+        "renda"
+      ],
+      "temas": [
+        "Trabalho e renda",
+        "Economia"
+      ],
+      "periodo_referencia": "2026-08",
+      "escopo_geografico": {
+        "tipo": "nacional",
+        "pais": "BR",
+        "descricao": "Referência nacional do DIEESE calculada mensalmente a partir da Pesquisa Nacional da Cesta Básica de Alimentos."
+      },
+      "fontes": [
+        {
+          "id": "dieese",
+          "nome": "DIEESE",
+          "url": "https://www.dieese.org.br/analisecestabasica/salarioMinimo.html",
+          "tipo": "pesquisa",
+          "indicador": "Salário mínimo nominal e necessário",
+          "periodicidade": "mensal",
+          "observacao": "O salário mínimo necessário é estimado pelo DIEESE para a manutenção de uma família de quatro pessoas, considerando despesas previstas constitucionalmente e o custo da cesta básica."
+        }
+      ],
+      "atualizacao": {
+        "modo": "automatica",
+        "periodicidade": "mensal",
+        "coletor": "scripts/coletar_salario_minimo_dieese.py",
+        "cron": "30 10 * * 1",
+        "politica_falha": "manter_ultimo_dado",
+        "max_idade_dado_horas": 1488,
+        "campos_atualizaveis": [
+          "periodo_referencia",
+          "dados.salario_minimo_nominal.valor",
+          "dados.salario_minimo_necessario.valor",
+          "dados.diferenca.valor",
+          "dados.multiplicador",
+          "atualizacao.ultima_alteracao"
+        ]
+      },
+      "tempo_slide": 15,
+      "origem": "colecao-salario-minimo",
+      "site_only": true,
+      "id": "utilidade:salario-minimo:comparacao-dieese",
+      "ordem": 10,
+      "titulo": "Salário mínimo: valor nominal x valor necessário",
+      "descricao": "Comparação entre o salário mínimo nominal vigente e a estimativa mensal do DIEESE para atender às necessidades de uma família de quatro pessoas.",
+      "destaque": "Comparação mensal do DIEESE",
+      "detalhe": "Os valores usam metodologias e finalidades específicas; o indicador do DIEESE não substitui o salário mínimo legal.",
+      "observacao": "O DIEESE estima o salário mínimo necessário com base no custo da cesta básica mais cara entre as localidades pesquisadas e nas despesas previstas no art. 7º, IV, da Constituição.",
+      "dados": {
+        "salario_minimo_nominal": {
+          "valor": 1621,
+          "unidade": "BRL"
+        },
+        "salario_minimo_necessario": {
+          "valor": 7565.86,
+          "unidade": "BRL"
+        },
+        "diferenca": {
+          "valor": 5944.86,
+          "unidade": "BRL"
+        },
+        "multiplicador": 4.67,
+        "familia_referencia_pessoas": 4
+      },
+      "visualizacao": {
+        "tipo": "comparacao_barras",
+        "titulo": "Salário mínimo nominal x necessário",
+        "itens": [
+          {
+            "campo": "dados.salario_minimo_nominal.valor",
+            "rotulo": "Salário mínimo nominal"
+          },
+          {
+            "campo": "dados.salario_minimo_necessario.valor",
+            "rotulo": "Salário mínimo necessário"
+          }
+        ],
+        "unidade": "BRL",
+        "mostrar_multiplicador": true
+      }
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "utilidade_publica",
+      "natureza": "indicador",
+      "colecao": "salario-minimo",
+      "status_editorial": "rascunho",
+      "publicar": false,
+      "areas_utilidade": [
+        "Trabalho e renda",
+        "Economia"
+      ],
+      "tipos_recurso": [
+        "Indicador econômico",
+        "Informação"
+      ],
+      "fonte_label": "DIEESE — Salário mínimo nominal e necessário",
+      "link": "https://www.dieese.org.br/analisecestabasica/salarioMinimo.html",
+      "termos_busca": [
+        "salário mínimo",
+        "salário mínimo necessário",
+        "DIEESE",
+        "custo de vida",
+        "renda"
+      ],
+      "temas": [
+        "Trabalho e renda",
+        "Economia"
+      ],
+      "periodo_referencia": "2026-08",
+      "escopo_geografico": {
+        "tipo": "nacional",
+        "pais": "BR",
+        "descricao": "Referência nacional do DIEESE calculada mensalmente a partir da Pesquisa Nacional da Cesta Básica de Alimentos."
+      },
+      "fontes": [
+        {
+          "id": "dieese",
+          "nome": "DIEESE",
+          "url": "https://www.dieese.org.br/analisecestabasica/salarioMinimo.html",
+          "tipo": "pesquisa",
+          "indicador": "Salário mínimo nominal e necessário",
+          "periodicidade": "mensal",
+          "observacao": "O salário mínimo necessário é estimado pelo DIEESE para a manutenção de uma família de quatro pessoas, considerando despesas previstas constitucionalmente e o custo da cesta básica."
+        }
+      ],
+      "atualizacao": {
+        "modo": "automatica",
+        "periodicidade": "mensal",
+        "coletor": "scripts/coletar_salario_minimo_dieese.py",
+        "cron": "30 10 * * 1",
+        "politica_falha": "manter_ultimo_dado",
+        "max_idade_dado_horas": 1488,
+        "campos_atualizaveis": [
+          "periodo_referencia",
+          "dados.serie_mensal",
+          "atualizacao.ultima_alteracao"
+        ]
+      },
+      "tempo_slide": 15,
+      "origem": "colecao-salario-minimo",
+      "site_only": true,
+      "id": "utilidade:salario-minimo:evolucao-dieese",
+      "ordem": 20,
+      "titulo": "Como evoluiu o salário mínimo necessário",
+      "descricao": "Série mensal do DIEESE para acompanhar a diferença entre o salário mínimo nominal e o valor estimado como necessário.",
+      "destaque": "Série mensal",
+      "detalhe": "A visualização mantém os 24 meses mais recentes disponíveis na fonte.",
+      "observacao": "A série deve ser lida como uma estimativa metodológica do DIEESE. O valor necessário varia mensalmente com os preços da cesta básica e não é o piso legal.",
+      "dados": {
+        "janela_meses": 24,
+        "serie_mensal": [
+          {
+            "periodo": "2026-08",
+            "salario_minimo_nominal": 1621,
+            "salario_minimo_necessario": 7565.86,
+            "multiplicador": 4.67
+          },
+          {
+            "periodo": "2026-07",
+            "salario_minimo_nominal": 1621,
+            "salario_minimo_necessario": 7687.01,
+            "multiplicador": 4.74
+          },
+          {
+            "periodo": "2026-06",
+            "salario_minimo_nominal": 1621,
+            "salario_minimo_necessario": 8110.92,
+            "multiplicador": 5
+          },
+          {
+            "periodo": "2026-05",
+            "salario_minimo_nominal": 1621,
+            "salario_minimo_necessario": 7999.44,
+            "multiplicador": 4.93
+          },
+          {
+            "periodo": "2026-04",
+            "salario_minimo_nominal": 1621,
+            "salario_minimo_necessario": 7612.49,
+            "multiplicador": 4.7
+          },
+          {
+            "periodo": "2026-03",
+            "salario_minimo_nominal": 1621,
+            "salario_minimo_necessario": 7425.99,
+            "multiplicador": 4.58
+          },
+          {
+            "periodo": "2026-02",
+            "salario_minimo_nominal": 1621,
+            "salario_minimo_necessario": 7164.94,
+            "multiplicador": 4.42
+          },
+          {
+            "periodo": "2026-01",
+            "salario_minimo_nominal": 1621,
+            "salario_minimo_necessario": 7156.15,
+            "multiplicador": 4.41
+          },
+          {
+            "periodo": "2025-12",
+            "salario_minimo_nominal": 1518,
+            "salario_minimo_necessario": 7106.83,
+            "multiplicador": 4.68
+          },
+          {
+            "periodo": "2025-11",
+            "salario_minimo_nominal": 1518,
+            "salario_minimo_necessario": 7067.18,
+            "multiplicador": 4.66
+          },
+          {
+            "periodo": "2025-10",
+            "salario_minimo_nominal": 1518,
+            "salario_minimo_necessario": 7116.83,
+            "multiplicador": 4.69
+          },
+          {
+            "periodo": "2025-09",
+            "salario_minimo_nominal": 1518,
+            "salario_minimo_necessario": 7075.83,
+            "multiplicador": 4.66
+          },
+          {
+            "periodo": "2025-08",
+            "salario_minimo_nominal": 1518,
+            "salario_minimo_necessario": 7147.91,
+            "multiplicador": 4.71
+          },
+          {
+            "periodo": "2025-07",
+            "salario_minimo_nominal": 1518,
+            "salario_minimo_necessario": 7274.43,
+            "multiplicador": 4.79
+          },
+          {
+            "periodo": "2025-06",
+            "salario_minimo_nominal": 1518,
+            "salario_minimo_necessario": 7416.07,
+            "multiplicador": 4.89
+          },
+          {
+            "periodo": "2025-05",
+            "salario_minimo_nominal": 1518,
+            "salario_minimo_necessario": 7528.56,
+            "multiplicador": 4.96
+          },
+          {
+            "periodo": "2025-04",
+            "salario_minimo_nominal": 1518,
+            "salario_minimo_necessario": 7638.62,
+            "multiplicador": 5.03
+          },
+          {
+            "periodo": "2025-03",
+            "salario_minimo_nominal": 1518,
+            "salario_minimo_necessario": 7398.94,
+            "multiplicador": 4.87
+          },
+          {
+            "periodo": "2025-02",
+            "salario_minimo_nominal": 1518,
+            "salario_minimo_necessario": 7229.32,
+            "multiplicador": 4.76
+          },
+          {
+            "periodo": "2025-01",
+            "salario_minimo_nominal": 1518,
+            "salario_minimo_necessario": 7156.15,
+            "multiplicador": 4.71
+          }
+        ]
+      },
+      "visualizacao": {
+        "tipo": "linha",
+        "titulo": "Evolução mensal",
+        "eixo_x": "periodo",
+        "series": [
+          {
+            "campo": "salario_minimo_nominal",
+            "rotulo": "Salário mínimo nominal"
+          },
+          {
+            "campo": "salario_minimo_necessario",
+            "rotulo": "Salário mínimo necessário"
+          }
+        ],
+        "unidade": "BRL"
+      }
+    }
+  ]
+}
