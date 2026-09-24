@@ -434,6 +434,25 @@
     }
   }
 
+  function createUtilityAction(movie) {
+    const supportTarget = String(movie?.support_target || '').trim();
+    if (supportTarget) {
+      const action = document.createElement('button');
+      action.type = 'button';
+      action.className = 'support-card-action';
+      action.textContent = 'Ver informações, contatos e endereços';
+      action.addEventListener('click', () => openSupportArea(action, supportTarget));
+      return action;
+    }
+
+    const link = officialLink(movie?.link, 'Ver publicação original');
+    if (link) {
+      link.className = 'support-card-action';
+      return link;
+    }
+    return null;
+  }
+
   function setPanelSupportImageState(image, fallback, loaded) {
     if (!image) return;
     if (loaded) {
@@ -518,12 +537,8 @@
     if (sourceLabel) sourceLabel.textContent = movie.fonte_label || 'Onde buscar ajuda';
     const source = slide.querySelector('.source-url');
     if (source) {
-      const action = document.createElement('button');
-      action.type = 'button';
-      action.className = 'support-card-action';
-      action.textContent = 'Ver informações, contatos e endereços';
-      action.addEventListener('click', () => openSupportArea(action, movie.support_target));
-      source.replaceChildren(action);
+      const action = createUtilityAction(movie);
+      source.replaceChildren(...(action ? [action] : []));
     }
     const updated = slide.querySelector('.updated');
     if (updated) updated.textContent = movie.observacao || '';
@@ -619,15 +634,13 @@
       appendText(tags, 'span', area);
     }
     body.appendChild(tags);
-    const actions = document.createElement('div');
-    actions.className = 'agenda-card-actions';
-    const action = document.createElement('button');
-    action.type = 'button';
-    action.className = 'support-card-action';
-    action.textContent = 'Ver informações, contatos e endereços';
-    action.addEventListener('click', () => openSupportArea(action, movie.support_target));
-    actions.appendChild(action);
-    body.appendChild(actions);
+    const action = createUtilityAction(movie);
+    if (action) {
+      const actions = document.createElement('div');
+      actions.className = 'agenda-card-actions';
+      actions.appendChild(action);
+      body.appendChild(actions);
+    }
     article.append(media, body);
     return article;
   }
