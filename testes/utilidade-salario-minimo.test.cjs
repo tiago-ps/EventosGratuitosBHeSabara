@@ -56,11 +56,19 @@ assert.ok(line.maxValue >= 8110.92);
 
 const app = fs.readFileSync(path.join(root, 'js/app.js'), 'utf8');
 assert.match(app, /preview_utilidade/);
+assert.match(app, /utilityPreviewId \? \[\.\.\.previewUtility\] : \[\.\.\.publishedUtility\]/);
 assert.match(app, /utilityContent\.createPanelSlide/);
 assert.match(app, /utilityContent\.createAgendaCard/);
 
 const index = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
-assert.match(index, /css\/utilidade-publica\.css\?v=1/);
-assert.match(index, /js\/conteudos\/utilidade-publica\.js\?v=1/);
+assert.match(index, /css\/utilidade-publica\.css\?v=2/);
+assert.match(index, /js\/conteudos\/utilidade-publica\.js\?v=2/);
+
+const utilitySource = fs.readFileSync(path.join(root, 'js/conteudos/utilidade-publica.js'), 'utf8');
+assert.match(utilitySource, /helpers\.safeImageUrl\(item\.imagem\)/);
+assert.match(utilitySource, /utility-agenda-media--image/);
+const utilityCss = fs.readFileSync(path.join(root, 'css/utilidade-publica.css'), 'utf8');
+assert.match(utilityCss, /\.utility-data-slide \.details\[hidden\]/);
+assert.match(utilityCss, /max-height: 840px/);
 
 console.log('Visualizações de salário mínimo em Utilidade Pública aprovadas.');
