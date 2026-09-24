@@ -3795,7 +3795,7 @@ function eventProgram(event) {
 
   function renderAgendaCard(item, options = {}) {
     if (item.tipo_conteudo === 'utilidade_publica') {
-      return utilityContent.createAgendaCard(item, { safeExternalUrl });
+      return utilityContent.createAgendaCard(item, { safeExternalUrl, safeImageUrl });
     }
 
     if (item.tipo_conteudo === 'filme') {
@@ -4523,11 +4523,11 @@ function eventProgram(event) {
       const previewUtility = utilityPreviewId && utilityPreviewData && Array.isArray(utilityPreviewData.itens)
         ? utilityPreviewData.itens
         : [];
-      const utilityById = new Map();
-      for (const item of [...publishedUtility, ...previewUtility]) {
-        if (item && item.id) utilityById.set(String(item.id), item);
-      }
-      state.utilityData = { itens: [...utilityById.values()] };
+      // A prévia editorial é isolada: quando solicitada, substitui o catálogo
+      // publicado em vez de ser somada a ele.
+      state.utilityData = {
+        itens: utilityPreviewId ? [...previewUtility] : [...publishedUtility]
+      };
       state.siteCurationsData = siteCurationsData;
       state.config = config || {};
 

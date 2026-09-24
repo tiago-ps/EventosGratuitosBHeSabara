@@ -325,33 +325,64 @@
     return model.latestValues.find(function(entry) { return entry.field.includes('necessario'); }) || model.latestValues[model.latestValues.length - 1];
   }
 
-  function configureMedia(slide, item, model) {
+  function configureMedia(slide, item, model, helpers) {
     const image = slide.querySelector('.event-image');
-    if (image) {
-      image.removeAttribute('src');
-      image.style.display = 'none';
-    }
     const fallback = slide.querySelector('.image-fallback');
     if (!fallback) return;
+
+    // Indicadores com visualização estruturada usam o painel numérico.
+    if (model) {
+      if (image) {
+        image.removeAttribute('src');
+        image.style.display = 'none';
+      }
+      fallback.hidden = false;
+      fallback.style.display = 'grid';
+      fallback.classList.add('utility-data-fallback');
+      fallback.replaceChildren();
+      appendText(fallback, 'span', model.periodLabel || 'Utilidade Pública', 'utility-hero-period');
+      const metric = mainMetric(model);
+      if (metric) {
+        appendText(fallback, 'strong', metric.formatted, 'utility-hero-value');
+        appendText(fallback, 'span', metric.label, 'utility-hero-label');
+      }
+      if (model.type === 'comparacao_barras' && model.multiplier !== null) {
+        appendText(fallback, 'span', new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 2 }).format(model.multiplier) + '× o mínimo nominal', 'utility-hero-secondary');
+      } else if (model.type === 'linha') {
+        appendText(fallback, 'span', String(model.rows.length) + ' meses na série', 'utility-hero-secondary');
+      }
+      appendText(fallback, 'span', 'Fonte: ' + (item.fontes && item.fontes[0] ? item.fontes[0].nome : item.fonte_label || 'fonte oficial'), 'utility-hero-source');
+      return;
+    }
+
+    // Conteúdos antigos preservam a imagem editorial já existente no catálogo.
+    fallback.classList.remove('utility-data-fallback');
+    const imageUrl = helpers.safeImageUrl(item.imagem);
+    const fallbackIcon = fallback.querySelector('.fallback-icon');
+    const fallbackLabel = fallback.querySelector('.fallback-label');
+    if (fallbackIcon) fallbackIcon.textContent = item.icone || 'ℹ️';
+    if (fallbackLabel) fallbackLabel.textContent = (item.areas_utilidade || [])[0] || 'Utilidade Pública';
     fallback.hidden = false;
-    fallback.style.display = 'grid';
-    fallback.classList.add('utility-data-fallback');
-    fallback.replaceChildren();
-    appendText(fallback, 'span', model ? model.periodLabel : 'Utilidade Pública', 'utility-hero-period');
-    const metric = mainMetric(model);
-    if (metric) {
-      appendText(fallback, 'strong', metric.formatted, 'utility-hero-value');
-      appendText(fallback, 'span', metric.label, 'utility-hero-label');
-    } else {
-      appendText(fallback, 'strong', item.icone || 'ℹ️', 'utility-hero-icon');
-      appendText(fallback, 'span', (item.areas_utilidade || [])[0] || 'Utilidade Pública', 'utility-hero-label');
-    }
-    if (model && model.type === 'comparacao_barras' && model.multiplier !== null) {
-      appendText(fallback, 'span', new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 2 }).format(model.multiplier) + '× o mínimo nominal', 'utility-hero-secondary');
-    } else if (model && model.type === 'linha') {
-      appendText(fallback, 'span', String(model.rows.length) + ' meses na série', 'utility-hero-secondary');
-    }
-    appendText(fallback, 'span', 'Fonte: ' + (item.fontes && item.fontes[0] ? item.fontes[0].nome : item.fonte_label || 'fonte oficial'), 'utility-hero-source');
+    fallback.style.display = imageUrl ? 'none' : 'grid';
+
+    if (!image) return;
+    image.classList.remove('loaded');
+    image.alt = item.titulo ? 'Imagem de apoio: ' + item.titulo : 'Imagem de apoio';
+    image.decoding = 'async';
+    image.loading = 'eager';
+    image.style.display = imageUrl ? '' : 'none';
+    image.onload = function() {
+      image.classList.add('loaded');
+      fallback.style.display = 'none';
+    };
+    image.onerror = function() {
+      image.classList.remove('loaded');
+      image.removeAttribute('src');
+      image.style.display = 'none';
+      fallback.style.display = 'grid';
+    };
+    if (imageUrl) image.src = imageUrl;
+    else image.removeAttribute('src');
   }
 
   function configureAction(slide, item, helpers) {
@@ -444,7 +475,7 @@
     if (subtitle) subtitle.textContent = (Array.isArray(item.tipos_recurso) ? item.tipos_recurso : []).find(Boolean) || (item.natureza === 'indicador' ? 'Indicador' : 'Informação');
 
     configureAction(slide, item, helpers);
-    configureMedia(slide, item, model);
+    configureMedia(slide, item, model, helpers);
     return slide;
   }
 
@@ -461,8 +492,25 @@
       appendText(media, 'strong', metric && metric.formatted, 'utility-agenda-value');
       appendText(media, 'span', metric && metric.label, 'utility-agenda-label');
     } else {
-      appendText(media, 'strong', item.icone || 'ℹ️', 'utility-agenda-icon');
-      appendText(media, 'span', (item.areas_utilidade || [])[0] || 'Utilidade Pública', 'utility-agenda-label');
+      const imageUrl = helpers.safeImageUrl(item.imagem);
+      if (imageUrl) {
+        media.classList.add('utility-agenda-media--image');
+        const image = document.createElement('img');
+        image.src = imageUrl;
+        image.alt = item.titulo ? 'Imagem de apoio: ' + item.titulo : 'Imagem de apoio';
+        image.loading = 'lazy';
+        image.decoding = 'async';
+        image.addEventListener('error', function() {
+          image.remove();
+          media.classList.remove('utility-agenda-media--image');
+          appendText(media, 'strong', item.icone || 'ℹ️', 'utility-agenda-icon');
+          appendText(media, 'span', (item.areas_utilidade || [])[0] || 'Utilidade Pública', 'utility-agenda-label');
+        });
+        media.appendChild(image);
+      } else {
+        appendText(media, 'strong', item.icone || 'ℹ️', 'utility-agenda-icon');
+        appendText(media, 'span', (item.areas_utilidade || [])[0] || 'Utilidade Pública', 'utility-agenda-label');
+      }
     }
 
     const body = document.createElement('div');
