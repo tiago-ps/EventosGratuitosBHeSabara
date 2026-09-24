@@ -24,12 +24,16 @@ vm.runInContext(source, context, { filename: 'js/conteudos/utilidade-publica.js'
 const utility = context.window.MuralCultural.contents.utility;
 assert.equal(typeof utility.visualizationModel, 'function');
 assert.equal(preview.preview, 'salario-minimo');
-assert.equal(preview.itens.length, 2);
+assert.equal(preview.itens.length, 4);
 
-const comparison = preview.itens.find(item => item.visualizacao?.tipo === 'comparacao_barras');
-const evolution = preview.itens.find(item => item.visualizacao?.tipo === 'linha');
+const comparison = preview.itens.find(item => item.id === 'utilidade:salario-minimo:comparacao-dieese');
+const evolution = preview.itens.find(item => item.id === 'utilidade:salario-minimo:evolucao-dieese');
+const ipeadComparison = preview.itens.find(item => item.id === 'utilidade:salario-minimo:cesta-basica-bh-ipead');
+const ipeadEvolution = preview.itens.find(item => item.id === 'utilidade:salario-minimo:evolucao-cesta-basica-bh-ipead');
 assert.ok(comparison, 'Slide de comparação ausente');
 assert.ok(evolution, 'Slide de evolução ausente');
+assert.ok(ipeadComparison, 'Slide de cesta básica IPEAD ausente');
+assert.ok(ipeadEvolution, 'Slide de evolução da cesta IPEAD ausente');
 
 const bars = utility.visualizationModel(comparison);
 assert.equal(bars.type, 'comparacao_barras');
@@ -54,6 +58,23 @@ assert.equal(line.latestValues[0].value, 1621);
 assert.equal(line.latestValues[1].value, 7565.86);
 assert.ok(line.maxValue >= 8110.92);
 
+const ipeadBars = utility.visualizationModel(ipeadComparison);
+assert.equal(ipeadBars.type, 'comparacao_barras');
+assert.equal(ipeadBars.items[0].value, 1621);
+assert.equal(ipeadBars.items[1].value, 757.19);
+assert.equal(ipeadBars.summary.value, 46.71);
+assert.equal(ipeadBars.summary.formatted, '46,71%');
+assert.equal(ipeadBars.summary.label, 'do salário mínimo');
+
+const ipeadLine = utility.visualizationModel(ipeadEvolution);
+assert.equal(ipeadLine.type, 'linha');
+assert.equal(ipeadLine.rows.length, 13);
+assert.equal(ipeadLine.rows[0].periodo, '2025-08');
+assert.equal(ipeadLine.rows.at(-1).periodo, '2026-08');
+assert.equal(ipeadLine.latestValues.length, 1);
+assert.equal(ipeadLine.latestValues[0].value, 757.19);
+assert.ok(ipeadLine.maxValue >= 800.76);
+
 const app = fs.readFileSync(path.join(root, 'js/app.js'), 'utf8');
 assert.match(app, /preview_utilidade/);
 assert.match(app, /utilityPreviewId \? \[\.\.\.previewUtility\] : \[\.\.\.publishedUtility\]/);
@@ -62,7 +83,7 @@ assert.match(app, /utilityContent\.createAgendaCard/);
 
 const index = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 assert.match(index, /css\/utilidade-publica\.css\?v=2/);
-assert.match(index, /js\/conteudos\/utilidade-publica\.js\?v=2/);
+assert.match(index, /js\/conteudos\/utilidade-publica\.js\?v=3/);
 
 const utilitySource = fs.readFileSync(path.join(root, 'js/conteudos/utilidade-publica.js'), 'utf8');
 assert.match(utilitySource, /helpers\.safeImageUrl\(item\.imagem\)/);
