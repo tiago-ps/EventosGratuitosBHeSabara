@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v137-utilidade-preview-fix';
+const CACHE_VERSION = 'mural-cultural-v138-ipead-preview';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -21,7 +21,7 @@ const CORE_ASSETS = [
   './js/conteudos/cursos.js?v=3',
   './js/conteudos/concursos.js?v=2',
   './js/conteudos/filmes.js?v=6',
-  './js/conteudos/utilidade-publica.js?v=2',
+  './js/conteudos/utilidade-publica.js?v=3',
   './js/curadorias-site.js?v=11',
   './js/app.js?v=109',
   './js/temas-visuais.js?v=13',
