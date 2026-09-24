@@ -1,0 +1,46 @@
+name: Validar prévia de salário mínimo
+
+on:
+  pull_request:
+    paths:
+      - "js/app.js"
+      - "js/conteudos/utilidade-publica.js"
+      - "css/utilidade-publica.css"
+      - "index.html"
+      - "service-worker.js"
+      - "previews/utilidade-publica-salario-minimo.json"
+      - "testes/utilidade-salario-minimo.test.cjs"
+      - ".github/workflows/validar-utilidade-salario-minimo.yml"
+  push:
+    branches:
+      - "feat/preview-salario-minimo-*"
+    paths:
+      - "js/app.js"
+      - "js/conteudos/utilidade-publica.js"
+      - "css/utilidade-publica.css"
+      - "index.html"
+      - "service-worker.js"
+      - "previews/utilidade-publica-salario-minimo.json"
+      - "testes/utilidade-salario-minimo.test.cjs"
+      - ".github/workflows/validar-utilidade-salario-minimo.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Validar sintaxe JavaScript
+        run: |
+          node --check js/app.js
+          node --check js/conteudos/utilidade-publica.js
+          node --check service-worker.js
+      - name: Validar JSON de prévia
+        run: node -e "JSON.parse(require('fs').readFileSync('previews/utilidade-publica-salario-minimo.json','utf8'))"
+      - name: Testar visualizações
+        run: node testes/utilidade-salario-minimo.test.cjs

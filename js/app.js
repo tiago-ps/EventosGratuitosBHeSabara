@@ -7,6 +7,7 @@
   const CONTESTS_URL = 'concursos.json';
   const FILMS_URL = 'filmes.json';
   const UTILITY_URL = 'utilidade-publica.json';
+  const UTILITY_PREVIEW_URL = 'previews/utilidade-publica-salario-minimo.json';
   const SITE_CURATIONS_INDEX_URL = 'curadorias/index.json';
   const CONFIG_URL = 'configuracao-mural.json';
   const app = document.getElementById('app');
@@ -48,6 +49,7 @@
   const coursesContent = window.MuralCultural.contents.courses;
   const contestsContent = window.MuralCultural.contents.contests;
   const filmsContent = window.MuralCultural.contents.films;
+  const utilityContent = window.MuralCultural.contents.utility;
   const siteCurationsContent = window.MuralCultural.siteCurations;
   let deferredInstallPrompt = null;
   let bookLocationsDialog = null;
@@ -2237,7 +2239,7 @@ function eventProgram(event) {
   }
 
   function renderUtilitySlide(index) {
-    renderMediaSlide(index, siteCurationsContent.createPanelSupportSlide);
+    renderMediaSlide(index, utilityContent.createPanelSlide);
   }
 
   function renderSlide(index) {
@@ -3793,7 +3795,7 @@ function eventProgram(event) {
 
   function renderAgendaCard(item, options = {}) {
     if (item.tipo_conteudo === 'utilidade_publica') {
-      return siteCurationsContent.createAgendaSupportCard(item);
+      return utilityContent.createAgendaCard(item, { safeExternalUrl });
     }
 
     if (item.tipo_conteudo === 'filme') {
@@ -4476,15 +4478,26 @@ function eventProgram(event) {
     });
   }
 
+  function requestedUtilityPreview() {
+    try {
+      const value = String(new URL(window.location.href).searchParams.get('preview_utilidade') || '').trim().toLowerCase();
+      return value === 'salario-minimo' ? value : '';
+    } catch {
+      return '';
+    }
+  }
+
   async function load() {
     try {
-      const [response, booksData, coursesData, contestsData, filmsData, utilityData, siteCurationsData, config] = await Promise.all([
+      const utilityPreviewId = requestedUtilityPreview();
+      const [response, booksData, coursesData, contestsData, filmsData, utilityData, utilityPreviewData, siteCurationsData, config] = await Promise.all([
         fetch(`${DATA_URL}?v=${Date.now()}`, { cache: 'no-store' }),
         loadOptionalJson(BOOKS_URL, { livros: [] }),
         loadOptionalJson(COURSES_URL, { cursos: [] }),
         loadOptionalJson(CONTESTS_URL, { concursos: [] }),
         loadOptionalJson(FILMS_URL, { filmes: [] }),
         loadOptionalJson(UTILITY_URL, { itens: [] }),
+        utilityPreviewId ? loadOptionalJson(UTILITY_PREVIEW_URL, { itens: [] }) : Promise.resolve({ itens: [] }),
         loadSiteCurations(),
         loadOptionalJson(CONFIG_URL, {
           nome: 'Mural Cultural',
@@ -4506,7 +4519,15 @@ function eventProgram(event) {
         ? contestsData
         : { concursos: [] };
       state.filmsData = filmsData && Array.isArray(filmsData.filmes) ? filmsData : { filmes: [] };
-      state.utilityData = utilityData && Array.isArray(utilityData.itens) ? utilityData : { itens: [] };
+      const publishedUtility = utilityData && Array.isArray(utilityData.itens) ? utilityData.itens : [];
+      const previewUtility = utilityPreviewId && utilityPreviewData && Array.isArray(utilityPreviewData.itens)
+        ? utilityPreviewData.itens
+        : [];
+      const utilityById = new Map();
+      for (const item of [...publishedUtility, ...previewUtility]) {
+        if (item && item.id) utilityById.set(String(item.id), item);
+      }
+      state.utilityData = { itens: [...utilityById.values()] };
       state.siteCurationsData = siteCurationsData;
       state.config = config || {};
 
@@ -4548,6 +4569,13 @@ function eventProgram(event) {
       siteCurationsContent.bindSupportRequest();
       state.schoolRotationBatch = readStoredSchoolBatch();
       loadStoredPanelSettings();
+      if (utilityPreviewId) {
+        state.panelModules = { events: false, books: false, courses: false, contests: false, films: false, utility: true };
+        state.panelWeights = { events: 1, books: 1, courses: 1, contests: 1, films: 1, utility: 10 };
+        state.filters.theme = '';
+        state.mobileContent = 'utility';
+        state.mobileCuration = '';
+      }
       syncActivePanelProfile();
       rebuildVisibleItems();
 
@@ -4556,7 +4584,7 @@ function eventProgram(event) {
         return;
       }
 
-      state.viewMode = storedViewMode();
+      state.viewMode = utilityPreviewId ? 'painel' : storedViewMode();
       renderCurrentView();
     } catch (error) {
       console.error(error);
