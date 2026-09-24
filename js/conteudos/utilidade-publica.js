@@ -50,6 +50,15 @@
     return new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 2 }).format(number);
   }
 
+  function formatSummary(value, format) {
+    const number = Number(value);
+    if (!Number.isFinite(number)) return '';
+    const formatted = new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 2 }).format(number);
+    if (text(format) === 'percentual') return formatted + '%';
+    if (text(format) === 'multiplicador') return formatted + '×';
+    return formatted;
+  }
+
   function visualizationModel(item) {
     const visual = item && item.visualizacao;
     if (!visual || typeof visual !== 'object') return null;
@@ -77,6 +86,17 @@
       });
       const multiplier = Number(item && item.dados && item.dados.multiplicador);
       const difference = Number(item && item.dados && item.dados.diferenca && item.dados.diferenca.valor);
+      const summarySpec = visual.resumo && typeof visual.resumo === 'object' ? visual.resumo : null;
+      const summaryValue = Number(summarySpec ? pathValue(item, summarySpec.campo) : NaN);
+      const summary = summarySpec && text(summarySpec.rotulo) && Number.isFinite(summaryValue)
+        ? {
+            field: text(summarySpec.campo),
+            label: text(summarySpec.rotulo),
+            value: summaryValue,
+            format: text(summarySpec.formato),
+            formatted: formatSummary(summaryValue, summarySpec.formato)
+          }
+        : null;
       return {
         type: type,
         title: text(visual.titulo || item.titulo),
@@ -86,7 +106,8 @@
         items: items,
         multiplier: Number.isFinite(multiplier) ? multiplier : null,
         difference: Number.isFinite(difference) ? difference : null,
-        differenceFormatted: Number.isFinite(difference) ? formatMetric(difference, unit) : ''
+        differenceFormatted: Number.isFinite(difference) ? formatMetric(difference, unit) : '',
+        summary: summary
       };
     }
 
@@ -162,6 +183,12 @@
       card.className = 'utility-metric-card utility-metric-card--accent';
       appendText(card, 'span', 'Equivale a', 'utility-metric-label');
       appendText(card, 'strong', new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 2 }).format(model.multiplier) + '×', 'utility-metric-value');
+      wrapper.appendChild(card);
+    } else if (model.type === 'comparacao_barras' && model.summary) {
+      const card = document.createElement('div');
+      card.className = 'utility-metric-card utility-metric-card--accent';
+      appendText(card, 'span', model.summary.label, 'utility-metric-label');
+      appendText(card, 'strong', model.summary.formatted, 'utility-metric-value');
       wrapper.appendChild(card);
     }
     return wrapper;
@@ -308,6 +335,8 @@
       summary.className = 'utility-viz-summary';
       if (model.multiplier !== null) {
         appendText(summary, 'strong', new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 2 }).format(model.multiplier) + '× o salário mínimo nominal');
+      } else if (model.summary) {
+        appendText(summary, 'strong', model.summary.formatted + ' ' + model.summary.label);
       }
       if (model.differenceFormatted) appendText(summary, 'span', 'Diferença: ' + model.differenceFormatted);
       section.appendChild(summary);
@@ -348,6 +377,8 @@
       }
       if (model.type === 'comparacao_barras' && model.multiplier !== null) {
         appendText(fallback, 'span', new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 2 }).format(model.multiplier) + '× o mínimo nominal', 'utility-hero-secondary');
+      } else if (model.type === 'comparacao_barras' && model.summary) {
+        appendText(fallback, 'span', model.summary.formatted + ' ' + model.summary.label, 'utility-hero-secondary');
       } else if (model.type === 'linha') {
         appendText(fallback, 'span', String(model.rows.length) + ' meses na série', 'utility-hero-secondary');
       }
