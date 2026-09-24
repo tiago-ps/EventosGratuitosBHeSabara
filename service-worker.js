@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v135-banner-toggle';
+const CACHE_VERSION = 'mural-cultural-v136-utilidade-indicadores';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -12,6 +12,7 @@ const CORE_ASSETS = [
   './css/eventos-manuais-ui.css?v=43',
   './css/concursos-mural.css?v=3',
   './css/temas-visuais.css?v=11',
+  './css/utilidade-publica.css?v=1',
   './css/painel-modos.css?v=2',
   './css/painel-acoes-contextuais.css?v=2',
   './css/tem-sim-uai-painel.css?v=1',
@@ -20,8 +21,9 @@ const CORE_ASSETS = [
   './js/conteudos/cursos.js?v=3',
   './js/conteudos/concursos.js?v=2',
   './js/conteudos/filmes.js?v=6',
+  './js/conteudos/utilidade-publica.js?v=1',
   './js/curadorias-site.js?v=11',
-  './js/app.js?v=107',
+  './js/app.js?v=108',
   './js/temas-visuais.js?v=13',
   './js/eventos-manuais-ui.js?v=44',
   './js/ios-install.js?v=2',
@@ -43,6 +45,7 @@ const DATA_PATHS = [
   '/concursos.json',
   '/filmes.json',
   '/utilidade-publica.json',
+  '/previews/utilidade-publica-salario-minimo.json',
   '/curadorias/index.json',
   '/configuracao-mural.json'
 ];
