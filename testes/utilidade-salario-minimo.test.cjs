@@ -7,8 +7,8 @@ const vm = require('node:vm');
 
 const root = path.resolve(__dirname, '..');
 const source = fs.readFileSync(path.join(root, 'js/conteudos/utilidade-publica.js'), 'utf8');
-const preview = JSON.parse(fs.readFileSync(
-  path.join(root, 'previews/utilidade-publica-salario-minimo.json'),
+const catalog = JSON.parse(fs.readFileSync(
+  path.join(root, 'utilidade-publica.json'),
   'utf8'
 ));
 
@@ -23,13 +23,12 @@ vm.runInContext(source, context, { filename: 'js/conteudos/utilidade-publica.js'
 
 const utility = context.window.MuralCultural.contents.utility;
 assert.equal(typeof utility.visualizationModel, 'function');
-assert.equal(preview.preview, 'salario-minimo');
-assert.equal(preview.itens.length, 4);
+assert.equal(catalog.itens.length, 9);
 
-const comparison = preview.itens.find(item => item.id === 'utilidade:salario-minimo:comparacao-dieese');
-const evolution = preview.itens.find(item => item.id === 'utilidade:salario-minimo:evolucao-dieese');
-const ipeadComparison = preview.itens.find(item => item.id === 'utilidade:salario-minimo:cesta-basica-bh-ipead');
-const ipeadEvolution = preview.itens.find(item => item.id === 'utilidade:salario-minimo:evolucao-cesta-basica-bh-ipead');
+const comparison = catalog.itens.find(item => item.id === 'utilidade:salario-minimo:comparacao-dieese');
+const evolution = catalog.itens.find(item => item.id === 'utilidade:salario-minimo:evolucao-dieese');
+const ipeadComparison = catalog.itens.find(item => item.id === 'utilidade:salario-minimo:cesta-basica-bh-ipead');
+const ipeadEvolution = catalog.itens.find(item => item.id === 'utilidade:salario-minimo:evolucao-cesta-basica-bh-ipead');
 assert.ok(comparison, 'Slide de comparação ausente');
 assert.ok(evolution, 'Slide de evolução ausente');
 assert.ok(ipeadComparison, 'Slide de cesta básica IPEAD ausente');
@@ -76,14 +75,14 @@ assert.equal(ipeadLine.latestValues[0].value, 757.19);
 assert.ok(ipeadLine.maxValue >= 800.76);
 
 const app = fs.readFileSync(path.join(root, 'js/app.js'), 'utf8');
-assert.match(app, /preview_utilidade/);
-assert.match(app, /utilityPreviewId \? \[\.\.\.previewUtility\] : \[\.\.\.publishedUtility\]/);
+assert.doesNotMatch(app, /preview_utilidade|UTILITY_PREVIEW_URL|utilityPreviewId|previewUtility/);
 assert.match(app, /utilityContent\.createPanelSlide/);
 assert.match(app, /utilityContent\.createAgendaCard/);
 
 const index = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 assert.match(index, /css\/utilidade-publica\.css\?v=2/);
 assert.match(index, /js\/conteudos\/utilidade-publica\.js\?v=3/);
+assert.match(index, /js\/app\.js\?v=110/);
 
 const utilitySource = fs.readFileSync(path.join(root, 'js/conteudos/utilidade-publica.js'), 'utf8');
 assert.match(utilitySource, /helpers\.safeImageUrl\(item\.imagem\)/);
@@ -92,4 +91,4 @@ const utilityCss = fs.readFileSync(path.join(root, 'css/utilidade-publica.css'),
 assert.match(utilityCss, /\.utility-data-slide \.details\[hidden\]/);
 assert.match(utilityCss, /max-height: 840px/);
 
-console.log('Visualizações de salário mínimo em Utilidade Pública aprovadas.');
+console.log('Utilidade Pública integrada ao catálogo normal com visualizações aprovadas.');

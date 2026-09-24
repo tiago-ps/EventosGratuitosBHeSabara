@@ -1,26 +1,26 @@
-name: Validar prévia de salário mínimo
+name: Validar Utilidade Pública
 
 on:
   pull_request:
     paths:
+      - "utilidade-publica.json"
       - "js/app.js"
       - "js/conteudos/utilidade-publica.js"
       - "css/utilidade-publica.css"
       - "index.html"
       - "service-worker.js"
-      - "previews/utilidade-publica-salario-minimo.json"
       - "testes/utilidade-salario-minimo.test.cjs"
       - ".github/workflows/validar-utilidade-salario-minimo.yml"
   push:
     branches:
-      - "feat/preview-salario-minimo-*"
+      - "feat/integrar-salario-*"
     paths:
+      - "utilidade-publica.json"
       - "js/app.js"
       - "js/conteudos/utilidade-publica.js"
       - "css/utilidade-publica.css"
       - "index.html"
       - "service-worker.js"
-      - "previews/utilidade-publica-salario-minimo.json"
       - "testes/utilidade-salario-minimo.test.cjs"
       - ".github/workflows/validar-utilidade-salario-minimo.yml"
 
@@ -40,7 +40,7 @@ jobs:
           node --check js/app.js
           node --check js/conteudos/utilidade-publica.js
           node --check service-worker.js
-      - name: Validar JSON de prévia
-        run: node -e "JSON.parse(require('fs').readFileSync('previews/utilidade-publica-salario-minimo.json','utf8'))"
+      - name: Validar catálogo de Utilidade Pública
+        run: node -e "const d=JSON.parse(require('fs').readFileSync('utilidade-publica.json','utf8')); if(!Array.isArray(d.itens)) process.exit(1); console.log(d.itens.length, 'itens');"
       - name: Testar visualizações
         run: node testes/utilidade-salario-minimo.test.cjs
