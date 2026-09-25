@@ -4805,6 +4805,14 @@ function eventProgram(event) {
       }
 
       state.viewMode = storedViewMode();
+      const sharedSelection = sharedAgendaSelectionFromUrl();
+      if (sharedSelection?.size) {
+        state.mobileSharedSelection = sharedSelection;
+        state.mobileFavoritesOnly = false;
+        state.mobileContent = 'all';
+        state.viewMode = 'agenda';
+        saveViewMode('agenda');
+      }
       renderCurrentView();
     } catch (error) {
       console.error(error);
@@ -4830,13 +4838,6 @@ function eventProgram(event) {
   let resizeFitTimer = null;
   window.addEventListener('resize', () => {
     if (state.viewMode === 'auto' && state.data && !bookLocationsDialog?.open) {
-      const sharedSelection = sharedAgendaSelectionFromUrl();
-      if (sharedSelection?.size) {
-        state.mobileSharedSelection = sharedSelection;
-        state.mobileFavoritesOnly = false;
-        state.mobileContent = 'all';
-        saveViewMode('agenda');
-      }
       renderCurrentView();
       return;
     }
