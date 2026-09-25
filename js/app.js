@@ -2290,7 +2290,7 @@ function eventProgram(event) {
     let tracking = false;
 
     app.addEventListener('touchstart', event => {
-      if (!mobileQuery.matches || event.touches.length !== 1) {
+      if (!mobileQuery.matches || document.body.classList.contains('agenda-mode') || event.touches.length !== 1) {
         tracking = false;
         return;
       }
@@ -2302,7 +2302,7 @@ function eventProgram(event) {
     }, { passive: true });
 
     app.addEventListener('touchend', event => {
-      if (!tracking || !mobileQuery.matches || event.changedTouches.length !== 1) {
+      if (!tracking || !mobileQuery.matches || document.body.classList.contains('agenda-mode') || event.changedTouches.length !== 1) {
         tracking = false;
         return;
       }
