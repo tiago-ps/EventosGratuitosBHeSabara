@@ -154,6 +154,7 @@
     mobileQuery: '',
     mobileFiltersOpen: false,
     mobileFavoritesOnly: false,
+    mobileSharedSelection: null,
     mobileContent: 'all',
     mobileCuration: '',
     mobileTheme: '',
@@ -3628,6 +3629,17 @@ function eventProgram(event) {
   }
 
   function agendaVisibleContents() {
+    if (state.mobileSharedSelection) {
+      const items = agendaItemsForIds(state.mobileSharedSelection);
+      const group = type => items.filter(item => item.tipo_conteudo === type);
+      const events = group('evento').sort(compareAgendaEvents);
+      const books = group('livro').sort(agendaTitleCompare);
+      const courses = group('curso').sort(agendaTitleCompare);
+      const contests = group('concurso').sort(agendaTitleCompare);
+      const films = group('filme').sort(agendaTitleCompare);
+      const utility = group('utilidade_publica').sort(agendaTitleCompare);
+      return { events, books, courses, contests, films, utility, total: items.length };
+    }
     if (state.mobileFavoritesOnly) {
       const items = agendaFavoriteItems();
       const group = type => items.filter(item => item.tipo_conteudo === type);
@@ -3876,13 +3888,77 @@ function eventProgram(event) {
     }
   }
 
-  function agendaFavoriteItems() {
-    const favorites = loadAgendaFavorites();
+  function encodeSharedAgendaSelection(ids) {
+    const json = JSON.stringify([...ids]);
+    const bytes = new TextEncoder().encode(json);
+    let binary = '';
+    bytes.forEach(byte => { binary += String.fromCharCode(byte); });
+    return btoa(binary).replaceAll('+', '-').replaceAll('/', '_').replace(/=+$/g, '');
+  }
+
+  function decodeSharedAgendaSelection(value) {
+    try {
+      const base64 = String(value || '').replaceAll('-', '+').replaceAll('_', '/');
+      const padded = base64 + '='.repeat((4 - base64.length % 4) % 4);
+      const binary = atob(padded);
+      const bytes = Uint8Array.from(binary, char => char.charCodeAt(0));
+      const parsed = JSON.parse(new TextDecoder().decode(bytes));
+      if (!Array.isArray(parsed)) return null;
+      const ids = parsed.filter(id => typeof id === 'string' && id.includes(':'));
+      return new Set(ids.slice(0, 500));
+    } catch {
+      return null;
+    }
+  }
+
+  function sharedAgendaSelectionFromUrl() {
+    const url = new URL(window.location.href);
+    return decodeSharedAgendaSelection(url.searchParams.get('selecao'));
+  }
+
+  function agendaItemsForIds(ids) {
     const catalogs = [
       state.allEvents, state.allBooks, state.allCourses,
       state.allContests, state.allFilms, state.allUtility
     ];
-    return catalogs.flat().filter(item => favorites.has(agendaFavoriteId(item)));
+    return catalogs.flat().filter(item => ids.has(agendaFavoriteId(item)));
+  }
+
+  function sharedAgendaUrl(ids) {
+    const url = new URL(window.location.href);
+    url.searchParams.set('selecao', encodeSharedAgendaSelection(ids));
+    url.searchParams.delete('painel');
+    return url.toString();
+  }
+
+  async function shareAgendaFavorites() {
+    const favorites = loadAgendaFavorites();
+    if (!favorites.size) return;
+    const url = sharedAgendaUrl(favorites);
+    const data = {
+      title: 'Seleção do Mural Cultural',
+      text: `Separei ${favorites.size} ${favorites.size === 1 ? 'conteúdo' : 'conteúdos'} no Mural Cultural.`,
+      url
+    };
+    if (navigator.share) {
+      try {
+        await navigator.share(data);
+        return;
+      } catch (error) {
+        if (error?.name === 'AbortError') return;
+      }
+    }
+    try {
+      await navigator.clipboard.writeText(url);
+      window.alert('Link da seleção copiado. Agora é só enviar para quem você quiser.');
+    } catch {
+      window.prompt('Copie o link da sua seleção:', url);
+    }
+  }
+
+  function agendaFavoriteItems() {
+    const favorites = loadAgendaFavorites();
+    return agendaItemsForIds(favorites);
   }
 
   function decorateAgendaFavorite(article, item) {
@@ -4130,7 +4206,7 @@ function eventProgram(event) {
     normalizeAgendaFiltersForContent();
 
     const results = agendaVisibleContents();
-    const activeFilters = state.mobileFavoritesOnly ? 0 : agendaActiveFilterCount();
+    const activeFilters = state.mobileFavoritesOnly || state.mobileSharedSelection ? 0 : agendaActiveFilterCount();
     const header = document.createElement('header');
     header.className = 'agenda-header';
     const agendaContentTabs = [
@@ -4164,6 +4240,7 @@ function eventProgram(event) {
           aria-pressed="${state.mobileFavoritesOnly ? 'true' : 'false'}"
           title="Meus favoritos"
         ><span aria-hidden="true">★</span><span class="agenda-favorites-label">Favoritos</span><span class="agenda-favorites-count" ${favoriteCount ? '' : 'hidden'}>${favoriteCount}</span></button>
+        ${state.mobileFavoritesOnly && favoriteCount ? '<button class="agenda-share-favorites" type="button" title="Compartilhar favoritos"><span aria-hidden="true">↗</span><span>Compartilhar</span></button>' : ''}
         <button
           class="agenda-search-toggle"
           type="button"
@@ -4350,7 +4427,10 @@ function eventProgram(event) {
     count.className = 'agenda-count';
     count.setAttribute('role', 'status');
     count.setAttribute('aria-live', 'polite');
-    count.innerHTML = state.mobileFavoritesOnly ? `
+    count.innerHTML = state.mobileSharedSelection ? `
+      <span><strong>${results.total}</strong> ${results.total === 1 ? 'conteúdo nesta seleção compartilhada' : 'conteúdos nesta seleção compartilhada'}</span>
+      <button type="button" class="agenda-save-shared">Salvar nos meus favoritos</button>
+    ` : state.mobileFavoritesOnly ? `
       <span><strong>${results.total}</strong> ${results.total === 1 ? 'favorito salvo neste dispositivo' : 'favoritos salvos neste dispositivo'}</span>
     ` : contestMode ? `
       <span><strong>${results.total}</strong> de ${state.allContests.length} oportunidades compatíveis com as formações acompanhadas.${activeFilters ? ` · ${activeFilters} ${activeFilters === 1 ? 'filtro ativo' : 'filtros ativos'}` : ''}</span>
@@ -4368,7 +4448,7 @@ function eventProgram(event) {
       resultsContainer.innerHTML = state.mobileFavoritesOnly
         ? '<div class="agenda-empty"><h2>Nenhum favorito ainda</h2><p>Use a estrela nos conteúdos que quiser guardar neste dispositivo.</p><button type="button" class="agenda-empty-favorites-back">Explorar conteúdos</button></div>'
         : '<div class="agenda-empty"><h2>Nenhum conteúdo encontrado</h2><p>Tente alterar a busca ou os filtros.</p><button type="button" class="agenda-empty-clear">Limpar filtros</button></div>';
-    } else if (state.mobileFavoritesOnly || state.mobileContent === 'all') {
+    } else if (state.mobileFavoritesOnly || state.mobileSharedSelection || state.mobileContent === 'all') {
       const eventsGrid = document.createElement('div');
       eventsGrid.className = 'agenda-section-grid';
       const eventsProgressiveControl = createAgendaProgressiveControl(eventsGrid, results.events, 'events');
@@ -4421,12 +4501,23 @@ function eventProgram(event) {
     app.replaceChildren(shell);
 
     header.querySelector('.agenda-favorites-toggle').addEventListener('click', () => {
+      state.mobileSharedSelection = null;
       state.mobileFavoritesOnly = !state.mobileFavoritesOnly;
       if (state.mobileFavoritesOnly) {
         state.mobileContent = 'all';
         state.mobileFiltersOpen = false;
       }
       resetAgendaBatches();
+      renderAgenda();
+    });
+
+    header.querySelector('.agenda-share-favorites')?.addEventListener('click', shareAgendaFavorites);
+    count.querySelector('.agenda-save-shared')?.addEventListener('click', () => {
+      const current = loadAgendaFavorites();
+      for (const id of state.mobileSharedSelection || []) current.add(id);
+      saveAgendaFavorites(current);
+      state.mobileSharedSelection = null;
+      state.mobileFavoritesOnly = true;
       renderAgenda();
     });
 
@@ -4460,6 +4551,7 @@ function eventProgram(event) {
         const nextContent = button.dataset.content || 'all';
         if (nextContent === state.mobileContent && !state.mobileFavoritesOnly) return;
         state.mobileFavoritesOnly = false;
+        state.mobileSharedSelection = null;
         normalizeAgendaFiltersForContent(nextContent);
         resetAgendaBatches();
         renderAgenda();
@@ -4738,6 +4830,13 @@ function eventProgram(event) {
   let resizeFitTimer = null;
   window.addEventListener('resize', () => {
     if (state.viewMode === 'auto' && state.data && !bookLocationsDialog?.open) {
+      const sharedSelection = sharedAgendaSelectionFromUrl();
+      if (sharedSelection?.size) {
+        state.mobileSharedSelection = sharedSelection;
+        state.mobileFavoritesOnly = false;
+        state.mobileContent = 'all';
+        saveViewMode('agenda');
+      }
       renderCurrentView();
       return;
     }
