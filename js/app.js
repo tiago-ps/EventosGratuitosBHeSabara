@@ -18,6 +18,7 @@
   const PANEL_PROFILE_ATTRIBUTE = 'panelProfile';
   const AGENDA_BATCH_SIZE = 24;
   const AGENDA_COLOR_SCHEME_KEY = 'tem-sim-uai-agenda-color-scheme';
+  const AGENDA_FAVORITES_KEY = 'mural-cultural-favoritos-v1';
   const PUBLIC_CURATION_ALIASES = Object.freeze({
     ufmg: 'vestibular-ufmg-seriado-2026',
     fuvest: 'vestibular-fuvest-2027',
@@ -152,6 +153,7 @@
     slideDuration: 0,
     mobileQuery: '',
     mobileFiltersOpen: false,
+    mobileFavoritesOnly: false,
     mobileContent: 'all',
     mobileCuration: '',
     mobileTheme: '',
@@ -3626,6 +3628,17 @@ function eventProgram(event) {
   }
 
   function agendaVisibleContents() {
+    if (state.mobileFavoritesOnly) {
+      const items = agendaFavoriteItems();
+      const group = type => items.filter(item => item.tipo_conteudo === type);
+      const events = group('evento').sort(compareAgendaEvents);
+      const books = group('livro').sort(agendaTitleCompare);
+      const courses = group('curso').sort(agendaTitleCompare);
+      const contests = group('concurso').sort(agendaTitleCompare);
+      const films = group('filme').sort(agendaTitleCompare);
+      const utility = group('utilidade_publica').sort(agendaTitleCompare);
+      return { events, books, courses, contests, films, utility, total: items.length };
+    }
     const curation = agendaCurationEntries().find(entry => entry.id === state.mobileCuration);
     const matchesCuration = item => agendaItemMatchesCuration(item, curation);
     const events = agendaVisibleEvents().filter(matchesCuration);
@@ -3839,32 +3852,101 @@ function eventProgram(event) {
     return 'Descobertas culturais';
   }
 
+  function agendaFavoriteId(item) {
+    if (!item) return '';
+    const type = String(item.tipo_conteudo || '').trim();
+    const id = String(type === 'curso' ? item.id_fonte : item.id || '').trim();
+    return type && id ? `${type}:${id}` : '';
+  }
+
+  function loadAgendaFavorites() {
+    try {
+      const parsed = JSON.parse(localStorage.getItem(AGENDA_FAVORITES_KEY) || '[]');
+      return new Set(Array.isArray(parsed) ? parsed.filter(value => typeof value === 'string') : []);
+    } catch {
+      return new Set();
+    }
+  }
+
+  function saveAgendaFavorites(favorites) {
+    try {
+      localStorage.setItem(AGENDA_FAVORITES_KEY, JSON.stringify([...favorites]));
+    } catch {
+      // A interface continua funcional na sessão mesmo quando o armazenamento é bloqueado.
+    }
+  }
+
+  function agendaFavoriteItems() {
+    const favorites = loadAgendaFavorites();
+    const catalogs = [
+      state.allEvents, state.allBooks, state.allCourses,
+      state.allContests, state.allFilms, state.allUtility
+    ];
+    return catalogs.flat().filter(item => favorites.has(agendaFavoriteId(item)));
+  }
+
+  function decorateAgendaFavorite(article, item) {
+    const favoriteId = agendaFavoriteId(item);
+    if (!article || !favoriteId) return article;
+    const favorites = loadAgendaFavorites();
+    const active = favorites.has(favoriteId);
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = `agenda-favorite-button${active ? ' is-favorite' : ''}`;
+    button.setAttribute('aria-pressed', active ? 'true' : 'false');
+    button.setAttribute('aria-label', active ? 'Remover dos favoritos' : 'Adicionar aos favoritos');
+    button.title = active ? 'Remover dos favoritos' : 'Adicionar aos favoritos';
+    button.innerHTML = '<span aria-hidden="true">★</span>';
+    button.addEventListener('click', event => {
+      event.preventDefault();
+      event.stopPropagation();
+      const current = loadAgendaFavorites();
+      if (current.has(favoriteId)) current.delete(favoriteId);
+      else current.add(favoriteId);
+      saveAgendaFavorites(current);
+      if (state.mobileFavoritesOnly) renderAgenda();
+      else {
+        const selected = current.has(favoriteId);
+        button.classList.toggle('is-favorite', selected);
+        button.setAttribute('aria-pressed', selected ? 'true' : 'false');
+        button.setAttribute('aria-label', selected ? 'Remover dos favoritos' : 'Adicionar aos favoritos');
+        button.title = selected ? 'Remover dos favoritos' : 'Adicionar aos favoritos';
+        document.querySelectorAll('.agenda-favorites-count').forEach(node => {
+          node.textContent = String(current.size);
+          node.hidden = current.size === 0;
+        });
+      }
+    });
+    article.append(button);
+    return article;
+  }
+
   function renderAgendaCard(item, options = {}) {
     if (item.tipo_conteudo === 'utilidade_publica') {
-      return utilityContent.createAgendaCard(item, { safeExternalUrl, safeImageUrl });
+      return decorateAgendaFavorite(utilityContent.createAgendaCard(item, { safeExternalUrl, safeImageUrl }), item);
     }
 
     if (item.tipo_conteudo === 'filme') {
-      return filmsContent.createAgendaCard(item, {
+      return decorateAgendaFavorite(filmsContent.createAgendaCard(item, {
         escapeHtml,
         safeExternalUrl,
         showDetails: (movie, opener) => filmsContent.showDetails(movie, opener, escapeHtml, safeExternalUrl)
-      });
+      }), item);
     }
 
     if (item.tipo_conteudo === 'concurso') {
-      return contestsContent.createAgendaCard(item, {
+      return decorateAgendaFavorite(contestsContent.createAgendaCard(item, {
         safeExternalUrl,
         safeImageUrl
-      });
+      }), item);
     }
 
     if (item.tipo_conteudo === 'curso') {
-      return coursesContent.createAgendaCard(item, {
+      return decorateAgendaFavorite(coursesContent.createAgendaCard(item, {
         safeExternalUrl,
         safeImageUrl,
         escapeHtml
-      });
+      }), item);
     }
 
     const article = document.createElement('article');
@@ -3892,7 +3974,7 @@ function eventProgram(event) {
           ${opinionUrl ? `<div class="agenda-card-actions"><a class="secondary" href="${escapeHtml(opinionUrl)}" target="_blank" rel="noopener noreferrer">Opine sobre este livro</a></div>` : ''}
         </div>`;
       bindAgendaBookHoldingsToggle(article);
-      return article;
+      return decorateAgendaFavorite(article, item);
     }
 
     const event = item;
@@ -3930,7 +4012,7 @@ function eventProgram(event) {
     } else {
       setMobileCardImage(image, event);
     }
-    return article;
+    return decorateAgendaFavorite(article, item);
   }
 
   function resetAgendaBatches() {
@@ -4048,7 +4130,7 @@ function eventProgram(event) {
     normalizeAgendaFiltersForContent();
 
     const results = agendaVisibleContents();
-    const activeFilters = agendaActiveFilterCount();
+    const activeFilters = state.mobileFavoritesOnly ? 0 : agendaActiveFilterCount();
     const header = document.createElement('header');
     header.className = 'agenda-header';
     const agendaContentTabs = [
@@ -4060,6 +4142,7 @@ function eventProgram(event) {
       ['films', 'Filmes'],
       ['utility', 'Utilidade pública']
     ];
+    const favoriteCount = loadAgendaFavorites().size;
     header.innerHTML = `
       <div class="agenda-heading">
         <img class="agenda-logo" src="imagens/marca/logo-mural-cultural.png" alt="Tem Sim, Uai">
@@ -4075,6 +4158,12 @@ function eventProgram(event) {
         `).join('')}
       </nav>
       <div class="agenda-header-actions">
+        <button
+          class="agenda-favorites-toggle${state.mobileFavoritesOnly ? ' is-active' : ''}"
+          type="button"
+          aria-pressed="${state.mobileFavoritesOnly ? 'true' : 'false'}"
+          title="Meus favoritos"
+        ><span aria-hidden="true">★</span><span class="agenda-favorites-label">Favoritos</span><span class="agenda-favorites-count" ${favoriteCount ? '' : 'hidden'}>${favoriteCount}</span></button>
         <button
           class="agenda-search-toggle"
           type="button"
@@ -4261,7 +4350,9 @@ function eventProgram(event) {
     count.className = 'agenda-count';
     count.setAttribute('role', 'status');
     count.setAttribute('aria-live', 'polite');
-    count.innerHTML = contestMode ? `
+    count.innerHTML = state.mobileFavoritesOnly ? `
+      <span><strong>${results.total}</strong> ${results.total === 1 ? 'favorito salvo neste dispositivo' : 'favoritos salvos neste dispositivo'}</span>
+    ` : contestMode ? `
       <span><strong>${results.total}</strong> de ${state.allContests.length} oportunidades compatíveis com as formações acompanhadas.${activeFilters ? ` · ${activeFilters} ${activeFilters === 1 ? 'filtro ativo' : 'filtros ativos'}` : ''}</span>
       ${activeFilters ? '<button type="button" class="agenda-clear-filters">Limpar filtros</button>' : ''}
     ` : `
@@ -4274,8 +4365,10 @@ function eventProgram(event) {
     resultsContainer.setAttribute('aria-label', 'Conteúdos culturais');
 
     if (!results.total) {
-      resultsContainer.innerHTML = '<div class="agenda-empty"><h2>Nenhum conteúdo encontrado</h2><p>Tente alterar a busca ou os filtros.</p><button type="button" class="agenda-empty-clear">Limpar filtros</button></div>';
-    } else if (state.mobileContent === 'all') {
+      resultsContainer.innerHTML = state.mobileFavoritesOnly
+        ? '<div class="agenda-empty"><h2>Nenhum favorito ainda</h2><p>Use a estrela nos conteúdos que quiser guardar neste dispositivo.</p><button type="button" class="agenda-empty-favorites-back">Explorar conteúdos</button></div>'
+        : '<div class="agenda-empty"><h2>Nenhum conteúdo encontrado</h2><p>Tente alterar a busca ou os filtros.</p><button type="button" class="agenda-empty-clear">Limpar filtros</button></div>';
+    } else if (state.mobileFavoritesOnly || state.mobileContent === 'all') {
       const eventsGrid = document.createElement('div');
       eventsGrid.className = 'agenda-section-grid';
       const eventsProgressiveControl = createAgendaProgressiveControl(eventsGrid, results.events, 'events');
@@ -4327,6 +4420,16 @@ function eventProgram(event) {
     shell.append(resultsContainer, footer);
     app.replaceChildren(shell);
 
+    header.querySelector('.agenda-favorites-toggle').addEventListener('click', () => {
+      state.mobileFavoritesOnly = !state.mobileFavoritesOnly;
+      if (state.mobileFavoritesOnly) {
+        state.mobileContent = 'all';
+        state.mobileFiltersOpen = false;
+      }
+      resetAgendaBatches();
+      renderAgenda();
+    });
+
     const installButton = header.querySelector('.install-app-btn');
     installButton.addEventListener('click', installApp);
     refreshInstallButtons();
@@ -4355,7 +4458,8 @@ function eventProgram(event) {
     header.querySelectorAll('.agenda-content-tab').forEach(button => {
       button.addEventListener('click', () => {
         const nextContent = button.dataset.content || 'all';
-        if (nextContent === state.mobileContent) return;
+        if (nextContent === state.mobileContent && !state.mobileFavoritesOnly) return;
+        state.mobileFavoritesOnly = false;
         normalizeAgendaFiltersForContent(nextContent);
         resetAgendaBatches();
         renderAgenda();
@@ -4432,6 +4536,10 @@ function eventProgram(event) {
       else if (filmMode) clearFilmAgendaFilters();
       else clearAgendaFilters();
       rerender();
+    });
+    resultsContainer.querySelector('.agenda-empty-favorites-back')?.addEventListener('click', () => {
+      state.mobileFavoritesOnly = false;
+      renderAgenda();
     });
     resultsContainer.querySelector('.agenda-empty-clear')?.addEventListener('click', () => {
       if (contestMode) clearContestAgendaFilters();

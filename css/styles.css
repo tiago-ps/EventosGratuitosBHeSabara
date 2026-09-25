@@ -1844,3 +1844,81 @@ body.agenda-mode .agenda-book-holdings-toggle:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
+
+
+/* Favoritos da Agenda v1 */
+.agenda-card { position: relative; }
+.agenda-favorite-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 3;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.28);
+  border-radius: 50%;
+  background: rgba(7,17,31,.78);
+  color: #fff;
+  font: inherit;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 14px rgba(0,0,0,.24);
+}
+.agenda-favorite-button:hover,
+.agenda-favorite-button:focus-visible { transform: scale(1.05); }
+.agenda-favorite-button.is-favorite {
+  background: var(--accent);
+  color: var(--accent-contrast);
+  border-color: transparent;
+}
+.agenda-favorites-toggle {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--control-bg);
+  color: var(--text);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 900;
+  cursor: pointer;
+}
+.agenda-favorites-toggle > span[aria-hidden="true"] { font-size: 17px; }
+.agenda-favorites-toggle:hover,
+.agenda-favorites-toggle:focus-visible,
+.agenda-favorites-toggle.is-active { background: var(--control-hover-bg); border-color: var(--accent); }
+.agenda-favorites-count {
+  min-width: 20px;
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  text-align: center;
+  font-size: 11px;
+}
+.agenda-empty-favorites-back {
+  min-height: 42px;
+  margin-top: 12px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer;
+}
+@media (max-width: 760px) {
+  .agenda-favorites-toggle { min-height: 38px; padding: 0 10px; }
+  .agenda-favorite-button { width: 38px; height: 38px; top: 8px; right: 8px; }
+}
+@media (max-width: 430px) {
+  .agenda-favorites-label { display: none; }
+}
