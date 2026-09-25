@@ -1922,3 +1922,32 @@ body.agenda-mode .agenda-book-holdings-toggle:focus-visible {
 @media (max-width: 430px) {
   .agenda-favorites-label { display: none; }
 }
+
+
+/* Compartilhamento de favoritos */
+.agenda-share-favorites,
+.agenda-save-shared {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 0 13px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--control-bg);
+  color: var(--text);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 900;
+  cursor: pointer;
+}
+.agenda-share-favorites:hover,
+.agenda-share-favorites:focus-visible,
+.agenda-save-shared:hover,
+.agenda-save-shared:focus-visible { border-color: var(--accent); background: var(--control-hover-bg); }
+.agenda-save-shared { margin-left: 10px; background: var(--accent); color: var(--accent-contrast); border-color: transparent; }
+@media (max-width: 760px) {
+  .agenda-share-favorites,
+  .agenda-save-shared { min-height: 38px; padding: 0 10px; }
+}
