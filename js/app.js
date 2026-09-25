@@ -210,6 +210,21 @@
     };
   }
 
+  function publicCurationBookRecord(item) {
+    const normalized = normalizeCurationBook(item);
+    if (!normalized) return null;
+    return {
+      id: normalized.id,
+      titulo: normalized.titulo,
+      autor: normalized.autor,
+      acesso_fisico: normalized.acesso_fisico,
+      acesso_virtual: normalized.acesso_virtual,
+      icone: normalized.icone || '📚',
+      temas: Array.isArray(normalized.temas) ? normalized.temas : [],
+      _catalogo_curadoria: true
+    };
+  }
+
   function mergeCurationBooks(publicBooks, catalogBooks) {
     const byId = new Map(publicBooks.map(book => [String(book.id), book]));
     catalogBooks.map(normalizeCurationBook).filter(Boolean).forEach(book => {
