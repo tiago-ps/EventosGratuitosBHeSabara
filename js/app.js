@@ -3,6 +3,7 @@
 
   const DATA_URL = 'eventos.json';
   const BOOKS_URL = 'livros.json';
+  const CURATION_BOOKS_URL = 'catalogo-curadoria-livros.json';
   const COURSES_URL = 'cursos.json';
   const CONTESTS_URL = 'concursos.json';
   const FILMS_URL = 'filmes.json';
@@ -106,6 +107,8 @@
   let state = {
     data: null,
     booksData: null,
+    curationBooksData: null,
+    curationMode: false,
     coursesData: null,
     contestsData: null,
     filmsData: null,
@@ -186,6 +189,49 @@
       utility: AGENDA_BATCH_SIZE
     }
   };
+
+  function curationModeFromUrl() {
+    const params = new URL(window.location.href).searchParams;
+    return params.get('modo') === 'curadoria';
+  }
+
+  function normalizeCurationBook(item) {
+    if (!item || typeof item !== 'object' || !item.id) return null;
+    return {
+      ...item,
+      tipo_conteudo: 'livro',
+      titulo: String(item.titulo || item.titulo_completo || 'Livro sem título informado').trim(),
+      autor: String(item.autor || item.autoria || '').trim(),
+      acesso_fisico: item.acesso_fisico === true || item.acesso?.fisico === true,
+      acesso_virtual: item.acesso_virtual === true || item.acesso?.virtual === true,
+      pergunta_curiosidade: '',
+      texto_apoio: String(item.texto_apoio || '').trim(),
+      _catalogo_curadoria: true
+    };
+  }
+
+  function publicCurationBookRecord(item) {
+    const normalized = normalizeCurationBook(item);
+    if (!normalized) return null;
+    return {
+      id: normalized.id,
+      titulo: normalized.titulo,
+      autor: normalized.autor,
+      acesso_fisico: normalized.acesso_fisico,
+      acesso_virtual: normalized.acesso_virtual,
+      icone: normalized.icone || '📚',
+      temas: Array.isArray(normalized.temas) ? normalized.temas : [],
+      _catalogo_curadoria: true
+    };
+  }
+
+  function mergeCurationBooks(publicBooks, catalogBooks) {
+    const byId = new Map(publicBooks.map(book => [String(book.id), book]));
+    catalogBooks.map(publicCurationBookRecord).filter(Boolean).forEach(book => {
+      if (!byId.has(String(book.id))) byId.set(String(book.id), book);
+    });
+    return [...byId.values()];
+  }
 
   function normalizeText(value = '') {
     return String(value)
@@ -4031,6 +4077,7 @@ function eventProgram(event) {
     if (item.tipo_conteudo === 'livro') {
       const holdingsHtml = agendaBookHoldingsHtml(item);
       const acervosCount = bookAcervos(item).length;
+      const curationOnly = item._catalogo_curadoria === true;
       const bookImage = safeImageUrl(item.imagem);
       const opinionUrl = state.config?.opinioes_livros?.habilitado === true
         ? safeExternalUrl(item.link_formulario_opiniao || state.config?.opinioes_livros?.url_formulario)
@@ -4040,7 +4087,7 @@ function eventProgram(event) {
           ? `<img src="${escapeHtml(bookImage)}" alt="Capa: ${escapeHtml(item.titulo || '')}" loading="lazy">`
           : `<div class="agenda-book-placeholder" role="img" aria-label="Livro sem capa disponível"><span aria-hidden="true">${escapeHtml(item.icone || '📚')}</span><strong>Livro</strong></div>`}</div>
         <div class="agenda-card-body">
-          <div class="agenda-card-badges"><span>Livro</span>${item.acesso_fisico ? '<span>Físico</span>' : ''}${item.acesso_virtual ? '<span>Virtual</span>' : ''}${acervosCount > 1 ? `<span>${acervosCount} acervos</span>` : ''}</div>
+          <div class="agenda-card-badges"><span>Livro</span>${curationOnly ? '<span class="curation-catalog-badge">Acervo — ainda não publicado no Mural</span>' : ''}${item.acesso_fisico ? '<span>Físico</span>' : ''}${item.acesso_virtual ? '<span>Virtual</span>' : ''}${acervosCount > 1 ? `<span>${acervosCount} acervos</span>` : ''}</div>
           <p class="agenda-card-date">Sugestão de Leitura</p>
           <h2>${escapeHtml(item.pergunta_curiosidade || item.titulo || 'Livro')}</h2>
           <p class="agenda-card-place"><strong class="agenda-book-title">${escapeHtml(item.titulo || '')}</strong> · ${escapeHtml(item.autor || '')}</p>
@@ -4200,6 +4247,7 @@ function eventProgram(event) {
     clearTimeout(state.timer);
     state.isPaused = true;
     document.body.classList.add('agenda-mode');
+    document.body.classList.toggle('curation-mode', state.curationMode);
     document.body.classList.remove('panel-mode');
     const agendaColorScheme = applyAgendaColorScheme(storedAgendaColorScheme());
 
@@ -4220,6 +4268,7 @@ function eventProgram(event) {
     ];
     const favoriteCount = loadAgendaFavorites().size;
     header.innerHTML = `
+      ${state.curationMode ? `<div class="curation-mode-banner" role="status"><strong>Modo Curadoria</strong><span>Ambiente de seleção — este não é o Mural Cultural público oficial.</span></div>` : ''}
       <div class="agenda-heading">
         <img class="agenda-logo" src="imagens/marca/logo-mural-cultural.png" alt="Tem Sim, Uai">
       </div>
@@ -4726,9 +4775,11 @@ function eventProgram(event) {
 
   async function load() {
     try {
-      const [response, booksData, coursesData, contestsData, filmsData, utilityData, siteCurationsData, config] = await Promise.all([
+      state.curationMode = curationModeFromUrl();
+      const [response, booksData, curationBooksData, coursesData, contestsData, filmsData, utilityData, siteCurationsData, config] = await Promise.all([
         fetch(`${DATA_URL}?v=${Date.now()}`, { cache: 'no-store' }),
         loadOptionalJson(BOOKS_URL, { livros: [] }),
+        state.curationMode ? loadOptionalJson(CURATION_BOOKS_URL, { livros: [] }) : Promise.resolve({ livros: [] }),
         loadOptionalJson(COURSES_URL, { cursos: [] }),
         loadOptionalJson(CONTESTS_URL, { concursos: [] }),
         loadOptionalJson(FILMS_URL, { filmes: [] }),
@@ -4749,6 +4800,7 @@ function eventProgram(event) {
 
       state.data = data;
       state.booksData = booksData && Array.isArray(booksData.livros) ? booksData : { livros: [] };
+      state.curationBooksData = curationBooksData && Array.isArray(curationBooksData.livros) ? curationBooksData : { livros: [] };
       state.coursesData = coursesData && Array.isArray(coursesData.cursos) ? coursesData : { cursos: [] };
       state.contestsData = contestsData && Array.isArray(contestsData.concursos)
         ? contestsData
@@ -4773,7 +4825,10 @@ function eventProgram(event) {
         concursos: state.contestsData.concursos
       });
       state.allEvents = filterAndSort(siteLayer.eventos).map(event => ({ ...event, tipo_conteudo: 'evento' }));
-      state.allBooks = siteLayer.livros.map(book => ({ ...book, tipo_conteudo: 'livro' }));
+      const publicBooks = siteLayer.livros.map(book => ({ ...book, tipo_conteudo: 'livro' }));
+      state.allBooks = state.curationMode
+        ? mergeCurationBooks(publicBooks, state.curationBooksData.livros)
+        : publicBooks;
       state.allCourses = siteLayer.cursos.map(course => ({ ...course, tipo_conteudo: 'curso' }));
       state.allContests = (siteLayer.concursos || [])
         .filter(contestsContent.isValid)
@@ -4804,7 +4859,7 @@ function eventProgram(event) {
         return;
       }
 
-      state.viewMode = storedViewMode();
+      state.viewMode = state.curationMode ? 'agenda' : storedViewMode();
       const sharedSelection = sharedAgendaSelectionFromUrl();
       if (sharedSelection?.size) {
         state.mobileSharedSelection = sharedSelection;
