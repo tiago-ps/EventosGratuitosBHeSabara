@@ -824,6 +824,290 @@
         ],
         "unidade": "BRL"
       }
+    },
+    {
+      "schema_version": 1,
+      "id": "utilidade:setembro-verde:direitos-pcd-bh",
+      "tipo_conteudo": "utilidade_publica",
+      "natureza": "direito_orientacao",
+      "colecao": "setembro-verde",
+      "ordem": 10,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "ativo": true,
+      "areas_utilidade": [
+        "Direitos",
+        "Pessoa com deficiência",
+        "Inclusão"
+      ],
+      "tipos_recurso": [
+        "Orientação",
+        "Direitos e benefícios"
+      ],
+      "titulo": "Direitos e benefícios das pessoas com deficiência em BH",
+      "descricao": "A Prefeitura de Belo Horizonte reúne orientações sobre direitos e benefícios voltados às pessoas com deficiência, com informações para facilitar o acesso a serviços, garantias legais e políticas de inclusão.",
+      "destaque": "Conheça direitos, benefícios e caminhos de acesso em Belo Horizonte.",
+      "fonte_label": "Prefeitura de Belo Horizonte",
+      "link": "https://prefeitura.pbh.gov.br/direitos-humanos/politicas/pessoa-com-deficiencia/direitos-e-beneficios",
+      "termos_busca": [
+        "pessoa com deficiência",
+        "PCD",
+        "direitos",
+        "benefícios",
+        "inclusão",
+        "Belo Horizonte"
+      ],
+      "icone": "♿",
+      "temas": [
+        "Setembro Verde",
+        "Pessoa com deficiência",
+        "Direitos",
+        "Inclusão"
+      ],
+      "curadoria_ids": [
+        "setembro-verde"
+      ],
+      "publicos_alvo": [
+        "Pessoas com deficiência",
+        "Familiares e cuidadores",
+        "População de Belo Horizonte"
+      ],
+      "escopo_geografico": {
+        "tipo": "municipal",
+        "pais": "BR",
+        "uf": "MG",
+        "municipios": [
+          "Belo Horizonte"
+        ]
+      },
+      "fontes": [
+        {
+          "id": "pbh-direitos-pcd",
+          "nome": "Orientações sobre Direitos e Benefícios das Pessoas com Deficiência — PBH",
+          "url": "https://prefeitura.pbh.gov.br/direitos-humanos/politicas/pessoa-com-deficiencia/direitos-e-beneficios",
+          "tipo": "oficial"
+        }
+      ],
+      "visualizacao": {
+        "tipo": "texto"
+      },
+      "tempo_slide": 15,
+      "origem": "curadoria-setembro-verde",
+      "site_only": true
+    },
+    {
+      "schema_version": 1,
+      "id": "utilidade:setembro-verde:bhbus-beneficio-inclusao",
+      "tipo_conteudo": "utilidade_publica",
+      "natureza": "direito_orientacao",
+      "colecao": "setembro-verde",
+      "ordem": 20,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "ativo": true,
+      "areas_utilidade": [
+        "Transporte",
+        "Pessoa com deficiência",
+        "Autismo"
+      ],
+      "tipos_recurso": [
+        "Gratuidade",
+        "Transporte público",
+        "Serviço municipal"
+      ],
+      "titulo": "BHBUS Benefício Inclusão: gratuidade no transporte em BH",
+      "descricao": "Pessoas com deficiência física, mental, auditiva ou visual e pessoas autistas que atendam aos critérios da norma vigente podem solicitar o Cartão BHBUS Benefício Inclusão para usar gratuitamente os ônibus municipais de Belo Horizonte.",
+      "destaque": "O pedido inicial pode ser feito pelos serviços digitais da Prefeitura de Belo Horizonte.",
+      "fonte_label": "SUMOB — Prefeitura de Belo Horizonte",
+      "link": "https://prefeitura.pbh.gov.br/sumob/servicos-gratuidade",
+      "termos_busca": [
+        "BHBUS",
+        "gratuidade",
+        "ônibus",
+        "transporte",
+        "deficiência",
+        "autismo",
+        "TEA"
+      ],
+      "icone": "🚌",
+      "temas": [
+        "Setembro Verde",
+        "Pessoa com deficiência",
+        "Autismo",
+        "Mobilidade"
+      ],
+      "curadoria_ids": [
+        "setembro-verde"
+      ],
+      "publicos_alvo": [
+        "Pessoas com deficiência",
+        "Pessoas autistas",
+        "Moradores de Belo Horizonte"
+      ],
+      "escopo_geografico": {
+        "tipo": "municipal",
+        "pais": "BR",
+        "uf": "MG",
+        "municipios": [
+          "Belo Horizonte"
+        ]
+      },
+      "fontes": [
+        {
+          "id": "pbh-bhbus-inclusao",
+          "nome": "Serviços Gratuidade — PBH/SUMOB",
+          "url": "https://prefeitura.pbh.gov.br/sumob/servicos-gratuidade",
+          "tipo": "oficial"
+        }
+      ],
+      "visualizacao": {
+        "tipo": "texto"
+      },
+      "observacao": "A concessão depende do atendimento aos critérios definidos na norma vigente. Consulte o serviço oficial para requisitos e etapas atualizados.",
+      "tempo_slide": 15,
+      "origem": "curadoria-setembro-verde",
+      "site_only": true
+    },
+    {
+      "schema_version": 1,
+      "id": "utilidade:setembro-verde:ciptea-mg",
+      "tipo_conteudo": "utilidade_publica",
+      "natureza": "direito_orientacao",
+      "colecao": "setembro-verde",
+      "ordem": 30,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "ativo": true,
+      "areas_utilidade": [
+        "Autismo",
+        "Documentos",
+        "Direitos"
+      ],
+      "tipos_recurso": [
+        "Documento de identificação",
+        "Serviço estadual"
+      ],
+      "titulo": "CIPTEA: carteira de identificação da pessoa autista em Minas Gerais",
+      "descricao": "A Carteira de Identificação da Pessoa com Transtorno do Espectro Autista (CIPTEA) pode ser solicitada por residentes de Minas Gerais. O documento auxilia na identificação e no acesso à prioridade de atendimento e a serviços públicos e privados, especialmente nas áreas de saúde, educação e assistência social.",
+      "destaque": "A solicitação pode ser feita pela internet no Cidadão MG ou presencialmente em uma UAI.",
+      "detalhe": "O Portal MG informa prazo de até 10 dias úteis para o serviço.",
+      "fonte_label": "Portal MG / SEDESE",
+      "link": "https://www.mg.gov.br/servico/obter-carteira-de-identificacao-da-pessoa-com-transtorno-do-espectro-autista-ciptea",
+      "termos_busca": [
+        "CIPTEA",
+        "autismo",
+        "TEA",
+        "carteira",
+        "identificação",
+        "prioridade"
+      ],
+      "icone": "🪪",
+      "temas": [
+        "Setembro Verde",
+        "Autismo",
+        "Direitos",
+        "Inclusão"
+      ],
+      "curadoria_ids": [
+        "setembro-verde"
+      ],
+      "publicos_alvo": [
+        "Pessoas com Transtorno do Espectro Autista",
+        "Familiares e responsáveis",
+        "Residentes de Minas Gerais"
+      ],
+      "requisitos": [
+        "Ser residente em Minas Gerais",
+        "Apresentar a documentação exigida pelo serviço oficial"
+      ],
+      "escopo_geografico": {
+        "tipo": "estadual",
+        "pais": "BR",
+        "uf": "MG"
+      },
+      "fontes": [
+        {
+          "id": "mg-ciptea",
+          "nome": "Obter Carteira de Identificação da Pessoa com Transtorno do Espectro Autista — Portal MG",
+          "url": "https://www.mg.gov.br/servico/obter-carteira-de-identificacao-da-pessoa-com-transtorno-do-espectro-autista-ciptea",
+          "tipo": "oficial"
+        }
+      ],
+      "visualizacao": {
+        "tipo": "texto"
+      },
+      "tempo_slide": 15,
+      "origem": "curadoria-setembro-verde",
+      "site_only": true
+    },
+    {
+      "schema_version": 1,
+      "id": "utilidade:setembro-verde:doacao-orgaos-mg",
+      "tipo_conteudo": "utilidade_publica",
+      "natureza": "direito_orientacao",
+      "colecao": "setembro-verde",
+      "ordem": 40,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "ativo": true,
+      "areas_utilidade": [
+        "Saúde",
+        "Doação de órgãos",
+        "Transplantes"
+      ],
+      "tipos_recurso": [
+        "Orientação",
+        "Campanha de saúde"
+      ],
+      "titulo": "Quer ser doador de órgãos? Converse com sua família",
+      "descricao": "No Brasil, a doação de órgãos de pessoa falecida depende da autorização da família. Por isso, quem deseja ser doador deve comunicar essa decisão aos familiares. Em Minas Gerais, a SES-MG também orienta sobre formas de registrar a manifestação de vontade, como a Autorização Eletrônica para Doação de Órgãos (AEDO).",
+      "destaque": "Falar com a família continua sendo essencial para que a vontade de doar seja conhecida.",
+      "detalhe": "O transplante pelo SUS é gratuito, incluindo exames preparatórios, cirurgia, acompanhamento e medicamentos pós-transplante.",
+      "fonte_label": "Secretaria de Estado de Saúde de Minas Gerais",
+      "link": "https://www.saude.mg.gov.br/doeorgaos/",
+      "termos_busca": [
+        "doação de órgãos",
+        "doador",
+        "transplante",
+        "AEDO",
+        "família",
+        "27 de setembro"
+      ],
+      "icone": "💚",
+      "temas": [
+        "Setembro Verde",
+        "Doação de órgãos",
+        "Transplantes",
+        "Saúde"
+      ],
+      "curadoria_ids": [
+        "setembro-verde"
+      ],
+      "publicos_alvo": [
+        "População em geral",
+        "Pessoas interessadas em doação de órgãos",
+        "Familiares"
+      ],
+      "escopo_geografico": {
+        "tipo": "estadual",
+        "pais": "BR",
+        "uf": "MG"
+      },
+      "fontes": [
+        {
+          "id": "sesmg-doe-orgaos",
+          "nome": "Doe Órgãos. Doe Vida — SES-MG",
+          "url": "https://www.saude.mg.gov.br/doeorgaos/",
+          "tipo": "oficial"
+        }
+      ],
+      "visualizacao": {
+        "tipo": "texto"
+      },
+      "observacao": "O registro de vontade ajuda a comunicar a decisão, mas não substitui a autorização familiar exigida para doação após a morte.",
+      "tempo_slide": 15,
+      "origem": "curadoria-setembro-verde",
+      "site_only": true
     }
   ]
 }
