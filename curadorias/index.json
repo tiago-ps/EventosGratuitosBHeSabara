@@ -4,6 +4,17 @@
   "descricao": "Dados editoriais complementares exclusivos da interface de teste. Não substituem nem alteram os catálogos centrais.",
   "curadorias": [
     {
+      "id": "setembro-verde",
+      "arquivo": "curadorias/setembro-verde.json",
+      "nome": "Setembro Verde",
+      "tema": "Inclusão, Doação de Órgãos",
+      "permanente": false,
+      "ativo_de": "2026-09-01",
+      "ativo_ate": "2026-09-30",
+      "ordem": 0,
+      "banner": "imagens/curadorias/setembro-verde/setembro-verde-banner.svg"
+    },
+    {
       "id": "teste",
       "arquivo": "curadorias/teste.json",
       "nome": "teste",
