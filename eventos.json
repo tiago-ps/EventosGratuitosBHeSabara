@@ -6224,6 +6224,48 @@
       "inscricao_inicio": "",
       "inscricao_fim": "",
       "motivo_publicacao": "realizacao_em_andamento_ou_futura"
+    },
+    {
+      "id": "manual-manual-instagram-18084086951283360-neurodiversidade-2026-09-26",
+      "titulo": "Encontro com Educadores | Neurodiversidade na Educação: Acolhimento e Regulação",
+      "data": "2026-09-26",
+      "data_fim": "",
+      "horario": "10h30",
+      "local": "Centro Cultural Banco do Brasil Belo Horizonte",
+      "cidade": "Belo Horizonte",
+      "categoria": "Encontro",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita, mediante inscrição via formulário. Vagas limitadas.",
+      "criterio_exibicao": "realizacao",
+      "status_inscricao": "",
+      "politica_ambiente": "padrao",
+      "exibicao_ativa": true,
+      "descricao": "Encontro conduzido por Natália Maia sobre acolhimento e manejo de crianças neurodivergentes em contextos educativos. A atividade aborda estratégias para situações de crise, diferentes tipos de suporte e práticas de regulação, com foco na redução de barreiras e na construção de experiências de aprendizagem mais inclusivas, seguras e acolhedoras.",
+      "imagem": "",
+      "link": "https://ccbb.com.br/belo-horizonte/ccbb-educativo/",
+      "pagina": "https://ccbb.com.br/belo-horizonte/ccbb-educativo/",
+      "link_inscricao": "",
+      "monitorar_formulario_google": false,
+      "url_formulario_google": "",
+      "acao_formulario_fechado": "marcar_encerrada",
+      "fonte": "CCBB Belo Horizonte",
+      "instituicao_id": "ccbb-bh",
+      "classificacao_indicativa": "Livre; recomendada para pessoas a partir de 16 anos",
+      "local_id": "ccbb-bh",
+      "endereco": "Praça da Liberdade, 450, Funcionários, Belo Horizonte - MG",
+      "mapa": "",
+      "espaco_interno": "Teatro I",
+      "temas": [
+        "Setembro Verde",
+        "Neurodiversidade",
+        "Educação inclusiva",
+        "Pessoa com deficiência",
+        "Acessibilidade"
+      ],
+      "imagem_fonte": "",
+      "imagem_url_origem": "",
+      "origem": "manual",
+      "tipo_conteudo": "evento"
     }
   ]
 }
