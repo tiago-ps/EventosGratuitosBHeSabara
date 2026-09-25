@@ -227,7 +227,7 @@
 
   function mergeCurationBooks(publicBooks, catalogBooks) {
     const byId = new Map(publicBooks.map(book => [String(book.id), book]));
-    catalogBooks.map(normalizeCurationBook).filter(Boolean).forEach(book => {
+    catalogBooks.map(publicCurationBookRecord).filter(Boolean).forEach(book => {
       if (!byId.has(String(book.id))) byId.set(String(book.id), book);
     });
     return [...byId.values()];
