@@ -2278,6 +2278,53 @@ function eventProgram(event) {
     renderSlide(state.index);
   }
 
+  function setupMobileSwipeNavigation() {
+    const mobileQuery = window.matchMedia('(max-width: 680px)');
+    const minimumDistance = 50;
+    const horizontalBias = 1.25;
+    let startX = 0;
+    let startY = 0;
+    let tracking = false;
+
+    app.addEventListener('touchstart', event => {
+      if (!mobileQuery.matches || event.touches.length !== 1) {
+        tracking = false;
+        return;
+      }
+
+      const touch = event.touches[0];
+      startX = touch.clientX;
+      startY = touch.clientY;
+      tracking = true;
+    }, { passive: true });
+
+    app.addEventListener('touchend', event => {
+      if (!tracking || !mobileQuery.matches || event.changedTouches.length !== 1) {
+        tracking = false;
+        return;
+      }
+
+      const touch = event.changedTouches[0];
+      const deltaX = touch.clientX - startX;
+      const deltaY = touch.clientY - startY;
+      tracking = false;
+
+      // Só considera swipe quando o gesto é claramente horizontal. Assim,
+      // a rolagem vertical da página continua natural no celular.
+      if (Math.abs(deltaX) < minimumDistance ||
+          Math.abs(deltaX) < Math.abs(deltaY) * horizontalBias) {
+        return;
+      }
+
+      if (deltaX < 0) goToNext();
+      else goToPrevious();
+    }, { passive: true });
+
+    app.addEventListener('touchcancel', () => {
+      tracking = false;
+    }, { passive: true });
+  }
+
   function togglePlayPause() {
     state.isPaused = !state.isPaused;
     updatePlayPauseButton();
@@ -4630,8 +4677,9 @@ function eventProgram(event) {
     applyEditorialPanelProfile(profileId);
   });
 
-  // Adicionar listeners de teclado
+  // Adicionar listeners de teclado e gesto horizontal no celular
   document.addEventListener('keydown', handleKeyPress);
+  setupMobileSwipeNavigation();
 
   load();
 })();
