@@ -1951,3 +1951,50 @@ body.agenda-mode .agenda-book-holdings-toggle:focus-visible {
   .agenda-share-favorites,
   .agenda-save-shared { min-height: 38px; padding: 0 10px; }
 }
+
+/* Modo Curadoria — identidade visual inequívoca, sem alterar o Mural público. */
+body.agenda-mode.curation-mode {
+  --curation-accent: #f0b429;
+  --curation-ink: #201704;
+}
+body.agenda-mode.curation-mode .agenda-header {
+  border-top: 6px solid var(--curation-accent);
+}
+.curation-mode-banner {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .7rem 1rem;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 0 .85rem;
+  padding: .75rem 1rem;
+  border-radius: 10px;
+  background: var(--curation-accent);
+  color: var(--curation-ink);
+  text-align: center;
+  font-size: .88rem;
+  line-height: 1.35;
+}
+.curation-mode-banner strong {
+  padding: .2rem .55rem;
+  border: 2px solid currentColor;
+  border-radius: 999px;
+  font-size: .78rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+body.agenda-mode.curation-mode .agenda-favorite-button.is-favorite,
+body.agenda-mode.curation-mode .agenda-favorites-count {
+  background: var(--curation-accent);
+  color: var(--curation-ink);
+}
+.curation-catalog-badge {
+  border-color: var(--curation-accent) !important;
+  background: color-mix(in srgb, var(--curation-accent) 18%, transparent) !important;
+}
+@media (max-width: 620px) {
+  .curation-mode-banner { align-items: stretch; flex-direction: column; }
+  .curation-mode-banner strong { align-self: center; }
+}
