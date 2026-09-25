@@ -1,0 +1,85 @@
+{
+  "id": "setembro-verde",
+  "status_editorial": "em_analise",
+  "membros": {
+    "concursos": [],
+    "cursos": [],
+    "eventos": [
+      "portal-bh-7482c32d5c46-2026-09-25-1400",
+      "portal-bh-5f83c25750e4-2026-09-26-0900",
+      "manual-manual-instagram-18084086951283360-neurodiversidade-2026-09-26"
+    ],
+    "filmes": [
+      "telabrasil:323",
+      "telabrasil:193",
+      "telabrasil:481",
+      "telabrasil:712",
+      "telabrasil:190"
+    ],
+    "livros": [],
+    "utilidade_publica": [
+      "utilidade:setembro-verde:direitos-pcd-bh",
+      "utilidade:setembro-verde:bhbus-beneficio-inclusao",
+      "utilidade:setembro-verde:ciptea-mg",
+      "utilidade:setembro-verde:doacao-orgaos-mg"
+    ]
+  },
+  "nome": "Setembro Verde",
+  "tema": "Inclusão, Doação de Órgãos",
+  "permanente": false,
+  "ativo_de": "2026-09-01",
+  "ativo_ate": "2026-09-30",
+  "ordem": 0,
+  "titulo_editorial": "Setembro Verde",
+  "subtitulo_editorial": "Inclusão, direitos das pessoas com deficiência e doação de órgãos",
+  "texto_introdutorio": "Setembro Verde reúne duas campanhas diferentes. Em Belo Horizonte, o mês destaca os direitos, a inclusão e o protagonismo das pessoas com deficiência. Na área da saúde, a campanha também promove a conscientização sobre a doação de órgãos e tecidos. Esta curadoria reúne conteúdos culturais, orientações e serviços ligados a esses dois eixos.",
+  "promocao_painel": {
+    "meses": [
+      9
+    ]
+  },
+  "perfil_painel": {
+    "nome": "Setembro Verde — curadoria do mês",
+    "banner": {
+      "src": "imagens/curadorias/setembro-verde/setembro-verde-banner.svg",
+      "alt": "Setembro Verde — inclusão, direitos e doação de órgãos"
+    },
+    "destaque": "Inclusão, direitos e solidariedade",
+    "configuracao": {
+      "modules": {
+        "events": true,
+        "books": false,
+        "courses": false,
+        "contests": false,
+        "films": true,
+        "utility": true
+      },
+      "theme": "setembro verde",
+      "eventCities": [],
+      "eventCategory": "",
+      "eventProgram": "",
+      "eventUnit": "",
+      "bookCampuses": [],
+      "bookAccess": "",
+      "filmGenre": "",
+      "filmRating": "",
+      "filmDuration": "",
+      "weights": {
+        "events": 3,
+        "books": 1,
+        "courses": 1,
+        "contests": 1,
+        "films": 2,
+        "utility": 2
+      },
+      "slideDuration": 0
+    }
+  },
+  "perfil_visual": {
+    "id": "setembro-verde-glow",
+    "label": "Setembro Verde Glow",
+    "profileLabel": "Setembro Verde",
+    "auto_ativar": true,
+    "themeColor": "#073424"
+  }
+}
