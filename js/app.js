@@ -202,6 +202,8 @@
       tipo_conteudo: 'livro',
       titulo: String(item.titulo || item.titulo_completo || 'Livro sem título informado').trim(),
       autor: String(item.autor || item.autoria || '').trim(),
+      acesso_fisico: item.acesso_fisico === true || item.acesso?.fisico === true,
+      acesso_virtual: item.acesso_virtual === true || item.acesso?.virtual === true,
       pergunta_curiosidade: '',
       texto_apoio: String(item.texto_apoio || '').trim(),
       _catalogo_curadoria: true
