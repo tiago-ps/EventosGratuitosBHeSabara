@@ -220,7 +220,9 @@
       acesso_fisico: normalized.acesso_fisico,
       acesso_virtual: normalized.acesso_virtual,
       icone: normalized.icone || '📚',
+      imagem: normalized.imagem || '',
       temas: Array.isArray(normalized.temas) ? normalized.temas : [],
+      tipo_conteudo: 'livro',
       _catalogo_curadoria: true
     };
   }
@@ -4092,7 +4094,7 @@ function eventProgram(event) {
           <div class="agenda-card-badges"><span>Livro</span>${curationOnly ? '<span class="curation-catalog-badge">Acervo — ainda não publicado no Mural</span>' : ''}${item.acesso_fisico ? '<span>Físico</span>' : ''}${item.acesso_virtual ? '<span>Virtual</span>' : ''}${acervosCount > 1 ? `<span>${acervosCount} acervos</span>` : ''}</div>
           <p class="agenda-card-date">Sugestão de Leitura</p>
           <h2>${escapeHtml(item.pergunta_curiosidade || item.titulo || 'Livro')}</h2>
-          <p class="agenda-card-place"><strong class="agenda-book-title">${escapeHtml(item.titulo || '')}</strong> · ${escapeHtml(item.autor || '')}</p>
+          <p class="agenda-card-place"><strong class="agenda-book-title">${escapeHtml(item.titulo || '')}</strong>${item.autor ? ` · ${escapeHtml(item.autor)}` : ''}</p>
           <p class="agenda-card-description">${escapeHtml(item.texto_apoio || '')}</p>
           ${holdingsHtml}
           ${item.exibir_comentario && item.comentario_aprovado ? `<blockquote class="agenda-book-opinion">“${escapeHtml(item.comentario_aprovado)}”<cite>${escapeHtml(item.credito_comentario || 'Leitor(a) do IFMG')}</cite></blockquote>` : ''}
