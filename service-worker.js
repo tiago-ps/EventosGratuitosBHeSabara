@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v140-catalogo-curadoria';
+const CACHE_VERSION = 'mural-cultural-v141-acervo-curadoria';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -23,7 +23,7 @@ const CORE_ASSETS = [
   './js/conteudos/filmes.js?v=6',
   './js/conteudos/utilidade-publica.js?v=3',
   './js/curadorias-site.js?v=11',
-  './js/app.js?v=110',
+  './js/app.js?v=116',
   './js/temas-visuais.js?v=13',
   './js/eventos-manuais-ui.js?v=44',
   './js/ios-install.js?v=2',
