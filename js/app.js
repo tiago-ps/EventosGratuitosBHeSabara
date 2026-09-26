@@ -226,6 +226,8 @@
   function publicCurationBookRecord(item, coverMap = {}) {
     const normalized = normalizeCurationBook(item);
     if (!normalized) return null;
+    const automaticCover = curationBookCoverUrl(normalized, coverMap);
+    const cover = normalized.imagem || automaticCover;
     return {
       id: normalized.id,
       titulo: normalized.titulo,
@@ -233,10 +235,11 @@
       acesso_fisico: normalized.acesso_fisico,
       acesso_virtual: normalized.acesso_virtual,
       icone: normalized.icone || '📚',
-      imagem: normalized.imagem || curationBookCoverUrl(normalized, coverMap),
+      imagem: cover,
       temas: Array.isArray(normalized.temas) ? normalized.temas : [],
       tipo_conteudo: 'livro',
-      _catalogo_curadoria: true
+      _catalogo_curadoria: true,
+      _capa_automatica: Boolean(automaticCover && cover === automaticCover)
     };
   }
 
@@ -4121,7 +4124,7 @@ function eventProgram(event) {
           ? `<img src="${escapeHtml(bookImage)}" alt="Capa: ${escapeHtml(item.titulo || '')}" loading="lazy">`
           : `<div class="agenda-book-placeholder" role="img" aria-label="Livro sem capa disponível"><span aria-hidden="true">${escapeHtml(item.icone || '📚')}</span><strong>Livro</strong></div>`}</div>
         <div class="agenda-card-body">
-          <div class="agenda-card-badges"><span>Livro</span>${curationOnly ? '<span class="curation-catalog-badge">Acervo — ainda não publicado no Mural</span>' : ''}${item.acesso_fisico ? '<span>Físico</span>' : ''}${item.acesso_virtual ? '<span>Virtual</span>' : ''}${acervosCount > 1 ? `<span>${acervosCount} acervos</span>` : ''}</div>
+          <div class="agenda-card-badges"><span>Livro</span>${curationOnly ? '<span class="curation-catalog-badge">Acervo — ainda não publicado no Mural</span>' : ''}${item._capa_automatica ? '<span class="curation-auto-cover-badge">Capa automática — não verificada</span>' : ''}${item.acesso_fisico ? '<span>Físico</span>' : ''}${item.acesso_virtual ? '<span>Virtual</span>' : ''}${acervosCount > 1 ? `<span>${acervosCount} acervos</span>` : ''}</div>
           <p class="agenda-card-date">Sugestão de Leitura</p>
           <h2>${escapeHtml(item.pergunta_curiosidade || item.titulo || 'Livro')}</h2>
           <p class="agenda-card-place"><strong class="agenda-book-title">${escapeHtml(item.titulo || '')}</strong>${item.autor ? ` · ${escapeHtml(item.autor)}` : ''}</p>
@@ -4400,6 +4403,7 @@ function eventProgram(event) {
       <label><span>Capa</span><select class="agenda-book-cover">
         <option value="">Todas</option><option value="with">Com capa</option><option value="without">Sem capa</option>
       </select></label>
+      <p class="agenda-book-cover-warning"><strong>Atenção às capas automáticas:</strong> elas podem estar incorretas. Para selecionar uma obra, considere sempre o título e o autor como referência; eles prevalecem sobre a imagem. A capa poderá ser revisada no Editor antes da publicação.</p>
     ` : '';
     const bookControls = state.mobileContent === 'books' ? `
       <label><span>Acesso</span><select class="agenda-book-access">
