@@ -245,9 +245,12 @@
 
   function mergeCurationBooks(publicBooks, catalogBooks, coverMap = {}) {
     const byId = new Map(publicBooks.map(book => {
+      const automaticCover = curationBookCoverUrl(book, coverMap);
       const withCover = book.imagem
         ? book
-        : { ...book, imagem: curationBookCoverUrl(book, coverMap) };
+        : automaticCover
+          ? { ...book, imagem: automaticCover, _capa_automatica: true }
+          : book;
       return [String(withCover.id), withCover];
     }));
     catalogBooks.map(item => publicCurationBookRecord(item, coverMap)).filter(Boolean).forEach(book => {
