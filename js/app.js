@@ -4,6 +4,7 @@
   const DATA_URL = 'eventos.json';
   const BOOKS_URL = 'livros.json';
   const CURATION_BOOKS_URL = 'catalogo-curadoria-livros.json';
+  const CURATION_BOOK_COVERS_URL = 'capas-curadoria-livros.json';
   const COURSES_URL = 'cursos.json';
   const CONTESTS_URL = 'concursos.json';
   const FILMS_URL = 'filmes.json';
@@ -108,6 +109,7 @@
     data: null,
     booksData: null,
     curationBooksData: null,
+    curationBookCoversData: null,
     curationMode: false,
     coursesData: null,
     contestsData: null,
@@ -211,7 +213,17 @@
     };
   }
 
-  function publicCurationBookRecord(item) {
+  function curationBookPhysicalCode(item) {
+    const match = String(item?.id || '').match(/^ifmg-sabara-fisico-(.+)$/);
+    return match ? match[1] : '';
+  }
+
+  function curationBookCoverUrl(item, coverMap = {}) {
+    const code = curationBookPhysicalCode(item);
+    return code ? String(coverMap?.[code] || '').trim() : '';
+  }
+
+  function publicCurationBookRecord(item, coverMap = {}) {
     const normalized = normalizeCurationBook(item);
     if (!normalized) return null;
     return {
@@ -221,16 +233,21 @@
       acesso_fisico: normalized.acesso_fisico,
       acesso_virtual: normalized.acesso_virtual,
       icone: normalized.icone || '📚',
-      imagem: normalized.imagem || '',
+      imagem: normalized.imagem || curationBookCoverUrl(normalized, coverMap),
       temas: Array.isArray(normalized.temas) ? normalized.temas : [],
       tipo_conteudo: 'livro',
       _catalogo_curadoria: true
     };
   }
 
-  function mergeCurationBooks(publicBooks, catalogBooks) {
-    const byId = new Map(publicBooks.map(book => [String(book.id), book]));
-    catalogBooks.map(publicCurationBookRecord).filter(Boolean).forEach(book => {
+  function mergeCurationBooks(publicBooks, catalogBooks, coverMap = {}) {
+    const byId = new Map(publicBooks.map(book => {
+      const withCover = book.imagem
+        ? book
+        : { ...book, imagem: curationBookCoverUrl(book, coverMap) };
+      return [String(withCover.id), withCover];
+    }));
+    catalogBooks.map(item => publicCurationBookRecord(item, coverMap)).filter(Boolean).forEach(book => {
       if (!byId.has(String(book.id))) byId.set(String(book.id), book);
     });
     return [...byId.values()];
@@ -4802,10 +4819,11 @@ function eventProgram(event) {
   async function load() {
     try {
       state.curationMode = curationModeFromUrl();
-      const [response, booksData, curationBooksData, coursesData, contestsData, filmsData, utilityData, siteCurationsData, config] = await Promise.all([
+      const [response, booksData, curationBooksData, curationBookCoversData, coursesData, contestsData, filmsData, utilityData, siteCurationsData, config] = await Promise.all([
         fetch(`${DATA_URL}?v=${Date.now()}`, { cache: 'no-store' }),
         loadOptionalJson(BOOKS_URL, { livros: [] }),
         state.curationMode ? loadOptionalJson(CURATION_BOOKS_URL, { livros: [] }) : Promise.resolve({ livros: [] }),
+        state.curationMode ? loadOptionalJson(CURATION_BOOK_COVERS_URL, { capas: {} }) : Promise.resolve({ capas: {} }),
         loadOptionalJson(COURSES_URL, { cursos: [] }),
         loadOptionalJson(CONTESTS_URL, { concursos: [] }),
         loadOptionalJson(FILMS_URL, { filmes: [] }),
@@ -4827,6 +4845,9 @@ function eventProgram(event) {
       state.data = data;
       state.booksData = booksData && Array.isArray(booksData.livros) ? booksData : { livros: [] };
       state.curationBooksData = curationBooksData && Array.isArray(curationBooksData.livros) ? curationBooksData : { livros: [] };
+      state.curationBookCoversData = curationBookCoversData && curationBookCoversData.capas && typeof curationBookCoversData.capas === 'object'
+        ? curationBookCoversData
+        : { capas: {} };
       state.coursesData = coursesData && Array.isArray(coursesData.cursos) ? coursesData : { cursos: [] };
       state.contestsData = contestsData && Array.isArray(contestsData.concursos)
         ? contestsData
@@ -4853,7 +4874,7 @@ function eventProgram(event) {
       state.allEvents = filterAndSort(siteLayer.eventos).map(event => ({ ...event, tipo_conteudo: 'evento' }));
       const publicBooks = siteLayer.livros.map(book => ({ ...book, tipo_conteudo: 'livro' }));
       state.allBooks = state.curationMode
-        ? mergeCurationBooks(publicBooks, state.curationBooksData.livros)
+        ? mergeCurationBooks(publicBooks, state.curationBooksData.livros, state.curationBookCoversData.capas)
         : publicBooks;
       state.allCourses = siteLayer.cursos.map(course => ({ ...course, tipo_conteudo: 'curso' }));
       state.allContests = (siteLayer.concursos || [])
