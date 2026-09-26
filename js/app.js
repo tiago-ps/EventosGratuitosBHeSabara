@@ -3590,7 +3590,9 @@ function eventProgram(event) {
     const today = todayAtMidnight();
     const specific = state.mobileContent === 'books';
     return state.allBooks
-      .filter(book => bookIsPublishable(book, today))
+      .filter(book => state.curationMode
+        ? Boolean(book && book.titulo)
+        : bookIsPublishable(book, today))
       .filter(book => bookMatchesTheme(book, state.mobileTheme))
       .filter(book => {
         if (!specific) return true;
