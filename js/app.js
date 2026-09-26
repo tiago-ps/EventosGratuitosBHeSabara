@@ -239,7 +239,8 @@
       temas: Array.isArray(normalized.temas) ? normalized.temas : [],
       tipo_conteudo: 'livro',
       _catalogo_curadoria: true,
-      _capa_automatica: Boolean(automaticCover && cover === automaticCover)
+      _capa_automatica: normalized.capa_automatica === true ||
+        Boolean(automaticCover && cover === automaticCover)
     };
   }
 
