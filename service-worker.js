@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v139-utilidade-integrada';
+const CACHE_VERSION = 'mural-cultural-v140-catalogo-curadoria';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -41,6 +41,7 @@ const CORE_ASSETS = [
 const DATA_PATHS = [
   '/eventos.json',
   '/livros.json',
+  '/catalogo-curadoria-livros.json',
   '/cursos.json',
   '/concursos.json',
   '/filmes.json',
