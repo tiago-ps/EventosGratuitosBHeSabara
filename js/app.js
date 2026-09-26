@@ -4,6 +4,7 @@
   const DATA_URL = 'eventos.json';
   const BOOKS_URL = 'livros.json';
   const CURATION_BOOKS_URL = 'catalogo-curadoria-livros.json';
+  const CURATION_BOOK_COVERS_URL = 'capas-curadoria-livros.json';
   const COURSES_URL = 'cursos.json';
   const CONTESTS_URL = 'concursos.json';
   const FILMS_URL = 'filmes.json';
@@ -108,6 +109,7 @@
     data: null,
     booksData: null,
     curationBooksData: null,
+    curationBookCoversData: null,
     curationMode: false,
     coursesData: null,
     contestsData: null,
@@ -168,6 +170,7 @@
     mobileInstitution: '',
     mobileRegistration: '',
     mobileBookAccess: '',
+    mobileBookCover: '',
     mobileContestFormation: '',
     mobileContestUf: '',
     mobileContestDeadline: '',
@@ -210,7 +213,17 @@
     };
   }
 
-  function publicCurationBookRecord(item) {
+  function curationBookPhysicalCode(item) {
+    const match = String(item?.id || '').match(/^ifmg-sabara-fisico-(.+)$/);
+    return match ? match[1] : '';
+  }
+
+  function curationBookCoverUrl(item, coverMap = {}) {
+    const code = curationBookPhysicalCode(item);
+    return code ? String(coverMap?.[code] || '').trim() : '';
+  }
+
+  function publicCurationBookRecord(item, coverMap = {}) {
     const normalized = normalizeCurationBook(item);
     if (!normalized) return null;
     return {
@@ -220,16 +233,21 @@
       acesso_fisico: normalized.acesso_fisico,
       acesso_virtual: normalized.acesso_virtual,
       icone: normalized.icone || '📚',
-      imagem: normalized.imagem || '',
+      imagem: normalized.imagem || curationBookCoverUrl(normalized, coverMap),
       temas: Array.isArray(normalized.temas) ? normalized.temas : [],
       tipo_conteudo: 'livro',
       _catalogo_curadoria: true
     };
   }
 
-  function mergeCurationBooks(publicBooks, catalogBooks) {
-    const byId = new Map(publicBooks.map(book => [String(book.id), book]));
-    catalogBooks.map(publicCurationBookRecord).filter(Boolean).forEach(book => {
+  function mergeCurationBooks(publicBooks, catalogBooks, coverMap = {}) {
+    const byId = new Map(publicBooks.map(book => {
+      const withCover = book.imagem
+        ? book
+        : { ...book, imagem: curationBookCoverUrl(book, coverMap) };
+      return [String(withCover.id), withCover];
+    }));
+    catalogBooks.map(item => publicCurationBookRecord(item, coverMap)).filter(Boolean).forEach(book => {
       if (!byId.has(String(book.id))) byId.set(String(book.id), book);
     });
     return [...byId.values()];
@@ -3431,7 +3449,12 @@ function eventProgram(event) {
       state.mobileInstitution = '';
       state.mobileRegistration = '';
     }
-    if (state.mobileContent !== 'books') state.mobileBookAccess = '';
+    if (state.mobileContent !== 'books') {
+      state.mobileBookAccess = '';
+      state.mobileBookCover = '';
+    } else if (!state.curationMode) {
+      state.mobileBookCover = '';
+    }
     if (state.mobileContent !== 'utility') {
       state.mobileUtilityArea = '';
       state.mobileUtilityType = '';
@@ -3601,6 +3624,8 @@ function eventProgram(event) {
         if (state.mobileBookAccess === 'physical' && !book.acesso_fisico) return false;
         if (state.mobileBookAccess === 'virtual' && !book.acesso_virtual) return false;
         if (state.mobileBookAccess === 'both' && !(book.acesso_fisico && book.acesso_virtual)) return false;
+        if (state.curationMode && state.mobileBookCover === 'with' && !safeImageUrl(book.imagem)) return false;
+        if (state.curationMode && state.mobileBookCover === 'without' && safeImageUrl(book.imagem)) return false;
         return true;
       })
       .map(book => siteCurationsContent.effectiveItemForCuration(book, state.mobileCuration))
@@ -3755,7 +3780,11 @@ function eventProgram(event) {
         state.mobileInstitution, state.mobileRegistration
       );
     } else if (state.mobileContent === 'books') {
-      common.push(state.mobileTheme, state.mobileBookAccess);
+      common.push(
+        state.mobileTheme,
+        state.mobileBookAccess,
+        state.curationMode ? state.mobileBookCover : ''
+      );
     } else if (state.mobileContent === 'utility') {
       common.push(state.mobileUtilityArea, state.mobileUtilityType);
     }
@@ -3776,6 +3805,7 @@ function eventProgram(event) {
     state.mobileInstitution = '';
     state.mobileRegistration = '';
     state.mobileBookAccess = '';
+    state.mobileBookCover = '';
     state.mobileContestFormation = '';
     state.mobileContestUf = '';
     state.mobileContestDeadline = '';
@@ -4366,11 +4396,17 @@ function eventProgram(event) {
       </select></label>
     ` : '';
 
+    const bookCoverControl = state.mobileContent === 'books' && state.curationMode ? `
+      <label><span>Capa</span><select class="agenda-book-cover">
+        <option value="">Todas</option><option value="with">Com capa</option><option value="without">Sem capa</option>
+      </select></label>
+    ` : '';
     const bookControls = state.mobileContent === 'books' ? `
       <label><span>Acesso</span><select class="agenda-book-access">
         <option value="">Físico ou virtual</option><option value="physical">Acervo físico</option>
         <option value="virtual">Biblioteca virtual</option><option value="both">Físico e virtual</option>
       </select></label>
+      ${bookCoverControl}
     ` : '';
 
     const contestControls = contestMode ? `
@@ -4442,6 +4478,8 @@ function eventProgram(event) {
       controls.querySelector('.agenda-registration').value = state.mobileRegistration;
     } else if (state.mobileContent === 'books') {
       controls.querySelector('.agenda-book-access').value = state.mobileBookAccess;
+      const bookCover = controls.querySelector('.agenda-book-cover');
+      if (bookCover) bookCover.value = state.mobileBookCover;
     } else if (contestMode) {
       populateDynamicSelect(
         controls.querySelector('.agenda-contest-formation'),
@@ -4654,6 +4692,7 @@ function eventProgram(event) {
       controls.querySelector('.agenda-registration').addEventListener('change', event => { state.mobileRegistration = event.target.value; rerender(); });
     } else if (state.mobileContent === 'books') {
       controls.querySelector('.agenda-book-access').addEventListener('change', event => { state.mobileBookAccess = event.target.value; rerender(); });
+      controls.querySelector('.agenda-book-cover')?.addEventListener('change', event => { state.mobileBookCover = event.target.value; rerender(); });
     } else if (contestMode) {
       controls.querySelector('.agenda-contest-formation').addEventListener('change', event => { state.mobileContestFormation = event.target.value; rerender(); });
       controls.querySelector('.agenda-contest-uf').addEventListener('change', event => { state.mobileContestUf = event.target.value; rerender(); });
@@ -4780,10 +4819,11 @@ function eventProgram(event) {
   async function load() {
     try {
       state.curationMode = curationModeFromUrl();
-      const [response, booksData, curationBooksData, coursesData, contestsData, filmsData, utilityData, siteCurationsData, config] = await Promise.all([
+      const [response, booksData, curationBooksData, curationBookCoversData, coursesData, contestsData, filmsData, utilityData, siteCurationsData, config] = await Promise.all([
         fetch(`${DATA_URL}?v=${Date.now()}`, { cache: 'no-store' }),
         loadOptionalJson(BOOKS_URL, { livros: [] }),
         state.curationMode ? loadOptionalJson(CURATION_BOOKS_URL, { livros: [] }) : Promise.resolve({ livros: [] }),
+        state.curationMode ? loadOptionalJson(CURATION_BOOK_COVERS_URL, { capas: {} }) : Promise.resolve({ capas: {} }),
         loadOptionalJson(COURSES_URL, { cursos: [] }),
         loadOptionalJson(CONTESTS_URL, { concursos: [] }),
         loadOptionalJson(FILMS_URL, { filmes: [] }),
@@ -4805,6 +4845,9 @@ function eventProgram(event) {
       state.data = data;
       state.booksData = booksData && Array.isArray(booksData.livros) ? booksData : { livros: [] };
       state.curationBooksData = curationBooksData && Array.isArray(curationBooksData.livros) ? curationBooksData : { livros: [] };
+      state.curationBookCoversData = curationBookCoversData && curationBookCoversData.capas && typeof curationBookCoversData.capas === 'object'
+        ? curationBookCoversData
+        : { capas: {} };
       state.coursesData = coursesData && Array.isArray(coursesData.cursos) ? coursesData : { cursos: [] };
       state.contestsData = contestsData && Array.isArray(contestsData.concursos)
         ? contestsData
@@ -4831,7 +4874,7 @@ function eventProgram(event) {
       state.allEvents = filterAndSort(siteLayer.eventos).map(event => ({ ...event, tipo_conteudo: 'evento' }));
       const publicBooks = siteLayer.livros.map(book => ({ ...book, tipo_conteudo: 'livro' }));
       state.allBooks = state.curationMode
-        ? mergeCurationBooks(publicBooks, state.curationBooksData.livros)
+        ? mergeCurationBooks(publicBooks, state.curationBooksData.livros, state.curationBookCoversData.capas)
         : publicBooks;
       state.allCourses = siteLayer.cursos.map(course => ({ ...course, tipo_conteudo: 'curso' }));
       state.allContests = (siteLayer.concursos || [])

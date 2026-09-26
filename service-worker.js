@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v142-curadoria-livros-completa';
+const CACHE_VERSION = 'mural-cultural-v143-curadoria-filtro-capas';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -23,7 +23,7 @@ const CORE_ASSETS = [
   './js/conteudos/filmes.js?v=6',
   './js/conteudos/utilidade-publica.js?v=3',
   './js/curadorias-site.js?v=11',
-  './js/app.js?v=117',
+  './js/app.js?v=118',
   './js/temas-visuais.js?v=13',
   './js/eventos-manuais-ui.js?v=44',
   './js/ios-install.js?v=2',
@@ -42,6 +42,7 @@ const DATA_PATHS = [
   '/eventos.json',
   '/livros.json',
   '/catalogo-curadoria-livros.json',
+  '/capas-curadoria-livros.json',
   '/cursos.json',
   '/concursos.json',
   '/filmes.json',
