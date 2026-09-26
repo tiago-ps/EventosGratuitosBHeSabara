@@ -1998,3 +1998,24 @@ body.agenda-mode.curation-mode .agenda-favorites-count {
   .curation-mode-banner { align-items: stretch; flex-direction: column; }
   .curation-mode-banner strong { align-self: center; }
 }
+
+
+/* Revisão humana de capas automáticas no Modo Curadoria. */
+body.agenda-mode.curation-mode .curation-auto-cover-badge {
+  border-color: #e1a628 !important;
+  background: color-mix(in srgb, #e1a628 16%, transparent) !important;
+}
+body.agenda-mode.curation-mode .agenda-book-cover-warning {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: .7rem .85rem;
+  border: 1px solid color-mix(in srgb, var(--curation-accent) 62%, var(--line));
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--curation-accent) 10%, var(--surface));
+  color: var(--text);
+  font-size: .82rem;
+  line-height: 1.45;
+}
+body.agenda-mode.curation-mode .agenda-book-cover-warning strong {
+  color: var(--curation-accent);
+}
