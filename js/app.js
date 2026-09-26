@@ -168,6 +168,7 @@
     mobileInstitution: '',
     mobileRegistration: '',
     mobileBookAccess: '',
+    mobileBookCover: '',
     mobileContestFormation: '',
     mobileContestUf: '',
     mobileContestDeadline: '',
@@ -3431,7 +3432,12 @@ function eventProgram(event) {
       state.mobileInstitution = '';
       state.mobileRegistration = '';
     }
-    if (state.mobileContent !== 'books') state.mobileBookAccess = '';
+    if (state.mobileContent !== 'books') {
+      state.mobileBookAccess = '';
+      state.mobileBookCover = '';
+    } else if (!state.curationMode) {
+      state.mobileBookCover = '';
+    }
     if (state.mobileContent !== 'utility') {
       state.mobileUtilityArea = '';
       state.mobileUtilityType = '';
@@ -3601,6 +3607,8 @@ function eventProgram(event) {
         if (state.mobileBookAccess === 'physical' && !book.acesso_fisico) return false;
         if (state.mobileBookAccess === 'virtual' && !book.acesso_virtual) return false;
         if (state.mobileBookAccess === 'both' && !(book.acesso_fisico && book.acesso_virtual)) return false;
+        if (state.curationMode && state.mobileBookCover === 'with' && !safeImageUrl(book.imagem)) return false;
+        if (state.curationMode && state.mobileBookCover === 'without' && safeImageUrl(book.imagem)) return false;
         return true;
       })
       .map(book => siteCurationsContent.effectiveItemForCuration(book, state.mobileCuration))
@@ -3755,7 +3763,11 @@ function eventProgram(event) {
         state.mobileInstitution, state.mobileRegistration
       );
     } else if (state.mobileContent === 'books') {
-      common.push(state.mobileTheme, state.mobileBookAccess);
+      common.push(
+        state.mobileTheme,
+        state.mobileBookAccess,
+        state.curationMode ? state.mobileBookCover : ''
+      );
     } else if (state.mobileContent === 'utility') {
       common.push(state.mobileUtilityArea, state.mobileUtilityType);
     }
@@ -3776,6 +3788,7 @@ function eventProgram(event) {
     state.mobileInstitution = '';
     state.mobileRegistration = '';
     state.mobileBookAccess = '';
+    state.mobileBookCover = '';
     state.mobileContestFormation = '';
     state.mobileContestUf = '';
     state.mobileContestDeadline = '';
@@ -4366,11 +4379,17 @@ function eventProgram(event) {
       </select></label>
     ` : '';
 
+    const bookCoverControl = state.mobileContent === 'books' && state.curationMode ? `
+      <label><span>Capa</span><select class="agenda-book-cover">
+        <option value="">Todas</option><option value="with">Com capa</option><option value="without">Sem capa</option>
+      </select></label>
+    ` : '';
     const bookControls = state.mobileContent === 'books' ? `
       <label><span>Acesso</span><select class="agenda-book-access">
         <option value="">Físico ou virtual</option><option value="physical">Acervo físico</option>
         <option value="virtual">Biblioteca virtual</option><option value="both">Físico e virtual</option>
       </select></label>
+      ${bookCoverControl}
     ` : '';
 
     const contestControls = contestMode ? `
@@ -4442,6 +4461,8 @@ function eventProgram(event) {
       controls.querySelector('.agenda-registration').value = state.mobileRegistration;
     } else if (state.mobileContent === 'books') {
       controls.querySelector('.agenda-book-access').value = state.mobileBookAccess;
+      const bookCover = controls.querySelector('.agenda-book-cover');
+      if (bookCover) bookCover.value = state.mobileBookCover;
     } else if (contestMode) {
       populateDynamicSelect(
         controls.querySelector('.agenda-contest-formation'),
@@ -4654,6 +4675,7 @@ function eventProgram(event) {
       controls.querySelector('.agenda-registration').addEventListener('change', event => { state.mobileRegistration = event.target.value; rerender(); });
     } else if (state.mobileContent === 'books') {
       controls.querySelector('.agenda-book-access').addEventListener('change', event => { state.mobileBookAccess = event.target.value; rerender(); });
+      controls.querySelector('.agenda-book-cover')?.addEventListener('change', event => { state.mobileBookCover = event.target.value; rerender(); });
     } else if (contestMode) {
       controls.querySelector('.agenda-contest-formation').addEventListener('change', event => { state.mobileContestFormation = event.target.value; rerender(); });
       controls.querySelector('.agenda-contest-uf').addEventListener('change', event => { state.mobileContestUf = event.target.value; rerender(); });
