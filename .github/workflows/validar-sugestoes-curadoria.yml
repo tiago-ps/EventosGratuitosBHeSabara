@@ -1,0 +1,33 @@
+name: Validar sugestões anônimas de curadoria
+
+on:
+  pull_request:
+    paths:
+      - "js/app.js"
+      - "css/styles.css"
+      - "index.html"
+      - "service-worker.js"
+      - "cloudflare/social-preview-worker.js"
+      - "cloudflare/sugestoes-curadoria.sql"
+      - "cloudflare/README-sugestoes-curadoria.md"
+      - "testes/sugestoes-curadoria.test.cjs"
+      - ".github/workflows/validar-sugestoes-curadoria.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "22"
+      - name: Validar sintaxe
+        run: |
+          node --check js/app.js
+          node --check service-worker.js
+          node --input-type=module --check < cloudflare/social-preview-worker.js
+      - name: Validar contrato de privacidade e integração
+        run: node testes/sugestoes-curadoria.test.cjs
