@@ -4,6 +4,7 @@ const assert = require('assert');
 const app = fs.readFileSync('js/app.js', 'utf8');
 const worker = fs.readFileSync('cloudflare/social-preview-worker.js', 'utf8');
 const serviceWorker = fs.readFileSync('service-worker.js', 'utf8');
+const panelActions = fs.readFileSync('js/painel-acoes-contextuais.js', 'utf8');
 const schema = fs.readFileSync('cloudflare/sugestoes-curadoria.sql', 'utf8');
 const wrangler = JSON.parse(fs.readFileSync('wrangler.jsonc', 'utf8'));
 
@@ -97,3 +98,10 @@ assert(app.includes("action: 'contribuir_mural'"));
 assert(app.includes('/api/contribuicoes-comunidade'));
 assert(app.includes("protocol.startsWith('CON-')"));
 assert(app.includes('SUG-XXXX-XXXX ou CON-XXXX-XXXX'));
+
+assert(app.includes('window.openMuralCommunityCorrection'));
+assert(app.includes('slide.dataset.communityItemId'));
+assert(app.includes('slide.dataset.communityItemTitle'));
+assert(panelActions.includes('panel-community-correction'));
+assert(panelActions.includes('Corrigir informação'));
+assert(panelActions.includes('window.openMuralCommunityCorrection'));
