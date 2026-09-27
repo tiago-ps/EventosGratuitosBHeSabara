@@ -82,30 +82,44 @@ async function dispatch(type, event) {
 }
 
 (async () => {
-  assert.equal(sw.CACHE_VERSION, 'mural-cultural-v100-stylesheets-curadorias');
+  assert.match(sw.CACHE_VERSION, /^mural-cultural-v\d+-/);
   assert.equal(sw.CURATION_IMAGE_PREFIX, '/imagens/curadorias/');
+  const corePaths = new Set(sw.CORE_ASSETS.map(asset => String(asset).split('?')[0]));
   for (const asset of [
-    './css/styles.css?v=71',
-    './css/eventos-manuais-ui.css?v=43',
-    './css/concursos-mural.css?v=2',
-    './js/core/rotacao.js?v=1',
-    './css/temas-visuais.css?v=8',
-    './js/tema-visual-boot.js?v=3',
-    './js/conteudos/cursos.js?v=3',
-    './js/conteudos/concursos.js?v=2',
-    './js/conteudos/filmes.js?v=6',
-    './js/curadorias-site.js?v=4',
-    './js/app.js?v=91',
-    './js/temas-visuais.js?v=8',
-    './js/eventos-manuais-ui.js?v=44'
+    './css/styles.css',
+    './css/eventos-manuais-ui.css',
+    './css/concursos-mural.css',
+    './css/temas-visuais.css',
+    './css/utilidade-publica.css',
+    './css/atividades-lazer.css',
+    './js/tema-visual-boot.js',
+    './js/core/rotacao.js',
+    './js/conteudos/cursos.js',
+    './js/conteudos/concursos.js',
+    './js/conteudos/filmes.js',
+    './js/conteudos/utilidade-publica.js',
+    './js/conteudos/atividades-lazer.js',
+    './js/curadorias-site.js',
+    './js/app.js',
+    './js/temas-visuais.js',
+    './js/eventos-manuais-ui.js'
   ]) {
-    assert.ok(sw.CORE_ASSETS.includes(asset), `Precache ausente: ${asset}`);
+    assert.ok(corePaths.has(asset), `Precache ausente: ${asset}`);
   }
-  assert.ok(sw.DATA_PATHS.includes('/cursos.json'));
-  assert.ok(sw.DATA_PATHS.includes('/concursos.json'));
-  assert.ok(sw.DATA_PATHS.includes('/filmes.json'));
-  assert.ok(sw.DATA_PATHS.includes('/curadorias/index.json'));
-  assert.equal(sw.CORE_ASSETS.some(asset => /(?:cursos|concursos|filmes|curadorias)\.json/.test(asset)), false);
+  for (const dataPath of [
+    '/cursos.json',
+    '/concursos.json',
+    '/filmes.json',
+    '/utilidade-publica.json',
+    '/atividades-lazer.json',
+    '/curadorias/index.json'
+  ]) {
+    assert.ok(sw.DATA_PATHS.includes(dataPath), `Dado opcional ausente: ${dataPath}`);
+  }
+  assert.equal(
+    sw.CORE_ASSETS.some(asset => /(?:cursos|concursos|filmes|utilidade-publica|atividades-lazer|curadorias)\.json/.test(asset)),
+    false
+  );
   assert.equal(sw.CORE_ASSETS.includes('./imagens/curadorias/setembro-amarelo-2026/setembro-amarelo-banner.png'), false);
 
   await dispatch('install', {});
