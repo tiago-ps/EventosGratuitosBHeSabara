@@ -1,0 +1,40 @@
+name: Validar Esporte e Lazer
+
+on:
+  pull_request:
+    paths:
+      - "atividades-lazer.json"
+      - "js/conteudos/atividades-lazer.js"
+      - "css/atividades-lazer.css"
+      - "js/app.js"
+      - "index.html"
+      - "service-worker.js"
+      - "testes/atividades-lazer-agenda.test.cjs"
+      - ".github/workflows/validar-atividade-lazer.yml"
+  push:
+    branches: [main, "feature/**"]
+    paths:
+      - "atividades-lazer.json"
+      - "js/conteudos/atividades-lazer.js"
+      - "css/atividades-lazer.css"
+      - "js/app.js"
+      - "index.html"
+      - "service-worker.js"
+      - "testes/atividades-lazer-agenda.test.cjs"
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Validar JSON
+        run: python -m json.tool atividades-lazer.json > /dev/null
+      - name: Validar sintaxe JavaScript
+        run: |
+          node --check js/app.js
+          node --check js/conteudos/atividades-lazer.js
+      - name: Testar Agenda
+        run: node testes/atividades-lazer-agenda.test.cjs

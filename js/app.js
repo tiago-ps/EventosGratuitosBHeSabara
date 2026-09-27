@@ -9,6 +9,7 @@
   const CONTESTS_URL = 'concursos.json';
   const FILMS_URL = 'filmes.json';
   const UTILITY_URL = 'utilidade-publica.json';
+  const ACTIVITIES_URL = 'atividades-lazer.json';
   const SITE_CURATIONS_INDEX_URL = 'curadorias/index.json';
   const CONFIG_URL = 'configuracao-mural.json';
   const app = document.getElementById('app');
@@ -33,7 +34,8 @@
     courses: { singular: 'curso', plural: 'cursos' },
     contests: { singular: 'concurso', plural: 'concursos' },
     films: { singular: 'filme', plural: 'filmes' },
-    utility: { singular: 'item de utilidade pública', plural: 'itens de utilidade pública' }
+    utility: { singular: 'item de utilidade pública', plural: 'itens de utilidade pública' },
+    activities: { singular: 'atividade de esporte e lazer', plural: 'atividades de esporte e lazer' }
   });
   const PANEL_UTILITY_LIMIT = 4;
   const PANEL_BOOK_LIMIT = 15;
@@ -44,7 +46,8 @@
     curso: 'Curso Online Gratuito',
     filme: 'Sugestão de Filme',
     jogo: 'Sugestão de Jogo',
-    passeio: 'Sugestão de Passeio'
+    passeio: 'Sugestão de Passeio',
+    atividade_lazer: 'Esporte e Lazer'
   });
   const template = document.getElementById('slide-template');
   const muralCore = window.MuralCultural.core;
@@ -52,6 +55,7 @@
   const contestsContent = window.MuralCultural.contents.contests;
   const filmsContent = window.MuralCultural.contents.films;
   const utilityContent = window.MuralCultural.contents.utility;
+  const activitiesContent = window.MuralCultural.contents.activities;
   const siteCurationsContent = window.MuralCultural.siteCurations;
   let deferredInstallPrompt = null;
   let bookLocationsDialog = null;
@@ -115,6 +119,7 @@
     contestsData: null,
     filmsData: null,
     utilityData: null,
+    activitiesData: null,
     siteCurationsData: null,
     config: null,
     allEvents: [],
@@ -123,6 +128,7 @@
     allContests: [],
     allFilms: [],
     allUtility: [],
+    allActivities: [],
     events: [],
     panelRoundSamples: { books: [], courses: [], contests: [], films: [], utility: [] },
     panelMemory: muralCore.createPanelMemory(),
@@ -181,6 +187,9 @@
     mobileFilmYearTo: '',
     mobileFilmDuration: '',
     mobileFilmSort: 'title-asc',
+    mobileActivityCity: '',
+    mobileActivityCategory: '',
+    mobileActivityModality: '',
     mobileUtilityArea: '',
     mobileUtilityType: '',
     agendaVisibleCounts: {
@@ -189,7 +198,8 @@
       courses: AGENDA_BATCH_SIZE,
       contests: AGENDA_BATCH_SIZE,
       films: AGENDA_BATCH_SIZE,
-      utility: AGENDA_BATCH_SIZE
+      utility: AGENDA_BATCH_SIZE,
+      activities: AGENDA_BATCH_SIZE
     }
   };
 
@@ -3429,11 +3439,16 @@ function eventProgram(event) {
         (Array.isArray(movie.temas) ? movie.temas : []).forEach(add);
       }
     }
+    if (content === 'activities') {
+      for (const item of state.allActivities) {
+        (Array.isArray(item.temas) ? item.temas : []).forEach(add);
+      }
+    }
     return [...values.entries()].sort((a, b) => a[1].localeCompare(b[1], 'pt-BR'));
   }
 
   function normalizeAgendaFiltersForContent(content = state.mobileContent) {
-    const allowedContents = new Set(['all', 'events', 'books', 'courses', 'contests', 'films', 'utility']);
+    const allowedContents = new Set(['all', 'events', 'books', 'courses', 'contests', 'films', 'utility', 'activities']);
     state.mobileContent = allowedContents.has(content) ? content : 'all';
 
     // A troca de conteúdo preserva a curadoria; apenas uma opção indisponível expira.
@@ -3441,7 +3456,7 @@ function eventProgram(event) {
       state.mobileCuration = '';
     }
 
-    if (!['events', 'books', 'courses', 'films'].includes(state.mobileContent)) {
+    if (!['events', 'books', 'courses', 'films', 'activities'].includes(state.mobileContent)) {
       state.mobileTheme = '';
     } else {
       const allowedThemes = new Set(agendaThemeOptions(state.mobileContent).map(([value]) => value));
@@ -3465,6 +3480,11 @@ function eventProgram(event) {
     if (state.mobileContent !== 'utility') {
       state.mobileUtilityArea = '';
       state.mobileUtilityType = '';
+    }
+    if (state.mobileContent !== 'activities') {
+      state.mobileActivityCity = '';
+      state.mobileActivityCategory = '';
+      state.mobileActivityModality = '';
     }
     if (state.mobileContent !== 'contests') {
       state.mobileContestFormation = '';
@@ -3676,6 +3696,18 @@ function eventProgram(event) {
     }, normalizeText);
   }
 
+  function agendaVisibleActivities() {
+    if (!['all', 'activities'].includes(state.mobileContent) || state.config?.modulos?.atividades_lazer === false) return [];
+    const specific = state.mobileContent === 'activities';
+    return activitiesContent.filter(state.allActivities, {
+      query: state.mobileQuery,
+      city: specific ? state.mobileActivityCity : '',
+      category: specific ? state.mobileActivityCategory : '',
+      modality: specific ? state.mobileActivityModality : '',
+      theme: specific ? state.mobileTheme : ''
+    }, normalizeText).sort(agendaTitleCompare);
+  }
+
   function utilitySource() {
     return state.allUtility;
   }
@@ -3720,7 +3752,8 @@ function eventProgram(event) {
       const contests = group('concurso').sort(agendaTitleCompare);
       const films = group('filme').sort(agendaTitleCompare);
       const utility = group('utilidade_publica').sort(agendaTitleCompare);
-      return { events, books, courses, contests, films, utility, total: items.length };
+      const activities = group('atividade_lazer').sort(agendaTitleCompare);
+      return { events, books, courses, contests, films, utility, activities, total: items.length };
     }
     if (state.mobileFavoritesOnly) {
       const items = agendaFavoriteItems();
@@ -3731,7 +3764,8 @@ function eventProgram(event) {
       const contests = group('concurso').sort(agendaTitleCompare);
       const films = group('filme').sort(agendaTitleCompare);
       const utility = group('utilidade_publica').sort(agendaTitleCompare);
-      return { events, books, courses, contests, films, utility, total: items.length };
+      const activities = group('atividade_lazer').sort(agendaTitleCompare);
+      return { events, books, courses, contests, films, utility, activities, total: items.length };
     }
     const curation = agendaCurationEntries().find(entry => entry.id === state.mobileCuration);
     const matchesCuration = item => agendaItemMatchesCuration(item, curation);
@@ -3741,6 +3775,7 @@ function eventProgram(event) {
     const contests = agendaVisibleContests().filter(matchesCuration);
     const films = agendaVisibleFilms().filter(matchesCuration);
     const utility = agendaVisibleUtility().filter(matchesCuration);
+    const activities = agendaVisibleActivities().filter(matchesCuration);
     return {
       events,
       books,
@@ -3748,7 +3783,8 @@ function eventProgram(event) {
       contests,
       films,
       utility,
-      total: events.length + books.length + courses.length + contests.length + films.length + utility.length
+      activities,
+      total: events.length + books.length + courses.length + contests.length + films.length + utility.length + activities.length
     };
   }
 
@@ -3794,6 +3830,8 @@ function eventProgram(event) {
       );
     } else if (state.mobileContent === 'utility') {
       common.push(state.mobileUtilityArea, state.mobileUtilityType);
+    } else if (state.mobileContent === 'activities') {
+      common.push(state.mobileTheme, state.mobileActivityCity, state.mobileActivityCategory, state.mobileActivityModality);
     }
     return common.filter(Boolean).length;
   }
@@ -3801,6 +3839,9 @@ function eventProgram(event) {
   function clearAgendaFilters() {
     state.mobileUtilityArea = '';
     state.mobileUtilityType = '';
+    state.mobileActivityCity = '';
+    state.mobileActivityCategory = '';
+    state.mobileActivityModality = '';
     state.mobileQuery = '';
     state.mobileCuration = '';
     state.mobileContent = 'all';
@@ -3948,6 +3989,7 @@ function eventProgram(event) {
     if (state.mobileContent === 'contests') return 'Concursos públicos';
     if (state.mobileContent === 'films') return 'Filmes gratuitos';
     if (state.mobileContent === 'utility') return 'Utilidade Pública';
+    if (state.mobileContent === 'activities') return 'Esporte e Lazer';
     return 'Descobertas culturais';
   }
 
@@ -4006,7 +4048,7 @@ function eventProgram(event) {
   function agendaItemsForIds(ids) {
     const catalogs = [
       state.allEvents, state.allBooks, state.allCourses,
-      state.allContests, state.allFilms, state.allUtility
+      state.allContests, state.allFilms, state.allUtility, state.allActivities
     ];
     return catalogs.flat().filter(item => ids.has(agendaFavoriteId(item)));
   }
@@ -4383,6 +4425,10 @@ function eventProgram(event) {
   }
 
   function renderAgendaCard(item, options = {}) {
+    if (item.tipo_conteudo === 'atividade_lazer') {
+      return decorateAgendaFavorite(activitiesContent.createAgendaCard(item, { safeExternalUrl, safeImageUrl }), item);
+    }
+
     if (item.tipo_conteudo === 'utilidade_publica') {
       return decorateAgendaFavorite(utilityContent.createAgendaCard(item, { safeExternalUrl, safeImageUrl }), item);
     }
@@ -4603,6 +4649,7 @@ function eventProgram(event) {
       ['courses', 'Cursos'],
       ['contests', 'Concursos'],
       ['films', 'Filmes'],
+      ['activities', 'Esporte e Lazer'],
       ['utility', 'Utilidade pública']
     ];
     const favoriteCount = loadAgendaFavorites().size;
@@ -4659,7 +4706,8 @@ function eventProgram(event) {
     const contestMode = state.mobileContent === 'contests';
     const filmMode = state.mobileContent === 'films';
     const utilityMode = state.mobileContent === 'utility';
-    const themeMode = ['events', 'books', 'courses', 'films'].includes(state.mobileContent);
+    const activityMode = state.mobileContent === 'activities';
+    const themeMode = ['events', 'books', 'courses', 'films', 'activities'].includes(state.mobileContent);
     const searchPlaceholder = contestMode
       ? 'Órgão, cargo, cidade, formação…'
       : state.mobileContent === 'courses'
@@ -4672,7 +4720,9 @@ function eventProgram(event) {
             ? 'Título, direção, sinopse, gênero ou tema…'
             : utilityMode
               ? 'Título, descrição, área ou tipo de recurso…'
-              : 'Título, autor ou instituição…';
+              : activityMode
+                ? 'Atividade, modalidade, local, cidade ou público…'
+                : 'Título, autor ou instituição…';
     const themeControl = themeMode ? `
       <label><span>Tema</span><select class="agenda-theme"><option value="">Todos os temas</option></select></label>
     ` : '';
@@ -4680,7 +4730,7 @@ function eventProgram(event) {
       <label class="agenda-search"><span>Pesquisar</span><input type="search" placeholder="${escapeHtml(searchPlaceholder)}" value="${escapeHtml(state.mobileQuery)}"></label>
       <label class="agenda-content-field"><span>Conteúdo</span><select class="agenda-content">
         <option value="all">Todos</option><option value="events">Eventos</option><option value="books">Livros</option><option value="courses">Cursos</option><option value="contests">Concursos</option><option value="films">Filmes</option>
-        <option value="utility">Utilidade Pública</option>
+        <option value="activities">Esporte e Lazer</option><option value="utility">Utilidade Pública</option>
       </select></label>
       <label><span>Curadoria</span><select class="agenda-curation"><option value="">Todas as curadorias</option></select></label>
       ${themeControl}
@@ -4745,13 +4795,23 @@ function eventProgram(event) {
       <label><span>Área de Utilidade Pública</span><select class="agenda-utility-area"><option value="">Todas as áreas</option></select></label>
       <label><span>Tipo de recurso</span><select class="agenda-utility-type"><option value="">Todos os tipos</option></select></label>
     ` : '';
+    const activityControls = activityMode ? `
+      <label><span>Cidade</span><select class="agenda-activity-city"><option value="">Todas as cidades</option></select></label>
+      <label><span>Categoria</span><select class="agenda-activity-category"><option value="">Todas as categorias</option></select></label>
+      <label><span>Modalidade</span><select class="agenda-activity-modality"><option value="">Todas as modalidades</option></select></label>
+    ` : '';
 
-    controls.innerHTML = commonControls + eventControls + bookControls + contestControls + filmControls + utilityControls;
+    controls.innerHTML = commonControls + eventControls + bookControls + contestControls + filmControls + utilityControls + activityControls;
 
     controls.querySelector('.agenda-content').value = state.mobileContent;
     if (utilityMode) {
       populateDynamicSelect(controls.querySelector('.agenda-utility-area'), 'Todas as áreas', agendaUtilityOptions('areas_utilidade'), state.mobileUtilityArea);
       populateDynamicSelect(controls.querySelector('.agenda-utility-type'), 'Todos os tipos', agendaUtilityOptions('tipos_recurso'), state.mobileUtilityType);
+    }
+    if (activityMode) {
+      populateDynamicSelect(controls.querySelector('.agenda-activity-city'), 'Todas as cidades', activitiesContent.cityOptions(state.allActivities, normalizeText), state.mobileActivityCity);
+      populateDynamicSelect(controls.querySelector('.agenda-activity-category'), 'Todas as categorias', activitiesContent.categoryOptions(state.allActivities), state.mobileActivityCategory);
+      populateDynamicSelect(controls.querySelector('.agenda-activity-modality'), 'Todas as modalidades', activitiesContent.modalityOptions(state.allActivities, normalizeText), state.mobileActivityModality);
     }
     populateDynamicSelect(
       controls.querySelector('.agenda-curation'),
@@ -4853,6 +4913,7 @@ function eventProgram(event) {
       const eventsProgressiveControl = createAgendaProgressiveControl(eventsGrid, results.events, 'events');
       resultsContainer.append(eventsGrid);
       if (eventsProgressiveControl) resultsContainer.append(eventsProgressiveControl);
+      appendAgendaSection(resultsContainer, 'Esporte e Lazer', results.activities, 'activities', 'Ver somente esporte e lazer');
       appendAgendaSection(resultsContainer, 'Utilidade Pública', results.utility, 'utility', 'Ver somente utilidade pública');
       appendAgendaSection(resultsContainer, 'Sugestões de Leitura', results.books, 'books', 'Ver somente livros');
       appendAgendaSection(resultsContainer, 'Cursos Online Gratuitos', results.courses, 'courses', 'Ver somente cursos');
@@ -4871,7 +4932,9 @@ function eventProgram(event) {
               ? results.films
               : state.mobileContent === 'utility'
                 ? results.utility
-                : results.courses;
+                : state.mobileContent === 'activities'
+                  ? results.activities
+                  : results.courses;
       const renderItem = state.mobileContent === 'events' && !agendaHasSpecificEventFilters()
         ? item => renderAgendaCard(item, { exclusiveUnfilteredEvent: true })
         : renderAgendaCard;
@@ -4993,6 +5056,9 @@ function eventProgram(event) {
     controls.querySelector('.agenda-theme')?.addEventListener('change', event => { state.mobileTheme = event.target.value; rerender(); });
     controls.querySelector('.agenda-utility-area')?.addEventListener('change', event => { state.mobileUtilityArea = event.target.value; rerender(); });
     controls.querySelector('.agenda-utility-type')?.addEventListener('change', event => { state.mobileUtilityType = event.target.value; rerender(); });
+    controls.querySelector('.agenda-activity-city')?.addEventListener('change', event => { state.mobileActivityCity = event.target.value; rerender(); });
+    controls.querySelector('.agenda-activity-category')?.addEventListener('change', event => { state.mobileActivityCategory = event.target.value; rerender(); });
+    controls.querySelector('.agenda-activity-modality')?.addEventListener('change', event => { state.mobileActivityModality = event.target.value; rerender(); });
 
     if (state.mobileContent === 'events') {
       controls.querySelector('.agenda-period').addEventListener('change', event => { state.mobilePeriod = event.target.value; rerender(); });
@@ -5130,7 +5196,7 @@ function eventProgram(event) {
   async function load() {
     try {
       state.curationMode = curationModeFromUrl();
-      const [response, booksData, curationBooksData, curationBookCoversData, coursesData, contestsData, filmsData, utilityData, siteCurationsData, config] = await Promise.all([
+      const [response, booksData, curationBooksData, curationBookCoversData, coursesData, contestsData, filmsData, utilityData, activitiesData, siteCurationsData, config] = await Promise.all([
         fetch(`${DATA_URL}?v=${Date.now()}`, { cache: 'no-store' }),
         loadOptionalJson(BOOKS_URL, { livros: [] }),
         state.curationMode ? loadOptionalJson(CURATION_BOOKS_URL, { livros: [] }) : Promise.resolve({ livros: [] }),
@@ -5139,6 +5205,7 @@ function eventProgram(event) {
         loadOptionalJson(CONTESTS_URL, { concursos: [] }),
         loadOptionalJson(FILMS_URL, { filmes: [] }),
         loadOptionalJson(UTILITY_URL, { itens: [] }),
+        loadOptionalJson(ACTIVITIES_URL, { atividades: [] }),
         loadSiteCurations(),
         loadOptionalJson(CONFIG_URL, {
           nome: 'Mural Cultural',
@@ -5165,6 +5232,7 @@ function eventProgram(event) {
         : { concursos: [] };
       state.filmsData = filmsData && Array.isArray(filmsData.filmes) ? filmsData : { filmes: [] };
       state.utilityData = utilityData && Array.isArray(utilityData.itens) ? utilityData : { itens: [] };
+      state.activitiesData = activitiesData && Array.isArray(activitiesData.atividades) ? activitiesData : { atividades: [] };
       state.siteCurationsData = siteCurationsData;
       state.config = config || {};
 
@@ -5204,6 +5272,15 @@ function eventProgram(event) {
           ...item,
           areas_utilidade: Array.isArray(item.areas_utilidade) ? [...item.areas_utilidade] : [],
           tipos_recurso: Array.isArray(item.tipos_recurso) ? [...item.tipos_recurso] : []
+        }));
+      state.allActivities = state.activitiesData.atividades
+        .filter(activitiesContent.isValid)
+        .map(item => ({
+          ...item,
+          modalidades: Array.isArray(item.modalidades) ? [...item.modalidades] : [],
+          publicos_alvo: Array.isArray(item.publicos_alvo) ? [...item.publicos_alvo] : [],
+          temas: Array.isArray(item.temas) ? [...item.temas] : [],
+          termos_busca: Array.isArray(item.termos_busca) ? [...item.termos_busca] : []
         }));
       siteCurationsContent.mountSupportArea(siteLayer.apoio);
       siteCurationsContent.bindSupportRequest();

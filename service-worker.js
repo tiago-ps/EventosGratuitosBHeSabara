@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v148-consulta-protocolo';
+const CACHE_VERSION = 'mural-cultural-v149-esporte-lazer';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -13,6 +13,7 @@ const CORE_ASSETS = [
   './css/concursos-mural.css?v=3',
   './css/temas-visuais.css?v=11',
   './css/utilidade-publica.css?v=2',
+  './css/atividades-lazer.css?v=1',
   './css/painel-modos.css?v=2',
   './css/painel-acoes-contextuais.css?v=2',
   './css/tem-sim-uai-painel.css?v=1',
@@ -22,8 +23,9 @@ const CORE_ASSETS = [
   './js/conteudos/concursos.js?v=2',
   './js/conteudos/filmes.js?v=6',
   './js/conteudos/utilidade-publica.js?v=3',
+  './js/conteudos/atividades-lazer.js?v=1',
   './js/curadorias-site.js?v=11',
-  './js/app.js?v=122',
+  './js/app.js?v=123',
   './js/temas-visuais.js?v=13',
   './js/eventos-manuais-ui.js?v=44',
   './js/ios-install.js?v=2',
@@ -47,6 +49,7 @@ const DATA_PATHS = [
   '/concursos.json',
   '/filmes.json',
   '/utilidade-publica.json',
+  '/atividades-lazer.json',
   '/curadorias/index.json',
   '/configuracao-mural.json'
 ];

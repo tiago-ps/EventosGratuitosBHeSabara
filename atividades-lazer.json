@@ -1,0 +1,995 @@
+{
+  "schema_version": 1,
+  "atividades": [
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "levantamento-editorial-2026-09-27",
+      "site_only": true,
+      "id": "atividade:pbh:tai-chi:academia-diamante",
+      "programa_id": "pbh:tai-chi-chuan",
+      "titulo": "Tai Chi Chuan na Academia da Cidade Diamante",
+      "categoria": "pratica_integrativa",
+      "modalidades": [
+        "Tai Chi Chuan"
+      ],
+      "formato": "aula_orientada",
+      "descricao": "Aulas gratuitas de Tai Chi Chuan oferecidas pelo SUS-BH, conduzidas por profissionais de educação física capacitados.",
+      "publicos_alvo": [
+        "População em geral"
+      ],
+      "abrangencia": {
+        "cidade": "Belo Horizonte",
+        "uf": "MG",
+        "regional": "Barreiro",
+        "bairros": [
+          "Diamante"
+        ]
+      },
+      "local": {
+        "nome": "Academia da Cidade Diamante",
+        "endereco": "Rua Maria Marcolina de Souza, 40",
+        "bairro": "Diamante",
+        "cidade": "Belo Horizonte",
+        "uf": "MG"
+      },
+      "agenda": {
+        "temporalidade": "recorrente",
+        "dias_semana": [
+          "terca",
+          "quinta"
+        ],
+        "horarios": [
+          "11:30",
+          "15:00"
+        ],
+        "duracao_minutos": null,
+        "observacao": "Horários conforme página oficial atualizada em 16/09/2026."
+      },
+      "participacao": {
+        "inscricao": "consultar_local",
+        "vagas_limitadas": false,
+        "como_participar": "Consulte o Centro de Saúde de referência ou o telefone 156 para confirmar a forma de participação.",
+        "url_inscricao": "",
+        "documentos_necessarios": []
+      },
+      "organizador": {
+        "nome": "Prefeitura de Belo Horizonte · SUS-BH",
+        "contato": "156"
+      },
+      "fontes": [
+        {
+          "id": "pbh-tai-chi",
+          "nome": "Prefeitura de Belo Horizonte",
+          "url": "https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/promocao-da-saude/tai-chi-chuan",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "confirmado",
+        "revalidar_apos_dias": 14
+      },
+      "icone": "☯️",
+      "temas": [
+        "Saúde",
+        "Bem-estar",
+        "Atividade física"
+      ],
+      "termos_busca": [
+        "tai chi",
+        "tai chi chuan",
+        "barreiro",
+        "diamante"
+      ]
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "levantamento-editorial-2026-09-27",
+      "site_only": true,
+      "id": "atividade:pbh:treina-bh:futsal-feminino-dom-bosco",
+      "programa_id": "pbh:treina-bh",
+      "titulo": "Futsal feminino do Treina BH",
+      "categoria": "esporte",
+      "modalidades": [
+        "Futsal feminino"
+      ],
+      "formato": "treino",
+      "descricao": "Aula gratuita de futsal feminino do Treina BH, voltada à vivência do esporte e ao fortalecimento da rede de mulheres praticantes.",
+      "publicos_alvo": [
+        "Mulheres de 18 a 59 anos"
+      ],
+      "idade_minima": 18,
+      "idade_maxima": 59,
+      "abrangencia": {
+        "cidade": "Belo Horizonte",
+        "uf": "MG",
+        "regional": "Noroeste",
+        "bairros": [
+          "Dom Bosco"
+        ]
+      },
+      "local": {
+        "nome": "Centro Esportivo Dom Bosco",
+        "endereco": "Rua Tabapuam, 514",
+        "bairro": "Dom Bosco",
+        "cidade": "Belo Horizonte",
+        "uf": "MG"
+      },
+      "agenda": {
+        "temporalidade": "recorrente",
+        "dias_semana": [
+          "quarta"
+        ],
+        "horarios": [
+          "19:00"
+        ],
+        "duracao_minutos": null,
+        "observacao": "Inscrições no local, dia e horário das aulas."
+      },
+      "participacao": {
+        "inscricao": "presencial",
+        "vagas_limitadas": true,
+        "como_participar": "Faça a inscrição no local, no dia e horário da aula.",
+        "url_inscricao": "",
+        "documentos_necessarios": []
+      },
+      "organizador": {
+        "nome": "Prefeitura de Belo Horizonte · Secretaria Municipal de Esportes e Lazer",
+        "contato": "treinabh@pbh.gov.br"
+      },
+      "fontes": [
+        {
+          "id": "pbh-treina-bh",
+          "nome": "Prefeitura de Belo Horizonte",
+          "url": "https://prefeitura.pbh.gov.br/esportes-e-lazer/treina-bh",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "confirmado",
+        "revalidar_apos_dias": 14
+      },
+      "icone": "⚽",
+      "temas": [
+        "Esporte",
+        "Mulheres",
+        "Atividade física"
+      ],
+      "termos_busca": [
+        "futsal feminino",
+        "treina bh",
+        "dom bosco"
+      ]
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "levantamento-editorial-2026-09-27",
+      "site_only": true,
+      "id": "atividade:pbh:selecoes-futuro:calegario",
+      "programa_id": "pbh:selecoes-do-futuro",
+      "titulo": "Seleções do Futuro · Complexo José Calegário de Cristo",
+      "categoria": "esporte",
+      "modalidades": [
+        "Futebol de campo"
+      ],
+      "formato": "aula_orientada",
+      "descricao": "Escolinha gratuita de futebol do projeto Seleções do Futuro para crianças e adolescentes, com duas aulas semanais de 90 minutos.",
+      "publicos_alvo": [
+        "Crianças e adolescentes de 6 a 17 anos",
+        "Prioritariamente estudantes da rede pública"
+      ],
+      "idade_minima": 6,
+      "idade_maxima": 17,
+      "abrangencia": {
+        "cidade": "Belo Horizonte",
+        "uf": "MG",
+        "regional": "Barreiro",
+        "bairros": [
+          "Solar do Barreiro"
+        ]
+      },
+      "local": {
+        "nome": "Complexo Esportivo José Calegário de Cristo",
+        "endereco": "Rua Ulisses Surette, 386",
+        "bairro": "Solar do Barreiro",
+        "cidade": "Belo Horizonte",
+        "uf": "MG"
+      },
+      "agenda": {
+        "temporalidade": "recorrente",
+        "dias_semana": [
+          "segunda",
+          "quarta"
+        ],
+        "horarios": [
+          "08:00–09:30 · 6 a 8 anos",
+          "09:00–10:30 · 9 a 13 anos",
+          "09:30–11:00 · 14 a 17 anos",
+          "13:00–14:30 · 14 a 17 anos",
+          "14:00–15:30 · 9 a 13 anos",
+          "15:00–16:30 · 6 a 8 anos"
+        ],
+        "duracao_minutos": 90,
+        "observacao": "Núcleo passou a atender neste endereço em setembro de 2026."
+      },
+      "participacao": {
+        "inscricao": "presencial",
+        "vagas_limitadas": true,
+        "como_participar": "Responsáveis devem fazer a inscrição presencialmente no local e horário das atividades.",
+        "url_inscricao": "",
+        "documentos_necessarios": [
+          "Documento de identidade do participante",
+          "Comprovante de matrícula escolar"
+        ]
+      },
+      "organizador": {
+        "nome": "Prefeitura de Belo Horizonte · Secretaria Municipal de Esportes e Lazer",
+        "contato": "dfes@pbh.gov.br"
+      },
+      "fontes": [
+        {
+          "id": "pbh-selecoes-futuro",
+          "nome": "Prefeitura de Belo Horizonte",
+          "url": "https://prefeitura.pbh.gov.br/esportes-e-lazer/selecoes-do-futuro",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "confirmado",
+        "revalidar_apos_dias": 14
+      },
+      "icone": "⚽",
+      "temas": [
+        "Esporte",
+        "Infância",
+        "Juventude"
+      ],
+      "termos_busca": [
+        "futebol gratuito",
+        "seleções do futuro",
+        "barreiro"
+      ]
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "levantamento-editorial-2026-09-27",
+      "site_only": true,
+      "id": "atividade:pbh:vida-ativa",
+      "programa_id": "pbh:vida-ativa",
+      "titulo": "Programa Vida Ativa",
+      "categoria": "atividade_fisica",
+      "modalidades": [
+        "Atividades físicas",
+        "Lazer",
+        "Socialização"
+      ],
+      "formato": "programa_multimodal",
+      "descricao": "Programa municipal com atividades físicas, de lazer e de socialização para pessoas idosas, distribuído em dezenas de núcleos comunitários de Belo Horizonte.",
+      "publicos_alvo": [
+        "Pessoas com mais de 60 anos"
+      ],
+      "idade_minima": 60,
+      "idade_maxima": null,
+      "abrangencia": {
+        "cidade": "Belo Horizonte",
+        "uf": "MG",
+        "bairros": []
+      },
+      "agenda": {
+        "temporalidade": "permanente",
+        "dias_semana": [],
+        "horarios": [],
+        "duracao_minutos": null,
+        "observacao": "Os horários variam por núcleo. Consulte a página oficial para os locais de atendimento."
+      },
+      "participacao": {
+        "inscricao": "presencial",
+        "vagas_limitadas": true,
+        "como_participar": "Apresente documentos pessoais e atestado médico de aptidão no núcleo indicado pelo programa.",
+        "url_inscricao": "",
+        "documentos_necessarios": [
+          "Documentos pessoais",
+          "Atestado médico de aptidão para atividade física"
+        ]
+      },
+      "organizador": {
+        "nome": "Prefeitura de Belo Horizonte · Secretaria Municipal de Esportes e Lazer",
+        "contato": "vidaativa@pbh.gov.br"
+      },
+      "fontes": [
+        {
+          "id": "pbh-vida-ativa",
+          "nome": "Prefeitura de Belo Horizonte",
+          "url": "https://prefeitura.pbh.gov.br/esportes-e-lazer/vida-ativa",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "programa_confirmado_detalhes_pendentes",
+        "revalidar_apos_dias": 30,
+        "observacao": "Programa confirmado; os 43 núcleos ainda serão desdobrados em ofertas individuais."
+      },
+      "icone": "🧓",
+      "temas": [
+        "Pessoa idosa",
+        "Atividade física",
+        "Convivência"
+      ],
+      "termos_busca": [
+        "vida ativa",
+        "idosos",
+        "60+"
+      ]
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "levantamento-editorial-2026-09-27",
+      "site_only": true,
+      "id": "atividade:pbh:lian-gong",
+      "programa_id": "pbh:lian-gong",
+      "titulo": "Lian Gong em Belo Horizonte",
+      "categoria": "pratica_integrativa",
+      "modalidades": [
+        "Lian Gong"
+      ],
+      "formato": "aula_orientada",
+      "descricao": "Prática corporal chinesa oferecida gratuitamente em centros de saúde e pontos extras de Belo Horizonte, com grupos orientados por profissionais capacitados.",
+      "publicos_alvo": [
+        "População em geral"
+      ],
+      "abrangencia": {
+        "cidade": "Belo Horizonte",
+        "uf": "MG",
+        "bairros": []
+      },
+      "agenda": {
+        "temporalidade": "recorrente",
+        "dias_semana": [],
+        "horarios": [],
+        "duracao_minutos": null,
+        "observacao": "A Prefeitura informou 186 grupos em setembro de 2026. Locais e horários serão desdobrados em registros próprios."
+      },
+      "participacao": {
+        "inscricao": "consultar_local",
+        "vagas_limitadas": false,
+        "como_participar": "Procure um Centro de Saúde e informe-se sobre o grupo mais próximo.",
+        "url_inscricao": "",
+        "documentos_necessarios": []
+      },
+      "organizador": {
+        "nome": "Prefeitura de Belo Horizonte · SUS-BH"
+      },
+      "fontes": [
+        {
+          "id": "pbh-lian-gong",
+          "nome": "Prefeitura de Belo Horizonte",
+          "url": "https://prefeitura.pbh.gov.br/noticias/lian-gong-leva-beneficios-para-saude-e-bem-estar-de-mais-de-4-mil-praticantes-em-bh",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "programa_confirmado_detalhes_pendentes",
+        "revalidar_apos_dias": 30
+      },
+      "icone": "🧘",
+      "temas": [
+        "Saúde",
+        "Bem-estar",
+        "Atividade física"
+      ],
+      "termos_busca": [
+        "lian gong",
+        "liang gong",
+        "prática chinesa"
+      ]
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "levantamento-editorial-2026-09-27",
+      "site_only": true,
+      "id": "atividade:pbh:academia-da-cidade",
+      "programa_id": "pbh:academia-da-cidade",
+      "titulo": "Academia da Cidade",
+      "categoria": "atividade_fisica",
+      "modalidades": [
+        "Ginástica",
+        "Dança",
+        "Esportes",
+        "Jogos",
+        "Caminhada orientada"
+      ],
+      "formato": "programa_multimodal",
+      "descricao": "Programa gratuito de atividade física supervisionada por profissionais de Educação Física, oferecido em unidades da Academia da Cidade de Belo Horizonte.",
+      "publicos_alvo": [
+        "Pessoas com mais de 18 anos"
+      ],
+      "idade_minima": 18,
+      "idade_maxima": null,
+      "abrangencia": {
+        "cidade": "Belo Horizonte",
+        "uf": "MG",
+        "bairros": []
+      },
+      "agenda": {
+        "temporalidade": "permanente",
+        "dias_semana": [],
+        "horarios": [],
+        "duracao_minutos": 60,
+        "observacao": "Cada aluno participa em geral de três aulas por semana; horários variam por unidade."
+      },
+      "participacao": {
+        "inscricao": "consultar_local",
+        "vagas_limitadas": true,
+        "como_participar": "Consulte a unidade ou o serviço municipal para avaliação inicial e disponibilidade de vaga.",
+        "url_inscricao": "",
+        "documentos_necessarios": []
+      },
+      "organizador": {
+        "nome": "Prefeitura de Belo Horizonte · Secretaria Municipal de Saúde"
+      },
+      "fontes": [
+        {
+          "id": "pbh-academia-cidade",
+          "nome": "Prefeitura de Belo Horizonte",
+          "url": "https://prefeitura.pbh.gov.br/noticias/programa-academia-da-cidade-oferece-atividades-fisicas-gratuitas-em-bh",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "programa_confirmado_detalhes_pendentes",
+        "revalidar_apos_dias": 30,
+        "observacao": "Programa confirmado; as unidades serão desdobradas posteriormente."
+      },
+      "icone": "🏃",
+      "temas": [
+        "Saúde",
+        "Atividade física"
+      ],
+      "termos_busca": [
+        "academia da cidade",
+        "ginástica",
+        "caminhada"
+      ]
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "levantamento-editorial-2026-09-27",
+      "site_only": true,
+      "id": "atividade:contagem:contagem-ativa",
+      "programa_id": "contagem:contagem-ativa",
+      "titulo": "Contagem Ativa",
+      "categoria": "atividade_fisica",
+      "modalidades": [
+        "Zumba",
+        "Ritmos",
+        "Treinamento funcional",
+        "Forró",
+        "Pilates",
+        "Balé",
+        "Ginástica rítmica"
+      ],
+      "formato": "programa_multimodal",
+      "descricao": "Programa gratuito de esporte e atividade física da Prefeitura de Contagem, com aulas em dezenas de locais do município.",
+      "publicos_alvo": [
+        "População de Contagem",
+        "Crianças de 6 a 14 anos em modalidades específicas"
+      ],
+      "abrangencia": {
+        "cidade": "Contagem",
+        "uf": "MG",
+        "bairros": []
+      },
+      "agenda": {
+        "temporalidade": "permanente",
+        "dias_semana": [],
+        "horarios": [],
+        "duracao_minutos": null,
+        "observacao": "Mais de 80 locais; horários variam por núcleo."
+      },
+      "participacao": {
+        "inscricao": "consultar_local",
+        "vagas_limitadas": true,
+        "como_participar": "Consulte o perfil @contagemativa ou a Secretaria Municipal de Esportes e Lazer para vagas e horários.",
+        "url_inscricao": "",
+        "documentos_necessarios": []
+      },
+      "organizador": {
+        "nome": "Prefeitura de Contagem · Secretaria Municipal de Esportes e Lazer",
+        "contato": "(31) 3392-5464"
+      },
+      "fontes": [
+        {
+          "id": "contagem-esportes",
+          "nome": "Prefeitura de Contagem",
+          "url": "https://portal.contagem.mg.gov.br/esportes",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "programa_confirmado_detalhes_pendentes",
+        "revalidar_apos_dias": 30
+      },
+      "icone": "🤸",
+      "temas": [
+        "Atividade física",
+        "Esporte",
+        "Dança"
+      ],
+      "termos_busca": [
+        "contagem ativa",
+        "zumba",
+        "pilates",
+        "funcional"
+      ]
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "levantamento-editorial-2026-09-27",
+      "site_only": true,
+      "id": "atividade:contagem:escola-futsal-california",
+      "programa_id": "contagem:escola-futsal",
+      "titulo": "Escola de Futsal de Contagem",
+      "categoria": "esporte",
+      "modalidades": [
+        "Futsal"
+      ],
+      "formato": "aula_orientada",
+      "descricao": "Projeto gratuito da Prefeitura de Contagem com aulas de futsal para meninos e meninas.",
+      "publicos_alvo": [
+        "Meninos e meninas de 8 a 17 anos"
+      ],
+      "idade_minima": 8,
+      "idade_maxima": 17,
+      "abrangencia": {
+        "cidade": "Contagem",
+        "uf": "MG",
+        "bairros": [
+          "Califórnia"
+        ]
+      },
+      "local": {
+        "nome": "Ginásio Poliesportivo Califórnia",
+        "endereco": "",
+        "bairro": "Califórnia",
+        "cidade": "Contagem",
+        "uf": "MG"
+      },
+      "agenda": {
+        "temporalidade": "recorrente",
+        "dias_semana": [],
+        "horarios": [],
+        "duracao_minutos": null,
+        "observacao": "Programa confirmado; dias e horários precisam ser revalidados antes do desdobramento por turma."
+      },
+      "participacao": {
+        "inscricao": "consultar_local",
+        "vagas_limitadas": true,
+        "como_participar": "Consulte a Secretaria Municipal de Esportes e Lazer para inscrição e horários.",
+        "url_inscricao": "",
+        "documentos_necessarios": []
+      },
+      "organizador": {
+        "nome": "Prefeitura de Contagem · Secretaria Municipal de Esportes e Lazer",
+        "contato": "(31) 3392-5464"
+      },
+      "fontes": [
+        {
+          "id": "contagem-esportes",
+          "nome": "Prefeitura de Contagem",
+          "url": "https://portal.contagem.mg.gov.br/esportes",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "programa_confirmado_detalhes_pendentes",
+        "revalidar_apos_dias": 14
+      },
+      "icone": "⚽",
+      "temas": [
+        "Esporte",
+        "Infância",
+        "Juventude"
+      ],
+      "termos_busca": [
+        "futsal",
+        "califórnia",
+        "contagem"
+      ]
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "levantamento-editorial-2026-09-27",
+      "site_only": true,
+      "id": "atividade:betim:viva-esporte:horto",
+      "programa_id": "betim:viva-o-esporte",
+      "titulo": "Viva o Esporte · Horto Municipal",
+      "categoria": "esporte",
+      "modalidades": [
+        "Futsal",
+        "Vôlei de quadra",
+        "Vôlei de praia",
+        "Handebol",
+        "Basquete",
+        "Iniciação esportiva",
+        "Atletismo",
+        "Atletismo PCD",
+        "Taekwondo",
+        "Hidroginástica",
+        "Pilates solo",
+        "Ginástica",
+        "Lian Gong"
+      ],
+      "formato": "programa_multimodal",
+      "descricao": "Núcleo do programa Viva o Esporte da Prefeitura de Betim com diversas modalidades gratuitas.",
+      "publicos_alvo": [
+        "Pessoas a partir de 4 anos, conforme a modalidade"
+      ],
+      "idade_minima": 4,
+      "idade_maxima": null,
+      "abrangencia": {
+        "cidade": "Betim",
+        "uf": "MG",
+        "bairros": [
+          "Horto"
+        ]
+      },
+      "local": {
+        "nome": "Horto Municipal",
+        "endereco": "Rua Redelvim Andrade, 300",
+        "bairro": "Horto",
+        "cidade": "Betim",
+        "uf": "MG"
+      },
+      "agenda": {
+        "temporalidade": "recorrente",
+        "dias_semana": [],
+        "horarios": [],
+        "duracao_minutos": null,
+        "observacao": "Dias e horários variam por modalidade e devem ser consultados no programa."
+      },
+      "participacao": {
+        "inscricao": "consultar_local",
+        "vagas_limitadas": true,
+        "como_participar": "Consulte a Central de Atendimento do Viva o Esporte para horários, vagas e documentação.",
+        "url_inscricao": "",
+        "documentos_necessarios": [
+          "Documento do aluno",
+          "Documento dos responsáveis, se menor",
+          "Comprovante de endereço",
+          "Atestado médico para maiores de 18 anos"
+        ]
+      },
+      "organizador": {
+        "nome": "Prefeitura de Betim · Secretaria Municipal de Esportes",
+        "contato": "(31) 3531-2471"
+      },
+      "fontes": [
+        {
+          "id": "betim-viva-esporte",
+          "nome": "Prefeitura de Betim",
+          "url": "https://www.betim.mg.gov.br/portal/secretarias-paginas/279/programa-viva-o-esporte/",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "programa_confirmado_detalhes_pendentes",
+        "revalidar_apos_dias": 30
+      },
+      "icone": "🏅",
+      "temas": [
+        "Esporte",
+        "Atividade física",
+        "Inclusão"
+      ],
+      "termos_busca": [
+        "viva o esporte",
+        "horto",
+        "betim"
+      ]
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "levantamento-editorial-2026-09-27",
+      "site_only": true,
+      "id": "atividade:betim:betim-ativa:alcidez-bras",
+      "programa_id": "betim:betim-ativa",
+      "titulo": "Betim Ativa · UBS Alcidez Brás",
+      "categoria": "atividade_fisica",
+      "modalidades": [
+        "Atividade física geral",
+        "Prevenção de quedas",
+        "Atividade infantil",
+        "Lian Gong"
+      ],
+      "formato": "programa_multimodal",
+      "descricao": "Grupos gratuitos de atividade física e práticas corporais vinculados à UBS Alcidez Brás, no programa Betim Ativa.",
+      "publicos_alvo": [
+        "População atendida pela UBS de referência"
+      ],
+      "abrangencia": {
+        "cidade": "Betim",
+        "uf": "MG",
+        "bairros": [
+          "Cachoeira"
+        ]
+      },
+      "local": {
+        "nome": "UBS Alcidez Brás",
+        "endereco": "Rua José Maria de Morais, 200",
+        "bairro": "Cachoeira",
+        "cidade": "Betim",
+        "uf": "MG"
+      },
+      "agenda": {
+        "temporalidade": "recorrente",
+        "dias_semana": [
+          "terca",
+          "quinta",
+          "sexta"
+        ],
+        "horarios": [
+          "Terça e quinta · Lian Gong · 07:30",
+          "Terça e quinta · atividade física geral · 08:15 e 09:30",
+          "Sexta · prevenção de quedas · 14:00",
+          "Sexta · grupo de crianças · 15:00"
+        ],
+        "duracao_minutos": null,
+        "observacao": "Atividades físicas ocorrem na Academia da Saúde vinculada à unidade."
+      },
+      "participacao": {
+        "inscricao": "presencial",
+        "vagas_limitadas": true,
+        "como_participar": "A inscrição deve ser feita na UBS de referência do participante.",
+        "url_inscricao": "",
+        "documentos_necessarios": []
+      },
+      "organizador": {
+        "nome": "Prefeitura de Betim"
+      },
+      "fontes": [
+        {
+          "id": "betim-ativa",
+          "nome": "Prefeitura de Betim",
+          "url": "https://www.betim.mg.gov.br/betimativa",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "confirmado",
+        "revalidar_apos_dias": 14
+      },
+      "icone": "🏃",
+      "temas": [
+        "Saúde",
+        "Atividade física",
+        "Lian Gong"
+      ],
+      "termos_busca": [
+        "betim ativa",
+        "alcidez brás",
+        "cachoeira"
+      ]
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "levantamento-editorial-2026-09-27",
+      "site_only": true,
+      "id": "atividade:sabara:programa-conviver",
+      "programa_id": "sabara:conviver",
+      "titulo": "Programa Conviver",
+      "categoria": "lazer_recreacao",
+      "modalidades": [
+        "Zumba",
+        "Hidroginástica",
+        "Dança",
+        "Esportes adaptados",
+        "Futebol",
+        "Vôlei",
+        "Circuito funcional"
+      ],
+      "formato": "programa_multimodal",
+      "descricao": "Programa gratuito de esporte, lazer e convivência de Sabará, organizado por faixas etárias e distribuído em diferentes territórios do município.",
+      "publicos_alvo": [
+        "Crianças e adolescentes de 6 a 17 anos",
+        "Adultos de 18 a 59 anos",
+        "Pessoas com 60 anos ou mais"
+      ],
+      "abrangencia": {
+        "cidade": "Sabará",
+        "uf": "MG",
+        "bairros": []
+      },
+      "agenda": {
+        "temporalidade": "periodo",
+        "dias_semana": [],
+        "horarios": [],
+        "duracao_minutos": null,
+        "observacao": "Mais de 2.400 vagas anunciadas em 2026; locais e horários dependem do eixo e território."
+      },
+      "participacao": {
+        "inscricao": "online",
+        "vagas_limitadas": true,
+        "como_participar": "Use o formulário indicado na página oficial do Programa Conviver e confira disponibilidade por modalidade.",
+        "url_inscricao": "https://site.sabara.mg.gov.br/sabara-lanca-programa-conviver-e-amplia-acesso-ao-esporte-e-lazer-no-municipio/",
+        "documentos_necessarios": []
+      },
+      "organizador": {
+        "nome": "Prefeitura de Sabará · Secretarias de Esportes e de Desenvolvimento Social",
+        "contato": "(31) 98886-6487"
+      },
+      "fontes": [
+        {
+          "id": "sabara-conviver",
+          "nome": "Prefeitura de Sabará",
+          "url": "https://site.sabara.mg.gov.br/sabara-lanca-programa-conviver-e-amplia-acesso-ao-esporte-e-lazer-no-municipio/",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "programa_confirmado_detalhes_pendentes",
+        "revalidar_apos_dias": 14
+      },
+      "icone": "🤝",
+      "temas": [
+        "Esporte",
+        "Lazer",
+        "Convivência"
+      ],
+      "termos_busca": [
+        "conviver",
+        "sabara",
+        "zumba",
+        "futebol",
+        "hidroginástica"
+      ]
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "levantamento-editorial-2026-09-27",
+      "site_only": true,
+      "id": "atividade:novalima:aerodance:piero-garzon",
+      "programa_id": "novalima:aerodance",
+      "titulo": "AeroDance em Nova Lima",
+      "categoria": "atividade_fisica",
+      "modalidades": [
+        "AeroDance",
+        "Dança"
+      ],
+      "formato": "aula_orientada",
+      "descricao": "Aulas de AeroDance oferecidas pela Prefeitura de Nova Lima para incentivar atividade física, saúde e bem-estar.",
+      "publicos_alvo": [
+        "Pessoas com 16 anos ou mais"
+      ],
+      "idade_minima": 16,
+      "idade_maxima": null,
+      "abrangencia": {
+        "cidade": "Nova Lima",
+        "uf": "MG",
+        "bairros": []
+      },
+      "local": {
+        "nome": "Espaço Cultural Piero Garzon Henrique",
+        "endereco": "",
+        "bairro": "",
+        "cidade": "Nova Lima",
+        "uf": "MG"
+      },
+      "agenda": {
+        "temporalidade": "recorrente",
+        "dias_semana": [
+          "terca",
+          "quinta"
+        ],
+        "horarios": [
+          "18:00"
+        ],
+        "duracao_minutos": null,
+        "observacao": "Aulas iniciadas em maio de 2026."
+      },
+      "participacao": {
+        "inscricao": "app",
+        "vagas_limitadas": true,
+        "como_participar": "Faça a inscrição pelo Nova Lima App. Há lista de espera quando as vagas estão preenchidas.",
+        "url_inscricao": "https://novalima.mg.gov.br/inicio/noticias/nucleo_de_aero_dance",
+        "documentos_necessarios": []
+      },
+      "organizador": {
+        "nome": "Prefeitura de Nova Lima"
+      },
+      "fontes": [
+        {
+          "id": "novalima-aerodance",
+          "nome": "Prefeitura de Nova Lima",
+          "url": "https://novalima.mg.gov.br/inicio/noticias/nucleo_de_aero_dance",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "confirmado",
+        "revalidar_apos_dias": 30
+      },
+      "icone": "💃",
+      "temas": [
+        "Dança",
+        "Atividade física",
+        "Bem-estar"
+      ],
+      "termos_busca": [
+        "aerodance",
+        "nova lima",
+        "dança"
+      ]
+    }
+  ]
+}
