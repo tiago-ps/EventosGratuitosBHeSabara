@@ -43,3 +43,22 @@ A resposta pública contém apenas:
 - data da última atualização, quando houver.
 
 A consulta pública não retorna mensagem, IDs enviados, quantidade, dados do Editor ou qualquer informação interna da curadoria. O protocolo funciona como uma chave de consulta; não há login nem cadastro.
+
+
+## Contribuições gerais da comunidade
+
+O mesmo Worker e o mesmo banco D1 atendem também dois formulários independentes da fila de curadoria:
+
+- `sugerir_evento`: sugestão de um novo evento, com título, cidade/data opcionais, link de referência e observação;
+- `corrigir_informacao`: correção de um conteúdo já publicado, preferencialmente identificado pelo ID estável do Mural.
+
+Endpoints:
+
+- `GET /api/contribuicoes-comunidade/config`
+- `POST /api/contribuicoes-comunidade`
+- `GET /api/contribuicoes-comunidade/status?protocolo=CON-XXXX-XXXX`
+- `GET/PATCH /api/contribuicoes-comunidade/admin...` (Bearer `CURADORIA_ADMIN_TOKEN`)
+
+O Turnstile usa a ação `contribuir_mural`. A contribuição não exige cadastro e não grava IP, User-Agent, fingerprint, localização ou identificador persistente do visitante na tabela editorial.
+
+Antes de ativar os formulários, aplique `cloudflare/contribuicoes-comunidade.sql` no mesmo D1 vinculado como `SUGESTOES_DB`.
