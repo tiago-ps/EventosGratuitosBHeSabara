@@ -380,7 +380,7 @@ export default {
     const apiResponse = await handleSuggestionApi(request, env);
     if (apiResponse) return apiResponse;
 
-    const response = await fetch(request);
+    const response = await env.ASSETS.fetch(request);
     const contentType = response.headers.get('content-type') || '';
     if (!contentType.includes('text/html')) return response;
 
