@@ -4,6 +4,38 @@ const SUGGESTION_ADMIN_PATH = '/api/sugestoes-curadoria/admin';
 const SUGGESTION_STATUSES = new Set(['recebido', 'em_analise', 'aproveitado', 'descartado']);
 const SUGGESTION_ITEM_RE = /^(evento|livro|curso|concurso|filme|utilidade_publica):[^\s:][^\s]{0,260}$/u;
 
+function suggestionCorsOrigin(request, env) {
+  const origin = String(request.headers.get('origin') || '').trim();
+  if (!origin) return '';
+  const configured = String(env.SUGESTOES_ALLOWED_ORIGINS || '')
+    .split(',')
+    .map(value => value.trim())
+    .filter(Boolean);
+  const allowed = new Set([
+    'https://temsimuai.com.br',
+    'https://www.temsimuai.com.br',
+    'https://tiago-ps.github.io',
+    ...configured
+  ]);
+  return allowed.has(origin) ? origin : '';
+}
+
+function withSuggestionCors(request, env, response) {
+  const origin = suggestionCorsOrigin(request, env);
+  if (!origin) return response;
+  const headers = new Headers(response.headers);
+  headers.set('Access-Control-Allow-Origin', origin);
+  headers.set('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  headers.set('Access-Control-Allow-Headers', 'Content-Type');
+  headers.set('Access-Control-Max-Age', '86400');
+  headers.append('Vary', 'Origin');
+  return new Response(response.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers
+  });
+}
+
 function jsonResponse(payload, status = 200, headers = {}) {
   return new Response(JSON.stringify(payload), {
     status,
@@ -218,11 +250,20 @@ async function handleSuggestionAdminUpdate(request, env, protocol) {
 
 async function handleSuggestionApi(request, env) {
   const url = new URL(request.url);
+  const publicApi = url.pathname === SUGGESTION_API_PATH
+    || url.pathname === `${SUGGESTION_API_PATH}/config`;
+
+  if (publicApi && request.method === 'OPTIONS') {
+    return withSuggestionCors(request, env, new Response(null, {
+      status: 204,
+      headers: {'cache-control': 'no-store'}
+    }));
+  }
   if (url.pathname === `${SUGGESTION_API_PATH}/config` && request.method === 'GET') {
-    return handleSuggestionConfig(env);
+    return withSuggestionCors(request, env, await handleSuggestionConfig(env));
   }
   if (url.pathname === SUGGESTION_API_PATH && request.method === 'POST') {
-    return handleSuggestionPost(request, env);
+    return withSuggestionCors(request, env, await handleSuggestionPost(request, env));
   }
   if (url.pathname === SUGGESTION_ADMIN_PATH && request.method === 'GET') {
     return handleSuggestionAdminList(request, env);
