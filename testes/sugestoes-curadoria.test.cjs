@@ -3,6 +3,7 @@ const assert = require('assert');
 
 const app = fs.readFileSync('js/app.js', 'utf8');
 const worker = fs.readFileSync('cloudflare/social-preview-worker.js', 'utf8');
+const serviceWorker = fs.readFileSync('service-worker.js', 'utf8');
 const schema = fs.readFileSync('cloudflare/sugestoes-curadoria.sql', 'utf8');
 const wrangler = JSON.parse(fs.readFileSync('wrangler.jsonc', 'utf8'));
 
@@ -25,6 +26,8 @@ assert(worker.includes("request.method === 'OPTIONS'"));
 assert(!worker.includes("form.append('remoteip'"));
 assert(!worker.includes("CF-Connecting-IP"));
 assert(worker.includes('env.ASSETS.fetch(request)'));
+assert(serviceWorker.includes("if (url.pathname.startsWith('/api/')) return;"));
+assert(serviceWorker.indexOf("if (url.pathname.startsWith('/api/')) return;") < serviceWorker.indexOf("if (request.mode === 'navigate')"));
 
 assert.equal(wrangler.name, 'muralcultural');
 assert.equal(wrangler.main, 'cloudflare/social-preview-worker.js');
