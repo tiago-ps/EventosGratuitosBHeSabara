@@ -1,7 +1,14 @@
 
 const SUGGESTION_API_PATH = '/api/sugestoes-curadoria';
+const SUGGESTION_STATUS_PATH = '/api/sugestoes-curadoria/status';
 const SUGGESTION_ADMIN_PATH = '/api/sugestoes-curadoria/admin';
 const SUGGESTION_STATUSES = new Set(['recebido', 'em_analise', 'aproveitado', 'descartado']);
+const PUBLIC_SUGGESTION_STATUS_LABELS = {
+  recebido: 'Recebida',
+  em_analise: 'Em análise',
+  aproveitado: 'Aproveitada',
+  descartado: 'Não aproveitada'
+};
 const SUGGESTION_ITEM_RE = /^(evento|livro|curso|concurso|filme|utilidade_publica):[^\s:][^\s]{0,260}$/u;
 
 function suggestionCorsOrigin(request, env) {
@@ -141,6 +148,41 @@ async function handleSuggestionConfig(env) {
   });
 }
 
+function sqliteUtcToIso(value) {
+  const text = String(value || '').trim();
+  if (!text) return '';
+  if (/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$/.test(text)) {
+    return text.replace(' ', 'T') + 'Z';
+  }
+  return text;
+}
+
+async function handleSuggestionStatus(request, env) {
+  if (!env.SUGESTOES_DB) {
+    return jsonResponse({ erro: 'A consulta de sugestões está temporariamente indisponível.' }, 503);
+  }
+  const url = new URL(request.url);
+  const protocol = String(url.searchParams.get('protocolo') || '').trim().toUpperCase();
+  if (!/^SUG-[A-Z0-9]{4}-[A-Z0-9]{4}$/.test(protocol)) {
+    return jsonResponse({ erro: 'Protocolo não encontrado.' }, 404);
+  }
+
+  const row = await env.SUGESTOES_DB.prepare(
+    'SELECT protocolo, criado_em, atualizado_em, status FROM curadoria_sugestoes WHERE protocolo = ? LIMIT 1'
+  ).bind(protocol).first();
+
+  if (!row) return jsonResponse({ erro: 'Protocolo não encontrado.' }, 404);
+
+  const status = SUGGESTION_STATUSES.has(String(row.status)) ? String(row.status) : 'recebido';
+  return jsonResponse({
+    protocolo: String(row.protocolo || protocol),
+    status,
+    status_label: PUBLIC_SUGGESTION_STATUS_LABELS[status] || 'Recebida',
+    criado_em: sqliteUtcToIso(row.criado_em),
+    atualizado_em: sqliteUtcToIso(row.atualizado_em)
+  });
+}
+
 async function handleSuggestionPost(request, env) {
   if (!env.SUGESTOES_DB) {
     return jsonResponse({ erro: 'O envio à curadoria está temporariamente indisponível.' }, 503);
@@ -251,7 +293,8 @@ async function handleSuggestionAdminUpdate(request, env, protocol) {
 async function handleSuggestionApi(request, env) {
   const url = new URL(request.url);
   const publicApi = url.pathname === SUGGESTION_API_PATH
-    || url.pathname === `${SUGGESTION_API_PATH}/config`;
+    || url.pathname === `${SUGGESTION_API_PATH}/config`
+    || url.pathname === SUGGESTION_STATUS_PATH;
 
   if (publicApi && request.method === 'OPTIONS') {
     return withSuggestionCors(request, env, new Response(null, {
@@ -261,6 +304,9 @@ async function handleSuggestionApi(request, env) {
   }
   if (url.pathname === `${SUGGESTION_API_PATH}/config` && request.method === 'GET') {
     return withSuggestionCors(request, env, await handleSuggestionConfig(env));
+  }
+  if (url.pathname === SUGGESTION_STATUS_PATH && request.method === 'GET') {
+    return withSuggestionCors(request, env, await handleSuggestionStatus(request, env));
   }
   if (url.pathname === SUGGESTION_API_PATH && request.method === 'POST') {
     return withSuggestionCors(request, env, await handleSuggestionPost(request, env));

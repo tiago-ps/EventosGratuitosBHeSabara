@@ -2024,6 +2024,8 @@ body.agenda-mode.curation-mode .agenda-book-cover-warning strong {
 /* Envio anônimo de favoritos para a curadoria. */
 .agenda-send-curation{display:inline-flex;align-items:center;gap:.4rem;min-height:38px;border:1px solid var(--line);border-radius:10px;padding:.45rem .7rem;background:var(--surface);color:var(--text);font:inherit;font-weight:800;cursor:pointer}
 .agenda-send-curation:hover{border-color:var(--accent)}
+.agenda-suggestion-lookup{display:inline-flex;align-items:center;gap:.4rem;min-height:38px;border:1px solid var(--line);border-radius:10px;padding:.45rem .7rem;background:var(--surface);color:var(--text);font:inherit;font-weight:800;cursor:pointer}
+.agenda-suggestion-lookup:hover{border-color:var(--accent)}
 .agenda-curation-suggestion-dialog{box-sizing:border-box;width:min(620px,calc(100% - 24px));max-width:none;max-height:min(88dvh,760px);padding:0;border:1px solid var(--line);border-radius:18px;background:var(--panel);color:var(--text);box-shadow:0 24px 80px rgba(0,0,0,.72);overflow:auto;overscroll-behavior:contain}
 .agenda-curation-suggestion-dialog::backdrop{background:rgba(0,0,0,.78);backdrop-filter:blur(2px)}
 .agenda-curation-suggestion-card{display:grid;gap:1rem;padding:1.2rem;margin:0;background:var(--panel)}
@@ -2035,6 +2037,12 @@ body.agenda-mode.curation-mode .agenda-book-cover-warning strong {
 .agenda-curation-suggestion-message{display:grid;gap:.45rem;font-weight:800}
 .agenda-curation-suggestion-message small{font-weight:600;color:var(--muted)}
 .agenda-curation-suggestion-message textarea{box-sizing:border-box;width:100%;resize:vertical;min-height:110px;border:1px solid var(--line);border-radius:10px;padding:.75rem;background:var(--panel);color:var(--text);font:inherit}
+.agenda-curation-status-field{display:grid;gap:.45rem;font-weight:800}
+.agenda-curation-status-field input{box-sizing:border-box;width:100%;border:1px solid var(--line);border-radius:10px;padding:.8rem;background:var(--panel);color:var(--text);font:700 1rem ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;text-transform:uppercase;letter-spacing:.04em}
+.agenda-curation-status-result{display:grid;gap:.55rem;padding:1rem;border:1px solid var(--line);border-radius:12px;background:color-mix(in srgb,var(--accent) 7%,var(--surface))}
+.agenda-curation-status-result p{margin:0}
+.agenda-curation-status-protocol{font:800 1rem ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.04em}
+.agenda-curation-status-badge{justify-self:start;padding:.35rem .6rem;border-radius:999px;background:color-mix(in srgb,var(--accent) 18%,var(--panel));font-weight:900}
 .agenda-curation-suggestion-status{margin:0;color:var(--muted)}
 .agenda-curation-suggestion-status[data-error=true]{color:#c9534d}
 .agenda-curation-suggestion-actions{display:flex;justify-content:flex-end;gap:.7rem;flex-wrap:wrap}
@@ -2044,4 +2052,4 @@ body.agenda-mode.curation-mode .agenda-book-cover-warning strong {
 .agenda-curation-turnstile{min-height:65px}
 .agenda-curation-suggestion-success{display:grid;gap:.9rem;padding:1.2rem}
 .agenda-curation-suggestion-protocol{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:1.08em;letter-spacing:.03em}
-@media(max-width:620px){.agenda-curation-suggestion-dialog{width:calc(100% - 16px);max-height:90dvh;border-radius:14px}.agenda-curation-suggestion-card{padding:1rem}.agenda-curation-suggestion-actions>*{flex:1}.agenda-header-actions .agenda-send-curation span:last-child{display:none}}
+@media(max-width:620px){.agenda-curation-suggestion-dialog{width:calc(100% - 16px);max-height:90dvh;border-radius:14px}.agenda-curation-suggestion-card{padding:1rem}.agenda-curation-suggestion-actions>*{flex:1}.agenda-header-actions .agenda-send-curation span:last-child,.agenda-header-actions .agenda-suggestion-lookup-label{display:none}}

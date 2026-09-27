@@ -8,6 +8,9 @@ const schema = fs.readFileSync('cloudflare/sugestoes-curadoria.sql', 'utf8');
 const wrangler = JSON.parse(fs.readFileSync('wrangler.jsonc', 'utf8'));
 
 assert(app.includes('Enviar para curadoria'));
+assert(app.includes('Consultar sugestão'));
+assert(app.includes('Acompanhar sugestão'));
+assert(app.includes("/api/sugestoes-curadoria/status?protocolo="));
 assert(app.includes('Não pedimos nome, e-mail ou cadastro.'));
 assert(app.includes("curationSuggestionApi('/api/sugestoes-curadoria')"));
 assert(app.includes('itens: [...selection]'));
@@ -16,6 +19,8 @@ assert(app.includes("window.location.hostname === 'tiago-ps.github.io'"));
 assert(app.includes("'https://temsimuai.com.br'"));
 
 assert(worker.includes("const SUGGESTION_API_PATH = '/api/sugestoes-curadoria'"));
+assert(worker.includes("const SUGGESTION_STATUS_PATH = '/api/sugestoes-curadoria/status'"));
+assert(worker.includes('handleSuggestionStatus(request, env)'));
 assert(worker.includes('CURADORIA_ADMIN_TOKEN'));
 assert(worker.includes('SUGESTOES_DAILY_LIMIT'));
 assert(worker.includes('TURNSTILE_SECRET'));
@@ -26,6 +31,14 @@ assert(worker.includes("request.method === 'OPTIONS'"));
 assert(!worker.includes("form.append('remoteip'"));
 assert(!worker.includes("CF-Connecting-IP"));
 assert(worker.includes('env.ASSETS.fetch(request)'));
+const publicStatusStart = worker.indexOf('async function handleSuggestionStatus');
+const publicStatusEnd = worker.indexOf('async function handleSuggestionPost');
+assert(publicStatusStart > 0 && publicStatusEnd > publicStatusStart);
+const publicStatusHandler = worker.slice(publicStatusStart, publicStatusEnd);
+assert(publicStatusHandler.includes('SELECT protocolo, criado_em, atualizado_em, status'));
+for (const forbidden of ['mensagem', 'itens_json', 'quantidade']) {
+  assert(!publicStatusHandler.includes(forbidden), `consulta pública não deve expor ${forbidden}`);
+}
 assert(serviceWorker.includes("if (url.pathname.startsWith('/api/')) return;"));
 assert(serviceWorker.indexOf("if (url.pathname.startsWith('/api/')) return;") < serviceWorker.indexOf("if (request.mode === 'navigate')"));
 
