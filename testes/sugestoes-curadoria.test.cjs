@@ -67,3 +67,19 @@ for (const required of ['.github/**', 'cloudflare/**', '*.py', 'README*', '.wran
 }
 
 console.log('Fluxo anônimo de sugestões validado.');
+
+
+assert(worker.includes("const CONTRIBUTION_API_PATH = '/api/contribuicoes-comunidade'"));
+assert(worker.includes("const CONTRIBUTION_STATUS_PATH = '/api/contribuicoes-comunidade/status'"));
+assert(worker.includes("const CONTRIBUTION_ADMIN_PATH = '/api/contribuicoes-comunidade/admin'"));
+assert(worker.includes("sugerir_evento"));
+assert(worker.includes("corrigir_informacao"));
+assert(worker.includes("contribuir_mural"));
+assert(worker.includes("CON-"));
+assert(worker.includes("contribuicoes_comunidade"));
+assert(worker.includes("atividade_lazer"));
+assert(worker.includes("handleCommunityContributionApi(request, env)"));
+
+const contributionSchema = fs.readFileSync('cloudflare/contribuicoes-comunidade.sql', 'utf8');
+assert(contributionSchema.includes('CREATE TABLE IF NOT EXISTS contribuicoes_comunidade'));
+assert(contributionSchema.includes("CHECK (tipo IN ('sugerir_evento', 'corrigir_informacao'))"));
