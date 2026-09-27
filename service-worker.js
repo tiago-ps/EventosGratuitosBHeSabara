@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v150-panel-correction';
+const CACHE_VERSION = 'mural-cultural-v151-esporte-lazer-painel';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -23,9 +23,9 @@ const CORE_ASSETS = [
   './js/conteudos/concursos.js?v=2',
   './js/conteudos/filmes.js?v=6',
   './js/conteudos/utilidade-publica.js?v=3',
-  './js/conteudos/atividades-lazer.js?v=1',
+  './js/conteudos/atividades-lazer.js?v=2',
   './js/curadorias-site.js?v=11',
-  './js/app.js?v=124',
+  './js/app.js?v=125',
   './js/temas-visuais.js?v=13',
   './js/eventos-manuais-ui.js?v=44',
   './js/ios-install.js?v=2',
