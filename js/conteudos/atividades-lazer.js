@@ -110,6 +110,103 @@
     return optionPairs(items, item => Array.isArray(item?.modalidades) ? item.modalidades : [], normalizeText);
   }
 
+  function createPanelSlide(args) {
+    const item = args.movie;
+    const slide = args.template.content.firstElementChild.cloneNode(true);
+    const helpers = args.helpers;
+    helpers.buildSiteQr(slide);
+    slide.classList.add('activity-slide');
+    slide.setAttribute('aria-label', 'Esporte e Lazer: ' + (item.titulo || 'Atividade gratuita'));
+
+    const seconds = helpers.slideDurationFor(item);
+    slide.style.setProperty('--slide-seconds', String(seconds) + 's');
+    slide.querySelector('.counter').textContent = String(args.index + 1) + ' de ' + String(args.total);
+
+    const eventCopy = slide.querySelector('.event-copy');
+    const bookCopy = slide.querySelector('.book-copy');
+    if (bookCopy) bookCopy.hidden = true;
+    if (eventCopy) eventCopy.hidden = false;
+
+    const category = slide.querySelector('.category');
+    if (category) {
+      category.hidden = false;
+      category.textContent = 'ESPORTE E LAZER';
+    }
+    const free = slide.querySelector('.free');
+    if (free) {
+      free.hidden = false;
+      free.textContent = 'GRATUITO';
+    }
+    const rating = slide.querySelector('.badge.rating');
+    if (rating) rating.hidden = true;
+
+    const cityBadge = slide.querySelector('.badge.city');
+    const cityLabel = city(item);
+    if (cityBadge) {
+      cityBadge.hidden = !cityLabel;
+      cityBadge.textContent = cityLabel.toUpperCase();
+      cityBadge.setAttribute('aria-hidden', cityLabel ? 'false' : 'true');
+    }
+
+    const title = slide.querySelector('.event-title');
+    if (title) title.textContent = item.titulo || 'Atividade gratuita';
+    const description = slide.querySelector('.description');
+    if (description) description.textContent = item.descricao || '';
+
+    const when = slide.querySelector('.when');
+    if (when) when.textContent = scheduleLabel(item) || 'Consulte a programação';
+    const where = slide.querySelector('.where-text');
+    const local = item?.local || {};
+    const location = [local.nome, local.endereco, local.bairro, cityLabel].map(text).filter(Boolean);
+    if (where) where.textContent = [...new Set(location)].join(' · ') || 'Consulte o local';
+    const mapLink = slide.querySelector('.map-link');
+    if (mapLink) mapLink.remove();
+
+    const subtitle = slide.querySelector('.panel-subtitle');
+    if (subtitle) subtitle.textContent = (Array.isArray(item.modalidades) ? item.modalidades : []).find(Boolean) || categoryLabel(item.categoria) || 'Esporte e Lazer';
+
+    const image = slide.querySelector('.event-image');
+    const fallback = slide.querySelector('.image-fallback');
+    const imageUrl = helpers.safeImageUrl(item.imagem);
+    if (imageUrl && image) {
+      image.src = imageUrl;
+      image.alt = 'Imagem de apoio: ' + (item.titulo || 'atividade');
+      image.style.display = 'block';
+      image.addEventListener('load', () => {
+        if (fallback) fallback.style.display = 'none';
+      }, { once: true });
+      image.addEventListener('error', () => {
+        image.style.display = 'none';
+        if (fallback) fallback.style.display = 'grid';
+      }, { once: true });
+    } else {
+      if (image) image.style.display = 'none';
+      if (fallback) fallback.style.display = 'grid';
+    }
+    const fallbackIcon = slide.querySelector('.fallback-icon');
+    const fallbackLabel = slide.querySelector('.fallback-label');
+    if (fallbackIcon) fallbackIcon.textContent = item.icone || '🏃';
+    if (fallbackLabel) fallbackLabel.textContent = (Array.isArray(item.modalidades) ? item.modalidades : []).find(Boolean) || categoryLabel(item.categoria) || 'Esporte e Lazer';
+
+    const registration = helpers.safeExternalUrl(item?.participacao?.url_inscricao);
+    const source = helpers.safeExternalUrl(item?.fontes?.[0]?.url);
+    const link = registration || source;
+    const sourceLabel = slide.querySelector('.source-label');
+    const sourceUrl = slide.querySelector('.source-url');
+    const updated = slide.querySelector('.updated');
+    if (sourceLabel) sourceLabel.textContent = registration ? 'Participação e inscrição' : 'Fonte oficial';
+    if (sourceUrl) sourceUrl.textContent = item?.organizador?.nome || item?.fontes?.[0]?.nome || '';
+    if (updated) {
+      const verified = text(item?.verificacao?.ultima_verificacao);
+      updated.textContent = verified ? 'Verificado em ' + verified.split('-').reverse().join('/') : '';
+    }
+
+    helpers.configureItemQrLabel(slide, item, Boolean(link));
+    const qr = slide.querySelector('.qr-code');
+    if (qr && link) helpers.buildQr(qr, link);
+    return slide;
+  }
+
   function createAgendaCard(item, helpers) {
     const article = document.createElement('article');
     article.className = 'agenda-card agenda-activity-card';
@@ -186,6 +283,7 @@
     categoryOptions,
     modalityOptions,
     scheduleLabel,
+    createPanelSlide,
     createAgendaCard
   });
 })();
