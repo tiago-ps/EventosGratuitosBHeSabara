@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v146-sugestoes-mobile';
+const CACHE_VERSION = 'mural-cultural-v147-api-bypass';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -117,6 +117,7 @@ self.addEventListener('fetch', event => {
   if (request.method !== 'GET') return;
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return;
+  if (url.pathname.startsWith('/api/')) return;
 
   if (request.mode === 'navigate') {
     event.respondWith(networkFirst(request, CORE_CACHE, './index.html', 'text/html'));
