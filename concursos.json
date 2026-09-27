@@ -2,8 +2,8 @@
   "schema": 10,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-09-22T13:47:11.525705+00:00",
-  "total": 22,
+  "coletado_em_utc": "2026-09-27T14:21:03.518883+00:00",
+  "total": 24,
   "concursos": [
     {
       "id": "pci:noticia:caraguaprev-sp-abre-concurso-publico-com-salarios-de-ate-7104",
@@ -78,34 +78,40 @@
       ]
     },
     {
-      "id": "pci:noticia:prefeitura-de-anhembi-sp-abre-concurso-publico-com-salarios-de-ate-6407",
-      "titulo": "Prefeitura de Anhembi",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-anhembi-sp-abre-concurso-publico-com-salarios-de-ate-6407",
-      "imagem": "https://cdn.pci.app.br/img/i/4f433fb9d7703d1d0533c5818bc79bf4.png",
+      "id": "pci:noticia:marinha-do-brasil-8-distrito-naval-abre-vagas-para-oficiais-rm2-em-sp",
+      "titulo": "Marinha do Brasil - Comando do 8º Distrito Naval",
+      "url": "https://www.pciconcursos.com.br/noticias/marinha-do-brasil-8-distrito-naval-abre-vagas-para-oficiais-rm2-em-sp",
+      "imagem": "https://cdn.pci.app.br/img/i/beeb75028c81e9d534d8ab4a39fd7fc0.png",
       "formacoes_compativeis": [
-        "Técnico em Informática"
+        "Sistemas de Informação / Computação"
       ],
       "evidencias_formacao": [
         {
-          "nome": "Técnico em Informática",
-          "nivel": "tecnico",
-          "evidencia": "argos de: agente de defesa civil (1 vaga) almoxarife (1 vaga + cr) assistente administrativo de rh (1 vaga) auxiliar de cozinha (1 vaga + cr) auxiliar de manutencao e conservacao da frota municipal (1 vaga + cr) gari (1 vaga + cr) monitor (1 vaga + cr) motorista (cr) tecnico em agricultura (1 vaga) tecnico em informatica (1 vaga) tecnico de enfermagem (1 vaga + cr) analista de compras (1 vaga) analista de contabilidade (1 vaga) analista de expediente legislativo (1 vaga) analista de licitacao (1 vaga) analista de meio ambiente (1 vaga) arquiteto (1 vaga) contador (1 vaga) coordenador do cras (1 vaga) engenheiro civ"
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "- sp (1 vaga) informatica, sao paulo - sp (1 vaga) engenharia civil, sao paulo - sp (2 vagas) engenharia civil, ipero - sp (1 vaga) engenharia de materiais, sao paulo - sp (1 vaga) engenharia de producao, ipero - sp (1 vaga) engenharia de producao, sao paulo - sp (2 vagas) engenharia de sistemas de computacao, ipero - sp (1 vaga) engenharia de sistemas de computacao, sao paulo - sp (1 vaga) engenharia de telecomunicacoes, sao paulo - sp (1 vaga) engenharia eletrica, sao paulo - sp (4 vagas) engenharia eletronica, ipero - sp (1 vaga) engenharia eletronica, sao paulo - sp (4 vagas) engenharia mecanica, sa"
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
       "uf": "SP",
-      "cidade": "Anhembi",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "",
-      "inscricoes_texto": "",
-      "remuneracao_faixa_texto": "R$ 1.989,68 a R$ 6.407,17",
-      "remuneracao_fonte": "noticia",
+      "cidade": "",
+      "inscricoes_inicio_texto": "18 de setembro de 2026",
+      "inscricoes_fim_texto": "10 de novembro de 2026",
+      "inscricoes_texto": "18 de setembro de 2026 a 10 de novembro de 2026",
+      "remuneracao_faixa_texto": "R$ 2.662,00",
+      "remuneracao_fonte": "catalogo",
       "cargos_compativeis": [
         {
-          "cargo": "Técnico em Informática",
+          "cargo": "Engenharia de Sistemas de Computação, Iperó - SP",
           "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        },
+        {
+          "cargo": "Engenharia de Sistemas de Computação, São Paulo - SP",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
           "confianca": "alta"
         }
       ]
@@ -239,39 +245,6 @@
       "inscricoes_texto": "até 21 de outubro de 2026",
       "remuneracao_faixa_texto": "R$ 1.914,05 a R$ 4.527,60",
       "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Técnico em Informática",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "alta"
-        }
-      ]
-    },
-    {
-      "id": "pci:noticia:dmae-de-uberlandia-mg-retifica-edital-de-concurso-publico",
-      "titulo": "DMAE - Departamento Municipal de Água e Esgoto de Uberlândia",
-      "url": "https://www.pciconcursos.com.br/noticias/dmae-de-uberlandia-mg-retifica-edital-de-concurso-publico",
-      "imagem": "https://cdn.pci.app.br/img/i/eed57af4c8ee7b02770437af8c9a81aa.png",
-      "formacoes_compativeis": [
-        "Técnico em Informática"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Técnico em Informática",
-          "nivel": "tecnico",
-          "evidencia": "ustrial (1 vaga) motorista (1 vaga) operador de bombas (1 vaga) operador de maquinas automotivas (1 vaga) soldador industrial (1 vaga) agente comercial (5 vagas) oficial administrativo (10 vagas) desenhista (1 vaga) fiscal de obras do saneamento (1 vaga) tecnico de operacoes de etas e etes (1 vaga) tecnico em informatica (1 vaga) tecnico em meio ambiente (1 vaga) assistente social (1 vaga) biologo (1 vaga) contador (1 vaga) economista (1 vaga) engenheiro ambiental (1 vaga) engenheiro civil (1 vaga) engenheiro eletricista (1 vaga) engenheiro de seguranca do trabalho (1 vaga) engenheiro quimico (1 vaga) psicologo (1 "
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "MG",
-      "cidade": "",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "",
-      "inscricoes_texto": "",
-      "remuneracao_faixa_texto": "R$ 9.879,08",
-      "remuneracao_fonte": "catalogo",
       "cargos_compativeis": [
         {
           "cargo": "Técnico em Informática",
@@ -543,6 +516,51 @@
       ]
     },
     {
+      "id": "pci:noticia:prefeitura-de-patis-mg-abre-concurso-publico-com-salarios-de-ate-13500",
+      "titulo": "Prefeitura de Patis",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-patis-mg-abre-concurso-publico-com-salarios-de-ate-13500",
+      "imagem": "https://cdn.pci.app.br/img/i/3033ed48d2583d45d3dc8c87905075ce.png",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação",
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": "es) (1 vaga) professor de educacao empreendedora (1 vaga) psicologo (area social) (1 vaga) psicologo (saude) (1 vaga) servente de pedreiro (3 vagas) tecnico de nivel medio em politicas sociais (1 vaga) tecnico em contabilidade (1 vaga) tecnico em edificacoes (1 vaga) tecnico em enfermagem (4 vagas) tecnico em informatica (2 vagas) tecnico em saude bucal (cr) vigia (cr) a jornada de trabalho varia de 24 a 40 horas semanais, conforme o cargo. o vencimento basico inicial vai de r$ 1.621,00 a r$ 13.500,00. as inscricoes poderao ser realizadas das 8h do dia 3 de dezembro de 2026 as 17h do dia 30 de dezembro de 2026, pel"
+        },
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": " publicos (bombeiro) (cr) oficial de servicos publicos (eletricista) (cr) oficial de servicos publicos (serralheiro) (1 vaga) operador de maquinas (2 vagas) operador de patrol/motoniveladora (1 vaga) orientador educacional (1 vaga) pintor de parede (1 vaga) professor de apoio (2 vagas) professor de computacao (2 vagas) professor de educacao basica - professor de 1a a 5a (24 vagas) professor de educacao basica (ii - artes) (1 vaga) professor de educacao basica (ii - ciencias) (1 vaga) professor de educacao basica (ii - educacao fisica) (2 vagas) professor de educacao basica (ii - educacao religiosa) (1 v"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "MG",
+      "cidade": "Patis",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "R$ 1.621,00 a R$ 13.500,00",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Professor de Computação",
+          "vagas_texto": "2 vagas",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        },
+        {
+          "cargo": "Técnico em Informática",
+          "vagas_texto": "2 vagas",
+          "formacao": "Técnico em Informática",
+          "confianca": "alta"
+        }
+      ]
+    },
+    {
       "id": "pci:noticia:prefeitura-de-pedro-teixeira-mg-publica-edital-de-concurso-publico-com-salarios-de-ate-5494",
       "titulo": "Prefeitura de Pedro Teixeira",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-pedro-teixeira-mg-publica-edital-de-concurso-publico-com-salarios-de-ate-5494",
@@ -660,6 +678,39 @@
       ]
     },
     {
+      "id": "pci:noticia:municipio-e-camara-de-nova-prata-do-iguacu-pr-abrem-concursos-com-salarios-de-ate-12823",
+      "titulo": "Município e Câmara de Nova Prata do Iguaçu",
+      "url": "https://www.pciconcursos.com.br/noticias/municipio-e-camara-de-nova-prata-do-iguacu-pr-abrem-concursos-com-salarios-de-ate-12823",
+      "imagem": "https://cdn.pci.app.br/img/i/7fd2541f865c625d22eaba4491a5751f.png",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": "aga + cr) auxiliar de servicos gerais (12 vagas + cr) motorista (4 vagas + cr) operador de maquinas (3 vagas + cr) servicos bracais (2 vagas + cr) camara municipal de nova prata do iguacu advogado (cr) contador (cr) tesoureiro (cr) agente administrativo (1 vaga) auxiliar de servicos gerais (1 vaga) tecnico em informatica (1 vaga) tecnico de relacoes publicas (cr) a jornada de trabalho varia de 20 a 40 horas semanais, conforme o cargo. a remuneracao inicial bruta vai de r$ 1.619,19 a r$ 12.823,98. as inscricoes serao realizadas exclusivamente via internet, pelo site www.concursosfau.com.br , das 12h do dia 30 de set"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "PR",
+      "cidade": "Nova Prata do Iguaçu",
+      "inscricoes_inicio_texto": "30 de setembro de 2026",
+      "inscricoes_fim_texto": "29 de outubro de 2026",
+      "inscricoes_texto": "30 de setembro de 2026 a 29 de outubro de 2026",
+      "remuneracao_faixa_texto": "R$ 1.619,19 a R$ 12.823,98",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico em Informática",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "alta"
+        }
+      ]
+    },
+    {
       "id": "pci:noticia:prefeitura-de-alvorada-rs-retifica-concurso-publico-com-salarios-de-ate-18974",
       "titulo": "Prefeitura de Alvorada",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-alvorada-rs-retifica-concurso-publico-com-salarios-de-ate-18974",
@@ -686,72 +737,6 @@
       "cargos_compativeis": [
         {
           "cargo": "Técnico em Informática",
-          "vagas_texto": "Cadastro de Reserva",
-          "formacao": "Técnico em Informática",
-          "confianca": "alta"
-        }
-      ]
-    },
-    {
-      "id": "pci:noticia:prefeitura-de-erval-velho-sc-retifica-concurso-publico-com-salarios-de-ate-22044",
-      "titulo": "Prefeitura de Erval Velho",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-erval-velho-sc-retifica-concurso-publico-com-salarios-de-ate-22044",
-      "imagem": "https://cdn.pci.app.br/img/i/98266ad095d144a964c6e9189a6c86f5.png",
-      "formacoes_compativeis": [
-        "Técnico em Informática"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Técnico em Informática",
-          "nivel": "tecnico",
-          "evidencia": "professor de educacao fisica (cr) professor de lingua estrangeira - ingles (cr) professor de informatica (cr) psicologo (1 vaga + cr) tecnico agricola (cr) tecnico em atividades administrativas (cr) tecnico em contabilidade (cr) tecnico em edificacao e manutencao (1 + cr) tecnico em enfermagem (cr) tecnico em informatica (cr) tecnico em tesouraria (cr) a jornada semanal varia de 20 a 40 horas, com remuneracoes de r$ 1.892,66 a r$ 22.044,76, conforme o cargo. as inscricoes devem ser realizadas de 17 de setembro de 2026 ate as 14h do dia 1o de outubro de 2026, pelo site www.aprendersc.srv.br . as taxas de inscricao v"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "SC",
-      "cidade": "Erval Velho",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "",
-      "inscricoes_texto": "",
-      "remuneracao_faixa_texto": "R$ 22.044,76",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Técnico em Informática",
-          "vagas_texto": "Cadastro de Reserva",
-          "formacao": "Técnico em Informática",
-          "confianca": "alta"
-        }
-      ]
-    },
-    {
-      "id": "pci:noticia:prefeitura-de-massaranduba-sc-retifica-edital-de-concurso-com-salarios-de-ate-24722",
-      "titulo": "Prefeitura de Massaranduba",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-massaranduba-sc-retifica-edital-de-concurso-com-salarios-de-ate-24722",
-      "imagem": "https://cdn.pci.app.br/img/i/b362c7f66ff3bc7b091b909ff20454f1.png",
-      "formacoes_compativeis": [
-        "Técnico em Informática"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Técnico em Informática",
-          "nivel": "tecnico",
-          "evidencia": "sf 06 (cr) agente comunitario de saude - esf 07 (cr) agente de combate as endemias (1 vaga + cr) auxiliar administrativo (3 vagas + cr) educador social (cr) eletricista predial (cr) mestre de obras (cr) motorista de ambulancia (cr) tecnico agricola (1 vaga + cr) tecnico de enfermagem (3 vagas + cr) tecnico em informatica (cr) tecnico em saude bucal (2 vagas + cr) cargos de nivel superior advogado (cr) arquiteto (cr) assistente social (1 vaga + cr) cirurgiao-dentista - 20h (cr) cirurgiao-dentista - 40h (1 vaga + cr) enfermeiro (cr) engenheiro agronomo (1 vaga + cr) engenheiro civil (cr) engenheiro florestal (1 vaga "
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "SC",
-      "cidade": "Massaranduba",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "",
-      "inscricoes_texto": "",
-      "remuneracao_faixa_texto": "R$ 2.371,80 a R$ 24.722,94",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Técnico Agrícola (1 vaga + CR) Técnico de Enfermagem (3 vagas + CR) Técnico em Informática",
           "vagas_texto": "Cadastro de Reserva",
           "formacao": "Técnico em Informática",
           "confianca": "alta"
@@ -787,6 +772,105 @@
           "cargo": "Auditor Estadual de Finanças Públicas - Ciências da Computação",
           "vagas_texto": "12 vagas",
           "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ]
+    },
+    {
+      "id": "pci:noticia:prefeitura-de-erval-velho-sc-retifica-concurso-publico-com-salarios-de-ate-22044",
+      "titulo": "Prefeitura de Erval Velho",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-erval-velho-sc-retifica-concurso-publico-com-salarios-de-ate-22044",
+      "imagem": "https://cdn.pci.app.br/img/i/98266ad095d144a964c6e9189a6c86f5.png",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": "professor de educacao fisica (cr) professor de lingua estrangeira - ingles (cr) professor de informatica (cr) psicologo (1 vaga + cr) tecnico agricola (cr) tecnico em atividades administrativas (cr) tecnico em contabilidade (cr) tecnico em edificacao e manutencao (1 + cr) tecnico em enfermagem (cr) tecnico em informatica (cr) tecnico em tesouraria (cr) a jornada semanal varia de 20 a 40 horas, com remuneracoes de r$ 1.892,66 a r$ 22.044,76, conforme o cargo. as inscricoes devem ser realizadas de 17 de setembro de 2026 ate as 14h do dia 1o de outubro de 2026, pelo site www.aprendersc.srv.br . as taxas de inscricao v"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "SC",
+      "cidade": "Erval Velho",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "R$ 6.627,04 a R$ 22.044,76",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico em Informática",
+          "vagas_texto": "Cadastro de Reserva",
+          "formacao": "Técnico em Informática",
+          "confianca": "alta"
+        }
+      ]
+    },
+    {
+      "id": "pci:noticia:prefeitura-de-maravilha-sc-abre-concurso-com-salarios-de-ate-15748",
+      "titulo": "Prefeitura de Maravilha",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-maravilha-sc-abre-concurso-com-salarios-de-ate-15748",
+      "imagem": "https://cdn.pci.app.br/img/i/f42a07d68e721ffea1804e935cf26e31.png",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": "strativo (1 vaga + cr) agente comunitario de saude acs (novo bairro) (cr) agente comunitario de saude acs (centro iii) (1 vaga + cr) agente comunitario de saude acs (floresta) (cr) agente comunitario de saude acs (pioneiro) (1 vaga + cr) fiscal de tributos (cr) motorista de transporte coletivo (cr) tecnico em informatica (1 vaga + cr) vigilante ambiental (cr) nivel superior analista de sistemas (cr) assistente social - educacao (1 vaga + cr) auditor de tributos (1 vaga + cr) fonoaudiologo (cr) medico pediatra (1 vaga + cr) medico ginecologista e obstetra (1 vaga + cr) medico veterinario (1 vaga + cr) odontologo - s"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "SC",
+      "cidade": "Maravilha",
+      "inscricoes_inicio_texto": "2 de outubro de 2026",
+      "inscricoes_fim_texto": "3 de novembro de 2026",
+      "inscricoes_texto": "2 de outubro de 2026 a 3 de novembro de 2026",
+      "remuneracao_faixa_texto": "R$ 15.748,20",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico em Informática (1 vaga + CR) Vigilante Ambiental",
+          "vagas_texto": "Cadastro de Reserva",
+          "formacao": "Técnico em Informática",
+          "confianca": "alta"
+        }
+      ]
+    },
+    {
+      "id": "pci:noticia:prefeitura-de-massaranduba-sc-retifica-edital-de-concurso-com-salarios-de-ate-24722",
+      "titulo": "Prefeitura de Massaranduba",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-massaranduba-sc-retifica-edital-de-concurso-com-salarios-de-ate-24722",
+      "imagem": "https://cdn.pci.app.br/img/i/b362c7f66ff3bc7b091b909ff20454f1.png",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": "sf 06 (cr) agente comunitario de saude - esf 07 (cr) agente de combate as endemias (1 vaga + cr) auxiliar administrativo (3 vagas + cr) educador social (cr) eletricista predial (cr) mestre de obras (cr) motorista de ambulancia (cr) tecnico agricola (1 vaga + cr) tecnico de enfermagem (3 vagas + cr) tecnico em informatica (cr) tecnico em saude bucal (2 vagas + cr) cargos de nivel superior advogado (cr) arquiteto (cr) assistente social (1 vaga + cr) cirurgiao-dentista - 20h (cr) cirurgiao-dentista - 40h (1 vaga + cr) enfermeiro (cr) engenheiro agronomo (1 vaga + cr) engenheiro civil (cr) engenheiro florestal (1 vaga "
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "SC",
+      "cidade": "Massaranduba",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "R$ 2.371,80 a R$ 24.722,94",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico Agrícola (1 vaga + CR) Técnico de Enfermagem (3 vagas + CR) Técnico em Informática",
+          "vagas_texto": "Cadastro de Reserva",
+          "formacao": "Técnico em Informática",
           "confianca": "alta"
         }
       ]
