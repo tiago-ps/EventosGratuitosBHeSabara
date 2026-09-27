@@ -7,6 +7,8 @@ on:
       - "css/styles.css"
       - "index.html"
       - "service-worker.js"
+      - "wrangler.jsonc"
+      - ".assetsignore"
       - "cloudflare/social-preview-worker.js"
       - "cloudflare/sugestoes-curadoria.sql"
       - "cloudflare/README-sugestoes-curadoria.md"
