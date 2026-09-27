@@ -7,7 +7,7 @@ Não há campo de nome, e-mail, telefone, conta, localização ou identificador 
 
 O Worker `cloudflare/social-preview-worker.js` espera:
 
-- binding D1 `SUGESTOES_DB`
+- binding D1 `SUGESTOES_DB` (declarado no `wrangler.jsonc`, apontando para `mural-sugestoes-curadoria`)
 - segredo `CURADORIA_ADMIN_TOKEN` para a fila privada do Editor
 - `TURNSTILE_SITE_KEY` e segredo `TURNSTILE_SECRET` para proteção anti-bot
 - `PUBLIC_HOSTNAME` com o host oficial esperado pelo Turnstile
