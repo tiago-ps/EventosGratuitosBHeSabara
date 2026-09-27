@@ -31,6 +31,7 @@ assert.equal(wrangler.main, 'cloudflare/social-preview-worker.js');
 assert.equal(wrangler.keep_vars, true);
 assert.equal(wrangler.assets.directory, '.');
 assert.equal(wrangler.assets.binding, 'ASSETS');
+assert.equal(wrangler.observability.enabled, true);
 assert.deepEqual(wrangler.assets.run_worker_first, ['/api/*', '/', '/index.html']);
 
 for (const forbidden of ['ip ', 'user_agent', 'user-agent', 'fingerprint', 'email', 'telefone']) {
@@ -39,5 +40,10 @@ for (const forbidden of ['ip ', 'user_agent', 'user-agent', 'fingerprint', 'emai
 assert(schema.includes('itens_json'));
 assert(schema.includes('protocolo'));
 assert(schema.includes('status'));
+
+const assetsIgnore = fs.readFileSync('.assetsignore', 'utf8');
+for (const required of ['.github/**', 'cloudflare/**', '*.py', 'README*', '.wrangler/**']) {
+  assert(assetsIgnore.includes(required), `.assetsignore deve preservar ${required}`);
+}
 
 console.log('Fluxo anônimo de sugestões validado.');
