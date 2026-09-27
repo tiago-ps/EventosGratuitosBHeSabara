@@ -12,5 +12,8 @@
       "/",
       "/index.html"
     ]
+  },
+  "observability": {
+    "enabled": true
   }
 }
