@@ -390,6 +390,16 @@ function normalizeContributionPayload(type, raw) {
   throw new Error('tipo_invalido');
 }
 
+async function contributionTableAvailable(env) {
+  if (!env.SUGESTOES_DB) return false;
+  try {
+    await env.SUGESTOES_DB.prepare('SELECT 1 FROM contribuicoes_comunidade LIMIT 1').first();
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 async function countContributionsToday(env) {
   const row = await env.SUGESTOES_DB
     .prepare("SELECT COUNT(*) AS total FROM contribuicoes_comunidade WHERE criado_em >= datetime('now','start of day')")
@@ -416,14 +426,14 @@ async function insertCommunityContribution(env, type, payload) {
 
 async function handleContributionConfig(env) {
   return jsonResponse({
-    disponivel: Boolean(env.SUGESTOES_DB),
+    disponivel: await contributionTableAvailable(env),
     turnstile_site_key: String(env.TURNSTILE_SITE_KEY || '').trim(),
     tipos: [...CONTRIBUTION_TYPES]
   });
 }
 
 async function handleContributionPost(request, env) {
-  if (!env.SUGESTOES_DB) {
+  if (!(await contributionTableAvailable(env))) {
     return jsonResponse({ erro: 'O envio de contribuições está temporariamente indisponível.' }, 503);
   }
   const contentLength = Number(request.headers.get('content-length') || 0);
@@ -484,7 +494,7 @@ async function handleContributionPost(request, env) {
 }
 
 async function handleContributionStatus(request, env) {
-  if (!env.SUGESTOES_DB) {
+  if (!(await contributionTableAvailable(env))) {
     return jsonResponse({ erro: 'A consulta de contribuições está temporariamente indisponível.' }, 503);
   }
   const url = new URL(request.url);
@@ -509,7 +519,7 @@ async function handleContributionStatus(request, env) {
 }
 
 async function handleContributionAdminList(request, env) {
-  if (!env.SUGESTOES_DB) return jsonResponse({ erro: 'Base de contribuições não configurada.' }, 503);
+  if (!(await contributionTableAvailable(env))) return jsonResponse({ erro: 'Base de contribuições não configurada.' }, 503);
   if (!adminAuthorized(request, env)) return jsonResponse({ erro: 'Não autorizado.' }, 401);
   const url = new URL(request.url);
   const status = String(url.searchParams.get('status') || '').trim();
@@ -549,7 +559,7 @@ async function handleContributionAdminList(request, env) {
 }
 
 async function handleContributionAdminUpdate(request, env, protocol) {
-  if (!env.SUGESTOES_DB) return jsonResponse({ erro: 'Base de contribuições não configurada.' }, 503);
+  if (!(await contributionTableAvailable(env))) return jsonResponse({ erro: 'Base de contribuições não configurada.' }, 503);
   if (!adminAuthorized(request, env)) return jsonResponse({ erro: 'Não autorizado.' }, 401);
   let body;
   try {
