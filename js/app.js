@@ -1657,6 +1657,14 @@ function eventProgram(event) {
     state.timer = setTimeout(goToNext, seconds * 1000);
   }
 
+  function attachPanelCommunityContext(slide, item) {
+    if (!slide || !item) return;
+    const itemId = agendaFavoriteId(item);
+    if (!itemId) return;
+    slide.dataset.communityItemId = itemId;
+    slide.dataset.communityItemTitle = communityContributionTitle(item);
+  }
+
   function renderEventSlide(index) {
     clearTimeout(state.timer);
 
@@ -1963,6 +1971,7 @@ function eventProgram(event) {
     }
 
     slide.dataset.curadoriaIds = JSON.stringify(siteCurationsContent.mergeCurationIds(state.events[index]?.curadoria_ids));
+    attachPanelCommunityContext(slide, state.events[index]);
     app.replaceChildren(slide);
 
     // Atualizar referências dos botões após renderizar o slide
@@ -2194,6 +2203,7 @@ function eventProgram(event) {
     }
 
     slide.dataset.curadoriaIds = JSON.stringify(siteCurationsContent.mergeCurationIds(state.events[index]?.curadoria_ids));
+    attachPanelCommunityContext(slide, state.events[index]);
     app.replaceChildren(slide);
     scheduleBookFit(slide);
     state.btnNext = slide.querySelector('.next-btn');
@@ -2230,6 +2240,7 @@ function eventProgram(event) {
     });
 
     slide.dataset.curadoriaIds = JSON.stringify(siteCurationsContent.mergeCurationIds(state.events[index]?.curadoria_ids));
+    attachPanelCommunityContext(slide, state.events[index]);
     app.replaceChildren(slide);
 
     state.btnNext = slide.querySelector('.next-btn');
@@ -2267,6 +2278,7 @@ function eventProgram(event) {
     });
 
     slide.dataset.curadoriaIds = JSON.stringify(siteCurationsContent.mergeCurationIds(state.events[index]?.curadoria_ids));
+    attachPanelCommunityContext(slide, state.events[index]);
     app.replaceChildren(slide);
 
     state.btnNext = slide.querySelector('.next-btn');
@@ -2305,6 +2317,7 @@ function eventProgram(event) {
     });
 
     slide.dataset.curadoriaIds = JSON.stringify(siteCurationsContent.mergeCurationIds(state.events[index]?.curadoria_ids));
+    attachPanelCommunityContext(slide, state.events[index]);
     app.replaceChildren(slide);
     state.btnNext = slide.querySelector('.next-btn');
     state.btnPrev = slide.querySelector('.prev-btn');
@@ -4452,6 +4465,13 @@ function eventProgram(event) {
       }
     });
   }
+
+  window.openMuralCommunityCorrection = context => {
+    state.paused = true;
+    clearTimeout(state.timer);
+    updatePlayPauseButton();
+    openCommunityContributionForm('corrigir_informacao', context || {});
+  };
 
   function curationSuggestionSelection() {
     if (state.mobileSharedSelection?.size) return new Set(state.mobileSharedSelection);
