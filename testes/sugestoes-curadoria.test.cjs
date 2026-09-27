@@ -8,9 +8,11 @@ const schema = fs.readFileSync('cloudflare/sugestoes-curadoria.sql', 'utf8');
 const wrangler = JSON.parse(fs.readFileSync('wrangler.jsonc', 'utf8'));
 
 assert(app.includes('Enviar para curadoria'));
-assert(app.includes('Consultar sugestão'));
+assert(app.includes('Consultar contribuição'));
 assert(app.includes('Acompanhar sugestão'));
-assert(app.includes("/api/sugestoes-curadoria/status?protocolo="));
+assert(app.includes("protocol.startsWith('CON-')"));
+assert(app.includes("'/api/sugestoes-curadoria/status'"));
+assert(app.includes("'/api/contribuicoes-comunidade/status'"));
 assert(app.includes('Não pedimos nome, e-mail ou cadastro.'));
 assert(app.includes("curationSuggestionApi('/api/sugestoes-curadoria')"));
 assert(app.includes('itens: [...selection]'));
@@ -83,6 +85,9 @@ assert(worker.includes("handleCommunityContributionApi(request, env)"));
 const contributionSchema = fs.readFileSync('cloudflare/contribuicoes-comunidade.sql', 'utf8');
 assert(contributionSchema.includes('CREATE TABLE IF NOT EXISTS contribuicoes_comunidade'));
 assert(contributionSchema.includes("CHECK (tipo IN ('sugerir_evento', 'corrigir_informacao'))"));
+for (const forbidden of ['ip ', 'user_agent', 'user-agent', 'fingerprint', 'email', 'telefone']) {
+  assert(!contributionSchema.toLowerCase().includes(forbidden), `schema de contribuições não deve conter ${forbidden}`);
+}
 
 assert(app.includes('Contribua com o Mural'));
 assert(app.includes('Sugerir um evento'));
