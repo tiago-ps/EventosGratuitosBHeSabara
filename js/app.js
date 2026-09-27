@@ -4043,6 +4043,167 @@ function eventProgram(event) {
     }
   }
 
+  let turnstileLoaderPromise = null;
+
+  function loadTurnstileApi() {
+    if (window.turnstile) return Promise.resolve(window.turnstile);
+    if (turnstileLoaderPromise) return turnstileLoaderPromise;
+    turnstileLoaderPromise = new Promise((resolve, reject) => {
+      const existing = document.querySelector('script[data-mural-turnstile]');
+      if (existing) {
+        existing.addEventListener('load', () => resolve(window.turnstile), {once:true});
+        existing.addEventListener('error', reject, {once:true});
+        return;
+      }
+      const script = document.createElement('script');
+      script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+      script.async = true;
+      script.defer = true;
+      script.dataset.muralTurnstile = '1';
+      script.addEventListener('load', () => resolve(window.turnstile), {once:true});
+      script.addEventListener('error', reject, {once:true});
+      document.head.append(script);
+    });
+    return turnstileLoaderPromise;
+  }
+
+  function curationSuggestionSelection() {
+    if (state.mobileSharedSelection?.size) return new Set(state.mobileSharedSelection);
+    if (state.mobileFavoritesOnly) return loadAgendaFavorites();
+    return new Set();
+  }
+
+  async function openCurationSuggestionDialog() {
+    const selection = curationSuggestionSelection();
+    if (!selection.size) return;
+
+    document.getElementById('agenda-curation-suggestion-dialog')?.remove();
+    const dialog = document.createElement('dialog');
+    dialog.id = 'agenda-curation-suggestion-dialog';
+    dialog.className = 'agenda-curation-suggestion-dialog';
+    dialog.innerHTML = `
+      <form method="dialog" class="agenda-curation-suggestion-card">
+        <div class="agenda-curation-suggestion-heading">
+          <div>
+            <p class="agenda-curation-suggestion-eyebrow">Contribuição anônima</p>
+            <h2>Enviar seleção para a curadoria</h2>
+          </div>
+          <button type="button" class="agenda-curation-suggestion-close" aria-label="Fechar">×</button>
+        </div>
+        <p>Você está enviando <strong>${selection.size}</strong> ${selection.size === 1 ? 'conteúdo' : 'conteúdos'} para análise da equipe do Mural.</p>
+        <p class="agenda-curation-suggestion-privacy"><strong>Não pedimos nome, e-mail ou cadastro.</strong> A curadoria recebe somente os conteúdos selecionados e a mensagem opcional abaixo. Não inclua dados pessoais na mensagem.</p>
+        <label class="agenda-curation-suggestion-message">
+          <span>Mensagem para a curadoria <small>(opcional)</small></span>
+          <textarea maxlength="1200" rows="4" placeholder="Ex.: Acho que estes conteúdos combinam com uma curadoria sobre…"></textarea>
+        </label>
+        <div class="agenda-curation-turnstile" hidden></div>
+        <p class="agenda-curation-suggestion-status" role="status" aria-live="polite">Verificando disponibilidade do envio…</p>
+        <div class="agenda-curation-suggestion-actions">
+          <button type="button" class="secondary agenda-curation-suggestion-cancel">Cancelar</button>
+          <button type="button" class="agenda-curation-suggestion-submit" disabled>Enviar anonimamente</button>
+        </div>
+      </form>
+    `;
+    document.body.append(dialog);
+
+    const close = () => {
+      if (dialog.open) dialog.close();
+      dialog.remove();
+    };
+    dialog.querySelector('.agenda-curation-suggestion-close').addEventListener('click', close);
+    dialog.querySelector('.agenda-curation-suggestion-cancel').addEventListener('click', close);
+    dialog.addEventListener('cancel', event => { event.preventDefault(); close(); });
+
+    const status = dialog.querySelector('.agenda-curation-suggestion-status');
+    const submit = dialog.querySelector('.agenda-curation-suggestion-submit');
+    const textarea = dialog.querySelector('textarea');
+    const turnstileBox = dialog.querySelector('.agenda-curation-turnstile');
+    let turnstileToken = '';
+    let turnstileWidgetId = null;
+    let config = null;
+
+    dialog.showModal();
+
+    try {
+      const response = await fetch('/api/sugestoes-curadoria/config', {cache:'no-store'});
+      config = await response.json();
+      if (!response.ok || !config?.disponivel) throw new Error('indisponivel');
+
+      if (config.turnstile_site_key) {
+        turnstileBox.hidden = false;
+        const api = await loadTurnstileApi();
+        turnstileWidgetId = api.render(turnstileBox, {
+          sitekey: config.turnstile_site_key,
+          action: 'sugerir_curadoria',
+          callback: token => {
+            turnstileToken = token;
+            submit.disabled = false;
+            status.textContent = 'Pronto para enviar.';
+          },
+          'expired-callback': () => {
+            turnstileToken = '';
+            submit.disabled = true;
+            status.textContent = 'A verificação expirou. Confirme novamente para enviar.';
+          },
+          'error-callback': () => {
+            turnstileToken = '';
+            submit.disabled = true;
+            status.textContent = 'Não foi possível concluir a verificação. Tente novamente.';
+          }
+        });
+        status.textContent = 'Confirme a verificação para enviar.';
+      } else {
+        submit.disabled = false;
+        status.textContent = 'Pronto para enviar.';
+      }
+    } catch {
+      status.textContent = 'O envio direto à curadoria está temporariamente indisponível neste endereço. Seus favoritos continuam salvos neste dispositivo.';
+      status.dataset.error = 'true';
+    }
+
+    submit.addEventListener('click', async () => {
+      if (!config?.disponivel || submit.disabled) return;
+      submit.disabled = true;
+      status.dataset.error = 'false';
+      status.textContent = 'Enviando sua sugestão…';
+      try {
+        const response = await fetch('/api/sugestoes-curadoria', {
+          method: 'POST',
+          headers: {'Content-Type':'application/json'},
+          body: JSON.stringify({
+            schema_version: 1,
+            origem: 'mural',
+            itens: [...selection],
+            mensagem: textarea.value,
+            turnstile_token: turnstileToken
+          })
+        });
+        const result = await response.json();
+        if (!response.ok) throw Object.assign(new Error(result.erro || 'Não foi possível enviar a sugestão.'), {status: response.status});
+        dialog.querySelector('.agenda-curation-suggestion-card').innerHTML = `
+          <div class="agenda-curation-suggestion-success">
+            <p class="agenda-curation-suggestion-eyebrow">Sugestão recebida</p>
+            <h2>Obrigado por contribuir com o Mural.</h2>
+            <p>A seleção foi enviada anonimamente para análise da curadoria.</p>
+            <p>Protocolo: <strong class="agenda-curation-suggestion-protocol">${escapeHtml(result.protocolo || '')}</strong></p>
+            <p class="helper">Guarde o protocolo se quiser ter uma referência deste envio. Seus favoritos permanecem no seu dispositivo.</p>
+            <button type="button" class="agenda-curation-suggestion-done">Fechar</button>
+          </div>
+        `;
+        dialog.querySelector('.agenda-curation-suggestion-done').addEventListener('click', close);
+      } catch (error) {
+        status.textContent = error.message || 'Não foi possível enviar a sugestão.';
+        status.dataset.error = 'true';
+        submit.disabled = false;
+        if (turnstileWidgetId !== null && window.turnstile) {
+          turnstileToken = '';
+          submit.disabled = true;
+          window.turnstile.reset(turnstileWidgetId);
+        }
+      }
+    });
+  }
+
   function agendaFavoriteItems() {
     const favorites = loadAgendaFavorites();
     return agendaItemsForIds(favorites);
@@ -4330,7 +4491,7 @@ function eventProgram(event) {
           aria-pressed="${state.mobileFavoritesOnly ? 'true' : 'false'}"
           title="Meus favoritos"
         ><span aria-hidden="true">★</span><span class="agenda-favorites-label">Favoritos</span><span class="agenda-favorites-count" ${favoriteCount ? '' : 'hidden'}>${favoriteCount}</span></button>
-        ${state.mobileFavoritesOnly && favoriteCount ? '<button class="agenda-share-favorites" type="button" title="Compartilhar favoritos"><span aria-hidden="true">↗</span><span>Compartilhar</span></button>' : ''}
+        ${state.mobileFavoritesOnly && favoriteCount ? '<button class="agenda-share-favorites" type="button" title="Compartilhar favoritos"><span aria-hidden="true">↗</span><span>Compartilhar</span></button><button class="agenda-send-curation" type="button" title="Enviar favoritos anonimamente para a curadoria"><span aria-hidden="true">✦</span><span>Enviar para curadoria</span></button>' : ''}
         <button
           class="agenda-search-toggle"
           type="button"
@@ -4529,6 +4690,7 @@ function eventProgram(event) {
     count.innerHTML = state.mobileSharedSelection ? `
       <span><strong>${results.total}</strong> ${results.total === 1 ? 'conteúdo nesta seleção compartilhada' : 'conteúdos nesta seleção compartilhada'}</span>
       <button type="button" class="agenda-save-shared">Salvar nos meus favoritos</button>
+      <button type="button" class="agenda-send-curation">Enviar para curadoria</button>
     ` : state.mobileFavoritesOnly ? `
       <span><strong>${results.total}</strong> ${results.total === 1 ? 'favorito salvo neste dispositivo' : 'favoritos salvos neste dispositivo'}</span>
     ` : contestMode ? `
@@ -4611,6 +4773,8 @@ function eventProgram(event) {
     });
 
     header.querySelector('.agenda-share-favorites')?.addEventListener('click', shareAgendaFavorites);
+    header.querySelector('.agenda-send-curation')?.addEventListener('click', openCurationSuggestionDialog);
+    count.querySelector('.agenda-send-curation')?.addEventListener('click', openCurationSuggestionDialog);
     count.querySelector('.agenda-save-shared')?.addEventListener('click', () => {
       const current = loadAgendaFavorites();
       for (const id of state.mobileSharedSelection || []) current.add(id);
