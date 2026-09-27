@@ -4043,6 +4043,15 @@ function eventProgram(event) {
     }
   }
 
+  const CURATION_SUGGESTION_API_ORIGIN =
+    window.location.hostname === 'tiago-ps.github.io'
+      ? 'https://temsimuai.com.br'
+      : '';
+
+  function curationSuggestionApi(path) {
+    return `${CURATION_SUGGESTION_API_ORIGIN}${path}`;
+  }
+
   let turnstileLoaderPromise = null;
 
   function loadTurnstileApi() {
@@ -4125,7 +4134,7 @@ function eventProgram(event) {
     dialog.showModal();
 
     try {
-      const response = await fetch('/api/sugestoes-curadoria/config', {cache:'no-store'});
+      const response = await fetch(curationSuggestionApi('/api/sugestoes-curadoria/config'), {cache:'no-store'});
       config = await response.json();
       if (!response.ok || !config?.disponivel) throw new Error('indisponivel');
 
@@ -4167,7 +4176,7 @@ function eventProgram(event) {
       status.dataset.error = 'false';
       status.textContent = 'Enviando sua sugestão…';
       try {
-        const response = await fetch('/api/sugestoes-curadoria', {
+        const response = await fetch(curationSuggestionApi('/api/sugestoes-curadoria'), {
           method: 'POST',
           headers: {'Content-Type':'application/json'},
           body: JSON.stringify({

@@ -7,15 +7,20 @@ const schema = fs.readFileSync('cloudflare/sugestoes-curadoria.sql', 'utf8');
 
 assert(app.includes('Enviar para curadoria'));
 assert(app.includes('Não pedimos nome, e-mail ou cadastro.'));
-assert(app.includes("fetch('/api/sugestoes-curadoria'"));
+assert(app.includes("curationSuggestionApi('/api/sugestoes-curadoria')"));
 assert(app.includes('itens: [...selection]'));
 assert(app.includes('mensagem: textarea.value'));
+assert(app.includes("window.location.hostname === 'tiago-ps.github.io'"));
+assert(app.includes("'https://temsimuai.com.br'"));
 
 assert(worker.includes("const SUGGESTION_API_PATH = '/api/sugestoes-curadoria'"));
 assert(worker.includes('CURADORIA_ADMIN_TOKEN'));
 assert(worker.includes('SUGESTOES_DAILY_LIMIT'));
 assert(worker.includes('TURNSTILE_SECRET'));
 assert(worker.includes("form.append('response', String(token))"));
+assert(worker.includes("'https://tiago-ps.github.io'"));
+assert(worker.includes("'Access-Control-Allow-Origin'"));
+assert(worker.includes("request.method === 'OPTIONS'"));
 assert(!worker.includes("form.append('remoteip'"));
 assert(!worker.includes("CF-Connecting-IP"));
 
