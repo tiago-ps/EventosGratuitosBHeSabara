@@ -2024,9 +2024,9 @@ body.agenda-mode.curation-mode .agenda-book-cover-warning strong {
 /* Envio anônimo de favoritos para a curadoria. */
 .agenda-send-curation{display:inline-flex;align-items:center;gap:.4rem;min-height:38px;border:1px solid var(--line);border-radius:10px;padding:.45rem .7rem;background:var(--surface);color:var(--text);font:inherit;font-weight:800;cursor:pointer}
 .agenda-send-curation:hover{border-color:var(--accent)}
-.agenda-curation-suggestion-dialog{box-sizing:border-box;width:min(620px,calc(100% - 24px));max-width:none;padding:0;border:1px solid var(--line);border-radius:18px;background:var(--surface);color:var(--text);box-shadow:0 24px 80px rgba(0,0,0,.55)}
-.agenda-curation-suggestion-dialog::backdrop{background:rgba(0,0,0,.68)}
-.agenda-curation-suggestion-card{display:grid;gap:1rem;padding:1.2rem;margin:0}
+.agenda-curation-suggestion-dialog{box-sizing:border-box;width:min(620px,calc(100% - 24px));max-width:none;max-height:min(88dvh,760px);padding:0;border:1px solid var(--line);border-radius:18px;background:var(--panel);color:var(--text);box-shadow:0 24px 80px rgba(0,0,0,.72);overflow:auto;overscroll-behavior:contain}
+.agenda-curation-suggestion-dialog::backdrop{background:rgba(0,0,0,.78);backdrop-filter:blur(2px)}
+.agenda-curation-suggestion-card{display:grid;gap:1rem;padding:1.2rem;margin:0;background:var(--panel)}
 .agenda-curation-suggestion-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem}
 .agenda-curation-suggestion-heading h2,.agenda-curation-suggestion-success h2{margin:.15rem 0 0}
 .agenda-curation-suggestion-eyebrow{margin:0;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;font-weight:900;color:var(--accent)}
@@ -2044,4 +2044,4 @@ body.agenda-mode.curation-mode .agenda-book-cover-warning strong {
 .agenda-curation-turnstile{min-height:65px}
 .agenda-curation-suggestion-success{display:grid;gap:.9rem;padding:1.2rem}
 .agenda-curation-suggestion-protocol{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:1.08em;letter-spacing:.03em}
-@media(max-width:620px){.agenda-curation-suggestion-actions>*{flex:1}.agenda-header-actions .agenda-send-curation span:last-child{display:none}}
+@media(max-width:620px){.agenda-curation-suggestion-dialog{width:calc(100% - 16px);max-height:90dvh;border-radius:14px}.agenda-curation-suggestion-card{padding:1rem}.agenda-curation-suggestion-actions>*{flex:1}.agenda-header-actions .agenda-send-curation span:last-child{display:none}}
