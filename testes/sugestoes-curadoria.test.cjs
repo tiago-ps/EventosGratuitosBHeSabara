@@ -83,3 +83,12 @@ assert(worker.includes("handleCommunityContributionApi(request, env)"));
 const contributionSchema = fs.readFileSync('cloudflare/contribuicoes-comunidade.sql', 'utf8');
 assert(contributionSchema.includes('CREATE TABLE IF NOT EXISTS contribuicoes_comunidade'));
 assert(contributionSchema.includes("CHECK (tipo IN ('sugerir_evento', 'corrigir_informacao'))"));
+
+assert(app.includes('Contribua com o Mural'));
+assert(app.includes('Sugerir um evento'));
+assert(app.includes('Corrigir informação'));
+assert(app.includes("openCommunityContributionForm('corrigir_informacao'"));
+assert(app.includes("action: 'contribuir_mural'"));
+assert(app.includes('/api/contribuicoes-comunidade'));
+assert(app.includes("protocol.startsWith('CON-')"));
+assert(app.includes('SUG-XXXX-XXXX ou CON-XXXX-XXXX'));
