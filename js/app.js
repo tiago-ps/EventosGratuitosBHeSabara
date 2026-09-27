@@ -4052,6 +4052,126 @@ function eventProgram(event) {
     return `${CURATION_SUGGESTION_API_ORIGIN}${path}`;
   }
 
+  function normalizeCurationSuggestionProtocol(value) {
+    return String(value || '').trim().toUpperCase();
+  }
+
+  function formatCurationSuggestionDate(value) {
+    if (!value) return '';
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) return '';
+    return new Intl.DateTimeFormat('pt-BR', {
+      dateStyle: 'medium',
+      timeStyle: 'short'
+    }).format(date);
+  }
+
+  async function openCurationSuggestionStatusDialog(prefillProtocol = '') {
+    document.getElementById('agenda-curation-status-dialog')?.remove();
+    const dialog = document.createElement('dialog');
+    dialog.id = 'agenda-curation-status-dialog';
+    dialog.className = 'agenda-curation-suggestion-dialog agenda-curation-status-dialog';
+    dialog.innerHTML = `
+      <form method="dialog" class="agenda-curation-suggestion-card agenda-curation-status-card">
+        <div class="agenda-curation-suggestion-heading">
+          <div>
+            <p class="agenda-curation-suggestion-eyebrow">Acompanhar contribuição</p>
+            <h2>Consultar sugestão</h2>
+          </div>
+          <button type="button" class="agenda-curation-suggestion-close" aria-label="Fechar">×</button>
+        </div>
+        <p>Digite o protocolo recebido quando você enviou a seleção para a curadoria.</p>
+        <label class="agenda-curation-status-field">
+          <span>Protocolo</span>
+          <input
+            type="text"
+            inputmode="text"
+            autocomplete="off"
+            autocapitalize="characters"
+            spellcheck="false"
+            maxlength="13"
+            placeholder="SUG-XXXX-XXXX"
+            value="${escapeHtml(normalizeCurationSuggestionProtocol(prefillProtocol))}"
+          >
+        </label>
+        <p class="agenda-curation-suggestion-status" role="status" aria-live="polite"></p>
+        <div class="agenda-curation-status-result" hidden></div>
+        <div class="agenda-curation-suggestion-actions">
+          <button type="button" class="secondary agenda-curation-status-cancel">Fechar</button>
+          <button type="button" class="agenda-curation-status-submit">Consultar</button>
+        </div>
+      </form>
+    `;
+    document.body.append(dialog);
+
+    const close = () => {
+      if (dialog.open) dialog.close();
+      dialog.remove();
+    };
+    dialog.querySelector('.agenda-curation-suggestion-close').addEventListener('click', close);
+    dialog.querySelector('.agenda-curation-status-cancel').addEventListener('click', close);
+    dialog.addEventListener('cancel', event => { event.preventDefault(); close(); });
+
+    const input = dialog.querySelector('input');
+    const status = dialog.querySelector('.agenda-curation-suggestion-status');
+    const resultBox = dialog.querySelector('.agenda-curation-status-result');
+    const submit = dialog.querySelector('.agenda-curation-status-submit');
+
+    const consult = async () => {
+      const protocol = normalizeCurationSuggestionProtocol(input.value);
+      input.value = protocol;
+      resultBox.hidden = true;
+      resultBox.innerHTML = '';
+      status.dataset.error = 'false';
+
+      if (!/^SUG-[A-Z0-9]{4}-[A-Z0-9]{4}$/.test(protocol)) {
+        status.textContent = 'Confira o protocolo. O formato esperado é SUG-XXXX-XXXX.';
+        status.dataset.error = 'true';
+        return;
+      }
+
+      submit.disabled = true;
+      status.textContent = 'Consultando…';
+      try {
+        const response = await fetch(
+          curationSuggestionApi(`/api/sugestoes-curadoria/status?protocolo=${encodeURIComponent(protocol)}`),
+          {cache:'no-store'}
+        );
+        const payload = await response.json();
+        if (!response.ok) throw new Error(payload.erro || 'Não foi possível consultar o protocolo.');
+
+        const received = formatCurationSuggestionDate(payload.criado_em);
+        const updated = formatCurationSuggestionDate(payload.atualizado_em);
+        resultBox.innerHTML = `
+          <p class="agenda-curation-status-protocol">${escapeHtml(payload.protocolo || protocol)}</p>
+          <p class="agenda-curation-status-badge" data-status="${escapeHtml(payload.status || '')}">${escapeHtml(payload.status_label || 'Recebida')}</p>
+          ${received ? `<p><strong>Recebida em:</strong> ${escapeHtml(received)}</p>` : ''}
+          ${updated ? `<p><strong>Última atualização:</strong> ${escapeHtml(updated)}</p>` : ''}
+          <p class="helper">Esta consulta mostra somente o andamento. A seleção enviada, a mensagem e informações internas da curadoria não são exibidas publicamente.</p>
+        `;
+        resultBox.hidden = false;
+        status.textContent = '';
+      } catch (error) {
+        status.textContent = error.message || 'Não foi possível consultar o protocolo.';
+        status.dataset.error = 'true';
+      } finally {
+        submit.disabled = false;
+      }
+    };
+
+    submit.addEventListener('click', consult);
+    input.addEventListener('keydown', event => {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        consult();
+      }
+    });
+
+    dialog.showModal();
+    if (prefillProtocol) consult();
+    else input.focus();
+  }
+
   let turnstileLoaderPromise = null;
 
   function loadTurnstileApi() {
@@ -4195,11 +4315,19 @@ function eventProgram(event) {
             <h2>Obrigado por contribuir com o Mural.</h2>
             <p>A seleção foi enviada anonimamente para análise da curadoria.</p>
             <p>Protocolo: <strong class="agenda-curation-suggestion-protocol">${escapeHtml(result.protocolo || '')}</strong></p>
-            <p class="helper">Guarde o protocolo se quiser ter uma referência deste envio. Seus favoritos permanecem no seu dispositivo.</p>
-            <button type="button" class="agenda-curation-suggestion-done">Fechar</button>
+            <p class="helper">Guarde o protocolo: ele permite consultar o andamento desta sugestão. Seus favoritos continuam salvos neste navegador enquanto os dados locais do site forem mantidos.</p>
+            <div class="agenda-curation-suggestion-actions">
+              <button type="button" class="secondary agenda-curation-suggestion-done">Fechar</button>
+              <button type="button" class="agenda-curation-suggestion-track">Acompanhar sugestão</button>
+            </div>
           </div>
         `;
+        const submittedProtocol = String(result.protocolo || '');
         dialog.querySelector('.agenda-curation-suggestion-done').addEventListener('click', close);
+        dialog.querySelector('.agenda-curation-suggestion-track').addEventListener('click', () => {
+          close();
+          openCurationSuggestionStatusDialog(submittedProtocol);
+        });
       } catch (error) {
         status.textContent = error.message || 'Não foi possível enviar a sugestão.';
         status.dataset.error = 'true';
@@ -4500,6 +4628,7 @@ function eventProgram(event) {
           aria-pressed="${state.mobileFavoritesOnly ? 'true' : 'false'}"
           title="Meus favoritos"
         ><span aria-hidden="true">★</span><span class="agenda-favorites-label">Favoritos</span><span class="agenda-favorites-count" ${favoriteCount ? '' : 'hidden'}>${favoriteCount}</span></button>
+        <button class="agenda-suggestion-lookup" type="button" title="Consultar sugestão enviada"><span aria-hidden="true">⌕</span><span class="agenda-suggestion-lookup-label">Consultar sugestão</span></button>
         ${state.mobileFavoritesOnly && favoriteCount ? '<button class="agenda-share-favorites" type="button" title="Compartilhar favoritos"><span aria-hidden="true">↗</span><span>Compartilhar</span></button><button class="agenda-send-curation" type="button" title="Enviar favoritos anonimamente para a curadoria"><span aria-hidden="true">✦</span><span>Enviar para curadoria</span></button>' : ''}
         <button
           class="agenda-search-toggle"
@@ -4782,6 +4911,7 @@ function eventProgram(event) {
     });
 
     header.querySelector('.agenda-share-favorites')?.addEventListener('click', shareAgendaFavorites);
+    header.querySelector('.agenda-suggestion-lookup')?.addEventListener('click', () => openCurationSuggestionStatusDialog());
     header.querySelector('.agenda-send-curation')?.addEventListener('click', openCurationSuggestionDialog);
     count.querySelector('.agenda-send-curation')?.addEventListener('click', openCurationSuggestionDialog);
     count.querySelector('.agenda-save-shared')?.addEventListener('click', () => {
