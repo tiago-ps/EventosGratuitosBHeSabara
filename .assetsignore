@@ -1,0 +1,5 @@
+.git/
+.github/
+cloudflare/
+wrangler.jsonc
+.assetsignore

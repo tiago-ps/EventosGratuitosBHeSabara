@@ -4,6 +4,7 @@ const assert = require('assert');
 const app = fs.readFileSync('js/app.js', 'utf8');
 const worker = fs.readFileSync('cloudflare/social-preview-worker.js', 'utf8');
 const schema = fs.readFileSync('cloudflare/sugestoes-curadoria.sql', 'utf8');
+const wrangler = JSON.parse(fs.readFileSync('wrangler.jsonc', 'utf8'));
 
 assert(app.includes('Enviar para curadoria'));
 assert(app.includes('Não pedimos nome, e-mail ou cadastro.'));
@@ -23,6 +24,14 @@ assert(worker.includes("'Access-Control-Allow-Origin'"));
 assert(worker.includes("request.method === 'OPTIONS'"));
 assert(!worker.includes("form.append('remoteip'"));
 assert(!worker.includes("CF-Connecting-IP"));
+assert(worker.includes('env.ASSETS.fetch(request)'));
+
+assert.equal(wrangler.name, 'muralcultural');
+assert.equal(wrangler.main, 'cloudflare/social-preview-worker.js');
+assert.equal(wrangler.keep_vars, true);
+assert.equal(wrangler.assets.directory, '.');
+assert.equal(wrangler.assets.binding, 'ASSETS');
+assert.deepEqual(wrangler.assets.run_worker_first, ['/api/*', '/', '/index.html']);
 
 for (const forbidden of ['ip ', 'user_agent', 'user-agent', 'fingerprint', 'email', 'telefone']) {
   assert(!schema.toLowerCase().includes(forbidden), `schema não deve conter ${forbidden}`);
