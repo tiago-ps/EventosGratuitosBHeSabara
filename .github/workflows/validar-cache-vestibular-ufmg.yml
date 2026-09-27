@@ -6,6 +6,12 @@ on:
     paths:
       - 'service-worker.js'
       - 'testes/service-worker-cache.test.cjs'
+  pull_request:
+    paths:
+      - 'service-worker.js'
+      - 'testes/service-worker-cache.test.cjs'
+      - '.github/workflows/validar-cache-vestibular-ufmg.yml'
+      - 'testes/service-worker-cache.test.cjs'
       - '.github/workflows/validar-cache-vestibular-ufmg.yml'
   workflow_dispatch:
 
