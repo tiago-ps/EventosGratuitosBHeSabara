@@ -38,6 +38,7 @@
     activities: { singular: 'atividade de esporte e lazer', plural: 'atividades de esporte e lazer' }
   });
   const PANEL_UTILITY_LIMIT = 4;
+  const PANEL_ACTIVITY_LIMIT = 6;
   const PANEL_BOOK_LIMIT = 15;
   const ALLOWED_SLIDE_DURATIONS = new Set([0, 5, 8, 10, 12, 15, 20, 30]);
   const CONTENT_SUBTITLES = Object.freeze({
@@ -130,7 +131,7 @@
     allUtility: [],
     allActivities: [],
     events: [],
-    panelRoundSamples: { books: [], courses: [], contests: [], films: [], utility: [] },
+    panelRoundSamples: { books: [], courses: [], contests: [], films: [], utility: [], activities: [] },
     panelMemory: muralCore.createPanelMemory(),
     panelRoundSteps: [],
     panelSeenSteps: new WeakSet(),
@@ -142,10 +143,10 @@
     btnPlayPause: null,
     btnFilter: null,
     filterOverlay: null,
-    panelModules: { events: true, books: true, courses: true, contests: true, films: true, utility: false },
+    panelModules: { events: true, books: true, courses: true, contests: true, films: true, utility: false, activities: false },
     panelEventCities: [],
     panelBookCampuses: [],
-    panelWeights: { events: 5, books: 1, courses: 1, contests: 1, films: 1, utility: 1 },
+    panelWeights: { events: 5, books: 1, courses: 1, contests: 1, films: 1, utility: 1, activities: 1 },
     filters: {
       content: 'all',
       theme: '',
@@ -850,6 +851,7 @@
     const contestsEnabled = state.panelModules.contests && state.config?.modulos?.concursos !== false;
     const filmsEnabled = state.panelModules.films && state.config?.modulos?.filmes !== false;
     const utilityEnabled = state.panelModules.utility && state.config?.modulos?.utilidade_publica !== false;
+    const activitiesEnabled = state.panelModules.activities && state.config?.modulos?.atividades_lazer !== false;
     const events = eventsEnabled ? visibleEventsForFilters() : [];
     const eligibleBooks = booksEnabled ? filterBooks(state.allBooks) : [];
     const sampleOptions = module => ({
@@ -885,7 +887,15 @@
       PANEL_UTILITY_LIMIT,
       sampleOptions('utility')
     );
-    state.panelRoundSamples = { books, courses, contests, films, utility };
+    const eligibleActivities = activitiesEnabled
+      ? activitiesContent.filter(state.allActivities, { theme: state.filters.theme }, normalizeText)
+      : [];
+    const activities = muralCore.sampleForPanel(
+      eligibleActivities,
+      PANEL_ACTIVITY_LIMIT,
+      sampleOptions('activities')
+    );
+    state.panelRoundSamples = { books, courses, contests, films, utility, activities };
     // Perfil temático explícito conserva a composição e os pesos já configurados.
     if (state.filters.theme || activeEditorialPanelProfileId()) {
       state.events = muralCore.interleaveContents([
@@ -894,7 +904,8 @@
         { items: courses, weight: state.panelWeights.courses },
         { items: contests, weight: state.panelWeights.contests },
         { items: films, weight: state.panelWeights.films },
-        { items: utility, weight: state.panelWeights.utility }
+        { items: utility, weight: state.panelWeights.utility },
+        { items: activities, weight: state.panelWeights.activities }
       ]);
       state.panelRoundSteps = state.events.map(item => ({ item }));
     } else {
@@ -904,7 +915,8 @@
         courses: coursesEnabled ? coursesContent.filter(themedCourses) : [],
         contests: contestsEnabled ? contestsContent.filter(state.allContests).map(contestsContent.publicRecord) : [],
         films: filmsEnabled ? filmsContent.filter(state.allFilms, filmFilters, normalizeText) : [],
-        utility: eligibleUtility
+        utility: eligibleUtility,
+        activities: eligibleActivities
       };
       const curations = (state.siteCurationsData?.curadorias || [])
         .filter(curation => siteCurationsContent.isPromoted(curation))
@@ -1024,7 +1036,7 @@
   function hasUserFilters() {
     return Boolean(
       !state.panelModules.events || !state.panelModules.books || !state.panelModules.courses ||
-      !state.panelModules.contests || !state.panelModules.films || state.panelModules.utility ||
+      !state.panelModules.contests || !state.panelModules.films || state.panelModules.utility || state.panelModules.activities ||
       state.filters.theme || state.panelEventCities.length ||
       state.filters.category || state.filters.program || state.filters.unit ||
       state.filters.rating || state.filters.period !== 'all' ||
@@ -1149,6 +1161,7 @@
     for (const course of state.allCourses) (Array.isArray(course.temas) ? course.temas : []).forEach(add);
     for (const movie of state.allFilms) (Array.isArray(movie.temas) ? movie.temas : []).forEach(add);
     for (const item of state.allUtility) (Array.isArray(item.temas) ? item.temas : []).forEach(add);
+    for (const item of state.allActivities) (Array.isArray(item.temas) ? item.temas : []).forEach(add);
     return [...values.entries()].sort((a, b) => a[1].localeCompare(b[1], 'pt-BR'));
   }
 
@@ -1250,7 +1263,8 @@ function eventProgram(event) {
         state.panelModules.courses !== defaults.modules.courses ||
         state.panelModules.contests !== defaults.modules.contests ||
         state.panelModules.films !== defaults.modules.films ||
-        state.panelModules.utility !== defaults.modules.utility) count += 1;
+        state.panelModules.utility !== defaults.modules.utility ||
+        state.panelModules.activities !== defaults.modules.activities) count += 1;
     if (state.filters.theme) count += 1;
     if (state.panelModules.events) {
       if (state.panelEventCities.length) count += 1;
@@ -1272,7 +1286,8 @@ function eventProgram(event) {
         state.panelWeights.courses !== defaults.weights.courses ||
         state.panelWeights.contests !== defaults.weights.contests ||
         state.panelWeights.films !== defaults.weights.films ||
-        state.panelWeights.utility !== defaults.weights.utility) count += 1;
+        state.panelWeights.utility !== defaults.weights.utility ||
+        state.panelWeights.activities !== defaults.weights.activities) count += 1;
     if (state.slideDuration !== defaults.slideDuration) count += 1;
     return count;
   }
@@ -1560,7 +1575,8 @@ function eventProgram(event) {
       concurso: 'Ver este concurso',
       filme: 'Ver este filme',
       jogo: 'Ver este jogo',
-      passeio: 'Ver este passeio'
+      passeio: 'Ver este passeio',
+      atividade_lazer: 'Ver esta atividade'
     })[type] || 'Abrir este conteúdo';
   }
 
@@ -1613,6 +1629,8 @@ function eventProgram(event) {
         ? state.config?.tempo_slide?.concurso
         : type === 'utilidade_publica'
           ? state.config?.tempo_slide?.utilidade_publica
+          : type === 'atividade_lazer'
+            ? state.config?.tempo_slide?.atividade_lazer
           : type === 'filme'
             ? state.config?.tempo_slide?.filme
             : type === 'curso'
@@ -2340,6 +2358,10 @@ function eventProgram(event) {
     renderMediaSlide(index, utilityContent.createPanelSlide);
   }
 
+  function renderActivitySlide(index) {
+    renderMediaSlide(index, activitiesContent.createPanelSlide);
+  }
+
   function renderSlide(index) {
     const item = state.events[index];
     if (!item) return;
@@ -2355,6 +2377,7 @@ function eventProgram(event) {
     else if (item.tipo_conteudo === 'concurso') renderContestSlide(index);
     else if (item.tipo_conteudo === 'filme') renderFilmSlide(index);
     else if (item.tipo_conteudo === 'utilidade_publica') renderUtilitySlide(index);
+    else if (item.tipo_conteudo === 'atividade_lazer') renderActivitySlide(index);
     else renderEventSlide(index);
   }
 
@@ -2530,8 +2553,11 @@ function eventProgram(event) {
         films: panelModules.filmes !== undefined
           ? Boolean(panelModules.filmes)
           : state.config?.modulos?.filmes !== false,
-        // Perfis precisam declarar Utility explicitamente; a presença de dados não o ativa.
-        utility: false
+        // Perfis precisam declarar Utility e Esporte e Lazer explicitamente; a presença de dados não os ativa.
+        utility: false,
+        activities: panelModules.atividades_lazer !== undefined
+          ? Boolean(panelModules.atividades_lazer)
+          : false
       },
       theme: String(panel.tema || ''),
       eventCities: Array.isArray(eventConfig.cidades) ? eventConfig.cidades.map(normalizeText).filter(Boolean) : [],
@@ -2549,7 +2575,8 @@ function eventProgram(event) {
         courses: Math.max(1, Number(frequency.cursos) || 1),
         contests: Math.max(1, Number(frequency.concursos) || 1),
         films: Math.max(1, Number(frequency.filmes) || 1),
-        utility: 1
+        utility: 1,
+        activities: Math.max(1, Number(frequency.atividades_lazer) || 1)
       },
       slideDuration: ALLOWED_SLIDE_DURATIONS.has(Number(panel.tempo_slides)) ? Number(panel.tempo_slides) : 0
     };
@@ -2568,7 +2595,8 @@ function eventProgram(event) {
         courses: modules.courses !== undefined ? Boolean(modules.courses) : defaults.modules.courses,
         contests: modules.contests !== undefined ? Boolean(modules.contests) : defaults.modules.contests,
         films: modules.films !== undefined ? Boolean(modules.films) : defaults.modules.films,
-        utility: modules.utility !== undefined ? Boolean(modules.utility) : defaults.modules.utility
+        utility: modules.utility !== undefined ? Boolean(modules.utility) : defaults.modules.utility,
+        activities: modules.activities !== undefined ? Boolean(modules.activities) : defaults.modules.activities
       },
       theme: String(value.theme || ''),
       eventCities: Array.isArray(value.eventCities) ? value.eventCities.map(normalizeText).filter(Boolean) : [],
@@ -2586,7 +2614,8 @@ function eventProgram(event) {
         courses: clampWeight(weights.courses ?? defaults.weights.courses),
         contests: clampWeight(weights.contests ?? defaults.weights.contests),
         films: clampWeight(weights.films ?? defaults.weights.films),
-        utility: clampWeight(weights.utility ?? defaults.weights.utility)
+        utility: clampWeight(weights.utility ?? defaults.weights.utility),
+        activities: clampWeight(weights.activities ?? defaults.weights.activities)
       },
       slideDuration: ALLOWED_SLIDE_DURATIONS.has(Number(value.slideDuration))
         ? Number(value.slideDuration)
@@ -2970,7 +2999,8 @@ function eventProgram(event) {
     const contestsEnabled = Boolean(slide.querySelector('.panel-module-contests')?.checked);
     const filmsEnabled = Boolean(slide.querySelector('.panel-module-films')?.checked);
     const utilityEnabled = Boolean(slide.querySelector('.panel-module-utility')?.checked);
-    if (!eventsEnabled && !booksEnabled && !coursesEnabled && !contestsEnabled && !filmsEnabled && !utilityEnabled) {
+    const activitiesEnabled = Boolean(slide.querySelector('.panel-module-activities')?.checked);
+    if (!eventsEnabled && !booksEnabled && !coursesEnabled && !contestsEnabled && !filmsEnabled && !utilityEnabled && !activitiesEnabled) {
       throw new Error('Ative pelo menos um tipo de conteúdo para o painel.');
     }
 
@@ -2992,7 +3022,8 @@ function eventProgram(event) {
         courses: coursesEnabled,
         contests: contestsEnabled,
         films: filmsEnabled,
-        utility: utilityEnabled
+        utility: utilityEnabled,
+        activities: activitiesEnabled
       },
       theme: slide.querySelector('.filter-theme')?.value || '',
       eventCities: checkedFilterValues(cityContainer),
@@ -3010,7 +3041,8 @@ function eventProgram(event) {
         courses: slide.querySelector('.panel-course-weight')?.value || 1,
         contests: slide.querySelector('.panel-contest-weight')?.value || 1,
         films: slide.querySelector('.panel-film-weight')?.value || 1,
-        utility: slide.querySelector('.panel-utility-weight')?.value || 1
+        utility: slide.querySelector('.panel-utility-weight')?.value || 1,
+        activities: slide.querySelector('.panel-activity-weight')?.value || 1
       },
       slideDuration: slide.querySelector('.filter-slide-duration')?.value || 0
     });
@@ -3023,18 +3055,21 @@ function eventProgram(event) {
     const contestsEnabled = Boolean(slide.querySelector('.panel-module-contests')?.checked);
     const filmsEnabled = Boolean(slide.querySelector('.panel-module-films')?.checked);
     const utilityEnabled = Boolean(slide.querySelector('.panel-module-utility')?.checked);
+    const activitiesEnabled = Boolean(slide.querySelector('.panel-module-activities')?.checked);
     const eventSection = slide.querySelector('.panel-event-section');
     const bookSection = slide.querySelector('.panel-book-section');
     const courseSection = slide.querySelector('.panel-course-section');
     const contestSection = slide.querySelector('.panel-contest-section');
     const filmSection = slide.querySelector('.panel-film-section');
     const utilitySection = slide.querySelector('.panel-utility-section');
+    const activitySection = slide.querySelector('.panel-activity-section');
     if (eventSection) eventSection.hidden = !eventsEnabled;
     if (bookSection) bookSection.hidden = !booksEnabled;
     if (courseSection) courseSection.hidden = !coursesEnabled;
     if (contestSection) contestSection.hidden = !contestsEnabled;
     if (filmSection) filmSection.hidden = !filmsEnabled;
     if (utilitySection) utilitySection.hidden = !utilityEnabled;
+    if (activitySection) activitySection.hidden = !activitiesEnabled;
   }
 
   function populateFilterPanel(slide, settings = currentPanelSettings()) {
@@ -3055,12 +3090,14 @@ function eventProgram(event) {
     const contestsToggle = slide.querySelector('.panel-module-contests');
     const filmsToggle = slide.querySelector('.panel-module-films');
     const utilityToggle = slide.querySelector('.panel-module-utility');
+    const activitiesToggle = slide.querySelector('.panel-module-activities');
     if (eventsToggle) eventsToggle.checked = value.modules.events;
     if (booksToggle) booksToggle.checked = value.modules.books;
     if (coursesToggle) coursesToggle.checked = value.modules.courses;
     if (contestsToggle) contestsToggle.checked = value.modules.contests;
     if (filmsToggle) filmsToggle.checked = value.modules.films;
     if (utilityToggle) utilityToggle.checked = value.modules.utility;
+    if (activitiesToggle) activitiesToggle.checked = value.modules.activities;
     if (durationSelect) durationSelect.value = String(value.slideDuration || 0);
     const eventWeight = slide.querySelector('.panel-event-weight');
     const bookWeight = slide.querySelector('.panel-book-weight');
@@ -3068,12 +3105,14 @@ function eventProgram(event) {
     const contestWeight = slide.querySelector('.panel-contest-weight');
     const filmWeight = slide.querySelector('.panel-film-weight');
     const utilityWeight = slide.querySelector('.panel-utility-weight');
+    const activityWeight = slide.querySelector('.panel-activity-weight');
     if (eventWeight) eventWeight.value = String(value.weights.events);
     if (bookWeight) bookWeight.value = String(value.weights.books);
     if (courseWeight) courseWeight.value = String(value.weights.courses);
     if (contestWeight) contestWeight.value = String(value.weights.contests);
     if (filmWeight) filmWeight.value = String(value.weights.films);
     if (utilityWeight) utilityWeight.value = String(value.weights.utility);
+    if (activityWeight) activityWeight.value = String(value.weights.activities);
 
     populateDynamicSelect(themeSelect, 'Todos os temas', universalThemeOptions(), value.theme);
 
@@ -3265,6 +3304,7 @@ function eventProgram(event) {
     slide.querySelector('.panel-module-contests')?.addEventListener('change', () => updatePanelModuleVisibility(slide));
     slide.querySelector('.panel-module-films')?.addEventListener('change', () => updatePanelModuleVisibility(slide));
     slide.querySelector('.panel-module-utility')?.addEventListener('change', () => updatePanelModuleVisibility(slide));
+    slide.querySelector('.panel-module-activities')?.addEventListener('change', () => updatePanelModuleVisibility(slide));
     slide.querySelector('.panel-profile-save')?.addEventListener('click', () => savePanelProfile(slide));
     slide.querySelector('.panel-profile-delete')?.addEventListener('click', () => deletePanelProfile(slide));
     slide.querySelector('.panel-profile-select')?.addEventListener('change', event => {
