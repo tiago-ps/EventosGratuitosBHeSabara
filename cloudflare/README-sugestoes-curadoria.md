@@ -28,3 +28,18 @@ O Turnstile é validado no servidor sem enviar o parâmetro opcional `remoteip`.
 `recebido -> em_analise -> aproveitado | descartado`
 
 Nenhuma sugestão é publicada automaticamente.
+
+
+## Consulta pública por protocolo
+
+O usuário pode consultar somente o andamento de uma sugestão em:
+
+`GET /api/sugestoes-curadoria/status?protocolo=SUG-XXXX-XXXX`
+
+A resposta pública contém apenas:
+- protocolo;
+- status e rótulo público;
+- data de recebimento;
+- data da última atualização, quando houver.
+
+A consulta pública não retorna mensagem, IDs enviados, quantidade, dados do Editor ou qualquer informação interna da curadoria. O protocolo funciona como uma chave de consulta; não há login nem cadastro.
