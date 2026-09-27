@@ -8,9 +8,11 @@ const schema = fs.readFileSync('cloudflare/sugestoes-curadoria.sql', 'utf8');
 const wrangler = JSON.parse(fs.readFileSync('wrangler.jsonc', 'utf8'));
 
 assert(app.includes('Enviar para curadoria'));
-assert(app.includes('Consultar sugestão'));
+assert(app.includes('Consultar contribuição'));
 assert(app.includes('Acompanhar sugestão'));
-assert(app.includes("/api/sugestoes-curadoria/status?protocolo="));
+assert(app.includes("protocol.startsWith('CON-')"));
+assert(app.includes("'/api/sugestoes-curadoria/status'"));
+assert(app.includes("'/api/contribuicoes-comunidade/status'"));
 assert(app.includes('Não pedimos nome, e-mail ou cadastro.'));
 assert(app.includes("curationSuggestionApi('/api/sugestoes-curadoria')"));
 assert(app.includes('itens: [...selection]'));
@@ -67,3 +69,31 @@ for (const required of ['.github/**', 'cloudflare/**', '*.py', 'README*', '.wran
 }
 
 console.log('Fluxo anônimo de sugestões validado.');
+
+
+assert(worker.includes("const CONTRIBUTION_API_PATH = '/api/contribuicoes-comunidade'"));
+assert(worker.includes("const CONTRIBUTION_STATUS_PATH = '/api/contribuicoes-comunidade/status'"));
+assert(worker.includes("const CONTRIBUTION_ADMIN_PATH = '/api/contribuicoes-comunidade/admin'"));
+assert(worker.includes("sugerir_evento"));
+assert(worker.includes("corrigir_informacao"));
+assert(worker.includes("contribuir_mural"));
+assert(worker.includes("CON-"));
+assert(worker.includes("contribuicoes_comunidade"));
+assert(worker.includes("atividade_lazer"));
+assert(worker.includes("handleCommunityContributionApi(request, env)"));
+
+const contributionSchema = fs.readFileSync('cloudflare/contribuicoes-comunidade.sql', 'utf8');
+assert(contributionSchema.includes('CREATE TABLE IF NOT EXISTS contribuicoes_comunidade'));
+assert(contributionSchema.includes("CHECK (tipo IN ('sugerir_evento', 'corrigir_informacao'))"));
+for (const forbidden of ['ip ', 'user_agent', 'user-agent', 'fingerprint', 'email', 'telefone']) {
+  assert(!contributionSchema.toLowerCase().includes(forbidden), `schema de contribuições não deve conter ${forbidden}`);
+}
+
+assert(app.includes('Contribua com o Mural'));
+assert(app.includes('Sugerir um evento'));
+assert(app.includes('Corrigir informação'));
+assert(app.includes("openCommunityContributionForm('corrigir_informacao'"));
+assert(app.includes("action: 'contribuir_mural'"));
+assert(app.includes('/api/contribuicoes-comunidade'));
+assert(app.includes("protocol.startsWith('CON-')"));
+assert(app.includes('SUG-XXXX-XXXX ou CON-XXXX-XXXX'));

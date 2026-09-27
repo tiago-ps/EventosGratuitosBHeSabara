@@ -4118,11 +4118,11 @@ function eventProgram(event) {
         <div class="agenda-curation-suggestion-heading">
           <div>
             <p class="agenda-curation-suggestion-eyebrow">Acompanhar contribuição</p>
-            <h2>Consultar sugestão</h2>
+            <h2>Consultar contribuição</h2>
           </div>
           <button type="button" class="agenda-curation-suggestion-close" aria-label="Fechar">×</button>
         </div>
-        <p>Digite o protocolo recebido quando você enviou a seleção para a curadoria.</p>
+        <p>Digite o protocolo recebido quando você enviou uma contribuição ao Mural.</p>
         <label class="agenda-curation-status-field">
           <span>Protocolo</span>
           <input
@@ -4132,7 +4132,7 @@ function eventProgram(event) {
             autocapitalize="characters"
             spellcheck="false"
             maxlength="13"
-            placeholder="SUG-XXXX-XXXX"
+            placeholder="SUG-XXXX-XXXX ou CON-XXXX-XXXX"
             value="${escapeHtml(normalizeCurationSuggestionProtocol(prefillProtocol))}"
           >
         </label>
@@ -4166,8 +4166,8 @@ function eventProgram(event) {
       resultBox.innerHTML = '';
       status.dataset.error = 'false';
 
-      if (!/^SUG-[A-Z0-9]{4}-[A-Z0-9]{4}$/.test(protocol)) {
-        status.textContent = 'Confira o protocolo. O formato esperado é SUG-XXXX-XXXX.';
+      if (!/^(SUG|CON)-[A-Z0-9]{4}-[A-Z0-9]{4}$/.test(protocol)) {
+        status.textContent = 'Confira o protocolo. O formato esperado é SUG-XXXX-XXXX ou CON-XXXX-XXXX.';
         status.dataset.error = 'true';
         return;
       }
@@ -4175,8 +4175,11 @@ function eventProgram(event) {
       submit.disabled = true;
       status.textContent = 'Consultando…';
       try {
+        const statusPath = protocol.startsWith('CON-')
+          ? '/api/contribuicoes-comunidade/status'
+          : '/api/sugestoes-curadoria/status';
         const response = await fetch(
-          curationSuggestionApi(`/api/sugestoes-curadoria/status?protocolo=${encodeURIComponent(protocol)}`),
+          curationSuggestionApi(`${statusPath}?protocolo=${encodeURIComponent(protocol)}`),
           {cache:'no-store'}
         );
         const payload = await response.json();
@@ -4186,10 +4189,11 @@ function eventProgram(event) {
         const updated = formatCurationSuggestionDate(payload.atualizado_em);
         resultBox.innerHTML = `
           <p class="agenda-curation-status-protocol">${escapeHtml(payload.protocolo || protocol)}</p>
+          ${payload.tipo_label ? `<p class="agenda-curation-status-type">${escapeHtml(payload.tipo_label)}</p>` : ''}
           <p class="agenda-curation-status-badge" data-status="${escapeHtml(payload.status || '')}">${escapeHtml(payload.status_label || 'Recebida')}</p>
           ${received ? `<p><strong>Recebida em:</strong> ${escapeHtml(received)}</p>` : ''}
           ${updated ? `<p><strong>Última atualização:</strong> ${escapeHtml(updated)}</p>` : ''}
-          <p class="helper">Esta consulta mostra somente o andamento. A seleção enviada, a mensagem e informações internas da curadoria não são exibidas publicamente.</p>
+          <p class="helper">Esta consulta mostra somente o andamento. Os dados enviados e informações internas da equipe não são exibidos publicamente.</p>
         `;
         resultBox.hidden = false;
         status.textContent = '';
@@ -4236,6 +4240,217 @@ function eventProgram(event) {
       document.head.append(script);
     });
     return turnstileLoaderPromise;
+  }
+
+  function communityContributionTitle(item) {
+    return String(
+      item?.titulo || item?.nome || item?.pergunta_curiosidade ||
+      item?.orgao || item?.instituicao || 'Conteúdo do Mural'
+    ).trim();
+  }
+
+  function openCommunityContributionHub() {
+    document.getElementById('agenda-community-hub-dialog')?.remove();
+    const dialog = document.createElement('dialog');
+    dialog.id = 'agenda-community-hub-dialog';
+    dialog.className = 'agenda-curation-suggestion-dialog agenda-community-dialog';
+    dialog.innerHTML = `
+      <div class="agenda-curation-suggestion-card">
+        <div class="agenda-curation-suggestion-heading">
+          <div>
+            <p class="agenda-curation-suggestion-eyebrow">Ajude a construir o Mural</p>
+            <h2>Contribua com o Mural</h2>
+          </div>
+          <button type="button" class="agenda-curation-suggestion-close" aria-label="Fechar">×</button>
+        </div>
+        <p>Você pode indicar algo que ainda não está no Mural ou ajudar a corrigir uma informação publicada.</p>
+        <div class="agenda-community-options">
+          <button type="button" class="agenda-community-option" data-kind="sugerir_evento">
+            <strong>Sugerir um evento</strong>
+            <span>Envie um evento gratuito de BH e região metropolitana para a equipe verificar.</span>
+          </button>
+          <button type="button" class="agenda-community-option" data-kind="corrigir_informacao">
+            <strong>Corrigir uma informação</strong>
+            <span>Informe qual conteúdo precisa de ajuste e explique a correção.</span>
+          </button>
+        </div>
+        <p class="agenda-curation-suggestion-privacy"><strong>Não pedimos nome, e-mail ou cadastro.</strong> Não inclua dados pessoais nos campos de texto.</p>
+      </div>
+    `;
+    document.body.append(dialog);
+    const close = () => {
+      if (dialog.open) dialog.close();
+      dialog.remove();
+    };
+    dialog.querySelector('.agenda-curation-suggestion-close').addEventListener('click', close);
+    dialog.addEventListener('cancel', event => { event.preventDefault(); close(); });
+    dialog.querySelectorAll('.agenda-community-option').forEach(button => {
+      button.addEventListener('click', () => {
+        const kind = button.dataset.kind;
+        close();
+        openCommunityContributionForm(kind);
+      });
+    });
+    dialog.showModal();
+  }
+
+  async function openCommunityContributionForm(kind, context = {}) {
+    if (!['sugerir_evento', 'corrigir_informacao'].includes(kind)) return;
+    document.getElementById('agenda-community-form-dialog')?.remove();
+    const isEvent = kind === 'sugerir_evento';
+    const dialog = document.createElement('dialog');
+    dialog.id = 'agenda-community-form-dialog';
+    dialog.className = 'agenda-curation-suggestion-dialog agenda-community-dialog';
+    const itemTitle = String(context.item_titulo || '').trim();
+    dialog.innerHTML = `
+      <form class="agenda-curation-suggestion-card agenda-community-form">
+        <div class="agenda-curation-suggestion-heading">
+          <div>
+            <p class="agenda-curation-suggestion-eyebrow">Contribuição anônima</p>
+            <h2>${isEvent ? 'Sugerir um evento' : 'Corrigir uma informação'}</h2>
+          </div>
+          <button type="button" class="agenda-curation-suggestion-close" aria-label="Fechar">×</button>
+        </div>
+        <p class="agenda-curation-suggestion-privacy"><strong>Não pedimos nome, e-mail ou cadastro.</strong> Envie somente informações necessárias para a equipe verificar a contribuição.</p>
+        ${isEvent ? `
+          <label class="agenda-community-field"><span>Nome do evento *</span><input name="titulo" maxlength="180" required></label>
+          <div class="agenda-community-field-grid">
+            <label class="agenda-community-field"><span>Cidade <small>(opcional)</small></span><input name="cidade" maxlength="120" placeholder="Ex.: Belo Horizonte"></label>
+            <label class="agenda-community-field"><span>Data ou período <small>(opcional)</small></span><input name="data" maxlength="120" placeholder="Ex.: 12 de outubro, às 15h"></label>
+          </div>
+          <label class="agenda-community-field"><span>Link de referência <small>(recomendado)</small></span><input name="link_referencia" type="url" inputmode="url" maxlength="1200" placeholder="https://..."></label>
+          <label class="agenda-community-field"><span>Onde podemos confirmar / observação <small>(opcional se houver link)</small></span><textarea name="observacao" maxlength="1200" rows="4" placeholder="Ex.: Divulgação no Instagram da instituição, atividade gratuita no parque..."></textarea></label>
+        ` : `
+          <label class="agenda-community-field"><span>Conteúdo que precisa de correção *</span><input name="item_titulo" maxlength="220" required value="${escapeHtml(itemTitle)}" placeholder="Ex.: nome do evento, livro, curso..."></label>
+          <input name="item_id" type="hidden" value="${escapeHtml(String(context.item_id || ''))}">
+          <label class="agenda-community-field"><span>O que precisa ser corrigido? *</span><textarea name="correcao" maxlength="1200" rows="5" required placeholder="Explique a informação incorreta e, se souber, qual é a informação correta."></textarea></label>
+          <label class="agenda-community-field"><span>Link que confirma a correção <small>(opcional)</small></span><input name="link_referencia" type="url" inputmode="url" maxlength="1200" placeholder="https://..."></label>
+        `}
+        <div class="agenda-curation-turnstile" hidden></div>
+        <p class="agenda-curation-suggestion-status" role="status" aria-live="polite">Verificando disponibilidade do envio…</p>
+        <div class="agenda-curation-suggestion-actions">
+          <button type="button" class="secondary agenda-community-cancel">Cancelar</button>
+          <button type="submit" class="agenda-community-submit" disabled>Enviar contribuição</button>
+        </div>
+      </form>
+    `;
+    document.body.append(dialog);
+
+    const form = dialog.querySelector('form');
+    const status = dialog.querySelector('.agenda-curation-suggestion-status');
+    const submit = dialog.querySelector('.agenda-community-submit');
+    const turnstileBox = dialog.querySelector('.agenda-curation-turnstile');
+    let turnstileToken = '';
+    let turnstileWidgetId = null;
+    let config = null;
+    const close = () => {
+      if (dialog.open) dialog.close();
+      dialog.remove();
+    };
+    dialog.querySelector('.agenda-curation-suggestion-close').addEventListener('click', close);
+    dialog.querySelector('.agenda-community-cancel').addEventListener('click', close);
+    dialog.addEventListener('cancel', event => { event.preventDefault(); close(); });
+    dialog.showModal();
+
+    try {
+      const response = await fetch(curationSuggestionApi('/api/contribuicoes-comunidade/config'), {cache:'no-store'});
+      config = await response.json();
+      if (!response.ok || !config?.disponivel) throw new Error('indisponivel');
+      if (config.turnstile_site_key) {
+        turnstileBox.hidden = false;
+        const api = await loadTurnstileApi();
+        turnstileWidgetId = api.render(turnstileBox, {
+          sitekey: config.turnstile_site_key,
+          action: 'contribuir_mural',
+          callback: token => {
+            turnstileToken = token;
+            submit.disabled = false;
+            status.textContent = 'Pronto para enviar.';
+          },
+          'expired-callback': () => {
+            turnstileToken = '';
+            submit.disabled = true;
+            status.textContent = 'A verificação expirou. Confirme novamente para enviar.';
+          },
+          'error-callback': () => {
+            turnstileToken = '';
+            submit.disabled = true;
+            status.textContent = 'Não foi possível concluir a verificação. Tente novamente.';
+          }
+        });
+        status.textContent = 'Confirme a verificação para enviar.';
+      } else {
+        submit.disabled = false;
+        status.textContent = 'Pronto para enviar.';
+      }
+    } catch {
+      status.textContent = 'O envio de contribuições está temporariamente indisponível.';
+      status.dataset.error = 'true';
+    }
+
+    form.addEventListener('submit', async event => {
+      event.preventDefault();
+      if (!config?.disponivel || submit.disabled) return;
+      const data = new FormData(form);
+      const dados = isEvent ? {
+        titulo: data.get('titulo'),
+        cidade: data.get('cidade'),
+        data: data.get('data'),
+        link_referencia: data.get('link_referencia'),
+        observacao: data.get('observacao')
+      } : {
+        item_id: data.get('item_id'),
+        item_titulo: data.get('item_titulo'),
+        correcao: data.get('correcao'),
+        link_referencia: data.get('link_referencia')
+      };
+
+      submit.disabled = true;
+      status.dataset.error = 'false';
+      status.textContent = 'Enviando contribuição…';
+      try {
+        const response = await fetch(curationSuggestionApi('/api/contribuicoes-comunidade'), {
+          method: 'POST',
+          headers: {'Content-Type':'application/json'},
+          body: JSON.stringify({
+            schema_version: 1,
+            tipo: kind,
+            dados,
+            turnstile_token: turnstileToken
+          })
+        });
+        const result = await response.json();
+        if (!response.ok) throw new Error(result.erro || 'Não foi possível enviar a contribuição.');
+        form.innerHTML = `
+          <div class="agenda-curation-suggestion-success">
+            <p class="agenda-curation-suggestion-eyebrow">Contribuição recebida</p>
+            <h2>Obrigado por ajudar o Mural.</h2>
+            <p>A equipe vai verificar as informações enviadas.</p>
+            <p>Protocolo: <strong class="agenda-curation-suggestion-protocol">${escapeHtml(result.protocolo || '')}</strong></p>
+            <p class="helper">Guarde o protocolo para consultar o andamento desta contribuição.</p>
+            <div class="agenda-curation-suggestion-actions">
+              <button type="button" class="secondary agenda-community-done">Fechar</button>
+              <button type="button" class="agenda-community-track">Acompanhar contribuição</button>
+            </div>
+          </div>
+        `;
+        const protocol = String(result.protocolo || '');
+        form.querySelector('.agenda-community-done').addEventListener('click', close);
+        form.querySelector('.agenda-community-track').addEventListener('click', () => {
+          close();
+          openCurationSuggestionStatusDialog(protocol);
+        });
+      } catch (error) {
+        status.textContent = error.message || 'Não foi possível enviar a contribuição.';
+        status.dataset.error = 'true';
+        submit.disabled = false;
+        if (turnstileWidgetId !== null && window.turnstile) {
+          turnstileToken = '';
+          submit.disabled = true;
+          window.turnstile.reset(turnstileWidgetId);
+        }
+      }
+    });
   }
 
   function curationSuggestionSelection() {
@@ -4421,6 +4636,30 @@ function eventProgram(event) {
       }
     });
     article.append(button);
+
+    if (!state.curationMode) {
+      let actions = article.querySelector('.agenda-card-actions');
+      if (!actions) {
+        actions = document.createElement('div');
+        actions.className = 'agenda-card-actions';
+        article.querySelector('.agenda-card-body')?.append(actions);
+      }
+      if (actions) {
+        const correction = document.createElement('button');
+        correction.type = 'button';
+        correction.className = 'secondary agenda-correction-button';
+        correction.textContent = 'Corrigir informação';
+        correction.addEventListener('click', event => {
+          event.preventDefault();
+          event.stopPropagation();
+          openCommunityContributionForm('corrigir_informacao', {
+            item_id: favoriteId,
+            item_titulo: communityContributionTitle(item)
+          });
+        });
+        actions.append(correction);
+      }
+    }
     return article;
   }
 
@@ -4675,7 +4914,8 @@ function eventProgram(event) {
           aria-pressed="${state.mobileFavoritesOnly ? 'true' : 'false'}"
           title="Meus favoritos"
         ><span aria-hidden="true">★</span><span class="agenda-favorites-label">Favoritos</span><span class="agenda-favorites-count" ${favoriteCount ? '' : 'hidden'}>${favoriteCount}</span></button>
-        <button class="agenda-suggestion-lookup" type="button" title="Consultar sugestão enviada"><span aria-hidden="true">⌕</span><span class="agenda-suggestion-lookup-label">Consultar sugestão</span></button>
+        <button class="agenda-community-open" type="button" title="Contribuir com o Mural"><span aria-hidden="true">＋</span><span class="agenda-community-open-label">Contribua</span></button>
+        <button class="agenda-suggestion-lookup" type="button" title="Consultar contribuição enviada"><span aria-hidden="true">⌕</span><span class="agenda-suggestion-lookup-label">Consultar protocolo</span></button>
         ${state.mobileFavoritesOnly && favoriteCount ? '<button class="agenda-share-favorites" type="button" title="Compartilhar favoritos"><span aria-hidden="true">↗</span><span>Compartilhar</span></button><button class="agenda-send-curation" type="button" title="Enviar favoritos anonimamente para a curadoria"><span aria-hidden="true">✦</span><span>Enviar para curadoria</span></button>' : ''}
         <button
           class="agenda-search-toggle"
@@ -4974,6 +5214,7 @@ function eventProgram(event) {
     });
 
     header.querySelector('.agenda-share-favorites')?.addEventListener('click', shareAgendaFavorites);
+    header.querySelector('.agenda-community-open')?.addEventListener('click', openCommunityContributionHub);
     header.querySelector('.agenda-suggestion-lookup')?.addEventListener('click', () => openCurationSuggestionStatusDialog());
     header.querySelector('.agenda-send-curation')?.addEventListener('click', openCurationSuggestionDialog);
     count.querySelector('.agenda-send-curation')?.addEventListener('click', openCurationSuggestionDialog);

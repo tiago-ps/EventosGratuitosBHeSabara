@@ -2053,3 +2053,21 @@ body.agenda-mode.curation-mode .agenda-book-cover-warning strong {
 .agenda-curation-suggestion-success{display:grid;gap:.9rem;padding:1.2rem}
 .agenda-curation-suggestion-protocol{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:1.08em;letter-spacing:.03em}
 @media(max-width:620px){.agenda-curation-suggestion-dialog{width:calc(100% - 16px);max-height:90dvh;border-radius:14px}.agenda-curation-suggestion-card{padding:1rem}.agenda-curation-suggestion-actions>*{flex:1}.agenda-header-actions .agenda-send-curation span:last-child,.agenda-header-actions .agenda-suggestion-lookup-label{display:none}}
+
+
+.agenda-community-open{display:inline-flex;align-items:center;gap:.4rem;min-height:38px;border:1px solid var(--line);border-radius:10px;padding:.45rem .7rem;background:var(--surface);color:var(--text);font:inherit;font-weight:800;cursor:pointer}
+.agenda-community-open:hover{border-color:var(--accent)}
+.agenda-community-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem}
+.agenda-community-option{display:grid;gap:.35rem;text-align:left;border:1px solid var(--line);border-radius:12px;padding:1rem;background:var(--panel);color:var(--text);font:inherit;cursor:pointer}
+.agenda-community-option:hover{border-color:var(--accent)}
+.agenda-community-option strong{font-size:1rem}
+.agenda-community-option span{color:var(--muted);line-height:1.45}
+.agenda-community-form{gap:.9rem}
+.agenda-community-field{display:grid;gap:.4rem;font-weight:800}
+.agenda-community-field input,.agenda-community-field textarea{box-sizing:border-box;width:100%;border:1px solid var(--line);border-radius:10px;padding:.75rem;background:var(--panel);color:var(--text);font:inherit}
+.agenda-community-field textarea{resize:vertical;min-height:100px}
+.agenda-community-field-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem}
+.agenda-card-actions button.secondary,.agenda-correction-button{display:inline-flex;align-items:center;min-height:40px;padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--text);font:inherit;font-size:12px;font-weight:900;cursor:pointer}
+.agenda-card-actions button.secondary:hover,.agenda-correction-button:hover{border-color:var(--accent)}
+.agenda-curation-status-type{margin:0;color:var(--muted);font-weight:800}
+@media(max-width:620px){.agenda-community-options,.agenda-community-field-grid{grid-template-columns:1fr}.agenda-header-actions .agenda-community-open-label{display:none}}

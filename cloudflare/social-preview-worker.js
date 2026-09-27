@@ -9,7 +9,16 @@ const PUBLIC_SUGGESTION_STATUS_LABELS = {
   aproveitado: 'Aproveitada',
   descartado: 'Não aproveitada'
 };
-const SUGGESTION_ITEM_RE = /^(evento|livro|curso|concurso|filme|utilidade_publica):[^\s:][^\s]{0,260}$/u;
+const SUGGESTION_ITEM_RE = /^(evento|livro|curso|concurso|filme|utilidade_publica|atividade_lazer):[^\s:][^\s]{0,260}$/u;
+
+const CONTRIBUTION_API_PATH = '/api/contribuicoes-comunidade';
+const CONTRIBUTION_STATUS_PATH = '/api/contribuicoes-comunidade/status';
+const CONTRIBUTION_ADMIN_PATH = '/api/contribuicoes-comunidade/admin';
+const CONTRIBUTION_TYPES = new Set(['sugerir_evento', 'corrigir_informacao']);
+const CONTRIBUTION_TYPE_LABELS = {
+  sugerir_evento: 'Sugestão de evento',
+  corrigir_informacao: 'Correção de informação'
+};
 
 function suggestionCorsOrigin(request, env) {
   const origin = String(request.headers.get('origin') || '').trim();
@@ -88,7 +97,7 @@ function protocolCode() {
   return `SUG-${token.slice(0, 4)}-${token.slice(4)}`;
 }
 
-async function verifyTurnstile(token, env) {
+async function verifyTurnstile(token, env, expectedAction = 'sugerir_curadoria') {
   const secret = String(env.TURNSTILE_SECRET || '').trim();
   if (!secret) return true;
   if (!token) return false;
@@ -102,7 +111,7 @@ async function verifyTurnstile(token, env) {
   if (!response.ok) return false;
   const result = await response.json();
   if (result.success !== true) return false;
-  if (result.action && result.action !== 'sugerir_curadoria') return false;
+  if (result.action && result.action !== expectedAction) return false;
   const expectedHost = String(env.PUBLIC_HOSTNAME || '').trim().toLowerCase();
   if (expectedHost && String(result.hostname || '').toLowerCase() !== expectedHost) return false;
   return true;
@@ -324,6 +333,283 @@ async function handleSuggestionApi(request, env) {
   return null;
 }
 
+
+function contributionProtocolCode() {
+  const alphabet = '23456789ABCDEFGHJKLMNPQRSTUVWXYZ';
+  const bytes = new Uint8Array(8);
+  crypto.getRandomValues(bytes);
+  const token = [...bytes].map(value => alphabet[value % alphabet.length]).join('');
+  return `CON-${token.slice(0, 4)}-${token.slice(4)}`;
+}
+
+function normalizeShortText(value, max = 180) {
+  const text = String(value || '')
+    .replace(/[\u0000-\u001F\u007F]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+  if (text.length > max) throw new Error('campo_longo');
+  return text;
+}
+
+function normalizeOptionalUrl(value) {
+  const text = String(value || '').trim();
+  if (!text) return '';
+  let parsed;
+  try {
+    parsed = new URL(text);
+  } catch {
+    throw new Error('url_invalida');
+  }
+  if (!['http:', 'https:'].includes(parsed.protocol)) throw new Error('url_invalida');
+  if (text.length > 1200) throw new Error('url_invalida');
+  return parsed.href;
+}
+
+function normalizeContributionPayload(type, raw) {
+  const payload = raw && typeof raw === 'object' && !Array.isArray(raw) ? raw : {};
+  if (type === 'sugerir_evento') {
+    const titulo = normalizeShortText(payload.titulo, 180);
+    const cidade = normalizeShortText(payload.cidade, 120);
+    const data = normalizeShortText(payload.data, 120);
+    const link_referencia = normalizeOptionalUrl(payload.link_referencia);
+    const observacao = normalizeMessage(payload.observacao);
+    if (titulo.length < 2) throw new Error('titulo_obrigatorio');
+    if (!link_referencia && observacao.length < 10) throw new Error('referencia_obrigatoria');
+    return { titulo, cidade, data, link_referencia, observacao };
+  }
+  if (type === 'corrigir_informacao') {
+    const item_id = normalizeShortText(payload.item_id, 300);
+    const item_titulo = normalizeShortText(payload.item_titulo, 220);
+    const correcao = normalizeMessage(payload.correcao);
+    const link_referencia = normalizeOptionalUrl(payload.link_referencia);
+    if (!item_id && !item_titulo) throw new Error('item_obrigatorio');
+    if (item_id && !SUGGESTION_ITEM_RE.test(item_id)) throw new Error('item_invalido');
+    if (correcao.length < 5) throw new Error('correcao_obrigatoria');
+    return { item_id, item_titulo, correcao, link_referencia };
+  }
+  throw new Error('tipo_invalido');
+}
+
+async function contributionTableAvailable(env) {
+  if (!env.SUGESTOES_DB) return false;
+  try {
+    await env.SUGESTOES_DB.prepare('SELECT 1 FROM contribuicoes_comunidade LIMIT 1').first();
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+async function countContributionsToday(env) {
+  const row = await env.SUGESTOES_DB
+    .prepare("SELECT COUNT(*) AS total FROM contribuicoes_comunidade WHERE criado_em >= datetime('now','start of day')")
+    .first();
+  return Number(row?.total || 0);
+}
+
+async function insertCommunityContribution(env, type, payload) {
+  for (let attempt = 0; attempt < 5; attempt += 1) {
+    const protocol = contributionProtocolCode();
+    try {
+      await env.SUGESTOES_DB.prepare(
+        `INSERT INTO contribuicoes_comunidade
+          (protocolo, criado_em, status, tipo, payload_json, schema_version)
+         VALUES (?, datetime('now'), 'recebido', ?, ?, 1)`
+      ).bind(protocol, type, JSON.stringify(payload)).run();
+      return protocol;
+    } catch (error) {
+      if (!String(error?.message || error).toLowerCase().includes('unique')) throw error;
+    }
+  }
+  throw new Error('protocolo_indisponivel');
+}
+
+async function handleContributionConfig(env) {
+  return jsonResponse({
+    disponivel: await contributionTableAvailable(env),
+    turnstile_site_key: String(env.TURNSTILE_SITE_KEY || '').trim(),
+    tipos: [...CONTRIBUTION_TYPES]
+  });
+}
+
+async function handleContributionPost(request, env) {
+  if (!(await contributionTableAvailable(env))) {
+    return jsonResponse({ erro: 'O envio de contribuições está temporariamente indisponível.' }, 503);
+  }
+  const contentLength = Number(request.headers.get('content-length') || 0);
+  if (contentLength > 32 * 1024) {
+    return jsonResponse({ erro: 'A contribuição excede o limite permitido.' }, 413);
+  }
+
+  let body;
+  try {
+    body = await request.json();
+  } catch {
+    return jsonResponse({ erro: 'Contribuição inválida.' }, 400);
+  }
+
+  const type = String(body?.tipo || '').trim();
+  if (!CONTRIBUTION_TYPES.has(type)) {
+    return jsonResponse({ erro: 'Tipo de contribuição inválido.' }, 422);
+  }
+
+  let payload;
+  try {
+    payload = normalizeContributionPayload(type, body?.dados);
+  } catch (error) {
+    const code = String(error?.message || '');
+    const messages = {
+      titulo_obrigatorio: 'Informe o nome do evento.',
+      referencia_obrigatoria: 'Informe um link de referência ou explique onde a equipe pode confirmar o evento.',
+      item_obrigatorio: 'Informe qual conteúdo precisa de correção.',
+      item_invalido: 'O identificador do conteúdo está inválido.',
+      correcao_obrigatoria: 'Explique o que precisa ser corrigido.',
+      url_invalida: 'O link de referência está inválido.',
+      campo_longo: 'Um dos campos excede o limite permitido.',
+      mensagem_longa: 'O texto pode ter no máximo 1200 caracteres.'
+    };
+    return jsonResponse({ erro: messages[code] || 'Os dados enviados estão inválidos.' }, 422);
+  }
+
+  if (!(await verifyTurnstile(body?.turnstile_token, env, 'contribuir_mural'))) {
+    return jsonResponse({ erro: 'Não foi possível confirmar o envio. Tente novamente.' }, 403);
+  }
+
+  const dailyLimit = Math.max(1, Number(env.CONTRIBUICOES_DAILY_LIMIT || env.SUGESTOES_DAILY_LIMIT || 500));
+  if ((await countContributionsToday(env)) >= dailyLimit) {
+    return jsonResponse({
+      erro: 'Ficamos muito felizes por você se dispor a ajudar, mas hoje tivemos muitas contribuições e excedemos nosso limite de processamento. Não desista de nós. Volte amanhã e contribua com o projeto.',
+      codigo: 'LIMITE_DIARIO'
+    }, 429);
+  }
+
+  const protocol = await insertCommunityContribution(env, type, payload);
+  return jsonResponse({
+    ok: true,
+    protocolo: protocol,
+    tipo: type,
+    tipo_label: CONTRIBUTION_TYPE_LABELS[type],
+    mensagem: 'Contribuição enviada para análise.'
+  }, 201);
+}
+
+async function handleContributionStatus(request, env) {
+  if (!(await contributionTableAvailable(env))) {
+    return jsonResponse({ erro: 'A consulta de contribuições está temporariamente indisponível.' }, 503);
+  }
+  const url = new URL(request.url);
+  const protocol = String(url.searchParams.get('protocolo') || '').trim().toUpperCase();
+  if (!/^CON-[A-Z0-9]{4}-[A-Z0-9]{4}$/.test(protocol)) {
+    return jsonResponse({ erro: 'Protocolo não encontrado.' }, 404);
+  }
+  const row = await env.SUGESTOES_DB.prepare(
+    'SELECT protocolo, criado_em, atualizado_em, status, tipo FROM contribuicoes_comunidade WHERE protocolo = ? LIMIT 1'
+  ).bind(protocol).first();
+  if (!row) return jsonResponse({ erro: 'Protocolo não encontrado.' }, 404);
+  const status = SUGGESTION_STATUSES.has(String(row.status)) ? String(row.status) : 'recebido';
+  return jsonResponse({
+    protocolo: String(row.protocolo || protocol),
+    tipo: String(row.tipo || ''),
+    tipo_label: CONTRIBUTION_TYPE_LABELS[String(row.tipo || '')] || 'Contribuição',
+    status,
+    status_label: PUBLIC_SUGGESTION_STATUS_LABELS[status] || 'Recebida',
+    criado_em: sqliteUtcToIso(row.criado_em),
+    atualizado_em: sqliteUtcToIso(row.atualizado_em)
+  });
+}
+
+async function handleContributionAdminList(request, env) {
+  if (!(await contributionTableAvailable(env))) return jsonResponse({ erro: 'Base de contribuições não configurada.' }, 503);
+  if (!adminAuthorized(request, env)) return jsonResponse({ erro: 'Não autorizado.' }, 401);
+  const url = new URL(request.url);
+  const status = String(url.searchParams.get('status') || '').trim();
+  const type = String(url.searchParams.get('tipo') || '').trim();
+  const limit = Math.min(100, Math.max(1, Number(url.searchParams.get('limite') || 50)));
+  if (status && !SUGGESTION_STATUSES.has(status)) return jsonResponse({ erro: 'Status inválido.' }, 422);
+  if (type && !CONTRIBUTION_TYPES.has(type)) return jsonResponse({ erro: 'Tipo inválido.' }, 422);
+
+  const clauses = [];
+  const binds = [];
+  if (status) { clauses.push('status = ?'); binds.push(status); }
+  if (type) { clauses.push('tipo = ?'); binds.push(type); }
+  const where = clauses.length ? ` WHERE ${clauses.join(' AND ')}` : '';
+  const statement = env.SUGESTOES_DB.prepare(
+    `SELECT id, protocolo, criado_em, atualizado_em, status, tipo, payload_json, schema_version
+       FROM contribuicoes_comunidade${where} ORDER BY id DESC LIMIT ?`
+  ).bind(...binds, limit);
+  const result = await statement.all();
+  const contribuicoes = (result.results || []).map(row => ({
+    protocolo: row.protocolo,
+    criado_em: row.criado_em,
+    atualizado_em: row.atualizado_em || '',
+    status: row.status,
+    tipo: row.tipo,
+    tipo_label: CONTRIBUTION_TYPE_LABELS[row.tipo] || row.tipo,
+    schema_version: Number(row.schema_version || 1),
+    dados: (() => {
+      try {
+        const parsed = JSON.parse(row.payload_json || '{}');
+        return parsed && typeof parsed === 'object' && !Array.isArray(parsed) ? parsed : {};
+      } catch {
+        return {};
+      }
+    })()
+  }));
+  return jsonResponse({ contribuicoes, total: contribuicoes.length });
+}
+
+async function handleContributionAdminUpdate(request, env, protocol) {
+  if (!(await contributionTableAvailable(env))) return jsonResponse({ erro: 'Base de contribuições não configurada.' }, 503);
+  if (!adminAuthorized(request, env)) return jsonResponse({ erro: 'Não autorizado.' }, 401);
+  let body;
+  try {
+    body = await request.json();
+  } catch {
+    return jsonResponse({ erro: 'Solicitação inválida.' }, 400);
+  }
+  const status = String(body?.status || '').trim();
+  if (!SUGGESTION_STATUSES.has(status)) return jsonResponse({ erro: 'Status inválido.' }, 422);
+  const result = await env.SUGESTOES_DB.prepare(
+    "UPDATE contribuicoes_comunidade SET status = ?, atualizado_em = datetime('now') WHERE protocolo = ?"
+  ).bind(status, protocol).run();
+  if (!Number(result.meta?.changes || 0)) return jsonResponse({ erro: 'Contribuição não encontrada.' }, 404);
+  return jsonResponse({ ok: true, protocolo: protocol, status });
+}
+
+async function handleCommunityContributionApi(request, env) {
+  const url = new URL(request.url);
+  const publicApi = url.pathname === CONTRIBUTION_API_PATH
+    || url.pathname === `${CONTRIBUTION_API_PATH}/config`
+    || url.pathname === CONTRIBUTION_STATUS_PATH;
+
+  if (publicApi && request.method === 'OPTIONS') {
+    return withSuggestionCors(request, env, new Response(null, {
+      status: 204,
+      headers: {'cache-control': 'no-store'}
+    }));
+  }
+  if (url.pathname === `${CONTRIBUTION_API_PATH}/config` && request.method === 'GET') {
+    return withSuggestionCors(request, env, await handleContributionConfig(env));
+  }
+  if (url.pathname === CONTRIBUTION_STATUS_PATH && request.method === 'GET') {
+    return withSuggestionCors(request, env, await handleContributionStatus(request, env));
+  }
+  if (url.pathname === CONTRIBUTION_API_PATH && request.method === 'POST') {
+    return withSuggestionCors(request, env, await handleContributionPost(request, env));
+  }
+  if (url.pathname === CONTRIBUTION_ADMIN_PATH && request.method === 'GET') {
+    return handleContributionAdminList(request, env);
+  }
+  if (url.pathname.startsWith(`${CONTRIBUTION_ADMIN_PATH}/`) && request.method === 'PATCH') {
+    const protocol = decodeURIComponent(url.pathname.slice(CONTRIBUTION_ADMIN_PATH.length + 1));
+    if (!/^CON-[A-Z0-9]{4}-[A-Z0-9]{4}$/.test(protocol)) {
+      return jsonResponse({ erro: 'Protocolo inválido.' }, 422);
+    }
+    return handleContributionAdminUpdate(request, env, protocol);
+  }
+  return null;
+}
+
 const CONFIG_URL =
   'https://bibliotecaifmgsabara.github.io/MuralCultural/curadorias/compartilhamento.json';
 
@@ -423,6 +709,9 @@ function rewriteHtml(response, meta) {
 
 export default {
   async fetch(request, env) {
+    const contributionResponse = await handleCommunityContributionApi(request, env);
+    if (contributionResponse) return contributionResponse;
+
     const apiResponse = await handleSuggestionApi(request, env);
     if (apiResponse) return apiResponse;
 
