@@ -1032,6 +1032,2993 @@
         "nova lima",
         "dança"
       ]
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "radar-oficial-pbh",
+      "site_only": true,
+      "id": "atividade:pbh:tai-chi:academia-da-cidade-amilcar-viana",
+      "programa_id": "pbh:tai-chi-chuan",
+      "titulo": "Tai Chi Chuan · Academia da Cidade Amílcar Viana",
+      "categoria": "pratica_integrativa",
+      "modalidades": [
+        "Tai Chi Chuan"
+      ],
+      "formato": "aula_orientada",
+      "descricao": "Aulas gratuitas de Tai Chi Chuan oferecidas pelo SUS-BH, conduzidas por profissionais de educação física capacitados.",
+      "publicos_alvo": [
+        "População em geral"
+      ],
+      "abrangencia": {
+        "cidade": "Belo Horizonte",
+        "uf": "MG",
+        "regional": "Oeste",
+        "bairros": [
+          "Cinquentenário"
+        ]
+      },
+      "local": {
+        "nome": "Academia da Cidade Amílcar Viana",
+        "endereco": "R. Nelson de Senna, 120",
+        "bairro": "Cinquentenário",
+        "cidade": "Belo Horizonte",
+        "uf": "MG"
+      },
+      "agenda": {
+        "temporalidade": "recorrente",
+        "dias_semana": [
+          "terca",
+          "quinta"
+        ],
+        "horarios": [
+          "16:10"
+        ],
+        "duracao_minutos": null,
+        "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "participacao": {
+        "inscricao": "consultar_local",
+        "vagas_limitadas": false,
+        "como_participar": "Consulte o Centro de Saúde de referência ou o telefone 156 para confirmar a forma de participação.",
+        "url_inscricao": "",
+        "documentos_necessarios": []
+      },
+      "organizador": {
+        "nome": "Prefeitura de Belo Horizonte · SUS-BH",
+        "contato": "156"
+      },
+      "fontes": [
+        {
+          "id": "pbh-tai-chi",
+          "nome": "Prefeitura de Belo Horizonte",
+          "url": "https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/promocao-da-saude/tai-chi-chuan",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "confirmado",
+        "revalidar_apos_dias": 14
+      },
+      "icone": "☯️",
+      "temas": [
+        "Saúde",
+        "Bem-estar",
+        "Atividade física"
+      ],
+      "termos_busca": [
+        "tai chi",
+        "tai chi chuan",
+        "Oeste",
+        "Cinquentenário",
+        "Academia da Cidade Amílcar Viana"
+      ],
+      "atualizacao": {
+        "modo": "hibrida",
+        "periodicidade": "semanal",
+        "coletor": "scripts/coletar_atividades_lazer_pbh.py",
+        "campos_atualizaveis": [
+          "agenda.dias_semana",
+          "agenda.horarios",
+          "local.nome",
+          "local.endereco",
+          "local.bairro",
+          "verificacao.ultima_verificacao",
+          "verificacao.status"
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "radar-oficial-pbh",
+      "site_only": true,
+      "id": "atividade:pbh:tai-chi:academia-da-cidade-ciame",
+      "programa_id": "pbh:tai-chi-chuan",
+      "titulo": "Tai Chi Chuan · Academia da Cidade CIAME",
+      "categoria": "pratica_integrativa",
+      "modalidades": [
+        "Tai Chi Chuan"
+      ],
+      "formato": "aula_orientada",
+      "descricao": "Aulas gratuitas de Tai Chi Chuan oferecidas pelo SUS-BH, conduzidas por profissionais de educação física capacitados.",
+      "publicos_alvo": [
+        "População em geral"
+      ],
+      "abrangencia": {
+        "cidade": "Belo Horizonte",
+        "uf": "MG",
+        "regional": "Noroeste",
+        "bairros": [
+          "Pindorama"
+        ]
+      },
+      "local": {
+        "nome": "Academia da Cidade CIAME",
+        "endereco": "R. Guararapes, 1810",
+        "bairro": "Pindorama",
+        "cidade": "Belo Horizonte",
+        "uf": "MG"
+      },
+      "agenda": {
+        "temporalidade": "recorrente",
+        "dias_semana": [
+          "sexta"
+        ],
+        "horarios": [
+          "10:20"
+        ],
+        "duracao_minutos": null,
+        "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "participacao": {
+        "inscricao": "consultar_local",
+        "vagas_limitadas": false,
+        "como_participar": "Consulte o Centro de Saúde de referência ou o telefone 156 para confirmar a forma de participação.",
+        "url_inscricao": "",
+        "documentos_necessarios": []
+      },
+      "organizador": {
+        "nome": "Prefeitura de Belo Horizonte · SUS-BH",
+        "contato": "156"
+      },
+      "fontes": [
+        {
+          "id": "pbh-tai-chi",
+          "nome": "Prefeitura de Belo Horizonte",
+          "url": "https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/promocao-da-saude/tai-chi-chuan",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "confirmado",
+        "revalidar_apos_dias": 14
+      },
+      "icone": "☯️",
+      "temas": [
+        "Saúde",
+        "Bem-estar",
+        "Atividade física"
+      ],
+      "termos_busca": [
+        "tai chi",
+        "tai chi chuan",
+        "Noroeste",
+        "Pindorama",
+        "Academia da Cidade CIAME"
+      ],
+      "atualizacao": {
+        "modo": "hibrida",
+        "periodicidade": "semanal",
+        "coletor": "scripts/coletar_atividades_lazer_pbh.py",
+        "campos_atualizaveis": [
+          "agenda.dias_semana",
+          "agenda.horarios",
+          "local.nome",
+          "local.endereco",
+          "local.bairro",
+          "verificacao.ultima_verificacao",
+          "verificacao.status"
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "radar-oficial-pbh",
+      "site_only": true,
+      "id": "atividade:pbh:tai-chi:academia-da-cidade-conjunto-betania",
+      "programa_id": "pbh:tai-chi-chuan",
+      "titulo": "Tai Chi Chuan · Academia da Cidade Conjunto Betânia",
+      "categoria": "pratica_integrativa",
+      "modalidades": [
+        "Tai Chi Chuan"
+      ],
+      "formato": "aula_orientada",
+      "descricao": "Aulas gratuitas de Tai Chi Chuan oferecidas pelo SUS-BH, conduzidas por profissionais de educação física capacitados.",
+      "publicos_alvo": [
+        "População em geral"
+      ],
+      "abrangencia": {
+        "cidade": "Belo Horizonte",
+        "uf": "MG",
+        "regional": "Oeste",
+        "bairros": [
+          "Conjunto Betânia"
+        ]
+      },
+      "local": {
+        "nome": "Academia da Cidade Conjunto Betânia",
+        "endereco": "R. Onã,105",
+        "bairro": "Conjunto Betânia",
+        "cidade": "Belo Horizonte",
+        "uf": "MG"
+      },
+      "agenda": {
+        "temporalidade": "recorrente",
+        "dias_semana": [
+          "terca",
+          "quinta"
+        ],
+        "horarios": [
+          "16:00"
+        ],
+        "duracao_minutos": null,
+        "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "participacao": {
+        "inscricao": "consultar_local",
+        "vagas_limitadas": false,
+        "como_participar": "Consulte o Centro de Saúde de referência ou o telefone 156 para confirmar a forma de participação.",
+        "url_inscricao": "",
+        "documentos_necessarios": []
+      },
+      "organizador": {
+        "nome": "Prefeitura de Belo Horizonte · SUS-BH",
+        "contato": "156"
+      },
+      "fontes": [
+        {
+          "id": "pbh-tai-chi",
+          "nome": "Prefeitura de Belo Horizonte",
+          "url": "https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/promocao-da-saude/tai-chi-chuan",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "confirmado",
+        "revalidar_apos_dias": 14
+      },
+      "icone": "☯️",
+      "temas": [
+        "Saúde",
+        "Bem-estar",
+        "Atividade física"
+      ],
+      "termos_busca": [
+        "tai chi",
+        "tai chi chuan",
+        "Oeste",
+        "Conjunto Betânia",
+        "Academia da Cidade Conjunto Betânia"
+      ],
+      "atualizacao": {
+        "modo": "hibrida",
+        "periodicidade": "semanal",
+        "coletor": "scripts/coletar_atividades_lazer_pbh.py",
+        "campos_atualizaveis": [
+          "agenda.dias_semana",
+          "agenda.horarios",
+          "local.nome",
+          "local.endereco",
+          "local.bairro",
+          "verificacao.ultima_verificacao",
+          "verificacao.status"
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "radar-oficial-pbh",
+      "site_only": true,
+      "id": "atividade:pbh:tai-chi:academia-da-cidade-cras-ventosa",
+      "programa_id": "pbh:tai-chi-chuan",
+      "titulo": "Tai Chi Chuan · Academia da Cidade / CRAS Ventosa",
+      "categoria": "pratica_integrativa",
+      "modalidades": [
+        "Tai Chi Chuan"
+      ],
+      "formato": "aula_orientada",
+      "descricao": "Aulas gratuitas de Tai Chi Chuan oferecidas pelo SUS-BH, conduzidas por profissionais de educação física capacitados.",
+      "publicos_alvo": [
+        "População em geral"
+      ],
+      "abrangencia": {
+        "cidade": "Belo Horizonte",
+        "uf": "MG",
+        "regional": "Oeste",
+        "bairros": [
+          "Havaí"
+        ]
+      },
+      "local": {
+        "nome": "Academia da Cidade / CRAS Ventosa",
+        "endereco": "R. Dona Nicolina de Lima, 316",
+        "bairro": "Havaí",
+        "cidade": "Belo Horizonte",
+        "uf": "MG"
+      },
+      "agenda": {
+        "temporalidade": "recorrente",
+        "dias_semana": [
+          "segunda",
+          "quarta",
+          "sexta"
+        ],
+        "horarios": [
+          "10:00"
+        ],
+        "duracao_minutos": null,
+        "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "participacao": {
+        "inscricao": "consultar_local",
+        "vagas_limitadas": false,
+        "como_participar": "Consulte o Centro de Saúde de referência ou o telefone 156 para confirmar a forma de participação.",
+        "url_inscricao": "",
+        "documentos_necessarios": []
+      },
+      "organizador": {
+        "nome": "Prefeitura de Belo Horizonte · SUS-BH",
+        "contato": "156"
+      },
+      "fontes": [
+        {
+          "id": "pbh-tai-chi",
+          "nome": "Prefeitura de Belo Horizonte",
+          "url": "https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/promocao-da-saude/tai-chi-chuan",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "confirmado",
+        "revalidar_apos_dias": 14
+      },
+      "icone": "☯️",
+      "temas": [
+        "Saúde",
+        "Bem-estar",
+        "Atividade física"
+      ],
+      "termos_busca": [
+        "tai chi",
+        "tai chi chuan",
+        "Oeste",
+        "Havaí",
+        "Academia da Cidade / CRAS Ventosa"
+      ],
+      "atualizacao": {
+        "modo": "hibrida",
+        "periodicidade": "semanal",
+        "coletor": "scripts/coletar_atividades_lazer_pbh.py",
+        "campos_atualizaveis": [
+          "agenda.dias_semana",
+          "agenda.horarios",
+          "local.nome",
+          "local.endereco",
+          "local.bairro",
+          "verificacao.ultima_verificacao",
+          "verificacao.status"
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "radar-oficial-pbh",
+      "site_only": true,
+      "id": "atividade:pbh:tai-chi:academia-da-cidade-goiania",
+      "programa_id": "pbh:tai-chi-chuan",
+      "titulo": "Tai Chi Chuan · Academia da Cidade Goiânia",
+      "categoria": "pratica_integrativa",
+      "modalidades": [
+        "Tai Chi Chuan"
+      ],
+      "formato": "aula_orientada",
+      "descricao": "Aulas gratuitas de Tai Chi Chuan oferecidas pelo SUS-BH, conduzidas por profissionais de educação física capacitados.",
+      "publicos_alvo": [
+        "População em geral"
+      ],
+      "abrangencia": {
+        "cidade": "Belo Horizonte",
+        "uf": "MG",
+        "regional": "Nordeste",
+        "bairros": [
+          "Goiânia"
+        ]
+      },
+      "local": {
+        "nome": "Academia da Cidade Goiânia",
+        "endereco": "R. Tiziu, 175",
+        "bairro": "Goiânia",
+        "cidade": "Belo Horizonte",
+        "uf": "MG"
+      },
+      "agenda": {
+        "temporalidade": "recorrente",
+        "dias_semana": [
+          "quarta"
+        ],
+        "horarios": [
+          "14:30"
+        ],
+        "duracao_minutos": null,
+        "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "participacao": {
+        "inscricao": "consultar_local",
+        "vagas_limitadas": false,
+        "como_participar": "Consulte o Centro de Saúde de referência ou o telefone 156 para confirmar a forma de participação.",
+        "url_inscricao": "",
+        "documentos_necessarios": []
+      },
+      "organizador": {
+        "nome": "Prefeitura de Belo Horizonte · SUS-BH",
+        "contato": "156"
+      },
+      "fontes": [
+        {
+          "id": "pbh-tai-chi",
+          "nome": "Prefeitura de Belo Horizonte",
+          "url": "https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/promocao-da-saude/tai-chi-chuan",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "confirmado",
+        "revalidar_apos_dias": 14
+      },
+      "icone": "☯️",
+      "temas": [
+        "Saúde",
+        "Bem-estar",
+        "Atividade física"
+      ],
+      "termos_busca": [
+        "tai chi",
+        "tai chi chuan",
+        "Nordeste",
+        "Goiânia",
+        "Academia da Cidade Goiânia"
+      ],
+      "atualizacao": {
+        "modo": "hibrida",
+        "periodicidade": "semanal",
+        "coletor": "scripts/coletar_atividades_lazer_pbh.py",
+        "campos_atualizaveis": [
+          "agenda.dias_semana",
+          "agenda.horarios",
+          "local.nome",
+          "local.endereco",
+          "local.bairro",
+          "verificacao.ultima_verificacao",
+          "verificacao.status"
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "radar-oficial-pbh",
+      "site_only": true,
+      "id": "atividade:pbh:tai-chi:academia-da-cidade-jardim-vitoria",
+      "programa_id": "pbh:tai-chi-chuan",
+      "titulo": "Tai Chi Chuan · Academia da Cidade Jardim Vitória",
+      "categoria": "pratica_integrativa",
+      "modalidades": [
+        "Tai Chi Chuan"
+      ],
+      "formato": "aula_orientada",
+      "descricao": "Aulas gratuitas de Tai Chi Chuan oferecidas pelo SUS-BH, conduzidas por profissionais de educação física capacitados.",
+      "publicos_alvo": [
+        "População em geral"
+      ],
+      "abrangencia": {
+        "cidade": "Belo Horizonte",
+        "uf": "MG",
+        "regional": "Nordeste",
+        "bairros": [
+          "Jardim Vitória"
+        ]
+      },
+      "local": {
+        "nome": "Academia da Cidade Jardim Vitória",
+        "endereco": "R. Henriqueta Lisboa, 99",
+        "bairro": "Jardim Vitória",
+        "cidade": "Belo Horizonte",
+        "uf": "MG"
+      },
+      "agenda": {
+        "temporalidade": "recorrente",
+        "dias_semana": [
+          "quarta"
+        ],
+        "horarios": [
+          "10:00"
+        ],
+        "duracao_minutos": null,
+        "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "participacao": {
+        "inscricao": "consultar_local",
+        "vagas_limitadas": false,
+        "como_participar": "Consulte o Centro de Saúde de referência ou o telefone 156 para confirmar a forma de participação.",
+        "url_inscricao": "",
+        "documentos_necessarios": []
+      },
+      "organizador": {
+        "nome": "Prefeitura de Belo Horizonte · SUS-BH",
+        "contato": "156"
+      },
+      "fontes": [
+        {
+          "id": "pbh-tai-chi",
+          "nome": "Prefeitura de Belo Horizonte",
+          "url": "https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/promocao-da-saude/tai-chi-chuan",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "confirmado",
+        "revalidar_apos_dias": 14
+      },
+      "icone": "☯️",
+      "temas": [
+        "Saúde",
+        "Bem-estar",
+        "Atividade física"
+      ],
+      "termos_busca": [
+        "tai chi",
+        "tai chi chuan",
+        "Nordeste",
+        "Jardim Vitória",
+        "Academia da Cidade Jardim Vitória"
+      ],
+      "atualizacao": {
+        "modo": "hibrida",
+        "periodicidade": "semanal",
+        "coletor": "scripts/coletar_atividades_lazer_pbh.py",
+        "campos_atualizaveis": [
+          "agenda.dias_semana",
+          "agenda.horarios",
+          "local.nome",
+          "local.endereco",
+          "local.bairro",
+          "verificacao.ultima_verificacao",
+          "verificacao.status"
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "radar-oficial-pbh",
+      "site_only": true,
+      "id": "atividade:pbh:tai-chi:academia-da-cidade-palmeiras",
+      "programa_id": "pbh:tai-chi-chuan",
+      "titulo": "Tai Chi Chuan · Academia da Cidade Palmeiras",
+      "categoria": "pratica_integrativa",
+      "modalidades": [
+        "Tai Chi Chuan"
+      ],
+      "formato": "aula_orientada",
+      "descricao": "Aulas gratuitas de Tai Chi Chuan oferecidas pelo SUS-BH, conduzidas por profissionais de educação física capacitados.",
+      "publicos_alvo": [
+        "População em geral"
+      ],
+      "abrangencia": {
+        "cidade": "Belo Horizonte",
+        "uf": "MG",
+        "regional": "Oeste",
+        "bairros": [
+          "Cinquentenário"
+        ]
+      },
+      "local": {
+        "nome": "Academia da Cidade Palmeiras",
+        "endereco": "Paróquia São Judas Tadeu/Palmeiras",
+        "bairro": "Cinquentenário",
+        "cidade": "Belo Horizonte",
+        "uf": "MG"
+      },
+      "agenda": {
+        "temporalidade": "recorrente",
+        "dias_semana": [
+          "quarta"
+        ],
+        "horarios": [
+          "14:00"
+        ],
+        "duracao_minutos": null,
+        "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "participacao": {
+        "inscricao": "consultar_local",
+        "vagas_limitadas": false,
+        "como_participar": "Consulte o Centro de Saúde de referência ou o telefone 156 para confirmar a forma de participação.",
+        "url_inscricao": "",
+        "documentos_necessarios": []
+      },
+      "organizador": {
+        "nome": "Prefeitura de Belo Horizonte · SUS-BH",
+        "contato": "156"
+      },
+      "fontes": [
+        {
+          "id": "pbh-tai-chi",
+          "nome": "Prefeitura de Belo Horizonte",
+          "url": "https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/promocao-da-saude/tai-chi-chuan",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "confirmado",
+        "revalidar_apos_dias": 14
+      },
+      "icone": "☯️",
+      "temas": [
+        "Saúde",
+        "Bem-estar",
+        "Atividade física"
+      ],
+      "termos_busca": [
+        "tai chi",
+        "tai chi chuan",
+        "Oeste",
+        "Cinquentenário",
+        "Academia da Cidade Palmeiras"
+      ],
+      "atualizacao": {
+        "modo": "hibrida",
+        "periodicidade": "semanal",
+        "coletor": "scripts/coletar_atividades_lazer_pbh.py",
+        "campos_atualizaveis": [
+          "agenda.dias_semana",
+          "agenda.horarios",
+          "local.nome",
+          "local.endereco",
+          "local.bairro",
+          "verificacao.ultima_verificacao",
+          "verificacao.status"
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "radar-oficial-pbh",
+      "site_only": true,
+      "id": "atividade:pbh:tai-chi:academia-da-cidade-risoleta-neves",
+      "programa_id": "pbh:tai-chi-chuan",
+      "titulo": "Tai Chi Chuan · Academia da Cidade Risoleta Neves",
+      "categoria": "pratica_integrativa",
+      "modalidades": [
+        "Tai Chi Chuan"
+      ],
+      "formato": "aula_orientada",
+      "descricao": "Aulas gratuitas de Tai Chi Chuan oferecidas pelo SUS-BH, conduzidas por profissionais de educação física capacitados.",
+      "publicos_alvo": [
+        "População em geral"
+      ],
+      "abrangencia": {
+        "cidade": "Belo Horizonte",
+        "uf": "MG",
+        "regional": "Venda Nova",
+        "bairros": [
+          "Vila Clóris"
+        ]
+      },
+      "local": {
+        "nome": "Academia da Cidade Risoleta Neves",
+        "endereco": "R. das Gabirobas, 1",
+        "bairro": "Vila Clóris",
+        "cidade": "Belo Horizonte",
+        "uf": "MG"
+      },
+      "agenda": {
+        "temporalidade": "recorrente",
+        "dias_semana": [
+          "quinta"
+        ],
+        "horarios": [
+          "14:00"
+        ],
+        "duracao_minutos": null,
+        "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "participacao": {
+        "inscricao": "consultar_local",
+        "vagas_limitadas": false,
+        "como_participar": "Consulte o Centro de Saúde de referência ou o telefone 156 para confirmar a forma de participação.",
+        "url_inscricao": "",
+        "documentos_necessarios": []
+      },
+      "organizador": {
+        "nome": "Prefeitura de Belo Horizonte · SUS-BH",
+        "contato": "156"
+      },
+      "fontes": [
+        {
+          "id": "pbh-tai-chi",
+          "nome": "Prefeitura de Belo Horizonte",
+          "url": "https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/promocao-da-saude/tai-chi-chuan",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "confirmado",
+        "revalidar_apos_dias": 14
+      },
+      "icone": "☯️",
+      "temas": [
+        "Saúde",
+        "Bem-estar",
+        "Atividade física"
+      ],
+      "termos_busca": [
+        "tai chi",
+        "tai chi chuan",
+        "Venda Nova",
+        "Vila Clóris",
+        "Academia da Cidade Risoleta Neves"
+      ],
+      "atualizacao": {
+        "modo": "hibrida",
+        "periodicidade": "semanal",
+        "coletor": "scripts/coletar_atividades_lazer_pbh.py",
+        "campos_atualizaveis": [
+          "agenda.dias_semana",
+          "agenda.horarios",
+          "local.nome",
+          "local.endereco",
+          "local.bairro",
+          "verificacao.ultima_verificacao",
+          "verificacao.status"
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "radar-oficial-pbh",
+      "site_only": true,
+      "id": "atividade:pbh:tai-chi:academia-da-cidade-santa-monica",
+      "programa_id": "pbh:tai-chi-chuan",
+      "titulo": "Tai Chi Chuan · Academia da Cidade Santa Mônica",
+      "categoria": "pratica_integrativa",
+      "modalidades": [
+        "Tai Chi Chuan"
+      ],
+      "formato": "aula_orientada",
+      "descricao": "Aulas gratuitas de Tai Chi Chuan oferecidas pelo SUS-BH, conduzidas por profissionais de educação física capacitados.",
+      "publicos_alvo": [
+        "População em geral"
+      ],
+      "abrangencia": {
+        "cidade": "Belo Horizonte",
+        "uf": "MG",
+        "regional": "Venda Nova",
+        "bairros": [
+          "Santa Mônica"
+        ]
+      },
+      "local": {
+        "nome": "Academia da Cidade Santa Mônica",
+        "endereco": "R. dos Canoeiros, 320",
+        "bairro": "Santa Mônica",
+        "cidade": "Belo Horizonte",
+        "uf": "MG"
+      },
+      "agenda": {
+        "temporalidade": "recorrente",
+        "dias_semana": [
+          "terca",
+          "quinta"
+        ],
+        "horarios": [
+          "14:00"
+        ],
+        "duracao_minutos": null,
+        "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "participacao": {
+        "inscricao": "consultar_local",
+        "vagas_limitadas": false,
+        "como_participar": "Consulte o Centro de Saúde de referência ou o telefone 156 para confirmar a forma de participação.",
+        "url_inscricao": "",
+        "documentos_necessarios": []
+      },
+      "organizador": {
+        "nome": "Prefeitura de Belo Horizonte · SUS-BH",
+        "contato": "156"
+      },
+      "fontes": [
+        {
+          "id": "pbh-tai-chi",
+          "nome": "Prefeitura de Belo Horizonte",
+          "url": "https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/promocao-da-saude/tai-chi-chuan",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "confirmado",
+        "revalidar_apos_dias": 14
+      },
+      "icone": "☯️",
+      "temas": [
+        "Saúde",
+        "Bem-estar",
+        "Atividade física"
+      ],
+      "termos_busca": [
+        "tai chi",
+        "tai chi chuan",
+        "Venda Nova",
+        "Santa Mônica",
+        "Academia da Cidade Santa Mônica"
+      ],
+      "atualizacao": {
+        "modo": "hibrida",
+        "periodicidade": "semanal",
+        "coletor": "scripts/coletar_atividades_lazer_pbh.py",
+        "campos_atualizaveis": [
+          "agenda.dias_semana",
+          "agenda.horarios",
+          "local.nome",
+          "local.endereco",
+          "local.bairro",
+          "verificacao.ultima_verificacao",
+          "verificacao.status"
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "radar-oficial-pbh",
+      "site_only": true,
+      "id": "atividade:pbh:tai-chi:academia-da-cidade-sao-bernardo",
+      "programa_id": "pbh:tai-chi-chuan",
+      "titulo": "Tai Chi Chuan · Academia da Cidade São Bernardo",
+      "categoria": "pratica_integrativa",
+      "modalidades": [
+        "Tai Chi Chuan"
+      ],
+      "formato": "aula_orientada",
+      "descricao": "Aulas gratuitas de Tai Chi Chuan oferecidas pelo SUS-BH, conduzidas por profissionais de educação física capacitados.",
+      "publicos_alvo": [
+        "População em geral"
+      ],
+      "abrangencia": {
+        "cidade": "Belo Horizonte",
+        "uf": "MG",
+        "regional": "Norte",
+        "bairros": [
+          "São Bernardo"
+        ]
+      },
+      "local": {
+        "nome": "Academia da Cidade São Bernardo",
+        "endereco": "Av. Maria Amélia Maia, 270",
+        "bairro": "São Bernardo",
+        "cidade": "Belo Horizonte",
+        "uf": "MG"
+      },
+      "agenda": {
+        "temporalidade": "recorrente",
+        "dias_semana": [
+          "terca"
+        ],
+        "horarios": [
+          "20:20"
+        ],
+        "duracao_minutos": null,
+        "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "participacao": {
+        "inscricao": "consultar_local",
+        "vagas_limitadas": false,
+        "como_participar": "Consulte o Centro de Saúde de referência ou o telefone 156 para confirmar a forma de participação.",
+        "url_inscricao": "",
+        "documentos_necessarios": []
+      },
+      "organizador": {
+        "nome": "Prefeitura de Belo Horizonte · SUS-BH",
+        "contato": "156"
+      },
+      "fontes": [
+        {
+          "id": "pbh-tai-chi",
+          "nome": "Prefeitura de Belo Horizonte",
+          "url": "https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/promocao-da-saude/tai-chi-chuan",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "confirmado",
+        "revalidar_apos_dias": 14
+      },
+      "icone": "☯️",
+      "temas": [
+        "Saúde",
+        "Bem-estar",
+        "Atividade física"
+      ],
+      "termos_busca": [
+        "tai chi",
+        "tai chi chuan",
+        "Norte",
+        "São Bernardo",
+        "Academia da Cidade São Bernardo"
+      ],
+      "atualizacao": {
+        "modo": "hibrida",
+        "periodicidade": "semanal",
+        "coletor": "scripts/coletar_atividades_lazer_pbh.py",
+        "campos_atualizaveis": [
+          "agenda.dias_semana",
+          "agenda.horarios",
+          "local.nome",
+          "local.endereco",
+          "local.bairro",
+          "verificacao.ultima_verificacao",
+          "verificacao.status"
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "radar-oficial-pbh",
+      "site_only": true,
+      "id": "atividade:pbh:tai-chi:academia-da-cidade-via-240",
+      "programa_id": "pbh:tai-chi-chuan",
+      "titulo": "Tai Chi Chuan · Academia da Cidade Via 240",
+      "categoria": "pratica_integrativa",
+      "modalidades": [
+        "Tai Chi Chuan"
+      ],
+      "formato": "aula_orientada",
+      "descricao": "Aulas gratuitas de Tai Chi Chuan oferecidas pelo SUS-BH, conduzidas por profissionais de educação física capacitados.",
+      "publicos_alvo": [
+        "População em geral"
+      ],
+      "abrangencia": {
+        "cidade": "Belo Horizonte",
+        "uf": "MG",
+        "regional": "Norte",
+        "bairros": [
+          "Novo Aarão Reis"
+        ]
+      },
+      "local": {
+        "nome": "Academia da Cidade Via 240",
+        "endereco": "Av. Risoleta Neves, 347",
+        "bairro": "Novo Aarão Reis",
+        "cidade": "Belo Horizonte",
+        "uf": "MG"
+      },
+      "agenda": {
+        "temporalidade": "recorrente",
+        "dias_semana": [
+          "quarta"
+        ],
+        "horarios": [
+          "16:00"
+        ],
+        "duracao_minutos": null,
+        "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "participacao": {
+        "inscricao": "consultar_local",
+        "vagas_limitadas": false,
+        "como_participar": "Consulte o Centro de Saúde de referência ou o telefone 156 para confirmar a forma de participação.",
+        "url_inscricao": "",
+        "documentos_necessarios": []
+      },
+      "organizador": {
+        "nome": "Prefeitura de Belo Horizonte · SUS-BH",
+        "contato": "156"
+      },
+      "fontes": [
+        {
+          "id": "pbh-tai-chi",
+          "nome": "Prefeitura de Belo Horizonte",
+          "url": "https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/promocao-da-saude/tai-chi-chuan",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "confirmado",
+        "revalidar_apos_dias": 14
+      },
+      "icone": "☯️",
+      "temas": [
+        "Saúde",
+        "Bem-estar",
+        "Atividade física"
+      ],
+      "termos_busca": [
+        "tai chi",
+        "tai chi chuan",
+        "Norte",
+        "Novo Aarão Reis",
+        "Academia da Cidade Via 240"
+      ],
+      "atualizacao": {
+        "modo": "hibrida",
+        "periodicidade": "semanal",
+        "coletor": "scripts/coletar_atividades_lazer_pbh.py",
+        "campos_atualizaveis": [
+          "agenda.dias_semana",
+          "agenda.horarios",
+          "local.nome",
+          "local.endereco",
+          "local.bairro",
+          "verificacao.ultima_verificacao",
+          "verificacao.status"
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "radar-oficial-pbh",
+      "site_only": true,
+      "id": "atividade:pbh:tai-chi:academia-da-cidade-vila-biquinhas",
+      "programa_id": "pbh:tai-chi-chuan",
+      "titulo": "Tai Chi Chuan · Academia da Cidade Vila Biquinhas",
+      "categoria": "pratica_integrativa",
+      "modalidades": [
+        "Tai Chi Chuan"
+      ],
+      "formato": "aula_orientada",
+      "descricao": "Aulas gratuitas de Tai Chi Chuan oferecidas pelo SUS-BH, conduzidas por profissionais de educação física capacitados.",
+      "publicos_alvo": [
+        "População em geral"
+      ],
+      "abrangencia": {
+        "cidade": "Belo Horizonte",
+        "uf": "MG",
+        "regional": "Norte",
+        "bairros": [
+          "Heliópólis"
+        ]
+      },
+      "local": {
+        "nome": "Academia da Cidade Vila Biquinhas",
+        "endereco": "R. Coronel Joaquim Tibúrcio, 850",
+        "bairro": "Heliópólis",
+        "cidade": "Belo Horizonte",
+        "uf": "MG"
+      },
+      "agenda": {
+        "temporalidade": "recorrente",
+        "dias_semana": [
+          "terca",
+          "quinta"
+        ],
+        "horarios": [
+          "19:10"
+        ],
+        "duracao_minutos": null,
+        "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "participacao": {
+        "inscricao": "consultar_local",
+        "vagas_limitadas": false,
+        "como_participar": "Consulte o Centro de Saúde de referência ou o telefone 156 para confirmar a forma de participação.",
+        "url_inscricao": "",
+        "documentos_necessarios": []
+      },
+      "organizador": {
+        "nome": "Prefeitura de Belo Horizonte · SUS-BH",
+        "contato": "156"
+      },
+      "fontes": [
+        {
+          "id": "pbh-tai-chi",
+          "nome": "Prefeitura de Belo Horizonte",
+          "url": "https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/promocao-da-saude/tai-chi-chuan",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "confirmado",
+        "revalidar_apos_dias": 14
+      },
+      "icone": "☯️",
+      "temas": [
+        "Saúde",
+        "Bem-estar",
+        "Atividade física"
+      ],
+      "termos_busca": [
+        "tai chi",
+        "tai chi chuan",
+        "Norte",
+        "Heliópólis",
+        "Academia da Cidade Vila Biquinhas"
+      ],
+      "atualizacao": {
+        "modo": "hibrida",
+        "periodicidade": "semanal",
+        "coletor": "scripts/coletar_atividades_lazer_pbh.py",
+        "campos_atualizaveis": [
+          "agenda.dias_semana",
+          "agenda.horarios",
+          "local.nome",
+          "local.endereco",
+          "local.bairro",
+          "verificacao.ultima_verificacao",
+          "verificacao.status"
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "radar-oficial-pbh",
+      "site_only": true,
+      "id": "atividade:pbh:tai-chi:academia-da-cidade-zilah-sposito",
+      "programa_id": "pbh:tai-chi-chuan",
+      "titulo": "Tai Chi Chuan · Academia da Cidade Ziláh Spósito",
+      "categoria": "pratica_integrativa",
+      "modalidades": [
+        "Tai Chi Chuan"
+      ],
+      "formato": "aula_orientada",
+      "descricao": "Aulas gratuitas de Tai Chi Chuan oferecidas pelo SUS-BH, conduzidas por profissionais de educação física capacitados.",
+      "publicos_alvo": [
+        "População em geral"
+      ],
+      "abrangencia": {
+        "cidade": "Belo Horizonte",
+        "uf": "MG",
+        "regional": "Norte",
+        "bairros": [
+          "Ziláh Spósito"
+        ]
+      },
+      "local": {
+        "nome": "Academia da Cidade Ziláh Spósito",
+        "endereco": "R. Coquilio, 75",
+        "bairro": "Ziláh Spósito",
+        "cidade": "Belo Horizonte",
+        "uf": "MG"
+      },
+      "agenda": {
+        "temporalidade": "recorrente",
+        "dias_semana": [
+          "terca"
+        ],
+        "horarios": [
+          "17:00"
+        ],
+        "duracao_minutos": null,
+        "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "participacao": {
+        "inscricao": "consultar_local",
+        "vagas_limitadas": false,
+        "como_participar": "Consulte o Centro de Saúde de referência ou o telefone 156 para confirmar a forma de participação.",
+        "url_inscricao": "",
+        "documentos_necessarios": []
+      },
+      "organizador": {
+        "nome": "Prefeitura de Belo Horizonte · SUS-BH",
+        "contato": "156"
+      },
+      "fontes": [
+        {
+          "id": "pbh-tai-chi",
+          "nome": "Prefeitura de Belo Horizonte",
+          "url": "https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/promocao-da-saude/tai-chi-chuan",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "confirmado",
+        "revalidar_apos_dias": 14
+      },
+      "icone": "☯️",
+      "temas": [
+        "Saúde",
+        "Bem-estar",
+        "Atividade física"
+      ],
+      "termos_busca": [
+        "tai chi",
+        "tai chi chuan",
+        "Norte",
+        "Ziláh Spósito",
+        "Academia da Cidade Ziláh Spósito"
+      ],
+      "atualizacao": {
+        "modo": "hibrida",
+        "periodicidade": "semanal",
+        "coletor": "scripts/coletar_atividades_lazer_pbh.py",
+        "campos_atualizaveis": [
+          "agenda.dias_semana",
+          "agenda.horarios",
+          "local.nome",
+          "local.endereco",
+          "local.bairro",
+          "verificacao.ultima_verificacao",
+          "verificacao.status"
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "radar-oficial-pbh",
+      "site_only": true,
+      "id": "atividade:pbh:tai-chi:centro-cultural-lindeia-regina",
+      "programa_id": "pbh:tai-chi-chuan",
+      "titulo": "Tai Chi Chuan · Centro Cultural Lindéia/ Regina",
+      "categoria": "pratica_integrativa",
+      "modalidades": [
+        "Tai Chi Chuan"
+      ],
+      "formato": "aula_orientada",
+      "descricao": "Aulas gratuitas de Tai Chi Chuan oferecidas pelo SUS-BH, conduzidas por profissionais de educação física capacitados.",
+      "publicos_alvo": [
+        "População em geral"
+      ],
+      "abrangencia": {
+        "cidade": "Belo Horizonte",
+        "uf": "MG",
+        "regional": "Barreiro",
+        "bairros": [
+          "Regina"
+        ]
+      },
+      "local": {
+        "nome": "Centro Cultural Lindéia/ Regina",
+        "endereco": "R. Aristolino Basílio de Oliveira, 445",
+        "bairro": "Regina",
+        "cidade": "Belo Horizonte",
+        "uf": "MG"
+      },
+      "agenda": {
+        "temporalidade": "recorrente",
+        "dias_semana": [
+          "quinta"
+        ],
+        "horarios": [
+          "09:00"
+        ],
+        "duracao_minutos": null,
+        "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "participacao": {
+        "inscricao": "consultar_local",
+        "vagas_limitadas": false,
+        "como_participar": "Consulte o Centro de Saúde de referência ou o telefone 156 para confirmar a forma de participação.",
+        "url_inscricao": "",
+        "documentos_necessarios": []
+      },
+      "organizador": {
+        "nome": "Prefeitura de Belo Horizonte · SUS-BH",
+        "contato": "156"
+      },
+      "fontes": [
+        {
+          "id": "pbh-tai-chi",
+          "nome": "Prefeitura de Belo Horizonte",
+          "url": "https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/promocao-da-saude/tai-chi-chuan",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "confirmado",
+        "revalidar_apos_dias": 14
+      },
+      "icone": "☯️",
+      "temas": [
+        "Saúde",
+        "Bem-estar",
+        "Atividade física"
+      ],
+      "termos_busca": [
+        "tai chi",
+        "tai chi chuan",
+        "Barreiro",
+        "Regina",
+        "Centro Cultural Lindéia/ Regina"
+      ],
+      "atualizacao": {
+        "modo": "hibrida",
+        "periodicidade": "semanal",
+        "coletor": "scripts/coletar_atividades_lazer_pbh.py",
+        "campos_atualizaveis": [
+          "agenda.dias_semana",
+          "agenda.horarios",
+          "local.nome",
+          "local.endereco",
+          "local.bairro",
+          "verificacao.ultima_verificacao",
+          "verificacao.status"
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "radar-oficial-pbh",
+      "site_only": true,
+      "id": "atividade:pbh:tai-chi:centro-cultural-vila-santa-rita",
+      "programa_id": "pbh:tai-chi-chuan",
+      "titulo": "Tai Chi Chuan · Centro Cultural Vila Santa Rita",
+      "categoria": "pratica_integrativa",
+      "modalidades": [
+        "Tai Chi Chuan"
+      ],
+      "formato": "aula_orientada",
+      "descricao": "Aulas gratuitas de Tai Chi Chuan oferecidas pelo SUS-BH, conduzidas por profissionais de educação física capacitados.",
+      "publicos_alvo": [
+        "População em geral"
+      ],
+      "abrangencia": {
+        "cidade": "Belo Horizonte",
+        "uf": "MG",
+        "regional": "Barreiro",
+        "bairros": [
+          "Vila Santa Rita"
+        ]
+      },
+      "local": {
+        "nome": "Centro Cultural Vila Santa Rita",
+        "endereco": "R. Ana Rafael dos Santos, 149",
+        "bairro": "Vila Santa Rita",
+        "cidade": "Belo Horizonte",
+        "uf": "MG"
+      },
+      "agenda": {
+        "temporalidade": "recorrente",
+        "dias_semana": [
+          "terca"
+        ],
+        "horarios": [
+          "08:00",
+          "09:30"
+        ],
+        "duracao_minutos": null,
+        "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "participacao": {
+        "inscricao": "consultar_local",
+        "vagas_limitadas": false,
+        "como_participar": "Consulte o Centro de Saúde de referência ou o telefone 156 para confirmar a forma de participação.",
+        "url_inscricao": "",
+        "documentos_necessarios": []
+      },
+      "organizador": {
+        "nome": "Prefeitura de Belo Horizonte · SUS-BH",
+        "contato": "156"
+      },
+      "fontes": [
+        {
+          "id": "pbh-tai-chi",
+          "nome": "Prefeitura de Belo Horizonte",
+          "url": "https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/promocao-da-saude/tai-chi-chuan",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "confirmado",
+        "revalidar_apos_dias": 14
+      },
+      "icone": "☯️",
+      "temas": [
+        "Saúde",
+        "Bem-estar",
+        "Atividade física"
+      ],
+      "termos_busca": [
+        "tai chi",
+        "tai chi chuan",
+        "Barreiro",
+        "Vila Santa Rita",
+        "Centro Cultural Vila Santa Rita"
+      ],
+      "atualizacao": {
+        "modo": "hibrida",
+        "periodicidade": "semanal",
+        "coletor": "scripts/coletar_atividades_lazer_pbh.py",
+        "campos_atualizaveis": [
+          "agenda.dias_semana",
+          "agenda.horarios",
+          "local.nome",
+          "local.endereco",
+          "local.bairro",
+          "verificacao.ultima_verificacao",
+          "verificacao.status"
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "radar-oficial-pbh",
+      "site_only": true,
+      "id": "atividade:pbh:tai-chi:centro-de-saude-dom-joaquim",
+      "programa_id": "pbh:tai-chi-chuan",
+      "titulo": "Tai Chi Chuan · Centro de Saúde Dom Joaquim",
+      "categoria": "pratica_integrativa",
+      "modalidades": [
+        "Tai Chi Chuan"
+      ],
+      "formato": "aula_orientada",
+      "descricao": "Aulas gratuitas de Tai Chi Chuan oferecidas pelo SUS-BH, conduzidas por profissionais de educação física capacitados.",
+      "publicos_alvo": [
+        "População em geral"
+      ],
+      "abrangencia": {
+        "cidade": "Belo Horizonte",
+        "uf": "MG",
+        "regional": "Nordeste",
+        "bairros": [
+          "Fernão Dias"
+        ]
+      },
+      "local": {
+        "nome": "Centro de Saúde Dom Joaquim",
+        "endereco": "Av. Joaquim José Diniz, 855",
+        "bairro": "Fernão Dias",
+        "cidade": "Belo Horizonte",
+        "uf": "MG"
+      },
+      "agenda": {
+        "temporalidade": "recorrente",
+        "dias_semana": [
+          "terca"
+        ],
+        "horarios": [
+          "14:30"
+        ],
+        "duracao_minutos": null,
+        "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "participacao": {
+        "inscricao": "consultar_local",
+        "vagas_limitadas": false,
+        "como_participar": "Consulte o Centro de Saúde de referência ou o telefone 156 para confirmar a forma de participação.",
+        "url_inscricao": "",
+        "documentos_necessarios": []
+      },
+      "organizador": {
+        "nome": "Prefeitura de Belo Horizonte · SUS-BH",
+        "contato": "156"
+      },
+      "fontes": [
+        {
+          "id": "pbh-tai-chi",
+          "nome": "Prefeitura de Belo Horizonte",
+          "url": "https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/promocao-da-saude/tai-chi-chuan",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "confirmado",
+        "revalidar_apos_dias": 14
+      },
+      "icone": "☯️",
+      "temas": [
+        "Saúde",
+        "Bem-estar",
+        "Atividade física"
+      ],
+      "termos_busca": [
+        "tai chi",
+        "tai chi chuan",
+        "Nordeste",
+        "Fernão Dias",
+        "Centro de Saúde Dom Joaquim"
+      ],
+      "atualizacao": {
+        "modo": "hibrida",
+        "periodicidade": "semanal",
+        "coletor": "scripts/coletar_atividades_lazer_pbh.py",
+        "campos_atualizaveis": [
+          "agenda.dias_semana",
+          "agenda.horarios",
+          "local.nome",
+          "local.endereco",
+          "local.bairro",
+          "verificacao.ultima_verificacao",
+          "verificacao.status"
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "radar-oficial-pbh",
+      "site_only": true,
+      "id": "atividade:pbh:tai-chi:centro-de-saude-etelvina-carneiro",
+      "programa_id": "pbh:tai-chi-chuan",
+      "titulo": "Tai Chi Chuan · Centro de Saúde Etelvina Carneiro",
+      "categoria": "pratica_integrativa",
+      "modalidades": [
+        "Tai Chi Chuan"
+      ],
+      "formato": "aula_orientada",
+      "descricao": "Aulas gratuitas de Tai Chi Chuan oferecidas pelo SUS-BH, conduzidas por profissionais de educação física capacitados.",
+      "publicos_alvo": [
+        "População em geral"
+      ],
+      "abrangencia": {
+        "cidade": "Belo Horizonte",
+        "uf": "MG",
+        "regional": "Norte",
+        "bairros": [
+          "Etelvina Carneiro"
+        ]
+      },
+      "local": {
+        "nome": "Centro de Saúde Etelvina Carneiro",
+        "endereco": "Travessa Dois mil Quatrocentos e Dezessete, 235",
+        "bairro": "Etelvina Carneiro",
+        "cidade": "Belo Horizonte",
+        "uf": "MG"
+      },
+      "agenda": {
+        "temporalidade": "recorrente",
+        "dias_semana": [
+          "terca"
+        ],
+        "horarios": [
+          "14:00"
+        ],
+        "duracao_minutos": null,
+        "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "participacao": {
+        "inscricao": "consultar_local",
+        "vagas_limitadas": false,
+        "como_participar": "Consulte o Centro de Saúde de referência ou o telefone 156 para confirmar a forma de participação.",
+        "url_inscricao": "",
+        "documentos_necessarios": []
+      },
+      "organizador": {
+        "nome": "Prefeitura de Belo Horizonte · SUS-BH",
+        "contato": "156"
+      },
+      "fontes": [
+        {
+          "id": "pbh-tai-chi",
+          "nome": "Prefeitura de Belo Horizonte",
+          "url": "https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/promocao-da-saude/tai-chi-chuan",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "confirmado",
+        "revalidar_apos_dias": 14
+      },
+      "icone": "☯️",
+      "temas": [
+        "Saúde",
+        "Bem-estar",
+        "Atividade física"
+      ],
+      "termos_busca": [
+        "tai chi",
+        "tai chi chuan",
+        "Norte",
+        "Etelvina Carneiro",
+        "Centro de Saúde Etelvina Carneiro"
+      ],
+      "atualizacao": {
+        "modo": "hibrida",
+        "periodicidade": "semanal",
+        "coletor": "scripts/coletar_atividades_lazer_pbh.py",
+        "campos_atualizaveis": [
+          "agenda.dias_semana",
+          "agenda.horarios",
+          "local.nome",
+          "local.endereco",
+          "local.bairro",
+          "verificacao.ultima_verificacao",
+          "verificacao.status"
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "radar-oficial-pbh",
+      "site_only": true,
+      "id": "atividade:pbh:tai-chi:centro-de-saude-felicidade-2",
+      "programa_id": "pbh:tai-chi-chuan",
+      "titulo": "Tai Chi Chuan · Centro de Saúde Felicidade 2",
+      "categoria": "pratica_integrativa",
+      "modalidades": [
+        "Tai Chi Chuan"
+      ],
+      "formato": "aula_orientada",
+      "descricao": "Aulas gratuitas de Tai Chi Chuan oferecidas pelo SUS-BH, conduzidas por profissionais de educação física capacitados.",
+      "publicos_alvo": [
+        "População em geral"
+      ],
+      "abrangencia": {
+        "cidade": "Belo Horizonte",
+        "uf": "MG",
+        "regional": "Norte",
+        "bairros": [
+          "Jardim Felicidade"
+        ]
+      },
+      "local": {
+        "nome": "Centro de Saúde Felicidade 2",
+        "endereco": "R. Sônia Braz Xavier, 60",
+        "bairro": "Jardim Felicidade",
+        "cidade": "Belo Horizonte",
+        "uf": "MG"
+      },
+      "agenda": {
+        "temporalidade": "recorrente",
+        "dias_semana": [
+          "sexta"
+        ],
+        "horarios": [
+          "14:00"
+        ],
+        "duracao_minutos": null,
+        "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "participacao": {
+        "inscricao": "consultar_local",
+        "vagas_limitadas": false,
+        "como_participar": "Consulte o Centro de Saúde de referência ou o telefone 156 para confirmar a forma de participação.",
+        "url_inscricao": "",
+        "documentos_necessarios": []
+      },
+      "organizador": {
+        "nome": "Prefeitura de Belo Horizonte · SUS-BH",
+        "contato": "156"
+      },
+      "fontes": [
+        {
+          "id": "pbh-tai-chi",
+          "nome": "Prefeitura de Belo Horizonte",
+          "url": "https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/promocao-da-saude/tai-chi-chuan",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "confirmado",
+        "revalidar_apos_dias": 14
+      },
+      "icone": "☯️",
+      "temas": [
+        "Saúde",
+        "Bem-estar",
+        "Atividade física"
+      ],
+      "termos_busca": [
+        "tai chi",
+        "tai chi chuan",
+        "Norte",
+        "Jardim Felicidade",
+        "Centro de Saúde Felicidade 2"
+      ],
+      "atualizacao": {
+        "modo": "hibrida",
+        "periodicidade": "semanal",
+        "coletor": "scripts/coletar_atividades_lazer_pbh.py",
+        "campos_atualizaveis": [
+          "agenda.dias_semana",
+          "agenda.horarios",
+          "local.nome",
+          "local.endereco",
+          "local.bairro",
+          "verificacao.ultima_verificacao",
+          "verificacao.status"
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "radar-oficial-pbh",
+      "site_only": true,
+      "id": "atividade:pbh:tai-chi:centro-de-saude-francisco-gomes-barbosa-tirol",
+      "programa_id": "pbh:tai-chi-chuan",
+      "titulo": "Tai Chi Chuan · Centro de Saúde Francisco Gomes Barbosa (Tirol)",
+      "categoria": "pratica_integrativa",
+      "modalidades": [
+        "Tai Chi Chuan"
+      ],
+      "formato": "aula_orientada",
+      "descricao": "Aulas gratuitas de Tai Chi Chuan oferecidas pelo SUS-BH, conduzidas por profissionais de educação física capacitados.",
+      "publicos_alvo": [
+        "População em geral"
+      ],
+      "abrangencia": {
+        "cidade": "Belo Horizonte",
+        "uf": "MG",
+        "regional": "Barreiro",
+        "bairros": [
+          "Tirol"
+        ]
+      },
+      "local": {
+        "nome": "Centro de Saúde Francisco Gomes Barbosa (Tirol)",
+        "endereco": "R. Hugo Campos Martins, 15",
+        "bairro": "Tirol",
+        "cidade": "Belo Horizonte",
+        "uf": "MG"
+      },
+      "agenda": {
+        "temporalidade": "recorrente",
+        "dias_semana": [
+          "sexta"
+        ],
+        "horarios": [
+          "10:30"
+        ],
+        "duracao_minutos": null,
+        "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "participacao": {
+        "inscricao": "consultar_local",
+        "vagas_limitadas": false,
+        "como_participar": "Consulte o Centro de Saúde de referência ou o telefone 156 para confirmar a forma de participação.",
+        "url_inscricao": "",
+        "documentos_necessarios": []
+      },
+      "organizador": {
+        "nome": "Prefeitura de Belo Horizonte · SUS-BH",
+        "contato": "156"
+      },
+      "fontes": [
+        {
+          "id": "pbh-tai-chi",
+          "nome": "Prefeitura de Belo Horizonte",
+          "url": "https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/promocao-da-saude/tai-chi-chuan",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "confirmado",
+        "revalidar_apos_dias": 14
+      },
+      "icone": "☯️",
+      "temas": [
+        "Saúde",
+        "Bem-estar",
+        "Atividade física"
+      ],
+      "termos_busca": [
+        "tai chi",
+        "tai chi chuan",
+        "Barreiro",
+        "Tirol",
+        "Centro de Saúde Francisco Gomes Barbosa (Tirol)"
+      ],
+      "atualizacao": {
+        "modo": "hibrida",
+        "periodicidade": "semanal",
+        "coletor": "scripts/coletar_atividades_lazer_pbh.py",
+        "campos_atualizaveis": [
+          "agenda.dias_semana",
+          "agenda.horarios",
+          "local.nome",
+          "local.endereco",
+          "local.bairro",
+          "verificacao.ultima_verificacao",
+          "verificacao.status"
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "radar-oficial-pbh",
+      "site_only": true,
+      "id": "atividade:pbh:tai-chi:centro-de-saude-palmeiras",
+      "programa_id": "pbh:tai-chi-chuan",
+      "titulo": "Tai Chi Chuan · Centro de Saúde Palmeiras",
+      "categoria": "pratica_integrativa",
+      "modalidades": [
+        "Tai Chi Chuan"
+      ],
+      "formato": "aula_orientada",
+      "descricao": "Aulas gratuitas de Tai Chi Chuan oferecidas pelo SUS-BH, conduzidas por profissionais de educação física capacitados.",
+      "publicos_alvo": [
+        "População em geral"
+      ],
+      "abrangencia": {
+        "cidade": "Belo Horizonte",
+        "uf": "MG",
+        "regional": "Oeste",
+        "bairros": [
+          "Palmeiras"
+        ]
+      },
+      "local": {
+        "nome": "Centro de Saúde Palmeiras",
+        "endereco": "Av. Dom João VI, 1821",
+        "bairro": "Palmeiras",
+        "cidade": "Belo Horizonte",
+        "uf": "MG"
+      },
+      "agenda": {
+        "temporalidade": "recorrente",
+        "dias_semana": [
+          "segunda"
+        ],
+        "horarios": [
+          "15:00"
+        ],
+        "duracao_minutos": null,
+        "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "participacao": {
+        "inscricao": "consultar_local",
+        "vagas_limitadas": false,
+        "como_participar": "Consulte o Centro de Saúde de referência ou o telefone 156 para confirmar a forma de participação.",
+        "url_inscricao": "",
+        "documentos_necessarios": []
+      },
+      "organizador": {
+        "nome": "Prefeitura de Belo Horizonte · SUS-BH",
+        "contato": "156"
+      },
+      "fontes": [
+        {
+          "id": "pbh-tai-chi",
+          "nome": "Prefeitura de Belo Horizonte",
+          "url": "https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/promocao-da-saude/tai-chi-chuan",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "confirmado",
+        "revalidar_apos_dias": 14
+      },
+      "icone": "☯️",
+      "temas": [
+        "Saúde",
+        "Bem-estar",
+        "Atividade física"
+      ],
+      "termos_busca": [
+        "tai chi",
+        "tai chi chuan",
+        "Oeste",
+        "Palmeiras",
+        "Centro de Saúde Palmeiras"
+      ],
+      "atualizacao": {
+        "modo": "hibrida",
+        "periodicidade": "semanal",
+        "coletor": "scripts/coletar_atividades_lazer_pbh.py",
+        "campos_atualizaveis": [
+          "agenda.dias_semana",
+          "agenda.horarios",
+          "local.nome",
+          "local.endereco",
+          "local.bairro",
+          "verificacao.ultima_verificacao",
+          "verificacao.status"
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "radar-oficial-pbh",
+      "site_only": true,
+      "id": "atividade:pbh:tai-chi:centro-de-saude-rio-branco",
+      "programa_id": "pbh:tai-chi-chuan",
+      "titulo": "Tai Chi Chuan · Centro de Saúde Rio Branco",
+      "categoria": "pratica_integrativa",
+      "modalidades": [
+        "Tai Chi Chuan"
+      ],
+      "formato": "aula_orientada",
+      "descricao": "Aulas gratuitas de Tai Chi Chuan oferecidas pelo SUS-BH, conduzidas por profissionais de educação física capacitados.",
+      "publicos_alvo": [
+        "População em geral"
+      ],
+      "abrangencia": {
+        "cidade": "Belo Horizonte",
+        "uf": "MG",
+        "regional": "Venda Nova",
+        "bairros": [
+          "Rio Branco"
+        ]
+      },
+      "local": {
+        "nome": "Centro de Saúde Rio Branco",
+        "endereco": "R. Crisanto Muniz 120",
+        "bairro": "Rio Branco",
+        "cidade": "Belo Horizonte",
+        "uf": "MG"
+      },
+      "agenda": {
+        "temporalidade": "recorrente",
+        "dias_semana": [
+          "segunda",
+          "quarta"
+        ],
+        "horarios": [
+          "14:40"
+        ],
+        "duracao_minutos": null,
+        "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "participacao": {
+        "inscricao": "consultar_local",
+        "vagas_limitadas": false,
+        "como_participar": "Consulte o Centro de Saúde de referência ou o telefone 156 para confirmar a forma de participação.",
+        "url_inscricao": "",
+        "documentos_necessarios": []
+      },
+      "organizador": {
+        "nome": "Prefeitura de Belo Horizonte · SUS-BH",
+        "contato": "156"
+      },
+      "fontes": [
+        {
+          "id": "pbh-tai-chi",
+          "nome": "Prefeitura de Belo Horizonte",
+          "url": "https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/promocao-da-saude/tai-chi-chuan",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "confirmado",
+        "revalidar_apos_dias": 14
+      },
+      "icone": "☯️",
+      "temas": [
+        "Saúde",
+        "Bem-estar",
+        "Atividade física"
+      ],
+      "termos_busca": [
+        "tai chi",
+        "tai chi chuan",
+        "Venda Nova",
+        "Rio Branco",
+        "Centro de Saúde Rio Branco"
+      ],
+      "atualizacao": {
+        "modo": "hibrida",
+        "periodicidade": "semanal",
+        "coletor": "scripts/coletar_atividades_lazer_pbh.py",
+        "campos_atualizaveis": [
+          "agenda.dias_semana",
+          "agenda.horarios",
+          "local.nome",
+          "local.endereco",
+          "local.bairro",
+          "verificacao.ultima_verificacao",
+          "verificacao.status"
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "radar-oficial-pbh",
+      "site_only": true,
+      "id": "atividade:pbh:tai-chi:centro-de-saude-santa-lucia",
+      "programa_id": "pbh:tai-chi-chuan",
+      "titulo": "Tai Chi Chuan · Centro de Saúde Santa Lúcia",
+      "categoria": "pratica_integrativa",
+      "modalidades": [
+        "Tai Chi Chuan"
+      ],
+      "formato": "aula_orientada",
+      "descricao": "Aulas gratuitas de Tai Chi Chuan oferecidas pelo SUS-BH, conduzidas por profissionais de educação física capacitados.",
+      "publicos_alvo": [
+        "População em geral"
+      ],
+      "abrangencia": {
+        "cidade": "Belo Horizonte",
+        "uf": "MG",
+        "regional": "Centro-Sul",
+        "bairros": [
+          "Santa Lúcia"
+        ]
+      },
+      "local": {
+        "nome": "Centro de Saúde Santa Lúcia",
+        "endereco": "R. Murilo Moraes de Andrade, 125",
+        "bairro": "Santa Lúcia",
+        "cidade": "Belo Horizonte",
+        "uf": "MG"
+      },
+      "agenda": {
+        "temporalidade": "recorrente",
+        "dias_semana": [
+          "terca",
+          "quinta"
+        ],
+        "horarios": [
+          "17:00"
+        ],
+        "duracao_minutos": null,
+        "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "participacao": {
+        "inscricao": "consultar_local",
+        "vagas_limitadas": false,
+        "como_participar": "Consulte o Centro de Saúde de referência ou o telefone 156 para confirmar a forma de participação.",
+        "url_inscricao": "",
+        "documentos_necessarios": []
+      },
+      "organizador": {
+        "nome": "Prefeitura de Belo Horizonte · SUS-BH",
+        "contato": "156"
+      },
+      "fontes": [
+        {
+          "id": "pbh-tai-chi",
+          "nome": "Prefeitura de Belo Horizonte",
+          "url": "https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/promocao-da-saude/tai-chi-chuan",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "confirmado",
+        "revalidar_apos_dias": 14
+      },
+      "icone": "☯️",
+      "temas": [
+        "Saúde",
+        "Bem-estar",
+        "Atividade física"
+      ],
+      "termos_busca": [
+        "tai chi",
+        "tai chi chuan",
+        "Centro-Sul",
+        "Santa Lúcia",
+        "Centro de Saúde Santa Lúcia"
+      ],
+      "atualizacao": {
+        "modo": "hibrida",
+        "periodicidade": "semanal",
+        "coletor": "scripts/coletar_atividades_lazer_pbh.py",
+        "campos_atualizaveis": [
+          "agenda.dias_semana",
+          "agenda.horarios",
+          "local.nome",
+          "local.endereco",
+          "local.bairro",
+          "verificacao.ultima_verificacao",
+          "verificacao.status"
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "radar-oficial-pbh",
+      "site_only": true,
+      "id": "atividade:pbh:tai-chi:cras-jardim-felicidade",
+      "programa_id": "pbh:tai-chi-chuan",
+      "titulo": "Tai Chi Chuan · CRAS Jardim Felicidade",
+      "categoria": "pratica_integrativa",
+      "modalidades": [
+        "Tai Chi Chuan"
+      ],
+      "formato": "aula_orientada",
+      "descricao": "Aulas gratuitas de Tai Chi Chuan oferecidas pelo SUS-BH, conduzidas por profissionais de educação física capacitados.",
+      "publicos_alvo": [
+        "População em geral"
+      ],
+      "abrangencia": {
+        "cidade": "Belo Horizonte",
+        "uf": "MG",
+        "regional": "Norte",
+        "bairros": [
+          "Jardim Felicidade"
+        ]
+      },
+      "local": {
+        "nome": "CRAS Jardim Felicidade",
+        "endereco": "R. Cecilia Trindade Silva, 55",
+        "bairro": "Jardim Felicidade",
+        "cidade": "Belo Horizonte",
+        "uf": "MG"
+      },
+      "agenda": {
+        "temporalidade": "recorrente",
+        "dias_semana": [
+          "quarta"
+        ],
+        "horarios": [
+          "14:00"
+        ],
+        "duracao_minutos": null,
+        "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "participacao": {
+        "inscricao": "consultar_local",
+        "vagas_limitadas": false,
+        "como_participar": "Consulte o Centro de Saúde de referência ou o telefone 156 para confirmar a forma de participação.",
+        "url_inscricao": "",
+        "documentos_necessarios": []
+      },
+      "organizador": {
+        "nome": "Prefeitura de Belo Horizonte · SUS-BH",
+        "contato": "156"
+      },
+      "fontes": [
+        {
+          "id": "pbh-tai-chi",
+          "nome": "Prefeitura de Belo Horizonte",
+          "url": "https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/promocao-da-saude/tai-chi-chuan",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "confirmado",
+        "revalidar_apos_dias": 14
+      },
+      "icone": "☯️",
+      "temas": [
+        "Saúde",
+        "Bem-estar",
+        "Atividade física"
+      ],
+      "termos_busca": [
+        "tai chi",
+        "tai chi chuan",
+        "Norte",
+        "Jardim Felicidade",
+        "CRAS Jardim Felicidade"
+      ],
+      "atualizacao": {
+        "modo": "hibrida",
+        "periodicidade": "semanal",
+        "coletor": "scripts/coletar_atividades_lazer_pbh.py",
+        "campos_atualizaveis": [
+          "agenda.dias_semana",
+          "agenda.horarios",
+          "local.nome",
+          "local.endereco",
+          "local.bairro",
+          "verificacao.ultima_verificacao",
+          "verificacao.status"
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "radar-oficial-pbh",
+      "site_only": true,
+      "id": "atividade:pbh:tai-chi:distrito-regional-norte",
+      "programa_id": "pbh:tai-chi-chuan",
+      "titulo": "Tai Chi Chuan · Distrito Regional Norte",
+      "categoria": "pratica_integrativa",
+      "modalidades": [
+        "Tai Chi Chuan"
+      ],
+      "formato": "aula_orientada",
+      "descricao": "Aulas gratuitas de Tai Chi Chuan oferecidas pelo SUS-BH, conduzidas por profissionais de educação física capacitados.",
+      "publicos_alvo": [
+        "População em geral"
+      ],
+      "abrangencia": {
+        "cidade": "Belo Horizonte",
+        "uf": "MG",
+        "regional": "Norte",
+        "bairros": [
+          "São Bernardo"
+        ]
+      },
+      "local": {
+        "nome": "Distrito Regional Norte",
+        "endereco": "R. Pastor Muryllo Cassete, 25",
+        "bairro": "São Bernardo",
+        "cidade": "Belo Horizonte",
+        "uf": "MG"
+      },
+      "agenda": {
+        "temporalidade": "recorrente",
+        "dias_semana": [
+          "quinta"
+        ],
+        "horarios": [
+          "15:00"
+        ],
+        "duracao_minutos": null,
+        "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "participacao": {
+        "inscricao": "consultar_local",
+        "vagas_limitadas": false,
+        "como_participar": "Consulte o Centro de Saúde de referência ou o telefone 156 para confirmar a forma de participação.",
+        "url_inscricao": "",
+        "documentos_necessarios": []
+      },
+      "organizador": {
+        "nome": "Prefeitura de Belo Horizonte · SUS-BH",
+        "contato": "156"
+      },
+      "fontes": [
+        {
+          "id": "pbh-tai-chi",
+          "nome": "Prefeitura de Belo Horizonte",
+          "url": "https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/promocao-da-saude/tai-chi-chuan",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "confirmado",
+        "revalidar_apos_dias": 14
+      },
+      "icone": "☯️",
+      "temas": [
+        "Saúde",
+        "Bem-estar",
+        "Atividade física"
+      ],
+      "termos_busca": [
+        "tai chi",
+        "tai chi chuan",
+        "Norte",
+        "São Bernardo",
+        "Distrito Regional Norte"
+      ],
+      "atualizacao": {
+        "modo": "hibrida",
+        "periodicidade": "semanal",
+        "coletor": "scripts/coletar_atividades_lazer_pbh.py",
+        "campos_atualizaveis": [
+          "agenda.dias_semana",
+          "agenda.horarios",
+          "local.nome",
+          "local.endereco",
+          "local.bairro",
+          "verificacao.ultima_verificacao",
+          "verificacao.status"
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "radar-oficial-pbh",
+      "site_only": true,
+      "id": "atividade:pbh:tai-chi:laco-associacao-de-apoio-social",
+      "programa_id": "pbh:tai-chi-chuan",
+      "titulo": "Tai Chi Chuan · Laço Associação de Apoio Social",
+      "categoria": "pratica_integrativa",
+      "modalidades": [
+        "Tai Chi Chuan"
+      ],
+      "formato": "aula_orientada",
+      "descricao": "Aulas gratuitas de Tai Chi Chuan oferecidas pelo SUS-BH, conduzidas por profissionais de educação física capacitados.",
+      "publicos_alvo": [
+        "População em geral"
+      ],
+      "abrangencia": {
+        "cidade": "Belo Horizonte",
+        "uf": "MG",
+        "regional": "Centro-Sul",
+        "bairros": [
+          "Serra"
+        ]
+      },
+      "local": {
+        "nome": "Laço Associação de Apoio Social",
+        "endereco": "R. Caraça, 900",
+        "bairro": "Serra",
+        "cidade": "Belo Horizonte",
+        "uf": "MG"
+      },
+      "agenda": {
+        "temporalidade": "recorrente",
+        "dias_semana": [
+          "sexta"
+        ],
+        "horarios": [
+          "14:30"
+        ],
+        "duracao_minutos": null,
+        "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "participacao": {
+        "inscricao": "consultar_local",
+        "vagas_limitadas": false,
+        "como_participar": "Consulte o Centro de Saúde de referência ou o telefone 156 para confirmar a forma de participação.",
+        "url_inscricao": "",
+        "documentos_necessarios": []
+      },
+      "organizador": {
+        "nome": "Prefeitura de Belo Horizonte · SUS-BH",
+        "contato": "156"
+      },
+      "fontes": [
+        {
+          "id": "pbh-tai-chi",
+          "nome": "Prefeitura de Belo Horizonte",
+          "url": "https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/promocao-da-saude/tai-chi-chuan",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "confirmado",
+        "revalidar_apos_dias": 14
+      },
+      "icone": "☯️",
+      "temas": [
+        "Saúde",
+        "Bem-estar",
+        "Atividade física"
+      ],
+      "termos_busca": [
+        "tai chi",
+        "tai chi chuan",
+        "Centro-Sul",
+        "Serra",
+        "Laço Associação de Apoio Social"
+      ],
+      "atualizacao": {
+        "modo": "hibrida",
+        "periodicidade": "semanal",
+        "coletor": "scripts/coletar_atividades_lazer_pbh.py",
+        "campos_atualizaveis": [
+          "agenda.dias_semana",
+          "agenda.horarios",
+          "local.nome",
+          "local.endereco",
+          "local.bairro",
+          "verificacao.ultima_verificacao",
+          "verificacao.status"
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "radar-oficial-pbh",
+      "site_only": true,
+      "id": "atividade:pbh:tai-chi:poliesportiva-dom-bosco",
+      "programa_id": "pbh:tai-chi-chuan",
+      "titulo": "Tai Chi Chuan · Poliesportiva Dom Bosco",
+      "categoria": "pratica_integrativa",
+      "modalidades": [
+        "Tai Chi Chuan"
+      ],
+      "formato": "aula_orientada",
+      "descricao": "Aulas gratuitas de Tai Chi Chuan oferecidas pelo SUS-BH, conduzidas por profissionais de educação física capacitados.",
+      "publicos_alvo": [
+        "População em geral"
+      ],
+      "abrangencia": {
+        "cidade": "Belo Horizonte",
+        "uf": "MG",
+        "regional": "Noroeste",
+        "bairros": [
+          "Dom Bosco"
+        ]
+      },
+      "local": {
+        "nome": "Poliesportiva Dom Bosco",
+        "endereco": "R. Tabapuam, 514",
+        "bairro": "Dom Bosco",
+        "cidade": "Belo Horizonte",
+        "uf": "MG"
+      },
+      "agenda": {
+        "temporalidade": "recorrente",
+        "dias_semana": [
+          "terca"
+        ],
+        "horarios": [
+          "14:45"
+        ],
+        "duracao_minutos": null,
+        "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "participacao": {
+        "inscricao": "consultar_local",
+        "vagas_limitadas": false,
+        "como_participar": "Consulte o Centro de Saúde de referência ou o telefone 156 para confirmar a forma de participação.",
+        "url_inscricao": "",
+        "documentos_necessarios": []
+      },
+      "organizador": {
+        "nome": "Prefeitura de Belo Horizonte · SUS-BH",
+        "contato": "156"
+      },
+      "fontes": [
+        {
+          "id": "pbh-tai-chi",
+          "nome": "Prefeitura de Belo Horizonte",
+          "url": "https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/promocao-da-saude/tai-chi-chuan",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "confirmado",
+        "revalidar_apos_dias": 14
+      },
+      "icone": "☯️",
+      "temas": [
+        "Saúde",
+        "Bem-estar",
+        "Atividade física"
+      ],
+      "termos_busca": [
+        "tai chi",
+        "tai chi chuan",
+        "Noroeste",
+        "Dom Bosco",
+        "Poliesportiva Dom Bosco"
+      ],
+      "atualizacao": {
+        "modo": "hibrida",
+        "periodicidade": "semanal",
+        "coletor": "scripts/coletar_atividades_lazer_pbh.py",
+        "campos_atualizaveis": [
+          "agenda.dias_semana",
+          "agenda.horarios",
+          "local.nome",
+          "local.endereco",
+          "local.bairro",
+          "verificacao.ultima_verificacao",
+          "verificacao.status"
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "radar-oficial-pbh",
+      "site_only": true,
+      "id": "atividade:pbh:tai-chi:praca-amadeu-lorenzato",
+      "programa_id": "pbh:tai-chi-chuan",
+      "titulo": "Tai Chi Chuan · Praça Amadeu Lorenzato",
+      "categoria": "pratica_integrativa",
+      "modalidades": [
+        "Tai Chi Chuan"
+      ],
+      "formato": "aula_orientada",
+      "descricao": "Aulas gratuitas de Tai Chi Chuan oferecidas pelo SUS-BH, conduzidas por profissionais de educação física capacitados.",
+      "publicos_alvo": [
+        "População em geral"
+      ],
+      "abrangencia": {
+        "cidade": "Belo Horizonte",
+        "uf": "MG",
+        "regional": "Barreiro",
+        "bairros": [
+          "Pilar"
+        ]
+      },
+      "local": {
+        "nome": "Praça Amadeu Lorenzato",
+        "endereco": "Av. Sigmund Weiss, S/N",
+        "bairro": "Pilar",
+        "cidade": "Belo Horizonte",
+        "uf": "MG"
+      },
+      "agenda": {
+        "temporalidade": "recorrente",
+        "dias_semana": [
+          "terca"
+        ],
+        "horarios": [
+          "08:00"
+        ],
+        "duracao_minutos": null,
+        "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "participacao": {
+        "inscricao": "consultar_local",
+        "vagas_limitadas": false,
+        "como_participar": "Consulte o Centro de Saúde de referência ou o telefone 156 para confirmar a forma de participação.",
+        "url_inscricao": "",
+        "documentos_necessarios": []
+      },
+      "organizador": {
+        "nome": "Prefeitura de Belo Horizonte · SUS-BH",
+        "contato": "156"
+      },
+      "fontes": [
+        {
+          "id": "pbh-tai-chi",
+          "nome": "Prefeitura de Belo Horizonte",
+          "url": "https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/promocao-da-saude/tai-chi-chuan",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "confirmado",
+        "revalidar_apos_dias": 14
+      },
+      "icone": "☯️",
+      "temas": [
+        "Saúde",
+        "Bem-estar",
+        "Atividade física"
+      ],
+      "termos_busca": [
+        "tai chi",
+        "tai chi chuan",
+        "Barreiro",
+        "Pilar",
+        "Praça Amadeu Lorenzato"
+      ],
+      "atualizacao": {
+        "modo": "hibrida",
+        "periodicidade": "semanal",
+        "coletor": "scripts/coletar_atividades_lazer_pbh.py",
+        "campos_atualizaveis": [
+          "agenda.dias_semana",
+          "agenda.horarios",
+          "local.nome",
+          "local.endereco",
+          "local.bairro",
+          "verificacao.ultima_verificacao",
+          "verificacao.status"
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "radar-oficial-pbh",
+      "site_only": true,
+      "id": "atividade:pbh:tai-chi:quadra-projeto-providencia",
+      "programa_id": "pbh:tai-chi-chuan",
+      "titulo": "Tai Chi Chuan · Quadra Projeto Providência",
+      "categoria": "pratica_integrativa",
+      "modalidades": [
+        "Tai Chi Chuan"
+      ],
+      "formato": "aula_orientada",
+      "descricao": "Aulas gratuitas de Tai Chi Chuan oferecidas pelo SUS-BH, conduzidas por profissionais de educação física capacitados.",
+      "publicos_alvo": [
+        "População em geral"
+      ],
+      "abrangencia": {
+        "cidade": "Belo Horizonte",
+        "uf": "MG",
+        "regional": "Nordeste",
+        "bairros": [
+          "Vila Maria/Jardim Vitória"
+        ]
+      },
+      "local": {
+        "nome": "Quadra Projeto Providência",
+        "endereco": "R. D, 300",
+        "bairro": "Vila Maria/Jardim Vitória",
+        "cidade": "Belo Horizonte",
+        "uf": "MG"
+      },
+      "agenda": {
+        "temporalidade": "recorrente",
+        "dias_semana": [
+          "quinta"
+        ],
+        "horarios": [
+          "14:00"
+        ],
+        "duracao_minutos": null,
+        "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "participacao": {
+        "inscricao": "consultar_local",
+        "vagas_limitadas": false,
+        "como_participar": "Consulte o Centro de Saúde de referência ou o telefone 156 para confirmar a forma de participação.",
+        "url_inscricao": "",
+        "documentos_necessarios": []
+      },
+      "organizador": {
+        "nome": "Prefeitura de Belo Horizonte · SUS-BH",
+        "contato": "156"
+      },
+      "fontes": [
+        {
+          "id": "pbh-tai-chi",
+          "nome": "Prefeitura de Belo Horizonte",
+          "url": "https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/promocao-da-saude/tai-chi-chuan",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "confirmado",
+        "revalidar_apos_dias": 14
+      },
+      "icone": "☯️",
+      "temas": [
+        "Saúde",
+        "Bem-estar",
+        "Atividade física"
+      ],
+      "termos_busca": [
+        "tai chi",
+        "tai chi chuan",
+        "Nordeste",
+        "Vila Maria/Jardim Vitória",
+        "Quadra Projeto Providência"
+      ],
+      "atualizacao": {
+        "modo": "hibrida",
+        "periodicidade": "semanal",
+        "coletor": "scripts/coletar_atividades_lazer_pbh.py",
+        "campos_atualizaveis": [
+          "agenda.dias_semana",
+          "agenda.horarios",
+          "local.nome",
+          "local.endereco",
+          "local.bairro",
+          "verificacao.ultima_verificacao",
+          "verificacao.status"
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "radar-oficial-pbh",
+      "site_only": true,
+      "id": "atividade:pbh:tai-chi:secretaria-municipal-de-educacao-smed",
+      "programa_id": "pbh:tai-chi-chuan",
+      "titulo": "Tai Chi Chuan · Secretaria Municipal de Educação (SMED)",
+      "categoria": "pratica_integrativa",
+      "modalidades": [
+        "Tai Chi Chuan"
+      ],
+      "formato": "aula_orientada",
+      "descricao": "Aulas gratuitas de Tai Chi Chuan oferecidas pelo SUS-BH, conduzidas por profissionais de educação física capacitados.",
+      "publicos_alvo": [
+        "População em geral"
+      ],
+      "abrangencia": {
+        "cidade": "Belo Horizonte",
+        "uf": "MG",
+        "regional": "Centro-Sul",
+        "bairros": [
+          "Santo Antônio"
+        ]
+      },
+      "local": {
+        "nome": "Secretaria Municipal de Educação (SMED)",
+        "endereco": "R. Carangola, 288",
+        "bairro": "Santo Antônio",
+        "cidade": "Belo Horizonte",
+        "uf": "MG"
+      },
+      "agenda": {
+        "temporalidade": "recorrente",
+        "dias_semana": [
+          "segunda",
+          "quarta"
+        ],
+        "horarios": [
+          "15:00"
+        ],
+        "duracao_minutos": null,
+        "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "participacao": {
+        "inscricao": "consultar_local",
+        "vagas_limitadas": false,
+        "como_participar": "Consulte o Centro de Saúde de referência ou o telefone 156 para confirmar a forma de participação.",
+        "url_inscricao": "",
+        "documentos_necessarios": []
+      },
+      "organizador": {
+        "nome": "Prefeitura de Belo Horizonte · SUS-BH",
+        "contato": "156"
+      },
+      "fontes": [
+        {
+          "id": "pbh-tai-chi",
+          "nome": "Prefeitura de Belo Horizonte",
+          "url": "https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/promocao-da-saude/tai-chi-chuan",
+          "tipo": "oficial"
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "confirmado",
+        "revalidar_apos_dias": 14
+      },
+      "icone": "☯️",
+      "temas": [
+        "Saúde",
+        "Bem-estar",
+        "Atividade física"
+      ],
+      "termos_busca": [
+        "tai chi",
+        "tai chi chuan",
+        "Centro-Sul",
+        "Santo Antônio",
+        "Secretaria Municipal de Educação (SMED)"
+      ],
+      "atualizacao": {
+        "modo": "hibrida",
+        "periodicidade": "semanal",
+        "coletor": "scripts/coletar_atividades_lazer_pbh.py",
+        "campos_atualizaveis": [
+          "agenda.dias_semana",
+          "agenda.horarios",
+          "local.nome",
+          "local.endereco",
+          "local.bairro",
+          "verificacao.ultima_verificacao",
+          "verificacao.status"
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "tipo_conteudo": "atividade_lazer",
+      "gratuito": true,
+      "status_editorial": "ativo",
+      "publicar": true,
+      "tempo_slide": 15,
+      "origem": "levantamento-editorial-2026-09-27",
+      "site_only": true,
+      "id": "atividade:pbh:tai-chi-parque-municipal",
+      "programa_id": "pbh:tai-chi-parque-municipal",
+      "titulo": "Tai Chi Chuan no Parque Municipal",
+      "categoria": "pratica_integrativa",
+      "modalidades": [
+        "Tai Chi Chuan"
+      ],
+      "formato": "aula_orientada",
+      "descricao": "Aula gratuita de Tai Chi Chuan realizada no Parque Municipal Américo Renné Giannetti, em atividade aberta ao público.",
+      "publicos_alvo": [
+        "População em geral"
+      ],
+      "abrangencia": {
+        "cidade": "Belo Horizonte",
+        "uf": "MG",
+        "regional": "Centro-Sul",
+        "bairros": [
+          "Centro"
+        ]
+      },
+      "local": {
+        "nome": "Parque Municipal Américo Renné Giannetti · Praça do Trenzinho",
+        "endereco": "Avenida Afonso Pena, 1377",
+        "bairro": "Centro",
+        "cidade": "Belo Horizonte",
+        "uf": "MG"
+      },
+      "agenda": {
+        "temporalidade": "recorrente",
+        "dias_semana": [
+          "sabado"
+        ],
+        "horarios": [
+          "08:00–09:30"
+        ],
+        "duracao_minutos": 90,
+        "observacao": "A programação semanal da PBH confirma a atividade aos sábados; em caso de chuva, atividades nos parques podem ser canceladas."
+      },
+      "participacao": {
+        "inscricao": "dispensada",
+        "vagas_limitadas": false,
+        "como_participar": "Compareça à Praça do Trenzinho no horário da atividade, com roupas confortáveis. Consulte a programação da PBH ou o perfil oficial do projeto para avisos.",
+        "url_inscricao": "",
+        "documentos_necessarios": []
+      },
+      "organizador": {
+        "nome": "Projeto Tai Chi Chuan no Parque · Parque Municipal Américo Renné Giannetti"
+      },
+      "fontes": [
+        {
+          "id": "pbh-parques-programacao",
+          "nome": "Prefeitura de Belo Horizonte · Programação dos Parques",
+          "url": "https://prefeitura.pbh.gov.br/fundacao-de-parques-e-zoobotanica/eventos/programacao-semanal",
+          "tipo": "oficial"
+        },
+        {
+          "id": "tai-chi-chuan-no-parque-instagram",
+          "nome": "Tai Chi Chuan no Parque · Instagram oficial do projeto",
+          "url": "https://www.instagram.com/taichichuannoparque/",
+          "tipo": "instagram",
+          "observacao": "Perfil oficial do projeto informado pelo responsável do projeto."
+        }
+      ],
+      "verificacao": {
+        "ultima_verificacao": "2026-09-27",
+        "status": "confirmado",
+        "revalidar_apos_dias": 7
+      },
+      "icone": "☯️",
+      "temas": [
+        "Saúde",
+        "Bem-estar",
+        "Atividade física",
+        "Parques"
+      ],
+      "termos_busca": [
+        "tai chi",
+        "tai chi chuan",
+        "parque municipal",
+        "praça do trenzinho",
+        "centro"
+      ],
+      "atualizacao": {
+        "modo": "hibrida",
+        "periodicidade": "semanal",
+        "coletor": "scripts/coletar_atividades_lazer_pbh.py",
+        "campos_atualizaveis": [
+          "agenda.dias_semana",
+          "agenda.horarios",
+          "local.nome",
+          "local.endereco",
+          "local.bairro",
+          "verificacao.ultima_verificacao",
+          "verificacao.status"
+        ]
+      }
     }
   ]
 }
