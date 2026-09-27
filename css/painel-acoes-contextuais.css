@@ -255,3 +255,19 @@ html[data-panel-experience="passivo"] body.panel-mode
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Painel interativo — contribuição contextual vinculada ao conteúdo exibido. */
+.slide .panel-community-correction-button {
+  width: 100%;
+  box-sizing: border-box;
+  background: transparent;
+  color: var(--accent, #fbbf24);
+  font: inherit;
+  cursor: pointer;
+}
+
+.slide .panel-community-correction-button:hover,
+.slide .panel-community-correction-button:focus-visible {
+  background: color-mix(in srgb, var(--accent, #fbbf24) 10%, transparent);
+}

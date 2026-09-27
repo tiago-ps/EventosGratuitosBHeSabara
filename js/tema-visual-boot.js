@@ -56,11 +56,11 @@
   // as ações específicas dos conteúdos para as respectivas caixas de informação.
   const contextualStyles = document.createElement('link');
   contextualStyles.rel = 'stylesheet';
-  contextualStyles.href = 'css/painel-acoes-contextuais.css?v=2';
+  contextualStyles.href = 'css/painel-acoes-contextuais.css?v=3';
   document.head.appendChild(contextualStyles);
 
   const contextualActions = document.createElement('script');
-  contextualActions.src = 'js/painel-acoes-contextuais.js?v=3';
+  contextualActions.src = 'js/painel-acoes-contextuais.js?v=4';
   document.head.appendChild(contextualActions);
 
   // Composição oficial do Painel Tem Sim, Uai, compartilhada entre teste e público.

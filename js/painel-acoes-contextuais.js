@@ -201,6 +201,49 @@
     details.classList.add('has-context-action');
   }
 
+  function addCommunityCorrectionAction(slide) {
+    const itemId = String(slide.dataset.communityItemId || '').trim();
+    const itemTitle = String(slide.dataset.communityItemTitle || '').trim();
+    if (!itemId || slide.querySelector('.panel-community-correction')) return;
+
+    const details = visibleBook(slide)
+      ? slide.querySelector('.book-details')
+      : slide.querySelector('.details');
+    if (!details) return;
+
+    const row = document.createElement('div');
+    row.className = 'panel-context-action panel-community-correction';
+
+    const dt = document.createElement('dt');
+    dt.textContent = 'Ajude o Mural';
+
+    const dd = document.createElement('dd');
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'panel-context-action-link panel-community-correction-button';
+    button.textContent = 'Corrigir informação';
+    button.addEventListener('click', () => {
+      if (typeof window.openMuralCommunityCorrection === 'function') {
+        window.openMuralCommunityCorrection({
+          item_id: itemId,
+          item_titulo: itemTitle
+        });
+      }
+    });
+
+    dd.appendChild(button);
+    row.append(dt, dd);
+    details.appendChild(row);
+    details.classList.add('has-context-action');
+
+    if (visibleBook(slide)) {
+      const visibleRows = [...details.children].filter(node =>
+        node instanceof HTMLElement && !node.hidden
+      ).length;
+      details.dataset.contextCount = String(visibleRows);
+    }
+  }
+
   function normalizeBookLayout(slide) {
     const copy = slide.querySelector('.book-copy');
     if (!copy || copy.classList.contains('book-standardized')) return;
@@ -313,6 +356,7 @@
 
     if (type === 'book') normalizeBookLayout(slide);
     addContextAction(slide, type, anchor, href);
+    addCommunityCorrectionAction(slide);
     simplifyFooter(slide, type, href);
 
     slide.dataset.contextActionsReady = 'true';
