@@ -3969,7 +3969,8 @@
         "documentos_necessarios": []
       },
       "organizador": {
-        "nome": "Projeto Tai Chi Chuan no Parque · Parque Municipal Américo Renné Giannetti"
+        "nome": "Projeto Tai Chi Chuan no Parque · Parque Municipal Américo Renné Giannetti",
+        "contato": "https://www.instagram.com/taichichuannoparque"
       },
       "fontes": [
         {
@@ -4018,7 +4019,9 @@
           "verificacao.ultima_verificacao",
           "verificacao.status"
         ]
-      }
+      },
+      "idade_minima": null,
+      "idade_maxima": null
     }
   ]
 }
