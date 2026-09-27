@@ -49,6 +49,10 @@ assert.equal(wrangler.assets.directory, '.');
 assert.equal(wrangler.assets.binding, 'ASSETS');
 assert.equal(wrangler.observability.enabled, true);
 assert.deepEqual(wrangler.assets.run_worker_first, ['/api/*', '/', '/index.html']);
+assert.equal(wrangler.d1_databases.length, 1);
+assert.equal(wrangler.d1_databases[0].binding, 'SUGESTOES_DB');
+assert.equal(wrangler.d1_databases[0].database_name, 'mural-sugestoes-curadoria');
+assert.equal(wrangler.d1_databases[0].database_id, '32bc6d5f-4750-452a-bb5e-0a90878fc15a');
 
 for (const forbidden of ['ip ', 'user_agent', 'user-agent', 'fingerprint', 'email', 'telefone']) {
   assert(!schema.toLowerCase().includes(forbidden), `schema não deve conter ${forbidden}`);
