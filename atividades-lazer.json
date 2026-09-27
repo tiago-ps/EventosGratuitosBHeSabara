@@ -85,7 +85,21 @@
         "tai chi chuan",
         "barreiro",
         "diamante"
-      ]
+      ],
+      "atualizacao": {
+        "modo": "hibrida",
+        "periodicidade": "semanal",
+        "coletor": "scripts/coletar_atividades_lazer_pbh.py",
+        "campos_atualizaveis": [
+          "agenda.dias_semana",
+          "agenda.horarios",
+          "local.nome",
+          "local.endereco",
+          "local.bairro",
+          "verificacao.ultima_verificacao",
+          "verificacao.status"
+        ]
+      }
     },
     {
       "schema_version": 1,
@@ -170,7 +184,21 @@
         "futsal feminino",
         "treina bh",
         "dom bosco"
-      ]
+      ],
+      "atualizacao": {
+        "modo": "hibrida",
+        "periodicidade": "semanal",
+        "coletor": "scripts/coletar_atividades_lazer_pbh.py",
+        "campos_atualizaveis": [
+          "agenda.dias_semana",
+          "agenda.horarios",
+          "local.nome",
+          "local.endereco",
+          "local.bairro",
+          "verificacao.ultima_verificacao",
+          "verificacao.status"
+        ]
+      }
     },
     {
       "schema_version": 1,
@@ -265,7 +293,21 @@
         "futebol gratuito",
         "seleções do futuro",
         "barreiro"
-      ]
+      ],
+      "atualizacao": {
+        "modo": "hibrida",
+        "periodicidade": "semanal",
+        "coletor": "scripts/coletar_atividades_lazer_pbh.py",
+        "campos_atualizaveis": [
+          "agenda.dias_semana",
+          "agenda.horarios",
+          "local.nome",
+          "local.endereco",
+          "local.bairro",
+          "verificacao.ultima_verificacao",
+          "verificacao.status"
+        ]
+      }
     },
     {
       "schema_version": 1,
