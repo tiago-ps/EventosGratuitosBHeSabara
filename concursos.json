@@ -2,8 +2,8 @@
   "schema": 10,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-09-27T14:21:03.518883+00:00",
-  "total": 24,
+  "coletado_em_utc": "2026-09-28T17:08:09.704521+00:00",
+  "total": 26,
   "concursos": [
     {
       "id": "pci:noticia:caraguaprev-sp-abre-concurso-publico-com-salarios-de-ate-7104",
@@ -112,6 +112,39 @@
           "cargo": "Engenharia de Sistemas de Computação, São Paulo - SP",
           "vagas_texto": "1 vaga",
           "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ]
+    },
+    {
+      "id": "pci:noticia:prudenprev-sp-abre-concurso-publico-com-salarios-de-ate-11102",
+      "titulo": "PRUDENPREV - Sistema de Previdência do Município de Presidente Prudente",
+      "url": "https://www.pciconcursos.com.br/noticias/prudenprev-sp-abre-concurso-publico-com-salarios-de-ate-11102",
+      "imagem": "https://cdn.pci.app.br/img/i/589955d0ecc37f14cd5d77e38c092b0f.png",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": "oncurso publico destinado ao preenchimento de vagas e a formacao de cadastro de reserva para profissionais de nivel fundamental, medio e superior. segundo o edital, as oportunidades sao para os cargos de: motorista (cadastro de reserva) servicos gerais (1 vaga) escriturario (5 vagas ac + 1 vaga ni) tecnico em informatica (1 vaga) contador (1 vaga) controlador interno (1 vaga) medico perito (cadastro de reserva) a jornada de trabalho varia de 20 a 40 horas semanais, conforme o cargo. a remuneracao inicial vai de r$ 1.984,14 a r$ 11.102,06, alem de cartao-alimentacao no valor mensal de r$ 1.309,59. as inscricoes sera"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "SP",
+      "cidade": "Presidente Prudente",
+      "inscricoes_inicio_texto": "5 de outubro de 2026",
+      "inscricoes_fim_texto": "10 de novembro de 2026",
+      "inscricoes_texto": "5 de outubro de 2026 a 10 de novembro de 2026",
+      "remuneracao_faixa_texto": "R$ 1.309,59 a R$ 11.102,06",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Escriturário (5 vagas AC + 1 vaga NI) Técnico em Informática",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
           "confianca": "alta"
         }
       ]
@@ -871,6 +904,39 @@
           "cargo": "Técnico Agrícola (1 vaga + CR) Técnico de Enfermagem (3 vagas + CR) Técnico em Informática",
           "vagas_texto": "Cadastro de Reserva",
           "formacao": "Técnico em Informática",
+          "confianca": "alta"
+        }
+      ]
+    },
+    {
+      "id": "pci:noticia:tce-go-retifica-concurso-publico-para-tecnicos-de-controle-externo",
+      "titulo": "TCE - Tribunal de Contas do Estado de Goiás",
+      "url": "https://www.pciconcursos.com.br/noticias/tce-go-retifica-concurso-publico-para-tecnicos-de-controle-externo",
+      "imagem": "https://cdn.pci.app.br/img/i/49d0f07f837fcc4f15672d89520c62f4.png",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "tce - go retifica concurso publico para tecnicos de controle externo oportunidades contemplam cargos de nivel medio nas areas administrativas e de tecnologia da informacao, com remuneracao inicial de r$ 11.862,19 e selecao composta por provas objetivas e discursivas. concursos › noticias › centro-oeste quarta-feira, 16 de setembro de 2026 o tribunal de contas do estado de goias (tce-go) abriu um concurso publico visando o preenchimento de vagas para profissionais de "
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "GO",
+      "cidade": "",
+      "inscricoes_inicio_texto": "5 de outubro de 2026",
+      "inscricoes_fim_texto": "6 de novembro de 2026",
+      "inscricoes_texto": "5 de outubro de 2026 a 6 de novembro de 2026",
+      "remuneracao_faixa_texto": "R$ 11.862,19",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Tecnologia da Informação",
+          "vagas_texto": "10 vagas",
+          "formacao": "Sistemas de Informação / Computação",
           "confianca": "alta"
         }
       ]
