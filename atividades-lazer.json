@@ -199,7 +199,8 @@
           "verificacao.ultima_verificacao",
           "verificacao.status"
         ]
-      }
+      },
+      "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/styles/slideshow/public/estrutura-de-governo/esportes-e-lazer/2024/banner-portal_treina-bh.png?itok=7DMOXXkx"
     },
     {
       "schema_version": 1,
@@ -308,7 +309,8 @@
           "verificacao.ultima_verificacao",
           "verificacao.status"
         ]
-      }
+      },
+      "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/styles/slideshow/public/estrutura-de-governo/comunicacao/img_4124.JPG?itok=ZF0Q-DyF"
     },
     {
       "schema_version": 1,
@@ -385,7 +387,8 @@
         "vida ativa",
         "idosos",
         "60+"
-      ]
+      ],
+      "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/styles/slideshow/public/noticia/img/2018-08/28953984597_bd3bd706a1_k.jpg?itok=8f11QQR2"
     },
     {
       "schema_version": 1,
@@ -453,7 +456,8 @@
         "lian gong",
         "liang gong",
         "prática chinesa"
-      ]
+      ],
+      "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/styles/slideshow/public/estrutura-de-governo/lian-gong-rodrigo-clemente-pbh-32.jpg?itok=_djp4K3w"
     },
     {
       "schema_version": 1,
@@ -527,7 +531,8 @@
         "academia da cidade",
         "ginástica",
         "caminhada"
-      ]
+      ],
+      "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/styles/slideshow/public/estrutura-de-governo/comunicacao/estagiarios.JPG?itok=wFqoyI4j"
     },
     {
       "schema_version": 1,
@@ -604,7 +609,8 @@
         "zumba",
         "pilates",
         "funcional"
-      ]
+      ],
+      "imagem": "https://portal.contagem.mg.gov.br/fotos/b5a3db73aaead7ee155fd6b41615c1e0.jpg"
     },
     {
       "schema_version": 1,
@@ -684,7 +690,8 @@
         "futsal",
         "califórnia",
         "contagem"
-      ]
+      ],
+      "imagem": "https://portal.contagem.mg.gov.br/fotos/520550e61b3af48c1fcd88d39620ac50.jpg"
     },
     {
       "schema_version": 1,
@@ -781,7 +788,8 @@
         "viva o esporte",
         "horto",
         "betim"
-      ]
+      ],
+      "imagem": "https://www.betim.mg.gov.br/fotos/83f315bb3f2cd68b85f63ae4710c79ed.jpg"
     },
     {
       "schema_version": 1,
@@ -870,7 +878,8 @@
         "betim ativa",
         "alcidez brás",
         "cachoeira"
-      ]
+      ],
+      "imagem": "https://www.betim.mg.gov.br/imgeditor/Ativo%202%403x-100.jpg"
     },
     {
       "schema_version": 1,
@@ -1032,7 +1041,8 @@
         "aerodance",
         "nova lima",
         "dança"
-      ]
+      ],
+      "imagem": "https://www.novalima.mg.gov.br/v1/storage/news/nucleo_de_aero_dance1778701435458.jpeg"
     },
     {
       "schema_version": 1,
