@@ -2071,3 +2071,53 @@ body.agenda-mode.curation-mode .agenda-book-cover-warning strong {
 .agenda-card-actions button.secondary:hover,.agenda-correction-button:hover{border-color:var(--accent)}
 .agenda-curation-status-type{margin:0;color:var(--muted);font-weight:800}
 @media(max-width:620px){.agenda-community-options,.agenda-community-field-grid{grid-template-columns:1fr}.agenda-header-actions .agenda-community-open-label{display:none}}
+
+
+/* Agenda v153 — logo em linha própria no cabeçalho. */
+body.agenda-mode .agenda-header {
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px 18px;
+}
+
+body.agenda-mode .agenda-heading {
+  grid-column: 1 / -1;
+  grid-row: auto;
+  width: 100%;
+  padding: 2px 0 4px;
+}
+
+body.agenda-mode .agenda-content-nav {
+  grid-column: 1;
+  grid-row: auto;
+  align-self: center;
+}
+
+body.agenda-mode .agenda-header-actions {
+  grid-column: 2;
+  grid-row: auto;
+  align-self: center;
+}
+
+@media (max-width: 1120px) {
+  body.agenda-mode .agenda-header {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  body.agenda-mode .agenda-heading {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+
+  body.agenda-mode .agenda-content-nav {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    order: 3;
+  }
+
+  body.agenda-mode .agenda-header-actions {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    justify-content: flex-start;
+    order: 2;
+  }
+}
