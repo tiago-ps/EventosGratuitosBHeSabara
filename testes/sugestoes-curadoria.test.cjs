@@ -5,6 +5,7 @@ const app = fs.readFileSync('js/app.js', 'utf8');
 const worker = fs.readFileSync('cloudflare/social-preview-worker.js', 'utf8');
 const serviceWorker = fs.readFileSync('service-worker.js', 'utf8');
 const panelActions = fs.readFileSync('js/painel-acoes-contextuais.js', 'utf8');
+const panelNavigation = fs.readFileSync('js/painel-navegacao-modos.js', 'utf8');
 const schema = fs.readFileSync('cloudflare/sugestoes-curadoria.sql', 'utf8');
 const wrangler = JSON.parse(fs.readFileSync('wrangler.jsonc', 'utf8'));
 
@@ -105,3 +106,12 @@ assert(app.includes('slide.dataset.communityItemTitle'));
 assert(panelActions.includes('panel-community-correction'));
 assert(panelActions.includes('Corrigir informação'));
 assert(panelActions.includes('window.openMuralCommunityCorrection'));
+
+
+assert(app.includes('function clearSharedAgendaSelectionUrl()'));
+assert(app.includes('function exitSharedAgendaSelection()'));
+assert(app.includes("url.searchParams.delete('selecao')"));
+assert(app.includes("url.searchParams.delete('modo')"));
+assert(app.includes("history.replaceState(history.state, '', url)"));
+assert(panelNavigation.includes("url.searchParams.delete('selecao')"));
+assert(panelNavigation.includes("url.searchParams.set('modo', mode)"));
