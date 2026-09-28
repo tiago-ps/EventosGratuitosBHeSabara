@@ -76,7 +76,10 @@
     "label": "Setembro Verde Glow",
     "profileLabel": "Setembro Verde",
     "auto_ativar": true,
-    "themeColor": "#073424"
+    "themeColor": "#073424",
+    "stylesheet": "css/curadorias/setembro-verde.css",
+    "description": "Verde esmeralda, fundo profundo e brilho suave",
+    "swatch": "is-setembro-verde"
   },
   "complementos": {
     "eventos": [
