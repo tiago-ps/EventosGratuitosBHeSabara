@@ -5255,9 +5255,33 @@ function eventProgram(event) {
       <p>Atualizado em ${escapeHtml(formatUpdated(state.data?.atualizado_em).replace(/^Atualizado em\s*/i, ''))}</p>
     `;
 
+    const activeAgendaCuration = state.mobileCuration
+      ? (state.siteCurationsData?.curadorias || [])
+        .find(curation => String(curation?.id || '').trim() === state.mobileCuration)
+      : null;
+    const agendaCurationBannerSrc = String(activeAgendaCuration?.perfil_painel?.banner?.src || '').trim();
+    const agendaCurationBanner = /^imagens\/curadorias\/[a-z0-9._-]+\/[^?#]+$/i.test(agendaCurationBannerSrc)
+      ? document.createElement('section')
+      : null;
+    if (agendaCurationBanner) {
+      agendaCurationBanner.className = 'agenda-curation-banner';
+      agendaCurationBanner.setAttribute('aria-label', `Curadoria ${String(activeAgendaCuration?.nome || state.mobileCuration)}`);
+      const bannerImage = document.createElement('img');
+      bannerImage.src = agendaCurationBannerSrc;
+      bannerImage.alt = String(
+        activeAgendaCuration?.perfil_painel?.banner?.alt ||
+        activeAgendaCuration?.nome ||
+        state.mobileCuration
+      );
+      bannerImage.decoding = 'async';
+      agendaCurationBanner.appendChild(bannerImage);
+    }
+
     const shell = document.createElement('div');
     shell.className = 'agenda-shell';
-    shell.append(header, controls, count);
+    shell.append(header);
+    if (agendaCurationBanner) shell.append(agendaCurationBanner);
+    shell.append(controls, count);
     if (filmMode) shell.append(filmSourceNotice());
     shell.append(resultsContainer, footer);
     app.replaceChildren(shell);
