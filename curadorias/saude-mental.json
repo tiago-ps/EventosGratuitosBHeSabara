@@ -116,9 +116,10 @@
       }
     },
     "cursos": {
-      "1089": {
-        "titulo_esperado": "Saúde mental, atenção psicossocial e interculturalidade nas migrações",
+      "817": {
+        "titulo_esperado": "Propósito e Qualidade de vida: Descobertas para o Desenvolvimento Pessoal",
         "temas": [
+          "Bem-estar emocional",
           "Saúde Mental"
         ]
       },
@@ -128,16 +129,15 @@
           "Saúde Mental"
         ]
       },
-      "1207": {
-        "titulo_esperado": "Mídias Digitais e Saúde Mental de Crianças e Adolescentes",
+      "1089": {
+        "titulo_esperado": "Saúde mental, atenção psicossocial e interculturalidade nas migrações",
         "temas": [
           "Saúde Mental"
         ]
       },
-      "817": {
-        "titulo_esperado": "Propósito e Qualidade de vida: Descobertas para o Desenvolvimento Pessoal",
+      "1207": {
+        "titulo_esperado": "Mídias Digitais e Saúde Mental de Crianças e Adolescentes",
         "temas": [
-          "Bem-estar emocional",
           "Saúde Mental"
         ]
       }
@@ -758,15 +758,6 @@
           "observacao": "Material técnico, especialmente útil para profissionais, equipes e pessoas interessadas em compreender a organização do cuidado na RAPS."
         },
         {
-          "id": "ms-cartilha-prevencao-suicidio-2026",
-          "titulo": "Cartilha — Prevenção de Suicídio",
-          "fonte": "Ministério da Saúde",
-          "ano": "2026",
-          "descricao": "Material da série Saúde mental e atenção psicossocial em desastres, disponibilizado na coleção oficial de publicações do Ministério da Saúde.",
-          "url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/svsa/emergencia-em-saude-publica",
-          "cta": "Acessar coleção oficial do Ministério da Saúde"
-        },
-        {
           "id": "ms-cartilha-adolescentes-saude-mental-2026",
           "titulo": "Cartilha — Adolescentes (saúde mental)",
           "fonte": "Ministério da Saúde",
@@ -774,36 +765,6 @@
           "descricao": "Material da série Saúde mental e atenção psicossocial em desastres voltado às especificidades da adolescência.",
           "url": "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/svsa/emergencia-em-saude-publica",
           "cta": "Acessar coleção oficial do Ministério da Saúde"
-        },
-        {
-          "id": "cfp-suicidio-desafios-psicologia-2013",
-          "titulo": "Suicídio e os Desafios para a Psicologia",
-          "fonte": "Conselho Federal de Psicologia (CFP)",
-          "ano": "2013",
-          "descricao": "Publicação do CFP baseada em debates sobre suicídio como questão de saúde pública, desafios para a Psicologia clínica e luto de sobreviventes.",
-          "url": "https://site.cfp.org.br/publicacao/suicidio-e-os-desafios-para-a-psicologia/",
-          "cta": "Acessar publicação do CFP",
-          "observacao": "Material técnico de 2013. Deve ser lido como referência complementar e histórica, em conjunto com orientações atuais."
-        },
-        {
-          "id": "ms-prevencao-suicidio-equipes-saude-mental-2006",
-          "titulo": "Prevenção do Suicídio — Manual dirigido a profissionais das equipes de saúde mental",
-          "fonte": "Ministério da Saúde / OPAS",
-          "ano": "2006",
-          "descricao": "Manual técnico dirigido a profissionais das equipes de saúde mental, disponibilizado pela Biblioteca Virtual em Saúde do Ministério da Saúde.",
-          "url": "https://bvsms.saude.gov.br/bvs/publicacoes/manual_editoracao.pdf",
-          "cta": "Abrir manual na BVS/MS",
-          "observacao": "Material antigo e voltado a profissionais. Não deve ser apresentado como orientação clínica atual isolada."
-        },
-        {
-          "id": "oms-prevencao-suicidio-escolas-2000",
-          "titulo": "Preventing suicide: a resource for teachers and other school staff",
-          "fonte": "Organização Mundial da Saúde (OMS)",
-          "ano": "2000",
-          "descricao": "Recurso da OMS dirigido a professores e outros profissionais escolares; a página oficial disponibiliza traduções, inclusive em português.",
-          "url": "https://www.who.int/publications-detail-redirect/WHO_MNH_MBD_00.3",
-          "cta": "Acessar recurso da OMS",
-          "observacao": "Publicação de 2000. Útil como referência histórica para o contexto escolar, mas deve ser complementada por orientações atuais."
         },
         {
           "id": "governo-guia-telas-2025",
