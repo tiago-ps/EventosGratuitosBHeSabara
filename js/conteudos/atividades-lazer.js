@@ -31,6 +31,26 @@
     return text(item?.local?.cidade || item?.abrangencia?.cidade);
   }
 
+  function mapParts(item) {
+    const local = item?.local || {};
+    const values = [
+      local.nome,
+      local.endereco,
+      local.bairro,
+      local.cidade || item?.abrangencia?.cidade,
+      local.uf || item?.abrangencia?.uf
+    ].map(text).filter(Boolean);
+    return [...new Set(values)];
+  }
+
+  function mapUrl(item, helpers) {
+    const manual = helpers?.safeExternalUrl?.(item?.mapa);
+    if (manual) return manual;
+    const parts = mapParts(item);
+    if (!parts.length) return '';
+    return 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(parts.join(', '));
+  }
+
   function categoryLabel(value) {
     return ({
       atividade_fisica: 'Atividade física',
@@ -56,7 +76,7 @@
   function searchText(item) {
     return [
       item.titulo, item.descricao, item.programa_id, categoryLabel(item.categoria),
-      city(item), item?.local?.nome, item?.local?.bairro,
+      city(item), item?.local?.nome, item?.local?.endereco, item?.local?.bairro,
       ...(Array.isArray(item.modalidades) ? item.modalidades : []),
       ...(Array.isArray(item.publicos_alvo) ? item.publicos_alvo : []),
       ...(Array.isArray(item.temas) ? item.temas : []),
@@ -160,7 +180,14 @@
     const location = [local.nome, local.endereco, local.bairro, cityLabel].map(text).filter(Boolean);
     if (where) where.textContent = [...new Set(location)].join(' · ') || 'Consulte o local';
     const mapLink = slide.querySelector('.map-link');
-    if (mapLink) mapLink.remove();
+    const map = mapUrl(item, helpers);
+    if (mapLink && map) {
+      mapLink.href = map;
+      mapLink.hidden = false;
+      mapLink.setAttribute('aria-label', 'Abrir ' + (local.nome || 'o local da atividade') + ' no Google Maps');
+    } else if (mapLink) {
+      mapLink.remove();
+    }
 
     const subtitle = slide.querySelector('.panel-subtitle');
     if (subtitle) subtitle.textContent = (Array.isArray(item.modalidades) ? item.modalidades : []).find(Boolean) || categoryLabel(item.categoria) || 'Esporte e Lazer';
@@ -240,7 +267,7 @@
 
     const meta = document.createElement('div');
     meta.className = 'activity-agenda-meta';
-    const location = [item?.local?.nome, item?.local?.bairro, city(item)].map(text).filter(Boolean);
+    const location = [item?.local?.nome, item?.local?.endereco, item?.local?.bairro, city(item)].map(text).filter(Boolean);
     appendText(meta, 'p', location.join(' · '), 'activity-agenda-location');
     appendText(meta, 'p', scheduleLabel(item), 'activity-agenda-schedule');
     body.appendChild(meta);
@@ -258,15 +285,27 @@
     const registration = helpers.safeExternalUrl(item?.participacao?.url_inscricao);
     const source = helpers.safeExternalUrl(item?.fontes?.[0]?.url);
     const link = registration || source;
-    if (link) {
+    const map = mapUrl(item, helpers);
+    if (link || map) {
       const actions = document.createElement('div');
       actions.className = 'agenda-card-actions';
-      const anchor = document.createElement('a');
-      anchor.href = link;
-      anchor.target = '_blank';
-      anchor.rel = 'noopener noreferrer';
-      anchor.textContent = registration ? 'Como participar' : 'Consultar fonte oficial';
-      actions.appendChild(anchor);
+      if (link) {
+        const anchor = document.createElement('a');
+        anchor.href = link;
+        anchor.target = '_blank';
+        anchor.rel = 'noopener noreferrer';
+        anchor.textContent = registration ? 'Como participar' : 'Consultar fonte oficial';
+        actions.appendChild(anchor);
+      }
+      if (map) {
+        const mapAnchor = document.createElement('a');
+        mapAnchor.className = 'secondary';
+        mapAnchor.href = map;
+        mapAnchor.target = '_blank';
+        mapAnchor.rel = 'noopener noreferrer';
+        mapAnchor.textContent = 'Como chegar';
+        actions.appendChild(mapAnchor);
+      }
       body.appendChild(actions);
     }
 
@@ -279,6 +318,8 @@
     filter,
     city,
     categoryLabel,
+    mapParts,
+    mapUrl,
     cityOptions,
     categoryOptions,
     modalityOptions,
