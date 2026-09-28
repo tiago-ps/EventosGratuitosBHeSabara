@@ -21,6 +21,11 @@ assert.equal(typeof activities.createAgendaCard, 'function');
 assert.equal(typeof activities.createPanelSlide, 'function');
 assert.equal(typeof activities.mapUrl, 'function');
 
+assert.match(source, /image\.classList\.add\('loaded'\)/);
+assert.match(source, /image\.classList\.remove\('loaded'\)/);
+assert.match(source, /image\.complete/);
+assert.match(source, /image\.naturalWidth > 0/);
+
 const normalizeText = value => String(value || '')
   .normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
 
@@ -55,7 +60,7 @@ assert.match(app, /panel-module-activities/);
 assert.match(app, /panel-activity-weight/);
 
 const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
-assert.match(html, /js\/conteudos\/atividades-lazer\.js\?v=3/);
+assert.match(html, /js\/conteudos\/atividades-lazer\.js\?v=4/);
 assert.match(html, /panel-module-activities/);
 assert.match(html, /<span>Esporte e Lazer<\/span>/);
 assert.match(html, /panel-activity-section/);
@@ -64,7 +69,7 @@ assert.match(html, /css\/atividades-lazer\.css\?v=1/);
 
 const sw = fs.readFileSync(path.join(root, 'service-worker.js'), 'utf8');
 assert.match(sw, /'\/atividades-lazer\.json'/);
-assert.match(sw, /js\/conteudos\/atividades-lazer\.js\?v=3/);
+assert.match(sw, /js\/conteudos\/atividades-lazer\.js\?v=4/);
 assert.match(sw, /js\/app\.js\?v=125/);
 
 console.log('Esporte e Lazer integrado à Agenda e ao Painel com endereço, Google Maps, catálogo, filtros, perfis e cache.');
