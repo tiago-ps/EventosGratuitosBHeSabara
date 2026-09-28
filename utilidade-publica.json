@@ -893,7 +893,9 @@
       },
       "tempo_slide": 15,
       "origem": "curadoria-setembro-verde",
-      "site_only": true
+      "site_only": true,
+      "imagem": "imagens/curadorias/setembro-verde/direitos-pcd.jpg",
+      "imagem_fonte": "Imagem editorial criada para a curadoria Setembro Verde"
     },
     {
       "schema_version": 1,
@@ -966,7 +968,9 @@
       "observacao": "A concessão depende do atendimento aos critérios definidos na norma vigente. Consulte o serviço oficial para requisitos e etapas atualizados.",
       "tempo_slide": 15,
       "origem": "curadoria-setembro-verde",
-      "site_only": true
+      "site_only": true,
+      "imagem": "imagens/curadorias/setembro-verde/bhbus-inclusao.jpg",
+      "imagem_fonte": "Imagem editorial criada para a curadoria Setembro Verde"
     },
     {
       "schema_version": 1,
@@ -1038,7 +1042,9 @@
       },
       "tempo_slide": 15,
       "origem": "curadoria-setembro-verde",
-      "site_only": true
+      "site_only": true,
+      "imagem": "imagens/curadorias/setembro-verde/ciptea-mg.jpg",
+      "imagem_fonte": "Imagem editorial criada para a curadoria Setembro Verde"
     },
     {
       "schema_version": 1,
@@ -1107,7 +1113,9 @@
       "observacao": "O registro de vontade ajuda a comunicar a decisão, mas não substitui a autorização familiar exigida para doação após a morte.",
       "tempo_slide": 15,
       "origem": "curadoria-setembro-verde",
-      "site_only": true
+      "site_only": true,
+      "imagem": "imagens/curadorias/setembro-verde/doacao-orgaos.jpg",
+      "imagem_fonte": "Imagem editorial criada para a curadoria Setembro Verde"
     }
   ]
 }
