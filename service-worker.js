@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v155-shared-selection-url';
+const CACHE_VERSION = 'mural-cultural-v156-loading-gif-compact-actions';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -8,7 +8,7 @@ const CURATION_IMAGE_PREFIX = '/imagens/curadorias/';
 
 const CORE_ASSETS = [
   './', './index.html',
-  './css/styles.css?v=91',
+  './css/styles.css?v=92',
   './css/eventos-manuais-ui.css?v=43',
   './css/concursos-mural.css?v=3',
   './css/temas-visuais.css?v=11',
