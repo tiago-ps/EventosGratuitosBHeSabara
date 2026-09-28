@@ -1351,6 +1351,22 @@ body.agenda-mode .agenda-heading {
   min-width: 0;
 }
 
+.agenda-curation-banner {
+  width: 100%;
+  margin: 0 0 14px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--panel-deep);
+  box-shadow: 0 10px 30px rgba(0,0,0,.18);
+}
+
+.agenda-curation-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 body.agenda-mode .agenda-logo {
   width: clamp(150px, 13vw, 210px);
   max-height: 52px;
