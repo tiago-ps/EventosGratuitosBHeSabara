@@ -4,11 +4,7 @@
   "membros": {
     "concursos": [],
     "cursos": [],
-    "eventos": [
-      "portal-bh-7482c32d5c46-2026-09-25-1400",
-      "portal-bh-5f83c25750e4-2026-09-26-0900",
-      "manual-manual-instagram-18084086951283360-neurodiversidade-2026-09-26"
-    ],
+    "eventos": [],
     "filmes": [
       "telabrasil:323",
       "telabrasil:193",
@@ -81,5 +77,96 @@
     "profileLabel": "Setembro Verde",
     "auto_ativar": true,
     "themeColor": "#073424"
+  },
+  "complementos": {
+    "eventos": [
+      {
+        "id": "portal-bh-7482c32d5c46-2026-09-25-1400",
+        "titulo": "Primavera dos Museus / Setembro Verde - “Todo mundo pode dançar”",
+        "data": "2026-09-25",
+        "data_fim": "",
+        "horario": "14h às 17h",
+        "local": "Casa do Baile",
+        "cidade": "Belo Horizonte",
+        "categoria": "Dança",
+        "gratuito": true,
+        "inscricao": "Entrada gratuita; consulte a página oficial",
+        "descricao": "Ação “Todo mundo pode dançar”, realizada na Casa do Baile em parceria com a Fundação Helena Antipoff e integrada às atividades do Setembro Verde — Mês da Pessoa com Deficiência.",
+        "imagem": "imagens/curadorias/setembro-verde/todo-mundo-pode-dancar.jpg",
+        "imagem_fonte": "Portal Belo Horizonte / divulgação oficial dos Museus Pampulha",
+        "link": "https://portalbelohorizonte.com.br/museuspampulha/2026/eventos/festa/danca/primavera-dos-museus-setembro-verde-todo-mundo-pode-dancar",
+        "pagina": "https://portalbelohorizonte.com.br/museuspampulha/2026/eventos/festa/danca/primavera-dos-museus-setembro-verde-todo-mundo-pode-dancar",
+        "fonte": "Portal Belo Horizonte / Museus Pampulha",
+        "classificacao_indicativa": "Livre",
+        "criterio_exibicao": "realizacao",
+        "exibicao_ativa": true,
+        "temas": [
+          "Setembro Verde",
+          "Pessoa com deficiência",
+          "Inclusão",
+          "Dança"
+        ]
+      },
+      {
+        "id": "portal-bh-5f83c25750e4-2026-09-26-0900",
+        "titulo": "Primavera dos Museus / Setembro Verde - Oficina “Antotipia no Jardim do MAP”",
+        "data": "2026-09-26",
+        "data_fim": "",
+        "horario": "9h às 12h",
+        "local": "Museu de Arte da Pampulha - MAP",
+        "cidade": "Belo Horizonte",
+        "categoria": "Oficina",
+        "gratuito": true,
+        "inscricao": "Entrada gratuita; consulte a página oficial",
+        "descricao": "Oficina de antotipia no Jardim do MAP, processo fotográfico artesanal que utiliza pigmentos naturais de plantas, flores e folhas e a ação da luz solar para criar imagens.",
+        "imagem": "imagens/curadorias/setembro-verde/antotipia-jardim-map.jpg",
+        "imagem_fonte": "Portal Belo Horizonte / divulgação oficial dos Museus Pampulha",
+        "link": "https://portalbelohorizonte.com.br/museuspampulha/2026/eventos/oficina/artes-plasticas/primavera-dos-museus-setembro-verde-oficina-antotipia-no-jardim-do-map",
+        "pagina": "https://portalbelohorizonte.com.br/museuspampulha/2026/eventos/oficina/artes-plasticas/primavera-dos-museus-setembro-verde-oficina-antotipia-no-jardim-do-map",
+        "fonte": "Portal Belo Horizonte / Museus Pampulha",
+        "endereco": "Av. Otacílio Negrão de Lima, 16.585, Pampulha, Belo Horizonte - MG",
+        "criterio_exibicao": "realizacao",
+        "exibicao_ativa": true,
+        "temas": [
+          "Setembro Verde",
+          "Pessoa com deficiência",
+          "Inclusão",
+          "Artes Visuais"
+        ]
+      },
+      {
+        "id": "manual-manual-instagram-18084086951283360-neurodiversidade-2026-09-26",
+        "titulo": "Encontro com Educadores | Neurodiversidade na Educação: Acolhimento e Regulação",
+        "data": "2026-09-26",
+        "data_fim": "",
+        "horario": "10h30",
+        "local": "Centro Cultural Banco do Brasil Belo Horizonte",
+        "cidade": "Belo Horizonte",
+        "categoria": "Encontro",
+        "gratuito": true,
+        "inscricao": "Entrada gratuita, mediante inscrição. Vagas limitadas.",
+        "descricao": "Encontro sobre acolhimento e manejo de crianças neurodivergentes em contextos educativos, com estratégias de suporte e regulação e foco na redução de barreiras e em práticas mais inclusivas.",
+        "imagem": "imagens/curadorias/setembro-verde/neurodiversidade-educacao.jpg",
+        "imagem_fonte": "Instagram oficial @ccbbbh — programação do CCBB Educativo",
+        "link": "https://ccbb.com.br/belo-horizonte/ccbb-educativo/",
+        "pagina": "https://ccbb.com.br/belo-horizonte/ccbb-educativo/",
+        "fonte": "CCBB Belo Horizonte",
+        "endereco": "Praça da Liberdade, 450, Funcionários, Belo Horizonte - MG",
+        "espaco_interno": "Teatro II",
+        "classificacao_indicativa": "Livre; recomendada para pessoas a partir de 16 anos",
+        "criterio_exibicao": "realizacao",
+        "exibicao_ativa": true,
+        "temas": [
+          "Setembro Verde",
+          "Neurodiversidade",
+          "Educação inclusiva",
+          "Pessoa com deficiência",
+          "Acessibilidade"
+        ]
+      }
+    ],
+    "livros": [],
+    "cursos": [],
+    "filmes": []
   }
 }
