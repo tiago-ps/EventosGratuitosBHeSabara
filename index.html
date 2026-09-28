@@ -31,7 +31,7 @@
   <link rel="apple-touch-icon" href="imagens/app-icons/apple-touch-icon.png?v=3">
   <link rel="icon" type="image/png" sizes="32x32" href="imagens/app-icons/favicon-32.png?v=3">
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="stylesheet" href="css/styles.css?v=91">
+  <link rel="stylesheet" href="css/styles.css?v=92">
   <link rel="stylesheet" href="css/atividades-lazer.css?v=1">
   <link rel="stylesheet" href="css/eventos-manuais-ui.css?v=43">
   <link rel="stylesheet" href="css/concursos-mural.css?v=3">
@@ -48,7 +48,17 @@
 <body>
   <main id="app" class="app" aria-live="polite">
     <section class="loading" id="loading">
-      <div class="spinner" aria-hidden="true"></div>
+      <div class="loading-visual" aria-hidden="true">
+        <div class="spinner loading-spinner-fallback"></div>
+        <img
+          class="loading-animation"
+          src="imagens/marca/mural-logo-gif3.gif"
+          alt=""
+          width="420"
+          height="420"
+          hidden
+        >
+      </div>
       <p>Carregando programação…</p>
     </section>
   </main>
@@ -535,7 +545,7 @@
   <script src="js/conteudos/utilidade-publica.js?v=3" defer></script>
   <script src="js/conteudos/atividades-lazer.js?v=4" defer></script>
   <script src="js/curadorias-site.js?v=11" defer></script>
-  <script src="js/app.js?v=127" defer></script>
+  <script src="js/app.js?v=128" defer></script>
   <script src="js/temas-visuais.js?v=13" defer></script>
   <script src="js/eventos-manuais-ui.js?v=44" defer></script>
   <script src="js/ios-install.js?v=2" defer></script>
