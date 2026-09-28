@@ -2137,3 +2137,105 @@ body.agenda-mode .agenda-header-actions {
     order: 2;
   }
 }
+
+
+/* Agenda v155 — ações compactas e loading com identidade Tem Sim, Uai. */
+.loading-visual {
+  min-height: 96px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 12px;
+}
+
+.loading-visual > * {
+  grid-area: 1 / 1;
+}
+
+.loading-animation {
+  width: 96px;
+  height: 96px;
+  display: block;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.loading-animation[hidden],
+.loading-spinner-fallback[hidden] {
+  display: none;
+}
+
+.loading > p {
+  margin: 0;
+}
+
+body.agenda-mode .agenda-header-actions > button {
+  min-height: 36px;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 12px;
+}
+
+body.agenda-mode .agenda-header-actions .agenda-favorites-toggle,
+body.agenda-mode .agenda-header-actions .agenda-community-open,
+body.agenda-mode .agenda-header-actions .agenda-suggestion-lookup,
+body.agenda-mode .agenda-header-actions .agenda-share-favorites,
+body.agenda-mode .agenda-header-actions .agenda-send-curation,
+body.agenda-mode .agenda-header-actions .install-app-btn,
+body.agenda-mode .agenda-header-actions .view-toggle {
+  min-height: 36px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+body.agenda-mode .agenda-header-actions .agenda-search-toggle,
+body.agenda-mode .agenda-header-actions .agenda-theme-toggle {
+  width: 36px;
+  height: 36px;
+  min-height: 36px;
+  padding: 0;
+}
+
+body.agenda-mode .agenda-header-actions .agenda-search-toggle svg,
+body.agenda-mode .agenda-header-actions .agenda-theme-icon {
+  width: 18px;
+  height: 18px;
+}
+
+body.agenda-mode .agenda-header-actions .agenda-favorites-toggle > span[aria-hidden="true"] {
+  font-size: 15px;
+}
+
+body.agenda-mode .agenda-header-actions .agenda-favorites-count {
+  min-width: 18px;
+  padding: 1px 5px;
+  font-size: 10px;
+}
+
+@media (max-width: 760px) {
+  .loading-visual {
+    min-height: 82px;
+  }
+
+  .loading-animation {
+    width: 82px;
+    height: 82px;
+  }
+
+  body.agenda-mode .agenda-header-actions > button,
+  body.agenda-mode .agenda-header-actions .agenda-favorites-toggle,
+  body.agenda-mode .agenda-header-actions .agenda-community-open,
+  body.agenda-mode .agenda-header-actions .agenda-suggestion-lookup,
+  body.agenda-mode .agenda-header-actions .agenda-share-favorites,
+  body.agenda-mode .agenda-header-actions .agenda-send-curation,
+  body.agenda-mode .agenda-header-actions .install-app-btn,
+  body.agenda-mode .agenda-header-actions .view-toggle {
+    min-height: 34px;
+  }
+
+  body.agenda-mode .agenda-header-actions .agenda-search-toggle,
+  body.agenda-mode .agenda-header-actions .agenda-theme-toggle {
+    width: 34px;
+    height: 34px;
+    min-height: 34px;
+  }
+}
