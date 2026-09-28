@@ -196,18 +196,35 @@
     const fallback = slide.querySelector('.image-fallback');
     const imageUrl = helpers.safeImageUrl(item.imagem);
     if (imageUrl && image) {
-      image.src = imageUrl;
-      image.alt = 'Imagem de apoio: ' + (item.titulo || 'atividade');
-      image.style.display = 'block';
-      image.addEventListener('load', () => {
+      const showImage = () => {
+        image.classList.add('loaded');
+        image.style.display = 'block';
         if (fallback) fallback.style.display = 'none';
-      }, { once: true });
-      image.addEventListener('error', () => {
+      };
+      const showFallback = () => {
+        image.classList.remove('loaded');
         image.style.display = 'none';
         if (fallback) fallback.style.display = 'grid';
-      }, { once: true });
+      };
+
+      image.alt = 'Imagem de apoio: ' + (item.titulo || 'atividade');
+      image.decoding = 'async';
+      image.onload = showImage;
+      image.onerror = showFallback;
+      image.style.display = 'block';
+      image.src = imageUrl;
+
+      // Em imagens já presentes no cache, o evento load pode ter ocorrido
+      // antes de o slide entrar no DOM. Garante a visibilidade nesse caso.
+      if (image.complete) {
+        if (image.naturalWidth > 0) showImage();
+        else showFallback();
+      }
     } else {
-      if (image) image.style.display = 'none';
+      if (image) {
+        image.classList.remove('loaded');
+        image.style.display = 'none';
+      }
       if (fallback) fallback.style.display = 'grid';
     }
     const fallbackIcon = slide.querySelector('.fallback-icon');
