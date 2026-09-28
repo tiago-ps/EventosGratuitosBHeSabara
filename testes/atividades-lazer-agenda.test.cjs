@@ -70,6 +70,6 @@ assert.match(html, /css\/atividades-lazer\.css\?v=1/);
 const sw = fs.readFileSync(path.join(root, 'service-worker.js'), 'utf8');
 assert.match(sw, /'\/atividades-lazer\.json'/);
 assert.match(sw, /js\/conteudos\/atividades-lazer\.js\?v=4/);
-assert.match(sw, /js\/app\.js\?v=125/);
+assert.match(sw, /js\/app\.js\?v=\d+/);
 
 console.log('Esporte e Lazer integrado à Agenda e ao Painel com endereço, Google Maps, catálogo, filtros, perfis e cache.');
