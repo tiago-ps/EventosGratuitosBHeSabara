@@ -4098,6 +4098,22 @@ function eventProgram(event) {
     return decodeSharedAgendaSelection(url.searchParams.get('selecao'));
   }
 
+  function clearSharedAgendaSelectionUrl() {
+    try {
+      const url = new URL(window.location.href);
+      if (!url.searchParams.has('selecao')) return;
+      url.searchParams.delete('selecao');
+      history.replaceState(history.state, '', url);
+    } catch {
+      // A navegação continua funcional mesmo quando a URL não puder ser normalizada.
+    }
+  }
+
+  function exitSharedAgendaSelection() {
+    state.mobileSharedSelection = null;
+    clearSharedAgendaSelectionUrl();
+  }
+
   function agendaItemsForIds(ids) {
     const catalogs = [
       state.allEvents, state.allBooks, state.allCourses,
@@ -4110,6 +4126,7 @@ function eventProgram(event) {
     const url = new URL(window.location.href);
     url.searchParams.set('selecao', encodeSharedAgendaSelection(ids));
     url.searchParams.delete('painel');
+    url.searchParams.delete('modo');
     return url.toString();
   }
 
@@ -5264,7 +5281,7 @@ function eventProgram(event) {
     app.replaceChildren(shell);
 
     header.querySelector('.agenda-favorites-toggle').addEventListener('click', () => {
-      state.mobileSharedSelection = null;
+      exitSharedAgendaSelection();
       state.mobileFavoritesOnly = !state.mobileFavoritesOnly;
       if (state.mobileFavoritesOnly) {
         state.mobileContent = 'all';
@@ -5283,7 +5300,7 @@ function eventProgram(event) {
       const current = loadAgendaFavorites();
       for (const id of state.mobileSharedSelection || []) current.add(id);
       saveAgendaFavorites(current);
-      state.mobileSharedSelection = null;
+      exitSharedAgendaSelection();
       state.mobileFavoritesOnly = true;
       renderAgenda();
     });
@@ -5318,7 +5335,7 @@ function eventProgram(event) {
         const nextContent = button.dataset.content || 'all';
         if (nextContent === state.mobileContent && !state.mobileFavoritesOnly) return;
         state.mobileFavoritesOnly = false;
-        state.mobileSharedSelection = null;
+        exitSharedAgendaSelection();
         normalizeAgendaFiltersForContent(nextContent);
         resetAgendaBatches();
         renderAgenda();
@@ -5326,6 +5343,7 @@ function eventProgram(event) {
     });
 
     header.querySelector('.view-toggle').addEventListener('click', () => {
+      exitSharedAgendaSelection();
       resetAgendaBatches();
       saveViewMode('painel');
       state.isPaused = false;
@@ -5351,6 +5369,7 @@ function eventProgram(event) {
       state.mobileSearchTimer = window.setTimeout(rerender, 180);
     });
     controls.querySelector('.agenda-content').addEventListener('change', event => {
+      exitSharedAgendaSelection();
       normalizeAgendaFiltersForContent(event.target.value);
       rerender();
     });
@@ -5429,6 +5448,7 @@ function eventProgram(event) {
     button.setAttribute('aria-label', 'Abrir modo agenda');
     button.textContent = '☷';
     button.addEventListener('click', () => {
+      exitSharedAgendaSelection();
       resetAgendaBatches();
       saveViewMode('agenda');
       renderCurrentView();
