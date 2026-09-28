@@ -5642,6 +5642,24 @@ function eventProgram(event) {
 
 
 
+  function activateLoadingAnimation() {
+    const animation = document.querySelector('.loading-animation');
+    const fallback = document.querySelector('.loading-spinner-fallback');
+    if (!animation) return;
+
+    const showAnimation = () => {
+      animation.hidden = false;
+      if (fallback) fallback.hidden = true;
+    };
+
+    if (animation.complete && animation.naturalWidth > 0) {
+      showAnimation();
+      return;
+    }
+
+    animation.addEventListener('load', showAnimation, { once: true });
+  }
+
   window.addEventListener('beforeinstallprompt', event => {
     event.preventDefault();
     deferredInstallPrompt = event;
@@ -5681,5 +5699,6 @@ function eventProgram(event) {
   document.addEventListener('keydown', handleKeyPress);
   setupMobileSwipeNavigation();
 
+  activateLoadingAnimation();
   load();
 })();
