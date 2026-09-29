@@ -417,13 +417,25 @@
   }
 
   function configureAction(slide, item, helpers) {
+    const supportTarget = text(item.support_target);
     const link = helpers.safeExternalUrl(item.link);
     const sourceLabel = slide.querySelector('.source-label');
-    if (sourceLabel) sourceLabel.textContent = item.fonte_label || 'Fonte do indicador';
+    if (sourceLabel) sourceLabel.textContent = item.fonte_label || (supportTarget ? 'Onde buscar ajuda' : 'Fonte do indicador');
     const source = slide.querySelector('.source-url');
     if (source) {
       source.replaceChildren();
-      if (link) {
+      if (supportTarget) {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'support-card-action';
+        button.textContent = 'Ver informações, contatos e endereços';
+        button.addEventListener('click', function() {
+          window.dispatchEvent(new CustomEvent('mural:support-help-request', {
+            detail: { opener: button, target: supportTarget }
+          }));
+        });
+        source.appendChild(button);
+      } else if (link) {
         const anchor = document.createElement('a');
         anchor.href = link;
         anchor.textContent = item.natureza === 'indicador' ? 'Consultar fonte e metodologia' : 'Consultar fonte';
@@ -560,16 +572,30 @@
     });
     body.appendChild(tags);
 
+    const supportTarget = text(item.support_target);
     const link = helpers.safeExternalUrl(item.link);
-    if (link) {
+    if (supportTarget || link) {
       const actions = document.createElement('div');
       actions.className = 'agenda-card-actions';
-      const anchor = document.createElement('a');
-      anchor.href = link;
-      anchor.target = '_blank';
-      anchor.rel = 'noopener noreferrer';
-      anchor.textContent = item.natureza === 'indicador' ? 'Consultar fonte' : 'Saiba mais';
-      actions.appendChild(anchor);
+      if (supportTarget) {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'support-card-action';
+        button.textContent = 'Ver informações, contatos e endereços';
+        button.addEventListener('click', function() {
+          window.dispatchEvent(new CustomEvent('mural:support-help-request', {
+            detail: { opener: button, target: supportTarget }
+          }));
+        });
+        actions.appendChild(button);
+      } else {
+        const anchor = document.createElement('a');
+        anchor.href = link;
+        anchor.target = '_blank';
+        anchor.rel = 'noopener noreferrer';
+        anchor.textContent = item.natureza === 'indicador' ? 'Consultar fonte' : 'Saiba mais';
+        actions.appendChild(anchor);
+      }
       body.appendChild(actions);
     }
     article.append(media, body);
