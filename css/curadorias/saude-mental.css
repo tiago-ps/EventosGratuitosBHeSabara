@@ -168,6 +168,24 @@ html[data-visual-theme="saude-mental-glow"] body.panel-mode .media > .campaign-h
   display: none;
 }
 
+@media (max-aspect-ratio: 5/4), (max-width: 850px) {
+  html[data-visual-theme="saude-mental-glow"],
+  html[data-visual-theme="saude-mental-glow"] body.panel-mode {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  html[data-visual-theme="saude-mental-glow"] body.panel-mode .content::before {
+    left: 0;
+    right: 0;
+  }
+
+  html[data-visual-theme="saude-mental-glow"] body.panel-mode .content::after {
+    right: 0;
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 720px) {
   html[data-visual-theme="saude-mental-glow"] body.panel-mode .content::before { filter: blur(12px); opacity: .80; }
 }
