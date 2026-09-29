@@ -4257,6 +4257,64 @@ function eventProgram(event) {
     }
   }
 
+  function openAgendaShareHub() {
+    const favorites = loadAgendaFavorites();
+    if (!favorites.size) return;
+
+    document.getElementById('agenda-share-hub-dialog')?.remove();
+    const dialog = document.createElement('dialog');
+    dialog.id = 'agenda-share-hub-dialog';
+    dialog.className = 'agenda-curation-suggestion-dialog agenda-community-dialog';
+    dialog.innerHTML = `
+      <div class="agenda-curation-suggestion-card">
+        <div class="agenda-curation-suggestion-heading">
+          <div>
+            <p class="agenda-curation-suggestion-eyebrow">Compartilhar favoritos</p>
+            <h2>Como você quer compartilhar esta seleção?</h2>
+          </div>
+          <button type="button" class="agenda-curation-suggestion-close" aria-label="Fechar">×</button>
+        </div>
+        <p>Escolha se deseja enviar um link para outras pessoas ou encaminhar a seleção anonimamente para análise da curadoria.</p>
+        <div class="agenda-community-options">
+          <button type="button" class="agenda-community-option" data-share-kind="people">
+            <strong>Compartilhar com outras pessoas</strong>
+            <span>Gere um link da seleção para enviar por WhatsApp, mensagem, e-mail ou outro aplicativo.</span>
+          </button>
+          <button type="button" class="agenda-community-option" data-share-kind="curation">
+            <strong>Enviar para a curadoria</strong>
+            <span>Envie os favoritos anonimamente para análise da equipe do Mural.</span>
+          </button>
+        </div>
+      </div>
+    `;
+    document.body.append(dialog);
+
+    const close = () => {
+      if (dialog.open) dialog.close();
+      dialog.remove();
+    };
+
+    dialog.querySelector('.agenda-curation-suggestion-close').addEventListener('click', close);
+    dialog.addEventListener('cancel', event => {
+      event.preventDefault();
+      close();
+    });
+
+    dialog.querySelectorAll('[data-share-kind]').forEach(button => {
+      button.addEventListener('click', () => {
+        const kind = button.dataset.shareKind;
+        close();
+        if (kind === 'curation') {
+          openCurationSuggestionDialog();
+          return;
+        }
+        shareAgendaFavorites();
+      });
+    });
+
+    dialog.showModal();
+  }
+
   const CURATION_SUGGESTION_API_ORIGIN =
     window.location.hostname === 'tiago-ps.github.io'
       ? 'https://temsimuai.com.br'
@@ -5119,7 +5177,7 @@ function eventProgram(event) {
           title="Meus favoritos"
         ><span aria-hidden="true">★</span><span class="agenda-favorites-label">Favoritos</span><span class="agenda-favorites-count" ${favoriteCount ? '' : 'hidden'}>${favoriteCount}</span></button>
         <button class="agenda-community-open" type="button" title="Contribuir com o Mural"><span aria-hidden="true">＋</span><span class="agenda-community-open-label">Contribua</span></button>
-        ${state.mobileFavoritesOnly && favoriteCount ? '<button class="agenda-share-favorites" type="button" title="Compartilhar favoritos"><span aria-hidden="true">↗</span><span>Compartilhar</span></button><button class="agenda-send-curation" type="button" title="Enviar favoritos anonimamente para a curadoria"><span aria-hidden="true">✦</span><span>Enviar para curadoria</span></button>' : ''}
+        ${state.mobileFavoritesOnly && favoriteCount ? '<button class="agenda-share-favorites" type="button" title="Compartilhar favoritos"><span aria-hidden="true">↗</span><span>Compartilhar</span></button>' : ''}
         <button
           class="agenda-search-toggle"
           type="button"
@@ -5417,9 +5475,8 @@ function eventProgram(event) {
       renderAgenda();
     });
 
-    header.querySelector('.agenda-share-favorites')?.addEventListener('click', shareAgendaFavorites);
+    header.querySelector('.agenda-share-favorites')?.addEventListener('click', openAgendaShareHub);
     header.querySelector('.agenda-community-open')?.addEventListener('click', openCommunityContributionHub);
-    header.querySelector('.agenda-send-curation')?.addEventListener('click', openCurationSuggestionDialog);
     count.querySelector('.agenda-send-curation')?.addEventListener('click', openCurationSuggestionDialog);
     count.querySelector('.agenda-save-shared')?.addEventListener('click', () => {
       const current = loadAgendaFavorites();
