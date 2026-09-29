@@ -82,12 +82,23 @@ assert.match(app, /utilityContent\.createAgendaCard/);
 
 const index = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 assert.match(index, /css\/utilidade-publica\.css\?v=2/);
-assert.match(index, /js\/conteudos\/utilidade-publica\.js\?v=3/);
+assert.match(index, /js\/conteudos\/utilidade-publica\.js\?v=4/);
 assert.match(index, /js\/app\.js\?v=\d+/);
 
 const utilitySource = fs.readFileSync(path.join(root, 'js/conteudos/utilidade-publica.js'), 'utf8');
 assert.match(utilitySource, /helpers\.safeImageUrl\(item\.imagem\)/);
 assert.match(utilitySource, /utility-agenda-media--image/);
+assert.match(utilitySource, /text\(item\.support_target\)/);
+assert.match(utilitySource, /mural:support-help-request/);
+assert.match(utilitySource, /Ver informações, contatos e endereços/);
+
+const healthSupportItems = catalog.itens.filter(item => item.support_target);
+assert.equal(healthSupportItems.length, 4);
+assert.ok(healthSupportItems.every(item => !item.link));
+assert.deepEqual(
+  Array.from(healthSupportItems, item => item.support_target),
+  ['apoio-emocional', 'rede-publica', 'atendimento-universitario', 'informacao-confiavel']
+);
 const utilityCss = fs.readFileSync(path.join(root, 'css/utilidade-publica.css'), 'utf8');
 assert.match(utilityCss, /\.utility-data-slide \.details\[hidden\]/);
 assert.match(utilityCss, /max-height: 840px/);
