@@ -125,3 +125,15 @@ assert(styles.includes('radial-gradient(circle at 12% 0%'));
 assert(styles.includes('body.agenda-mode.curation-mode .agenda-header'));
 assert(styles.includes('body.agenda-mode.curation-mode .agenda-tools'));
 assert(styles.includes('body.agenda-mode.curation-mode .agenda-card'));
+
+
+assert(app.includes("const CURATION_BOOKS_ENTRY_URL = 'https://tiago-ps.github.io/EventosGratuitosBHeSabara/'"));
+assert(app.includes('function curationBooksContributionUrl()'));
+assert(app.includes("url.searchParams.set('modo', 'curadoria')"));
+assert(app.includes("url.searchParams.set('conteudo', 'livros')"));
+assert(app.includes('Ajude a selecionar livros'));
+assert(app.includes('Acervo ampliado'));
+assert(app.includes("kind === 'selecionar_livros'"));
+assert(app.includes('requestedCurationContentFromUrl()'));
+assert(styles.includes('.agenda-community-option-books'));
+assert(styles.includes('.agenda-community-option-kicker'));
