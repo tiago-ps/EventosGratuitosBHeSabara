@@ -4128,12 +4128,58 @@ function eventProgram(event) {
     return decodeSharedAgendaSelection(url.searchParams.get('selecao'));
   }
 
+  function sharedAgendaShortCodeFromUrl() {
+    try {
+      const url = new URL(window.location.href);
+      const queryCode = String(url.searchParams.get('lista') || '').trim().toUpperCase();
+      if (/^[23456789ABCDEFGHJKLMNPQRSTUVWXYZ]{7}$/.test(queryCode)) return queryCode;
+      const match = url.pathname.match(/\/s\/([23456789ABCDEFGHJKLMNPQRSTUVWXYZ]{7})\/?$/i);
+      return match ? match[1].toUpperCase() : '';
+    } catch {
+      return '';
+    }
+  }
+
+  async function sharedAgendaSelectionFromShortLink() {
+    const code = sharedAgendaShortCodeFromUrl();
+    if (!code) return null;
+    try {
+      const response = await fetch(
+        curationSuggestionApi(`/api/selecoes-compartilhadas/${encodeURIComponent(code)}`),
+        { cache: 'no-store' }
+      );
+      if (!response.ok) return null;
+      const payload = await response.json();
+      const ids = Array.isArray(payload?.itens)
+        ? payload.itens.filter(id => typeof id === 'string' && id.includes(':')).slice(0, 500)
+        : [];
+      if (!ids.length) return null;
+      return {
+        ids: new Set(ids),
+        contexto: String(payload?.contexto || 'mural')
+      };
+    } catch {
+      return null;
+    }
+  }
+
   function clearSharedAgendaSelectionUrl() {
     try {
       const url = new URL(window.location.href);
-      if (!url.searchParams.has('selecao')) return;
-      url.searchParams.delete('selecao');
-      history.replaceState(history.state, '', url);
+      let changed = false;
+      if (url.searchParams.has('selecao')) {
+        url.searchParams.delete('selecao');
+        changed = true;
+      }
+      if (url.searchParams.has('lista')) {
+        url.searchParams.delete('lista');
+        changed = true;
+      }
+      if (/\/s\/[23456789ABCDEFGHJKLMNPQRSTUVWXYZ]{7}\/?$/i.test(url.pathname)) {
+        url.pathname = '/';
+        changed = true;
+      }
+      if (changed) history.replaceState(history.state, '', url);
     } catch {
       // A navegação continua funcional mesmo quando a URL não puder ser normalizada.
     }
@@ -4156,14 +4202,40 @@ function eventProgram(event) {
     const url = new URL(window.location.href);
     url.searchParams.set('selecao', encodeSharedAgendaSelection(ids));
     url.searchParams.delete('painel');
-    url.searchParams.delete('modo');
+    if (state.curationMode) {
+      url.searchParams.set('modo', 'curadoria');
+      url.searchParams.set('conteudo', 'livros');
+    } else {
+      url.searchParams.delete('modo');
+      url.searchParams.delete('conteudo');
+    }
     return url.toString();
+  }
+
+  async function createShortSharedAgendaUrl(ids) {
+    const fallback = sharedAgendaUrl(ids);
+    try {
+      const response = await fetch(curationSuggestionApi('/api/selecoes-compartilhadas'), {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({
+          itens: [...ids],
+          contexto: state.curationMode ? 'curadoria_livros' : 'mural'
+        })
+      });
+      const payload = await response.json().catch(() => ({}));
+      const shortUrl = String(payload?.url || '').trim();
+      if (response.ok && /^https?:\/\//i.test(shortUrl)) return shortUrl;
+    } catch {
+      // O compartilhamento continua disponível pelo formato legado.
+    }
+    return fallback;
   }
 
   async function shareAgendaFavorites() {
     const favorites = loadAgendaFavorites();
     if (!favorites.size) return;
-    const url = sharedAgendaUrl(favorites);
+    const url = await createShortSharedAgendaUrl(favorites);
     const data = {
       title: 'Seleção do Mural Cultural',
       text: `Separei ${favorites.size} ${favorites.size === 1 ? 'conteúdo' : 'conteúdos'} no Mural Cultural.`,
@@ -5662,11 +5734,20 @@ function eventProgram(event) {
       if (requestedCurationContent) {
         state.mobileContent = requestedCurationContent;
       }
-      const sharedSelection = sharedAgendaSelectionFromUrl();
+      let sharedSelection = sharedAgendaSelectionFromUrl();
+      if (!sharedSelection?.size) {
+        const shortSelection = await sharedAgendaSelectionFromShortLink();
+        if (shortSelection?.ids?.size) {
+          sharedSelection = shortSelection.ids;
+          if (shortSelection.contexto === 'curadoria_livros' && state.curationMode) {
+            state.mobileContent = 'books';
+          }
+        }
+      }
       if (sharedSelection?.size) {
         state.mobileSharedSelection = sharedSelection;
         state.mobileFavoritesOnly = false;
-        state.mobileContent = 'all';
+        if (!state.curationMode) state.mobileContent = 'all';
         state.viewMode = 'agenda';
         saveViewMode('agenda');
       }

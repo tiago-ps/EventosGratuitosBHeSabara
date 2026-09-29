@@ -5,6 +5,7 @@ on:
     paths:
       - "cloudflare/social-preview-worker.js"
       - "cloudflare/sugestoes-curadoria.sql"
+      - "cloudflare/selecoes-compartilhadas.sql"
       - "cloudflare/README-sugestoes-curadoria.md"
       - "js/app.js"
       - "css/styles.css"
@@ -34,8 +35,10 @@ jobs:
           const fs=require('fs');
           const worker=fs.readFileSync('cloudflare/social-preview-worker.js','utf8');
           const sql=fs.readFileSync('cloudflare/sugestoes-curadoria.sql','utf8');
+          const shared=fs.readFileSync('cloudflare/selecoes-compartilhadas.sql','utf8');
           for (const forbidden of ['remoteip', 'user_agent', 'fingerprint']) {
             if (sql.toLowerCase().includes(forbidden)) throw new Error('campo persistente proibido: '+forbidden);
+            if (shared.toLowerCase().includes(forbidden)) throw new Error('campo persistente proibido em links curtos: '+forbidden);
           }
           if (!worker.includes("SUGGESTION_API_PATH = '/api/sugestoes-curadoria'")) throw new Error('API ausente');
           if (!worker.includes('CURADORIA_ADMIN_TOKEN')) throw new Error('proteção administrativa ausente');

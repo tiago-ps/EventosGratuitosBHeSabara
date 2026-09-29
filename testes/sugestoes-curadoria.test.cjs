@@ -9,6 +9,7 @@ const panelNavigation = fs.readFileSync('js/painel-navegacao-modos.js', 'utf8');
 const styles = fs.readFileSync('css/styles.css', 'utf8');
 const indexHtml = fs.readFileSync('index.html', 'utf8');
 const schema = fs.readFileSync('cloudflare/sugestoes-curadoria.sql', 'utf8');
+const sharedSelectionSchema = fs.readFileSync('cloudflare/selecoes-compartilhadas.sql', 'utf8');
 const wrangler = JSON.parse(fs.readFileSync('wrangler.jsonc', 'utf8'));
 
 assert(app.includes('Enviar para curadoria'));
@@ -54,7 +55,7 @@ assert.equal(wrangler.keep_vars, true);
 assert.equal(wrangler.assets.directory, '.');
 assert.equal(wrangler.assets.binding, 'ASSETS');
 assert.equal(wrangler.observability.enabled, true);
-assert.deepEqual(wrangler.assets.run_worker_first, ['/api/*', '/', '/index.html']);
+assert.deepEqual(wrangler.assets.run_worker_first, ['/api/*', '/s/*', '/', '/index.html']);
 assert.equal(wrangler.d1_databases.length, 1);
 assert.equal(wrangler.d1_databases[0].binding, 'SUGESTOES_DB');
 assert.equal(wrangler.d1_databases[0].database_name, 'mural-sugestoes-curadoria');
@@ -146,3 +147,32 @@ assert(styles.includes('.panel-home-link'));
 assert(styles.includes('.agenda-home-link'));
 
 assert(indexHtml.includes('class="panel-home-link" href="./"'));
+
+
+assert(worker.includes("const SHARED_SELECTION_API_PATH = '/api/selecoes-compartilhadas'"));
+assert(worker.includes("const SHARED_SELECTION_SHORT_PREFIX = '/s/'"));
+assert(worker.includes("const SHARED_SELECTION_PUBLIC_BASE = 'https://temsimuai.com.br/'"));
+assert(worker.includes("const SHARED_SELECTION_CURATION_BASE = 'https://tiago-ps.github.io/EventosGratuitosBHeSabara/'"));
+assert(worker.includes('handleSharedSelectionApi(request, env)'));
+assert(worker.includes('handleSharedSelectionShortLink(request, env)'));
+assert(worker.includes('crypto.subtle.digest'));
+assert(worker.includes('SELECOES_COMPARTILHADAS_DAILY_LIMIT'));
+assert(worker.includes('selecoes_compartilhadas'));
+assert(worker.includes("contexto === 'curadoria_livros'") || worker.includes("String(row.contexto) === 'curadoria_livros'"));
+
+assert(sharedSelectionSchema.includes('CREATE TABLE IF NOT EXISTS selecoes_compartilhadas'));
+assert(sharedSelectionSchema.includes("CHECK (contexto IN ('mural', 'curadoria_livros'))"));
+assert(sharedSelectionSchema.includes('hash_selecao'));
+assert(sharedSelectionSchema.includes('itens_json'));
+for (const forbidden of ['ip ', 'user_agent', 'user-agent', 'fingerprint', 'email', 'telefone']) {
+  assert(!sharedSelectionSchema.toLowerCase().includes(forbidden), `schema de links curtos não deve conter ${forbidden}`);
+}
+
+assert(app.includes('function sharedAgendaShortCodeFromUrl()'));
+assert(app.includes('function sharedAgendaSelectionFromShortLink()'));
+assert(app.includes('function createShortSharedAgendaUrl(ids)'));
+assert(app.includes("curationSuggestionApi('/api/selecoes-compartilhadas')"));
+assert(app.includes("contexto: state.curationMode ? 'curadoria_livros' : 'mural'"));
+assert(app.includes("url.searchParams.delete('lista')"));
+assert(panelNavigation.includes("url.searchParams.delete('lista')"));
+assert(panelNavigation.includes('/s\\/[23456789ABCDEFGHJKLMNPQRSTUVWXYZ]{7}'));

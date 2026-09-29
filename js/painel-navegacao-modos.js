@@ -8,6 +8,10 @@
   function modeUrl(mode) {
     const url = new URL(window.location.href);
     url.searchParams.delete('selecao');
+    url.searchParams.delete('lista');
+    if (/\/s\/[23456789ABCDEFGHJKLMNPQRSTUVWXYZ]{7}\/?$/i.test(url.pathname)) {
+      url.pathname = '/';
+    }
     url.searchParams.set('modo', mode);
     return url.href;
   }
