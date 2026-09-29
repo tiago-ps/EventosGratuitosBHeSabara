@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v156-loading-gif-compact-actions';
+const CACHE_VERSION = 'mural-cultural-v157-utility-support-actions';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -22,7 +22,7 @@ const CORE_ASSETS = [
   './js/conteudos/cursos.js?v=3',
   './js/conteudos/concursos.js?v=2',
   './js/conteudos/filmes.js?v=6',
-  './js/conteudos/utilidade-publica.js?v=3',
+  './js/conteudos/utilidade-publica.js?v=4',
   './js/conteudos/atividades-lazer.js?v=4',
   './js/curadorias-site.js?v=11',
   './js/app.js?v=128',
