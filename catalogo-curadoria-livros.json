@@ -10,8 +10,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/DEA4FB7B-2124-463C-AAC6-0BF824D97D09.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-84742",
@@ -100,8 +100,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/6C943655-C326-41E8-8913-5B66AED4DBFD.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-84502",
@@ -220,8 +220,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/0FA2C36F-597B-430A-9264-1102C3E99CDF.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-92887",
@@ -250,8 +250,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/892F7191-7C09-49B1-91DA-5A4FC57B9B88.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-77560",
@@ -350,8 +350,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000077/00007739.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-105073",
@@ -360,8 +360,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000077/0000773a.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-76116",
@@ -3040,8 +3040,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/78314930-BE1E-4FEC-B3DB-6C624283C012.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-103856",
@@ -3510,8 +3510,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/A77B5263-6621-47A4-BE95-378817663180.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-160255",
@@ -4980,8 +4980,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000076/00007689.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-80199",
@@ -5090,8 +5090,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/378BC7C3-21A3-4ECC-BAF0-39BC07D5F4D2.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-80035",
@@ -5210,8 +5210,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/4E2221FB-CA8C-4EFB-BB7B-3570FF0E25A4.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-192840",
@@ -5940,8 +5940,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000077/00007709.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-209185",
@@ -6740,8 +6740,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/49E1CF07-C9C3-43B8-9FF6-35E122AC551B.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-54220",
@@ -6840,8 +6840,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/3E6A5014-E95B-4857-A7D4-14D027B0D71B.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-100460",
@@ -7580,8 +7580,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000074/000074a8.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-209601",
@@ -7720,8 +7720,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000075/00007554.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-226614",
@@ -7850,8 +7850,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/9EE8599C-28E4-4696-9341-7F6E6F4095A8.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-189236",
@@ -8680,8 +8680,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/88CC115B-8C9B-4ACB-AA80-BC8BF183F6BC.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-223625",
@@ -8970,8 +8970,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/499A8921-3A5E-428C-9F78-EF6BBB3459F3.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-191925",
@@ -9530,8 +9530,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000076/000076d2.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-109561",
@@ -9820,8 +9820,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/CD241B57-17F6-47FF-8EE8-AC4495B1A7E3.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-100661",
@@ -9840,8 +9840,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/8AE9A038-5F18-4AB6-BFDB-55D92349ED37.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-214686",
@@ -9870,8 +9870,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/11E93AA9-4B1E-48A3-8F83-93CAA116E932.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-195240",
@@ -10050,8 +10050,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/DB5EA14A-302D-4C4B-B87A-4402E20F0154.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-211503",
@@ -10300,8 +10300,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/CB8CB1F9-B9A6-41AD-9A7E-1194BFC4CBD2.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-213721",
@@ -10440,8 +10440,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000075/000075e8.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-221765",
@@ -11500,8 +11500,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000075/00007511.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-39394",
@@ -11640,8 +11640,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/DB9BE644-E90F-49A7-8301-BA46C000014F.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-215821",
@@ -11680,8 +11680,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/50F4DF31-BA71-4C48-839D-A77D6459F90B.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-171166",
@@ -12480,8 +12480,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/647CE5F5-D3E1-48A5-9950-E42ED44CB6B3.png",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-185337",
@@ -12700,8 +12700,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000075/00007515.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-228199",
@@ -12860,8 +12860,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000074/000074aa.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-109849",
@@ -13300,8 +13300,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/ACF11872-7087-41AE-ADF2-F24F09A93D2B.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-104153",
@@ -13660,8 +13660,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/8F637BAC-2AC6-400D-BD52-540EC0449E41.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-222588",
@@ -14840,8 +14840,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000074/000074e4.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-66018",
@@ -15930,8 +15930,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/5C0F2737-B373-404B-9F3B-198E6C88B796.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-203189",
@@ -17430,8 +17430,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000074/0000749b.jfif",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-66761",
@@ -19060,8 +19060,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/306DD80F-1362-4082-A77B-61D6B1915E8B.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-229432",
@@ -19930,8 +19930,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000076/000076cc.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-52520",
@@ -21980,8 +21980,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/D11A876A-BA38-415E-A353-FF79B7B6FC47.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-109120",
@@ -22070,8 +22070,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000074/00007482.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-194255",
@@ -22230,8 +22230,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/D932D18A-5D7C-4057-BD39-934BE4A5E4F4.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-192398",
@@ -24600,8 +24600,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/00000f/00000ff9.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-263",
@@ -28260,8 +28260,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/2E44FA96-72D4-438C-BA5F-49C49712B67E.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-95759",
@@ -31620,8 +31620,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000074/000074c4.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-75458",
@@ -31640,8 +31640,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000074/000074bf.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-214836",
@@ -32400,8 +32400,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000075/0000757d.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-178094",
@@ -32450,8 +32450,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000077/00007742.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-187863",
@@ -33030,8 +33030,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/8B6EE1F4-C6B8-4A25-AEC4-C17DCD5DB0BF.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-184292",
@@ -33480,8 +33480,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/25E4E345-7BFF-40A2-9A1D-B8F7C5ED0378.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-192800",
@@ -36280,8 +36280,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/1CA2FA6F-168D-42F1-ACBC-CC316B747B82.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-204025",
@@ -36840,8 +36840,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/20D97803-A6BC-455E-96BD-10F9676C6226.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-215988",
@@ -38700,8 +38700,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/1762FECC-C9C1-4D34-A20A-8BC3FB9385F1.jfif",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-95235",
@@ -38790,8 +38790,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000076/000076a6.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-3115",
@@ -38910,8 +38910,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000076/00007640.jpeg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-228544",
@@ -40520,8 +40520,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/FCC19DE8-C8DB-4013-9421-26AC9037C1F4.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-226255",
@@ -41120,8 +41120,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/3B7BB29F-5EE0-4620-8ECF-9CBA0CD1860F.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-72007",
@@ -42690,8 +42690,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000076/000076d6.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-179692",
@@ -47040,8 +47040,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/B56D3CC9-2898-428F-A104-C52D8E64FC8B.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-209373",
@@ -47910,8 +47910,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/A8A00153-C0FC-436B-BFCD-45B0E7740D43.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-195522",
@@ -47960,8 +47960,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/A4B361EF-3356-4D35-B77A-24A8DF033D0C.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-305",
@@ -48170,8 +48170,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/ECDB81EC-70B3-41B4-8436-06895783A538.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-5986",
@@ -50120,8 +50120,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000075/00007553.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-208757",
@@ -51180,8 +51180,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000074/000074ca.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-229370",
@@ -51280,8 +51280,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/1150BFF5-1B52-47F1-A631-1D06B8B3D617.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-203325",
@@ -51470,8 +51470,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000008/00000805.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-116282",
@@ -52180,8 +52180,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000076/00007631.png",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-231671",
@@ -53520,8 +53520,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/C7C88486-B940-45B8-9E4D-1199CAB57CFC.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-63824",
@@ -54040,8 +54040,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/588BAEB8-3B33-4A47-82CB-94E0846C2AEB.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-209213",
@@ -55000,8 +55000,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000074/000074c0.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-218020",
@@ -55030,8 +55030,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000074/000074be.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-229449",
@@ -55600,8 +55600,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/00004c/00004c15.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-1566",
@@ -55860,8 +55860,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/EC47EB68-D5DA-4D90-A93D-1505F56E5EFA.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-225653",
@@ -55970,8 +55970,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000053/00005323.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-94867",
@@ -61550,8 +61550,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000076/0000762a.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-203314",
@@ -62130,8 +62130,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/FEACFE54-C1E7-4910-BBD6-A9A62BD8DA38.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-229180",
@@ -62580,8 +62580,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/597E3265-4EC9-4EEE-BBEC-6AD19E382B33.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-209135",
@@ -63710,8 +63710,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/00002e/00002e1c.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-12675",
@@ -63810,8 +63810,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/00006d/00006dfa.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-17441",
@@ -65430,8 +65430,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/6D94ED56-7564-44A7-9626-F3D1A00290B5.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-172606",
@@ -67500,8 +67500,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/B98842B7-CAEE-4C06-8559-2871ECEBDE7A.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-213342",
@@ -70210,8 +70210,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/40CB58CE-5ABB-4AF1-AAB7-FE44EC554591.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-178051",
@@ -70350,8 +70350,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/352548C3-C5C4-428A-810C-9506BFA60A00.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-202121",
@@ -70860,8 +70860,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/10DA7C98-5E17-4B20-AF64-39FED9404F0F.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-219922",
@@ -71700,8 +71700,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000073/000073fe.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-103308",
@@ -72010,8 +72010,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/00000d/00000ddc.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-80701",
@@ -72200,8 +72200,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/CCB897F3-AA2B-4787-A45B-BD253C3E405D.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-186382",
@@ -73440,8 +73440,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/6CA20BA0-45C0-4432-9B96-E36FCD46459A.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-223483",
@@ -73850,8 +73850,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000011/0000110b.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-107325",
@@ -74890,8 +74890,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/74A63D00-94A1-49C8-9C8C-F78B914DC86A.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-6004",
@@ -75730,8 +75730,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000075/00007543.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-66155",
@@ -80670,8 +80670,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000074/0000749e.png",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-100268",
@@ -81820,8 +81820,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/6687A510-7815-4DBC-B3B6-813CAFD62E6E.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-1690",
@@ -81860,8 +81860,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/5AB062D1-4C13-48D2-9C0A-8541DC7DC263.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-158863",
@@ -82520,8 +82520,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/DA77FA2B-0EAD-45BD-A2DC-26A9BD3F5F6E.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-12378",
@@ -83560,8 +83560,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000075/000075cd.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-308",
@@ -85630,8 +85630,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000076/000076b2.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-128277",
@@ -88010,8 +88010,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/3F364C59-BFD2-4FB0-B5A5-21A3989E64D8.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-4555",
@@ -88230,8 +88230,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/E913E07D-3C61-43F0-B674-330C32184AAE.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-105959",
@@ -88240,8 +88240,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/C1D2DA8D-FFEB-4265-A086-08DD5A3D6ED0.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-105960",
@@ -88250,8 +88250,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/E24136F5-C699-4FE1-A14B-661BC29E6A6E.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-105961",
@@ -89470,8 +89470,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000076/000076d8.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-107294",
@@ -92860,8 +92860,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/4F7F877D-209C-4D92-A132-1596BFED8339.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-225208",
@@ -93170,8 +93170,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000076/000076b7.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-51606",
@@ -94000,8 +94000,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/00006a/00006a87.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-78754",
@@ -94690,8 +94690,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000076/0000768b.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-216397",
@@ -94770,8 +94770,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000076/000076c9.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-2827",
@@ -95760,8 +95760,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000076/000076cd.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-213758",
@@ -97110,8 +97110,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/00006d/00006d71.jpeg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-460",
@@ -97130,8 +97130,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/00000f/00000f48.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-104404",
@@ -97140,8 +97140,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000074/0000749d.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-184174",
@@ -100090,8 +100090,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/7F6E607E-D0A9-4B28-8A60-4F46A7754813.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-101204",
@@ -100230,8 +100230,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/C9FABBF6-704F-4DAB-AFE1-1FE6AED653A1.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-222637",
@@ -100280,8 +100280,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/DA712D9A-F5B0-4FA7-A45C-D26D2629BB8D.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-47408",
@@ -100810,8 +100810,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/04489F01-30C0-4A10-83CE-0D56C73C555F.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-128280",
@@ -101240,8 +101240,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/0ABE7C17-66CA-4DB0-9E1B-09B1CF434179.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-228304",
@@ -103000,8 +103000,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/B28D790B-0F98-4A73-965A-70CF0A9968D1.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-6391",
@@ -104390,8 +104390,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/FEF0286F-C021-4F51-A073-E6D0E8287908.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-227864",
@@ -105920,8 +105920,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000076/000076b9.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-188096",
@@ -107790,8 +107790,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/00000a/00000a44.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-69583",
@@ -108250,8 +108250,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/5A510AC1-41A7-4E92-8020-981E8CB0EBCF.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-185158",
@@ -109040,8 +109040,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/7574017A-93AD-4880-97DB-E39EFF303610.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-184978",
@@ -111020,8 +111020,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/73D4D399-6E4B-4945-A55C-58B00B38BA34.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-158853",
@@ -111420,8 +111420,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000074/000074ab.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-88534",
@@ -112690,8 +112690,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/00005f/00005f91.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-121",
@@ -116060,8 +116060,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000075/000075c6.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-184094",
@@ -117850,8 +117850,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000075/00007578.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-184499",
@@ -118020,8 +118020,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000075/000075ce.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-188377",
@@ -119250,8 +119250,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/66C83EAF-2924-4CD4-9E1A-CE22750C10CE.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-208284",
@@ -120260,8 +120260,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/55685436-00A3-45A9-9238-380FA2A98F5E.png",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-197445",
@@ -122360,8 +122360,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/8022D5A6-0869-4C8B-A4C2-94155D621873.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-225824",
@@ -122900,8 +122900,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000075/000075c3.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-54235",
@@ -125490,8 +125490,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/EDB2D9E1-ED67-4846-A4C3-97B74A433FB7.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-223041",
@@ -127150,8 +127150,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/8548E499-1578-4D72-9EA3-B474A3E48CDF.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-105300",
@@ -128070,8 +128070,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/0878216F-578B-4B52-A33F-BAB386576B8F.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-221343",
@@ -129270,8 +129270,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/19AB0329-C37A-4728-A37A-19C38A5450E2.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-3284",
@@ -130510,8 +130510,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/773486B6-86C9-4B6B-B84A-C5C0350F0B43.jpg",
+      "capa_automatica": true
     },
     {
       "id": "insubmissas-lagrimas-de-mulheres",
@@ -131700,8 +131700,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000075/000075dd.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-177861",
@@ -132330,8 +132330,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/7A438369-08E1-4E67-A65C-5146B523A573.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-204976",
@@ -132550,8 +132550,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/00001e/00001e0c.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-95105",
@@ -132590,8 +132590,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000074/000074c1.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-176563",
@@ -133280,8 +133280,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000006/000006b1.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-186485",
@@ -136820,8 +136820,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/00005f/00005ff8.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-40254",
@@ -139290,8 +139290,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/F0039500-11D7-45F3-ADFC-C94A6B2A0AA6.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-106562",
@@ -139300,8 +139300,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/DB45DB8F-32D0-4A2B-806A-7D5CFC09D87F.jfif",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-228949",
@@ -139730,8 +139730,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/BDF0C68F-E0F0-4B58-A330-57193F96D6DC.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-109122",
@@ -140230,8 +140230,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/42241FFF-B3CB-46FB-A852-E8DB2D9EACE5.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-186486",
@@ -144060,8 +144060,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000076/000076ac.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-106451",
@@ -144070,8 +144070,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/69CD3469-B838-4A2D-81FB-8B5CFAC3EF69.jpg",
+      "capa_automatica": true
     },
     {
       "id": "literatura-escrita-por-mulheres",
@@ -145080,8 +145080,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/45AAFD78-C652-43D2-9736-2F248D7A3FB8.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-26880",
@@ -145530,8 +145530,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/FC5C3306-FBF3-45E0-9216-C30097807F6B.png",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-95835",
@@ -145990,8 +145990,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/05424E36-E8DE-4D42-9A51-812C9CA11E7E.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-229417",
@@ -147630,8 +147630,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/F3256E51-5CF6-47F3-9842-5934C6F612B7.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-72312",
@@ -149130,8 +149130,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/F93C4422-7486-4C54-AA73-47423A65027F.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-211319",
@@ -149380,8 +149380,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000075/00007541.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-64183",
@@ -149540,8 +149540,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/EAEBD8E7-7A9B-44DE-92C5-62205B28BD74.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-186245",
@@ -150630,8 +150630,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000075/00007545.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-160741",
@@ -152880,8 +152880,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/D82854B4-384D-45E5-AC85-5B6F75D69E32.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-1592",
@@ -153200,8 +153200,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/00915CC1-F120-44E5-9391-7EF0BDE18CD8.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-203417",
@@ -154040,8 +154040,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000074/000074a7.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-69654",
@@ -155190,8 +155190,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/00000f/00000fd6.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-114692",
@@ -156000,8 +156000,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000074/000074af.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-35661",
@@ -157380,8 +157380,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/1AED2313-1D21-4C23-9CD6-696A15C86476.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-106531",
@@ -157390,8 +157390,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/391D222A-0849-47DD-81F1-848FC72E39EF.jfif",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-191206",
@@ -157770,8 +157770,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/76027A89-80B0-4274-95F8-B06AC468B07D.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-215362",
@@ -158750,8 +158750,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000074/000074e2.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-83386",
@@ -161710,8 +161710,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/E6807C1F-2C61-448B-944A-4136CD4DBA28.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-97588",
@@ -162500,8 +162500,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/24A6E2ED-1D16-4A8C-A20F-D7F0F9434543.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-176483",
@@ -162660,8 +162660,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/C679692E-4538-4BA2-80B6-FA38F3285CD1.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-205343",
@@ -165390,8 +165390,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/3389DA88-B8A3-406E-8124-1CA0A199BF13.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-179562",
@@ -166070,8 +166070,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000075/000075cc.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-1246",
@@ -166230,8 +166230,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/7F2FDF3E-CBE0-42DA-A1A1-A1623C3B144C.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-189728",
@@ -167310,8 +167310,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/2D682259-2483-4BB0-BB33-393258BADBB2.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-106690",
@@ -167320,8 +167320,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/6E086D6D-C753-4FFA-8EAC-CA5DAA07980F.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-214578",
@@ -168130,8 +168130,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/4F091C9F-AAFD-42F0-8D52-08CC3EC06386.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-229459",
@@ -169710,8 +169710,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/B622B026-8A18-46AA-9E1D-8077D83ACD7E.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-193259",
@@ -170430,8 +170430,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000075/000075c1.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-49064",
@@ -170590,8 +170590,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/12E4138B-0830-4808-9839-67BB62FF6670.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-49139",
@@ -171280,8 +171280,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000074/000074f8.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-104520",
@@ -171290,8 +171290,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000074/000074f9.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-104521",
@@ -171300,8 +171300,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000074/000074fa.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-84677",
@@ -171670,8 +171670,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/D7C51E59-9F5B-4E52-B955-726BA08C241F.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-203585",
@@ -171750,8 +171750,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000076/000076d0.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-184330",
@@ -171920,8 +171920,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000074/000074a6.png",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-229875",
@@ -174700,8 +174700,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000076/0000764a.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-194739",
@@ -175370,8 +175370,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/07454BB3-4762-4715-83F9-1EAEAFCC7DA4.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-184395",
@@ -176070,8 +176070,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/46031C96-AD9F-43D6-B84B-F7B1FF450FD2.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-201860",
@@ -176590,8 +176590,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000075/000075a7.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-201885",
@@ -176710,8 +176710,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/09349A2B-2DBC-4924-8399-F5D5A4FE4A54.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-181946",
@@ -176810,8 +176810,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/45490F79-B900-485D-8BA4-CFAF0C0D6A24.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-97867",
@@ -177200,8 +177200,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/81562EF0-9AD2-46AA-9BCA-6841C4AFF59D.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-212316",
@@ -177370,8 +177370,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/E1837F21-0086-4828-A2ED-2F92B29F2AE5.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-214219",
@@ -177740,8 +177740,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/7159140A-47D3-402E-96DD-952A0265F16F.png",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-70549",
@@ -177760,8 +177760,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/1D178DF5-BED3-4CE1-9B7F-D58BB5DFC183.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-214163",
@@ -180420,8 +180420,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/E498F2CC-18F3-4719-B67A-D2BB5CDFF6F0.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-106588",
@@ -180790,8 +180790,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/F649F614-FB5A-4A7D-B5D2-D4626CAB1026.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-99029",
@@ -181120,8 +181120,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/A08535B0-4FEA-4FE5-90D3-0915B7CBAE39.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-168209",
@@ -181330,8 +181330,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000076/000076ce.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-187295",
@@ -181520,8 +181520,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/A6F1F23A-88A7-4AE1-83AA-B09E79F951B0.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-228899",
@@ -181780,8 +181780,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/C784E473-5937-4E76-9ECB-FFA1A359F009.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-191275",
@@ -182140,8 +182140,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/3C0B7500-3FF8-4177-B313-F5EBF8E3BE4F.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-102687",
@@ -182920,8 +182920,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000075/00007577.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-169957",
@@ -183460,8 +183460,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/A7F76A37-E84D-4A51-9921-2C48462AC33E.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-103447",
@@ -183700,8 +183700,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/AE26FCE8-CFF6-4E29-8E43-971F9B40E15C.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-223016",
@@ -184120,8 +184120,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/FD7A4386-3DE6-43E2-96AB-51FDFDBAAA26.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-6142",
@@ -184550,8 +184550,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000039/00003914.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-94855",
@@ -184770,8 +184770,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/6FCD529C-6C40-405C-8747-9CBAC560E04F.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-212646",
@@ -186440,8 +186440,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/DF8AF0E7-B8CB-4A7B-A5B3-D47318A4F845.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-3522",
@@ -186670,8 +186670,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/60DFCFEE-9F4A-43C4-A606-B28ECC27B784.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-85368",
@@ -187280,8 +187280,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/E9F63CA9-6729-4CA2-B8A1-ED39EAF99908.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-170982",
@@ -187420,8 +187420,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/6FBC18E3-AF87-4E94-9987-1CA11A4EE10F.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-196874",
@@ -188700,8 +188700,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/A40C3BDC-0252-4C0A-B645-9B427C62F24A.jfif",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-17258",
@@ -189110,8 +189110,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000076/000076d7.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-209530",
@@ -189470,8 +189470,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/90CBA196-70A3-4640-AE27-78D7C203E8FA.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-26522",
@@ -190280,8 +190280,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/DB7231A3-933E-439E-B4EC-362674E0A515.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-215606",
@@ -192170,8 +192170,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/69242E50-CA24-452C-9709-5AFD9FB9578D.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-221403",
@@ -192190,8 +192190,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/F13BC77B-DC64-4E4E-86A4-70205FA693F5.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-214259",
@@ -192880,8 +192880,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/BA8546C2-2762-43F8-A8E4-A5D6834DB370.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-6230",
@@ -193310,8 +193310,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/7418D48D-D544-4C0B-9CB4-CF87691E1864.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-216051",
@@ -194550,8 +194550,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000074/00007443.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-103589",
@@ -196660,8 +196660,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/FC1BB07F-4BA1-45DE-9370-1A6519127305.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-225532",
@@ -196890,8 +196890,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/31E5AA1C-2A0A-4C9A-8E14-802803E3D0CB.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-83539",
@@ -198470,8 +198470,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000075/0000757c.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-177656",
@@ -199880,8 +199880,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000002/000002e1.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-176620",
@@ -201810,8 +201810,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000075/00007542.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-70275",
@@ -202280,8 +202280,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000006/00000656.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-64199",
@@ -207920,8 +207920,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/CF191139-0C8D-4BAF-8320-2B43D71D6AC2.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-227947",
@@ -208190,8 +208190,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/C3BCF9C3-EFEA-480E-95A8-8759B98F6A5D.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-12431",
@@ -208380,8 +208380,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/96E702FA-A598-4D40-A993-0198EB459DD2.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-97595",
@@ -208580,8 +208580,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/2B0A697E-7A5F-4C0B-B7F8-0AE4AE581FAA.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-109850",
@@ -208760,8 +208760,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/BE15EAAB-9FB0-42C3-A3A1-62A4F24AE790.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-233058",
@@ -210230,8 +210230,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/630E6E85-67CE-4338-91D4-A2DC5908A1C2.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-229534",
@@ -210370,8 +210370,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000077/00007741.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-194254",
@@ -211130,8 +211130,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/61547E49-75E9-4CA3-B545-33AD98E8352D.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-216557",
@@ -213100,8 +213100,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000075/00007555.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-158864",
@@ -213690,8 +213690,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000074/000074b0.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-104688",
@@ -213700,8 +213700,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000075/0000759a.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-192620",
@@ -214050,8 +214050,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000076/00007659.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-187038",
@@ -215780,8 +215780,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000075/00007546.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-228781",
@@ -216240,8 +216240,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/D182CF3F-BBAA-4F34-8CF3-9B9502BB3A70.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-194727",
@@ -216330,8 +216330,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/9756B79D-94EE-4F6D-B47A-216126479005.png",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-197498",
@@ -217470,8 +217470,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000075/000075c4.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-104968",
@@ -217480,8 +217480,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000076/000076cb.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-167963",
@@ -218230,8 +218230,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000076/00007646.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-212618",
@@ -218570,8 +218570,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000074/000074bd.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-215797",
@@ -219300,8 +219300,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/0CDC20F8-F45D-477D-810D-D7B4F12BE465.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-204114",
@@ -219430,8 +219430,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/DD61ECCE-DDB5-4229-A20D-106769FA81FE.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-208318",
@@ -222790,8 +222790,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000076/000076b5.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-230425",
@@ -224580,8 +224580,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/B78A4924-E162-43E7-B584-51CF2F364C89.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-203952",
@@ -227050,8 +227050,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/5D6769D1-0B65-4F0B-A880-09E51D480F14.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-214845",
@@ -230670,8 +230670,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000075/00007544.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-229955",
@@ -233130,8 +233130,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/1DDB1A61-76FF-41D8-A648-30733F347FF7.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-209710",
@@ -233390,8 +233390,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000007/0000074e.jpg",
+      "capa_automatica": true
     },
     {
       "id": "bibliotecas-da-fundacao-municipal-de-cultura-de-belo-horizonte-71747",
@@ -234000,8 +234000,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000075/000075a6.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-229565",
@@ -235640,8 +235640,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000075/00007516.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-159270",
@@ -236000,8 +236000,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000074/00007498.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-30373",
@@ -236580,8 +236580,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/24035466-3B28-4093-BF54-675F03A3C680.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-42370",
@@ -236680,8 +236680,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/6091D952-E391-40C9-960E-D19088F6052D.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-192774",
@@ -238600,8 +238600,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/00001b/00001b10.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-10653",
@@ -238610,8 +238610,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/00002c/00002c95.png",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-10804",
@@ -239270,8 +239270,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/9EBBFC9E-F1A7-415D-9A95-41F0C7082CC5.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-42294",
@@ -240540,8 +240540,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/AEE9C09D-510F-4131-8840-F95408660C56.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-163639",
@@ -241830,8 +241830,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/EE0F7CA7-6940-4FAA-AF6C-51EDC675403E.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-220659",
@@ -243050,8 +243050,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000076/000076a9.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-229537",
@@ -243220,8 +243220,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/81F50CA4-8217-4DC2-BEE4-533A4B3957A9.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-219337",
@@ -243470,8 +243470,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/D6AC46CC-F53E-45EF-82A8-B602429C6E7D.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-208283",
@@ -244330,8 +244330,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/D7082CC3-E989-4DC5-A443-E5C12BFC09BC.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-187186",
@@ -244750,8 +244750,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/E7C06ACD-0E17-41E8-80C3-CF9538E96A88.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-189155",
@@ -245630,8 +245630,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/F75BD63D-5D55-49E8-AB9C-39136DF3009B.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-183928",
@@ -245760,8 +245760,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/A83E651B-BC2B-444C-8BD8-A5D29D2DAF1E.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-10181",
@@ -245820,8 +245820,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/C429CFA5-AFD6-4D15-AA22-2061FEA437D3.PNG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-187054",
@@ -246210,8 +246210,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/00000f/00000fc8.jpg",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-64062",
@@ -246620,8 +246620,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000075/000075e6.JPG",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-sabara-fisico-10503",
@@ -246630,8 +246630,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/00004f/00004f8e.png",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-184368",
@@ -246650,8 +246650,8 @@
       "acesso_fisico": true,
       "acesso_virtual": false,
       "icone": "📚",
-      "imagem": "",
-      "capa_automatica": false
+      "imagem": "https://pergamum.ifmg.edu.br/pergamumweb/download/FCBA2E89-C2F6-4110-8982-AD5AEF27B5CB.png",
+      "capa_automatica": true
     },
     {
       "id": "ifmg-virtual-192681",

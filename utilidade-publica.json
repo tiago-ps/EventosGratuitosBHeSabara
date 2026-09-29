@@ -289,7 +289,7 @@
       "observacao": "O DIEESE estima o salário mínimo necessário com base no custo da cesta básica mais cara entre as localidades pesquisadas e nas despesas previstas no art. 7º, IV, da Constituição.",
       "dados": {
         "salario_minimo_nominal": {
-          "valor": 1621,
+          "valor": 1621.0,
           "unidade": "BRL"
         },
         "salario_minimo_necessario": {
@@ -376,7 +376,8 @@
           "periodo_referencia",
           "dados.serie_mensal",
           "atualizacao.ultima_alteracao"
-        ]
+        ],
+        "ultima_alteracao": "2026-09-28T18:14:26Z"
       },
       "tempo_slide": 15,
       "origem": "colecao-salario-minimo",
@@ -393,122 +394,146 @@
         "serie_mensal": [
           {
             "periodo": "2026-08",
-            "salario_minimo_nominal": 1621,
+            "salario_minimo_nominal": 1621.0,
             "salario_minimo_necessario": 7565.86,
             "multiplicador": 4.67
           },
           {
             "periodo": "2026-07",
-            "salario_minimo_nominal": 1621,
+            "salario_minimo_nominal": 1621.0,
             "salario_minimo_necessario": 7687.01,
             "multiplicador": 4.74
           },
           {
             "periodo": "2026-06",
-            "salario_minimo_nominal": 1621,
+            "salario_minimo_nominal": 1621.0,
             "salario_minimo_necessario": 8110.92,
-            "multiplicador": 5
+            "multiplicador": 5.0
           },
           {
             "periodo": "2026-05",
-            "salario_minimo_nominal": 1621,
+            "salario_minimo_nominal": 1621.0,
             "salario_minimo_necessario": 7999.44,
             "multiplicador": 4.93
           },
           {
             "periodo": "2026-04",
-            "salario_minimo_nominal": 1621,
+            "salario_minimo_nominal": 1621.0,
             "salario_minimo_necessario": 7612.49,
             "multiplicador": 4.7
           },
           {
             "periodo": "2026-03",
-            "salario_minimo_nominal": 1621,
+            "salario_minimo_nominal": 1621.0,
             "salario_minimo_necessario": 7425.99,
             "multiplicador": 4.58
           },
           {
             "periodo": "2026-02",
-            "salario_minimo_nominal": 1621,
+            "salario_minimo_nominal": 1621.0,
             "salario_minimo_necessario": 7164.94,
             "multiplicador": 4.42
           },
           {
             "periodo": "2026-01",
-            "salario_minimo_nominal": 1621,
+            "salario_minimo_nominal": 1621.0,
             "salario_minimo_necessario": 7156.15,
             "multiplicador": 4.41
           },
           {
             "periodo": "2025-12",
-            "salario_minimo_nominal": 1518,
+            "salario_minimo_nominal": 1518.0,
             "salario_minimo_necessario": 7106.83,
             "multiplicador": 4.68
           },
           {
             "periodo": "2025-11",
-            "salario_minimo_nominal": 1518,
+            "salario_minimo_nominal": 1518.0,
             "salario_minimo_necessario": 7067.18,
             "multiplicador": 4.66
           },
           {
             "periodo": "2025-10",
-            "salario_minimo_nominal": 1518,
+            "salario_minimo_nominal": 1518.0,
             "salario_minimo_necessario": 7116.83,
             "multiplicador": 4.69
           },
           {
             "periodo": "2025-09",
-            "salario_minimo_nominal": 1518,
+            "salario_minimo_nominal": 1518.0,
             "salario_minimo_necessario": 7075.83,
             "multiplicador": 4.66
           },
           {
             "periodo": "2025-08",
-            "salario_minimo_nominal": 1518,
+            "salario_minimo_nominal": 1518.0,
             "salario_minimo_necessario": 7147.91,
             "multiplicador": 4.71
           },
           {
             "periodo": "2025-07",
-            "salario_minimo_nominal": 1518,
+            "salario_minimo_nominal": 1518.0,
             "salario_minimo_necessario": 7274.43,
             "multiplicador": 4.79
           },
           {
             "periodo": "2025-06",
-            "salario_minimo_nominal": 1518,
+            "salario_minimo_nominal": 1518.0,
             "salario_minimo_necessario": 7416.07,
             "multiplicador": 4.89
           },
           {
             "periodo": "2025-05",
-            "salario_minimo_nominal": 1518,
+            "salario_minimo_nominal": 1518.0,
             "salario_minimo_necessario": 7528.56,
             "multiplicador": 4.96
           },
           {
             "periodo": "2025-04",
-            "salario_minimo_nominal": 1518,
+            "salario_minimo_nominal": 1518.0,
             "salario_minimo_necessario": 7638.62,
             "multiplicador": 5.03
           },
           {
             "periodo": "2025-03",
-            "salario_minimo_nominal": 1518,
+            "salario_minimo_nominal": 1518.0,
             "salario_minimo_necessario": 7398.94,
             "multiplicador": 4.87
           },
           {
             "periodo": "2025-02",
-            "salario_minimo_nominal": 1518,
+            "salario_minimo_nominal": 1518.0,
             "salario_minimo_necessario": 7229.32,
             "multiplicador": 4.76
           },
           {
             "periodo": "2025-01",
-            "salario_minimo_nominal": 1518,
+            "salario_minimo_nominal": 1518.0,
             "salario_minimo_necessario": 7156.15,
+            "multiplicador": 4.71
+          },
+          {
+            "periodo": "2024-12",
+            "salario_minimo_nominal": 1412.0,
+            "salario_minimo_necessario": 7067.68,
+            "multiplicador": 5.01
+          },
+          {
+            "periodo": "2024-11",
+            "salario_minimo_nominal": 1412.0,
+            "salario_minimo_necessario": 6959.31,
+            "multiplicador": 4.93
+          },
+          {
+            "periodo": "2024-10",
+            "salario_minimo_nominal": 1412.0,
+            "salario_minimo_necessario": 6769.87,
+            "multiplicador": 4.79
+          },
+          {
+            "periodo": "2024-09",
+            "salario_minimo_nominal": 1412.0,
+            "salario_minimo_necessario": 6657.55,
             "multiplicador": 4.71
           }
         ]
