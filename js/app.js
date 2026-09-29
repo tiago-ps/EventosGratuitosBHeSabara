@@ -5011,7 +5011,9 @@ function eventProgram(event) {
     header.innerHTML = `
       ${state.curationMode ? `<div class="curation-mode-banner" role="status"><strong>Modo Curadoria</strong><span>Ambiente de seleção — este não é o Mural Cultural público oficial.</span></div>` : ''}
       <div class="agenda-heading">
-        <img class="agenda-logo" src="imagens/marca/logo-mural-cultural.png" alt="Tem Sim, Uai">
+        <a class="agenda-home-link" href="./" aria-label="Ir para a página inicial do Tem Sim, Uai" title="Voltar ao início">
+          <img class="agenda-logo" src="imagens/marca/logo-mural-cultural.png" alt="Tem Sim, Uai">
+        </a>
       </div>
       <nav class="agenda-content-nav" aria-label="Tipos de conteúdo">
         ${agendaContentTabs.map(([value, label]) => `
