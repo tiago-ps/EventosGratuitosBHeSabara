@@ -137,3 +137,9 @@ assert(app.includes("kind === 'selecionar_livros'"));
 assert(app.includes('requestedCurationContentFromUrl()'));
 assert(styles.includes('.agenda-community-option-books'));
 assert(styles.includes('.agenda-community-option-kicker'));
+
+
+assert(app.includes('class="agenda-home-link" href="./"'));
+assert(app.includes('Ir para a página inicial do Tem Sim, Uai'));
+assert(styles.includes('.panel-home-link'));
+assert(styles.includes('.agenda-home-link'));
