@@ -2494,8 +2494,8 @@ function eventProgram(event) {
     const count = activeFilterCount();
     const countElement = state.btnFilter.querySelector('.filter-count');
     const description = count
-      ? `Configurar painel: ${count} ajuste${count === 1 ? '' : 's'} ativo${count === 1 ? '' : 's'}`
-      : 'Configurar painel';
+      ? `Configurar exibição: ${count} ajuste${count === 1 ? '' : 's'} ativo${count === 1 ? '' : 's'}`
+      : 'Configurar exibição';
 
     state.btnFilter.classList.toggle('has-filters', count > 0);
     state.btnFilter.setAttribute('aria-label', description);
@@ -5194,7 +5194,7 @@ function eventProgram(event) {
         </button>
         ${agendaThemeToggleMarkup()}
         <button class="install-app-btn" type="button" hidden>Instalar app</button>
-        <button class="view-toggle" type="button" aria-label="Abrir modo painel">Modo painel</button>
+        <button class="view-toggle" type="button" aria-label="Abrir exibição interativa">Exibição interativa</button>
       </div>
     `;
 
@@ -5626,9 +5626,14 @@ function eventProgram(event) {
     const button = document.createElement('button');
     button.className = 'control-btn view-mode-btn';
     button.type = 'button';
-    button.title = 'Modo agenda';
-    button.setAttribute('aria-label', 'Abrir modo agenda');
-    button.textContent = '☷';
+    button.title = 'Explorar conteúdos';
+    button.setAttribute('aria-label', 'Explorar conteúdos');
+    button.innerHTML = `
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <circle cx="11" cy="11" r="6"></circle>
+        <path d="m16 16 4 4"></path>
+      </svg>
+    `;
     button.addEventListener('click', () => {
       exitSharedAgendaSelection();
       resetAgendaBatches();
