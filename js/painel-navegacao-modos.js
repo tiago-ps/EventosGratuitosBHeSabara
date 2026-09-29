@@ -52,8 +52,8 @@
     if (interactiveButton.dataset.explicitPanelMode !== 'true') {
       interactiveButton.dataset.explicitPanelMode = 'true';
       interactiveButton.textContent = 'Exibição interativa';
-      interactiveButton.title = 'Abrir Painel interativo';
-      interactiveButton.setAttribute('aria-label', 'Abrir Painel interativo');
+      interactiveButton.title = 'Abrir exibição interativa';
+      interactiveButton.setAttribute('aria-label', 'Abrir exibição interativa');
       interactiveButton.addEventListener('click', event => {
         event.preventDefault();
         event.stopImmediatePropagation();
@@ -96,7 +96,7 @@
     button.type = 'button';
     button.className = 'passive-mode-exit';
     button.textContent = 'Exibição interativa';
-    button.setAttribute('aria-label', 'Abrir Painel interativo');
+    button.setAttribute('aria-label', 'Abrir exibição interativa');
     button.addEventListener('click', () => navigate('interativo'));
     media.appendChild(button);
   }
