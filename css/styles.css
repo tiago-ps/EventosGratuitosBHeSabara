@@ -1973,6 +1973,107 @@ body.agenda-mode.curation-mode {
   --curation-accent: #f0b429;
   --curation-ink: #201704;
 }
+
+/* Perfil visual do ambiente de seleção.
+   Mantém claro/escuro, mas deixa inequívoco que este não é o catálogo comum. */
+body.agenda-mode.curation-mode.agenda-theme-light {
+  color-scheme: light;
+  --bg: #f3ecd2;
+  --panel: #fffaf0;
+  --panel-deep: #f8efd4;
+  --panel-end: #eee0ad;
+  --media-bg: #efe2b8;
+  --text: #2d250f;
+  --muted: #6b5d35;
+  --accent: #9a6700;
+  --accent-soft: #c78d18;
+  --accent-contrast: #fffaf0;
+  --category: #b7791f;
+  --category-contrast: #fffaf0;
+  --date-highlight: #9a6700;
+  --detail-heading: #7b5512;
+  --line: rgba(110, 81, 15, .22);
+  --surface: rgba(154, 103, 0, .065);
+  --counter-border: rgba(154, 103, 0, .30);
+  --detail-border: rgba(154, 103, 0, .24);
+  --link-decoration: rgba(154, 103, 0, .42);
+  --link-hover: #684600;
+  --controls-bg: rgba(255, 250, 240, .96);
+  --control-bg: rgba(154, 103, 0, .09);
+  --control-hover-bg: rgba(154, 103, 0, .16);
+  --mobile-overlay: rgba(243, 236, 210, .97);
+  background:
+    radial-gradient(circle at 12% 0%, rgba(255, 220, 111, .40) 0, transparent 34%),
+    var(--bg);
+}
+
+body.agenda-mode.curation-mode.agenda-theme-dark {
+  color-scheme: dark;
+  --bg: #151105;
+  --panel: #211a08;
+  --panel-deep: #0f0d04;
+  --panel-end: #2b220a;
+  --media-bg: #33290f;
+  --text: #fff7d8;
+  --muted: #d5c58f;
+  --accent: #f1ba38;
+  --accent-soft: #ffd870;
+  --accent-contrast: #241900;
+  --category: #d69a25;
+  --category-contrast: #241900;
+  --date-highlight: #ffd870;
+  --detail-heading: #ffd870;
+  --line: rgba(241, 186, 56, .20);
+  --surface: rgba(241, 186, 56, .075);
+  --counter-border: rgba(241, 186, 56, .34);
+  --detail-border: rgba(241, 186, 56, .24);
+  --link-decoration: rgba(241, 186, 56, .48);
+  --link-hover: #ffe49b;
+  --controls-bg: rgba(25, 20, 6, .94);
+  --control-bg: rgba(241, 186, 56, .12);
+  --control-hover-bg: rgba(241, 186, 56, .20);
+  --mobile-overlay: rgba(21, 17, 5, .97);
+  background:
+    radial-gradient(circle at 12% 0%, rgba(241, 186, 56, .15) 0, transparent 34%),
+    var(--bg);
+}
+
+body.agenda-mode.curation-mode .agenda-header {
+  background: color-mix(in srgb, var(--panel) 93%, var(--curation-accent) 7%);
+  border: 1px solid color-mix(in srgb, var(--curation-accent) 48%, var(--line));
+  border-top: 6px solid var(--curation-accent);
+  border-radius: 20px;
+  padding: 16px;
+  box-shadow: 0 14px 38px color-mix(in srgb, var(--curation-accent) 12%, transparent);
+}
+
+body.agenda-mode.curation-mode .agenda-tools {
+  background: color-mix(in srgb, var(--panel) 94%, var(--curation-accent) 6%);
+  border-color: color-mix(in srgb, var(--curation-accent) 34%, var(--line));
+}
+
+body.agenda-mode.curation-mode .agenda-card {
+  background: linear-gradient(
+    145deg,
+    color-mix(in srgb, var(--panel) 96%, var(--curation-accent) 4%),
+    var(--panel-deep)
+  );
+  border-color: color-mix(in srgb, var(--curation-accent) 24%, var(--line));
+  box-shadow: 0 10px 30px color-mix(in srgb, var(--curation-accent) 8%, rgba(0,0,0,.22));
+}
+
+body.agenda-mode.curation-mode .agenda-card-badges span {
+  background: color-mix(in srgb, var(--curation-accent) 11%, var(--surface));
+}
+
+body.agenda-mode.curation-mode .agenda-content-tab.is-active,
+body.agenda-mode.curation-mode .agenda-favorites-toggle.is-active {
+  border-color: var(--curation-accent);
+}
+
+body.agenda-mode.curation-mode .agenda-footer {
+  border-top-color: color-mix(in srgb, var(--curation-accent) 28%, var(--line));
+}
 body.agenda-mode.curation-mode .agenda-header {
   border-top: 6px solid var(--curation-accent);
 }

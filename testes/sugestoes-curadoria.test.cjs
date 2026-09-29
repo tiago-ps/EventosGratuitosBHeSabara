@@ -6,6 +6,7 @@ const worker = fs.readFileSync('cloudflare/social-preview-worker.js', 'utf8');
 const serviceWorker = fs.readFileSync('service-worker.js', 'utf8');
 const panelActions = fs.readFileSync('js/painel-acoes-contextuais.js', 'utf8');
 const panelNavigation = fs.readFileSync('js/painel-navegacao-modos.js', 'utf8');
+const styles = fs.readFileSync('css/styles.css', 'utf8');
 const schema = fs.readFileSync('cloudflare/sugestoes-curadoria.sql', 'utf8');
 const wrangler = JSON.parse(fs.readFileSync('wrangler.jsonc', 'utf8'));
 
@@ -115,3 +116,12 @@ assert(app.includes("url.searchParams.delete('modo')"));
 assert(app.includes("history.replaceState(history.state, '', url)"));
 assert(panelNavigation.includes("url.searchParams.delete('selecao')"));
 assert(panelNavigation.includes("url.searchParams.set('modo', mode)"));
+
+
+assert(styles.includes('body.agenda-mode.curation-mode.agenda-theme-light'));
+assert(styles.includes('body.agenda-mode.curation-mode.agenda-theme-dark'));
+assert(styles.includes('--curation-accent: #f0b429'));
+assert(styles.includes('radial-gradient(circle at 12% 0%'));
+assert(styles.includes('body.agenda-mode.curation-mode .agenda-header'));
+assert(styles.includes('body.agenda-mode.curation-mode .agenda-tools'));
+assert(styles.includes('body.agenda-mode.curation-mode .agenda-card'));
