@@ -24,8 +24,8 @@
     const button = document.createElement('button');
     button.type = 'button';
     button.className = className;
-    button.setAttribute('aria-label', 'Abrir Painel passivo');
-    button.title = 'Painel passivo';
+    button.setAttribute('aria-label', 'Abrir exibição automática');
+    button.title = 'Exibição automática';
 
     if (compact) {
       button.innerHTML = `
@@ -35,7 +35,7 @@
         </svg>
       `;
     } else {
-      button.textContent = 'Painel passivo';
+      button.textContent = 'Exibição automática';
     }
 
     button.addEventListener('click', () => navigate('passivo'));
@@ -51,7 +51,7 @@
 
     if (interactiveButton.dataset.explicitPanelMode !== 'true') {
       interactiveButton.dataset.explicitPanelMode = 'true';
-      interactiveButton.textContent = 'Painel interativo';
+      interactiveButton.textContent = 'Exibição interativa';
       interactiveButton.title = 'Abrir Painel interativo';
       interactiveButton.setAttribute('aria-label', 'Abrir Painel interativo');
       interactiveButton.addEventListener('click', event => {
@@ -95,7 +95,7 @@
     const button = document.createElement('button');
     button.type = 'button';
     button.className = 'passive-mode-exit';
-    button.textContent = 'Modo interativo';
+    button.textContent = 'Exibição interativa';
     button.setAttribute('aria-label', 'Abrir Painel interativo');
     button.addEventListener('click', () => navigate('interativo'));
     media.appendChild(button);
