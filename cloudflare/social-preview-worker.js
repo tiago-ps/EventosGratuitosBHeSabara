@@ -20,6 +20,13 @@ const CONTRIBUTION_TYPE_LABELS = {
   corrigir_informacao: 'Correção de informação'
 };
 
+const SHARED_SELECTION_API_PATH = '/api/selecoes-compartilhadas';
+const SHARED_SELECTION_SHORT_PREFIX = '/s/';
+const SHARED_SELECTION_CONTEXTS = new Set(['mural', 'curadoria_livros']);
+const SHARED_SELECTION_CODE_RE = /^[23456789ABCDEFGHJKLMNPQRSTUVWXYZ]{7}$/;
+const SHARED_SELECTION_PUBLIC_BASE = 'https://temsimuai.com.br/';
+const SHARED_SELECTION_CURATION_BASE = 'https://tiago-ps.github.io/EventosGratuitosBHeSabara/';
+
 function suggestionCorsOrigin(request, env) {
   const origin = String(request.headers.get('origin') || '').trim();
   if (!origin) return '';
@@ -87,6 +94,205 @@ function normalizeSuggestionItems(raw) {
   }
   if (!unique.length) throw new Error('itens_invalidos');
   return unique;
+}
+
+function normalizeSharedSelectionContext(value) {
+  const context = String(value || '').trim().toLowerCase();
+  if (!SHARED_SELECTION_CONTEXTS.has(context)) throw new Error('contexto_invalido');
+  return context;
+}
+
+function sharedSelectionCode() {
+  const alphabet = '23456789ABCDEFGHJKLMNPQRSTUVWXYZ';
+  const bytes = new Uint8Array(7);
+  crypto.getRandomValues(bytes);
+  return [...bytes].map(value => alphabet[value % alphabet.length]).join('');
+}
+
+async function sharedSelectionHash(context, items) {
+  const canonical = [context, ...[...items].sort()].join('\n');
+  const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(canonical));
+  return [...new Uint8Array(digest)].map(value => value.toString(16).padStart(2, '0')).join('');
+}
+
+async function sharedSelectionsTableAvailable(env) {
+  if (!env.SUGESTOES_DB) return false;
+  try {
+    await env.SUGESTOES_DB.prepare('SELECT 1 FROM selecoes_compartilhadas LIMIT 1').first();
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+async function countSharedSelectionsToday(env) {
+  const row = await env.SUGESTOES_DB
+    .prepare("SELECT COUNT(*) AS total FROM selecoes_compartilhadas WHERE criado_em >= datetime('now','start of day')")
+    .first();
+  return Number(row?.total || 0);
+}
+
+async function sharedSelectionRow(env, code) {
+  return env.SUGESTOES_DB.prepare(
+    'SELECT codigo, contexto, criado_em, itens_json, quantidade, schema_version FROM selecoes_compartilhadas WHERE codigo = ? LIMIT 1'
+  ).bind(code).first();
+}
+
+function sharedSelectionItemsFromRow(row) {
+  try {
+    const parsed = JSON.parse(row?.itens_json || '[]');
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
+async function insertOrReuseSharedSelection(env, context, items) {
+  const hash = await sharedSelectionHash(context, items);
+  const existing = await env.SUGESTOES_DB.prepare(
+    'SELECT codigo FROM selecoes_compartilhadas WHERE contexto = ? AND hash_selecao = ? LIMIT 1'
+  ).bind(context, hash).first();
+  if (existing?.codigo) return String(existing.codigo);
+
+  for (let attempt = 0; attempt < 6; attempt += 1) {
+    const code = sharedSelectionCode();
+    try {
+      await env.SUGESTOES_DB.prepare(
+        `INSERT INTO selecoes_compartilhadas
+          (codigo, criado_em, contexto, itens_json, quantidade, hash_selecao, schema_version)
+         VALUES (?, datetime('now'), ?, ?, ?, ?, 1)`
+      ).bind(code, context, JSON.stringify([...items].sort()), items.length, hash).run();
+      return code;
+    } catch (error) {
+      const message = String(error?.message || error).toLowerCase();
+      if (message.includes('hash_selecao') || message.includes('idx_selecoes_compartilhadas_contexto_hash')) {
+        const reused = await env.SUGESTOES_DB.prepare(
+          'SELECT codigo FROM selecoes_compartilhadas WHERE contexto = ? AND hash_selecao = ? LIMIT 1'
+        ).bind(context, hash).first();
+        if (reused?.codigo) return String(reused.codigo);
+      }
+      if (!message.includes('unique')) throw error;
+    }
+  }
+  throw new Error('codigo_indisponivel');
+}
+
+async function handleSharedSelectionPost(request, env) {
+  if (!(await sharedSelectionsTableAvailable(env))) {
+    return jsonResponse({ erro: 'Os links curtos estão temporariamente indisponíveis.' }, 503);
+  }
+  const contentLength = Number(request.headers.get('content-length') || 0);
+  if (contentLength > 32 * 1024) {
+    return jsonResponse({ erro: 'A seleção excede o limite permitido.' }, 413);
+  }
+
+  let body;
+  try {
+    body = await request.json();
+  } catch {
+    return jsonResponse({ erro: 'Seleção inválida.' }, 400);
+  }
+
+  let items;
+  let context;
+  try {
+    items = normalizeSuggestionItems(body?.itens);
+    context = normalizeSharedSelectionContext(body?.contexto);
+  } catch {
+    return jsonResponse({ erro: 'Seleção inválida.' }, 422);
+  }
+
+  const dailyLimit = Math.max(1, Number(env.SELECOES_COMPARTILHADAS_DAILY_LIMIT || 3000));
+  if ((await countSharedSelectionsToday(env)) >= dailyLimit) {
+    return jsonResponse({
+      erro: 'Não foi possível criar um novo link curto agora. Tente novamente mais tarde.',
+      codigo: 'LIMITE_DIARIO'
+    }, 429);
+  }
+
+  const code = await insertOrReuseSharedSelection(env, context, items);
+  return jsonResponse({
+    ok: true,
+    codigo: code,
+    contexto: context,
+    quantidade: items.length,
+    url: new URL(`s/${code}`, SHARED_SELECTION_PUBLIC_BASE).href
+  }, 201);
+}
+
+async function handleSharedSelectionGet(code, env) {
+  if (!(await sharedSelectionsTableAvailable(env))) {
+    return jsonResponse({ erro: 'Os links curtos estão temporariamente indisponíveis.' }, 503);
+  }
+  const row = await sharedSelectionRow(env, code);
+  if (!row) return jsonResponse({ erro: 'Seleção não encontrada.' }, 404);
+  const items = sharedSelectionItemsFromRow(row);
+  return jsonResponse({
+    codigo: String(row.codigo),
+    contexto: String(row.contexto),
+    quantidade: Number(row.quantidade || items.length),
+    itens: items,
+    schema_version: Number(row.schema_version || 1)
+  });
+}
+
+async function handleSharedSelectionApi(request, env) {
+  const url = new URL(request.url);
+  const isCollection = url.pathname === SHARED_SELECTION_API_PATH;
+  const codeMatch = url.pathname.match(/^\/api\/selecoes-compartilhadas\/([23456789ABCDEFGHJKLMNPQRSTUVWXYZ]{7})$/);
+
+  if ((isCollection || codeMatch) && request.method === 'OPTIONS') {
+    return withSuggestionCors(request, env, new Response(null, {
+      status: 204,
+      headers: {'cache-control': 'no-store'}
+    }));
+  }
+  if (isCollection && request.method === 'POST') {
+    return withSuggestionCors(request, env, await handleSharedSelectionPost(request, env));
+  }
+  if (codeMatch && request.method === 'GET') {
+    return withSuggestionCors(request, env, await handleSharedSelectionGet(codeMatch[1], env));
+  }
+  return null;
+}
+
+async function handleSharedSelectionShortLink(request, env) {
+  if (request.method !== 'GET' && request.method !== 'HEAD') return null;
+  const url = new URL(request.url);
+  const match = url.pathname.match(/^\/s\/([23456789ABCDEFGHJKLMNPQRSTUVWXYZ]{7})\/?$/);
+  if (!match) return null;
+  const code = match[1];
+
+  if (!(await sharedSelectionsTableAvailable(env))) {
+    return Response.redirect(SHARED_SELECTION_PUBLIC_BASE, 302);
+  }
+  const row = await sharedSelectionRow(env, code);
+  if (!row) return Response.redirect(SHARED_SELECTION_PUBLIC_BASE, 302);
+
+  if (String(row.contexto) === 'curadoria_livros') {
+    const target = new URL(SHARED_SELECTION_CURATION_BASE);
+    target.searchParams.set('modo', 'curadoria');
+    target.searchParams.set('conteudo', 'livros');
+    target.searchParams.set('lista', code);
+    return Response.redirect(target.href, 302);
+  }
+
+  const indexUrl = new URL('/index.html', request.url);
+  const assetRequest = new Request(indexUrl.href, request);
+  const response = await env.ASSETS.fetch(assetRequest);
+  const contentType = response.headers.get('content-type') || '';
+  if (!contentType.includes('text/html')) return response;
+
+  const quantity = Number(row.quantidade || 0);
+  return rewriteHtml(response, {
+    title: 'Seleção compartilhada — Tem Sim, Uai',
+    description: quantity === 1
+      ? 'Uma indicação compartilhada no Tem Sim, Uai.'
+      : `${quantity} indicações compartilhadas no Tem Sim, Uai.`,
+    image: new URL('imagens/marca/logo-mural-cultural.png', SHARED_SELECTION_PUBLIC_BASE).href,
+    imageAlt: 'Tem Sim, Uai',
+    url: new URL(`s/${code}`, SHARED_SELECTION_PUBLIC_BASE).href
+  });
 }
 
 function protocolCode() {
@@ -709,6 +915,12 @@ function rewriteHtml(response, meta) {
 
 export default {
   async fetch(request, env) {
+    const shortSelectionResponse = await handleSharedSelectionShortLink(request, env);
+    if (shortSelectionResponse) return shortSelectionResponse;
+
+    const sharedSelectionResponse = await handleSharedSelectionApi(request, env);
+    if (sharedSelectionResponse) return sharedSelectionResponse;
+
     const contributionResponse = await handleCommunityContributionApi(request, env);
     if (contributionResponse) return contributionResponse;
 
