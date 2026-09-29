@@ -24,12 +24,13 @@
   const stylesheetLoads = new Map();
   const root = document.documentElement;
   const defaultThemeColor = document.querySelector('meta[name="theme-color"]')?.content || '#07111f';
+  const CURATION_STYLESHEET_VERSION = '20260928-1';
 
   function loadCurationStylesheet(path) {
     if (stylesheetLoads.has(path)) return stylesheetLoads.get(path);
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = path;
+    link.href = `${path}?v=${CURATION_STYLESHEET_VERSION}`;
     link.dataset.curationStylesheet = path;
     const entry = { link, loaded: null, cancel: null, promise: null };
     entry.promise = new Promise(resolve => {
