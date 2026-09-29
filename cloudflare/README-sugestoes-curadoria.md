@@ -62,3 +62,22 @@ Endpoints:
 O Turnstile usa a ação `contribuir_mural`. A contribuição não exige cadastro e não grava IP, User-Agent, fingerprint, localização ou identificador persistente do visitante na tabela editorial.
 
 Antes de ativar os formulários, aplique `cloudflare/contribuicoes-comunidade.sql` no mesmo D1 vinculado como `SUGESTOES_DB`.
+
+
+## Links curtos de seleções compartilhadas
+
+O compartilhamento de favoritos pode usar links curtos do próprio domínio:
+
+`https://temsimuai.com.br/s/XXXXXXX`
+
+Endpoints:
+
+- `POST /api/selecoes-compartilhadas` cria ou reutiliza um link curto;
+- `GET /api/selecoes-compartilhadas/XXXXXXX` resolve a seleção;
+- `GET /s/XXXXXXX` abre a seleção no Mural ou encaminha para o ambiente de curadoria de livros quando o contexto for `curadoria_livros`.
+
+Antes de ativar os links curtos, aplique `cloudflare/selecoes-compartilhadas.sql` no mesmo D1 vinculado como `SUGESTOES_DB`.
+
+A tabela guarda somente código aleatório, data/hora, contexto, quantidade, hash de deduplicação, versão do esquema e os IDs estáveis selecionados. Não grava IP, User-Agent, fingerprint, localização, nome, e-mail ou conta. Seleções idênticas no mesmo contexto reutilizam o mesmo código para evitar armazenamento desnecessário.
+
+`SELECOES_COMPARTILHADAS_DAILY_LIMIT` é opcional; o padrão é 3000 novos registros por dia. Quando o serviço de link curto estiver indisponível, a interface mantém o formato legado como contingência.
