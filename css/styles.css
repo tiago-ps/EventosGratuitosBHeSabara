@@ -2384,3 +2384,74 @@ body.agenda-mode .agenda-header-actions .agenda-favorites-count {
     min-height: 34px;
   }
 }
+
+
+/* Agenda v163 — consulta de protocolo agrupada em Contribua. */
+.agenda-community-followup {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 4px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--surface) 72%, transparent);
+}
+
+.agenda-community-followup > div {
+  min-width: 0;
+  display: grid;
+  gap: 4px;
+}
+
+.agenda-community-followup strong {
+  color: var(--text);
+  font-size: .96rem;
+}
+
+.agenda-community-followup span {
+  color: var(--muted);
+  font-size: .86rem;
+  line-height: 1.4;
+}
+
+.agenda-community-track {
+  flex: 0 0 auto;
+  min-height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--control-bg);
+  color: var(--text);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.agenda-community-track:hover,
+.agenda-community-track:focus-visible {
+  border-color: var(--accent);
+  background: var(--control-hover-bg);
+}
+
+.agenda-community-track:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (max-width: 620px) {
+  .agenda-community-followup {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .agenda-community-track {
+    width: 100%;
+  }
+}
