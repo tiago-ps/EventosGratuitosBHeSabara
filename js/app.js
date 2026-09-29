@@ -5,6 +5,7 @@
   const BOOKS_URL = 'livros.json';
   const CURATION_BOOKS_URL = 'catalogo-curadoria-livros.json';
   const CURATION_BOOK_COVERS_URL = 'capas-curadoria-livros.json';
+  const CURATION_BOOKS_ENTRY_URL = 'https://tiago-ps.github.io/EventosGratuitosBHeSabara/';
   const COURSES_URL = 'cursos.json';
   const CONTESTS_URL = 'concursos.json';
   const FILMS_URL = 'filmes.json';
@@ -207,6 +208,35 @@
   function curationModeFromUrl() {
     const params = new URL(window.location.href).searchParams;
     return params.get('modo') === 'curadoria';
+  }
+
+  function requestedCurationContentFromUrl() {
+    try {
+      const value = String(new URL(window.location.href).searchParams.get('conteudo') || '')
+        .trim()
+        .toLowerCase();
+      return value === 'livros' ? 'books' : '';
+    } catch {
+      return '';
+    }
+  }
+
+  function curationBooksContributionUrl() {
+    try {
+      const onCurationHost =
+        window.location.hostname === 'tiago-ps.github.io' &&
+        /^\/EventosGratuitosBHeSabara(?:\/|$)/.test(window.location.pathname);
+      const url = onCurationHost
+        ? new URL(window.location.href)
+        : new URL(CURATION_BOOKS_ENTRY_URL);
+      url.search = '';
+      url.hash = '';
+      url.searchParams.set('modo', 'curadoria');
+      url.searchParams.set('conteudo', 'livros');
+      return url.toString();
+    } catch {
+      return `${CURATION_BOOKS_ENTRY_URL}?modo=curadoria&conteudo=livros`;
+    }
   }
 
   function normalizeCurationBook(item) {
@@ -4333,7 +4363,7 @@ function eventProgram(event) {
           </div>
           <button type="button" class="agenda-curation-suggestion-close" aria-label="Fechar">×</button>
         </div>
-        <p>Você pode indicar algo que ainda não está no Mural ou ajudar a corrigir uma informação publicada.</p>
+        <p>Você pode sugerir conteúdos, ajudar a corrigir informações ou participar da seleção de livros para o Mural.</p>
         <div class="agenda-community-options">
           <button type="button" class="agenda-community-option" data-kind="sugerir_evento">
             <strong>Sugerir um evento</strong>
@@ -4342,6 +4372,11 @@ function eventProgram(event) {
           <button type="button" class="agenda-community-option" data-kind="corrigir_informacao">
             <strong>Corrigir uma informação</strong>
             <span>Informe qual conteúdo precisa de ajuste e explique a correção.</span>
+          </button>
+          <button type="button" class="agenda-community-option agenda-community-option-books" data-kind="selecionar_livros">
+            <span class="agenda-community-option-kicker">Acervo ampliado</span>
+            <strong>Ajude a selecionar livros</strong>
+            <span>Explore o acervo completo das bibliotecas, marque seus favoritos e envie uma seleção para o Mural. Os livros desse ambiente ainda não estão necessariamente publicados no site.</span>
           </button>
         </div>
         <p class="agenda-curation-suggestion-privacy"><strong>Não pedimos nome, e-mail ou cadastro.</strong> Não inclua dados pessoais nos campos de texto.</p>
@@ -4358,6 +4393,10 @@ function eventProgram(event) {
       button.addEventListener('click', () => {
         const kind = button.dataset.kind;
         close();
+        if (kind === 'selecionar_livros') {
+          window.location.assign(curationBooksContributionUrl());
+          return;
+        }
         openCommunityContributionForm(kind);
       });
     });
@@ -5617,6 +5656,10 @@ function eventProgram(event) {
       }
 
       state.viewMode = state.curationMode ? 'agenda' : storedViewMode();
+      const requestedCurationContent = state.curationMode ? requestedCurationContentFromUrl() : '';
+      if (requestedCurationContent) {
+        state.mobileContent = requestedCurationContent;
+      }
       const sharedSelection = sharedAgendaSelectionFromUrl();
       if (sharedSelection?.size) {
         state.mobileSharedSelection = sharedSelection;

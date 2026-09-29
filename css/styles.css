@@ -2179,6 +2179,35 @@ body.agenda-mode.curation-mode .agenda-book-cover-warning strong {
 .agenda-community-option:hover{border-color:var(--accent)}
 .agenda-community-option strong{font-size:1rem}
 .agenda-community-option span{color:var(--muted);line-height:1.45}
+.agenda-community-option-books{
+  grid-column:1/-1;
+  border-color:color-mix(in srgb,var(--curation-accent,#f0b429) 55%,var(--line));
+  background:
+    linear-gradient(135deg,
+      color-mix(in srgb,var(--curation-accent,#f0b429) 13%,var(--panel)),
+      var(--panel));
+}
+.agenda-community-option-books:hover,
+.agenda-community-option-books:focus-visible{
+  border-color:var(--curation-accent,#f0b429);
+  background:
+    linear-gradient(135deg,
+      color-mix(in srgb,var(--curation-accent,#f0b429) 20%,var(--panel)),
+      var(--panel));
+}
+.agenda-community-option-books .agenda-community-option-kicker{
+  justify-self:start;
+  padding:.25rem .5rem;
+  border-radius:999px;
+  background:var(--curation-accent,#f0b429);
+  color:#201704;
+  font-size:.7rem;
+  font-weight:900;
+  letter-spacing:.06em;
+  line-height:1.2;
+  text-transform:uppercase;
+}
+
 .agenda-community-form{gap:.9rem}
 .agenda-community-field{display:grid;gap:.4rem;font-weight:800}
 .agenda-community-field input,.agenda-community-field textarea{box-sizing:border-box;width:100%;border:1px solid var(--line);border-radius:10px;padding:.75rem;background:var(--panel);color:var(--text);font:inherit}
