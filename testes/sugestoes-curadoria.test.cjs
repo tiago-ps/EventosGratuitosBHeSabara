@@ -7,6 +7,7 @@ const serviceWorker = fs.readFileSync('service-worker.js', 'utf8');
 const panelActions = fs.readFileSync('js/painel-acoes-contextuais.js', 'utf8');
 const panelNavigation = fs.readFileSync('js/painel-navegacao-modos.js', 'utf8');
 const styles = fs.readFileSync('css/styles.css', 'utf8');
+const indexHtml = fs.readFileSync('index.html', 'utf8');
 const schema = fs.readFileSync('cloudflare/sugestoes-curadoria.sql', 'utf8');
 const wrangler = JSON.parse(fs.readFileSync('wrangler.jsonc', 'utf8'));
 
@@ -143,3 +144,5 @@ assert(app.includes('class="agenda-home-link" href="./"'));
 assert(app.includes('Ir para a página inicial do Tem Sim, Uai'));
 assert(styles.includes('.panel-home-link'));
 assert(styles.includes('.agenda-home-link'));
+
+assert(indexHtml.includes('class="panel-home-link" href="./"'));
