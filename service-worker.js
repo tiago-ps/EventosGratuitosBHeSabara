@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v160-community-book-selection';
+const CACHE_VERSION = 'mural-cultural-v161-logo-home';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -8,7 +8,7 @@ const CURATION_IMAGE_PREFIX = '/imagens/curadorias/';
 
 const CORE_ASSETS = [
   './', './index.html',
-  './css/styles.css?v=94',
+  './css/styles.css?v=95',
   './css/eventos-manuais-ui.css?v=43',
   './css/concursos-mural.css?v=3',
   './css/temas-visuais.css?v=11',
@@ -25,7 +25,7 @@ const CORE_ASSETS = [
   './js/conteudos/utilidade-publica.js?v=4',
   './js/conteudos/atividades-lazer.js?v=4',
   './js/curadorias-site.js?v=11',
-  './js/app.js?v=129',
+  './js/app.js?v=130',
   './js/temas-visuais.js?v=14',
   './js/eventos-manuais-ui.js?v=44',
   './js/ios-install.js?v=2',
