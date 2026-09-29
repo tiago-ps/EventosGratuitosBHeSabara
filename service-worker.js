@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v163-community-protocol';
+const CACHE_VERSION = 'mural-cultural-v164-share-hub';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -25,7 +25,7 @@ const CORE_ASSETS = [
   './js/conteudos/utilidade-publica.js?v=4',
   './js/conteudos/atividades-lazer.js?v=4',
   './js/curadorias-site.js?v=11',
-  './js/app.js?v=132',
+  './js/app.js?v=133',
   './js/temas-visuais.js?v=14',
   './js/eventos-manuais-ui.js?v=44',
   './js/ios-install.js?v=2',
