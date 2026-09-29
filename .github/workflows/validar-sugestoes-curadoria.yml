@@ -11,6 +11,7 @@ on:
       - ".assetsignore"
       - "cloudflare/social-preview-worker.js"
       - "cloudflare/sugestoes-curadoria.sql"
+      - "cloudflare/selecoes-compartilhadas.sql"
       - "cloudflare/README-sugestoes-curadoria.md"
       - "testes/sugestoes-curadoria.test.cjs"
       - ".github/workflows/validar-sugestoes-curadoria.yml"
