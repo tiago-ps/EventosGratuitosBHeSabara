@@ -4451,6 +4451,16 @@ function eventProgram(event) {
             <span>Explore o acervo completo das bibliotecas, marque seus favoritos e envie uma seleção para o Mural. Os livros desse ambiente ainda não estão necessariamente publicados no site.</span>
           </button>
         </div>
+        <div class="agenda-community-followup">
+          <div>
+            <strong>Já enviou uma contribuição?</strong>
+            <span>Acompanhe o andamento usando o protocolo recebido no envio.</span>
+          </div>
+          <button type="button" class="agenda-community-track">
+            <span aria-hidden="true">⌕</span>
+            <span>Consultar protocolo</span>
+          </button>
+        </div>
         <p class="agenda-curation-suggestion-privacy"><strong>Não pedimos nome, e-mail ou cadastro.</strong> Não inclua dados pessoais nos campos de texto.</p>
       </div>
     `;
@@ -4461,6 +4471,10 @@ function eventProgram(event) {
     };
     dialog.querySelector('.agenda-curation-suggestion-close').addEventListener('click', close);
     dialog.addEventListener('cancel', event => { event.preventDefault(); close(); });
+    dialog.querySelector('.agenda-community-track').addEventListener('click', () => {
+      close();
+      openCurationSuggestionStatusDialog();
+    });
     dialog.querySelectorAll('.agenda-community-option').forEach(button => {
       button.addEventListener('click', () => {
         const kind = button.dataset.kind;
@@ -5105,7 +5119,6 @@ function eventProgram(event) {
           title="Meus favoritos"
         ><span aria-hidden="true">★</span><span class="agenda-favorites-label">Favoritos</span><span class="agenda-favorites-count" ${favoriteCount ? '' : 'hidden'}>${favoriteCount}</span></button>
         <button class="agenda-community-open" type="button" title="Contribuir com o Mural"><span aria-hidden="true">＋</span><span class="agenda-community-open-label">Contribua</span></button>
-        <button class="agenda-suggestion-lookup" type="button" title="Consultar contribuição enviada"><span aria-hidden="true">⌕</span><span class="agenda-suggestion-lookup-label">Consultar protocolo</span></button>
         ${state.mobileFavoritesOnly && favoriteCount ? '<button class="agenda-share-favorites" type="button" title="Compartilhar favoritos"><span aria-hidden="true">↗</span><span>Compartilhar</span></button><button class="agenda-send-curation" type="button" title="Enviar favoritos anonimamente para a curadoria"><span aria-hidden="true">✦</span><span>Enviar para curadoria</span></button>' : ''}
         <button
           class="agenda-search-toggle"
@@ -5406,7 +5419,6 @@ function eventProgram(event) {
 
     header.querySelector('.agenda-share-favorites')?.addEventListener('click', shareAgendaFavorites);
     header.querySelector('.agenda-community-open')?.addEventListener('click', openCommunityContributionHub);
-    header.querySelector('.agenda-suggestion-lookup')?.addEventListener('click', () => openCurationSuggestionStatusDialog());
     header.querySelector('.agenda-send-curation')?.addEventListener('click', openCurationSuggestionDialog);
     count.querySelector('.agenda-send-curation')?.addEventListener('click', openCurationSuggestionDialog);
     count.querySelector('.agenda-save-shared')?.addEventListener('click', () => {
