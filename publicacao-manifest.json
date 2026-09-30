@@ -1,7 +1,7 @@
 {
   "counts": {
     "atividades-lazer.json": 42,
-    "concursos.json": 26,
+    "concursos.json": 25,
     "configuracao-mural.json": 1,
     "cursos.json": 1051,
     "espacos_culturais.json": 0,
@@ -12,24 +12,24 @@
   },
   "hashes": {
     "atividades-lazer.json": "9256e708ad6303d5b98d6f7356e1c028a569da09dbf83e5a645345038f62bc89",
-    "concursos.json": "876ac7183c71738289b35989b8e06cf69f29137d3f19584d874d147b04e83b8e",
+    "concursos.json": "3f121bf6fe36c1856b4d3b257c914f6c0764b169aa50c324304c05a2d74f3b5e",
     "configuracao-mural.json": "a900a4ac5490792f0a9b70d46a5acc561fa9cdadb29ddded966bbb779f89e5e7",
     "cursos.json": "0ff104762390033065b9620c75410f7ff056e8586534fe558c09f1e6e02376b2",
     "espacos_culturais.json": "4dc991501616e3ec922a46c4b86f5937007fade4f9a87afa10b4548cb2f9e8cf",
-    "eventos.json": "ee16442be4e4d7cb2a37351a8bdb432e459355640de986f464e1d603fab8b9f4",
+    "eventos.json": "bcfdebcb29f9bd27437ddf8a3b7effc49729956a2631ecb187d699a9c1cf3410",
     "filmes.json": "d26c88040aafd172aaf0942c90f2dd4890ace3b21c04f380d967bb132b6694a8",
-    "livros.json": "b06abdcac2f1cf8d77b63511ccfb95a16ed846b9153493b5055a46d6b19d15a5",
+    "livros.json": "fa4e3431e4c27acb6442cd473b58074b88090192363a57f451afafbb50de7072",
     "utilidade-publica.json": "0f2db01c279a1516af4c8305ee74baa4c663b9069dabf73432d470351575be44"
   },
-  "published_at": "2026-09-30T14:42:09Z",
-  "request_id": "auto-workflow_dispatch-36730951024-1",
+  "published_at": "2026-09-30T15:27:16Z",
+  "request_id": "auto-workflow_run-36736632241-1",
   "schema_version": "1.0",
   "source_repository": "tiago-ps/ColetorEventosGratuitos",
-  "source_sha": "405acad5a6ef03f179d16d1b72d7723a04f99c2e",
+  "source_sha": "5546b63ae8bf7721f76b6c91768bccb877ecf32f",
   "staging_repository": "tiago-ps/EventosGratuitosBHeSabara",
   "versions": {
     "manifest_schema": "1.0",
     "publication_validator": "central-v1"
   },
-  "workflow_run_id": "36730951024"
+  "workflow_run_id": "36736632241"
 }

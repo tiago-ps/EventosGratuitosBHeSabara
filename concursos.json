@@ -2,42 +2,9 @@
   "schema": 10,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-09-29T15:10:39.308010+00:00",
-  "total": 26,
+  "coletado_em_utc": "2026-09-30T15:25:24.683408+00:00",
+  "total": 25,
   "concursos": [
-    {
-      "id": "pci:noticia:caraguaprev-sp-abre-concurso-publico-com-salarios-de-ate-7104",
-      "titulo": "CaraguaPrev - Instituto de Previdência do Município de Caraguatatuba",
-      "url": "https://www.pciconcursos.com.br/noticias/caraguaprev-sp-abre-concurso-publico-com-salarios-de-ate-7104",
-      "imagem": "https://cdn.pci.app.br/img/i/7c529274eb88ade342c2762f502e454c.png",
-      "formacoes_compativeis": [
-        "Técnico em Informática"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Técnico em Informática",
-          "nivel": "tecnico",
-          "evidencia": "tatuba ( caraguaprev ), em sao paulo, abriu um concurso publico visando preencher vagas para profissionais de nivel fundamental, medio, tecnico e superior. segundo o edital, as oportunidades sao para os cargos de: motorista i (1 vaga) agente administrativo (1 vaga) tecnico de contabilidade (1 vaga) tecnico em informatica (1 vaga) contador (1 vaga) controlador interno (1 vaga) procurador juridico (1 vaga) a jornada de trabalho varia de 20 a 40 horas semanais e as remuneracoes vao de r$ 1.706,94 a r$ 7.104,30. todos os cargos contam com beneficios como vale-alimentacao, vale-refeicao e vale-transporte mediante requer"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "SP",
-      "cidade": "Caraguatatuba",
-      "inscricoes_inicio_texto": "17 de agosto de 2026",
-      "inscricoes_fim_texto": "29 de setembro de 2026",
-      "inscricoes_texto": "17 de agosto de 2026 a 29 de setembro de 2026",
-      "remuneracao_faixa_texto": "R$ 7.104,30",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Técnico em Informática",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "alta"
-        }
-      ]
-    },
     {
       "id": "pci:noticia:emdurb-de-bauru-sp-abre-processo-seletivo-para-diversos-cargos",
       "titulo": "EMDURB - Empresa Municipal de Desenvolvimento Urbano e Rural de Bauru",
@@ -99,7 +66,7 @@
       "inscricoes_inicio_texto": "18 de setembro de 2026",
       "inscricoes_fim_texto": "10 de novembro de 2026",
       "inscricoes_texto": "18 de setembro de 2026 a 10 de novembro de 2026",
-      "remuneracao_faixa_texto": "R$ 2.662,00",
+      "remuneracao_faixa_texto": "R$ 3.844,86",
       "remuneracao_fonte": "catalogo",
       "cargos_compativeis": [
         {
@@ -594,9 +561,9 @@
       ]
     },
     {
-      "id": "pci:noticia:prefeitura-de-pedro-teixeira-mg-publica-edital-de-concurso-publico-com-salarios-de-ate-5494",
+      "id": "pci:noticia:prefeitura-de-pedro-teixeira-mg-publica-edital-retificado-de-concurso-publico",
       "titulo": "Prefeitura de Pedro Teixeira",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-pedro-teixeira-mg-publica-edital-de-concurso-publico-com-salarios-de-ate-5494",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-pedro-teixeira-mg-publica-edital-retificado-de-concurso-publico",
       "imagem": "https://cdn.pci.app.br/img/i/b7726c9aae144008454dee3887826030.png",
       "formacoes_compativeis": [
         "Sistemas de Informação / Computação"
@@ -605,7 +572,7 @@
         {
           "nome": "Sistemas de Informação / Computação",
           "nivel": "superior",
-          "evidencia": "atematica (1 vaga) professor regente ii - portugues (2 vagas) professor regente ii - redacao (1 vaga) profissional de apoio escolar (5 vagas) psicologo (2 vagas) psicologo (educacao) (1 vaga) recepcionista (3 vagas) tecnico em enfermagem 12x36 (4 vagas) tecnico em enfermagem 40h (1 vaga) tecnico em tecnologia da informacao (1 vaga) vigia de reparticoes publicas (4 vagas) zelador de reparticao (2 vagas) a jornada de trabalho varia de 20 a 44 horas semanais, incluindo escalas de 12x36 para alguns cargos. as remuneracoes vao de r$ 1.621,00 a r$ 5.494,76, com valores diferenciados para a carreira do magisterio (professor"
+          "evidencia": "ga) professor regente ii - portugues (2 vagas) professor regente ii - redacao (1 vaga) profissional de apoio escolar (5 vagas ac, 1 vaga pcd) psicologo (2 vagas) psicologo (educacao) (1 vaga) recepcionista (3 vagas) tecnico em enfermagem 12x36 (4 vagas) tecnico em enfermagem 40h (1 vaga) tecnico em tecnologia da informacao (1 vaga) vigia de reparticoes publicas (4 vagas) zelador de reparticao (2 vagas) a jornada de trabalho varia de 20 a 44 horas semanais, incluindo escalas de 12x36 para alguns cargos. as remuneracoes vao de r$ 1.621,00 a r$ 5.494,76, com valores diferenciados para a carreira do magisterio (professor"
         }
       ],
       "fonte": "PCI Concursos",
@@ -615,7 +582,7 @@
       "inscricoes_inicio_texto": "",
       "inscricoes_fim_texto": "",
       "inscricoes_texto": "",
-      "remuneracao_faixa_texto": "R$ 5.494,76",
+      "remuneracao_faixa_texto": "R$ 1.621,00",
       "remuneracao_fonte": "noticia",
       "cargos_compativeis": [
         {
