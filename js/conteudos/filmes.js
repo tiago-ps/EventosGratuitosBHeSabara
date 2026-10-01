@@ -70,6 +70,7 @@
     const yearTo = Number(filters.yearTo) || 0;
     return sort((Array.isArray(movies) ? movies : []).filter(movie => {
       if (!queryMatches(movie, filters.query, normalizeText)) return false;
+      if (filters.platform && normalizeText(platformName(movie)) !== normalizeText(filters.platform)) return false;
       if (!valueMatches(movie.generos, filters.genre, normalizeText)) return false;
       if (!valueMatches(movie.temas, filters.theme, normalizeText)) return false;
       if (!valueMatches(movie.letras, filters.letter, normalizeText)) return false;
@@ -87,6 +88,16 @@
         const key = value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
         if (!values.has(key)) values.set(key, value);
       }
+    }
+    return [...values.values()].sort((a, b) => a.localeCompare(b, 'pt-BR'));
+  }
+
+  function platformOptions(movies) {
+    const values = new Map();
+    for (const movie of Array.isArray(movies) ? movies : []) {
+      const value = platformName(movie);
+      const key = value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+      if (value && !values.has(key)) values.set(key, value);
     }
     return [...values.values()].sort((a, b) => a.localeCompare(b, 'pt-BR'));
   }
@@ -363,6 +374,7 @@
     filter,
     options,
     platformName,
+    platformOptions,
     queryMatches,
     sampleForPanel,
     showDetails,
