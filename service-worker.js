@@ -8,7 +8,7 @@ const CURATION_IMAGE_PREFIX = '/imagens/curadorias/';
 
 const CORE_ASSETS = [
   './', './index.html',
-  './css/styles.css?v=97',
+  './css/styles.css?v=98',
   './css/eventos-manuais-ui.css?v=43',
   './css/concursos-mural.css?v=3',
   './css/temas-visuais.css?v=11',
@@ -28,7 +28,7 @@ const CORE_ASSETS = [
   './js/app.js?v=135',
   './js/temas-visuais.js?v=14',
   './js/eventos-manuais-ui.js?v=44',
-  './js/ios-install.js?v=2',
+  './js/ios-install.js?v=3',
   './js/painel-navegacao-modos.js?v=5',
   './js/agenda-pesquisa-foco.js?v=1',
   './js/painel-acoes-contextuais.js?v=4',
