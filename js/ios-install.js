@@ -24,7 +24,7 @@
     const style = document.createElement('style');
     style.id = 'course-panel-fixes';
     style.textContent = `
-      .course-slide .event-image { width:100%!important; height:100%!important; object-fit:cover!important; object-position:center!important; }
+      .course-slide .event-image { width:100%!important; height:100%!important; object-fit:contain!important; object-position:center!important; background:#fff!important; padding:clamp(10px,1.4vw,22px)!important; box-sizing:border-box!important; }
       .course-slide .badge.city { display:inline-flex!important; align-items:center; justify-content:center; width:auto!important; min-width:0!important; max-width:none!important; white-space:nowrap!important; overflow:visible!important; text-overflow:clip!important; line-height:1!important; }
       .course-slide .source-url a { color:inherit; text-decoration:underline; text-underline-offset:.18em; overflow-wrap:anywhere; }
     `;
