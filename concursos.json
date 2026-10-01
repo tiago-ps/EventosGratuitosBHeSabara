@@ -2,7 +2,7 @@
   "schema": 10,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-09-30T15:25:24.683408+00:00",
+  "coletado_em_utc": "2026-10-01T15:46:30.758407+00:00",
   "total": 25,
   "concursos": [
     {
@@ -66,7 +66,7 @@
       "inscricoes_inicio_texto": "18 de setembro de 2026",
       "inscricoes_fim_texto": "10 de novembro de 2026",
       "inscricoes_texto": "18 de setembro de 2026 a 10 de novembro de 2026",
-      "remuneracao_faixa_texto": "R$ 3.844,86",
+      "remuneracao_faixa_texto": "R$ 4.106,09",
       "remuneracao_fonte": "catalogo",
       "cargos_compativeis": [
         {
@@ -627,6 +627,39 @@
       ]
     },
     {
+      "id": "pci:noticia:prefeitura-de-santa-luzia-mg-abre-concurso-publico-com-salarios-de-ate-8628",
+      "titulo": "Prefeitura de Santa Luzia",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-santa-luzia-mg-abre-concurso-publico-com-salarios-de-ate-8628",
+      "imagem": "https://cdn.pci.app.br/img/i/235304f35049dd093385cd614f9c28c0.png",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": "uesa (1 vaga) professor de educacao basica peb iii matematica (7 vagas) psicologo (12 vagas) supervisor pedagogico (cr) tecnico agricola (1 vaga) tecnico ambiental (cr) tecnico em saude bucal (12 vagas) tecnico em edificacoes (8 vagas) tecnico em enfermagem (cr) tecnico em geoprocessamento (1 vaga) tecnico em informatica (2 vagas) tecnico em paisagismo (cr) terapeuta ocupacional (4 vagas) tesoureiro (1 vaga) topografo (3 vagas) turismologo (1 vaga) procurador municipal (3 vagas) a jornada de trabalho e de 20 a 40 horas semanais, conforme o cargo. as remuneracoes variam de r$ 1.622,41 a r$ 8.628,87. as inscricoes po"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "MG",
+      "cidade": "Santa Luzia",
+      "inscricoes_inicio_texto": "17 de dezembro de 2026",
+      "inscricoes_fim_texto": "15 de janeiro de 2027",
+      "inscricoes_texto": "17 de dezembro de 2026 a 15 de janeiro de 2027",
+      "remuneracao_faixa_texto": "R$ 8.628,87",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico em Informática",
+          "vagas_texto": "2 vagas",
+          "formacao": "Técnico em Informática",
+          "confianca": "alta"
+        }
+      ]
+    },
+    {
       "id": "pci:noticia:crm-pr-abre-concurso-publico-com-salarios-de-ate-6994",
       "titulo": "CRM - Conselho Regional de Medicina do Estado do Paraná",
       "url": "https://www.pciconcursos.com.br/noticias/crm-pr-abre-concurso-publico-com-salarios-de-ate-6994",
@@ -871,39 +904,6 @@
           "cargo": "Técnico Agrícola (1 vaga + CR) Técnico de Enfermagem (3 vagas + CR) Técnico em Informática",
           "vagas_texto": "Cadastro de Reserva",
           "formacao": "Técnico em Informática",
-          "confianca": "alta"
-        }
-      ]
-    },
-    {
-      "id": "pci:noticia:tce-go-retifica-concurso-publico-para-tecnicos-de-controle-externo",
-      "titulo": "TCE - Tribunal de Contas do Estado de Goiás",
-      "url": "https://www.pciconcursos.com.br/noticias/tce-go-retifica-concurso-publico-para-tecnicos-de-controle-externo",
-      "imagem": "https://cdn.pci.app.br/img/i/49d0f07f837fcc4f15672d89520c62f4.png",
-      "formacoes_compativeis": [
-        "Sistemas de Informação / Computação"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Sistemas de Informação / Computação",
-          "nivel": "superior",
-          "evidencia": "tce - go retifica concurso publico para tecnicos de controle externo oportunidades contemplam cargos de nivel medio nas areas administrativas e de tecnologia da informacao, com remuneracao inicial de r$ 11.862,19 e selecao composta por provas objetivas e discursivas. concursos › noticias › centro-oeste quarta-feira, 16 de setembro de 2026 o tribunal de contas do estado de goias (tce-go) abriu um concurso publico visando o preenchimento de vagas para profissionais de "
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "GO",
-      "cidade": "",
-      "inscricoes_inicio_texto": "5 de outubro de 2026",
-      "inscricoes_fim_texto": "6 de novembro de 2026",
-      "inscricoes_texto": "5 de outubro de 2026 a 6 de novembro de 2026",
-      "remuneracao_faixa_texto": "R$ 11.862,19",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Tecnologia da Informação",
-          "vagas_texto": "10 vagas",
-          "formacao": "Sistemas de Informação / Computação",
           "confianca": "alta"
         }
       ]
