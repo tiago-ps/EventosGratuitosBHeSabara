@@ -65,6 +65,7 @@
         ['ccbb.com.br', 'CCBB'],
         ['gov.br', 'Portal oficial do Governo'],
         ['pciconcursos.com.br', 'PCI Concursos'],
+        ['moodle.ifrs.edu.br', 'IFRS'],
         ['ifmg.edu.br', 'IFMG']
       ];
       const hit = known.find(([domain]) => host === domain || host.endsWith(`.${domain}`));
