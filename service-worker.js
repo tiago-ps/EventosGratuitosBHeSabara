@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v167-loading-gif';
+const CACHE_VERSION = 'mural-cultural-v168-contextual-qr';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -8,7 +8,7 @@ const CURATION_IMAGE_PREFIX = '/imagens/curadorias/';
 
 const CORE_ASSETS = [
   './', './index.html',
-  './css/styles.css?v=96',
+  './css/styles.css?v=97',
   './css/eventos-manuais-ui.css?v=43',
   './css/concursos-mural.css?v=3',
   './css/temas-visuais.css?v=11',
@@ -19,13 +19,13 @@ const CORE_ASSETS = [
   './css/tem-sim-uai-painel.css?v=1',
   './js/tema-visual-boot.js?v=16',
   './js/core/rotacao.js?v=1',
-  './js/conteudos/cursos.js?v=3',
-  './js/conteudos/concursos.js?v=2',
-  './js/conteudos/filmes.js?v=6',
-  './js/conteudos/utilidade-publica.js?v=4',
-  './js/conteudos/atividades-lazer.js?v=4',
-  './js/curadorias-site.js?v=11',
-  './js/app.js?v=134',
+  './js/conteudos/cursos.js?v=4',
+  './js/conteudos/concursos.js?v=3',
+  './js/conteudos/filmes.js?v=7',
+  './js/conteudos/utilidade-publica.js?v=5',
+  './js/conteudos/atividades-lazer.js?v=5',
+  './js/curadorias-site.js?v=12',
+  './js/app.js?v=135',
   './js/temas-visuais.js?v=14',
   './js/eventos-manuais-ui.js?v=44',
   './js/ios-install.js?v=2',
