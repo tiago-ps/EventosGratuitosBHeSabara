@@ -108,7 +108,7 @@
       normalizeRating
     } = helpers;
     const slide = template.content.firstElementChild.cloneNode(true);
-    buildSiteQr(slide);
+    buildSiteQr(slide, movie);
     slide.classList.add('film-slide');
 
     const seconds = slideDurationFor(movie);
