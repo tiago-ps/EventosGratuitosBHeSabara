@@ -13,6 +13,8 @@
   const ACTIVITIES_URL = 'atividades-lazer.json';
   const SITE_CURATIONS_INDEX_URL = 'curadorias/index.json';
   const CONFIG_URL = 'configuracao-mural.json';
+  const PUBLICATION_MANIFEST_URL = 'publicacao-manifest.json';
+  const LIVE_PUBLICATION_CHECK_MS = 5 * 60 * 1000;
   const app = document.getElementById('app');
   const SCHOOL_ROTATION_SIZE = 6;
   const SCHOOL_ROTATION_KEY = 'agenda-cultural-escola-livre-lote';
@@ -124,6 +126,8 @@
     activitiesData: null,
     siteCurationsData: null,
     config: null,
+    publicationCourseHash: '',
+    publicationWatchTimer: null,
     allEvents: [],
     allBooks: [],
     allCourses: [],
@@ -5757,6 +5761,41 @@ function eventProgram(event) {
     }
   }
 
+  async function publicationCourseHash() {
+    try {
+      const response = await fetch(`${PUBLICATION_MANIFEST_URL}?v=${Date.now()}`, { cache: 'no-store' });
+      if (!response.ok) return '';
+      const manifest = await response.json();
+      return String(manifest?.hashes?.['cursos.json'] || '').trim();
+    } catch {
+      return '';
+    }
+  }
+
+  function startLivePublicationWatch() {
+    if (state.publicationWatchTimer) clearInterval(state.publicationWatchTimer);
+
+    const check = async () => {
+      // O modo Painel é uma exibição contínua. Quando uma nova publicação
+      // chegar, recarrega a página para aplicar catálogos e imagens atualizados.
+      // No modo Agenda/Curadoria, não interrompe a interação do usuário.
+      if (document.hidden || state.curationMode || effectiveViewMode() === 'agenda') return;
+
+      const hash = await publicationCourseHash();
+      if (!hash) return;
+      if (!state.publicationCourseHash) {
+        state.publicationCourseHash = hash;
+        return;
+      }
+      if (hash !== state.publicationCourseHash) {
+        window.location.reload();
+      }
+    };
+
+    void check();
+    state.publicationWatchTimer = setInterval(check, LIVE_PUBLICATION_CHECK_MS);
+  }
+
   async function loadSiteCurations() {
     const publish = payload => {
       window.MuralCultural.loadedCurations = payload?.curadorias || [];
@@ -5925,6 +5964,8 @@ function eventProgram(event) {
         state.viewMode = 'agenda';
         saveViewMode('agenda');
       }
+      state.publicationCourseHash = await publicationCourseHash();
+      startLivePublicationWatch();
       renderCurrentView();
     } catch (error) {
       console.error(error);
