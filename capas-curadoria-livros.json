@@ -2,7 +2,7 @@
   "schema": 1,
   "escopo": "capas-curadoria-livros",
   "descricao": "URLs de capas do acervo físico usadas somente no Modo Curadoria.",
-  "atualizado_em": "2026-10-01T00:53:30.063719+00:00",
+  "atualizado_em": "2026-10-01T01:07:37.493760+00:00",
   "capas": {
     "100004": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000064/00006486.jpg",
     "100007": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000064/00006487.jpg",
