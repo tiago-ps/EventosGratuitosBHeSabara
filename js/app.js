@@ -168,6 +168,7 @@
     mobileFiltersOpen: false,
     mobileFavoritesOnly: false,
     mobileSharedSelection: null,
+    mobileFocusedItem: '',
     mobileContent: 'all',
     mobileCuration: '',
     mobileTheme: '',
@@ -219,6 +220,32 @@
     } catch {
       return '';
     }
+  }
+
+  function requestedAgendaItemFromUrl() {
+    try {
+      const value = String(new URL(window.location.href).searchParams.get('item') || '').trim();
+      if (!value || value.length > 500 || !value.includes(':')) return '';
+      return value;
+    } catch {
+      return '';
+    }
+  }
+
+  function clearFocusedAgendaItemUrl() {
+    try {
+      const url = new URL(window.location.href);
+      if (!url.searchParams.has('item')) return;
+      url.searchParams.delete('item');
+      history.replaceState(history.state, '', url);
+    } catch {
+      // A exploração continua funcional mesmo sem normalizar a URL.
+    }
+  }
+
+  function exitFocusedAgendaItem() {
+    state.mobileFocusedItem = '';
+    clearFocusedAgendaItemUrl();
   }
 
   function curationBooksContributionUrl() {
@@ -1576,19 +1603,49 @@ function eventProgram(event) {
     }
   }
 
-  function buildSiteQr(slide) {
+  function muralItemUrl(item) {
+    const base = muralPublicUrl();
+    if (!base) return '';
+
+    const itemId = agendaFavoriteId(item);
+    if (!itemId) return base;
+
+    try {
+      const url = new URL(base);
+      url.searchParams.set('modo', 'agenda');
+      url.searchParams.set('item', itemId);
+      return url.href;
+    } catch {
+      return base;
+    }
+  }
+
+  function buildSiteQr(slide, item = null) {
     const wrap = slide.querySelector('.site-qr-wrap');
     const container = slide.querySelector('.site-qr-code');
     if (!wrap || !container) return;
 
-    const link = muralPublicUrl();
+    const itemId = agendaFavoriteId(item);
+    const link = itemId ? muralItemUrl(item) : muralPublicUrl();
     if (!link || typeof QRCode === 'undefined') {
       wrap.hidden = true;
       return;
     }
 
+    const title = wrap.querySelector('.site-qr-copy strong');
+    const description = wrap.querySelector('.site-qr-copy span');
+    if (itemId) {
+      if (title) title.textContent = 'Continuar no celular';
+      if (description) description.textContent = 'Abra este conteúdo no Mural';
+    } else {
+      if (title) title.textContent = 'Abrir no celular';
+      if (description) description.textContent = 'Explore todos os conteúdos';
+    }
+
     wrap.hidden = false;
-    container.setAttribute('aria-label', `QR Code do Mural Cultural: ${link}`);
+    container.setAttribute('aria-label', itemId
+      ? `QR Code para abrir este conteúdo no Mural: ${link}`
+      : `QR Code do Mural Cultural: ${link}`);
     container.title = link;
     buildQr(container, link);
   }
@@ -1719,7 +1776,7 @@ function eventProgram(event) {
     const event = state.events[index];
     const data = state.data;
     const slide = template.content.firstElementChild.cloneNode(true);
-    buildSiteQr(slide);
+    buildSiteQr(slide, event);
 
     const visualKey = normalizeText(event.categoria);
     const [icon, label] =
@@ -2106,7 +2163,7 @@ function eventProgram(event) {
       state.events[index], panelEditorialCurationId(index)
     );
     const slide = template.content.firstElementChild.cloneNode(true);
-    buildSiteQr(slide);
+    buildSiteQr(slide, book);
     slide.classList.add('book-slide');
 
     const seconds = slideDurationFor(book);
@@ -3826,6 +3883,18 @@ function eventProgram(event) {
   }
 
   function agendaVisibleContents() {
+    if (state.mobileFocusedItem) {
+      const items = agendaItemsForIds(new Set([state.mobileFocusedItem]));
+      const group = type => items.filter(item => item.tipo_conteudo === type);
+      const events = group('evento').sort(compareAgendaEvents);
+      const books = group('livro').sort(agendaTitleCompare);
+      const courses = group('curso').sort(agendaTitleCompare);
+      const contests = group('concurso').sort(agendaTitleCompare);
+      const films = group('filme').sort(agendaTitleCompare);
+      const utility = group('utilidade_publica').sort(agendaTitleCompare);
+      const activities = group('atividade_lazer').sort(agendaTitleCompare);
+      return { events, books, courses, contests, films, utility, activities, total: items.length };
+    }
     if (state.mobileSharedSelection) {
       const items = agendaItemsForIds(state.mobileSharedSelection);
       const group = type => items.filter(item => item.tipo_conteudo === type);
@@ -5138,7 +5207,7 @@ function eventProgram(event) {
     normalizeAgendaFiltersForContent();
 
     const results = agendaVisibleContents();
-    const activeFilters = state.mobileFavoritesOnly || state.mobileSharedSelection ? 0 : agendaActiveFilterCount();
+    const activeFilters = state.mobileFavoritesOnly || state.mobileSharedSelection || state.mobileFocusedItem ? 0 : agendaActiveFilterCount();
     const header = document.createElement('header');
     header.className = 'agenda-header';
     const agendaContentTabs = [
@@ -5386,7 +5455,10 @@ function eventProgram(event) {
     count.className = 'agenda-count';
     count.setAttribute('role', 'status');
     count.setAttribute('aria-live', 'polite');
-    count.innerHTML = state.mobileSharedSelection ? `
+    count.innerHTML = state.mobileFocusedItem ? `
+      <span><strong>${results.total}</strong> ${results.total === 1 ? 'conteúdo aberto pelo QR Code' : 'conteúdos abertos pelo QR Code'}</span>
+      <button type="button" class="agenda-focused-exit">Explorar todos os conteúdos</button>
+    ` : state.mobileSharedSelection ? `
       <span><strong>${results.total}</strong> ${results.total === 1 ? 'conteúdo nesta seleção compartilhada' : 'conteúdos nesta seleção compartilhada'}</span>
       <button type="button" class="agenda-save-shared">Salvar nos meus favoritos</button>
       <button type="button" class="agenda-send-curation">Enviar para curadoria</button>
@@ -5405,9 +5477,11 @@ function eventProgram(event) {
     resultsContainer.setAttribute('aria-label', 'Conteúdos culturais');
 
     if (!results.total) {
-      resultsContainer.innerHTML = state.mobileFavoritesOnly
-        ? '<div class="agenda-empty"><h2>Nenhum favorito ainda</h2><p>Use a estrela nos conteúdos que quiser guardar neste dispositivo.</p><button type="button" class="agenda-empty-favorites-back">Explorar conteúdos</button></div>'
-        : '<div class="agenda-empty"><h2>Nenhum conteúdo encontrado</h2><p>Tente alterar a busca ou os filtros.</p><button type="button" class="agenda-empty-clear">Limpar filtros</button></div>';
+      resultsContainer.innerHTML = state.mobileFocusedItem
+        ? '<div class="agenda-empty"><h2>Conteúdo não encontrado</h2><p>Este item pode ter sido atualizado ou removido do Mural.</p><button type="button" class="agenda-focused-exit">Explorar todos os conteúdos</button></div>'
+        : state.mobileFavoritesOnly
+          ? '<div class="agenda-empty"><h2>Nenhum favorito ainda</h2><p>Use a estrela nos conteúdos que quiser guardar neste dispositivo.</p><button type="button" class="agenda-empty-favorites-back">Explorar conteúdos</button></div>'
+          : '<div class="agenda-empty"><h2>Nenhum conteúdo encontrado</h2><p>Tente alterar a busca ou os filtros.</p><button type="button" class="agenda-empty-clear">Limpar filtros</button></div>';
     } else if (state.mobileFavoritesOnly || state.mobileSharedSelection || state.mobileContent === 'all') {
       const eventsGrid = document.createElement('div');
       eventsGrid.className = 'agenda-section-grid';
@@ -5465,6 +5539,7 @@ function eventProgram(event) {
     app.replaceChildren(shell);
 
     header.querySelector('.agenda-favorites-toggle').addEventListener('click', () => {
+      exitFocusedAgendaItem();
       exitSharedAgendaSelection();
       state.mobileFavoritesOnly = !state.mobileFavoritesOnly;
       if (state.mobileFavoritesOnly) {
@@ -5515,7 +5590,8 @@ function eventProgram(event) {
     header.querySelectorAll('.agenda-content-tab').forEach(button => {
       button.addEventListener('click', () => {
         const nextContent = button.dataset.content || 'all';
-        if (nextContent === state.mobileContent && !state.mobileFavoritesOnly) return;
+        if (nextContent === state.mobileContent && !state.mobileFavoritesOnly && !state.mobileFocusedItem) return;
+        exitFocusedAgendaItem();
         state.mobileFavoritesOnly = false;
         exitSharedAgendaSelection();
         normalizeAgendaFiltersForContent(nextContent);
@@ -5546,6 +5622,7 @@ function eventProgram(event) {
       searchToggle.focus();
     });
     controls.querySelector('.agenda-search input').addEventListener('input', event => {
+      if (state.mobileFocusedItem) exitFocusedAgendaItem();
       state.mobileQuery = event.target.value;
       window.clearTimeout(state.mobileSearchTimer);
       state.mobileSearchTimer = window.setTimeout(rerender, 180);
@@ -5594,6 +5671,19 @@ function eventProgram(event) {
       controls.querySelector('.agenda-film-duration').addEventListener('change', event => { state.mobileFilmDuration = event.target.value; rerender(); });
       controls.querySelector('.agenda-film-sort').addEventListener('change', event => { state.mobileFilmSort = event.target.value; rerender(); });
     }
+
+    count.querySelector('.agenda-focused-exit')?.addEventListener('click', () => {
+      exitFocusedAgendaItem();
+      state.mobileContent = 'all';
+      resetAgendaBatches();
+      renderAgenda();
+    });
+    resultsContainer.querySelector('.agenda-focused-exit')?.addEventListener('click', () => {
+      exitFocusedAgendaItem();
+      state.mobileContent = 'all';
+      resetAgendaBatches();
+      renderAgenda();
+    });
 
     count.querySelector('.agenda-clear-filters')?.addEventListener('click', () => {
       if (contestMode) clearContestAgendaFilters();
@@ -5808,8 +5898,18 @@ function eventProgram(event) {
       if (requestedCurationContent) {
         state.mobileContent = requestedCurationContent;
       }
-      let sharedSelection = sharedAgendaSelectionFromUrl();
-      if (!sharedSelection?.size) {
+      const requestedAgendaItem = requestedAgendaItemFromUrl();
+      if (requestedAgendaItem && agendaItemsForIds(new Set([requestedAgendaItem])).length) {
+        state.mobileFocusedItem = requestedAgendaItem;
+        state.mobileSharedSelection = null;
+        state.mobileFavoritesOnly = false;
+        state.mobileContent = 'all';
+        state.viewMode = 'agenda';
+        saveViewMode('agenda');
+      }
+
+      let sharedSelection = state.mobileFocusedItem ? null : sharedAgendaSelectionFromUrl();
+      if (!state.mobileFocusedItem && !sharedSelection?.size) {
         const shortSelection = await sharedAgendaSelectionFromShortLink();
         if (shortSelection?.ids?.size) {
           sharedSelection = shortSelection.ids;
