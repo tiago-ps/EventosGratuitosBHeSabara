@@ -162,6 +162,7 @@
       rating: '',
       bookAccess: '',
       filmGenre: '',
+      filmPlatform: '',
       filmRating: '',
       filmDuration: ''
     },
@@ -188,6 +189,7 @@
     mobileContestUf: '',
     mobileContestDeadline: '',
     mobileFilmGenre: '',
+    mobileFilmPlatform: '',
     mobileFilmLetter: '',
     mobileFilmRating: '',
     mobileFilmYearFrom: '',
@@ -929,6 +931,7 @@
       : [];
     const filmFilters = {
       genre: state.filters.filmGenre,
+      platform: state.filters.filmPlatform,
       theme: state.filters.theme,
       rating: state.filters.filmRating,
       duration: state.filters.filmDuration,
@@ -1102,7 +1105,7 @@
       state.filters.category || state.filters.program || state.filters.unit ||
       state.filters.rating || state.filters.period !== 'all' ||
       state.filters.bookAccess || state.panelBookCampuses.length ||
-      state.filters.filmGenre || state.filters.filmRating || state.filters.filmDuration
+      state.filters.filmGenre || state.filters.filmPlatform || state.filters.filmRating || state.filters.filmDuration
     );
   }
 
@@ -1339,6 +1342,7 @@ function eventProgram(event) {
     }
     if (state.panelModules.films) {
       if (state.filters.filmGenre) count += 1;
+      if (state.filters.filmPlatform) count += 1;
       if (state.filters.filmRating) count += 1;
       if (state.filters.filmDuration) count += 1;
     }
@@ -2658,6 +2662,7 @@ function eventProgram(event) {
       bookCampuses: Array.isArray(bookConfig.campi_acervos) ? bookConfig.campi_acervos.map(normalizeText).filter(Boolean) : [],
       bookAccess: String(bookConfig.acesso || ''),
       filmGenre: String(filmConfig.genero || ''),
+      filmPlatform: String(filmConfig.plataforma || ''),
       filmRating: String(filmConfig.classificacao || ''),
       filmDuration: String(filmConfig.duracao || ''),
       weights: {
@@ -2697,6 +2702,7 @@ function eventProgram(event) {
       bookCampuses: Array.isArray(value.bookCampuses) ? value.bookCampuses.map(normalizeText).filter(Boolean) : [],
       bookAccess: String(value.bookAccess || ''),
       filmGenre: String(value.filmGenre || ''),
+      filmPlatform: String(value.filmPlatform || ''),
       filmRating: String(value.filmRating || ''),
       filmDuration: String(value.filmDuration || ''),
       weights: {
@@ -2725,6 +2731,7 @@ function eventProgram(event) {
       bookCampuses: state.panelBookCampuses,
       bookAccess: state.filters.bookAccess,
       filmGenre: state.filters.filmGenre,
+      filmPlatform: state.filters.filmPlatform,
       filmRating: state.filters.filmRating,
       filmDuration: state.filters.filmDuration,
       weights: state.panelWeights,
@@ -2748,6 +2755,7 @@ function eventProgram(event) {
       rating: '',
       bookAccess: value.bookAccess,
       filmGenre: value.filmGenre,
+      filmPlatform: value.filmPlatform,
       filmRating: value.filmRating,
       filmDuration: value.filmDuration
     };
@@ -3124,6 +3132,7 @@ function eventProgram(event) {
       bookCampuses: checkedFilterValues(campusContainer),
       bookAccess: slide.querySelector('.filter-book-access')?.value || '',
       filmGenre: slide.querySelector('.filter-film-genre')?.value || '',
+      filmPlatform: slide.querySelector('.filter-film-platform')?.value || '',
       filmRating: slide.querySelector('.filter-film-rating')?.value || '',
       filmDuration: slide.querySelector('.filter-film-duration')?.value || '',
       weights: {
@@ -3171,6 +3180,7 @@ function eventProgram(event) {
     const unitSelect = slide.querySelector('.filter-unit');
     const bookAccessSelect = slide.querySelector('.filter-book-access');
     const filmGenreSelect = slide.querySelector('.filter-film-genre');
+    const filmPlatformSelect = slide.querySelector('.filter-film-platform');
     const filmRatingSelect = slide.querySelector('.filter-film-rating');
     const filmDurationSelect = slide.querySelector('.filter-film-duration');
     const durationSelect = slide.querySelector('.filter-slide-duration');
@@ -3242,6 +3252,12 @@ function eventProgram(event) {
       'Todos os gêneros',
       filmsContent.options(state.allFilms, 'generos').map(label => [normalizeText(label), label]),
       normalizeText(value.filmGenre)
+    );
+    populateDynamicSelect(
+      filmPlatformSelect,
+      'Todas as plataformas',
+      filmsContent.platformOptions(state.allFilms).map(label => [label, label]),
+      value.filmPlatform
     );
     if (filmRatingSelect) filmRatingSelect.value = value.filmRating;
     if (filmDurationSelect) filmDurationSelect.value = value.filmDuration;
@@ -3637,6 +3653,7 @@ function eventProgram(event) {
     }
     if (state.mobileContent !== 'films') {
       state.mobileFilmGenre = '';
+      state.mobileFilmPlatform = '';
       state.mobileFilmLetter = '';
       state.mobileFilmRating = '';
       state.mobileFilmYearFrom = '';
@@ -3830,6 +3847,7 @@ function eventProgram(event) {
     return filmsContent.filter(state.allFilms, {
       query: state.mobileQuery,
       genre: state.mobileContent === 'films' ? state.mobileFilmGenre : '',
+      platform: state.mobileContent === 'films' ? state.mobileFilmPlatform : '',
       theme: state.mobileContent === 'films' ? state.mobileTheme : '',
       letter: state.mobileContent === 'films' ? state.mobileFilmLetter : '',
       rating: state.mobileContent === 'films' ? state.mobileFilmRating : '',
@@ -3959,6 +3977,7 @@ function eventProgram(event) {
         state.mobileQuery,
         state.mobileCuration,
         state.mobileFilmGenre,
+        state.mobileFilmPlatform,
         state.mobileTheme,
         state.mobileFilmLetter,
         state.mobileFilmRating,
@@ -4031,6 +4050,7 @@ function eventProgram(event) {
     state.mobileQuery = '';
     state.mobileCuration = '';
     state.mobileFilmGenre = '';
+    state.mobileFilmPlatform = '';
     state.mobileTheme = '';
     state.mobileFilmLetter = '';
     state.mobileFilmRating = '';
@@ -5351,6 +5371,7 @@ function eventProgram(event) {
 
     const filmControls = filmMode ? `
       <label><span>Gênero</span><select class="agenda-film-genre"><option value="">Todos os gêneros</option></select></label>
+      <label><span>Plataforma</span><select class="agenda-film-platform"><option value="">Todas as plataformas</option></select></label>
       <label><span>Letra</span><select class="agenda-film-letter"><option value="">Todas as letras</option></select></label>
       <label><span>Classificação</span><select class="agenda-film-rating">
         <option value="">Todas as classificações</option><option value="Livre">Livre</option><option value="10">10</option><option value="12">12</option><option value="14">14</option><option value="16">16</option><option value="18">18</option><option value="Não informada">Não informada</option>
@@ -5441,6 +5462,12 @@ function eventProgram(event) {
         'Todos os gêneros',
         filmsContent.options(state.allFilms, 'generos').map(value => [value, value]),
         state.mobileFilmGenre
+      );
+      populateDynamicSelect(
+        controls.querySelector('.agenda-film-platform'),
+        'Todas as plataformas',
+        filmsContent.platformOptions(state.allFilms).map(value => [value, value]),
+        state.mobileFilmPlatform
       );
       populateDynamicSelect(
         controls.querySelector('.agenda-film-letter'),
@@ -5660,6 +5687,7 @@ function eventProgram(event) {
       controls.querySelector('.agenda-contest-deadline').addEventListener('change', event => { state.mobileContestDeadline = event.target.value; rerender(); });
     } else if (filmMode) {
       controls.querySelector('.agenda-film-genre').addEventListener('change', event => { state.mobileFilmGenre = event.target.value; rerender(); });
+      controls.querySelector('.agenda-film-platform').addEventListener('change', event => { state.mobileFilmPlatform = event.target.value; rerender(); });
       controls.querySelector('.agenda-film-letter').addEventListener('change', event => { state.mobileFilmLetter = event.target.value; rerender(); });
       controls.querySelector('.agenda-film-rating').addEventListener('change', event => { state.mobileFilmRating = event.target.value; rerender(); });
       controls.querySelector('.agenda-film-year-from').addEventListener('input', event => {
