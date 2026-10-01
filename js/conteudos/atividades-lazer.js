@@ -134,7 +134,7 @@
     const item = args.movie;
     const slide = args.template.content.firstElementChild.cloneNode(true);
     const helpers = args.helpers;
-    helpers.buildSiteQr(slide);
+    helpers.buildSiteQr(slide, item);
     slide.classList.add('activity-slide');
     slide.setAttribute('aria-label', 'Esporte e Lazer: ' + (item.titulo || 'Atividade gratuita'));
 
