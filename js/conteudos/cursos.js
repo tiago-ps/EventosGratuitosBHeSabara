@@ -11,6 +11,13 @@
       .trim();
   }
 
+  function formatWorkload(value = '') {
+    const text = String(value || '').trim();
+    if (!text) return '';
+    if (/\b(?:hora|horas|h)\b/i.test(text)) return text;
+    return `${text} horas`;
+  }
+
   function isPublishable(course) {
     return Boolean(course && course.titulo && course.exibicao_ativa !== false);
   }
@@ -121,9 +128,7 @@
 
     const when = slide.querySelector('.when');
     if (when) {
-      when.textContent = course.carga_horaria
-        ? `${course.carga_horaria} horas`
-        : 'Curso online';
+      when.textContent = formatWorkload(course.carga_horaria) || 'Curso online';
     }
 
     const where = slide.querySelector('.where-text');
@@ -217,7 +222,7 @@
     const image = safeImageUrl(item.imagem);
     const summary = item.descricao || item.competencias || item.publico_alvo || '';
     const schedule = [
-      item.carga_horaria ? `${item.carga_horaria} horas` : 'Formação online',
+      formatWorkload(item.carga_horaria) || 'Formação online',
       item.situacao || ''
     ].filter(Boolean).join(' · ');
     article.innerHTML = `<div class="agenda-card-media course-media">${image ? `<img src="${escapeHtml(image)}" alt="Imagem: ${escapeHtml(item.titulo || 'Curso')}" loading="lazy">` : '<div class="film-poster-fallback" role="img" aria-label="Imagem não disponível para este curso"><span aria-hidden="true">🎓</span><strong>Imagem não disponível</strong></div>'}</div><div class="agenda-card-body"><div class="agenda-card-badges"><span>Curso</span><span>Online</span><span>Gratuito</span>${item.site_only ? '<span>Curadoria site-only</span>' : ''}</div><p class="agenda-card-date">${escapeHtml(schedule)}</p><h2>${escapeHtml(item.titulo || 'Curso')}</h2><p class="agenda-card-place">${escapeHtml([item.instituicao, item.fonte].filter(Boolean).join(' · ') || 'Instituição')}</p><p class="agenda-card-description">${escapeHtml(summary)}</p><div class="agenda-card-actions">${link ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer">Acessar curso</a>` : ''}</div></div>`;
