@@ -71,7 +71,7 @@
     // Cursos seguem o mesmo ciclo de Eventos/Livros: cada navegação parte
     // de um template novo, evitando herdar classes/hidden/estilos do slide anterior.
     const slide = template.content.firstElementChild.cloneNode(true);
-    buildSiteQr(slide);
+    buildSiteQr(slide, course);
 
     const seconds = slideDurationFor(course);
     slide.style.setProperty('--slide-seconds', `${seconds}s`);
