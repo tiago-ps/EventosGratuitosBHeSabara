@@ -124,7 +124,7 @@
     // do Evento, Livro, Curso ou Concurso exibido anteriormente.
     const slide = template.content.firstElementChild.cloneNode(true);
     slide.classList.add('contest-slide');
-    buildSiteQr(slide);
+    buildSiteQr(slide, contest);
 
     const seconds = slideDurationFor(contest);
     slide.style.setProperty('--slide-seconds', `${seconds}s`);
