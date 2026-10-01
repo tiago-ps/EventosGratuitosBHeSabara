@@ -456,7 +456,7 @@
     const slide = args.template.content.firstElementChild.cloneNode(true);
     const helpers = args.helpers;
     const model = visualizationModel(item);
-    helpers.buildSiteQr(slide);
+    helpers.buildSiteQr(slide, item);
     slide.classList.add('support-slide', 'utility-slide');
     if (model) slide.classList.add('utility-data-slide', 'utility-data-slide--' + model.type);
     slide.setAttribute('aria-label', 'Utilidade Pública: ' + (item.titulo || 'Informação'));
