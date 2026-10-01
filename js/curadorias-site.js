@@ -474,7 +474,7 @@
       safeImageUrl
     } = helpers;
     const slide = template.content.firstElementChild.cloneNode(true);
-    buildSiteQr(slide);
+    buildSiteQr(slide, movie);
     slide.classList.add('support-slide');
     slide.setAttribute('aria-label', `Informação de apoio: ${movie.titulo || 'Saúde Mental'}`);
 
