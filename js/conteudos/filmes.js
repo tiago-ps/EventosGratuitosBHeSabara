@@ -270,9 +270,11 @@
       ? ` width="${Number(movie.imagem_largura)}" height="${Number(movie.imagem_altura)}"`
       : '';
     const imageRatio = Number(movie.imagem_largura) / Number(movie.imagem_altura);
-    const mediaClass = Number.isFinite(imageRatio) && imageRatio > 0 && imageRatio < 1.35
-      ? 'film-media film-media-atypical'
-      : 'film-media';
+    const mediaClass = movie.imagem_fallback_origem === 'plataforma_audiovisual'
+      ? 'film-media film-media-platform-fallback'
+      : Number.isFinite(imageRatio) && imageRatio > 0 && imageRatio < 1.35
+        ? 'film-media film-media-atypical'
+        : 'film-media';
     const poster = movie.imagem
       ? `<img src="${escapeHtml(movie.imagem)}" alt="Cartaz do filme ${escapeHtml(movie.titulo)}" loading="lazy" decoding="async"${dimensions}>`
       : `<div class="film-poster-fallback" role="img" aria-label="Cartaz não disponível para o filme ${escapeHtml(movie.titulo)}"><span aria-hidden="true">🎬</span><strong>Cartaz não disponível</strong></div>`;
@@ -339,7 +341,7 @@
     dialog.innerHTML = `
       <div class="film-dialog-shell">
         <button type="button" class="film-dialog-close" aria-label="Fechar detalhes">×</button>
-        <div class="film-dialog-poster">${poster}</div>
+        <div class="film-dialog-poster${movie.imagem_fallback_origem === 'plataforma_audiovisual' ? ' film-dialog-poster-platform-fallback' : ''}">${poster}</div>
         <div class="film-dialog-copy">
           <p class="agenda-eyebrow">${link ? `Filme gratuito em ${escapeHtml(platform)}` : 'Filme da curadoria site-only'}</p>
           <h2 id="film-dialog-title">${escapeHtml(movie.titulo)}</h2>
@@ -362,9 +364,11 @@
           <p class="film-rights-note">O Mural Cultural não hospeda este filme. ${link ? (
             [
               movie.imagem
-                ? (isTmdb(movie.imagem_fonte)
-                  ? 'Cartaz obtido por meio da API do TMDB.'
-                  : `Imagem fornecida pela plataforma ${escapeHtml(platform)}; licença específica de reutilização não verificada.`)
+                ? (movie.imagem_fallback_origem === 'plataforma_audiovisual'
+                  ? `Imagem institucional da plataforma ${escapeHtml(platform)} usada como fallback porque não há cartaz específico cadastrado.`
+                  : isTmdb(movie.imagem_fonte)
+                    ? 'Cartaz obtido por meio da API do TMDB.'
+                    : `Imagem fornecida pela plataforma ${escapeHtml(platform)}; licença específica de reutilização não verificada.`)
                 : 'Cartaz não fornecido pela fonte.',
               movie.sinopse && isTmdb(movie.sinopse_fonte)
                 ? 'Sinopse obtida por meio da API do TMDB.'
