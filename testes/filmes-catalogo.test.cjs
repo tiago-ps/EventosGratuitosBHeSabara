@@ -7,6 +7,7 @@ const vm = require('node:vm');
 
 const root = path.resolve(__dirname, '..');
 const data = JSON.parse(fs.readFileSync(path.join(root, 'filmes.json'), 'utf8'));
+const platformsData = JSON.parse(fs.readFileSync(path.join(root, 'plataformas-audiovisuais.json'), 'utf8'));
 const source = fs.readFileSync(path.join(root, 'js/conteudos/filmes.js'), 'utf8');
 const stylesSource = fs.readFileSync(path.join(root, 'css/styles.css'), 'utf8');
 const appSource = fs.readFileSync(path.join(root, 'js/app.js'), 'utf8');
@@ -29,6 +30,12 @@ assert.ok(data.filmes.every(movie => movie.status_manual === 'revisar'));
 assert.ok(data.filmes.every(movie => /^https:\/\//.test(String(movie.pagina_oficial || ''))));
 assert.ok(data.filmes.every(movie => !Object.hasOwn(movie, 'video_embed')));
 assert.ok(data.filmes.every(movie => movie.plataforma));
+assert.ok(Array.isArray(platformsData.plataformas));
+assert.ok(platformsData.plataformas.length >= 3);
+const ecoPlatform = platformsData.plataformas.find(platform => platform.id === 'ecofalante-play');
+assert.ok(ecoPlatform);
+assert.equal(ecoPlatform.imagem, 'imagens/plataformas/ecofalante-play.webp');
+assert.ok(fs.existsSync(path.join(root, ecoPlatform.imagem)));
 
 for (const movie of data.filmes) {
   if (!movie.imagem) continue;
@@ -78,10 +85,12 @@ for (const [order, field, direction] of [
   }
 }
 
-assert.match(indexSource, /js\/conteudos\/filmes\.js\?v=9/);
+assert.match(indexSource, /js\/conteudos\/filmes\.js\?v=10/);
 assert.doesNotMatch(indexSource, /filmes\.html/);
 assert.match(appSource, /<option value="films">Filmes<\/option>/);
 assert.match(appSource, /loadOptionalJson\(FILMS_URL, \{ filmes: \[\] \}\)/);
+assert.match(appSource, /loadOptionalJson\(PLATFORMS_URL, \{ plataformas: \[\] \}\)/);
+assert.match(appSource, /imagem_fallback_origem: 'plataforma_audiovisual'/);
 assert.match(appSource, /appendAgendaSection\(resultsContainer, 'Filmes gratuitos'/);
 assert.match(source, /platformName/);
 assert.equal(typeof films.createPanelSlide, 'function');
@@ -95,10 +104,9 @@ assert.equal(typeof films.catalogUsesTmdb, 'function');
 assert.equal(films.catalogUsesTmdb([{ imagem_fonte: 'TMDB' }]), true);
 assert.equal(films.catalogUsesTmdb([{ sinopse_fonte: 'TMDB' }]), true);
 assert.equal(films.catalogUsesTmdb([{ imagem_fonte: 'Ecofalante Play' }]), false);
-assert.match(appSource, /Créditos TMDB/);
-assert.match(appSource, /This product uses the TMDB API but is not endorsed or certified by TMDB\./);
-assert.match(appSource, /blue_square_2-/);
-assert.match(stylesSource, /\.tmdb-global-credit/);
+assert.match(appSource, /Este produto usa a API do TMDB, mas não é endossado nem certificado pelo TMDB\./);
+assert.doesNotMatch(appSource, /tmdb-global-credit|Créditos TMDB|blue_square_2-/);
+assert.doesNotMatch(stylesSource, /\.tmdb-global-credit/);
 assert.match(appSource, /renderFilmSlide/);
 assert.match(appSource, /panel-film-weight/);
 assert.match(appSource, /tipo_conteudo === 'filme'/);
@@ -111,8 +119,13 @@ assert.doesNotMatch(source, /Assistir gratuitamente no LGBTFlix/);
 assert.doesNotMatch(source, /<(?:iframe|video)\b/i);
 assert.doesNotMatch(JSON.stringify(data), /youtube\.com\/embed|player\.vimeo\.com/i);
 assert.match(swSource, /'\/filmes\.json'/);
-assert.match(swSource, /'\.\/js\/conteudos\/filmes\.js\?v=9'/);
+assert.match(swSource, /'\/plataformas-audiovisuais\.json'/);
+assert.match(swSource, /imagens\/plataformas\/ecofalante-play\.webp/);
+assert.match(swSource, /'\.\/js\/conteudos\/filmes\.js\?v=10'/);
 assert.match(stylesSource, /\.agenda-film-card \.film-media\{[^}]*aspect-ratio:16\/9/);
+assert.match(stylesSource, /agenda-theme-light \.agenda-film-card/);
+assert.match(stylesSource, /agenda-theme-light \.film-dialog/);
+assert.match(stylesSource, /film-media-platform-fallback/);
 assert.match(stylesSource, /@media\(max-width:760px\)\{\.agenda-film-card\{display:flex;grid-template-columns:none;flex-direction:column/);
 assert.match(stylesSource, /\.agenda-film-card \.film-media img\{[^}]*position:static;[^}]*object-fit:cover/);
 assert.doesNotMatch(stylesSource, /\.agenda-film-card \.film-media\{[^}]*aspect-ratio:2\/3/);
