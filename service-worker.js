@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v173-film-platform-entities';
+const CACHE_VERSION = 'mural-cultural-v174-eco-fallback';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -36,7 +36,7 @@ const CORE_ASSETS = [
   './js/tem-sim-uai-painel.js?v=1',
   './js/cursos-runtime-fix.js?v=2',
   './imagens/curadorias/agosto-lilas-banner.png',
-  './imagens/plataformas/ecofalante-play.webp',
+  './imagens/plataformas/ecofalante-play-v2.webp',
   './manifest.webmanifest',
   './imagens/app-icons/icon-192.png?v=3', './imagens/app-icons/icon-512.png?v=3',
   './imagens/app-icons/apple-touch-icon.png?v=3'
