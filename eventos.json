@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Janeiro de 2026 a Janeiro de 2027",
-  "atualizado_em": "2026-10-01T14:59:22-03:00",
+  "atualizado_em": "2026-10-01T21:20:40-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -4546,29 +4546,6 @@
       ],
       "classificacao_indicativa": "Livre",
       "motivo_publicacao": "realizacao_em_andamento_ou_futura"
-    },
-    {
-      "id": "cine-santa-tereza-bileto-127632",
-      "titulo": "IN-EDIT: MÚSICA PARA OS TEUS OLHOS - A Marselhesa dos bêbados",
-      "data": "2026-10-01",
-      "data_fim": "",
-      "horario": "17h",
-      "local": "Cine Santa Tereza",
-      "cidade": "Belo Horizonte",
-      "categoria": "Cinema",
-      "gratuito": true,
-      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial. Também há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade.",
-      "descricao": "A Marselhesa dos bêbados (Pablo Gil Retuerto | 2025 | Espanha | documentário | 96 min) Uma equipe de filmagem percorre as estradas e os povoados do norte da Espanha. Ela refaz os passos da viagem clandestina do grupo de etnomusicólogos italianos Canta Cronache que, no verão de 1961 — em plena ditadura —, reuniu canções populares da resistência: as vozes de operários, intelectuais e camponeses. Agora, por meio da memória oral, das fitas e fotos originais daquela expedição e de releituras atuais daquele repertório, estabelece-se um diálogo entre as duas viagens,",
-      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/3q657hv4b0kkm1pv4rhq99oogbi29mjsprptpp4d3proqempl95hp4l3ham77enhu2b5alkiua4tf9s6dauttvjb8hil0qi7pjhi75r.jpeg",
-      "link": "https://bileto.sympla.com.br/event/127632/d/417068/s/2709048",
-      "fonte": "Cine Santa Tereza",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "fonte_id": "127632",
-      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
-      "classificacao_indicativa": "Livre",
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
     {
       "id": "ufmg-ec-horario-de-funcionamento-10h-as-14h",
