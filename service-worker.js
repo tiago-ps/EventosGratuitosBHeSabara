@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v171-film-platform';
+const CACHE_VERSION = 'mural-cultural-v172-tmdb-credits';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -8,7 +8,7 @@ const CURATION_IMAGE_PREFIX = '/imagens/curadorias/';
 
 const CORE_ASSETS = [
   './', './index.html',
-  './css/styles.css?v=98',
+  './css/styles.css?v=99',
   './css/eventos-manuais-ui.css?v=43',
   './css/concursos-mural.css?v=3',
   './css/temas-visuais.css?v=11',
@@ -21,11 +21,11 @@ const CORE_ASSETS = [
   './js/core/rotacao.js?v=1',
   './js/conteudos/cursos.js?v=4',
   './js/conteudos/concursos.js?v=3',
-  './js/conteudos/filmes.js?v=8',
+  './js/conteudos/filmes.js?v=9',
   './js/conteudos/utilidade-publica.js?v=5',
   './js/conteudos/atividades-lazer.js?v=5',
   './js/curadorias-site.js?v=12',
-  './js/app.js?v=137',
+  './js/app.js?v=138',
   './js/temas-visuais.js?v=14',
   './js/eventos-manuais-ui.js?v=44',
   './js/ios-install.js?v=3',

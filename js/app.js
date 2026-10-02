@@ -9,6 +9,8 @@
   const COURSES_URL = 'cursos.json';
   const CONTESTS_URL = 'concursos.json';
   const FILMS_URL = 'filmes.json';
+  const TMDB_SITE_URL = 'https://www.themoviedb.org';
+  const TMDB_LOGO_URL = 'https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg';
   const UTILITY_URL = 'utilidade-publica.json';
   const ACTIVITIES_URL = 'atividades-lazer.json';
   const SITE_CURATIONS_INDEX_URL = 'curadorias/index.json';
@@ -5176,23 +5178,38 @@ function eventProgram(event) {
   }
 
   function filmSourceNotice() {
-    const source = document.createElement('p');
+    const source = document.createElement('div');
     source.className = 'film-source-notice';
-    const platform = String(state.filmsData?.fonte || 'plataforma oficial').trim();
-    const site = safeExternalUrl(state.filmsData?.fonte_site);
-    source.append(document.createTextNode('Filmes disponibilizados gratuitamente pelo '));
-    if (site) {
-      const link = document.createElement('a');
-      link.href = site;
-      link.target = '_blank';
-      link.rel = 'noopener noreferrer';
-      link.textContent = platform;
-      source.append(link);
-    } else {
-      source.append(document.createTextNode(platform));
+    const text = document.createElement('p');
+    text.textContent = 'Os filmes são disponibilizados gratuitamente nas plataformas indicadas em cada card. O Mural Cultural não hospeda os vídeos.';
+    source.append(text);
+    if (filmsContent.catalogUsesTmdb(state.allFilms)) {
+      const creditHint = document.createElement('p');
+      creditHint.className = 'film-source-credit-hint';
+      creditHint.textContent = 'Alguns cartazes ou sinopses usam dados do TMDB. Consulte “Créditos TMDB” para a atribuição completa.';
+      source.append(creditHint);
     }
-    source.append(document.createTextNode('. O Mural Cultural não hospeda os vídeos.'));
     return source;
+  }
+
+  function syncTmdbCredit() {
+    document.getElementById('tmdb-global-credit')?.remove();
+    if (!filmsContent.catalogUsesTmdb(state.allFilms)) return;
+
+    const credit = document.createElement('details');
+    credit.id = 'tmdb-global-credit';
+    credit.className = 'tmdb-global-credit';
+    credit.innerHTML = `
+      <summary>Créditos TMDB</summary>
+      <div class="tmdb-global-credit-body">
+        <a href="${TMDB_SITE_URL}" target="_blank" rel="noopener noreferrer" aria-label="Acessar The Movie Database">
+          <img src="${TMDB_LOGO_URL}" alt="TMDB" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+        </a>
+        <p>Algumas capas e sinopses complementares são obtidas por meio da API do TMDB.</p>
+        <p lang="en">This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
+      </div>
+    `;
+    document.body.append(credit);
   }
 
   function appendAgendaSection(container, title, items, contentValue, actionLabel) {
@@ -5932,6 +5949,7 @@ function eventProgram(event) {
         ...movie,
         tipo_conteudo: 'filme'
       }));
+      syncTmdbCredit();
       state.allUtility = siteLayer.utilidade_publica
         .filter(item => item?.tipo_conteudo === 'utilidade_publica' && item.id && item.titulo)
         .map(item => ({

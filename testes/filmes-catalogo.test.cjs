@@ -78,7 +78,7 @@ for (const [order, field, direction] of [
   }
 }
 
-assert.match(indexSource, /js\/conteudos\/filmes\.js\?v=8/);
+assert.match(indexSource, /js\/conteudos\/filmes\.js\?v=9/);
 assert.doesNotMatch(indexSource, /filmes\.html/);
 assert.match(appSource, /<option value="films">Filmes<\/option>/);
 assert.match(appSource, /loadOptionalJson\(FILMS_URL, \{ filmes: \[\] \}\)/);
@@ -91,6 +91,14 @@ assert.match(indexSource, /panel-film-section/);
 assert.match(indexSource, /filter-film-platform/);
 assert.match(appSource, /agenda-film-platform/);
 assert.match(source, /filters\.platform/);
+assert.equal(typeof films.catalogUsesTmdb, 'function');
+assert.equal(films.catalogUsesTmdb([{ imagem_fonte: 'TMDB' }]), true);
+assert.equal(films.catalogUsesTmdb([{ sinopse_fonte: 'TMDB' }]), true);
+assert.equal(films.catalogUsesTmdb([{ imagem_fonte: 'Ecofalante Play' }]), false);
+assert.match(appSource, /Créditos TMDB/);
+assert.match(appSource, /This product uses the TMDB API but is not endorsed or certified by TMDB\./);
+assert.match(appSource, /blue_square_2-/);
+assert.match(stylesSource, /\.tmdb-global-credit/);
 assert.match(appSource, /renderFilmSlide/);
 assert.match(appSource, /panel-film-weight/);
 assert.match(appSource, /tipo_conteudo === 'filme'/);
@@ -103,7 +111,7 @@ assert.doesNotMatch(source, /Assistir gratuitamente no LGBTFlix/);
 assert.doesNotMatch(source, /<(?:iframe|video)\b/i);
 assert.doesNotMatch(JSON.stringify(data), /youtube\.com\/embed|player\.vimeo\.com/i);
 assert.match(swSource, /'\/filmes\.json'/);
-assert.match(swSource, /'\.\/js\/conteudos\/filmes\.js\?v=8'/);
+assert.match(swSource, /'\.\/js\/conteudos\/filmes\.js\?v=9'/);
 assert.match(stylesSource, /\.agenda-film-card \.film-media\{[^}]*aspect-ratio:16\/9/);
 assert.match(stylesSource, /@media\(max-width:760px\)\{\.agenda-film-card\{display:flex;grid-template-columns:none;flex-direction:column/);
 assert.match(stylesSource, /\.agenda-film-card \.film-media img\{[^}]*position:static;[^}]*object-fit:cover/);
