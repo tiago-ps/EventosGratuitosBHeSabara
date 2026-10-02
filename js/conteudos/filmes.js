@@ -8,6 +8,9 @@
   const list = value => Array.isArray(value) ? value.map(text).filter(Boolean) : [];
   const titleCompare = (a, b) => text(a.titulo).localeCompare(text(b.titulo), 'pt-BR');
   const platformName = movie => text(movie?.plataforma) || text(movie?.fonte) || (movie?.site_only ? 'Curadoria site-only' : 'Origem não informada');
+  const isTmdb = value => text(value).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase() === 'tmdb';
+  const usesTmdb = movie => isTmdb(movie?.imagem_fonte) || isTmdb(movie?.sinopse_fonte);
+  const catalogUsesTmdb = movies => (Array.isArray(movies) ? movies : []).some(usesTmdb);
   const PANEL_LIMIT = 15;
 
   function queryMatches(movie, query, normalizeText) {
@@ -356,7 +359,18 @@
             ${detailSection('Plataforma', platform, escapeHtml)}
           </div>
           ${link ? `<a class="film-watch-link" href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer">Acessar no ${escapeHtml(platform)} <span aria-hidden="true">↗</span></a>` : '<p class="film-link-unavailable">Página oficial não confirmada no piloto; nenhum link ou QR Code foi criado.</p>'}
-          <p class="film-rights-note">O Mural Cultural não hospeda este filme. ${link ? (movie.imagem ? `Imagem fornecida pela plataforma ${escapeHtml(platform)}; licença específica de reutilização não verificada.` : 'Cartaz não fornecido pela fonte.') : 'Metadados e acesso ainda precisam de validação institucional.'}</p>
+          <p class="film-rights-note">O Mural Cultural não hospeda este filme. ${link ? (
+            [
+              movie.imagem
+                ? (isTmdb(movie.imagem_fonte)
+                  ? 'Cartaz obtido por meio da API do TMDB.'
+                  : `Imagem fornecida pela plataforma ${escapeHtml(platform)}; licença específica de reutilização não verificada.`)
+                : 'Cartaz não fornecido pela fonte.',
+              movie.sinopse && isTmdb(movie.sinopse_fonte)
+                ? 'Sinopse obtida por meio da API do TMDB.'
+                : ''
+            ].filter(Boolean).join(' ')
+          ) : 'Metadados e acesso ainda precisam de validação institucional.'}</p>
         </div>
       </div>`;
     const close = dialog.querySelector('.film-dialog-close');
@@ -375,6 +389,8 @@
     options,
     platformName,
     platformOptions,
+    catalogUsesTmdb,
+    usesTmdb,
     queryMatches,
     sampleForPanel,
     showDetails,
