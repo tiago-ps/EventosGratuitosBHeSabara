@@ -34,7 +34,7 @@ assert.ok(Array.isArray(platformsData.plataformas));
 assert.ok(platformsData.plataformas.length >= 3);
 const ecoPlatform = platformsData.plataformas.find(platform => platform.id === 'ecofalante-play');
 assert.ok(ecoPlatform);
-assert.equal(ecoPlatform.imagem, 'imagens/plataformas/ecofalante-play.webp');
+assert.equal(ecoPlatform.imagem, 'imagens/plataformas/ecofalante-play-v2.webp');
 assert.ok(fs.existsSync(path.join(root, ecoPlatform.imagem)));
 
 for (const movie of data.filmes) {
