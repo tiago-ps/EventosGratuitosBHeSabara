@@ -34,7 +34,7 @@ assert.ok(Array.isArray(platformsData.plataformas));
 assert.ok(platformsData.plataformas.length >= 3);
 const ecoPlatform = platformsData.plataformas.find(platform => platform.id === 'ecofalante-play');
 assert.ok(ecoPlatform);
-assert.equal(ecoPlatform.imagem, 'imagens/plataformas/ecofalante-play.webp');
+assert.equal(ecoPlatform.imagem, 'imagens/plataformas/ecofalante-play-v2.webp');
 assert.ok(fs.existsSync(path.join(root, ecoPlatform.imagem)));
 
 for (const movie of data.filmes) {
@@ -120,7 +120,7 @@ assert.doesNotMatch(source, /<(?:iframe|video)\b/i);
 assert.doesNotMatch(JSON.stringify(data), /youtube\.com\/embed|player\.vimeo\.com/i);
 assert.match(swSource, /'\/filmes\.json'/);
 assert.match(swSource, /'\/plataformas-audiovisuais\.json'/);
-assert.match(swSource, /imagens\/plataformas\/ecofalante-play\.webp/);
+assert.match(swSource, /imagens\/plataformas\/ecofalante-play-v2\.webp/);
 assert.match(swSource, /'\.\/js\/conteudos\/filmes\.js\?v=10'/);
 assert.match(stylesSource, /\.agenda-film-card \.film-media\{[^}]*aspect-ratio:16\/9/);
 assert.match(stylesSource, /agenda-theme-light \.agenda-film-card/);
