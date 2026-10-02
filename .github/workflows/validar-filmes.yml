@@ -1,0 +1,43 @@
+name: Validar Filmes
+
+on:
+  pull_request:
+    paths:
+      - "filmes.json"
+      - "js/app.js"
+      - "js/conteudos/filmes.js"
+      - "css/styles.css"
+      - "index.html"
+      - "service-worker.js"
+      - "testes/filmes-catalogo.test.cjs"
+      - ".github/workflows/validar-filmes.yml"
+  push:
+    branches: [main]
+    paths:
+      - "filmes.json"
+      - "js/app.js"
+      - "js/conteudos/filmes.js"
+      - "css/styles.css"
+      - "index.html"
+      - "service-worker.js"
+      - "testes/filmes-catalogo.test.cjs"
+      - ".github/workflows/validar-filmes.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Validar sintaxe JavaScript
+        run: |
+          node --check js/app.js
+          node --check js/conteudos/filmes.js
+          node --check service-worker.js
+      - name: Testar catálogo e interface de Filmes
+        run: node testes/filmes-catalogo.test.cjs
