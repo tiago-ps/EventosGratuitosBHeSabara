@@ -2461,41 +2461,51 @@ body.agenda-mode .agenda-header-actions .agenda-favorites-count {
 }
 
 
-/* Créditos de dados complementares — TMDB */
+/* Créditos TMDB permanecem inline no modo exploração. */
 .film-source-notice{display:grid;gap:.35rem}
 .film-source-notice>p{margin:0}
 .film-source-credit-hint{font-size:.82rem}
-.tmdb-global-credit{
-  position:fixed;
-  left:12px;
-  bottom:12px;
-  z-index:45;
-  max-width:min(360px,calc(100vw - 24px));
-  border:1px solid var(--line);
-  border-radius:12px;
-  background:color-mix(in srgb,var(--panel) 95%,transparent);
-  color:var(--text);
-  box-shadow:0 8px 30px rgba(0,0,0,.28);
-  backdrop-filter:blur(10px);
+
+
+/* Filmes — fallback institucional e contraste correto no tema claro. */
+.agenda-film-card .film-media-platform-fallback img{object-fit:cover;object-position:center}
+.film-dialog-poster-platform-fallback>img{object-fit:contain;background:#0b1d32}
+
+body.agenda-mode.agenda-theme-light .agenda-film-card{
+  background:#fff;
+  color:#17231b;
+  border-color:rgba(23,35,27,.14);
 }
-.tmdb-global-credit summary{
-  cursor:pointer;
-  padding:.45rem .7rem;
-  color:var(--muted);
-  font-size:.72rem;
-  font-weight:900;
+body.agenda-mode.agenda-theme-light .agenda-film-card .agenda-card-date,
+body.agenda-mode.agenda-theme-light .agenda-film-card .agenda-card-place,
+body.agenda-mode.agenda-theme-light .agenda-film-card .agenda-card-description{
+  color:#405248;
 }
-.tmdb-global-credit-body{
-  display:grid;
-  gap:.55rem;
-  padding:0 .8rem .8rem;
-  font-size:.72rem;
-  line-height:1.4;
+body.agenda-mode.agenda-theme-light .agenda-film-card .film-tags span{
+  background:#eef3ef;
+  border-color:#d3ddd5;
+  color:#294438;
 }
-.tmdb-global-credit-body p{margin:0;color:var(--muted)}
-.tmdb-global-credit-body a{width:max-content;max-width:100%}
-.tmdb-global-credit-body img{display:block;width:74px;max-width:100%;height:auto}
-@media(max-width:760px){
-  .tmdb-global-credit{left:8px;bottom:8px;max-width:calc(100vw - 16px)}
+body.agenda-mode.agenda-theme-light .agenda-film-card .agenda-card-actions button,
+body.agenda-mode.agenda-theme-light .agenda-film-card .agenda-card-actions a{
+  border-color:#b9c9bd;
+  color:#245f34;
 }
-@media print{.tmdb-global-credit{display:none!important}}
+body.agenda-mode.agenda-theme-light .film-dialog{
+  background:#fff;
+  color:#17231b;
+  border-color:#d6dfd8;
+  box-shadow:0 24px 70px rgba(31,42,34,.22);
+}
+body.agenda-mode.agenda-theme-light .film-dialog-close{
+  background:#f3f6f3;
+  color:#17231b;
+  border-color:#d6dfd8;
+}
+body.agenda-mode.agenda-theme-light .film-dialog-poster{background:#eef2ee}
+body.agenda-mode.agenda-theme-light .film-dialog-sections section{
+  background:#f4f7f4;
+  border-color:#d8e1da;
+}
+body.agenda-mode.agenda-theme-light .film-dialog-synopsis{color:#405248}
+body.agenda-mode.agenda-theme-light .film-rights-note{color:#64736a}
