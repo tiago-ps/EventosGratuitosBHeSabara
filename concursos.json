@@ -2,8 +2,8 @@
   "schema": 10,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-10-01T15:46:30.758407+00:00",
-  "total": 25,
+  "coletado_em_utc": "2026-10-02T15:07:01.287648+00:00",
+  "total": 23,
   "concursos": [
     {
       "id": "pci:noticia:emdurb-de-bauru-sp-abre-processo-seletivo-para-diversos-cargos",
@@ -660,57 +660,6 @@
       ]
     },
     {
-      "id": "pci:noticia:crm-pr-abre-concurso-publico-com-salarios-de-ate-6994",
-      "titulo": "CRM - Conselho Regional de Medicina do Estado do Paraná",
-      "url": "https://www.pciconcursos.com.br/noticias/crm-pr-abre-concurso-publico-com-salarios-de-ate-6994",
-      "imagem": "https://cdn.pci.app.br/img/i/3e0ab25b80d247b64f33af998889a991.png",
-      "formacoes_compativeis": [
-        "Sistemas de Informação / Computação"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Sistemas de Informação / Computação",
-          "nivel": "superior",
-          "evidencia": " de medicina do estado do parana (crm-pr) publicou um edital de concurso publico visando preencher 2 vagas imediatas e formar cadastro de reserva para profissionais de nivel medio, tecnico e superior. segundo o edital, as oportunidades sao para os cargos de: operador audiovisual (1 vaga) tecnico em tecnologia da informacao (1 vaga) analista em tecnologia da informacao (cadastro de reserva) programador em tecnologia da informacao back-end (cadastro de reserva) programador em tecnologia da informacao front-end (cadastro de reserva) a jornada de trabalho e de 40 horas semanais. as remuneracoes variam de r$ 3.341,33 a r$"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "PR",
-      "cidade": "",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "",
-      "inscricoes_texto": "",
-      "remuneracao_faixa_texto": "R$ 6.994,40",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Técnico em Tecnologia da Informação",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        },
-        {
-          "cargo": "Analista em Tecnologia da Informação",
-          "vagas_texto": "Cadastro de Reserva",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        },
-        {
-          "cargo": "Programador em Tecnologia da Informação Back-End",
-          "vagas_texto": "Cadastro de Reserva",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        },
-        {
-          "cargo": "Programador em Tecnologia da Informação Front-End",
-          "vagas_texto": "Cadastro de Reserva",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        }
-      ]
-    },
-    {
       "id": "pci:noticia:municipio-e-camara-de-nova-prata-do-iguacu-pr-abrem-concursos-com-salarios-de-ate-12823",
       "titulo": "Município e Câmara de Nova Prata do Iguaçu",
       "url": "https://www.pciconcursos.com.br/noticias/municipio-e-camara-de-nova-prata-do-iguacu-pr-abrem-concursos-com-salarios-de-ate-12823",
@@ -805,39 +754,6 @@
           "cargo": "Auditor Estadual de Finanças Públicas - Ciências da Computação",
           "vagas_texto": "12 vagas",
           "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        }
-      ]
-    },
-    {
-      "id": "pci:noticia:prefeitura-de-erval-velho-sc-retifica-concurso-publico-com-salarios-de-ate-22044",
-      "titulo": "Prefeitura de Erval Velho",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-erval-velho-sc-retifica-concurso-publico-com-salarios-de-ate-22044",
-      "imagem": "https://cdn.pci.app.br/img/i/98266ad095d144a964c6e9189a6c86f5.png",
-      "formacoes_compativeis": [
-        "Técnico em Informática"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Técnico em Informática",
-          "nivel": "tecnico",
-          "evidencia": "professor de educacao fisica (cr) professor de lingua estrangeira - ingles (cr) professor de informatica (cr) psicologo (1 vaga + cr) tecnico agricola (cr) tecnico em atividades administrativas (cr) tecnico em contabilidade (cr) tecnico em edificacao e manutencao (1 + cr) tecnico em enfermagem (cr) tecnico em informatica (cr) tecnico em tesouraria (cr) a jornada semanal varia de 20 a 40 horas, com remuneracoes de r$ 1.892,66 a r$ 22.044,76, conforme o cargo. as inscricoes devem ser realizadas de 17 de setembro de 2026 ate as 14h do dia 1o de outubro de 2026, pelo site www.aprendersc.srv.br . as taxas de inscricao v"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "SC",
-      "cidade": "Erval Velho",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "",
-      "inscricoes_texto": "",
-      "remuneracao_faixa_texto": "R$ 6.627,04 a R$ 22.044,76",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Técnico em Informática",
-          "vagas_texto": "Cadastro de Reserva",
-          "formacao": "Técnico em Informática",
           "confianca": "alta"
         }
       ]
