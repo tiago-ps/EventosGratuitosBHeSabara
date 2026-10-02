@@ -4,6 +4,8 @@ on:
   pull_request:
     paths:
       - "filmes.json"
+      - "plataformas-audiovisuais.json"
+      - "imagens/plataformas/**"
       - "js/app.js"
       - "js/conteudos/filmes.js"
       - "css/styles.css"
@@ -15,6 +17,8 @@ on:
     branches: [main]
     paths:
       - "filmes.json"
+      - "plataformas-audiovisuais.json"
+      - "imagens/plataformas/**"
       - "js/app.js"
       - "js/conteudos/filmes.js"
       - "css/styles.css"
