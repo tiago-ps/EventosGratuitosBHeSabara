@@ -100,7 +100,8 @@
    * pois será comparada com o texto normalizado do campo "local".
    */
   const localImages = {
-    'cine santa tereza': 'imagens/CineSantaTerezaBH.png'
+    'cine santa tereza': 'imagens/CineSantaTerezaBH.png',
+    'espaco do conhecimento ufmg': 'https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg'
   };
 
   /*
