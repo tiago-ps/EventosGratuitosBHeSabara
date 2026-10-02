@@ -1,0 +1,35 @@
+{
+  "versao": 1,
+  "plataformas": [
+    {
+      "id": "telabrasil",
+      "nome": "Tela Brasil",
+      "site": "https://telabrasil.cultura.gov.br/",
+      "descricao": "Plataforma pública de acesso a obras audiovisuais brasileiras.",
+      "imagem": "",
+      "logo": "",
+      "tipo_acesso": "gratuito_com_cadastro_govbr",
+      "exibicao_ativa": true
+    },
+    {
+      "id": "ecofalante-play",
+      "nome": "Ecofalante Play",
+      "site": "https://play.ecofalante.org.br/",
+      "descricao": "Plataforma gratuita de cinema socioambiental e de impacto, com uso educacional e cultural.",
+      "imagem": "imagens/plataformas/ecofalante-play.webp",
+      "logo": "",
+      "tipo_acesso": "gratuito",
+      "exibicao_ativa": true
+    },
+    {
+      "id": "embauba-play",
+      "nome": "Embaúba Play",
+      "site": "https://embaubaplay.com/",
+      "descricao": "Plataforma audiovisual com catálogo de filmes brasileiros e independentes, incluindo obras gratuitas.",
+      "imagem": "",
+      "logo": "",
+      "tipo_acesso": "gratuito_com_login_embauba",
+      "exibicao_ativa": true
+    }
+  ]
+}

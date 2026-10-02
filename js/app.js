@@ -9,8 +9,7 @@
   const COURSES_URL = 'cursos.json';
   const CONTESTS_URL = 'concursos.json';
   const FILMS_URL = 'filmes.json';
-  const TMDB_SITE_URL = 'https://www.themoviedb.org';
-  const TMDB_LOGO_URL = 'https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg';
+  const PLATFORMS_URL = 'plataformas-audiovisuais.json';
   const UTILITY_URL = 'utilidade-publica.json';
   const ACTIVITIES_URL = 'atividades-lazer.json';
   const SITE_CURATIONS_INDEX_URL = 'curadorias/index.json';
@@ -124,6 +123,7 @@
     coursesData: null,
     contestsData: null,
     filmsData: null,
+    platformsData: null,
     utilityData: null,
     activitiesData: null,
     siteCurationsData: null,
@@ -5186,30 +5186,39 @@ function eventProgram(event) {
     if (filmsContent.catalogUsesTmdb(state.allFilms)) {
       const creditHint = document.createElement('p');
       creditHint.className = 'film-source-credit-hint';
-      creditHint.textContent = 'Alguns cartazes ou sinopses usam dados do TMDB. Consulte “Créditos TMDB” para a atribuição completa.';
+      creditHint.textContent = 'Alguns cartazes ou sinopses usam dados do TMDB. Este produto usa a API do TMDB, mas não é endossado nem certificado pelo TMDB.';
       source.append(creditHint);
     }
     return source;
   }
 
-  function syncTmdbCredit() {
-    document.getElementById('tmdb-global-credit')?.remove();
-    if (!filmsContent.catalogUsesTmdb(state.allFilms)) return;
+  function platformIndex(data) {
+    const byId = new Map();
+    const byName = new Map();
+    const items = Array.isArray(data?.plataformas) ? data.plataformas : [];
+    for (const platform of items) {
+      const id = String(platform?.id || '').trim();
+      const name = String(platform?.nome || '').trim();
+      if (id) byId.set(id, platform);
+      if (name) byName.set(normalizeText(name), platform);
+    }
+    return { byId, byName };
+  }
 
-    const credit = document.createElement('details');
-    credit.id = 'tmdb-global-credit';
-    credit.className = 'tmdb-global-credit';
-    credit.innerHTML = `
-      <summary>Créditos TMDB</summary>
-      <div class="tmdb-global-credit-body">
-        <a href="${TMDB_SITE_URL}" target="_blank" rel="noopener noreferrer" aria-label="Acessar The Movie Database">
-          <img src="${TMDB_LOGO_URL}" alt="TMDB" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-        </a>
-        <p>Algumas capas e sinopses complementares são obtidas por meio da API do TMDB.</p>
-        <p lang="en">This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
-      </div>
-    `;
-    document.body.append(credit);
+  function applyFilmPlatformFallback(movie, index) {
+    if (!movie || typeof movie !== 'object' || movie.imagem) return movie;
+    const platform = index.byId.get(String(movie.plataforma_id || '').trim()) ||
+      index.byName.get(normalizeText(movie.plataforma || movie.fonte || ''));
+    const image = String(platform?.imagem || '').trim();
+    if (!image) return movie;
+    return {
+      ...movie,
+      imagem: image,
+      imagem_fonte: String(platform.nome || movie.plataforma || movie.fonte || '').trim(),
+      imagem_pagina_origem: String(platform.site || '').trim(),
+      imagem_fallback_origem: 'plataforma_audiovisual',
+      plataforma_id: String(movie.plataforma_id || platform.id || '').trim()
+    };
   }
 
   function appendAgendaSection(container, title, items, contentValue, actionLabel) {
@@ -5879,7 +5888,7 @@ function eventProgram(event) {
   async function load() {
     try {
       state.curationMode = curationModeFromUrl();
-      const [response, booksData, curationBooksData, curationBookCoversData, coursesData, contestsData, filmsData, utilityData, activitiesData, siteCurationsData, config] = await Promise.all([
+      const [response, booksData, curationBooksData, curationBookCoversData, coursesData, contestsData, filmsData, platformsData, utilityData, activitiesData, siteCurationsData, config] = await Promise.all([
         fetch(`${DATA_URL}?v=${Date.now()}`, { cache: 'no-store' }),
         loadOptionalJson(BOOKS_URL, { livros: [] }),
         state.curationMode ? loadOptionalJson(CURATION_BOOKS_URL, { livros: [] }) : Promise.resolve({ livros: [] }),
@@ -5887,6 +5896,7 @@ function eventProgram(event) {
         loadOptionalJson(COURSES_URL, { cursos: [] }),
         loadOptionalJson(CONTESTS_URL, { concursos: [] }),
         loadOptionalJson(FILMS_URL, { filmes: [] }),
+        loadOptionalJson(PLATFORMS_URL, { plataformas: [] }),
         loadOptionalJson(UTILITY_URL, { itens: [] }),
         loadOptionalJson(ACTIVITIES_URL, { atividades: [] }),
         loadSiteCurations(),
@@ -5914,6 +5924,9 @@ function eventProgram(event) {
         ? contestsData
         : { concursos: [] };
       state.filmsData = filmsData && Array.isArray(filmsData.filmes) ? filmsData : { filmes: [] };
+      state.platformsData = platformsData && Array.isArray(platformsData.plataformas)
+        ? platformsData
+        : { plataformas: [] };
       state.utilityData = utilityData && Array.isArray(utilityData.itens) ? utilityData : { itens: [] };
       state.activitiesData = activitiesData && Array.isArray(activitiesData.atividades) ? activitiesData : { atividades: [] };
       state.siteCurationsData = siteCurationsData;
@@ -5945,11 +5958,11 @@ function eventProgram(event) {
           ...contestsContent.publicRecord(contest),
           tipo_conteudo: 'concurso'
         }));
-      state.allFilms = siteLayer.filmes.map(movie => ({
+      const platforms = platformIndex(state.platformsData);
+      state.allFilms = siteLayer.filmes.map(movie => applyFilmPlatformFallback({
         ...movie,
         tipo_conteudo: 'filme'
-      }));
-      syncTmdbCredit();
+      }, platforms));
       state.allUtility = siteLayer.utilidade_publica
         .filter(item => item?.tipo_conteudo === 'utilidade_publica' && item.id && item.titulo)
         .map(item => ({
