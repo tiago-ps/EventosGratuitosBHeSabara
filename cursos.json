@@ -2,7 +2,7 @@
   "schema": 5,
   "status": "catalogo_completo",
   "fonte": "Catálogo consolidado de cursos gratuitos",
-  "atualizado_em": "2026-10-01T16:22:01.644064+00:00",
+  "atualizado_em": "2026-10-02T15:46:02.451918+00:00",
   "total": 1501,
   "cursos": [
     {
@@ -15196,8 +15196,8 @@
       "prazo_conclusao_dias": "30",
       "tipo": "Curso Aberto",
       "descricao": "O curso oferece uma formação estratégica para gestores e servidores de TIC, abordando normas e práticas de privacidade e segurança da informação no setor público. Com enfoque em governança e metodologias em privacidade e segurança da informação, além dos pilares do PPSI, os participantes desenvolverão uma visão integrada para aplicar diretrizes e fortalecer a gestão de TIC de forma segura, responsável e alinhada às políticas nacionais. Inscreva-se!",
-      "publico_alvo": "Servidores e gestores que atuam na área de TIC e que empreendam ações complexas de gestão no âmbito da privacidade e segurança da informação.",
-      "conteudo_programatico": "Módulo 1 - Conhecendo os principais atores envolvidos na efetiva implantação dos controles e medidas de privacidade e segurança da informação e os principais órgãos e entidades que atuam (direta ou indiretamente) nos temasMódulo 2 - Situando o gestor de TIC no PPSIMódulo 3 - Privacidade e Segurança da Informação na Estratégia Nacional de Governo Digital, na Estratégia Federal de Governo Digital, na Transformação Digital e nas Contratações de TICMódulo 4 - O gestor de TIC em ação",
+      "publico_alvo": "Servidores e gestores que atuam na área de TIC e que empreendam ações complexas de gestão no âmbito da privacidade e segurança da informação, bem como demais interessados no tema.",
+      "conteudo_programatico": "Módulo 1 - Conhecendo os principais atores envolvidos na efetiva implantação dos controles e medidas.Módulo 2 - Situando o gestor de TIC no PPSIMódulo 3 - Privacidade e Segurança da Informação na Estratégia Nacional de Governo Digital.Módulo 4 - O gestor de TIC em ação",
       "data_lancamento": "21/09/26",
       "url": "https://www.escolavirtual.gov.br/curso/1600",
       "imagem": "https://cdn.evg.gov.br/cursos/1600_EVG/imagem_curso_1600.png",
