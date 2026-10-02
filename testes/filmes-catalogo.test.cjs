@@ -120,7 +120,7 @@ assert.doesNotMatch(source, /<(?:iframe|video)\b/i);
 assert.doesNotMatch(JSON.stringify(data), /youtube\.com\/embed|player\.vimeo\.com/i);
 assert.match(swSource, /'\/filmes\.json'/);
 assert.match(swSource, /'\/plataformas-audiovisuais\.json'/);
-assert.match(swSource, /imagens\/plataformas\/ecofalante-play\.webp/);
+assert.match(swSource, /imagens\/plataformas\/ecofalante-play-v2\.webp/);
 assert.match(swSource, /'\.\/js\/conteudos\/filmes\.js\?v=10'/);
 assert.match(stylesSource, /\.agenda-film-card \.film-media\{[^}]*aspect-ratio:16\/9/);
 assert.match(stylesSource, /agenda-theme-light \.agenda-film-card/);
