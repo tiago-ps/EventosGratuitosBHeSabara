@@ -1,14 +1,15 @@
-const CACHE_VERSION = 'mural-cultural-v172-tmdb-credits';
+const CACHE_VERSION = 'mural-cultural-v173-film-platform-entities';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
 const MAX_IMAGE_CACHE_ITEMS = 140;
 const BRAND_LOGO_PATH = '/imagens/marca/logo-mural-cultural.png';
 const CURATION_IMAGE_PREFIX = '/imagens/curadorias/';
+const PLATFORM_IMAGE_PREFIX = '/imagens/plataformas/';
 
 const CORE_ASSETS = [
   './', './index.html',
-  './css/styles.css?v=99',
+  './css/styles.css?v=100',
   './css/eventos-manuais-ui.css?v=43',
   './css/concursos-mural.css?v=3',
   './css/temas-visuais.css?v=11',
@@ -21,11 +22,11 @@ const CORE_ASSETS = [
   './js/core/rotacao.js?v=1',
   './js/conteudos/cursos.js?v=4',
   './js/conteudos/concursos.js?v=3',
-  './js/conteudos/filmes.js?v=9',
+  './js/conteudos/filmes.js?v=10',
   './js/conteudos/utilidade-publica.js?v=5',
   './js/conteudos/atividades-lazer.js?v=5',
   './js/curadorias-site.js?v=12',
-  './js/app.js?v=138',
+  './js/app.js?v=139',
   './js/temas-visuais.js?v=14',
   './js/eventos-manuais-ui.js?v=44',
   './js/ios-install.js?v=3',
@@ -35,6 +36,7 @@ const CORE_ASSETS = [
   './js/tem-sim-uai-painel.js?v=1',
   './js/cursos-runtime-fix.js?v=2',
   './imagens/curadorias/agosto-lilas-banner.png',
+  './imagens/plataformas/ecofalante-play.webp',
   './manifest.webmanifest',
   './imagens/app-icons/icon-192.png?v=3', './imagens/app-icons/icon-512.png?v=3',
   './imagens/app-icons/apple-touch-icon.png?v=3'
@@ -48,6 +50,7 @@ const DATA_PATHS = [
   '/cursos.json',
   '/concursos.json',
   '/filmes.json',
+  '/plataformas-audiovisuais.json',
   '/utilidade-publica.json',
   '/atividades-lazer.json',
   '/curadorias/index.json',
@@ -143,7 +146,8 @@ self.addEventListener('fetch', event => {
     event.respondWith(networkFirst(stableRequest, DATA_CACHE, '', 'application/json'));
   } else if (
     url.pathname.endsWith(BRAND_LOGO_PATH) ||
-    url.pathname.includes(CURATION_IMAGE_PREFIX)
+    url.pathname.includes(CURATION_IMAGE_PREFIX) ||
+    url.pathname.includes(PLATFORM_IMAGE_PREFIX)
   ) {
     // Imagens mutáveis podem ser substituídas no repositório mantendo o mesmo nome.
     // Busca sempre a versão atual da rede e usa a cópia local apenas se estiver offline.
