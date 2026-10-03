@@ -1,0 +1,49 @@
+name: Validar Notificações
+
+on:
+  pull_request:
+    paths:
+      - "js/app.js"
+      - "js/notificacoes.js"
+      - "css/notificacoes.css"
+      - "service-worker.js"
+      - "index.html"
+      - "wrangler.jsonc"
+      - "cloudflare/social-preview-worker.js"
+      - "cloudflare/notificacoes.sql"
+      - "cloudflare/README-notificacoes.md"
+      - "testes/notificacoes-eventos.test.cjs"
+      - ".github/workflows/validar-notificacoes.yml"
+  push:
+    branches: [main]
+    paths:
+      - "js/app.js"
+      - "js/notificacoes.js"
+      - "css/notificacoes.css"
+      - "service-worker.js"
+      - "index.html"
+      - "wrangler.jsonc"
+      - "cloudflare/social-preview-worker.js"
+      - "cloudflare/notificacoes.sql"
+      - "cloudflare/README-notificacoes.md"
+      - "testes/notificacoes-eventos.test.cjs"
+      - ".github/workflows/validar-notificacoes.yml"
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Validar sintaxe JavaScript
+        run: |
+          node --check js/app.js
+          node --check js/notificacoes.js
+          node --check service-worker.js
+          node --check cloudflare/social-preview-worker.js
+      - name: Validar configuração Wrangler
+        run: python -m json.tool wrangler.jsonc > /dev/null
+      - name: Testar notificações
+        run: node testes/notificacoes-eventos.test.cjs
