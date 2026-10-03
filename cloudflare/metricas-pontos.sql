@@ -1,5 +1,5 @@
 -- Métricas agregadas dos QR Codes dos pontos de divulgação.
--- Não armazena IP, user-agent, fingerprint, cookie ou identificador persistente de visitante.
+-- Não armazena identificadores pessoais ou persistentes de visitante ou dispositivo.
 
 CREATE TABLE IF NOT EXISTS metricas_pontos_diarias (
   dia TEXT NOT NULL,
