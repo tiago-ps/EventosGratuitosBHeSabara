@@ -24,6 +24,16 @@
     return POINT_RE.test(point) ? point : '';
   }
 
+  function isContentId(value) {
+    const contentId = String(value || '').trim();
+    const separator = contentId.indexOf(':');
+    if (separator < 1 || separator === contentId.length - 1) return false;
+    const type = contentId.slice(0, separator);
+    const id = contentId.slice(separator + 1);
+    if (!CONTENT_TYPE_RE.test(type) || id.length > 180) return false;
+    return !Array.from(id).some(char => char.trim() === '');
+  }
+
   function readState() {
     try {
       const parsed = JSON.parse(sessionStorage.getItem(STORAGE_KEY) || 'null');
@@ -65,7 +75,7 @@
       ambiente: environmentName(),
       acao
     };
-    if (conteudoId && CONTENT_ID_RE.test(conteudoId)) payload.conteudo_id = conteudoId;
+    if (conteudoId && isContentId(conteudoId)) payload.conteudo_id = conteudoId;
 
     try {
       fetch(metricsApiUrl(), {
@@ -113,12 +123,12 @@
   function contentIdFromElement(element) {
     if (!(element instanceof Element)) return '';
     const own = String(element.dataset.muralContentId || element.dataset.communityItemId || '').trim();
-    return CONTENT_ID_RE.test(own) ? own : '';
+    return isContentId(own) ? own : '';
   }
 
   function recordContentId(contentId) {
     const normalized = String(contentId || '').trim();
-    if (!CONTENT_ID_RE.test(normalized) || state.opened.includes(normalized)) return;
+    if (!isContentId(normalized) || state.opened.includes(normalized)) return;
     state.opened.push(normalized);
     if (state.opened.length > MAX_OPENED_ITEMS) state.opened.shift();
     touchState();
