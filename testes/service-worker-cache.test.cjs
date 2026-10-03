@@ -121,6 +121,7 @@ async function dispatch(type, event) {
     false
   );
   assert.equal(sw.CORE_ASSETS.includes('./imagens/curadorias/setembro-amarelo-2026/setembro-amarelo-banner.png'), false);
+  assert.equal(sw.CORE_ASSETS.some(asset => String(asset).includes('/imagens/plataformas/')), false);
 
   await dispatch('install', {});
   assert.deepEqual(installedAssets, Array.from(sw.CORE_ASSETS));
