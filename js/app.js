@@ -1657,6 +1657,34 @@ function eventProgram(event) {
     }
   }
 
+  function muralDistributionPoint() {
+    try {
+      const point = String(new URL(window.location.href).searchParams.get('ponto') || '')
+        .trim()
+        .toLowerCase();
+      return /^[a-z0-9](?:[a-z0-9-]{0,62}[a-z0-9])?$/.test(point) ? point : '';
+    } catch {
+      return '';
+    }
+  }
+
+  function muralTrackedQrUrl(item = null) {
+    const point = muralDistributionPoint();
+    if (!point) return '';
+
+    const itemId = agendaFavoriteId(item);
+    try {
+      const url = new URL('q/' + encodeURIComponent(point), 'https://temsimuai.com.br/');
+      if (itemId) {
+        url.searchParams.set('modo', 'agenda');
+        url.searchParams.set('item', itemId);
+      }
+      return url.href;
+    } catch {
+      return '';
+    }
+  }
+
   function muralItemUrl(item) {
     const base = muralPublicUrl();
     if (!base) return '';
@@ -1680,7 +1708,8 @@ function eventProgram(event) {
     if (!wrap || !container) return;
 
     const itemId = agendaFavoriteId(item);
-    const link = itemId ? muralItemUrl(item) : muralPublicUrl();
+    const trackedLink = muralTrackedQrUrl(item);
+    const link = trackedLink || (itemId ? muralItemUrl(item) : muralPublicUrl());
     if (!link || typeof QRCode === 'undefined') {
       wrap.hidden = true;
       return;
@@ -4986,6 +5015,8 @@ function eventProgram(event) {
   function decorateAgendaFavorite(article, item) {
     const favoriteId = agendaFavoriteId(item);
     if (!article || !favoriteId) return article;
+    article.dataset.muralContentId = favoriteId;
+    article.dataset.muralContentType = favoriteId.split(':', 1)[0] || '';
     const favorites = loadAgendaFavorites();
     const active = favorites.has(favoriteId);
     const button = document.createElement('button');
