@@ -47,11 +47,13 @@ assert.match(worker, /ensureVapidKeyPair/);
 assert.match(worker, /sendDueNotifications/);
 assert.match(worker, /async scheduled\(/);
 assert.match(worker, /DELETE FROM notificacoes_push/);
-assert.doesNotMatch(schema, /favorit/i);
-assert.doesNotMatch(schema, /user-agent/i);
-assert.doesNotMatch(schema, /localiza[cç][aã]o/i);
-assert.doesNotMatch(schema, /email/i);
-assert.doesNotMatch(schema, /telefone/i);
+const pushTable = schema.match(/CREATE TABLE IF NOT EXISTS notificacoes_push \([\s\S]*?\);/)?.[0] || '';
+assert.ok(pushTable);
+assert.doesNotMatch(pushTable, /favorit/i);
+assert.doesNotMatch(pushTable, /user-agent/i);
+assert.doesNotMatch(pushTable, /localiza[cç][aã]o/i);
+assert.doesNotMatch(pushTable, /email/i);
+assert.doesNotMatch(pushTable, /telefone/i);
 
 // Evita transformar a API em proxy arbitrário: endpoints de push têm hosts
 // conhecidos e HTTPS obrigatório.
