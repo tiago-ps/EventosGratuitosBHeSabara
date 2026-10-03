@@ -34,10 +34,19 @@ assert.ok(Array.isArray(platformsData.plataformas));
 assert.ok(platformsData.plataformas.length >= 3);
 const ecoPlatform = platformsData.plataformas.find(platform => platform.id === 'ecofalante-play');
 assert.ok(ecoPlatform);
-const ecoImageUrl = String(ecoPlatform.imagem || '');
-const ecoImageLocalPath = ecoImageUrl.replace(/^https:\/\/tiago-ps\.github\.io\/EventosGratuitosBHeSabara\//, '');
-assert.equal(ecoImageLocalPath, 'imagens/plataformas/ecofalante-play-v2.webp');
-assert.ok(fs.existsSync(path.join(root, ecoImageLocalPath)));
+const expectedPlatformImages = {
+  telabrasil: 'imagens/plataformas/tela-brasil.svg',
+  'ecofalante-play': 'imagens/plataformas/ecofalante-play.png',
+  'embauba-play': 'imagens/plataformas/embaubaplay.svg',
+  lgbtflix: 'imagens/plataformas/lgbtflix.svg'
+};
+for (const [platformId, imagePath] of Object.entries(expectedPlatformImages)) {
+  const platform = platformData.plataformas.find(item => item.id === platformId);
+  assert.ok(platform, `Plataforma ausente: ${platformId}`);
+  assert.equal(platform.imagem, imagePath);
+  assert.ok(fs.existsSync(path.join(root, imagePath)), `Imagem ausente: ${imagePath}`);
+}
+assert.equal(platformData.plataformas.find(item => item.id === 'lgbtflix').exibicao_ativa, false);
 
 for (const movie of data.filmes) {
   if (!movie.imagem) continue;
