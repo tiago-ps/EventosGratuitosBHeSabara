@@ -35,6 +35,14 @@ const POINT_METRIC_ACTIONS = new Set(['entrada', 'sessao_ativa', 'visualizacao_c
 const POINT_METRIC_ENVIRONMENTS = new Set(['publico', 'teste']);
 const POINT_METRIC_CONTENT_TYPE_RE = /^[a-z0-9_]+$/;
 
+const NOTIFICATION_API_PATH = '/api/notificacoes';
+const NOTIFICATION_CONFIG_PATH = '/api/notificacoes/config';
+const NOTIFICATION_ALLOWED_PUSH_HOSTS = new Set([
+  'fcm.googleapis.com',
+  'updates.push.services.mozilla.com',
+  'web.push.apple.com'
+]);
+
 function suggestionCorsOrigin(request, env) {
   const origin = String(request.headers.get('origin') || '').trim();
   if (!origin) return '';
@@ -56,7 +64,7 @@ function withSuggestionCors(request, env, response) {
   if (!origin) return response;
   const headers = new Headers(response.headers);
   headers.set('Access-Control-Allow-Origin', origin);
-  headers.set('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  headers.set('Access-Control-Allow-Methods', 'GET, POST, DELETE, OPTIONS');
   headers.set('Access-Control-Allow-Headers', 'Content-Type');
   headers.set('Access-Control-Max-Age', '86400');
   headers.append('Vary', 'Origin');
@@ -1042,6 +1050,329 @@ function handlePointQrRedirect(request) {
   return Response.redirect(target.href, 302);
 }
 
+
+function bytesBase64Url(value) {
+  const bytes = value instanceof Uint8Array ? value : new Uint8Array(value);
+  let binary = '';
+  for (const byte of bytes) binary += String.fromCharCode(byte);
+  return btoa(binary).replaceAll('+', '-').replaceAll('/', '_').replace(/=+$/g, '');
+}
+
+function textBase64Url(value) {
+  return bytesBase64Url(new TextEncoder().encode(String(value)));
+}
+
+async function sha256Hex(value) {
+  const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(String(value)));
+  return [...new Uint8Array(digest)].map(byte => byte.toString(16).padStart(2, '0')).join('');
+}
+
+function validPushEndpoint(value) {
+  const text = String(value || '').trim();
+  if (!text || text.length > 4096) return '';
+  try {
+    const url = new URL(text);
+    if (url.protocol !== 'https:' || url.username || url.password) return '';
+    const host = url.hostname.toLowerCase();
+    const allowed =
+      NOTIFICATION_ALLOWED_PUSH_HOSTS.has(host) ||
+      host.endsWith('.notify.windows.com');
+    if (!allowed) return '';
+    return url.href;
+  } catch {
+    return '';
+  }
+}
+
+function validReminderDate(value) {
+  if (value === null || value === undefined || value === '') return '';
+  const text = String(value).trim();
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(text)) return null;
+  const parsed = new Date(`${text}T12:00:00Z`);
+  if (Number.isNaN(parsed.getTime()) || parsed.toISOString().slice(0, 10) !== text) return null;
+  const now = new Date();
+  const min = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() - 1));
+  const max = new Date(Date.UTC(now.getUTCFullYear() + 10, now.getUTCMonth(), now.getUTCDate() + 2));
+  if (parsed < min || parsed > max) return null;
+  return text;
+}
+
+async function ensureNotificationTables(env) {
+  if (!env.SUGESTOES_DB) return false;
+  try {
+    await env.SUGESTOES_DB.prepare(
+      "CREATE TABLE IF NOT EXISTS notificacoes_push (" +
+      "endpoint_hash TEXT PRIMARY KEY, " +
+      "endpoint TEXT NOT NULL UNIQUE, " +
+      "criado_em TEXT NOT NULL DEFAULT (datetime('now')), " +
+      "atualizado_em TEXT NOT NULL DEFAULT (datetime('now')), " +
+      "proximo_aviso TEXT, " +
+      "falhas INTEGER NOT NULL DEFAULT 0 CHECK (falhas >= 0)" +
+      ")"
+    ).run();
+    await env.SUGESTOES_DB.prepare(
+      "CREATE INDEX IF NOT EXISTS idx_notificacoes_push_proximo_aviso " +
+      "ON notificacoes_push(proximo_aviso) WHERE proximo_aviso IS NOT NULL"
+    ).run();
+    await env.SUGESTOES_DB.prepare(
+      "CREATE TABLE IF NOT EXISTS notificacoes_config (" +
+      "chave TEXT PRIMARY KEY, " +
+      "valor TEXT NOT NULL, " +
+      "atualizado_em TEXT NOT NULL DEFAULT (datetime('now'))" +
+      ")"
+    ).run();
+    return true;
+  } catch (error) {
+    console.warn('Notificações: não foi possível preparar as tabelas.', error);
+    return false;
+  }
+}
+
+async function ensureVapidKeyPair(env) {
+  if (!(await ensureNotificationTables(env))) return null;
+
+  const existing = await env.SUGESTOES_DB.prepare(
+    "SELECT valor FROM notificacoes_config WHERE chave = 'vapid_keypair' LIMIT 1"
+  ).first();
+  if (existing?.valor) {
+    try {
+      const parsed = JSON.parse(existing.valor);
+      if (parsed?.private_jwk && parsed?.public_key) return parsed;
+    } catch {
+      // Um valor inválido será substituído por um novo par.
+    }
+  }
+
+  const keys = await crypto.subtle.generateKey(
+    { name: 'ECDSA', namedCurve: 'P-256' },
+    true,
+    ['sign', 'verify']
+  );
+  const privateJwk = await crypto.subtle.exportKey('jwk', keys.privateKey);
+  const publicRaw = await crypto.subtle.exportKey('raw', keys.publicKey);
+  const generated = {
+    private_jwk: privateJwk,
+    public_key: bytesBase64Url(publicRaw)
+  };
+
+  await env.SUGESTOES_DB.prepare(
+    "INSERT OR IGNORE INTO notificacoes_config (chave, valor, atualizado_em) " +
+    "VALUES ('vapid_keypair', ?, datetime('now'))"
+  ).bind(JSON.stringify(generated)).run();
+
+  const stored = await env.SUGESTOES_DB.prepare(
+    "SELECT valor FROM notificacoes_config WHERE chave = 'vapid_keypair' LIMIT 1"
+  ).first();
+  if (!stored?.valor) return generated;
+  try {
+    return JSON.parse(stored.valor);
+  } catch {
+    return generated;
+  }
+}
+
+function derLength(bytes, offset) {
+  let length = bytes[offset++];
+  if ((length & 0x80) === 0) return { length, offset };
+  const count = length & 0x7f;
+  length = 0;
+  for (let i = 0; i < count; i += 1) length = (length << 8) | bytes[offset++];
+  return { length, offset };
+}
+
+function ecdsaJoseSignature(value) {
+  const bytes = value instanceof Uint8Array ? value : new Uint8Array(value);
+  if (bytes.length === 64) return bytes;
+  if (bytes[0] !== 0x30) throw new Error('assinatura_ecdsa_invalida');
+
+  let offset = 1;
+  ({ offset } = derLength(bytes, offset));
+  if (bytes[offset++] !== 0x02) throw new Error('assinatura_ecdsa_invalida');
+  let parsed = derLength(bytes, offset);
+  const r = bytes.slice(parsed.offset, parsed.offset + parsed.length);
+  offset = parsed.offset + parsed.length;
+  if (bytes[offset++] !== 0x02) throw new Error('assinatura_ecdsa_invalida');
+  parsed = derLength(bytes, offset);
+  const s = bytes.slice(parsed.offset, parsed.offset + parsed.length);
+
+  const normalize = part => {
+    let clean = part;
+    while (clean.length > 32 && clean[0] === 0) clean = clean.slice(1);
+    if (clean.length > 32) throw new Error('assinatura_ecdsa_invalida');
+    const out = new Uint8Array(32);
+    out.set(clean, 32 - clean.length);
+    return out;
+  };
+
+  const signature = new Uint8Array(64);
+  signature.set(normalize(r), 0);
+  signature.set(normalize(s), 32);
+  return signature;
+}
+
+async function vapidAuthorization(endpoint, keyPair, env) {
+  const privateKey = await crypto.subtle.importKey(
+    'jwk',
+    keyPair.private_jwk,
+    { name: 'ECDSA', namedCurve: 'P-256' },
+    false,
+    ['sign']
+  );
+  const header = textBase64Url(JSON.stringify({ typ: 'JWT', alg: 'ES256' }));
+  const payload = textBase64Url(JSON.stringify({
+    aud: new URL(endpoint).origin,
+    exp: Math.floor(Date.now() / 1000) + 12 * 60 * 60,
+    sub: String(env.WEB_PUSH_SUBJECT || 'https://temsimuai.com.br/')
+  }));
+  const unsigned = `${header}.${payload}`;
+  const rawSignature = await crypto.subtle.sign(
+    { name: 'ECDSA', hash: 'SHA-256' },
+    privateKey,
+    new TextEncoder().encode(unsigned)
+  );
+  const signature = bytesBase64Url(ecdsaJoseSignature(rawSignature));
+  return `vapid t=${unsigned}.${signature}, k=${keyPair.public_key}`;
+}
+
+async function handleNotificationConfig(env) {
+  const keyPair = await ensureVapidKeyPair(env);
+  return jsonResponse({
+    disponivel: Boolean(keyPair?.public_key),
+    public_key: String(keyPair?.public_key || ''),
+    lembrete_dias: 1,
+    preferencias_locais: true
+  }, keyPair?.public_key ? 200 : 503);
+}
+
+async function handleNotificationPost(request, env) {
+  if (!(await ensureNotificationTables(env))) {
+    return jsonResponse({ erro: 'Notificações temporariamente indisponíveis.' }, 503);
+  }
+  let body;
+  try {
+    body = await request.json();
+  } catch {
+    return jsonResponse({ erro: 'Assinatura inválida.' }, 400);
+  }
+  const endpoint = validPushEndpoint(body?.endpoint);
+  const reminder = validReminderDate(body?.proximo_aviso);
+  if (!endpoint || reminder === null) {
+    return jsonResponse({ erro: 'Assinatura inválida.' }, 422);
+  }
+  const hash = await sha256Hex(endpoint);
+  await env.SUGESTOES_DB.prepare(
+    "INSERT INTO notificacoes_push " +
+    "(endpoint_hash, endpoint, criado_em, atualizado_em, proximo_aviso, falhas) " +
+    "VALUES (?, ?, datetime('now'), datetime('now'), ?, 0) " +
+    "ON CONFLICT(endpoint_hash) DO UPDATE SET " +
+    "endpoint = excluded.endpoint, atualizado_em = datetime('now'), " +
+    "proximo_aviso = excluded.proximo_aviso, falhas = 0"
+  ).bind(hash, endpoint, reminder || null).run();
+  return jsonResponse({ ok: true, agendado: reminder || null }, 202);
+}
+
+async function handleNotificationDelete(request, env) {
+  if (!(await ensureNotificationTables(env))) {
+    return jsonResponse({ erro: 'Notificações temporariamente indisponíveis.' }, 503);
+  }
+  let body;
+  try {
+    body = await request.json();
+  } catch {
+    return jsonResponse({ erro: 'Assinatura inválida.' }, 400);
+  }
+  const endpoint = validPushEndpoint(body?.endpoint);
+  if (!endpoint) return jsonResponse({ erro: 'Assinatura inválida.' }, 422);
+  const hash = await sha256Hex(endpoint);
+  await env.SUGESTOES_DB.prepare(
+    'DELETE FROM notificacoes_push WHERE endpoint_hash = ?'
+  ).bind(hash).run();
+  return jsonResponse({ ok: true });
+}
+
+async function handleNotificationApi(request, env) {
+  const url = new URL(request.url);
+  const relevant = url.pathname === NOTIFICATION_API_PATH || url.pathname === NOTIFICATION_CONFIG_PATH;
+  if (!relevant) return null;
+
+  if (request.method === 'OPTIONS') {
+    return withSuggestionCors(request, env, new Response(null, {
+      status: 204,
+      headers: { 'cache-control': 'no-store' }
+    }));
+  }
+  if (url.pathname === NOTIFICATION_CONFIG_PATH && request.method === 'GET') {
+    return withSuggestionCors(request, env, await handleNotificationConfig(env));
+  }
+  if (url.pathname === NOTIFICATION_API_PATH && request.method === 'POST') {
+    return withSuggestionCors(request, env, await handleNotificationPost(request, env));
+  }
+  if (url.pathname === NOTIFICATION_API_PATH && request.method === 'DELETE') {
+    return withSuggestionCors(request, env, await handleNotificationDelete(request, env));
+  }
+  return withSuggestionCors(request, env, jsonResponse({ erro: 'Método não permitido.' }, 405));
+}
+
+async function sendWebPush(endpoint, keyPair, env) {
+  const authorization = await vapidAuthorization(endpoint, keyPair, env);
+  return fetch(endpoint, {
+    method: 'POST',
+    headers: {
+      TTL: '86400',
+      Urgency: 'normal',
+      Topic: 'mural-eventos',
+      Authorization: authorization
+    }
+  });
+}
+
+async function sendDueNotifications(env) {
+  if (!(await ensureNotificationTables(env))) return;
+  const keyPair = await ensureVapidKeyPair(env);
+  if (!keyPair?.private_jwk || !keyPair?.public_key) return;
+
+  const today = new Date().toISOString().slice(0, 10);
+  const rows = await env.SUGESTOES_DB.prepare(
+    "SELECT endpoint_hash, endpoint, proximo_aviso, falhas " +
+    "FROM notificacoes_push " +
+    "WHERE proximo_aviso IS NOT NULL AND proximo_aviso <= ? " +
+    "ORDER BY proximo_aviso, criado_em LIMIT 500"
+  ).bind(today).all();
+
+  const pending = rows.results || [];
+  for (let start = 0; start < pending.length; start += 20) {
+    const batch = pending.slice(start, start + 20);
+    await Promise.allSettled(batch.map(async row => {
+      // Limpa antes do envio. O Service Worker registra a próxima data após
+      // mostrar a notificação, evitando disparos duplicados no mesmo dia.
+      await env.SUGESTOES_DB.prepare(
+        "UPDATE notificacoes_push SET proximo_aviso = NULL, atualizado_em = datetime('now') " +
+        "WHERE endpoint_hash = ?"
+      ).bind(row.endpoint_hash).run();
+
+      try {
+        const response = await sendWebPush(String(row.endpoint), keyPair, env);
+        if (response.ok) return;
+        if (response.status === 404 || response.status === 410) {
+          await env.SUGESTOES_DB.prepare(
+            'DELETE FROM notificacoes_push WHERE endpoint_hash = ?'
+          ).bind(row.endpoint_hash).run();
+          return;
+        }
+        await env.SUGESTOES_DB.prepare(
+          "UPDATE notificacoes_push SET proximo_aviso = ?, falhas = falhas + 1, atualizado_em = datetime('now') " +
+          "WHERE endpoint_hash = ?"
+        ).bind(today, row.endpoint_hash).run();
+      } catch {
+        await env.SUGESTOES_DB.prepare(
+          "UPDATE notificacoes_push SET proximo_aviso = ?, falhas = falhas + 1, atualizado_em = datetime('now') " +
+          "WHERE endpoint_hash = ?"
+        ).bind(today, row.endpoint_hash).run();
+      }
+    }));
+  }
+}
+
 const CONFIG_URL =
   'https://bibliotecaifmgsabara.github.io/MuralCultural/curadorias/compartilhamento.json';
 
@@ -1147,6 +1478,9 @@ export default {
     const pointMetricsResponse = await handlePointMetricsApi(request, env);
     if (pointMetricsResponse) return pointMetricsResponse;
 
+    const notificationResponse = await handleNotificationApi(request, env);
+    if (notificationResponse) return notificationResponse;
+
     const shortSelectionResponse = await handleSharedSelectionShortLink(request, env);
     if (shortSelectionResponse) return shortSelectionResponse;
 
@@ -1171,5 +1505,9 @@ export default {
       console.warn('Preview social: usando metadados estáticos do HTML.', error);
       return response;
     }
+  },
+
+  async scheduled(controller, env, ctx) {
+    ctx.waitUntil(sendDueNotifications(env));
   }
 };
