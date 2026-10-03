@@ -1674,7 +1674,11 @@ function eventProgram(event) {
 
     const itemId = agendaFavoriteId(item);
     try {
-      const url = new URL('q/' + encodeURIComponent(point), 'https://temsimuai.com.br/');
+      // O QR do painel usa a entrada direta do site. Isso evita depender da
+      // rota curta /q/ para o acesso funcionar; a origem continua sendo
+      // registrada pelo módulo de métricas e removida da URL após a entrada.
+      const url = new URL('https://temsimuai.com.br/');
+      url.searchParams.set('origem', point);
       if (itemId) {
         url.searchParams.set('modo', 'agenda');
         url.searchParams.set('item', itemId);
