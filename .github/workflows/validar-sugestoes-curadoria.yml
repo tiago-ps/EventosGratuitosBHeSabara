@@ -12,7 +12,11 @@ on:
       - "cloudflare/social-preview-worker.js"
       - "cloudflare/sugestoes-curadoria.sql"
       - "cloudflare/selecoes-compartilhadas.sql"
+      - "cloudflare/metricas-pontos.sql"
+      - "cloudflare/README-metricas-pontos.md"
       - "cloudflare/README-sugestoes-curadoria.md"
+      - "js/metricas-pontos.js"
+      - "testes/metricas-pontos.test.cjs"
       - "testes/sugestoes-curadoria.test.cjs"
       - ".github/workflows/validar-sugestoes-curadoria.yml"
 
@@ -33,4 +37,6 @@ jobs:
           node --check service-worker.js
           node --input-type=module --check < cloudflare/social-preview-worker.js
       - name: Validar contrato de privacidade e integração
-        run: node testes/sugestoes-curadoria.test.cjs
+        run: |
+          node testes/sugestoes-curadoria.test.cjs
+          node testes/metricas-pontos.test.cjs
