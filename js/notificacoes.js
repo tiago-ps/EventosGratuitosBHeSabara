@@ -73,15 +73,69 @@
     }
   }
 
+  function localDateKey(date = new Date()) {
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  }
+
+  function shiftDateKey(value, days) {
+    const match = String(value || '').match(/^(\d{4})-(\d{2})-(\d{2})/);
+    if (!match) return '';
+    const date = new Date(Number(match[1]), Number(match[2]) - 1, Number(match[3]), 12);
+    date.setDate(date.getDate() + Number(days || 0));
+    return localDateKey(date);
+  }
+
+  async function eventCatalog() {
+    try {
+      const response = await fetch(new URL('eventos.json', document.baseURI), {
+        headers: { accept: 'application/json' },
+        cache: 'no-store'
+      });
+      if (!response.ok) return [];
+      const payload = await response.json();
+      return Array.isArray(payload) ? payload : (Array.isArray(payload?.eventos) ? payload.eventos : []);
+    } catch {
+      return [];
+    }
+  }
+
+  function nextReminderDate(events, favorites, afterDate = '') {
+    const favoriteSet = new Set(Array.isArray(favorites) ? favorites : []);
+    const today = localDateKey();
+    const dates = (Array.isArray(events) ? events : [])
+      .filter(event => favoriteSet.has(`evento:${String(event?.id || '').trim()}`))
+      .map(event => shiftDateKey(event?.data || event?.data_inicio, -1))
+      .filter(date => date && date >= today && (!afterDate || date > afterDate))
+      .sort();
+    return dates[0] || '';
+  }
+
+  async function syncServerSchedule(subscription, favorites = localFavorites(), afterDate = '') {
+    if (!subscription?.endpoint) return;
+    const events = await eventCatalog();
+    const next = nextReminderDate(events, favorites, afterDate);
+    await postSubscription(subscription.endpoint, next);
+  }
+
   async function syncFavorites(favorites = localFavorites()) {
+    const normalized = [...new Set((Array.isArray(favorites) ? favorites : []).filter(value => typeof value === 'string'))];
     const current = await readState(PREFS_KEY, {});
     await writeState(PREFS_KEY, {
       ...current,
-      favorites: [...new Set((Array.isArray(favorites) ? favorites : []).filter(value => typeof value === 'string'))],
+      favorites: normalized,
       favoritesOnly: true,
       leadDays: 1,
       updatedAt: new Date().toISOString()
     });
+    if (current.enabled) {
+      const subscription = await currentSubscription();
+      if (subscription) {
+        try { await syncServerSchedule(subscription, normalized); } catch { /* tenta novamente na próxima alteração/abertura */ }
+      }
+    }
   }
 
   function base64UrlToUint8Array(value) {
@@ -128,11 +182,14 @@
     }
   }
 
-  async function postSubscription(endpoint) {
+  async function postSubscription(endpoint, nextReminder = '') {
     const response = await fetch(apiUrl('/api/notificacoes'), {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ endpoint }),
+      body: JSON.stringify({
+        endpoint,
+        proximo_aviso: nextReminder || null
+      }),
       cache: 'no-store'
     });
     if (!response.ok) throw new Error('assinatura_nao_registrada');
@@ -169,13 +226,14 @@
       });
     }
 
-    await postSubscription(subscription.endpoint);
+    const favorites = localFavorites();
+    await syncServerSchedule(subscription, favorites);
     await writeState(PREFS_KEY, {
       ...(await readState(PREFS_KEY, {})),
       enabled: true,
       favoritesOnly: true,
       leadDays: 1,
-      favorites: localFavorites(),
+      favorites,
       updatedAt: new Date().toISOString()
     });
     return subscription;
