@@ -55,7 +55,7 @@ assert.equal(wrangler.keep_vars, true);
 assert.equal(wrangler.assets.directory, '.');
 assert.equal(wrangler.assets.binding, 'ASSETS');
 assert.equal(wrangler.observability.enabled, true);
-assert.deepEqual(wrangler.assets.run_worker_first, ['/api/*', '/s/*', '/', '/index.html']);
+assert.deepEqual(wrangler.assets.run_worker_first, ['/api/*', '/q/*', '/s/*', '/', '/index.html']);
 assert.equal(wrangler.d1_databases.length, 1);
 assert.equal(wrangler.d1_databases[0].binding, 'SUGESTOES_DB');
 assert.equal(wrangler.d1_databases[0].database_name, 'mural-sugestoes-curadoria');
