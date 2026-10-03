@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v180-notificacoes';
+const CACHE_VERSION = 'mural-cultural-v181-notificacoes';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -267,8 +267,10 @@ function eventReminderUrl(event) {
 
 async function handleMuralPush() {
   const prefs = await notificationState(NOTIFICATION_PREFS_KEY, {});
-  if (!prefs?.enabled) return;
 
+  // Todo push recebido resulta em notificação visível. Normalmente o servidor
+  // só envia quando existe uma data agendada; o fallback cobre mudanças locais
+  // ou de catálogo ocorridas depois do agendamento.
   const today = swLocalDateKey();
   const events = await swEventCatalog();
   const favorites = Array.isArray(prefs.favorites) ? prefs.favorites : [];
@@ -291,20 +293,14 @@ async function handleMuralPush() {
     if (due.length > 2) body += ` • +${due.length - 2}`;
   }
 
-  const signature = due.map(event => String(event.id || '')).sort().join('|') || 'fallback';
-  const sentKey = `sent:${today}`;
-  const previous = await notificationState(sentKey, '');
-  if (previous !== signature) {
-    await self.registration.showNotification(title, {
-      body,
-      icon: new URL('./imagens/app-icons/icon-192.png?v=3', self.registration.scope).href,
-      badge: new URL('./imagens/app-icons/favicon-32.png?v=3', self.registration.scope).href,
-      tag: `mural-eventos-${today}`,
-      renotify: false,
-      data: { url }
-    });
-    await writeNotificationState(sentKey, signature);
-  }
+  await self.registration.showNotification(title, {
+    body,
+    icon: new URL('./imagens/app-icons/icon-192.png?v=3', self.registration.scope).href,
+    badge: new URL('./imagens/app-icons/favicon-32.png?v=3', self.registration.scope).href,
+    tag: `mural-eventos-${today}`,
+    renotify: false,
+    data: { url }
+  });
 
   await swUpdateServerSchedule(nextReminder);
 }
