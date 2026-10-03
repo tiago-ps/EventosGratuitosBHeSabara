@@ -8,7 +8,7 @@
       "arquivo": "curadorias/setembro-verde.json",
       "nome": "Setembro Verde",
       "tema": "Inclusão, Doação de Órgãos",
-      "permanente": false,
+      "permanente": true,
       "ativo_de": "2026-09-01",
       "ativo_ate": "2026-09-30",
       "ordem": 0,

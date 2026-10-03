@@ -1,9 +1,15 @@
 {
   "id": "setembro-verde",
-  "status_editorial": "aprovada",
+  "status_editorial": "em_analise",
   "membros": {
     "concursos": [],
-    "cursos": [],
+    "cursos": [
+      "275",
+      "274",
+      "273",
+      "268",
+      "615"
+    ],
     "eventos": [],
     "filmes": [
       "telabrasil:323",
@@ -22,7 +28,7 @@
   },
   "nome": "Setembro Verde",
   "tema": "Inclusão, Doação de Órgãos",
-  "permanente": false,
+  "permanente": true,
   "ativo_de": "2026-09-01",
   "ativo_ate": "2026-09-30",
   "ordem": 0,
