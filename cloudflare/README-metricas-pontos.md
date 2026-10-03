@@ -34,4 +34,31 @@ O navegador usa apenas sessionStorage para deduplicar a sessão por até 30 minu
 
 GET /api/metricas-pontos/admin?inicio=AAAA-MM-DD&fim=AAAA-MM-DD
 
-Usa o mesmo CURADORIA_ADMIN_TOKEN das filas administrativas. O retorno contém resumo por ponto e as linhas agregadas do período.
+Usa o mesmo CURADORIA_ADMIN_TOKEN das filas administrativas. O retorno contém resumo por ponto, linhas agregadas do período, conteúdos visualizados e exposição das telas por dia e hora.
+
+
+## Tempo de exposição do painel
+
+Uma instalação física é identificada pelo parâmetro `ponto`:
+
+`https://temsimuai.com.br/?ponto=ifmg-betim`
+
+Enquanto essa página permanece visível, o navegador envia um sinal de presença por minuto para o Worker. O servidor usa seu próprio relógio no fuso `America/Sao_Paulo` e marca apenas o minuto correspondente. Sinais repetidos no mesmo minuto não aumentam o total.
+
+Se um ponto tiver mais de uma tela, use também `painel=<slug>`:
+
+`https://temsimuai.com.br/?ponto=espaco-conhecimento&painel=parede-principal`
+
+`https://temsimuai.com.br/?ponto=espaco-conhecimento&painel=recepcao`
+
+Sem `painel`, a instalação recebe o identificador `principal`.
+
+O relatório considera **horas-tela**: duas telas diferentes ligadas por 10 horas somam 20 horas de exposição. Duas abas com o mesmo `ponto` e o mesmo `painel` não duplicam o mesmo minuto, porque o armazenamento é deduplicado por ponto, painel, dia, hora e minuto.
+
+A contagem não depende de QR Code, cookie analítico, identificador de visitante ou fingerprint. Ela mede somente o tempo em que a página identificada como painel esteve visível.
+
+O endpoint usado pelas telas é:
+
+`POST /api/metricas-pontos/painel`
+
+O relatório administrativo já devolve também a chave `exposicao`, com linhas agregadas por dia, hora, ponto e painel.
