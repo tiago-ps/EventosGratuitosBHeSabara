@@ -14,12 +14,14 @@ const CORE_ASSETS = [
   './css/concursos-mural.css?v=3',
   './css/temas-visuais.css?v=11',
   './css/utilidade-publica.css?v=2',
-  './css/atividades-lazer.css?v=1',\n  './css/notificacoes.css?v=1',
+  './css/atividades-lazer.css?v=1',
+  './css/notificacoes.css?v=1',
   './css/painel-modos.css?v=2',
   './css/painel-acoes-contextuais.css?v=3',
   './css/tem-sim-uai-painel.css?v=1',
   './js/tema-visual-boot.js?v=16',
-  './js/core/rotacao.js?v=2',\n  './js/notificacoes.js?v=1',
+  './js/core/rotacao.js?v=2',
+  './js/notificacoes.js?v=1',
   './js/conteudos/cursos.js?v=4',
   './js/conteudos/concursos.js?v=3',
   './js/conteudos/filmes.js?v=10',
@@ -366,7 +368,8 @@ self.addEventListener('pushsubscriptionchange', event => {
     }
   })());
 });
-\nself.addEventListener('fetch', event => {
+
+self.addEventListener('fetch', event => {
   const request = event.request;
   if (request.method !== 'GET') return;
   const url = new URL(request.url);
