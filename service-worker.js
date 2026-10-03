@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v182-exposicao-pontos';
+const CACHE_VERSION = 'mural-cultural-v183-sobre-projeto';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -9,7 +9,7 @@ const PLATFORM_IMAGE_PREFIX = '/imagens/plataformas/';
 
 const CORE_ASSETS = [
   './', './index.html',
-  './css/styles.css?v=101',
+  './css/styles.css?v=102',
   './css/eventos-manuais-ui.css?v=43',
   './css/concursos-mural.css?v=3',
   './css/temas-visuais.css?v=11',
@@ -29,7 +29,7 @@ const CORE_ASSETS = [
   './js/conteudos/atividades-lazer.js?v=5',
   './js/curadorias-site.js?v=12',
   './js/metricas-pontos.js?v=2',
-  './js/app.js?v=142',
+  './js/app.js?v=143',
   './js/temas-visuais.js?v=14',
   './js/eventos-manuais-ui.js?v=44',
   './js/ios-install.js?v=3',
