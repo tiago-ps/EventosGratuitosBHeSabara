@@ -5,7 +5,7 @@
   const SESSION_TTL_MS = 30 * 60 * 1000;
   const MAX_OPENED_ITEMS = 500;
   const POINT_RE = /^[a-z0-9](?:[a-z0-9-]{0,62}[a-z0-9])?$/;
-  const CONTENT_ID_RE = /^[a-z0-9_]+:[^\\s]{1,180}$/u;
+  const CONTENT_TYPE_RE = /^[a-z0-9_]+$/;
   const PUBLIC_ORIGIN = 'https://temsimuai.com.br';
 
   function metricsApiUrl() {
