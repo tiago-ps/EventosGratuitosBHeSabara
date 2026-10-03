@@ -51,7 +51,7 @@ assert.match(app, /tipo_conteudo === 'atividade_lazer'/);
 assert.match(app, /\['activities', 'Esporte e Lazer'\]/);
 assert.match(app, /agenda-activity-city/);
 assert.match(app, /state\.allActivities/);
-assert.match(app, /panelModules: \{[^\n]*activities: false/);
+assert.match(app, /panelModules: Object\.fromEntries\(PANEL_MODULE_IDS\.map\(id => \[id, true\]\)\)/);
 assert.match(app, /panelWeights: \{[^\n]*activities: 1/);
 assert.match(app, /activitiesEnabled = state\.panelModules\.activities/);
 assert.match(app, /renderActivitySlide/);
@@ -61,7 +61,7 @@ assert.match(app, /panel-activity-weight/);
 
 const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 assert.match(html, /js\/conteudos\/atividades-lazer\.js\?v=4/);
-assert.match(html, /panel-module-activities/);
+assert.match(html, /panel-module-activities\" type=\"checkbox\" checked/);
 assert.match(html, /<span>Esporte e Lazer<\/span>/);
 assert.match(html, /panel-activity-section/);
 assert.match(html, /panel-activity-weight/);
