@@ -3,6 +3,7 @@
 
   const STORAGE_KEY = 'mural:origem-sessao-v1';
   const SESSION_TTL_MS = 30 * 60 * 1000;
+  const PANEL_HEARTBEAT_MS = 60 * 1000;
   const MAX_OPENED_ITEMS = 500;
   const POINT_RE = /^[a-z0-9](?:[a-z0-9-]{0,62}[a-z0-9])?$/;
   const CONTENT_TYPE_RE = /^[a-z0-9_]+$/;
@@ -15,6 +16,13 @@
     return '/api/metricas-pontos';
   }
 
+  function panelHeartbeatApiUrl() {
+    if (window.location.hostname === 'tiago-ps.github.io') {
+      return PUBLIC_ORIGIN + '/api/metricas-pontos/painel';
+    }
+    return '/api/metricas-pontos/painel';
+  }
+
   function environmentName() {
     return window.location.hostname === 'tiago-ps.github.io' ? 'teste' : 'publico';
   }
@@ -22,6 +30,12 @@
   function normalizePoint(value) {
     const point = String(value || '').trim().toLowerCase();
     return POINT_RE.test(point) ? point : '';
+  }
+
+  function normalizePanel(value) {
+    const panel = String(value || '').trim().toLowerCase();
+    if (!panel) return 'principal';
+    return POINT_RE.test(panel) ? panel : '';
   }
 
   function isContentId(value) {
@@ -32,6 +46,35 @@
     const id = contentId.slice(separator + 1);
     if (!CONTENT_TYPE_RE.test(type) || id.length > 180) return false;
     return !Array.from(id).some(char => char.trim() === '');
+  }
+
+  function startPanelExposureTracking(pageUrl) {
+    const point = normalizePoint(pageUrl.searchParams.get('ponto'));
+    if (!point) return;
+
+    const panel = normalizePanel(pageUrl.searchParams.get('painel'));
+    if (!panel) return;
+
+    const heartbeat = () => {
+      if (document.visibilityState !== 'visible') return;
+      try {
+        fetch(panelHeartbeatApiUrl(), {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({
+            ponto: point,
+            painel: panel,
+            ambiente: environmentName()
+          }),
+          keepalive: true,
+          credentials: 'omit'
+        }).catch(() => {});
+      } catch {
+        // A medição de exposição nunca pode interromper a exibição do Mural.
+      }
+    };
+
+    window.setInterval(heartbeat, PANEL_HEARTBEAT_MS);
   }
 
   function readState() {
@@ -103,7 +146,10 @@
     return current;
   }
 
-  const incomingPoint = normalizePoint(new URL(window.location.href).searchParams.get('origem'));
+  const pageUrl = new URL(window.location.href);
+  startPanelExposureTracking(pageUrl);
+
+  const incomingPoint = normalizePoint(pageUrl.searchParams.get('origem'));
   let state = incomingPoint ? newTrackedSession(incomingPoint) : readState();
   if (incomingPoint) removeOriginFromVisibleUrl();
   if (!state) return;
