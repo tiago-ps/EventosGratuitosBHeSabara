@@ -1,0 +1,42 @@
+{
+  "id": "bloqueio",
+  "status_editorial": "aprovada",
+  "membros": {
+    "concursos": [],
+    "cursos": [],
+    "eventos": [],
+    "filmes": [
+      "telabrasil:721",
+      "embauba:j57c26wetak3817rjy9g6kfcwh8ayejj",
+      "embauba:j5749r7qcqy9v64z6s2w2c0d918azvyx",
+      "embauba:j573sd3747de5ngcfxkp6t784n8azchj",
+      "embauba:j572y7q90kkve19p0yvy2vzz0n8ay0yh",
+      "embauba:j573jee59sx50fke8g985ny4ax8az8xp",
+      "embauba:j57b2amvr2z319x84d62peymfd8ayxfb",
+      "embauba:j57e0vce907ervdkb1z86w777x8ay2n4",
+      "embauba:j57d3n8k1rffcnfvfhge8g4kpx8aymx2",
+      "embauba:j5709r4pgmv0vx6wd1nk6hpky18azzsr",
+      "embauba:j575k7gm42cajaqk08j8e35k198azq97",
+      "embauba:j571frmcpbya9jmx7sb5961j118aznke",
+      "embauba:j57cnk41yr9q549r0pq6b31d618ayem3",
+      "embauba:j571chkgqs1qhw5qchzj817z818ay52b",
+      "embauba:j57807gkw4ba5htjbs4498r4k18aytgn",
+      "embauba:j579a2z9c5h79gms4f4k1014e18ayaff",
+      "embauba:j571jpk8cynt28jcr8q0j1qhmh8ayvnn",
+      "embauba:j5707wgg3jmw0tcb0m47ry8b1s8ayxvx",
+      "embauba:j574r4sg45bmawyhc00zn8dfcd8ayz58"
+    ],
+    "livros": [],
+    "utilidade_publica": []
+  },
+  "nome": "bloqueio",
+  "tema": "bloqueio",
+  "permanente": false,
+  "ativo_de": "",
+  "ativo_ate": "",
+  "ordem": 0,
+  "titulo_editorial": "",
+  "subtitulo_editorial": "",
+  "texto_introdutorio": "",
+  "origem_sugestao": "SUG-74VA-CQVD"
+}

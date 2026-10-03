@@ -25,6 +25,16 @@
       "ordem": 0
     },
     {
+      "id": "bloqueio",
+      "arquivo": "curadorias/bloqueio.json",
+      "nome": "bloqueio",
+      "tema": "bloqueio",
+      "permanente": false,
+      "ativo_de": "",
+      "ativo_ate": "",
+      "ordem": 0
+    },
+    {
       "id": "saude-mental",
       "arquivo": "curadorias/saude-mental.json",
       "nome": "Saúde Mental",
