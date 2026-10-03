@@ -1526,6 +1526,31 @@ body.agenda-mode .agenda-tools .agenda-content-field {
   font-weight: 900;
 }
 
+.agenda-footer-identity {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.agenda-about-footer {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.agenda-about-footer:hover,
+.agenda-about-footer:focus-visible {
+  color: var(--accent);
+}
+
 @media (min-width: 1360px) {
   body.agenda-mode .agenda-list,
   body.agenda-mode .agenda-section-grid {
@@ -2193,6 +2218,19 @@ body.agenda-mode.curation-mode .agenda-book-cover-warning strong {
 
 .agenda-community-open{display:inline-flex;align-items:center;gap:.4rem;min-height:38px;border:1px solid var(--line);border-radius:10px;padding:.45rem .7rem;background:var(--surface);color:var(--text);font:inherit;font-weight:800;cursor:pointer}
 .agenda-community-open:hover{border-color:var(--accent)}
+.agenda-about-open{display:inline-flex;align-items:center;gap:.4rem;min-height:38px;border:1px solid var(--line);border-radius:10px;padding:.45rem .7rem;background:var(--surface);color:var(--text);font:inherit;font-weight:800;cursor:pointer}
+.agenda-about-open:hover,.agenda-about-open:focus-visible{border-color:var(--accent)}
+.agenda-about-dialog{width:min(720px,calc(100% - 24px))}
+.agenda-about-card{gap:1.1rem}
+.agenda-about-lead{margin:0;color:var(--text);font-size:1.02rem;line-height:1.62}
+.agenda-about-sections{display:grid;gap:.8rem}
+.agenda-about-section{display:grid;gap:.4rem;padding:.9rem 1rem;border:1px solid var(--line);border-radius:12px;background:color-mix(in srgb,var(--surface) 72%,transparent)}
+.agenda-about-section h3{margin:0;color:var(--text);font-size:1rem}
+.agenda-about-section p{margin:0;color:var(--muted);line-height:1.55}
+.agenda-about-contact{display:grid;gap:.35rem;margin:0;color:var(--muted);font-style:normal;line-height:1.5}
+.agenda-about-contact strong{color:var(--text)}
+.agenda-about-contact a{justify-self:start;color:var(--accent);font-weight:850;text-decoration-thickness:1px;text-underline-offset:3px}
+.agenda-about-note{margin:0;color:var(--muted);font-size:.9rem;line-height:1.5}
 .agenda-community-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem}
 .agenda-community-option{display:grid;gap:.35rem;text-align:left;border:1px solid var(--line);border-radius:12px;padding:1rem;background:var(--panel);color:var(--text);font:inherit;cursor:pointer}
 .agenda-community-option:hover{border-color:var(--accent)}
@@ -2235,7 +2273,7 @@ body.agenda-mode.curation-mode .agenda-book-cover-warning strong {
 .agenda-card-actions button.secondary,.agenda-correction-button{display:inline-flex;align-items:center;min-height:40px;padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--text);font:inherit;font-size:12px;font-weight:900;cursor:pointer}
 .agenda-card-actions button.secondary:hover,.agenda-correction-button:hover{border-color:var(--accent)}
 .agenda-curation-status-type{margin:0;color:var(--muted);font-weight:800}
-@media(max-width:620px){.agenda-community-options,.agenda-community-field-grid{grid-template-columns:1fr}.agenda-header-actions .agenda-community-open-label{display:none}}
+@media(max-width:620px){.agenda-community-options,.agenda-community-field-grid{grid-template-columns:1fr}.agenda-header-actions .agenda-community-open-label,.agenda-header-actions .agenda-about-open-label{display:none}.agenda-about-dialog{width:calc(100% - 16px)}}
 
 
 /* Agenda v153 — logo em linha própria no cabeçalho. */
@@ -2326,6 +2364,7 @@ body.agenda-mode .agenda-header-actions > button {
 
 body.agenda-mode .agenda-header-actions .agenda-favorites-toggle,
 body.agenda-mode .agenda-header-actions .agenda-community-open,
+body.agenda-mode .agenda-header-actions .agenda-about-open,
 body.agenda-mode .agenda-header-actions .agenda-suggestion-lookup,
 body.agenda-mode .agenda-header-actions .agenda-share-favorites,
 body.agenda-mode .agenda-header-actions .agenda-send-curation,
@@ -2373,6 +2412,7 @@ body.agenda-mode .agenda-header-actions .agenda-favorites-count {
   body.agenda-mode .agenda-header-actions > button,
   body.agenda-mode .agenda-header-actions .agenda-favorites-toggle,
   body.agenda-mode .agenda-header-actions .agenda-community-open,
+  body.agenda-mode .agenda-header-actions .agenda-about-open,
   body.agenda-mode .agenda-header-actions .agenda-suggestion-lookup,
   body.agenda-mode .agenda-header-actions .agenda-share-favorites,
   body.agenda-mode .agenda-header-actions .agenda-send-curation,
