@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v181-notificacoes';
+const CACHE_VERSION = 'mural-cultural-v182-exposicao-pontos';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -28,7 +28,7 @@ const CORE_ASSETS = [
   './js/conteudos/utilidade-publica.js?v=5',
   './js/conteudos/atividades-lazer.js?v=5',
   './js/curadorias-site.js?v=12',
-  './js/metricas-pontos.js?v=1',
+  './js/metricas-pontos.js?v=2',
   './js/app.js?v=142',
   './js/temas-visuais.js?v=14',
   './js/eventos-manuais-ui.js?v=44',
