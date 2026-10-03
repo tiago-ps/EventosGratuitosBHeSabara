@@ -79,6 +79,7 @@
   const utilityContent = window.MuralCultural.contents.utility;
   const activitiesContent = window.MuralCultural.contents.activities;
   const siteCurationsContent = window.MuralCultural.siteCurations;
+  const notificationsContent = window.MuralCultural.notifications;
   let deferredInstallPrompt = null;
   let bookLocationsDialog = null;
 
@@ -4251,6 +4252,7 @@ function eventProgram(event) {
     } catch {
       // A interface continua funcional na sessão mesmo quando o armazenamento é bloqueado.
     }
+    notificationsContent?.syncFavorites?.([...favorites]);
   }
 
   function encodeSharedAgendaSelection(ids) {
@@ -5355,6 +5357,7 @@ function eventProgram(event) {
           aria-pressed="${state.mobileFavoritesOnly ? 'true' : 'false'}"
           title="Meus favoritos"
         ><span aria-hidden="true">★</span><span class="agenda-favorites-label">Favoritos</span><span class="agenda-favorites-count" ${favoriteCount ? '' : 'hidden'}>${favoriteCount}</span></button>
+        ${notificationsContent?.headerButtonMarkup?.() || ''}
         <button class="agenda-community-open" type="button" title="Contribuir com o Mural"><span aria-hidden="true">＋</span><span class="agenda-community-open-label">Contribua</span></button>
         ${state.mobileFavoritesOnly && favoriteCount ? '<button class="agenda-share-favorites" type="button" title="Compartilhar favoritos"><span aria-hidden="true">↗</span><span>Compartilhar</span></button>' : ''}
         <button
@@ -5668,6 +5671,7 @@ function eventProgram(event) {
     });
 
     header.querySelector('.agenda-share-favorites')?.addEventListener('click', openAgendaShareHub);
+    notificationsContent?.bindAgendaHeader?.(header);
     header.querySelector('.agenda-community-open')?.addEventListener('click', openCommunityContributionHub);
     count.querySelector('.agenda-send-curation')?.addEventListener('click', openCurationSuggestionDialog);
     count.querySelector('.agenda-save-shared')?.addEventListener('click', () => {
