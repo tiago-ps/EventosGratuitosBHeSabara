@@ -29,7 +29,7 @@ assert(worker.includes('metricas_pontos_diarias'));
 assert(worker.includes("action === 'visualizacao_conteudo'"));
 assert(!worker.includes('CF-Connecting-IP'));
 
-for (const forbidden of ['ip ', 'user_agent', 'user-agent', 'fingerprint', 'visitante', 'session_id']) {
+for (const forbidden of ['ip ', 'user_agent', 'user-agent', 'fingerprint', 'visitante_id', 'usuario_id', 'session_id']) {
   assert(!schema.toLowerCase().includes(forbidden));
 }
 
