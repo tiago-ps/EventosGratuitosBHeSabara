@@ -47,7 +47,7 @@ assert(schema.includes('PRIMARY KEY (dia, ambiente, ponto, acao, tipo_conteudo, 
 assert(schema.includes('PRIMARY KEY (dia, hora, ambiente, ponto, painel)'));
 assert(schema.includes('minutos_00_29 INTEGER'));
 assert(schema.includes('minutos_30_59 INTEGER'));
-assert(app.includes("url.searchParams.get('ponto')"));
+assert(app.includes("searchParams.get('ponto')"));
 assert(app.includes("url.searchParams.set('origem', point)"));
 assert(app.includes('article.dataset.muralContentId = favoriteId'));
 assert(indexHtml.includes('js/metricas-pontos.js?v=2'));
