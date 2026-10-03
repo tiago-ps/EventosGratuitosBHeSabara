@@ -213,10 +213,12 @@
     if (!supported()) throw new Error('nao_suportado');
     if (iosDevice() && !standalone()) throw new Error('ios_tela_inicio');
 
+    // Confere o backend antes de solicitar a permissão nativa, evitando pedir
+    // autorização quando o serviço ainda não estiver disponível.
+    const config = await notificationConfig();
     const permission = await Notification.requestPermission();
     if (permission !== 'granted') throw new Error(permission === 'denied' ? 'permissao_negada' : 'permissao_pendente');
 
-    const config = await notificationConfig();
     const reg = await registration();
     let subscription = await reg.pushManager.getSubscription();
     if (!subscription) {
