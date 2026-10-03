@@ -6,7 +6,7 @@
       "nome": "Tela Brasil",
       "site": "https://telabrasil.cultura.gov.br/",
       "descricao": "Plataforma pública de acesso a obras audiovisuais brasileiras.",
-      "imagem": "",
+      "imagem": "imagens/plataformas/tela-brasil.svg",
       "logo": "",
       "tipo_acesso": "gratuito_com_cadastro_govbr",
       "exibicao_ativa": true
@@ -16,7 +16,7 @@
       "nome": "Ecofalante Play",
       "site": "https://play.ecofalante.org.br/",
       "descricao": "Plataforma gratuita de cinema socioambiental e de impacto, com uso educacional e cultural.",
-      "imagem": "https://tiago-ps.github.io/EventosGratuitosBHeSabara/imagens/plataformas/ecofalante-play-v2.webp",
+      "imagem": "imagens/plataformas/ecofalante-play.png",
       "logo": "",
       "tipo_acesso": "gratuito",
       "exibicao_ativa": true
@@ -26,10 +26,20 @@
       "nome": "Embaúba Play",
       "site": "https://embaubaplay.com/",
       "descricao": "Plataforma audiovisual com catálogo de filmes brasileiros e independentes, incluindo obras gratuitas.",
-      "imagem": "",
+      "imagem": "imagens/plataformas/embaubaplay.svg",
       "logo": "",
       "tipo_acesso": "gratuito_com_login_embauba",
       "exibicao_ativa": true
+    },
+    {
+      "id": "lgbtflix",
+      "nome": "LGBTFlix",
+      "site": "https://flix.votelgbt.org/",
+      "descricao": "Plataforma audiovisual voltada à diversidade LGBTQIA+, atualmente mantida como fonte experimental no Mural.",
+      "imagem": "imagens/plataformas/lgbtflix.svg",
+      "logo": "",
+      "tipo_acesso": "gratuito_sem_cadastro",
+      "exibicao_ativa": false
     }
   ]
 }
