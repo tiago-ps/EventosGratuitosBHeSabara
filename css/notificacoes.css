@@ -1,0 +1,137 @@
+.agenda-notifications-button{
+  display:inline-flex;
+  align-items:center;
+  gap:.4rem;
+  border:1px solid var(--agenda-border, rgba(255,255,255,.18));
+  background:transparent;
+  color:inherit;
+  border-radius:999px;
+  min-height:2.5rem;
+  padding:.55rem .8rem;
+  cursor:pointer;
+  font:inherit;
+  font-weight:700;
+}
+.agenda-notifications-button:hover,
+.agenda-notifications-button:focus-visible{
+  background:rgba(127,127,127,.12);
+}
+.mural-notifications-dialog{
+  border:0;
+  padding:0;
+  background:transparent;
+  color:inherit;
+  width:min(94vw, 560px);
+}
+.mural-notifications-dialog::backdrop{
+  background:rgba(2,8,18,.72);
+  backdrop-filter:blur(4px);
+}
+.mural-notifications-card{
+  background:var(--agenda-card, #101a2b);
+  color:var(--agenda-text, #f8fbff);
+  border:1px solid var(--agenda-border, rgba(255,255,255,.18));
+  border-radius:22px;
+  padding:1.2rem;
+  box-shadow:0 24px 70px rgba(0,0,0,.38);
+}
+body.agenda-theme-light .mural-notifications-card{
+  background:#fff;
+  color:#172219;
+  border-color:#cdd8cf;
+}
+.mural-notifications-heading{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:1rem;
+}
+.mural-notifications-heading h2{
+  margin:.15rem 0 0;
+  font-size:1.35rem;
+}
+.mural-notifications-eyebrow{
+  margin:0;
+  font-size:.78rem;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  opacity:.72;
+}
+.mural-notifications-close{
+  border:0;
+  background:transparent;
+  color:inherit;
+  font-size:1.7rem;
+  line-height:1;
+  cursor:pointer;
+}
+.mural-notifications-status{
+  display:flex;
+  gap:.8rem;
+  align-items:flex-start;
+  margin:1.1rem 0;
+  padding:1rem;
+  border-radius:16px;
+  background:rgba(127,127,127,.12);
+}
+.mural-notifications-status.is-enabled{
+  outline:1px solid rgba(70,180,100,.45);
+}
+.mural-notifications-status>span{
+  font-size:1.4rem;
+}
+.mural-notifications-status div{
+  display:grid;
+  gap:.2rem;
+}
+.mural-notifications-status div span,
+.mural-notifications-rule span{
+  opacity:.78;
+  line-height:1.45;
+}
+.mural-notifications-rule{
+  display:grid;
+  gap:.25rem;
+  padding:.85rem 0;
+}
+.mural-notifications-privacy{
+  margin:.6rem 0 0;
+  font-size:.9rem;
+  line-height:1.5;
+  opacity:.82;
+}
+.mural-notifications-feedback{
+  min-height:1.25rem;
+  margin:.7rem 0 0;
+  font-size:.9rem;
+}
+.mural-notifications-actions{
+  display:flex;
+  justify-content:flex-end;
+  margin-top:.5rem;
+}
+.mural-notifications-toggle{
+  border:0;
+  border-radius:12px;
+  padding:.75rem 1rem;
+  background:var(--accent, #267a3a);
+  color:var(--accent-contrast, #fff);
+  font:inherit;
+  font-weight:800;
+  cursor:pointer;
+}
+.mural-notifications-toggle.secondary{
+  background:transparent;
+  color:inherit;
+  border:1px solid currentColor;
+}
+.mural-notifications-toggle:disabled{
+  opacity:.55;
+  cursor:wait;
+}
+@media (max-width:760px){
+  .agenda-notifications-label{display:none}
+  .agenda-notifications-button{padding:.55rem .68rem}
+  .mural-notifications-card{border-radius:18px}
+}
