@@ -18,6 +18,11 @@
   "observability": {
     "enabled": true
   },
+  "triggers": {
+    "crons": [
+      "0 12 * * *"
+    ]
+  },
   "d1_databases": [
     {
       "binding": "SUGESTOES_DB",
