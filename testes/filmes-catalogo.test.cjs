@@ -41,12 +41,12 @@ const expectedPlatformImages = {
   lgbtflix: 'imagens/plataformas/lgbtflix.svg'
 };
 for (const [platformId, imagePath] of Object.entries(expectedPlatformImages)) {
-  const platform = platformData.plataformas.find(item => item.id === platformId);
+  const platform = platformsData.plataformas.find(item => item.id === platformId);
   assert.ok(platform, `Plataforma ausente: ${platformId}`);
   assert.equal(platform.imagem, imagePath);
   assert.ok(fs.existsSync(path.join(root, imagePath)), `Imagem ausente: ${imagePath}`);
 }
-assert.equal(platformData.plataformas.find(item => item.id === 'lgbtflix').exibicao_ativa, false);
+assert.equal(platformsData.plataformas.find(item => item.id === 'lgbtflix').exibicao_ativa, false);
 
 for (const movie of data.filmes) {
   if (!movie.imagem) continue;
