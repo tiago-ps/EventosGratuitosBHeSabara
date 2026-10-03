@@ -60,7 +60,7 @@ assert.match(app, /panel-module-activities/);
 assert.match(app, /panel-activity-weight/);
 
 const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
-assert.match(html, /js\/conteudos\/atividades-lazer\.js\?v=4/);
+assert.match(html, /js\/conteudos\/atividades-lazer\.js\?v=\d+/);
 assert.match(html, /panel-module-activities\" type=\"checkbox\" checked/);
 assert.match(html, /<span>Esporte e Lazer<\/span>/);
 assert.match(html, /panel-activity-section/);
@@ -69,7 +69,7 @@ assert.match(html, /css\/atividades-lazer\.css\?v=1/);
 
 const sw = fs.readFileSync(path.join(root, 'service-worker.js'), 'utf8');
 assert.match(sw, /'\/atividades-lazer\.json'/);
-assert.match(sw, /js\/conteudos\/atividades-lazer\.js\?v=4/);
+assert.match(sw, /js\/conteudos\/atividades-lazer\.js\?v=\d+/);
 assert.match(sw, /js\/app\.js\?v=\d+/);
 
 console.log('Esporte e Lazer integrado à Agenda e ao Painel com endereço, Google Maps, catálogo, filtros, perfis e cache.');
