@@ -2,7 +2,7 @@
   "schema": 10,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-10-02T15:07:01.287648+00:00",
+  "coletado_em_utc": "2026-10-03T13:59:34.258380+00:00",
   "total": 23,
   "concursos": [
     {
@@ -378,39 +378,6 @@
       ]
     },
     {
-      "id": "pci:noticia:prefeitura-de-carmo-da-mata-mg-divulga-retificacao-de-concurso-publico",
-      "titulo": "Prefeitura de Carmo da Mata",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-carmo-da-mata-mg-divulga-retificacao-de-concurso-publico",
-      "imagem": "https://cdn.pci.app.br/img/i/ab66ad80592bf51690b5335716372bd0.png",
-      "formacoes_compativeis": [
-        "Técnico em Informática"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Técnico em Informática",
-          "nivel": "tecnico",
-          "evidencia": "tro de reserva) motorista de ambulancia (cadastro de reserva) recepcionista (cadastro de reserva) ensino medio e/ou tecnico auxiliar de servicos (1 vaga) fiscal ambiental (1 vaga) fiscal de posturas e obras (1 vaga) fiscal de vigilancia sanitaria e em saude (1 vaga) fiscal sim (cadastro de reserva) tecnico em informatica (cadastro de reserva) tecnico em seguranca do trabalho (cadastro de reserva) ensino superior bibliotecario (cadastro de reserva) enfermeiro (cadastro de reserva) engenheiro ambiental (1 vaga) engenheiro civil (cadastro de reserva) fisioterapeuta (cadastro de reserva) maestro (cadastro de reserva) p"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "MG",
-      "cidade": "Carmo da Mata",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "2 de outubro de 2026",
-      "inscricoes_texto": "até 2 de outubro de 2026",
-      "remuneracao_faixa_texto": "R$ 3.886,53",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Técnico em Informática",
-          "vagas_texto": "Cadastro de Reserva",
-          "formacao": "Técnico em Informática",
-          "confianca": "alta"
-        }
-      ]
-    },
-    {
       "id": "pci:noticia:prefeitura-de-coromandel-mg-abre-concurso-publico-com-salarios-de-ate-7821",
       "titulo": "Prefeitura de Coromandel",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-coromandel-mg-abre-concurso-publico-com-salarios-de-ate-7821",
@@ -444,45 +411,6 @@
       ]
     },
     {
-      "id": "pci:noticia:prefeitura-de-dores-do-indaia-mg-retifica-edital-de-concurso-publico-com-salarios-de-ate-18702",
-      "titulo": "Prefeitura de Dores do Indaiá",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-dores-do-indaia-mg-retifica-edital-de-concurso-publico-com-salarios-de-ate-18702",
-      "imagem": "https://cdn.pci.app.br/img/i/232efc3c99ca77c691a9eef47ecda1b3.png",
-      "formacoes_compativeis": [
-        "Técnico em Informática"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Técnico em Informática",
-          "nivel": "tecnico",
-          "evidencia": "ineira (5 vagas) auxiliar de servicos publicos servente escolar (18 vagas) zelador (2 vagas) agente fiscal (1 vaga) agente sanitario (1 vaga) fiscal ambiental (1 vaga) profissional de apoio escolar (5 vagas) secretario escolar (1 vaga) tecnico de saude bucal (1 vaga) tecnico em enfermagem (7 vagas) tecnico em informatica (1 vaga) tecnico em informatica - saude (1 vaga) advogado da assistencia social (1 vaga) analista ambiental (1 vaga) assistente social (1 vaga) assistente social da saude (1 vaga) biomedico (1 vaga) bioquimico (1 vaga) enfermeiro psf (1 vaga) engenheiro agronomo (1 vaga) farmaceutico (1 vaga) medic"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "MG",
-      "cidade": "Dores do Indaiá",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "2 de outubro de 2026",
-      "inscricoes_texto": "até 2 de outubro de 2026",
-      "remuneracao_faixa_texto": "R$ 1.469,88 a R$ 18.702,17",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Técnico em Informática",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "alta"
-        },
-        {
-          "cargo": "Técnico em Informática - Saúde",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "alta"
-        }
-      ]
-    },
-    {
       "id": "pci:noticia:prefeitura-de-ipaba-mg-retifica-edital-de-concurso-publico-com-salarios-de-ate-5275",
       "titulo": "Prefeitura de Ipaba",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-ipaba-mg-retifica-edital-de-concurso-publico-com-salarios-de-ate-5275",
@@ -511,6 +439,39 @@
           "cargo": "Técnico em Informática",
           "vagas_texto": "1 vaga",
           "formacao": "Técnico em Informática",
+          "confianca": "alta"
+        }
+      ]
+    },
+    {
+      "id": "pci:noticia:prefeitura-de-luislandia-mg-abre-concurso-publico-com-vagas-em-diversas-areas",
+      "titulo": "Prefeitura de Luislândia",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-luislandia-mg-abre-concurso-publico-com-vagas-em-diversas-areas",
+      "imagem": "https://cdn.pci.app.br/img/i/f39216a08d910f12694acd2219680e9c.png",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "ciplina especifica - ingles (cr) professor de disciplina especifica - matematica (1 vaga) professor de disciplina especifica - portugues (cr) professor de educacao basica infantil e 1o ao 5o (7 vagas) psicologo (1 vaga) psicologo clinico (cr) tecnico de enfermagem (2 vagas) tecnico de nivel medio - tecnologia da informacao (1 vaga) tecnico de nivel superior em contabilidade (1 vaga) tecnico em farmacia (cr) tecnico em manutencao (1 vaga) tecnico em saude bucal (cr) tecnico de nivel medio em seguranca do trabalho (1 vaga) a jornada de trabalho varia de 6 a 40 horas semanais ou regime de hora-aula para professores, com"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "MG",
+      "cidade": "Luislândia",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "R$ 1.621,00 a R$ 10.000,00",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico de Nível Médio - Tecnologia da Informação",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
           "confianca": "alta"
         }
       ]
@@ -820,6 +781,39 @@
           "cargo": "Técnico Agrícola (1 vaga + CR) Técnico de Enfermagem (3 vagas + CR) Técnico em Informática",
           "vagas_texto": "Cadastro de Reserva",
           "formacao": "Técnico em Informática",
+          "confianca": "alta"
+        }
+      ]
+    },
+    {
+      "id": "pci:noticia:tce-go-retifica-concurso-publico-para-tecnicos-de-controle-externo",
+      "titulo": "TCE - Tribunal de Contas do Estado de Goiás",
+      "url": "https://www.pciconcursos.com.br/noticias/tce-go-retifica-concurso-publico-para-tecnicos-de-controle-externo",
+      "imagem": "https://cdn.pci.app.br/img/i/49d0f07f837fcc4f15672d89520c62f4.png",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "tce - go retifica concurso publico para tecnicos de controle externo oportunidades contemplam cargos de nivel medio nas areas administrativas e de tecnologia da informacao, com remuneracao inicial de r$ 11.862,19 e selecao composta por provas objetivas e discursivas. concursos › noticias › centro-oeste quarta-feira, 16 de setembro de 2026 o tribunal de contas do estado de goias (tce-go) abriu um concurso publico visando o preenchimento de vagas para profissionais de "
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "GO",
+      "cidade": "",
+      "inscricoes_inicio_texto": "5 de outubro de 2026",
+      "inscricoes_fim_texto": "6 de novembro de 2026",
+      "inscricoes_texto": "5 de outubro de 2026 a 6 de novembro de 2026",
+      "remuneracao_faixa_texto": "R$ 11.862,19",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Tecnologia da Informação",
+          "vagas_texto": "10 vagas",
+          "formacao": "Sistemas de Informação / Computação",
           "confianca": "alta"
         }
       ]
