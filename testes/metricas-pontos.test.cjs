@@ -35,7 +35,7 @@ for (const forbidden of ['ip ', 'user_agent', 'user-agent', 'fingerprint', 'visi
 
 assert(schema.includes('PRIMARY KEY (dia, ambiente, ponto, acao, tipo_conteudo, conteudo_id)'));
 assert(app.includes("url.searchParams.get('ponto')"));
-assert(app.includes("new URL('q/' + encodeURIComponent(point), 'https://temsimuai.com.br/')"));
+assert(app.includes("url.searchParams.set('origem', point)"));
 assert(app.includes('article.dataset.muralContentId = favoriteId'));
 assert(indexHtml.includes('js/metricas-pontos.js?v=1'));
 assert(serviceWorker.includes('./js/metricas-pontos.js?v=1'));
