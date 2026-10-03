@@ -16,47 +16,57 @@ assert.deepEqual(config.modulos, {
 });
 assert.equal(config.painel, undefined, 'A configuração enxuta do publicador central deve continuar válida.');
 
-// Configurações/perfis antigos não possuem `modules.contests`. O contrato
-// real deve herdar o padrão global somente quando a propriedade está ausente.
+// O registro central é a fonte de verdade dos módulos. Todo módulo registrado
+// herda "ativo" quando não existe um false explícito no perfil ou config.
+assert.match(appSource, /const PANEL_MODULE_CONFIG_KEYS = Object\.freeze\(\{/);
+for (const [id, configKey] of [
+  ['events', 'eventos'],
+  ['books', 'livros'],
+  ['courses', 'cursos'],
+  ['contests', 'concursos'],
+  ['films', 'filmes'],
+  ['utility', 'utilidade_publica'],
+  ['activities', 'atividades_lazer']
+]) {
+  assert.match(appSource, new RegExp(`${id}: '${configKey}'`));
+}
 assert.match(
   appSource,
-  /contests: modules\.contests !== undefined \? Boolean\(modules\.contests\) : defaults\.modules\.contests/
+  /panelModules: Object\.fromEntries\(PANEL_MODULE_IDS\.map\(id => \[id, true\]\)\)/
 );
 assert.match(
   appSource,
-  /courses: modules\.courses !== undefined \? Boolean\(modules\.courses\) : defaults\.modules\.courses/
+  /panelValue !== undefined \? Boolean\(panelValue\) : globalValue !== false/
 );
 assert.match(
   appSource,
-  /courses: panelModules\.cursos !== undefined\s*\? Boolean\(panelModules\.cursos\)\s*: state\.config\?\.modulos\?\.cursos !== false/
+  /modules\[id\] !== undefined \? Boolean\(modules\[id\]\) : defaults\.modules\[id\]/
 );
 assert.match(
   appSource,
-  /contests: panelModules\.concursos !== undefined\s*\? Boolean\(panelModules\.concursos\)\s*: state\.config\?\.modulos\?\.concursos !== false/
+  /PANEL_NON_EVENT_MODULE_IDS = Object\.freeze/
 );
-assert.match(
-  appSource,
-  /contests: clampWeight\(weights\.contests \?\? defaults\.weights\.contests\)/
-);
-assert.match(appSource, /const panel = state\.config\?\.painel \|\| \{\};/);
-assert.match(appSource, /const panelModules = panel\.modulos_ativos \|\| \{\};/);
 
-// Uma escolha explícita do usuário deve ser lida do compositor e persistida
-// junto das demais configurações normalizadas.
+// A programação padrão não depende de pesos absolutos por tipo: o número de
+// vagas deriva dos eventos e o núcleo equilibra todos os não-eventos.
+assert.match(appSource, /const PANEL_EVENTS_PER_OTHER = 4;/);
+assert.match(appSource, /Math\.ceil\(events\.length \/ PANEL_EVENTS_PER_OTHER\)/);
+assert.match(appSource, /eventsPerOther: PANEL_EVENTS_PER_OTHER/);
+assert.match(appSource, /const customComposition = Boolean\(state\.filters\.theme \|\| activeEditorialPanelProfileId\(\)\)/);
+
+// Uma escolha explícita do usuário continua sendo lida e persistida.
 assert.match(appSource, /const contestsEnabled = Boolean\(slide\.querySelector\('\.panel-module-contests'\)\?\.checked\)/);
 assert.match(appSource, /contests: contestsEnabled/);
 assert.match(appSource, /localStorage\.setItem\(PANEL_SETTINGS_KEY, JSON\.stringify\(value\)\)/);
+assert.match(appSource, /mural-cultural-configuracao-painel-v2/);
 assert.match(
   appSource,
   /if \(!stored\) \{\s*defaults\.slideDuration = storedSlideDuration\(\);\s*applyPanelSettings\(defaults, false\);/
 );
-assert.match(
-  appSource,
-  /stored = JSON\.parse\(localStorage\.getItem\(PANEL_SETTINGS_KEY\) \|\| 'null'\);\s*\} catch \{\s*stored = null;/
-);
 
 const indexSource = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 assert.match(indexSource, /class="panel-module-contests"/);
-assert.match(indexSource, /class="panel-contest-weight"/);
+assert.match(indexSource, /class="panel-module-activities" type="checkbox" checked/);
+assert.match(indexSource, /class="panel-module-utility" type="checkbox" checked/);
 
 console.log('Testes de compatibilidade das configurações do Painel aprovados.');
