@@ -52,7 +52,7 @@ assert.match(app, /\['activities', 'Esporte e Lazer'\]/);
 assert.match(app, /agenda-activity-city/);
 assert.match(app, /state\.allActivities/);
 assert.match(app, /panelModules: Object\.fromEntries\(PANEL_MODULE_IDS\.map\(id => \[id, true\]\)\)/);
-assert.match(app, /panelWeights: \{[^\n]*activities: 1/);
+assert.match(app, /panelWeights: Object\.fromEntries\(PANEL_MODULE_IDS\.map\(id => \[id, id === 'events' \? 5 : 1\]\)\)/);
 assert.match(app, /activitiesEnabled = state\.panelModules\.activities/);
 assert.match(app, /renderActivitySlide/);
 assert.match(app, /item\.tipo_conteudo === 'atividade_lazer'\) renderActivitySlide/);
