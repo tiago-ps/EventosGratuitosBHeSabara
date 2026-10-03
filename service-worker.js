@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v176-balanced-panel';
+const CACHE_VERSION = 'mural-cultural-v177-point-metrics';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -26,6 +26,7 @@ const CORE_ASSETS = [
   './js/conteudos/utilidade-publica.js?v=5',
   './js/conteudos/atividades-lazer.js?v=5',
   './js/curadorias-site.js?v=12',
+  './js/metricas-pontos.js?v=1',
   './js/app.js?v=141',
   './js/temas-visuais.js?v=14',
   './js/eventos-manuais-ui.js?v=44',
