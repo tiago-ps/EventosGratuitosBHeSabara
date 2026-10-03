@@ -176,3 +176,21 @@ assert(app.includes("contexto: state.curationMode ? 'curadoria_livros' : 'mural'
 assert(app.includes("url.searchParams.delete('lista')"));
 assert(panelNavigation.includes("url.searchParams.delete('lista')"));
 assert(panelNavigation.includes('/s\\/[23456789ABCDEFGHJKLMNPQRSTUVWXYZ]{7}'));
+
+assert(app.includes('function openAboutProjectDialog()'));
+assert(app.includes('class="agenda-about-open"'));
+assert(app.includes('class="agenda-about-footer"'));
+assert(app.includes('projeto de ensino e extensão da Biblioteca do Instituto Federal de Minas Gerais (IFMG) — Campus Sabará'));
+assert(app.includes('Curadoria também é formação'));
+assert(app.includes('Estudantes participam da seleção, conferência, organização e contextualização dos conteúdos'));
+assert(app.includes('Segunda a sexta, das 09h00 às 21h00'));
+assert(app.includes('(31) 2102-9374'));
+assert(app.includes('mailto:temsimuai@ifmg.edu.br'));
+assert(app.includes('tel:+553121029374'));
+assert(styles.includes('.agenda-about-open'));
+assert(styles.includes('.agenda-about-dialog'));
+assert(styles.includes('.agenda-about-footer'));
+assert(indexHtml.includes('css/styles.css?v=102'));
+assert(indexHtml.includes('js/app.js?v=143'));
+assert(serviceWorker.includes("mural-cultural-v183-sobre-projeto"));
+
