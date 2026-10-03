@@ -28,6 +28,7 @@ const SHARED_SELECTION_PUBLIC_BASE = 'https://temsimuai.com.br/';
 const SHARED_SELECTION_CURATION_BASE = 'https://tiago-ps.github.io/EventosGratuitosBHeSabara/';
 
 const POINT_METRICS_API_PATH = '/api/metricas-pontos';
+const POINT_PANEL_API_PATH = '/api/metricas-pontos/painel';
 const POINT_METRICS_ADMIN_PATH = '/api/metricas-pontos/admin';
 const POINT_QR_PREFIX = '/q/';
 const POINT_SLUG_RE = /^[a-z0-9](?:[a-z0-9-]{0,62}[a-z0-9])?$/;
@@ -847,19 +848,35 @@ function validPointMetricContentId(value) {
   return !Array.from(id).some(char => char.trim() === '');
 }
 
-function pointMetricsDate() {
+function pointMetricsClock() {
   try {
     const parts = new Intl.DateTimeFormat('en-CA', {
       timeZone: 'America/Sao_Paulo',
       year: 'numeric',
       month: '2-digit',
-      day: '2-digit'
+      day: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      hourCycle: 'h23'
     }).formatToParts(new Date());
     const values = Object.fromEntries(parts.map(part => [part.type, part.value]));
-    return values.year + '-' + values.month + '-' + values.day;
+    return {
+      dia: values.year + '-' + values.month + '-' + values.day,
+      hora: Number(values.hour),
+      minuto: Number(values.minute)
+    };
   } catch {
-    return new Date().toISOString().slice(0, 10);
+    const now = new Date();
+    return {
+      dia: now.toISOString().slice(0, 10),
+      hora: now.getUTCHours(),
+      minuto: now.getUTCMinutes()
+    };
   }
+}
+
+function pointMetricsDate() {
+  return pointMetricsClock().dia;
 }
 
 function shiftIsoDate(value, days) {
@@ -876,6 +893,16 @@ function normalizeMetricDate(value, fallback) {
   return Number.isNaN(parsed.getTime()) || parsed.toISOString().slice(0, 10) !== normalized
     ? fallback
     : normalized;
+}
+
+function bitCount30(value) {
+  let current = Number(value || 0) >>> 0;
+  let count = 0;
+  while (current) {
+    current &= current - 1;
+    count += 1;
+  }
+  return count;
 }
 
 async function ensurePointMetricsTable(env) {
@@ -897,9 +924,25 @@ async function ensurePointMetricsTable(env) {
       'CREATE INDEX IF NOT EXISTS idx_metricas_pontos_periodo ' +
       'ON metricas_pontos_diarias(ponto, ambiente, dia)'
     ).run();
+    await env.SUGESTOES_DB.prepare(
+      "CREATE TABLE IF NOT EXISTS exposicao_paineis_horaria (" +
+      "dia TEXT NOT NULL, " +
+      "hora INTEGER NOT NULL CHECK (hora >= 0 AND hora <= 23), " +
+      "ambiente TEXT NOT NULL CHECK (ambiente IN ('publico', 'teste')), " +
+      "ponto TEXT NOT NULL, " +
+      "painel TEXT NOT NULL, " +
+      "minutos_00_29 INTEGER NOT NULL DEFAULT 0 CHECK (minutos_00_29 >= 0), " +
+      "minutos_30_59 INTEGER NOT NULL DEFAULT 0 CHECK (minutos_30_59 >= 0), " +
+      "PRIMARY KEY (dia, hora, ambiente, ponto, painel)" +
+      ") WITHOUT ROWID"
+    ).run();
+    await env.SUGESTOES_DB.prepare(
+      'CREATE INDEX IF NOT EXISTS idx_exposicao_paineis_periodo ' +
+      'ON exposicao_paineis_horaria(ponto, ambiente, dia, hora)'
+    ).run();
     return true;
   } catch (error) {
-    console.warn('Métricas por ponto: não foi possível preparar a tabela.', error);
+    console.warn('Métricas por ponto: não foi possível preparar as tabelas.', error);
     return false;
   }
 }
@@ -954,6 +997,57 @@ async function handlePointMetricsPost(request, env) {
   return jsonResponse({ ok: true }, 202);
 }
 
+async function handlePointPanelHeartbeat(request, env) {
+  if (!(await ensurePointMetricsTable(env))) {
+    return jsonResponse({ erro: 'Métricas temporariamente indisponíveis.' }, 503);
+  }
+
+  const contentLength = Number(request.headers.get('content-length') || 0);
+  if (contentLength > 2048) return jsonResponse({ erro: 'Métrica inválida.' }, 413);
+
+  let body;
+  try {
+    body = await request.json();
+  } catch {
+    return jsonResponse({ erro: 'Métrica inválida.' }, 400);
+  }
+
+  const point = normalizePointSlug(body?.ponto);
+  const panel = normalizePointSlug(body?.painel || 'principal');
+  const environment = String(body?.ambiente || '').trim();
+  if (!point || !panel || !POINT_METRIC_ENVIRONMENTS.has(environment)) {
+    return jsonResponse({ erro: 'Métrica inválida.' }, 422);
+  }
+
+  const clock = pointMetricsClock();
+  if (!Number.isInteger(clock.hora) || clock.hora < 0 || clock.hora > 23 ||
+      !Number.isInteger(clock.minuto) || clock.minuto < 0 || clock.minuto > 59) {
+    return jsonResponse({ erro: 'Horário indisponível.' }, 503);
+  }
+
+  const lowBit = clock.minuto < 30 ? 2 ** clock.minuto : 0;
+  const highBit = clock.minuto >= 30 ? 2 ** (clock.minuto - 30) : 0;
+
+  await env.SUGESTOES_DB.prepare(
+    'INSERT INTO exposicao_paineis_horaria ' +
+    '(dia, hora, ambiente, ponto, painel, minutos_00_29, minutos_30_59) ' +
+    'VALUES (?, ?, ?, ?, ?, ?, ?) ' +
+    'ON CONFLICT(dia, hora, ambiente, ponto, painel) DO UPDATE SET ' +
+    'minutos_00_29 = minutos_00_29 | excluded.minutos_00_29, ' +
+    'minutos_30_59 = minutos_30_59 | excluded.minutos_30_59'
+  ).bind(
+    clock.dia,
+    clock.hora,
+    environment,
+    point,
+    panel,
+    lowBit,
+    highBit
+  ).run();
+
+  return jsonResponse({ ok: true }, 202);
+}
+
 async function handlePointMetricsAdmin(request, env) {
   if (!(await ensurePointMetricsTable(env))) {
     return jsonResponse({ erro: 'Métricas temporariamente indisponíveis.' }, 503);
@@ -971,7 +1065,7 @@ async function handlePointMetricsAdmin(request, env) {
     return jsonResponse({ erro: 'O período máximo para uma consulta é de 366 dias.' }, 422);
   }
 
-  const [summary, daily, contents] = await Promise.all([
+  const [summary, daily, contents, exposure] = await Promise.all([
     env.SUGESTOES_DB.prepare(
       "SELECT ponto, ambiente, " +
       "SUM(CASE WHEN acao = 'entrada' THEN quantidade ELSE 0 END) AS entradas, " +
@@ -994,21 +1088,37 @@ async function handlePointMetricsAdmin(request, env) {
       "WHERE dia >= ? AND dia <= ? AND acao = 'visualizacao_conteudo' " +
       'GROUP BY ponto, ambiente, tipo_conteudo, conteudo_id ' +
       'ORDER BY visualizacoes DESC LIMIT 1000'
+    ).bind(start, end).all(),
+    env.SUGESTOES_DB.prepare(
+      'SELECT dia, hora, ambiente, ponto, painel, minutos_00_29, minutos_30_59 ' +
+      'FROM exposicao_paineis_horaria WHERE dia >= ? AND dia <= ? ' +
+      'ORDER BY dia, hora, ponto, painel'
     ).bind(start, end).all()
   ]);
+
+  const exposureRows = (exposure.results || []).map(row => ({
+    dia: String(row.dia || ''),
+    hora: Number(row.hora || 0),
+    ambiente: String(row.ambiente || ''),
+    ponto: String(row.ponto || ''),
+    painel: String(row.painel || 'principal'),
+    minutos: bitCount30(row.minutos_00_29) + bitCount30(row.minutos_30_59)
+  }));
 
   return jsonResponse({
     inicio: start,
     fim: end,
     resumo: summary.results || [],
     diario: daily.results || [],
-    conteudos: contents.results || []
+    conteudos: contents.results || [],
+    exposicao: exposureRows
   });
 }
 
 async function handlePointMetricsApi(request, env) {
   const url = new URL(request.url);
-  if (url.pathname === POINT_METRICS_API_PATH && request.method === 'OPTIONS') {
+  if ((url.pathname === POINT_METRICS_API_PATH || url.pathname === POINT_PANEL_API_PATH) &&
+      request.method === 'OPTIONS') {
     return withSuggestionCors(request, env, new Response(null, {
       status: 204,
       headers: { 'cache-control': 'no-store' }
@@ -1016,6 +1126,9 @@ async function handlePointMetricsApi(request, env) {
   }
   if (url.pathname === POINT_METRICS_API_PATH && request.method === 'POST') {
     return withSuggestionCors(request, env, await handlePointMetricsPost(request, env));
+  }
+  if (url.pathname === POINT_PANEL_API_PATH && request.method === 'POST') {
+    return withSuggestionCors(request, env, await handlePointPanelHeartbeat(request, env));
   }
   if (url.pathname === POINT_METRICS_ADMIN_PATH && request.method === 'GET') {
     return handlePointMetricsAdmin(request, env);
