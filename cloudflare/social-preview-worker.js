@@ -33,7 +33,7 @@ const POINT_QR_PREFIX = '/q/';
 const POINT_SLUG_RE = /^[a-z0-9](?:[a-z0-9-]{0,62}[a-z0-9])?$/;
 const POINT_METRIC_ACTIONS = new Set(['entrada', 'sessao_ativa', 'visualizacao_conteudo']);
 const POINT_METRIC_ENVIRONMENTS = new Set(['publico', 'teste']);
-const POINT_METRIC_CONTENT_ID_RE = /^[a-z0-9_]+:[^\\s]{1,180}$/u;
+const POINT_METRIC_CONTENT_TYPE_RE = /^[a-z0-9_]+$/;
 
 function suggestionCorsOrigin(request, env) {
   const origin = String(request.headers.get('origin') || '').trim();
@@ -829,6 +829,16 @@ function normalizePointSlug(value) {
   return POINT_SLUG_RE.test(point) ? point : '';
 }
 
+function validPointMetricContentId(value) {
+  const contentId = String(value || '').trim();
+  const separator = contentId.indexOf(':');
+  if (separator < 1 || separator === contentId.length - 1) return false;
+  const type = contentId.slice(0, separator);
+  const id = contentId.slice(separator + 1);
+  if (!POINT_METRIC_CONTENT_TYPE_RE.test(type) || id.length > 180) return false;
+  return !Array.from(id).some(char => char.trim() === '');
+}
+
 function pointMetricsDate() {
   try {
     const parts = new Intl.DateTimeFormat('en-CA', {
@@ -853,7 +863,11 @@ function shiftIsoDate(value, days) {
 
 function normalizeMetricDate(value, fallback) {
   const normalized = String(value || '').trim();
-  return /^\\d{4}-\\d{2}-\\d{2}$/.test(normalized) ? normalized : fallback;
+  if (normalized.length !== 10 || normalized[4] !== '-' || normalized[7] !== '-') return fallback;
+  const parsed = new Date(normalized + 'T12:00:00Z');
+  return Number.isNaN(parsed.getTime()) || parsed.toISOString().slice(0, 10) !== normalized
+    ? fallback
+    : normalized;
 }
 
 async function ensurePointMetricsTable(env) {
@@ -908,7 +922,7 @@ async function handlePointMetricsPost(request, env) {
   let contentType = '';
   if (action === 'visualizacao_conteudo') {
     contentId = String(body?.conteudo_id || '').trim();
-    if (!POINT_METRIC_CONTENT_ID_RE.test(contentId)) {
+    if (!validPointMetricContentId(contentId)) {
       return jsonResponse({ erro: 'Conteúdo inválido.' }, 422);
     }
     contentType = contentId.split(':', 1)[0];
@@ -1006,10 +1020,13 @@ function handlePointQrRedirect(request) {
   const url = new URL(request.url);
   if (!url.pathname.startsWith(POINT_QR_PREFIX)) return null;
 
-  const match = url.pathname.match(/^\\/q\\/([a-z0-9](?:[a-z0-9-]{0,62}[a-z0-9])?)\\/?$/);
-  if (!match) return new Response('Ponto de divulgação inválido.', { status: 404 });
+  let rawPoint = url.pathname.slice(POINT_QR_PREFIX.length);
+  if (rawPoint.endsWith('/')) rawPoint = rawPoint.slice(0, -1);
+  if (!rawPoint || rawPoint.includes('/')) {
+    return new Response('Ponto de divulgação inválido.', { status: 404 });
+  }
 
-  const point = normalizePointSlug(match[1]);
+  const point = normalizePointSlug(rawPoint);
   if (!point) return new Response('Ponto de divulgação inválido.', { status: 404 });
 
   const target = new URL('https://temsimuai.com.br/');
