@@ -68,7 +68,12 @@
   }
 
   function createPanelMemory() {
-    return { exposure: new Map(), curations: new Map(), pendingCurations: [] };
+    return {
+      exposure: new Map(),
+      moduleExposure: new Map(),
+      curations: new Map(),
+      pendingCurations: []
+    };
   }
 
   function recordPanelExposure(memory, step) {
@@ -78,6 +83,15 @@
     memory.exposure.set(key, true);
     // Preferência recente limitada à sessão, nunca um veto à publicação.
     if (memory.exposure.size > 100) memory.exposure.delete(memory.exposure.keys().next().value);
+
+    if (step.moduleId) {
+      memory.moduleExposure ||= new Map();
+      memory.moduleExposure.set(
+        step.moduleId,
+        (memory.moduleExposure.get(step.moduleId) || 0) + 1
+      );
+    }
+
     if (step.curationId) {
       if (step.resetCycle || !memory.curations.has(step.curationId)) {
         memory.curations.set(step.curationId, new Set());
@@ -87,59 +101,85 @@
     }
   }
 
-  function createPanelSequence(events, groups, curations, session) {
+  function createPanelSequence(events, groups, curations, session, options = {}) {
+    const eventsPerOther = Math.max(1, Number(options.eventsPerOther) || 4);
+    const eventsPerCuration = Math.max(1, Number(options.eventsPerCuration) || 5);
+
     // Simula a passagem para escolher os próximos itens sem registrar exibição real.
     const memory = {
       exposure: new Map(session.exposure),
+      moduleExposure: new Map(session.moduleExposure || []),
       curations: new Map([...session.curations].map(([id, seen]) => [id, new Set(seen)])),
       pendingCurations: [...session.pendingCurations]
     };
     const shuffle = items => sampleForPanel(items, items.length);
-    const general = shuffle(groups.filter(group => group.items.length).map(group => ({
-      id: group.id, items: [...group.items]
-    })));
+    const general = groups
+      .filter(group => group.items.length)
+      .map(group => ({ id: group.id, items: [...group.items] }));
     const active = new Map(curations.filter(curation => curation.items.length).map(curation => [curation.id, curation]));
     memory.pendingCurations = memory.pendingCurations.filter(id => active.has(id));
+
     const steps = [];
     const append = step => {
       steps.push(step);
       recordPanelExposure(memory, step);
     };
-    const orderedEvents = events;
-    // Com Eventos, a rodada termina ao consumir a fila temporal: os próximos
-    // entremeios virão na próxima rodada, sem uma longa cauda sem Eventos.
-    const blocks = orderedEvents.length ? Math.ceil(orderedEvents.length / 5) : Math.max(
-      general.reduce((total, group) => total + group.items.length, 0), active.size);
-    let groupIndex = 0;
+    const orderedEvents = Array.isArray(events) ? events : [];
+    const blocks = orderedEvents.length
+      ? Math.ceil(orderedEvents.length / eventsPerOther)
+      : Math.max(general.length, active.size ? 1 : 0);
+    const curationSlots = orderedEvents.length
+      ? Math.ceil(orderedEvents.length / eventsPerCuration)
+      : blocks;
+    let curationsInserted = 0;
+
     for (let block = 0; block < blocks; block += 1) {
-      orderedEvents.slice(block * 5, block * 5 + 5).forEach(item => append({ item }));
-      if (general.length && general.every(group => !group.items.length)) {
-        general.forEach(group => { group.items = [...groups.find(source => source.id === group.id).items]; });
-      }
+      orderedEvents
+        .slice(block * eventsPerOther, block * eventsPerOther + eventsPerOther)
+        .forEach(item => append({ item }));
+
       const availableGroups = general.filter(group => group.items.length);
       if (availableGroups.length) {
-        // Percorre os módulos na ordem sorteada, saltando os já esgotados.
-        while (!general[groupIndex % general.length].items.length) groupIndex += 1;
-        const group = general[groupIndex++ % general.length];
+        const minimumExposure = Math.min(
+          ...availableGroups.map(group => memory.moduleExposure.get(group.id) || 0)
+        );
+        const leastShown = availableGroups.filter(
+          group => (memory.moduleExposure.get(group.id) || 0) === minimumExposure
+        );
+        const group = leastShown[Math.floor(Math.random() * leastShown.length)];
         const [item] = sampleForPanel(group.items, 1, { exposure: memory.exposure });
-        group.items = group.items.filter(candidate => panelItemKey(candidate) !== panelItemKey(item));
-        append({ item });
+        group.items = group.items.filter(
+          candidate => panelItemKey(candidate) !== panelItemKey(item)
+        );
+        append({ item, moduleId: group.id });
       }
+
       if (!active.size) continue;
-      if (!memory.pendingCurations.length) {
-        memory.pendingCurations = shuffle([...active.values()]).map(curation => curation.id);
+      const targetCurations = blocks
+        ? Math.floor(((block + 1) * curationSlots) / blocks)
+        : 0;
+
+      while (curationsInserted < targetCurations) {
+        if (!memory.pendingCurations.length) {
+          memory.pendingCurations = shuffle([...active.values()]).map(curation => curation.id);
+        }
+        const curationId = memory.pendingCurations.shift();
+        const curation = active.get(curationId);
+        if (!curation) break;
+
+        const seen = memory.curations.get(curationId) || new Set();
+        let remaining = curation.items.filter(item => !seen.has(panelItemKey(item)));
+        const resetCycle = !remaining.length;
+        if (resetCycle) remaining = curation.items;
+        const selected = sampleForPanel(remaining, 3, { exposure: memory.exposure });
+        selected.forEach((item, index) => append({
+          item,
+          curationId,
+          resetCycle: resetCycle && index === 0,
+          pendingCurations: [...memory.pendingCurations]
+        }));
+        curationsInserted += 1;
       }
-      const curationId = memory.pendingCurations.shift();
-      const curation = active.get(curationId);
-      const seen = memory.curations.get(curationId) || new Set();
-      let remaining = curation.items.filter(item => !seen.has(panelItemKey(item)));
-      const resetCycle = !remaining.length;
-      if (resetCycle) remaining = curation.items;
-      const selected = sampleForPanel(remaining, 3, { exposure: memory.exposure });
-      selected.forEach((item, index) => append({
-        item, curationId, resetCycle: resetCycle && index === 0,
-        pendingCurations: [...memory.pendingCurations]
-      }));
     }
     return steps;
   }
