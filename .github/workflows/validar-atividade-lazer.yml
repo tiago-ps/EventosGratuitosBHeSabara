@@ -6,10 +6,10 @@ on:
       - "atividades-lazer.json"
       - "js/conteudos/atividades-lazer.js"
       - "css/atividades-lazer.css"
-      - "js/app.js"
+      - "js/app.js"\n      - "js/core/rotacao.js"\n      - "js/core/rotacao.js"
       - "index.html"
       - "service-worker.js"
-      - "testes/atividades-lazer-agenda.test.cjs"
+      - "testes/atividades-lazer-agenda.test.cjs"\n      - "testes/rotacao-painel-equilibrada.test.cjs"\n      - "testes/rotacao-painel-equilibrada.test.cjs"
       - ".github/workflows/validar-atividade-lazer.yml"
   push:
     branches: [main, "feature/**"]
@@ -38,3 +38,5 @@ jobs:
           node --check js/conteudos/atividades-lazer.js
       - name: Testar Agenda
         run: node testes/atividades-lazer-agenda.test.cjs
+      - name: Testar rotação equilibrada
+        run: node testes/rotacao-painel-equilibrada.test.cjs
