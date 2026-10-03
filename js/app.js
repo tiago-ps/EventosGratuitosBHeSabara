@@ -4412,6 +4412,80 @@ function eventProgram(event) {
     }
   }
 
+  function openAboutProjectDialog() {
+    document.getElementById('agenda-about-dialog')?.remove();
+
+    const opener = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    const dialog = document.createElement('dialog');
+    dialog.id = 'agenda-about-dialog';
+    dialog.className = 'agenda-curation-suggestion-dialog agenda-about-dialog';
+    dialog.setAttribute('aria-labelledby', 'agenda-about-title');
+    dialog.innerHTML = `
+      <article class="agenda-curation-suggestion-card agenda-about-card">
+        <div class="agenda-curation-suggestion-heading">
+          <div>
+            <p class="agenda-curation-suggestion-eyebrow">Sobre o projeto</p>
+            <h2 id="agenda-about-title">Tem Sim, Uai</h2>
+          </div>
+          <button type="button" class="agenda-curation-suggestion-close" aria-label="Fechar">×</button>
+        </div>
+
+        <p class="agenda-about-lead"><strong>Tem Sim, Uai</strong> é um projeto de ensino e extensão da Biblioteca do Instituto Federal de Minas Gerais (IFMG) — Campus Sabará. A proposta é reunir, organizar e facilitar o acesso a informações culturais, educacionais e de utilidade pública que normalmente ficam espalhadas em diferentes sites, redes sociais, instituições e plataformas.</p>
+
+        <div class="agenda-about-sections">
+          <section class="agenda-about-section">
+            <h3>Um mural para descobrir e acessar</h3>
+            <p>O projeto reúne agenda de eventos gratuitos, livros e acervos, cursos e oportunidades de formação, concursos, filmes e conteúdos culturais, esporte e lazer e informações de utilidade pública. O Mural pode ser usado em exibição automática ou interativa em espaços físicos e também no modo Exploração, pelo celular ou computador.</p>
+          </section>
+
+          <section class="agenda-about-section">
+            <h3>Curadoria também é formação</h3>
+            <p>A curadoria de conteúdo faz parte do caráter formativo do projeto. Estudantes participam da seleção, conferência, organização e contextualização dos conteúdos, com acompanhamento da Biblioteca. A comunidade também pode sugerir eventos e indicar correções; as contribuições passam por análise antes de serem incorporadas ao Mural.</p>
+          </section>
+
+          <section class="agenda-about-section">
+            <h3>Fontes e atualização</h3>
+            <p>Sempre que possível, cada conteúdo mantém acesso à fonte original. Como datas, inscrições, horários e condições podem mudar, recomendamos confirmar as informações na fonte indicada antes de se deslocar ou realizar uma inscrição.</p>
+          </section>
+
+          <section class="agenda-about-section agenda-about-contact-section">
+            <h3>Contato</h3>
+            <address class="agenda-about-contact">
+              <span><strong>Biblioteca do IFMG Campus Sabará</strong></span>
+              <span>Segunda a sexta, das 09h00 às 21h00</span>
+              <a href="tel:+553121029374">(31) 2102-9374</a>
+              <a href="mailto:temsimuai@ifmg.edu.br">temsimuai@ifmg.edu.br</a>
+            </address>
+          </section>
+        </div>
+
+        <p class="agenda-about-note">O Tem Sim, Uai está em desenvolvimento contínuo. Novas fontes, conteúdos e formas de participação podem ser incorporados à medida que o projeto avança.</p>
+
+        <div class="agenda-curation-suggestion-actions">
+          <button type="button" class="agenda-about-close">Fechar</button>
+        </div>
+      </article>
+    `;
+    document.body.append(dialog);
+
+    const close = () => {
+      if (dialog.open) dialog.close();
+      dialog.remove();
+      if (opener?.isConnected) opener.focus();
+    };
+
+    dialog.querySelector('.agenda-curation-suggestion-close')?.addEventListener('click', close);
+    dialog.querySelector('.agenda-about-close')?.addEventListener('click', close);
+    dialog.addEventListener('cancel', event => {
+      event.preventDefault();
+      close();
+    });
+    dialog.addEventListener('click', event => {
+      if (event.target === dialog) close();
+    });
+    dialog.showModal();
+  }
+
   function openAgendaShareHub() {
     const favorites = loadAgendaFavorites();
     if (!favorites.size) return;
@@ -5359,6 +5433,7 @@ function eventProgram(event) {
         ><span aria-hidden="true">★</span><span class="agenda-favorites-label">Favoritos</span><span class="agenda-favorites-count" ${favoriteCount ? '' : 'hidden'}>${favoriteCount}</span></button>
         ${notificationsContent?.headerButtonMarkup?.() || ''}
         <button class="agenda-community-open" type="button" title="Contribuir com o Mural"><span aria-hidden="true">＋</span><span class="agenda-community-open-label">Contribua</span></button>
+        ${!state.curationMode ? '<button class="agenda-about-open" type="button" title="Sobre o projeto" aria-label="Sobre o projeto"><span aria-hidden="true">ⓘ</span><span class="agenda-about-open-label">Sobre o projeto</span></button>' : ''}
         ${state.mobileFavoritesOnly && favoriteCount ? '<button class="agenda-share-favorites" type="button" title="Compartilhar favoritos"><span aria-hidden="true">↗</span><span>Compartilhar</span></button>' : ''}
         <button
           class="agenda-search-toggle"
@@ -5646,7 +5721,10 @@ function eventProgram(event) {
     const footer = document.createElement('footer');
     footer.className = 'agenda-footer';
     footer.innerHTML = `
-      <div class="agenda-footer-brand">Tem Sim, Uai</div>
+      <div class="agenda-footer-identity">
+        <div class="agenda-footer-brand">Tem Sim, Uai</div>
+        ${!state.curationMode ? '<button type="button" class="agenda-about-footer">Sobre o projeto</button>' : ''}
+      </div>
       <p>Atualizado em ${escapeHtml(formatUpdated(state.data?.atualizado_em).replace(/^Atualizado em\s*/i, ''))}</p>
     `;
 
@@ -5673,6 +5751,8 @@ function eventProgram(event) {
     header.querySelector('.agenda-share-favorites')?.addEventListener('click', openAgendaShareHub);
     notificationsContent?.bindAgendaHeader?.(header);
     header.querySelector('.agenda-community-open')?.addEventListener('click', openCommunityContributionHub);
+    header.querySelector('.agenda-about-open')?.addEventListener('click', openAboutProjectDialog);
+    footer.querySelector('.agenda-about-footer')?.addEventListener('click', openAboutProjectDialog);
     count.querySelector('.agenda-send-curation')?.addEventListener('click', openCurationSuggestionDialog);
     count.querySelector('.agenda-save-shared')?.addEventListener('click', () => {
       const current = loadAgendaFavorites();
