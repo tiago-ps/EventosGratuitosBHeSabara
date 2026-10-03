@@ -20,7 +20,7 @@
   const SCHOOL_ROTATION_SIZE = 6;
   const SCHOOL_ROTATION_KEY = 'agenda-cultural-escola-livre-lote';
   const SLIDE_DURATION_KEY = 'mural-cultural-tempo-slides';
-  const PANEL_SETTINGS_KEY = 'mural-cultural-configuracao-painel-v1';
+  const PANEL_SETTINGS_KEY = 'mural-cultural-configuracao-painel-v2';
   const PANEL_PROFILES_KEY = 'mural-cultural-perfis-painel-v1';
   const PANEL_PROFILE_ATTRIBUTE = 'panelProfile';
   const AGENDA_BATCH_SIZE = 24;
@@ -44,6 +44,23 @@
   const PANEL_UTILITY_LIMIT = 4;
   const PANEL_ACTIVITY_LIMIT = 6;
   const PANEL_BOOK_LIMIT = 15;
+  const PANEL_EVENTS_PER_OTHER = 4;
+  const PANEL_CURATION_EVENTS_PER_BLOCK = 5;
+  // Registro central dos módulos do Painel. Um módulo registrado nasce ativo
+  // por padrão e só deixa a rotação quando houver um false explícito.
+  const PANEL_MODULE_CONFIG_KEYS = Object.freeze({
+    events: 'eventos',
+    books: 'livros',
+    courses: 'cursos',
+    contests: 'concursos',
+    films: 'filmes',
+    utility: 'utilidade_publica',
+    activities: 'atividades_lazer'
+  });
+  const PANEL_MODULE_IDS = Object.freeze(Object.keys(PANEL_MODULE_CONFIG_KEYS));
+  const PANEL_NON_EVENT_MODULE_IDS = Object.freeze(
+    PANEL_MODULE_IDS.filter(id => id !== 'events')
+  );
   const ALLOWED_SLIDE_DURATIONS = new Set([0, 5, 8, 10, 12, 15, 20, 30]);
   const CONTENT_SUBTITLES = Object.freeze({
     evento: 'Agenda Cultural',
@@ -139,7 +156,7 @@
     allUtility: [],
     allActivities: [],
     events: [],
-    panelRoundSamples: { books: [], courses: [], contests: [], films: [], utility: [], activities: [] },
+    panelRoundSamples: Object.fromEntries(PANEL_NON_EVENT_MODULE_IDS.map(id => [id, []])),
     panelMemory: muralCore.createPanelMemory(),
     panelRoundSteps: [],
     panelSeenSteps: new WeakSet(),
@@ -151,10 +168,10 @@
     btnPlayPause: null,
     btnFilter: null,
     filterOverlay: null,
-    panelModules: { events: true, books: true, courses: true, contests: true, films: true, utility: false, activities: false },
+    panelModules: Object.fromEntries(PANEL_MODULE_IDS.map(id => [id, true])),
     panelEventCities: [],
     panelBookCampuses: [],
-    panelWeights: { events: 5, books: 1, courses: 1, contests: 1, films: 1, utility: 1, activities: 1 },
+    panelWeights: Object.fromEntries(PANEL_MODULE_IDS.map(id => [id, id === 'events' ? 5 : 1])),
     filters: {
       content: 'all',
       theme: '',
@@ -911,27 +928,24 @@
   // Centraliza o início de uma rodada do Painel. Ela é chamada ao carregar,
   // quando filtros/perfis mudam e somente após chegar ao último slide.
   function createPanelRound() {
-    const eventsEnabled = state.panelModules.events && state.config?.modulos?.eventos !== false;
-    const booksEnabled = state.panelModules.books && state.config?.modulos?.livros !== false;
-    const coursesEnabled = state.panelModules.courses && state.config?.modulos?.cursos !== false;
-    const contestsEnabled = state.panelModules.contests && state.config?.modulos?.concursos !== false;
-    const filmsEnabled = state.panelModules.films && state.config?.modulos?.filmes !== false;
-    const utilityEnabled = state.panelModules.utility && state.config?.modulos?.utilidade_publica !== false;
-    const activitiesEnabled = state.panelModules.activities && state.config?.modulos?.atividades_lazer !== false;
+    const moduleEnabled = id => {
+      const configKey = PANEL_MODULE_CONFIG_KEYS[id];
+      return state.panelModules[id] !== false &&
+        (!configKey || state.config?.modulos?.[configKey] !== false);
+    };
+
+    const eventsEnabled = moduleEnabled('events');
+    const booksEnabled = moduleEnabled('books');
+    const coursesEnabled = moduleEnabled('courses');
+    const contestsEnabled = moduleEnabled('contests');
+    const filmsEnabled = moduleEnabled('films');
+    const utilityEnabled = moduleEnabled('utility');
+    const activitiesEnabled = moduleEnabled('activities');
+
     const events = eventsEnabled ? visibleEventsForFilters() : [];
-    const eligibleBooks = booksEnabled ? filterBooks(state.allBooks) : [];
-    const sampleOptions = module => ({
-      previousItems: state.panelRoundSamples[module],
-      exposure: state.panelMemory.exposure
-    });
-    const books = muralCore.sampleForPanel(eligibleBooks, PANEL_BOOK_LIMIT, sampleOptions('books'));
     const themedCourses = state.filters.theme
       ? state.allCourses.filter(course => courseMatchesTheme(course, state.filters.theme))
       : state.allCourses;
-    const courses = coursesEnabled ? coursesContent.sampleForPanel(themedCourses, undefined, sampleOptions('courses')) : [];
-    const contests = contestsEnabled && !state.filters.theme
-      ? contestsContent.sampleForPanel(state.allContests, undefined, sampleOptions('contests'))
-      : [];
     const filmFilters = {
       genre: state.filters.filmGenre,
       platform: state.filters.filmPlatform,
@@ -940,8 +954,6 @@
       duration: state.filters.filmDuration,
       sort: 'title-asc'
     };
-    const films = filmsEnabled ? filmsContent.sampleForPanel(state.allFilms, filmFilters,
-      normalizeText, undefined, sampleOptions('films')) : [];
     const utilityTheme = normalizeText(state.filters.theme);
     const eligibleUtility = utilityEnabled ? utilitySource().filter(item => {
       if (item.support_target && !(state.siteCurationsData?.curadorias || []).some(curation =>
@@ -949,42 +961,67 @@
       return !utilityTheme || (Array.isArray(item.temas) ? item.temas : [])
         .some(theme => normalizeText(theme) === utilityTheme);
     }) : [];
-    const utility = muralCore.sampleForPanel(
-      eligibleUtility,
-      PANEL_UTILITY_LIMIT,
-      sampleOptions('utility')
+
+    const eligibleNonEvents = {
+      books: booksEnabled ? filterBooks(state.allBooks) : [],
+      courses: coursesEnabled ? coursesContent.filter(themedCourses) : [],
+      contests: contestsEnabled && !state.filters.theme
+        ? contestsContent.filter(state.allContests).map(contestsContent.publicRecord)
+        : [],
+      films: filmsEnabled ? filmsContent.filter(state.allFilms, filmFilters, normalizeText) : [],
+      utility: eligibleUtility,
+      activities: activitiesEnabled
+        ? activitiesContent.filter(state.allActivities, { theme: state.filters.theme }, normalizeText)
+        : []
+    };
+
+    const sampleOptions = module => ({
+      previousItems: state.panelRoundSamples[module],
+      exposure: state.panelMemory.exposure
+    });
+    const customComposition = Boolean(state.filters.theme || activeEditorialPanelProfileId());
+    const activeGeneralGroups = Object.entries(eligibleNonEvents)
+      .filter(([, items]) => items.length);
+    const generalSlots = events.length
+      ? Math.ceil(events.length / PANEL_EVENTS_PER_OTHER)
+      : activeGeneralGroups.length;
+    const customLimits = {
+      books: PANEL_BOOK_LIMIT,
+      courses: coursesContent.PANEL_LIMIT || 15,
+      contests: contestsContent.PANEL_CONTEST_LIMIT || 15,
+      films: filmsContent.PANEL_LIMIT || 15,
+      utility: PANEL_UTILITY_LIMIT,
+      activities: PANEL_ACTIVITY_LIMIT
+    };
+
+    // Na programação padrão, cada módulo não-evento pode fornecer itens até
+    // preencher todas as vagas. A escolha efetiva é equilibrada pelo núcleo
+    // de rotação, então nenhum módulo ganha peso fixo só por ter mais itens.
+    state.panelRoundSamples = Object.fromEntries(
+      PANEL_NON_EVENT_MODULE_IDS.map(id => {
+        const items = eligibleNonEvents[id] || [];
+        const limit = customComposition ? (customLimits[id] || generalSlots) : generalSlots;
+        return [id, muralCore.sampleForPanel(items, limit, sampleOptions(id))];
+      })
     );
-    const eligibleActivities = activitiesEnabled
-      ? activitiesContent.filter(state.allActivities, { theme: state.filters.theme }, normalizeText)
-      : [];
-    const activities = muralCore.sampleForPanel(
-      eligibleActivities,
-      PANEL_ACTIVITY_LIMIT,
-      sampleOptions('activities')
-    );
-    state.panelRoundSamples = { books, courses, contests, films, utility, activities };
-    // Perfil temático explícito conserva a composição e os pesos já configurados.
-    if (state.filters.theme || activeEditorialPanelProfileId()) {
-      state.events = muralCore.interleaveContents([
-        { items: events, weight: state.panelWeights.events },
-        { items: books, weight: state.panelWeights.books },
-        { items: courses, weight: state.panelWeights.courses },
-        { items: contests, weight: state.panelWeights.contests },
-        { items: films, weight: state.panelWeights.films },
-        { items: utility, weight: state.panelWeights.utility },
-        { items: activities, weight: state.panelWeights.activities }
-      ]);
+
+    // Perfis temáticos explícitos conservam a composição e os pesos já
+    // configurados. A programação padrão usa distribuição automática.
+    if (customComposition) {
+      const weightedGroups = [
+        { id: 'events', items: events, weight: state.panelWeights.events },
+        ...PANEL_NON_EVENT_MODULE_IDS.map(id => ({
+          id,
+          items: state.panelRoundSamples[id] || [],
+          weight: state.panelWeights[id] || 1
+        }))
+      ];
+      state.events = muralCore.interleaveContents(weightedGroups);
       state.panelRoundSteps = state.events.map(item => ({ item }));
     } else {
-      // Microblocos usam o catálogo elegível completo, não apenas a amostra geral.
-      const eligible = {
-        events, books: eligibleBooks,
-        courses: coursesEnabled ? coursesContent.filter(themedCourses) : [],
-        contests: contestsEnabled ? contestsContent.filter(state.allContests).map(contestsContent.publicRecord) : [],
-        films: filmsEnabled ? filmsContent.filter(state.allFilms, filmFilters, normalizeText) : [],
-        utility: eligibleUtility,
-        activities: eligibleActivities
-      };
+      // Curadorias promovidas continuam podendo inserir microblocos, mas a
+      // distribuição geral dos tipos não-evento é calculada dinamicamente.
+      const eligible = { events, ...eligibleNonEvents };
       const curations = (state.siteCurationsData?.curadorias || [])
         .filter(curation => siteCurationsContent.isPromoted(curation))
         .map(curation => {
@@ -997,9 +1034,16 @@
               .filter(item => siteCurationsContent.matchesCuration(item, curation))
           };
         });
-      state.panelRoundSteps = muralCore.createPanelSequence(events,
+      state.panelRoundSteps = muralCore.createPanelSequence(
+        events,
         Object.entries(state.panelRoundSamples).map(([id, items]) => ({ id, items })),
-        curations, state.panelMemory);
+        curations,
+        state.panelMemory,
+        {
+          eventsPerOther: PANEL_EVENTS_PER_OTHER,
+          eventsPerCuration: PANEL_CURATION_EVENTS_PER_BLOCK
+        }
+      );
       state.events = state.panelRoundSteps.map(step => step.item);
     }
     state.panelSeenSteps = new WeakSet();
@@ -1101,9 +1145,12 @@
   }
 
   function hasUserFilters() {
+    const defaults = defaultPanelSettings();
+    const moduleSelectionChanged = PANEL_MODULE_IDS.some(
+      id => state.panelModules[id] !== defaults.modules[id]
+    );
     return Boolean(
-      !state.panelModules.events || !state.panelModules.books || !state.panelModules.courses ||
-      !state.panelModules.contests || !state.panelModules.films || state.panelModules.utility || state.panelModules.activities ||
+      moduleSelectionChanged ||
       state.filters.theme || state.panelEventCities.length ||
       state.filters.category || state.filters.program || state.filters.unit ||
       state.filters.rating || state.filters.period !== 'all' ||
@@ -1325,13 +1372,9 @@ function eventProgram(event) {
   function activeFilterCount() {
     const defaults = defaultPanelSettings();
     let count = 0;
-    if (state.panelModules.events !== defaults.modules.events ||
-        state.panelModules.books !== defaults.modules.books ||
-        state.panelModules.courses !== defaults.modules.courses ||
-        state.panelModules.contests !== defaults.modules.contests ||
-        state.panelModules.films !== defaults.modules.films ||
-        state.panelModules.utility !== defaults.modules.utility ||
-        state.panelModules.activities !== defaults.modules.activities) count += 1;
+    if (PANEL_MODULE_IDS.some(
+      id => state.panelModules[id] !== defaults.modules[id]
+    )) count += 1;
     if (state.filters.theme) count += 1;
     if (state.panelModules.events) {
       if (state.panelEventCities.length) count += 1;
@@ -2634,29 +2677,24 @@ function eventProgram(event) {
     const bookConfig = panel.livros || {};
     const filmConfig = panel.filmes || {};
     const frequency = panel.frequencia || {};
+    const modules = Object.fromEntries(
+      Object.entries(PANEL_MODULE_CONFIG_KEYS).map(([id, configKey]) => {
+        const panelValue = panelModules[configKey];
+        const globalValue = state.config?.modulos?.[configKey];
+        return [id, panelValue !== undefined ? Boolean(panelValue) : globalValue !== false];
+      })
+    );
+    const weights = Object.fromEntries(
+      PANEL_MODULE_IDS.map(id => {
+        const configKey = PANEL_MODULE_CONFIG_KEYS[id];
+        const fallback = id === 'events'
+          ? Number(state.config?.proporcao?.eventos_por_livro) || 5
+          : 1;
+        return [id, Math.max(1, Number(frequency[configKey]) || fallback)];
+      })
+    );
     return {
-      modules: {
-        events: panelModules.eventos !== undefined
-          ? Boolean(panelModules.eventos)
-          : state.config?.modulos?.eventos !== false,
-        books: panelModules.livros !== undefined
-          ? Boolean(panelModules.livros)
-          : state.config?.modulos?.livros !== false,
-        courses: panelModules.cursos !== undefined
-          ? Boolean(panelModules.cursos)
-          : state.config?.modulos?.cursos !== false,
-        contests: panelModules.concursos !== undefined
-          ? Boolean(panelModules.concursos)
-          : state.config?.modulos?.concursos !== false,
-        films: panelModules.filmes !== undefined
-          ? Boolean(panelModules.filmes)
-          : state.config?.modulos?.filmes !== false,
-        // Perfis precisam declarar Utility e Esporte e Lazer explicitamente; a presença de dados não os ativa.
-        utility: false,
-        activities: panelModules.atividades_lazer !== undefined
-          ? Boolean(panelModules.atividades_lazer)
-          : false
-      },
+      modules,
       theme: String(panel.tema || ''),
       eventCities: Array.isArray(eventConfig.cidades) ? eventConfig.cidades.map(normalizeText).filter(Boolean) : [],
       eventCategory: String(eventConfig.categoria || ''),
@@ -2668,15 +2706,7 @@ function eventProgram(event) {
       filmPlatform: String(filmConfig.plataforma || ''),
       filmRating: String(filmConfig.classificacao || ''),
       filmDuration: String(filmConfig.duracao || ''),
-      weights: {
-        events: Math.max(1, Number(frequency.eventos ?? state.config?.proporcao?.eventos_por_livro) || 5),
-        books: Math.max(1, Number(frequency.livros) || 1),
-        courses: Math.max(1, Number(frequency.cursos) || 1),
-        contests: Math.max(1, Number(frequency.concursos) || 1),
-        films: Math.max(1, Number(frequency.filmes) || 1),
-        utility: 1,
-        activities: Math.max(1, Number(frequency.atividades_lazer) || 1)
-      },
+      weights,
       slideDuration: ALLOWED_SLIDE_DURATIONS.has(Number(panel.tempo_slides)) ? Number(panel.tempo_slides) : 0
     };
   }
@@ -2688,15 +2718,12 @@ function eventProgram(event) {
     const clampWeight = number => Math.min(10, Math.max(1, Number(number) || 1));
 
     return {
-      modules: {
-        events: modules.events !== undefined ? Boolean(modules.events) : defaults.modules.events,
-        books: modules.books !== undefined ? Boolean(modules.books) : defaults.modules.books,
-        courses: modules.courses !== undefined ? Boolean(modules.courses) : defaults.modules.courses,
-        contests: modules.contests !== undefined ? Boolean(modules.contests) : defaults.modules.contests,
-        films: modules.films !== undefined ? Boolean(modules.films) : defaults.modules.films,
-        utility: modules.utility !== undefined ? Boolean(modules.utility) : defaults.modules.utility,
-        activities: modules.activities !== undefined ? Boolean(modules.activities) : defaults.modules.activities
-      },
+      modules: Object.fromEntries(
+        PANEL_MODULE_IDS.map(id => [
+          id,
+          modules[id] !== undefined ? Boolean(modules[id]) : defaults.modules[id]
+        ])
+      ),
       theme: String(value.theme || ''),
       eventCities: Array.isArray(value.eventCities) ? value.eventCities.map(normalizeText).filter(Boolean) : [],
       eventCategory: String(value.eventCategory || ''),
@@ -2708,15 +2735,12 @@ function eventProgram(event) {
       filmPlatform: String(value.filmPlatform || ''),
       filmRating: String(value.filmRating || ''),
       filmDuration: String(value.filmDuration || ''),
-      weights: {
-        events: clampWeight(weights.events ?? defaults.weights.events),
-        books: clampWeight(weights.books ?? defaults.weights.books),
-        courses: clampWeight(weights.courses ?? defaults.weights.courses),
-        contests: clampWeight(weights.contests ?? defaults.weights.contests),
-        films: clampWeight(weights.films ?? defaults.weights.films),
-        utility: clampWeight(weights.utility ?? defaults.weights.utility),
-        activities: clampWeight(weights.activities ?? defaults.weights.activities)
-      },
+      weights: Object.fromEntries(
+        PANEL_MODULE_IDS.map(id => [
+          id,
+          clampWeight(weights[id] ?? defaults.weights[id])
+        ])
+      ),
       slideDuration: ALLOWED_SLIDE_DURATIONS.has(Number(value.slideDuration))
         ? Number(value.slideDuration)
         : defaults.slideDuration
