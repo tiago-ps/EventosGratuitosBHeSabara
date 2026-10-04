@@ -31,9 +31,13 @@ assert(worker.includes('clientDeviceType'));
 assert(worker.includes('userAgentBrowser'));
 assert(worker.includes('userAgentOS'));
 assert(worker.includes('clientRefererHost'));
+
+const audiencePathFilterCount = (worker.match(/clientRequestPath: "\/"[\s\S]{0,120}clientRequestPath: "\/index\.html"/g) || []).length;
+assert(audiencePathFilterCount >= 7);
+assert(worker.includes('Dimensões de audiência são filtradas para os caminhos HTML reais do Mural.'));
 assert(worker.includes('sum { visits edgeResponseBytes }'));
-assert(worker.includes("fonte: 'Cloudflare GraphQL Analytics API'"));
-assert(worker.includes('amostragem: maxSampleInterval > 1'));
+assert(worker.includes("fonte: 'Cloudflare GraphQL Analytics API + histórico agregado D1'"));
+assert(worker.includes('amostragem: anySampling'));
 assert(worker.includes('const generalAnalyticsResponse = await handleGeneralAnalyticsApi(request, env)'));
 
 const handlerStart = worker.indexOf('async function handleGeneralAnalyticsAdmin');

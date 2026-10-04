@@ -70,3 +70,12 @@ Os caminhos HTML são classificados de forma conservadora:
 - **Outro HTML**: caminhos não reconhecidos que não são automaticamente classificados como ameaça.
 
 A quantidade de varreduras é um **mínimo detectado**, pois o ranking diário arquiva apenas os principais caminhos retornados pela Cloudflare.
+
+
+## Dimensões da audiência do Mural
+
+País, dispositivo e, quando disponíveis, navegador, sistema operacional e referência são consultados com filtro adicional de caminho para `/` e `/index.html`. Como parâmetros de consulta não alteram `clientRequestPath`, isso cobre as entradas normais do Mural em agenda, exploração, curadorias e conteúdos compartilhados que carregam a aplicação principal.
+
+Esse filtro é aplicado na própria GraphQL Analytics API antes da agregação. Assim, acessos a caminhos de varredura como `/.env`, Composer, WordPress ou arquivos de credenciais não contaminam essas distribuições.
+
+Os rankings gerais de caminhos HTML continuam sem esse filtro porque são usados justamente para separar **Mural**, **varredura provável** e **outro HTML**.
