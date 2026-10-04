@@ -1197,19 +1197,6 @@ function generalAnalyticsFullQuery() {
             count
             dimensions { date }
           }
-          paginasResumo: httpRequestsAdaptiveGroups(
-            limit: 1
-            filter: {
-              date: $date
-              requestSource: "eyeball"
-              edgeResponseContentTypeName: "html"
-              edgeResponseStatus_geq: 200
-              edgeResponseStatus_lt: 400
-            }
-          ) {
-            count
-            dimensions { date }
-          }
           paginas: httpRequestsAdaptiveGroups(
             limit: 100
             orderBy: [count_DESC]
@@ -1312,6 +1299,19 @@ function generalAnalyticsCoreQuery() {
             count
             avg { sampleInterval }
             sum { visits edgeResponseBytes }
+            dimensions { date }
+          }
+          paginasResumo: httpRequestsAdaptiveGroups(
+            limit: 1
+            filter: {
+              date: $date
+              requestSource: "eyeball"
+              edgeResponseContentTypeName: "html"
+              edgeResponseStatus_geq: 200
+              edgeResponseStatus_lt: 400
+            }
+          ) {
+            count
             dimensions { date }
           }
           paginas: httpRequestsAdaptiveGroups(
