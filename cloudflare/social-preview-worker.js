@@ -1409,6 +1409,53 @@ function generalAnalyticsMinimalQuery() {
   `;
 }
 
+function generalAnalyticsBareQuery() {
+  return `
+    query GeneralAnalyticsDay($zoneTag: string, $date: Date) {
+      viewer {
+        zones(filter: {zoneTag: $zoneTag}) {
+          resumo: httpRequestsAdaptiveGroups(
+            limit: 1
+            filter: {date: $date, requestSource: "eyeball"}
+          ) {
+            count
+            avg { sampleInterval }
+            sum { edgeResponseBytes }
+            dimensions { date }
+          }
+          paginasResumo: httpRequestsAdaptiveGroups(
+            limit: 1
+            filter: {
+              date: $date
+              requestSource: "eyeball"
+              edgeResponseContentTypeName: "html"
+              edgeResponseStatus_geq: 200
+              edgeResponseStatus_lt: 400
+            }
+          ) {
+            count
+            dimensions { date }
+          }
+          paginas: httpRequestsAdaptiveGroups(
+            limit: 100
+            orderBy: [count_DESC]
+            filter: {
+              date: $date
+              requestSource: "eyeball"
+              edgeResponseContentTypeName: "html"
+              edgeResponseStatus_geq: 200
+              edgeResponseStatus_lt: 400
+            }
+          ) {
+            count
+            dimensions { clientRequestPath }
+          }
+        }
+      }
+    }
+  `;
+}
+
 async function cloudflareGraphql(env, query, variables) {
   const config = generalAnalyticsConfig(env);
   if (!config.configured) throw new Error('analytics_nao_configurado');
@@ -1440,11 +1487,13 @@ function analyticsZoneFromPayload(payload) {
 
 async function fetchGeneralAnalyticsDay(env, date, mode = 'full') {
   const config = generalAnalyticsConfig(env);
-  const query = mode === 'minimal'
-    ? generalAnalyticsMinimalQuery()
-    : mode === 'core'
-      ? generalAnalyticsCoreQuery()
-      : generalAnalyticsFullQuery();
+  const query = mode === 'bare'
+    ? generalAnalyticsBareQuery()
+    : mode === 'minimal'
+      ? generalAnalyticsMinimalQuery()
+      : mode === 'core'
+        ? generalAnalyticsCoreQuery()
+        : generalAnalyticsFullQuery();
   const payload = await cloudflareGraphql(
     env,
     query,
@@ -1473,6 +1522,11 @@ async function fetchGeneralAnalyticsDays(env, dates) {
     mode = 'minimal';
     first = await fetchGeneralAnalyticsDay(env, dates[0], mode);
     warnings.push('Países e dispositivos também não estão disponíveis; o painel exibirá somente as métricas gerais e páginas.');
+  }
+  if (!first.zone) {
+    mode = 'bare';
+    first = await fetchGeneralAnalyticsDay(env, dates[0], mode);
+    warnings.push('A métrica Visits não está disponível nesta configuração; requisições, page views e páginas continuam sendo exibidas.');
   }
   if (!first.zone) {
     throw new Error('analytics_graphql_sem_dados');
@@ -1508,6 +1562,7 @@ function aggregateGeneralAnalytics(rows, extended) {
   const diario = [];
   let totalRequests = 0;
   let totalVisits = 0;
+  let visitsAvailable = false;
   let totalPageViews = 0;
   let totalBytes = 0;
   let maxSampleInterval = 1;
@@ -1530,7 +1585,9 @@ function aggregateGeneralAnalytics(rows, extended) {
 
     const summary = Array.isArray(zone.resumo) && zone.resumo.length ? zone.resumo[0] : {};
     const requests = Math.max(0, Number(summary?.count || 0));
-    const visits = Math.max(0, Number(summary?.sum?.visits || 0));
+    const hasVisits = summary?.sum && Object.prototype.hasOwnProperty.call(summary.sum, 'visits');
+    const visits = hasVisits ? Math.max(0, Number(summary.sum.visits || 0)) : 0;
+    if (hasVisits) visitsAvailable = true;
     const bytes = Math.max(0, Number(summary?.sum?.edgeResponseBytes || 0));
     const sampleInterval = Math.max(1, Number(summary?.avg?.sampleInterval || 1));
 
@@ -1580,6 +1637,7 @@ function aggregateGeneralAnalytics(rows, extended) {
     resumo: {
       requisicoes: Math.round(totalRequests),
       visitas: Math.round(totalVisits),
+      visitas_disponiveis: visitsAvailable,
       visualizacoes_pagina: Math.round(totalPageViews),
       bytes: Math.round(totalBytes),
       amostragem: maxSampleInterval > 1,
