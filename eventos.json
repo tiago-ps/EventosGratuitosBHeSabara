@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Janeiro de 2026 a Janeiro de 2027",
-  "atualizado_em": "2026-10-04T11:29:47-03:00",
+  "atualizado_em": "2026-10-04T11:48:37-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -4457,7 +4457,7 @@
       "gratuito": true,
       "inscricao": "Entrada gratuita; consulte a página oficial",
       "descricao": "No dia 04 de outubro de 2026 (domingo), o Espaço do Conhecimento UFMG estará fechado. Seguindo o funcionamento regular do museu (terça a domingo), as atividades presenciais serão retomadas na terça-feira, 06 de outubro, das 10h às 17h.",
-      "imagem": "",
+      "imagem": "imagens/instituicoes/espaco-conhecimento-ufmg.png",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/museu-fechado/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg",
@@ -4465,7 +4465,8 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
+      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
+      "imagem_fallback_origem": "instituicao"
     },
     {
       "id": "manual-concertos-peter-lund-grupo-musical-ufmg-2026-10-04-2026-10-04",
@@ -5923,7 +5924,7 @@
       "gratuito": true,
       "inscricao": "Entrada gratuita; consulte a página oficial",
       "descricao": "No dia 25 de outubro de 2026 (domingo), o Espaço do Conhecimento UFMG estará fechado. Seguindo o funcionamento regular do museu (terça a domingo), as atividades presenciais serão retomadas na terça-feira, 27 de outubro, das 10h às 17h.",
-      "imagem": "",
+      "imagem": "imagens/instituicoes/espaco-conhecimento-ufmg.png",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/museu-fechado-2/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg",
@@ -5931,7 +5932,8 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
+      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
+      "imagem_fallback_origem": "instituicao"
     },
     {
       "id": "manual-concertos-peter-lund-grupo-vocal-andrea-pelliccione-2026-10-25-2026-10-25",
@@ -6000,7 +6002,7 @@
       "gratuito": true,
       "inscricao": "Entrada gratuita; consulte a página oficial",
       "descricao": "Entre os dias 27 e 30/10 (terça-feira a sexta-feira), o Espaço do Conhecimento estará aberto ao público normalmente, mas não haverá sessões de Planetário devido à manutenção anual de equipamentos.",
-      "imagem": "",
+      "imagem": "imagens/instituicoes/espaco-conhecimento-ufmg.png",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/planetario-em-manutencao/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg",
@@ -6008,7 +6010,8 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
+      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
+      "imagem_fallback_origem": "instituicao"
     },
     {
       "id": "ufmg-ec-mostra-iaia-de-audiovisual-disque-quilombola-exibicao-2",
@@ -6088,7 +6091,7 @@
       "gratuito": true,
       "inscricao": "Entrada gratuita; consulte a página oficial",
       "descricao": "Entre os dias 27 e 30/10 (terça-feira a sexta-feira), o Espaço do Conhecimento estará aberto ao público normalmente, mas não haverá sessões de Planetário devido à manutenção anual de equipamentos.",
-      "imagem": "",
+      "imagem": "imagens/instituicoes/espaco-conhecimento-ufmg.png",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/planetario-em-manutencao-2/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg",
@@ -6096,7 +6099,8 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
+      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
+      "imagem_fallback_origem": "instituicao"
     },
     {
       "id": "ufmg-ec-mostra-iaia-de-audiovisual-a-piscina-de-caique-exibicao-3",
@@ -6176,7 +6180,7 @@
       "gratuito": true,
       "inscricao": "Entrada gratuita; consulte a página oficial",
       "descricao": "Entre os dias 27 e 30/10 (terça-feira a sexta-feira), o Espaço do Conhecimento estará aberto ao público normalmente, mas não haverá sessões de Planetário devido à manutenção anual de equipamentos.",
-      "imagem": "",
+      "imagem": "imagens/instituicoes/espaco-conhecimento-ufmg.png",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/planetario-em-manutencao-3/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg",
@@ -6184,7 +6188,8 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
+      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
+      "imagem_fallback_origem": "instituicao"
     },
     {
       "id": "ufmg-ec-mostra-iaia-de-audiovisual-carrinho-de-rolima-exibicao-3",
@@ -6288,7 +6293,7 @@
       "gratuito": true,
       "inscricao": "Entrada gratuita; consulte a página oficial",
       "descricao": "Entre os dias 27 e 30/10 (terça-feira a sexta-feira), o Espaço do Conhecimento estará aberto ao público normalmente, mas não haverá sessões de Planetário devido à manutenção anual de equipamentos.",
-      "imagem": "",
+      "imagem": "imagens/instituicoes/espaco-conhecimento-ufmg.png",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/planetario-em-manutencao-4/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg",
@@ -6296,7 +6301,8 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
+      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
+      "imagem_fallback_origem": "instituicao"
     },
     {
       "id": "ufmg-ec-roda-de-conversa-ovulario-artes-e-poeticas-ancestrais-iles-e-ialorixas-em-dialogo",
