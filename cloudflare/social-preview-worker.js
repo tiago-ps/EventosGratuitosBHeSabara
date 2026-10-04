@@ -36,6 +36,10 @@ const POINT_METRIC_ACTIONS = new Set(['entrada', 'sessao_ativa', 'visualizacao_c
 const POINT_METRIC_ENVIRONMENTS = new Set(['publico', 'teste']);
 const POINT_METRIC_CONTENT_TYPE_RE = /^[a-z0-9_]+$/;
 
+const GENERAL_ANALYTICS_ADMIN_PATH = '/api/analytics-geral/admin';
+const CLOUDFLARE_GRAPHQL_URL = 'https://api.cloudflare.com/client/v4/graphql';
+const GENERAL_ANALYTICS_MAX_DAYS = 31;
+
 const NOTIFICATION_API_PATH = '/api/notificacoes';
 const NOTIFICATION_CONFIG_PATH = '/api/notificacoes/config';
 const NOTIFICATION_ALLOWED_PUSH_HOSTS = new Set([
@@ -1136,6 +1140,441 @@ async function handlePointMetricsApi(request, env) {
   return null;
 }
 
+
+function generalAnalyticsConfig(env) {
+  const token = String(env.CLOUDFLARE_ANALYTICS_TOKEN || '').trim();
+  const zoneTag = String(env.CLOUDFLARE_ANALYTICS_ZONE_ID || '').trim();
+  return { token, zoneTag, configured: Boolean(token && zoneTag) };
+}
+
+function enumerateIsoDates(start, end) {
+  const result = [];
+  let current = new Date(start + 'T12:00:00Z');
+  const last = new Date(end + 'T12:00:00Z');
+  while (!Number.isNaN(current.getTime()) && current <= last && result.length < GENERAL_ANALYTICS_MAX_DAYS) {
+    result.push(current.toISOString().slice(0, 10));
+    current.setUTCDate(current.getUTCDate() + 1);
+  }
+  return result;
+}
+
+function addMetric(target, key, value) {
+  const normalized = String(key || '').trim() || 'Não informado';
+  target.set(normalized, (target.get(normalized) || 0) + Math.max(0, Number(value || 0)));
+}
+
+function metricMapRows(map, keyName, limit = 20) {
+  return [...map.entries()]
+    .map(([key, value]) => ({ [keyName]: key, quantidade: Math.round(value) }))
+    .sort((a, b) => b.quantidade - a.quantidade || String(a[keyName]).localeCompare(String(b[keyName])))
+    .slice(0, limit);
+}
+
+function generalAnalyticsFullQuery() {
+  return `
+    query GeneralAnalyticsDay($zoneTag: string, $date: Date) {
+      viewer {
+        zones(filter: {zoneTag: $zoneTag}) {
+          resumo: httpRequestsAdaptiveGroups(
+            limit: 1
+            filter: {date: $date, requestSource: "eyeball"}
+          ) {
+            count
+            avg { sampleInterval }
+            sum { visits edgeResponseBytes }
+            dimensions { date }
+          }
+          paginas: httpRequestsAdaptiveGroups(
+            limit: 100
+            orderBy: [count_DESC]
+            filter: {
+              date: $date
+              requestSource: "eyeball"
+              edgeResponseContentTypeName: "html"
+              edgeResponseStatus_geq: 200
+              edgeResponseStatus_lt: 400
+            }
+          ) {
+            count
+            dimensions { clientRequestPath }
+          }
+          paises: httpRequestsAdaptiveGroups(
+            limit: 100
+            orderBy: [count_DESC]
+            filter: {
+              date: $date
+              requestSource: "eyeball"
+              edgeResponseContentTypeName: "html"
+              edgeResponseStatus_geq: 200
+              edgeResponseStatus_lt: 400
+            }
+          ) {
+            count
+            dimensions { clientCountryName }
+          }
+          dispositivos: httpRequestsAdaptiveGroups(
+            limit: 30
+            orderBy: [count_DESC]
+            filter: {
+              date: $date
+              requestSource: "eyeball"
+              edgeResponseContentTypeName: "html"
+              edgeResponseStatus_geq: 200
+              edgeResponseStatus_lt: 400
+            }
+          ) {
+            count
+            dimensions { clientDeviceType }
+          }
+          navegadores: httpRequestsAdaptiveGroups(
+            limit: 30
+            orderBy: [count_DESC]
+            filter: {
+              date: $date
+              requestSource: "eyeball"
+              edgeResponseContentTypeName: "html"
+              edgeResponseStatus_geq: 200
+              edgeResponseStatus_lt: 400
+            }
+          ) {
+            count
+            dimensions { userAgentBrowser }
+          }
+          sistemas: httpRequestsAdaptiveGroups(
+            limit: 30
+            orderBy: [count_DESC]
+            filter: {
+              date: $date
+              requestSource: "eyeball"
+              edgeResponseContentTypeName: "html"
+              edgeResponseStatus_geq: 200
+              edgeResponseStatus_lt: 400
+            }
+          ) {
+            count
+            dimensions { userAgentOS }
+          }
+          referencias: httpRequestsAdaptiveGroups(
+            limit: 50
+            orderBy: [count_DESC]
+            filter: {
+              date: $date
+              requestSource: "eyeball"
+              edgeResponseContentTypeName: "html"
+              edgeResponseStatus_geq: 200
+              edgeResponseStatus_lt: 400
+            }
+          ) {
+            count
+            dimensions { clientRefererHost }
+          }
+        }
+      }
+    }
+  `;
+}
+
+function generalAnalyticsCoreQuery() {
+  return `
+    query GeneralAnalyticsDay($zoneTag: string, $date: Date) {
+      viewer {
+        zones(filter: {zoneTag: $zoneTag}) {
+          resumo: httpRequestsAdaptiveGroups(
+            limit: 1
+            filter: {date: $date, requestSource: "eyeball"}
+          ) {
+            count
+            avg { sampleInterval }
+            sum { visits edgeResponseBytes }
+            dimensions { date }
+          }
+          paginas: httpRequestsAdaptiveGroups(
+            limit: 100
+            orderBy: [count_DESC]
+            filter: {
+              date: $date
+              requestSource: "eyeball"
+              edgeResponseContentTypeName: "html"
+              edgeResponseStatus_geq: 200
+              edgeResponseStatus_lt: 400
+            }
+          ) {
+            count
+            dimensions { clientRequestPath }
+          }
+          paises: httpRequestsAdaptiveGroups(
+            limit: 100
+            orderBy: [count_DESC]
+            filter: {
+              date: $date
+              requestSource: "eyeball"
+              edgeResponseContentTypeName: "html"
+              edgeResponseStatus_geq: 200
+              edgeResponseStatus_lt: 400
+            }
+          ) {
+            count
+            dimensions { clientCountryName }
+          }
+          dispositivos: httpRequestsAdaptiveGroups(
+            limit: 30
+            orderBy: [count_DESC]
+            filter: {
+              date: $date
+              requestSource: "eyeball"
+              edgeResponseContentTypeName: "html"
+              edgeResponseStatus_geq: 200
+              edgeResponseStatus_lt: 400
+            }
+          ) {
+            count
+            dimensions { clientDeviceType }
+          }
+        }
+      }
+    }
+  `;
+}
+
+async function cloudflareGraphql(env, query, variables) {
+  const config = generalAnalyticsConfig(env);
+  if (!config.configured) throw new Error('analytics_nao_configurado');
+
+  const response = await fetch(CLOUDFLARE_GRAPHQL_URL, {
+    method: 'POST',
+    headers: {
+      'authorization': 'Bearer ' + config.token,
+      'content-type': 'application/json',
+      'accept': 'application/json'
+    },
+    body: JSON.stringify({ query, variables })
+  });
+
+  let payload;
+  try {
+    payload = await response.json();
+  } catch {
+    throw new Error('analytics_resposta_invalida');
+  }
+  if (!response.ok) throw new Error('analytics_http_' + response.status);
+  return payload;
+}
+
+function analyticsZoneFromPayload(payload) {
+  const zones = payload?.data?.viewer?.zones;
+  return Array.isArray(zones) && zones.length ? zones[0] : null;
+}
+
+async function fetchGeneralAnalyticsDay(env, date, extended = true) {
+  const config = generalAnalyticsConfig(env);
+  const payload = await cloudflareGraphql(
+    env,
+    extended ? generalAnalyticsFullQuery() : generalAnalyticsCoreQuery(),
+    { zoneTag: config.zoneTag, date }
+  );
+  return {
+    date,
+    zone: analyticsZoneFromPayload(payload),
+    errors: Array.isArray(payload?.errors) ? payload.errors : []
+  };
+}
+
+async function fetchGeneralAnalyticsDays(env, dates) {
+  if (!dates.length) return { rows: [], extended: true, warnings: [] };
+
+  let first = await fetchGeneralAnalyticsDay(env, dates[0], true);
+  let extended = Boolean(first.zone);
+  const warnings = [];
+
+  if (!first.zone) {
+    first = await fetchGeneralAnalyticsDay(env, dates[0], false);
+    extended = false;
+    warnings.push('Navegador, sistema operacional e origem de referência não estão disponíveis nesta configuração da API.');
+  } else if (first.errors.length) {
+    warnings.push('A Cloudflare retornou avisos parciais para algumas dimensões analíticas.');
+  }
+
+  const rows = [first];
+  const pending = dates.slice(1);
+  const batchSize = 6;
+  for (let offset = 0; offset < pending.length; offset += batchSize) {
+    const batch = pending.slice(offset, offset + batchSize);
+    const results = await Promise.all(batch.map(date =>
+      fetchGeneralAnalyticsDay(env, date, extended).catch(error => ({
+        date,
+        zone: null,
+        errors: [{ message: String(error?.message || error) }]
+      }))
+    ));
+    rows.push(...results);
+  }
+  return { rows, extended, warnings };
+}
+
+function aggregateGeneralAnalytics(rows, extended) {
+  const paginas = new Map();
+  const paises = new Map();
+  const dispositivos = new Map();
+  const navegadores = new Map();
+  const sistemas = new Map();
+  const referencias = new Map();
+  const diario = [];
+  let totalRequests = 0;
+  let totalVisits = 0;
+  let totalPageViews = 0;
+  let totalBytes = 0;
+  let maxSampleInterval = 1;
+  let failedDays = 0;
+
+  for (const item of rows) {
+    const zone = item.zone;
+    if (!zone) {
+      failedDays += 1;
+      diario.push({
+        dia: item.date,
+        requisicoes: 0,
+        visitas: 0,
+        visualizacoes_pagina: 0,
+        bytes: 0,
+        indisponivel: true
+      });
+      continue;
+    }
+
+    const summary = Array.isArray(zone.resumo) && zone.resumo.length ? zone.resumo[0] : {};
+    const requests = Math.max(0, Number(summary?.count || 0));
+    const visits = Math.max(0, Number(summary?.sum?.visits || 0));
+    const bytes = Math.max(0, Number(summary?.sum?.edgeResponseBytes || 0));
+    const sampleInterval = Math.max(1, Number(summary?.avg?.sampleInterval || 1));
+
+    let pageViews = 0;
+    for (const row of zone.paginas || []) {
+      const count = Math.max(0, Number(row?.count || 0));
+      pageViews += count;
+      addMetric(paginas, row?.dimensions?.clientRequestPath || '/', count);
+    }
+    for (const row of zone.paises || []) {
+      addMetric(paises, row?.dimensions?.clientCountryName || 'XX', row?.count);
+    }
+    for (const row of zone.dispositivos || []) {
+      addMetric(dispositivos, row?.dimensions?.clientDeviceType || 'Não informado', row?.count);
+    }
+    if (extended) {
+      for (const row of zone.navegadores || []) {
+        addMetric(navegadores, row?.dimensions?.userAgentBrowser || 'Não informado', row?.count);
+      }
+      for (const row of zone.sistemas || []) {
+        addMetric(sistemas, row?.dimensions?.userAgentOS || 'Não informado', row?.count);
+      }
+      for (const row of zone.referencias || []) {
+        addMetric(referencias, row?.dimensions?.clientRefererHost || 'Direto / sem referência', row?.count);
+      }
+    }
+
+    totalRequests += requests;
+    totalVisits += visits;
+    totalPageViews += pageViews;
+    totalBytes += bytes;
+    maxSampleInterval = Math.max(maxSampleInterval, sampleInterval);
+
+    diario.push({
+      dia: item.date,
+      requisicoes: Math.round(requests),
+      visitas: Math.round(visits),
+      visualizacoes_pagina: Math.round(pageViews),
+      bytes: Math.round(bytes),
+      indisponivel: false
+    });
+  }
+
+  return {
+    resumo: {
+      requisicoes: Math.round(totalRequests),
+      visitas: Math.round(totalVisits),
+      visualizacoes_pagina: Math.round(totalPageViews),
+      bytes: Math.round(totalBytes),
+      amostragem: maxSampleInterval > 1,
+      sample_interval_max: Number(maxSampleInterval.toFixed(2))
+    },
+    diario,
+    paginas: metricMapRows(paginas, 'caminho', 30),
+    paises: metricMapRows(paises, 'pais', 30),
+    dispositivos: metricMapRows(dispositivos, 'dispositivo', 20),
+    navegadores: metricMapRows(navegadores, 'navegador', 20),
+    sistemas: metricMapRows(sistemas, 'sistema', 20),
+    referencias: metricMapRows(referencias, 'referencia', 30),
+    dias_indisponiveis: failedDays
+  };
+}
+
+async function handleGeneralAnalyticsAdmin(request, env) {
+  if (!adminAuthorized(request, env)) return jsonResponse({ erro: 'Não autorizado.' }, 401);
+
+  const config = generalAnalyticsConfig(env);
+  if (!config.configured) {
+    return jsonResponse({
+      erro: 'Analytics geral ainda não configurado no Worker.',
+      codigo: 'ANALYTICS_NAO_CONFIGURADO'
+    }, 503);
+  }
+
+  const url = new URL(request.url);
+  const today = pointMetricsDate();
+  const end = normalizeMetricDate(url.searchParams.get('fim'), today);
+  const start = normalizeMetricDate(url.searchParams.get('inicio'), shiftIsoDate(end, -6));
+  if (!start || start > end) return jsonResponse({ erro: 'Período inválido.' }, 422);
+
+  const dates = enumerateIsoDates(start, end);
+  const expectedDays = Math.floor(
+    (new Date(end + 'T12:00:00Z') - new Date(start + 'T12:00:00Z')) / 86400000
+  ) + 1;
+  if (expectedDays > GENERAL_ANALYTICS_MAX_DAYS || dates.length !== expectedDays) {
+    return jsonResponse({ erro: 'O período máximo para as estatísticas gerais é de 31 dias.' }, 422);
+  }
+
+  try {
+    const fetched = await fetchGeneralAnalyticsDays(env, dates);
+    const aggregated = aggregateGeneralAnalytics(fetched.rows, fetched.extended);
+    const warnings = [...fetched.warnings];
+    if (aggregated.dias_indisponiveis) {
+      warnings.push(
+        aggregated.dias_indisponiveis === 1
+          ? 'Um dia do período não pôde ser consultado na Cloudflare.'
+          : aggregated.dias_indisponiveis + ' dias do período não puderam ser consultados na Cloudflare.'
+      );
+    }
+    if (aggregated.resumo.amostragem) {
+      warnings.push('A Cloudflare aplicou amostragem adaptativa a parte dos dados; os valores são estimativas da própria plataforma.');
+    }
+
+    return jsonResponse({
+      inicio: start,
+      fim: end,
+      fonte: 'Cloudflare GraphQL Analytics API',
+      ...aggregated,
+      avisos: warnings
+    });
+  } catch (error) {
+    const code = String(error?.message || error);
+    const messages = {
+      analytics_nao_configurado: 'Analytics geral ainda não configurado no Worker.',
+      analytics_resposta_invalida: 'A Cloudflare retornou uma resposta inválida.'
+    };
+    return jsonResponse({
+      erro: messages[code] || 'Não foi possível consultar as estatísticas gerais da Cloudflare agora.',
+      codigo: code.startsWith('analytics_http_') ? 'CLOUDFLARE_HTTP' : 'CLOUDFLARE_GRAPHQL'
+    }, 502);
+  }
+}
+
+async function handleGeneralAnalyticsApi(request, env) {
+  const url = new URL(request.url);
+  if (url.pathname === GENERAL_ANALYTICS_ADMIN_PATH && request.method === 'GET') {
+    return handleGeneralAnalyticsAdmin(request, env);
+  }
+  return null;
+}
+
 function handlePointQrRedirect(request) {
   if (request.method !== 'GET' && request.method !== 'HEAD') return null;
   const url = new URL(request.url);
@@ -1590,6 +2029,9 @@ export default {
 
     const pointMetricsResponse = await handlePointMetricsApi(request, env);
     if (pointMetricsResponse) return pointMetricsResponse;
+
+    const generalAnalyticsResponse = await handleGeneralAnalyticsApi(request, env);
+    if (generalAnalyticsResponse) return generalAnalyticsResponse;
 
     const notificationResponse = await handleNotificationApi(request, env);
     if (notificationResponse) return notificationResponse;
