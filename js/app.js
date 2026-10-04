@@ -13,6 +13,7 @@
   const PLATFORMS_URL = 'plataformas-audiovisuais.json';
   const UTILITY_URL = 'utilidade-publica.json';
   const ACTIVITIES_URL = 'atividades-lazer.json';
+  const SPACES_URL = 'espacos_culturais.json';
   const SITE_CURATIONS_INDEX_URL = 'curadorias/index.json';
   const CONFIG_URL = 'configuracao-mural.json';
   const PUBLICATION_MANIFEST_URL = 'publicacao-manifest.json';
@@ -40,6 +41,7 @@
     contests: { singular: 'concurso', plural: 'concursos' },
     films: { singular: 'filme', plural: 'filmes' },
     utility: { singular: 'item de utilidade pública', plural: 'itens de utilidade pública' },
+    spaces: { singular: 'espaço', plural: 'espaços' },
     activities: { singular: 'atividade de esporte e lazer', plural: 'atividades de esporte e lazer' }
   });
   const PANEL_UTILITY_LIMIT = 4;
@@ -56,6 +58,7 @@
     contests: 'concursos',
     films: 'filmes',
     utility: 'utilidade_publica',
+    spaces: 'espacos',
     activities: 'atividades_lazer'
   });
   const PANEL_MODULE_IDS = Object.freeze(Object.keys(PANEL_MODULE_CONFIG_KEYS));
@@ -70,7 +73,8 @@
     filme: 'Sugestão de Filme',
     jogo: 'Sugestão de Jogo',
     passeio: 'Sugestão de Passeio',
-    atividade_lazer: 'Esporte e Lazer'
+    atividade_lazer: 'Esporte e Lazer',
+    espaco: 'Espaços'
   });
   const template = document.getElementById('slide-template');
   const muralCore = window.MuralCultural.core;
@@ -79,6 +83,7 @@
   const filmsContent = window.MuralCultural.contents.films;
   const utilityContent = window.MuralCultural.contents.utility;
   const activitiesContent = window.MuralCultural.contents.activities;
+  const spacesContent = window.MuralCultural.contents.spaces;
   const eventRelations = window.MuralCultural.eventRelations;
   const siteCurationsContent = window.MuralCultural.siteCurations;
   const notificationsContent = window.MuralCultural.notifications;
@@ -149,6 +154,7 @@
     platformsData: null,
     utilityData: null,
     activitiesData: null,
+    spacesData: null,
     siteCurationsData: null,
     config: null,
     publicationCourseHash: '',
@@ -160,6 +166,7 @@
     allFilms: [],
     allUtility: [],
     allActivities: [],
+    allSpaces: [],
     events: [],
     panelRoundSamples: Object.fromEntries(PANEL_NON_EVENT_MODULE_IDS.map(id => [id, []])),
     panelMemory: muralCore.createPanelMemory(),
@@ -224,6 +231,9 @@
     mobileActivityCity: '',
     mobileActivityCategory: '',
     mobileActivityModality: '',
+    mobileSpaceCity: '',
+    mobileSpaceVocation: '',
+    mobileSpaceNature: '',
     mobileUtilityArea: '',
     mobileUtilityType: '',
     agendaVisibleCounts: {
@@ -233,6 +243,7 @@
       contests: AGENDA_BATCH_SIZE,
       films: AGENDA_BATCH_SIZE,
       utility: AGENDA_BATCH_SIZE,
+      spaces: AGENDA_BATCH_SIZE,
       activities: AGENDA_BATCH_SIZE
     }
   };
@@ -946,6 +957,7 @@
     const contestsEnabled = moduleEnabled('contests');
     const filmsEnabled = moduleEnabled('films');
     const utilityEnabled = moduleEnabled('utility');
+    const spacesEnabled = moduleEnabled('spaces');
     const activitiesEnabled = moduleEnabled('activities');
 
     const events = eventsEnabled ? visibleEventsForFilters() : [];
@@ -976,6 +988,13 @@
         : [],
       films: filmsEnabled ? filmsContent.filter(state.allFilms, filmFilters, normalizeText) : [],
       utility: eligibleUtility,
+      spaces: spacesEnabled
+        ? spacesContent.filter(
+            state.allSpaces.filter(item => item.exibicao_recorrente === true),
+            { theme: state.filters.theme },
+            normalizeText
+          )
+        : [],
       activities: activitiesEnabled
         ? activitiesContent.filter(state.allActivities, { theme: state.filters.theme }, normalizeText)
         : []
@@ -997,6 +1016,7 @@
       contests: contestsContent.PANEL_CONTEST_LIMIT || 15,
       films: filmsContent.PANEL_LIMIT || 15,
       utility: PANEL_UTILITY_LIMIT,
+      spaces: 6,
       activities: PANEL_ACTIVITY_LIMIT
     };
 
@@ -1281,6 +1301,7 @@
     for (const course of state.allCourses) (Array.isArray(course.temas) ? course.temas : []).forEach(add);
     for (const movie of state.allFilms) (Array.isArray(movie.temas) ? movie.temas : []).forEach(add);
     for (const item of state.allUtility) (Array.isArray(item.temas) ? item.temas : []).forEach(add);
+    for (const item of state.allSpaces) (Array.isArray(item.temas) ? item.temas : []).forEach(add);
     for (const item of state.allActivities) (Array.isArray(item.temas) ? item.temas : []).forEach(add);
     return [...values.entries()].sort((a, b) => a[1].localeCompare(b[1], 'pt-BR'));
   }
@@ -1425,6 +1446,7 @@ function eventProgram(event) {
         state.panelWeights.contests !== defaults.weights.contests ||
         state.panelWeights.films !== defaults.weights.films ||
         state.panelWeights.utility !== defaults.weights.utility ||
+        state.panelWeights.spaces !== defaults.weights.spaces ||
         state.panelWeights.activities !== defaults.weights.activities) count += 1;
     if (state.slideDuration !== defaults.slideDuration) count += 1;
     return count;
@@ -1777,7 +1799,8 @@ function eventProgram(event) {
       filme: 'Ver este filme',
       jogo: 'Ver este jogo',
       passeio: 'Ver este passeio',
-      atividade_lazer: 'Ver esta atividade'
+      atividade_lazer: 'Ver esta atividade',
+      espaco: 'Ver este espaço'
     })[type] || 'Abrir este conteúdo';
   }
 
@@ -2559,6 +2582,10 @@ function eventProgram(event) {
     renderMediaSlide(index, utilityContent.createPanelSlide);
   }
 
+  function renderSpaceSlide(index) {
+    renderMediaSlide(index, spacesContent.createPanelSlide);
+  }
+
   function renderActivitySlide(index) {
     renderMediaSlide(index, activitiesContent.createPanelSlide);
   }
@@ -2578,6 +2605,7 @@ function eventProgram(event) {
     else if (item.tipo_conteudo === 'concurso') renderContestSlide(index);
     else if (item.tipo_conteudo === 'filme') renderFilmSlide(index);
     else if (item.tipo_conteudo === 'utilidade_publica') renderUtilitySlide(index);
+    else if (item.tipo_conteudo === 'espaco') renderSpaceSlide(index);
     else if (item.tipo_conteudo === 'atividade_lazer') renderActivitySlide(index);
     else renderEventSlide(index);
   }
@@ -3185,8 +3213,9 @@ function eventProgram(event) {
     const contestsEnabled = Boolean(slide.querySelector('.panel-module-contests')?.checked);
     const filmsEnabled = Boolean(slide.querySelector('.panel-module-films')?.checked);
     const utilityEnabled = Boolean(slide.querySelector('.panel-module-utility')?.checked);
+    const spacesEnabled = Boolean(slide.querySelector('.panel-module-spaces')?.checked);
     const activitiesEnabled = Boolean(slide.querySelector('.panel-module-activities')?.checked);
-    if (!eventsEnabled && !booksEnabled && !coursesEnabled && !contestsEnabled && !filmsEnabled && !utilityEnabled && !activitiesEnabled) {
+    if (!eventsEnabled && !booksEnabled && !coursesEnabled && !contestsEnabled && !filmsEnabled && !utilityEnabled && !spacesEnabled && !activitiesEnabled) {
       throw new Error('Ative pelo menos um tipo de conteúdo para o painel.');
     }
 
@@ -3209,6 +3238,7 @@ function eventProgram(event) {
         contests: contestsEnabled,
         films: filmsEnabled,
         utility: utilityEnabled,
+        spaces: spacesEnabled,
         activities: activitiesEnabled
       },
       theme: slide.querySelector('.filter-theme')?.value || '',
@@ -3229,6 +3259,7 @@ function eventProgram(event) {
         contests: slide.querySelector('.panel-contest-weight')?.value || 1,
         films: slide.querySelector('.panel-film-weight')?.value || 1,
         utility: slide.querySelector('.panel-utility-weight')?.value || 1,
+        spaces: slide.querySelector('.panel-space-weight')?.value || 1,
         activities: slide.querySelector('.panel-activity-weight')?.value || 1
       },
       slideDuration: slide.querySelector('.filter-slide-duration')?.value || 0
@@ -3242,6 +3273,7 @@ function eventProgram(event) {
     const contestsEnabled = Boolean(slide.querySelector('.panel-module-contests')?.checked);
     const filmsEnabled = Boolean(slide.querySelector('.panel-module-films')?.checked);
     const utilityEnabled = Boolean(slide.querySelector('.panel-module-utility')?.checked);
+    const spacesEnabled = Boolean(slide.querySelector('.panel-module-spaces')?.checked);
     const activitiesEnabled = Boolean(slide.querySelector('.panel-module-activities')?.checked);
     const eventSection = slide.querySelector('.panel-event-section');
     const bookSection = slide.querySelector('.panel-book-section');
@@ -3249,6 +3281,7 @@ function eventProgram(event) {
     const contestSection = slide.querySelector('.panel-contest-section');
     const filmSection = slide.querySelector('.panel-film-section');
     const utilitySection = slide.querySelector('.panel-utility-section');
+    const spaceSection = slide.querySelector('.panel-space-section');
     const activitySection = slide.querySelector('.panel-activity-section');
     if (eventSection) eventSection.hidden = !eventsEnabled;
     if (bookSection) bookSection.hidden = !booksEnabled;
@@ -3256,6 +3289,7 @@ function eventProgram(event) {
     if (contestSection) contestSection.hidden = !contestsEnabled;
     if (filmSection) filmSection.hidden = !filmsEnabled;
     if (utilitySection) utilitySection.hidden = !utilityEnabled;
+    if (spaceSection) spaceSection.hidden = !spacesEnabled;
     if (activitySection) activitySection.hidden = !activitiesEnabled;
   }
 
@@ -3278,6 +3312,7 @@ function eventProgram(event) {
     const contestsToggle = slide.querySelector('.panel-module-contests');
     const filmsToggle = slide.querySelector('.panel-module-films');
     const utilityToggle = slide.querySelector('.panel-module-utility');
+    const spacesToggle = slide.querySelector('.panel-module-spaces');
     const activitiesToggle = slide.querySelector('.panel-module-activities');
     if (eventsToggle) eventsToggle.checked = value.modules.events;
     if (booksToggle) booksToggle.checked = value.modules.books;
@@ -3285,6 +3320,7 @@ function eventProgram(event) {
     if (contestsToggle) contestsToggle.checked = value.modules.contests;
     if (filmsToggle) filmsToggle.checked = value.modules.films;
     if (utilityToggle) utilityToggle.checked = value.modules.utility;
+    if (spacesToggle) spacesToggle.checked = value.modules.spaces;
     if (activitiesToggle) activitiesToggle.checked = value.modules.activities;
     if (durationSelect) durationSelect.value = String(value.slideDuration || 0);
     const eventWeight = slide.querySelector('.panel-event-weight');
@@ -3293,6 +3329,7 @@ function eventProgram(event) {
     const contestWeight = slide.querySelector('.panel-contest-weight');
     const filmWeight = slide.querySelector('.panel-film-weight');
     const utilityWeight = slide.querySelector('.panel-utility-weight');
+    const spaceWeight = slide.querySelector('.panel-space-weight');
     const activityWeight = slide.querySelector('.panel-activity-weight');
     if (eventWeight) eventWeight.value = String(value.weights.events);
     if (bookWeight) bookWeight.value = String(value.weights.books);
@@ -3300,6 +3337,7 @@ function eventProgram(event) {
     if (contestWeight) contestWeight.value = String(value.weights.contests);
     if (filmWeight) filmWeight.value = String(value.weights.films);
     if (utilityWeight) utilityWeight.value = String(value.weights.utility);
+    if (spaceWeight) spaceWeight.value = String(value.weights.spaces);
     if (activityWeight) activityWeight.value = String(value.weights.activities);
 
     populateDynamicSelect(themeSelect, 'Todos os temas', universalThemeOptions(), value.theme);
@@ -3686,6 +3724,11 @@ function eventProgram(event) {
         (Array.isArray(movie.temas) ? movie.temas : []).forEach(add);
       }
     }
+    if (content === 'spaces') {
+      for (const item of state.allSpaces) {
+        (Array.isArray(item.temas) ? item.temas : []).forEach(add);
+      }
+    }
     if (content === 'activities') {
       for (const item of state.allActivities) {
         (Array.isArray(item.temas) ? item.temas : []).forEach(add);
@@ -3695,7 +3738,7 @@ function eventProgram(event) {
   }
 
   function normalizeAgendaFiltersForContent(content = state.mobileContent) {
-    const allowedContents = new Set(['all', 'events', 'books', 'courses', 'contests', 'films', 'utility', 'activities']);
+    const allowedContents = new Set(['all', 'events', 'books', 'courses', 'contests', 'films', 'utility', 'spaces', 'activities']);
     state.mobileContent = allowedContents.has(content) ? content : 'all';
 
     // A troca de conteúdo preserva a curadoria; apenas uma opção indisponível expira.
@@ -3703,7 +3746,7 @@ function eventProgram(event) {
       state.mobileCuration = '';
     }
 
-    if (!['events', 'books', 'courses', 'films', 'activities'].includes(state.mobileContent)) {
+    if (!['events', 'books', 'courses', 'films', 'spaces', 'activities'].includes(state.mobileContent)) {
       state.mobileTheme = '';
     } else {
       const allowedThemes = new Set(agendaThemeOptions(state.mobileContent).map(([value]) => value));
@@ -3732,6 +3775,11 @@ function eventProgram(event) {
       state.mobileActivityCity = '';
       state.mobileActivityCategory = '';
       state.mobileActivityModality = '';
+    }
+    if (state.mobileContent !== 'spaces') {
+      state.mobileSpaceCity = '';
+      state.mobileSpaceVocation = '';
+      state.mobileSpaceNature = '';
     }
     if (state.mobileContent !== 'contests') {
       state.mobileContestFormation = '';
@@ -3958,6 +4006,18 @@ function eventProgram(event) {
     }, normalizeText).sort(agendaTitleCompare);
   }
 
+  function agendaVisibleSpaces() {
+    if (!['all', 'spaces'].includes(state.mobileContent) || state.config?.modulos?.espacos === false) return [];
+    const specific = state.mobileContent === 'spaces';
+    return spacesContent.filter(state.allSpaces, {
+      query: state.mobileQuery,
+      city: specific ? state.mobileSpaceCity : '',
+      vocation: specific ? state.mobileSpaceVocation : '',
+      nature: specific ? state.mobileSpaceNature : '',
+      theme: specific ? state.mobileTheme : ''
+    }, normalizeText).sort(agendaTitleCompare);
+  }
+
   function utilitySource() {
     return state.allUtility;
   }
@@ -4002,8 +4062,9 @@ function eventProgram(event) {
       const contests = group('concurso').sort(agendaTitleCompare);
       const films = group('filme').sort(agendaTitleCompare);
       const utility = group('utilidade_publica').sort(agendaTitleCompare);
+      const spaces = group('espaco').sort(agendaTitleCompare);
       const activities = group('atividade_lazer').sort(agendaTitleCompare);
-      return { events, books, courses, contests, films, utility, activities, total: items.length };
+      return { events, books, courses, contests, films, utility, spaces, activities, total: items.length };
     }
     if (state.mobileSharedSelection) {
       const items = agendaItemsForIds(state.mobileSharedSelection);
@@ -4014,8 +4075,9 @@ function eventProgram(event) {
       const contests = group('concurso').sort(agendaTitleCompare);
       const films = group('filme').sort(agendaTitleCompare);
       const utility = group('utilidade_publica').sort(agendaTitleCompare);
+      const spaces = group('espaco').sort(agendaTitleCompare);
       const activities = group('atividade_lazer').sort(agendaTitleCompare);
-      return { events, books, courses, contests, films, utility, activities, total: items.length };
+      return { events, books, courses, contests, films, utility, spaces, activities, total: items.length };
     }
     if (state.mobileFavoritesOnly) {
       const items = agendaFavoriteItems();
@@ -4026,8 +4088,9 @@ function eventProgram(event) {
       const contests = group('concurso').sort(agendaTitleCompare);
       const films = group('filme').sort(agendaTitleCompare);
       const utility = group('utilidade_publica').sort(agendaTitleCompare);
+      const spaces = group('espaco').sort(agendaTitleCompare);
       const activities = group('atividade_lazer').sort(agendaTitleCompare);
-      return { events, books, courses, contests, films, utility, activities, total: items.length };
+      return { events, books, courses, contests, films, utility, spaces, activities, total: items.length };
     }
     const curation = agendaCurationEntries().find(entry => entry.id === state.mobileCuration);
     const matchesCuration = item => agendaItemMatchesCuration(item, curation);
@@ -4037,6 +4100,7 @@ function eventProgram(event) {
     const contests = agendaVisibleContests().filter(matchesCuration);
     const films = agendaVisibleFilms().filter(matchesCuration);
     const utility = agendaVisibleUtility().filter(matchesCuration);
+    const spaces = agendaVisibleSpaces().filter(matchesCuration);
     const activities = agendaVisibleActivities().filter(matchesCuration);
     return {
       events,
@@ -4045,8 +4109,9 @@ function eventProgram(event) {
       contests,
       films,
       utility,
+      spaces,
       activities,
-      total: events.length + books.length + courses.length + contests.length + films.length + utility.length + activities.length
+      total: events.length + books.length + courses.length + contests.length + films.length + utility.length + spaces.length + activities.length
     };
   }
 
@@ -4095,6 +4160,8 @@ function eventProgram(event) {
       common.push(state.mobileUtilityArea, state.mobileUtilityType);
     } else if (state.mobileContent === 'activities') {
       common.push(state.mobileTheme, state.mobileActivityCity, state.mobileActivityCategory, state.mobileActivityModality);
+    } else if (state.mobileContent === 'spaces') {
+      common.push(state.mobileTheme, state.mobileSpaceCity, state.mobileSpaceVocation, state.mobileSpaceNature);
     }
     return common.filter(Boolean).length;
   }
@@ -4105,6 +4172,9 @@ function eventProgram(event) {
     state.mobileActivityCity = '';
     state.mobileActivityCategory = '';
     state.mobileActivityModality = '';
+    state.mobileSpaceCity = '';
+    state.mobileSpaceVocation = '';
+    state.mobileSpaceNature = '';
     state.mobileQuery = '';
     state.mobileCuration = '';
     state.mobileContent = 'all';
@@ -4253,6 +4323,7 @@ function eventProgram(event) {
     if (state.mobileContent === 'contests') return 'Concursos públicos';
     if (state.mobileContent === 'films') return 'Filmes gratuitos';
     if (state.mobileContent === 'utility') return 'Utilidade Pública';
+    if (state.mobileContent === 'spaces') return 'Espaços';
     if (state.mobileContent === 'activities') return 'Esporte e Lazer';
     return 'Descobertas culturais';
   }
@@ -4375,7 +4446,7 @@ function eventProgram(event) {
   function agendaItemsForIds(ids) {
     const catalogs = [
       state.allEvents, state.allBooks, state.allCourses,
-      state.allContests, state.allFilms, state.allUtility, state.allActivities
+      state.allContests, state.allFilms, state.allUtility, state.allSpaces, state.allActivities
     ];
     return catalogs.flat().filter(item => ids.has(agendaFavoriteId(item)));
   }
@@ -4462,7 +4533,7 @@ function eventProgram(event) {
         <div class="agenda-about-sections">
           <section class="agenda-about-section">
             <h3>Um mural para descobrir e acessar</h3>
-            <p>O projeto reúne agenda de eventos gratuitos, livros e acervos, cursos e oportunidades de formação, concursos, filmes e conteúdos culturais, esporte e lazer e informações de utilidade pública. O Mural pode ser usado em exibição automática ou interativa em espaços físicos e também no modo Exploração, pelo celular ou computador.</p>
+            <p>O projeto reúne agenda de eventos gratuitos, livros e acervos, cursos e oportunidades de formação, concursos, filmes e conteúdos culturais, espaços de cultura, esporte e lazer e informações de utilidade pública. O Mural pode ser usado em exibição automática ou interativa em espaços físicos e também no modo Exploração, pelo celular ou computador.</p>
           </section>
 
           <section class="agenda-about-section">
@@ -5182,6 +5253,10 @@ function eventProgram(event) {
   }
 
   function renderAgendaCard(item, options = {}) {
+    if (item.tipo_conteudo === 'espaco') {
+      return decorateAgendaFavorite(spacesContent.createAgendaCard(item, { safeExternalUrl, safeImageUrl }), item);
+    }
+
     if (item.tipo_conteudo === 'atividade_lazer') {
       return decorateAgendaFavorite(activitiesContent.createAgendaCard(item, { safeExternalUrl, safeImageUrl }), item);
     }
@@ -5430,6 +5505,7 @@ function eventProgram(event) {
       ['courses', 'Cursos'],
       ['contests', 'Concursos'],
       ['films', 'Filmes'],
+      ['spaces', 'Espaços'],
       ['activities', 'Esporte e Lazer'],
       ['utility', 'Utilidade pública']
     ];
@@ -5492,7 +5568,8 @@ function eventProgram(event) {
     const filmMode = state.mobileContent === 'films';
     const utilityMode = state.mobileContent === 'utility';
     const activityMode = state.mobileContent === 'activities';
-    const themeMode = ['events', 'books', 'courses', 'films', 'activities'].includes(state.mobileContent);
+    const spaceMode = state.mobileContent === 'spaces';
+    const themeMode = ['events', 'books', 'courses', 'films', 'spaces', 'activities'].includes(state.mobileContent);
     const searchPlaceholder = contestMode
       ? 'Órgão, cargo, cidade, formação…'
       : state.mobileContent === 'courses'
@@ -5507,7 +5584,9 @@ function eventProgram(event) {
               ? 'Título, descrição, área ou tipo de recurso…'
               : activityMode
                 ? 'Atividade, modalidade, local, cidade ou público…'
-                : 'Título, autor ou instituição…';
+                : spaceMode
+                  ? 'Espaço, cidade, tipo, vocação ou instituição…'
+                  : 'Título, autor ou instituição…';
     const themeControl = themeMode ? `
       <label><span>Tema</span><select class="agenda-theme"><option value="">Todos os temas</option></select></label>
     ` : '';
@@ -5515,7 +5594,7 @@ function eventProgram(event) {
       <label class="agenda-search"><span>Pesquisar</span><input type="search" placeholder="${escapeHtml(searchPlaceholder)}" value="${escapeHtml(state.mobileQuery)}"></label>
       <label class="agenda-content-field"><span>Conteúdo</span><select class="agenda-content">
         <option value="all">Todos</option><option value="events">Eventos</option><option value="books">Livros</option><option value="courses">Cursos</option><option value="contests">Concursos</option><option value="films">Filmes</option>
-        <option value="activities">Esporte e Lazer</option><option value="utility">Utilidade Pública</option>
+        <option value="spaces">Espaços</option><option value="activities">Esporte e Lazer</option><option value="utility">Utilidade Pública</option>
       </select></label>
       <label><span>Curadoria</span><select class="agenda-curation"><option value="">Todas as curadorias</option></select></label>
       ${themeControl}
@@ -5586,13 +5665,23 @@ function eventProgram(event) {
       <label><span>Categoria</span><select class="agenda-activity-category"><option value="">Todas as categorias</option></select></label>
       <label><span>Modalidade</span><select class="agenda-activity-modality"><option value="">Todas as modalidades</option></select></label>
     ` : '';
+    const spaceControls = spaceMode ? `
+      <label><span>Cidade</span><select class="agenda-space-city"><option value="">Todas as cidades</option></select></label>
+      <label><span>Vocação / uso</span><select class="agenda-space-vocation"><option value="">Todas as vocações</option></select></label>
+      <label><span>Tipo de espaço</span><select class="agenda-space-nature"><option value="">Todos os tipos</option></select></label>
+    ` : '';
 
-    controls.innerHTML = commonControls + eventControls + bookControls + contestControls + filmControls + utilityControls + activityControls;
+    controls.innerHTML = commonControls + eventControls + bookControls + contestControls + filmControls + utilityControls + spaceControls + activityControls;
 
     controls.querySelector('.agenda-content').value = state.mobileContent;
     if (utilityMode) {
       populateDynamicSelect(controls.querySelector('.agenda-utility-area'), 'Todas as áreas', agendaUtilityOptions('areas_utilidade'), state.mobileUtilityArea);
       populateDynamicSelect(controls.querySelector('.agenda-utility-type'), 'Todos os tipos', agendaUtilityOptions('tipos_recurso'), state.mobileUtilityType);
+    }
+    if (spaceMode) {
+      populateDynamicSelect(controls.querySelector('.agenda-space-city'), 'Todas as cidades', spacesContent.cityOptions(state.allSpaces, normalizeText), state.mobileSpaceCity);
+      populateDynamicSelect(controls.querySelector('.agenda-space-vocation'), 'Todas as vocações', spacesContent.vocationOptions(state.allSpaces, normalizeText), state.mobileSpaceVocation);
+      populateDynamicSelect(controls.querySelector('.agenda-space-nature'), 'Todos os tipos', spacesContent.natureOptions(state.allSpaces, normalizeText), state.mobileSpaceNature);
     }
     if (activityMode) {
       populateDynamicSelect(controls.querySelector('.agenda-activity-city'), 'Todas as cidades', activitiesContent.cityOptions(state.allActivities, normalizeText), state.mobileActivityCity);
@@ -5710,6 +5799,7 @@ function eventProgram(event) {
       const eventsProgressiveControl = createAgendaProgressiveControl(eventsGrid, results.events, 'events');
       resultsContainer.append(eventsGrid);
       if (eventsProgressiveControl) resultsContainer.append(eventsProgressiveControl);
+      appendAgendaSection(resultsContainer, 'Espaços', results.spaces, 'spaces', 'Ver somente espaços');
       appendAgendaSection(resultsContainer, 'Esporte e Lazer', results.activities, 'activities', 'Ver somente esporte e lazer');
       appendAgendaSection(resultsContainer, 'Utilidade Pública', results.utility, 'utility', 'Ver somente utilidade pública');
       appendAgendaSection(resultsContainer, 'Sugestões de Leitura', results.books, 'books', 'Ver somente livros');
@@ -5729,9 +5819,11 @@ function eventProgram(event) {
               ? results.films
               : state.mobileContent === 'utility'
                 ? results.utility
-                : state.mobileContent === 'activities'
-                  ? results.activities
-                  : results.courses;
+                : state.mobileContent === 'spaces'
+                  ? results.spaces
+                  : state.mobileContent === 'activities'
+                    ? results.activities
+                    : results.courses;
       const renderItem = state.mobileContent === 'events' && !agendaHasSpecificEventFilters()
         ? item => renderAgendaCard(item, { exclusiveUnfilteredEvent: true })
         : renderAgendaCard;
@@ -5864,6 +5956,19 @@ function eventProgram(event) {
     controls.querySelector('.agenda-theme')?.addEventListener('change', event => { state.mobileTheme = event.target.value; rerender(); });
     controls.querySelector('.agenda-utility-area')?.addEventListener('change', event => { state.mobileUtilityArea = event.target.value; rerender(); });
     controls.querySelector('.agenda-utility-type')?.addEventListener('change', event => { state.mobileUtilityType = event.target.value; rerender(); });
+    controls.querySelector('.agenda-space-city')?.addEventListener('change', event => {
+      state.mobileSpaceCity = event.target.value;
+      rerender();
+    });
+    controls.querySelector('.agenda-space-vocation')?.addEventListener('change', event => {
+      state.mobileSpaceVocation = event.target.value;
+      rerender();
+    });
+    controls.querySelector('.agenda-space-nature')?.addEventListener('change', event => {
+      state.mobileSpaceNature = event.target.value;
+      rerender();
+    });
+
     controls.querySelector('.agenda-activity-city')?.addEventListener('change', event => { state.mobileActivityCity = event.target.value; rerender(); });
     controls.querySelector('.agenda-activity-category')?.addEventListener('change', event => { state.mobileActivityCategory = event.target.value; rerender(); });
     controls.querySelector('.agenda-activity-modality')?.addEventListener('change', event => { state.mobileActivityModality = event.target.value; rerender(); });
@@ -6059,7 +6164,7 @@ function eventProgram(event) {
   async function load() {
     try {
       state.curationMode = curationModeFromUrl();
-      const [response, relationsData, booksData, curationBooksData, curationBookCoversData, coursesData, contestsData, filmsData, platformsData, utilityData, activitiesData, siteCurationsData, config] = await Promise.all([
+      const [response, relationsData, booksData, curationBooksData, curationBookCoversData, coursesData, contestsData, filmsData, platformsData, utilityData, activitiesData, spacesData, siteCurationsData, config] = await Promise.all([
         fetch(`${DATA_URL}?v=${Date.now()}`, { cache: 'no-store' }),
         loadOptionalJson(RELATIONS_URL, { relacoes: [] }),
         loadOptionalJson(BOOKS_URL, { livros: [] }),
@@ -6071,6 +6176,7 @@ function eventProgram(event) {
         loadOptionalJson(PLATFORMS_URL, { plataformas: [] }),
         loadOptionalJson(UTILITY_URL, { itens: [] }),
         loadOptionalJson(ACTIVITIES_URL, { atividades: [] }),
+        loadOptionalJson(SPACES_URL, { itens: [] }),
         loadSiteCurations(),
         loadOptionalJson(CONFIG_URL, {
           nome: 'Mural Cultural',
@@ -6105,6 +6211,7 @@ function eventProgram(event) {
         : { plataformas: [] };
       state.utilityData = utilityData && Array.isArray(utilityData.itens) ? utilityData : { itens: [] };
       state.activitiesData = activitiesData && Array.isArray(activitiesData.atividades) ? activitiesData : { atividades: [] };
+      state.spacesData = spacesData && Array.isArray(spacesData.itens) ? spacesData : { itens: [] };
       state.siteCurationsData = siteCurationsData;
       state.config = config || {};
 
@@ -6145,6 +6252,13 @@ function eventProgram(event) {
           ...item,
           areas_utilidade: Array.isArray(item.areas_utilidade) ? [...item.areas_utilidade] : [],
           tipos_recurso: Array.isArray(item.tipos_recurso) ? [...item.tipos_recurso] : []
+        }));
+      state.allSpaces = state.spacesData.itens
+        .filter(spacesContent.isValid)
+        .map(item => ({
+          ...item,
+          vocacoes: Array.isArray(item.vocacoes) ? [...item.vocacoes] : [],
+          temas: Array.isArray(item.temas) ? [...item.temas] : []
         }));
       state.allActivities = state.activitiesData.atividades
         .filter(activitiesContent.isValid)
