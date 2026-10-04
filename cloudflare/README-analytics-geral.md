@@ -51,3 +51,22 @@ As consultas usam `requestSource: "eyeball"`, excluindo subrequisições interna
 - **Dados transferidos**: `edgeResponseBytes`.
 
 O dataset `httpRequestsAdaptiveGroups` pode aplicar amostragem adaptativa. Quando isso ocorrer, a Cloudflare já devolve os valores estimados; o Editor sinaliza que houve amostragem.
+
+
+## Histórico preservado no D1
+
+O Worker mantém uma cópia agregada diária em `analytics_geral_historico`. O armazenamento contém somente totais e rankings agregados do dia; não são gravados IP, cookies, identificadores persistentes ou eventos individuais.
+
+Na primeira consulta administrativa após a implantação, se o histórico ainda estiver vazio, o Worker tenta fazer um backfill da janela recente ainda disponível na Cloudflare. Depois disso, o Cron Trigger diário já existente atualiza os dois dias anteriores para reduzir o risco de perder dados por atraso de consolidação.
+
+A consulta administrativa pode usar até 366 dias por vez. Dias que não existem no arquivo aparecem como **sem histórico**, em vez de zero.
+
+## Separação de audiência e varreduras
+
+Os caminhos HTML são classificados de forma conservadora:
+
+- **Mural**: caminhos públicos reconhecidos, como `/`, `/index.html`, links curtos `/s/...` e QR `/q/...`;
+- **Varredura provável**: padrões de alta confiança, como `/.env`, credenciais, `.git`, Composer, WordPress, phpMyAdmin, Actuator e arquivos de configuração;
+- **Outro HTML**: caminhos não reconhecidos que não são automaticamente classificados como ameaça.
+
+A quantidade de varreduras é um **mínimo detectado**, pois o ranking diário arquiva apenas os principais caminhos retornados pela Cloudflare.
