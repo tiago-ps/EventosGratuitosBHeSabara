@@ -56,7 +56,7 @@ assert.equal(relations.institutionName({ id: 'sem-relacao' }, index), '');
 const app = fs.readFileSync(path.join(root, 'js/app.js'), 'utf8');
 assert.ok(app.includes("const RELATIONS_URL = 'relacoes-eventos.json';"));
 assert.ok(app.includes('loadOptionalJson(RELATIONS_URL, { relacoes: [] })'));
-assert.ok(app.includes('eventRelations.buildIndex(relationsData)'));
+assert.ok(app.includes('eventRelations?.buildIndex?.(state.relationsData)'));
 assert.ok(app.includes('[eventPlace(event), event.cidade]'));
 assert.ok(app.includes('eventInstitutionName(event)'));
 
