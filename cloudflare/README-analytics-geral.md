@@ -27,7 +27,7 @@ Para o token, use uma permissão de leitura da Analytics API e restrinja os recu
 
 `GET /api/analytics-geral/admin?inicio=AAAA-MM-DD&fim=AAAA-MM-DD`
 
-O intervalo máximo é de 31 dias.
+A consulta do Editor pode cobrir até 366 dias por vez. Para os dias recentes, o Worker atualiza os dados pela Cloudflare; para períodos antigos, usa o histórico agregado preservado no D1.
 
 O retorno inclui:
 
