@@ -14,9 +14,11 @@ on:
       - "cloudflare/selecoes-compartilhadas.sql"
       - "cloudflare/metricas-pontos.sql"
       - "cloudflare/README-metricas-pontos.md"
+      - "cloudflare/README-analytics-geral.md"
       - "cloudflare/README-sugestoes-curadoria.md"
       - "js/metricas-pontos.js"
       - "testes/metricas-pontos.test.cjs"
+      - "testes/analytics-geral.test.cjs"
       - "testes/sugestoes-curadoria.test.cjs"
       - ".github/workflows/validar-sugestoes-curadoria.yml"
 
@@ -40,3 +42,4 @@ jobs:
         run: |
           node testes/sugestoes-curadoria.test.cjs
           node testes/metricas-pontos.test.cjs
+          node testes/analytics-geral.test.cjs
