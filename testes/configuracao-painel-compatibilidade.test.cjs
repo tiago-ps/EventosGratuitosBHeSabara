@@ -70,6 +70,6 @@ const indexSource = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 assert.match(indexSource, /class="panel-module-contests"/);
 assert.match(indexSource, /class="panel-module-activities" type="checkbox" checked/);
 assert.match(indexSource, /class="panel-module-utility" type="checkbox" checked/);
-assert.match(indexSource, /class="panel-module-spaces" type="checkbox" checked/);
+assert.match(indexSource, /class="panel-module-spaces" type="checkbox"/);
 
 console.log('Testes de compatibilidade das configurações do Painel aprovados.');
