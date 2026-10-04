@@ -15,6 +15,7 @@ on:
       - "cloudflare/metricas-pontos.sql"
       - "cloudflare/README-metricas-pontos.md"
       - "cloudflare/README-analytics-geral.md"
+      - "cloudflare/analytics-geral-historico.sql"
       - "cloudflare/README-sugestoes-curadoria.md"
       - "js/metricas-pontos.js"
       - "testes/metricas-pontos.test.cjs"
