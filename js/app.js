@@ -2,6 +2,7 @@
   'use strict';
 
   const DATA_URL = 'eventos.json';
+  const RELATIONS_URL = 'relacoes-eventos.json';
   const BOOKS_URL = 'livros.json';
   const CURATION_BOOKS_URL = 'catalogo-curadoria-livros.json';
   const CURATION_BOOK_COVERS_URL = 'capas-curadoria-livros.json';
@@ -78,6 +79,7 @@
   const filmsContent = window.MuralCultural.contents.films;
   const utilityContent = window.MuralCultural.contents.utility;
   const activitiesContent = window.MuralCultural.contents.activities;
+  const eventRelations = window.MuralCultural.eventRelations;
   const siteCurationsContent = window.MuralCultural.siteCurations;
   const notificationsContent = window.MuralCultural.notifications;
   let deferredInstallPrompt = null;
@@ -135,6 +137,8 @@
 
   let state = {
     data: null,
+    relationsData: null,
+    eventRelationsIndex: Object.create(null),
     booksData: null,
     curationBooksData: null,
     curationBookCoversData: null,
@@ -447,15 +451,16 @@
     const explicitImage = String(event.imagem_local || '').trim();
     if (explicitImage) return explicitImage;
 
-    const local = normalizeText(event.local);
+    const locals = [
+      eventCanonicalPlace(event),
+      event.local
+    ].map(normalizeText).filter(Boolean);
 
-    if (!local) {
-      return '';
-    }
-
-    for (const [localName, imagePath] of Object.entries(localImages)) {
-      if (local.includes(localName)) {
-        return imagePath;
+    for (const local of locals) {
+      for (const [localName, imagePath] of Object.entries(localImages)) {
+        if (local.includes(localName)) {
+          return imagePath;
+        }
       }
     }
 
@@ -1292,14 +1297,35 @@
   'associacao-social-paroquia-santa-ines': 'Associação Social Paróquia Santa Inês'
 });
 
+function eventCanonicalPlace(event) {
+  return eventRelations?.placeLabel?.(event, state.eventRelationsIndex) || '';
+}
+
+function eventInstitutionName(event) {
+  const canonical = eventRelations?.institutionName?.(event, state.eventRelationsIndex) || '';
+  if (canonical) return canonical;
+
+  const legacyName = String(event?.instituicao || '').trim();
+  if (legacyName) return legacyName;
+
+  const institutionId = String(event?.instituicao_id || '').trim();
+  return institutionId && EVENT_INSTITUTION_NAMES[institutionId]
+    ? EVENT_INSTITUTION_NAMES[institutionId]
+    : '';
+}
+
+function eventPlace(event) {
+  return eventCanonicalPlace(event) ||
+    String(event?.local || '').trim() ||
+    String(event?.unidade || '').trim();
+}
+
 function eventProgram(event) {
   const program = String(event?.programa || '').trim();
   if (program) return program;
 
-  const institutionId = String(event?.instituicao_id || '').trim();
-  if (institutionId && EVENT_INSTITUTION_NAMES[institutionId]) {
-    return EVENT_INSTITUTION_NAMES[institutionId];
-  }
+  const institution = eventInstitutionName(event);
+  if (institution) return institution;
 
   const source = String(event?.fonte || '').trim();
   if (!source || /^instagram\s*(?:—|-|$)/i.test(source)) return '';
@@ -1307,7 +1333,7 @@ function eventProgram(event) {
 }
 
   function eventUnit(event) {
-    return event.unidade || event.local || '';
+    return eventCanonicalPlace(event) || event.unidade || event.local || '';
   }
 
   function isSchoolEvent(event) {
@@ -1953,7 +1979,7 @@ function eventProgram(event) {
     const mapLink = slide.querySelector('.map-link');
 
     whereText.textContent =
-      [event.local, event.cidade]
+      [eventPlace(event), event.cidade]
         .filter(Boolean)
         .join(' • ') || 'Local não informado';
 
@@ -1964,7 +1990,7 @@ function eventProgram(event) {
       mapLink.hidden = false;
       mapLink.setAttribute(
         'aria-label',
-        `Abrir ${event.local || 'o local do evento'} no Google Maps`
+        `Abrir ${eventPlace(event) || 'o local do evento'} no Google Maps`
       );
     } else {
       mapLink.remove();
@@ -2093,7 +2119,7 @@ function eventProgram(event) {
           ? `Imagem de divulgação: ${event.titulo}`
           : imageType === 'program'
             ? `Imagem do programa: ${event.programa || event.titulo}`
-            : `Imagem do local: ${event.local || event.titulo}`;
+            : `Imagem do local: ${eventPlace(event) || event.titulo}`;
 
       image.referrerPolicy =
         imageType === 'event'
@@ -3595,7 +3621,7 @@ function eventProgram(event) {
       .find(Boolean);
     if (explicit) return explicit;
 
-    if (normalizeText(event.local).includes('cine santa tereza')) {
+    if (normalizeText(eventPlace(event)).includes('cine santa tereza')) {
       return safeImageUrl('imagens/CineSantaTerezaBH.png');
     }
     if (normalizeText(event.programa).includes('escola livre de artes arena da cultura')) {
@@ -3786,7 +3812,8 @@ function eventProgram(event) {
   function agendaEventQueryMatches(event, query) {
     if (!query) return true;
     const haystack = normalizeText([
-      event.titulo, event.descricao, event.local, event.unidade, event.cidade,
+      event.titulo, event.descricao, eventPlace(event), eventUnit(event),
+      eventInstitutionName(event), event.local, event.unidade, event.cidade,
       event.categoria, event.area_artistica, event.programa, event.fonte,
       ...(Array.isArray(event.areas) ? event.areas : []),
       ...(Array.isArray(event.tags) ? event.tags : [])
@@ -5229,7 +5256,7 @@ function eventProgram(event) {
         </div>
         <p class="agenda-card-date">${escapeHtml(mobileDateLabel(event))}${event.horario ? ` • ${escapeHtml(event.horario)}` : ''}</p>
         <h2>${escapeHtml(event.titulo || 'Evento cultural')}</h2>
-        <p class="agenda-card-place">${escapeHtml([event.local, event.cidade].filter(Boolean).join(' • ') || 'Local não informado')}</p>
+        <p class="agenda-card-place">${escapeHtml([eventPlace(event), event.cidade].filter(Boolean).join(' • ') || 'Local não informado')}</p>
         <p class="agenda-card-description">${escapeHtml(event.descricao || '')}</p>
         <div class="agenda-card-actions">
           ${link ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer">${closedRegistration ? 'Programação do evento' : 'Programação e inscrição'}</a>` : closedRegistration ? '<span class="agenda-action-disabled">Inscrições encerradas</span>' : ''}
@@ -6032,8 +6059,9 @@ function eventProgram(event) {
   async function load() {
     try {
       state.curationMode = curationModeFromUrl();
-      const [response, booksData, curationBooksData, curationBookCoversData, coursesData, contestsData, filmsData, platformsData, utilityData, activitiesData, siteCurationsData, config] = await Promise.all([
+      const [response, relationsData, booksData, curationBooksData, curationBookCoversData, coursesData, contestsData, filmsData, platformsData, utilityData, activitiesData, siteCurationsData, config] = await Promise.all([
         fetch(`${DATA_URL}?v=${Date.now()}`, { cache: 'no-store' }),
+        loadOptionalJson(RELATIONS_URL, { relacoes: [] }),
         loadOptionalJson(BOOKS_URL, { livros: [] }),
         state.curationMode ? loadOptionalJson(CURATION_BOOKS_URL, { livros: [] }) : Promise.resolve({ livros: [] }),
         state.curationMode ? loadOptionalJson(CURATION_BOOK_COVERS_URL, { capas: {} }) : Promise.resolve({ capas: {} }),
@@ -6058,6 +6086,10 @@ function eventProgram(event) {
       if (!data || !Array.isArray(data.eventos)) throw new Error('Formato inválido');
 
       state.data = data;
+      state.relationsData = relationsData && Array.isArray(relationsData.relacoes)
+        ? relationsData
+        : { relacoes: [] };
+      state.eventRelationsIndex = eventRelations?.buildIndex?.(state.relationsData) || Object.create(null);
       state.booksData = booksData && Array.isArray(booksData.livros) ? booksData : { livros: [] };
       state.curationBooksData = curationBooksData && Array.isArray(curationBooksData.livros) ? curationBooksData : { livros: [] };
       state.curationBookCoversData = curationBookCoversData && curationBookCoversData.capas && typeof curationBookCoversData.capas === 'object'
