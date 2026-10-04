@@ -1552,86 +1552,324 @@ async function fetchGeneralAnalyticsDays(env, dates) {
   return { rows, extended: mode === 'full', warnings };
 }
 
-function aggregateGeneralAnalytics(rows, extended) {
+function generalAnalyticsDimensionRows(zone, groupName, dimensionName, outputName) {
+  const rows = [];
+  for (const row of zone?.[groupName] || []) {
+    const amount = Math.max(0, Number(row?.count || 0));
+    const value = String(row?.dimensions?.[dimensionName] || '').trim() || 'Não informado';
+    if (amount > 0) rows.push({ [outputName]: value, quantidade: Math.round(amount) });
+  }
+  return rows;
+}
+
+function generalAnalyticsProbeInfo(path) {
+  let value = String(path || '/').trim() || '/';
+  try {
+    value = decodeURIComponent(value);
+  } catch {}
+  const lower = value.toLowerCase();
+
+  if (
+    lower === '/' ||
+    lower === '/index.html' ||
+    /^\/s\/[23456789abcdefghjklmnpqrstuvwxyz]{7}\/?$/i.test(value) ||
+    /^\/q\/[a-z0-9-]+\/?$/i.test(value)
+  ) {
+    return { classe: 'mural', natureza: 'Navegação do Mural' };
+  }
+
+  if (/^\/\.(?!well-known(?:\/|$))/i.test(value) || /(?:^|\/)\.env(?:\.|$)/i.test(value)) {
+    return { classe: 'varredura', natureza: 'Busca por arquivos ocultos ou segredos' };
+  }
+  if (
+    /(?:credentials|application_default_credentials|sendgrid\.env|discord\.json|\.npmrc)/i.test(value) ||
+    /(?:^|\/)(?:\.aws|\.ssh|\.config\/gcloud)(?:\/|$)/i.test(value)
+  ) {
+    return { classe: 'varredura', natureza: 'Busca por credenciais e configurações' };
+  }
+  if (
+    /(?:^|\/)(?:wp-admin|wp-content|wp-includes|phpmyadmin|administrator|actuator|cgi-bin)(?:\/|$)/i.test(value) ||
+    /(?:wp-login\.php|xmlrpc\.php|server-status)$/i.test(value)
+  ) {
+    return { classe: 'varredura', natureza: 'Busca por painéis ou software vulnerável' };
+  }
+  if (
+    /(?:^|\/)vendor\/composer(?:\/|$)/i.test(value) ||
+    /(?:composer\.(?:json|lock)|appsettings(?:\.[^/]+)?\.json|license\.txt)$/i.test(value)
+  ) {
+    return { classe: 'varredura', natureza: 'Busca por dependências ou configuração de servidor' };
+  }
+
+  return { classe: 'outro', natureza: 'Outro caminho HTML' };
+}
+
+function generalAnalyticsSnapshot(item) {
+  const zone = item?.zone;
+  if (!zone) return null;
+
+  const summary = Array.isArray(zone.resumo) && zone.resumo.length ? zone.resumo[0] : {};
+  const pageSummary = Array.isArray(zone.paginasResumo) && zone.paginasResumo.length ? zone.paginasResumo[0] : {};
+  const hasVisits = summary?.sum && Object.prototype.hasOwnProperty.call(summary.sum, 'visits');
+
+  return {
+    dia: String(item.date || ''),
+    requisicoes: Math.round(Math.max(0, Number(summary?.count || 0))),
+    visitas: Math.round(hasVisits ? Math.max(0, Number(summary.sum.visits || 0)) : 0),
+    visitas_disponiveis: hasVisits ? 1 : 0,
+    visualizacoes_pagina: Math.round(Math.max(0, Number(pageSummary?.count || 0))),
+    bytes: Math.round(Math.max(0, Number(summary?.sum?.edgeResponseBytes || 0))),
+    amostragem: Number(summary?.avg?.sampleInterval || 1) > 1 ? 1 : 0,
+    sample_interval_max: Math.max(1, Number(summary?.avg?.sampleInterval || 1)),
+    paginas: generalAnalyticsDimensionRows(zone, 'paginas', 'clientRequestPath', 'caminho'),
+    paises: generalAnalyticsDimensionRows(zone, 'paises', 'clientCountryName', 'pais'),
+    dispositivos: generalAnalyticsDimensionRows(zone, 'dispositivos', 'clientDeviceType', 'dispositivo'),
+    navegadores: generalAnalyticsDimensionRows(zone, 'navegadores', 'userAgentBrowser', 'navegador'),
+    sistemas: generalAnalyticsDimensionRows(zone, 'sistemas', 'userAgentOS', 'sistema'),
+    referencias: generalAnalyticsDimensionRows(zone, 'referencias', 'clientRefererHost', 'referencia')
+  };
+}
+
+function generalAnalyticsSnapshotHasData(snapshot) {
+  if (!snapshot) return false;
+  return Boolean(
+    snapshot.requisicoes ||
+    snapshot.visitas ||
+    snapshot.visualizacoes_pagina ||
+    snapshot.bytes ||
+    snapshot.paginas.length ||
+    snapshot.paises.length ||
+    snapshot.dispositivos.length
+  );
+}
+
+async function ensureGeneralAnalyticsHistoryTable(env) {
+  if (!env.SUGESTOES_DB) return false;
+  try {
+    await env.SUGESTOES_DB.prepare(
+      "CREATE TABLE IF NOT EXISTS analytics_geral_historico (" +
+      "dia TEXT PRIMARY KEY, " +
+      "requisicoes INTEGER NOT NULL DEFAULT 0, " +
+      "visitas INTEGER NOT NULL DEFAULT 0, " +
+      "visitas_disponiveis INTEGER NOT NULL DEFAULT 0 CHECK (visitas_disponiveis IN (0, 1)), " +
+      "visualizacoes_pagina INTEGER NOT NULL DEFAULT 0, " +
+      "bytes INTEGER NOT NULL DEFAULT 0, " +
+      "amostragem INTEGER NOT NULL DEFAULT 0 CHECK (amostragem IN (0, 1)), " +
+      "sample_interval_max REAL NOT NULL DEFAULT 1, " +
+      "paginas_json TEXT NOT NULL DEFAULT '[]', " +
+      "paises_json TEXT NOT NULL DEFAULT '[]', " +
+      "dispositivos_json TEXT NOT NULL DEFAULT '[]', " +
+      "navegadores_json TEXT NOT NULL DEFAULT '[]', " +
+      "sistemas_json TEXT NOT NULL DEFAULT '[]', " +
+      "referencias_json TEXT NOT NULL DEFAULT '[]', " +
+      "coletado_em TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP" +
+      ")"
+    ).run();
+    await env.SUGESTOES_DB.prepare(
+      'CREATE INDEX IF NOT EXISTS idx_analytics_geral_historico_dia ON analytics_geral_historico(dia)'
+    ).run();
+    return true;
+  } catch (error) {
+    console.warn('Analytics geral: não foi possível preparar o histórico.', error);
+    return false;
+  }
+}
+
+async function saveGeneralAnalyticsSnapshot(env, snapshot) {
+  if (!snapshot || !snapshot.dia) return false;
+  await env.SUGESTOES_DB.prepare(
+    'INSERT INTO analytics_geral_historico (' +
+    'dia, requisicoes, visitas, visitas_disponiveis, visualizacoes_pagina, bytes, amostragem, sample_interval_max, ' +
+    'paginas_json, paises_json, dispositivos_json, navegadores_json, sistemas_json, referencias_json, coletado_em' +
+    ') VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime(\'now\')) ' +
+    'ON CONFLICT(dia) DO UPDATE SET ' +
+    'requisicoes = excluded.requisicoes, visitas = excluded.visitas, ' +
+    'visitas_disponiveis = excluded.visitas_disponiveis, visualizacoes_pagina = excluded.visualizacoes_pagina, ' +
+    'bytes = excluded.bytes, amostragem = excluded.amostragem, sample_interval_max = excluded.sample_interval_max, ' +
+    'paginas_json = excluded.paginas_json, paises_json = excluded.paises_json, ' +
+    'dispositivos_json = excluded.dispositivos_json, navegadores_json = excluded.navegadores_json, ' +
+    'sistemas_json = excluded.sistemas_json, referencias_json = excluded.referencias_json, coletado_em = datetime(\'now\')'
+  ).bind(
+    snapshot.dia,
+    snapshot.requisicoes,
+    snapshot.visitas,
+    snapshot.visitas_disponiveis,
+    snapshot.visualizacoes_pagina,
+    snapshot.bytes,
+    snapshot.amostragem,
+    snapshot.sample_interval_max,
+    JSON.stringify(snapshot.paginas),
+    JSON.stringify(snapshot.paises),
+    JSON.stringify(snapshot.dispositivos),
+    JSON.stringify(snapshot.navegadores),
+    JSON.stringify(snapshot.sistemas),
+    JSON.stringify(snapshot.referencias)
+  ).run();
+  return true;
+}
+
+async function archiveFetchedGeneralAnalytics(env, fetched, options = {}) {
+  if (!(await ensureGeneralAnalyticsHistoryTable(env))) return 0;
+  const snapshots = (fetched?.rows || []).map(generalAnalyticsSnapshot);
+  const skipLeadingEmpty = options.skipLeadingEmpty === true;
+  let firstDataIndex = 0;
+
+  if (skipLeadingEmpty) {
+    firstDataIndex = snapshots.findIndex(generalAnalyticsSnapshotHasData);
+    if (firstDataIndex < 0) return 0;
+  }
+
+  let saved = 0;
+  for (let index = firstDataIndex; index < snapshots.length; index += 1) {
+    const snapshot = snapshots[index];
+    if (!snapshot) continue;
+    await saveGeneralAnalyticsSnapshot(env, snapshot);
+    saved += 1;
+  }
+  return saved;
+}
+
+function enumerateArchiveDates(start, end) {
+  const result = [];
+  let current = new Date(start + 'T12:00:00Z');
+  const last = new Date(end + 'T12:00:00Z');
+  while (!Number.isNaN(current.getTime()) && current <= last && result.length < 366) {
+    result.push(current.toISOString().slice(0, 10));
+    current.setUTCDate(current.getUTCDate() + 1);
+  }
+  return result;
+}
+
+function safeJsonArray(value) {
+  try {
+    const parsed = JSON.parse(String(value || '[]'));
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
+async function generalAnalyticsArchiveCount(env) {
+  if (!(await ensureGeneralAnalyticsHistoryTable(env))) return 0;
+  const row = await env.SUGESTOES_DB.prepare(
+    'SELECT COUNT(*) AS total FROM analytics_geral_historico'
+  ).first();
+  return Number(row?.total || 0);
+}
+
+async function readGeneralAnalyticsArchive(env, start, end) {
+  if (!(await ensureGeneralAnalyticsHistoryTable(env))) return [];
+  const result = await env.SUGESTOES_DB.prepare(
+    'SELECT dia, requisicoes, visitas, visitas_disponiveis, visualizacoes_pagina, bytes, amostragem, ' +
+    'sample_interval_max, paginas_json, paises_json, dispositivos_json, navegadores_json, sistemas_json, ' +
+    'referencias_json, coletado_em FROM analytics_geral_historico ' +
+    'WHERE dia >= ? AND dia <= ? ORDER BY dia'
+  ).bind(start, end).all();
+  return result.results || [];
+}
+
+function aggregateGeneralAnalyticsArchive(rows, start, end) {
+  const byDay = new Map((rows || []).map(row => [String(row.dia || ''), row]));
   const paginas = new Map();
+  const varreduras = new Map();
+  const varreduraNaturezas = new Map();
   const paises = new Map();
   const dispositivos = new Map();
   const navegadores = new Map();
   const sistemas = new Map();
   const referencias = new Map();
   const diario = [];
+
   let totalRequests = 0;
   let totalVisits = 0;
-  let visitsAvailable = false;
   let totalPageViews = 0;
   let totalBytes = 0;
+  let totalMural = 0;
+  let totalScans = 0;
   let maxSampleInterval = 1;
-  let failedDays = 0;
+  let anySampling = false;
+  let availableDays = 0;
+  let visitsAvailable = true;
 
-  for (const item of rows) {
-    const zone = item.zone;
-    if (!zone) {
-      failedDays += 1;
+  for (const date of enumerateArchiveDates(start, end)) {
+    const row = byDay.get(date);
+    if (!row) {
       diario.push({
-        dia: item.date,
+        dia: date,
         requisicoes: 0,
         visitas: 0,
         visualizacoes_pagina: 0,
+        acessos_mural: 0,
+        varreduras_provaveis: 0,
         bytes: 0,
         indisponivel: true
       });
       continue;
     }
 
-    const summary = Array.isArray(zone.resumo) && zone.resumo.length ? zone.resumo[0] : {};
-    const requests = Math.max(0, Number(summary?.count || 0));
-    const hasVisits = summary?.sum && Object.prototype.hasOwnProperty.call(summary.sum, 'visits');
-    const visits = hasVisits ? Math.max(0, Number(summary.sum.visits || 0)) : 0;
-    if (hasVisits) visitsAvailable = true;
-    const bytes = Math.max(0, Number(summary?.sum?.edgeResponseBytes || 0));
-    const sampleInterval = Math.max(1, Number(summary?.avg?.sampleInterval || 1));
+    availableDays += 1;
+    const requests = Math.max(0, Number(row.requisicoes || 0));
+    const visits = Math.max(0, Number(row.visitas || 0));
+    const pageViews = Math.max(0, Number(row.visualizacoes_pagina || 0));
+    const bytes = Math.max(0, Number(row.bytes || 0));
+    const dayPages = safeJsonArray(row.paginas_json);
+    let dayMural = 0;
+    let dayScans = 0;
 
-    const pageViewsSummary = Array.isArray(zone.paginasResumo) && zone.paginasResumo.length
-      ? zone.paginasResumo[0]
-      : {};
-    const pageViews = Math.max(0, Number(pageViewsSummary?.count || 0));
-    for (const row of zone.paginas || []) {
-      const count = Math.max(0, Number(row?.count || 0));
-      addMetric(paginas, row?.dimensions?.clientRequestPath || '/', count);
-    }
-    for (const row of zone.paises || []) {
-      addMetric(paises, row?.dimensions?.clientCountryName || 'XX', row?.count);
-    }
-    for (const row of zone.dispositivos || []) {
-      addMetric(dispositivos, row?.dimensions?.clientDeviceType || 'Não informado', row?.count);
-    }
-    if (extended) {
-      for (const row of zone.navegadores || []) {
-        addMetric(navegadores, row?.dimensions?.userAgentBrowser || 'Não informado', row?.count);
-      }
-      for (const row of zone.sistemas || []) {
-        addMetric(sistemas, row?.dimensions?.userAgentOS || 'Não informado', row?.count);
-      }
-      for (const row of zone.referencias || []) {
-        addMetric(referencias, row?.dimensions?.clientRefererHost || 'Direto / sem referência', row?.count);
+    for (const item of dayPages) {
+      const path = String(item?.caminho || '/');
+      const amount = Math.max(0, Number(item?.quantidade || 0));
+      if (!amount) continue;
+      const info = generalAnalyticsProbeInfo(path);
+      if (info.classe === 'mural') {
+        dayMural += amount;
+        addMetric(paginas, path, amount);
+      } else if (info.classe === 'varredura') {
+        dayScans += amount;
+        addMetric(varreduras, path, amount);
+        varreduraNaturezas.set(path, info.natureza);
+      } else {
+        addMetric(paginas, path, amount);
       }
     }
+
+    for (const item of safeJsonArray(row.paises_json)) addMetric(paises, item?.pais, item?.quantidade);
+    for (const item of safeJsonArray(row.dispositivos_json)) addMetric(dispositivos, item?.dispositivo, item?.quantidade);
+    for (const item of safeJsonArray(row.navegadores_json)) addMetric(navegadores, item?.navegador, item?.quantidade);
+    for (const item of safeJsonArray(row.sistemas_json)) addMetric(sistemas, item?.sistema, item?.quantidade);
+    for (const item of safeJsonArray(row.referencias_json)) addMetric(referencias, item?.referencia, item?.quantidade);
 
     totalRequests += requests;
     totalVisits += visits;
     totalPageViews += pageViews;
     totalBytes += bytes;
-    maxSampleInterval = Math.max(maxSampleInterval, sampleInterval);
+    totalMural += dayMural;
+    totalScans += dayScans;
+    anySampling = anySampling || Number(row.amostragem || 0) === 1;
+    maxSampleInterval = Math.max(maxSampleInterval, Number(row.sample_interval_max || 1));
+    visitsAvailable = visitsAvailable && Number(row.visitas_disponiveis || 0) === 1;
 
     diario.push({
-      dia: item.date,
+      dia: date,
       requisicoes: Math.round(requests),
       visitas: Math.round(visits),
       visualizacoes_pagina: Math.round(pageViews),
+      acessos_mural: Math.round(dayMural),
+      varreduras_provaveis: Math.round(dayScans),
       bytes: Math.round(bytes),
       indisponivel: false
     });
   }
+
+  if (!availableDays) visitsAvailable = false;
+
+  const scannerRows = [...varreduras.entries()]
+    .map(([caminho, quantidade]) => ({
+      caminho,
+      quantidade: Math.round(quantidade),
+      natureza: varreduraNaturezas.get(caminho) || 'Varredura provável'
+    }))
+    .sort((a, b) => b.quantidade - a.quantidade || a.caminho.localeCompare(b.caminho))
+    .slice(0, 30);
 
   return {
     resumo: {
@@ -1639,30 +1877,72 @@ function aggregateGeneralAnalytics(rows, extended) {
       visitas: Math.round(totalVisits),
       visitas_disponiveis: visitsAvailable,
       visualizacoes_pagina: Math.round(totalPageViews),
+      acessos_mural: Math.round(totalMural),
+      varreduras_provaveis: Math.round(totalScans),
+      outros_html: Math.max(0, Math.round(totalPageViews - totalMural - totalScans)),
       bytes: Math.round(totalBytes),
-      amostragem: maxSampleInterval > 1,
-      sample_interval_max: Number(maxSampleInterval.toFixed(2))
+      amostragem: anySampling,
+      sample_interval_max: Number(maxSampleInterval.toFixed(2)),
+      dias_com_dados: availableDays
     },
     diario,
     paginas: metricMapRows(paginas, 'caminho', 30),
+    varreduras: scannerRows,
     paises: metricMapRows(paises, 'pais', 30),
     dispositivos: metricMapRows(dispositivos, 'dispositivo', 20),
     navegadores: metricMapRows(navegadores, 'navegador', 20),
     sistemas: metricMapRows(sistemas, 'sistema', 20),
     referencias: metricMapRows(referencias, 'referencia', 30),
-    dias_indisponiveis: failedDays
+    dias_indisponiveis: diario.filter(row => row.indisponivel).length
   };
+}
+
+async function refreshGeneralAnalyticsArchive(env, start, end, options = {}) {
+  const config = generalAnalyticsConfig(env);
+  if (!config.configured) return { warnings: [], saved: 0 };
+
+  const today = pointMetricsDate();
+  const retentionStart = shiftIsoDate(today, -30);
+  const liveStart = start > retentionStart ? start : retentionStart;
+  const liveEnd = end < today ? end : today;
+  if (!liveStart || !liveEnd || liveStart > liveEnd) return { warnings: [], saved: 0 };
+
+  const dates = enumerateIsoDates(liveStart, liveEnd);
+  if (!dates.length) return { warnings: [], saved: 0 };
+  const fetched = await fetchGeneralAnalyticsDays(env, dates);
+  const saved = await archiveFetchedGeneralAnalytics(env, fetched, {
+    skipLeadingEmpty: options.skipLeadingEmpty !== false
+  });
+  return { warnings: fetched.warnings || [], saved };
+}
+
+async function backfillGeneralAnalyticsIfEmpty(env) {
+  if (!generalAnalyticsConfig(env).configured) return { warnings: [], saved: 0 };
+  const count = await generalAnalyticsArchiveCount(env);
+  if (count > 0) return { warnings: [], saved: 0 };
+
+  const today = pointMetricsDate();
+  return refreshGeneralAnalyticsArchive(env, shiftIsoDate(today, -30), today, {
+    skipLeadingEmpty: true
+  });
+}
+
+async function archiveRecentGeneralAnalytics(env) {
+  if (!generalAnalyticsConfig(env).configured || !env.SUGESTOES_DB) return;
+  try {
+    const today = pointMetricsDate();
+    await refreshGeneralAnalyticsArchive(env, shiftIsoDate(today, -2), shiftIsoDate(today, -1), {
+      skipLeadingEmpty: false
+    });
+  } catch (error) {
+    console.warn('Analytics geral: falha ao arquivar os últimos dias.', error);
+  }
 }
 
 async function handleGeneralAnalyticsAdmin(request, env) {
   if (!adminAuthorized(request, env)) return jsonResponse({ erro: 'Não autorizado.' }, 401);
-
-  const config = generalAnalyticsConfig(env);
-  if (!config.configured) {
-    return jsonResponse({
-      erro: 'Analytics geral ainda não configurado no Worker.',
-      codigo: 'ANALYTICS_NAO_CONFIGURADO'
-    }, 503);
+  if (!(await ensureGeneralAnalyticsHistoryTable(env))) {
+    return jsonResponse({ erro: 'Histórico de Analytics indisponível.' }, 503);
   }
 
   const url = new URL(request.url);
@@ -1671,35 +1951,65 @@ async function handleGeneralAnalyticsAdmin(request, env) {
   const start = normalizeMetricDate(url.searchParams.get('inicio'), shiftIsoDate(end, -6));
   if (!start || start > end) return jsonResponse({ erro: 'Período inválido.' }, 422);
 
-  const dates = enumerateIsoDates(start, end);
   const expectedDays = Math.floor(
     (new Date(end + 'T12:00:00Z') - new Date(start + 'T12:00:00Z')) / 86400000
   ) + 1;
-  if (expectedDays > GENERAL_ANALYTICS_MAX_DAYS || dates.length !== expectedDays) {
-    return jsonResponse({ erro: 'O período máximo para as estatísticas gerais é de 31 dias.' }, 422);
+  if (expectedDays > 366) {
+    return jsonResponse({ erro: 'O período máximo por consulta é de 366 dias.' }, 422);
   }
 
+  const warnings = [];
+  const config = generalAnalyticsConfig(env);
+
   try {
-    const fetched = await fetchGeneralAnalyticsDays(env, dates);
-    const aggregated = aggregateGeneralAnalytics(fetched.rows, fetched.extended);
-    const warnings = [...fetched.warnings];
+    const initial = await backfillGeneralAnalyticsIfEmpty(env);
+    warnings.push(...(initial.warnings || []));
+
+    if (!initial.saved) {
+      const refreshed = await refreshGeneralAnalyticsArchive(env, start, end, {
+        skipLeadingEmpty: true
+      });
+      warnings.push(...(refreshed.warnings || []));
+    }
+
+    const archived = await readGeneralAnalyticsArchive(env, start, end);
+    if (!archived.length && !config.configured) {
+      return jsonResponse({
+        erro: 'Analytics geral ainda não configurado no Worker.',
+        codigo: 'ANALYTICS_NAO_CONFIGURADO'
+      }, 503);
+    }
+
+    const aggregated = aggregateGeneralAnalyticsArchive(archived, start, end);
     if (aggregated.dias_indisponiveis) {
       warnings.push(
         aggregated.dias_indisponiveis === 1
-          ? 'Um dia do período não pôde ser consultado na Cloudflare.'
-          : aggregated.dias_indisponiveis + ' dias do período não puderam ser consultados na Cloudflare.'
+          ? 'Um dia do período não possui histórico arquivado.'
+          : aggregated.dias_indisponiveis + ' dias do período não possuem histórico arquivado.'
       );
     }
     if (aggregated.resumo.amostragem) {
       warnings.push('A Cloudflare aplicou amostragem adaptativa a parte dos dados; os valores são estimativas da própria plataforma.');
     }
+    if (aggregated.resumo.varreduras_provaveis) {
+      warnings.push('As varreduras prováveis são identificadas por caminhos de alta confiança e representam um mínimo detectado, não uma contagem completa de todos os bots.');
+    }
+
+    const historyBounds = await env.SUGESTOES_DB.prepare(
+      'SELECT MIN(dia) AS inicio, MAX(dia) AS fim FROM analytics_geral_historico'
+    ).first();
 
     return jsonResponse({
       inicio: start,
       fim: end,
-      fonte: 'Cloudflare GraphQL Analytics API',
+      fonte: 'Cloudflare GraphQL Analytics API + histórico agregado D1',
+      historico: {
+        inicio: String(historyBounds?.inicio || ''),
+        fim: String(historyBounds?.fim || ''),
+        preservado_no_d1: true
+      },
       ...aggregated,
-      avisos: warnings
+      avisos: [...new Set(warnings)]
     });
   } catch (error) {
     const code = String(error?.message || error);
@@ -2210,6 +2520,9 @@ export default {
   },
 
   async scheduled(controller, env, ctx) {
-    ctx.waitUntil(sendDueNotifications(env));
+    ctx.waitUntil(Promise.allSettled([
+      sendDueNotifications(env),
+      archiveRecentGeneralAnalytics(env)
+    ]));
   }
 };
