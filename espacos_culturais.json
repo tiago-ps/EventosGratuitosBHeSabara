@@ -49,7 +49,9 @@
       ],
       "natureza_espaco": "Centro cultural",
       "instituicao": "Centro Cultural Banco do Brasil Belo Horizonte",
-      "redes_sociais": {},
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/ccbbbh/#"
+      },
       "link": "https://ccbb.com.br/belo-horizonte"
     }
   ]
