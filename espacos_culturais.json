@@ -53,6 +53,62 @@
         "instagram": "https://www.instagram.com/ccbbbh/#"
       },
       "link": "https://ccbb.com.br/belo-horizonte"
+    },
+    {
+      "aliases": [
+        "Espaço do Conhecimento UFMG",
+        "Espaço UFMG do Conhecimento"
+      ],
+      "cidade": "Belo Horizonte",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "fonte_endereco": "https://www.ufmg.br/espacodoconhecimento/sobre-o-espaco/",
+      "google_place_id": "",
+      "id": "espaco-conhecimento-ufmg",
+      "instituicao_ids": [
+        "espaco-conhecimento-ufmg"
+      ],
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
+      "nome": "Espaço do Conhecimento UFMG",
+      "descricao": "O Espaço do Conhecimento UFMG é um espaço cultural único, que conjuga cultura, ciência e arte. Sua missão não se limita à difusão do conhecimento científico, mas também à produção de diversos saberes, trabalhando no sentido de propor linguagens que combinam, inovam e fruem conteúdos.\n\nO Espaço do Conhecimento realiza oficinas, contação de histórias, visitas mediadas, observação do céu, sessões no Planetário, lançamento de novas exposições e muito mais.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "De terça a domingo, das 10h às 17h (entrada até às 16h40)  Sábado, das 13h às 21h (entrada até às 20h40)"
+      },
+      "site": "https://www.ufmg.br/espacodoconhecimento/",
+      "imagem": "imagens/instituicoes/espaco-conhecimento-ufmg.png",
+      "imagem_fonte": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2025/12/Fachada-Digital-Divulgacao-Espaco-do-Conhecimento-UFMG-1.jpeg",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": true,
+      "prioridade": 1,
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/espacoufmg",
+        "youtube": "https://www.youtube.com/espacoufmg",
+        "tiktok": "https://www.tiktok.com/@espacoufmg"
+      },
+      "status_editorial": "revisado",
+      "tipo_espaco": "Espaço de ciência e cultura",
+      "vocacoes": [
+        "Cultura",
+        "Ciência / Divulgação científica",
+        "Formação"
+      ],
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Espaço do Conhecimento UFMG",
+      "temas": [
+        "Cultura",
+        "Ciência / Divulgação científica",
+        "Formação"
+      ],
+      "natureza_espaco": "Espaço de ciência e cultura",
+      "instituicao": "Espaço do Conhecimento UFMG",
+      "link": "https://www.ufmg.br/espacodoconhecimento/"
     }
   ]
 }
