@@ -52,6 +52,11 @@
       "redes_sociais": {
         "instagram": "https://www.instagram.com/ccbbbh/#"
       },
+      "contatos": {
+        "emails": [],
+        "telefones": []
+      },
+      "links_adicionais": [],
       "link": "https://ccbb.com.br/belo-horizonte"
     },
     {
@@ -108,6 +113,11 @@
       ],
       "natureza_espaco": "Espaço de ciência e cultura",
       "instituicao": "Espaço do Conhecimento UFMG",
+      "contatos": {
+        "emails": [],
+        "telefones": []
+      },
+      "links_adicionais": [],
       "link": "https://www.ufmg.br/espacodoconhecimento/"
     }
   ]
