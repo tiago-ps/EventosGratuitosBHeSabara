@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v184-relacoes-eventos';
+const CACHE_VERSION = 'mural-cultural-v185-espacos';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -26,11 +26,12 @@ const CORE_ASSETS = [
   './js/conteudos/concursos.js?v=3',
   './js/conteudos/filmes.js?v=10',
   './js/conteudos/utilidade-publica.js?v=5',
+  './js/conteudos/espacos.js?v=1',
   './js/conteudos/atividades-lazer.js?v=5',
   './js/curadorias-site.js?v=12',
   './js/metricas-pontos.js?v=2',
   './js/relacoes-eventos.js?v=1',
-  './js/app.js?v=144',
+  './js/app.js?v=145',
   './js/temas-visuais.js?v=14',
   './js/eventos-manuais-ui.js?v=44',
   './js/ios-install.js?v=3',
@@ -56,6 +57,7 @@ const DATA_PATHS = [
   '/filmes.json',
   '/plataformas-audiovisuais.json',
   '/utilidade-publica.json',
+  '/espacos_culturais.json',
   '/atividades-lazer.json',
   '/curadorias/index.json',
   '/configuracao-mural.json'
