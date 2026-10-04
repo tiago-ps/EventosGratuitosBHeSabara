@@ -1362,6 +1362,53 @@ function generalAnalyticsCoreQuery() {
   `;
 }
 
+function generalAnalyticsMinimalQuery() {
+  return `
+    query GeneralAnalyticsDay($zoneTag: string, $date: Date) {
+      viewer {
+        zones(filter: {zoneTag: $zoneTag}) {
+          resumo: httpRequestsAdaptiveGroups(
+            limit: 1
+            filter: {date: $date, requestSource: "eyeball"}
+          ) {
+            count
+            avg { sampleInterval }
+            sum { visits edgeResponseBytes }
+            dimensions { date }
+          }
+          paginasResumo: httpRequestsAdaptiveGroups(
+            limit: 1
+            filter: {
+              date: $date
+              requestSource: "eyeball"
+              edgeResponseContentTypeName: "html"
+              edgeResponseStatus_geq: 200
+              edgeResponseStatus_lt: 400
+            }
+          ) {
+            count
+            dimensions { date }
+          }
+          paginas: httpRequestsAdaptiveGroups(
+            limit: 100
+            orderBy: [count_DESC]
+            filter: {
+              date: $date
+              requestSource: "eyeball"
+              edgeResponseContentTypeName: "html"
+              edgeResponseStatus_geq: 200
+              edgeResponseStatus_lt: 400
+            }
+          ) {
+            count
+            dimensions { clientRequestPath }
+          }
+        }
+      }
+    }
+  `;
+}
+
 async function cloudflareGraphql(env, query, variables) {
   const config = generalAnalyticsConfig(env);
   if (!config.configured) throw new Error('analytics_nao_configurado');
@@ -1391,11 +1438,16 @@ function analyticsZoneFromPayload(payload) {
   return Array.isArray(zones) && zones.length ? zones[0] : null;
 }
 
-async function fetchGeneralAnalyticsDay(env, date, extended = true) {
+async function fetchGeneralAnalyticsDay(env, date, mode = 'full') {
   const config = generalAnalyticsConfig(env);
+  const query = mode === 'minimal'
+    ? generalAnalyticsMinimalQuery()
+    : mode === 'core'
+      ? generalAnalyticsCoreQuery()
+      : generalAnalyticsFullQuery();
   const payload = await cloudflareGraphql(
     env,
-    extended ? generalAnalyticsFullQuery() : generalAnalyticsCoreQuery(),
+    query,
     { zoneTag: config.zoneTag, date }
   );
   return {
@@ -1408,15 +1460,24 @@ async function fetchGeneralAnalyticsDay(env, date, extended = true) {
 async function fetchGeneralAnalyticsDays(env, dates) {
   if (!dates.length) return { rows: [], extended: true, warnings: [] };
 
-  let first = await fetchGeneralAnalyticsDay(env, dates[0], true);
-  let extended = Boolean(first.zone);
+  let mode = 'full';
+  let first = await fetchGeneralAnalyticsDay(env, dates[0], mode);
   const warnings = [];
 
   if (!first.zone) {
-    first = await fetchGeneralAnalyticsDay(env, dates[0], false);
-    extended = false;
+    mode = 'core';
+    first = await fetchGeneralAnalyticsDay(env, dates[0], mode);
     warnings.push('Navegador, sistema operacional e origem de referência não estão disponíveis nesta configuração da API.');
-  } else if (first.errors.length) {
+  }
+  if (!first.zone) {
+    mode = 'minimal';
+    first = await fetchGeneralAnalyticsDay(env, dates[0], mode);
+    warnings.push('Países e dispositivos também não estão disponíveis; o painel exibirá somente as métricas gerais e páginas.');
+  }
+  if (!first.zone) {
+    throw new Error('analytics_graphql_sem_dados');
+  }
+  if (first.errors.length) {
     warnings.push('A Cloudflare retornou avisos parciais para algumas dimensões analíticas.');
   }
 
@@ -1426,7 +1487,7 @@ async function fetchGeneralAnalyticsDays(env, dates) {
   for (let offset = 0; offset < pending.length; offset += batchSize) {
     const batch = pending.slice(offset, offset + batchSize);
     const results = await Promise.all(batch.map(date =>
-      fetchGeneralAnalyticsDay(env, date, extended).catch(error => ({
+      fetchGeneralAnalyticsDay(env, date, mode).catch(error => ({
         date,
         zone: null,
         errors: [{ message: String(error?.message || error) }]
@@ -1434,7 +1495,7 @@ async function fetchGeneralAnalyticsDays(env, dates) {
     ));
     rows.push(...results);
   }
-  return { rows, extended, warnings };
+  return { rows, extended: mode === 'full', warnings };
 }
 
 function aggregateGeneralAnalytics(rows, extended) {
