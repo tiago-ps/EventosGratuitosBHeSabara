@@ -1,4 +1,55 @@
 {
   "versao": 2,
-  "itens": []
+  "itens": [
+    {
+      "aliases": [
+        "CCBB Belo Horizonte",
+        "CCBB BH",
+        "Centro Cultural Banco do Brasil Belo Horizonte",
+        "Centro Cultural Banco do Brasil - CCBB Belo Horizonte",
+        "CCBB"
+      ],
+      "cidade": "Belo Horizonte",
+      "endereco": "Praça da Liberdade, 450, Funcionários, Belo Horizonte - MG",
+      "fonte_endereco": "https://ccbb.com.br/belo-horizonte/sobre-o-ccbb/",
+      "google_place_id": "",
+      "id": "ccbb-bh",
+      "instituicao_ids": [
+        "ccbb-bh"
+      ],
+      "mapa": "https://maps.app.goo.gl/Q6UrZGKEn8eCx8Kb8",
+      "nome": "CCBB Belo Horizonte",
+      "descricao": "Por meio de uma programação cultural diversa e de qualidade, o Centro Cultural Banco do Brasil abrange as mais diversas manifestações artísticas em um só lugar. Além de incentivar e democratizar o acesso à cultura, as unidades do CCBB oferecem ainda espaços de convivência e estabelecimentos que complementam a experiência no local.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "De quarta a segunda, das 10h às 22h. Fechado às terças."
+      },
+      "site": "https://ccbb.com.br/belo-horizonte",
+      "imagem": "imagens/instituicoes/ccbb-bh.png",
+      "imagem_fonte": "https://static.ccbb.com.br/site-2025/2025/09/swiper-bh4.png",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": true,
+      "prioridade": 1,
+      "status_editorial": "revisado",
+      "tipo_espaco": "Centro cultural",
+      "vocacoes": [
+        "Cultura"
+      ],
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "CCBB Belo Horizonte",
+      "temas": [
+        "Cultura"
+      ],
+      "natureza_espaco": "Centro cultural",
+      "instituicao": "Centro Cultural Banco do Brasil Belo Horizonte",
+      "link": "https://ccbb.com.br/belo-horizonte"
+    }
+  ]
 }
