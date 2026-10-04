@@ -119,6 +119,62 @@
       },
       "links_adicionais": [],
       "link": "https://www.ufmg.br/espacodoconhecimento/"
+    },
+    {
+      "id": "biblioteca-publica-infantil-e-juvenil-de-belo-horizonte",
+      "nome": "Biblioteca Pública Infantil e Juvenil de Belo Horizonte",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Espírito Santo, 593, Centro, Belo Horizonte - MG",
+      "instituicao_ids": [
+        "fundacao-municipal-cultura-bh"
+      ],
+      "aliases": [
+        "Biblioteca Pública Infantil e Juvenil de Belo Horizonte"
+      ],
+      "google_place_id": "",
+      "fonte_endereco": "https://www.instagram.com/p/Dbvum7BKouE/",
+      "mapa": "https://maps.app.goo.gl/CthGmeJQMPXaxfni6",
+      "descricao": "A Biblioteca Pública Infantil e Juvenil de Belo Horizonte (BPIJ-BH) é um lugar de encontro para pessoas de todas as idades e, sobretudo, de promoção da leitura, da escrita e de valorização da literatura em suas diversas formas de expressão.  Oferece à população empréstimo de livros e gibis, espaço para leitura local e várias atividades literárias.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "9h às 18h",
+        "quarta": "9h às 18h",
+        "quinta": "9h às 18h",
+        "sexta": "9h às 18h",
+        "sabado": "9h às 13h",
+        "domingo": "",
+        "observacao": ""
+      },
+      "site": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/biblioteca-infantil-e-juvenil",
+      "imagem": "imagens/instituicoes/biblioteca-publica-infantil-e-juvenil-de-belo-horizonte.png",
+      "imagem_fonte": "",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": true,
+      "prioridade": 0,
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/bpijbh/"
+      },
+      "contatos": {
+        "emails": [],
+        "telefones": []
+      },
+      "links_adicionais": [],
+      "status_editorial": "revisado",
+      "tipo_espaco": "Biblioteca",
+      "vocacoes": [
+        "Cultura",
+        "Formação"
+      ],
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Biblioteca Pública Infantil e Juvenil de Belo Horizonte",
+      "temas": [
+        "Cultura",
+        "Formação"
+      ],
+      "natureza_espaco": "Biblioteca",
+      "instituicao": "Fundação Municipal de Cultura de Belo Horizonte",
+      "link": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/biblioteca-infantil-e-juvenil"
     }
   ]
 }
