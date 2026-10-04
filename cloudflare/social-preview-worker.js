@@ -1184,6 +1184,32 @@ function generalAnalyticsFullQuery() {
             sum { visits edgeResponseBytes }
             dimensions { date }
           }
+          paginasResumo: httpRequestsAdaptiveGroups(
+            limit: 1
+            filter: {
+              date: $date
+              requestSource: "eyeball"
+              edgeResponseContentTypeName: "html"
+              edgeResponseStatus_geq: 200
+              edgeResponseStatus_lt: 400
+            }
+          ) {
+            count
+            dimensions { date }
+          }
+          paginasResumo: httpRequestsAdaptiveGroups(
+            limit: 1
+            filter: {
+              date: $date
+              requestSource: "eyeball"
+              edgeResponseContentTypeName: "html"
+              edgeResponseStatus_geq: 200
+              edgeResponseStatus_lt: 400
+            }
+          ) {
+            count
+            dimensions { date }
+          }
           paginas: httpRequestsAdaptiveGroups(
             limit: 100
             orderBy: [count_DESC]
@@ -1447,10 +1473,12 @@ function aggregateGeneralAnalytics(rows, extended) {
     const bytes = Math.max(0, Number(summary?.sum?.edgeResponseBytes || 0));
     const sampleInterval = Math.max(1, Number(summary?.avg?.sampleInterval || 1));
 
-    let pageViews = 0;
+    const pageViewsSummary = Array.isArray(zone.paginasResumo) && zone.paginasResumo.length
+      ? zone.paginasResumo[0]
+      : {};
+    const pageViews = Math.max(0, Number(pageViewsSummary?.count || 0));
     for (const row of zone.paginas || []) {
       const count = Math.max(0, Number(row?.count || 0));
-      pageViews += count;
       addMetric(paginas, row?.dimensions?.clientRequestPath || '/', count);
     }
     for (const row of zone.paises || []) {
