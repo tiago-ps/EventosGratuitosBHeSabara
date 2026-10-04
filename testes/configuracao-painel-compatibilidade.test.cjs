@@ -12,7 +12,8 @@ const config = JSON.parse(
 
 assert.deepEqual(config.modulos, {
   eventos: true,
-  livros: true
+  livros: true,
+  espacos: true
 });
 assert.equal(config.painel, undefined, 'A configuração enxuta do publicador central deve continuar válida.');
 
@@ -26,6 +27,7 @@ for (const [id, configKey] of [
   ['contests', 'concursos'],
   ['films', 'filmes'],
   ['utility', 'utilidade_publica'],
+  ['spaces', 'espacos'],
   ['activities', 'atividades_lazer']
 ]) {
   assert.match(appSource, new RegExp(`${id}: '${configKey}'`));
@@ -68,5 +70,6 @@ const indexSource = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 assert.match(indexSource, /class="panel-module-contests"/);
 assert.match(indexSource, /class="panel-module-activities" type="checkbox" checked/);
 assert.match(indexSource, /class="panel-module-utility" type="checkbox" checked/);
+assert.match(indexSource, /class="panel-module-spaces" type="checkbox" checked/);
 
 console.log('Testes de compatibilidade das configurações do Painel aprovados.');
