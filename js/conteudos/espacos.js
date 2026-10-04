@@ -306,7 +306,17 @@
 
     const site = helpers.safeExternalUrl(item.site);
     const map = mapUrl(item, helpers);
-    if (site || map) {
+    const socialLabels = {
+      instagram: 'Instagram',
+      facebook: 'Facebook',
+      youtube: 'YouTube',
+      tiktok: 'TikTok',
+      whatsapp: 'WhatsApp'
+    };
+    const socialLinks = Object.entries(item.redes_sociais || {})
+      .map(([key, value]) => [key, helpers.safeExternalUrl(value)])
+      .filter(([key, value]) => socialLabels[key] && value);
+    if (site || map || socialLinks.length) {
       const actions = document.createElement('div');
       actions.className = 'agenda-card-actions';
       if (site) {
@@ -326,6 +336,15 @@
         anchor.textContent = 'Como chegar';
         actions.appendChild(anchor);
       }
+      socialLinks.forEach(([key, value]) => {
+        const anchor = document.createElement('a');
+        anchor.className = 'secondary';
+        anchor.href = value;
+        anchor.target = '_blank';
+        anchor.rel = 'noopener noreferrer';
+        anchor.textContent = socialLabels[key];
+        actions.appendChild(anchor);
+      });
       body.appendChild(actions);
     }
 
