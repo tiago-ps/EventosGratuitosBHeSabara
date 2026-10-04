@@ -1170,6 +1170,8 @@ function metricMapRows(map, keyName, limit = 20) {
     .slice(0, limit);
 }
 
+// Dimensões de audiência são filtradas para os caminhos HTML reais do Mural.
+// Query strings não alteram clientRequestPath, então / cobre agenda, exploração etc.
 function generalAnalyticsFullQuery() {
   return `
     query GeneralAnalyticsDay($zoneTag: string, $date: Date) {
@@ -1219,7 +1221,10 @@ function generalAnalyticsFullQuery() {
               requestSource: "eyeball"
               edgeResponseContentTypeName: "html"
               edgeResponseStatus_geq: 200
-              edgeResponseStatus_lt: 400
+              edgeResponseStatus_lt: 400\n              OR: [
+                { clientRequestPath: "/" }
+                { clientRequestPath: "/index.html" }
+              ]
             }
           ) {
             count
@@ -1233,7 +1238,10 @@ function generalAnalyticsFullQuery() {
               requestSource: "eyeball"
               edgeResponseContentTypeName: "html"
               edgeResponseStatus_geq: 200
-              edgeResponseStatus_lt: 400
+              edgeResponseStatus_lt: 400\n              OR: [
+                { clientRequestPath: "/" }
+                { clientRequestPath: "/index.html" }
+              ]
             }
           ) {
             count
@@ -1247,7 +1255,10 @@ function generalAnalyticsFullQuery() {
               requestSource: "eyeball"
               edgeResponseContentTypeName: "html"
               edgeResponseStatus_geq: 200
-              edgeResponseStatus_lt: 400
+              edgeResponseStatus_lt: 400\n              OR: [
+                { clientRequestPath: "/" }
+                { clientRequestPath: "/index.html" }
+              ]
             }
           ) {
             count
@@ -1261,7 +1272,10 @@ function generalAnalyticsFullQuery() {
               requestSource: "eyeball"
               edgeResponseContentTypeName: "html"
               edgeResponseStatus_geq: 200
-              edgeResponseStatus_lt: 400
+              edgeResponseStatus_lt: 400\n              OR: [
+                { clientRequestPath: "/" }
+                { clientRequestPath: "/index.html" }
+              ]
             }
           ) {
             count
@@ -1275,7 +1289,10 @@ function generalAnalyticsFullQuery() {
               requestSource: "eyeball"
               edgeResponseContentTypeName: "html"
               edgeResponseStatus_geq: 200
-              edgeResponseStatus_lt: 400
+              edgeResponseStatus_lt: 400\n              OR: [
+                { clientRequestPath: "/" }
+                { clientRequestPath: "/index.html" }
+              ]
             }
           ) {
             count
@@ -1336,7 +1353,10 @@ function generalAnalyticsCoreQuery() {
               requestSource: "eyeball"
               edgeResponseContentTypeName: "html"
               edgeResponseStatus_geq: 200
-              edgeResponseStatus_lt: 400
+              edgeResponseStatus_lt: 400\n              OR: [
+                { clientRequestPath: "/" }
+                { clientRequestPath: "/index.html" }
+              ]
             }
           ) {
             count
@@ -1350,7 +1370,10 @@ function generalAnalyticsCoreQuery() {
               requestSource: "eyeball"
               edgeResponseContentTypeName: "html"
               edgeResponseStatus_geq: 200
-              edgeResponseStatus_lt: 400
+              edgeResponseStatus_lt: 400\n              OR: [
+                { clientRequestPath: "/" }
+                { clientRequestPath: "/index.html" }
+              ]
             }
           ) {
             count
