@@ -21,6 +21,8 @@ Configure no Worker:
 
 O token não deve ser incluído no repositório.
 
+Para o token, use uma permissão de leitura da Analytics API e restrinja os recursos à conta/zona necessária. A configuração recomendada pela Cloudflare para a GraphQL Analytics API é **Account → Account Analytics → Read**, com os recursos de zona limitados ao domínio que será consultado.
+
 ## Endpoint
 
 `GET /api/analytics-geral/admin?inicio=AAAA-MM-DD&fim=AAAA-MM-DD`
