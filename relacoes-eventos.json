@@ -1,0 +1,1916 @@
+{
+  "versao": 1,
+  "relacoes": [
+    {
+      "evento_id": "ccbb-bh-exposicao-permanente",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "ccbb-bh",
+        "nome": "CCBB Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ccbb-bh-exposicao-permanente",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "ccbb-bh",
+        "nome": "Centro Cultural Banco do Brasil Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ccbb-bh-joaquin-torres-garcia-150-anos",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "ccbb-bh",
+        "nome": "CCBB Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ccbb-bh-joaquin-torres-garcia-150-anos",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "espaco_interno",
+        "id": "ccbb-bh-3-piso",
+        "nome": "3º piso"
+      },
+      "equipamento": {
+        "id": "ccbb-bh",
+        "nome": "CCBB Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ccbb-bh-joaquin-torres-garcia-150-anos",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "ccbb-bh",
+        "nome": "Centro Cultural Banco do Brasil Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ccbb-bh-marcelo-xavier-asa-de-papel",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "espaco_interno",
+        "id": "ccbb-bh-galerias-do-terreo",
+        "nome": "Galerias do Térreo"
+      },
+      "equipamento": {
+        "id": "ccbb-bh",
+        "nome": "CCBB Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ccbb-bh-marcelo-xavier-asa-de-papel",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "ccbb-bh",
+        "nome": "Centro Cultural Banco do Brasil Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ccbb-bh-nos-ou-ninguem-podia-ouvir-os-olhos-dela",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "espaco_interno",
+        "id": "ccbb-bh-teatro-ii",
+        "nome": "Teatro II"
+      },
+      "equipamento": {
+        "id": "ccbb-bh",
+        "nome": "CCBB Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ccbb-bh-nos-ou-ninguem-podia-ouvir-os-olhos-dela",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "ccbb-bh",
+        "nome": "Centro Cultural Banco do Brasil Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-arena-atelie-livre-52e864fa5b",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-salgado-filho",
+        "nome": "Centro Cultural Salgado Filho"
+      }
+    },
+    {
+      "evento_id": "ela-arena-atelie-livre-52e864fa5b",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-arena-atelie-livre-68965bd217",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "nufac",
+        "nome": "Núcleo de Formação e Criação Artística e Cultural — NUFAC"
+      }
+    },
+    {
+      "evento_id": "ela-arena-atelie-livre-68965bd217",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-arena-atelie-livre-fcace676d6",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "nufac",
+        "nome": "Núcleo de Formação e Criação Artística e Cultural — NUFAC"
+      }
+    },
+    {
+      "evento_id": "ela-arena-atelie-livre-fcace676d6",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-arena-dj-diversidade-na-pista-0a1fc71968",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "nufac",
+        "nome": "Núcleo de Formação e Criação Artística e Cultural — NUFAC"
+      }
+    },
+    {
+      "evento_id": "ela-arena-dj-diversidade-na-pista-0a1fc71968",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-atelie-bastidores-das-artes-performance-figurino-e-curadoria-049cd9fa95",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "nufac",
+        "nome": "Núcleo de Formação e Criação Artística e Cultural — NUFAC"
+      }
+    },
+    {
+      "evento_id": "ela-atelie-bastidores-das-artes-performance-figurino-e-curadoria-049cd9fa95",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-atelie-de-design-popular-74727c50cc",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "lagoa-do-nado",
+        "nome": "Centro de Referência da Cultura Popular e Tradicional Lagoa do Nado"
+      }
+    },
+    {
+      "evento_id": "ela-atelie-de-design-popular-74727c50cc",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-aventuras-de-infancia-vamos-brincar-de-inventar-com-as-artes-visuais-301eef8344",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-vila-fatima",
+        "nome": "Centro Cultural Vila Fátima"
+      }
+    },
+    {
+      "evento_id": "ela-aventuras-de-infancia-vamos-brincar-de-inventar-com-as-artes-visuais-301eef8344",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-aventuras-de-infancia-vamos-brincar-de-inventar-com-as-artes-visuais-7ab0087345",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-vila-santa-rita",
+        "nome": "Centro Cultural Vila Santa Rita"
+      }
+    },
+    {
+      "evento_id": "ela-aventuras-de-infancia-vamos-brincar-de-inventar-com-as-artes-visuais-7ab0087345",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-aventuras-de-infancia-vamos-brincar-de-inventar-com-as-artes-visuais-b6dc0ebb12",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-pampulha",
+        "nome": "Centro Cultural Pampulha"
+      }
+    },
+    {
+      "evento_id": "ela-aventuras-de-infancia-vamos-brincar-de-inventar-com-as-artes-visuais-b6dc0ebb12",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-beaba-do-violao-3b084583e3",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-vila-santa-rita",
+        "nome": "Centro Cultural Vila Santa Rita"
+      }
+    },
+    {
+      "evento_id": "ela-beaba-do-violao-3b084583e3",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-beaba-do-violao-8e196d89cb",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-urucuia",
+        "nome": "Centro Cultural Urucuia"
+      }
+    },
+    {
+      "evento_id": "ela-beaba-do-violao-8e196d89cb",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-boi-livre-3c9a386eae",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "nufac",
+        "nome": "Núcleo de Formação e Criação Artística e Cultural — NUFAC"
+      }
+    },
+    {
+      "evento_id": "ela-boi-livre-3c9a386eae",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-brincadeiras-circenses-538c41367d",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-sao-bernardo",
+        "nome": "Centro Cultural São Bernardo"
+      }
+    },
+    {
+      "evento_id": "ela-brincadeiras-circenses-538c41367d",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-brincadeiras-circenses-9c5f12c97a",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-salgado-filho",
+        "nome": "Centro Cultural Salgado Filho"
+      }
+    },
+    {
+      "evento_id": "ela-brincadeiras-circenses-9c5f12c97a",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-brincadeiras-circenses-praticas-e-criacoes-juvenis-7c47756cce",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-usina-de-cultura",
+        "nome": "Centro Cultural Usina de Cultura"
+      }
+    },
+    {
+      "evento_id": "ela-brincadeiras-circenses-praticas-e-criacoes-juvenis-7c47756cce",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-canto-voz-e-expressao-4f91627676",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "nufac",
+        "nome": "Núcleo de Formação e Criação Artística e Cultural — NUFAC"
+      }
+    },
+    {
+      "evento_id": "ela-canto-voz-e-expressao-4f91627676",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-canto-voz-e-expressao-b9bb05c243",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-sao-geraldo",
+        "nome": "Centro Cultural São Geraldo"
+      }
+    },
+    {
+      "evento_id": "ela-canto-voz-e-expressao-b9bb05c243",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-carnaval-os-bastidores-da-festa-1eb05ac8ec",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "nufac",
+        "nome": "Núcleo de Formação e Criação Artística e Cultural — NUFAC"
+      }
+    },
+    {
+      "evento_id": "ela-carnaval-os-bastidores-da-festa-1eb05ac8ec",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-ciclo-de-poeticas-modulo-residencia-ii-58f9b86345",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "nufac",
+        "nome": "Núcleo de Formação e Criação Artística e Cultural — NUFAC"
+      }
+    },
+    {
+      "evento_id": "ela-ciclo-de-poeticas-modulo-residencia-ii-58f9b86345",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-ciclo-de-poeticas-modulo-residencia-ii-e74468cfb7",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "nufac",
+        "nome": "Núcleo de Formação e Criação Artística e Cultural — NUFAC"
+      }
+    },
+    {
+      "evento_id": "ela-ciclo-de-poeticas-modulo-residencia-ii-e74468cfb7",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-ciclo-expansao-modulo-corpo-52b53e6cfb",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "nufac",
+        "nome": "Núcleo de Formação e Criação Artística e Cultural — NUFAC"
+      }
+    },
+    {
+      "evento_id": "ela-ciclo-expansao-modulo-corpo-52b53e6cfb",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-ciclo-expansao-modulo-corpo-787ea7d17f",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "nufac",
+        "nome": "Núcleo de Formação e Criação Artística e Cultural — NUFAC"
+      }
+    },
+    {
+      "evento_id": "ela-ciclo-expansao-modulo-corpo-787ea7d17f",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-costurando-ideias-costura-criativa-e-invencoes-35e148f8b2",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-zilah-sposito",
+        "nome": "Centro Cultural Zilah Spósito"
+      }
+    },
+    {
+      "evento_id": "ela-costurando-ideias-costura-criativa-e-invencoes-35e148f8b2",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-costurando-ideias-costura-criativa-e-invencoes-6edf9a425f",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-bairro-das-industrias",
+        "nome": "Centro Cultural Bairro das Indústrias"
+      }
+    },
+    {
+      "evento_id": "ela-costurando-ideias-costura-criativa-e-invencoes-6edf9a425f",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-costurando-ideias-costura-criativa-e-invencoes-efc01ba2f7",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-jardim-guanabara",
+        "nome": "Centro Cultural Jardim Guanabara"
+      }
+    },
+    {
+      "evento_id": "ela-costurando-ideias-costura-criativa-e-invencoes-efc01ba2f7",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-criacao-e-producao-de-eventos-culturais-8b324801ac",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-liberalino-alves-de-oliveira",
+        "nome": "Centro Cultural Liberalino Alves de Oliveira"
+      }
+    },
+    {
+      "evento_id": "ela-criacao-e-producao-de-eventos-culturais-8b324801ac",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-danca-para-criancas-3dc24f22a7",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-vila-santa-rita",
+        "nome": "Centro Cultural Vila Santa Rita"
+      }
+    },
+    {
+      "evento_id": "ela-danca-para-criancas-3dc24f22a7",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-danca-para-criancas-9af8c11c87",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-lindeia-regina",
+        "nome": "Centro Cultural Lindeia Regina"
+      }
+    },
+    {
+      "evento_id": "ela-danca-para-criancas-9af8c11c87",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-danca-para-criancas-c5e700d124",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-bairro-das-industrias",
+        "nome": "Centro Cultural Bairro das Indústrias"
+      }
+    },
+    {
+      "evento_id": "ela-danca-para-criancas-c5e700d124",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-descobrindo-a-palhacaria-335b2e03d1",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "nufac",
+        "nome": "Núcleo de Formação e Criação Artística e Cultural — NUFAC"
+      }
+    },
+    {
+      "evento_id": "ela-descobrindo-a-palhacaria-335b2e03d1",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-desenho-de-observacao-c6927fb23d",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "nufac",
+        "nome": "Núcleo de Formação e Criação Artística e Cultural — NUFAC"
+      }
+    },
+    {
+      "evento_id": "ela-desenho-de-observacao-c6927fb23d",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-elaboracao-de-projetos-culturais-0563dc9854",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-pampulha",
+        "nome": "Centro Cultural Pampulha"
+      }
+    },
+    {
+      "evento_id": "ela-elaboracao-de-projetos-culturais-0563dc9854",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-elaboracao-de-projetos-culturais-b3d7f38056",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-jardim-guanabara",
+        "nome": "Centro Cultural Jardim Guanabara"
+      }
+    },
+    {
+      "evento_id": "ela-elaboracao-de-projetos-culturais-b3d7f38056",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-elaboracao-de-projetos-culturais-f008f5558f",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-sao-bernardo",
+        "nome": "Centro Cultural São Bernardo"
+      }
+    },
+    {
+      "evento_id": "ela-elaboracao-de-projetos-culturais-f008f5558f",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-encontros-para-dancar-413a0b6aad",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-liberalino-alves-de-oliveira",
+        "nome": "Centro Cultural Liberalino Alves de Oliveira"
+      }
+    },
+    {
+      "evento_id": "ela-encontros-para-dancar-413a0b6aad",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-encontros-para-dancar-530cc07633",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-urucuia",
+        "nome": "Centro Cultural Urucuia"
+      }
+    },
+    {
+      "evento_id": "ela-encontros-para-dancar-530cc07633",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-encontros-para-dancar-em-dialogo-com-saberes-ancestrais-2b3263ef42",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-sao-bernardo",
+        "nome": "Centro Cultural São Bernardo"
+      }
+    },
+    {
+      "evento_id": "ela-encontros-para-dancar-em-dialogo-com-saberes-ancestrais-2b3263ef42",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-encontros-para-dancar-f4bb1e2327",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-vila-marcola",
+        "nome": "Centro Cultural Vila Marçola"
+      }
+    },
+    {
+      "evento_id": "ela-encontros-para-dancar-f4bb1e2327",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-encontros-para-ver-e-criar-filmes-052b55f529",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-vila-marcola",
+        "nome": "Centro Cultural Vila Marçola"
+      }
+    },
+    {
+      "evento_id": "ela-encontros-para-ver-e-criar-filmes-052b55f529",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-encontros-para-ver-imagens-60260a2cbf",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-vila-marcola",
+        "nome": "Centro Cultural Vila Marçola"
+      }
+    },
+    {
+      "evento_id": "ela-encontros-para-ver-imagens-60260a2cbf",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-fotografia-e-outras-janelas-para-ver-o-mundo-ebab07d61e",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-zilah-sposito",
+        "nome": "Centro Cultural Zilah Spósito"
+      }
+    },
+    {
+      "evento_id": "ela-fotografia-e-outras-janelas-para-ver-o-mundo-ebab07d61e",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-gestao-e-producao-cultural-praticas-inventivas-no-fazer-artistico-07d9bdf7a7",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-vila-marcola",
+        "nome": "Centro Cultural Vila Marçola"
+      }
+    },
+    {
+      "evento_id": "ela-gestao-e-producao-cultural-praticas-inventivas-no-fazer-artistico-07d9bdf7a7",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-grafite-e-bom-demais-stencil-lambes-pixo-arte-urbana-909724bef2",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-venda-nova",
+        "nome": "Centro Cultural Venda Nova"
+      }
+    },
+    {
+      "evento_id": "ela-grafite-e-bom-demais-stencil-lambes-pixo-arte-urbana-909724bef2",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-grafite-e-bom-demais-stencil-lambes-pixo-arte-urbana-d47b745671",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-lindeia-regina",
+        "nome": "Centro Cultural Lindeia Regina"
+      }
+    },
+    {
+      "evento_id": "ela-grafite-e-bom-demais-stencil-lambes-pixo-arte-urbana-d47b745671",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-grafite-e-bom-demais-stencil-lambes-pixo-arte-urbana-e91a057086",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-vila-marcola",
+        "nome": "Centro Cultural Vila Marçola"
+      }
+    },
+    {
+      "evento_id": "ela-grafite-e-bom-demais-stencil-lambes-pixo-arte-urbana-e91a057086",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-laboratorio-com-linhas-e-agulhas-470610ecc7",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-urucuia",
+        "nome": "Centro Cultural Urucuia"
+      }
+    },
+    {
+      "evento_id": "ela-laboratorio-com-linhas-e-agulhas-470610ecc7",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-laboratorio-com-linhas-e-agulhas-5caca04e80",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-alto-vera-cruz",
+        "nome": "Centro Cultural Alto Vera Cruz"
+      }
+    },
+    {
+      "evento_id": "ela-laboratorio-com-linhas-e-agulhas-5caca04e80",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-laboratorio-com-linhas-e-agulhas-5f80aa6249",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-vila-fatima",
+        "nome": "Centro Cultural Vila Fátima"
+      }
+    },
+    {
+      "evento_id": "ela-laboratorio-com-linhas-e-agulhas-5f80aa6249",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-laboratorio-com-linhas-e-agulhas-fba5d83c6e",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "cras-conjunto-paulo-vi",
+        "nome": "CRAS Conjunto Paulo VI"
+      }
+    },
+    {
+      "evento_id": "ela-laboratorio-com-linhas-e-agulhas-fba5d83c6e",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-laboratorio-de-pesquisa-saberes-de-povos-originarios-6f89e3a592",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "nufac",
+        "nome": "Núcleo de Formação e Criação Artística e Cultural — NUFAC"
+      }
+    },
+    {
+      "evento_id": "ela-laboratorio-de-pesquisa-saberes-de-povos-originarios-6f89e3a592",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-laboratorio-de-producao-cultural-do-criar-ao-fazer-acontecer-23d1407ea1",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "nufac",
+        "nome": "Núcleo de Formação e Criação Artística e Cultural — NUFAC"
+      }
+    },
+    {
+      "evento_id": "ela-laboratorio-de-producao-cultural-do-criar-ao-fazer-acontecer-23d1407ea1",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-literatura-e-oralidade-popular-968a50341d",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "nufac",
+        "nome": "Núcleo de Formação e Criação Artística e Cultural — NUFAC"
+      }
+    },
+    {
+      "evento_id": "ela-literatura-e-oralidade-popular-968a50341d",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-musica-percussiva-de-rua-4d8887bc14",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-usina-de-cultura",
+        "nome": "Centro Cultural Usina de Cultura"
+      }
+    },
+    {
+      "evento_id": "ela-musica-percussiva-de-rua-4d8887bc14",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-o-funk-e-a-cidade-do-batuque-tamborzao-ao-batidao-corpo-e-ancestralidade-3b24223326",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "nufac",
+        "nome": "Núcleo de Formação e Criação Artística e Cultural — NUFAC"
+      }
+    },
+    {
+      "evento_id": "ela-o-funk-e-a-cidade-do-batuque-tamborzao-ao-batidao-corpo-e-ancestralidade-3b24223326",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-oficina-basica-de-circo-996ad91965",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-de-referencia-das-juventudes",
+        "nome": "Centro de Referência das Juventudes"
+      }
+    },
+    {
+      "evento_id": "ela-oficina-basica-de-circo-996ad91965",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-orquestra-transversal-vozes-instrumentos-samples-beats-e-som-d3862c5cae",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "nufac",
+        "nome": "Núcleo de Formação e Criação Artística e Cultural — NUFAC"
+      }
+    },
+    {
+      "evento_id": "ela-orquestra-transversal-vozes-instrumentos-samples-beats-e-som-d3862c5cae",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-programa-2026-2",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-quem-cuida-da-arte-os-bastidores-da-curadoria-56806ceda0",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "cine-santa-tereza",
+        "nome": "Cine Santa Tereza"
+      }
+    },
+    {
+      "evento_id": "ela-quem-cuida-da-arte-os-bastidores-da-curadoria-56806ceda0",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-tirando-as-ideias-das-gavetas-laboratorio-de-elaboracao-de-projetos-culturais-b0a44ba65b",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "nufac",
+        "nome": "Núcleo de Formação e Criação Artística e Cultural — NUFAC"
+      }
+    },
+    {
+      "evento_id": "ela-tirando-as-ideias-das-gavetas-laboratorio-de-elaboracao-de-projetos-culturais-b0a44ba65b",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-transe-da-tranca-aula-aberta-de-artes-visuais-4a55564c94",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-salgado-filho",
+        "nome": "Centro Cultural Salgado Filho"
+      }
+    },
+    {
+      "evento_id": "ela-transe-da-tranca-aula-aberta-de-artes-visuais-4a55564c94",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-cultural-alto-vera-cruz",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-alto-vera-cruz",
+        "nome": "Centro Cultural Alto Vera Cruz"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-cultural-alto-vera-cruz",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-cultural-bairro-das-industrias",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-bairro-das-industrias",
+        "nome": "Centro Cultural Bairro das Indústrias"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-cultural-bairro-das-industrias",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-cultural-jardim-guanabara",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-jardim-guanabara",
+        "nome": "Centro Cultural Jardim Guanabara"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-cultural-jardim-guanabara",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-cultural-liberalino-alves-de-oliveira",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-liberalino-alves-de-oliveira",
+        "nome": "Centro Cultural Liberalino Alves de Oliveira"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-cultural-liberalino-alves-de-oliveira",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-cultural-lindeia-regina",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-lindeia-regina",
+        "nome": "Centro Cultural Lindeia Regina"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-cultural-lindeia-regina",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-cultural-padre-eustaquio",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-padre-eustaquio",
+        "nome": "Centro Cultural Padre Eustáquio"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-cultural-padre-eustaquio",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-cultural-pampulha",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-pampulha",
+        "nome": "Centro Cultural Pampulha"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-cultural-pampulha",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-cultural-salgado-filho",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-salgado-filho",
+        "nome": "Centro Cultural Salgado Filho"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-cultural-salgado-filho",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-cultural-sao-bernardo",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-sao-bernardo",
+        "nome": "Centro Cultural São Bernardo"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-cultural-sao-bernardo",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-cultural-sao-geraldo",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-sao-geraldo",
+        "nome": "Centro Cultural São Geraldo"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-cultural-sao-geraldo",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-cultural-urucuia",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-urucuia",
+        "nome": "Centro Cultural Urucuia"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-cultural-urucuia",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-cultural-usina-de-cultura",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-usina-de-cultura",
+        "nome": "Centro Cultural Usina de Cultura"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-cultural-usina-de-cultura",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-cultural-venda-nova",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-venda-nova",
+        "nome": "Centro Cultural Venda Nova"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-cultural-venda-nova",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-cultural-vila-fatima",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-vila-fatima",
+        "nome": "Centro Cultural Vila Fátima"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-cultural-vila-fatima",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-cultural-vila-marcola",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-vila-marcola",
+        "nome": "Centro Cultural Vila Marçola"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-cultural-vila-marcola",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-cultural-vila-santa-rita",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-vila-santa-rita",
+        "nome": "Centro Cultural Vila Santa Rita"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-cultural-vila-santa-rita",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-cultural-zilah-sposito",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-zilah-sposito",
+        "nome": "Centro Cultural Zilah Spósito"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-cultural-zilah-sposito",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-de-referencia-da-cultura-popular-e-tradicional-lagoa-do-nado",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "lagoa-do-nado",
+        "nome": "Centro de Referência da Cultura Popular e Tradicional Lagoa do Nado"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-de-referencia-da-cultura-popular-e-tradicional-lagoa-do-nado",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-de-referencia-das-juventudes",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-de-referencia-das-juventudes",
+        "nome": "Centro de Referência das Juventudes"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-de-referencia-das-juventudes",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-de-referencia-de-assistencia-social-cras-conjunto-paulo-vi",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "cras-conjunto-paulo-vi",
+        "nome": "CRAS Conjunto Paulo VI"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-centro-de-referencia-de-assistencia-social-cras-conjunto-paulo-vi",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-cine-santa-tereza",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "cine-santa-tereza",
+        "nome": "Cine Santa Tereza"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-cine-santa-tereza",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-nucleo-de-formacao-e-criacao-artistica-e-cultural-nufac",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "nufac",
+        "nome": "Núcleo de Formação e Criação Artística e Cultural — NUFAC"
+      }
+    },
+    {
+      "evento_id": "ela-unidade-nucleo-de-formacao-e-criacao-artistica-e-cultural-nufac",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "ela-vamos-brincar-de-inventar-um-filme-747e60043f",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-bairro-das-industrias",
+        "nome": "Centro Cultural Bairro das Indústrias"
+      }
+    },
+    {
+      "evento_id": "ela-vamos-brincar-de-inventar-um-filme-747e60043f",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "fcs-wp-37639",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "espaco_interno",
+        "id": "palacio-das-artes-cine-humberto-mauro",
+        "nome": "Cine Humberto Mauro"
+      },
+      "equipamento": {
+        "id": "palacio-das-artes",
+        "nome": "Palácio das Artes"
+      }
+    },
+    {
+      "evento_id": "fcs-wp-37639",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fcs",
+        "nome": "Fundação Clóvis Salgado"
+      }
+    },
+    {
+      "evento_id": "fcs-wp-37664",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "espaco_interno",
+        "id": "palacio-das-artes-cine-humberto-mauro",
+        "nome": "Cine Humberto Mauro"
+      },
+      "equipamento": {
+        "id": "palacio-das-artes",
+        "nome": "Palácio das Artes"
+      }
+    },
+    {
+      "evento_id": "fcs-wp-37664",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fcs",
+        "nome": "Fundação Clóvis Salgado"
+      }
+    },
+    {
+      "evento_id": "fcs-wp-37666",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "espaco_interno",
+        "id": "palacio-das-artes-cine-humberto-mauro",
+        "nome": "Cine Humberto Mauro"
+      },
+      "equipamento": {
+        "id": "palacio-das-artes",
+        "nome": "Palácio das Artes"
+      }
+    },
+    {
+      "evento_id": "fcs-wp-37666",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fcs",
+        "nome": "Fundação Clóvis Salgado"
+      }
+    },
+    {
+      "evento_id": "manual-bloco-da-lagoa-cortejo-teatral-2026-09-05-2026-09-05",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "lagoa-do-nado",
+        "nome": "Centro de Referência da Cultura Popular e Tradicional Lagoa do Nado"
+      }
+    },
+    {
+      "evento_id": "manual-bloco-da-lagoa-cortejo-teatral-2026-09-05-2026-09-05",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "manual-concertos-peter-lund-coral-puc-minas-2026-12-13-2026-12-13",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "espaco_interno",
+        "id": "auditorio-do-museu-puc-minas",
+        "nome": "Auditório do Museu PUC Minas"
+      },
+      "equipamento": {
+        "id": "museu-puc-minas",
+        "nome": "Museu de Ciências Naturais PUC Minas"
+      }
+    },
+    {
+      "evento_id": "manual-concertos-peter-lund-coral-puc-minas-2026-12-13-2026-12-13",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "puc-minas",
+        "nome": "Pontifícia Universidade Católica de Minas Gerais"
+      }
+    },
+    {
+      "evento_id": "manual-concertos-peter-lund-grupo-geo-2026-11-08-2026-11-08",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "espaco_interno",
+        "id": "auditorio-do-museu-puc-minas",
+        "nome": "Auditório do Museu PUC Minas"
+      },
+      "equipamento": {
+        "id": "museu-puc-minas",
+        "nome": "Museu de Ciências Naturais PUC Minas"
+      }
+    },
+    {
+      "evento_id": "manual-concertos-peter-lund-grupo-geo-2026-11-08-2026-11-08",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "puc-minas",
+        "nome": "Pontifícia Universidade Católica de Minas Gerais"
+      }
+    },
+    {
+      "evento_id": "manual-concertos-peter-lund-grupo-musical-ufmg-2026-10-04-2026-10-04",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "espaco_interno",
+        "id": "auditorio-do-museu-puc-minas",
+        "nome": "Auditório do Museu PUC Minas"
+      },
+      "equipamento": {
+        "id": "museu-puc-minas",
+        "nome": "Museu de Ciências Naturais PUC Minas"
+      }
+    },
+    {
+      "evento_id": "manual-concertos-peter-lund-grupo-musical-ufmg-2026-10-04-2026-10-04",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "puc-minas",
+        "nome": "Pontifícia Universidade Católica de Minas Gerais"
+      }
+    },
+    {
+      "evento_id": "manual-concertos-peter-lund-grupo-vocal-andrea-pelliccione-2026-10-25-2026-10-25",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "espaco_interno",
+        "id": "auditorio-do-museu-puc-minas",
+        "nome": "Auditório do Museu PUC Minas"
+      },
+      "equipamento": {
+        "id": "museu-puc-minas",
+        "nome": "Museu de Ciências Naturais PUC Minas"
+      }
+    },
+    {
+      "evento_id": "manual-concertos-peter-lund-grupo-vocal-andrea-pelliccione-2026-10-25-2026-10-25",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "puc-minas",
+        "nome": "Pontifícia Universidade Católica de Minas Gerais"
+      }
+    },
+    {
+      "evento_id": "manual-concertos-peter-lund-orquestra-sonoro-despertar-2026-11-29-2026-11-29",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "espaco_interno",
+        "id": "auditorio-do-museu-puc-minas",
+        "nome": "Auditório do Museu PUC Minas"
+      },
+      "equipamento": {
+        "id": "museu-puc-minas",
+        "nome": "Museu de Ciências Naturais PUC Minas"
+      }
+    },
+    {
+      "evento_id": "manual-concertos-peter-lund-orquestra-sonoro-despertar-2026-11-29-2026-11-29",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "puc-minas",
+        "nome": "Pontifícia Universidade Católica de Minas Gerais"
+      }
+    },
+    {
+      "evento_id": "manual-concertos-peter-lund-recital-infantil-coracao-e-mente-2026-10-18-2026-10-18",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "espaco_interno",
+        "id": "auditorio-do-museu-puc-minas",
+        "nome": "Auditório do Museu PUC Minas"
+      },
+      "equipamento": {
+        "id": "museu-puc-minas",
+        "nome": "Museu de Ciências Naturais PUC Minas"
+      }
+    },
+    {
+      "evento_id": "manual-concertos-peter-lund-recital-infantil-coracao-e-mente-2026-10-18-2026-10-18",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "puc-minas",
+        "nome": "Pontifícia Universidade Católica de Minas Gerais"
+      }
+    },
+    {
+      "evento_id": "manual-ela-praticas-percussivas-ritmos-brasileiros-2157c0200a-2026-08-24",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-padre-eustaquio",
+        "nome": "Centro Cultural Padre Eustáquio"
+      }
+    },
+    {
+      "evento_id": "manual-ela-praticas-percussivas-ritmos-brasileiros-2157c0200a-2026-08-24",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "manual-ela-roda-de-choro-13ef75b94c-2026-08-19",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-padre-eustaquio",
+        "nome": "Centro Cultural Padre Eustáquio"
+      }
+    },
+    {
+      "evento_id": "manual-ela-roda-de-choro-13ef75b94c-2026-08-19",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "manual-ela-voa-palavra-elaboracao-de-projetos-culturais-em-literatura-e-leitura-d3a8ca75d9-2026-09-15",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-padre-eustaquio",
+        "nome": "Centro Cultural Padre Eustáquio"
+      }
+    },
+    {
+      "evento_id": "manual-ela-voa-palavra-elaboracao-de-projetos-culturais-em-literatura-e-leitura-d3a8ca75d9-2026-09-15",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "manual-fiq-bh-2026-2026-11-04-2026-11-04",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "minascentro",
+        "nome": "Minascentro"
+      }
+    },
+    {
+      "evento_id": "manual-fiq-bh-2026-2026-11-04-2026-11-04",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "fundacao-municipal-cultura-bh",
+        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "manual-manual-instagram-17933113986370029-2026-10-12",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "ccbb-bh",
+        "nome": "CCBB Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "manual-manual-instagram-17933113986370029-2026-10-12",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "ccbb-bh",
+        "nome": "Centro Cultural Banco do Brasil Belo Horizonte"
+      }
+    },
+    {
+      "evento_id": "manual-oficinas-centro-cultural-santa-ines-2026-08-03",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "centro-cultural-santa-ines",
+        "nome": "Centro Cultural Santa Inês"
+      }
+    },
+    {
+      "evento_id": "manual-oficinas-centro-cultural-santa-ines-2026-08-03",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "associacao-social-paroquia-santa-ines",
+        "nome": "Associação Social Paróquia Santa Inês"
+      }
+    },
+    {
+      "evento_id": "manual-programa-conjunto-de-conscientizacao-instrucao-e-combate-a-violencia-domestica-2026-01-01",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "equipamento_cultural",
+        "id": "ejef-escola-judicial-desembargador-edesio-fernandes",
+        "nome": "EJEF — Escola Judicial Desembargador Edésio Fernandes"
+      }
+    }
+  ]
+}
