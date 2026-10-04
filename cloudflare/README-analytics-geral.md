@@ -16,8 +16,8 @@ A credencial de Analytics não é enviada ao PythonAnywhere nem ao navegador.
 
 Configure no Worker:
 
-- `CLOUDFLARE_ANALYTICS_TOKEN`: API Token somente de leitura para Analytics.
-- `CLOUDFLARE_ANALYTICS_ZONE_ID`: Zone ID da zona `temsimuai.com.br`.
+- `CLOUDFLARE_ANALYTICS_TOKEN`: API Token somente de leitura para Analytics; armazene como **Secret** do Worker.
+- `CLOUDFLARE_ANALYTICS_ZONE_ID`: Zone ID da zona `temsimuai.com.br`; pode ser uma variável de texto, pois não é uma credencial.
 
 O token não deve ser incluído no repositório.
 
