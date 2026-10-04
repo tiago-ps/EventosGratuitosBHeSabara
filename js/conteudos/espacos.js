@@ -87,7 +87,10 @@
     return [
       item?.titulo, item?.descricao, nature(item), city(item), item?.endereco,
       item?.espaco_principal, item?.instituicao, ...vocations(item),
-      ...(Array.isArray(item?.temas) ? item.temas : [])
+      ...(Array.isArray(item?.temas) ? item.temas : []),
+      ...list(item?.contatos?.emails),
+      ...list(item?.contatos?.telefones),
+      ...(Array.isArray(item?.links_adicionais) ? item.links_adicionais.flatMap(link => [link?.rotulo, link?.url]) : [])
     ].filter(Boolean).join(' ');
   }
 
@@ -316,7 +319,16 @@
     const socialLinks = Object.entries(item.redes_sociais || {})
       .map(([key, value]) => [key, helpers.safeExternalUrl(value)])
       .filter(([key, value]) => socialLabels[key] && value);
-    if (site || map || socialLinks.length) {
+    const emails = list(item?.contatos?.emails)
+      .filter(value => /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(value));
+    const phones = list(item?.contatos?.telefones)
+      .map(value => [value, value.replace(/[^\d+]/g, '')])
+      .filter(([, value]) => value);
+    const extraLinks = (Array.isArray(item?.links_adicionais) ? item.links_adicionais : [])
+      .map(link => [text(link?.rotulo), helpers.safeExternalUrl(link?.url)])
+      .filter(([label, value]) => label && value);
+
+    if (site || map || socialLinks.length || emails.length || phones.length || extraLinks.length) {
       const actions = document.createElement('div');
       actions.className = 'agenda-card-actions';
       if (site) {
@@ -343,6 +355,30 @@
         anchor.target = '_blank';
         anchor.rel = 'noopener noreferrer';
         anchor.textContent = socialLabels[key];
+        actions.appendChild(anchor);
+      });
+      emails.forEach(value => {
+        const anchor = document.createElement('a');
+        anchor.className = 'secondary';
+        anchor.href = 'mailto:' + value;
+        anchor.textContent = 'E-mail';
+        anchor.title = value;
+        actions.appendChild(anchor);
+      });
+      phones.forEach(([label, value]) => {
+        const anchor = document.createElement('a');
+        anchor.className = 'secondary';
+        anchor.href = 'tel:' + value;
+        anchor.textContent = label;
+        actions.appendChild(anchor);
+      });
+      extraLinks.forEach(([label, value]) => {
+        const anchor = document.createElement('a');
+        anchor.className = 'secondary';
+        anchor.href = value;
+        anchor.target = '_blank';
+        anchor.rel = 'noopener noreferrer';
+        anchor.textContent = label;
         actions.appendChild(anchor);
       });
       body.appendChild(actions);
