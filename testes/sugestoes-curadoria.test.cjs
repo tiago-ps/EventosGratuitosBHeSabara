@@ -191,6 +191,6 @@ assert(styles.includes('.agenda-about-open'));
 assert(styles.includes('.agenda-about-dialog'));
 assert(styles.includes('.agenda-about-footer'));
 assert(indexHtml.includes('css/styles.css?v=102'));
-assert(indexHtml.includes('js/app.js?v=143'));
-assert(serviceWorker.includes("mural-cultural-v183-sobre-projeto"));
+assert(indexHtml.includes('js/app.js?v=144'));
+assert(serviceWorker.includes("mural-cultural-v184-relacoes-eventos"));
 

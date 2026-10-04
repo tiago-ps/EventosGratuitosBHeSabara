@@ -1,0 +1,40 @@
+name: ATC4.6.3 — validar consumo relacional
+
+on:
+  pull_request:
+    paths:
+      - "js/app.js"
+      - "js/relacoes-eventos.js"
+      - "relacoes-eventos.json"
+      - "index.html"
+      - "service-worker.js"
+      - "testes/relacoes-eventos.test.cjs"
+      - ".github/workflows/validar-relacoes-eventos.yml"
+  push:
+    branches: [main]
+    paths:
+      - "js/app.js"
+      - "js/relacoes-eventos.js"
+      - "relacoes-eventos.json"
+      - "index.html"
+      - "service-worker.js"
+      - "testes/relacoes-eventos.test.cjs"
+      - ".github/workflows/validar-relacoes-eventos.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validar sintaxe JavaScript
+        run: |
+          node --check js/relacoes-eventos.js
+          node --check js/app.js
+          node --check service-worker.js
+      - name: Validar projeção publicada
+        run: node -e "const fs=require('fs'); const d=JSON.parse(fs.readFileSync('relacoes-eventos.json','utf8')); if(d.versao!==1 || !Array.isArray(d.relacoes)) process.exit(1);"
+      - name: Testar consumo relacional
+        run: node testes/relacoes-eventos.test.cjs

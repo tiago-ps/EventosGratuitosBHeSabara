@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v183-sobre-projeto';
+const CACHE_VERSION = 'mural-cultural-v184-relacoes-eventos';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -29,7 +29,8 @@ const CORE_ASSETS = [
   './js/conteudos/atividades-lazer.js?v=5',
   './js/curadorias-site.js?v=12',
   './js/metricas-pontos.js?v=2',
-  './js/app.js?v=143',
+  './js/relacoes-eventos.js?v=1',
+  './js/app.js?v=144',
   './js/temas-visuais.js?v=14',
   './js/eventos-manuais-ui.js?v=44',
   './js/ios-install.js?v=3',
@@ -46,6 +47,7 @@ const CORE_ASSETS = [
 
 const DATA_PATHS = [
   '/eventos.json',
+  '/relacoes-eventos.json',
   '/livros.json',
   '/catalogo-curadoria-livros.json',
   '/capas-curadoria-livros.json',
