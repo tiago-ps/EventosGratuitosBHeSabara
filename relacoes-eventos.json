@@ -1708,28 +1708,6 @@
       }
     },
     {
-      "evento_id": "manual-concertos-peter-lund-grupo-musical-ufmg-2026-10-04-2026-10-04",
-      "tipo": "acontece_em",
-      "destino": {
-        "tipo": "espaco_interno",
-        "id": "auditorio-do-museu-puc-minas",
-        "nome": "Auditório do Museu PUC Minas"
-      },
-      "equipamento": {
-        "id": "museu-puc-minas",
-        "nome": "Museu de Ciências Naturais PUC Minas"
-      }
-    },
-    {
-      "evento_id": "manual-concertos-peter-lund-grupo-musical-ufmg-2026-10-04-2026-10-04",
-      "tipo": "organizado_por",
-      "destino": {
-        "tipo": "instituicao",
-        "id": "puc-minas",
-        "nome": "Pontifícia Universidade Católica de Minas Gerais"
-      }
-    },
-    {
       "evento_id": "manual-concertos-peter-lund-grupo-vocal-andrea-pelliccione-2026-10-25-2026-10-25",
       "tipo": "acontece_em",
       "destino": {
