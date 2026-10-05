@@ -62,12 +62,12 @@ assert.ok(app.includes('eventInstitutionName(event)'));
 
 const indexHtml = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 assert.ok(indexHtml.includes('js/relacoes-eventos.js?v=1'));
-assert.ok(indexHtml.includes('js/app.js?v=145'));
+assert.ok(indexHtml.includes('js/app.js?v=151'));
 
 const serviceWorker = fs.readFileSync(path.join(root, 'service-worker.js'), 'utf8');
 assert.ok(serviceWorker.includes("'./js/relacoes-eventos.js?v=1'"));
 assert.ok(serviceWorker.includes("'/relacoes-eventos.json'"));
-assert.ok(serviceWorker.includes("'./js/app.js?v=145'"));
+assert.ok(serviceWorker.includes("'./js/app.js?v=151'"));
 assert.ok(serviceWorker.includes("mural-cultural-v192-opinioes-livros-opcionais"));
 
 console.log('ATC4.6.3: consumo relacional da interface aprovado.');
