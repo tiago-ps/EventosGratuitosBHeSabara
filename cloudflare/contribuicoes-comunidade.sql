@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS contribuicoes_comunidade (
   status TEXT NOT NULL DEFAULT 'recebido'
     CHECK (status IN ('recebido', 'em_analise', 'aproveitado', 'descartado')),
   tipo TEXT NOT NULL
-    CHECK (tipo IN ('sugerir_evento', 'corrigir_informacao')),
+    CHECK (tipo IN ('sugerir_evento', 'corrigir_informacao', 'opiniao_livro')),
   payload_json TEXT NOT NULL,
   schema_version INTEGER NOT NULL DEFAULT 1
 );
