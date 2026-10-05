@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Janeiro de 2026 a Janeiro de 2027",
-  "atualizado_em": "2026-10-05T15:24:40-03:00",
+  "atualizado_em": "2026-10-05T15:56:26-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -4674,6 +4674,29 @@
       "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
     },
     {
+      "id": "cine-santa-tereza-bileto-128036",
+      "titulo": "5ª AUTÊNTICA MOSTRA CINEMAS DO BRASIL - Quando a sala de projeção vira personagem",
+      "data": "2026-10-07",
+      "data_fim": "",
+      "horario": "17h",
+      "local": "Cine Santa Tereza",
+      "cidade": "Belo Horizonte",
+      "categoria": "Cinema",
+      "gratuito": true,
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "descricao": "Quando a sala de projeção vira personagem (Eudaldo Monção Jr. | 2025 | Brasil | Documentário | 16 min) O documentário apresenta, de modo poético, a relação afetiva do cineasta com o cinema de rua, identificando o momento em que as histórias de vida do realizador e do cinema protagonista se entrelaçam. Cinemas de rua de Guaxupé (Eudaldo Monção Jr. | 2024 | Brasil | Documentário | 15min) Os resquícios dos cinemas que já existiram em Guaxupé, como o Cine Theatro São Carlos, evidenciam ao espectador através desta narrativa, histórias da vida de seu público frequentador.",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/3q657hv4b0kkm1pv4rhq99oogbi29mjsprptpp4d3proqempl95hp4l3ham77enhu2b5alkiua4tf9s6dauttvjb8hil0qi7pjhi75r.jpeg",
+      "link": "https://bileto.sympla.com.br/event/128036/d/419265/s/2719834",
+      "fonte": "Cine Santa Tereza",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "fonte_id": "128036",
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "classificacao_indicativa": "Livre",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
+    },
+    {
       "id": "cine-santa-tereza-bileto-127828",
       "titulo": "SEMANA DO CINEMA ESPANHOL - Os Lampejos",
       "data": "2026-10-07",
@@ -4729,27 +4752,24 @@
       "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+do+TRT-MG%2C+Rua+da+Bahia%2C+112+-+Centro%2C+Belo+Horizonte"
     },
     {
-      "id": "sympla-sabara-3589577",
-      "titulo": "Identidade Gastronômica de Sabará  - Sabores, Histórias e Tradições",
+      "id": "fcs-wp-37666",
+      "titulo": "Lírico no Museu",
       "data": "2026-10-08",
       "data_fim": "",
-      "horario": "15h às 17h",
-      "local": "Solar do Padre Correia",
-      "cidade": "Sabará",
-      "categoria": "Oficina",
+      "horario": "",
+      "local": "Museu Inimá de Paula",
+      "cidade": "Belo Horizonte",
+      "categoria": "Música",
       "gratuito": true,
-      "inscricao": "Inscrição gratuita pela Sympla; consulte disponibilidade",
-      "descricao": "A Prefeitura de Sabará, por meio da Secretaria Municipal de Turismo, em parceria com o SEBRAE Minas, convida você para participar da II oficina do projeto Identidade Gastronômica de Sabará.O objetivo é a definição e a priorização das ações a serem trabalhadas no Plano de Futuro do projeto,",
-      "imagem": "https://images.sympla.com.br/6ab2a8f438242-lg.png",
-      "link": "https://www.sympla.com.br/evento/identidade-gastronomica-de-sabara-sabores-historias-e-tradicoes/3589577",
-      "fonte": "Sympla — evento em Sabará",
-      "instituicao_id": "prefeitura-sabara",
-      "fonte_id": "3589577",
-      "organizador": "",
-      "endereco": "Rua Dom Pedro II, 200 Centro, Sabará, MG",
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "solar-padre-correia",
-      "mapa": "https://maps.app.goo.gl/fNCH9XLpCY5V4z2j6"
+      "inscricao": "Ingresso gratuito; consulte a página oficial",
+      "descricao": "O Coral Lírico de Minas Gerais apresenta, no dia 8 de outubro, no Museu Inimá de Paula, um programa dedicado à riqueza da música coral francesa e alemã do século XIX. Sob a regência da maestra Maria Clara Marco Fernández, o concerto reúne obras de Camille Saint-Saëns, Gabriel Fauré, Charles Gounod,",
+      "imagem": "https://fcs.mg.gov.br/wp-content/uploads/2026/09/lirico-card-1024x1024.png",
+      "link": "https://fcs.mg.gov.br/evento/lirico-no-museu-7/",
+      "fonte": "Fundação Clóvis Salgado",
+      "instituicao_id": "fcs",
+      "fonte_id": 37666,
+      "atualizado_na_fonte": "2026-10-04T22:36:15",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
       "id": "portal-bh-69dbfade2381-2026-10-08-1500",
@@ -4779,6 +4799,29 @@
         "Pampulha"
       ],
       "motivo_publicacao": "realizacao_em_andamento_ou_futura"
+    },
+    {
+      "id": "cine-santa-tereza-bileto-128035",
+      "titulo": "5ª AUTÊNTICA MOSTRA CINEMAS DO BRASIL - Areia, memória e cinema",
+      "data": "2026-10-08",
+      "data_fim": "",
+      "horario": "17h",
+      "local": "Cine Santa Tereza",
+      "cidade": "Belo Horizonte",
+      "categoria": "Cinema",
+      "gratuito": true,
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "descricao": "Areia, memória e cinema (Letícia Damasceno Barreto | 2023 | Brasil |Documentário | 20 min) Narrado em primeira pessoa, o documentário revisita a história do cinema em Areia a partir da memória afetiva da realizadora e da trajetória de seu avô. Memórias – Histórias do Cine Teatro Municipal de Sumé (Ana Célia Gomes | 2025 | Brasil | Documentário | 19min) O filme revela a importância cultural do Cine Teatro Municipal de Sumé como patrimônio vivo, conectando memórias, identidades e pertencimento.",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/3q657hv4b0kkm1pv4rhq99oogbi29mjsprptpp4d3proqempl95hp4l3ham77enhu2b5alkiua4tf9s6dauttvjb8hil0qi7pjhi75r.jpeg",
+      "link": "https://bileto.sympla.com.br/event/128035/d/419264/s/2719832",
+      "fonte": "Cine Santa Tereza",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "fonte_id": "128035",
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "classificacao_indicativa": "Livre",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
     {
       "id": "cine-santa-tereza-bileto-127829",
@@ -5051,7 +5094,7 @@
       "cidade": "Belo Horizonte",
       "categoria": "Cinema",
       "gratuito": true,
-      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial. Também há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade.",
       "descricao": "A bruxa (Robert Eggers | EUA |2015 |Drama |92 min) Uma família na década de 1630 na Nova Inglaterra é dilacerada pelas forças da feitiçaria, magia negra e possessão. Classificação Indicativa: 16 anos",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/1vdnfioj82bcdj2jq04orgtj0ta7e52v36f7grocreo87l86f74pf5vfksd5vggm3q21m5bl74sdcdohn0cgmsbl1tlkg0ljt9pgioa.jpeg",
       "link": "https://bileto.sympla.com.br/event/128031/d/419259/s/2719822",
@@ -5216,28 +5259,6 @@
       ],
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+do+Baile%2C+Av.+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+751+-+Pampulha%2C+Belo+Horizonte"
-    },
-    {
-      "id": "ufmg-ec-mostra-iaia-de-audiovisual-disque-quilombola-exibicao",
-      "titulo": "Mostra IAIA de Audiovisual: “Disque Quilombola” (exibição)",
-      "data": "2026-10-13",
-      "data_fim": "",
-      "horario": "15h",
-      "local": "Espaço do Conhecimento UFMG",
-      "cidade": "Belo Horizonte",
-      "categoria": "Atividade educativa",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": ": Em outubro, a Mostra IAIA de Audiovisual se dedica à cultura da criança na afrodiáspora, com a exibição do filme “Disque Quilombola”. A história se passa no Espírito Santo, enquanto crianças conversam de um jeito divertido sobre como é a vida em uma comunidade quilombola e em um morro na cidade de Vitória.",
-      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/09/cbs_id_disque_quilombola.jpg",
-      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/mostra-iaia-de-audiovisual-disque-quilombola-exibicao/",
-      "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg",
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "espaco-conhecimento-ufmg",
-      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
     },
     {
       "id": "ufmg-ec-oficina-libras-para-criancas-semana-das-criancas",
@@ -5453,30 +5474,6 @@
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
       "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
-    },
-    {
-      "id": "fcs-wp-37666",
-      "titulo": "Lírico no Museu",
-      "data": "2026-10-16",
-      "data_fim": "",
-      "horario": "19h",
-      "local": "Cine Humberto Mauro",
-      "cidade": "Belo Horizonte",
-      "categoria": "Cinema",
-      "gratuito": true,
-      "inscricao": "Ingresso gratuito; consulte a página oficial",
-      "descricao": "O Cine Humberto Mauro segue sua parceria com a Escola Brasileira de Psicanálise e apresenta mais uma sessão do projeto Cinema e Psicanálise. No dia 16 de outubro, sexta-feira, às 19h, o projeto exibe Eu, Daniel Blake (I, Daniel Blake, Ken Loach, Reino Unido, França e Bélgica, 2016),",
-      "imagem": "https://fcs.mg.gov.br/wp-content/uploads/2026/09/lirico-card-1024x1024.png",
-      "link": "https://fcs.mg.gov.br/evento/lirico-no-museu-7/",
-      "fonte": "Fundação Clóvis Salgado",
-      "instituicao_id": "fcs",
-      "fonte_id": 37666,
-      "atualizado_na_fonte": "2026-09-21T18:50:59",
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "palacio-das-artes",
-      "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
-      "espaco_interno": "Cine Humberto Mauro"
     },
     {
       "id": "portal-bh-df2696d98e93-2026-10-17-1000",
@@ -5791,28 +5788,6 @@
       "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
     },
     {
-      "id": "sympla-sabara-3594196",
-      "titulo": "Oficina MESA POSTA - CONEXÃO SABARÁ",
-      "data": "2026-10-21",
-      "data_fim": "",
-      "horario": "14h às 17h",
-      "local": "Associação Servindo e Protegendo",
-      "cidade": "Sabará",
-      "categoria": "Oficina",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página da Sympla",
-      "descricao": "Olá, nossa OFICINA MESA POSTA será realizada na Conexão Sabará será um encontro de muito carinho e acolhimento!Encerrando nosso programa de Oficinas 2026 com chave de ouro e com muita solidariedade.Você vai descobrir que mesa posta não precisa ser complicada, cara ou perfeita. Ela pode ser simples,",
-      "imagem": "https://images.sympla.com.br/6ab5c315018e8-lg.jpg",
-      "link": "https://www.sympla.com.br/evento/oficina-mesa-posta-conexao-sabara/3594196",
-      "fonte": "Sympla — evento em Sabará",
-      "instituicao_id": "",
-      "fonte_id": "3594196",
-      "organizador": "",
-      "endereco": "Rua Silvana Almeida, 236 Borba Gato, Sabará, MG",
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Associa%C3%A7%C3%A3o+Servindo+e+Protegendo%2C+Rua+Silvana+Almeida%2C+236+Borba+Gato%2C+Sabar%C3%A1%2C+MG"
-    },
-    {
       "id": "ufmg-ec-roda-de-conversa-ovulario-fabulacao-critica-como-rota",
       "titulo": "Roda de Conversa “Ovulário: Fabulação Crítica como Rota”",
       "data": "2026-10-23",
@@ -6012,7 +5987,7 @@
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
       "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
-      "imagem_fallback_origem": "instituicao"
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "manual-concertos-peter-lund-grupo-vocal-andrea-pelliccione-2026-10-25-2026-10-25",
@@ -6090,7 +6065,7 @@
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
       "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
-      "imagem_fallback_origem": "instituicao"
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ufmg-ec-mostra-iaia-de-audiovisual-disque-quilombola-exibicao-2",
@@ -6179,7 +6154,7 @@
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
       "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
-      "imagem_fallback_origem": "instituicao"
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ufmg-ec-mostra-iaia-de-audiovisual-a-piscina-de-caique-exibicao-3",
@@ -6268,7 +6243,7 @@
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
       "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
-      "imagem_fallback_origem": "instituicao"
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ufmg-ec-mostra-iaia-de-audiovisual-carrinho-de-rolima-exibicao-3",
@@ -6381,7 +6356,7 @@
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
       "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
-      "imagem_fallback_origem": "instituicao"
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ufmg-ec-roda-de-conversa-ovulario-artes-e-poeticas-ancestrais-iles-e-ialorixas-em-dialogo",
