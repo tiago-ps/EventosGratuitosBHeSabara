@@ -27,7 +27,8 @@
     {
       "binding": "SUGESTOES_DB",
       "database_name": "mural-sugestoes-curadoria",
-      "database_id": "32bc6d5f-4750-452a-bb5e-0a90878fc15a"
+      "database_id": "32bc6d5f-4750-452a-bb5e-0a90878fc15a",
+      "migrations_dir": "cloudflare/migrations"
     }
   ]
 }
