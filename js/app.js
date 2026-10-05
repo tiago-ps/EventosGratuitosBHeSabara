@@ -700,6 +700,15 @@
     return safeExternalUrl(book?.[field]);
   }
 
+  function bookAudiobookUrl(book) {
+    return safeExternalUrl(book?.link_audiolivro);
+  }
+
+  function bookAudiobookLabel(book) {
+    const source = String(book?.audiolivro_fonte || '').trim();
+    return source ? `Ouvir audiolivro — ${source}` : 'Ouvir audiolivro';
+  }
+
   function panelBookRecordLinks(record) {
     const links = new Map();
     const virtualLabel = record?.tipo_registro === 'acesso_integral_legal'
@@ -2328,8 +2337,10 @@ function eventProgram(event) {
     copy.querySelector('.book-call').textContent = callText;
 
     const accessLabels = [];
+    const audiobookUrl = bookAudiobookUrl(book);
     if (book.acesso_fisico) accessLabels.push('Físico');
     if (book.acesso_virtual) accessLabels.push('Virtual');
+    if (audiobookUrl) accessLabels.push('Audiolivro');
     if (acervos.length > 1) accessLabels.push(`${acervos.length} acervos`);
     copy.querySelector('.book-access').textContent = accessLabels.join(' · ') || 'Catálogo';
     const availability = [];
@@ -2341,6 +2352,7 @@ function eventProgram(event) {
       }
     }
     if (book.acesso_virtual) availability.push('edição virtual');
+    if (audiobookUrl) availability.push('audiolivro disponível');
     if (acervos.length > 1) availability.push(`${acervos.length} acervos`);
     const availabilityText = availability.join(' • ');
     copy.querySelector('.book-availability').textContent = availabilityText;
@@ -2370,6 +2382,7 @@ function eventProgram(event) {
 
     const physicalLink = copy.querySelector('.book-physical-link');
     const virtualLink = copy.querySelector('.book-virtual-link');
+    const audiobookLink = copy.querySelector('.book-audiobook-link');
     const physicalUrl = firstBookHoldingUrl(book, 'link_fisico');
     const virtualUrl = firstBookHoldingUrl(book, 'link_virtual');
     const physicalLinksCount = new Set(holdings.map(item => safeExternalUrl(item.link_fisico)).filter(Boolean)).size;
@@ -2386,6 +2399,15 @@ function eventProgram(event) {
         virtualLink.href = virtualUrl;
         if (virtualLinksCount > 1) virtualLink.textContent = 'Acessar uma edição virtual';
       } else virtualLink.remove();
+    }
+    if (audiobookLink) {
+      if (audiobookUrl) {
+        audiobookLink.href = audiobookUrl;
+        audiobookLink.textContent = bookAudiobookLabel(book);
+        audiobookLink.setAttribute('aria-label', bookAudiobookLabel(book));
+      } else {
+        audiobookLink.remove();
+      }
     }
     const opinionLink = copy.querySelector('.book-opinion-link');
     const opinionUrl = safeExternalUrl(book.link_formulario_opiniao || state.config?.opinioes_livros?.url_formulario);
@@ -5294,6 +5316,8 @@ function eventProgram(event) {
     if (item.tipo_conteudo === 'livro') {
       const holdingsHtml = agendaBookHoldingsHtml(item);
       const acervosCount = bookAcervos(item).length;
+      const audiobookUrl = bookAudiobookUrl(item);
+      const audiobookLabel = bookAudiobookLabel(item);
       const curationOnly = item._catalogo_curadoria === true;
       const bookImage = safeImageUrl(item.imagem);
       const opinionUrl = state.config?.opinioes_livros?.habilitado === true
@@ -5304,12 +5328,13 @@ function eventProgram(event) {
           ? `<img src="${escapeHtml(bookImage)}" alt="Capa: ${escapeHtml(item.titulo || '')}" loading="lazy">`
           : `<div class="agenda-book-placeholder" role="img" aria-label="Livro sem capa disponível"><span aria-hidden="true">${escapeHtml(item.icone || '📚')}</span><strong>Livro</strong></div>`}</div>
         <div class="agenda-card-body">
-          <div class="agenda-card-badges"><span>Livro</span>${curationOnly ? '<span class="curation-catalog-badge">Acervo — ainda não publicado no Mural</span>' : ''}${item._capa_automatica ? '<span class="curation-auto-cover-badge">Capa automática — não verificada</span>' : ''}${item.acesso_fisico ? '<span>Físico</span>' : ''}${item.acesso_virtual ? '<span>Virtual</span>' : ''}${acervosCount > 1 ? `<span>${acervosCount} acervos</span>` : ''}</div>
+          <div class="agenda-card-badges"><span>Livro</span>${curationOnly ? '<span class="curation-catalog-badge">Acervo — ainda não publicado no Mural</span>' : ''}${item._capa_automatica ? '<span class="curation-auto-cover-badge">Capa automática — não verificada</span>' : ''}${item.acesso_fisico ? '<span>Físico</span>' : ''}${item.acesso_virtual ? '<span>Virtual</span>' : ''}${audiobookUrl ? '<span>Audiolivro</span>' : ''}${acervosCount > 1 ? `<span>${acervosCount} acervos</span>` : ''}</div>
           <p class="agenda-card-date">Sugestão de Leitura</p>
           <h2>${escapeHtml(item.pergunta_curiosidade || item.titulo || 'Livro')}</h2>
           <p class="agenda-card-place"><strong class="agenda-book-title">${escapeHtml(item.titulo || '')}</strong>${item.autor ? ` · ${escapeHtml(item.autor)}` : ''}</p>
           <p class="agenda-card-description">${escapeHtml(item.texto_apoio || '')}</p>
           ${holdingsHtml}
+          ${audiobookUrl ? `<div class="agenda-card-actions"><a href="${escapeHtml(audiobookUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(audiobookLabel)}</a></div>` : ''}
           ${item.exibir_comentario && item.comentario_aprovado ? `<blockquote class="agenda-book-opinion">“${escapeHtml(item.comentario_aprovado)}”<cite>${escapeHtml(item.credito_comentario || 'Leitor(a) do IFMG')}</cite></blockquote>` : ''}
           ${opinionUrl ? `<div class="agenda-card-actions"><a class="secondary" href="${escapeHtml(opinionUrl)}" target="_blank" rel="noopener noreferrer">Opine sobre este livro</a></div>` : ''}
         </div>`;
