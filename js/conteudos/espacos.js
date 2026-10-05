@@ -302,6 +302,7 @@
     const tags = document.createElement('div');
     tags.className = 'film-tags activity-tags';
     tags.setAttribute('aria-label', 'Características do espaço');
+    if (text(item.status_editorial) !== 'revisado') appendText(tags, 'span', 'Em análise');
     appendText(tags, 'span', nature(item));
     vocations(item).slice(0, 4).forEach(value => appendText(tags, 'span', value));
     if (city(item)) appendText(tags, 'span', city(item));
