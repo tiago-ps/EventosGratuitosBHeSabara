@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Janeiro de 2026 a Janeiro de 2027",
-  "atualizado_em": "2026-10-05T09:49:42-03:00",
+  "atualizado_em": "2026-10-05T10:21:04-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -1626,7 +1626,9 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Guaicurus, 50, Centro, Belo Horizonte - MG, 30111-060",
       "mapa": "https://maps.app.goo.gl/BvSVrZ34oQpWFoM57",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/assistencia-social-e-direitos-humanos/crj_capa_materia.png",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ela-arena-atelie-livre-fcace676d6",
@@ -1706,7 +1708,7 @@
       "descricao": "Esta oficina propõe atividades fundamentais para o aprendizado das modalidades de acrobacia de solo, malabarismo, equilibrismo e acrobacias aéreas, focando no desenvolvimento de habilidades essenciais para a formação no circo. As aulas incluem exercícios de força, flexibilidade, equilíbrio e consciência corporal. Também estimulam a expressividade, a criatividade e a construção de noções cênicas para a criação de números circenses.",
       "descricao_fonte": "Sinopses do 2º semestre/2026 — Escola Livre de Artes Arena da Cultura",
       "descricao_url": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/cultura/sinopses-2-vagas-abertas-presenciais-ead.pdf",
-      "imagem": "",
+      "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/assistencia-social-e-direitos-humanos/crj_capa_materia.png",
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "link": "https://form.jotform.com/261965053614661",
       "link_inscricao": "https://form.jotform.com/261965053614661",
@@ -1726,7 +1728,8 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Guaicurus, 50, Centro, Belo Horizonte - MG, 30111-060",
       "mapa": "https://maps.app.goo.gl/BvSVrZ34oQpWFoM57",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ela-unidade-centro-cultural-pampulha",
@@ -2791,7 +2794,9 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Estrela do Sul, 89, Santa Tereza, Belo Horizonte - MG, 31010-240",
       "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/fundacao-municipal-de-cultura/2021/cine-santa-tereza-foto-ricardo-laf-3_1.jpg",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ela-laboratorio-com-linhas-e-agulhas-5caca04e80",
@@ -2961,7 +2966,7 @@
       "descricao": "A curadoria envolve a pesquisa de trabalhos, artistas, espaços e projetos culturais com o objetivo de criar narrativas de compartilhamento sensível com públicos interessados. A oficina tem como objetivo apresentar estratégias curatoriais em diálogo com os contextos atuais e as características do grupo de trabalho, tendo em vista as possibilidades de mediação, a pluralidade de linguagens e a potencialidade da escuta para a criação coletiva.",
       "descricao_fonte": "Sinopses do 2º semestre/2026 — Escola Livre de Artes Arena da Cultura",
       "descricao_url": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/cultura/sinopses-2-vagas-abertas-presenciais-ead.pdf",
-      "imagem": "",
+      "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/fundacao-municipal-de-cultura/2021/cine-santa-tereza-foto-ricardo-laf-3_1.jpg",
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "link": "https://form.jotform.com/261965053614661",
       "link_inscricao": "https://form.jotform.com/261965053614661",
@@ -2981,7 +2986,8 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Estrela do Sul, 89, Santa Tereza, Belo Horizonte - MG, 31010-240",
       "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ela-tirando-as-ideias-das-gavetas-laboratorio-de-elaboracao-de-projetos-culturais-b0a44ba65b",
@@ -3077,7 +3083,9 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Ministro Hermenegildo de Barros, 904, Itapoã, Belo Horizonte - MG, 31710-230",
       "mapa": "https://maps.app.goo.gl/Xupvn986WiEQikbR8",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/fundacao-municipal-de-cultura/2020/CRCP%20Lagoa%20do%20Nado%20-%20Foto%20Vander%20Bras%20%20PBH-%20C%C3%B3pia.jpg",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ela-atelie-de-design-popular-74727c50cc",
