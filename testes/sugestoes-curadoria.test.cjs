@@ -10,6 +10,7 @@ const styles = fs.readFileSync('css/styles.css', 'utf8');
 const indexHtml = fs.readFileSync('index.html', 'utf8');
 const schema = fs.readFileSync('cloudflare/sugestoes-curadoria.sql', 'utf8');
 const sharedSelectionSchema = fs.readFileSync('cloudflare/selecoes-compartilhadas.sql', 'utf8');
+const opinionMigration = fs.readFileSync('cloudflare/migrations/0001_opinioes_livros.sql', 'utf8');
 const wrangler = JSON.parse(fs.readFileSync('wrangler.jsonc', 'utf8'));
 
 assert(app.includes('Enviar para curadoria'));
@@ -60,6 +61,7 @@ assert.equal(wrangler.d1_databases.length, 1);
 assert.equal(wrangler.d1_databases[0].binding, 'SUGESTOES_DB');
 assert.equal(wrangler.d1_databases[0].database_name, 'mural-sugestoes-curadoria');
 assert.equal(wrangler.d1_databases[0].database_id, '32bc6d5f-4750-452a-bb5e-0a90878fc15a');
+assert.equal(wrangler.d1_databases[0].migrations_dir, 'cloudflare/migrations');
 
 for (const forbidden of ['ip ', 'user_agent', 'user-agent', 'fingerprint', 'email', 'telefone']) {
   assert(!schema.toLowerCase().includes(forbidden), `schema não deve conter ${forbidden}`);
@@ -93,6 +95,9 @@ assert(worker.includes("handleCommunityContributionApi(request, env)"));
 const contributionSchema = fs.readFileSync('cloudflare/contribuicoes-comunidade.sql', 'utf8');
 assert(contributionSchema.includes('CREATE TABLE IF NOT EXISTS contribuicoes_comunidade'));
 assert(contributionSchema.includes("CHECK (tipo IN ('sugerir_evento', 'corrigir_informacao', 'opiniao_livro'))"));
+assert(opinionMigration.includes("CHECK (tipo IN ('sugerir_evento', 'corrigir_informacao', 'opiniao_livro'))"));
+assert(!opinionMigration.includes('BEGIN TRANSACTION'));
+assert(!opinionMigration.includes('COMMIT;'));
 for (const forbidden of ['ip ', 'user_agent', 'user-agent', 'fingerprint', 'email', 'telefone']) {
   assert(!contributionSchema.toLowerCase().includes(forbidden), `schema de contribuições não deve conter ${forbidden}`);
 }
