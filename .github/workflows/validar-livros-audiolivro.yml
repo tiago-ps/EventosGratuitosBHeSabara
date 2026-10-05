@@ -1,0 +1,32 @@
+name: Validar audiolivros em Livros
+
+on:
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'js/app.js'
+      - 'service-worker.js'
+      - 'testes/livros-audiolivro.test.cjs'
+      - '.github/workflows/validar-livros-audiolivro.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Validar JavaScript principal
+        run: node --check js/app.js
+
+      - name: Testar audiolivros
+        run: node testes/livros-audiolivro.test.cjs
