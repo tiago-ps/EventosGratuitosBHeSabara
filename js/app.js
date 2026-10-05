@@ -4949,13 +4949,14 @@ function eventProgram(event) {
           <input name="id_obra" type="hidden" value="${escapeHtml(itemWorkId)}">
           <input name="titulo" type="hidden" value="${escapeHtml(itemTitle)}">
           <input name="autor" type="hidden" value="${escapeHtml(itemAuthor)}">
+          <p class="agenda-curation-suggestion-privacy">Responda apenas ao que quiser. <strong>As três opções abaixo são opcionais</strong>; basta preencher pelo menos uma delas.</p>
           <label class="agenda-community-field">
-            <span>O que você diria para alguém ficar com vontade de ler este livro? *</span>
-            <textarea name="estimulo_leitura" maxlength="1200" rows="4" required placeholder="Conte, com suas palavras, o que torna essa leitura interessante."></textarea>
+            <span>O que você diria para alguém ficar com vontade de ler este livro? <small>(opcional)</small></span>
+            <textarea name="estimulo_leitura" maxlength="1200" rows="4" placeholder="Conte, com suas palavras, o que torna essa leitura interessante."></textarea>
           </label>
           <label class="agenda-community-field">
-            <span>Como você resumiria este livro para alguém que ainda não conhece? *</span>
-            <textarea name="mini_resumo_leitor" maxlength="1200" rows="4" required placeholder="Faça um resumo curto, sem se preocupar em escrever um texto editorial pronto."></textarea>
+            <span>Como você resumiria este livro para alguém que ainda não conhece? <small>(opcional)</small></span>
+            <textarea name="mini_resumo_leitor" maxlength="1200" rows="4" placeholder="Faça um resumo curto, sem se preocupar em escrever um texto editorial pronto."></textarea>
           </label>
           <label class="agenda-community-field">
             <span>Quer acrescentar alguma coisa? <small>(opcional)</small></span>
@@ -5055,6 +5056,19 @@ function eventProgram(event) {
         correcao: data.get('correcao'),
         link_referencia: data.get('link_referencia')
       };
+
+      if (isBookOpinion) {
+        const hasOpinionText = [
+          dados.estimulo_leitura,
+          dados.mini_resumo_leitor,
+          dados.comentario
+        ].some(value => String(value || '').trim().length > 0);
+        if (!hasOpinionText) {
+          status.textContent = 'Preencha pelo menos uma das três opções de texto para enviar sua opinião.';
+          status.dataset.error = 'true';
+          return;
+        }
+      }
 
       submit.disabled = true;
       status.dataset.error = 'false';
