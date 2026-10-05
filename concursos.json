@@ -2,48 +2,9 @@
   "schema": 10,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-10-04T14:28:23.816781+00:00",
+  "coletado_em_utc": "2026-10-05T17:29:57.812512+00:00",
   "total": 23,
   "concursos": [
-    {
-      "id": "pci:noticia:emdurb-de-bauru-sp-abre-processo-seletivo-para-diversos-cargos",
-      "titulo": "EMDURB - Empresa Municipal de Desenvolvimento Urbano e Rural de Bauru",
-      "url": "https://www.pciconcursos.com.br/noticias/emdurb-de-bauru-sp-abre-processo-seletivo-para-diversos-cargos",
-      "imagem": "https://cdn.pci.app.br/img/i/3cc9812558270dd2d74b62823d2e3237.png",
-      "formacoes_compativeis": [
-        "Sistemas de Informação / Computação"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Sistemas de Informação / Computação",
-          "nivel": "superior",
-          "evidencia": "deste quinta-feira, 17 de setembro de 2026 a empresa municipal de desenvolvimento urbano e rural de bauru ( emdurb ), no estado de sao paulo, abriu um processo seletivo para profissionais de nivel medio e superior. segundo o edital, as oportunidades sao para os cargos de: nivel superior analista de tecnologia da informacao (1 vaga) contador (1 vaga) nivel medio agente de fiscalizacao de transito got (1 vaga) agente de transporte (1 vaga) eletricista instalador (1 vaga) tecnico em seguranca do trabalho (1 vaga) tecnico em tecnologia da informacao (1 vaga) a carga horaria e de 44h semanais para todos os cargos. os sala"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "SP",
-      "cidade": "",
-      "inscricoes_inicio_texto": "17 de setembro de 2026",
-      "inscricoes_fim_texto": "4 de outubro de 2026",
-      "inscricoes_texto": "17 de setembro de 2026 a 4 de outubro de 2026",
-      "remuneracao_faixa_texto": "R$ 5.457,24",
-      "remuneracao_fonte": "catalogo",
-      "cargos_compativeis": [
-        {
-          "cargo": "NÍVEL SUPERIOR Analista de Tecnologia da Informação",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        },
-        {
-          "cargo": "Técnico em Tecnologia da Informação",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        }
-      ]
-    },
     {
       "id": "pci:noticia:marinha-do-brasil-8-distrito-naval-abre-vagas-para-oficiais-rm2-em-sp",
       "titulo": "Marinha do Brasil - Comando do 8º Distrito Naval",
@@ -720,9 +681,9 @@
       ]
     },
     {
-      "id": "pci:noticia:prefeitura-de-maravilha-sc-abre-concurso-com-salarios-de-ate-15748",
+      "id": "pci:noticia:prefeitura-de-maravilha-sc-retifica-concurso-com-salarios-de-ate-15748",
       "titulo": "Prefeitura de Maravilha",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-maravilha-sc-abre-concurso-com-salarios-de-ate-15748",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-maravilha-sc-retifica-concurso-com-salarios-de-ate-15748",
       "imagem": "https://cdn.pci.app.br/img/i/f42a07d68e721ffea1804e935cf26e31.png",
       "formacoes_compativeis": [
         "Técnico em Informática"
@@ -780,6 +741,39 @@
         {
           "cargo": "Técnico Agrícola (1 vaga + CR) Técnico de Enfermagem (3 vagas + CR) Técnico em Informática",
           "vagas_texto": "Cadastro de Reserva",
+          "formacao": "Técnico em Informática",
+          "confianca": "alta"
+        }
+      ]
+    },
+    {
+      "id": "pci:noticia:ses-sc-abre-processo-seletivo-com-salarios-de-ate-5670",
+      "titulo": "SES - Secretaria de Estado da Saúde de Santa Catarina",
+      "url": "https://www.pciconcursos.com.br/noticias/ses-sc-abre-processo-seletivo-com-salarios-de-ate-5670",
+      "imagem": "https://cdn.pci.app.br/img/i/bf56624401433deefeba225fe6a5a0af.png",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": "a, 5 de outubro de 2026 no estado de santa catarina, a secretaria de estado da saude (ses) divulgou um edital de processo seletivo simplificado para preencher vagas em funcoes de nivel medio e superior. segundo o edital, as oportunidades sao para os cargos de: grande florianopolis - unidades da ses tecnico em informatica (1 vaga) engenheiro eletricista (1 vaga) florianopolis - centro catarinense de reabilitacao tecnico em protese e ortese (1 vaga) sao jose - instituto de psiquiatria terapeuta ocupacional (1 vaga) sao pedro de alcantara - hospital santa teresa terapeuta ocupacional (1 vaga) a carga horaria minima e "
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "SC",
+      "cidade": "",
+      "inscricoes_inicio_texto": "2 de outubro de 2026",
+      "inscricoes_fim_texto": "16 de outubro de 2026",
+      "inscricoes_texto": "2 de outubro de 2026 a 16 de outubro de 2026",
+      "remuneracao_faixa_texto": "R$ 5.670,38",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Grande Florianópolis - Unidades da SES Técnico em Informática",
+          "vagas_texto": "1 vaga",
           "formacao": "Técnico em Informática",
           "confianca": "alta"
         }

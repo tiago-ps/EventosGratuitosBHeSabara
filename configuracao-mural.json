@@ -18,8 +18,8 @@
     "conteudo_padrao": "todos"
   },
   "opinioes_livros": {
-    "habilitado": true,
+    "habilitado": false,
     "url_formulario": "",
-    "aviso_privacidade": "As opiniões são recebidas pelo formulário do Mural e usadas como apoio à curadoria editorial. Nada é publicado automaticamente."
+    "aviso_privacidade": "As respostas são recebidas em formulário institucional privado e só aparecem no mural após revisão e anonimização."
   }
 }
