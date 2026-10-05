@@ -82,6 +82,8 @@ assert(worker.includes("const CONTRIBUTION_ADMIN_PATH = '/api/contribuicoes-comu
 assert(worker.includes("sugerir_evento"));
 assert(worker.includes("corrigir_informacao"));
 assert(worker.includes("opiniao_livro"));
+assert(worker.includes("contributionOpinionTypeAvailable"));
+assert(worker.includes("SCHEMA_PENDENTE"));
 assert(worker.includes("contribuir_mural"));
 assert(worker.includes("CON-"));
 assert(worker.includes("contribuicoes_comunidade"));
@@ -195,6 +197,6 @@ assert(styles.includes('.agenda-about-open'));
 assert(styles.includes('.agenda-about-dialog'));
 assert(styles.includes('.agenda-about-footer'));
 assert(indexHtml.includes('css/styles.css?v=102'));
-assert(indexHtml.includes('js/app.js?v=147'));
-assert(serviceWorker.includes("mural-cultural-v188-opinioes-livros"));
+assert(indexHtml.includes('js/app.js?v=148'));
+assert(serviceWorker.includes("mural-cultural-v189-opinioes-livros-d1"));
 
