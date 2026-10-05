@@ -50,7 +50,8 @@ A consulta pública não retorna mensagem, IDs enviados, quantidade, dados do Ed
 O mesmo Worker e o mesmo banco D1 atendem também dois formulários independentes da fila de curadoria:
 
 - `sugerir_evento`: sugestão de um novo evento, com título, cidade/data opcionais, link de referência e observação;
-- `corrigir_informacao`: correção de um conteúdo já publicado, preferencialmente identificado pelo ID estável do Mural.
+- `corrigir_informacao`: correção de um conteúdo já publicado, preferencialmente identificado pelo ID estável do Mural;
+- `opiniao_livro`: opinião contextual sobre um livro, usada como apoio editorial para `pergunta_curiosidade` e `texto_apoio`.
 
 Endpoints:
 
@@ -63,7 +64,11 @@ O Turnstile usa a ação `contribuir_mural`. A contribuição não exige cadastr
 
 Antes de ativar os formulários, aplique `cloudflare/contribuicoes-comunidade.sql` no mesmo D1 vinculado como `SUGESTOES_DB`.
 
-Se `contribuicoes_comunidade` já existir com o schema anterior, aplique também `cloudflare/migrar-contribuicoes-opinioes-livros.sql` antes de habilitar `opiniao_livro`. A migração preserva protocolos, estados e payloads já recebidos.
+Se `contribuicoes_comunidade` já existir com o schema anterior, aplique a migração D1 versionada antes de ativar `opiniao_livro` no ambiente remoto:
+
+`npx wrangler d1 migrations apply mural-sugestoes-curadoria --remote`
+
+O `wrangler.jsonc` usa `cloudflare/migrations` como `migrations_dir`; a primeira migração é `0001_opinioes_livros.sql`. O mecanismo nativo do D1 registra as migrações aplicadas, cria backup ao aplicar e reverte uma migração que falhar.
 
 
 ## Links curtos de seleções compartilhadas
