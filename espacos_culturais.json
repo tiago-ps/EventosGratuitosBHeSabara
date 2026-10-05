@@ -41,6 +41,20 @@
       "vocacoes": [
         "Cultura"
       ],
+      "contatos": {
+        "emails": [],
+        "telefones": [
+          "(31) 3431-9400",
+          "(31) 3431-9401",
+          "(31) 3431-9441 (visitas mediadas)"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Normas de visitação",
+          "url": "https://ccbb.com.br/belo-horizonte/normas-de-visitacao/"
+        }
+      ],
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "CCBB Belo Horizonte",
@@ -52,11 +66,6 @@
       "redes_sociais": {
         "instagram": "https://www.instagram.com/ccbbbh/#"
       },
-      "contatos": {
-        "emails": [],
-        "telefones": []
-      },
-      "links_adicionais": [],
       "link": "https://ccbb.com.br/belo-horizonte"
     },
     {
@@ -103,6 +112,22 @@
         "Ciência / Divulgação científica",
         "Formação"
       ],
+      "contatos": {
+        "emails": [
+          "secretaria@espacoconhecimento.ufmg.br",
+          "agendamento.conhecimento@gmail.com"
+        ],
+        "telefones": [
+          "(31) 3409-8350 (Recepção)",
+          "(31) 3409-8360 (Agendamento)"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Contato e imprensa",
+          "url": "https://www.ufmg.br/espacodoconhecimento/contato-e-imprensa/"
+        }
+      ],
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "Espaço do Conhecimento UFMG",
@@ -113,11 +138,6 @@
       ],
       "natureza_espaco": "Espaço de ciência e cultura",
       "instituicao": "Espaço do Conhecimento UFMG",
-      "contatos": {
-        "emails": [],
-        "telefones": []
-      },
-      "links_adicionais": [],
       "link": "https://www.ufmg.br/espacodoconhecimento/"
     },
     {
@@ -147,7 +167,7 @@
       },
       "site": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/biblioteca-infantil-e-juvenil",
       "imagem": "imagens/instituicoes/biblioteca-publica-infantil-e-juvenil-de-belo-horizonte.png",
-      "imagem_fonte": "",
+      "imagem_fonte": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/biblioteca-infantil-e-juvenil",
       "exibicao_ativa": true,
       "exibicao_recorrente": true,
       "prioridade": 0,
@@ -155,10 +175,20 @@
         "instagram": "https://www.instagram.com/bpijbh/"
       },
       "contatos": {
-        "emails": [],
-        "telefones": []
+        "emails": [
+          "bpij.fmc@pbh.gov.br"
+        ],
+        "telefones": [
+          "(31) 3277-8769 (Educativo)",
+          "(31) 3277-1959 (Administrativo)"
+        ]
       },
-      "links_adicionais": [],
+      "links_adicionais": [
+        {
+          "rotulo": "Catálogo das bibliotecas",
+          "url": "https://bibliotecasfmc.pbh.gov.br/"
+        }
+      ],
       "status_editorial": "revisado",
       "tipo_espaco": "Biblioteca",
       "vocacoes": [
