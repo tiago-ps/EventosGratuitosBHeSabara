@@ -14,10 +14,11 @@ const SUGGESTION_ITEM_RE = /^(evento|livro|curso|concurso|filme|utilidade_public
 const CONTRIBUTION_API_PATH = '/api/contribuicoes-comunidade';
 const CONTRIBUTION_STATUS_PATH = '/api/contribuicoes-comunidade/status';
 const CONTRIBUTION_ADMIN_PATH = '/api/contribuicoes-comunidade/admin';
-const CONTRIBUTION_TYPES = new Set(['sugerir_evento', 'corrigir_informacao']);
+const CONTRIBUTION_TYPES = new Set(['sugerir_evento', 'corrigir_informacao', 'opiniao_livro']);
 const CONTRIBUTION_TYPE_LABELS = {
   sugerir_evento: 'Sugestão de evento',
-  corrigir_informacao: 'Correção de informação'
+  corrigir_informacao: 'Correção de informação',
+  opiniao_livro: 'Opinião sobre livro'
 };
 
 const SHARED_SELECTION_API_PATH = '/api/selecoes-compartilhadas';
@@ -614,6 +615,22 @@ function normalizeContributionPayload(type, raw) {
     if (correcao.length < 5) throw new Error('correcao_obrigatoria');
     return { item_id, item_titulo, correcao, link_referencia };
   }
+  if (type === 'opiniao_livro') {
+    const item_id = normalizeShortText(payload.item_id, 300);
+    const id_obra = normalizeShortText(payload.id_obra, 300);
+    const titulo = normalizeShortText(payload.titulo, 220);
+    const autor = normalizeShortText(payload.autor, 220);
+    const estimulo_leitura = normalizeMessage(payload.estimulo_leitura);
+    const mini_resumo_leitor = normalizeMessage(payload.mini_resumo_leitor);
+    const comentario = normalizeMessage(payload.comentario);
+    if (!item_id || !SUGGESTION_ITEM_RE.test(item_id) || !item_id.startsWith('livro:')) {
+      throw new Error('livro_invalido');
+    }
+    if (titulo.length < 1) throw new Error('livro_invalido');
+    if (estimulo_leitura.length < 5) throw new Error('estimulo_obrigatorio');
+    if (mini_resumo_leitor.length < 5) throw new Error('resumo_obrigatorio');
+    return { item_id, id_obra, titulo, autor, estimulo_leitura, mini_resumo_leitor, comentario };
+  }
   throw new Error('tipo_invalido');
 }
 
@@ -691,6 +708,9 @@ async function handleContributionPost(request, env) {
       item_obrigatorio: 'Informe qual conteúdo precisa de correção.',
       item_invalido: 'O identificador do conteúdo está inválido.',
       correcao_obrigatoria: 'Explique o que precisa ser corrigido.',
+      livro_invalido: 'Não foi possível identificar o livro desta opinião.',
+      estimulo_obrigatorio: 'Conte o que você diria para alguém ficar com vontade de ler este livro.',
+      resumo_obrigatorio: 'Conte como você resumiria este livro para alguém que ainda não o conhece.',
       url_invalida: 'O link de referência está inválido.',
       campo_longo: 'Um dos campos excede o limite permitido.',
       mensagem_longa: 'O texto pode ter no máximo 1200 caracteres.'
