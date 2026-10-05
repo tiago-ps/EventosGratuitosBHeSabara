@@ -5369,9 +5369,8 @@ function eventProgram(event) {
       const audiobookLabel = bookAudiobookLabel(item);
       const curationOnly = item._catalogo_curadoria === true;
       const bookImage = safeImageUrl(item.imagem);
-      const opinionUrl = state.config?.opinioes_livros?.habilitado === true
-        ? safeExternalUrl(item.link_formulario_opiniao || state.config?.opinioes_livros?.url_formulario)
-        : '';
+      const opinionBookId = String(item.id || '').trim();
+      const opinionsEnabled = state.config?.opinioes_livros?.habilitado === true && Boolean(opinionBookId);
       article.innerHTML = `
         <div class="agenda-card-media book-media">${bookImage
           ? `<img src="${escapeHtml(bookImage)}" alt="Capa: ${escapeHtml(item.titulo || '')}" loading="lazy">`
@@ -5385,9 +5384,21 @@ function eventProgram(event) {
           ${holdingsHtml}
           ${audiobookUrl ? `<div class="agenda-card-actions"><a href="${escapeHtml(audiobookUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(audiobookLabel)}</a></div>` : ''}
           ${item.exibir_comentario && item.comentario_aprovado ? `<blockquote class="agenda-book-opinion">“${escapeHtml(item.comentario_aprovado)}”<cite>${escapeHtml(item.credito_comentario || 'Leitor(a) do IFMG')}</cite></blockquote>` : ''}
-          ${opinionUrl ? `<div class="agenda-card-actions"><a class="secondary" href="${escapeHtml(opinionUrl)}" target="_blank" rel="noopener noreferrer">Opine sobre este livro</a></div>` : ''}
+          ${opinionsEnabled ? '<div class="agenda-card-actions"><a class="secondary agenda-book-opinion-open" href="#">Dê sua opinião sobre este livro</a></div>' : ''}
         </div>`;
       bindAgendaBookHoldingsToggle(article);
+      const opinionAction = article.querySelector('.agenda-book-opinion-open');
+      if (opinionAction) {
+        opinionAction.addEventListener('click', event => {
+          event.preventDefault();
+          openCommunityContributionForm('opiniao_livro', {
+            item_id: `livro:${opinionBookId}`,
+            id_obra: String(item.id_obra || '').trim(),
+            item_titulo: String(item.titulo || '').trim(),
+            item_autor: String(item.autor || '').trim()
+          });
+        });
+      }
       return decorateAgendaFavorite(article, item);
     }
 
