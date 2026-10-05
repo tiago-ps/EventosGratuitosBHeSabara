@@ -81,6 +81,7 @@ assert(worker.includes("const CONTRIBUTION_STATUS_PATH = '/api/contribuicoes-com
 assert(worker.includes("const CONTRIBUTION_ADMIN_PATH = '/api/contribuicoes-comunidade/admin'"));
 assert(worker.includes("sugerir_evento"));
 assert(worker.includes("corrigir_informacao"));
+assert(worker.includes("opiniao_livro"));
 assert(worker.includes("contribuir_mural"));
 assert(worker.includes("CON-"));
 assert(worker.includes("contribuicoes_comunidade"));
@@ -89,7 +90,7 @@ assert(worker.includes("handleCommunityContributionApi(request, env)"));
 
 const contributionSchema = fs.readFileSync('cloudflare/contribuicoes-comunidade.sql', 'utf8');
 assert(contributionSchema.includes('CREATE TABLE IF NOT EXISTS contribuicoes_comunidade'));
-assert(contributionSchema.includes("CHECK (tipo IN ('sugerir_evento', 'corrigir_informacao'))"));
+assert(contributionSchema.includes("CHECK (tipo IN ('sugerir_evento', 'corrigir_informacao', 'opiniao_livro'))"));
 for (const forbidden of ['ip ', 'user_agent', 'user-agent', 'fingerprint', 'email', 'telefone']) {
   assert(!contributionSchema.toLowerCase().includes(forbidden), `schema de contribuições não deve conter ${forbidden}`);
 }
@@ -98,6 +99,9 @@ assert(app.includes('Contribua com o Mural'));
 assert(app.includes('Sugerir um evento'));
 assert(app.includes('Corrigir informação'));
 assert(app.includes("openCommunityContributionForm('corrigir_informacao'"));
+assert(app.includes("openCommunityContributionForm('opiniao_livro'"));
+assert(app.includes('O que você diria para alguém ficar com vontade de ler este livro?'));
+assert(app.includes('Como você resumiria este livro para alguém que ainda não conhece?'));
 assert(app.includes("action: 'contribuir_mural'"));
 assert(app.includes('/api/contribuicoes-comunidade'));
 assert(app.includes("protocol.startsWith('CON-')"));
@@ -191,6 +195,6 @@ assert(styles.includes('.agenda-about-open'));
 assert(styles.includes('.agenda-about-dialog'));
 assert(styles.includes('.agenda-about-footer'));
 assert(indexHtml.includes('css/styles.css?v=102'));
-assert(indexHtml.includes('js/app.js?v=144'));
-assert(serviceWorker.includes("mural-cultural-v184-relacoes-eventos"));
+assert(indexHtml.includes('js/app.js?v=147'));
+assert(serviceWorker.includes("mural-cultural-v188-opinioes-livros"));
 
