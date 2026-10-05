@@ -2410,11 +2410,28 @@ function eventProgram(event) {
       }
     }
     const opinionLink = copy.querySelector('.book-opinion-link');
-    const opinionUrl = safeExternalUrl(book.link_formulario_opiniao || state.config?.opinioes_livros?.url_formulario);
     const opinionsEnabled = state.config?.opinioes_livros?.habilitado === true;
+    const opinionBookId = String(book.id || '').trim();
     if (opinionLink) {
-      opinionLink.hidden = !(opinionsEnabled && opinionUrl);
-      if (opinionsEnabled && opinionUrl) opinionLink.href = opinionUrl;
+      opinionLink.hidden = !(opinionsEnabled && opinionBookId);
+      if (opinionsEnabled && opinionBookId) {
+        opinionLink.href = '#';
+        opinionLink.removeAttribute('target');
+        opinionLink.removeAttribute('rel');
+        opinionLink.textContent = 'Dê sua opinião sobre este livro';
+        opinionLink.addEventListener('click', event => {
+          event.preventDefault();
+          state.paused = true;
+          clearTimeout(state.timer);
+          updatePlayPauseButton();
+          openCommunityContributionForm('opiniao_livro', {
+            item_id: `livro:${opinionBookId}`,
+            id_obra: String(book.id_obra || '').trim(),
+            item_titulo: String(book.titulo || '').trim(),
+            item_autor: String(book.autor || '').trim()
+          });
+        });
+      }
     }
 
     const link = safeExternalUrl(book.link || book.link_fisico || book.link_virtual);
@@ -4897,19 +4914,22 @@ function eventProgram(event) {
   }
 
   async function openCommunityContributionForm(kind, context = {}) {
-    if (!['sugerir_evento', 'corrigir_informacao'].includes(kind)) return;
+    if (!['sugerir_evento', 'corrigir_informacao', 'opiniao_livro'].includes(kind)) return;
     document.getElementById('agenda-community-form-dialog')?.remove();
     const isEvent = kind === 'sugerir_evento';
+    const isBookOpinion = kind === 'opiniao_livro';
     const dialog = document.createElement('dialog');
     dialog.id = 'agenda-community-form-dialog';
     dialog.className = 'agenda-curation-suggestion-dialog agenda-community-dialog';
     const itemTitle = String(context.item_titulo || '').trim();
+    const itemAuthor = String(context.item_autor || '').trim();
+    const itemWorkId = String(context.id_obra || '').trim();
     dialog.innerHTML = `
       <form class="agenda-curation-suggestion-card agenda-community-form">
         <div class="agenda-curation-suggestion-heading">
           <div>
             <p class="agenda-curation-suggestion-eyebrow">Contribuição anônima</p>
-            <h2>${isEvent ? 'Sugerir um evento' : 'Corrigir uma informação'}</h2>
+            <h2>${isEvent ? 'Sugerir um evento' : (isBookOpinion ? 'Dê sua opinião sobre este livro' : 'Corrigir uma informação')}</h2>
           </div>
           <button type="button" class="agenda-curation-suggestion-close" aria-label="Fechar">×</button>
         </div>
@@ -4922,6 +4942,24 @@ function eventProgram(event) {
           </div>
           <label class="agenda-community-field"><span>Link de referência <small>(recomendado)</small></span><input name="link_referencia" type="url" inputmode="url" maxlength="1200" placeholder="https://..."></label>
           <label class="agenda-community-field"><span>Onde podemos confirmar / observação <small>(opcional se houver link)</small></span><textarea name="observacao" maxlength="1200" rows="4" placeholder="Ex.: Divulgação no Instagram da instituição, atividade gratuita no parque..."></textarea></label>
+        ` : isBookOpinion ? `
+          <p class="agenda-curation-suggestion-privacy"><strong>Livro:</strong> ${escapeHtml(itemTitle)}${itemAuthor ? ` · ${escapeHtml(itemAuthor)}` : ''}</p>
+          <input name="item_id" type="hidden" value="${escapeHtml(String(context.item_id || ''))}">
+          <input name="id_obra" type="hidden" value="${escapeHtml(itemWorkId)}">
+          <input name="titulo" type="hidden" value="${escapeHtml(itemTitle)}">
+          <input name="autor" type="hidden" value="${escapeHtml(itemAuthor)}">
+          <label class="agenda-community-field">
+            <span>O que você diria para alguém ficar com vontade de ler este livro? *</span>
+            <textarea name="estimulo_leitura" maxlength="1200" rows="4" required placeholder="Conte, com suas palavras, o que torna essa leitura interessante."></textarea>
+          </label>
+          <label class="agenda-community-field">
+            <span>Como você resumiria este livro para alguém que ainda não conhece? *</span>
+            <textarea name="mini_resumo_leitor" maxlength="1200" rows="4" required placeholder="Faça um resumo curto, sem se preocupar em escrever um texto editorial pronto."></textarea>
+          </label>
+          <label class="agenda-community-field">
+            <span>Quer acrescentar alguma coisa? <small>(opcional)</small></span>
+            <textarea name="comentario" maxlength="1200" rows="3" placeholder="Impressões, temas, para quem você recomendaria a leitura..."></textarea>
+          </label>
         ` : `
           <label class="agenda-community-field"><span>Conteúdo que precisa de correção *</span><input name="item_titulo" maxlength="220" required value="${escapeHtml(itemTitle)}" placeholder="Ex.: nome do evento, livro, curso..."></label>
           <input name="item_id" type="hidden" value="${escapeHtml(String(context.item_id || ''))}">
@@ -5000,6 +5038,14 @@ function eventProgram(event) {
         data: data.get('data'),
         link_referencia: data.get('link_referencia'),
         observacao: data.get('observacao')
+      } : isBookOpinion ? {
+        item_id: data.get('item_id'),
+        id_obra: data.get('id_obra'),
+        titulo: data.get('titulo'),
+        autor: data.get('autor'),
+        estimulo_leitura: data.get('estimulo_leitura'),
+        mini_resumo_leitor: data.get('mini_resumo_leitor'),
+        comentario: data.get('comentario')
       } : {
         item_id: data.get('item_id'),
         item_titulo: data.get('item_titulo'),
