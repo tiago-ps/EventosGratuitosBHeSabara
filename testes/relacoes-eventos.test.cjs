@@ -68,6 +68,6 @@ const serviceWorker = fs.readFileSync(path.join(root, 'service-worker.js'), 'utf
 assert.ok(serviceWorker.includes("'./js/relacoes-eventos.js?v=1'"));
 assert.ok(serviceWorker.includes("'/relacoes-eventos.json'"));
 assert.ok(serviceWorker.includes("'./js/app.js?v=145'"));
-assert.ok(serviceWorker.includes("mural-cultural-v188-espacos-revisao"));
+assert.ok(serviceWorker.includes("mural-cultural-v192-opinioes-livros-opcionais"));
 
 console.log('ATC4.6.3: consumo relacional da interface aprovado.');
