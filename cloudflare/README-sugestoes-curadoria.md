@@ -63,6 +63,8 @@ O Turnstile usa a ação `contribuir_mural`. A contribuição não exige cadastr
 
 Antes de ativar os formulários, aplique `cloudflare/contribuicoes-comunidade.sql` no mesmo D1 vinculado como `SUGESTOES_DB`.
 
+Se `contribuicoes_comunidade` já existir com o schema anterior, aplique também `cloudflare/migrar-contribuicoes-opinioes-livros.sql` antes de habilitar `opiniao_livro`. A migração preserva protocolos, estados e payloads já recebidos.
+
 
 ## Links curtos de seleções compartilhadas
 
