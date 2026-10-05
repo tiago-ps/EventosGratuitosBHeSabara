@@ -4934,6 +4934,7 @@ function eventProgram(event) {
           <button type="button" class="agenda-curation-suggestion-close" aria-label="Fechar">×</button>
         </div>
         <p class="agenda-curation-suggestion-privacy"><strong>Não pedimos nome, e-mail ou cadastro.</strong> Envie somente informações necessárias para a equipe verificar a contribuição.</p>
+        ${isBookOpinion ? '<p class="agenda-curation-suggestion-privacy">Suas respostas serão usadas como apoio para a equipe elaborar a mensagem de estímulo e o mini resumo do livro. Elas não substituem automaticamente os textos editoriais nem são publicadas automaticamente.</p>' : ''}
         ${isEvent ? `
           <label class="agenda-community-field"><span>Nome do evento *</span><input name="titulo" maxlength="180" required></label>
           <div class="agenda-community-field-grid">
@@ -4995,7 +4996,9 @@ function eventProgram(event) {
     try {
       const response = await fetch(curationSuggestionApi('/api/contribuicoes-comunidade/config'), {cache:'no-store'});
       config = await response.json();
-      if (!response.ok || !config?.disponivel) throw new Error('indisponivel');
+      if (!response.ok || !config?.disponivel || !Array.isArray(config?.tipos) || !config.tipos.includes(kind)) {
+        throw new Error('indisponivel');
+      }
       if (config.turnstile_site_key) {
         turnstileBox.hidden = false;
         const api = await loadTurnstileApi();
