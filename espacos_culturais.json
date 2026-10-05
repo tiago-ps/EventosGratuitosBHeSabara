@@ -56,6 +56,9 @@
           "url": "https://ccbb.com.br/belo-horizonte/normas-de-visitacao/"
         }
       ],
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/ccbbbh/"
+      },
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "CCBB Belo Horizonte",
@@ -64,9 +67,6 @@
       ],
       "natureza_espaco": "Centro cultural",
       "instituicao": "Centro Cultural Banco do Brasil Belo Horizonte",
-      "redes_sociais": {
-        "instagram": "https://www.instagram.com/ccbbbh/#"
-      },
       "link": "https://ccbb.com.br/belo-horizonte"
     },
     {
@@ -176,7 +176,9 @@
       "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
       "instituicao": "Fundação Clóvis Salgado",
-      "redes_sociais": {},
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/palaciodasartes_/"
+      },
       "contatos": {
         "emails": [
           "mediacao@fcs.mg.gov.br"
@@ -533,7 +535,9 @@
         ]
       },
       "status_editorial": "em_analise",
-      "redes_sociais": {},
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/palaciodasartes_/"
+      },
       "links_adicionais": [
         {
           "rotulo": "Horários e bilheterias",
@@ -611,7 +615,9 @@
         "Leitura"
       ],
       "status_editorial": "em_analise",
-      "redes_sociais": {},
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/centroculturalaltoveracruz/"
+      },
       "links_adicionais": [],
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
@@ -674,7 +680,9 @@
         "Leitura"
       ],
       "status_editorial": "em_analise",
-      "redes_sociais": {},
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/cc.bairrodasindustrias/"
+      },
       "links_adicionais": [],
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
@@ -738,7 +746,9 @@
         "Leitura"
       ],
       "status_editorial": "em_analise",
-      "redes_sociais": {},
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/centroculturaljardimguanabara/"
+      },
       "links_adicionais": [],
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
@@ -803,7 +813,9 @@
         "Leitura"
       ],
       "status_editorial": "em_analise",
-      "redes_sociais": {},
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/cc.liberalinoalves/"
+      },
       "links_adicionais": [],
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
@@ -867,7 +879,9 @@
         "Leitura"
       ],
       "status_editorial": "em_analise",
-      "redes_sociais": {},
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/centroculturallindeiaregina/"
+      },
       "links_adicionais": [],
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
@@ -932,7 +946,9 @@
         "Leitura"
       ],
       "status_editorial": "em_analise",
-      "redes_sociais": {},
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/centroculturalpadreeustaquio/"
+      },
       "links_adicionais": [],
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
@@ -994,7 +1010,9 @@
         "Leitura"
       ],
       "status_editorial": "em_analise",
-      "redes_sociais": {},
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/centroculturalpampulha/"
+      },
       "links_adicionais": [],
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
@@ -1057,7 +1075,9 @@
         "Leitura"
       ],
       "status_editorial": "em_analise",
-      "redes_sociais": {},
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/centroculturalsalgadofilho/"
+      },
       "links_adicionais": [],
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
@@ -1104,6 +1124,9 @@
       "prioridade": 0,
       "status_editorial": "em_analise",
       "nota_editorial": "O local existe em serviços de mapas no endereço Rua Carmésia, 500, mas não foi localizado na rede oficial atual de Centros Culturais da PBH. Confirmar responsável, natureza jurídica e fonte oficial antes de preencher/publicar.",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/centroculturalsantainesbh/"
+      },
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "Centro Cultural Santa Inês",
@@ -1111,7 +1134,6 @@
       "temas": [],
       "natureza_espaco": "",
       "instituicao": "Fundação Municipal de Cultura de Belo Horizonte",
-      "redes_sociais": {},
       "contatos": {
         "emails": [],
         "telefones": []
@@ -1258,7 +1280,9 @@
         "Leitura"
       ],
       "status_editorial": "em_analise",
-      "redes_sociais": {},
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/cc.saobernardo/"
+      },
       "links_adicionais": [],
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
@@ -1323,7 +1347,9 @@
         "Leitura"
       ],
       "status_editorial": "em_analise",
-      "redes_sociais": {},
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/centroculturalsaogeraldo/"
+      },
       "links_adicionais": [],
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
@@ -1387,7 +1413,9 @@
         "Leitura"
       ],
       "status_editorial": "em_analise",
-      "redes_sociais": {},
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/centroculturalurucuia/"
+      },
       "links_adicionais": [],
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
@@ -1450,7 +1478,9 @@
         "Leitura"
       ],
       "status_editorial": "em_analise",
-      "redes_sociais": {},
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/usinadecultura/"
+      },
       "links_adicionais": [],
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
@@ -1516,7 +1546,9 @@
         "Leitura"
       ],
       "status_editorial": "em_analise",
-      "redes_sociais": {},
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/centroculturalvendanova/"
+      },
       "links_adicionais": [],
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
@@ -1579,7 +1611,9 @@
         "Leitura"
       ],
       "status_editorial": "em_analise",
-      "redes_sociais": {},
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/centroculturalvilafatima/"
+      },
       "links_adicionais": [],
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
@@ -1644,7 +1678,9 @@
         "Leitura"
       ],
       "status_editorial": "em_analise",
-      "redes_sociais": {},
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/centroculturalvilamarcola/"
+      },
       "links_adicionais": [],
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
@@ -1709,7 +1745,9 @@
         "Leitura"
       ],
       "status_editorial": "em_analise",
-      "redes_sociais": {},
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/centroculturalvilasantarita/"
+      },
       "links_adicionais": [],
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
@@ -1772,7 +1810,9 @@
         "Leitura"
       ],
       "status_editorial": "em_analise",
-      "redes_sociais": {},
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/centroculturalzilahsposito/"
+      },
       "links_adicionais": [],
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
@@ -2063,7 +2103,9 @@
         ]
       },
       "status_editorial": "em_analise",
-      "redes_sociais": {},
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/palaciodasartes_/"
+      },
       "links_adicionais": [
         {
           "rotulo": "Horários e bilheterias",
@@ -2208,7 +2250,9 @@
           "(31) 3243-1964"
         ]
       },
-      "redes_sociais": {},
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/cinetheatrobrasil/"
+      },
       "links_adicionais": [
         {
           "rotulo": "Espaços",
@@ -2649,7 +2693,9 @@
         ]
       },
       "status_editorial": "em_analise",
-      "redes_sociais": {},
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/palaciodasartes_/"
+      },
       "links_adicionais": [
         {
           "rotulo": "Horários e bilheterias",
@@ -2716,7 +2762,9 @@
         ]
       },
       "status_editorial": "em_analise",
-      "redes_sociais": {},
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/palaciodasartes_/"
+      },
       "links_adicionais": [
         {
           "rotulo": "Horários e bilheterias",
@@ -2862,7 +2910,9 @@
         ]
       },
       "status_editorial": "em_analise",
-      "redes_sociais": {},
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/palaciodasartes_/"
+      },
       "links_adicionais": [
         {
           "rotulo": "Horários e bilheterias",
@@ -2928,7 +2978,9 @@
         ]
       },
       "status_editorial": "em_analise",
-      "redes_sociais": {},
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/palaciodasartes_/"
+      },
       "links_adicionais": [
         {
           "rotulo": "Horários e bilheterias",
@@ -2997,7 +3049,7 @@
       ],
       "status_editorial": "em_analise",
       "redes_sociais": {
-        "instagram": "https://www.instagram.com/ccbbbh/#"
+        "instagram": "https://www.instagram.com/ccbbbh/"
       },
       "contatos": {
         "emails": [],
@@ -3065,7 +3117,7 @@
       ],
       "status_editorial": "em_analise",
       "redes_sociais": {
-        "instagram": "https://www.instagram.com/ccbbbh/#"
+        "instagram": "https://www.instagram.com/ccbbbh/"
       },
       "contatos": {
         "emails": [],
@@ -3130,7 +3182,9 @@
         ]
       },
       "status_editorial": "em_analise",
-      "redes_sociais": {},
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/palaciodasartes_/"
+      },
       "links_adicionais": [
         {
           "rotulo": "Horários e bilheterias",
@@ -3198,7 +3252,9 @@
         ]
       },
       "status_editorial": "em_analise",
-      "redes_sociais": {},
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/palaciodasartes_/"
+      },
       "links_adicionais": [
         {
           "rotulo": "Horários e bilheterias",
@@ -3247,7 +3303,9 @@
       "site": "https://www.cineteatrobrasil.com.br/grande-theatro-unimed-bh/",
       "imagem": "",
       "imagem_fonte": "",
-      "redes_sociais": {},
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/cinetheatrobrasil/"
+      },
       "contatos": {
         "emails": [
           "contato@cinetheatrobrasil.com.br",
@@ -3628,7 +3686,9 @@
       "exibicao_recorrente": false,
       "prioridade": 0,
       "imagem_credito": "Acervo Fundação Clóvis Salgado",
-      "redes_sociais": {},
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/palaciodasartes_/"
+      },
       "contatos": {
         "emails": [
           "mediacao@fcs.mg.gov.br"
@@ -3713,7 +3773,9 @@
         ]
       },
       "status_editorial": "em_analise",
-      "redes_sociais": {},
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/palaciodasartes_/"
+      },
       "links_adicionais": [
         {
           "rotulo": "Horários e bilheterias",
@@ -3858,7 +3920,7 @@
       ],
       "status_editorial": "em_analise",
       "redes_sociais": {
-        "instagram": "https://www.instagram.com/ccbbbh/#"
+        "instagram": "https://www.instagram.com/ccbbbh/"
       },
       "contatos": {
         "emails": [],
@@ -3925,7 +3987,9 @@
         ]
       },
       "status_editorial": "em_analise",
-      "redes_sociais": {},
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/palaciodasartes_/"
+      },
       "links_adicionais": [
         {
           "rotulo": "Horários e bilheterias",
@@ -3987,7 +4051,7 @@
       ],
       "status_editorial": "em_analise",
       "redes_sociais": {
-        "instagram": "https://www.instagram.com/ccbbbh/#"
+        "instagram": "https://www.instagram.com/ccbbbh/"
       },
       "contatos": {
         "emails": [],
@@ -4285,7 +4349,7 @@
       ],
       "status_editorial": "em_analise",
       "redes_sociais": {
-        "instagram": "https://www.instagram.com/ccbbbh/#"
+        "instagram": "https://www.instagram.com/ccbbbh/"
       },
       "contatos": {
         "emails": [],
@@ -4353,7 +4417,7 @@
       ],
       "status_editorial": "em_analise",
       "redes_sociais": {
-        "instagram": "https://www.instagram.com/ccbbbh/#"
+        "instagram": "https://www.instagram.com/ccbbbh/"
       },
       "contatos": {
         "emails": [],
@@ -4417,7 +4481,9 @@
         ]
       },
       "status_editorial": "em_analise",
-      "redes_sociais": {},
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/palaciodasartes_/"
+      },
       "links_adicionais": [
         {
           "rotulo": "Horários e bilheterias",
