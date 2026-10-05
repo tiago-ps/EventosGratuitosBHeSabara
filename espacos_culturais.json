@@ -1,6 +1,6 @@
 {
   "versao": 2,
-  "modo_revisao_teste": false,
+  "modo_revisao_teste": true,
   "itens": [
     {
       "aliases": [
@@ -142,6 +142,295 @@
       "link": "https://www.ufmg.br/espacodoconhecimento/"
     },
     {
+      "id": "palacio-das-artes-arena-joao-das-neves",
+      "nome": "Arena João das Neves",
+      "equipamento_id": "palacio-das-artes",
+      "instituicao_id": "fcs",
+      "descricao": "",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": ""
+      },
+      "site": "https://fcs.mg.gov.br/palacio-das-artes/",
+      "imagem": "https://fcs.mg.gov.br/wp-content/uploads/2024/12/FachadaPL00141-1024x683.jpg",
+      "imagem_fonte": "https://fcs.mg.gov.br/palacio-das-artes/",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "status_editorial": "em_analise",
+      "nota_editorial": "O nome não aparece entre os espaços atualmente listados pela Fundação Clóvis Salgado no Palácio das Artes. Confirmar se permanece ativo, foi renomeado ou corresponde a outro ambiente antes de publicar.",
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Arena João das Neves",
+      "vocacoes": [],
+      "temas": [],
+      "natureza_espaco": "",
+      "espaco_principal": "Palácio das Artes",
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
+      "instituicao": "Fundação Clóvis Salgado",
+      "redes_sociais": {},
+      "contatos": {
+        "emails": [
+          "mediacao@fcs.mg.gov.br"
+        ],
+        "telefones": [
+          "(31) 3236-7400"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Horários e bilheterias",
+          "url": "https://fcs.mg.gov.br/institucional/horario-de-atendimento/"
+        },
+        {
+          "rotulo": "Ingressos",
+          "url": "https://www.sympla.com.br/"
+        }
+      ],
+      "link": "https://fcs.mg.gov.br/palacio-das-artes/"
+    },
+    {
+      "id": "centro-cultural-sesiminas-bh-auditorio",
+      "nome": "Auditório",
+      "equipamento_id": "centro-cultural-sesiminas-bh",
+      "instituicao_id": "sesiminas-bh",
+      "descricao": "Auditório do Centro Cultural SESIMINAS BH destinado a eventos de menor porte, encontros e atividades corporativas. Integra a estrutura de locação do complexo, com mobiliário e recursos de apoio para reuniões e apresentações.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Uso conforme agendamento e realização de eventos."
+      },
+      "site": "https://www.fiemg.com.br/sesi-cultura/centro-cultural-sesiminas-bh/",
+      "imagem": "https://www.fiemg.com.br/sesi-cultura/wp-content/uploads/sites/28/2023/07/c9ad3694bc4b55cd4122ecb4f642908e0db018c961170f51099c6ab6212d879c.jpg",
+      "imagem_fonte": "https://www.fiemg.com.br/sesi-cultura/centro-cultural-sesiminas-bh/",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Auditório",
+      "vocacoes": [
+        "Eventos",
+        "Formação",
+        "Palestras",
+        "Encontros"
+      ],
+      "links_adicionais": [
+        {
+          "rotulo": "Centro Cultural SESIMINAS BH",
+          "url": "https://www.fiemg.com.br/sesi-cultura/centro-cultural-sesiminas-bh/"
+        },
+        {
+          "rotulo": "Programação",
+          "url": "https://www.fiemg.com.br/sesi-cultura/programacao/"
+        },
+        {
+          "rotulo": "Cursos",
+          "url": "https://www.fiemg.com.br/sesi-cultura/cursos/"
+        },
+        {
+          "rotulo": "Biblioteca",
+          "url": "https://www.fiemg.com.br/sesi-cultura/biblioteca/"
+        }
+      ],
+      "status_editorial": "em_analise",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/sesiculturamg/",
+        "whatsapp": "https://wa.me/5531996247612"
+      },
+      "contatos": {
+        "emails": [
+          "sesiculturamg@fiemg.com.br",
+          "teatrosesiminas@fiemg.com.br"
+        ],
+        "telefones": [
+          "(31) 2116-0418",
+          "(31) 99624-7612 (WhatsApp)",
+          "(31) 97157-0747 (eventos)"
+        ]
+      },
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Auditório",
+      "temas": [
+        "Eventos",
+        "Formação",
+        "Palestras",
+        "Encontros"
+      ],
+      "natureza_espaco": "Auditório",
+      "espaco_principal": "Centro Cultural SESIMINAS BH",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Padre Marinho, 60, Santa Efigênia, Belo Horizonte - MG",
+      "mapa": "",
+      "instituicao": "SESIMINAS BH",
+      "link": "https://www.fiemg.com.br/sesi-cultura/centro-cultural-sesiminas-bh/"
+    },
+    {
+      "id": "auditorio-do-museu-puc-minas",
+      "nome": "Auditório do Museu PUC Minas",
+      "equipamento_id": "museu-puc-minas",
+      "instituicao_id": "puc-minas",
+      "descricao": "Auditório integrado ao Museu de Ciências Naturais PUC Minas, no Campus Coração Eucarístico. Recebe concertos, palestras, encontros acadêmicos, atividades formativas e eventos culturais abertos à comunidade, incluindo a série gratuita Concertos Dominicais Peter Lund.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Funcionamento conforme a programação de eventos, concertos e atividades acadêmicas do Museu e da PUC Minas."
+      },
+      "site": "https://www.pucminas.br/sala-imprensa/eventos/Paginas/Concertos-Dominicais-Peter-Lund-1.aspx",
+      "imagem": "https://www.pucminas.br/cienciasbiologicas/infraestrutura/PublishingImages/Paginas/museu/museu.jpg",
+      "imagem_fonte": "https://www.pucminas.br/Paginas/museu.aspx",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Auditório",
+      "vocacoes": [
+        "Cultura",
+        "Música",
+        "Formação",
+        "Palestras",
+        "Eventos acadêmicos"
+      ],
+      "contatos": {
+        "emails": [
+          "museu@pucminas.br",
+          "mcn.educação@pucminas.br"
+        ],
+        "telefones": [
+          "(31) 3319-4421",
+          "(31) 3319-4152",
+          "(31) 3319-4520 (Setor de Educação)"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Agenda de eventos PUC Minas",
+          "url": "https://www.pucminas.br/sala-imprensa/eventos/Paginas/default.aspx"
+        },
+        {
+          "rotulo": "Ingressos",
+          "url": "https://ingressosmuseu.pucminas.br/"
+        }
+      ],
+      "status_editorial": "em_analise",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/museupucminas/?hl=pt-br"
+      },
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Auditório do Museu PUC Minas",
+      "temas": [
+        "Cultura",
+        "Música",
+        "Formação",
+        "Palestras",
+        "Eventos acadêmicos"
+      ],
+      "natureza_espaco": "Auditório",
+      "espaco_principal": "Museu de Ciências Naturais PUC Minas",
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida Dom José Gaspar, 290, Coração Eucarístico, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/DcEtTi99WAcyrfux6",
+      "instituicao": "Pontifícia Universidade Católica de Minas Gerais",
+      "link": "https://www.pucminas.br/sala-imprensa/eventos/Paginas/Concertos-Dominicais-Peter-Lund-1.aspx"
+    },
+    {
+      "id": "centro-cultural-sesiminas-bh-biblioteca",
+      "nome": "Biblioteca",
+      "equipamento_id": "centro-cultural-sesiminas-bh",
+      "instituicao_id": "sesiminas-bh",
+      "descricao": "Biblioteca aberta ao público, localizada no Centro Cultural SESIMINAS BH. Reúne acervo com mais de 30 mil exemplares entre livros, periódicos e materiais de referência, oferecendo empréstimo, consulta, espaço de estudo, atividades culturais, espaço infantil, acesso à internet e impressão.",
+      "funcionamento": {
+        "segunda": "9h às 19h",
+        "terca": "9h às 19h",
+        "quarta": "9h às 19h",
+        "quinta": "9h às 19h",
+        "sexta": "9h às 19h",
+        "sabado": "9h às 14h30",
+        "domingo": "",
+        "observacao": "Aos sábados, funciona apenas no primeiro e no último sábado de cada mês."
+      },
+      "site": "https://www.fiemg.com.br/sesi-cultura/biblioteca/",
+      "imagem": "https://www.fiemg.com.br/sesi-cultura/wp-content/uploads/sites/28/2023/07/c9ad3694bc4b55cd4122ecb4f642908e0db018c961170f51099c6ab6212d879c.jpg",
+      "imagem_fonte": "https://www.fiemg.com.br/sesi-cultura/centro-cultural-sesiminas-bh/",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/sesiculturamg/",
+        "whatsapp": "https://wa.me/5531971696735"
+      },
+      "contatos": {
+        "emails": [
+          "bsesiminasbh@fiemg.com.br",
+          "sesiculturamg@fiemg.com.br",
+          "teatrosesiminas@fiemg.com.br"
+        ],
+        "telefones": [
+          "(31) 97169-6735 (WhatsApp)",
+          "(31) 2116-0418",
+          "(31) 99624-7612 (WhatsApp)",
+          "(31) 97157-0747 (eventos)"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Biblioteca e acervo",
+          "url": "https://www.fiemg.com.br/sesi-cultura/biblioteca/"
+        },
+        {
+          "rotulo": "Programação",
+          "url": "https://www.fiemg.com.br/sesi-cultura/programacao/"
+        },
+        {
+          "rotulo": "Cursos",
+          "url": "https://www.fiemg.com.br/sesi-cultura/cursos/"
+        },
+        {
+          "rotulo": "Biblioteca",
+          "url": "https://www.fiemg.com.br/sesi-cultura/biblioteca/"
+        }
+      ],
+      "tipo_espaco": "Biblioteca",
+      "vocacoes": [
+        "Cultura",
+        "Leitura",
+        "Formação"
+      ],
+      "status_editorial": "em_analise",
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Biblioteca",
+      "temas": [
+        "Cultura",
+        "Leitura",
+        "Formação"
+      ],
+      "natureza_espaco": "Biblioteca",
+      "espaco_principal": "Centro Cultural SESIMINAS BH",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Padre Marinho, 60, Santa Efigênia, Belo Horizonte - MG",
+      "mapa": "",
+      "instituicao": "SESIMINAS BH",
+      "link": "https://www.fiemg.com.br/sesi-cultura/biblioteca/"
+    },
+    {
       "id": "biblioteca-publica-infantil-e-juvenil-de-belo-horizonte",
       "nome": "Biblioteca Pública Infantil e Juvenil de Belo Horizonte",
       "cidade": "Belo Horizonte",
@@ -206,6 +495,4261 @@
       "natureza_espaco": "Biblioteca",
       "instituicao": "Fundação Municipal de Cultura de Belo Horizonte",
       "link": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/biblioteca-infantil-e-juvenil"
+    },
+    {
+      "id": "palacio-das-artes-cafe-do-palacio",
+      "nome": "Café do Palácio",
+      "equipamento_id": "palacio-das-artes",
+      "instituicao_id": "fcs",
+      "descricao": "Espaço de convivência que articula acessos do Palácio das Artes, próximo ao Cine Humberto Mauro e à Galeria Mari’Stella Tristão. Funciona como ponto de encontro e pausa entre sessões, exposições e espetáculos, oferecendo lanches e bebidas.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "9h30 às 21h",
+        "quarta": "9h30 às 21h",
+        "quinta": "9h30 às 21h",
+        "sexta": "9h30 às 21h",
+        "sabado": "9h30 às 21h",
+        "domingo": "17h às 21h",
+        "observacao": "Horário geral de visitação do Palácio das Artes. Sessões, espetáculos e eventos têm horários próprios conforme a programação."
+      },
+      "site": "https://fcs.mg.gov.br/espacos-culturais/palacio-das-artes/cafe-do-palacio/",
+      "imagem": "https://fcs.mg.gov.br/wp-content/uploads/2024/12/FachadaPL00141-1024x683.jpg",
+      "imagem_fonte": "https://fcs.mg.gov.br/palacio-das-artes/",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Café / espaço de convivência",
+      "vocacoes": [
+        "Convivência",
+        "Cultura",
+        "Alimentação"
+      ],
+      "contatos": {
+        "emails": [
+          "mediacao@fcs.mg.gov.br"
+        ],
+        "telefones": [
+          "(31) 3236-7400"
+        ]
+      },
+      "status_editorial": "em_analise",
+      "redes_sociais": {},
+      "links_adicionais": [
+        {
+          "rotulo": "Horários e bilheterias",
+          "url": "https://fcs.mg.gov.br/institucional/horario-de-atendimento/"
+        },
+        {
+          "rotulo": "Ingressos",
+          "url": "https://www.sympla.com.br/"
+        }
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Café do Palácio",
+      "temas": [
+        "Convivência",
+        "Cultura",
+        "Alimentação"
+      ],
+      "natureza_espaco": "Café / espaço de convivência",
+      "espaco_principal": "Palácio das Artes",
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
+      "instituicao": "Fundação Clóvis Salgado",
+      "link": "https://fcs.mg.gov.br/espacos-culturais/palacio-das-artes/cafe-do-palacio/"
+    },
+    {
+      "aliases": [
+        "Centro Cultural Alto Vera Cruz",
+        "CC Alto Vera Cruz"
+      ],
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Padre Júlio Maria, 1577, Alto Vera Cruz, Belo Horizonte - MG, 30285-360",
+      "fonte_endereco": "https://maps.app.goo.gl/BVLi6uyKLmALv6SM6",
+      "google_maps_foto": "https://maps.app.goo.gl/RqLNoEP5Ee4XgjqE7",
+      "google_maps_street_view": "https://maps.app.goo.gl/jhrjbseMuarEUMVZ9",
+      "google_place_id": "",
+      "id": "centro-cultural-alto-vera-cruz",
+      "instituicao_ids": [
+        "fundacao-municipal-cultura-bh"
+      ],
+      "mapa": "https://maps.app.goo.gl/BVLi6uyKLmALv6SM6",
+      "nome": "Centro Cultural Alto Vera Cruz",
+      "descricao": "Centro cultural comunitário da Regional Leste, criado a partir do Orçamento Participativo. Oferece formação e capacitação, oficinas artísticas, eventos, debates e atividades de incentivo à leitura por meio de sua biblioteca.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "9h às 19h",
+        "quarta": "9h às 19h",
+        "quinta": "9h às 19h",
+        "sexta": "9h às 19h",
+        "sabado": "9h às 17h",
+        "domingo": "",
+        "observacao": "A biblioteca funciona até as 18h durante a semana. Atividades podem ocorrer em outros horários conforme a programação."
+      },
+      "site": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/altoveracruz",
+      "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/fundacao-municipal-de-cultura/2020_01_15_fachada_CCAVC_foto_Poliana_Pinto_%20-1%20%281%29%20-%20C%C3%B3pia.jpg",
+      "imagem_fonte": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/altoveracruz",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem_credito": "Poliana Pinto/PBH",
+      "contatos": {
+        "emails": [
+          "ccavc.fmc@pbh.gov.br"
+        ],
+        "telefones": [
+          "(31) 3277-5612",
+          "(31) 3277-5618"
+        ]
+      },
+      "tipo_espaco": "Centro cultural",
+      "vocacoes": [
+        "Cultura",
+        "Formação",
+        "Leitura"
+      ],
+      "status_editorial": "em_analise",
+      "redes_sociais": {},
+      "links_adicionais": [],
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Centro Cultural Alto Vera Cruz",
+      "temas": [
+        "Cultura",
+        "Formação",
+        "Leitura"
+      ],
+      "natureza_espaco": "Centro cultural",
+      "instituicao": "Fundação Municipal de Cultura de Belo Horizonte",
+      "link": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/altoveracruz"
+    },
+    {
+      "aliases": [
+        "Centro Cultural Bairro das Indústrias",
+        "Centro Cultural Bairro das Industrias",
+        "CC Bairro das Indústrias"
+      ],
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua dos Industriários, 289, Indústrias I (Barreiro), Belo Horizonte - MG, 30610-280",
+      "fonte_endereco": "https://maps.app.goo.gl/o3ucaPwjJs26Zdvy5",
+      "google_maps_foto": "https://maps.app.goo.gl/iPEbQMwLEayWsp9C9",
+      "google_maps_street_view": "https://maps.app.goo.gl/eNUt7L4TunQVT86g7",
+      "google_place_id": "",
+      "id": "centro-cultural-bairro-das-industrias",
+      "instituicao_ids": [
+        "fundacao-municipal-cultura-bh"
+      ],
+      "mapa": "https://maps.app.goo.gl/o3ucaPwjJs26Zdvy5",
+      "nome": "Centro Cultural Bairro das Indústrias",
+      "descricao": "Centro cultural da Regional Barreiro, implantado a partir de mobilização comunitária. Desenvolve oficinas de artes, dança, música, teatro e literatura, além de exposições e ações de memória e patrimônio. Possui biblioteca, sala multiuso, semiarena externa, auditório e área verde.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "9h às 19h",
+        "quarta": "9h às 19h",
+        "quinta": "9h às 19h",
+        "sexta": "9h às 19h",
+        "sabado": "9h às 17h",
+        "domingo": "",
+        "observacao": "A biblioteca funciona até as 18h durante a semana. Atividades podem ocorrer em outros horários conforme a programação."
+      },
+      "site": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/bairrodasindustrias",
+      "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/styles/slideshow/public/imagens/authenticated%2C%20publicador_a_ascom/banners/2018-01/ccbdi-16-2015-10-07-cricardolaf.jpg?itok=WW-Gp5kh",
+      "imagem_fonte": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/bairrodasindustrias",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem_credito": "Ricardo Laf/PBH",
+      "contatos": {
+        "emails": [
+          "ccbdi.fmc@pbh.gov.br"
+        ],
+        "telefones": []
+      },
+      "tipo_espaco": "Centro cultural",
+      "vocacoes": [
+        "Cultura",
+        "Formação",
+        "Leitura"
+      ],
+      "status_editorial": "em_analise",
+      "redes_sociais": {},
+      "links_adicionais": [],
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Centro Cultural Bairro das Indústrias",
+      "temas": [
+        "Cultura",
+        "Formação",
+        "Leitura"
+      ],
+      "natureza_espaco": "Centro cultural",
+      "instituicao": "Fundação Municipal de Cultura de Belo Horizonte",
+      "link": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/bairrodasindustrias"
+    },
+    {
+      "aliases": [
+        "Centro Cultural Jardim Guanabara",
+        "CC Jardim Guanabara"
+      ],
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua João Álvares Cabral, 277, Jardim Guanabara, Belo Horizonte - MG, 31742-170",
+      "fonte_endereco": "https://maps.app.goo.gl/eCATveDGRuNKYLof9",
+      "google_maps_street_view": "https://maps.app.goo.gl/Ar7wKZtPaLtLvuEq5",
+      "google_place_id": "",
+      "id": "centro-cultural-jardim-guanabara",
+      "instituicao_ids": [
+        "fundacao-municipal-cultura-bh"
+      ],
+      "mapa": "https://maps.app.goo.gl/eCATveDGRuNKYLof9",
+      "nome": "Centro Cultural Jardim Guanabara",
+      "descricao": "Centro cultural da Regional Norte voltado à produção, difusão e preservação da cultura e do patrimônio comunitário. Possui biblioteca, sala multiuso, sala de oficina, hall de exposições, mini teatro de arena e área externa utilizada para eventos.",
+      "funcionamento": {
+        "segunda": "9h às 19h",
+        "terca": "9h às 19h",
+        "quarta": "9h às 19h",
+        "quinta": "9h às 19h",
+        "sexta": "9h às 19h",
+        "sabado": "9h às 17h",
+        "domingo": "",
+        "observacao": "A biblioteca funciona até as 18h durante a semana. Atividades podem ocorrer em outros horários conforme a programação."
+      },
+      "site": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/jardimguanabara",
+      "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/cultura/2018/imagens/CCJG%20-%20DSC_4925%20-%20%C2%A9Glenio%20Campregher%20copy.jpg",
+      "imagem_fonte": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/jardimguanabara",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem_credito": "Glênio Campregher/PBH",
+      "contatos": {
+        "emails": [
+          "ccjg.fmc@pbh.gov.br"
+        ],
+        "telefones": [
+          "(31) 3277-6703",
+          "(31) 3277-4628 (biblioteca)"
+        ]
+      },
+      "tipo_espaco": "Centro cultural",
+      "vocacoes": [
+        "Cultura",
+        "Formação",
+        "Leitura"
+      ],
+      "status_editorial": "em_analise",
+      "redes_sociais": {},
+      "links_adicionais": [],
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Centro Cultural Jardim Guanabara",
+      "temas": [
+        "Cultura",
+        "Formação",
+        "Leitura"
+      ],
+      "natureza_espaco": "Centro cultural",
+      "instituicao": "Fundação Municipal de Cultura de Belo Horizonte",
+      "link": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/jardimguanabara"
+    },
+    {
+      "aliases": [
+        "Centro Cultural Liberalino Alves de Oliveira",
+        "CC Liberalino Alves de Oliveira"
+      ],
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida Presidente Antônio Carlos, 821, Lagoinha, Belo Horizonte - MG, 31110-314",
+      "fonte_endereco": "https://maps.app.goo.gl/59216yGPUBfMrKVa9",
+      "google_maps_foto": "https://maps.app.goo.gl/44bQJPBfs1mhSKCQ9",
+      "google_maps_street_view": "https://maps.app.goo.gl/Pxeg7hnV5KhP9sJA8",
+      "google_place_id": "",
+      "id": "centro-cultural-liberalino-alves-de-oliveira",
+      "instituicao_ids": [
+        "fundacao-municipal-cultura-bh"
+      ],
+      "mapa": "https://maps.app.goo.gl/59216yGPUBfMrKVa9",
+      "nome": "Centro Cultural Liberalino Alves de Oliveira",
+      "descricao": "Espaço cultural instalado no Mercado da Lagoinha, dedicado a democratizar o acesso à cultura, aos bens culturais e à informação. Atua como ponto de criação, formação, difusão e circulação cultural para moradores da Regional Noroeste e de outras regiões da cidade.",
+      "funcionamento": {
+        "segunda": "9h às 19h",
+        "terca": "9h às 19h",
+        "quarta": "9h às 19h",
+        "quinta": "9h às 19h",
+        "sexta": "9h às 19h",
+        "sabado": "9h às 17h",
+        "domingo": "",
+        "observacao": "A biblioteca funciona até as 18h durante a semana. Atividades podem ocorrer em outros horários conforme a programação."
+      },
+      "site": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/liberalinoalves",
+      "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/fundacao-municipal-de-cultura/2019/2019_06_11_CCLAO_fachada_foto_Ricardo_Laf_02%20-%20C%C3%B3pia.jpg",
+      "imagem_fonte": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/liberalinoalves",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem_credito": "Ricardo Laf/PBH",
+      "contatos": {
+        "emails": [
+          "cclao.fmc@pbh.gov.br"
+        ],
+        "telefones": [
+          "(31) 3277-6091",
+          "(31) 3277-6077"
+        ]
+      },
+      "tipo_espaco": "Centro cultural",
+      "vocacoes": [
+        "Cultura",
+        "Formação",
+        "Leitura"
+      ],
+      "status_editorial": "em_analise",
+      "redes_sociais": {},
+      "links_adicionais": [],
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Centro Cultural Liberalino Alves de Oliveira",
+      "temas": [
+        "Cultura",
+        "Formação",
+        "Leitura"
+      ],
+      "natureza_espaco": "Centro cultural",
+      "instituicao": "Fundação Municipal de Cultura de Belo Horizonte",
+      "link": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/liberalinoalves"
+    },
+    {
+      "aliases": [
+        "Centro Cultural Lindeia Regina",
+        "Centro Cultural Lindéia Regina",
+        "CC Lindeia Regina"
+      ],
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Aristolino Basílio de Oliveira, 445, Regina, Belo Horizonte - MG, 30692-190",
+      "fonte_endereco": "https://maps.app.goo.gl/NbE1w2tMKeH6P3Lm8",
+      "google_maps_street_view": "https://maps.app.goo.gl/pLCKsqYigfV7dLDg7",
+      "google_place_id": "",
+      "id": "centro-cultural-lindeia-regina",
+      "instituicao_ids": [
+        "fundacao-municipal-cultura-bh"
+      ],
+      "mapa": "https://maps.app.goo.gl/NbE1w2tMKeH6P3Lm8",
+      "nome": "Centro Cultural Lindeia Regina",
+      "descricao": "Centro cultural situado na região de divisa entre Belo Horizonte, Contagem e Ibirité. Desenvolve projetos ligados à memória social e à identidade das comunidades locais, promove oficinas de artes visuais e cênicas, recebe grupos artísticos e mantém biblioteca pública para empréstimo.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "9h às 19h",
+        "quarta": "9h às 19h",
+        "quinta": "9h às 19h",
+        "sexta": "9h às 19h",
+        "sabado": "9h às 17h",
+        "domingo": "",
+        "observacao": "A biblioteca funciona até as 18h durante a semana. Atividades podem ocorrer em outros horários conforme a programação."
+      },
+      "site": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/lindeiaregina",
+      "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/styles/slideshow/public/imagens/authenticated%2C%20publicador_a_ascom/banners/2018-01/cclr-dsc0471-cglenio-campregher.jpg?itok=xivQB56j",
+      "imagem_fonte": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/lindeiaregina",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem_credito": "Glênio Campregher/PBH",
+      "contatos": {
+        "emails": [
+          "cclr.fmc@pbh.gov.br"
+        ],
+        "telefones": [
+          "(31) 3277-1515"
+        ]
+      },
+      "tipo_espaco": "Centro cultural",
+      "vocacoes": [
+        "Cultura",
+        "Formação",
+        "Leitura"
+      ],
+      "status_editorial": "em_analise",
+      "redes_sociais": {},
+      "links_adicionais": [],
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Centro Cultural Lindeia Regina",
+      "temas": [
+        "Cultura",
+        "Formação",
+        "Leitura"
+      ],
+      "natureza_espaco": "Centro cultural",
+      "instituicao": "Fundação Municipal de Cultura de Belo Horizonte",
+      "link": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/lindeiaregina"
+    },
+    {
+      "aliases": [
+        "Centro Cultural Padre Eustáquio",
+        "Centro Cultural Padre Eustaquio",
+        "CC Padre Eustáquio"
+      ],
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Jacutinga, 550, Padre Eustáquio, Belo Horizonte - MG, 30730-430",
+      "fonte_endereco": "https://maps.app.goo.gl/7rg1vm7n5XChXQbv7",
+      "google_maps_street_view": "https://maps.app.goo.gl/s3Gqh3pCVTsfk55XA",
+      "google_place_id": "",
+      "id": "centro-cultural-padre-eustaquio",
+      "instituicao_ids": [
+        "fundacao-municipal-cultura-bh"
+      ],
+      "mapa": "https://maps.app.goo.gl/7rg1vm7n5XChXQbv7",
+      "nome": "Centro Cultural Padre Eustáquio",
+      "descricao": "Centro cultural instalado na antiga Feira Coberta do bairro Padre Eustáquio. Conta com pátio amplo e palco para apresentações, biblioteca e salas destinadas a oficinas de artes plásticas e cênicas, atendendo atividades de formação e difusão cultural.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "9h às 19h",
+        "quarta": "9h às 19h",
+        "quinta": "9h às 19h",
+        "sexta": "9h às 19h",
+        "sabado": "9h às 17h",
+        "domingo": "",
+        "observacao": "A biblioteca funciona até as 18h durante a semana. Atividades podem ocorrer em outros horários conforme a programação."
+      },
+      "site": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/padreeustaquio",
+      "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/cultura/2018/imagens/CCPE%20-%20DSC_4953%20-%20%C2%A9Glenio%20Campregher.jpg",
+      "imagem_fonte": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/padreeustaquio",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem_credito": "Glênio Campregher/PBH",
+      "contatos": {
+        "emails": [
+          "ccpe.fmc@pbh.gov.br"
+        ],
+        "telefones": [
+          "(31) 3277-8394",
+          "(31) 3277-7269"
+        ]
+      },
+      "tipo_espaco": "Centro cultural",
+      "vocacoes": [
+        "Cultura",
+        "Formação",
+        "Leitura"
+      ],
+      "status_editorial": "em_analise",
+      "redes_sociais": {},
+      "links_adicionais": [],
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Centro Cultural Padre Eustáquio",
+      "temas": [
+        "Cultura",
+        "Formação",
+        "Leitura"
+      ],
+      "natureza_espaco": "Centro cultural",
+      "instituicao": "Fundação Municipal de Cultura de Belo Horizonte",
+      "link": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/padreeustaquio"
+    },
+    {
+      "aliases": [
+        "Centro Cultural Pampulha",
+        "CC Pampulha"
+      ],
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Expedicionário Paulo de Souza, 185, Urca, Belo Horizonte - MG, 31360-310",
+      "fonte_endereco": "https://maps.app.goo.gl/rrV4fGrZHEfgd5k57",
+      "google_maps_foto": "https://maps.app.goo.gl/C77mHpRRZ2ZgZqQW8",
+      "google_maps_street_view": "https://maps.app.goo.gl/8eJToYdJdSu3AbPLA",
+      "google_place_id": "",
+      "id": "centro-cultural-pampulha",
+      "instituicao_ids": [
+        "fundacao-municipal-cultura-bh"
+      ],
+      "mapa": "https://maps.app.goo.gl/rrV4fGrZHEfgd5k57",
+      "nome": "Centro Cultural Pampulha",
+      "descricao": "Centro cultural da Regional Pampulha voltado à formação, cidadania e memória da comunidade. O espaço reúne biblioteca, sala de projeção, salas de oficinas, auditório, jardins e área para apresentações artísticas e outras atividades.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "9h às 19h",
+        "quarta": "9h às 19h",
+        "quinta": "9h às 19h",
+        "sexta": "9h às 19h",
+        "sabado": "9h às 17h",
+        "domingo": "",
+        "observacao": "A biblioteca funciona até as 18h durante a semana. Atividades podem ocorrer em outros horários conforme a programação."
+      },
+      "site": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/pampulha",
+      "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/fundacao-municipal-de-cultura/2020/ccpam-foto-glenio-campregher.jpg",
+      "imagem_fonte": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/pampulha",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem_credito": "Glênio Campregher/PBH",
+      "contatos": {
+        "emails": [
+          "ccp.fmc@pbh.gov.br"
+        ],
+        "telefones": []
+      },
+      "tipo_espaco": "Centro cultural",
+      "vocacoes": [
+        "Cultura",
+        "Formação",
+        "Leitura"
+      ],
+      "status_editorial": "em_analise",
+      "redes_sociais": {},
+      "links_adicionais": [],
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Centro Cultural Pampulha",
+      "temas": [
+        "Cultura",
+        "Formação",
+        "Leitura"
+      ],
+      "natureza_espaco": "Centro cultural",
+      "instituicao": "Fundação Municipal de Cultura de Belo Horizonte",
+      "link": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/pampulha"
+    },
+    {
+      "aliases": [
+        "Centro Cultural Salgado Filho",
+        "CC Salgado Filho"
+      ],
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Nova Ponte, 22, Salgado Filho, Belo Horizonte - MG, 30550-720",
+      "fonte_endereco": "https://maps.app.goo.gl/xqnT1A9TWbQdY2wE8",
+      "google_maps_street_view": "https://maps.app.goo.gl/sTg7xhat4tTjLXL57",
+      "google_place_id": "",
+      "id": "centro-cultural-salgado-filho",
+      "instituicao_ids": [
+        "fundacao-municipal-cultura-bh"
+      ],
+      "mapa": "https://maps.app.goo.gl/xqnT1A9TWbQdY2wE8",
+      "nome": "Centro Cultural Salgado Filho",
+      "descricao": "Centro cultural da Regional Oeste criado a partir da mobilização dos moradores. Possui auditório multiuso, biblioteca, telecentro, sala de oficina, áreas expositivas, auditório audiovisual e sala para ensaios de teatro e dança, com estrutura de acessibilidade.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "9h às 19h",
+        "quarta": "9h às 19h",
+        "quinta": "9h às 19h",
+        "sexta": "9h às 19h",
+        "sabado": "9h às 17h",
+        "domingo": "",
+        "observacao": "A biblioteca funciona até as 18h durante a semana. Atividades podem ocorrer em outros horários conforme a programação."
+      },
+      "site": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/salgadofilho",
+      "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/cultura/2018/imagens/CCSF_foto_Ricardo_Laf_03.jpg",
+      "imagem_fonte": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/salgadofilho",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem_credito": "Ricardo Laf/PBH",
+      "contatos": {
+        "emails": [
+          "ccsf.fmc@pbh.gov.br"
+        ],
+        "telefones": [
+          "(31) 3277-9625"
+        ]
+      },
+      "tipo_espaco": "Centro cultural",
+      "vocacoes": [
+        "Cultura",
+        "Formação",
+        "Leitura"
+      ],
+      "status_editorial": "em_analise",
+      "redes_sociais": {},
+      "links_adicionais": [],
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Centro Cultural Salgado Filho",
+      "temas": [
+        "Cultura",
+        "Formação",
+        "Leitura"
+      ],
+      "natureza_espaco": "Centro cultural",
+      "instituicao": "Fundação Municipal de Cultura de Belo Horizonte",
+      "link": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/salgadofilho"
+    },
+    {
+      "id": "centro-cultural-santa-ines",
+      "nome": "Centro Cultural Santa Inês",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Carmésia, 500 - Santa Ines, Belo Horizonte - MG, 31080-170",
+      "instituicao_ids": [
+        "fundacao-municipal-cultura-bh"
+      ],
+      "aliases": [
+        "Centro Cultural Santa Inês"
+      ],
+      "google_place_id": "",
+      "fonte_endereco": "https://www.instagram.com/p/DayRlq5CL1k/",
+      "mapa": "https://maps.app.goo.gl/d9hMmB9xJuPXpbaB9",
+      "descricao": "",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": ""
+      },
+      "site": "",
+      "imagem": "",
+      "imagem_fonte": "",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "status_editorial": "em_analise",
+      "nota_editorial": "O local existe em serviços de mapas no endereço Rua Carmésia, 500, mas não foi localizado na rede oficial atual de Centros Culturais da PBH. Confirmar responsável, natureza jurídica e fonte oficial antes de preencher/publicar.",
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Centro Cultural Santa Inês",
+      "vocacoes": [],
+      "temas": [],
+      "natureza_espaco": "",
+      "instituicao": "Fundação Municipal de Cultura de Belo Horizonte",
+      "redes_sociais": {},
+      "contatos": {
+        "emails": [],
+        "telefones": []
+      },
+      "links_adicionais": [],
+      "link": "https://maps.app.goo.gl/d9hMmB9xJuPXpbaB9"
+    },
+    {
+      "aliases": [
+        "Centro Cultural SESIMINAS BH",
+        "Centro Cultural SESIMINAS",
+        "Centro Cultural SESIMINAS - MG"
+      ],
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Padre Marinho, 60, Santa Efigênia, Belo Horizonte - MG",
+      "fonte_endereco": "https://site.bileto.sympla.com.br/centroculturalsesiminas/",
+      "google_place_id": "",
+      "id": "centro-cultural-sesiminas-bh",
+      "instituicao_ids": [
+        "sesiminas-bh"
+      ],
+      "nome": "Centro Cultural SESIMINAS BH",
+      "descricao": "Complexo cultural do SESI Cultura em Belo Horizonte, inaugurado em 1990 e estruturado para atividades artístico-culturais, formação e eventos. Reúne o Teatro SESIMINAS, Teatro de Bolso, galeria, Escola de Cultura, Biblioteca SESIMINAS, Centro de Memória e outros espaços de uso cultural e corporativo.",
+      "funcionamento": {
+        "segunda": "8h às 17h",
+        "terca": "8h às 17h",
+        "quarta": "8h às 17h",
+        "quinta": "8h às 17h",
+        "sexta": "8h às 17h",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Horário geral de atendimento informado pelo SESI Cultura. Espetáculos, cursos e eventos podem ocorrer em outros dias e horários conforme a programação."
+      },
+      "site": "https://www.fiemg.com.br/sesi-cultura/centro-cultural-sesiminas-bh/",
+      "imagem": "https://www.fiemg.com.br/sesi-cultura/wp-content/uploads/sites/28/2023/07/c9ad3694bc4b55cd4122ecb4f642908e0db018c961170f51099c6ab6212d879c.jpg",
+      "imagem_fonte": "https://www.fiemg.com.br/sesi-cultura/centro-cultural-sesiminas-bh/",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem_credito": "SESI Cultura/FIEMG",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/sesiculturamg/",
+        "whatsapp": "https://wa.me/5531996247612"
+      },
+      "contatos": {
+        "emails": [
+          "sesiculturamg@fiemg.com.br",
+          "teatrosesiminas@fiemg.com.br"
+        ],
+        "telefones": [
+          "(31) 2116-0418",
+          "(31) 99624-7612 (WhatsApp)",
+          "(31) 97157-0747 (eventos)"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Programação",
+          "url": "https://www.fiemg.com.br/sesi-cultura/programacao/"
+        },
+        {
+          "rotulo": "Cursos",
+          "url": "https://www.fiemg.com.br/sesi-cultura/cursos/"
+        },
+        {
+          "rotulo": "Biblioteca",
+          "url": "https://www.fiemg.com.br/sesi-cultura/biblioteca/"
+        }
+      ],
+      "tipo_espaco": "Complexo cultural",
+      "vocacoes": [
+        "Cultura",
+        "Teatro",
+        "Música",
+        "Dança",
+        "Formação",
+        "Leitura",
+        "Artes visuais"
+      ],
+      "status_editorial": "em_analise",
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Centro Cultural SESIMINAS BH",
+      "temas": [
+        "Cultura",
+        "Teatro",
+        "Música",
+        "Dança",
+        "Formação",
+        "Leitura",
+        "Artes visuais"
+      ],
+      "natureza_espaco": "Complexo cultural",
+      "instituicao": "SESIMINAS BH",
+      "link": "https://www.fiemg.com.br/sesi-cultura/centro-cultural-sesiminas-bh/"
+    },
+    {
+      "aliases": [
+        "Centro Cultural São Bernardo",
+        "Centro Cultural Sao Bernardo",
+        "CC São Bernardo"
+      ],
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Édna Quintel, 320, São Bernardo, Belo Horizonte - MG, 31750-030",
+      "fonte_endereco": "https://maps.app.goo.gl/Yufimrb872nmXa4s9",
+      "google_maps_street_view": "https://maps.app.goo.gl/jUtVzekJtDMgZbGN8",
+      "google_place_id": "",
+      "id": "centro-cultural-sao-bernardo",
+      "instituicao_ids": [
+        "fundacao-municipal-cultura-bh"
+      ],
+      "mapa": "https://maps.app.goo.gl/Yufimrb872nmXa4s9",
+      "nome": "Centro Cultural São Bernardo",
+      "descricao": "Centro cultural nascido da mobilização comunitária na Regional Norte. A sede atual dispõe de auditório para cerca de 100 pessoas, sala de oficinas, biblioteca, camarim, cozinha, administração e área externa, recebendo atividades culturais e formativas.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "9h às 18h",
+        "quarta": "9h às 18h",
+        "quinta": "9h às 18h",
+        "sexta": "9h às 18h",
+        "sabado": "9h às 17h",
+        "domingo": "",
+        "observacao": "A biblioteca funciona até as 18h durante a semana. Atividades podem ocorrer em outros horários conforme a programação."
+      },
+      "site": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/saobernardo",
+      "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/cultura/ccsb_foto.victoroliveira-02.jpg",
+      "imagem_fonte": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/saobernardo",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem_credito": "Victor Oliveira/FMCBH",
+      "contatos": {
+        "emails": [
+          "ccsb.fmc@pbh.gov.br"
+        ],
+        "telefones": [
+          "(31) 3277-7416"
+        ]
+      },
+      "tipo_espaco": "Centro cultural",
+      "vocacoes": [
+        "Cultura",
+        "Formação",
+        "Leitura"
+      ],
+      "status_editorial": "em_analise",
+      "redes_sociais": {},
+      "links_adicionais": [],
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Centro Cultural São Bernardo",
+      "temas": [
+        "Cultura",
+        "Formação",
+        "Leitura"
+      ],
+      "natureza_espaco": "Centro cultural",
+      "instituicao": "Fundação Municipal de Cultura de Belo Horizonte",
+      "link": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/saobernardo"
+    },
+    {
+      "aliases": [
+        "Centro Cultural São Geraldo",
+        "Centro Cultural Sao Geraldo",
+        "CC São Geraldo"
+      ],
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Silva Alvarenga, 548, São Geraldo, Belo Horizonte - MG, 31050-640",
+      "fonte_endereco": "https://maps.app.goo.gl/BTFGBXTDZkSgQRc98",
+      "google_maps_foto": "https://maps.app.goo.gl/jDxKZNeuoMehTVbj6",
+      "google_maps_street_view": "https://maps.app.goo.gl/z1jc58BbgBsC5a517",
+      "google_place_id": "",
+      "id": "centro-cultural-sao-geraldo",
+      "instituicao_ids": [
+        "fundacao-municipal-cultura-bh"
+      ],
+      "mapa": "https://maps.app.goo.gl/BTFGBXTDZkSgQRc98",
+      "nome": "Centro Cultural São Geraldo",
+      "descricao": "Centro cultural da Regional Leste voltado ao convívio comunitário e à programação artística. Sua estrutura inclui auditório multiuso, sala de oficinas, biblioteca, hall para exposições e áreas de apoio a atividades culturais e formativas.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "9h às 19h",
+        "quarta": "9h às 19h",
+        "quinta": "9h às 19h",
+        "sexta": "9h às 19h",
+        "sabado": "9h às 17h",
+        "domingo": "",
+        "observacao": "A biblioteca funciona até as 18h durante a semana. Atividades podem ocorrer em outros horários conforme a programação."
+      },
+      "site": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/saogeraldo",
+      "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/fundacao-municipal-de-cultura/2020/2020_01_15_fachadas_ccsg_foto_poliana_pinto_01.jpg",
+      "imagem_fonte": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/saogeraldo",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem_credito": "Poliana Pinto/PBH",
+      "contatos": {
+        "emails": [
+          "ccsg.fmc@pbh.gov.br"
+        ],
+        "telefones": [
+          "(31) 3277-5648"
+        ]
+      },
+      "tipo_espaco": "Centro cultural",
+      "vocacoes": [
+        "Cultura",
+        "Formação",
+        "Leitura"
+      ],
+      "status_editorial": "em_analise",
+      "redes_sociais": {},
+      "links_adicionais": [],
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Centro Cultural São Geraldo",
+      "temas": [
+        "Cultura",
+        "Formação",
+        "Leitura"
+      ],
+      "natureza_espaco": "Centro cultural",
+      "instituicao": "Fundação Municipal de Cultura de Belo Horizonte",
+      "link": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/saogeraldo"
+    },
+    {
+      "aliases": [
+        "Centro Cultural Urucuia",
+        "CC Urucuia"
+      ],
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua W-3, 500, Pongelupe, Belo Horizonte - MG, 30628-175",
+      "fonte_endereco": "https://maps.app.goo.gl/Uq5R3PNvQBrdWSnT9",
+      "google_maps_street_view": "https://maps.app.goo.gl/YxihAJXbo8PeQoD27",
+      "google_place_id": "",
+      "id": "centro-cultural-urucuia",
+      "instituicao_ids": [
+        "fundacao-municipal-cultura-bh"
+      ],
+      "mapa": "https://maps.app.goo.gl/Uq5R3PNvQBrdWSnT9",
+      "nome": "Centro Cultural Urucuia",
+      "descricao": "Centro cultural da Regional Barreiro dedicado a difundir e fortalecer manifestações e identidades culturais locais. Recebe oficinas e apresentações em diversas linguagens, mantém biblioteca para empréstimo e dispõe de salas de oficina, auditório e área externa com teatro de arena.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "9h às 19h",
+        "quarta": "9h às 19h",
+        "quinta": "9h às 19h",
+        "sexta": "9h às 19h",
+        "sabado": "9h às 17h",
+        "domingo": "",
+        "observacao": "A biblioteca funciona até as 18h durante a semana. Atividades podem ocorrer em outros horários conforme a programação."
+      },
+      "site": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/urucuia",
+      "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/styles/slideshow/public/imagens/authenticated%2C%20publicador_a_ascom/banners/2018-01/dsc0545c-glenio-campregher-1.JPG?itok=nEvm-rNP",
+      "imagem_fonte": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/urucuia",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem_credito": "Glênio Campregher/PBH",
+      "contatos": {
+        "emails": [
+          "ccu.fmc@pbh.gov.br"
+        ],
+        "telefones": [
+          "(31) 3277-1531",
+          "(31) 3277-1549"
+        ]
+      },
+      "tipo_espaco": "Centro cultural",
+      "vocacoes": [
+        "Cultura",
+        "Formação",
+        "Leitura"
+      ],
+      "status_editorial": "em_analise",
+      "redes_sociais": {},
+      "links_adicionais": [],
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Centro Cultural Urucuia",
+      "temas": [
+        "Cultura",
+        "Formação",
+        "Leitura"
+      ],
+      "natureza_espaco": "Centro cultural",
+      "instituicao": "Fundação Municipal de Cultura de Belo Horizonte",
+      "link": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/urucuia"
+    },
+    {
+      "aliases": [
+        "Centro Cultural Usina de Cultura",
+        "Usina de Cultura",
+        "CC Usina de Cultura"
+      ],
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Dom Cabral, 765, Ipiranga, Belo Horizonte - MG, 31160-150",
+      "fonte_endereco": "https://maps.app.goo.gl/Da4tniDGCdhMExeY9",
+      "google_maps_foto": "https://maps.app.goo.gl/2hkG6QUYWTSTMi858",
+      "google_maps_street_view": "https://maps.app.goo.gl/B1s6jGduL4Ti9gZ98",
+      "google_place_id": "",
+      "id": "centro-cultural-usina-de-cultura",
+      "instituicao_ids": [
+        "fundacao-municipal-cultura-bh"
+      ],
+      "mapa": "https://maps.app.goo.gl/Da4tniDGCdhMExeY9",
+      "nome": "Centro Cultural Usina de Cultura",
+      "descricao": "Centro cultural instalado em um antigo galpão municipal da Regional Nordeste. O espaço articula literatura, música, teatro, dança, circo e artes visuais, além de contar com biblioteca, área externa, academia a céu aberto, horta comunitária e espaços de convivência.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "9h às 19h",
+        "quarta": "9h às 19h",
+        "quinta": "9h às 19h",
+        "sexta": "9h às 19h",
+        "sabado": "9h às 13h",
+        "domingo": "",
+        "observacao": "A biblioteca funciona até as 19h durante a semana. Atividades podem ocorrer em outros horários conforme a programação."
+      },
+      "site": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/usinadecultura",
+      "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/fundacao-municipal-de-cultura/2021/2020_01_15_fachadas_ccuc_fotos_poliana_pinto_03.jpg",
+      "imagem_fonte": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/usinadecultura",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem_credito": "Poliana Pinto/FMCBH",
+      "contatos": {
+        "emails": [
+          "ccuc.fmc@pbh.gov.br"
+        ],
+        "telefones": []
+      },
+      "tipo_espaco": "Centro cultural",
+      "vocacoes": [
+        "Cultura",
+        "Formação",
+        "Leitura"
+      ],
+      "status_editorial": "em_analise",
+      "redes_sociais": {},
+      "links_adicionais": [],
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Centro Cultural Usina de Cultura",
+      "temas": [
+        "Cultura",
+        "Formação",
+        "Leitura"
+      ],
+      "natureza_espaco": "Centro cultural",
+      "instituicao": "Fundação Municipal de Cultura de Belo Horizonte",
+      "link": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/usinadecultura"
+    },
+    {
+      "aliases": [
+        "Centro Cultural Venda Nova",
+        "CC Venda Nova"
+      ],
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua José Ferreira dos Santos, 184, Jardim dos Comerciários, Belo Horizonte - MG, 31640-060",
+      "fonte_endereco": "https://maps.app.goo.gl/zcTEYqwr1mBiBwZ99",
+      "google_maps_foto": "https://maps.app.goo.gl/BgvqhnV4dmqTFSh87",
+      "google_maps_street_view": "https://maps.app.goo.gl/Fo6bT7RE2GqsxHFg8",
+      "google_place_id": "",
+      "id": "centro-cultural-venda-nova",
+      "instituicao_ids": [
+        "fundacao-municipal-cultura-bh"
+      ],
+      "mapa": "https://maps.app.goo.gl/zcTEYqwr1mBiBwZ99",
+      "nome": "Centro Cultural Venda Nova",
+      "descricao": "Centro cultural criado a partir de mobilização popular em Venda Nova. Desenvolve ações de formação artística e cidadã, difusão cultural, incentivo à leitura, valorização do patrimônio e apoio a artistas e grupos, promovendo intercâmbio cultural entre diferentes territórios.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "9h às 18h",
+        "quarta": "9h às 18h",
+        "quinta": "9h às 18h",
+        "sexta": "9h às 18h",
+        "sabado": "9h às 17h",
+        "domingo": "",
+        "observacao": "A biblioteca funciona até as 18h durante a semana. Atividades podem ocorrer em outros horários conforme a programação."
+      },
+      "site": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/vendanova",
+      "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/cultura/2018/imagens/CCVN_foto_Ricardo_Laf_02.jpg",
+      "imagem_fonte": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/vendanova",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem_credito": "Ricardo Laf/PBH",
+      "contatos": {
+        "emails": [
+          "ccvn.fmc@pbh.gov.br",
+          "bibliotecaccvn@pbh.gov.br"
+        ],
+        "telefones": [
+          "(31) 3277-5533 (administração)",
+          "(31) 3277-9504 (biblioteca)"
+        ]
+      },
+      "tipo_espaco": "Centro cultural",
+      "vocacoes": [
+        "Cultura",
+        "Formação",
+        "Leitura"
+      ],
+      "status_editorial": "em_analise",
+      "redes_sociais": {},
+      "links_adicionais": [],
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Centro Cultural Venda Nova",
+      "temas": [
+        "Cultura",
+        "Formação",
+        "Leitura"
+      ],
+      "natureza_espaco": "Centro cultural",
+      "instituicao": "Fundação Municipal de Cultura de Belo Horizonte",
+      "link": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/vendanova"
+    },
+    {
+      "aliases": [
+        "Centro Cultural Vila Fátima",
+        "Centro Cultural Vila Fatima",
+        "CC Vila Fátima"
+      ],
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua São Miguel Arcanjo, 215, Nossa Senhora de Fátima, Belo Horizonte - MG, 30230-660",
+      "fonte_endereco": "https://maps.app.goo.gl/Ky1wTCbu3P1i94FQ7",
+      "google_maps_foto": "https://maps.app.goo.gl/6dXuS6LHkmwqJZWf6",
+      "google_maps_street_view": "https://maps.app.goo.gl/X6Mhw8fiTHCQGRrz9",
+      "google_place_id": "",
+      "id": "centro-cultural-vila-fatima",
+      "instituicao_ids": [
+        "fundacao-municipal-cultura-bh"
+      ],
+      "mapa": "https://maps.app.goo.gl/Ky1wTCbu3P1i94FQ7",
+      "nome": "Centro Cultural Vila Fátima",
+      "descricao": "Centro cultural localizado no Aglomerado da Serra, com infraestrutura para diferentes práticas artísticas. Possui auditório, praça externa, sala de oficinas, galeria para exposições e biblioteca, oferecendo programação cultural gratuita e espaço de convivência para grupos artísticos.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "9h às 19h",
+        "quarta": "9h às 19h",
+        "quinta": "9h às 19h",
+        "sexta": "9h às 19h",
+        "sabado": "9h às 17h",
+        "domingo": "",
+        "observacao": "A biblioteca funciona até as 18h durante a semana. Atividades podem ocorrer em outros horários conforme a programação."
+      },
+      "site": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/vilafatima",
+      "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/cultura/2018_01_19_ccvf_foto_ricardo_laf-15.jpg",
+      "imagem_fonte": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/vilafatima",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem_credito": "Ricardo Laf/PBH",
+      "contatos": {
+        "emails": [
+          "ccvf.fmc@pbh.gov.br"
+        ],
+        "telefones": []
+      },
+      "tipo_espaco": "Centro cultural",
+      "vocacoes": [
+        "Cultura",
+        "Formação",
+        "Leitura"
+      ],
+      "status_editorial": "em_analise",
+      "redes_sociais": {},
+      "links_adicionais": [],
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Centro Cultural Vila Fátima",
+      "temas": [
+        "Cultura",
+        "Formação",
+        "Leitura"
+      ],
+      "natureza_espaco": "Centro cultural",
+      "instituicao": "Fundação Municipal de Cultura de Belo Horizonte",
+      "link": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/vilafatima"
+    },
+    {
+      "aliases": [
+        "Centro Cultural Vila Marçola",
+        "Centro Cultural Vila Marcola",
+        "CC Vila Marçola"
+      ],
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Mangabeira da Serra, 320, Marçola, Belo Horizonte - MG, 30220-265",
+      "fonte_endereco": "https://maps.app.goo.gl/CqmZC29eVpYZdKzFA",
+      "google_maps_foto": "https://maps.app.goo.gl/PmnQEbLjLnYk4FrK7",
+      "google_maps_street_view": "https://maps.app.goo.gl/qqD9CjYcERhUzDRQA",
+      "google_place_id": "",
+      "id": "centro-cultural-vila-marcola",
+      "instituicao_ids": [
+        "fundacao-municipal-cultura-bh"
+      ],
+      "mapa": "https://maps.app.goo.gl/CqmZC29eVpYZdKzFA",
+      "nome": "Centro Cultural Vila Marçola",
+      "descricao": "Centro cultural do Aglomerado da Serra criado a partir da mobilização da comunidade. Desenvolve ações de formação, difusão, incentivo à leitura e patrimônio e possui biblioteca, Telecentro, sala de oficinas, auditório, praça central e praça de dança.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "9h às 19h",
+        "quarta": "9h às 19h",
+        "quinta": "9h às 19h",
+        "sexta": "9h às 19h",
+        "sabado": "9h às 17h",
+        "domingo": "",
+        "observacao": "A biblioteca funciona até as 18h durante a semana. Atividades podem ocorrer em outros horários conforme a programação."
+      },
+      "site": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/vilamarcola",
+      "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/cultura/2018/imagens/2016_01_29_CCVM_Fachada_%40RicardoLaf_01%20copy.jpg",
+      "imagem_fonte": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/vilamarcola",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem_credito": "Ricardo Laf/PBH",
+      "contatos": {
+        "emails": [
+          "ccvm.fmc@pbh.gov.br"
+        ],
+        "telefones": [
+          "(31) 3277-5250"
+        ]
+      },
+      "tipo_espaco": "Centro cultural",
+      "vocacoes": [
+        "Cultura",
+        "Formação",
+        "Leitura"
+      ],
+      "status_editorial": "em_analise",
+      "redes_sociais": {},
+      "links_adicionais": [],
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Centro Cultural Vila Marçola",
+      "temas": [
+        "Cultura",
+        "Formação",
+        "Leitura"
+      ],
+      "natureza_espaco": "Centro cultural",
+      "instituicao": "Fundação Municipal de Cultura de Belo Horizonte",
+      "link": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/vilamarcola"
+    },
+    {
+      "aliases": [
+        "Centro Cultural Vila Santa Rita",
+        "CC Vila Santa Rita"
+      ],
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Ana Rafael dos Santos, 149, Vila Santa Rita, Belo Horizonte - MG, 30668-570",
+      "fonte_endereco": "https://maps.app.goo.gl/2bjmUoYBq6G5Tfm17",
+      "google_maps_foto": "https://maps.app.goo.gl/LoSDAyoN4FJg2TWj6",
+      "google_maps_street_view": "https://maps.app.goo.gl/cEEDf3wYLXY3mQjb7",
+      "google_place_id": "",
+      "id": "centro-cultural-vila-santa-rita",
+      "instituicao_ids": [
+        "fundacao-municipal-cultura-bh"
+      ],
+      "mapa": "https://maps.app.goo.gl/2bjmUoYBq6G5Tfm17",
+      "nome": "Centro Cultural Vila Santa Rita",
+      "descricao": "Centro cultural da Regional Barreiro com oficinas de artes plásticas, dança, música, teatro e literatura, além de exposições e ações de memória e patrimônio. Possui auditório, sala de oficina e biblioteca com acervo para consulta local e empréstimo.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "9h às 19h",
+        "quarta": "9h às 19h",
+        "quinta": "9h às 19h",
+        "sexta": "9h às 19h",
+        "sabado": "9h às 17h",
+        "domingo": "",
+        "observacao": "A biblioteca funciona até as 18h durante a semana. Atividades podem ocorrer em outros horários conforme a programação."
+      },
+      "site": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/vilasantarita",
+      "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/fundacao-municipal-de-cultura/2019/CCVSR%20-%20Foto%20Nathalia_Turcheti.jpg",
+      "imagem_fonte": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/vilasantarita",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem_credito": "Nathalia Turcheti/PBH",
+      "contatos": {
+        "emails": [
+          "ccvsr.fmc@pbh.gov.br"
+        ],
+        "telefones": [
+          "(31) 3277-1519",
+          "(31) 3277-1534 (biblioteca)"
+        ]
+      },
+      "tipo_espaco": "Centro cultural",
+      "vocacoes": [
+        "Cultura",
+        "Formação",
+        "Leitura"
+      ],
+      "status_editorial": "em_analise",
+      "redes_sociais": {},
+      "links_adicionais": [],
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Centro Cultural Vila Santa Rita",
+      "temas": [
+        "Cultura",
+        "Formação",
+        "Leitura"
+      ],
+      "natureza_espaco": "Centro cultural",
+      "instituicao": "Fundação Municipal de Cultura de Belo Horizonte",
+      "link": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/vilasantarita"
+    },
+    {
+      "aliases": [
+        "Centro Cultural Zilah Spósito",
+        "Centro Cultural Zilah Sposito",
+        "CC Zilah Spósito"
+      ],
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Carnaúba, 286, Zilah Spósito, Belo Horizonte - MG, 31787-210",
+      "fonte_endereco": "https://maps.app.goo.gl/hTZMNcQSzknYzSRx7",
+      "google_maps_foto": "https://maps.app.goo.gl/ASaRQDobyhCkajB1A",
+      "google_maps_street_view": "https://maps.app.goo.gl/vy7xhs5EbQHTMWzb9",
+      "google_place_id": "",
+      "id": "centro-cultural-zilah-sposito",
+      "instituicao_ids": [
+        "fundacao-municipal-cultura-bh"
+      ],
+      "mapa": "https://maps.app.goo.gl/hTZMNcQSzknYzSRx7",
+      "nome": "Centro Cultural Zilah Spósito",
+      "descricao": "Centro cultural da Regional Norte voltado ao acesso à cidadania e às diversas expressões artísticas. A programação inclui leitura, brincadeiras, oficinas, cursos, música, teatro, dança e audiovisual; o espaço possui biblioteca e sala multimeios.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "9h às 18h",
+        "quarta": "9h às 18h",
+        "quinta": "9h às 18h",
+        "sexta": "9h às 18h",
+        "sabado": "9h às 17h",
+        "domingo": "",
+        "observacao": "A biblioteca funciona até as 18h durante a semana. Atividades podem ocorrer em outros horários conforme a programação."
+      },
+      "site": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/zilahsposito",
+      "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/cultura/cczs_foto.victoroliveira-14.jpg",
+      "imagem_fonte": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/zilahsposito",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem_credito": "Victor Oliveira/FMC",
+      "contatos": {
+        "emails": [
+          "cczs.fmc@pbh.gov.br"
+        ],
+        "telefones": []
+      },
+      "tipo_espaco": "Centro cultural",
+      "vocacoes": [
+        "Cultura",
+        "Formação",
+        "Leitura"
+      ],
+      "status_editorial": "em_analise",
+      "redes_sociais": {},
+      "links_adicionais": [],
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Centro Cultural Zilah Spósito",
+      "temas": [
+        "Cultura",
+        "Formação",
+        "Leitura"
+      ],
+      "natureza_espaco": "Centro cultural",
+      "instituicao": "Fundação Municipal de Cultura de Belo Horizonte",
+      "link": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/zilahsposito"
+    },
+    {
+      "id": "centro-cultural-sesiminas-bh-centro-de-memoria",
+      "nome": "Centro de Memória",
+      "equipamento_id": "centro-cultural-sesiminas-bh",
+      "instituicao_id": "sesiminas-bh",
+      "descricao": "Centro de Memória do Sistema FIEMG, criado em 1995 e instalado no Centro Cultural SESIMINAS BH. Preserva, pesquisa e divulga documentos, objetos e registros ligados à trajetória da FIEMG, SESI, SENAI, IEL, CIEMG e da indústria mineira, apoiando pesquisas e realizando exposições e publicações.",
+      "funcionamento": {
+        "segunda": "8h às 17h",
+        "terca": "8h às 17h",
+        "quarta": "8h às 17h",
+        "quinta": "8h às 17h",
+        "sexta": "8h às 17h",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Horário de referência da unidade. Para pesquisa e consulta ao acervo, recomenda-se contato prévio."
+      },
+      "site": "https://centrodememoria.fiemg.com.br/sobre/",
+      "imagem": "https://www.fiemg.com.br/sesi-cultura/wp-content/uploads/sites/28/2023/07/c9ad3694bc4b55cd4122ecb4f642908e0db018c961170f51099c6ab6212d879c.jpg",
+      "imagem_fonte": "https://www.fiemg.com.br/sesi-cultura/centro-cultural-sesiminas-bh/",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Centro de memória",
+      "vocacoes": [
+        "Memória",
+        "Patrimônio",
+        "Pesquisa",
+        "Cultura",
+        "História da indústria"
+      ],
+      "links_adicionais": [
+        {
+          "rotulo": "Centro de Memória FIEMG",
+          "url": "https://centrodememoria.fiemg.com.br/"
+        },
+        {
+          "rotulo": "Programação",
+          "url": "https://www.fiemg.com.br/sesi-cultura/programacao/"
+        },
+        {
+          "rotulo": "Cursos",
+          "url": "https://www.fiemg.com.br/sesi-cultura/cursos/"
+        },
+        {
+          "rotulo": "Biblioteca",
+          "url": "https://www.fiemg.com.br/sesi-cultura/biblioteca/"
+        }
+      ],
+      "status_editorial": "em_analise",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/sesiculturamg/",
+        "whatsapp": "https://wa.me/5531996247612"
+      },
+      "contatos": {
+        "emails": [
+          "sesiculturamg@fiemg.com.br",
+          "teatrosesiminas@fiemg.com.br"
+        ],
+        "telefones": [
+          "(31) 2116-0418",
+          "(31) 99624-7612 (WhatsApp)",
+          "(31) 97157-0747 (eventos)"
+        ]
+      },
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Centro de Memória",
+      "temas": [
+        "Memória",
+        "Patrimônio",
+        "Pesquisa",
+        "Cultura",
+        "História da indústria"
+      ],
+      "natureza_espaco": "Centro de memória",
+      "espaco_principal": "Centro Cultural SESIMINAS BH",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Padre Marinho, 60, Santa Efigênia, Belo Horizonte - MG",
+      "mapa": "",
+      "instituicao": "SESIMINAS BH",
+      "link": "https://centrodememoria.fiemg.com.br/sobre/"
+    },
+    {
+      "aliases": [
+        "Centro de Referência da Cultura Popular e Tradicional Lagoa do Nado",
+        "Centro Cultural Lagoa do Nado",
+        "Lagoa do Nado"
+      ],
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Ministro Hermenegildo de Barros, 904, Itapoã, Belo Horizonte - MG, 31710-230",
+      "fonte_endereco": "https://maps.app.goo.gl/Xupvn986WiEQikbR8",
+      "google_maps_foto": "https://maps.app.goo.gl/HaGwComVfgrq7KMB6",
+      "google_maps_street_view": "https://maps.app.goo.gl/5nJQF9Su5UGgiQZW8",
+      "google_place_id": "",
+      "id": "lagoa-do-nado",
+      "instituicao_ids": [
+        "fundacao-municipal-cultura-bh"
+      ],
+      "mapa": "https://maps.app.goo.gl/Xupvn986WiEQikbR8",
+      "nome": "Centro de Referência da Cultura Popular e Tradicional Lagoa do Nado",
+      "descricao": "Centro de referência dedicado à cultura popular e tradicional, à memória e ao patrimônio imaterial. Localizado junto ao Parque Lagoa do Nado, promove oficinas, espetáculos, exposições, debates e ações formativas, articulando agentes e comunidades ligados às diversas manifestações culturais da cidade.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "8h às 17h",
+        "quarta": "8h às 17h",
+        "quinta": "8h às 17h",
+        "sexta": "8h às 17h",
+        "sabado": "8h às 17h",
+        "domingo": "8h às 17h",
+        "observacao": "No último domingo de cada mês, funcionamento das 10h às 16h. Consulte a programação e eventuais alterações de serviços."
+      },
+      "site": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/lagoa-do-nado",
+      "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/fundacao-municipal-de-cultura/2020/CRCP%20Lagoa%20do%20Nado%20-%20Foto%20Vander%20Bras%20%20PBH-%20C%C3%B3pia.jpg",
+      "imagem_fonte": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/lagoa-do-nado",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem_credito": "Vander Bras/PBH",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/crcp.lagoadonado/",
+        "facebook": "https://www.facebook.com/CentrodeReferenciaLagoadoNado"
+      },
+      "contatos": {
+        "emails": [
+          "crcp.fmc@pbh.gov.br"
+        ],
+        "telefones": [
+          "(31) 3277-7420"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Programação",
+          "url": "https://portalbelohorizonte.com.br/eventos/centro-de-referencia-popular-e-tradicional-lagoa-do-nado"
+        }
+      ],
+      "tipo_espaco": "Centro de referência cultural",
+      "vocacoes": [
+        "Cultura",
+        "Cultura popular e tradicional",
+        "Patrimônio",
+        "Formação",
+        "Leitura"
+      ],
+      "status_editorial": "em_analise",
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Centro de Referência da Cultura Popular e Tradicional Lagoa do Nado",
+      "temas": [
+        "Cultura",
+        "Cultura popular e tradicional",
+        "Patrimônio",
+        "Formação",
+        "Leitura"
+      ],
+      "natureza_espaco": "Centro de referência cultural",
+      "instituicao": "Fundação Municipal de Cultura de Belo Horizonte",
+      "link": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/lagoa-do-nado"
+    },
+    {
+      "aliases": [
+        "Centro de Referência das Juventudes",
+        "CRJ Belo Horizonte",
+        "CRJ BH"
+      ],
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Guaicurus, 50, Centro, Belo Horizonte - MG, 30111-060",
+      "fonte_endereco": "https://maps.app.goo.gl/BvSVrZ34oQpWFoM57",
+      "google_maps_foto": "https://maps.app.goo.gl/wvu5GCf7stM9EWN37",
+      "google_maps_street_view": "https://maps.app.goo.gl/SCUZCrhxbm5KGcgu7",
+      "google_place_id": "",
+      "id": "centro-de-referencia-das-juventudes",
+      "instituicao_ids": [
+        "secretaria-municipal-assistencia-social-direitos-humanos-bh"
+      ],
+      "mapa": "https://maps.app.goo.gl/BvSVrZ34oQpWFoM57",
+      "nome": "Centro de Referência das Juventudes",
+      "descricao": "Equipamento público de cidadania voltado às juventudes de Belo Horizonte. O CRJ promove livre expressão, participação social, inclusão, direitos humanos, cultura e formação, disponibilizando diferentes ambientes para atividades desenvolvidas com, para e pelas juventudes mediante programação ou agendamento.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "10h às 22h",
+        "quarta": "10h às 22h",
+        "quinta": "10h às 22h",
+        "sexta": "10h às 22h",
+        "sabado": "9h às 16h",
+        "domingo": "",
+        "observacao": "Ocupações e usos específicos dos ambientes dependem de programação ou agendamento."
+      },
+      "site": "https://prefeitura.pbh.gov.br/direitos-humanos/equipamentos/crj",
+      "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/assistencia-social-e-direitos-humanos/crj_capa_materia.png",
+      "imagem_fonte": "https://prefeitura.pbh.gov.br/direitos-humanos/equipamentos/crj",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem_credito": "Prefeitura de Belo Horizonte",
+      "redes_sociais": {},
+      "contatos": {
+        "emails": [
+          "crj@pbh.gov.br",
+          "estudio.crj@pbh.gov.br"
+        ],
+        "telefones": [
+          "(31) 98866-1091"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Agendamento de espaços",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSd_O_WsJu0AxnlIM1lqHQXNXND-ubTZqvLMkD0U6JPq7xiAMA/viewform"
+        },
+        {
+          "rotulo": "Agendamento do Estúdio CRJ",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSd5P-l1_hfWoi7kr4q5NzGGiHt0BiLwgEcFtnBqESYvDVBg1g/viewform"
+        }
+      ],
+      "tipo_espaco": "Centro de referência",
+      "vocacoes": [
+        "Juventudes",
+        "Cidadania",
+        "Cultura",
+        "Formação",
+        "Inclusão digital"
+      ],
+      "status_editorial": "em_analise",
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Centro de Referência das Juventudes",
+      "temas": [
+        "Juventudes",
+        "Cidadania",
+        "Cultura",
+        "Formação",
+        "Inclusão digital"
+      ],
+      "natureza_espaco": "Centro de referência",
+      "instituicao": "Secretaria Municipal de Assistência Social e Direitos Humanos de Belo Horizonte",
+      "link": "https://prefeitura.pbh.gov.br/direitos-humanos/equipamentos/crj"
+    },
+    {
+      "id": "palacio-das-artes-cine-humberto-mauro",
+      "nome": "Cine Humberto Mauro",
+      "equipamento_id": "palacio-das-artes",
+      "instituicao_id": "fcs",
+      "descricao": "Sala de cinema do Palácio das Artes dedicada à difusão e reflexão cinematográfica desde 1978. Com 130 lugares, recebe mostras nacionais e internacionais, festivais, cineclubes, debates, palestras e sessões especiais, com forte atuação na formação de público e na valorização do cinema brasileiro.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "Conforme programação",
+        "quarta": "Conforme programação",
+        "quinta": "Conforme programação",
+        "sexta": "Conforme programação",
+        "sabado": "Conforme programação",
+        "domingo": "Conforme programação",
+        "observacao": "A bilheteria do saguão inferior funciona de acordo com os horários das sessões do Cine Humberto Mauro."
+      },
+      "site": "https://fcs.mg.gov.br/espacos-culturais/palacio-das-artes/cine-humberto-mauro/",
+      "imagem": "https://fcs.mg.gov.br/wp-content/uploads/2024/12/FachadaPL00141-1024x683.jpg",
+      "imagem_fonte": "https://fcs.mg.gov.br/palacio-das-artes/",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Cinema",
+      "vocacoes": [
+        "Cultura",
+        "Cinema",
+        "Audiovisual",
+        "Formação de público",
+        "Debates"
+      ],
+      "contatos": {
+        "emails": [
+          "mediacao@fcs.mg.gov.br"
+        ],
+        "telefones": [
+          "(31) 3236-7400"
+        ]
+      },
+      "status_editorial": "em_analise",
+      "redes_sociais": {},
+      "links_adicionais": [
+        {
+          "rotulo": "Horários e bilheterias",
+          "url": "https://fcs.mg.gov.br/institucional/horario-de-atendimento/"
+        },
+        {
+          "rotulo": "Ingressos",
+          "url": "https://www.sympla.com.br/"
+        }
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Cine Humberto Mauro",
+      "temas": [
+        "Cultura",
+        "Cinema",
+        "Audiovisual",
+        "Formação de público",
+        "Debates"
+      ],
+      "natureza_espaco": "Cinema",
+      "espaco_principal": "Palácio das Artes",
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
+      "instituicao": "Fundação Clóvis Salgado",
+      "link": "https://fcs.mg.gov.br/espacos-culturais/palacio-das-artes/cine-humberto-mauro/"
+    },
+    {
+      "aliases": [
+        "Cine Santa Tereza",
+        "MIS Cine Santa Tereza"
+      ],
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Estrela do Sul, 89, Santa Tereza, Belo Horizonte - MG, 31010-240",
+      "fonte_endereco": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/cinema/cinesantatereza",
+      "google_maps_foto": "https://maps.app.goo.gl/KDeeKsPL3Q3Qxt1q7",
+      "google_maps_street_view": "https://maps.app.goo.gl/k35cKvtyLhf8S3Kv6",
+      "google_place_id": "",
+      "id": "cine-santa-tereza",
+      "instituicao_ids": [
+        "fundacao-municipal-cultura-bh"
+      ],
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9",
+      "nome": "Cine Santa Tereza",
+      "descricao": "Cinema público municipal instalado em edifício art déco histórico do bairro Santa Tereza. O espaço possui sala de exibição digital e programação cultural gratuita, com mostras, cineclubes, lançamentos e ações de formação e difusão audiovisual.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "10h às 21h",
+        "quarta": "10h às 21h",
+        "quinta": "10h às 21h",
+        "sexta": "10h às 21h",
+        "sabado": "16h às 21h",
+        "domingo": "16h às 21h",
+        "observacao": "Feriados: das 16h às 21h. Ingressos conforme a programação, com retirada pela Sympla ou na bilheteria."
+      },
+      "site": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/cinema/cinesantatereza",
+      "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/fundacao-municipal-de-cultura/2021/cine-santa-tereza-foto-ricardo-laf-3_1.jpg",
+      "imagem_fonte": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/cinema/cinesantatereza",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem_credito": "Ricardo Laf/FMCBH",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/cinesantatereza/",
+        "facebook": "https://www.facebook.com/cinesantatereza"
+      },
+      "contatos": {
+        "emails": [
+          "cst-fmc@pbh.gov.br"
+        ],
+        "telefones": [
+          "(31) 3277-4699"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Ingressos",
+          "url": "https://www.sympla.com.br/cinesantatereza"
+        }
+      ],
+      "tipo_espaco": "Cinema",
+      "vocacoes": [
+        "Cultura",
+        "Cinema",
+        "Audiovisual",
+        "Formação"
+      ],
+      "status_editorial": "em_analise",
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Cine Santa Tereza",
+      "temas": [
+        "Cultura",
+        "Cinema",
+        "Audiovisual",
+        "Formação"
+      ],
+      "natureza_espaco": "Cinema",
+      "instituicao": "Fundação Municipal de Cultura de Belo Horizonte",
+      "link": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/cinema/cinesantatereza"
+    },
+    {
+      "id": "grande-theatro-unimed-bh-cine-theatro-brasil",
+      "nome": "Cine Theatro Brasil Vallourec",
+      "cidade": "Belo Horizonte",
+      "endereco": "Av. Amazonas, 315 - Centro, Belo Horizonte - MG, 30180-000",
+      "instituicao_ids": [],
+      "aliases": [
+        "Cine Theatro Brasil Vallourec",
+        "Cine Theatro Brasil",
+        "Grande Theatro Unimed-BH | Cine Theatro Brasil",
+        "Grande Theatro Unimed-BH"
+      ],
+      "google_place_id": "",
+      "fonte_endereco": "dados/locais.json",
+      "mapa": "https://maps.app.goo.gl/z4yFHAmeFRKHg3ro9",
+      "descricao": "Complexo cultural instalado em um edifício histórico art déco inaugurado em 1932 e restaurado para reabertura em 2013. Reúne o Grande Theatro Unimed-BH, Teatro de Câmara, galerias e espaços multiuso, recebendo música, teatro, dança, cinema, exposições, visitas educativas e eventos.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "O funcionamento do complexo acompanha a programação. Bilheteria: segunda a sábado, das 12h às 21h; domingos e feriados, das 15h às 20h."
+      },
+      "site": "https://www.cineteatrobrasil.com.br/",
+      "imagem": "",
+      "imagem_fonte": "",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "contatos": {
+        "emails": [
+          "contato@cinetheatrobrasil.com.br",
+          "educativoctbv@gmail.com"
+        ],
+        "telefones": [
+          "(31) 3201-5211",
+          "(31) 3243-1964"
+        ]
+      },
+      "redes_sociais": {},
+      "links_adicionais": [
+        {
+          "rotulo": "Espaços",
+          "url": "https://www.cineteatrobrasil.com.br/espaco/"
+        },
+        {
+          "rotulo": "Educativo e visitas",
+          "url": "https://www.cineteatrobrasil.com.br/educativo/"
+        }
+      ],
+      "tipo_espaco": "Complexo cultural / teatro histórico",
+      "vocacoes": [
+        "Cultura",
+        "Teatro",
+        "Música",
+        "Dança",
+        "Cinema",
+        "Artes visuais",
+        "Patrimônio",
+        "Formação"
+      ],
+      "status_editorial": "em_analise",
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Cine Theatro Brasil Vallourec",
+      "temas": [
+        "Cultura",
+        "Teatro",
+        "Música",
+        "Dança",
+        "Cinema",
+        "Artes visuais",
+        "Patrimônio",
+        "Formação"
+      ],
+      "natureza_espaco": "Complexo cultural / teatro histórico",
+      "link": "https://www.cineteatrobrasil.com.br/"
+    },
+    {
+      "aliases": [
+        "Centro de Referência de Assistência Social — CRAS Conjunto Paulo VI",
+        "Centro de Referência de Assistência Social - CRAS Conjunto Paulo VI",
+        "CRAS Conjunto Paulo VI"
+      ],
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Neblina, 120, Conjunto Paulo VI, Belo Horizonte - MG, 31998-180",
+      "fonte_endereco": "https://maps.app.goo.gl/g7KC6SqCAiTugEzQ9",
+      "google_maps_street_view": "https://maps.app.goo.gl/jnyYPiLZVpJE71pd9",
+      "google_place_id": "",
+      "id": "cras-conjunto-paulo-vi",
+      "instituicao_ids": [
+        "secretaria-municipal-assistencia-social-direitos-humanos-bh"
+      ],
+      "mapa": "https://maps.app.goo.gl/g7KC6SqCAiTugEzQ9",
+      "nome": "CRAS Conjunto Paulo VI",
+      "descricao": "Unidade pública de assistência social que organiza e oferece serviços da Proteção Social Básica do SUAS no território do Conjunto Paulo VI e entorno. O equipamento também abriga a Pracinha da Cultura, integrando ações socioassistenciais, cultura, esporte e lazer, formação, prevenção à violência e inclusão digital.",
+      "funcionamento": {
+        "segunda": "9h às 18h",
+        "terca": "9h às 18h",
+        "quarta": "9h às 18h",
+        "quinta": "9h às 18h",
+        "sexta": "9h às 18h",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Horário de referência confirmado em programas da PBH realizados no equipamento. Serviços específicos podem exigir agendamento ou ter horários próprios."
+      },
+      "site": "https://prefeitura.pbh.gov.br/assistencia-social/equipamentos/cras/paulo-vi",
+      "imagem": "",
+      "imagem_fonte": "",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "redes_sociais": {},
+      "contatos": {
+        "emails": [
+          "cras.paulovi@pbh.gov.br"
+        ],
+        "telefones": [
+          "(31) 3277-6840"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Serviços dos CRAS",
+          "url": "https://prefeitura.pbh.gov.br/assistencia-social/equipamentos/cras"
+        }
+      ],
+      "tipo_espaco": "CRAS / Praça da Cultura",
+      "vocacoes": [
+        "Assistência social",
+        "Cidadania",
+        "Cultura",
+        "Esporte e lazer",
+        "Formação",
+        "Inclusão digital"
+      ],
+      "status_editorial": "em_analise",
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "CRAS Conjunto Paulo VI",
+      "temas": [
+        "Assistência social",
+        "Cidadania",
+        "Cultura",
+        "Esporte e lazer",
+        "Formação",
+        "Inclusão digital"
+      ],
+      "natureza_espaco": "CRAS / Praça da Cultura",
+      "instituicao": "Secretaria Municipal de Assistência Social e Direitos Humanos de Belo Horizonte",
+      "link": "https://prefeitura.pbh.gov.br/assistencia-social/equipamentos/cras/paulo-vi"
+    },
+    {
+      "aliases": [
+        "CâmeraSete – Casa da Fotografia de Minas Gerais",
+        "CâmeraSete",
+        "CameraSete – Casa da Fotografia de Minas Gerais",
+        "CameraSete",
+        "Casa da Fotografia de Minas Gerais"
+      ],
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida Afonso Pena, 737, Centro, Belo Horizonte - MG",
+      "fonte_endereco": "https://fcs.mg.gov.br/contato/duvidas-frequentes/",
+      "google_place_id": "",
+      "id": "camerasete",
+      "instituicao_ids": [
+        "fcs"
+      ],
+      "mapa": "https://maps.app.goo.gl/Ab3GCDUXaWph6oRs7",
+      "nome": "CâmeraSete – Casa da Fotografia de Minas Gerais",
+      "descricao": "Casa da Fotografia de Minas Gerais, espaço expositivo da Fundação Clóvis Salgado dedicado à fotografia contemporânea. Com cerca de 275 m², recebe exposições e ações de difusão e visitação que aproximam o público da produção fotográfica.",
+      "funcionamento": {
+        "segunda": "Fechado",
+        "terca": "9h30 às 21h",
+        "quarta": "9h30 às 21h",
+        "quinta": "9h30 às 21h",
+        "sexta": "9h30 às 21h",
+        "sabado": "9h30 às 21h",
+        "domingo": "Fechado",
+        "observacao": "Fechada também em feriados."
+      },
+      "site": "https://fcs.mg.gov.br/espacos-culturais/camerasete/",
+      "imagem": "https://fcs.mg.gov.br/wp-content/uploads/2024/12/CameraSete-4PDN-Nucleo-Nomade-de-fotografia-1-1024x683.jpg",
+      "imagem_fonte": "https://fcs.mg.gov.br/espacos-culturais/camerasete/",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem_credito": "Paulo Lacerda/Fundação Clóvis Salgado",
+      "redes_sociais": {},
+      "contatos": {
+        "emails": [
+          "mediacao@fcs.mg.gov.br"
+        ],
+        "telefones": [
+          "(31) 3222-6917",
+          "(31) 3236-7400"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Horários oficiais",
+          "url": "https://fcs.mg.gov.br/institucional/horario-de-atendimento/"
+        }
+      ],
+      "tipo_espaco": "Casa de fotografia / galeria",
+      "vocacoes": [
+        "Cultura",
+        "Fotografia",
+        "Artes visuais",
+        "Exposições"
+      ],
+      "status_editorial": "em_analise",
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "CâmeraSete – Casa da Fotografia de Minas Gerais",
+      "temas": [
+        "Cultura",
+        "Fotografia",
+        "Artes visuais",
+        "Exposições"
+      ],
+      "natureza_espaco": "Casa de fotografia / galeria",
+      "instituicao": "Fundação Clóvis Salgado",
+      "link": "https://fcs.mg.gov.br/espacos-culturais/camerasete/"
+    },
+    {
+      "id": "ejef-escola-judicial-desembargador-edesio-fernandes",
+      "nome": "EJEF — Escola Judicial Desembargador Edésio Fernandes",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Manaus, 467 - Santa Efigênia, Belo Horizonte - MG, 30150-350",
+      "instituicao_ids": [],
+      "aliases": [
+        "EJEF",
+        "EJEF - Escola Judicial Desembargador Edésio Fernandes",
+        "Escola Judicial Desembargador Edésio Fernandes",
+        "EJE - Escola Judicial Desembargador Edésio Fernandes"
+      ],
+      "google_place_id": "",
+      "fonte_endereco": "https://ejef.tjmg.jus.br/",
+      "mapa": "",
+      "descricao": "Escola Judicial do Tribunal de Justiça de Minas Gerais, criada em 1977 e dedicada à seleção, formação e desenvolvimento contínuo de magistrados e servidores, além da produção e disseminação de conhecimento especializado do Poder Judiciário. A instituição mantém programas de formação, cursos e atividades acadêmicas e culturais.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "O atendimento e o acesso variam conforme cursos, eventos e setores da EJEF. Consulte a programação ou entre em contato antes da visita."
+      },
+      "site": "https://ejef.tjmg.jus.br/",
+      "imagem": "",
+      "imagem_fonte": "",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "contatos": {
+        "emails": [],
+        "telefones": [
+          "(31) 3247-8700"
+        ]
+      },
+      "redes_sociais": {},
+      "links_adicionais": [
+        {
+          "rotulo": "Cursos e ações educacionais",
+          "url": "https://ejef.tjmg.jus.br/acoes-educacionais-ejef/"
+        },
+        {
+          "rotulo": "Fale com a EJEF",
+          "url": "https://ejef.tjmg.jus.br/fale-ejef/"
+        }
+      ],
+      "tipo_espaco": "Escola judicial / espaço de formação",
+      "vocacoes": [
+        "Formação",
+        "Educação",
+        "Cultura",
+        "Conhecimento"
+      ],
+      "status_editorial": "em_analise",
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "EJEF — Escola Judicial Desembargador Edésio Fernandes",
+      "temas": [
+        "Formação",
+        "Educação",
+        "Cultura",
+        "Conhecimento"
+      ],
+      "natureza_espaco": "Escola judicial / espaço de formação",
+      "link": "https://ejef.tjmg.jus.br/"
+    },
+    {
+      "id": "espaco-conhecimento-ufmg-fachada-digital",
+      "nome": "Fachada Digital",
+      "equipamento_id": "espaco-conhecimento-ufmg",
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "descricao": "Fachada frontal do Espaço do Conhecimento UFMG transformada em grande tela urbana de projeção por meio de revestimento vítreo especial e um sistema de 12 projetores. Exibe fotografias, vídeos, poemas, animações, curtas e outros conteúdos que aproximam ciência, arte, cultura e universidade do espaço público.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "18h às 22h, geralmente",
+        "quarta": "18h às 22h, geralmente",
+        "quinta": "18h às 22h, geralmente",
+        "sexta": "18h às 22h, geralmente",
+        "sabado": "18h às 22h, geralmente",
+        "domingo": "18h às 22h, geralmente",
+        "observacao": "Os horários e conteúdos variam conforme a programação e chamadas curatoriais do museu."
+      },
+      "site": "https://www.ufmg.br/espacodoconhecimento/fachada-digital/",
+      "imagem": "imagens/instituicoes/espaco-conhecimento-ufmg.png",
+      "imagem_fonte": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2025/12/Fachada-Digital-Divulgacao-Espaco-do-Conhecimento-UFMG-1.jpeg",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Fachada digital / projeção audiovisual",
+      "vocacoes": [
+        "Cultura",
+        "Ciência",
+        "Audiovisual",
+        "Artes digitais",
+        "Arte pública"
+      ],
+      "links_adicionais": [
+        {
+          "rotulo": "Programação da Fachada Digital",
+          "url": "https://www.ufmg.br/espacodoconhecimento/fachada-digital/"
+        },
+        {
+          "rotulo": "Contato e imprensa",
+          "url": "https://www.ufmg.br/espacodoconhecimento/contato-e-imprensa/"
+        }
+      ],
+      "status_editorial": "em_analise",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/espacoufmg",
+        "youtube": "https://www.youtube.com/espacoufmg",
+        "tiktok": "https://www.tiktok.com/@espacoufmg"
+      },
+      "contatos": {
+        "emails": [
+          "secretaria@espacoconhecimento.ufmg.br",
+          "agendamento.conhecimento@gmail.com"
+        ],
+        "telefones": [
+          "(31) 3409-8350 (Recepção)",
+          "(31) 3409-8360 (Agendamento)"
+        ]
+      },
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Fachada Digital",
+      "temas": [
+        "Cultura",
+        "Ciência",
+        "Audiovisual",
+        "Artes digitais",
+        "Arte pública"
+      ],
+      "natureza_espaco": "Fachada digital / projeção audiovisual",
+      "espaco_principal": "Espaço do Conhecimento UFMG",
+      "cidade": "Belo Horizonte",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
+      "instituicao": "Espaço do Conhecimento UFMG",
+      "link": "https://www.ufmg.br/espacodoconhecimento/fachada-digital/"
+    },
+    {
+      "aliases": [
+        "Fazenda Arraial Velho",
+        "Fazenda Arraial Velho – Sabará/MG",
+        "FAZENDA ARRAIAL VELHO"
+      ],
+      "cidade": "Sabará",
+      "endereco": "Rua Paracatu, 588, Sabará - MG",
+      "fonte_endereco": "https://www.fazendaarraialvelho.com.br/como-chegar",
+      "google_place_id": "",
+      "id": "fazenda-arraial-velho",
+      "instituicao_ids": [],
+      "nome": "Fazenda Arraial Velho",
+      "descricao": "Espaço privado para eventos em Sabará, instalado em propriedade histórica com casarão do século XVII e cerca de 50 mil m² de área. Integra a Estrada Real e reúne áreas abertas e cobertas, gramados, lagoa, nascentes e estrutura para casamentos, festas, eventos corporativos, ensaios fotográficos e visitas agendadas.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Não possui horário regular de visitação informado. Visitas e eventos são realizados mediante agenda e contato prévio."
+      },
+      "site": "https://www.fazendaarraialvelho.com.br/",
+      "imagem": "",
+      "imagem_fonte": "",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "contatos": {
+        "emails": [
+          "contato@fazendaarraialvelho.com.br"
+        ],
+        "telefones": [
+          "(31) 99623-6289"
+        ]
+      },
+      "redes_sociais": {
+        "whatsapp": "https://wa.me/5531996236289"
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Conheça a Fazenda",
+          "url": "https://www.fazendaarraialvelho.com.br/a-fazenda"
+        },
+        {
+          "rotulo": "Como chegar",
+          "url": "https://www.fazendaarraialvelho.com.br/como-chegar"
+        }
+      ],
+      "tipo_espaco": "Fazenda histórica / espaço de eventos",
+      "vocacoes": [
+        "Eventos",
+        "Patrimônio",
+        "Turismo",
+        "Natureza",
+        "Fotografia"
+      ],
+      "status_editorial": "em_analise",
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Fazenda Arraial Velho",
+      "temas": [
+        "Eventos",
+        "Patrimônio",
+        "Turismo",
+        "Natureza",
+        "Fotografia"
+      ],
+      "natureza_espaco": "Fazenda histórica / espaço de eventos",
+      "link": "https://www.fazendaarraialvelho.com.br/"
+    },
+    {
+      "id": "palacio-das-artes-foyer-do-grande-teatro",
+      "nome": "Foyer do Grande Teatro",
+      "equipamento_id": "palacio-das-artes",
+      "instituicao_id": "fcs",
+      "descricao": "Foyer integrado ao Grande Teatro Cemig Palácio das Artes, utilizado como área de circulação, recepção do público e apoio a espetáculos. O espaço também recebe exposições, concertos, cerimônias e eventos culturais e corporativos.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "9h30 às 21h",
+        "quarta": "9h30 às 21h",
+        "quinta": "9h30 às 21h",
+        "sexta": "9h30 às 21h",
+        "sabado": "9h30 às 21h",
+        "domingo": "17h às 21h",
+        "observacao": "Horário geral de visitação do Palácio das Artes. Sessões, espetáculos e eventos têm horários próprios conforme a programação."
+      },
+      "site": "https://fcs.mg.gov.br/contato-para-eventos/",
+      "imagem": "https://fcs.mg.gov.br/wp-content/uploads/2024/12/FachadaPL00141-1024x683.jpg",
+      "imagem_fonte": "https://fcs.mg.gov.br/palacio-das-artes/",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Foyer / espaço multiuso",
+      "vocacoes": [
+        "Cultura",
+        "Eventos",
+        "Exposições",
+        "Música",
+        "Convivência"
+      ],
+      "contatos": {
+        "emails": [
+          "mediacao@fcs.mg.gov.br"
+        ],
+        "telefones": [
+          "(31) 3236-7400"
+        ]
+      },
+      "status_editorial": "em_analise",
+      "redes_sociais": {},
+      "links_adicionais": [
+        {
+          "rotulo": "Horários e bilheterias",
+          "url": "https://fcs.mg.gov.br/institucional/horario-de-atendimento/"
+        },
+        {
+          "rotulo": "Ingressos",
+          "url": "https://www.sympla.com.br/"
+        }
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Foyer do Grande Teatro",
+      "temas": [
+        "Cultura",
+        "Eventos",
+        "Exposições",
+        "Música",
+        "Convivência"
+      ],
+      "natureza_espaco": "Foyer / espaço multiuso",
+      "espaco_principal": "Palácio das Artes",
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
+      "instituicao": "Fundação Clóvis Salgado",
+      "link": "https://fcs.mg.gov.br/contato-para-eventos/"
+    },
+    {
+      "id": "palacio-das-artes-galeria-arlinda-correa-lima",
+      "nome": "Galeria Arlinda Corrêa Lima",
+      "equipamento_id": "palacio-das-artes",
+      "instituicao_id": "fcs",
+      "descricao": "Galeria de artes visuais do Palácio das Artes com 177 m². O espaço homenageia a artista e educadora Arlinda Corrêa Lima e recebe exposições temporárias integradas à programação da Fundação Clóvis Salgado.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "9h30 às 21h",
+        "quarta": "9h30 às 21h",
+        "quinta": "9h30 às 21h",
+        "sexta": "9h30 às 21h",
+        "sabado": "9h30 às 21h",
+        "domingo": "17h às 21h",
+        "observacao": "Horário geral de visitação do Palácio das Artes. Sessões, espetáculos e eventos têm horários próprios conforme a programação."
+      },
+      "site": "https://fcs.mg.gov.br/espacos-culturais/palacio-das-artes/galeria-arlinda-corea-de-lima/",
+      "imagem": "https://fcs.mg.gov.br/wp-content/uploads/2024/12/FachadaPL00141-1024x683.jpg",
+      "imagem_fonte": "https://fcs.mg.gov.br/palacio-das-artes/",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Galeria de arte",
+      "vocacoes": [
+        "Cultura",
+        "Artes visuais",
+        "Exposições",
+        "Formação de público"
+      ],
+      "contatos": {
+        "emails": [
+          "mediacao@fcs.mg.gov.br"
+        ],
+        "telefones": [
+          "(31) 3236-7400"
+        ]
+      },
+      "status_editorial": "em_analise",
+      "redes_sociais": {},
+      "links_adicionais": [
+        {
+          "rotulo": "Horários e bilheterias",
+          "url": "https://fcs.mg.gov.br/institucional/horario-de-atendimento/"
+        },
+        {
+          "rotulo": "Ingressos",
+          "url": "https://www.sympla.com.br/"
+        }
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Galeria Arlinda Corrêa Lima",
+      "temas": [
+        "Cultura",
+        "Artes visuais",
+        "Exposições",
+        "Formação de público"
+      ],
+      "natureza_espaco": "Galeria de arte",
+      "espaco_principal": "Palácio das Artes",
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
+      "instituicao": "Fundação Clóvis Salgado",
+      "link": "https://fcs.mg.gov.br/espacos-culturais/palacio-das-artes/galeria-arlinda-corea-de-lima/"
+    },
+    {
+      "id": "centro-cultural-sesiminas-bh-galeria-de-artes",
+      "nome": "Galeria de Artes",
+      "equipamento_id": "centro-cultural-sesiminas-bh",
+      "instituicao_id": "sesiminas-bh",
+      "descricao": "Galeria de artes visuais localizada na entrada do Teatro SESIMINAS, integrada ao Centro Cultural SESIMINAS BH. Recebe exposições de artistas de diferentes linguagens e trajetórias e integra o calendário de artes visuais do SESI Cultura.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Visitação conforme o período e horário de cada exposição. Consulte a programação do SESI Cultura."
+      },
+      "site": "https://www.fiemg.com.br/sesi-cultura/programacao/",
+      "imagem": "https://www.fiemg.com.br/sesi-cultura/wp-content/uploads/sites/28/2023/07/c9ad3694bc4b55cd4122ecb4f642908e0db018c961170f51099c6ab6212d879c.jpg",
+      "imagem_fonte": "https://www.fiemg.com.br/sesi-cultura/centro-cultural-sesiminas-bh/",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Galeria de arte",
+      "vocacoes": [
+        "Cultura",
+        "Artes visuais",
+        "Exposições",
+        "Formação de público"
+      ],
+      "links_adicionais": [
+        {
+          "rotulo": "Programação de exposições",
+          "url": "https://www.fiemg.com.br/sesi-cultura/programacao/"
+        },
+        {
+          "rotulo": "Programação",
+          "url": "https://www.fiemg.com.br/sesi-cultura/programacao/"
+        },
+        {
+          "rotulo": "Cursos",
+          "url": "https://www.fiemg.com.br/sesi-cultura/cursos/"
+        },
+        {
+          "rotulo": "Biblioteca",
+          "url": "https://www.fiemg.com.br/sesi-cultura/biblioteca/"
+        }
+      ],
+      "status_editorial": "em_analise",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/sesiculturamg/",
+        "whatsapp": "https://wa.me/5531996247612"
+      },
+      "contatos": {
+        "emails": [
+          "sesiculturamg@fiemg.com.br",
+          "teatrosesiminas@fiemg.com.br"
+        ],
+        "telefones": [
+          "(31) 2116-0418",
+          "(31) 99624-7612 (WhatsApp)",
+          "(31) 97157-0747 (eventos)"
+        ]
+      },
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Galeria de Artes",
+      "temas": [
+        "Cultura",
+        "Artes visuais",
+        "Exposições",
+        "Formação de público"
+      ],
+      "natureza_espaco": "Galeria de arte",
+      "espaco_principal": "Centro Cultural SESIMINAS BH",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Padre Marinho, 60, Santa Efigênia, Belo Horizonte - MG",
+      "mapa": "",
+      "instituicao": "SESIMINAS BH",
+      "link": "https://www.fiemg.com.br/sesi-cultura/programacao/"
+    },
+    {
+      "id": "palacio-das-artes-galeria-genesco-murta",
+      "nome": "Galeria Genesco Murta",
+      "equipamento_id": "palacio-das-artes",
+      "instituicao_id": "fcs",
+      "descricao": "Galeria de artes visuais do Palácio das Artes com 295 m² em um amplo vão retangular. Homenageia o artista mineiro Genesco Murta e recebe exposições temporárias e projetos do programa de artes visuais da Fundação Clóvis Salgado.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "9h30 às 21h",
+        "quarta": "9h30 às 21h",
+        "quinta": "9h30 às 21h",
+        "sexta": "9h30 às 21h",
+        "sabado": "9h30 às 21h",
+        "domingo": "17h às 21h",
+        "observacao": "Horário geral de visitação do Palácio das Artes. Sessões, espetáculos e eventos têm horários próprios conforme a programação."
+      },
+      "site": "https://fcs.mg.gov.br/espacos-culturais/palacio-das-artes/galeria-genesco-murta/",
+      "imagem": "https://fcs.mg.gov.br/wp-content/uploads/2024/12/FachadaPL00141-1024x683.jpg",
+      "imagem_fonte": "https://fcs.mg.gov.br/palacio-das-artes/",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Galeria de arte",
+      "vocacoes": [
+        "Cultura",
+        "Artes visuais",
+        "Exposições",
+        "Formação de público"
+      ],
+      "contatos": {
+        "emails": [
+          "mediacao@fcs.mg.gov.br"
+        ],
+        "telefones": [
+          "(31) 3236-7400"
+        ]
+      },
+      "status_editorial": "em_analise",
+      "redes_sociais": {},
+      "links_adicionais": [
+        {
+          "rotulo": "Horários e bilheterias",
+          "url": "https://fcs.mg.gov.br/institucional/horario-de-atendimento/"
+        },
+        {
+          "rotulo": "Ingressos",
+          "url": "https://www.sympla.com.br/"
+        }
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Galeria Genesco Murta",
+      "temas": [
+        "Cultura",
+        "Artes visuais",
+        "Exposições",
+        "Formação de público"
+      ],
+      "natureza_espaco": "Galeria de arte",
+      "espaco_principal": "Palácio das Artes",
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
+      "instituicao": "Fundação Clóvis Salgado",
+      "link": "https://fcs.mg.gov.br/espacos-culturais/palacio-das-artes/galeria-genesco-murta/"
+    },
+    {
+      "id": "palacio-das-artes-galeria-mari-stella-tristao",
+      "nome": "Galeria Mari'Stella Tristão",
+      "equipamento_id": "palacio-das-artes",
+      "instituicao_id": "fcs",
+      "descricao": "Espaço expositivo do Palácio das Artes dedicado a mostras de artes visuais. Integra, ao lado das galerias Guignard, Arlinda Corrêa Lima e Genesco Murta, o circuito de exposições da Fundação Clóvis Salgado.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "9h30 às 21h",
+        "quarta": "9h30 às 21h",
+        "quinta": "9h30 às 21h",
+        "sexta": "9h30 às 21h",
+        "sabado": "9h30 às 21h",
+        "domingo": "17h às 21h",
+        "observacao": "Horário geral de visitação do Palácio das Artes. Sessões, espetáculos e eventos têm horários próprios conforme a programação."
+      },
+      "site": "https://fcs.mg.gov.br/palacio-das-artes/",
+      "imagem": "https://fcs.mg.gov.br/wp-content/uploads/2024/12/FachadaPL00141-1024x683.jpg",
+      "imagem_fonte": "https://fcs.mg.gov.br/palacio-das-artes/",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Galeria de arte",
+      "vocacoes": [
+        "Cultura",
+        "Artes visuais",
+        "Exposições",
+        "Formação de público"
+      ],
+      "contatos": {
+        "emails": [
+          "mediacao@fcs.mg.gov.br"
+        ],
+        "telefones": [
+          "(31) 3236-7400"
+        ]
+      },
+      "status_editorial": "em_analise",
+      "redes_sociais": {},
+      "links_adicionais": [
+        {
+          "rotulo": "Horários e bilheterias",
+          "url": "https://fcs.mg.gov.br/institucional/horario-de-atendimento/"
+        },
+        {
+          "rotulo": "Ingressos",
+          "url": "https://www.sympla.com.br/"
+        }
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Galeria Mari'Stella Tristão",
+      "temas": [
+        "Cultura",
+        "Artes visuais",
+        "Exposições",
+        "Formação de público"
+      ],
+      "natureza_espaco": "Galeria de arte",
+      "espaco_principal": "Palácio das Artes",
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
+      "instituicao": "Fundação Clóvis Salgado",
+      "link": "https://fcs.mg.gov.br/palacio-das-artes/"
+    },
+    {
+      "id": "ccbb-bh-galerias-do-3-andar",
+      "nome": "Galerias do 3º andar",
+      "equipamento_id": "ccbb-bh",
+      "instituicao_id": "ccbb-bh",
+      "descricao": "Conjunto de galerias expositivas no terceiro andar do CCBB Belo Horizonte, utilizado para exposições temporárias de artes visuais, patrimônio, design e outras linguagens. Integra a área expositiva de cerca de 1.200 m² do centro cultural.",
+      "funcionamento": {
+        "segunda": "10h às 22h",
+        "terca": "Fechado",
+        "quarta": "10h às 22h",
+        "quinta": "10h às 22h",
+        "sexta": "10h às 22h",
+        "sabado": "10h às 22h",
+        "domingo": "10h às 22h",
+        "observacao": "Horário geral do CCBB Belo Horizonte. Atividades, espetáculos e exposições podem ter horários e regras de ingresso próprios."
+      },
+      "site": "https://ccbb.com.br/belo-horizonte/programacao/",
+      "imagem": "imagens/instituicoes/ccbb-bh.png",
+      "imagem_fonte": "https://static.ccbb.com.br/site-2025/2025/09/swiper-bh4.png",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Galerias de exposição",
+      "vocacoes": [
+        "Cultura",
+        "Artes visuais",
+        "Exposições",
+        "Patrimônio"
+      ],
+      "links_adicionais": [
+        {
+          "rotulo": "Programação",
+          "url": "https://ccbb.com.br/belo-horizonte/programacao/"
+        },
+        {
+          "rotulo": "Normas de visitação",
+          "url": "https://ccbb.com.br/belo-horizonte/normas-de-visitacao/"
+        }
+      ],
+      "status_editorial": "em_analise",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/ccbbbh/#"
+      },
+      "contatos": {
+        "emails": [],
+        "telefones": [
+          "(31) 3431-9400",
+          "(31) 3431-9401",
+          "(31) 3431-9441 (visitas mediadas)"
+        ]
+      },
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Galerias do 3º andar",
+      "temas": [
+        "Cultura",
+        "Artes visuais",
+        "Exposições",
+        "Patrimônio"
+      ],
+      "natureza_espaco": "Galerias de exposição",
+      "espaco_principal": "CCBB Belo Horizonte",
+      "cidade": "Belo Horizonte",
+      "endereco": "Praça da Liberdade, 450, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/Q6UrZGKEn8eCx8Kb8",
+      "instituicao": "Centro Cultural Banco do Brasil Belo Horizonte",
+      "link": "https://ccbb.com.br/belo-horizonte/programacao/"
+    },
+    {
+      "id": "ccbb-bh-galerias-do-terreo",
+      "nome": "Galerias do Térreo",
+      "equipamento_id": "ccbb-bh",
+      "instituicao_id": "ccbb-bh",
+      "descricao": "Galerias expositivas localizadas no térreo do CCBB Belo Horizonte, utilizadas para mostras temporárias e projetos de artes visuais e cultura. Fazem parte da estrutura de exposições do edifício histórico da Praça da Liberdade.",
+      "funcionamento": {
+        "segunda": "10h às 22h",
+        "terca": "Fechado",
+        "quarta": "10h às 22h",
+        "quinta": "10h às 22h",
+        "sexta": "10h às 22h",
+        "sabado": "10h às 22h",
+        "domingo": "10h às 22h",
+        "observacao": "Horário geral do CCBB Belo Horizonte. Atividades, espetáculos e exposições podem ter horários e regras de ingresso próprios."
+      },
+      "site": "https://ccbb.com.br/belo-horizonte/programacao/",
+      "imagem": "imagens/instituicoes/ccbb-bh.png",
+      "imagem_fonte": "https://static.ccbb.com.br/site-2025/2025/09/swiper-bh4.png",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Galerias de exposição",
+      "vocacoes": [
+        "Cultura",
+        "Artes visuais",
+        "Exposições",
+        "Patrimônio"
+      ],
+      "links_adicionais": [
+        {
+          "rotulo": "Programação",
+          "url": "https://ccbb.com.br/belo-horizonte/programacao/"
+        },
+        {
+          "rotulo": "Normas de visitação",
+          "url": "https://ccbb.com.br/belo-horizonte/normas-de-visitacao/"
+        }
+      ],
+      "status_editorial": "em_analise",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/ccbbbh/#"
+      },
+      "contatos": {
+        "emails": [],
+        "telefones": [
+          "(31) 3431-9400",
+          "(31) 3431-9401",
+          "(31) 3431-9441 (visitas mediadas)"
+        ]
+      },
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Galerias do Térreo",
+      "temas": [
+        "Cultura",
+        "Artes visuais",
+        "Exposições",
+        "Patrimônio"
+      ],
+      "natureza_espaco": "Galerias de exposição",
+      "espaco_principal": "CCBB Belo Horizonte",
+      "cidade": "Belo Horizonte",
+      "endereco": "Praça da Liberdade, 450, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/Q6UrZGKEn8eCx8Kb8",
+      "instituicao": "Centro Cultural Banco do Brasil Belo Horizonte",
+      "link": "https://ccbb.com.br/belo-horizonte/programacao/"
+    },
+    {
+      "id": "palacio-das-artes-galeria-alberto-da-veiga-guignard",
+      "nome": "Grande Galeria Alberto da Veiga Guignard",
+      "equipamento_id": "palacio-das-artes",
+      "instituicao_id": "fcs",
+      "descricao": "Maior espaço expositivo do Palácio das Artes, com 510 m², concebido para receber grandes exposições de artes visuais. A galeria homenageia o pintor e professor Alberto da Veiga Guignard e integra a programação expositiva da Fundação Clóvis Salgado.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "9h30 às 21h",
+        "quarta": "9h30 às 21h",
+        "quinta": "9h30 às 21h",
+        "sexta": "9h30 às 21h",
+        "sabado": "9h30 às 21h",
+        "domingo": "17h às 21h",
+        "observacao": "Horário geral de visitação do Palácio das Artes. Sessões, espetáculos e eventos têm horários próprios conforme a programação."
+      },
+      "site": "https://fcs.mg.gov.br/espacos-culturais/palacio-das-artes/grande-galeria-alberto-da-veiga-guignard/",
+      "imagem": "https://fcs.mg.gov.br/wp-content/uploads/2024/12/FachadaPL00141-1024x683.jpg",
+      "imagem_fonte": "https://fcs.mg.gov.br/palacio-das-artes/",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Galeria de arte",
+      "vocacoes": [
+        "Cultura",
+        "Artes visuais",
+        "Exposições",
+        "Formação de público"
+      ],
+      "contatos": {
+        "emails": [
+          "mediacao@fcs.mg.gov.br"
+        ],
+        "telefones": [
+          "(31) 3236-7400"
+        ]
+      },
+      "status_editorial": "em_analise",
+      "redes_sociais": {},
+      "links_adicionais": [
+        {
+          "rotulo": "Horários e bilheterias",
+          "url": "https://fcs.mg.gov.br/institucional/horario-de-atendimento/"
+        },
+        {
+          "rotulo": "Ingressos",
+          "url": "https://www.sympla.com.br/"
+        }
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Grande Galeria Alberto da Veiga Guignard",
+      "temas": [
+        "Cultura",
+        "Artes visuais",
+        "Exposições",
+        "Formação de público"
+      ],
+      "natureza_espaco": "Galeria de arte",
+      "espaco_principal": "Palácio das Artes",
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
+      "instituicao": "Fundação Clóvis Salgado",
+      "link": "https://fcs.mg.gov.br/espacos-culturais/palacio-das-artes/grande-galeria-alberto-da-veiga-guignard/"
+    },
+    {
+      "id": "palacio-das-artes-grande-teatro-cemig-palacio-das-artes",
+      "nome": "Grande Teatro Cemig Palácio das Artes",
+      "equipamento_id": "palacio-das-artes",
+      "instituicao_id": "fcs",
+      "descricao": "Principal sala de espetáculos do Palácio das Artes, concebida por Oscar Niemeyer como teatro lírico para grandes montagens. Possui 1.705 lugares, duas plateias, camarotes, amplo palco, fosso para grandes orquestras, elevadores cênicos e estrutura técnica para óperas, concertos, balés, teatro e grandes apresentações.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "9h30 às 21h",
+        "quarta": "9h30 às 21h",
+        "quinta": "9h30 às 21h",
+        "sexta": "9h30 às 21h",
+        "sabado": "9h30 às 21h",
+        "domingo": "17h às 21h",
+        "observacao": "Horário geral de visitação do Palácio das Artes. Sessões, espetáculos e eventos têm horários próprios conforme a programação."
+      },
+      "site": "https://fcs.mg.gov.br/grande-teatro-cemig-palacio-das-artes/",
+      "imagem": "https://fcs.mg.gov.br/wp-content/uploads/2024/12/FachadaPL00141-1024x683.jpg",
+      "imagem_fonte": "https://fcs.mg.gov.br/palacio-das-artes/",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Grande teatro / teatro lírico",
+      "vocacoes": [
+        "Cultura",
+        "Teatro",
+        "Ópera",
+        "Música",
+        "Dança",
+        "Grandes espetáculos"
+      ],
+      "contatos": {
+        "emails": [
+          "mediacao@fcs.mg.gov.br"
+        ],
+        "telefones": [
+          "(31) 3236-7400"
+        ]
+      },
+      "status_editorial": "em_analise",
+      "redes_sociais": {},
+      "links_adicionais": [
+        {
+          "rotulo": "Horários e bilheterias",
+          "url": "https://fcs.mg.gov.br/institucional/horario-de-atendimento/"
+        },
+        {
+          "rotulo": "Ingressos",
+          "url": "https://www.sympla.com.br/"
+        }
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Grande Teatro Cemig Palácio das Artes",
+      "temas": [
+        "Cultura",
+        "Teatro",
+        "Ópera",
+        "Música",
+        "Dança",
+        "Grandes espetáculos"
+      ],
+      "natureza_espaco": "Grande teatro / teatro lírico",
+      "espaco_principal": "Palácio das Artes",
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
+      "instituicao": "Fundação Clóvis Salgado",
+      "link": "https://fcs.mg.gov.br/grande-teatro-cemig-palacio-das-artes/"
+    },
+    {
+      "id": "cine-theatro-brasil-grande-theatro-unimed-bh",
+      "nome": "Grande Theatro Unimed-BH",
+      "equipamento_id": "grande-theatro-unimed-bh-cine-theatro-brasil",
+      "instituicao_id": "",
+      "descricao": "Principal sala de espetáculos do Cine Theatro Brasil Vallourec. O teatro tem capacidade para cerca de mil pessoas, palco italiano, frisas laterais e elementos art déco restaurados, recebendo shows, peças, musicais, dança, orquestras, óperas, palestras e mostras de cinema.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Funcionamento conforme a programação de espetáculos."
+      },
+      "site": "https://www.cineteatrobrasil.com.br/grande-theatro-unimed-bh/",
+      "imagem": "",
+      "imagem_fonte": "",
+      "redes_sociais": {},
+      "contatos": {
+        "emails": [
+          "contato@cinetheatrobrasil.com.br",
+          "educativoctbv@gmail.com"
+        ],
+        "telefones": [
+          "(31) 3201-5211",
+          "(31) 3243-1964"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Espaços",
+          "url": "https://www.cineteatrobrasil.com.br/espaco/"
+        },
+        {
+          "rotulo": "Educativo e visitas",
+          "url": "https://www.cineteatrobrasil.com.br/educativo/"
+        }
+      ],
+      "tipo_espaco": "Teatro",
+      "vocacoes": [
+        "Cultura",
+        "Teatro",
+        "Música",
+        "Dança",
+        "Cinema"
+      ],
+      "status_editorial": "em_analise",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Grande Theatro Unimed-BH",
+      "temas": [
+        "Cultura",
+        "Teatro",
+        "Música",
+        "Dança",
+        "Cinema"
+      ],
+      "natureza_espaco": "Teatro",
+      "espaco_principal": "Cine Theatro Brasil Vallourec",
+      "cidade": "Belo Horizonte",
+      "endereco": "Av. Amazonas, 315 - Centro, Belo Horizonte - MG, 30180-000",
+      "mapa": "https://maps.app.goo.gl/z4yFHAmeFRKHg3ro9",
+      "link": "https://www.cineteatrobrasil.com.br/grande-theatro-unimed-bh/"
+    },
+    {
+      "id": "minascentro",
+      "nome": "Minascentro",
+      "cidade": "Belo Horizonte",
+      "endereco": "Av. Augusto de Lima, 785 - Centro, Belo Horizonte - MG, 30190-001",
+      "instituicao_ids": [],
+      "aliases": [
+        "Minascentro"
+      ],
+      "google_place_id": "",
+      "fonte_endereco": "https://www.instagram.com/p/DbdYywkxpKj/",
+      "mapa": "https://maps.app.goo.gl/hogC8sPVqGfuEXb59",
+      "descricao": "Centro de convenções e eventos instalado em edifício histórico no Centro de Belo Horizonte. Em 2026, o prédio celebra 100 anos e reúne teatros, auditórios, salões, foyers e áreas de exposição com configurações flexíveis para congressos, feiras, formaturas, shows e outros eventos.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "O funcionamento para o público varia conforme cada evento. Atendimento comercial: segunda a sexta, das 8h às 18h."
+      },
+      "site": "https://minascentro.bhz.br/",
+      "imagem": "https://minascentro.bhz.br/uploads/fachada-minascentro.webp",
+      "imagem_fonte": "https://minascentro.bhz.br/",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem_credito": "Minascentro",
+      "contatos": {
+        "emails": [
+          "comercial@grupochv.com.br",
+          "atendimento@minascentro.bhz.br"
+        ],
+        "telefones": [
+          "(31) 3995-5775",
+          "(31) 98488-0373 (WhatsApp comercial)"
+        ]
+      },
+      "redes_sociais": {
+        "whatsapp": "https://wa.me/5531984880373"
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Programação",
+          "url": "https://minascentro.bhz.br/programacao"
+        },
+        {
+          "rotulo": "Perguntas frequentes",
+          "url": "https://minascentro.bhz.br/faq"
+        }
+      ],
+      "tipo_espaco": "Centro de convenções e eventos",
+      "vocacoes": [
+        "Eventos",
+        "Cultura",
+        "Congressos",
+        "Feiras",
+        "Shows"
+      ],
+      "status_editorial": "em_analise",
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Minascentro",
+      "temas": [
+        "Eventos",
+        "Cultura",
+        "Congressos",
+        "Feiras",
+        "Shows"
+      ],
+      "natureza_espaco": "Centro de convenções e eventos",
+      "link": "https://minascentro.bhz.br/"
+    },
+    {
+      "aliases": [
+        "Museu da Moda",
+        "MUMO",
+        "Museu da Moda de Belo Horizonte"
+      ],
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua da Bahia, 1149, Centro, Belo Horizonte - MG, 30160-011",
+      "fonte_endereco": "https://maps.app.goo.gl/NSKCeznUnR3ooTQaA",
+      "google_maps_street_view": "https://maps.app.goo.gl/k35cKvtyLhf8S3Kv6",
+      "google_place_id": "",
+      "id": "museu-da-moda",
+      "instituicao_ids": [
+        "fundacao-municipal-cultura-bh"
+      ],
+      "mapa": "https://maps.app.goo.gl/NSKCeznUnR3ooTQaA",
+      "nome": "Museu da Moda",
+      "descricao": "Museu público dedicado à preservação, pesquisa e difusão da moda, da indumentária e do comportamento. Inaugurado em 2016 a partir do antigo Centro de Referência da Moda, ocupa edifício histórico no Centro de Belo Horizonte e promove exposições, pesquisa, memória, criação e experimentação cultural.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "12h às 20h",
+        "quarta": "10h às 18h",
+        "quinta": "10h às 18h",
+        "sexta": "10h às 18h",
+        "sabado": "10h às 18h",
+        "domingo": "",
+        "observacao": "Consulte a programação oficial para exposições e atividades especiais."
+      },
+      "site": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/museus/mumo",
+      "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/styles/slideshow/public/estrutura-de-governo/cultura/2018_02_16_mumo_foto_ricardo_laf_134.jpg?itok=vAiUOJg_",
+      "imagem_fonte": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/museus/mumo",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem_credito": "Ricardo Laf/PBH",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/museudamodabh/",
+        "facebook": "https://www.facebook.com/mumobh"
+      },
+      "contatos": {
+        "emails": [
+          "mumo.fmc@pbh.gov.br"
+        ],
+        "telefones": [
+          "(31) 3277-9248"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Programação dos Museus do Centro",
+          "url": "https://portalbelohorizonte.com.br/museuscentro"
+        }
+      ],
+      "tipo_espaco": "Museu",
+      "vocacoes": [
+        "Cultura",
+        "Moda",
+        "Memória",
+        "Patrimônio",
+        "Formação"
+      ],
+      "status_editorial": "em_analise",
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Museu da Moda",
+      "temas": [
+        "Cultura",
+        "Moda",
+        "Memória",
+        "Patrimônio",
+        "Formação"
+      ],
+      "natureza_espaco": "Museu",
+      "instituicao": "Fundação Municipal de Cultura de Belo Horizonte",
+      "link": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/museus/mumo"
+    },
+    {
+      "id": "museu-puc-minas",
+      "nome": "Museu de Ciências Naturais PUC Minas",
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida Dom José Gaspar, 290, Coração Eucarístico, Belo Horizonte - MG",
+      "instituicao_ids": [
+        "puc-minas"
+      ],
+      "aliases": [
+        "Museu PUC Minas",
+        "Museu de Ciências Naturais PUC Minas",
+        "Museu de Ciências Naturais da PUC Minas"
+      ],
+      "google_place_id": "",
+      "fonte_endereco": "https://www.instagram.com/p/DbwGRIgnz3-/",
+      "mapa": "https://maps.app.goo.gl/DcEtTi99WAcyrfux6",
+      "descricao": "Museu universitário criado em 1983 e dedicado à pesquisa, educação, extensão e lazer cultural. Abriga importantes coleções de zoologia e paleontologia, com destaque para fósseis de mamíferos do Pleistoceno da América do Sul e coleções de vertebrados da fauna atual.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "A visitação segue calendário e disponibilidade de ingressos. Consulte a página oficial de ingressos antes da visita."
+      },
+      "site": "https://www.pucminas.br/Paginas/museu.aspx",
+      "imagem": "https://www.pucminas.br/cienciasbiologicas/infraestrutura/PublishingImages/Paginas/museu/museu.jpg",
+      "imagem_fonte": "https://www.pucminas.br/Paginas/museu.aspx",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem_credito": "PUC Minas",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/museupucminas/?hl=pt-br"
+      },
+      "contatos": {
+        "emails": [
+          "museu@pucminas.br",
+          "mcn.educação@pucminas.br"
+        ],
+        "telefones": [
+          "(31) 3319-4152",
+          "(31) 3319-4520 (Setor de Educação)"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Ingressos",
+          "url": "https://ingressosmuseu.pucminas.br/"
+        }
+      ],
+      "tipo_espaco": "Museu de ciências naturais",
+      "vocacoes": [
+        "Ciência",
+        "Cultura",
+        "Educação",
+        "Pesquisa",
+        "Paleontologia",
+        "História Natural"
+      ],
+      "status_editorial": "em_analise",
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Museu de Ciências Naturais PUC Minas",
+      "temas": [
+        "Ciência",
+        "Cultura",
+        "Educação",
+        "Pesquisa",
+        "Paleontologia",
+        "História Natural"
+      ],
+      "natureza_espaco": "Museu de ciências naturais",
+      "instituicao": "Pontifícia Universidade Católica de Minas Gerais",
+      "link": "https://www.pucminas.br/Paginas/museu.aspx"
+    },
+    {
+      "aliases": [
+        "Núcleo de Formação e Criação Artística e Cultural — NUFAC",
+        "Núcleo de Formação e Criação Artística e Cultural - NUFAC",
+        "NUFAC"
+      ],
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
+      "fonte_endereco": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
+      "google_maps_street_view": "https://maps.app.goo.gl/tqeLD6kjbSjKX2mG6",
+      "google_place_id": "",
+      "id": "nufac",
+      "instituicao_ids": [
+        "fundacao-municipal-cultura-bh"
+      ],
+      "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
+      "nome": "Núcleo de Formação e Criação Artística e Cultural — NUFAC",
+      "descricao": "Sede de atividades da Escola Livre de Artes Arena da Cultura, voltada à formação e à criação artística e cultural. O NUFAC recebe cursos, oficinas, laboratórios, ciclos formativos e outras ações gratuitas em diferentes linguagens, articulando processos de aprendizagem, experimentação e participação cultural.",
+      "funcionamento": {
+        "segunda": "10h às 20h",
+        "terca": "10h às 20h",
+        "quarta": "10h às 20h",
+        "quinta": "10h às 20h",
+        "sexta": "10h às 20h",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Horário informado para atendimento da secretaria e atividades da Escola Livre de Artes Arena da Cultura; cursos podem ter horários próprios."
+      },
+      "site": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
+      "imagem": "",
+      "imagem_fonte": "",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "redes_sociais": {},
+      "contatos": {
+        "emails": [
+          "secretaria.ela@pbh.gov.br"
+        ],
+        "telefones": [
+          "(31) 3277-4644",
+          "(31) 3277-4656"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Cursos e informações",
+          "url": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes"
+        }
+      ],
+      "tipo_espaco": "Núcleo de formação artística e cultural",
+      "vocacoes": [
+        "Cultura",
+        "Formação",
+        "Criação artística"
+      ],
+      "status_editorial": "em_analise",
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Núcleo de Formação e Criação Artística e Cultural — NUFAC",
+      "temas": [
+        "Cultura",
+        "Formação",
+        "Criação artística"
+      ],
+      "natureza_espaco": "Núcleo de formação artística e cultural",
+      "instituicao": "Fundação Municipal de Cultura de Belo Horizonte",
+      "link": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes"
+    },
+    {
+      "aliases": [
+        "Palácio das Artes",
+        "Fundação Clóvis Salgado - Palácio das Artes"
+      ],
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
+      "fonte_endereco": "https://fcs.mg.gov.br/palacio-das-artes/",
+      "google_place_id": "",
+      "id": "palacio-das-artes",
+      "instituicao_ids": [
+        "fcs"
+      ],
+      "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
+      "nome": "Palácio das Artes",
+      "descricao": "Complexo cultural da Fundação Clóvis Salgado e um dos principais equipamentos culturais de Minas Gerais. Reúne teatros, cinema, galerias, espaços expositivos e de convivência, além de sediar atividades de formação artística, espetáculos, concertos, mostras de cinema e exposições.",
+      "funcionamento": {
+        "segunda": "9h às 21h",
+        "terca": "9h às 21h",
+        "quarta": "9h às 21h",
+        "quinta": "9h às 21h",
+        "sexta": "9h às 21h",
+        "sabado": "9h30 às 21h",
+        "domingo": "17h às 21h",
+        "observacao": "O Balcão de Informações funciona de segunda a sexta, das 9h às 21h. Galerias: terça a sábado, das 9h30 às 21h; domingos e feriados, das 17h às 21h. Bilheteria: segunda a sábado, das 16h às 22h; domingo, das 17h às 21h."
+      },
+      "site": "https://fcs.mg.gov.br/palacio-das-artes/",
+      "imagem": "https://fcs.mg.gov.br/wp-content/uploads/2024/12/FachadaPL00141-1024x683.jpg",
+      "imagem_fonte": "https://fcs.mg.gov.br/palacio-das-artes/",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem_credito": "Acervo Fundação Clóvis Salgado",
+      "redes_sociais": {},
+      "contatos": {
+        "emails": [
+          "mediacao@fcs.mg.gov.br"
+        ],
+        "telefones": [
+          "(31) 3236-7400"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Horários e bilheterias",
+          "url": "https://fcs.mg.gov.br/institucional/horario-de-atendimento/"
+        },
+        {
+          "rotulo": "Ingressos",
+          "url": "https://www.sympla.com.br/"
+        }
+      ],
+      "tipo_espaco": "Complexo cultural",
+      "vocacoes": [
+        "Cultura",
+        "Teatro",
+        "Música",
+        "Dança",
+        "Cinema",
+        "Artes visuais",
+        "Formação"
+      ],
+      "status_editorial": "em_analise",
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Palácio das Artes",
+      "temas": [
+        "Cultura",
+        "Teatro",
+        "Música",
+        "Dança",
+        "Cinema",
+        "Artes visuais",
+        "Formação"
+      ],
+      "natureza_espaco": "Complexo cultural",
+      "instituicao": "Fundação Clóvis Salgado",
+      "link": "https://fcs.mg.gov.br/palacio-das-artes/"
+    },
+    {
+      "id": "palacio-das-artes-passeio-niemeyer",
+      "nome": "Passeio Niemeyer",
+      "equipamento_id": "palacio-das-artes",
+      "instituicao_id": "fcs",
+      "descricao": "Área de convivência ao ar livre com 842 m² que liga o Parque Municipal ao edifício do Grande Teatro do Palácio das Artes. Projetado como parte do conjunto arquitetônico de Oscar Niemeyer, dá acesso a outros espaços do complexo e também recebe encontros, bate-papos, mesas redondas e eventos.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "9h30 às 21h",
+        "quarta": "9h30 às 21h",
+        "quinta": "9h30 às 21h",
+        "sexta": "9h30 às 21h",
+        "sabado": "9h30 às 21h",
+        "domingo": "17h às 21h",
+        "observacao": "Horário geral de visitação do Palácio das Artes. Sessões, espetáculos e eventos têm horários próprios conforme a programação."
+      },
+      "site": "https://fcs.mg.gov.br/espacos-culturais/palacio-das-artes/jardins/",
+      "imagem": "https://fcs.mg.gov.br/wp-content/uploads/2024/12/FachadaPL00141-1024x683.jpg",
+      "imagem_fonte": "https://fcs.mg.gov.br/palacio-das-artes/",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Passeio / área de convivência",
+      "vocacoes": [
+        "Cultura",
+        "Convivência",
+        "Eventos",
+        "Arquitetura",
+        "Natureza"
+      ],
+      "contatos": {
+        "emails": [
+          "mediacao@fcs.mg.gov.br"
+        ],
+        "telefones": [
+          "(31) 3236-7400"
+        ]
+      },
+      "status_editorial": "em_analise",
+      "redes_sociais": {},
+      "links_adicionais": [
+        {
+          "rotulo": "Horários e bilheterias",
+          "url": "https://fcs.mg.gov.br/institucional/horario-de-atendimento/"
+        },
+        {
+          "rotulo": "Ingressos",
+          "url": "https://www.sympla.com.br/"
+        }
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Passeio Niemeyer",
+      "temas": [
+        "Cultura",
+        "Convivência",
+        "Eventos",
+        "Arquitetura",
+        "Natureza"
+      ],
+      "natureza_espaco": "Passeio / área de convivência",
+      "espaco_principal": "Palácio das Artes",
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
+      "instituicao": "Fundação Clóvis Salgado",
+      "link": "https://fcs.mg.gov.br/espacos-culturais/palacio-das-artes/jardins/"
+    },
+    {
+      "id": "espaco-conhecimento-ufmg-planetario",
+      "nome": "Planetário",
+      "equipamento_id": "espaco-conhecimento-ufmg",
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "descricao": "Planetário imersivo instalado no quinto andar do Espaço do Conhecimento UFMG. Possui domo de 9 metros, projeção digital 4K combinada a projetor óptico-mecânico, visão de 180° x 360°, cadeiras reclináveis e capacidade para 61 pessoas. Recebe sessões comentadas de astronomia e filmes digitais fulldome.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "Conforme programação",
+        "quarta": "Conforme programação",
+        "quinta": "Conforme programação",
+        "sexta": "Conforme programação",
+        "sabado": "Conforme programação",
+        "domingo": "Conforme programação",
+        "observacao": "As sessões ocorrem em horários específicos divulgados na programação do museu. Ingressos são adquiridos no próprio dia, conforme regras vigentes."
+      },
+      "site": "https://www.ufmg.br/espacodoconhecimento/planetario/",
+      "imagem": "imagens/instituicoes/espaco-conhecimento-ufmg.png",
+      "imagem_fonte": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2025/12/Fachada-Digital-Divulgacao-Espaco-do-Conhecimento-UFMG-1.jpeg",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Planetário",
+      "vocacoes": [
+        "Ciência",
+        "Astronomia",
+        "Audiovisual",
+        "Cultura",
+        "Educação"
+      ],
+      "links_adicionais": [
+        {
+          "rotulo": "Programação e ingressos",
+          "url": "https://www.ufmg.br/espacodoconhecimento/planetario/"
+        },
+        {
+          "rotulo": "Contato e imprensa",
+          "url": "https://www.ufmg.br/espacodoconhecimento/contato-e-imprensa/"
+        }
+      ],
+      "status_editorial": "em_analise",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/espacoufmg",
+        "youtube": "https://www.youtube.com/espacoufmg",
+        "tiktok": "https://www.tiktok.com/@espacoufmg"
+      },
+      "contatos": {
+        "emails": [
+          "secretaria@espacoconhecimento.ufmg.br",
+          "agendamento.conhecimento@gmail.com"
+        ],
+        "telefones": [
+          "(31) 3409-8350 (Recepção)",
+          "(31) 3409-8360 (Agendamento)"
+        ]
+      },
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Planetário",
+      "temas": [
+        "Ciência",
+        "Astronomia",
+        "Audiovisual",
+        "Cultura",
+        "Educação"
+      ],
+      "natureza_espaco": "Planetário",
+      "espaco_principal": "Espaço do Conhecimento UFMG",
+      "cidade": "Belo Horizonte",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
+      "instituicao": "Espaço do Conhecimento UFMG",
+      "link": "https://www.ufmg.br/espacodoconhecimento/planetario/"
+    },
+    {
+      "id": "ccbb-bh-patio",
+      "nome": "Pátio",
+      "equipamento_id": "ccbb-bh",
+      "instituicao_id": "ccbb-bh",
+      "descricao": "Pátio central do edifício histórico do CCBB Belo Horizonte. Além de área de convivência e circulação, recebe instalações, exposições, ações educativas, performances e outras atividades culturais; também abriga serviços de alimentação.",
+      "funcionamento": {
+        "segunda": "10h às 22h",
+        "terca": "Fechado",
+        "quarta": "10h às 22h",
+        "quinta": "10h às 22h",
+        "sexta": "10h às 22h",
+        "sabado": "10h às 22h",
+        "domingo": "10h às 22h",
+        "observacao": "Horário geral do CCBB Belo Horizonte. Atividades, espetáculos e exposições podem ter horários e regras de ingresso próprios."
+      },
+      "site": "https://ccbb.com.br/belo-horizonte/servicos/",
+      "imagem": "imagens/instituicoes/ccbb-bh.png",
+      "imagem_fonte": "https://static.ccbb.com.br/site-2025/2025/09/swiper-bh4.png",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Pátio / espaço de convivência",
+      "vocacoes": [
+        "Cultura",
+        "Convivência",
+        "Exposições",
+        "Performances",
+        "Alimentação"
+      ],
+      "links_adicionais": [
+        {
+          "rotulo": "Serviços",
+          "url": "https://ccbb.com.br/belo-horizonte/servicos/"
+        },
+        {
+          "rotulo": "Normas de visitação",
+          "url": "https://ccbb.com.br/belo-horizonte/normas-de-visitacao/"
+        }
+      ],
+      "status_editorial": "em_analise",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/ccbbbh/#"
+      },
+      "contatos": {
+        "emails": [],
+        "telefones": [
+          "(31) 3431-9400",
+          "(31) 3431-9401",
+          "(31) 3431-9441 (visitas mediadas)"
+        ]
+      },
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Pátio",
+      "temas": [
+        "Cultura",
+        "Convivência",
+        "Exposições",
+        "Performances",
+        "Alimentação"
+      ],
+      "natureza_espaco": "Pátio / espaço de convivência",
+      "espaco_principal": "CCBB Belo Horizonte",
+      "cidade": "Belo Horizonte",
+      "endereco": "Praça da Liberdade, 450, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/Q6UrZGKEn8eCx8Kb8",
+      "instituicao": "Centro Cultural Banco do Brasil Belo Horizonte",
+      "link": "https://ccbb.com.br/belo-horizonte/servicos/"
+    },
+    {
+      "id": "palacio-das-artes-sala-juvenal-dias",
+      "nome": "Sala Juvenal Dias",
+      "equipamento_id": "palacio-das-artes",
+      "instituicao_id": "fcs",
+      "descricao": "Sala de espetáculos em formato de arena, com 175 cadeiras e espaço reservado para cadeirante. Homenageia o músico, maestro e professor Juvenal Dias e recebe apresentações musicais, cênicas e outras atividades culturais de menor porte.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "9h30 às 21h",
+        "quarta": "9h30 às 21h",
+        "quinta": "9h30 às 21h",
+        "sexta": "9h30 às 21h",
+        "sabado": "9h30 às 21h",
+        "domingo": "17h às 21h",
+        "observacao": "Horário geral de visitação do Palácio das Artes. Sessões, espetáculos e eventos têm horários próprios conforme a programação."
+      },
+      "site": "https://fcs.mg.gov.br/espacos-culturais/palacio-das-artes/sala-juvenal-dias/",
+      "imagem": "https://fcs.mg.gov.br/wp-content/uploads/2024/12/FachadaPL00141-1024x683.jpg",
+      "imagem_fonte": "https://fcs.mg.gov.br/palacio-das-artes/",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Sala de espetáculos / arena",
+      "vocacoes": [
+        "Cultura",
+        "Música",
+        "Teatro",
+        "Dança",
+        "Eventos"
+      ],
+      "contatos": {
+        "emails": [
+          "mediacao@fcs.mg.gov.br"
+        ],
+        "telefones": [
+          "(31) 3236-7400"
+        ]
+      },
+      "status_editorial": "em_analise",
+      "redes_sociais": {},
+      "links_adicionais": [
+        {
+          "rotulo": "Horários e bilheterias",
+          "url": "https://fcs.mg.gov.br/institucional/horario-de-atendimento/"
+        },
+        {
+          "rotulo": "Ingressos",
+          "url": "https://www.sympla.com.br/"
+        }
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Sala Juvenal Dias",
+      "temas": [
+        "Cultura",
+        "Música",
+        "Teatro",
+        "Dança",
+        "Eventos"
+      ],
+      "natureza_espaco": "Sala de espetáculos / arena",
+      "espaco_principal": "Palácio das Artes",
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
+      "instituicao": "Fundação Clóvis Salgado",
+      "link": "https://fcs.mg.gov.br/espacos-culturais/palacio-das-artes/sala-juvenal-dias/"
+    },
+    {
+      "id": "ccbb-bh-sala-multiuso",
+      "nome": "Sala Multiuso",
+      "equipamento_id": "ccbb-bh",
+      "instituicao_id": "ccbb-bh",
+      "descricao": "Sala multiuso do CCBB Belo Horizonte destinada a atividades audiovisuais, debates, conferências, oficinas, palestras e ações interativas e educacionais. Integra a estrutura de formação e programação cultural do centro.",
+      "funcionamento": {
+        "segunda": "10h às 22h",
+        "terca": "Fechado",
+        "quarta": "10h às 22h",
+        "quinta": "10h às 22h",
+        "sexta": "10h às 22h",
+        "sabado": "10h às 22h",
+        "domingo": "10h às 22h",
+        "observacao": "Horário geral do CCBB Belo Horizonte. Atividades, espetáculos e exposições podem ter horários e regras de ingresso próprios."
+      },
+      "site": "https://ccbb.com.br/belo-horizonte/sobre-o-ccbb/",
+      "imagem": "imagens/instituicoes/ccbb-bh.png",
+      "imagem_fonte": "https://static.ccbb.com.br/site-2025/2025/09/swiper-bh4.png",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Sala multiuso",
+      "vocacoes": [
+        "Cultura",
+        "Formação",
+        "Audiovisual",
+        "Debates",
+        "Oficinas",
+        "Palestras"
+      ],
+      "status_editorial": "em_analise",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/ccbbbh/#"
+      },
+      "contatos": {
+        "emails": [],
+        "telefones": [
+          "(31) 3431-9400",
+          "(31) 3431-9401",
+          "(31) 3431-9441 (visitas mediadas)"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Normas de visitação",
+          "url": "https://ccbb.com.br/belo-horizonte/normas-de-visitacao/"
+        }
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Sala Multiuso",
+      "temas": [
+        "Cultura",
+        "Formação",
+        "Audiovisual",
+        "Debates",
+        "Oficinas",
+        "Palestras"
+      ],
+      "natureza_espaco": "Sala multiuso",
+      "espaco_principal": "CCBB Belo Horizonte",
+      "cidade": "Belo Horizonte",
+      "endereco": "Praça da Liberdade, 450, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/Q6UrZGKEn8eCx8Kb8",
+      "instituicao": "Centro Cultural Banco do Brasil Belo Horizonte",
+      "link": "https://ccbb.com.br/belo-horizonte/sobre-o-ccbb/"
+    },
+    {
+      "aliases": [
+        "Sesc Palladium",
+        "Sesc Palladium - MG"
+      ],
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Rio de Janeiro, 1046, Centro, Belo Horizonte - MG, 30160-041",
+      "fonte_endereco": "Página oficial do Sesc Palladium na Bileto/Sympla",
+      "google_place_id": "",
+      "id": "sesc-palladium",
+      "instituicao_ids": [
+        "sesc-mg"
+      ],
+      "mapa": "https://maps.app.goo.gl/69GL5ydEpAtcwDgv7",
+      "nome": "Sesc Palladium",
+      "descricao": "Espaço cultural e multiuso do Sesc em Minas, inaugurado em 2011 no edifício do antigo Cine Palladium. Em oito andares, reúne Grande Teatro, sala de cinema, teatro de bolso, foyers, coworking, estúdio audiovisual, espaços multiuso, jardim, café e salas de reunião, com programação de artes, educação e cultura.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "11h às 21h",
+        "quarta": "11h às 21h",
+        "quinta": "11h às 21h",
+        "sexta": "11h às 21h",
+        "sabado": "11h às 21h",
+        "domingo": "11h às 21h",
+        "observacao": "Horário da programação artístico-cultural informado pelo Sesc. Coworking e salas de reunião funcionam de segunda a sexta, das 9h às 21h."
+      },
+      "site": "https://sescmg.com.br/unidade/sesc-palladium/",
+      "imagem": "",
+      "imagem_fonte": "",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "redes_sociais": {},
+      "contatos": {
+        "emails": [
+          "palladium@sescmg.com.br"
+        ],
+        "telefones": [
+          "(31) 3270-8100"
+        ]
+      },
+      "links_adicionais": [],
+      "tipo_espaco": "Complexo cultural",
+      "vocacoes": [
+        "Cultura",
+        "Teatro",
+        "Cinema",
+        "Música",
+        "Dança",
+        "Audiovisual",
+        "Formação",
+        "Inovação"
+      ],
+      "status_editorial": "em_analise",
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Sesc Palladium",
+      "temas": [
+        "Cultura",
+        "Teatro",
+        "Cinema",
+        "Música",
+        "Dança",
+        "Audiovisual",
+        "Formação",
+        "Inovação"
+      ],
+      "natureza_espaco": "Complexo cultural",
+      "instituicao": "Sesc em Minas",
+      "link": "https://sescmg.com.br/unidade/sesc-palladium/"
+    },
+    {
+      "aliases": [
+        "Solar Padre Correia"
+      ],
+      "cidade": "Sabará",
+      "endereco": "R. Dom Pedro II, 200 - Centro, Sabará - MG, 34505-000",
+      "fonte_endereco": "https://www.instagram.com/cultura.sabara/",
+      "google_place_id": "",
+      "id": "solar-padre-correia",
+      "instituicao_ids": [
+        "Secretaria de Cultura de Sabará"
+      ],
+      "mapa": "https://maps.app.goo.gl/fNCH9XLpCY5V4z2j6",
+      "nome": "Solar Padre Correia",
+      "descricao": "Solar histórico tricentenário localizado no Centro Histórico de Sabará. O imóvel abrigou por muitos anos a Prefeitura Municipal e conserva elementos arquitetônicos e decorativos de interesse patrimonial, incluindo uma capela no hall do pavimento superior. O conjunto passou por obras de restauração e recuperação.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Não foi localizado horário oficial atual de visitação regular. Consulte a Prefeitura ou a Secretaria Municipal de Cultura antes da visita."
+      },
+      "site": "https://site.sabara.mg.gov.br/restauracao-do-solar-padre-correia/",
+      "imagem": "https://site.sabara.mg.gov.br/wp-content/uploads/2019/06/image.png",
+      "imagem_fonte": "https://site.sabara.mg.gov.br/restauracao-do-solar-padre-correia/",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem_credito": "Prefeitura de Sabará",
+      "contatos": {
+        "emails": [
+          "cultura@sabara.mg.gov.br"
+        ],
+        "telefones": [
+          "(31) 3671-1780"
+        ]
+      },
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/cultura.sabara/"
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Secretaria Municipal de Cultura",
+          "url": "https://site.sabara.mg.gov.br/secretaria-municipal-de-cultura/"
+        }
+      ],
+      "tipo_espaco": "Solar histórico / patrimônio cultural",
+      "vocacoes": [
+        "Patrimônio",
+        "História",
+        "Cultura",
+        "Turismo"
+      ],
+      "status_editorial": "em_analise",
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Solar Padre Correia",
+      "temas": [
+        "Patrimônio",
+        "História",
+        "Cultura",
+        "Turismo"
+      ],
+      "natureza_espaco": "Solar histórico / patrimônio cultural",
+      "instituicao": "Secretaria De Cultura De Sabará",
+      "link": "https://site.sabara.mg.gov.br/restauracao-do-solar-padre-correia/"
+    },
+    {
+      "id": "centro-cultural-sesiminas-bh-teatro-de-bolso",
+      "nome": "Teatro de Bolso",
+      "equipamento_id": "centro-cultural-sesiminas-bh",
+      "instituicao_id": "sesiminas-bh",
+      "descricao": "Sala de apresentações intimistas do Centro Cultural SESIMINAS BH. Tem palco em formato de semi-arena, aproximadamente 200 m², camarim coletivo e capacidade para 103 pessoas, com estrutura de acessibilidade. Recebe espetáculos, gravações, ensaios, sessões de fotos e eventos.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Funcionamento conforme a programação de espetáculos, ensaios e eventos."
+      },
+      "site": "https://www.fiemg.com.br/sesi-cultura/seu-evento-aqui/detalhe/teatro-de-bolso-sesiminas-bh/",
+      "imagem": "https://www.fiemg.com.br/sesi-cultura/wp-content/uploads/sites/28/2023/07/c9ad3694bc4b55cd4122ecb4f642908e0db018c961170f51099c6ab6212d879c.jpg",
+      "imagem_fonte": "https://www.fiemg.com.br/sesi-cultura/centro-cultural-sesiminas-bh/",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Teatro de bolso / semi-arena",
+      "vocacoes": [
+        "Cultura",
+        "Teatro",
+        "Música",
+        "Dança",
+        "Ensaios",
+        "Eventos"
+      ],
+      "links_adicionais": [
+        {
+          "rotulo": "Programação",
+          "url": "https://www.fiemg.com.br/sesi-cultura/programacao/"
+        },
+        {
+          "rotulo": "Cursos",
+          "url": "https://www.fiemg.com.br/sesi-cultura/cursos/"
+        },
+        {
+          "rotulo": "Biblioteca",
+          "url": "https://www.fiemg.com.br/sesi-cultura/biblioteca/"
+        }
+      ],
+      "status_editorial": "em_analise",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/sesiculturamg/",
+        "whatsapp": "https://wa.me/5531996247612"
+      },
+      "contatos": {
+        "emails": [
+          "sesiculturamg@fiemg.com.br",
+          "teatrosesiminas@fiemg.com.br"
+        ],
+        "telefones": [
+          "(31) 2116-0418",
+          "(31) 99624-7612 (WhatsApp)",
+          "(31) 97157-0747 (eventos)"
+        ]
+      },
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Teatro de Bolso",
+      "temas": [
+        "Cultura",
+        "Teatro",
+        "Música",
+        "Dança",
+        "Ensaios",
+        "Eventos"
+      ],
+      "natureza_espaco": "Teatro de bolso / semi-arena",
+      "espaco_principal": "Centro Cultural SESIMINAS BH",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Padre Marinho, 60, Santa Efigênia, Belo Horizonte - MG",
+      "mapa": "",
+      "instituicao": "SESIMINAS BH",
+      "link": "https://www.fiemg.com.br/sesi-cultura/seu-evento-aqui/detalhe/teatro-de-bolso-sesiminas-bh/"
+    },
+    {
+      "id": "ccbb-bh-teatro-i",
+      "nome": "Teatro I",
+      "equipamento_id": "ccbb-bh",
+      "instituicao_id": "ccbb-bh",
+      "descricao": "Espaço cênico do CCBB Belo Horizonte identificado na programação como Teatro I. Recebe peças, musicais, apresentações, palestras e outras atividades, com agenda própria de sessões e ingressos.",
+      "funcionamento": {
+        "segunda": "Conforme programação",
+        "terca": "Fechado",
+        "quarta": "Conforme programação",
+        "quinta": "Conforme programação",
+        "sexta": "Conforme programação",
+        "sabado": "Conforme programação",
+        "domingo": "Conforme programação",
+        "observacao": "Horários definidos por cada espetáculo ou atividade. Consulte a programação do CCBB Belo Horizonte."
+      },
+      "site": "https://ccbb.com.br/belo-horizonte/programacao/",
+      "imagem": "imagens/instituicoes/ccbb-bh.png",
+      "imagem_fonte": "https://static.ccbb.com.br/site-2025/2025/09/swiper-bh4.png",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Teatro",
+      "vocacoes": [
+        "Cultura",
+        "Teatro",
+        "Música",
+        "Artes cênicas",
+        "Palestras"
+      ],
+      "links_adicionais": [
+        {
+          "rotulo": "Programação",
+          "url": "https://ccbb.com.br/belo-horizonte/programacao/"
+        },
+        {
+          "rotulo": "Normas de visitação",
+          "url": "https://ccbb.com.br/belo-horizonte/normas-de-visitacao/"
+        }
+      ],
+      "status_editorial": "em_analise",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/ccbbbh/#"
+      },
+      "contatos": {
+        "emails": [],
+        "telefones": [
+          "(31) 3431-9400",
+          "(31) 3431-9401",
+          "(31) 3431-9441 (visitas mediadas)"
+        ]
+      },
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Teatro I",
+      "temas": [
+        "Cultura",
+        "Teatro",
+        "Música",
+        "Artes cênicas",
+        "Palestras"
+      ],
+      "natureza_espaco": "Teatro",
+      "espaco_principal": "CCBB Belo Horizonte",
+      "cidade": "Belo Horizonte",
+      "endereco": "Praça da Liberdade, 450, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/Q6UrZGKEn8eCx8Kb8",
+      "instituicao": "Centro Cultural Banco do Brasil Belo Horizonte",
+      "link": "https://ccbb.com.br/belo-horizonte/programacao/"
+    },
+    {
+      "id": "ccbb-bh-teatro-ii",
+      "nome": "Teatro II",
+      "equipamento_id": "ccbb-bh",
+      "instituicao_id": "ccbb-bh",
+      "descricao": "Espaço cênico do CCBB Belo Horizonte identificado na programação como Teatro II. É utilizado em espetáculos e atividades culturais de diferentes formatos, com funcionamento de acordo com a agenda do centro cultural.",
+      "funcionamento": {
+        "segunda": "Conforme programação",
+        "terca": "Fechado",
+        "quarta": "Conforme programação",
+        "quinta": "Conforme programação",
+        "sexta": "Conforme programação",
+        "sabado": "Conforme programação",
+        "domingo": "Conforme programação",
+        "observacao": "Horários definidos por cada espetáculo ou atividade. Consulte a programação do CCBB Belo Horizonte."
+      },
+      "site": "https://ccbb.com.br/belo-horizonte/programacao/",
+      "imagem": "imagens/instituicoes/ccbb-bh.png",
+      "imagem_fonte": "https://static.ccbb.com.br/site-2025/2025/09/swiper-bh4.png",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Teatro",
+      "vocacoes": [
+        "Cultura",
+        "Teatro",
+        "Artes cênicas"
+      ],
+      "links_adicionais": [
+        {
+          "rotulo": "Programação",
+          "url": "https://ccbb.com.br/belo-horizonte/programacao/"
+        },
+        {
+          "rotulo": "Normas de visitação",
+          "url": "https://ccbb.com.br/belo-horizonte/normas-de-visitacao/"
+        }
+      ],
+      "status_editorial": "em_analise",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/ccbbbh/#"
+      },
+      "contatos": {
+        "emails": [],
+        "telefones": [
+          "(31) 3431-9400",
+          "(31) 3431-9401",
+          "(31) 3431-9441 (visitas mediadas)"
+        ]
+      },
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Teatro II",
+      "temas": [
+        "Cultura",
+        "Teatro",
+        "Artes cênicas"
+      ],
+      "natureza_espaco": "Teatro",
+      "espaco_principal": "CCBB Belo Horizonte",
+      "cidade": "Belo Horizonte",
+      "endereco": "Praça da Liberdade, 450, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/Q6UrZGKEn8eCx8Kb8",
+      "instituicao": "Centro Cultural Banco do Brasil Belo Horizonte",
+      "link": "https://ccbb.com.br/belo-horizonte/programacao/"
+    },
+    {
+      "id": "palacio-das-artes-teatro-joao-ceschiatti",
+      "nome": "Teatro João Ceschiatti",
+      "equipamento_id": "palacio-das-artes",
+      "instituicao_id": "fcs",
+      "descricao": "Teatro de arena do Palácio das Artes com capacidade para 125 pessoas, incluindo espaços reservados para cadeirantes. Homenageia o ator, diretor e formador João Ceschiatti e recebe peças, performances, mostras e atividades ligadas às artes cênicas.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "9h30 às 21h",
+        "quarta": "9h30 às 21h",
+        "quinta": "9h30 às 21h",
+        "sexta": "9h30 às 21h",
+        "sabado": "9h30 às 21h",
+        "domingo": "17h às 21h",
+        "observacao": "Horário geral de visitação do Palácio das Artes. Sessões, espetáculos e eventos têm horários próprios conforme a programação."
+      },
+      "site": "https://fcs.mg.gov.br/espacos-culturais/palacio-das-artes/teatro-joao-ceschiatti/",
+      "imagem": "https://fcs.mg.gov.br/wp-content/uploads/2024/12/FachadaPL00141-1024x683.jpg",
+      "imagem_fonte": "https://fcs.mg.gov.br/palacio-das-artes/",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Teatro de arena",
+      "vocacoes": [
+        "Cultura",
+        "Teatro",
+        "Artes cênicas",
+        "Formação"
+      ],
+      "contatos": {
+        "emails": [
+          "mediacao@fcs.mg.gov.br"
+        ],
+        "telefones": [
+          "(31) 3236-7400"
+        ]
+      },
+      "status_editorial": "em_analise",
+      "redes_sociais": {},
+      "links_adicionais": [
+        {
+          "rotulo": "Horários e bilheterias",
+          "url": "https://fcs.mg.gov.br/institucional/horario-de-atendimento/"
+        },
+        {
+          "rotulo": "Ingressos",
+          "url": "https://www.sympla.com.br/"
+        }
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Teatro João Ceschiatti",
+      "temas": [
+        "Cultura",
+        "Teatro",
+        "Artes cênicas",
+        "Formação"
+      ],
+      "natureza_espaco": "Teatro de arena",
+      "espaco_principal": "Palácio das Artes",
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
+      "instituicao": "Fundação Clóvis Salgado",
+      "link": "https://fcs.mg.gov.br/espacos-culturais/palacio-das-artes/teatro-joao-ceschiatti/"
+    },
+    {
+      "aliases": [
+        "Teatro Marília",
+        "Teatro Marilia",
+        "Centro de Referência da Dança — Teatro Marília",
+        "Centro de Referência da Dança - Teatro Marília",
+        "Centro de Referência da Dança"
+      ],
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida Professor Alfredo Balena, 586, Santa Efigênia, Belo Horizonte - MG, 30130-100",
+      "fonte_endereco": "https://maps.app.goo.gl/MtyButkEtXBbL1Ae8",
+      "google_maps_foto": "https://maps.app.goo.gl/paSQ9jjFjnFX4Dqy9",
+      "google_maps_street_view": "https://maps.app.goo.gl/pPXKA9BEQwRGpxZU6",
+      "google_place_id": "",
+      "id": "teatro-marilia",
+      "instituicao_ids": [
+        "fundacao-municipal-cultura-bh"
+      ],
+      "mapa": "https://maps.app.goo.gl/MtyButkEtXBbL1Ae8",
+      "nome": "Teatro Marília",
+      "descricao": "Teatro histórico de Belo Horizonte inaugurado em 1964 e tombado como patrimônio cultural do município. Com palco italiano e capacidade para 256 pessoas, recebe espetáculos de teatro, dança, música, mostras, festivais e outras atividades culturais, além de abrigar ações ligadas ao Centro de Referência da Dança.",
+      "funcionamento": {
+        "segunda": "9h às 18h",
+        "terca": "9h às 18h",
+        "quarta": "9h às 18h",
+        "quinta": "9h às 18h",
+        "sexta": "9h às 18h",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Horário da administração. Em outros dias e horários, o funcionamento acompanha a agenda de espetáculos. A bilheteria abre duas horas antes das atividades, conforme disponibilidade."
+      },
+      "site": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/teatros/marilia",
+      "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/cultura/tm_foto.rafaelcosta-tm.jpg",
+      "imagem_fonte": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/teatros/marilia",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem_credito": "Rafael Costa/FMC",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/teatromariliabh/",
+        "facebook": "https://www.facebook.com/TeatroMarilia"
+      },
+      "contatos": {
+        "emails": [
+          "tm.fmc@pbh.gov.br"
+        ],
+        "telefones": [
+          "(31) 3277-4697",
+          "(31) 3277-6319 (bilheteria)"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Programação",
+          "url": "https://portalbelohorizonte.com.br/eventos/teatro-marilia"
+        },
+        {
+          "rotulo": "Ingressos",
+          "url": "https://site.bileto.sympla.com.br/teatromarilia/"
+        }
+      ],
+      "tipo_espaco": "Teatro",
+      "vocacoes": [
+        "Cultura",
+        "Teatro",
+        "Dança",
+        "Música"
+      ],
+      "status_editorial": "em_analise",
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Teatro Marília",
+      "temas": [
+        "Cultura",
+        "Teatro",
+        "Dança",
+        "Música"
+      ],
+      "natureza_espaco": "Teatro",
+      "instituicao": "Fundação Municipal de Cultura de Belo Horizonte",
+      "link": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/teatros/marilia"
+    },
+    {
+      "id": "centro-cultural-sesiminas-bh-teatro-sesiminas",
+      "nome": "Teatro SESIMINAS",
+      "equipamento_id": "centro-cultural-sesiminas-bh",
+      "instituicao_id": "sesiminas-bh",
+      "descricao": "Principal sala de espetáculos do Centro Cultural SESIMINAS BH. Possui palco italiano, fosso de orquestra, camarins e infraestrutura para produções culturais, sociais e corporativas, com capacidade oficial de 648 lugares, incluindo espaços de acessibilidade.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Funcionamento conforme a programação de espetáculos e eventos."
+      },
+      "site": "https://www.fiemg.com.br/sesi-cultura/seu-evento-aqui/detalhe/teatro-sesiminas-bh-2/",
+      "imagem": "https://www.fiemg.com.br/sesi-cultura/wp-content/uploads/sites/28/2023/07/c9ad3694bc4b55cd4122ecb4f642908e0db018c961170f51099c6ab6212d879c.jpg",
+      "imagem_fonte": "https://www.fiemg.com.br/sesi-cultura/centro-cultural-sesiminas-bh/",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Teatro",
+      "vocacoes": [
+        "Cultura",
+        "Teatro",
+        "Música",
+        "Dança",
+        "Eventos"
+      ],
+      "links_adicionais": [
+        {
+          "rotulo": "Programação",
+          "url": "https://www.fiemg.com.br/sesi-cultura/categoria_programacao_unidade/teatro-sesiminas-bh/"
+        },
+        {
+          "rotulo": "Programação",
+          "url": "https://www.fiemg.com.br/sesi-cultura/programacao/"
+        },
+        {
+          "rotulo": "Cursos",
+          "url": "https://www.fiemg.com.br/sesi-cultura/cursos/"
+        },
+        {
+          "rotulo": "Biblioteca",
+          "url": "https://www.fiemg.com.br/sesi-cultura/biblioteca/"
+        }
+      ],
+      "status_editorial": "em_analise",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/sesiculturamg/",
+        "whatsapp": "https://wa.me/5531996247612"
+      },
+      "contatos": {
+        "emails": [
+          "sesiculturamg@fiemg.com.br",
+          "teatrosesiminas@fiemg.com.br"
+        ],
+        "telefones": [
+          "(31) 2116-0418",
+          "(31) 99624-7612 (WhatsApp)",
+          "(31) 97157-0747 (eventos)"
+        ]
+      },
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Teatro SESIMINAS",
+      "temas": [
+        "Cultura",
+        "Teatro",
+        "Música",
+        "Dança",
+        "Eventos"
+      ],
+      "natureza_espaco": "Teatro",
+      "espaco_principal": "Centro Cultural SESIMINAS BH",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Padre Marinho, 60, Santa Efigênia, Belo Horizonte - MG",
+      "mapa": "",
+      "instituicao": "SESIMINAS BH",
+      "link": "https://www.fiemg.com.br/sesi-cultura/seu-evento-aqui/detalhe/teatro-sesiminas-bh-2/"
+    },
+    {
+      "id": "espaco-conhecimento-ufmg-terraco-astronomico",
+      "nome": "Terraço Astronômico",
+      "equipamento_id": "espaco-conhecimento-ufmg",
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "descricao": "Observatório a céu aberto no quinto andar do Espaço do Conhecimento UFMG. Possui teto retrátil e telescópios para observação direta do céu, com sessões comentadas pela equipe de Astronomia. As atividades incluem observação noturna e solar, sempre condicionadas às condições meteorológicas.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "Observação noturna conforme programação",
+        "domingo": "Observação solar conforme programação",
+        "observacao": "As observações dependem das condições climáticas e exigem retirada de ingresso gratuito conforme a programação vigente."
+      },
+      "site": "https://www.ufmg.br/espacodoconhecimento/terraco-astronomico/",
+      "imagem": "imagens/instituicoes/espaco-conhecimento-ufmg.png",
+      "imagem_fonte": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2025/12/Fachada-Digital-Divulgacao-Espaco-do-Conhecimento-UFMG-1.jpeg",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Terraço astronômico / observatório",
+      "vocacoes": [
+        "Ciência",
+        "Astronomia",
+        "Educação",
+        "Cultura"
+      ],
+      "links_adicionais": [
+        {
+          "rotulo": "Observações e ingressos",
+          "url": "https://www.ufmg.br/espacodoconhecimento/terraco-astronomico/"
+        },
+        {
+          "rotulo": "Contato e imprensa",
+          "url": "https://www.ufmg.br/espacodoconhecimento/contato-e-imprensa/"
+        }
+      ],
+      "status_editorial": "em_analise",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/espacoufmg",
+        "youtube": "https://www.youtube.com/espacoufmg",
+        "tiktok": "https://www.tiktok.com/@espacoufmg"
+      },
+      "contatos": {
+        "emails": [
+          "secretaria@espacoconhecimento.ufmg.br",
+          "agendamento.conhecimento@gmail.com"
+        ],
+        "telefones": [
+          "(31) 3409-8350 (Recepção)",
+          "(31) 3409-8360 (Agendamento)"
+        ]
+      },
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Terraço Astronômico",
+      "temas": [
+        "Ciência",
+        "Astronomia",
+        "Educação",
+        "Cultura"
+      ],
+      "natureza_espaco": "Terraço astronômico / observatório",
+      "espaco_principal": "Espaço do Conhecimento UFMG",
+      "cidade": "Belo Horizonte",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
+      "instituicao": "Espaço do Conhecimento UFMG",
+      "link": "https://www.ufmg.br/espacodoconhecimento/terraco-astronomico/"
+    },
+    {
+      "id": "teatro-marilia-vitrine-do-teatro-marilia",
+      "nome": "Vitrine do Teatro Marília",
+      "equipamento_id": "teatro-marilia",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "descricao": "Vitrine expositiva integrada à fachada do Teatro Marília, voltada à ocupação artística do espaço urbano. Recebe instalações e exposições que podem ser vistas diretamente da rua, aproximando artes visuais, memória e cotidiano da cidade.",
+      "funcionamento": {
+        "segunda": "Acesso visual livre",
+        "terca": "Acesso visual livre",
+        "quarta": "Acesso visual livre",
+        "quinta": "Acesso visual livre",
+        "sexta": "Acesso visual livre",
+        "sabado": "Acesso visual livre",
+        "domingo": "Acesso visual livre",
+        "observacao": "As exposições da Vitrine podem ser vistas da rua gratuitamente e, conforme a mostra, sem limitação de horário."
+      },
+      "site": "https://prefeitura.pbh.gov.br/noticias/vitrine-do-teatro-marilia-recebe-exposicao-o-trajeto-do-afeto-de-paloma-parentoni",
+      "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/cultura/tm_foto.rafaelcosta-tm.jpg",
+      "imagem_fonte": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/teatros/marilia",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Vitrine expositiva / galeria urbana",
+      "vocacoes": [
+        "Cultura",
+        "Artes visuais",
+        "Exposições",
+        "Arte pública"
+      ],
+      "status_editorial": "em_analise",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/teatromariliabh/",
+        "facebook": "https://www.facebook.com/TeatroMarilia"
+      },
+      "contatos": {
+        "emails": [
+          "tm.fmc@pbh.gov.br"
+        ],
+        "telefones": [
+          "(31) 3277-4697",
+          "(31) 3277-6319 (bilheteria)"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Programação",
+          "url": "https://portalbelohorizonte.com.br/eventos/teatro-marilia"
+        },
+        {
+          "rotulo": "Ingressos",
+          "url": "https://site.bileto.sympla.com.br/teatromarilia/"
+        }
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Vitrine do Teatro Marília",
+      "temas": [
+        "Cultura",
+        "Artes visuais",
+        "Exposições",
+        "Arte pública"
+      ],
+      "natureza_espaco": "Vitrine expositiva / galeria urbana",
+      "espaco_principal": "Teatro Marília",
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida Professor Alfredo Balena, 586, Santa Efigênia, Belo Horizonte - MG, 30130-100",
+      "mapa": "https://maps.app.goo.gl/MtyButkEtXBbL1Ae8",
+      "instituicao": "Fundação Municipal de Cultura de Belo Horizonte",
+      "link": "https://prefeitura.pbh.gov.br/noticias/vitrine-do-teatro-marilia-recebe-exposicao-o-trajeto-do-afeto-de-paloma-parentoni"
     }
   ]
 }
