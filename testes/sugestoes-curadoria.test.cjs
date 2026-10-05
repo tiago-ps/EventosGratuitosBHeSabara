@@ -102,6 +102,8 @@ assert(app.includes('Sugerir um evento'));
 assert(app.includes('Corrigir informação'));
 assert(app.includes("openCommunityContributionForm('corrigir_informacao'"));
 assert(app.includes("openCommunityContributionForm('opiniao_livro'"));
+assert(app.includes('agenda-book-opinion-open'));
+assert(app.includes('Dê sua opinião sobre este livro'));
 assert(app.includes('O que você diria para alguém ficar com vontade de ler este livro?'));
 assert(app.includes('Como você resumiria este livro para alguém que ainda não conhece?'));
 assert(app.includes("action: 'contribuir_mural'"));
@@ -197,6 +199,6 @@ assert(styles.includes('.agenda-about-open'));
 assert(styles.includes('.agenda-about-dialog'));
 assert(styles.includes('.agenda-about-footer'));
 assert(indexHtml.includes('css/styles.css?v=102'));
-assert(indexHtml.includes('js/app.js?v=148'));
-assert(serviceWorker.includes("mural-cultural-v189-opinioes-livros-d1"));
+assert(indexHtml.includes('js/app.js?v=149'));
+assert(serviceWorker.includes("mural-cultural-v190-opinioes-livros-agenda"));
 
