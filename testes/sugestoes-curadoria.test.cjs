@@ -210,6 +210,6 @@ assert(styles.includes('.agenda-about-open'));
 assert(styles.includes('.agenda-about-dialog'));
 assert(styles.includes('.agenda-about-footer'));
 assert(indexHtml.includes('css/styles.css?v=102'));
-assert(indexHtml.includes('js/app.js?v=150'));
-assert(serviceWorker.includes("mural-cultural-v191-opinioes-livros-api"));
+assert(indexHtml.includes('js/app.js?v=151'));
+assert(serviceWorker.includes("mural-cultural-v192-opinioes-livros-opcionais"));
 
