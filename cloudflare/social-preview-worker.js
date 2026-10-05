@@ -644,6 +644,24 @@ async function contributionTableAvailable(env) {
   }
 }
 
+async function contributionOpinionTypeAvailable(env) {
+  if (!(await contributionTableAvailable(env))) return false;
+  try {
+    const row = await env.SUGESTOES_DB.prepare(
+      "SELECT sql FROM sqlite_master WHERE type = 'table' AND name = 'contribuicoes_comunidade' LIMIT 1"
+    ).first();
+    return /opiniao_livro/i.test(String(row?.sql || ''));
+  } catch {
+    return false;
+  }
+}
+
+async function contributionSupportedTypes(env) {
+  const types = [...CONTRIBUTION_TYPES];
+  if (await contributionOpinionTypeAvailable(env)) return types;
+  return types.filter(type => type !== 'opiniao_livro');
+}
+
 async function countContributionsToday(env) {
   const row = await env.SUGESTOES_DB
     .prepare("SELECT COUNT(*) AS total FROM contribuicoes_comunidade WHERE criado_em >= datetime('now','start of day')")
@@ -672,7 +690,7 @@ async function handleContributionConfig(env) {
   return jsonResponse({
     disponivel: await contributionTableAvailable(env),
     turnstile_site_key: String(env.TURNSTILE_SITE_KEY || '').trim(),
-    tipos: [...CONTRIBUTION_TYPES]
+    tipos: await contributionSupportedTypes(env)
   });
 }
 
@@ -695,6 +713,12 @@ async function handleContributionPost(request, env) {
   const type = String(body?.tipo || '').trim();
   if (!CONTRIBUTION_TYPES.has(type)) {
     return jsonResponse({ erro: 'Tipo de contribuição inválido.' }, 422);
+  }
+  if (type === 'opiniao_livro' && !(await contributionOpinionTypeAvailable(env))) {
+    return jsonResponse({
+      erro: 'O envio de opiniões sobre livros está temporariamente indisponível. Tente novamente mais tarde.',
+      codigo: 'SCHEMA_PENDENTE'
+    }, 503);
   }
 
   let payload;
