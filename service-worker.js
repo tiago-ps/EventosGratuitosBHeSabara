@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'mural-cultural-v190-opinioes-livros-agenda';
+const CACHE_VERSION = 'mural-cultural-v191-opinioes-livros-api';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -31,7 +31,7 @@ const CORE_ASSETS = [
   './js/curadorias-site.js?v=12',
   './js/metricas-pontos.js?v=2',
   './js/relacoes-eventos.js?v=1',
-  './js/app.js?v=149',
+  './js/app.js?v=150',
   './js/temas-visuais.js?v=14',
   './js/eventos-manuais-ui.js?v=44',
   './js/ios-install.js?v=3',
