@@ -2410,8 +2410,8 @@ function eventProgram(event) {
       }
     }
     const opinionLink = copy.querySelector('.book-opinion-link');
-    const opinionsEnabled = state.config?.opinioes_livros?.habilitado === true;
     const opinionBookId = String(book.id || '').trim();
+    const opinionsEnabled = Boolean(opinionBookId);
     if (opinionLink) {
       opinionLink.hidden = !(opinionsEnabled && opinionBookId);
       if (opinionsEnabled && opinionBookId) {
@@ -5370,7 +5370,7 @@ function eventProgram(event) {
       const curationOnly = item._catalogo_curadoria === true;
       const bookImage = safeImageUrl(item.imagem);
       const opinionBookId = String(item.id || '').trim();
-      const opinionsEnabled = state.config?.opinioes_livros?.habilitado === true && Boolean(opinionBookId);
+      const opinionsEnabled = Boolean(opinionBookId);
       article.innerHTML = `
         <div class="agenda-card-media book-media">${bookImage
           ? `<img src="${escapeHtml(bookImage)}" alt="Capa: ${escapeHtml(item.titulo || '')}" loading="lazy">`
