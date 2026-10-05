@@ -627,8 +627,9 @@ function normalizeContributionPayload(type, raw) {
       throw new Error('livro_invalido');
     }
     if (titulo.length < 1) throw new Error('livro_invalido');
-    if (estimulo_leitura.length < 5) throw new Error('estimulo_obrigatorio');
-    if (mini_resumo_leitor.length < 5) throw new Error('resumo_obrigatorio');
+    if (![estimulo_leitura, mini_resumo_leitor, comentario].some(value => value.length > 0)) {
+      throw new Error('opiniao_vazia');
+    }
     return { item_id, id_obra, titulo, autor, estimulo_leitura, mini_resumo_leitor, comentario };
   }
   throw new Error('tipo_invalido');
@@ -733,8 +734,7 @@ async function handleContributionPost(request, env) {
       item_invalido: 'O identificador do conteúdo está inválido.',
       correcao_obrigatoria: 'Explique o que precisa ser corrigido.',
       livro_invalido: 'Não foi possível identificar o livro desta opinião.',
-      estimulo_obrigatorio: 'Conte o que você diria para alguém ficar com vontade de ler este livro.',
-      resumo_obrigatorio: 'Conte como você resumiria este livro para alguém que ainda não o conhece.',
+      opiniao_vazia: 'Preencha pelo menos uma das três opções de texto para enviar sua opinião.',
       url_invalida: 'O link de referência está inválido.',
       campo_longo: 'Um dos campos excede o limite permitido.',
       mensagem_longa: 'O texto pode ter no máximo 1200 caracteres.'
