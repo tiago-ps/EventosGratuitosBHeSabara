@@ -2858,13 +2858,14 @@ body.agenda-mode .agenda-more-menu-list .view-toggle::before {
   }
 
   .agenda-more-menu-list {
-    position: fixed;
-    top: auto;
-    right: 12px;
-    bottom: 12px;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    bottom: auto;
     width: min(320px, calc(100vw - 24px));
-    max-height: min(70dvh, 520px);
+    max-height: min(calc(100dvh - 96px), 520px);
     overflow-y: auto;
+    overscroll-behavior: contain;
   }
 }
 
@@ -2881,6 +2882,10 @@ body.agenda-mode .agenda-more-menu-list .view-toggle::before {
     font-size: 13px;
   }
 }
+
+/* Agenda v166 — no mobile o menu Mais fica ancorado ao botão.
+   Evita que backdrop-filter do cabeçalho transforme position:fixed em um
+   posicionamento relativo ao próprio cabeçalho e corte os primeiros itens. */
 
 /* Agenda v165 — Notificações dentro do menu Mais. */
 body.agenda-mode .agenda-more-menu-list .agenda-notifications-button {
