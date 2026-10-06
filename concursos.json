@@ -42,7 +42,29 @@
           "formacao": "Sistemas de Informação / Computação",
           "confianca": "alta"
         }
-      ]
+      ],
+      "janela_inscricoes": {
+        "estado": "aberto",
+        "completude": "completa",
+        "inicio": "2026-09-18",
+        "fim": "2026-11-10",
+        "texto_original": "18 de setembro de 2026 a 10 de novembro de 2026"
+      },
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-18",
+          "fim": "2026-11-10"
+        },
+        "participacao": [
+          {
+            "tipo": "candidatura",
+            "inicio": "2026-09-18",
+            "fim": "2026-11-10",
+            "status": "aberto"
+          }
+        ]
+      }
     },
     {
       "id": "pci:noticia:prudenprev-sp-abre-concurso-publico-com-salarios-de-ate-11102",
@@ -75,7 +97,29 @@
           "formacao": "Técnico em Informática",
           "confianca": "alta"
         }
-      ]
+      ],
+      "janela_inscricoes": {
+        "estado": "aberto",
+        "completude": "completa",
+        "inicio": "2026-10-05",
+        "fim": "2026-11-10",
+        "texto_original": "5 de outubro de 2026 a 10 de novembro de 2026"
+      },
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-10-05",
+          "fim": "2026-11-10"
+        },
+        "participacao": [
+          {
+            "tipo": "candidatura",
+            "inicio": "2026-10-05",
+            "fim": "2026-11-10",
+            "status": "aberto"
+          }
+        ]
+      }
     },
     {
       "id": "pci:noticia:seplag-rj-publica-retificacoes-do-concurso-com-60-vagas-para-cargos-de-nivel-superior",
@@ -108,7 +152,29 @@
           "formacao": "Sistemas de Informação / Computação",
           "confianca": "alta"
         }
-      ]
+      ],
+      "janela_inscricoes": {
+        "estado": "aberto",
+        "completude": "completa",
+        "inicio": "2026-09-10",
+        "fim": "2026-10-08",
+        "texto_original": "10 de setembro de 2026 a 8 de outubro de 2026"
+      },
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-10",
+          "fim": "2026-10-08"
+        },
+        "participacao": [
+          {
+            "tipo": "candidatura",
+            "inicio": "2026-09-10",
+            "fim": "2026-10-08",
+            "status": "aberto"
+          }
+        ]
+      }
     },
     {
       "id": "pci:noticia:ufrrj-publica-edital-de-concurso-publico-para-cargos-de-nivel-medio-e-tecnico",
@@ -147,7 +213,29 @@
           "formacao": "Sistemas de Informação / Computação",
           "confianca": "alta"
         }
-      ]
+      ],
+      "janela_inscricoes": {
+        "estado": "aberto",
+        "completude": "completa",
+        "inicio": "2026-09-14",
+        "fim": "2026-10-13",
+        "texto_original": "14 de setembro de 2026 a 13 de outubro de 2026"
+      },
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-14",
+          "fim": "2026-10-13"
+        },
+        "participacao": [
+          {
+            "tipo": "candidatura",
+            "inicio": "2026-09-14",
+            "fim": "2026-10-13",
+            "status": "aberto"
+          }
+        ]
+      }
     },
     {
       "id": "pci:noticia:prefeitura-de-contagem-mg-abre-concurso-publico-com-salarios-de-ate-13305",
@@ -180,7 +268,29 @@
           "formacao": "Sistemas de Informação / Computação",
           "confianca": "alta"
         }
-      ]
+      ],
+      "janela_inscricoes": {
+        "estado": "futuro",
+        "completude": "completa",
+        "inicio": "2026-10-19",
+        "fim": "2026-11-17",
+        "texto_original": "19 de outubro de 2026 a 17 de novembro de 2026"
+      },
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-10-19",
+          "fim": "2026-11-17"
+        },
+        "participacao": [
+          {
+            "tipo": "candidatura",
+            "inicio": "2026-10-19",
+            "fim": "2026-11-17",
+            "status": "futuro"
+          }
+        ]
+      }
     },
     {
       "id": "pci:noticia:camara-de-capelinha-mg-retifica-edital-do-concurso-publico-com-salarios-de-ate-4527",
@@ -213,7 +323,13 @@
           "formacao": "Técnico em Informática",
           "confianca": "alta"
         }
-      ]
+      ],
+      "janela_inscricoes": {
+        "estado": "aberto",
+        "completude": "somente_fim",
+        "fim": "2026-10-21",
+        "texto_original": "até 21 de outubro de 2026"
+      }
     },
     {
       "id": "pci:noticia:fumep-de-sete-lagoas-mg-retifica-concurso-publico-para-diversos-niveis-de-escolaridade",
@@ -258,7 +374,11 @@
           "formacao": "Sistemas de Informação / Computação",
           "confianca": "alta"
         }
-      ]
+      ],
+      "janela_inscricoes": {
+        "estado": "prazo_desconhecido",
+        "completude": "desconhecida"
+      }
     },
     {
       "id": "pci:noticia:hospital-metropolitano-odilon-behrens-mg-abre-concurso-publico-com-salarios-de-ate-7397",
@@ -303,7 +423,29 @@
           "formacao": "Técnico em Eletrônica",
           "confianca": "alta"
         }
-      ]
+      ],
+      "janela_inscricoes": {
+        "estado": "aberto",
+        "completude": "completa",
+        "inicio": "2026-09-09",
+        "fim": "2026-10-08",
+        "texto_original": "9 de setembro de 2026 a 8 de outubro de 2026"
+      },
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-09",
+          "fim": "2026-10-08"
+        },
+        "participacao": [
+          {
+            "tipo": "candidatura",
+            "inicio": "2026-09-09",
+            "fim": "2026-10-08",
+            "status": "aberto"
+          }
+        ]
+      }
     },
     {
       "id": "pci:noticia:prefeitura-de-belo-vale-mg-abre-concurso-publico-com-diversas-vagas-e-salarios-de-ate-8000",
@@ -336,7 +478,29 @@
           "formacao": "Técnico em Informática",
           "confianca": "alta"
         }
-      ]
+      ],
+      "janela_inscricoes": {
+        "estado": "aberto",
+        "completude": "completa",
+        "inicio": "2026-10-02",
+        "fim": "2026-11-03",
+        "texto_original": "2 de outubro de 2026 a 3 de novembro de 2026"
+      },
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-10-02",
+          "fim": "2026-11-03"
+        },
+        "participacao": [
+          {
+            "tipo": "candidatura",
+            "inicio": "2026-10-02",
+            "fim": "2026-11-03",
+            "status": "aberto"
+          }
+        ]
+      }
     },
     {
       "id": "pci:noticia:prefeitura-de-coromandel-mg-abre-concurso-publico-com-salarios-de-ate-7821",
@@ -369,7 +533,11 @@
           "formacao": "Sistemas de Informação / Computação",
           "confianca": "alta"
         }
-      ]
+      ],
+      "janela_inscricoes": {
+        "estado": "prazo_desconhecido",
+        "completude": "desconhecida"
+      }
     },
     {
       "id": "pci:noticia:prefeitura-de-ipaba-mg-retifica-edital-de-concurso-publico-com-salarios-de-ate-5275",
@@ -402,7 +570,13 @@
           "formacao": "Técnico em Informática",
           "confianca": "alta"
         }
-      ]
+      ],
+      "janela_inscricoes": {
+        "estado": "aberto",
+        "completude": "somente_fim",
+        "fim": "2026-10-08",
+        "texto_original": "até 8 de outubro de 2026"
+      }
     },
     {
       "id": "pci:noticia:prefeitura-de-luislandia-mg-abre-concurso-publico-com-vagas-em-diversas-areas",
@@ -435,7 +609,11 @@
           "formacao": "Sistemas de Informação / Computação",
           "confianca": "alta"
         }
-      ]
+      ],
+      "janela_inscricoes": {
+        "estado": "prazo_desconhecido",
+        "completude": "desconhecida"
+      }
     },
     {
       "id": "pci:noticia:prefeitura-de-patis-mg-abre-concurso-publico-com-salarios-de-ate-13500",
@@ -480,7 +658,11 @@
           "formacao": "Técnico em Informática",
           "confianca": "alta"
         }
-      ]
+      ],
+      "janela_inscricoes": {
+        "estado": "prazo_desconhecido",
+        "completude": "desconhecida"
+      }
     },
     {
       "id": "pci:noticia:prefeitura-de-pedro-teixeira-mg-publica-edital-retificado-de-concurso-publico",
@@ -513,7 +695,11 @@
           "formacao": "Sistemas de Informação / Computação",
           "confianca": "alta"
         }
-      ]
+      ],
+      "janela_inscricoes": {
+        "estado": "prazo_desconhecido",
+        "completude": "desconhecida"
+      }
     },
     {
       "id": "pci:noticia:prefeitura-de-piracema-mg-abre-concurso-e-processo-seletivo-com-diversas-vagas",
@@ -546,7 +732,29 @@
           "formacao": "Técnico em Informática",
           "confianca": "alta"
         }
-      ]
+      ],
+      "janela_inscricoes": {
+        "estado": "futuro",
+        "completude": "completa",
+        "inicio": "2026-10-20",
+        "fim": "2026-11-18",
+        "texto_original": "20 de outubro de 2026 a 18 de novembro de 2026"
+      },
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-10-20",
+          "fim": "2026-11-18"
+        },
+        "participacao": [
+          {
+            "tipo": "candidatura",
+            "inicio": "2026-10-20",
+            "fim": "2026-11-18",
+            "status": "futuro"
+          }
+        ]
+      }
     },
     {
       "id": "pci:noticia:prefeitura-de-santa-luzia-mg-abre-concurso-publico-com-salarios-de-ate-8628",
@@ -579,7 +787,29 @@
           "formacao": "Técnico em Informática",
           "confianca": "alta"
         }
-      ]
+      ],
+      "janela_inscricoes": {
+        "estado": "futuro",
+        "completude": "completa",
+        "inicio": "2026-12-17",
+        "fim": "2027-01-15",
+        "texto_original": "17 de dezembro de 2026 a 15 de janeiro de 2027"
+      },
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-12-17",
+          "fim": "2027-01-15"
+        },
+        "participacao": [
+          {
+            "tipo": "candidatura",
+            "inicio": "2026-12-17",
+            "fim": "2027-01-15",
+            "status": "futuro"
+          }
+        ]
+      }
     },
     {
       "id": "pci:noticia:municipio-e-camara-de-nova-prata-do-iguacu-pr-abrem-concursos-com-salarios-de-ate-12823",
@@ -612,7 +842,29 @@
           "formacao": "Técnico em Informática",
           "confianca": "alta"
         }
-      ]
+      ],
+      "janela_inscricoes": {
+        "estado": "aberto",
+        "completude": "completa",
+        "inicio": "2026-09-30",
+        "fim": "2026-10-29",
+        "texto_original": "30 de setembro de 2026 a 29 de outubro de 2026"
+      },
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-30",
+          "fim": "2026-10-29"
+        },
+        "participacao": [
+          {
+            "tipo": "candidatura",
+            "inicio": "2026-09-30",
+            "fim": "2026-10-29",
+            "status": "aberto"
+          }
+        ]
+      }
     },
     {
       "id": "pci:noticia:prefeitura-de-alvorada-rs-retifica-concurso-publico-com-salarios-de-ate-18974",
@@ -645,7 +897,29 @@
           "formacao": "Técnico em Informática",
           "confianca": "alta"
         }
-      ]
+      ],
+      "janela_inscricoes": {
+        "estado": "aberto",
+        "completude": "completa",
+        "inicio": "2026-08-28",
+        "fim": "2026-10-18",
+        "texto_original": "28 de agosto de 2026 a 18 de outubro de 2026"
+      },
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-28",
+          "fim": "2026-10-18"
+        },
+        "participacao": [
+          {
+            "tipo": "candidatura",
+            "inicio": "2026-08-28",
+            "fim": "2026-10-18",
+            "status": "aberto"
+          }
+        ]
+      }
     },
     {
       "id": "pci:noticia:prefeitura-de-maravilha-sc-retifica-concurso-com-salarios-de-ate-15748",
@@ -678,7 +952,29 @@
           "formacao": "Técnico em Informática",
           "confianca": "alta"
         }
-      ]
+      ],
+      "janela_inscricoes": {
+        "estado": "aberto",
+        "completude": "completa",
+        "inicio": "2026-10-02",
+        "fim": "2026-11-03",
+        "texto_original": "2 de outubro de 2026 a 3 de novembro de 2026"
+      },
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-10-02",
+          "fim": "2026-11-03"
+        },
+        "participacao": [
+          {
+            "tipo": "candidatura",
+            "inicio": "2026-10-02",
+            "fim": "2026-11-03",
+            "status": "aberto"
+          }
+        ]
+      }
     },
     {
       "id": "pci:noticia:prefeitura-de-massaranduba-sc-retifica-edital-de-concurso-com-salarios-de-ate-24722",
@@ -711,7 +1007,11 @@
           "formacao": "Técnico em Informática",
           "confianca": "alta"
         }
-      ]
+      ],
+      "janela_inscricoes": {
+        "estado": "prazo_desconhecido",
+        "completude": "desconhecida"
+      }
     },
     {
       "id": "pci:noticia:sefaz-sc-abre-concurso-publico-para-o-cargo-de-auditor-estadual-de-financas-publicas",
@@ -744,7 +1044,13 @@
           "formacao": "Sistemas de Informação / Computação",
           "confianca": "alta"
         }
-      ]
+      ],
+      "janela_inscricoes": {
+        "estado": "encerrado",
+        "completude": "somente_fim",
+        "fim": "2026-10-05",
+        "texto_original": "até 5 de outubro de 2026"
+      }
     },
     {
       "id": "pci:noticia:ses-sc-abre-processo-seletivo-com-salarios-de-ate-5670",
@@ -777,7 +1083,29 @@
           "formacao": "Técnico em Informática",
           "confianca": "alta"
         }
-      ]
+      ],
+      "janela_inscricoes": {
+        "estado": "aberto",
+        "completude": "completa",
+        "inicio": "2026-10-02",
+        "fim": "2026-10-16",
+        "texto_original": "2 de outubro de 2026 a 16 de outubro de 2026"
+      },
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-10-02",
+          "fim": "2026-10-16"
+        },
+        "participacao": [
+          {
+            "tipo": "candidatura",
+            "inicio": "2026-10-02",
+            "fim": "2026-10-16",
+            "status": "aberto"
+          }
+        ]
+      }
     },
     {
       "id": "pci:noticia:tce-go-retifica-concurso-publico-para-tecnicos-de-controle-externo",
@@ -810,7 +1138,29 @@
           "formacao": "Sistemas de Informação / Computação",
           "confianca": "alta"
         }
-      ]
+      ],
+      "janela_inscricoes": {
+        "estado": "aberto",
+        "completude": "completa",
+        "inicio": "2026-10-05",
+        "fim": "2026-11-06",
+        "texto_original": "5 de outubro de 2026 a 6 de novembro de 2026"
+      },
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-10-05",
+          "fim": "2026-11-06"
+        },
+        "participacao": [
+          {
+            "tipo": "candidatura",
+            "inicio": "2026-10-05",
+            "fim": "2026-11-06",
+            "status": "aberto"
+          }
+        ]
+      }
     }
   ]
 }
