@@ -53,16 +53,18 @@ assert.ok(panelNavigation.includes("'view-toggle passive-view-toggle agenda-more
 assert.ok(panelNavigation.includes("button.closest('.agenda-more-menu')?.removeAttribute('open')"));
 assert.ok(themeBoot.includes("js/painel-navegacao-modos.js?v=6"));
 
-// Cache busting deve entregar a nova barra imediatamente.
+// Cache busting deve entregar os mesmos assets/versionamentos no HTML e no SW.
 for (const asset of [
   'css/styles.css?v=104',
-  'js/tema-visual-boot.js?v=17',
-  'js/app.js?v=153'
+  'js/tema-visual-boot.js?v=17'
 ]) {
   assert.ok(indexHtml.includes(asset), `index sem ${asset}`);
   assert.ok(serviceWorker.includes(`./${asset}`), `service worker sem ${asset}`);
 }
+const appVersion = indexHtml.match(/js\/app\.js\?v=(\d+)/)?.[1];
+assert.ok(appVersion, 'index sem versão de js/app.js');
+assert.ok(serviceWorker.includes(`./js/app.js?v=${appVersion}`), 'service worker com versão divergente de js/app.js');
 assert.ok(serviceWorker.includes("'./js/painel-navegacao-modos.js?v=6'"));
-assert.ok(serviceWorker.includes("mural-cultural-v195-menu-acoes"));
+assert.match(serviceWorker, /const CACHE_VERSION = 'mural-cultural-v\d+-[^']+';/);
 
 console.log('Cabeçalho compacto do modo Exploração validado.');
