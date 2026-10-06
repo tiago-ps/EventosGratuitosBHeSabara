@@ -2882,3 +2882,40 @@ body.agenda-mode .agenda-more-menu-list .view-toggle::before {
   }
 }
 
+/* Agenda v165 — Notificações dentro do menu Mais. */
+body.agenda-mode .agenda-more-menu-list .agenda-notifications-button {
+  width: 100%;
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  text-align: left;
+  cursor: pointer;
+}
+
+body.agenda-mode .agenda-more-menu-list .agenda-notifications-button:hover,
+body.agenda-mode .agenda-more-menu-list .agenda-notifications-button:focus-visible {
+  background: var(--control-hover-bg);
+}
+
+body.agenda-mode .agenda-more-menu-list .agenda-notifications-button > span:first-child {
+  width: 22px;
+  flex: 0 0 22px;
+  display: inline-grid;
+  place-items: center;
+  color: var(--accent);
+}
+
+body.agenda-mode .agenda-more-menu-list .agenda-notifications-label {
+  display: inline !important;
+}
+
