@@ -132,7 +132,7 @@ for (const className of [
   'agenda-book-library', 'agenda-book-year-from', 'agenda-book-year-to', 'agenda-book-audiobook',
   'agenda-course-institution', 'agenda-course-area', 'agenda-course-workload',
   'agenda-course-type', 'agenda-course-level', 'agenda-course-language', 'agenda-course-certificate',
-  'agenda-contest-city', 'agenda-contest-remuneration',
+  'agenda-contest-city', 'agenda-contest-state', 'agenda-contest-remuneration',
   'agenda-film-accessibility', 'agenda-film-country', 'agenda-film-collection',
   'agenda-utility-nature', 'agenda-utility-scope', 'agenda-utility-audience',
   'agenda-activity-day', 'agenda-activity-participation', 'agenda-activity-audience', 'agenda-activity-format',
@@ -145,7 +145,7 @@ for (const stateField of [
   'mobileBookLibrary', 'mobileBookYearFrom', 'mobileBookYearTo', 'mobileBookAudiobook',
   'mobileCourseInstitution', 'mobileCourseArea', 'mobileCourseWorkload', 'mobileCourseType',
   'mobileCourseLevel', 'mobileCourseLanguage', 'mobileCourseCertificate',
-  'mobileContestCity', 'mobileContestRemuneration',
+  'mobileContestCity', 'mobileContestState', 'mobileContestRemuneration',
   'mobileFilmAccessibility', 'mobileFilmCountry', 'mobileFilmCollection',
   'mobileUtilityNature', 'mobileUtilityScope', 'mobileUtilityAudience',
   'mobileActivityDay', 'mobileActivityParticipation', 'mobileActivityAudience', 'mobileActivityFormat',
@@ -164,15 +164,15 @@ assert.ok(appSource.includes('state.mobileTheme'));
 for (const asset of [
   'css/styles.css?v=104',
   'js/conteudos/cursos.js?v=5',
-  'js/conteudos/concursos.js?v=4',
+  'js/conteudos/concursos.js?v=5',
   'js/conteudos/filmes.js?v=11',
   'js/conteudos/espacos.js?v=5',
   'js/conteudos/atividades-lazer.js?v=6',
-  'js/app.js?v=153'
+  'js/app.js?v=154'
 ]) {
   assert.ok(indexSource.includes(asset), `Asset ausente do index: ${asset}`);
   assert.ok(swSource.includes(`./${asset}`), `Asset ausente do service worker: ${asset}`);
 }
-assert.ok(swSource.includes('mural-cultural-v195-menu-acoes'));
+assert.ok(swSource.includes('mural-cultural-v196-concursos-temporalidade'));
 
 console.log('Filtros completos do modo Exploração validados.');
