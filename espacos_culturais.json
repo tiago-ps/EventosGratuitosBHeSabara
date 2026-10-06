@@ -1117,28 +1117,29 @@
         "observacao": ""
       },
       "site": "",
-      "imagem": "",
-      "imagem_fonte": "",
+      "imagem": "imagens/equipamentos/centro-cultural-santa-ines.png",
+      "imagem_fonte": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RPRoblkOWWAA3g6wPlJJU5T9dEbnaa4mAUCYKZYKddzQmPox_sXTlpQ1xcNPSnLkkDanGhAk_r1NX1mJM_Assdru_Jiz14uzEcvowQrc3lfTpO7SV5m8szkxVNC-fyWRq74BvD=s680-w680-h510-rw",
       "exibicao_ativa": true,
-      "exibicao_recorrente": false,
+      "exibicao_recorrente": true,
       "prioridade": 0,
       "status_editorial": "em_analise",
       "nota_editorial": "O local existe em serviços de mapas no endereço Rua Carmésia, 500, mas não foi localizado na rede oficial atual de Centros Culturais da PBH. Confirmar responsável, natureza jurídica e fonte oficial antes de preencher/publicar.",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/centroculturalsantainesbh/"
       },
-      "tipo": "equipamento",
-      "tipo_conteudo": "espaco",
-      "titulo": "Centro Cultural Santa Inês",
-      "vocacoes": [],
-      "temas": [],
-      "natureza_espaco": "",
-      "instituicao": "Fundação Municipal de Cultura de Belo Horizonte",
       "contatos": {
         "emails": [],
         "telefones": []
       },
       "links_adicionais": [],
+      "tipo_espaco": "",
+      "vocacoes": [],
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Centro Cultural Santa Inês",
+      "temas": [],
+      "natureza_espaco": "",
+      "instituicao": "Fundação Municipal de Cultura de Belo Horizonte",
       "link": "https://maps.app.goo.gl/d9hMmB9xJuPXpbaB9"
     },
     {
