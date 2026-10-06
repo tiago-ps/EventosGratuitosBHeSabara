@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Janeiro de 2026 a Janeiro de 2027",
-  "atualizado_em": "2026-10-05T22:50:08-03:00",
+  "atualizado_em": "2026-10-05T23:02:46-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -385,7 +385,9 @@
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "imagem": "imagens/equipamentos/nufac.png",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ela-encontros-para-dancar-em-dialogo-com-saberes-ancestrais-2b3263ef42",
@@ -459,7 +461,7 @@
       "descricao": "Atividade da Escola Livre de Artes. Público: A partir de 14 anos. Modalidade: Presencial.",
       "descricao_fonte": "",
       "descricao_url": "",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/nufac.png",
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "link": "https://form.jotform.com/261965053614661",
       "link_inscricao": "https://form.jotform.com/261965053614661",
@@ -480,7 +482,8 @@
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ela-ciclo-expansao-modulo-corpo-52b53e6cfb",
@@ -506,7 +509,7 @@
       "descricao": "Atividade da Escola Livre de Artes. Público: A partir de 14 anos. Modalidade: Presencial.",
       "descricao_fonte": "",
       "descricao_url": "",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/nufac.png",
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "link": "https://form.jotform.com/261965053614661",
       "link_inscricao": "https://form.jotform.com/261965053614661",
@@ -527,7 +530,8 @@
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ela-ciclo-de-poeticas-modulo-residencia-ii-e74468cfb7",
@@ -553,7 +557,7 @@
       "descricao": "Pretende orientar estudantes em seus projetos individuais no Campo de Pesquisa em que eles se inscrevem (Arte Ambiente ou Expressão Bidimensional). Desenvolve práticas e reflexões dando ênfase ao Desenho enquanto possibilidade gráfica, elemento plástico e simbólico e seus desdobramentos a partir das propostas dos(as) participantes; propicia práticas e reflexões acerca dos suportes, técnicas, métodos e das relações dos trabalhos com outras práticas artísticas e culturais e seus possíveis significados; instaura práticas de construção de imagem capazes de suscitar reflexões sobre processos de criação por recodificação e/ou tradução intersemiótica e trabalha modos de reprodução da imagem: a serigrafia. A ideia central é a expansão dos conhecimentos sobre o Desenho sem deixar de abordar seus relacionamentos com a cor, multimídia, tridimensionalidade, suportes, técnicas, pesquisa em materiais pictóricos e outros conteúdos que estão envolvidos nas pesquisas dos(as) participantes. Além disso, estimula o(a) estudante a compreender a dimensão poética da imagem, as articulações e relações entre a pesquisa em arte, a crítica e as múltiplas dimensões da cadeia produtiva da prática, do processo e do objeto artístico quando se inserem no campo social",
       "descricao_fonte": "Sinopses do 2º semestre/2026 — Escola Livre de Artes Arena da Cultura",
       "descricao_url": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/cultura/sinopses-2-vagas-abertas-presenciais-ead.pdf",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/nufac.png",
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "link": "https://form.jotform.com/261965053614661",
       "link_inscricao": "https://form.jotform.com/261965053614661",
@@ -574,7 +578,8 @@
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ela-unidade-centro-cultural-urucuia",
@@ -657,7 +662,7 @@
       "descricao": "Neste módulo serão trabalhadas experimentações artísticas a partir da literatura popular e da oralidade brasileira. Partindo das cantigas, casos, lendas, mitos e histórias que fazem parte da formação do povo brasileiro. Estabelecendo um diálogo entre as matrizes indígenas, africanas e europeias na construção destes saberes. Os(as) participantes serão estimulados a experimentar os versos da cultura popular, letras de música, fanzine, cordel e contação de histórias. Estimular a criação e a descoberta de modos diversificados de recriação das referências da própria da oralidade brasileira. Núcleo de Formação de Criação Artística e Cultural - Terça-feira, de 19h às 21h, de 11 de agosto a 24 de novembro. Laboratório de Pesquisa e Experimentação:",
       "descricao_fonte": "Sinopses do 2º semestre/2026 — Escola Livre de Artes Arena da Cultura",
       "descricao_url": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/cultura/sinopses-2-vagas-abertas-presenciais-ead.pdf",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/nufac.png",
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "link": "https://form.jotform.com/261965053614661",
       "link_inscricao": "https://form.jotform.com/261965053614661",
@@ -678,7 +683,8 @@
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ela-encontros-para-dancar-530cc07633",
@@ -1121,7 +1127,7 @@
       "descricao": "Uma exploração dos conceitos e princípios da linguagem da palhaçaria por meio de práticas que envolvem a conscientização corporal, o estado de jogo e a brincadeira, a improvisação e a experimentação do ridículo. A proposta é criar um ambiente de estudo e prática onde cada participante possa, por si mesmo(a), identificar e compreender os caminhos para a descoberta e o desenvolvimento do “ser” palhaço/a/e que habita em si. A oficina também inclui momentos de compartilhamento de processos criativos desenvolvidos ao longo das aulas.",
       "descricao_fonte": "Sinopses do 2º semestre/2026 — Escola Livre de Artes Arena da Cultura",
       "descricao_url": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/cultura/sinopses-2-vagas-abertas-presenciais-ead.pdf",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/nufac.png",
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "link": "https://form.jotform.com/261965053614661",
       "link_inscricao": "https://form.jotform.com/261965053614661",
@@ -1142,7 +1148,8 @@
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ela-brincadeiras-circenses-9c5f12c97a",
@@ -1322,7 +1329,7 @@
       "descricao": "Um laboratório em Arte, Cultura e Comunidade, direcionado à pesquisa na área artística e cultural dos modos de fazer, das expressões, da criação, das trocas de afetos, encontros e partilhas a partir das expressões de matrizes africanas. Os(as) participantes serão estimulados(as) a pesquisar manifestações artísticas e culturais na dança, música, artes cênicas e em seus aspectos visuais. Um olhar para a tradição, mas também para a produção contemporânea, própria da juventude, como o movimento hip hop e o funk.",
       "descricao_fonte": "Sinopses do 2º semestre/2026 — Escola Livre de Artes Arena da Cultura",
       "descricao_url": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/cultura/sinopses-2-vagas-abertas-presenciais-ead.pdf",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/nufac.png",
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "link": "https://form.jotform.com/261965053614661",
       "link_inscricao": "https://form.jotform.com/261965053614661",
@@ -1350,7 +1357,8 @@
         "ela-boi-livre-3c9a386eae",
         "ela-laboratorio-de-africanidades-18892054fe"
       ],
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ela-danca-para-criancas-c5e700d124",
@@ -1556,7 +1564,7 @@
       "descricao": "Pretende orientar estudantes em seus projetos individuais no Campo de Pesquisa em que eles se inscrevem (Arte Ambiente ou Expressão Bidimensional). Desenvolve práticas e reflexões dando ênfase ao Desenho enquanto possibilidade gráfica, elemento plástico e simbólico e seus desdobramentos a partir das propostas dos(as) participantes; propicia práticas e reflexões acerca dos suportes, técnicas, métodos e das relações dos trabalhos com outras práticas artísticas e culturais e seus possíveis significados; instaura práticas de construção de imagem capazes de suscitar reflexões sobre processos de criação por recodificação e/ou tradução intersemiótica e trabalha modos de reprodução da imagem: a serigrafia. A ideia central é a expansão dos conhecimentos sobre o Desenho sem deixar de abordar seus relacionamentos com a cor, multimídia, tridimensionalidade, suportes, técnicas, pesquisa em materiais pictóricos e outros conteúdos que estão envolvidos nas pesquisas dos(as) participantes. Além disso, estimula o(a) estudante a compreender a dimensão poética da imagem, as articulações e relações entre a pesquisa em arte, a crítica e as múltiplas dimensões da cadeia produtiva da prática, do processo e do objeto artístico quando se inserem no campo social",
       "descricao_fonte": "Sinopses do 2º semestre/2026 — Escola Livre de Artes Arena da Cultura",
       "descricao_url": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/cultura/sinopses-2-vagas-abertas-presenciais-ead.pdf",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/nufac.png",
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "link": "https://form.jotform.com/261965053614661",
       "link_inscricao": "https://form.jotform.com/261965053614661",
@@ -1577,7 +1585,8 @@
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ela-unidade-centro-de-referencia-das-juventudes",
@@ -1654,7 +1663,7 @@
       "descricao": "Este laboratório de criação de imagens é aberto a todas e quaisquer pessoas com ou sem experiência em Artes Visuais (Pintura, Desenho, Gravura, Escultura, entre outras). Portanto, é aberto ao público em geral, aos(às) estudantes egressos(as) da Escola e artistas da cidade que buscam espaços para o desenvolvimento de suas poéticas pessoais (suas artes). Está intimamente ligado à ideia de lugar onde se trabalha. O(a) estudante é convidado(a) a desenvolver atividades de criação (e suas técnicas), mas também recebe orientações específicas nas técnicas, gêneros e modalidades de expressão visual que o(a) participante pratica.",
       "descricao_fonte": "Sinopses do 2º semestre/2026 — Escola Livre de Artes Arena da Cultura",
       "descricao_url": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/cultura/sinopses-2-vagas-abertas-presenciais-ead.pdf",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/nufac.png",
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "link": "https://form.jotform.com/261965053614661",
       "link_inscricao": "https://form.jotform.com/261965053614661",
@@ -1682,7 +1691,8 @@
         "ela-arena-atelie-livre-fcace676d6",
         "ela-formacao-de-brincantes-o-brincar-e-a-natureza-f0ab60fc5a"
       ],
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ela-oficina-basica-de-circo-996ad91965",
@@ -2138,7 +2148,7 @@
       "descricao": "Este laboratório de criação de imagens é aberto a todas e quaisquer pessoas com ou sem experiência em Artes Visuais (Pintura, Desenho, Gravura, Escultura, entre outras). Portanto, é aberto ao público em geral, aos(às) estudantes egressos(as) da Escola e artistas da cidade que buscam espaços para o desenvolvimento de suas poéticas pessoais (suas artes). Está intimamente ligado à ideia de lugar onde se trabalha. O(a) estudante é convidado(a) a desenvolver atividades de criação (e suas técnicas), mas também recebe orientações específicas nas técnicas, gêneros e modalidades de expressão visual que o(a) participante pratica.",
       "descricao_fonte": "Sinopses do 2º semestre/2026 — Escola Livre de Artes Arena da Cultura",
       "descricao_url": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/cultura/sinopses-2-vagas-abertas-presenciais-ead.pdf",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/nufac.png",
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "link": "https://form.jotform.com/261965053614661",
       "link_inscricao": "https://form.jotform.com/261965053614661",
@@ -2159,7 +2169,8 @@
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ela-arena-atelie-livre-52e864fa5b",
@@ -2233,7 +2244,7 @@
       "descricao": "Um laboratório de pesquisa que irá estimular pesquisas individuais e coletivas acerca da contribuição dos diferentes povos indígenas para a formação cultural do povo brasileiro, e em particular do povo mineiro. O trabalho será direcionado à pesquisa dos modos de fazer, do cultivo de plantas, da linguagem, das expressões, da criação, das trocas de afetos, encontros e partilhas a partir das expressões de matrizes indígenas.",
       "descricao_fonte": "Sinopses do 2º semestre/2026 — Escola Livre de Artes Arena da Cultura",
       "descricao_url": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/cultura/sinopses-2-vagas-abertas-presenciais-ead.pdf",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/nufac.png",
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "link": "https://form.jotform.com/261965053614661",
       "link_inscricao": "https://form.jotform.com/261965053614661",
@@ -2254,7 +2265,8 @@
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ela-unidade-centro-de-referencia-de-assistencia-social-cras-conjunto-paulo-vi",
@@ -3016,7 +3028,7 @@
       "descricao": "O laboratório consiste em um espaço de experimentação, criação e troca de conhecimentos para artistas, estudantes e agentes culturais que desejam transformar ideias em projetos culturais consistentes e viáveis. A partir de estudos de caso, referências práticas e exercícios colaborativos, os participantes serão convidados a compreender as diferentes etapas da elaboração, planejamento, produção e gestão de projetos culturais. Como exercício prático, a turma desenvolverá coletivamente um projeto cultural, vivenciando de maneira integrada os processos de criação, planejamento e gestão, fortalecendo a autonomia, o trabalho colaborativo e a capacidade de transformar propostas artísticas em ações concretas.",
       "descricao_fonte": "Sinopses do 2º semestre/2026 — Escola Livre de Artes Arena da Cultura",
       "descricao_url": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/cultura/sinopses-2-vagas-abertas-presenciais-ead.pdf",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/nufac.png",
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "link": "https://form.jotform.com/261965053614661",
       "link_inscricao": "https://form.jotform.com/261965053614661",
@@ -3037,7 +3049,8 @@
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ela-unidade-centro-de-referencia-da-cultura-popular-e-tradicional-lagoa-do-nado",
@@ -3210,7 +3223,7 @@
       "descricao": "Enquanto imagina, cria; enquanto cria, cuida; enquanto cuida, mostra; enquanto move o corpo, se coletiviza. O ateliê vai articular exercícios transversais de criação que incentivem as pessoas interessadas a desenvolver um trabalho artístico desde a ideia, elaboração e compartilhamento com o mundo, em suas diferentes possibilidades de linguagem, forma e conteúdo. A partir das modalidades de curadoria e figurino da área de Bastidores das Artes da ELA-Arena, a atividade terá como objetivo desenvolver procedimentos de pesquisa, composição e presença para a invenção coletiva de obras sensíveis, projetos de exposição, performances, livros de artista, ações coletivas, intervenções urbanas, entre outras manifestações. Com a escuta constante do processo de criação e do grupo de trabalho formado por participantes do ateliê, a atividade tem como objetivo descobrir coletivamente possibilidades de criação em diálogo com os desafios atuais.",
       "descricao_fonte": "Sinopses do 2º semestre/2026 — Escola Livre de Artes Arena da Cultura",
       "descricao_url": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/cultura/sinopses-2-vagas-abertas-presenciais-ead.pdf",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/nufac.png",
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "link": "https://form.jotform.com/261965053614661",
       "link_inscricao": "https://form.jotform.com/261965053614661",
@@ -3231,7 +3244,8 @@
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ela-costurando-ideias-costura-criativa-e-invencoes-35e148f8b2",
@@ -3305,7 +3319,7 @@
       "descricao": "Atividade da Escola Livre de Artes. Público: A partir de 14 anos. Modalidade: Presencial.",
       "descricao_fonte": "",
       "descricao_url": "",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/nufac.png",
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "link": "https://form.jotform.com/261965053614661",
       "link_inscricao": "https://form.jotform.com/261965053614661",
@@ -3326,7 +3340,8 @@
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ela-unidade-centro-cultural-venda-nova",
@@ -3547,7 +3562,7 @@
       "descricao": "Atividade da Escola Livre de Artes. Público: A partir de 14 anos. Modalidade: Presencial.",
       "descricao_fonte": "",
       "descricao_url": "",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/nufac.png",
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "link": "https://form.jotform.com/261965053614661",
       "link_inscricao": "https://form.jotform.com/261965053614661",
@@ -3568,7 +3583,8 @@
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ela-elaboracao-de-projetos-culturais-f008f5558f",
@@ -3833,7 +3849,7 @@
       "descricao": "A prática do canto, partindo de noções de fisiologia da voz, exercícios técnicos, percepção da própria voz e da voz do Outro, desencadeando também experiências de interpretação e performances musicais.",
       "descricao_fonte": "Sinopses do 2º semestre/2026 — Escola Livre de Artes Arena da Cultura",
       "descricao_url": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/cultura/sinopses-2-vagas-abertas-presenciais-ead.pdf",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/nufac.png",
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "link": "https://form.jotform.com/261965053614661",
       "link_inscricao": "https://form.jotform.com/261965053614661",
@@ -3854,7 +3870,8 @@
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ela-elaboracao-de-projetos-culturais-0563dc9854",
@@ -3957,7 +3974,7 @@
       "descricao": "A Orquestra Transversal é um convite para prática musical em conjunto de maneira não convencional, misturando instrumentos acústicos como oboé, violão, e a voz com DJ e instrumentos virtuais, (os VST’S da música produzida de maneira digital), assim como samples , baterias eletrônicas e sintetizador.",
       "descricao_fonte": "Sinopses do 2º semestre/2026 — Escola Livre de Artes Arena da Cultura",
       "descricao_url": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/cultura/sinopses-2-vagas-abertas-presenciais-ead.pdf",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/nufac.png",
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "link": "https://form.jotform.com/261965053614661",
       "link_inscricao": "https://form.jotform.com/261965053614661",
@@ -3978,7 +3995,8 @@
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ela-criacao-e-producao-de-eventos-culturais-8b324801ac",
@@ -4052,7 +4070,7 @@
       "descricao": "A oficina é um espaço de pesquisa e criação para pessoas interessadas em investigar a prática de DJ ́s através do estudo de diferentes dispositivos de criação, desde a tecnologia, os equipamentos e demais procedimentos da linguagem de DJ ́s, o estudo do espaço nas pistas de dança, em diálogo com as diversas vertentes e estilos musicais, bem como os diversos perfis de atuação de DJ´s na cidade.",
       "descricao_fonte": "Sinopses do 2º semestre/2026 — Escola Livre de Artes Arena da Cultura",
       "descricao_url": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/cultura/sinopses-2-vagas-abertas-presenciais-ead.pdf",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/nufac.png",
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "link": "https://form.jotform.com/261965053614661",
       "link_inscricao": "https://form.jotform.com/261965053614661",
@@ -4073,7 +4091,8 @@
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ela-carnaval-os-bastidores-da-festa-1eb05ac8ec",
@@ -4099,7 +4118,7 @@
       "descricao": "Atividade da Escola Livre de Artes. Público: A partir de 14 anos. Modalidade: Presencial.",
       "descricao_fonte": "",
       "descricao_url": "",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/nufac.png",
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "link": "https://form.jotform.com/261965053614661",
       "link_inscricao": "https://form.jotform.com/261965053614661",
@@ -4120,7 +4139,8 @@
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ela-o-funk-e-a-cidade-do-batuque-tamborzao-ao-batidao-corpo-e-ancestralidade-3b24223326",
@@ -4146,7 +4166,7 @@
       "descricao": "O workshop tem como objetivo tratar questões relativas à história individual e coletiva dos(as) participantes através do funk. Histórias que podem ser revividas, lembradas e refletidas através das letras, e desta forma contribuir para o conhecimento e valorização do Patrimônio Cultural do indivíduo e da comunidade. Os encontros são práticos, com ênfase nas manifestações artísticas que compõem a herança cultural brasileira, tendo como ponto de partida o funk. Propõe atividades para estimular a criatividade, o fazer artístico e a reflexão sobre elementos culturais presentes nas periferias de Belo Horizonte.",
       "descricao_fonte": "Sinopses do 2º semestre/2026 — Escola Livre de Artes Arena da Cultura",
       "descricao_url": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/cultura/sinopses-2-vagas-abertas-presenciais-ead.pdf",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/nufac.png",
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "link": "https://form.jotform.com/261965053614661",
       "link_inscricao": "https://form.jotform.com/261965053614661",
@@ -4167,7 +4187,8 @@
       "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ela-transe-da-tranca-aula-aberta-de-artes-visuais-4a55564c94",

@@ -2614,7 +2614,7 @@
         "observacao": "Não possui horário regular de visitação informado. Visitas e eventos são realizados mediante agenda e contato prévio."
       },
       "site": "https://www.fazendaarraialvelho.com.br/",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/fazenda-arraial-velho.png",
       "imagem_fonte": "",
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
@@ -2649,6 +2649,7 @@
         "Fotografia"
       ],
       "status_editorial": "em_analise",
+      "mapa": "",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "Fazenda Arraial Velho",
@@ -3621,7 +3622,7 @@
         "observacao": "Horário informado para atendimento da secretaria e atividades da Escola Livre de Artes Arena da Cultura; cursos podem ter horários próprios."
       },
       "site": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/nufac.png",
       "imagem_fonte": "",
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
