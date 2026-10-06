@@ -6,7 +6,7 @@ const path = require('node:path');
 const vm = require('node:vm');
 
 const root = path.resolve(__dirname, '..');
-const context = vm.createContext({ window: {} });
+const context = vm.createContext({ Intl, Date, window: {} });
 for (const file of ['js/core/rotacao.js', 'js/conteudos/concursos.js']) {
   const moduleSource = fs.readFileSync(path.join(root, file), 'utf8');
   vm.runInContext(moduleSource, context, { filename: file });
@@ -23,7 +23,7 @@ const catalog = JSON.parse(
 ).concursos;
 
 assert.ok(catalog.length > 0);
-assert.equal(contests.filter(catalog).length, catalog.filter(contests.isValid).length);
+assert.equal(contests.filter(catalog).length, catalog.filter(contest => contests.isValid(contest) && contests.isTemporallyVisible(contest)).length);
 
 const searchable = catalog.find(contest => contest.titulo);
 assert.ok(searchable);
