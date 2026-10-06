@@ -5902,10 +5902,11 @@ function eventProgram(event) {
     const utilityMode = state.mobileContent === 'utility';
     const activityMode = state.mobileContent === 'activities';
     const spaceMode = state.mobileContent === 'spaces';
-    const themeMode = ['events', 'books', 'courses', 'films', 'spaces', 'activities'].includes(state.mobileContent);
+    const courseMode = state.mobileContent === 'courses';
+    const themeMode = ['events', 'books', 'courses', 'films', 'utility', 'spaces', 'activities'].includes(state.mobileContent);
     const searchPlaceholder = contestMode
       ? 'Órgão, cargo, cidade, formação…'
-      : state.mobileContent === 'courses'
+      : courseMode
         ? 'Título, instituição, área ou descrição…'
         : state.mobileContent === 'events'
           ? 'Título, local, instituição ou tema…'
@@ -5914,7 +5915,7 @@ function eventProgram(event) {
           : filmMode
             ? 'Título, direção, sinopse, gênero ou tema…'
             : utilityMode
-              ? 'Título, descrição, área ou tipo de recurso…'
+              ? 'Título, descrição, área, público ou tipo de recurso…'
               : activityMode
                 ? 'Atividade, modalidade, local, cidade ou público…'
                 : spaceMode
@@ -5960,15 +5961,46 @@ function eventProgram(event) {
         <option value="">Físico ou virtual</option><option value="physical">Acervo físico</option>
         <option value="virtual">Biblioteca virtual</option><option value="both">Físico e virtual</option>
       </select></label>
+      <label><span>Acervo / biblioteca</span><select class="agenda-book-library"><option value="">Todos os acervos</option></select></label>
+      <label><span>Ano inicial</span><input class="agenda-book-year-from" type="number" inputmode="numeric" min="1000" max="2100" placeholder="Todos"></label>
+      <label><span>Ano final</span><input class="agenda-book-year-to" type="number" inputmode="numeric" min="1000" max="2100" placeholder="Todos"></label>
+      <label><span>Audiolivro</span><select class="agenda-book-audiobook">
+        <option value="">Todos</option><option value="with">Com audiolivro</option><option value="without">Sem audiolivro</option>
+      </select></label>
       ${bookCoverControl}
+    ` : '';
+
+    const courseControls = courseMode ? `
+      <label><span>Instituição</span><select class="agenda-course-institution"><option value="">Todas as instituições</option></select></label>
+      <label><span>Área</span><select class="agenda-course-area"><option value="">Todas as áreas</option></select></label>
+      <label><span>Carga horária</span><select class="agenda-course-workload">
+        <option value="">Todas as cargas horárias</option>
+        <option value="ate-10">Até 10 horas</option><option value="11-20">11 a 20 horas</option>
+        <option value="21-40">21 a 40 horas</option><option value="mais-40">Mais de 40 horas</option>
+        <option value="nao-informada">Não informada</option>
+      </select></label>
+      <label><span>Tipo</span><select class="agenda-course-type"><option value="">Todos os tipos</option></select></label>
+      <label><span>Nível</span><select class="agenda-course-level"><option value="">Todos os níveis</option></select></label>
+      <label><span>Idioma</span><select class="agenda-course-language"><option value="">Todos os idiomas</option></select></label>
+      <label><span>Certificado</span><select class="agenda-course-certificate">
+        <option value="">Todos</option><option value="yes">Com certificado informado</option>
+        <option value="no">Sem certificado</option><option value="unknown">Não informado</option>
+      </select></label>
     ` : '';
 
     const contestControls = contestMode ? `
       <label><span>Formação</span><select class="agenda-contest-formation"><option value="">Todas as formações</option></select></label>
       <label><span>UF</span><select class="agenda-contest-uf"><option value="">Todos os estados</option></select></label>
+      <label><span>Cidade</span><select class="agenda-contest-city"><option value="">Todas as cidades</option></select></label>
       <label><span>Prazo</span><select class="agenda-contest-deadline">
         <option value="">Todos os prazos</option><option value="com-data">Com data de inscrição</option>
         <option value="sem-data">Sem data informada</option>
+      </select></label>
+      <label><span>Maior remuneração</span><select class="agenda-contest-remuneration">
+        <option value="">Todas as faixas</option><option value="ate-3000">Até R$ 3 mil</option>
+        <option value="3000-5000">Mais de R$ 3 mil até R$ 5 mil</option>
+        <option value="5000-10000">Mais de R$ 5 mil até R$ 10 mil</option>
+        <option value="mais-10000">Mais de R$ 10 mil</option><option value="nao-informada">Não informada</option>
       </select></label>
     ` : '';
 
@@ -5976,6 +6008,9 @@ function eventProgram(event) {
       <label><span>Gênero</span><select class="agenda-film-genre"><option value="">Todos os gêneros</option></select></label>
       <label><span>Plataforma</span><select class="agenda-film-platform"><option value="">Todas as plataformas</option></select></label>
       <label><span>Letra</span><select class="agenda-film-letter"><option value="">Todas as letras</option></select></label>
+      <label><span>Acessibilidade</span><select class="agenda-film-accessibility"><option value="">Todos os recursos</option></select></label>
+      <label><span>País de origem</span><select class="agenda-film-country"><option value="">Todos os países</option></select></label>
+      <label><span>Coleção</span><select class="agenda-film-collection"><option value="">Todas as coleções</option></select></label>
       <label><span>Classificação</span><select class="agenda-film-rating">
         <option value="">Todas as classificações</option><option value="Livre">Livre</option><option value="10">10</option><option value="12">12</option><option value="14">14</option><option value="16">16</option><option value="18">18</option><option value="Não informada">Não informada</option>
       </select></label>
@@ -5992,34 +6027,52 @@ function eventProgram(event) {
     const utilityControls = utilityMode ? `
       <label><span>Área de Utilidade Pública</span><select class="agenda-utility-area"><option value="">Todas as áreas</option></select></label>
       <label><span>Tipo de recurso</span><select class="agenda-utility-type"><option value="">Todos os tipos</option></select></label>
+      <label><span>Natureza</span><select class="agenda-utility-nature"><option value="">Todas</option></select></label>
+      <label><span>Abrangência</span><select class="agenda-utility-scope"><option value="">Todas as abrangências</option></select></label>
+      <label><span>Público-alvo</span><select class="agenda-utility-audience"><option value="">Todos os públicos</option></select></label>
     ` : '';
     const activityControls = activityMode ? `
       <label><span>Cidade</span><select class="agenda-activity-city"><option value="">Todas as cidades</option></select></label>
       <label><span>Categoria</span><select class="agenda-activity-category"><option value="">Todas as categorias</option></select></label>
       <label><span>Modalidade</span><select class="agenda-activity-modality"><option value="">Todas as modalidades</option></select></label>
+      <label><span>Dia da semana</span><select class="agenda-activity-day"><option value="">Todos os dias</option></select></label>
+      <label><span>Participação</span><select class="agenda-activity-participation"><option value="">Todas as formas</option></select></label>
+      <label><span>Público-alvo</span><select class="agenda-activity-audience"><option value="">Todos os públicos</option></select></label>
+      <label><span>Formato</span><select class="agenda-activity-format"><option value="">Todos os formatos</option></select></label>
     ` : '';
     const spaceControls = spaceMode ? `
       <label><span>Cidade</span><select class="agenda-space-city"><option value="">Todas as cidades</option></select></label>
       <label><span>Vocação / uso</span><select class="agenda-space-vocation"><option value="">Todas as vocações</option></select></label>
       <label><span>Tipo de espaço</span><select class="agenda-space-nature"><option value="">Todos os tipos</option></select></label>
+      <label><span>Instituição</span><select class="agenda-space-institution"><option value="">Todas as instituições</option></select></label>
+      <label><span>Abre em</span><select class="agenda-space-open-day"><option value="">Qualquer dia</option></select></label>
     ` : '';
 
-    controls.innerHTML = commonControls + eventControls + bookControls + contestControls + filmControls + utilityControls + spaceControls + activityControls;
+    controls.innerHTML = commonControls + eventControls + bookControls + courseControls + contestControls + filmControls + utilityControls + spaceControls + activityControls;
 
     controls.querySelector('.agenda-content').value = state.mobileContent;
     if (utilityMode) {
       populateDynamicSelect(controls.querySelector('.agenda-utility-area'), 'Todas as áreas', agendaUtilityOptions('areas_utilidade'), state.mobileUtilityArea);
       populateDynamicSelect(controls.querySelector('.agenda-utility-type'), 'Todos os tipos', agendaUtilityOptions('tipos_recurso'), state.mobileUtilityType);
+      populateDynamicSelect(controls.querySelector('.agenda-utility-nature'), 'Todas', utilityNatureOptions(), state.mobileUtilityNature);
+      populateDynamicSelect(controls.querySelector('.agenda-utility-scope'), 'Todas as abrangências', utilityScopeOptions(), state.mobileUtilityScope);
+      populateDynamicSelect(controls.querySelector('.agenda-utility-audience'), 'Todos os públicos', agendaUtilityOptions('publicos_alvo'), state.mobileUtilityAudience);
     }
     if (spaceMode) {
       populateDynamicSelect(controls.querySelector('.agenda-space-city'), 'Todas as cidades', spacesContent.cityOptions(state.allSpaces, normalizeText), state.mobileSpaceCity);
       populateDynamicSelect(controls.querySelector('.agenda-space-vocation'), 'Todas as vocações', spacesContent.vocationOptions(state.allSpaces, normalizeText), state.mobileSpaceVocation);
       populateDynamicSelect(controls.querySelector('.agenda-space-nature'), 'Todos os tipos', spacesContent.natureOptions(state.allSpaces, normalizeText), state.mobileSpaceNature);
+      populateDynamicSelect(controls.querySelector('.agenda-space-institution'), 'Todas as instituições', spacesContent.institutionOptions(state.allSpaces, normalizeText), state.mobileSpaceInstitution);
+      populateDynamicSelect(controls.querySelector('.agenda-space-open-day'), 'Qualquer dia', spacesContent.openDayOptions(state.allSpaces), state.mobileSpaceOpenDay);
     }
     if (activityMode) {
       populateDynamicSelect(controls.querySelector('.agenda-activity-city'), 'Todas as cidades', activitiesContent.cityOptions(state.allActivities, normalizeText), state.mobileActivityCity);
       populateDynamicSelect(controls.querySelector('.agenda-activity-category'), 'Todas as categorias', activitiesContent.categoryOptions(state.allActivities), state.mobileActivityCategory);
       populateDynamicSelect(controls.querySelector('.agenda-activity-modality'), 'Todas as modalidades', activitiesContent.modalityOptions(state.allActivities, normalizeText), state.mobileActivityModality);
+      populateDynamicSelect(controls.querySelector('.agenda-activity-day'), 'Todos os dias', activitiesContent.dayOptions(state.allActivities), state.mobileActivityDay);
+      populateDynamicSelect(controls.querySelector('.agenda-activity-participation'), 'Todas as formas', activitiesContent.participationOptions(state.allActivities), state.mobileActivityParticipation);
+      populateDynamicSelect(controls.querySelector('.agenda-activity-audience'), 'Todos os públicos', activitiesContent.audienceOptions(state.allActivities, normalizeText), state.mobileActivityAudience);
+      populateDynamicSelect(controls.querySelector('.agenda-activity-format'), 'Todos os formatos', activitiesContent.formatOptions(state.allActivities), state.mobileActivityFormat);
     }
     populateDynamicSelect(
       controls.querySelector('.agenda-curation'),
@@ -6053,8 +6106,20 @@ function eventProgram(event) {
       controls.querySelector('.agenda-registration').value = state.mobileRegistration;
     } else if (state.mobileContent === 'books') {
       controls.querySelector('.agenda-book-access').value = state.mobileBookAccess;
+      populateDynamicSelect(controls.querySelector('.agenda-book-library'), 'Todos os acervos', agendaBookLibraryOptions(), state.mobileBookLibrary);
+      controls.querySelector('.agenda-book-year-from').value = state.mobileBookYearFrom;
+      controls.querySelector('.agenda-book-year-to').value = state.mobileBookYearTo;
+      controls.querySelector('.agenda-book-audiobook').value = state.mobileBookAudiobook;
       const bookCover = controls.querySelector('.agenda-book-cover');
       if (bookCover) bookCover.value = state.mobileBookCover;
+    } else if (courseMode) {
+      populateDynamicSelect(controls.querySelector('.agenda-course-institution'), 'Todas as instituições', coursesContent.scalarOptions(state.allCourses, 'instituicao'), state.mobileCourseInstitution);
+      populateDynamicSelect(controls.querySelector('.agenda-course-area'), 'Todas as áreas', coursesContent.scalarOptions(state.allCourses, 'area'), state.mobileCourseArea);
+      populateDynamicSelect(controls.querySelector('.agenda-course-type'), 'Todos os tipos', coursesContent.scalarOptions(state.allCourses, 'tipo'), state.mobileCourseType);
+      populateDynamicSelect(controls.querySelector('.agenda-course-level'), 'Todos os níveis', coursesContent.scalarOptions(state.allCourses, 'nivel'), state.mobileCourseLevel);
+      populateDynamicSelect(controls.querySelector('.agenda-course-language'), 'Todos os idiomas', coursesContent.scalarOptions(state.allCourses, 'idioma'), state.mobileCourseLanguage);
+      controls.querySelector('.agenda-course-workload').value = state.mobileCourseWorkload;
+      controls.querySelector('.agenda-course-certificate').value = state.mobileCourseCertificate;
     } else if (contestMode) {
       populateDynamicSelect(
         controls.querySelector('.agenda-contest-formation'),
@@ -6068,7 +6133,14 @@ function eventProgram(event) {
         contestsContent.ufOptions(state.allContests),
         state.mobileContestUf
       );
+      populateDynamicSelect(
+        controls.querySelector('.agenda-contest-city'),
+        'Todas as cidades',
+        contestsContent.cityOptions(state.allContests),
+        state.mobileContestCity
+      );
       controls.querySelector('.agenda-contest-deadline').value = state.mobileContestDeadline;
+      controls.querySelector('.agenda-contest-remuneration').value = state.mobileContestRemuneration;
     } else if (filmMode) {
       populateDynamicSelect(
         controls.querySelector('.agenda-film-genre'),
@@ -6087,6 +6159,24 @@ function eventProgram(event) {
         'Todas as letras',
         filmsContent.options(state.allFilms, 'letras').map(value => [value, value]),
         state.mobileFilmLetter
+      );
+      populateDynamicSelect(
+        controls.querySelector('.agenda-film-accessibility'),
+        'Todos os recursos',
+        filmsContent.options(state.allFilms, 'acessibilidade').map(value => [value, value]),
+        state.mobileFilmAccessibility
+      );
+      populateDynamicSelect(
+        controls.querySelector('.agenda-film-country'),
+        'Todos os países',
+        mobileSelectOptions(state.allFilms, 'pais_origem'),
+        state.mobileFilmCountry
+      );
+      populateDynamicSelect(
+        controls.querySelector('.agenda-film-collection'),
+        'Todas as coleções',
+        filmsContent.options(state.allFilms, 'colecoes').map(value => [value, value]),
+        state.mobileFilmCollection
       );
       controls.querySelector('.agenda-film-rating').value = state.mobileFilmRating;
       controls.querySelector('.agenda-film-year-from').value = state.mobileFilmYearFrom;
