@@ -4121,10 +4121,10 @@
         "observacao": "Horário da programação artístico-cultural informado pelo Sesc. Coworking e salas de reunião funcionam de segunda a sexta, das 9h às 21h."
       },
       "site": "https://sescmg.com.br/unidade/sesc-palladium/",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/sesc-palladium.png",
       "imagem_fonte": "",
       "exibicao_ativa": true,
-      "exibicao_recorrente": false,
+      "exibicao_recorrente": true,
       "prioridade": 0,
       "redes_sociais": {},
       "contatos": {
