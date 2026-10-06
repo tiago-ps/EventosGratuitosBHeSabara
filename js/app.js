@@ -217,12 +217,28 @@
     mobileRegistration: '',
     mobileBookAccess: '',
     mobileBookCover: '',
+    mobileBookLibrary: '',
+    mobileBookYearFrom: '',
+    mobileBookYearTo: '',
+    mobileBookAudiobook: '',
+    mobileCourseInstitution: '',
+    mobileCourseArea: '',
+    mobileCourseWorkload: '',
+    mobileCourseType: '',
+    mobileCourseLevel: '',
+    mobileCourseLanguage: '',
+    mobileCourseCertificate: '',
     mobileContestFormation: '',
     mobileContestUf: '',
+    mobileContestCity: '',
     mobileContestDeadline: '',
+    mobileContestRemuneration: '',
     mobileFilmGenre: '',
     mobileFilmPlatform: '',
     mobileFilmLetter: '',
+    mobileFilmAccessibility: '',
+    mobileFilmCountry: '',
+    mobileFilmCollection: '',
     mobileFilmRating: '',
     mobileFilmYearFrom: '',
     mobileFilmYearTo: '',
@@ -231,11 +247,20 @@
     mobileActivityCity: '',
     mobileActivityCategory: '',
     mobileActivityModality: '',
+    mobileActivityDay: '',
+    mobileActivityParticipation: '',
+    mobileActivityAudience: '',
+    mobileActivityFormat: '',
     mobileSpaceCity: '',
     mobileSpaceVocation: '',
     mobileSpaceNature: '',
+    mobileSpaceInstitution: '',
+    mobileSpaceOpenDay: '',
     mobileUtilityArea: '',
     mobileUtilityType: '',
+    mobileUtilityNature: '',
+    mobileUtilityScope: '',
+    mobileUtilityAudience: '',
     agendaVisibleCounts: {
       events: AGENDA_BATCH_SIZE,
       books: AGENDA_BATCH_SIZE,
@@ -3759,19 +3784,16 @@ function eventProgram(event) {
       for (const course of state.allCourses) (Array.isArray(course.temas) ? course.temas : []).forEach(add);
     }
     if (content === 'films') {
-      for (const movie of state.allFilms) {
-        (Array.isArray(movie.temas) ? movie.temas : []).forEach(add);
-      }
+      for (const movie of state.allFilms) (Array.isArray(movie.temas) ? movie.temas : []).forEach(add);
+    }
+    if (content === 'utility') {
+      for (const item of state.allUtility) (Array.isArray(item.temas) ? item.temas : []).forEach(add);
     }
     if (content === 'spaces') {
-      for (const item of state.allSpaces) {
-        (Array.isArray(item.temas) ? item.temas : []).forEach(add);
-      }
+      for (const item of state.allSpaces) (Array.isArray(item.temas) ? item.temas : []).forEach(add);
     }
     if (content === 'activities') {
-      for (const item of state.allActivities) {
-        (Array.isArray(item.temas) ? item.temas : []).forEach(add);
-      }
+      for (const item of state.allActivities) (Array.isArray(item.temas) ? item.temas : []).forEach(add);
     }
     return [...values.entries()].sort((a, b) => a[1].localeCompare(b[1], 'pt-BR'));
   }
@@ -3785,7 +3807,7 @@ function eventProgram(event) {
       state.mobileCuration = '';
     }
 
-    if (!['events', 'books', 'courses', 'films', 'spaces', 'activities'].includes(state.mobileContent)) {
+    if (!['events', 'books', 'courses', 'films', 'utility', 'spaces', 'activities'].includes(state.mobileContent)) {
       state.mobileTheme = '';
     } else {
       const allowedThemes = new Set(agendaThemeOptions(state.mobileContent).map(([value]) => value));
@@ -3803,32 +3825,59 @@ function eventProgram(event) {
     if (state.mobileContent !== 'books') {
       state.mobileBookAccess = '';
       state.mobileBookCover = '';
+      state.mobileBookLibrary = '';
+      state.mobileBookYearFrom = '';
+      state.mobileBookYearTo = '';
+      state.mobileBookAudiobook = '';
     } else if (!state.curationMode) {
       state.mobileBookCover = '';
+    }
+    if (state.mobileContent !== 'courses') {
+      state.mobileCourseInstitution = '';
+      state.mobileCourseArea = '';
+      state.mobileCourseWorkload = '';
+      state.mobileCourseType = '';
+      state.mobileCourseLevel = '';
+      state.mobileCourseLanguage = '';
+      state.mobileCourseCertificate = '';
     }
     if (state.mobileContent !== 'utility') {
       state.mobileUtilityArea = '';
       state.mobileUtilityType = '';
+      state.mobileUtilityNature = '';
+      state.mobileUtilityScope = '';
+      state.mobileUtilityAudience = '';
     }
     if (state.mobileContent !== 'activities') {
       state.mobileActivityCity = '';
       state.mobileActivityCategory = '';
       state.mobileActivityModality = '';
+      state.mobileActivityDay = '';
+      state.mobileActivityParticipation = '';
+      state.mobileActivityAudience = '';
+      state.mobileActivityFormat = '';
     }
     if (state.mobileContent !== 'spaces') {
       state.mobileSpaceCity = '';
       state.mobileSpaceVocation = '';
       state.mobileSpaceNature = '';
+      state.mobileSpaceInstitution = '';
+      state.mobileSpaceOpenDay = '';
     }
     if (state.mobileContent !== 'contests') {
       state.mobileContestFormation = '';
       state.mobileContestUf = '';
+      state.mobileContestCity = '';
       state.mobileContestDeadline = '';
+      state.mobileContestRemuneration = '';
     }
     if (state.mobileContent !== 'films') {
       state.mobileFilmGenre = '';
       state.mobileFilmPlatform = '';
       state.mobileFilmLetter = '';
+      state.mobileFilmAccessibility = '';
+      state.mobileFilmCountry = '';
+      state.mobileFilmCollection = '';
       state.mobileFilmRating = '';
       state.mobileFilmYearFrom = '';
       state.mobileFilmYearTo = '';
@@ -3972,11 +4021,35 @@ function eventProgram(event) {
     return contestDeadlineValue(first) - contestDeadlineValue(second) || agendaTitleCompare(first, second);
   }
 
+  function agendaBookLibraryOptions() {
+    const values = new Map();
+    for (const book of state.allBooks) {
+      for (const label of bookCampusLabels(book)) {
+        const value = normalizeText(label);
+        if (value && !values.has(value)) values.set(value, label);
+      }
+    }
+    return [...values.entries()].sort((a, b) => a[1].localeCompare(b[1], 'pt-BR'));
+  }
+
+  function agendaBookYear(book) {
+    const value = Number(String(book?.ano || '').match(/\d{4}/)?.[0]);
+    return Number.isFinite(value) && value > 0 ? value : null;
+  }
+
+  function agendaBookMatchesLibrary(book, wanted) {
+    if (!wanted) return true;
+    return bookCampusLabels(book).some(label => normalizeText(label) === wanted);
+  }
+
   function agendaVisibleBooks() {
     if (!['all', 'books'].includes(state.mobileContent) || state.config?.modulos?.livros === false) return [];
     const query = normalizeText(state.mobileQuery);
     const today = todayAtMidnight();
     const specific = state.mobileContent === 'books';
+    const yearFrom = specific ? Number(state.mobileBookYearFrom) || 0 : 0;
+    const yearTo = specific ? Number(state.mobileBookYearTo) || 0 : 0;
+
     return state.allBooks
       .filter(book => state.curationMode
         ? Boolean(book && book.titulo)
@@ -3987,6 +4060,12 @@ function eventProgram(event) {
         if (state.mobileBookAccess === 'physical' && !book.acesso_fisico) return false;
         if (state.mobileBookAccess === 'virtual' && !book.acesso_virtual) return false;
         if (state.mobileBookAccess === 'both' && !(book.acesso_fisico && book.acesso_virtual)) return false;
+        if (!agendaBookMatchesLibrary(book, state.mobileBookLibrary)) return false;
+        const year = agendaBookYear(book);
+        if (yearFrom && (!year || year < yearFrom)) return false;
+        if (yearTo && (!year || year > yearTo)) return false;
+        if (state.mobileBookAudiobook === 'with' && !bookAudiobookUrl(book)) return false;
+        if (state.mobileBookAudiobook === 'without' && bookAudiobookUrl(book)) return false;
         if (state.curationMode && state.mobileBookCover === 'with' && !safeImageUrl(book.imagem)) return false;
         if (state.curationMode && state.mobileBookCover === 'without' && safeImageUrl(book.imagem)) return false;
         return true;
@@ -3999,8 +4078,17 @@ function eventProgram(event) {
   function agendaVisibleCourses() {
     if (!['all', 'courses'].includes(state.mobileContent) || state.config?.modulos?.cursos === false) return [];
     const query = normalizeText(state.mobileQuery);
-    return coursesContent.filter(state.allCourses)
-      .filter(course => courseMatchesTheme(course, state.mobileTheme))
+    const specific = state.mobileContent === 'courses';
+    return coursesContent.filter(state.allCourses, {
+      theme: state.mobileTheme,
+      institution: specific ? state.mobileCourseInstitution : '',
+      area: specific ? state.mobileCourseArea : '',
+      workload: specific ? state.mobileCourseWorkload : '',
+      type: specific ? state.mobileCourseType : '',
+      level: specific ? state.mobileCourseLevel : '',
+      language: specific ? state.mobileCourseLanguage : '',
+      certificate: specific ? state.mobileCourseCertificate : ''
+    })
       .filter(course => coursesContent.agendaQueryMatches(course, query, normalizeText))
       .sort(agendaTitleCompare);
   }
@@ -4013,7 +4101,9 @@ function eventProgram(event) {
       query: state.mobileQuery,
       formation: state.mobileContent === 'contests' ? state.mobileContestFormation : '',
       uf: state.mobileContent === 'contests' ? state.mobileContestUf : '',
-      deadline: state.mobileContent === 'contests' ? state.mobileContestDeadline : ''
+      city: state.mobileContent === 'contests' ? state.mobileContestCity : '',
+      deadline: state.mobileContent === 'contests' ? state.mobileContestDeadline : '',
+      remuneration: state.mobileContent === 'contests' ? state.mobileContestRemuneration : ''
     }).sort(compareAgendaContests);
   }
 
@@ -4025,6 +4115,9 @@ function eventProgram(event) {
       platform: state.mobileContent === 'films' ? state.mobileFilmPlatform : '',
       theme: state.mobileContent === 'films' ? state.mobileTheme : '',
       letter: state.mobileContent === 'films' ? state.mobileFilmLetter : '',
+      accessibility: state.mobileContent === 'films' ? state.mobileFilmAccessibility : '',
+      country: state.mobileContent === 'films' ? state.mobileFilmCountry : '',
+      collection: state.mobileContent === 'films' ? state.mobileFilmCollection : '',
       rating: state.mobileContent === 'films' ? state.mobileFilmRating : '',
       yearFrom: state.mobileContent === 'films' ? state.mobileFilmYearFrom : '',
       yearTo: state.mobileContent === 'films' ? state.mobileFilmYearTo : '',
@@ -4041,7 +4134,11 @@ function eventProgram(event) {
       city: specific ? state.mobileActivityCity : '',
       category: specific ? state.mobileActivityCategory : '',
       modality: specific ? state.mobileActivityModality : '',
-      theme: specific ? state.mobileTheme : ''
+      theme: specific ? state.mobileTheme : '',
+      day: specific ? state.mobileActivityDay : '',
+      participation: specific ? state.mobileActivityParticipation : '',
+      audience: specific ? state.mobileActivityAudience : '',
+      format: specific ? state.mobileActivityFormat : ''
     }, normalizeText).sort(agendaTitleCompare);
   }
 
@@ -4053,7 +4150,9 @@ function eventProgram(event) {
       city: specific ? state.mobileSpaceCity : '',
       vocation: specific ? state.mobileSpaceVocation : '',
       nature: specific ? state.mobileSpaceNature : '',
-      theme: specific ? state.mobileTheme : ''
+      theme: specific ? state.mobileTheme : '',
+      institution: specific ? state.mobileSpaceInstitution : '',
+      openDay: specific ? state.mobileSpaceOpenDay : ''
     }, normalizeText).sort(agendaTitleCompare);
   }
 
@@ -4064,11 +4163,54 @@ function eventProgram(event) {
   function agendaUtilityOptions(field) {
     const values = new Map();
     for (const item of utilitySource()) {
-      for (const label of item[field]) {
+      const raw = item?.[field];
+      const entries = Array.isArray(raw) ? raw : [raw];
+      for (const label of entries) {
+        if (label && typeof label === 'object') continue;
         const text = String(label || '').trim();
         const value = normalizeText(text);
         if (value && !values.has(value)) values.set(value, text);
       }
+    }
+    return [...values.entries()].sort((a, b) => a[1].localeCompare(b[1], 'pt-BR'));
+  }
+
+  function utilityNatureLabel(value) {
+    const normalized = normalizeText(value);
+    if (normalized === 'indicador') return 'Indicador';
+    if (normalized === 'direito_orientacao') return 'Orientação, direitos e serviços';
+    return String(value || '').replaceAll('_', ' ').trim();
+  }
+
+  function utilityNatureOptions() {
+    const values = new Map();
+    for (const item of utilitySource()) {
+      const raw = String(item?.natureza || '').trim();
+      const value = normalizeText(raw);
+      if (value && !values.has(value)) values.set(value, utilityNatureLabel(raw));
+    }
+    return [...values.entries()].sort((a, b) => a[1].localeCompare(b[1], 'pt-BR'));
+  }
+
+  function utilityScopeLabel(item) {
+    const scope = item?.escopo_geografico;
+    if (!scope || typeof scope !== 'object') return '';
+    const type = normalizeText(scope.tipo);
+    const municipalities = Array.isArray(scope.municipios)
+      ? scope.municipios.map(value => String(value || '').trim()).filter(Boolean)
+      : [];
+    if (type === 'municipal' && municipalities.length) return municipalities.join(', ');
+    if (type === 'estadual' && scope.uf) return scope.uf === 'MG' ? 'Minas Gerais' : String(scope.uf);
+    if (type === 'nacional') return 'Brasil';
+    return String(scope.descricao || '').trim();
+  }
+
+  function utilityScopeOptions() {
+    const values = new Map();
+    for (const item of utilitySource()) {
+      const label = utilityScopeLabel(item);
+      const value = normalizeText(label);
+      if (label && value && !values.has(value)) values.set(value, label);
     }
     return [...values.entries()].sort((a, b) => a[1].localeCompare(b[1], 'pt-BR'));
   }
@@ -4078,15 +4220,30 @@ function eventProgram(event) {
     const query = normalizeText(state.mobileQuery);
     const specific = state.mobileContent === 'utility';
     return utilitySource().filter(item => {
+      if (specific && state.mobileTheme &&
+          !(Array.isArray(item.temas) ? item.temas : []).some(theme => normalizeText(theme) === state.mobileTheme)) return false;
       if (specific && state.mobileUtilityArea &&
-          !item.areas_utilidade.some(area => normalizeText(area) === state.mobileUtilityArea)) return false;
+          !(Array.isArray(item.areas_utilidade) ? item.areas_utilidade : [])
+            .some(area => normalizeText(area) === state.mobileUtilityArea)) return false;
       if (specific && state.mobileUtilityType &&
-          !item.tipos_recurso.some(type => normalizeText(type) === state.mobileUtilityType)) return false;
+          !(Array.isArray(item.tipos_recurso) ? item.tipos_recurso : [])
+            .some(type => normalizeText(type) === state.mobileUtilityType)) return false;
+      if (specific && state.mobileUtilityNature &&
+          normalizeText(item.natureza) !== state.mobileUtilityNature) return false;
+      if (specific && state.mobileUtilityScope &&
+          normalizeText(utilityScopeLabel(item)) !== state.mobileUtilityScope) return false;
+      if (specific && state.mobileUtilityAudience &&
+          !(Array.isArray(item.publicos_alvo) ? item.publicos_alvo : [])
+            .some(audience => normalizeText(audience) === state.mobileUtilityAudience)) return false;
       if (!query) return true;
       return normalizeText([
         item.titulo, item.descricao, item.destaque, item.detalhe,
+        utilityNatureLabel(item.natureza), utilityScopeLabel(item),
         ...(Array.isArray(item.termos_busca) ? item.termos_busca : []),
-        ...item.areas_utilidade, ...item.tipos_recurso
+        ...(Array.isArray(item.temas) ? item.temas : []),
+        ...(Array.isArray(item.publicos_alvo) ? item.publicos_alvo : []),
+        ...(Array.isArray(item.areas_utilidade) ? item.areas_utilidade : []),
+        ...(Array.isArray(item.tipos_recurso) ? item.tipos_recurso : [])
       ].join(' ')).includes(query);
     });
   }
@@ -4161,7 +4318,9 @@ function eventProgram(event) {
         state.mobileCuration,
         state.mobileContestFormation,
         state.mobileContestUf,
-        state.mobileContestDeadline
+        state.mobileContestCity,
+        state.mobileContestDeadline,
+        state.mobileContestRemuneration
       ].filter(Boolean).length;
     }
     if (state.mobileContent === 'films') {
@@ -4172,6 +4331,9 @@ function eventProgram(event) {
         state.mobileFilmPlatform,
         state.mobileTheme,
         state.mobileFilmLetter,
+        state.mobileFilmAccessibility,
+        state.mobileFilmCountry,
+        state.mobileFilmCollection,
         state.mobileFilmRating,
         state.mobileFilmYearFrom,
         state.mobileFilmYearTo,
@@ -4193,14 +4355,52 @@ function eventProgram(event) {
       common.push(
         state.mobileTheme,
         state.mobileBookAccess,
+        state.mobileBookLibrary,
+        state.mobileBookYearFrom,
+        state.mobileBookYearTo,
+        state.mobileBookAudiobook,
         state.curationMode ? state.mobileBookCover : ''
       );
+    } else if (state.mobileContent === 'courses') {
+      common.push(
+        state.mobileTheme,
+        state.mobileCourseInstitution,
+        state.mobileCourseArea,
+        state.mobileCourseWorkload,
+        state.mobileCourseType,
+        state.mobileCourseLevel,
+        state.mobileCourseLanguage,
+        state.mobileCourseCertificate
+      );
     } else if (state.mobileContent === 'utility') {
-      common.push(state.mobileUtilityArea, state.mobileUtilityType);
+      common.push(
+        state.mobileTheme,
+        state.mobileUtilityArea,
+        state.mobileUtilityType,
+        state.mobileUtilityNature,
+        state.mobileUtilityScope,
+        state.mobileUtilityAudience
+      );
     } else if (state.mobileContent === 'activities') {
-      common.push(state.mobileTheme, state.mobileActivityCity, state.mobileActivityCategory, state.mobileActivityModality);
+      common.push(
+        state.mobileTheme,
+        state.mobileActivityCity,
+        state.mobileActivityCategory,
+        state.mobileActivityModality,
+        state.mobileActivityDay,
+        state.mobileActivityParticipation,
+        state.mobileActivityAudience,
+        state.mobileActivityFormat
+      );
     } else if (state.mobileContent === 'spaces') {
-      common.push(state.mobileTheme, state.mobileSpaceCity, state.mobileSpaceVocation, state.mobileSpaceNature);
+      common.push(
+        state.mobileTheme,
+        state.mobileSpaceCity,
+        state.mobileSpaceVocation,
+        state.mobileSpaceNature,
+        state.mobileSpaceInstitution,
+        state.mobileSpaceOpenDay
+      );
     }
     return common.filter(Boolean).length;
   }
@@ -4208,12 +4408,21 @@ function eventProgram(event) {
   function clearAgendaFilters() {
     state.mobileUtilityArea = '';
     state.mobileUtilityType = '';
+    state.mobileUtilityNature = '';
+    state.mobileUtilityScope = '';
+    state.mobileUtilityAudience = '';
     state.mobileActivityCity = '';
     state.mobileActivityCategory = '';
     state.mobileActivityModality = '';
+    state.mobileActivityDay = '';
+    state.mobileActivityParticipation = '';
+    state.mobileActivityAudience = '';
+    state.mobileActivityFormat = '';
     state.mobileSpaceCity = '';
     state.mobileSpaceVocation = '';
     state.mobileSpaceNature = '';
+    state.mobileSpaceInstitution = '';
+    state.mobileSpaceOpenDay = '';
     state.mobileQuery = '';
     state.mobileCuration = '';
     state.mobileContent = 'all';
@@ -4226,30 +4435,55 @@ function eventProgram(event) {
     state.mobileRegistration = '';
     state.mobileBookAccess = '';
     state.mobileBookCover = '';
+    state.mobileBookLibrary = '';
+    state.mobileBookYearFrom = '';
+    state.mobileBookYearTo = '';
+    state.mobileBookAudiobook = '';
+    state.mobileCourseInstitution = '';
+    state.mobileCourseArea = '';
+    state.mobileCourseWorkload = '';
+    state.mobileCourseType = '';
+    state.mobileCourseLevel = '';
+    state.mobileCourseLanguage = '';
+    state.mobileCourseCertificate = '';
     state.mobileContestFormation = '';
     state.mobileContestUf = '';
+    state.mobileContestCity = '';
     state.mobileContestDeadline = '';
+    state.mobileContestRemuneration = '';
+    state.mobileFilmGenre = '';
+    state.mobileFilmPlatform = '';
+    state.mobileFilmLetter = '';
+    state.mobileFilmAccessibility = '';
+    state.mobileFilmCountry = '';
+    state.mobileFilmCollection = '';
+    state.mobileFilmRating = '';
+    state.mobileFilmYearFrom = '';
+    state.mobileFilmYearTo = '';
+    state.mobileFilmDuration = '';
+    state.mobileFilmSort = 'title-asc';
   }
 
   function clearContestAgendaFilters() {
-    state.mobileUtilityArea = '';
-    state.mobileUtilityType = '';
     state.mobileQuery = '';
     state.mobileCuration = '';
     state.mobileContestFormation = '';
     state.mobileContestUf = '';
+    state.mobileContestCity = '';
     state.mobileContestDeadline = '';
+    state.mobileContestRemuneration = '';
   }
 
   function clearFilmAgendaFilters() {
-    state.mobileUtilityArea = '';
-    state.mobileUtilityType = '';
     state.mobileQuery = '';
     state.mobileCuration = '';
     state.mobileFilmGenre = '';
     state.mobileFilmPlatform = '';
     state.mobileTheme = '';
     state.mobileFilmLetter = '';
+    state.mobileFilmAccessibility = '';
+    state.mobileFilmCountry = '';
+    state.mobileFilmCollection = '';
     state.mobileFilmRating = '';
     state.mobileFilmYearFrom = '';
     state.mobileFilmYearTo = '';
