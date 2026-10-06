@@ -1,6 +1,8 @@
 importScripts('./js/relacoes-eventos.js?v=2');
+importScripts('./js/temporalidade-eventos.js?v=1');
 
 const SW_EVENT_RELATIONS = self.MuralCultural?.eventRelations;
+const SW_EVENT_TEMPORAL = self.MuralCultural?.eventTemporal;
 const CACHE_VERSION = 'mural-cultural-v197-notificacoes-menu';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
@@ -31,12 +33,12 @@ const CORE_ASSETS = [
   './js/conteudos/utilidade-publica.js?v=5',
   './js/conteudos/espacos.js?v=5',
   './js/conteudos/atividades-lazer.js?v=6',
-  './js/curadorias-site.js?v=12',
+  './js/curadorias-site.js?v=13',
   './js/metricas-pontos.js?v=2',
   './js/relacoes-eventos.js?v=2',
   './js/app.js?v=155',
   './js/temas-visuais.js?v=14',
-  './js/eventos-manuais-ui.js?v=45',
+  './js/eventos-manuais-ui.js?v=46',
   './js/ios-install.js?v=3',
   './js/painel-navegacao-modos.js?v=6',
   './js/agenda-pesquisa-foco.js?v=1',
@@ -257,12 +259,18 @@ function swEventPlace(event, relationIndex) {
     String(event?.unidade || '').trim();
 }
 
+function swEventReminderBaseDate(event) {
+  return SW_EVENT_TEMPORAL?.reminderBaseDate?.(event) ||
+    String(event?.data || event?.data_inicio || '').slice(0, 10);
+}
+
 function swFavoriteEventsForReminder(events, favorites, reminderDate) {
   const favoriteSet = new Set(Array.isArray(favorites) ? favorites : []);
   return (Array.isArray(events) ? events : []).filter(event => {
     const id = `evento:${String(event?.id || '').trim()}`;
     if (!favoriteSet.has(id)) return false;
-    return swShiftDateKey(event?.data || event?.data_inicio, -1) === reminderDate;
+    const baseDate = swEventReminderBaseDate(event);
+    return Boolean(baseDate && swShiftDateKey(baseDate, -1) === reminderDate);
   });
 }
 
@@ -270,7 +278,9 @@ function swNextReminderDate(events, favorites, afterDate) {
   const favoriteSet = new Set(Array.isArray(favorites) ? favorites : []);
   const dates = (Array.isArray(events) ? events : [])
     .filter(event => favoriteSet.has(`evento:${String(event?.id || '').trim()}`))
-    .map(event => swShiftDateKey(event?.data || event?.data_inicio, -1))
+    .map(event => swEventReminderBaseDate(event))
+    .filter(Boolean)
+    .map(date => swShiftDateKey(date, -1))
     .filter(date => date && date > afterDate)
     .sort();
   return dates[0] || '';
