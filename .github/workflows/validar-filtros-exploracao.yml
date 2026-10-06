@@ -45,6 +45,10 @@ on:
       - "utilidade-publica.json"
       - "espacos_culturais.json"
       - "testes/filtros-exploracao-completos.test.cjs"
+      - "testes/filmes-catalogo.test.cjs"
+      - "testes/atividades-lazer-agenda.test.cjs"
+      - "testes/concursos-agenda.test.cjs"
+      - "testes/cursos-agenda.test.cjs"
       - ".github/workflows/validar-filtros-exploracao.yml"
 
 permissions:
