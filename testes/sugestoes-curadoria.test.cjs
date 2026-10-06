@@ -209,7 +209,7 @@ assert(app.includes('tel:+553121029374'));
 assert(styles.includes('.agenda-about-open'));
 assert(styles.includes('.agenda-about-dialog'));
 assert(styles.includes('.agenda-about-footer'));
-assert(indexHtml.includes('css/styles.css?v=103'));
-assert(indexHtml.includes('js/app.js?v=152'));
-assert(serviceWorker.includes("mural-cultural-v194-filtros-exploracao"));
+assert(indexHtml.includes('css/styles.css?v=104'));
+assert(indexHtml.includes('js/app.js?v=153'));
+assert(serviceWorker.includes("mural-cultural-v195-menu-acoes"));
 
