@@ -197,7 +197,7 @@ assert(panelNavigation.includes("url.searchParams.delete('lista')"));
 assert(panelNavigation.includes('/s\\/[23456789ABCDEFGHJKLMNPQRSTUVWXYZ]{7}'));
 
 assert(app.includes('function openAboutProjectDialog()'));
-assert(app.includes('class="agenda-about-open"'));
+assert(app.includes('agenda-about-open agenda-more-menu-action'));
 assert(app.includes('class="agenda-about-footer"'));
 assert(app.includes('projeto de ensino e extensão da Biblioteca do Instituto Federal de Minas Gerais (IFMG) — Campus Sabará'));
 assert(app.includes('Curadoria também é formação'));
@@ -210,6 +210,8 @@ assert(styles.includes('.agenda-about-open'));
 assert(styles.includes('.agenda-about-dialog'));
 assert(styles.includes('.agenda-about-footer'));
 assert(indexHtml.includes('css/styles.css?v=104'));
-assert(indexHtml.includes('js/app.js?v=153'));
-assert(serviceWorker.includes("mural-cultural-v195-menu-acoes"));
+const appVersion = indexHtml.match(/js\/app\.js\?v=(\d+)/)?.[1];
+assert(appVersion);
+assert(serviceWorker.includes(`./js/app.js?v=${appVersion}`));
+assert(/const CACHE_VERSION = 'mural-cultural-v\d+-[^']+';/.test(serviceWorker));
 
