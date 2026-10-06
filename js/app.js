@@ -5868,9 +5868,6 @@ function eventProgram(event) {
           title="Meus favoritos"
         ><span aria-hidden="true">★</span><span class="agenda-favorites-label">Favoritos</span><span class="agenda-favorites-count" ${favoriteCount ? '' : 'hidden'}>${favoriteCount}</span></button>
         ${notificationsContent?.headerButtonMarkup?.() || ''}
-        <button class="agenda-community-open" type="button" title="Contribuir com o Mural"><span aria-hidden="true">＋</span><span class="agenda-community-open-label">Contribua</span></button>
-        ${!state.curationMode ? '<button class="agenda-about-open" type="button" title="Sobre o projeto" aria-label="Sobre o projeto"><span aria-hidden="true">ⓘ</span><span class="agenda-about-open-label">Sobre o projeto</span></button>' : ''}
-        ${state.mobileFavoritesOnly && favoriteCount ? '<button class="agenda-share-favorites" type="button" title="Compartilhar favoritos"><span aria-hidden="true">↗</span><span>Compartilhar</span></button>' : ''}
         <button
           class="agenda-search-toggle"
           type="button"
@@ -5886,8 +5883,26 @@ function eventProgram(event) {
           ${activeFilters ? `<span class="agenda-filter-badge" aria-label="${activeFilters} ${activeFilters === 1 ? 'filtro ativo' : 'filtros ativos'}">${activeFilters}</span>` : ''}
         </button>
         ${agendaThemeToggleMarkup()}
-        <button class="install-app-btn" type="button" hidden>Instalar app</button>
-        <button class="view-toggle" type="button" aria-label="Abrir exibição interativa">Exibição interativa</button>
+        <details class="agenda-more-menu">
+          <summary class="agenda-more-toggle" title="Mais ações" aria-label="Mais ações">
+            <span class="agenda-more-icon" aria-hidden="true">⋯</span>
+            <span class="agenda-more-label">Mais</span>
+          </summary>
+          <div class="agenda-more-menu-list" role="group" aria-label="Mais ações">
+            <button class="agenda-community-open agenda-more-menu-action" type="button" title="Contribuir com o Mural">
+              <span class="agenda-more-action-icon" aria-hidden="true">＋</span><span>Contribua</span>
+            </button>
+            ${!state.curationMode ? '<button class="agenda-about-open agenda-more-menu-action" type="button" title="Sobre o projeto" aria-label="Sobre o projeto"><span class="agenda-more-action-icon" aria-hidden="true">ⓘ</span><span>Sobre o projeto</span></button>' : ''}
+            ${state.mobileFavoritesOnly && favoriteCount ? '<button class="agenda-share-favorites agenda-more-menu-action" type="button" title="Compartilhar favoritos"><span class="agenda-more-action-icon" aria-hidden="true">↗</span><span>Compartilhar favoritos</span></button>' : ''}
+            <button class="install-app-btn agenda-more-menu-action" type="button" hidden>
+              <span class="agenda-more-action-icon" aria-hidden="true">⇩</span><span>Instalar app</span>
+            </button>
+            <div class="agenda-more-menu-separator" role="separator"></div>
+            <button class="view-toggle agenda-more-menu-action" type="button" aria-label="Abrir exibição interativa">
+              <span class="agenda-more-action-icon" aria-hidden="true">⌨</span><span>Exibição interativa</span>
+            </button>
+          </div>
+        </details>
       </div>
     `;
 
@@ -6290,10 +6305,20 @@ function eventProgram(event) {
       renderAgenda();
     });
 
-    header.querySelector('.agenda-share-favorites')?.addEventListener('click', openAgendaShareHub);
+    const closeAgendaMoreMenu = () => header.querySelector('.agenda-more-menu')?.removeAttribute('open');
+    header.querySelector('.agenda-share-favorites')?.addEventListener('click', () => {
+      closeAgendaMoreMenu();
+      openAgendaShareHub();
+    });
     notificationsContent?.bindAgendaHeader?.(header);
-    header.querySelector('.agenda-community-open')?.addEventListener('click', openCommunityContributionHub);
-    header.querySelector('.agenda-about-open')?.addEventListener('click', openAboutProjectDialog);
+    header.querySelector('.agenda-community-open')?.addEventListener('click', () => {
+      closeAgendaMoreMenu();
+      openCommunityContributionHub();
+    });
+    header.querySelector('.agenda-about-open')?.addEventListener('click', () => {
+      closeAgendaMoreMenu();
+      openAboutProjectDialog();
+    });
     footer.querySelector('.agenda-about-footer')?.addEventListener('click', openAboutProjectDialog);
     count.querySelector('.agenda-send-curation')?.addEventListener('click', openCurationSuggestionDialog);
     count.querySelector('.agenda-save-shared')?.addEventListener('click', () => {
@@ -6306,11 +6331,15 @@ function eventProgram(event) {
     });
 
     const installButton = header.querySelector('.install-app-btn');
-    installButton.addEventListener('click', installApp);
+    installButton.addEventListener('click', () => {
+      closeAgendaMoreMenu();
+      installApp();
+    });
     refreshInstallButtons();
 
     const searchToggle = header.querySelector('.agenda-search-toggle');
     searchToggle.addEventListener('click', () => {
+      closeAgendaMoreMenu();
       state.mobileFiltersOpen = !state.mobileFiltersOpen;
       controls.hidden = !state.mobileFiltersOpen;
       searchToggle.setAttribute('aria-expanded', state.mobileFiltersOpen ? 'true' : 'false');
@@ -6322,6 +6351,7 @@ function eventProgram(event) {
 
     const themeToggle = header.querySelector('.agenda-theme-toggle');
     themeToggle.addEventListener('click', () => {
+      closeAgendaMoreMenu();
       const next = document.body.classList.contains('agenda-theme-light') ? 'dark' : 'light';
       const applied = saveAgendaColorScheme(next);
       const isLight = applied === 'light';
@@ -6344,6 +6374,7 @@ function eventProgram(event) {
     });
 
     header.querySelector('.view-toggle').addEventListener('click', () => {
+      closeAgendaMoreMenu();
       exitSharedAgendaSelection();
       resetAgendaBatches();
       saveViewMode('painel');
