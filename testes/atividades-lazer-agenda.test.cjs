@@ -36,6 +36,30 @@ assert.ok(betim.every(item => activities.city(item) === 'Betim'));
 const taiChi = activities.filter(catalog.atividades, { query: 'tai chi' }, normalizeText);
 assert.ok(taiChi.some(item => /tai chi/i.test(item.titulo)));
 
+const dayOptions = activities.dayOptions(catalog.atividades);
+assert.ok(dayOptions.length >= 5);
+const [day] = dayOptions[0];
+const dayMatches = activities.filter(catalog.atividades, { day }, normalizeText);
+assert.ok(dayMatches.length > 0);
+assert.ok(dayMatches.every(item => (item.agenda?.dias_semana || []).includes(day)));
+
+const participationOptions = activities.participationOptions(catalog.atividades);
+assert.ok(participationOptions.length >= 3);
+const [participation] = participationOptions[0];
+const participationMatches = activities.filter(catalog.atividades, { participation }, normalizeText);
+assert.ok(participationMatches.length > 0);
+assert.ok(participationMatches.every(item => item.participacao?.inscricao === participation));
+
+const audienceOptions = activities.audienceOptions(catalog.atividades, normalizeText);
+assert.ok(audienceOptions.length > 5);
+const [audience] = audienceOptions[0];
+assert.ok(activities.filter(catalog.atividades, { audience }, normalizeText).length > 0);
+
+const formatOptions = activities.formatOptions(catalog.atividades);
+assert.ok(formatOptions.length >= 2);
+const [format] = formatOptions[0];
+assert.ok(activities.filter(catalog.atividades, { format }, normalizeText).length > 0);
+
 const park = catalog.atividades.find(item => item.id === 'atividade:pbh:tai-chi-parque-municipal');
 assert.ok(park);
 const safeExternalUrl = value => /^https?:\/\//.test(String(value || '')) ? String(value) : '';
@@ -50,6 +74,10 @@ assert.match(app, /ACTIVITIES_URL = 'atividades-lazer\.json'/);
 assert.match(app, /tipo_conteudo === 'atividade_lazer'/);
 assert.match(app, /\['activities', 'Esporte e Lazer'\]/);
 assert.match(app, /agenda-activity-city/);
+assert.match(app, /agenda-activity-day/);
+assert.match(app, /agenda-activity-participation/);
+assert.match(app, /agenda-activity-audience/);
+assert.match(app, /agenda-activity-format/);
 assert.match(app, /state\.allActivities/);
 assert.match(app, /panelModules: Object\.fromEntries\(PANEL_MODULE_IDS\.map\(id => \[id, true\]\)\)/);
 assert.match(app, /panelWeights: Object\.fromEntries\(PANEL_MODULE_IDS\.map\(id => \[id, id === 'events' \? 5 : 1\]\)\)/);
