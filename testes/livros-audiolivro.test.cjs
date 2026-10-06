@@ -10,7 +10,8 @@ const appSource = fs.readFileSync(path.join(root, 'js/app.js'), 'utf8');
 const swSource = fs.readFileSync(path.join(root, 'service-worker.js'), 'utf8');
 
 assert.match(indexSource, /class="book-audiobook-link"/);
-assert.match(indexSource, /js\/app\.js\?v=146/);
+const indexAppVersion = indexSource.match(/js\/app\.js\?v=(\d+)/)?.[1];
+assert.ok(indexAppVersion, 'Versão de js/app.js ausente no index.html');
 
 assert.match(appSource, /function bookAudiobookUrl\(book\)/);
 assert.match(appSource, /function bookAudiobookLabel\(book\)/);
@@ -21,7 +22,6 @@ assert.match(appSource, /audiobookLink\.href = audiobookUrl/);
 assert.match(appSource, /audiobookUrl \? '<span>Audiolivro<\/span>'/);
 assert.match(appSource, /escapeHtml\(audiobookLabel\)/);
 
-assert.match(swSource, /\.\/js\/app\.js\?v=146/);
-assert.doesNotMatch(swSource, /\.\/js\/app\.js\?v=145/);
+assert.ok(swSource.includes(`./js/app.js?v=${indexAppVersion}`));
 
 console.log('Testes de audiolivro em Livros aprovados.');

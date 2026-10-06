@@ -13,6 +13,14 @@ vm.runInContext(
   { filename: 'js/relacoes-eventos.js' }
 );
 
+const workerContext = vm.createContext({});
+vm.runInContext(
+  fs.readFileSync(path.join(root, 'js/relacoes-eventos.js'), 'utf8'),
+  workerContext,
+  { filename: 'js/relacoes-eventos.js' }
+);
+assert.ok(workerContext.MuralCultural?.eventRelations?.buildIndex);
+
 const relations = context.window.MuralCultural.eventRelations;
 const index = relations.buildIndex({
   versao: 1,
@@ -61,13 +69,20 @@ assert.ok(app.includes('[eventPlace(event), event.cidade]'));
 assert.ok(app.includes('eventInstitutionName(event)'));
 
 const indexHtml = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
-assert.ok(indexHtml.includes('js/relacoes-eventos.js?v=1'));
+assert.ok(indexHtml.includes('js/relacoes-eventos.js?v=2'));
 assert.ok(indexHtml.includes('js/app.js?v=151'));
 
 const serviceWorker = fs.readFileSync(path.join(root, 'service-worker.js'), 'utf8');
-assert.ok(serviceWorker.includes("'./js/relacoes-eventos.js?v=1'"));
+assert.ok(serviceWorker.includes("'./js/relacoes-eventos.js?v=2'"));
 assert.ok(serviceWorker.includes("'/relacoes-eventos.json'"));
 assert.ok(serviceWorker.includes("'./js/app.js?v=151'"));
-assert.ok(serviceWorker.includes("mural-cultural-v192-opinioes-livros-opcionais"));
+assert.ok(serviceWorker.includes("mural-cultural-v193-atc4-relacoes"));
+assert.ok(serviceWorker.includes("swEventRelationIndex"));
+assert.ok(serviceWorker.includes("swEventPlace(event, relationIndex)"));
+
+const manualUi = fs.readFileSync(path.join(root, 'js/eventos-manuais-ui.js'), 'utf8');
+assert.ok(manualUi.includes("const RELATIONS_URL = 'relacoes-eventos.json';"));
+assert.ok(manualUi.includes('eventRelations.buildIndex'));
+assert.ok(manualUi.includes('[eventPlace(event), event?.cidade]'));
 
 console.log('ATC4.6.3: consumo relacional da interface aprovado.');

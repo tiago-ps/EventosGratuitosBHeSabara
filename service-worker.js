@@ -1,4 +1,7 @@
-const CACHE_VERSION = 'mural-cultural-v192-opinioes-livros-opcionais';
+importScripts('./js/relacoes-eventos.js?v=2');
+
+const SW_EVENT_RELATIONS = self.MuralCultural?.eventRelations;
+const CACHE_VERSION = 'mural-cultural-v193-atc4-relacoes';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -30,10 +33,10 @@ const CORE_ASSETS = [
   './js/conteudos/atividades-lazer.js?v=5',
   './js/curadorias-site.js?v=12',
   './js/metricas-pontos.js?v=2',
-  './js/relacoes-eventos.js?v=1',
+  './js/relacoes-eventos.js?v=2',
   './js/app.js?v=151',
   './js/temas-visuais.js?v=14',
-  './js/eventos-manuais-ui.js?v=44',
+  './js/eventos-manuais-ui.js?v=45',
   './js/ios-install.js?v=3',
   './js/painel-navegacao-modos.js?v=5',
   './js/agenda-pesquisa-foco.js?v=1',
@@ -225,6 +228,35 @@ async function swEventCatalog() {
   }
 }
 
+async function swEventRelationIndex() {
+  const empty = () => Object.create(null);
+  if (!SW_EVENT_RELATIONS?.buildIndex) return empty();
+
+  const url = new URL('./relacoes-eventos.json', self.registration.scope);
+  try {
+    const response = await fetch(url, {
+      headers: { accept: 'application/json' },
+      cache: 'no-store'
+    });
+    if (!response.ok) throw new Error('relacoes_indisponiveis');
+    return SW_EVENT_RELATIONS.buildIndex(await response.json());
+  } catch {
+    try {
+      const cached = await caches.match(url);
+      if (!cached) return empty();
+      return SW_EVENT_RELATIONS.buildIndex(await cached.json());
+    } catch {
+      return empty();
+    }
+  }
+}
+
+function swEventPlace(event, relationIndex) {
+  return SW_EVENT_RELATIONS?.placeLabel?.(event, relationIndex) ||
+    String(event?.local || '').trim() ||
+    String(event?.unidade || '').trim();
+}
+
 function swFavoriteEventsForReminder(events, favorites, reminderDate) {
   const favoriteSet = new Set(Array.isArray(favorites) ? favorites : []);
   return (Array.isArray(events) ? events : []).filter(event => {
@@ -276,7 +308,10 @@ async function handleMuralPush() {
   // só envia quando existe uma data agendada; o fallback cobre mudanças locais
   // ou de catálogo ocorridas depois do agendamento.
   const today = swLocalDateKey();
-  const events = await swEventCatalog();
+  const [events, relationIndex] = await Promise.all([
+    swEventCatalog(),
+    swEventRelationIndex()
+  ]);
   const favorites = Array.isArray(prefs.favorites) ? prefs.favorites : [];
   const due = swFavoriteEventsForReminder(events, favorites, today);
   const nextReminder = swNextReminderDate(events, favorites, today);
@@ -288,7 +323,8 @@ async function handleMuralPush() {
   if (due.length === 1) {
     const event = due[0];
     title = `Amanhã: ${String(event.titulo || 'evento favoritado')}`;
-    body = [event.horario, event.local, event.cidade].filter(Boolean).join(' • ') || 'Veja os detalhes no Mural.';
+    body = [event.horario, swEventPlace(event, relationIndex), event.cidade]
+      .filter(Boolean).join(' • ') || 'Veja os detalhes no Mural.';
     url = eventReminderUrl(event);
   } else if (due.length > 1) {
     title = `${due.length} eventos favoritados amanhã`;

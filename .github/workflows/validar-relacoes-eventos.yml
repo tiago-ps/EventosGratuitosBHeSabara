@@ -1,10 +1,11 @@
-name: ATC4.6.3 — validar consumo relacional
+name: ATC4.6.4 — validar consumidores relacionais
 
 on:
   pull_request:
     paths:
       - "js/app.js"
       - "js/relacoes-eventos.js"
+      - "js/eventos-manuais-ui.js"
       - "relacoes-eventos.json"
       - "index.html"
       - "service-worker.js"
@@ -15,6 +16,7 @@ on:
     paths:
       - "js/app.js"
       - "js/relacoes-eventos.js"
+      - "js/eventos-manuais-ui.js"
       - "relacoes-eventos.json"
       - "index.html"
       - "service-worker.js"
@@ -33,6 +35,7 @@ jobs:
         run: |
           node --check js/relacoes-eventos.js
           node --check js/app.js
+          node --check js/eventos-manuais-ui.js
           node --check service-worker.js
       - name: Validar projeção publicada
         run: node -e "const fs=require('fs'); const d=JSON.parse(fs.readFileSync('relacoes-eventos.json','utf8')); if(d.versao!==1 || !Array.isArray(d.relacoes)) process.exit(1);"

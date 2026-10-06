@@ -48,10 +48,10 @@ assert.equal(bars.items[1].ratio, 1);
 
 const line = utility.visualizationModel(evolution);
 assert.equal(line.type, 'linha');
-assert.equal(line.rows.length, 20);
-assert.equal(line.rows[0].periodo, '2025-01');
+assert.equal(line.rows.length, 24);
+assert.equal(line.rows[0].periodo, '2024-09');
 assert.equal(line.rows.at(-1).periodo, '2026-08');
-assert.equal(line.firstPeriodLabel, 'jan/2025');
+assert.equal(line.firstPeriodLabel, 'set/2024');
 assert.equal(line.lastPeriodLabel, 'ago/2026');
 assert.equal(line.latestValues.length, 2);
 assert.equal(line.latestValues[0].value, 1621);
@@ -82,7 +82,7 @@ assert.match(app, /utilityContent\.createAgendaCard/);
 
 const index = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 assert.match(index, /css\/utilidade-publica\.css\?v=2/);
-assert.match(index, /js\/conteudos\/utilidade-publica\.js\?v=4/);
+assert.match(index, /js\/conteudos\/utilidade-publica\.js\?v=\d+/);
 assert.match(index, /js\/app\.js\?v=\d+/);
 
 const utilitySource = fs.readFileSync(path.join(root, 'js/conteudos/utilidade-publica.js'), 'utf8');

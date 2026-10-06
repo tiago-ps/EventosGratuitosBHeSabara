@@ -1,7 +1,8 @@
 (() => {
   'use strict';
 
-  const root = window.MuralCultural = window.MuralCultural || {};
+  const host = typeof window !== 'undefined' ? window : globalThis;
+  const root = host.MuralCultural = host.MuralCultural || {};
 
   function text(value) {
     return String(value == null ? '' : value).trim();

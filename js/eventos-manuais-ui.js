@@ -2,6 +2,7 @@
   'use strict';
 
   const DATA_URL = 'eventos.json';
+  const RELATIONS_URL = 'relacoes-eventos.json';
   const BLOCKED_IFRAME_HOSTS = [
     'instagram.com',
     'facebook.com',
@@ -26,7 +27,9 @@
     'encerrada', 'encerrada provavel', 'esgotado', 'indisponivel'
   ]);
 
+  const eventRelations = window.MuralCultural?.eventRelations;
   let events = [];
+  let relationIndex = Object.create(null);
   let updateQueued = false;
 
   function normalizeText(value = '') {
@@ -35,6 +38,12 @@
       .replace(/[\u0300-\u036f]/g, '')
       .toLowerCase()
       .trim();
+  }
+
+  function eventPlace(event) {
+    return eventRelations?.placeLabel?.(event, relationIndex) ||
+      String(event?.local || '').trim() ||
+      String(event?.unidade || '').trim();
   }
 
   function escapeHtml(value = '') {
@@ -213,7 +222,7 @@
     if (where && candidates.length > 1) {
       const samePlace = candidates.filter(event => {
         const expected = normalizeText(
-          [event?.local, event?.cidade].filter(Boolean).join(' • ')
+          [eventPlace(event), event?.cidade].filter(Boolean).join(' • ')
         );
         return expected === where;
       });
@@ -241,7 +250,7 @@
 
     if (place && candidates.length > 1) {
       const samePlace = candidates.filter(event =>
-        normalizeText([event?.local, event?.cidade].filter(Boolean).join(' • ')) === place
+        normalizeText([eventPlace(event), event?.cidade].filter(Boolean).join(' • ')) === place
       );
       if (samePlace.length) candidates = samePlace;
     }
@@ -443,14 +452,25 @@
 
   async function loadEvents() {
     try {
-      const response = await fetch(`${DATA_URL}?ui=${Date.now()}`, {
-        cache: 'no-store'
-      });
+      const [eventsResponse, relationsResponse] = await Promise.all([
+        fetch(`${DATA_URL}?ui=${Date.now()}`, { cache: 'no-store' }),
+        fetch(`${RELATIONS_URL}?ui=${Date.now()}`, { cache: 'no-store' })
+          .catch(() => null)
+      ]);
 
-      if (!response.ok) return;
+      if (!eventsResponse.ok) return;
 
-      const data = await response.json();
+      const data = await eventsResponse.json();
       events = Array.isArray(data?.eventos) ? data.eventos : [];
+
+      if (relationsResponse?.ok && eventRelations?.buildIndex) {
+        try {
+          relationIndex = eventRelations.buildIndex(await relationsResponse.json());
+        } catch {
+          relationIndex = Object.create(null);
+        }
+      }
+
       queueEnhancement();
     } catch (error) {
       console.warn('Não foi possível carregar os aprimoramentos de exibição.', error);
