@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Janeiro de 2026 a Janeiro de 2027",
-  "atualizado_em": "2026-10-05T22:18:15-03:00",
+  "atualizado_em": "2026-10-05T22:22:48-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -2301,7 +2301,9 @@
       "instagram_perfil": "",
       "instagram_url": "",
       "motivo_publicacao": "inscricao_disponivel",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "imagem": "imagens/equipamentos/cras-conjunto-paulo-vi.png",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ela-laboratorio-com-linhas-e-agulhas-fba5d83c6e",
@@ -2327,7 +2329,7 @@
       "descricao": "Ambiente de criação e interação entre manualidades distintas que envolvem modos de fazer e possibilidades diversas de experimentações com agulhas, tecidos e linhas. As técnicas de bordado, crochê, macramé e tecelagem em geral, reunidas de acordo com as habilidades apresentadas pelo grupo de trabalho, numa TROCA DE SABERES entre os(as) participantes.",
       "descricao_fonte": "Sinopses do 2º semestre/2026 — Escola Livre de Artes Arena da Cultura",
       "descricao_url": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/cultura/sinopses-2-vagas-abertas-presenciais-ead.pdf",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/cras-conjunto-paulo-vi.png",
       "pagina": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/escola-livre-de-artes",
       "link": "https://form.jotform.com/261965053614661",
       "link_inscricao": "https://form.jotform.com/261965053614661",
@@ -2345,7 +2347,8 @@
       "modalidade": "Presencial",
       "idade_publico": "A partir de 14 anos",
       "motivo_publicacao": "inscricao_disponivel",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ela-grafite-e-bom-demais-stencil-lambes-pixo-arte-urbana-e91a057086",

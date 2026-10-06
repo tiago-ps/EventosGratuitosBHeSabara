@@ -2296,9 +2296,9 @@
     },
     {
       "aliases": [
+        "CRAS Conjunto Paulo VI",
         "Centro de Referência de Assistência Social — CRAS Conjunto Paulo VI",
-        "Centro de Referência de Assistência Social - CRAS Conjunto Paulo VI",
-        "CRAS Conjunto Paulo VI"
+        "Centro de Referência de Assistência Social - CRAS Conjunto Paulo VI"
       ],
       "cidade": "Belo Horizonte",
       "endereco": "Rua Neblina, 120, Conjunto Paulo VI, Belo Horizonte - MG, 31998-180",
@@ -2323,7 +2323,7 @@
         "observacao": "Horário de referência confirmado em programas da PBH realizados no equipamento. Serviços específicos podem exigir agendamento ou ter horários próprios."
       },
       "site": "https://prefeitura.pbh.gov.br/assistencia-social/equipamentos/cras/paulo-vi",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/cras-conjunto-paulo-vi.png",
       "imagem_fonte": "",
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
@@ -2448,6 +2448,7 @@
       "endereco": "Rua Manaus, 467 - Santa Efigênia, Belo Horizonte - MG, 30150-350",
       "instituicao_ids": [],
       "aliases": [
+        "EJEF — Escola Judicial Desembargador Edésio Fernandes",
         "EJEF",
         "EJEF - Escola Judicial Desembargador Edésio Fernandes",
         "Escola Judicial Desembargador Edésio Fernandes",
@@ -2468,7 +2469,7 @@
         "observacao": "O atendimento e o acesso variam conforme cursos, eventos e setores da EJEF. Consulte a programação ou entre em contato antes da visita."
       },
       "site": "https://ejef.tjmg.jus.br/",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/ejef-escola-judicial-desembargador-edesio-fernandes.png",
       "imagem_fonte": "",
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
@@ -2479,7 +2480,11 @@
           "(31) 3247-8700"
         ]
       },
-      "redes_sociais": {},
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/ejefoficial/",
+        "facebook": "https://www.facebook.com/ejefoficial",
+        "youtube": "https://www.youtube.com/channel/UCmJOlPuYIie_KD5eDQ42hTg"
+      },
       "links_adicionais": [
         {
           "rotulo": "Cursos e ações educacionais",
