@@ -43,7 +43,7 @@
   document.head.appendChild(panelModesStyles);
 
   const panelModesNavigation = document.createElement('script');
-  panelModesNavigation.src = 'js/painel-navegacao-modos.js?v=5';
+  panelModesNavigation.src = 'js/painel-navegacao-modos.js?v=6';
   document.head.appendChild(panelModesNavigation);
 
   // Preserva a mesma caixa de pesquisa da Agenda durante o debounce da busca,
