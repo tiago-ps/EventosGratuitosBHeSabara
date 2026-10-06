@@ -50,6 +50,22 @@
         "duracao_minutos": null,
         "observacao": "Horários conforme página oficial atualizada em 16/09/2026."
       },
+      "temporalidade": {
+        "classe": "recorrente",
+        "realizacao": {
+          "recorrencia": {
+            "dias_semana": [
+              "terca",
+              "quinta"
+            ],
+            "horarios": [
+              "11:30",
+              "15:00"
+            ],
+            "observacao": "Horários conforme página oficial atualizada em 16/09/2026."
+          }
+        }
+      },
       "participacao": {
         "inscricao": "consultar_local",
         "vagas_limitadas": false,
@@ -150,6 +166,20 @@
         ],
         "duracao_minutos": null,
         "observacao": "Inscrições no local, dia e horário das aulas."
+      },
+      "temporalidade": {
+        "classe": "recorrente",
+        "realizacao": {
+          "recorrencia": {
+            "dias_semana": [
+              "quarta"
+            ],
+            "horarios": [
+              "19:00"
+            ],
+            "observacao": "Inscrições no local, dia e horário das aulas."
+          }
+        }
       },
       "participacao": {
         "inscricao": "presencial",
@@ -258,6 +288,26 @@
         "duracao_minutos": 90,
         "observacao": "Núcleo passou a atender neste endereço em setembro de 2026."
       },
+      "temporalidade": {
+        "classe": "recorrente",
+        "realizacao": {
+          "recorrencia": {
+            "dias_semana": [
+              "segunda",
+              "quarta"
+            ],
+            "horarios": [
+              "08:00–09:30 · 6 a 8 anos",
+              "09:00–10:30 · 9 a 13 anos",
+              "09:30–11:00 · 14 a 17 anos",
+              "13:00–14:30 · 14 a 17 anos",
+              "14:00–15:30 · 9 a 13 anos",
+              "15:00–16:30 · 6 a 8 anos"
+            ],
+            "observacao": "Núcleo passou a atender neste endereço em setembro de 2026."
+          }
+        }
+      },
       "participacao": {
         "inscricao": "presencial",
         "vagas_limitadas": true,
@@ -349,6 +399,12 @@
         "duracao_minutos": null,
         "observacao": "Os horários variam por núcleo. Consulte a página oficial para os locais de atendimento."
       },
+      "temporalidade": {
+        "classe": "permanente",
+        "realizacao": {
+          "observacao": "Os horários variam por núcleo. Consulte a página oficial para os locais de atendimento."
+        }
+      },
       "participacao": {
         "inscricao": "presencial",
         "vagas_limitadas": true,
@@ -417,11 +473,17 @@
         "bairros": []
       },
       "agenda": {
-        "temporalidade": "recorrente",
+        "temporalidade": "permanente",
         "dias_semana": [],
         "horarios": [],
         "duracao_minutos": null,
         "observacao": "A Prefeitura informou 186 grupos em setembro de 2026. Locais e horários serão desdobrados em registros próprios."
+      },
+      "temporalidade": {
+        "classe": "permanente",
+        "realizacao": {
+          "observacao": "A Prefeitura informou 186 grupos em setembro de 2026. Locais e horários serão desdobrados em registros próprios."
+        }
       },
       "participacao": {
         "inscricao": "consultar_local",
@@ -497,6 +559,12 @@
         "horarios": [],
         "duracao_minutos": 60,
         "observacao": "Cada aluno participa em geral de três aulas por semana; horários variam por unidade."
+      },
+      "temporalidade": {
+        "classe": "permanente",
+        "realizacao": {
+          "observacao": "Cada aluno participa em geral de três aulas por semana; horários variam por unidade."
+        }
       },
       "participacao": {
         "inscricao": "consultar_local",
@@ -574,6 +642,12 @@
         "duracao_minutos": null,
         "observacao": "Mais de 80 locais; horários variam por núcleo."
       },
+      "temporalidade": {
+        "classe": "permanente",
+        "realizacao": {
+          "observacao": "Mais de 80 locais; horários variam por núcleo."
+        }
+      },
       "participacao": {
         "inscricao": "consultar_local",
         "vagas_limitadas": true,
@@ -650,11 +724,17 @@
         "uf": "MG"
       },
       "agenda": {
-        "temporalidade": "recorrente",
+        "temporalidade": "permanente",
         "dias_semana": [],
         "horarios": [],
         "duracao_minutos": null,
         "observacao": "Programa confirmado; dias e horários precisam ser revalidados antes do desdobramento por turma."
+      },
+      "temporalidade": {
+        "classe": "permanente",
+        "realizacao": {
+          "observacao": "Programa confirmado; dias e horários precisam ser revalidados antes do desdobramento por turma."
+        }
       },
       "participacao": {
         "inscricao": "consultar_local",
@@ -743,11 +823,17 @@
         "uf": "MG"
       },
       "agenda": {
-        "temporalidade": "recorrente",
+        "temporalidade": "permanente",
         "dias_semana": [],
         "horarios": [],
         "duracao_minutos": null,
         "observacao": "Dias e horários variam por modalidade e devem ser consultados no programa."
+      },
+      "temporalidade": {
+        "classe": "permanente",
+        "realizacao": {
+          "observacao": "Dias e horários variam por modalidade e devem ser consultados no programa."
+        }
       },
       "participacao": {
         "inscricao": "consultar_local",
@@ -845,6 +931,25 @@
         "duracao_minutos": null,
         "observacao": "Atividades físicas ocorrem na Academia da Saúde vinculada à unidade."
       },
+      "temporalidade": {
+        "classe": "recorrente",
+        "realizacao": {
+          "recorrencia": {
+            "dias_semana": [
+              "terca",
+              "quinta",
+              "sexta"
+            ],
+            "horarios": [
+              "Terça e quinta · Lian Gong · 07:30",
+              "Terça e quinta · atividade física geral · 08:15 e 09:30",
+              "Sexta · prevenção de quedas · 14:00",
+              "Sexta · grupo de crianças · 15:00"
+            ],
+            "observacao": "Atividades físicas ocorrem na Academia da Saúde vinculada à unidade."
+          }
+        }
+      },
       "participacao": {
         "inscricao": "presencial",
         "vagas_limitadas": true,
@@ -916,11 +1021,17 @@
         "bairros": []
       },
       "agenda": {
-        "temporalidade": "periodo",
+        "temporalidade": "permanente",
         "dias_semana": [],
         "horarios": [],
         "duracao_minutos": null,
         "observacao": "Mais de 2.400 vagas anunciadas em 2026; locais e horários dependem do eixo e território."
+      },
+      "temporalidade": {
+        "classe": "permanente",
+        "realizacao": {
+          "observacao": "Mais de 2.400 vagas anunciadas em 2026; locais e horários dependem do eixo e território."
+        }
       },
       "participacao": {
         "inscricao": "online",
@@ -1008,6 +1119,21 @@
         "duracao_minutos": null,
         "observacao": "Aulas iniciadas em maio de 2026."
       },
+      "temporalidade": {
+        "classe": "recorrente",
+        "realizacao": {
+          "recorrencia": {
+            "dias_semana": [
+              "terca",
+              "quinta"
+            ],
+            "horarios": [
+              "18:00"
+            ],
+            "observacao": "Aulas iniciadas em maio de 2026."
+          }
+        }
+      },
       "participacao": {
         "inscricao": "app",
         "vagas_limitadas": true,
@@ -1091,6 +1217,21 @@
         ],
         "duracao_minutos": null,
         "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "temporalidade": {
+        "classe": "recorrente",
+        "realizacao": {
+          "recorrencia": {
+            "dias_semana": [
+              "terca",
+              "quinta"
+            ],
+            "horarios": [
+              "16:10"
+            ],
+            "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+          }
+        }
       },
       "participacao": {
         "inscricao": "consultar_local",
@@ -1192,6 +1333,20 @@
         "duracao_minutos": null,
         "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
       },
+      "temporalidade": {
+        "classe": "recorrente",
+        "realizacao": {
+          "recorrencia": {
+            "dias_semana": [
+              "sexta"
+            ],
+            "horarios": [
+              "10:20"
+            ],
+            "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+          }
+        }
+      },
       "participacao": {
         "inscricao": "consultar_local",
         "vagas_limitadas": false,
@@ -1292,6 +1447,21 @@
         ],
         "duracao_minutos": null,
         "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "temporalidade": {
+        "classe": "recorrente",
+        "realizacao": {
+          "recorrencia": {
+            "dias_semana": [
+              "terca",
+              "quinta"
+            ],
+            "horarios": [
+              "16:00"
+            ],
+            "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+          }
+        }
       },
       "participacao": {
         "inscricao": "consultar_local",
@@ -1395,6 +1565,22 @@
         "duracao_minutos": null,
         "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
       },
+      "temporalidade": {
+        "classe": "recorrente",
+        "realizacao": {
+          "recorrencia": {
+            "dias_semana": [
+              "segunda",
+              "quarta",
+              "sexta"
+            ],
+            "horarios": [
+              "10:00"
+            ],
+            "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+          }
+        }
+      },
       "participacao": {
         "inscricao": "consultar_local",
         "vagas_limitadas": false,
@@ -1494,6 +1680,20 @@
         ],
         "duracao_minutos": null,
         "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "temporalidade": {
+        "classe": "recorrente",
+        "realizacao": {
+          "recorrencia": {
+            "dias_semana": [
+              "quarta"
+            ],
+            "horarios": [
+              "14:30"
+            ],
+            "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+          }
+        }
       },
       "participacao": {
         "inscricao": "consultar_local",
@@ -1595,6 +1795,20 @@
         "duracao_minutos": null,
         "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
       },
+      "temporalidade": {
+        "classe": "recorrente",
+        "realizacao": {
+          "recorrencia": {
+            "dias_semana": [
+              "quarta"
+            ],
+            "horarios": [
+              "10:00"
+            ],
+            "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+          }
+        }
+      },
       "participacao": {
         "inscricao": "consultar_local",
         "vagas_limitadas": false,
@@ -1695,6 +1909,20 @@
         "duracao_minutos": null,
         "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
       },
+      "temporalidade": {
+        "classe": "recorrente",
+        "realizacao": {
+          "recorrencia": {
+            "dias_semana": [
+              "quarta"
+            ],
+            "horarios": [
+              "14:00"
+            ],
+            "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+          }
+        }
+      },
       "participacao": {
         "inscricao": "consultar_local",
         "vagas_limitadas": false,
@@ -1794,6 +2022,20 @@
         ],
         "duracao_minutos": null,
         "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "temporalidade": {
+        "classe": "recorrente",
+        "realizacao": {
+          "recorrencia": {
+            "dias_semana": [
+              "quinta"
+            ],
+            "horarios": [
+              "14:00"
+            ],
+            "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+          }
+        }
       },
       "participacao": {
         "inscricao": "consultar_local",
@@ -1896,6 +2138,21 @@
         "duracao_minutos": null,
         "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
       },
+      "temporalidade": {
+        "classe": "recorrente",
+        "realizacao": {
+          "recorrencia": {
+            "dias_semana": [
+              "terca",
+              "quinta"
+            ],
+            "horarios": [
+              "14:00"
+            ],
+            "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+          }
+        }
+      },
       "participacao": {
         "inscricao": "consultar_local",
         "vagas_limitadas": false,
@@ -1996,6 +2253,20 @@
         "duracao_minutos": null,
         "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
       },
+      "temporalidade": {
+        "classe": "recorrente",
+        "realizacao": {
+          "recorrencia": {
+            "dias_semana": [
+              "terca"
+            ],
+            "horarios": [
+              "20:20"
+            ],
+            "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+          }
+        }
+      },
       "participacao": {
         "inscricao": "consultar_local",
         "vagas_limitadas": false,
@@ -2095,6 +2366,20 @@
         ],
         "duracao_minutos": null,
         "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "temporalidade": {
+        "classe": "recorrente",
+        "realizacao": {
+          "recorrencia": {
+            "dias_semana": [
+              "quarta"
+            ],
+            "horarios": [
+              "16:00"
+            ],
+            "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+          }
+        }
       },
       "participacao": {
         "inscricao": "consultar_local",
@@ -2197,6 +2482,21 @@
         "duracao_minutos": null,
         "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
       },
+      "temporalidade": {
+        "classe": "recorrente",
+        "realizacao": {
+          "recorrencia": {
+            "dias_semana": [
+              "terca",
+              "quinta"
+            ],
+            "horarios": [
+              "19:10"
+            ],
+            "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+          }
+        }
+      },
       "participacao": {
         "inscricao": "consultar_local",
         "vagas_limitadas": false,
@@ -2297,6 +2597,20 @@
         "duracao_minutos": null,
         "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
       },
+      "temporalidade": {
+        "classe": "recorrente",
+        "realizacao": {
+          "recorrencia": {
+            "dias_semana": [
+              "terca"
+            ],
+            "horarios": [
+              "17:00"
+            ],
+            "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+          }
+        }
+      },
       "participacao": {
         "inscricao": "consultar_local",
         "vagas_limitadas": false,
@@ -2396,6 +2710,20 @@
         ],
         "duracao_minutos": null,
         "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "temporalidade": {
+        "classe": "recorrente",
+        "realizacao": {
+          "recorrencia": {
+            "dias_semana": [
+              "quinta"
+            ],
+            "horarios": [
+              "09:00"
+            ],
+            "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+          }
+        }
       },
       "participacao": {
         "inscricao": "consultar_local",
@@ -2498,6 +2826,21 @@
         "duracao_minutos": null,
         "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
       },
+      "temporalidade": {
+        "classe": "recorrente",
+        "realizacao": {
+          "recorrencia": {
+            "dias_semana": [
+              "terca"
+            ],
+            "horarios": [
+              "08:00",
+              "09:30"
+            ],
+            "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+          }
+        }
+      },
       "participacao": {
         "inscricao": "consultar_local",
         "vagas_limitadas": false,
@@ -2597,6 +2940,20 @@
         ],
         "duracao_minutos": null,
         "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "temporalidade": {
+        "classe": "recorrente",
+        "realizacao": {
+          "recorrencia": {
+            "dias_semana": [
+              "terca"
+            ],
+            "horarios": [
+              "14:30"
+            ],
+            "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+          }
+        }
       },
       "participacao": {
         "inscricao": "consultar_local",
@@ -2698,6 +3055,20 @@
         "duracao_minutos": null,
         "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
       },
+      "temporalidade": {
+        "classe": "recorrente",
+        "realizacao": {
+          "recorrencia": {
+            "dias_semana": [
+              "terca"
+            ],
+            "horarios": [
+              "14:00"
+            ],
+            "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+          }
+        }
+      },
       "participacao": {
         "inscricao": "consultar_local",
         "vagas_limitadas": false,
@@ -2797,6 +3168,20 @@
         ],
         "duracao_minutos": null,
         "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "temporalidade": {
+        "classe": "recorrente",
+        "realizacao": {
+          "recorrencia": {
+            "dias_semana": [
+              "sexta"
+            ],
+            "horarios": [
+              "14:00"
+            ],
+            "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+          }
+        }
       },
       "participacao": {
         "inscricao": "consultar_local",
@@ -2898,6 +3283,20 @@
         "duracao_minutos": null,
         "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
       },
+      "temporalidade": {
+        "classe": "recorrente",
+        "realizacao": {
+          "recorrencia": {
+            "dias_semana": [
+              "sexta"
+            ],
+            "horarios": [
+              "10:30"
+            ],
+            "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+          }
+        }
+      },
       "participacao": {
         "inscricao": "consultar_local",
         "vagas_limitadas": false,
@@ -2997,6 +3396,20 @@
         ],
         "duracao_minutos": null,
         "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "temporalidade": {
+        "classe": "recorrente",
+        "realizacao": {
+          "recorrencia": {
+            "dias_semana": [
+              "segunda"
+            ],
+            "horarios": [
+              "15:00"
+            ],
+            "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+          }
+        }
       },
       "participacao": {
         "inscricao": "consultar_local",
@@ -3099,6 +3512,21 @@
         "duracao_minutos": null,
         "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
       },
+      "temporalidade": {
+        "classe": "recorrente",
+        "realizacao": {
+          "recorrencia": {
+            "dias_semana": [
+              "segunda",
+              "quarta"
+            ],
+            "horarios": [
+              "14:40"
+            ],
+            "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+          }
+        }
+      },
       "participacao": {
         "inscricao": "consultar_local",
         "vagas_limitadas": false,
@@ -3200,6 +3628,21 @@
         "duracao_minutos": null,
         "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
       },
+      "temporalidade": {
+        "classe": "recorrente",
+        "realizacao": {
+          "recorrencia": {
+            "dias_semana": [
+              "terca",
+              "quinta"
+            ],
+            "horarios": [
+              "17:00"
+            ],
+            "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+          }
+        }
+      },
       "participacao": {
         "inscricao": "consultar_local",
         "vagas_limitadas": false,
@@ -3299,6 +3742,20 @@
         ],
         "duracao_minutos": null,
         "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "temporalidade": {
+        "classe": "recorrente",
+        "realizacao": {
+          "recorrencia": {
+            "dias_semana": [
+              "quarta"
+            ],
+            "horarios": [
+              "14:00"
+            ],
+            "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+          }
+        }
       },
       "participacao": {
         "inscricao": "consultar_local",
@@ -3400,6 +3857,20 @@
         "duracao_minutos": null,
         "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
       },
+      "temporalidade": {
+        "classe": "recorrente",
+        "realizacao": {
+          "recorrencia": {
+            "dias_semana": [
+              "quinta"
+            ],
+            "horarios": [
+              "15:00"
+            ],
+            "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+          }
+        }
+      },
       "participacao": {
         "inscricao": "consultar_local",
         "vagas_limitadas": false,
@@ -3499,6 +3970,20 @@
         ],
         "duracao_minutos": null,
         "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "temporalidade": {
+        "classe": "recorrente",
+        "realizacao": {
+          "recorrencia": {
+            "dias_semana": [
+              "sexta"
+            ],
+            "horarios": [
+              "14:30"
+            ],
+            "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+          }
+        }
       },
       "participacao": {
         "inscricao": "consultar_local",
@@ -3600,6 +4085,20 @@
         "duracao_minutos": null,
         "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
       },
+      "temporalidade": {
+        "classe": "recorrente",
+        "realizacao": {
+          "recorrencia": {
+            "dias_semana": [
+              "terca"
+            ],
+            "horarios": [
+              "14:45"
+            ],
+            "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+          }
+        }
+      },
       "participacao": {
         "inscricao": "consultar_local",
         "vagas_limitadas": false,
@@ -3700,6 +4199,20 @@
         "duracao_minutos": null,
         "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
       },
+      "temporalidade": {
+        "classe": "recorrente",
+        "realizacao": {
+          "recorrencia": {
+            "dias_semana": [
+              "terca"
+            ],
+            "horarios": [
+              "08:00"
+            ],
+            "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+          }
+        }
+      },
       "participacao": {
         "inscricao": "consultar_local",
         "vagas_limitadas": false,
@@ -3799,6 +4312,20 @@
         ],
         "duracao_minutos": null,
         "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+      },
+      "temporalidade": {
+        "classe": "recorrente",
+        "realizacao": {
+          "recorrencia": {
+            "dias_semana": [
+              "quinta"
+            ],
+            "horarios": [
+              "14:00"
+            ],
+            "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+          }
+        }
       },
       "participacao": {
         "inscricao": "consultar_local",
@@ -3901,6 +4428,21 @@
         "duracao_minutos": null,
         "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
       },
+      "temporalidade": {
+        "classe": "recorrente",
+        "realizacao": {
+          "recorrencia": {
+            "dias_semana": [
+              "segunda",
+              "quarta"
+            ],
+            "horarios": [
+              "15:00"
+            ],
+            "observacao": "Horários e local confirmados na página oficial da PBH pelo radar de Esporte e Lazer."
+          }
+        }
+      },
       "participacao": {
         "inscricao": "consultar_local",
         "vagas_limitadas": false,
@@ -4000,6 +4542,20 @@
         ],
         "duracao_minutos": 90,
         "observacao": "A programação semanal da PBH confirma a atividade aos sábados; em caso de chuva, atividades nos parques podem ser canceladas."
+      },
+      "temporalidade": {
+        "classe": "recorrente",
+        "realizacao": {
+          "recorrencia": {
+            "dias_semana": [
+              "sabado"
+            ],
+            "horarios": [
+              "08:00–09:30"
+            ],
+            "observacao": "A programação semanal da PBH confirma a atividade aos sábados; em caso de chuva, atividades nos parques podem ser canceladas."
+          }
+        }
       },
       "participacao": {
         "inscricao": "dispensada",
