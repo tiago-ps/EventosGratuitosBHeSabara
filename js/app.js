@@ -5878,7 +5878,6 @@ function eventProgram(event) {
           aria-pressed="${state.mobileFavoritesOnly ? 'true' : 'false'}"
           title="Meus favoritos"
         ><span aria-hidden="true">★</span><span class="agenda-favorites-label">Favoritos</span><span class="agenda-favorites-count" ${favoriteCount ? '' : 'hidden'}>${favoriteCount}</span></button>
-        ${notificationsContent?.headerButtonMarkup?.() || ''}
         <button
           class="agenda-search-toggle"
           type="button"
@@ -5903,6 +5902,7 @@ function eventProgram(event) {
             <button class="agenda-community-open agenda-more-menu-action" type="button" title="Contribuir com o Mural">
               <span class="agenda-more-action-icon" aria-hidden="true">＋</span><span>Contribua</span>
             </button>
+            ${notificationsContent?.headerButtonMarkup?.() || ''}
             ${!state.curationMode ? '<button class="agenda-about-open agenda-more-menu-action" type="button" title="Sobre o projeto" aria-label="Sobre o projeto"><span class="agenda-more-action-icon" aria-hidden="true">ⓘ</span><span>Sobre o projeto</span></button>' : ''}
             ${state.mobileFavoritesOnly && favoriteCount ? '<button class="agenda-share-favorites agenda-more-menu-action" type="button" title="Compartilhar favoritos"><span class="agenda-more-action-icon" aria-hidden="true">↗</span><span>Compartilhar favoritos</span></button>' : ''}
             <button class="install-app-btn agenda-more-menu-action" type="button" hidden>
@@ -6328,6 +6328,7 @@ function eventProgram(event) {
       openAgendaShareHub();
     });
     notificationsContent?.bindAgendaHeader?.(header);
+    header.querySelector('.agenda-notifications-button')?.addEventListener('click', closeAgendaMoreMenu);
     header.querySelector('.agenda-community-open')?.addEventListener('click', () => {
       closeAgendaMoreMenu();
       openCommunityContributionHub();
