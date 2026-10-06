@@ -112,7 +112,7 @@ for (const [order, field, direction] of [
   }
 }
 
-assert.match(indexSource, /js\/conteudos\/filmes\.js\?v=10/);
+assert.match(indexSource, /js\/conteudos\/filmes\.js\?v=11/);
 assert.doesNotMatch(indexSource, /filmes\.html/);
 assert.match(appSource, /<option value="films">Filmes<\/option>/);
 assert.match(appSource, /loadOptionalJson\(FILMS_URL, \{ filmes: \[\] \}\)/);
@@ -154,7 +154,7 @@ assert.doesNotMatch(swSource, /\.\/imagens\/plataformas\/ecofalante-play\.png/);
 assert.doesNotMatch(swSource, /ecofalante-play-v2\.webp/);
 assert.match(swSource, /PLATFORM_IMAGE_PREFIX = '\/imagens\/plataformas\/'/);
 assert.match(swSource, /url\.pathname\.includes\(PLATFORM_IMAGE_PREFIX\)/);
-assert.match(swSource, /'\.\/js\/conteudos\/filmes\.js\?v=10'/);
+assert.match(swSource, /'\.\/js\/conteudos\/filmes\.js\?v=11'/);
 assert.match(stylesSource, /\.agenda-film-card \.film-media\{[^}]*aspect-ratio:16\/9/);
 assert.match(stylesSource, /agenda-theme-light \.agenda-film-card/);
 assert.match(stylesSource, /agenda-theme-light \.film-dialog/);
