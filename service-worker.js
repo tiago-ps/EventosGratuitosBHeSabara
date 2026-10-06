@@ -37,7 +37,7 @@ const CORE_ASSETS = [
   './js/ios-install.js?v=3',
   './js/painel-navegacao-modos.js?v=5',
   './js/agenda-pesquisa-foco.js?v=1',
-  './js/painel-acoes-contextuais.js?v=5',
+  './js/painel-acoes-contextuais.js?v=6',
   './js/tem-sim-uai-painel.js?v=1',
   './js/cursos-runtime-fix.js?v=2',
   './imagens/curadorias/agosto-lilas-banner.png',
