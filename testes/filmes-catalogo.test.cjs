@@ -78,6 +78,22 @@ const samePlatform = films.filter(data.filmes, { platform: searchable.plataforma
 assert.ok(samePlatform.length > 0);
 assert.ok(samePlatform.every(movie => normalizeText(films.platformName(movie)) === normalizeText(searchable.plataforma)));
 
+const accessibilityOptions = films.options(data.filmes, 'acessibilidade');
+assert.ok(accessibilityOptions.includes('Legendas'));
+const captioned = films.filter(data.filmes, { accessibility: 'Legendas' }, normalizeText);
+assert.ok(captioned.length > 0);
+assert.ok(captioned.every(movie => (movie.acessibilidade || []).some(value => normalizeText(value) === 'legendas')));
+
+const countryRecord = data.filmes.find(movie => String(movie.pais_origem || '').trim());
+assert.ok(countryRecord);
+const sameCountry = films.filter(data.filmes, { country: countryRecord.pais_origem }, normalizeText);
+assert.ok(sameCountry.length > 0);
+assert.ok(sameCountry.every(movie => normalizeText(movie.pais_origem) === normalizeText(countryRecord.pais_origem)));
+
+const collectionOptions = films.options(data.filmes, 'colecoes');
+assert.ok(collectionOptions.length > 0);
+assert.ok(films.filter(data.filmes, { collection: collectionOptions[0] }, normalizeText).length > 0);
+
 const titleSorted = films.sort(data.filmes, 'title-asc');
 assert.equal(titleSorted.length, data.filmes.length);
 assert.ok(titleSorted[0].titulo.localeCompare(titleSorted.at(-1).titulo, 'pt-BR') <= 0);
@@ -110,6 +126,9 @@ assert.match(indexSource, /panel-module-films/);
 assert.match(indexSource, /panel-film-section/);
 assert.match(indexSource, /filter-film-platform/);
 assert.match(appSource, /agenda-film-platform/);
+assert.match(appSource, /agenda-film-accessibility/);
+assert.match(appSource, /agenda-film-country/);
+assert.match(appSource, /agenda-film-collection/);
 assert.match(source, /filters\.platform/);
 assert.equal(typeof films.catalogUsesTmdb, 'function');
 assert.equal(films.catalogUsesTmdb([{ imagem_fonte: 'TMDB' }]), true);
