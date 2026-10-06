@@ -48,6 +48,12 @@ assert.ok(styles.includes('.agenda-more-menu-action'));
 assert.ok(styles.includes('@media (max-width: 1280px)'));
 assert.ok(styles.includes('@media (max-width: 900px)'));
 assert.ok(styles.includes('Agenda v165 — Notificações dentro do menu Mais.'));
+assert.ok(styles.includes('Agenda v166 — no mobile o menu Mais fica ancorado ao botão.'));
+const mobileMenuRule = styles.match(/@media \(max-width: 900px\) \{[\s\S]*?\.agenda-more-menu-list \{([\s\S]*?)\n  \}/)?.[1] || '';
+assert.ok(mobileMenuRule.includes('position: absolute;'));
+assert.ok(mobileMenuRule.includes('top: calc(100% + 8px);'));
+assert.ok(mobileMenuRule.includes('bottom: auto;'));
+assert.ok(!mobileMenuRule.includes('position: fixed;'));
 assert.ok(styles.includes('.agenda-notifications-label'));
 assert.ok(styles.includes('.agenda-favorites-label'));
 
@@ -59,7 +65,7 @@ assert.ok(themeBoot.includes("js/painel-navegacao-modos.js?v=6"));
 
 // Cache busting deve entregar os mesmos assets/versionamentos no HTML e no SW.
 for (const asset of [
-  'css/styles.css?v=105',
+  'css/styles.css?v=106',
   'js/tema-visual-boot.js?v=17'
 ]) {
   assert.ok(indexHtml.includes(asset), `index sem ${asset}`);
