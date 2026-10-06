@@ -4191,7 +4191,7 @@
         "observacao": "Não foi localizado horário oficial atual de visitação regular. Consulte a Prefeitura ou a Secretaria Municipal de Cultura antes da visita."
       },
       "site": "https://site.sabara.mg.gov.br/restauracao-do-solar-padre-correia/",
-      "imagem": "https://site.sabara.mg.gov.br/wp-content/uploads/2019/06/image.png",
+      "imagem": "imagens/equipamentos/solar-padre-correia.png",
       "imagem_fonte": "https://site.sabara.mg.gov.br/restauracao-do-solar-padre-correia/",
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
