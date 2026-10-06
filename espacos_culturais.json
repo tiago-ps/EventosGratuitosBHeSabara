@@ -499,6 +499,57 @@
       "link": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/biblioteca-infantil-e-juvenil"
     },
     {
+      "aliases": [
+        "Biblioteca SESIMINAS – SESI Cultura",
+        "SESI Cultura",
+        "Biblioteca SESIMINAS"
+      ],
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Álvares Maciel, 59, Santa Efigênia, Belo Horizonte - MG",
+      "fonte_endereco": "Página oficial do evento na Bileto",
+      "google_place_id": "https://maps.app.goo.gl/8JZjtbjNSJVHuXrh8",
+      "id": "sesi-cultura-biblioteca-sesiminas",
+      "instituicao_ids": [
+        "sesiminas-bh"
+      ],
+      "nome": "Biblioteca SESIMINAS – SESI Cultura",
+      "descricao": "",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": ""
+      },
+      "site": "",
+      "imagem": "",
+      "imagem_fonte": "",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": true,
+      "prioridade": 0,
+      "status_editorial": "em_analise",
+      "nota_editorial": "Registro duplicado do espaço interno Biblioteca do Centro Cultural SESIMINAS BH. Manter apenas para histórico até concluir a migração.",
+      "redes_sociais": {},
+      "contatos": {
+        "emails": [],
+        "telefones": []
+      },
+      "links_adicionais": [],
+      "tipo_espaco": "",
+      "vocacoes": [],
+      "mapa": "",
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Biblioteca SESIMINAS – SESI Cultura",
+      "temas": [],
+      "natureza_espaco": "",
+      "instituicao": "SESIMINAS BH",
+      "link": ""
+    },
+    {
       "id": "palacio-das-artes-cafe-do-palacio",
       "nome": "Café do Palácio",
       "equipamento_id": "palacio-das-artes",
@@ -3625,7 +3676,7 @@
       "imagem": "imagens/equipamentos/nufac.png",
       "imagem_fonte": "",
       "exibicao_ativa": true,
-      "exibicao_recorrente": false,
+      "exibicao_recorrente": true,
       "prioridade": 0,
       "redes_sociais": {},
       "contatos": {
@@ -4555,7 +4606,7 @@
       "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/cultura/tm_foto.rafaelcosta-tm.jpg",
       "imagem_fonte": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/teatros/marilia",
       "exibicao_ativa": true,
-      "exibicao_recorrente": false,
+      "exibicao_recorrente": true,
       "prioridade": 0,
       "imagem_credito": "Rafael Costa/FMC",
       "redes_sociais": {
