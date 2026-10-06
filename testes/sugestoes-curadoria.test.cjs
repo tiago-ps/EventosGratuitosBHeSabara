@@ -211,5 +211,5 @@ assert(styles.includes('.agenda-about-dialog'));
 assert(styles.includes('.agenda-about-footer'));
 assert(indexHtml.includes('css/styles.css?v=102'));
 assert(indexHtml.includes('js/app.js?v=151'));
-assert(serviceWorker.includes("mural-cultural-v192-opinioes-livros-opcionais"));
+assert(serviceWorker.includes("mural-cultural-v193-atc4-relacoes"));
 
