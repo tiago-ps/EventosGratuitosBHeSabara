@@ -21,6 +21,79 @@
       .replaceAll("'", '&#39;');
   }
 
+  const MONTHS_PT = Object.freeze({
+    janeiro: 1, fevereiro: 2, marco: 3, abril: 4, maio: 5, junho: 6,
+    julho: 7, agosto: 8, setembro: 9, outubro: 10, novembro: 11, dezembro: 12
+  });
+
+  function isoDateFromLegacy(value = '') {
+    const normalized = normalizeText(value).replace(/\s+/g, ' ');
+    let match = normalized.match(/^(\d{1,2}) de ([a-z]+) de (20\d{2})$/);
+    if (match && MONTHS_PT[match[2]]) {
+      return `${match[3]}-${String(MONTHS_PT[match[2]]).padStart(2, '0')}-${String(match[1]).padStart(2, '0')}`;
+    }
+    match = normalized.match(/^(\d{1,2})\/(\d{1,2})\/(20\d{2})$/);
+    if (match) {
+      return `${match[3]}-${String(match[2]).padStart(2, '0')}-${String(match[1]).padStart(2, '0')}`;
+    }
+    return '';
+  }
+
+  function muralDateKey(referenceDate = new Date()) {
+    try {
+      const parts = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/Sao_Paulo',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit'
+      }).formatToParts(referenceDate);
+      const values = Object.fromEntries(parts.map(part => [part.type, part.value]));
+      if (values.year && values.month && values.day) return `${values.year}-${values.month}-${values.day}`;
+    } catch {
+      /* fallback local abaixo */
+    }
+    return [
+      referenceDate.getFullYear(),
+      String(referenceDate.getMonth() + 1).padStart(2, '0'),
+      String(referenceDate.getDate()).padStart(2, '0')
+    ].join('-');
+  }
+
+  function deadlineWindow(contest) {
+    const structured = contest?.janela_inscricoes && typeof contest.janela_inscricoes === 'object'
+      ? contest.janela_inscricoes
+      : {};
+    const inicio = String(structured.inicio || '').trim() || isoDateFromLegacy(contest?.inscricoes_inicio_texto);
+    const fim = String(structured.fim || '').trim() || isoDateFromLegacy(contest?.inscricoes_fim_texto);
+    return { inicio, fim };
+  }
+
+  function deadlineState(contest, referenceDate = new Date()) {
+    const { inicio, fim } = deadlineWindow(contest);
+    const today = muralDateKey(referenceDate);
+    if (fim && fim < today) return 'encerrado';
+    if (inicio && inicio > today) return 'futuro';
+    if (fim && (!inicio || inicio <= today)) return 'aberto';
+    const stored = String(contest?.janela_inscricoes?.estado || '').trim();
+    return ['futuro', 'aberto', 'encerrado', 'prazo_desconhecido'].includes(stored)
+      ? stored
+      : 'prazo_desconhecido';
+  }
+
+  function deadlineStateLabel(contest, referenceDate = new Date()) {
+    const state = deadlineState(contest, referenceDate);
+    return {
+      futuro: 'Inscrições futuras',
+      aberto: 'Inscrições abertas',
+      encerrado: 'Inscrições encerradas',
+      prazo_desconhecido: 'Prazo a confirmar'
+    }[state] || 'Prazo a confirmar';
+  }
+
+  function isTemporallyVisible(contest, referenceDate = new Date()) {
+    return deadlineState(contest, referenceDate) !== 'encerrado';
+  }
+
   function isValid(contest) {
     return Boolean(
       contest &&
@@ -64,6 +137,7 @@
     const uf = String(filters.uf || '');
     const city = normalizeText(filters.city || '');
     const deadline = String(filters.deadline || '');
+    const temporalState = String(filters.state || '');
     const remuneration = String(filters.remuneration || '');
 
     return (Array.isArray(contests) ? contests : [])
@@ -77,8 +151,12 @@
           : [])
           .map(item => item?.cargo)
           .filter(Boolean);
-        const hasDeadline = Boolean(contest.inscricoes_texto);
+        const window = deadlineWindow(contest);
+        const hasDeadline = Boolean(window.inicio || window.fim || contest.inscricoes_texto);
+        const state = deadlineState(contest);
 
+        if (!temporalState && state === 'encerrado') return false;
+        if (temporalState && temporalState !== 'todos' && state !== temporalState) return false;
         if (formation && !formations.includes(formation)) return false;
         if (uf && contest.uf !== uf) return false;
         if (city && normalizeText(contest.cidade) !== city) return false;
@@ -135,6 +213,7 @@
   function sampleForPanel(contests, limit = PANEL_CONTEST_LIMIT, options = {}) {
     const available = (Array.isArray(contests) ? contests : [])
       .filter(isValid)
+      .filter(isTemporallyVisible)
       .map(publicRecord);
     return window.MuralCultural.core.sampleForPanel(available, limit, options);
   }
@@ -190,6 +269,7 @@
       badges.replaceChildren();
       const badgeValues = [
         ['badge category', 'CONCURSO'],
+        ['badge contest-deadline-state', deadlineStateLabel(contest)],
         ['badge contest-uf', contest.uf || 'BR'],
         ['badge contest-formation', formations[0] || 'FORMAÇÃO NO EDITAL']
       ];
@@ -332,6 +412,7 @@
       <div class="agenda-card-body">
         <div class="agenda-card-badges contest-badges">
           <span>Concurso</span>
+          <span class="contest-deadline-state">${escapeHtml(deadlineStateLabel(contest))}</span>
           ${formations.map(formation => `<span class="contest-formation-badge">${escapeHtml(formation)}</span>`).join('')}
         </div>
         <h2>${escapeHtml(contest.titulo || 'Concurso público')}</h2>
@@ -368,6 +449,12 @@
     FALLBACK_IMAGE,
     normalizeText,
     escapeHtml,
+    isoDateFromLegacy,
+    muralDateKey,
+    deadlineWindow,
+    deadlineState,
+    deadlineStateLabel,
+    isTemporallyVisible,
     isValid,
     publicRecord,
     filter,
