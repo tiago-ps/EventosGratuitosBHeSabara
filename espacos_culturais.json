@@ -1125,10 +1125,13 @@
       "status_editorial": "em_analise",
       "nota_editorial": "O local existe em serviços de mapas no endereço Rua Carmésia, 500, mas não foi localizado na rede oficial atual de Centros Culturais da PBH. Confirmar responsável, natureza jurídica e fonte oficial antes de preencher/publicar.",
       "redes_sociais": {
-        "instagram": "https://www.instagram.com/centroculturalsantainesbh/"
+        "instagram": "https://www.instagram.com/centroculturalsantainesbh/",
+        "whatsapp": "https://wa.me/+5531987105965"
       },
       "contatos": {
-        "emails": [],
+        "emails": [
+          "centroculturalsantaines2015@gmail.com"
+        ],
         "telefones": []
       },
       "links_adicionais": [],
