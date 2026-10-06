@@ -63,6 +63,7 @@
       const known = [
         ['telabrasil.cultura.gov.br', 'Tela Brasil'],
         ['ccbb.com.br', 'CCBB'],
+        ['aprendamais.mec.gov.br', 'Aprenda Mais (MEC)'],
         ['gov.br', 'Portal oficial do Governo'],
         ['pciconcursos.com.br', 'PCI Concursos'],
         ['moodle.ifrs.edu.br', 'IFRS'],
