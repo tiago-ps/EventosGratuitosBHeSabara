@@ -168,11 +168,12 @@ for (const asset of [
   'js/conteudos/filmes.js?v=11',
   'js/conteudos/espacos.js?v=5',
   'js/conteudos/atividades-lazer.js?v=6',
-  'js/app.js?v=155'
+  'js/temporalidade-eventos.js?v=1',
+  'js/app.js?v=156'
 ]) {
   assert.ok(indexSource.includes(asset), `Asset ausente do index: ${asset}`);
   assert.ok(swSource.includes(`./${asset}`), `Asset ausente do service worker: ${asset}`);
 }
-assert.ok(swSource.includes('mural-cultural-v197-notificacoes-menu'));
+assert.ok(swSource.includes('mural-cultural-v198-eventos-temporalidade'));
 
 console.log('Filtros completos do modo Exploração validados.');
