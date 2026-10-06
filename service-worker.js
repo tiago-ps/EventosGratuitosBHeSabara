@@ -1,7 +1,7 @@
 importScripts('./js/relacoes-eventos.js?v=2');
 
 const SW_EVENT_RELATIONS = self.MuralCultural?.eventRelations;
-const CACHE_VERSION = 'mural-cultural-v195-menu-acoes';
+const CACHE_VERSION = 'mural-cultural-v196-concursos-temporalidade';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -26,7 +26,7 @@ const CORE_ASSETS = [
   './js/core/rotacao.js?v=2',
   './js/notificacoes.js?v=1',
   './js/conteudos/cursos.js?v=5',
-  './js/conteudos/concursos.js?v=4',
+  './js/conteudos/concursos.js?v=5',
   './js/conteudos/filmes.js?v=11',
   './js/conteudos/utilidade-publica.js?v=5',
   './js/conteudos/espacos.js?v=5',
@@ -34,7 +34,7 @@ const CORE_ASSETS = [
   './js/curadorias-site.js?v=12',
   './js/metricas-pontos.js?v=2',
   './js/relacoes-eventos.js?v=2',
-  './js/app.js?v=153',
+  './js/app.js?v=154',
   './js/temas-visuais.js?v=14',
   './js/eventos-manuais-ui.js?v=45',
   './js/ios-install.js?v=3',

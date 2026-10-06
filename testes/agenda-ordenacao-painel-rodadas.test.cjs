@@ -47,7 +47,7 @@ assert.deepEqual(
 assert.deepEqual(
   [...[
     { titulo: 'Zeta', inscricoes_fim_texto: '20 de setembro de 2026' },
-    { titulo: 'Árvore', inscricoes_fim_texto: '10 de setembro de 2026' },
+    { titulo: 'Árvore', janela_inscricoes: { fim: '2026-09-10' } },
     { titulo: 'Abelha', inscricoes_fim_texto: '10 de setembro de 2026' },
     { titulo: 'Sem prazo' }
   ].sort(compareContests)].map(item => item.titulo),

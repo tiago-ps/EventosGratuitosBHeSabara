@@ -232,6 +232,7 @@
     mobileContestUf: '',
     mobileContestCity: '',
     mobileContestDeadline: '',
+    mobileContestState: '',
     mobileContestRemuneration: '',
     mobileFilmGenre: '',
     mobileFilmPlatform: '',
@@ -3869,6 +3870,7 @@ function eventProgram(event) {
       state.mobileContestUf = '';
       state.mobileContestCity = '';
       state.mobileContestDeadline = '';
+      state.mobileContestState = '';
       state.mobileContestRemuneration = '';
     }
     if (state.mobileContent !== 'films') {
@@ -4000,7 +4002,12 @@ function eventProgram(event) {
   }
 
   function contestDeadlineValue(contest) {
-    const value = String(contest?.inscricoes_fim || contest?.inscricoes_fim_texto || '').trim();
+    const value = String(
+      contest?.janela_inscricoes?.fim ||
+      contest?.inscricoes_fim ||
+      contest?.inscricoes_fim_texto ||
+      ''
+    ).trim();
     const isoDate = agendaDateValue(value);
     if (Number.isFinite(isoDate)) return isoDate;
 
@@ -4103,6 +4110,7 @@ function eventProgram(event) {
       uf: state.mobileContent === 'contests' ? state.mobileContestUf : '',
       city: state.mobileContent === 'contests' ? state.mobileContestCity : '',
       deadline: state.mobileContent === 'contests' ? state.mobileContestDeadline : '',
+      state: state.mobileContent === 'contests' ? state.mobileContestState : '',
       remuneration: state.mobileContent === 'contests' ? state.mobileContestRemuneration : ''
     }).sort(compareAgendaContests);
   }
@@ -4320,6 +4328,7 @@ function eventProgram(event) {
         state.mobileContestUf,
         state.mobileContestCity,
         state.mobileContestDeadline,
+        state.mobileContestState,
         state.mobileContestRemuneration
       ].filter(Boolean).length;
     }
@@ -4450,6 +4459,7 @@ function eventProgram(event) {
     state.mobileContestUf = '';
     state.mobileContestCity = '';
     state.mobileContestDeadline = '';
+    state.mobileContestState = '';
     state.mobileContestRemuneration = '';
     state.mobileFilmGenre = '';
     state.mobileFilmPlatform = '';
@@ -4471,6 +4481,7 @@ function eventProgram(event) {
     state.mobileContestUf = '';
     state.mobileContestCity = '';
     state.mobileContestDeadline = '';
+    state.mobileContestState = '';
     state.mobileContestRemuneration = '';
   }
 
@@ -6011,6 +6022,11 @@ function eventProgram(event) {
         <option value="">Todos os prazos</option><option value="com-data">Com data de inscrição</option>
         <option value="sem-data">Sem data informada</option>
       </select></label>
+      <label><span>Situação</span><select class="agenda-contest-state">
+        <option value="">Ativos</option><option value="aberto">Inscrições abertas</option>
+        <option value="futuro">Inscrições futuras</option><option value="prazo_desconhecido">Prazo a confirmar</option>
+        <option value="encerrado">Encerrados</option><option value="todos">Todos, inclusive encerrados</option>
+      </select></label>
       <label><span>Maior remuneração</span><select class="agenda-contest-remuneration">
         <option value="">Todas as faixas</option><option value="ate-3000">Até R$ 3 mil</option>
         <option value="3000-5000">Mais de R$ 3 mil até R$ 5 mil</option>
@@ -6155,6 +6171,7 @@ function eventProgram(event) {
         state.mobileContestCity
       );
       controls.querySelector('.agenda-contest-deadline').value = state.mobileContestDeadline;
+      controls.querySelector('.agenda-contest-state').value = state.mobileContestState;
       controls.querySelector('.agenda-contest-remuneration').value = state.mobileContestRemuneration;
     } else if (filmMode) {
       populateDynamicSelect(
@@ -6464,6 +6481,7 @@ function eventProgram(event) {
       controls.querySelector('.agenda-contest-uf').addEventListener('change', event => { state.mobileContestUf = event.target.value; rerender(); });
       controls.querySelector('.agenda-contest-city').addEventListener('change', event => { state.mobileContestCity = event.target.value; rerender(); });
       controls.querySelector('.agenda-contest-deadline').addEventListener('change', event => { state.mobileContestDeadline = event.target.value; rerender(); });
+      controls.querySelector('.agenda-contest-state').addEventListener('change', event => { state.mobileContestState = event.target.value; rerender(); });
       controls.querySelector('.agenda-contest-remuneration').addEventListener('change', event => { state.mobileContestRemuneration = event.target.value; rerender(); });
     } else if (filmMode) {
       controls.querySelector('.agenda-film-genre').addEventListener('change', event => { state.mobileFilmGenre = event.target.value; rerender(); });
