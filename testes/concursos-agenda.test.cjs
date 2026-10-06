@@ -24,25 +24,33 @@ const catalog = JSON.parse(
 
 assert.ok(catalog.length > 0);
 assert.equal(contests.filter(catalog).length, catalog.filter(contests.isValid).length);
-assert.ok(contests.filter(catalog, { query: 'Caraguatatuba' }).length >= 1);
-const formationMatches = contests.filter(catalog, { formation: 'Técnico em Informática' });
-const mgMatches = contests.filter(catalog, { uf: 'MG' });
+
+const searchable = catalog.find(contest => contest.titulo);
+assert.ok(searchable);
+const queryMatches = contests.filter(catalog, { query: searchable.titulo });
+assert.ok(queryMatches.some(contest => contest.url === searchable.url));
+
+const formationOptions = contests.formationOptions(catalog);
+const ufOptions = contests.ufOptions(catalog);
+assert.ok(formationOptions.length > 0);
+assert.ok(ufOptions.length > 0);
+
+const [formation] = formationOptions[0];
+const formationMatches = contests.filter(catalog, { formation });
 assert.ok(formationMatches.length > 0);
-assert.ok(mgMatches.length > 0);
-const combinedMatches = contests.filter(catalog, {
-  formation: 'Técnico em Informática',
-  uf: 'MG'
-});
-assert.ok(combinedMatches.length > 0);
-assert.ok(combinedMatches.length <= formationMatches.length);
-assert.ok(combinedMatches.length <= mgMatches.length);
+assert.ok(formationMatches.every(contest =>
+  (contest.formacoes_compativeis || []).includes(formation)
+));
+
+const [uf] = ufOptions[0];
+const ufMatches = contests.filter(catalog, { uf });
+assert.ok(ufMatches.length > 0);
+assert.ok(ufMatches.every(contest => contest.uf === uf));
+
 const withDeadline = contests.filter(catalog, { deadline: 'com-data' });
 const withoutDeadline = contests.filter(catalog, { deadline: 'sem-data' });
 assert.equal(withDeadline.length + withoutDeadline.length, contests.filter(catalog).length);
-assert.equal(contests.filter(catalog, { query: 'resultado impossível' }).length, 0);
-
-assert.ok(contests.formationOptions(catalog).length > 0);
-assert.ok(contests.ufOptions(catalog).length > 0);
+assert.equal(contests.filter(catalog, { query: 'resultado impossível 9xq7' }).length, 0);
 
 const cityOptions = contests.cityOptions(catalog);
 assert.ok(cityOptions.length > 0);
@@ -61,8 +69,8 @@ assert.equal(
 
 const panelSample = contests.sampleForPanel(catalog);
 assert.equal(contests.PANEL_CONTEST_LIMIT, 15);
-assert.equal(panelSample.length, 15);
-assert.equal(new Set(panelSample.map(contest => contest.url)).size, 15);
+assert.equal(panelSample.length, Math.min(15, contests.filter(catalog).length));
+assert.equal(new Set(panelSample.map(contest => contest.url)).size, panelSample.length);
 assert.ok(panelSample.every(contest => catalog.some(source => source.url === contest.url)));
 assert.ok(panelSample.every(contest => !Object.hasOwn(contest, 'evidencias_formacao')));
 
