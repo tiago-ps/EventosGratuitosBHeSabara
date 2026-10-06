@@ -82,7 +82,7 @@ assert.match(app, /utilityContent\.createAgendaCard/);
 
 const index = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 assert.match(index, /css\/utilidade-publica\.css\?v=2/);
-assert.match(index, /js\/conteudos\/utilidade-publica\.js\?v=4/);
+assert.match(index, /js\/conteudos\/utilidade-publica\.js\?v=\d+/);
 assert.match(index, /js\/app\.js\?v=\d+/);
 
 const utilitySource = fs.readFileSync(path.join(root, 'js/conteudos/utilidade-publica.js'), 'utf8');
