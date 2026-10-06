@@ -70,13 +70,13 @@ assert.ok(app.includes('eventInstitutionName(event)'));
 
 const indexHtml = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 assert.ok(indexHtml.includes('js/relacoes-eventos.js?v=2'));
-assert.ok(indexHtml.includes('js/app.js?v=152'));
+assert.ok(indexHtml.includes('js/app.js?v=153'));
 
 const serviceWorker = fs.readFileSync(path.join(root, 'service-worker.js'), 'utf8');
 assert.ok(serviceWorker.includes("'./js/relacoes-eventos.js?v=2'"));
 assert.ok(serviceWorker.includes("'/relacoes-eventos.json'"));
-assert.ok(serviceWorker.includes("'./js/app.js?v=152'"));
-assert.ok(serviceWorker.includes("mural-cultural-v194-filtros-exploracao"));
+assert.ok(serviceWorker.includes("'./js/app.js?v=153'"));
+assert.ok(serviceWorker.includes("mural-cultural-v195-menu-acoes"));
 assert.ok(serviceWorker.includes("swEventRelationIndex"));
 assert.ok(serviceWorker.includes("swEventPlace(event, relationIndex)"));
 
