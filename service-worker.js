@@ -1,7 +1,7 @@
 importScripts('./js/relacoes-eventos.js?v=2');
 
 const SW_EVENT_RELATIONS = self.MuralCultural?.eventRelations;
-const CACHE_VERSION = 'mural-cultural-v194-filtros-exploracao';
+const CACHE_VERSION = 'mural-cultural-v195-menu-acoes';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -12,7 +12,7 @@ const PLATFORM_IMAGE_PREFIX = '/imagens/plataformas/';
 
 const CORE_ASSETS = [
   './', './index.html',
-  './css/styles.css?v=103',
+  './css/styles.css?v=104',
   './css/eventos-manuais-ui.css?v=43',
   './css/concursos-mural.css?v=3',
   './css/temas-visuais.css?v=11',
@@ -22,7 +22,7 @@ const CORE_ASSETS = [
   './css/painel-modos.css?v=2',
   './css/painel-acoes-contextuais.css?v=3',
   './css/tem-sim-uai-painel.css?v=1',
-  './js/tema-visual-boot.js?v=16',
+  './js/tema-visual-boot.js?v=17',
   './js/core/rotacao.js?v=2',
   './js/notificacoes.js?v=1',
   './js/conteudos/cursos.js?v=5',
@@ -34,11 +34,11 @@ const CORE_ASSETS = [
   './js/curadorias-site.js?v=12',
   './js/metricas-pontos.js?v=2',
   './js/relacoes-eventos.js?v=2',
-  './js/app.js?v=152',
+  './js/app.js?v=153',
   './js/temas-visuais.js?v=14',
   './js/eventos-manuais-ui.js?v=45',
   './js/ios-install.js?v=3',
-  './js/painel-navegacao-modos.js?v=5',
+  './js/painel-navegacao-modos.js?v=6',
   './js/agenda-pesquisa-foco.js?v=1',
   './js/painel-acoes-contextuais.js?v=6',
   './js/tem-sim-uai-painel.js?v=1',
