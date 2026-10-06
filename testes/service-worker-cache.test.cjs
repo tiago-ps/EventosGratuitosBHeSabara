@@ -9,6 +9,7 @@ const root = path.resolve(__dirname, '..');
 const handlers = {};
 const stores = new Map();
 let installedAssets = [];
+let importedScripts = [];
 let fetchImplementation = async () => { throw new Error('offline'); };
 
 const keyFor = request => String(request?.url || request);
@@ -42,6 +43,7 @@ const context = vm.createContext({
   Request,
   Response,
   fetch: request => fetchImplementation(request),
+  importScripts: (...urls) => { importedScripts.push(...urls); },
   caches: {
     open: async name => cacheFor(name),
     keys: async () => [...stores.keys()],
@@ -100,13 +102,17 @@ async function dispatch(type, event) {
     './js/conteudos/utilidade-publica.js',
     './js/conteudos/atividades-lazer.js',
     './js/curadorias-site.js',
+    './js/relacoes-eventos.js',
     './js/app.js',
     './js/temas-visuais.js',
     './js/eventos-manuais-ui.js'
   ]) {
     assert.ok(corePaths.has(asset), `Precache ausente: ${asset}`);
   }
+  assert.ok(importedScripts.some(url => String(url).startsWith('./js/relacoes-eventos.js')));
+
   for (const dataPath of [
+    '/relacoes-eventos.json',
     '/cursos.json',
     '/concursos.json',
     '/filmes.json',
