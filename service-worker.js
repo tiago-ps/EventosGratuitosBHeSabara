@@ -1,7 +1,7 @@
 importScripts('./js/relacoes-eventos.js?v=2');
 
 const SW_EVENT_RELATIONS = self.MuralCultural?.eventRelations;
-const CACHE_VERSION = 'mural-cultural-v197-notificacoes-menu';
+const CACHE_VERSION = 'mural-cultural-v198-menu-mobile';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -12,7 +12,7 @@ const PLATFORM_IMAGE_PREFIX = '/imagens/plataformas/';
 
 const CORE_ASSETS = [
   './', './index.html',
-  './css/styles.css?v=105',
+  './css/styles.css?v=106',
   './css/eventos-manuais-ui.css?v=43',
   './css/concursos-mural.css?v=3',
   './css/temas-visuais.css?v=11',
