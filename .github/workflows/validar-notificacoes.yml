@@ -5,6 +5,7 @@ on:
     paths:
       - "js/app.js"
       - "js/notificacoes.js"
+      - "js/relacoes-eventos.js"
       - "css/notificacoes.css"
       - "service-worker.js"
       - "index.html"
@@ -19,6 +20,7 @@ on:
     paths:
       - "js/app.js"
       - "js/notificacoes.js"
+      - "js/relacoes-eventos.js"
       - "css/notificacoes.css"
       - "service-worker.js"
       - "index.html"
@@ -41,6 +43,7 @@ jobs:
         run: |
           node --check js/app.js
           node --check js/notificacoes.js
+          node --check js/relacoes-eventos.js
           node --check service-worker.js
           node --check cloudflare/social-preview-worker.js
       - name: Validar configuração Wrangler
