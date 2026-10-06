@@ -213,7 +213,7 @@
   function sampleForPanel(contests, limit = PANEL_CONTEST_LIMIT, options = {}) {
     const available = (Array.isArray(contests) ? contests : [])
       .filter(isValid)
-      .filter(isTemporallyVisible)
+      .filter(contest => isTemporallyVisible(contest))
       .map(publicRecord);
     return window.MuralCultural.core.sampleForPanel(available, limit, options);
   }
