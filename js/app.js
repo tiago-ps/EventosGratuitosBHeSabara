@@ -6377,24 +6377,26 @@ function eventProgram(event) {
     });
     controls.querySelector('.agenda-curation').addEventListener('change', event => { state.mobileCuration = event.target.value; rerender(); });
     controls.querySelector('.agenda-theme')?.addEventListener('change', event => { state.mobileTheme = event.target.value; rerender(); });
+
     controls.querySelector('.agenda-utility-area')?.addEventListener('change', event => { state.mobileUtilityArea = event.target.value; rerender(); });
     controls.querySelector('.agenda-utility-type')?.addEventListener('change', event => { state.mobileUtilityType = event.target.value; rerender(); });
-    controls.querySelector('.agenda-space-city')?.addEventListener('change', event => {
-      state.mobileSpaceCity = event.target.value;
-      rerender();
-    });
-    controls.querySelector('.agenda-space-vocation')?.addEventListener('change', event => {
-      state.mobileSpaceVocation = event.target.value;
-      rerender();
-    });
-    controls.querySelector('.agenda-space-nature')?.addEventListener('change', event => {
-      state.mobileSpaceNature = event.target.value;
-      rerender();
-    });
+    controls.querySelector('.agenda-utility-nature')?.addEventListener('change', event => { state.mobileUtilityNature = event.target.value; rerender(); });
+    controls.querySelector('.agenda-utility-scope')?.addEventListener('change', event => { state.mobileUtilityScope = event.target.value; rerender(); });
+    controls.querySelector('.agenda-utility-audience')?.addEventListener('change', event => { state.mobileUtilityAudience = event.target.value; rerender(); });
+
+    controls.querySelector('.agenda-space-city')?.addEventListener('change', event => { state.mobileSpaceCity = event.target.value; rerender(); });
+    controls.querySelector('.agenda-space-vocation')?.addEventListener('change', event => { state.mobileSpaceVocation = event.target.value; rerender(); });
+    controls.querySelector('.agenda-space-nature')?.addEventListener('change', event => { state.mobileSpaceNature = event.target.value; rerender(); });
+    controls.querySelector('.agenda-space-institution')?.addEventListener('change', event => { state.mobileSpaceInstitution = event.target.value; rerender(); });
+    controls.querySelector('.agenda-space-open-day')?.addEventListener('change', event => { state.mobileSpaceOpenDay = event.target.value; rerender(); });
 
     controls.querySelector('.agenda-activity-city')?.addEventListener('change', event => { state.mobileActivityCity = event.target.value; rerender(); });
     controls.querySelector('.agenda-activity-category')?.addEventListener('change', event => { state.mobileActivityCategory = event.target.value; rerender(); });
     controls.querySelector('.agenda-activity-modality')?.addEventListener('change', event => { state.mobileActivityModality = event.target.value; rerender(); });
+    controls.querySelector('.agenda-activity-day')?.addEventListener('change', event => { state.mobileActivityDay = event.target.value; rerender(); });
+    controls.querySelector('.agenda-activity-participation')?.addEventListener('change', event => { state.mobileActivityParticipation = event.target.value; rerender(); });
+    controls.querySelector('.agenda-activity-audience')?.addEventListener('change', event => { state.mobileActivityAudience = event.target.value; rerender(); });
+    controls.querySelector('.agenda-activity-format')?.addEventListener('change', event => { state.mobileActivityFormat = event.target.value; rerender(); });
 
     if (state.mobileContent === 'events') {
       controls.querySelector('.agenda-period').addEventListener('change', event => { state.mobilePeriod = event.target.value; rerender(); });
@@ -6405,15 +6407,40 @@ function eventProgram(event) {
       controls.querySelector('.agenda-registration').addEventListener('change', event => { state.mobileRegistration = event.target.value; rerender(); });
     } else if (state.mobileContent === 'books') {
       controls.querySelector('.agenda-book-access').addEventListener('change', event => { state.mobileBookAccess = event.target.value; rerender(); });
+      controls.querySelector('.agenda-book-library').addEventListener('change', event => { state.mobileBookLibrary = event.target.value; rerender(); });
+      controls.querySelector('.agenda-book-audiobook').addEventListener('change', event => { state.mobileBookAudiobook = event.target.value; rerender(); });
       controls.querySelector('.agenda-book-cover')?.addEventListener('change', event => { state.mobileBookCover = event.target.value; rerender(); });
+      controls.querySelector('.agenda-book-year-from').addEventListener('input', event => {
+        state.mobileBookYearFrom = event.target.value;
+        window.clearTimeout(state.mobileSearchTimer);
+        state.mobileSearchTimer = window.setTimeout(rerender, 250);
+      });
+      controls.querySelector('.agenda-book-year-to').addEventListener('input', event => {
+        state.mobileBookYearTo = event.target.value;
+        window.clearTimeout(state.mobileSearchTimer);
+        state.mobileSearchTimer = window.setTimeout(rerender, 250);
+      });
+    } else if (courseMode) {
+      controls.querySelector('.agenda-course-institution').addEventListener('change', event => { state.mobileCourseInstitution = event.target.value; rerender(); });
+      controls.querySelector('.agenda-course-area').addEventListener('change', event => { state.mobileCourseArea = event.target.value; rerender(); });
+      controls.querySelector('.agenda-course-workload').addEventListener('change', event => { state.mobileCourseWorkload = event.target.value; rerender(); });
+      controls.querySelector('.agenda-course-type').addEventListener('change', event => { state.mobileCourseType = event.target.value; rerender(); });
+      controls.querySelector('.agenda-course-level').addEventListener('change', event => { state.mobileCourseLevel = event.target.value; rerender(); });
+      controls.querySelector('.agenda-course-language').addEventListener('change', event => { state.mobileCourseLanguage = event.target.value; rerender(); });
+      controls.querySelector('.agenda-course-certificate').addEventListener('change', event => { state.mobileCourseCertificate = event.target.value; rerender(); });
     } else if (contestMode) {
       controls.querySelector('.agenda-contest-formation').addEventListener('change', event => { state.mobileContestFormation = event.target.value; rerender(); });
       controls.querySelector('.agenda-contest-uf').addEventListener('change', event => { state.mobileContestUf = event.target.value; rerender(); });
+      controls.querySelector('.agenda-contest-city').addEventListener('change', event => { state.mobileContestCity = event.target.value; rerender(); });
       controls.querySelector('.agenda-contest-deadline').addEventListener('change', event => { state.mobileContestDeadline = event.target.value; rerender(); });
+      controls.querySelector('.agenda-contest-remuneration').addEventListener('change', event => { state.mobileContestRemuneration = event.target.value; rerender(); });
     } else if (filmMode) {
       controls.querySelector('.agenda-film-genre').addEventListener('change', event => { state.mobileFilmGenre = event.target.value; rerender(); });
       controls.querySelector('.agenda-film-platform').addEventListener('change', event => { state.mobileFilmPlatform = event.target.value; rerender(); });
       controls.querySelector('.agenda-film-letter').addEventListener('change', event => { state.mobileFilmLetter = event.target.value; rerender(); });
+      controls.querySelector('.agenda-film-accessibility').addEventListener('change', event => { state.mobileFilmAccessibility = event.target.value; rerender(); });
+      controls.querySelector('.agenda-film-country').addEventListener('change', event => { state.mobileFilmCountry = event.target.value; rerender(); });
+      controls.querySelector('.agenda-film-collection').addEventListener('change', event => { state.mobileFilmCollection = event.target.value; rerender(); });
       controls.querySelector('.agenda-film-rating').addEventListener('change', event => { state.mobileFilmRating = event.target.value; rerender(); });
       controls.querySelector('.agenda-film-year-from').addEventListener('input', event => {
         state.mobileFilmYearFrom = event.target.value;
