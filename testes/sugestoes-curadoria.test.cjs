@@ -209,7 +209,7 @@ assert(app.includes('tel:+553121029374'));
 assert(styles.includes('.agenda-about-open'));
 assert(styles.includes('.agenda-about-dialog'));
 assert(styles.includes('.agenda-about-footer'));
-assert(indexHtml.includes('css/styles.css?v=105'));
+assert(indexHtml.includes('css/styles.css?v=106'));
 const appVersion = indexHtml.match(/js\/app\.js\?v=(\d+)/)?.[1];
 assert(appVersion);
 assert(serviceWorker.includes(`./js/app.js?v=${appVersion}`));
