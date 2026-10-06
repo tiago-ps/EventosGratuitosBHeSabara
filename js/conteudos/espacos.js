@@ -83,6 +83,15 @@
     return values.join(' · ');
   }
 
+  function isOpenOnDay(item, day) {
+    const key = text(day);
+    if (!key) return true;
+    const value = text(item?.funcionamento?.[key]);
+    if (!value) return false;
+    const normalized = value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+    return !/(fechad|nao abre|sem funcionamento)/.test(normalized);
+  }
+
   function searchText(item) {
     return [
       item?.titulo, item?.descricao, nature(item), city(item), item?.endereco,
@@ -100,6 +109,8 @@
     const wantedVocation = normalizeText(filters?.vocation || '');
     const wantedNature = normalizeText(filters?.nature || '');
     const wantedTheme = normalizeText(filters?.theme || '');
+    const wantedInstitution = normalizeText(filters?.institution || '');
+    const wantedOpenDay = text(filters?.openDay);
 
     return (Array.isArray(items) ? items : []).filter(isValid).filter(item => {
       if (wantedCity && normalizeText(city(item)) !== wantedCity) return false;
@@ -107,6 +118,8 @@
       if (wantedNature && normalizeText(nature(item)) !== wantedNature) return false;
       if (wantedTheme && !(Array.isArray(item?.temas) ? item.temas : [])
         .some(value => normalizeText(value) === wantedTheme)) return false;
+      if (wantedInstitution && normalizeText(item?.instituicao) !== wantedInstitution) return false;
+      if (wantedOpenDay && !isOpenOnDay(item, wantedOpenDay)) return false;
       return !query || normalizeText(searchText(item)).includes(query);
     });
   }
@@ -133,6 +146,16 @@
 
   function natureOptions(items, normalizeText) {
     return optionPairs(items, item => [nature(item)], normalizeText);
+  }
+
+  function institutionOptions(items, normalizeText) {
+    return optionPairs(items, item => [item?.instituicao], normalizeText);
+  }
+
+  function openDayOptions(items) {
+    return WEEKDAYS
+      .filter(([key]) => (Array.isArray(items) ? items : []).some(item => isOpenOnDay(item, key)))
+      .map(([key, label]) => [key, label]);
   }
 
   function mapUrl(item, helpers) {
@@ -400,6 +423,9 @@
     cityOptions,
     vocationOptions,
     natureOptions,
+    institutionOptions,
+    openDayOptions,
+    isOpenOnDay,
     createPanelSlide,
     createAgendaCard
   });
