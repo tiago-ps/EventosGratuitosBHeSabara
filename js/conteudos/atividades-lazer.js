@@ -61,6 +61,24 @@
     })[text(value)] || text(value);
   }
 
+  function participationLabel(value) {
+    return ({
+      dispensada: 'Sem inscrição',
+      online: 'Inscrição online',
+      app: 'Inscrição por aplicativo',
+      presencial: 'Inscrição presencial',
+      consultar_local: 'Consultar no local'
+    })[text(value)] || text(value).replaceAll('_', ' ');
+  }
+
+  function formatLabel(value) {
+    return ({
+      aula_orientada: 'Aula orientada',
+      programa_multimodal: 'Programa com várias modalidades',
+      treino: 'Treino'
+    })[text(value)] || text(value).replaceAll('_', ' ');
+  }
+
   function scheduleLabel(item) {
     const agenda = item?.agenda || {};
     const days = (Array.isArray(agenda.dias_semana) ? agenda.dias_semana : [])
@@ -80,6 +98,9 @@
       ...(Array.isArray(item.modalidades) ? item.modalidades : []),
       ...(Array.isArray(item.publicos_alvo) ? item.publicos_alvo : []),
       ...(Array.isArray(item.temas) ? item.temas : []),
+      ...(Array.isArray(item?.agenda?.dias_semana) ? item.agenda.dias_semana.map(day => WEEKDAYS[text(day)] || text(day)) : []),
+      participationLabel(item?.participacao?.inscricao),
+      formatLabel(item?.formato),
       ...(Array.isArray(item.termos_busca) ? item.termos_busca : [])
     ].filter(Boolean).join(' ');
   }
@@ -90,6 +111,10 @@
     const wantedCategory = text(filters?.category);
     const wantedModality = normalizeText(filters?.modality || '');
     const wantedTheme = normalizeText(filters?.theme || '');
+    const wantedDay = text(filters?.day);
+    const wantedParticipation = text(filters?.participation);
+    const wantedAudience = normalizeText(filters?.audience || '');
+    const wantedFormat = text(filters?.format);
     return (Array.isArray(items) ? items : []).filter(isValid).filter(item => {
       if (wantedCity && normalizeText(city(item)) !== wantedCity) return false;
       if (wantedCategory && text(item.categoria) !== wantedCategory) return false;
@@ -97,6 +122,12 @@
         .some(value => normalizeText(value) === wantedModality)) return false;
       if (wantedTheme && !(Array.isArray(item.temas) ? item.temas : [])
         .some(value => normalizeText(value) === wantedTheme)) return false;
+      if (wantedDay && !(Array.isArray(item?.agenda?.dias_semana) ? item.agenda.dias_semana : [])
+        .some(value => text(value) === wantedDay)) return false;
+      if (wantedParticipation && text(item?.participacao?.inscricao) !== wantedParticipation) return false;
+      if (wantedAudience && !(Array.isArray(item?.publicos_alvo) ? item.publicos_alvo : [])
+        .some(value => normalizeText(value) === wantedAudience)) return false;
+      if (wantedFormat && text(item?.formato) !== wantedFormat) return false;
       return !query || normalizeText(searchText(item)).includes(query);
     });
   }
@@ -128,6 +159,39 @@
 
   function modalityOptions(items, normalizeText) {
     return optionPairs(items, item => Array.isArray(item?.modalidades) ? item.modalidades : [], normalizeText);
+  }
+
+  function dayOptions(items) {
+    const order = Object.keys(WEEKDAYS);
+    const present = new Set();
+    for (const item of Array.isArray(items) ? items : []) {
+      for (const day of Array.isArray(item?.agenda?.dias_semana) ? item.agenda.dias_semana : []) {
+        if (WEEKDAYS[text(day)]) present.add(text(day));
+      }
+    }
+    return order.filter(day => present.has(day)).map(day => [day, WEEKDAYS[day]]);
+  }
+
+  function participationOptions(items) {
+    const values = new Map();
+    for (const item of Array.isArray(items) ? items : []) {
+      const value = text(item?.participacao?.inscricao);
+      if (value && !values.has(value)) values.set(value, participationLabel(value));
+    }
+    return [...values.entries()].sort((a, b) => a[1].localeCompare(b[1], 'pt-BR'));
+  }
+
+  function audienceOptions(items, normalizeText) {
+    return optionPairs(items, item => Array.isArray(item?.publicos_alvo) ? item.publicos_alvo : [], normalizeText);
+  }
+
+  function formatOptions(items) {
+    const values = new Map();
+    for (const item of Array.isArray(items) ? items : []) {
+      const value = text(item?.formato);
+      if (value && !values.has(value)) values.set(value, formatLabel(value));
+    }
+    return [...values.entries()].sort((a, b) => a[1].localeCompare(b[1], 'pt-BR'));
   }
 
   function createPanelSlide(args) {
@@ -340,6 +404,12 @@
     cityOptions,
     categoryOptions,
     modalityOptions,
+    dayOptions,
+    participationOptions,
+    audienceOptions,
+    formatOptions,
+    participationLabel,
+    formatLabel,
     scheduleLabel,
     createPanelSlide,
     createAgendaCard
