@@ -21,15 +21,18 @@ assert.ok(header.indexOf('class="agenda-content-nav"') < header.indexOf('class="
 
 // Somente ações rápidas ficam expostas permanentemente.
 assert.ok(header.includes('agenda-favorites-toggle'));
-assert.ok(header.includes('headerButtonMarkup'));
 assert.ok(header.includes('agenda-search-toggle'));
 assert.ok(header.includes('agendaThemeToggleMarkup'));
 assert.ok(header.includes('class="agenda-more-menu"'));
 assert.ok(header.includes('class="agenda-more-toggle"'));
+const moreMenuStart = header.indexOf('class="agenda-more-menu-list"');
+const notificationsMarkup = header.indexOf('headerButtonMarkup');
+assert.ok(moreMenuStart >= 0 && notificationsMarkup > moreMenuStart, 'Notificações deve ficar dentro do menu Mais');
 
 // Ações secundárias ficam agrupadas no menu Mais.
 for (const action of [
   'agenda-community-open agenda-more-menu-action',
+  'headerButtonMarkup',
   'agenda-about-open agenda-more-menu-action',
   'agenda-share-favorites agenda-more-menu-action',
   'install-app-btn agenda-more-menu-action',
@@ -44,6 +47,7 @@ assert.ok(styles.includes('.agenda-more-menu-list'));
 assert.ok(styles.includes('.agenda-more-menu-action'));
 assert.ok(styles.includes('@media (max-width: 1280px)'));
 assert.ok(styles.includes('@media (max-width: 900px)'));
+assert.ok(styles.includes('Agenda v165 — Notificações dentro do menu Mais.'));
 assert.ok(styles.includes('.agenda-notifications-label'));
 assert.ok(styles.includes('.agenda-favorites-label'));
 
@@ -55,7 +59,7 @@ assert.ok(themeBoot.includes("js/painel-navegacao-modos.js?v=6"));
 
 // Cache busting deve entregar os mesmos assets/versionamentos no HTML e no SW.
 for (const asset of [
-  'css/styles.css?v=104',
+  'css/styles.css?v=105',
   'js/tema-visual-boot.js?v=17'
 ]) {
   assert.ok(indexHtml.includes(asset), `index sem ${asset}`);
