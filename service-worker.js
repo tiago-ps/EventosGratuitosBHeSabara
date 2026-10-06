@@ -1,7 +1,7 @@
 importScripts('./js/relacoes-eventos.js?v=2');
 
 const SW_EVENT_RELATIONS = self.MuralCultural?.eventRelations;
-const CACHE_VERSION = 'mural-cultural-v193-atc4-relacoes';
+const CACHE_VERSION = 'mural-cultural-v194-filtros-exploracao';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -12,7 +12,7 @@ const PLATFORM_IMAGE_PREFIX = '/imagens/plataformas/';
 
 const CORE_ASSETS = [
   './', './index.html',
-  './css/styles.css?v=102',
+  './css/styles.css?v=103',
   './css/eventos-manuais-ui.css?v=43',
   './css/concursos-mural.css?v=3',
   './css/temas-visuais.css?v=11',
@@ -25,16 +25,16 @@ const CORE_ASSETS = [
   './js/tema-visual-boot.js?v=16',
   './js/core/rotacao.js?v=2',
   './js/notificacoes.js?v=1',
-  './js/conteudos/cursos.js?v=4',
-  './js/conteudos/concursos.js?v=3',
-  './js/conteudos/filmes.js?v=10',
+  './js/conteudos/cursos.js?v=5',
+  './js/conteudos/concursos.js?v=4',
+  './js/conteudos/filmes.js?v=11',
   './js/conteudos/utilidade-publica.js?v=5',
-  './js/conteudos/espacos.js?v=4',
-  './js/conteudos/atividades-lazer.js?v=5',
+  './js/conteudos/espacos.js?v=5',
+  './js/conteudos/atividades-lazer.js?v=6',
   './js/curadorias-site.js?v=12',
   './js/metricas-pontos.js?v=2',
   './js/relacoes-eventos.js?v=2',
-  './js/app.js?v=151',
+  './js/app.js?v=152',
   './js/temas-visuais.js?v=14',
   './js/eventos-manuais-ui.js?v=45',
   './js/ios-install.js?v=3',
