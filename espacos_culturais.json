@@ -2221,7 +2221,6 @@
       "aliases": [
         "Cine Theatro Brasil Vallourec",
         "Cine Theatro Brasil",
-        "Grande Theatro Unimed-BH | Cine Theatro Brasil",
         "Grande Theatro Unimed-BH"
       ],
       "google_place_id": "",
@@ -2239,10 +2238,10 @@
         "observacao": "O funcionamento do complexo acompanha a programação. Bilheteria: segunda a sábado, das 12h às 21h; domingos e feriados, das 15h às 20h."
       },
       "site": "https://www.cineteatrobrasil.com.br/",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/grande-theatro-unimed-bh-cine-theatro-brasil.png",
       "imagem_fonte": "",
       "exibicao_ativa": true,
-      "exibicao_recorrente": false,
+      "exibicao_recorrente": true,
       "prioridade": 0,
       "contatos": {
         "emails": [
@@ -3305,7 +3304,7 @@
         "observacao": "Funcionamento conforme a programação de espetáculos."
       },
       "site": "https://www.cineteatrobrasil.com.br/grande-theatro-unimed-bh/",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/grande-theatro-unimed-bh-cine-theatro-brasil.png",
       "imagem_fonte": "",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/cinetheatrobrasil/"
