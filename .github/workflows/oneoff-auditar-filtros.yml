@@ -98,4 +98,18 @@ jobs:
                   nk=nested_keys(items,key)
                   if nk:
                       print(f"{key} subcampos: {nk}")
+          print("\n==== DETALHES CURSOS ====")
+          courses=records(json.loads(Path("cursos.json").read_text(encoding="utf-8")))
+          for key in ["tipo","certificado","nivel","idioma","prazo_conclusao_dias","data_limite_conclusao","campus_ofertante"]:
+              vals, unique=top_values(courses,key,40)
+              print(f"{key}: unicos={unique}; top={vals}")
+          print("\n==== DETALHES ATIVIDADES ====")
+          acts=records(json.loads(Path("atividades-lazer.json").read_text(encoding="utf-8")))
+          for subkey in ["inscricao","vagas_limitadas"]:
+              vals=Counter(norm(x.get("participacao",{}).get(subkey)) for x in acts if norm(x.get("participacao",{}).get(subkey)))
+              print(f"participacao.{subkey}: {vals.most_common()}")
+          dias=Counter(d for x in acts for d in (x.get("agenda",{}).get("dias_semana") or []))
+          print("agenda.dias_semana:", dias.most_common())
+          formatos=Counter(norm(x.get("formato")) for x in acts if norm(x.get("formato")))
+          print("formato:", formatos.most_common())
           PY
