@@ -1,6 +1,6 @@
 {
   "versao": 2,
-  "atualizado_em": "2026-10-06T00:28:48.731245+00:00",
+  "atualizado_em": "2026-10-06T00:42:02.240082+00:00",
   "titulo": "Descobertas de leitura",
   "origem": "Acervos consultados em catálogos públicos Pergamum e bases institucionais",
   "aviso": "Seleção construída progressivamente e sujeita a curadoria. Não representa a totalidade dos acervos. Consulte o registro oficial para confirmar localização e disponibilidade.",
@@ -3820,6 +3820,83 @@
         "MEC Livros",
         "PUC Minas",
         "UFMG"
+      ]
+    },
+    {
+      "tipo_conteudo": "livro",
+      "id": "ifmg-sabara-fisico-110290",
+      "titulo": "Dona Maria do Pompéu: a marrecada, o ora pro nobis e outras histórias.",
+      "autor": "FONSECA, Silas da.",
+      "pergunta_curiosidade": "O que uma marrecada, o ora-pro-nóbis e memórias de família podem revelar sobre a história de Sabará?",
+      "texto_apoio": "Silas Fonseca recupera episódios da vida de Dona Maria do Pompéu e, entre causos, memórias e tradições culinárias, registra afetos e aspectos da história cultural do Pompéu, em Sabará.",
+      "temas": [],
+      "icone": "📚",
+      "numero_chamada": "821(81)-9 F676d 2025",
+      "unidade": "",
+      "biblioteca_rede": "IFMG Sabará",
+      "codigo_acervo": "110290",
+      "exemplares_fisicos_catalogados": 7,
+      "outras_edicoes_fisicas": 0,
+      "acesso_fisico": true,
+      "acesso_virtual": false,
+      "link_fisico": "https://pergamum.ifmg.edu.br/acervo/110290",
+      "link_virtual": "",
+      "link": "https://pergamum.ifmg.edu.br/acervo/110290",
+      "tipo_link_principal": "fisico",
+      "imagem": "imagens/livros/capas/ajuste-ifmg-sabara-fisico-110290.png",
+      "imagem_fonte": "Capa definida manualmente no editor do Mural Cultural",
+      "imagem_url_origem": "",
+      "qr_code": "imagens/livros/qrcodes/ajuste-ifmg-sabara-fisico-110290.svg",
+      "fonte": "IFMG Sabará",
+      "exibicao_ativa": true,
+      "exibir_de": "",
+      "exibir_ate": "",
+      "prioridade": 0,
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": "",
+      "link_audiolivro": "https://www.youtube.com/watch?v=7CR40UYgWcs",
+      "audiolivro_fonte": "Youtube - Rancho da Cultura",
+      "observacoes": "",
+      "id_obra": "obra-dona-maria-do-pompeu-a-marrecada-o-ora-pro-nobis-e-outras-histor-6e5a8a74",
+      "registros_ids": [
+        "ifmg-sabara-fisico-110290"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "IFMG Sabará",
+          "biblioteca_rede": "IFMG Sabará",
+          "unidade": "",
+          "acesso_fisico": true,
+          "acesso_virtual": false,
+          "exemplares_fisicos_catalogados": 7,
+          "registros": [
+            {
+              "registro_id": "ifmg-sabara-fisico-110290",
+              "titulo_registro": "Dona Maria do Pompéu: a marrecada, o ora pro nobis e outras histórias.",
+              "autor_registro": "FONSECA, Silas da.",
+              "biblioteca_rede": "IFMG Sabará",
+              "unidade": "",
+              "codigo_acervo": "110290",
+              "numero_chamada": "821(81)-9 F676d 2025",
+              "exemplares_fisicos_catalogados": 7,
+              "acesso_fisico": true,
+              "acesso_virtual": false,
+              "link_fisico": "https://pergamum.ifmg.edu.br/acervo/110290",
+              "link_virtual": "",
+              "link": "https://pergamum.ifmg.edu.br/acervo/110290",
+              "tipo_link_principal": "fisico",
+              "fonte": "IFMG Sabará"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "IFMG Sabará"
       ]
     },
     {
