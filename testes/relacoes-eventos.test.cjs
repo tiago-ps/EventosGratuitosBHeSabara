@@ -13,6 +13,14 @@ vm.runInContext(
   { filename: 'js/relacoes-eventos.js' }
 );
 
+const workerContext = vm.createContext({});
+vm.runInContext(
+  fs.readFileSync(path.join(root, 'js/relacoes-eventos.js'), 'utf8'),
+  workerContext,
+  { filename: 'js/relacoes-eventos.js' }
+);
+assert.ok(workerContext.MuralCultural?.eventRelations?.buildIndex);
+
 const relations = context.window.MuralCultural.eventRelations;
 const index = relations.buildIndex({
   versao: 1,
