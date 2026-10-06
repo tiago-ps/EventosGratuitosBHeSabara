@@ -38,6 +38,10 @@ assert.match(sw, /self\.registration\.pushManager\.getSubscription/);
 assert.match(sw, /swFavoriteEventsForReminder/);
 assert.match(sw, /swUpdateServerSchedule/);
 assert.match(sw, /\.\/eventos\.json/);
+assert.match(sw, /\.\/relacoes-eventos\.json/);
+assert.match(sw, /swEventRelationIndex/);
+assert.match(sw, /swEventPlace\(event, relationIndex\)/);
+assert.doesNotMatch(sw, /\[event\.horario, event\.local, event\.cidade\]/);
 
 // Backend não guarda favoritos ou dados de perfil do visitante.
 assert.match(worker, /NOTIFICATION_API_PATH = '\/api\/notificacoes'/);
