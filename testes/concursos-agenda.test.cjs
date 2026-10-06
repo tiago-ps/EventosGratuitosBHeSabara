@@ -13,6 +13,11 @@ for (const file of ['js/core/rotacao.js', 'js/conteudos/concursos.js']) {
 }
 
 const contests = context.window.MuralCultural.contents.contests;
+const normalizeText = value => String(value || '')
+  .normalize('NFD')
+  .replace(/[\u0300-\u036f]/g, '')
+  .toLowerCase()
+  .trim();
 const catalog = JSON.parse(
   fs.readFileSync(path.join(root, 'concursos.json'), 'utf8')
 ).concursos;
@@ -38,6 +43,21 @@ assert.equal(contests.filter(catalog, { query: 'resultado impossível' }).length
 
 assert.ok(contests.formationOptions(catalog).length > 0);
 assert.ok(contests.ufOptions(catalog).length > 0);
+
+const cityOptions = contests.cityOptions(catalog);
+assert.ok(cityOptions.length > 0);
+const [cityValue] = cityOptions[0];
+const cityMatches = contests.filter(catalog, { city: cityValue });
+assert.ok(cityMatches.length > 0);
+assert.ok(cityMatches.every(contest => normalizeText(contest.cidade) === cityValue));
+
+const highRemuneration = contests.filter(catalog, { remuneration: 'mais-10000' });
+assert.ok(highRemuneration.length > 0);
+assert.ok(highRemuneration.every(contest => contests.remunerationMax(contest) > 10000));
+assert.equal(
+  contests.remunerationMatches({ remuneracao_faixa_texto: 'R$ 2.000,00 a R$ 4.500,00' }, '3000-5000'),
+  true
+);
 
 const panelSample = contests.sampleForPanel(catalog);
 assert.equal(contests.PANEL_CONTEST_LIMIT, 15);
