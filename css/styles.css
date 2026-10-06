@@ -2552,3 +2552,62 @@ body.agenda-mode.agenda-theme-light .film-dialog-sections section{
 }
 body.agenda-mode.agenda-theme-light .film-dialog-synopsis{color:#405248}
 body.agenda-mode.agenda-theme-light .film-rights-note{color:#64736a}
+
+/* Agenda — filtros contextuais completos por tipo de conteúdo. */
+@media (min-width: 981px) {
+  .agenda-tools-books,
+  .agenda-tools-courses,
+  .agenda-tools-contests,
+  .agenda-tools-films,
+  .agenda-tools-utility,
+  .agenda-tools-spaces,
+  .agenda-tools-activities {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .agenda-tools-courses .agenda-search,
+  .agenda-tools-contests .agenda-search,
+  .agenda-tools-films .agenda-search,
+  .agenda-tools-utility .agenda-search,
+  .agenda-tools-spaces .agenda-search,
+  .agenda-tools-activities .agenda-search {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 980px) {
+  .agenda-tools-courses,
+  .agenda-tools-contests,
+  .agenda-tools-utility,
+  .agenda-tools-spaces,
+  .agenda-tools-activities {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .agenda-tools-courses .agenda-search,
+  .agenda-tools-contests .agenda-search,
+  .agenda-tools-utility .agenda-search,
+  .agenda-tools-spaces .agenda-search,
+  .agenda-tools-activities .agenda-search {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 430px) {
+  .agenda-tools-courses,
+  .agenda-tools-contests,
+  .agenda-tools-utility,
+  .agenda-tools-spaces,
+  .agenda-tools-activities {
+    grid-template-columns: 1fr;
+  }
+
+  .agenda-tools-courses .agenda-search,
+  .agenda-tools-contests .agenda-search,
+  .agenda-tools-utility .agenda-search,
+  .agenda-tools-spaces .agenda-search,
+  .agenda-tools-activities .agenda-search {
+    grid-column: auto;
+  }
+}
+
