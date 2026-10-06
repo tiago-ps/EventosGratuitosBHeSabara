@@ -1,0 +1,101 @@
+name: One-off — Auditar filtros do modo Exploração
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/oneoff-auditar-filtros.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  auditar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Auditar campos aproveitáveis como filtros
+        run: |
+          python3 - <<'PY'
+          import json
+          from collections import Counter
+          from pathlib import Path
+
+          FILES = [
+              "livros.json",
+              "cursos.json",
+              "concursos.json",
+              "filmes.json",
+              "atividades-lazer.json",
+              "utilidade-publica.json",
+              "espacos_culturais.json",
+          ]
+
+          def records(data):
+              if isinstance(data, list):
+                  return data
+              arrays = [(k, v) for k, v in data.items() if isinstance(v, list)]
+              if not arrays:
+                  return []
+              return max(arrays, key=lambda kv: len(kv[1]))[1]
+
+          def norm(v):
+              if v is None:
+                  return ""
+              if isinstance(v, bool):
+                  return str(v).lower()
+              return str(v).strip()
+
+          def top_values(items, key, limit=18):
+              vals = []
+              for item in items:
+                  value = item.get(key)
+                  if isinstance(value, list):
+                      for v in value:
+                          if isinstance(v, dict):
+                              continue
+                          if norm(v):
+                              vals.append(norm(v))
+                  elif not isinstance(value, (dict, list)) and norm(value):
+                      vals.append(norm(value))
+              c = Counter(vals)
+              return c.most_common(limit), len(c)
+
+          def nested_keys(items, key):
+              c=Counter()
+              for item in items:
+                  value=item.get(key)
+                  if isinstance(value, dict):
+                      c.update(value.keys())
+                  elif isinstance(value, list):
+                      for v in value:
+                          if isinstance(v, dict):
+                              c.update(v.keys())
+              return c.most_common()
+
+          for filename in FILES:
+              data=json.loads(Path(filename).read_text(encoding="utf-8"))
+              items=records(data)
+              print("\n====", filename, "registros=", len(items), "====")
+              keys=Counter()
+              for item in items:
+                  if isinstance(item, dict):
+                      keys.update(item.keys())
+              print("CAMPOS:", ", ".join(f"{k}:{n}" for k,n in keys.most_common()))
+              for key in [
+                  "instituicao","instituicao_parceira","area","situacao","carga_horaria","publico_alvo","nivel","idioma","modalidade","formato",
+                  "unidade","biblioteca_rede","ano","tipo_registro","acesso_fisico","acesso_virtual","disponibilidade_confirmada",
+                  "uf","cidade","formacoes_compativeis","status_manual",
+                  "plataforma","fonte","classificacao","generos","temas","letras","acessibilidade","colecoes","ano","duracao_minutos",
+                  "categoria","modalidades","publicos_alvo","abrangencia","programa_id","idade_minima","idade_maxima",
+                  "natureza","colecao","areas_utilidade","tipos_recurso","escopo_geografico","ativo",
+                  "natureza_espaco","tipo_espaco","vocacoes"
+              ]:
+                  if key in keys:
+                      vals, unique=top_values(items,key)
+                      print(f"{key}: unicos={unique}; top={vals}")
+              for key in ["agenda","participacao","local","organizador","funcionamento","contatos","redes_sociais","atualizacao","visualizacao"]:
+                  nk=nested_keys(items,key)
+                  if nk:
+                      print(f"{key} subcampos: {nk}")
+          PY
