@@ -31,11 +31,66 @@
       .some(value => value === wanted || value.includes(wanted));
   }
 
+  function normalizeOption(value = '') {
+    return normalizeTheme(value);
+  }
+
+  function workloadHours(value = '') {
+    const match = String(value || '').replace(',', '.').match(/\d+(?:\.\d+)?/);
+    if (!match) return null;
+    const hours = Number(match[0]);
+    return Number.isFinite(hours) && hours >= 0 ? hours : null;
+  }
+
+  function workloadMatches(value, band = '') {
+    if (!band) return true;
+    const hours = workloadHours(value);
+    if (hours === null) return band === 'nao-informada';
+    if (band === 'ate-10') return hours <= 10;
+    if (band === '11-20') return hours > 10 && hours <= 20;
+    if (band === '21-40') return hours > 20 && hours <= 40;
+    if (band === 'mais-40') return hours > 40;
+    return true;
+  }
+
+  function certificateMatches(course, value = '') {
+    if (!value) return true;
+    if (value === 'yes') return course?.certificado === true;
+    if (value === 'no') return course?.certificado === false;
+    if (value === 'unknown') return typeof course?.certificado !== 'boolean';
+    return true;
+  }
+
+  function scalarOptions(courses, field) {
+    const values = new Map();
+    for (const course of Array.isArray(courses) ? courses : []) {
+      if (!isPublishable(course)) continue;
+      const label = String(course?.[field] || '').trim();
+      const value = normalizeOption(label);
+      if (label && value && !values.has(value)) values.set(value, label);
+    }
+    return [...values.entries()].sort((a, b) => a[1].localeCompare(b[1], 'pt-BR'));
+  }
+
   function filter(courses, options = {}) {
-    const theme = options && typeof options === 'object' ? options.theme || '' : '';
+    const filters = options && typeof options === 'object' ? options : {};
+    const theme = filters.theme || '';
+    const institution = normalizeOption(filters.institution || '');
+    const area = normalizeOption(filters.area || '');
+    const type = normalizeOption(filters.type || '');
+    const level = normalizeOption(filters.level || '');
+    const language = normalizeOption(filters.language || '');
+
     return (Array.isArray(courses) ? courses : [])
       .filter(isPublishable)
       .filter(course => matchesTheme(course, theme))
+      .filter(course => !institution || normalizeOption(course.instituicao) === institution)
+      .filter(course => !area || normalizeOption(course.area) === area)
+      .filter(course => !type || normalizeOption(course.tipo) === type)
+      .filter(course => !level || normalizeOption(course.nivel) === level)
+      .filter(course => !language || normalizeOption(course.idioma) === language)
+      .filter(course => workloadMatches(course.carga_horaria, filters.workload || ''))
+      .filter(course => certificateMatches(course, filters.certificate || ''))
       .sort((a, b) =>
         String(a.titulo || '').localeCompare(String(b.titulo || ''), 'pt-BR')
       );
@@ -55,7 +110,11 @@
       course.area,
       course.competencias,
       course.descricao,
-      course.publico_alvo
+      course.publico_alvo,
+      course.tipo,
+      course.nivel,
+      course.idioma,
+      course.carga_horaria
     ].filter(Boolean).join(' ')).includes(query);
   }
 
@@ -238,6 +297,10 @@
     isPublishable,
     matchesTheme,
     filter,
+    scalarOptions,
+    workloadHours,
+    workloadMatches,
+    certificateMatches,
     sampleForPanel,
     agendaQueryMatches,
     createPanelSlide,
