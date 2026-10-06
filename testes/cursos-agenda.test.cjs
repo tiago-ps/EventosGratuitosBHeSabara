@@ -39,7 +39,8 @@ const search = query => catalog.filter(course =>
 
 assert.ok(data.cursos.length > 0);
 assert.equal(data.total, data.cursos.length);
-assert.equal(catalog.length, data.cursos.length);
+assert.equal(catalog.length, data.cursos.filter(courses.isPublishable).length);
+assert.ok(catalog.length <= data.cursos.length);
 assert.equal(new Set(catalog.map(course => course.id_fonte)).size, catalog.length);
 assert.equal(new Set(catalog.map(course => course.url)).size, catalog.length);
 
