@@ -35,11 +35,36 @@
     return publicContest;
   }
 
+  function remunerationValues(value = '') {
+    const matches = String(value || '').match(/R\$\s*[\d.]+(?:,\d{1,2})?/g) || [];
+    return matches.map(match => Number(
+      match.replace(/R\$\s*/g, '').replaceAll('.', '').replace(',', '.')
+    )).filter(number => Number.isFinite(number) && number >= 0);
+  }
+
+  function remunerationMax(contest) {
+    const values = remunerationValues(contest?.remuneracao_faixa_texto);
+    return values.length ? Math.max(...values) : null;
+  }
+
+  function remunerationMatches(contest, band = '') {
+    if (!band) return true;
+    const value = remunerationMax(contest);
+    if (value === null) return band === 'nao-informada';
+    if (band === 'ate-3000') return value <= 3000;
+    if (band === '3000-5000') return value > 3000 && value <= 5000;
+    if (band === '5000-10000') return value > 5000 && value <= 10000;
+    if (band === 'mais-10000') return value > 10000;
+    return true;
+  }
+
   function filter(contests, filters = {}) {
     const query = normalizeText(filters.query);
     const formation = String(filters.formation || '');
     const uf = String(filters.uf || '');
+    const city = normalizeText(filters.city || '');
     const deadline = String(filters.deadline || '');
+    const remuneration = String(filters.remuneration || '');
 
     return (Array.isArray(contests) ? contests : [])
       .filter(isValid)
@@ -56,8 +81,10 @@
 
         if (formation && !formations.includes(formation)) return false;
         if (uf && contest.uf !== uf) return false;
+        if (city && normalizeText(contest.cidade) !== city) return false;
         if (deadline === 'com-data' && !hasDeadline) return false;
         if (deadline === 'sem-data' && hasDeadline) return false;
+        if (!remunerationMatches(contest, remuneration)) return false;
         if (!query) return true;
 
         return normalizeText([
@@ -92,6 +119,17 @@
     )]
       .sort((a, b) => a.localeCompare(b, 'pt-BR'))
       .map(label => [label, label]);
+  }
+
+  function cityOptions(contests) {
+    const values = new Map();
+    for (const contest of Array.isArray(contests) ? contests : []) {
+      if (!isValid(contest)) continue;
+      const label = String(contest.cidade || '').trim();
+      const value = normalizeText(label);
+      if (label && value && !values.has(value)) values.set(value, label);
+    }
+    return [...values.entries()].sort((a, b) => a[1].localeCompare(b[1], 'pt-BR'));
   }
 
   function sampleForPanel(contests, limit = PANEL_CONTEST_LIMIT, options = {}) {
@@ -335,6 +373,10 @@
     filter,
     formationOptions,
     ufOptions,
+    cityOptions,
+    remunerationValues,
+    remunerationMax,
+    remunerationMatches,
     sampleForPanel,
     createPanelSlide,
     createAgendaCard
