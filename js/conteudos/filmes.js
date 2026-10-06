@@ -24,6 +24,9 @@
       ...list(movie.generos),
       ...list(movie.temas),
       ...list(movie.acessibilidade),
+      ...list(movie.colecoes),
+      movie.pais_origem,
+      movie.idioma_original,
       platformName(movie)
     ].join(' '));
     return haystack.includes(needle);
@@ -77,6 +80,9 @@
       if (!valueMatches(movie.generos, filters.genre, normalizeText)) return false;
       if (!valueMatches(movie.temas, filters.theme, normalizeText)) return false;
       if (!valueMatches(movie.letras, filters.letter, normalizeText)) return false;
+      if (!valueMatches(movie.acessibilidade, filters.accessibility, normalizeText)) return false;
+      if (!valueMatches(movie.colecoes, filters.collection, normalizeText)) return false;
+      if (filters.country && normalizeText(movie.pais_origem) !== normalizeText(filters.country)) return false;
       if (filters.rating && text(movie.classificacao) !== text(filters.rating)) return false;
       if (yearFrom && (!Number(movie.ano) || Number(movie.ano) < yearFrom)) return false;
       if (yearTo && (!Number(movie.ano) || Number(movie.ano) > yearTo)) return false;
