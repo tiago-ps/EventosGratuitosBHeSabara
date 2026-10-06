@@ -34,11 +34,16 @@
           <path d="M8 21h8M12 17v4"></path>
         </svg>
       `;
+    } else if (className.includes('agenda-more-menu-action')) {
+      button.innerHTML = '<span class="agenda-more-action-icon" aria-hidden="true">▶</span><span>Exibição automática</span>';
     } else {
       button.textContent = 'Exibição automática';
     }
 
-    button.addEventListener('click', () => navigate('passivo'));
+    button.addEventListener('click', () => {
+      button.closest('.agenda-more-menu')?.removeAttribute('open');
+      navigate('passivo');
+    });
     return button;
   }
 
@@ -46,23 +51,34 @@
     if (!document.body.classList.contains('agenda-mode')) return;
 
     const actions = document.querySelector('.agenda-header-actions');
-    const interactiveButton = actions?.querySelector('.view-toggle');
+    const interactiveButton = actions?.querySelector('.view-toggle:not(.passive-view-toggle)');
     if (!actions || !interactiveButton) return;
+    const menuList = actions.querySelector('.agenda-more-menu-list');
 
     if (interactiveButton.dataset.explicitPanelMode !== 'true') {
       interactiveButton.dataset.explicitPanelMode = 'true';
-      interactiveButton.textContent = 'Exibição interativa';
+      if (interactiveButton.classList.contains('agenda-more-menu-action')) {
+        interactiveButton.innerHTML = '<span class="agenda-more-action-icon" aria-hidden="true">⌨</span><span>Exibição interativa</span>';
+      } else {
+        interactiveButton.textContent = 'Exibição interativa';
+      }
       interactiveButton.title = 'Abrir exibição interativa';
       interactiveButton.setAttribute('aria-label', 'Abrir exibição interativa');
       interactiveButton.addEventListener('click', event => {
         event.preventDefault();
         event.stopImmediatePropagation();
+        interactiveButton.closest('.agenda-more-menu')?.removeAttribute('open');
         navigate('interativo');
       }, true);
     }
 
     if (!actions.querySelector('.passive-view-toggle')) {
-      actions.appendChild(makePassiveButton('view-toggle passive-view-toggle'));
+      const parent = menuList || actions;
+      parent.appendChild(makePassiveButton(
+        menuList
+          ? 'view-toggle passive-view-toggle agenda-more-menu-action'
+          : 'view-toggle passive-view-toggle'
+      ));
     }
   }
 
