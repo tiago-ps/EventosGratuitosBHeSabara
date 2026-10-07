@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Março de 2026 a Janeiro de 2027",
-  "atualizado_em": "2026-10-07T08:14:22-03:00",
+  "atualizado_em": "2026-10-07T08:33:44-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -5716,6 +5716,31 @@
       "motivo_publicacao": "exibicao_manual_ativa"
     },
     {
+      "id": "fiemg-sesi-exposicao-trabalhadores-2026-08-15",
+      "titulo": "EXPOSIÇÃO \"TRABALHADORES\"",
+      "data": "2026-08-15",
+      "data_fim": "2026-10-24",
+      "horario": "11h",
+      "local": "SESI Museu de Artes e Ofícios",
+      "local_id": "sesi-museu-artes-oficios",
+      "cidade": "Belo Horizonte",
+      "endereco": "Praça Rui Barbosa, 600, Centro, Belo Horizonte - MG",
+      "categoria": "Exposição",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita confirmada na programação oficial do SESI Cultura MG; consulte a página do evento para eventuais orientações de inscrição ou retirada.",
+      "descricao": "O SESI Museu de Artes e Ofícios (SESI MAO), em Belo Horizonte, recebe, a partir de 15 de agosto, a exposição “Trabalhadores”, primeira mostra individual da artista visual e filmmaker Dayane Tropicaos. A abertura será realizada às 11 horas, e as obras permanecerão em exibição até 24 de outubro de 2026. Com trabalhos produzidos entre 2019 e 2026, a exposição apresenta uma reflexão ampla sobre as relações de trabalho na atualidade. Por meio de uma abordagem sensível e questionadora, Dayane coloca a figura do trabalhador no centro da narrativa,",
+      "imagem": "https://www.fiemg.com.br/sesi-cultura/wp-content/uploads/sites/28/2026/08/SC002726E_MAO_EXPOSICAO_TRABALHADORES__BANNERSIMPRENSA_THUMB.png",
+      "link": "https://www.fiemg.com.br/sesi-cultura/programacao/detalhe/exposicao-trabalhadores/",
+      "fonte": "SESI Cultura MG — Programação",
+      "pagina": "https://www.fiemg.com.br/sesi-cultura/programacao/detalhe/exposicao-trabalhadores/",
+      "instituicao_id": "sesi-cultura-mg",
+      "criterio_exibicao": "realizacao",
+      "motivo_publicacao": "gratuidade_confirmada_no_campo_ingressos",
+      "somente_teste": true,
+      "status_validacao": "experimental",
+      "origem_experimental": "fiemg_sesi_cultura"
+    },
+    {
       "acao_formulario_fechado": "marcar_encerrada",
       "categoria": "Música",
       "cidade": "Sabará - MG",
@@ -6168,6 +6193,31 @@
           "inicio": "2026-10-08"
         }
       }
+    },
+    {
+      "id": "fiemg-sesi-museologia-em-foco-praca-da-estacao-porta-de-entrada-de-bh-2026-10-08",
+      "titulo": "Museologia em Foco | Praça da Estação – Porta de Entrada de BH",
+      "data": "2026-10-08",
+      "data_fim": "",
+      "horario": "08h",
+      "local": "SESI Museu de Artes e Ofícios",
+      "local_id": "sesi-museu-artes-oficios",
+      "cidade": "Belo Horizonte",
+      "endereco": "Praça Rui Barbosa, 600, Centro, Belo Horizonte - MG",
+      "categoria": "Palestra e debate",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita confirmada na programação oficial do SESI Cultura MG; consulte a página do evento para eventuais orientações de inscrição ou retirada.",
+      "descricao": "Palestra: “Praça da Estação – Porta de Entrada de BH” Nesta edição do Museologia em Foco, receberemos Moacir Ricoy Pena, sociólogo, pesquisador e profissional dedicado à preservação da memória audiovisual de Belo Horizonte. Atualmente, atua no Museu da Imagem e do Som de Belo Horizonte (MIS-BH), com pesquisa e atendimento ao consulente, além de ter participado do resgate e da curadoria de acervos e exposições sobre a TV Itacolomi. A palestra propõe um mergulho na história da Praça da Estação,",
+      "imagem": "https://www.fiemg.com.br/sesi-cultura/wp-content/uploads/sites/28/2026/09/fiemg_primavera_banners_geral_datas_tropicaos_museologia_alteradas2.png",
+      "link": "https://www.fiemg.com.br/sesi-cultura/programacao/detalhe/museologia-em-foco-praca-da-estacao-porta-de-entrada-de-bh/",
+      "fonte": "SESI Cultura MG — Programação",
+      "pagina": "https://www.fiemg.com.br/sesi-cultura/programacao/detalhe/museologia-em-foco-praca-da-estacao-porta-de-entrada-de-bh/",
+      "instituicao_id": "sesi-cultura-mg",
+      "criterio_exibicao": "realizacao",
+      "motivo_publicacao": "gratuidade_confirmada_no_campo_ingressos",
+      "somente_teste": true,
+      "status_validacao": "experimental",
+      "origem_experimental": "fiemg_sesi_cultura"
     },
     {
       "id": "portal-bh-69dbfade2381-2026-10-08-1500",
@@ -7273,6 +7323,30 @@
       "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
+      "id": "puc-minas-encontros-musicais-recebe-camerata-da-orquestra-jovem-vallourec-2026-10-18",
+      "titulo": "Encontros Musicais recebe Camerata da Orquestra Jovem Vallourec",
+      "data": "2026-10-18",
+      "data_fim": "",
+      "horario": "11h",
+      "local": "PUC Minas Lourdes",
+      "cidade": "Belo Horizonte",
+      "categoria": "Música",
+      "gratuito": true,
+      "inscricao": "Evento gratuito confirmado no site oficial da PUC Minas; consulte a página do evento para orientações de acesso.",
+      "descricao": "A PUC Minas Lourdes recebe, no dia 18 de outubro, às 11h, a Camerata da Orquestra Jovem Vallourec para a quarta edição dos Encontros Musicais. A apresentação será realizada no hall de convivência do 2º andar do Prédio 1 (Edifício Dom Cabral), localizado na Avenida Brasil, 2023 – Savassi. Com um repertório marcado por sucessos da música brasileira entre o final dos anos 1960 e a década de 1970, a apresentação contará com canções como \"Sorria, Sorria\", \"Cadê Você\" e \"Eu, Você e a Praça\", entre outras.",
+      "imagem": "",
+      "link": "https://www.pucminas.br/campus/lourdes/sala-imprensa/eventos/Paginas/Encontros-Musicais-recebe-Camerata-da-Orquestra-Jovem-Vallourec.aspx?date=18/10/2026",
+      "fonte": "PUC Minas — Calendário de Eventos",
+      "pagina": "https://www.pucminas.br/campus/lourdes/sala-imprensa/eventos/Paginas/Encontros-Musicais-recebe-Camerata-da-Orquestra-Jovem-Vallourec.aspx?date=18/10/2026",
+      "instituicao_id": "puc-minas",
+      "criterio_exibicao": "realizacao",
+      "motivo_publicacao": "gratuidade_confirmada_no_site_oficial",
+      "endereco": "Avenida Brasil, 2023, Savassi, Belo Horizonte - MG",
+      "somente_teste": true,
+      "status_validacao": "experimental",
+      "origem_experimental": "puc_minas"
+    },
+    {
       "id": "ufmg-ec-sessao-netuno-tea-era-uma-vez-no-ceu-andromeda-e-perseu",
       "titulo": "Sessão Netuno (TEA) “Era Uma Vez no Céu: Andrômeda e Perseu” – Semana das Crianças",
       "data": "2026-10-18",
@@ -7571,6 +7645,30 @@
       }
     },
     {
+      "id": "teatro-francisco-nunes-longevidade-em-cena-2026-10-23",
+      "titulo": "Longevidade em Cena",
+      "data": "2026-10-23",
+      "data_fim": "",
+      "horario": "19h30",
+      "local": "Teatro Francisco Nunes",
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida Afonso Pena, 1321, Centro, Belo Horizonte - MG",
+      "categoria": "Teatro",
+      "gratuito": true,
+      "inscricao": "Ingresso gratuito conforme programação oficial do Teatro Francisco Nunes; consulte a página para orientações de retirada.",
+      "descricao": "Dia 23/10, sexta-feira, às 19:30h. Classificação: Livre | Duração: 90 minutos Bilheteria do teatro: Ingressos gratuito. OBS: A Bilheteria do teatro abre duas horas antes do espetáculo.",
+      "imagem": "",
+      "link": "https://portalbelohorizonte.com.br/2026/eventos/oficina/cultural/programacao-outubro-2026-teatro-francisco-nunes",
+      "fonte": "Portal Belo Horizonte — Teatro Francisco Nunes",
+      "pagina": "https://portalbelohorizonte.com.br/2026/eventos/oficina/cultural/programacao-outubro-2026-teatro-francisco-nunes",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "criterio_exibicao": "realizacao",
+      "motivo_publicacao": "gratuidade_confirmada_na_atracao",
+      "somente_teste": true,
+      "status_validacao": "experimental",
+      "origem_experimental": "teatro_francisco_nunes"
+    },
+    {
       "id": "portal-bh-980ffbadc4c9-2026-10-24-1000",
       "titulo": "Papibaquígrafo: criando objetos imaginários",
       "data": "2026-10-24",
@@ -7643,6 +7741,30 @@
           "observacao": "15h30 às 16h30"
         }
       }
+    },
+    {
+      "id": "teatro-francisco-nunes-bom-soar-concerto-musical-e-formacao-artistica-2026-10-24",
+      "titulo": "Bom Soar - Concerto Musical e formação Artística",
+      "data": "2026-10-24",
+      "data_fim": "",
+      "horario": "17h",
+      "local": "Teatro Francisco Nunes",
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida Afonso Pena, 1321, Centro, Belo Horizonte - MG",
+      "categoria": "Música",
+      "gratuito": true,
+      "inscricao": "Ingresso gratuito conforme programação oficial do Teatro Francisco Nunes; consulte a página para orientações de retirada.",
+      "descricao": "Dia 24/10, sábado, das 17h às 21h. Classificação: Livre | Duração: 90 minutos Bilheteria do teatro: Ingressos gratuito. OBS: A Bilheteria do teatro abre duas horas antes do espetáculo.",
+      "imagem": "",
+      "link": "https://portalbelohorizonte.com.br/2026/eventos/oficina/cultural/programacao-outubro-2026-teatro-francisco-nunes",
+      "fonte": "Portal Belo Horizonte — Teatro Francisco Nunes",
+      "pagina": "https://portalbelohorizonte.com.br/2026/eventos/oficina/cultural/programacao-outubro-2026-teatro-francisco-nunes",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "criterio_exibicao": "realizacao",
+      "motivo_publicacao": "gratuidade_confirmada_na_atracao",
+      "somente_teste": true,
+      "status_validacao": "experimental",
+      "origem_experimental": "teatro_francisco_nunes"
     },
     {
       "id": "ufmg-ec-observacao-noturna-dos-astros-com-telescopios-5",
@@ -8807,5 +8929,8 @@
         }
       }
     }
-  ]
+  ],
+  "modo_teste_experimental": true,
+  "eventos_somente_teste": 5,
+  "atualizado_em_teste": "2026-10-07T08:34:06-03:00"
 }
