@@ -3428,6 +3428,302 @@
       "link": "https://www.cineteatrobrasil.com.br/grande-theatro-unimed-bh/"
     },
     {
+      "id": "sesi-mao-hall-1-andar",
+      "nome": "Hall 1º andar do Museu",
+      "equipamento_id": "sesi-museu-artes-oficios",
+      "instituicao_id": "sesi-cultura-mg",
+      "descricao": "Hall acessível no 1º andar do SESI Museu de Artes e Ofícios, com mobiliário, projetor e tela retrátil. Pode ser utilizado em conjunto com as varandas laterais e o Hall do 2º andar e comporta até 150 pessoas.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Uso conforme agendamento e programação do museu."
+      },
+      "site": "https://www.fiemg.com.br/sesi-cultura/seu-evento-aqui/detalhe/hall-1o-andar-do-museu-2/",
+      "imagem": "",
+      "imagem_fonte": "https://www.fiemg.com.br/sesi-cultura/sesi-museu-de-artes-e-oficios/",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Hall",
+      "vocacoes": [
+        "Eventos",
+        "Palestras",
+        "Encontros",
+        "Formação"
+      ],
+      "links_adicionais": [
+        {
+          "rotulo": "Informações oficiais",
+          "url": "https://www.fiemg.com.br/sesi-cultura/seu-evento-aqui/detalhe/hall-1o-andar-do-museu-2/"
+        },
+        {
+          "rotulo": "Programação",
+          "url": "https://www.fiemg.com.br/sesi-cultura/categoria_programacao_unidade/sesi-museu-de-artes-e-oficios/"
+        },
+        {
+          "rotulo": "Programação geral SESI Cultura",
+          "url": "https://www.fiemg.com.br/sesi-cultura/programacao/"
+        }
+      ],
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/museudearteseoficiossesi/",
+        "whatsapp": "https://wa.me/5531994080192"
+      },
+      "contatos": {
+        "emails": [
+          "sesiculturamg@fiemg.com.br",
+          "educativomao@fiemg.com.br"
+        ],
+        "telefones": [
+          "(31) 2116-0419",
+          "(31) 99408-0192 (WhatsApp)"
+        ]
+      },
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Hall 1º andar do Museu",
+      "temas": [
+        "Eventos",
+        "Palestras",
+        "Encontros",
+        "Formação"
+      ],
+      "natureza_espaco": "Hall",
+      "espaco_principal": "SESI Museu de Artes e Ofícios",
+      "cidade": "Belo Horizonte",
+      "endereco": "Praça Rui Barbosa, 600, Centro, Belo Horizonte - MG",
+      "mapa": "",
+      "instituicao": "SESI Cultura MG",
+      "link": "https://www.fiemg.com.br/sesi-cultura/seu-evento-aqui/detalhe/hall-1o-andar-do-museu-2/"
+    },
+    {
+      "id": "sesi-mao-hall-2-andar",
+      "nome": "Hall 2º andar do Museu",
+      "equipamento_id": "sesi-museu-artes-oficios",
+      "instituicao_id": "sesi-cultura-mg",
+      "descricao": "Hall acessível no 2º andar do SESI Museu de Artes e Ofícios, com capacidade para até 68 pessoas e possibilidade de uso conjunto com as varandas laterais e o Hall do 1º andar.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Uso conforme agendamento e programação do museu."
+      },
+      "site": "https://www.fiemg.com.br/sesi-cultura/seu-evento-aqui/detalhe/hall-2o-andar-do-museu/",
+      "imagem": "",
+      "imagem_fonte": "https://www.fiemg.com.br/sesi-cultura/sesi-museu-de-artes-e-oficios/",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Hall",
+      "vocacoes": [
+        "Eventos",
+        "Palestras",
+        "Encontros",
+        "Formação"
+      ],
+      "links_adicionais": [
+        {
+          "rotulo": "Informações oficiais",
+          "url": "https://www.fiemg.com.br/sesi-cultura/seu-evento-aqui/detalhe/hall-2o-andar-do-museu/"
+        },
+        {
+          "rotulo": "Programação",
+          "url": "https://www.fiemg.com.br/sesi-cultura/categoria_programacao_unidade/sesi-museu-de-artes-e-oficios/"
+        },
+        {
+          "rotulo": "Programação geral SESI Cultura",
+          "url": "https://www.fiemg.com.br/sesi-cultura/programacao/"
+        }
+      ],
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/museudearteseoficiossesi/",
+        "whatsapp": "https://wa.me/5531994080192"
+      },
+      "contatos": {
+        "emails": [
+          "sesiculturamg@fiemg.com.br",
+          "educativomao@fiemg.com.br"
+        ],
+        "telefones": [
+          "(31) 2116-0419",
+          "(31) 99408-0192 (WhatsApp)"
+        ]
+      },
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Hall 2º andar do Museu",
+      "temas": [
+        "Eventos",
+        "Palestras",
+        "Encontros",
+        "Formação"
+      ],
+      "natureza_espaco": "Hall",
+      "espaco_principal": "SESI Museu de Artes e Ofícios",
+      "cidade": "Belo Horizonte",
+      "endereco": "Praça Rui Barbosa, 600, Centro, Belo Horizonte - MG",
+      "mapa": "",
+      "instituicao": "SESI Cultura MG",
+      "link": "https://www.fiemg.com.br/sesi-cultura/seu-evento-aqui/detalhe/hall-2o-andar-do-museu/"
+    },
+    {
+      "id": "sesi-mao-jardim-das-energias",
+      "nome": "Jardim das Energias",
+      "equipamento_id": "sesi-museu-artes-oficios",
+      "instituicao_id": "sesi-cultura-mg",
+      "descricao": "Espaço aberto do SESI Museu de Artes e Ofícios, situado na Trilha da Energia, com cerca de 280 m² e capacidade para até 170 pessoas.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Uso conforme agendamento e programação do museu."
+      },
+      "site": "https://www.fiemg.com.br/sesi-cultura/seu-evento-aqui/detalhe/jardim-das-energias/",
+      "imagem": "",
+      "imagem_fonte": "https://www.fiemg.com.br/sesi-cultura/sesi-museu-de-artes-e-oficios/",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Área externa",
+      "vocacoes": [
+        "Eventos",
+        "Convivência",
+        "Atividades ao ar livre"
+      ],
+      "links_adicionais": [
+        {
+          "rotulo": "Informações oficiais",
+          "url": "https://www.fiemg.com.br/sesi-cultura/seu-evento-aqui/detalhe/jardim-das-energias/"
+        },
+        {
+          "rotulo": "Programação",
+          "url": "https://www.fiemg.com.br/sesi-cultura/categoria_programacao_unidade/sesi-museu-de-artes-e-oficios/"
+        },
+        {
+          "rotulo": "Programação geral SESI Cultura",
+          "url": "https://www.fiemg.com.br/sesi-cultura/programacao/"
+        }
+      ],
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/museudearteseoficiossesi/",
+        "whatsapp": "https://wa.me/5531994080192"
+      },
+      "contatos": {
+        "emails": [
+          "sesiculturamg@fiemg.com.br",
+          "educativomao@fiemg.com.br"
+        ],
+        "telefones": [
+          "(31) 2116-0419",
+          "(31) 99408-0192 (WhatsApp)"
+        ]
+      },
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Jardim das Energias",
+      "temas": [
+        "Eventos",
+        "Convivência",
+        "Atividades ao ar livre"
+      ],
+      "natureza_espaco": "Área externa",
+      "espaco_principal": "SESI Museu de Artes e Ofícios",
+      "cidade": "Belo Horizonte",
+      "endereco": "Praça Rui Barbosa, 600, Centro, Belo Horizonte - MG",
+      "mapa": "",
+      "instituicao": "SESI Cultura MG",
+      "link": "https://www.fiemg.com.br/sesi-cultura/seu-evento-aqui/detalhe/jardim-das-energias/"
+    },
+    {
+      "id": "sesi-mao-laboratorio-oficina",
+      "nome": "Laboratório / Oficina",
+      "equipamento_id": "sesi-museu-artes-oficios",
+      "instituicao_id": "sesi-cultura-mg",
+      "descricao": "Laboratório climatizado do SESI Museu de Artes e Ofícios destinado a oficinas e atividades formativas, com mobiliário e capacidade para até 30 pessoas.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Uso conforme agendamento e programação do museu."
+      },
+      "site": "https://www.fiemg.com.br/sesi-cultura/seu-evento-aqui/detalhe/laboratorio-oficina/",
+      "imagem": "",
+      "imagem_fonte": "https://www.fiemg.com.br/sesi-cultura/sesi-museu-de-artes-e-oficios/",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Laboratório / Oficina",
+      "vocacoes": [
+        "Oficinas",
+        "Formação",
+        "Educação"
+      ],
+      "links_adicionais": [
+        {
+          "rotulo": "Informações oficiais",
+          "url": "https://www.fiemg.com.br/sesi-cultura/seu-evento-aqui/detalhe/laboratorio-oficina/"
+        },
+        {
+          "rotulo": "Programação",
+          "url": "https://www.fiemg.com.br/sesi-cultura/categoria_programacao_unidade/sesi-museu-de-artes-e-oficios/"
+        },
+        {
+          "rotulo": "Programação geral SESI Cultura",
+          "url": "https://www.fiemg.com.br/sesi-cultura/programacao/"
+        }
+      ],
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/museudearteseoficiossesi/",
+        "whatsapp": "https://wa.me/5531994080192"
+      },
+      "contatos": {
+        "emails": [
+          "sesiculturamg@fiemg.com.br",
+          "educativomao@fiemg.com.br"
+        ],
+        "telefones": [
+          "(31) 2116-0419",
+          "(31) 99408-0192 (WhatsApp)"
+        ]
+      },
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Laboratório / Oficina",
+      "temas": [
+        "Oficinas",
+        "Formação",
+        "Educação"
+      ],
+      "natureza_espaco": "Laboratório / Oficina",
+      "espaco_principal": "SESI Museu de Artes e Ofícios",
+      "cidade": "Belo Horizonte",
+      "endereco": "Praça Rui Barbosa, 600, Centro, Belo Horizonte - MG",
+      "mapa": "",
+      "instituicao": "SESI Cultura MG",
+      "link": "https://www.fiemg.com.br/sesi-cultura/seu-evento-aqui/detalhe/laboratorio-oficina/"
+    },
+    {
       "id": "minascentro",
       "nome": "Minascentro",
       "cidade": "Belo Horizonte",
@@ -4157,6 +4453,229 @@
       "mapa": "https://maps.app.goo.gl/Q6UrZGKEn8eCx8Kb8",
       "instituicao": "Centro Cultural Banco do Brasil Belo Horizonte",
       "link": "https://ccbb.com.br/belo-horizonte/sobre-o-ccbb/"
+    },
+    {
+      "id": "sesi-mao-sala-multiuso-predio-a",
+      "nome": "Sala Multiuso – Prédio A",
+      "equipamento_id": "sesi-museu-artes-oficios",
+      "instituicao_id": "sesi-cultura-mg",
+      "descricao": "Sala climatizada do Prédio A do SESI Museu de Artes e Ofícios para reuniões, workshops, oficinas e treinamentos, com projetor, mobiliário e capacidade para até 21 pessoas.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Uso conforme agendamento e programação do museu."
+      },
+      "site": "https://www.fiemg.com.br/sesi-cultura/seu-evento-aqui/detalhe/salas-multiuso/",
+      "imagem": "",
+      "imagem_fonte": "https://www.fiemg.com.br/sesi-cultura/sesi-museu-de-artes-e-oficios/",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Sala multiuso",
+      "vocacoes": [
+        "Oficinas",
+        "Formação",
+        "Reuniões",
+        "Workshops"
+      ],
+      "links_adicionais": [
+        {
+          "rotulo": "Informações oficiais",
+          "url": "https://www.fiemg.com.br/sesi-cultura/seu-evento-aqui/detalhe/salas-multiuso/"
+        },
+        {
+          "rotulo": "Programação",
+          "url": "https://www.fiemg.com.br/sesi-cultura/categoria_programacao_unidade/sesi-museu-de-artes-e-oficios/"
+        },
+        {
+          "rotulo": "Programação geral SESI Cultura",
+          "url": "https://www.fiemg.com.br/sesi-cultura/programacao/"
+        }
+      ],
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/museudearteseoficiossesi/",
+        "whatsapp": "https://wa.me/5531994080192"
+      },
+      "contatos": {
+        "emails": [
+          "sesiculturamg@fiemg.com.br",
+          "educativomao@fiemg.com.br"
+        ],
+        "telefones": [
+          "(31) 2116-0419",
+          "(31) 99408-0192 (WhatsApp)"
+        ]
+      },
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Sala Multiuso – Prédio A",
+      "temas": [
+        "Oficinas",
+        "Formação",
+        "Reuniões",
+        "Workshops"
+      ],
+      "natureza_espaco": "Sala multiuso",
+      "espaco_principal": "SESI Museu de Artes e Ofícios",
+      "cidade": "Belo Horizonte",
+      "endereco": "Praça Rui Barbosa, 600, Centro, Belo Horizonte - MG",
+      "mapa": "",
+      "instituicao": "SESI Cultura MG",
+      "link": "https://www.fiemg.com.br/sesi-cultura/seu-evento-aqui/detalhe/salas-multiuso/"
+    },
+    {
+      "id": "sesi-mao-sala-multiuso-predio-b",
+      "nome": "Sala Multiuso – Prédio B",
+      "equipamento_id": "sesi-museu-artes-oficios",
+      "instituicao_id": "sesi-cultura-mg",
+      "descricao": "Sala climatizada do Prédio B do SESI Museu de Artes e Ofícios para reuniões, workshops, oficinas e treinamentos, com projetor e capacidade para até 40 pessoas.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Uso conforme agendamento e programação do museu."
+      },
+      "site": "https://www.fiemg.com.br/sesi-cultura/seu-evento-aqui/detalhe/salas-multiuso/",
+      "imagem": "",
+      "imagem_fonte": "https://www.fiemg.com.br/sesi-cultura/sesi-museu-de-artes-e-oficios/",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Sala multiuso",
+      "vocacoes": [
+        "Oficinas",
+        "Formação",
+        "Reuniões",
+        "Workshops"
+      ],
+      "links_adicionais": [
+        {
+          "rotulo": "Informações oficiais",
+          "url": "https://www.fiemg.com.br/sesi-cultura/seu-evento-aqui/detalhe/salas-multiuso/"
+        },
+        {
+          "rotulo": "Programação",
+          "url": "https://www.fiemg.com.br/sesi-cultura/categoria_programacao_unidade/sesi-museu-de-artes-e-oficios/"
+        },
+        {
+          "rotulo": "Programação geral SESI Cultura",
+          "url": "https://www.fiemg.com.br/sesi-cultura/programacao/"
+        }
+      ],
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/museudearteseoficiossesi/",
+        "whatsapp": "https://wa.me/5531994080192"
+      },
+      "contatos": {
+        "emails": [
+          "sesiculturamg@fiemg.com.br",
+          "educativomao@fiemg.com.br"
+        ],
+        "telefones": [
+          "(31) 2116-0419",
+          "(31) 99408-0192 (WhatsApp)"
+        ]
+      },
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Sala Multiuso – Prédio B",
+      "temas": [
+        "Oficinas",
+        "Formação",
+        "Reuniões",
+        "Workshops"
+      ],
+      "natureza_espaco": "Sala multiuso",
+      "espaco_principal": "SESI Museu de Artes e Ofícios",
+      "cidade": "Belo Horizonte",
+      "endereco": "Praça Rui Barbosa, 600, Centro, Belo Horizonte - MG",
+      "mapa": "",
+      "instituicao": "SESI Cultura MG",
+      "link": "https://www.fiemg.com.br/sesi-cultura/seu-evento-aqui/detalhe/salas-multiuso/"
+    },
+    {
+      "id": "sesi-mao-salas-exposicao",
+      "nome": "Salas de Exposição",
+      "equipamento_id": "sesi-museu-artes-oficios",
+      "instituicao_id": "sesi-cultura-mg",
+      "descricao": "Conjunto de quatro salas climatizadas e acessíveis do SESI Museu de Artes e Ofícios destinadas a exposições de arte, com áreas aproximadas entre 50 e 90 m².",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Uso conforme exposições e programação do museu."
+      },
+      "site": "https://www.fiemg.com.br/sesi-cultura/seu-evento-aqui/detalhe/salas-de-exposicao/",
+      "imagem": "",
+      "imagem_fonte": "https://www.fiemg.com.br/sesi-cultura/sesi-museu-de-artes-e-oficios/",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Galeria / Sala de exposição",
+      "vocacoes": [
+        "Exposições",
+        "Artes visuais",
+        "Cultura"
+      ],
+      "links_adicionais": [
+        {
+          "rotulo": "Informações oficiais",
+          "url": "https://www.fiemg.com.br/sesi-cultura/seu-evento-aqui/detalhe/salas-de-exposicao/"
+        },
+        {
+          "rotulo": "Programação",
+          "url": "https://www.fiemg.com.br/sesi-cultura/categoria_programacao_unidade/sesi-museu-de-artes-e-oficios/"
+        },
+        {
+          "rotulo": "Programação geral SESI Cultura",
+          "url": "https://www.fiemg.com.br/sesi-cultura/programacao/"
+        }
+      ],
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/museudearteseoficiossesi/",
+        "whatsapp": "https://wa.me/5531994080192"
+      },
+      "contatos": {
+        "emails": [
+          "sesiculturamg@fiemg.com.br",
+          "educativomao@fiemg.com.br"
+        ],
+        "telefones": [
+          "(31) 2116-0419",
+          "(31) 99408-0192 (WhatsApp)"
+        ]
+      },
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Salas de Exposição",
+      "temas": [
+        "Exposições",
+        "Artes visuais",
+        "Cultura"
+      ],
+      "natureza_espaco": "Galeria / Sala de exposição",
+      "espaco_principal": "SESI Museu de Artes e Ofícios",
+      "cidade": "Belo Horizonte",
+      "endereco": "Praça Rui Barbosa, 600, Centro, Belo Horizonte - MG",
+      "mapa": "",
+      "instituicao": "SESI Cultura MG",
+      "link": "https://www.fiemg.com.br/sesi-cultura/seu-evento-aqui/detalhe/salas-de-exposicao/"
     },
     {
       "aliases": [
