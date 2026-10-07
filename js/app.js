@@ -6808,7 +6808,9 @@ function eventProgram(event) {
       state.allBooks = state.curationMode
         ? mergeCurationBooks(publicBooks, state.curationBooksData.livros, state.curationBookCoversData.capas)
         : publicBooks;
-      state.allCourses = siteLayer.cursos.map(course => ({ ...course, tipo_conteudo: 'curso' }));
+      state.allCourses = siteLayer.cursos
+        .filter(coursesContent.isPublishable)
+        .map(course => ({ ...course, tipo_conteudo: 'curso' }));
       state.allContests = (siteLayer.concursos || [])
         .filter(contestsContent.isValid)
         .map(contest => ({
