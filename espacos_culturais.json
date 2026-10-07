@@ -3921,6 +3921,89 @@
       "link": "https://www.fiemg.com.br/sesi-cultura/seu-evento-aqui/detalhe/laboratorio-oficina/"
     },
     {
+      "id": "memorial-minas-gerais-vale",
+      "nome": "Memorial Minas Gerais Vale",
+      "cidade": "Belo Horizonte",
+      "endereco": "Praça da Liberdade, 640, Savassi, Belo Horizonte - MG, 30140-010",
+      "fonte_endereco": "https://memorialvale.org/pt/visite-o-memorial/visite/",
+      "google_place_id": "",
+      "instituicao_ids": [
+        "memorial-minas-gerais-vale"
+      ],
+      "aliases": [
+        "Memorial Minas Gerais Vale",
+        "Memorial Vale",
+        "MMGV"
+      ],
+      "mapa": "",
+      "descricao": "Museu e centro cultural instalado em edifício histórico da Praça da Liberdade. Integra o Circuito Liberdade e apresenta história, memória e identidades de Minas Gerais, além de programação contemporânea gratuita. A sede está temporariamente fechada para renovação, com atividades itinerantes mantidas em Belo Horizonte e outras cidades.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Sede temporariamente fechada para obras de renovação. Consultar a agenda oficial para os locais das atividades itinerantes."
+      },
+      "site": "https://memorialvale.org/",
+      "imagem": "",
+      "imagem_fonte": "",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/memorial.vale/",
+        "facebook": "https://www.facebook.com/MemorialVale/",
+        "youtube": "https://www.youtube.com/@memorialvale"
+      },
+      "contatos": {
+        "emails": [],
+        "telefones": [
+          "(31) 3343-7317"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Agenda cultural",
+          "url": "https://memorialvale.org/agenda-cultural/"
+        },
+        {
+          "rotulo": "Renovação da sede",
+          "url": "https://memorialvale.org/pt/"
+        }
+      ],
+      "tipo_espaco": "Museu / Centro cultural",
+      "vocacoes": [
+        "Museu",
+        "Cultura",
+        "Memória",
+        "Patrimônio",
+        "Artes visuais",
+        "Música",
+        "Formação",
+        "Oficinas"
+      ],
+      "status_editorial": "pronto_para_teste",
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Memorial Minas Gerais Vale",
+      "temas": [
+        "Museu",
+        "Cultura",
+        "Memória",
+        "Patrimônio",
+        "Artes visuais",
+        "Música",
+        "Formação",
+        "Oficinas"
+      ],
+      "natureza_espaco": "Museu / Centro cultural",
+      "instituicao": "Memorial Minas Gerais Vale",
+      "link": "https://memorialvale.org/"
+    },
+    {
       "id": "minascentro",
       "nome": "Minascentro",
       "cidade": "Belo Horizonte",
