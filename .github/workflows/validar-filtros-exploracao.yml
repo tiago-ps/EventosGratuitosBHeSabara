@@ -35,6 +35,7 @@ on:
       - "testes/concursos-temporalidade.test.cjs"
       - "testes/eventos-temporalidade.test.cjs"
       - "testes/cursos-agenda.test.cjs"
+      - "testes/cursos-temporalidade.test.cjs"
       - ".github/workflows/validar-filtros-exploracao.yml"
   pull_request:
     paths:
@@ -69,6 +70,7 @@ on:
       - "testes/concursos-temporalidade.test.cjs"
       - "testes/eventos-temporalidade.test.cjs"
       - "testes/cursos-agenda.test.cjs"
+      - "testes/cursos-temporalidade.test.cjs"
       - ".github/workflows/validar-filtros-exploracao.yml"
 
 permissions:
@@ -103,6 +105,7 @@ jobs:
           node testes/filtros-exploracao-completos.test.cjs
           node testes/cabecalho-exploracao.test.cjs
           node testes/cursos-agenda.test.cjs
+          node testes/cursos-temporalidade.test.cjs
           node testes/concursos-agenda.test.cjs
           node testes/concursos-temporalidade.test.cjs
           node testes/eventos-temporalidade.test.cjs
