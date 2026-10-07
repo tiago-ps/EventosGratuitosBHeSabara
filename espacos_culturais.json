@@ -142,6 +142,83 @@
       "link": "https://www.ufmg.br/espacodoconhecimento/"
     },
     {
+      "id": "academia-mineira-de-letras",
+      "nome": "Academia Mineira de Letras",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua da Bahia, 1466, Lourdes, Belo Horizonte - MG",
+      "fonte_endereco": "https://academiamineiradeletras.org.br/",
+      "google_place_id": "",
+      "instituicao_ids": [
+        "academia-mineira-de-letras"
+      ],
+      "aliases": [
+        "Academia Mineira de Letras",
+        "AML"
+      ],
+      "mapa": "",
+      "descricao": "Sede da Academia Mineira de Letras em Belo Horizonte, integrante do Circuito Liberdade. Recebe palestras, debates, lançamentos, exposições e atividades literárias, além de manter acervo documental e bibliográfico.",
+      "funcionamento": {
+        "segunda": "14h às 18h",
+        "terca": "14h às 18h",
+        "quarta": "14h às 18h",
+        "quinta": "14h às 18h",
+        "sexta": "14h às 18h",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Visitação conforme a programação; pesquisa acadêmica mediante agendamento."
+      },
+      "site": "https://academiamineiradeletras.org.br/",
+      "imagem": "",
+      "imagem_fonte": "",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/academiamineiradeletras/"
+      },
+      "contatos": {
+        "emails": [
+          "contato@academiamineiradeletras.org.br",
+          "comunicacao@academiamineiradeletras.org.br"
+        ],
+        "telefones": [
+          "(31) 3222-5764"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Programação",
+          "url": "https://academiamineiradeletras.org.br/eventos/"
+        }
+      ],
+      "tipo_espaco": "Academia / Centro cultural",
+      "vocacoes": [
+        "Literatura",
+        "Memória",
+        "Acervo",
+        "Exposições",
+        "Palestras",
+        "Debates",
+        "Lançamentos"
+      ],
+      "status_editorial": "pronto_para_teste",
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Academia Mineira de Letras",
+      "temas": [
+        "Literatura",
+        "Memória",
+        "Acervo",
+        "Exposições",
+        "Palestras",
+        "Debates",
+        "Lançamentos"
+      ],
+      "natureza_espaco": "Academia / Centro cultural",
+      "instituicao": "Academia Mineira de Letras",
+      "link": "https://academiamineiradeletras.org.br/"
+    },
+    {
       "id": "palacio-das-artes-arena-joao-das-neves",
       "nome": "Arena João das Neves",
       "equipamento_id": "palacio-das-artes",

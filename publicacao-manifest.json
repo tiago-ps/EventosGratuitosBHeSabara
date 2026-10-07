@@ -4,8 +4,8 @@
     "concursos.json": 22,
     "configuracao-mural.json": 1,
     "cursos.json": 1909,
-    "espacos_culturais.json": 92,
-    "eventos.json": 262,
+    "espacos_culturais.json": 93,
+    "eventos.json": 267,
     "filmes.json": 1292,
     "livros.json": 46,
     "relacoes-eventos.json": 205,
@@ -16,22 +16,22 @@
     "concursos.json": "e3f9d880e4f551b2f2b8739de8a3d83efd96a3ed8989daca7b5a62b5e20640ec",
     "configuracao-mural.json": "49dfe7115a6f5c6d5b8dee424d3b10341b5e3014ac58a295d27ef4e6043ebfc2",
     "cursos.json": "b20c2dd5e9b5ad86f7ac092d3041f83dafd7d1063db619b5b7e111da6899db72",
-    "espacos_culturais.json": "3daac1888179492de8bbb1856eb11983e79d28042514ab3191b20bc7f2523249",
-    "eventos.json": "8401cf478be1c5f702a0b3d3226f12024f1f8adab0a491943a80208953402585",
+    "espacos_culturais.json": "d9fb6d22a14bc2f9ef6c73e523de261195a68112a4cd966c46484cdcacf03d9e",
+    "eventos.json": "77ca8bda7ab919aef0c6fcec87b9d9dc4a130becc979e01ff1e7c853bd18f001",
     "filmes.json": "23437099af05856a1a822d1b91c19c9dc93962f073b823189bf8eb96652710af",
-    "livros.json": "9052b99cc332e59d303d97389323030e2ffa82af8a77830923de7698ed1da3cf",
+    "livros.json": "65e0ce0895b0e80267bb8027a31cc41fa33cf326bf3f5c04d1d88c16dcb457f3",
     "relacoes-eventos.json": "1d5f770dc0cd01df51f279b59304b1146acf2559ffe9b6cddeb9216f26425655",
     "utilidade-publica.json": "cbeed08b0810b7496fd1629875c4d907a91c373905c82e8b05a315cd3a11a2bb"
   },
-  "published_at": "2026-10-07T20:50:48Z",
-  "request_id": "auto-push-37684623322-1",
+  "published_at": "2026-10-07T20:55:22Z",
+  "request_id": "auto-push-37685445419-1",
   "schema_version": "1.0",
   "source_repository": "tiago-ps/ColetorEventosGratuitos",
-  "source_sha": "ed4145df999f94775eaf463b0a3021a11bbfddd5",
+  "source_sha": "bba5525e0e9133cdaa6d98d3f97492382563c8bb",
   "staging_repository": "tiago-ps/EventosGratuitosBHeSabara",
   "versions": {
     "manifest_schema": "1.0",
     "publication_validator": "central-v1"
   },
-  "workflow_run_id": "37684623322"
+  "workflow_run_id": "37685445419"
 }
