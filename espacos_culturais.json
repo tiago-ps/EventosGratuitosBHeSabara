@@ -4865,6 +4865,76 @@
       "link": "https://fcs.mg.gov.br/espacos-culturais/palacio-das-artes/sala-juvenal-dias/"
     },
     {
+      "id": "sala-minas-gerais",
+      "nome": "Sala Minas Gerais",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Tenente Brito Melo, 1090, Barro Preto, Belo Horizonte - MG",
+      "fonte_endereco": "https://filarmonica.art.br/",
+      "google_place_id": "",
+      "instituicao_ids": [
+        "instituto-cultural-filarmonica"
+      ],
+      "aliases": [
+        "Sala Minas Gerais",
+        "Orquestra Filarmônica de Minas Gerais",
+        "Filarmônica de Minas Gerais"
+      ],
+      "mapa": "",
+      "descricao": "Sede da Orquestra Filarmônica de Minas Gerais e sala de concertos dedicada à música sinfônica em Belo Horizonte. Recebe a temporada da Orquestra, concertos de câmara, projetos educacionais, ensaios e apresentações gratuitas.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "12h às 20h",
+        "quarta": "12h às 20h",
+        "quinta": "12h às 20h",
+        "sexta": "12h às 20h",
+        "sabado": "12h às 18h",
+        "domingo": "",
+        "observacao": "Horário informado para a bilheteria; concertos seguem a agenda oficial."
+      },
+      "site": "https://filarmonica.art.br/agenda/",
+      "imagem": "",
+      "imagem_fonte": "",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/filarmonicamg/"
+      },
+      "contatos": {
+        "emails": [],
+        "telefones": [
+          "(31) 3219-9000",
+          "(31) 3219-9045 (bilheteria)"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Agenda de concertos",
+          "url": "https://filarmonica.art.br/agenda/"
+        }
+      ],
+      "tipo_espaco": "Sala de concertos",
+      "vocacoes": [
+        "Música",
+        "Concertos",
+        "Educação musical",
+        "Formação"
+      ],
+      "status_editorial": "pronto_para_teste",
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Sala Minas Gerais",
+      "temas": [
+        "Música",
+        "Concertos",
+        "Educação musical",
+        "Formação"
+      ],
+      "natureza_espaco": "Sala de concertos",
+      "instituicao": "Instituto Cultural Filarmônica",
+      "link": "https://filarmonica.art.br/agenda/"
+    },
+    {
       "id": "ccbb-bh-sala-multiuso",
       "nome": "Sala Multiuso",
       "equipamento_id": "ccbb-bh",
