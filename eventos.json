@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Março de 2026 a Janeiro de 2027",
-  "atualizado_em": "2026-10-07T08:33:44-03:00",
+  "atualizado_em": "2026-10-07T08:35:37-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -6440,6 +6440,29 @@
       }
     },
     {
+      "id": "portal-bh-0a3afecfbfe3-2026-10-10-1000",
+      "titulo": "Oficina de Tie-Dye, com o Grupo Fios",
+      "data": "2026-10-10",
+      "data_fim": "",
+      "horario": "10h às 13h",
+      "local": "Museu da Moda de Belo Horizonte – MUMO",
+      "local_id": "museu-da-moda",
+      "cidade": "Belo Horizonte",
+      "categoria": "Oficina",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "Dia 10/10, das 10h às 13h. Indicado para maiores de 7 anos. Inscrições via formulário indicado pelo museu.",
+      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-10/oficina-de-tie-dye.png",
+      "link": "https://portalbelohorizonte.com.br/museuscentro/2026/eventos/oficina/artesanato/oficina-de-tie-dye-com-o-grupo-fios",
+      "fonte": "Portal Belo Horizonte",
+      "fonte_descoberta": "Portal Belo Horizonte — Museu da Moda",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "criterio_exibicao": "realizacao",
+      "somente_teste": true,
+      "status_validacao": "experimental",
+      "origem_experimental": "mumo_portal_bh"
+    },
+    {
       "id": "fcs-wp-37720",
       "titulo": "Palco Aberto – Dia do Pequeno Artista",
       "data": "2026-10-10",
@@ -7099,6 +7122,29 @@
       }
     },
     {
+      "id": "portal-bh-c15101a35524-2026-10-16-1400",
+      "titulo": "Oficina de Escrita Urbana e Caminhada Literária: Castelinho da Bahia",
+      "data": "2026-10-16",
+      "data_fim": "",
+      "horario": "14h às 16h",
+      "local": "Museu da Moda de Belo Horizonte – MUMO",
+      "local_id": "museu-da-moda",
+      "cidade": "Belo Horizonte",
+      "categoria": "Oficina",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "Dia 16/10, às 14h. Classificação livre. Inscrições via formulário indicado pelo museu.",
+      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-10/oficina-de-escrita-urbana-e-caminhada-literaria.png",
+      "link": "https://portalbelohorizonte.com.br/museuscentro/2026/eventos/oficina/cultural/oficina-de-escrita-urbana-e-caminhada-literaria-castelinho-da-bahia",
+      "fonte": "Portal Belo Horizonte",
+      "fonte_descoberta": "Portal Belo Horizonte — Museu da Moda",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "criterio_exibicao": "realizacao",
+      "somente_teste": true,
+      "status_validacao": "experimental",
+      "origem_experimental": "mumo_portal_bh"
+    },
+    {
       "id": "ufmg-ec-oficina-dinossauros-nas-pontas-dos-dedos-semana-das-criancas",
       "titulo": "Oficina “Dinossauros nas Pontas dos Dedos” – Semana das Crianças",
       "data": "2026-10-16",
@@ -7705,6 +7751,52 @@
           "observacao": "10h às 12h"
         }
       }
+    },
+    {
+      "id": "portal-bh-4e7283c478a5-2026-10-24-1100",
+      "titulo": "Visita Mediada à exposição • Markito – Cintilações da Noite",
+      "data": "2026-10-24",
+      "data_fim": "",
+      "horario": "11h às 12h",
+      "local": "Museu da Moda de Belo Horizonte – MUMO",
+      "local_id": "museu-da-moda",
+      "cidade": "Belo Horizonte",
+      "categoria": "Exposição",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; não requer inscrição prévia",
+      "descricao": "Dia 24/10, das 11h às 12h. Classificação livre. Não é necessário fazer inscrição.",
+      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-10/visita-mediada-a-exposicao-markito-cintilacoes-da-noite.png",
+      "link": "https://portalbelohorizonte.com.br/museuscentro/2026/eventos/exposicao/moda/visita-mediada-exposicao-markito-cintilacoes-da-noite-1",
+      "fonte": "Portal Belo Horizonte",
+      "fonte_descoberta": "Portal Belo Horizonte — Museu da Moda",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "criterio_exibicao": "realizacao",
+      "somente_teste": true,
+      "status_validacao": "experimental",
+      "origem_experimental": "mumo_portal_bh"
+    },
+    {
+      "id": "portal-bh-74317b8ad264-2026-10-24-1400",
+      "titulo": "Oficina de Stencil em Jeans, com o Grupo Fios",
+      "data": "2026-10-24",
+      "data_fim": "",
+      "horario": "14h às 18h",
+      "local": "Museu da Moda de Belo Horizonte – MUMO",
+      "local_id": "museu-da-moda",
+      "cidade": "Belo Horizonte",
+      "categoria": "Oficina",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "Dia 24/10, das 14h às 18h. Indicado para maiores de 16 anos. Inscrições via formulário indicado pelo museu.",
+      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-10/oficina-de-stencil-em-jeans-com-o-grupo-fios.png",
+      "link": "https://portalbelohorizonte.com.br/museuscentro/2026/eventos/oficina/artesanato/oficina-de-stencil-em-jeans-com-o-grupo-fios",
+      "fonte": "Portal Belo Horizonte",
+      "fonte_descoberta": "Portal Belo Horizonte — Museu da Moda",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "criterio_exibicao": "realizacao",
+      "somente_teste": true,
+      "status_validacao": "experimental",
+      "origem_experimental": "mumo_portal_bh"
     },
     {
       "id": "portal-bh-2329d0cc3a94-2026-10-24-1530",
@@ -8467,6 +8559,29 @@
       }
     },
     {
+      "id": "portal-bh-dead3fd1d937-2026-10-31-1500",
+      "titulo": "Visita Mediada à exposição Markito – Cintilações da Noite com interpretação simultânea em Libras",
+      "data": "2026-10-31",
+      "data_fim": "",
+      "horario": "15h às 16h",
+      "local": "Museu da Moda de Belo Horizonte – MUMO",
+      "local_id": "museu-da-moda",
+      "cidade": "Belo Horizonte",
+      "categoria": "Exposição",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "Dia 31/10, das 15h às 16h. Classificação livre. Inscrições via formulário indicado pelo museu.",
+      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-10/visita-mediada-a-exposicao-markito-cintilacoes-da-noite-com-interpretacao-simultanea-em-libras.png",
+      "link": "https://portalbelohorizonte.com.br/museuscentro/2026/eventos/exposicao/moda/visita-mediada-exposicao-markito-cintilacoes-da-noite-com-interpretacao-simultanea-em-libras",
+      "fonte": "Portal Belo Horizonte",
+      "fonte_descoberta": "Portal Belo Horizonte — Museu da Moda",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "criterio_exibicao": "realizacao",
+      "somente_teste": true,
+      "status_validacao": "experimental",
+      "origem_experimental": "mumo_portal_bh"
+    },
+    {
       "id": "ufmg-ec-observacao-noturna-dos-astros-com-telescopios-6",
       "titulo": "Observação Noturna dos Astros com Telescópios",
       "data": "2026-10-31",
@@ -8931,6 +9046,6 @@
     }
   ],
   "modo_teste_experimental": true,
-  "eventos_somente_teste": 5,
-  "atualizado_em_teste": "2026-10-07T08:34:06-03:00"
+  "eventos_somente_teste": 10,
+  "atualizado_em_teste": "2026-10-07T08:36:04-03:00"
 }
