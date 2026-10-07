@@ -12,6 +12,37 @@
     return [...tools.classList].find(name => name.startsWith('agenda-tools-')) || '';
   }
 
+  function activeAgendaContent(shell) {
+    const activeTab = shell?.querySelector('.agenda-content-tab.is-active');
+    if (activeTab?.dataset.content) return activeTab.dataset.content;
+
+    const toolsMode = agendaToolsMode(shell?.querySelector('.agenda-tools'));
+    return toolsMode.startsWith('agenda-tools-')
+      ? toolsMode.slice('agenda-tools-'.length)
+      : '';
+  }
+
+  /*
+   * A seleção de tipo de conteúdo na Agenda é exclusiva. Em especial,
+   * "Eventos" pode oferecer Espaço como critério de filtro, mas não deve
+   * renderizar os cards cadastrais de Espaços entre os resultados de eventos.
+   *
+   * app.js já separa esses conjuntos na origem; esta barreira de interface
+   * evita que uma renderização incremental ou outro aprimoramento de DOM
+   * reintroduza cards de Espaços quando a aba Eventos estiver ativa.
+   */
+  function enforceExclusiveAgendaContent(shell) {
+    if (!shell || activeAgendaContent(shell) !== 'events') return;
+
+    shell.querySelectorAll('.agenda-content-section').forEach(section => {
+      if (section.querySelector('.agenda-section-action[data-content="spaces"]')) {
+        section.remove();
+      }
+    });
+
+    shell.querySelectorAll('.agenda-space-card').forEach(card => card.remove());
+  }
+
   /*
    * A pesquisa da Agenda usa debounce e chama renderAgenda(). O render completo
    * recriava a caixa de busca e, por consequência, removia o foco/cursor após
@@ -47,13 +78,17 @@
         const nextResults = nextShell.querySelector('.agenda-results');
 
         if (currentCount && currentResults && nextCount && nextResults) {
+          enforceExclusiveAgendaContent(nextShell);
           currentCount.replaceWith(nextCount);
           currentResults.replaceWith(nextResults);
+          enforceExclusiveAgendaContent(currentShell);
           return;
         }
       }
     }
 
-    return nativeReplaceChildren(...nodes);
+    const result = nativeReplaceChildren(...nodes);
+    enforceExclusiveAgendaContent(app.querySelector('.agenda-shell'));
+    return result;
   };
 })();
