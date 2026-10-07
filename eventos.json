@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
-  "periodo": "Janeiro de 2026 a Janeiro de 2027",
-  "atualizado_em": "2026-10-06T20:57:12-03:00",
+  "periodo": "Março de 2026 a Janeiro de 2027",
+  "atualizado_em": "2026-10-07T01:03:47-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -56,7 +56,23 @@
       "mapa": "https://maps.app.goo.gl/NbE1w2tMKeH6P3Lm8",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
       "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/styles/slideshow/public/imagens/authenticated%2C%20publicador_a_ascom/banners/2018-01/cclr-dsc0471-cglenio-campregher.jpg?itok=xivQB56j",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-03-14",
+          "fim": "2026-11-03",
+          "observacao": "Dias e horários variam conforme a atividade"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrições gratuitas pelo formulário oficial."
+          }
+        ]
+      }
     },
     {
       "id": "ela-programa-2026-2",
@@ -114,7 +130,23 @@
       "grupo_rotativo": "",
       "descricao": "64 cursos e atividades gratuitas de formação artística e cultural em 22 unidades ou espaços de Belo Horizonte e on-line.",
       "motivo_publicacao": "inscricao_disponivel",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-03-14",
+          "fim": "2026-12-14",
+          "observacao": "Dias e horários variam conforme a atividade"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrições gratuitas. A disponibilidade varia conforme cada atividade."
+          }
+        ]
+      }
     },
     {
       "id": "ela-danca-para-criancas-9af8c11c87",
@@ -162,7 +194,23 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Aristolino Basílio de Oliveira, 445, Regina, Belo Horizonte - MG, 30692-190",
       "mapa": "https://maps.app.goo.gl/NbE1w2tMKeH6P3Lm8",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-03-14",
+          "fim": "2026-05-30",
+          "observacao": "Sábado — 10h30 às 12h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-unidade-centro-cultural-usina-de-cultura",
@@ -216,7 +264,23 @@
       "mapa": "https://maps.app.goo.gl/Da4tniDGCdhMExeY9",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
       "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/fundacao-municipal-de-cultura/2021/2020_01_15_fachadas_ccuc_fotos_poliana_pinto_03.jpg",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-03",
+          "fim": "2026-11-30",
+          "observacao": "Dias e horários variam conforme a atividade"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrições gratuitas pelo formulário oficial."
+          }
+        ]
+      }
     },
     {
       "id": "ela-brincadeiras-circenses-praticas-e-criacoes-juvenis-7c47756cce",
@@ -264,7 +328,23 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Dom Cabral, 765, Ipiranga, Belo Horizonte - MG, 31160-150",
       "mapa": "https://maps.app.goo.gl/Da4tniDGCdhMExeY9",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-03",
+          "fim": "2026-11-30",
+          "observacao": "Segunda-feira — 18h às 19h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-unidade-centro-cultural-sao-bernardo",
@@ -321,7 +401,23 @@
       "mapa": "https://maps.app.goo.gl/Yufimrb872nmXa4s9",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
       "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/cultura/ccsb_foto.victoroliveira-02.jpg",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-05",
+          "fim": "2026-11-25",
+          "observacao": "Dias e horários variam conforme a atividade"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrições gratuitas pelo formulário oficial."
+          }
+        ]
+      }
     },
     {
       "id": "ela-unidade-nucleo-de-formacao-e-criacao-artistica-e-cultural-nufac",
@@ -387,7 +483,23 @@
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
       "imagem": "imagens/equipamentos/nufac.png",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-05",
+          "fim": "2026-12-14",
+          "observacao": "Dias e horários variam conforme a atividade"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrições gratuitas pelo formulário oficial."
+          }
+        ]
+      }
     },
     {
       "id": "ela-encontros-para-dancar-em-dialogo-com-saberes-ancestrais-2b3263ef42",
@@ -435,7 +547,23 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Édna Quintel, 320, São Bernardo, Belo Horizonte - MG, 31750-030",
       "mapa": "https://maps.app.goo.gl/Yufimrb872nmXa4s9",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-05",
+          "fim": "2026-11-25",
+          "observacao": "Quarta-feira — 9h às 11h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-ciclo-expansao-modulo-corpo-787ea7d17f",
@@ -483,7 +611,23 @@
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-05",
+          "fim": "2026-12-14",
+          "observacao": "Segunda e quarta-feira — 14h às 17h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-ciclo-expansao-modulo-corpo-52b53e6cfb",
@@ -531,7 +675,23 @@
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-05",
+          "fim": "2026-12-14",
+          "observacao": "Segunda e quarta-feira — 19h às 22h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-ciclo-de-poeticas-modulo-residencia-ii-e74468cfb7",
@@ -579,7 +739,23 @@
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-10",
+          "fim": "2026-12-10",
+          "observacao": "Segunda e quinta-feira — 19h às 22h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-unidade-centro-cultural-urucuia",
@@ -636,7 +812,23 @@
       "mapa": "https://maps.app.goo.gl/Uq5R3PNvQBrdWSnT9",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
       "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/styles/slideshow/public/imagens/authenticated%2C%20publicador_a_ascom/banners/2018-01/dsc0545c-glenio-campregher-1.JPG?itok=nEvm-rNP",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-11",
+          "fim": "2026-11-19",
+          "observacao": "Dias e horários variam conforme a atividade"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrições gratuitas pelo formulário oficial."
+          }
+        ]
+      }
     },
     {
       "id": "ela-literatura-e-oralidade-popular-968a50341d",
@@ -684,7 +876,23 @@
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-11",
+          "fim": "2026-11-24",
+          "observacao": "Terça-feira — 19h às 21h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-encontros-para-dancar-530cc07633",
@@ -732,7 +940,23 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua W-3, 500, Pongelupe, Belo Horizonte - MG, 30628-175",
       "mapa": "https://maps.app.goo.gl/Uq5R3PNvQBrdWSnT9",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-11",
+          "fim": "2026-11-17",
+          "observacao": "Terça-feira — 19h30 às 21h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-unidade-centro-cultural-liberalino-alves-de-oliveira",
@@ -786,7 +1010,23 @@
       "mapa": "https://maps.app.goo.gl/59216yGPUBfMrKVa9",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
       "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/fundacao-municipal-de-cultura/2019/2019_06_11_CCLAO_fachada_foto_Ricardo_Laf_02%20-%20C%C3%B3pia.jpg",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-12",
+          "fim": "2026-12-01",
+          "observacao": "Dias e horários variam conforme a atividade"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrições gratuitas pelo formulário oficial."
+          }
+        ]
+      }
     },
     {
       "id": "ela-unidade-centro-cultural-vila-marcola",
@@ -847,7 +1087,23 @@
       "mapa": "https://maps.app.goo.gl/CqmZC29eVpYZdKzFA",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
       "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/cultura/2018/imagens/2016_01_29_CCVM_Fachada_%40RicardoLaf_01%20copy.jpg",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-12",
+          "fim": "2026-11-28",
+          "observacao": "Dias e horários variam conforme a atividade"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrições gratuitas pelo formulário oficial."
+          }
+        ]
+      }
     },
     {
       "id": "ela-unidade-centro-cultural-zilah-sposito",
@@ -901,7 +1157,23 @@
       "mapa": "https://maps.app.goo.gl/hTZMNcQSzknYzSRx7",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
       "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/cultura/cczs_foto.victoroliveira-14.jpg",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-12",
+          "fim": "2026-11-25",
+          "observacao": "Dias e horários variam conforme a atividade"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrições gratuitas pelo formulário oficial."
+          }
+        ]
+      }
     },
     {
       "id": "ela-fotografia-e-outras-janelas-para-ver-o-mundo-ebab07d61e",
@@ -950,7 +1222,23 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Carnaúba, 286, Zilah Spósito, Belo Horizonte - MG, 31787-210",
       "mapa": "https://maps.app.goo.gl/hTZMNcQSzknYzSRx7",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-12",
+          "fim": "2026-11-25",
+          "observacao": "Quarta-feira — 16h30 às 18h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-encontros-para-dancar-f4bb1e2327",
@@ -998,7 +1286,23 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Mangabeira da Serra, 320, Marçola, Belo Horizonte - MG, 30220-265",
       "mapa": "https://maps.app.goo.gl/CqmZC29eVpYZdKzFA",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-12",
+          "fim": "2026-11-25",
+          "observacao": "Quarta-feira — 19h às 20h30"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-encontros-para-dancar-413a0b6aad",
@@ -1046,7 +1350,23 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida Presidente Antônio Carlos, 821, Lagoinha, Belo Horizonte - MG, 31110-314",
       "mapa": "https://maps.app.goo.gl/59216yGPUBfMrKVa9",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-12",
+          "fim": "2026-11-25",
+          "observacao": "Quarta-feira — 9h30 às 11h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-unidade-centro-cultural-salgado-filho",
@@ -1101,7 +1421,23 @@
       "mapa": "https://maps.app.goo.gl/xqnT1A9TWbQdY2wE8",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
       "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/cultura/2018/imagens/CCSF_foto_Ricardo_Laf_03.jpg",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-13",
+          "fim": "2026-12-12",
+          "observacao": "Dias e horários variam conforme a atividade"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrições gratuitas pelo formulário oficial."
+          }
+        ]
+      }
     },
     {
       "id": "ela-descobrindo-a-palhacaria-335b2e03d1",
@@ -1149,7 +1485,23 @@
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-13",
+          "fim": "2026-10-15",
+          "observacao": "Quinta-feira — 14h30 às 16h30"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-brincadeiras-circenses-9c5f12c97a",
@@ -1197,7 +1549,23 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Nova Ponte, 22, Salgado Filho, Belo Horizonte - MG, 30550-720",
       "mapa": "https://maps.app.goo.gl/xqnT1A9TWbQdY2wE8",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-13",
+          "fim": "2026-10-29",
+          "observacao": "Quinta-feira — 17h30 às 19h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-encontros-para-ver-imagens-60260a2cbf",
@@ -1246,7 +1614,23 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Mangabeira da Serra, 320, Marçola, Belo Horizonte - MG, 30220-265",
       "mapa": "https://maps.app.goo.gl/CqmZC29eVpYZdKzFA",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-14",
+          "fim": "2026-10-16",
+          "observacao": "Sexta-feira — 17h30 às 19h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-unidade-centro-cultural-bairro-das-industrias",
@@ -1303,7 +1687,23 @@
       "mapa": "https://maps.app.goo.gl/o3ucaPwjJs26Zdvy5",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
       "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/styles/slideshow/public/imagens/authenticated%2C%20publicador_a_ascom/banners/2018-01/ccbdi-16-2015-10-07-cricardolaf.jpg?itok=WW-Gp5kh",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-18",
+          "fim": "2026-11-25",
+          "observacao": "Dias e horários variam conforme a atividade"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrições gratuitas pelo formulário oficial."
+          }
+        ]
+      }
     },
     {
       "id": "ela-boi-livre-3c9a386eae",
@@ -1358,7 +1758,23 @@
         "ela-laboratorio-de-africanidades-18892054fe"
       ],
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-18",
+          "fim": "2026-11-24",
+          "observacao": "Terça-feira — 17h às 19h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-danca-para-criancas-c5e700d124",
@@ -1406,7 +1822,23 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua dos Industriários, 289, Indústrias I (Barreiro), Belo Horizonte - MG, 30610-280",
       "mapa": "https://maps.app.goo.gl/o3ucaPwjJs26Zdvy5",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-18",
+          "fim": "2026-10-20",
+          "observacao": "Terça-feira — 18h às 19h30"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-unidade-centro-cultural-padre-eustaquio",
@@ -1460,7 +1892,23 @@
       "mapa": "https://maps.app.goo.gl/7rg1vm7n5XChXQbv7",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
       "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/cultura/2018/imagens/CCPE%20-%20DSC_4953%20-%20%C2%A9Glenio%20Campregher.jpg",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-19",
+          "fim": "2026-12-01",
+          "observacao": "Dias e horários variam conforme a atividade"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrições gratuitas pelo formulário oficial."
+          }
+        ]
+      }
     },
     {
       "id": "manual-ela-roda-de-choro-13ef75b94c-2026-08-19",
@@ -1489,6 +1937,22 @@
       "espaco_interno": "",
       "inscricao_inicio": "2026-07-17",
       "inscricao_fim": "",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-19",
+          "fim": "2026-11-25",
+          "observacao": "Quarta-feira — 19h às 22h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      },
       "motivo_publicacao": "inscricao_disponivel"
     },
     {
@@ -1538,7 +2002,23 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua dos Industriários, 289, Indústrias I (Barreiro), Belo Horizonte - MG, 30610-280",
       "mapa": "https://maps.app.goo.gl/o3ucaPwjJs26Zdvy5",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-20",
+          "fim": "2026-10-22",
+          "observacao": "Quinta-feira — 9h30 às 11h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-ciclo-de-poeticas-modulo-residencia-ii-58f9b86345",
@@ -1586,7 +2066,23 @@
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-20",
+          "fim": "2026-12-10",
+          "observacao": "Terça e quinta-feira — 14h às 17h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-unidade-centro-de-referencia-das-juventudes",
@@ -1637,7 +2133,23 @@
       "mapa": "https://maps.app.goo.gl/BvSVrZ34oQpWFoM57",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
       "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/assistencia-social-e-direitos-humanos/crj_capa_materia.png",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-21",
+          "fim": "2026-10-23",
+          "observacao": "Dias e horários variam conforme a atividade"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrições gratuitas pelo formulário oficial."
+          }
+        ]
+      }
     },
     {
       "id": "ela-arena-atelie-livre-fcace676d6",
@@ -1692,7 +2204,23 @@
         "ela-formacao-de-brincantes-o-brincar-e-a-natureza-f0ab60fc5a"
       ],
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-21",
+          "fim": "2026-12-04",
+          "observacao": "Sexta-feira — 14h às 17h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-oficina-basica-de-circo-996ad91965",
@@ -1739,7 +2267,23 @@
       "endereco": "Rua Guaicurus, 50, Centro, Belo Horizonte - MG, 30111-060",
       "mapa": "https://maps.app.goo.gl/BvSVrZ34oQpWFoM57",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-21",
+          "fim": "2026-10-23",
+          "observacao": "Sexta-feira — 14h30 às 17h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-unidade-centro-cultural-pampulha",
@@ -1793,7 +2337,23 @@
       "mapa": "https://maps.app.goo.gl/rrV4fGrZHEfgd5k57",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
       "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/fundacao-municipal-de-cultura/2020/ccpam-foto-glenio-campregher.jpg",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-22",
+          "fim": "2026-12-05",
+          "observacao": "Dias e horários variam conforme a atividade"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrições gratuitas pelo formulário oficial."
+          }
+        ]
+      }
     },
     {
       "id": "ela-unidade-centro-cultural-vila-fatima",
@@ -1847,7 +2407,23 @@
       "mapa": "https://maps.app.goo.gl/Ky1wTCbu3P1i94FQ7",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
       "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/cultura/2018_01_19_ccvf_foto_ricardo_laf-15.jpg",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-22",
+          "fim": "2026-11-17",
+          "observacao": "Dias e horários variam conforme a atividade"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrições gratuitas pelo formulário oficial."
+          }
+        ]
+      }
     },
     {
       "id": "ela-aventuras-de-infancia-vamos-brincar-de-inventar-com-as-artes-visuais-b6dc0ebb12",
@@ -1895,7 +2471,23 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Expedicionário Paulo de Souza, 185, Urca, Belo Horizonte - MG, 31360-310",
       "mapa": "https://maps.app.goo.gl/rrV4fGrZHEfgd5k57",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-22",
+          "fim": "2026-12-05",
+          "observacao": "Sábado — 10h às 11h30"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-aventuras-de-infancia-vamos-brincar-de-inventar-com-as-artes-visuais-301eef8344",
@@ -1943,7 +2535,22 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua São Miguel Arcanjo, 215, Nossa Senhora de Fátima, Belo Horizonte - MG, 30230-660",
       "mapa": "https://maps.app.goo.gl/Ky1wTCbu3P1i94FQ7",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-08-22",
+          "observacao": "Sábado — 14h às 15h30"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-brincadeiras-circenses-538c41367d",
@@ -1991,7 +2598,23 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Édna Quintel, 320, São Bernardo, Belo Horizonte - MG, 31750-030",
       "mapa": "https://maps.app.goo.gl/Yufimrb872nmXa4s9",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-22",
+          "fim": "2026-11-14",
+          "observacao": "Sábados — 10h às 11h30"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-unidade-centro-cultural-jardim-guanabara",
@@ -2045,7 +2668,23 @@
       "mapa": "https://maps.app.goo.gl/eCATveDGRuNKYLof9",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
       "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/cultura/2018/imagens/CCJG%20-%20DSC_4925%20-%20%C2%A9Glenio%20Campregher%20copy.jpg",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-24",
+          "fim": "2026-11-30",
+          "observacao": "Dias e horários variam conforme a atividade"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrições gratuitas pelo formulário oficial."
+          }
+        ]
+      }
     },
     {
       "id": "ela-costurando-ideias-costura-criativa-e-invencoes-efc01ba2f7",
@@ -2093,7 +2732,23 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua João Álvares Cabral, 277, Jardim Guanabara, Belo Horizonte - MG, 31742-170",
       "mapa": "https://maps.app.goo.gl/eCATveDGRuNKYLof9",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-24",
+          "fim": "2026-11-30",
+          "observacao": "Segunda-feira — 14h às 16h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "manual-ela-praticas-percussivas-ritmos-brasileiros-2157c0200a-2026-08-24",
@@ -2122,6 +2777,22 @@
       "espaco_interno": "",
       "inscricao_inicio": "2026-07-17",
       "inscricao_fim": "",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-24",
+          "fim": "2026-11-30",
+          "observacao": "Segunda-feira — 19h às 21h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      },
       "motivo_publicacao": "inscricao_disponivel"
     },
     {
@@ -2170,7 +2841,23 @@
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-25",
+          "fim": "2026-11-24",
+          "observacao": "Terça-feira — 19h às 22h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-arena-atelie-livre-52e864fa5b",
@@ -2218,7 +2905,23 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Nova Ponte, 22, Salgado Filho, Belo Horizonte - MG, 30550-720",
       "mapa": "https://maps.app.goo.gl/xqnT1A9TWbQdY2wE8",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-26",
+          "fim": "2026-12-02",
+          "observacao": "Quarta-feira — 14h às 16h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-laboratorio-de-pesquisa-saberes-de-povos-originarios-6f89e3a592",
@@ -2266,7 +2969,23 @@
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-26",
+          "fim": "2026-11-25",
+          "observacao": "Quarta-feira — 19h às 21h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-unidade-centro-de-referencia-de-assistencia-social-cras-conjunto-paulo-vi",
@@ -2315,7 +3034,23 @@
       "motivo_publicacao": "inscricao_disponivel",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
       "imagem": "imagens/equipamentos/cras-conjunto-paulo-vi.png",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-28",
+          "fim": "2026-11-27",
+          "observacao": "Dias e horários variam conforme a atividade"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrições gratuitas pelo formulário oficial."
+          }
+        ]
+      }
     },
     {
       "id": "ela-laboratorio-com-linhas-e-agulhas-fba5d83c6e",
@@ -2360,7 +3095,23 @@
       "idade_publico": "A partir de 14 anos",
       "motivo_publicacao": "inscricao_disponivel",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-28",
+          "fim": "2026-11-27",
+          "observacao": "Sexta-feira — 14h às 16h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-grafite-e-bom-demais-stencil-lambes-pixo-arte-urbana-e91a057086",
@@ -2408,7 +3159,23 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Mangabeira da Serra, 320, Marçola, Belo Horizonte - MG, 30220-265",
       "mapa": "https://maps.app.goo.gl/CqmZC29eVpYZdKzFA",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-29",
+          "fim": "2026-11-28",
+          "observacao": "Sábado — 11h às 13h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-encontros-para-ver-e-criar-filmes-052b55f529",
@@ -2457,7 +3224,23 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Mangabeira da Serra, 320, Marçola, Belo Horizonte - MG, 30220-265",
       "mapa": "https://maps.app.goo.gl/CqmZC29eVpYZdKzFA",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-29",
+          "fim": "2026-11-07",
+          "observacao": "Sábado — 14h às 15h30"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-unidade-centro-cultural-sao-geraldo",
@@ -2508,7 +3291,23 @@
       "mapa": "https://maps.app.goo.gl/BTFGBXTDZkSgQRc98",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
       "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/fundacao-municipal-de-cultura/2020/2020_01_15_fachadas_ccsg_foto_poliana_pinto_01.jpg",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-01",
+          "fim": "2026-11-03",
+          "observacao": "Dias e horários variam conforme a atividade"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrições gratuitas pelo formulário oficial."
+          }
+        ]
+      }
     },
     {
       "id": "ela-laboratorio-com-linhas-e-agulhas-5f80aa6249",
@@ -2556,7 +3355,23 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua São Miguel Arcanjo, 215, Nossa Senhora de Fátima, Belo Horizonte - MG, 30230-660",
       "mapa": "https://maps.app.goo.gl/Ky1wTCbu3P1i94FQ7",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-01",
+          "fim": "2026-11-17",
+          "observacao": "Terça-feira — 14h às 16h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-grafite-e-bom-demais-stencil-lambes-pixo-arte-urbana-d47b745671",
@@ -2604,7 +3419,23 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Aristolino Basílio de Oliveira, 445, Regina, Belo Horizonte - MG, 30692-190",
       "mapa": "https://maps.app.goo.gl/NbE1w2tMKeH6P3Lm8",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-01",
+          "fim": "2026-11-03",
+          "observacao": "Terça-feira — 19h às 21h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-canto-voz-e-expressao-b9bb05c243",
@@ -2652,7 +3483,23 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Silva Alvarenga, 548, São Geraldo, Belo Horizonte - MG, 31050-640",
       "mapa": "https://maps.app.goo.gl/BTFGBXTDZkSgQRc98",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-01",
+          "fim": "2026-11-03",
+          "observacao": "Terça-feira — 19h30 às 21h30"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-unidade-centro-cultural-alto-vera-cruz",
@@ -2703,7 +3550,23 @@
       "mapa": "https://maps.app.goo.gl/BVLi6uyKLmALv6SM6",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
       "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/fundacao-municipal-de-cultura/2020_01_15_fachada_CCAVC_foto_Poliana_Pinto_%20-1%20%281%29%20-%20C%C3%B3pia.jpg",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-02",
+          "fim": "2026-11-18",
+          "observacao": "Dias e horários variam conforme a atividade"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrições gratuitas pelo formulário oficial."
+          }
+        ]
+      }
     },
     {
       "id": "ela-unidade-centro-cultural-vila-santa-rita",
@@ -2760,7 +3623,23 @@
       "mapa": "https://maps.app.goo.gl/2bjmUoYBq6G5Tfm17",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
       "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/fundacao-municipal-de-cultura/2019/CCVSR%20-%20Foto%20Nathalia_Turcheti.jpg",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-02",
+          "fim": "2026-11-28",
+          "observacao": "Dias e horários variam conforme a atividade"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrições gratuitas pelo formulário oficial."
+          }
+        ]
+      }
     },
     {
       "id": "ela-unidade-cine-santa-tereza",
@@ -2811,7 +3690,23 @@
       "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
       "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/fundacao-municipal-de-cultura/2021/cine-santa-tereza-foto-ricardo-laf-3_1.jpg",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-02",
+          "fim": "2026-11-04",
+          "observacao": "Dias e horários variam conforme a atividade"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrições gratuitas pelo formulário oficial."
+          }
+        ]
+      }
     },
     {
       "id": "ela-laboratorio-com-linhas-e-agulhas-5caca04e80",
@@ -2859,7 +3754,23 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Padre Júlio Maria, 1577, Alto Vera Cruz, Belo Horizonte - MG, 30285-360",
       "mapa": "https://maps.app.goo.gl/BVLi6uyKLmALv6SM6",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-02",
+          "fim": "2026-11-18",
+          "observacao": "Quarta-feira — 14h às 16h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-laboratorio-com-linhas-e-agulhas-470610ecc7",
@@ -2907,7 +3818,23 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua W-3, 500, Pongelupe, Belo Horizonte - MG, 30628-175",
       "mapa": "https://maps.app.goo.gl/Uq5R3PNvQBrdWSnT9",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-02",
+          "fim": "2026-11-18",
+          "observacao": "Quarta-feira — 14h às 16h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-beaba-do-violao-3b084583e3",
@@ -2955,7 +3882,23 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Ana Rafael dos Santos, 149, Vila Santa Rita, Belo Horizonte - MG, 30668-570",
       "mapa": "https://maps.app.goo.gl/2bjmUoYBq6G5Tfm17",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-02",
+          "fim": "2026-11-18",
+          "observacao": "Quarta-feira — 14h30 às 16h30"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-quem-cuida-da-arte-os-bastidores-da-curadoria-56806ceda0",
@@ -3002,7 +3945,23 @@
       "endereco": "Rua Estrela do Sul, 89, Santa Tereza, Belo Horizonte - MG, 31010-240",
       "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-02",
+          "fim": "2026-11-04",
+          "observacao": "Quarta-feira — 19h às 21h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-tirando-as-ideias-das-gavetas-laboratorio-de-elaboracao-de-projetos-culturais-b0a44ba65b",
@@ -3050,7 +4009,23 @@
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-02",
+          "fim": "2026-12-02",
+          "observacao": "Quarta-feira — 9h30 às 12h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-unidade-centro-de-referencia-da-cultura-popular-e-tradicional-lagoa-do-nado",
@@ -3101,7 +4076,23 @@
       "mapa": "https://maps.app.goo.gl/Xupvn986WiEQikbR8",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
       "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/fundacao-municipal-de-cultura/2020/CRCP%20Lagoa%20do%20Nado%20-%20Foto%20Vander%20Bras%20%20PBH-%20C%C3%B3pia.jpg",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-03",
+          "fim": "2026-11-12",
+          "observacao": "Dias e horários variam conforme a atividade"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrições gratuitas pelo formulário oficial."
+          }
+        ]
+      }
     },
     {
       "id": "ela-atelie-de-design-popular-74727c50cc",
@@ -3149,7 +4140,23 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Ministro Hermenegildo de Barros, 904, Itapoã, Belo Horizonte - MG, 31710-230",
       "mapa": "https://maps.app.goo.gl/Xupvn986WiEQikbR8",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-03",
+          "fim": "2026-11-12",
+          "observacao": "Quinta-feira — 14h às 17h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-beaba-do-violao-8e196d89cb",
@@ -3197,7 +4204,23 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua W-3, 500, Pongelupe, Belo Horizonte - MG, 30628-175",
       "mapa": "https://maps.app.goo.gl/Uq5R3PNvQBrdWSnT9",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-03",
+          "fim": "2026-11-19",
+          "observacao": "Quinta-feira — 14h30 às 16h30"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-atelie-bastidores-das-artes-performance-figurino-e-curadoria-049cd9fa95",
@@ -3245,7 +4268,23 @@
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-03",
+          "fim": "2026-11-05",
+          "observacao": "Quinta-feira — 15h às 17h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-costurando-ideias-costura-criativa-e-invencoes-35e148f8b2",
@@ -3293,7 +4332,23 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Carnaúba, 286, Zilah Spósito, Belo Horizonte - MG, 31787-210",
       "mapa": "https://maps.app.goo.gl/hTZMNcQSzknYzSRx7",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-03",
+          "fim": "2026-11-05",
+          "observacao": "Quinta-feira — 15h às 17h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-laboratorio-de-producao-cultural-do-criar-ao-fazer-acontecer-23d1407ea1",
@@ -3341,7 +4396,23 @@
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-03",
+          "fim": "2026-12-03",
+          "observacao": "Quinta-feira — 19h às 21h30"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-unidade-centro-cultural-venda-nova",
@@ -3392,7 +4463,23 @@
       "mapa": "https://maps.app.goo.gl/zcTEYqwr1mBiBwZ99",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
       "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/cultura/2018/imagens/CCVN_foto_Ricardo_Laf_02.jpg",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-05",
+          "fim": "2026-11-14",
+          "observacao": "Dias e horários variam conforme a atividade"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrições gratuitas pelo formulário oficial."
+          }
+        ]
+      }
     },
     {
       "id": "ela-danca-para-criancas-3dc24f22a7",
@@ -3440,7 +4527,23 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Ana Rafael dos Santos, 149, Vila Santa Rita, Belo Horizonte - MG, 30668-570",
       "mapa": "https://maps.app.goo.gl/2bjmUoYBq6G5Tfm17",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-05",
+          "fim": "2026-10-24",
+          "observacao": "Sábado — 10h às 11h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-aventuras-de-infancia-vamos-brincar-de-inventar-com-as-artes-visuais-7ab0087345",
@@ -3488,7 +4591,23 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Ana Rafael dos Santos, 149, Vila Santa Rita, Belo Horizonte - MG, 30668-570",
       "mapa": "https://maps.app.goo.gl/2bjmUoYBq6G5Tfm17",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-05",
+          "fim": "2026-11-28",
+          "observacao": "Sábado — 13h às 15h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-grafite-e-bom-demais-stencil-lambes-pixo-arte-urbana-909724bef2",
@@ -3536,7 +4655,23 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua José Ferreira dos Santos, 184, Jardim dos Comerciários, Belo Horizonte - MG, 31640-060",
       "mapa": "https://maps.app.goo.gl/zcTEYqwr1mBiBwZ99",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-05",
+          "fim": "2026-11-14",
+          "observacao": "Sábado — 14h às 16h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-desenho-de-observacao-c6927fb23d",
@@ -3584,7 +4719,23 @@
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-08",
+          "fim": "2026-11-10",
+          "observacao": "Terça-feira — 14h às 16h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-elaboracao-de-projetos-culturais-f008f5558f",
@@ -3632,7 +4783,23 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Édna Quintel, 320, São Bernardo, Belo Horizonte - MG, 31750-030",
       "mapa": "https://maps.app.goo.gl/Yufimrb872nmXa4s9",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-08",
+          "fim": "2026-11-24",
+          "observacao": "Terça-feira — 19h às 21h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-gestao-e-producao-cultural-praticas-inventivas-no-fazer-artistico-07d9bdf7a7",
@@ -3680,7 +4847,23 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Mangabeira da Serra, 320, Marçola, Belo Horizonte - MG, 30220-265",
       "mapa": "https://maps.app.goo.gl/CqmZC29eVpYZdKzFA",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-08",
+          "fim": "2026-11-24",
+          "observacao": "Terça-feira — 19h às 21h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-musica-percussiva-de-rua-4d8887bc14",
@@ -3727,7 +4910,23 @@
       "endereco": "Rua Dom Cabral, 765, Ipiranga, Belo Horizonte - MG, 31160-150",
       "mapa": "https://maps.app.goo.gl/Da4tniDGCdhMExeY9",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-08",
+          "fim": "2026-11-24",
+          "observacao": "Terça-feira — 19h às 22h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-costurando-ideias-costura-criativa-e-invencoes-6edf9a425f",
@@ -3775,7 +4974,23 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua dos Industriários, 289, Indústrias I (Barreiro), Belo Horizonte - MG, 30610-280",
       "mapa": "https://maps.app.goo.gl/o3ucaPwjJs26Zdvy5",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-09",
+          "fim": "2026-11-25",
+          "observacao": "Quarta-feira — 15h às 17h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-elaboracao-de-projetos-culturais-b3d7f38056",
@@ -3823,7 +5038,23 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua João Álvares Cabral, 277, Jardim Guanabara, Belo Horizonte - MG, 31742-170",
       "mapa": "https://maps.app.goo.gl/eCATveDGRuNKYLof9",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-09",
+          "fim": "2026-11-25",
+          "observacao": "Quarta-feira — 19h às 21h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-canto-voz-e-expressao-4f91627676",
@@ -3871,7 +5102,23 @@
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-11",
+          "fim": "2026-11-27",
+          "observacao": "Sexta-feira — 19h30 às 21h30"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-elaboracao-de-projetos-culturais-0563dc9854",
@@ -3919,7 +5166,23 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Rua Expedicionário Paulo de Souza, 185, Urca, Belo Horizonte - MG, 31360-310",
       "mapa": "https://maps.app.goo.gl/rrV4fGrZHEfgd5k57",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-14",
+          "fim": "2026-11-30",
+          "observacao": "Segunda-feira — 19h às 21h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "manual-ela-voa-palavra-elaboracao-de-projetos-culturais-em-literatura-e-leitura-d3a8ca75d9-2026-09-15",
@@ -3948,6 +5211,22 @@
       "espaco_interno": "",
       "inscricao_inicio": "2026-07-17",
       "inscricao_fim": "",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-15",
+          "fim": "2026-12-01",
+          "observacao": "Terça-feira — 19h às 21h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      },
       "motivo_publicacao": "inscricao_disponivel"
     },
     {
@@ -3996,7 +5275,23 @@
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-16",
+          "fim": "2026-11-18",
+          "observacao": "Quarta-feira — 19h às 22h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-criacao-e-producao-de-eventos-culturais-8b324801ac",
@@ -4044,7 +5339,23 @@
       "motivo_publicacao": "inscricao_disponivel",
       "endereco": "Avenida Presidente Antônio Carlos, 821, Lagoinha, Belo Horizonte - MG, 31110-314",
       "mapa": "https://maps.app.goo.gl/59216yGPUBfMrKVa9",
-      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png"
+      "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-22",
+          "fim": "2026-12-01",
+          "observacao": "Terça-feira — 19h às 21h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-arena-dj-diversidade-na-pista-0a1fc71968",
@@ -4092,7 +5403,23 @@
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-10-06",
+          "fim": "2026-11-03",
+          "observacao": "Terça-feira — 19h às 21h30"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-carnaval-os-bastidores-da-festa-1eb05ac8ec",
@@ -4140,7 +5467,23 @@
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-10-07",
+          "fim": "2026-10-28",
+          "observacao": "Quarta-feira — 14h às 17h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-o-funk-e-a-cidade-do-batuque-tamborzao-ao-batidao-corpo-e-ancestralidade-3b24223326",
@@ -4188,7 +5531,22 @@
       "mapa": "https://maps.app.goo.gl/opoUtz4XokTKPhyG9",
       "espaco_interno": "Núcleo de Formação e Criação Artística e Cultural",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-04",
+          "observacao": "Quarta-feira — 19h às 22h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ela-transe-da-tranca-aula-aberta-de-artes-visuais-4a55564c94",
@@ -4235,67 +5593,22 @@
       "endereco": "Rua Nova Ponte, 22, Salgado Filho, Belo Horizonte - MG, 30550-720",
       "mapa": "https://maps.app.goo.gl/xqnT1A9TWbQdY2wE8",
       "imagem_programa": "imagens/eventos-manuais/escola-livre-de-artes.png",
-      "imagem_fallback_origem": "equipamento"
-    },
-    {
-      "id": "manual-programa-conjunto-de-conscientizacao-instrucao-e-combate-a-violencia-domestica-2026-01-01",
-      "titulo": "Programa Conjunto de Conscientização, Instrução e Combate à Violência Doméstica",
-      "data": "2026-01-01",
-      "data_fim": "2026-12-31",
-      "horario": "",
-      "local": "EJEF - Escola Judicial Desembargador Edésio Fernandes",
-      "cidade": "Belo Horizonte",
-      "categoria": "Informação",
-      "gratuito": true,
-      "inscricao": "",
-      "criterio_exibicao": "realizacao",
-      "status_inscricao": "",
-      "exibicao_ativa": true,
-      "descricao": "O Programa Conjunto de Conscientização, Instrução e Combate à Violência Doméstica reúne, em um só espaço, materiais informativos, jurisprudência, documentos e outros conteúdos voltados ao enfrentamento da violência doméstica.\n\nCriado pela EJEF, com o apoio da COMSIV/TJMG e de instituições parceiras, o programa busca ampliar o acesso à informação e fortalecer a conscientização sobre o tema.\n\nAgora, as notícias publicadas no programa também serão compartilhadas em nossas redes sociais, ampliando o alcance desse conteúdo e facilitando o acesso às principais informações.\n\nSaiba mais no portal da EJEF. Link na bio e nos stories.\n\n#ViolênciaDoméstica #Conscientização #DireitosHumanos #EJEF #TJMG",
-      "imagem": "imagens/eventos-manuais/programa-conjunto-de-conscientizacao-instrucao-e-combate-a-violencia-domestica.webp",
-      "link": "https://www.instagram.com/p/Da3JhdBtWh3/",
-      "pagina": "https://www.instagram.com/p/Da3JhdBtWh3/",
-      "link_inscricao": "https://ejef.tjmg.jus.br/combate-a-violencia-domestica",
-      "monitorar_formulario_google": false,
-      "url_formulario_google": "",
-      "acao_formulario_fechado": "marcar_encerrada",
-      "fonte": "Cadastro manual",
-      "instituicao_id": "",
-      "classificacao_indicativa": "",
-      "local_id": "ejef-escola-judicial-desembargador-edesio-fernandes",
-      "endereco": "Edifício Mirafiori - Rua dos Guajajaras, 40 - Centro, Belo Horizonte - MG, 30180-100",
-      "mapa": "https://maps.app.goo.gl/YH85vtV6rh1sGkMVA",
-      "espaco_interno": "",
-      "inscricao_inicio": "",
-      "inscricao_fim": "",
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
-    },
-    {
-      "id": "ccbb-bh-exposicao-permanente",
-      "titulo": "Exposição de Longa Duração",
-      "data": "2026-01-01",
-      "data_fim": "2026-12-31",
-      "horario": "10h às 22h. De quarta a segunda.",
-      "local": "CCBB Belo Horizonte",
-      "cidade": "Belo Horizonte",
-      "categoria": "Exposição",
-      "gratuito": true,
-      "inscricao": "Ingresso gratuito; consulte a página oficial",
-      "descricao": "O Centro Cultural Banco do Brasil Belo Horizonte possui duas salas de exposição permanente, o Grande Salão e o Gabinete do Secretário, que apresentam parte da história do CCBB BH e do prédio que o abriga. A expografia é fruto de uma parceria com o Arquivo Público Mineiro,",
-      "imagem": "imagens/ajustes-eventos/ccbb-bh-exposicao-permanente.jpg",
-      "link": "https://ccbb.com.br/belo-horizonte/programacao/exposicao-permanente/",
-      "fonte": "CCBB Belo Horizonte",
-      "instituicao_id": "ccbb-bh",
-      "classificacao_indicativa": "Livre",
-      "pagina": "https://ccbb.com.br/belo-horizonte/programacao/exposicao-permanente/",
-      "espaco_interno": "",
-      "criterio_exibicao": "realizacao",
-      "imagem_fonte": "Imagem adicionada manualmente pelo editor",
-      "ajuste_editor_aplicado": true,
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "ccbb-bh",
-      "endereco": "Praça da Liberdade, 450, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/Q6UrZGKEn8eCx8Kb8"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-12-12",
+          "observacao": "Sábado — 15h às 18h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-17",
+            "status": "aberta",
+            "observacao": "Inscrição disponível no formulário oficial enquanto a atividade aparecer como opção selecionável."
+          }
+        ]
+      }
     },
     {
       "id": "ccbb-bh-marcelo-xavier-asa-de-papel",
@@ -4318,7 +5631,15 @@
       "local_id": "ccbb-bh",
       "endereco": "Praça da Liberdade, 450, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/Q6UrZGKEn8eCx8Kb8",
-      "espaco_interno": "Galerias do Térreo"
+      "espaco_interno": "Galerias do Térreo",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-07-01",
+          "fim": "2026-10-12",
+          "observacao": "Quarta a segunda, das 10h às 22h"
+        }
+      }
     },
     {
       "id": "ccbb-bh-joaquin-torres-garcia-150-anos",
@@ -4341,7 +5662,15 @@
       "local_id": "ccbb-bh",
       "endereco": "Praça da Liberdade, 450, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/Q6UrZGKEn8eCx8Kb8",
-      "espaco_interno": "Galerias do 3º andar e Pátio"
+      "espaco_interno": "Galerias do 3º andar e Pátio",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-07-15",
+          "fim": "2026-10-12",
+          "observacao": "Quarta a segunda, das 10h às 22h"
+        }
+      }
     },
     {
       "id": "manual-oficinas-centro-cultural-santa-ines-2026-08-03",
@@ -4370,6 +5699,20 @@
       "espaco_interno": "",
       "inscricao_inicio": "2026-07-14",
       "inscricao_fim": "",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-03",
+          "fim": "2026-12-30"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-07-14",
+            "observacao": "Inscrições presenciais no Centro Cultural Santa Inês"
+          }
+        ]
+      },
       "motivo_publicacao": "exibicao_manual_ativa"
     },
     {
@@ -4403,6 +5746,21 @@
       "titulo": "Oficina Percussiva",
       "url_formulario_google": "",
       "inscricao_fim": "",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-29",
+          "fim": "2026-11-21",
+          "observacao": "Aos sábados, das 14h às 17h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "inicio": "2026-08-05",
+            "observacao": "📲 Mais informações: WhatsApp (31) 98668-2359"
+          }
+        ]
+      },
       "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
@@ -4436,6 +5794,22 @@
       "espaco_interno": "",
       "inscricao_fim": "2026-09-03",
       "inscricao_inicio": "",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-05",
+          "fim": "2026-11-28",
+          "observacao": "10h às 12h"
+        },
+        "participacao": [
+          {
+            "tipo": "inscricao",
+            "fim": "2026-09-03",
+            "status": "aberta",
+            "observacao": "Inscrições on-line ou presenciais, abertas até dois dias antes do início da atividade ou enquanto houver vagas."
+          }
+        ]
+      },
       "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
@@ -4456,7 +5830,14 @@
       "instituicao_id": "fcs",
       "fonte_id": 37771,
       "atualizado_na_fonte": "2026-10-03T13:15:50",
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-10-01",
+          "fim": "2026-11-15"
+        }
+      }
     },
     {
       "imagem": "imagens/eventos-manuais/coleta-4e74180f20b4316b2792e08e01ff770ba472d8e3d6b227e0cd82213af77a79c4.jpg",
@@ -4488,6 +5869,14 @@
       "endereco": "",
       "local_id": "",
       "espaco_interno": "",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-10-02",
+          "fim": "2026-10-26",
+          "observacao": "19h"
+        }
+      },
       "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
@@ -4511,53 +5900,15 @@
       "local_id": "ccbb-bh",
       "endereco": "Praça da Liberdade, 450, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/Q6UrZGKEn8eCx8Kb8",
-      "espaco_interno": "Teatro II"
-    },
-    {
-      "id": "fcs-wp-37774",
-      "titulo": "Seminário “Prosa de Saberes Tradicionais: Cambará das Matriarcas”",
-      "data": "2026-10-06",
-      "data_fim": "",
-      "horario": "15h",
-      "local": "Palácio das Artes",
-      "cidade": "Belo Horizonte",
-      "categoria": "Outros",
-      "gratuito": true,
-      "inscricao": "Ingresso gratuito; consulte a página oficial",
-      "descricao": "No dia 6 de outubro, às 15h, a Sala Juvenal Dias receberá o seminário “Prosa de saberes tradicionais: cambará das matriarcas”. O evento promove o diálogo com as mestras dos saberes tradicionais e poder público para fortalecimento, valorização e reconhecimento de políticas públicas desse patrimônio imaterial.",
-      "imagem": "https://fcs.mg.gov.br/wp-content/uploads/2026/10/matriarcas-card-1024x1024.png",
-      "link": "https://fcs.mg.gov.br/evento/seminario-prosa-de-saberes-tradicionais-cambara-das-matriarcas/",
-      "fonte": "Fundação Clóvis Salgado",
-      "instituicao_id": "fcs",
-      "fonte_id": 37774,
-      "atualizado_na_fonte": "2026-10-03T13:23:30",
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "palacio-das-artes",
-      "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7"
-    },
-    {
-      "id": "cine-santa-tereza-bileto-127670",
-      "titulo": "SEMANA DO CINEMA ESPANHOL - O desencanto",
-      "data": "2026-10-06",
-      "data_fim": "",
-      "horario": "19h",
-      "local": "Cine Santa Tereza",
-      "cidade": "Belo Horizonte",
-      "categoria": "Cinema",
-      "gratuito": true,
-      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial. Também há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade.",
-      "descricao": "O desencanto (El desencanto | Jaime Chávarri | 1976 | Espanhol |Documentário |97 min) Este filme é um documentário sobre o poeta 'Leopoldo Panero'. Sua viúva e seus filhos falam sobre a morte em geral e neste caso especial e também sobre seus próprios problemas familiares. Classificação Indicativa: 12 anos",
-      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/2sf5nrf0v9oc2l2lqpoln1g93tdg9k8vuetnbbpv9nvqkusqnmbm26h6sig1h88fukabtvevg9oj2k4fht1h8jjirbnuf2l0oejn60r.webp",
-      "link": "https://bileto.sympla.com.br/event/127670/d/417193/s/2709397",
-      "fonte": "Cine Santa Tereza",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "fonte_id": "127670",
-      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
-      "classificacao_indicativa": "12 anos",
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
+      "espaco_interno": "Teatro II",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-10-02",
+          "fim": "2026-10-26",
+          "observacao": "Sexta a segunda, às 19h. No dia 04/10 (domingo) não haverá sessão. Excepcionalmente no dia 10/10 (sábado) serão realizadas duas apresentações, às 15h e às 19h."
+        }
+      }
     },
     {
       "id": "sympla-teatro-da-cidade-3598079",
@@ -4582,7 +5933,13 @@
       "pagina": "https://www.sympla.com.br/produtor/teatrodacidade",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "evento_gratuito_confirmado_na_sympla",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Teatro+da+Cidade%2C+Rua+da+Bahia%2C+1341%2C+Centro%2C+Belo+Horizonte+-+MG"
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Teatro+da+Cidade%2C+Rua+da+Bahia%2C+1341%2C+Centro%2C+Belo+Horizonte+-+MG",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-07"
+        }
+      }
     },
     {
       "id": "portal-bh-f52dbc705ede-2026-10-07-1230",
@@ -4610,7 +5967,14 @@
         "Gratuito"
       ],
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Local+informado+na+p%C3%A1gina+oficial%2C+Pra%C3%A7a+de+Servi%C3%A7os+da+UFMG+-+Avenida+Presidente+Ant%C3%B4nio+Carlos%2C+6627+-+Pampulha%2C+Belo+Horizonte"
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Local+informado+na+p%C3%A1gina+oficial%2C+Pra%C3%A7a+de+Servi%C3%A7os+da+UFMG+-+Avenida+Presidente+Ant%C3%B4nio+Carlos%2C+6627+-+Pampulha%2C+Belo+Horizonte",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-07",
+          "observacao": "12h30 às 13h30"
+        }
+      }
     },
     {
       "id": "portal-bh-1e45a9fc3659-2026-10-07-1230",
@@ -4642,7 +6006,14 @@
         "Acessibilidade"
       ],
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Local+informado+na+p%C3%A1gina+oficial%2C+Avenida+Ant%C3%B4nio+Carlos%2C+6.627+-+Pampulha%2C+Belo+Horizonte"
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Local+informado+na+p%C3%A1gina+oficial%2C+Avenida+Ant%C3%B4nio+Carlos%2C+6.627+-+Pampulha%2C+Belo+Horizonte",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-07",
+          "observacao": "12h30 às 13h30"
+        }
+      }
     },
     {
       "id": "ufmg-ec-espaco-aberto-a-educadores",
@@ -4664,7 +6035,14 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
+      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-07",
+          "observacao": "14h"
+        }
+      }
     },
     {
       "id": "cine-santa-tereza-bileto-128036",
@@ -4687,7 +6065,14 @@
       "classificacao_indicativa": "Livre",
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-07",
+          "observacao": "17h"
+        }
+      }
     },
     {
       "id": "cine-santa-tereza-bileto-127828",
@@ -4710,7 +6095,14 @@
       "classificacao_indicativa": "Livre",
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-07",
+          "observacao": "19h"
+        }
+      }
     },
     {
       "id": "portal-bh-74819194d736-2026-10-07-1900",
@@ -4742,7 +6134,14 @@
         "Gratuito"
       ],
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+do+TRT-MG%2C+Rua+da+Bahia%2C+112+-+Centro%2C+Belo+Horizonte"
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+do+TRT-MG%2C+Rua+da+Bahia%2C+112+-+Centro%2C+Belo+Horizonte",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-07",
+          "observacao": "19h às 20h15"
+        }
+      }
     },
     {
       "id": "fcs-wp-37666",
@@ -4762,7 +6161,13 @@
       "instituicao_id": "fcs",
       "fonte_id": 37666,
       "atualizado_na_fonte": "2026-10-04T22:36:15",
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-08"
+        }
+      }
     },
     {
       "id": "portal-bh-69dbfade2381-2026-10-08-1500",
@@ -4791,7 +6196,14 @@
         "Lançamentos",
         "Pampulha"
       ],
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-08",
+          "observacao": "15h às 17h"
+        }
+      }
     },
     {
       "id": "cine-santa-tereza-bileto-128035",
@@ -4814,7 +6226,14 @@
       "classificacao_indicativa": "Livre",
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-08",
+          "observacao": "17h"
+        }
+      }
     },
     {
       "id": "cine-santa-tereza-bileto-127829",
@@ -4837,7 +6256,14 @@
       "classificacao_indicativa": "16 anos",
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-08",
+          "observacao": "19h"
+        }
+      }
     },
     {
       "id": "fcs-wp-37692",
@@ -4862,7 +6288,14 @@
       "local_id": "palacio-das-artes",
       "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
-      "espaco_interno": "Cine Humberto Mauro"
+      "espaco_interno": "Cine Humberto Mauro",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-08",
+          "observacao": "19h30"
+        }
+      }
     },
     {
       "id": "fcs-wp-37664",
@@ -4886,7 +6319,15 @@
       "local_id": "palacio-das-artes",
       "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
-      "espaco_interno": "Cine Humberto Mauro"
+      "espaco_interno": "Cine Humberto Mauro",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-10-09",
+          "fim": "2026-10-16",
+          "observacao": "00h"
+        }
+      }
     },
     {
       "id": "cine-santa-tereza-bileto-128034",
@@ -4909,7 +6350,14 @@
       "classificacao_indicativa": "Livre",
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-09",
+          "observacao": "17h"
+        }
+      }
     },
     {
       "id": "cine-santa-tereza-bileto-127859",
@@ -4932,7 +6380,14 @@
       "classificacao_indicativa": "14 anos",
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-09",
+          "observacao": "19h"
+        }
+      }
     },
     {
       "id": "fcs-wp-37720",
@@ -4955,7 +6410,14 @@
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "palacio-das-artes",
       "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7"
+      "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-10",
+          "observacao": "10h às 17h"
+        }
+      }
     },
     {
       "id": "ufmg-ec-observacao-solar-na-alameda-da-educacao-se-essa-rua-fosse-nossa-semana-das-criancas",
@@ -4978,7 +6440,14 @@
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
       "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
-      "espaco_interno": "Terraço Astronômico"
+      "espaco_interno": "Terraço Astronômico",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-10",
+          "observacao": "10h30"
+        }
+      }
     },
     {
       "id": "ufmg-ec-oficina-perceber-e-reconhecer-para-proteger-se-essa-rua-fosse-nossa-semana-das-criancas",
@@ -5000,7 +6469,14 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
+      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-10",
+          "observacao": "15h"
+        }
+      }
     },
     {
       "id": "portal-bh-14364f6564d5-2026-10-10-1530",
@@ -5030,7 +6506,14 @@
       ],
       "classificacao_indicativa": "Livre",
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Kubitschek%2C+Av.+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+4.188+-+Pampulha%2C+Belo+Horizonte"
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Kubitschek%2C+Av.+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+4.188+-+Pampulha%2C+Belo+Horizonte",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-10",
+          "observacao": "15h30 às 17h30"
+        }
+      }
     },
     {
       "id": "cine-santa-tereza-bileto-128033",
@@ -5053,7 +6536,14 @@
       "classificacao_indicativa": "Livre",
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-10",
+          "observacao": "16h30"
+        }
+      }
     },
     {
       "id": "ufmg-ec-conversas-de-terreiro-o-jazz-de-terreiro-com-ifatoki-maira-freitas-multiverso-procult-ufmg",
@@ -5075,7 +6565,14 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
+      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-10",
+          "observacao": "17h"
+        }
+      }
     },
     {
       "id": "cine-santa-tereza-bileto-128031",
@@ -5098,7 +6595,14 @@
       "classificacao_indicativa": "16 anos",
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-10",
+          "observacao": "19h"
+        }
+      }
     },
     {
       "id": "ufmg-ec-observacao-noturna-dos-astros-com-telescopios-2",
@@ -5121,7 +6625,14 @@
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
       "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
-      "espaco_interno": "Terraço Astronômico"
+      "espaco_interno": "Terraço Astronômico",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-10",
+          "observacao": "19h"
+        }
+      }
     },
     {
       "id": "ufmg-ec-atelie-tarde-de-jogos-semana-das-criancas",
@@ -5143,7 +6654,14 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
+      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-11",
+          "observacao": "14h"
+        }
+      }
     },
     {
       "id": "cine-santa-tereza-bileto-128030",
@@ -5166,7 +6684,14 @@
       "classificacao_indicativa": "18 anos",
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-11",
+          "observacao": "18h30"
+        }
+      }
     },
     {
       "id": "manual-manual-instagram-17933113986370029-2026-10-12",
@@ -5200,6 +6725,13 @@
       "temas": [],
       "inscricao_inicio": "",
       "inscricao_fim": "",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-12",
+          "observacao": "10h • 22h"
+        }
+      },
       "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
@@ -5222,7 +6754,14 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
+      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-13",
+          "observacao": "11h"
+        }
+      }
     },
     {
       "id": "portal-bh-9294768d17f3-2026-10-13-1400",
@@ -5251,7 +6790,14 @@
         "Brincadeiras"
       ],
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+do+Baile%2C+Av.+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+751+-+Pampulha%2C+Belo+Horizonte"
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+do+Baile%2C+Av.+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+751+-+Pampulha%2C+Belo+Horizonte",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-13",
+          "observacao": "14h às 17h"
+        }
+      }
     },
     {
       "id": "ufmg-ec-oficina-libras-para-criancas-semana-das-criancas",
@@ -5273,7 +6819,14 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
+      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-13",
+          "observacao": "15h"
+        }
+      }
     },
     {
       "id": "cine-santa-tereza-bileto-128029",
@@ -5296,7 +6849,14 @@
       "classificacao_indicativa": "Livre",
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-13",
+          "observacao": "19h"
+        }
+      }
     },
     {
       "id": "ufmg-ec-mostra-iaia-de-audiovisual-a-camera-de-joao-exibicao",
@@ -5318,7 +6878,14 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
+      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-14",
+          "observacao": "11h"
+        }
+      }
     },
     {
       "id": "ufmg-ec-oficina-cosmologias-em-quadrinhos-semana-das-criancas",
@@ -5340,7 +6907,14 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
+      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-14",
+          "observacao": "15h"
+        }
+      }
     },
     {
       "id": "ufmg-ec-mostra-iaia-de-audiovisual-a-piscina-de-caique-exibicao-2",
@@ -5362,7 +6936,14 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
+      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-15",
+          "observacao": "11h"
+        }
+      }
     },
     {
       "id": "portal-bh-104b84323e37-2026-10-15-1400",
@@ -5392,7 +6973,14 @@
       ],
       "classificacao_indicativa": "Livre",
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Arte+da+Pampulha+-+MAP%2C+Av.+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+16.585+-+Pampulha%2C+Belo+Horizonte"
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Arte+da+Pampulha+-+MAP%2C+Av.+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+16.585+-+Pampulha%2C+Belo+Horizonte",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-15",
+          "observacao": "14h às 16h"
+        }
+      }
     },
     {
       "id": "ufmg-ec-oficina-plantando-no-espaco-semana-das-criancas",
@@ -5414,7 +7002,14 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
+      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-15",
+          "observacao": "15h"
+        }
+      }
     },
     {
       "id": "portal-bh-fb275ca457f3-2026-10-16-1400",
@@ -5444,7 +7039,14 @@
       ],
       "classificacao_indicativa": "Livre",
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Arte+da+Pampulha+-+MAP%2C+Av.+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+16.585%2C+Belo+Horizonte"
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Arte+da+Pampulha+-+MAP%2C+Av.+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+16.585%2C+Belo+Horizonte",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-16",
+          "observacao": "14h às 16h"
+        }
+      }
     },
     {
       "id": "ufmg-ec-oficina-dinossauros-nas-pontas-dos-dedos-semana-das-criancas",
@@ -5466,7 +7068,14 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
+      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-16",
+          "observacao": "14h30"
+        }
+      }
     },
     {
       "id": "portal-bh-df2696d98e93-2026-10-17-1000",
@@ -5497,7 +7106,14 @@
         "Pampulha"
       ],
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Arte+da+Pampulha+-+MAP%2C+Av.+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+16.585+%E2%80%93+Pampulha%2C+Belo+Horizonte"
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Arte+da+Pampulha+-+MAP%2C+Av.+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+16.585+%E2%80%93+Pampulha%2C+Belo+Horizonte",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-17",
+          "observacao": "10h às 12h"
+        }
+      }
     },
     {
       "id": "ufmg-ec-apresentacao-espaco-experimental-iaia-conversa-com-curador-e-performance-musical",
@@ -5519,7 +7135,14 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
+      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-17",
+          "observacao": "10h30"
+        }
+      }
     },
     {
       "id": "ufmg-ec-roda-de-conversa-ovulario-racionais-mcs-e-nego-bispo-rapensando-o-territorio",
@@ -5541,7 +7164,14 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
+      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-17",
+          "observacao": "14h"
+        }
+      }
     },
     {
       "id": "ufmg-ec-oficina-dinossauros-nas-pontas-dos-dedos-semana-das-criancas-2",
@@ -5563,7 +7193,14 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
+      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-17",
+          "observacao": "14h30"
+        }
+      }
     },
     {
       "id": "ufmg-ec-observacao-noturna-dos-astros-com-telescopios-4",
@@ -5586,7 +7223,14 @@
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
       "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
-      "espaco_interno": "Terraço Astronômico"
+      "espaco_interno": "Terraço Astronômico",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-17",
+          "observacao": "19h"
+        }
+      }
     },
     {
       "id": "manual-concertos-peter-lund-recital-infantil-coracao-e-mente-2026-10-18-2026-10-18",
@@ -5619,6 +7263,13 @@
       "espaco_interno": "",
       "inscricao_inicio": "",
       "inscricao_fim": "",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-18",
+          "observacao": "11h"
+        }
+      },
       "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
@@ -5643,7 +7294,14 @@
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
       "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
-      "espaco_interno": "Planetário"
+      "espaco_interno": "Planetário",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-18",
+          "observacao": "14h"
+        }
+      }
     },
     {
       "id": "ufmg-ec-oficina-abayomi-encontro-precioso-semana-das-criancas",
@@ -5665,7 +7323,14 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
+      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-18",
+          "observacao": "15h"
+        }
+      }
     },
     {
       "id": "ufmg-ec-sessao-netuno-tea-dois-pedacinhos-de-vidro-3",
@@ -5689,7 +7354,14 @@
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
       "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
-      "espaco_interno": "Planetário"
+      "espaco_interno": "Planetário",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-18",
+          "observacao": "16h"
+        }
+      }
     },
     {
       "id": "ufmg-ec-mostra-iaia-de-audiovisual-caixa-dagua-exibicao-2",
@@ -5711,7 +7383,14 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
+      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-20",
+          "observacao": "11h"
+        }
+      }
     },
     {
       "id": "ufmg-ec-mostra-iaia-de-audiovisual-carrinho-de-rolima-exibicao-2",
@@ -5733,7 +7412,14 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
+      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-20",
+          "observacao": "15h"
+        }
+      }
     },
     {
       "id": "fcs-wp-37689",
@@ -5756,7 +7442,14 @@
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "palacio-das-artes",
       "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7"
+      "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-20",
+          "observacao": "16h"
+        }
+      }
     },
     {
       "id": "ufmg-ec-oficina-barracao-das-artes-inteligencia-ancestral-ia-e-escrevivencias-da-maternidade-e-da-infancia-negra",
@@ -5778,7 +7471,14 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
+      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-21",
+          "observacao": "13h"
+        }
+      }
     },
     {
       "id": "ufmg-ec-roda-de-conversa-ovulario-fabulacao-critica-como-rota",
@@ -5800,7 +7500,14 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
+      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-23",
+          "observacao": "14h"
+        }
+      }
     },
     {
       "id": "fcs-wp-37776",
@@ -5824,7 +7531,14 @@
       "local_id": "palacio-das-artes",
       "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
-      "espaco_interno": "Cine Humberto Mauro"
+      "espaco_interno": "Cine Humberto Mauro",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-23",
+          "observacao": "19h"
+        }
+      }
     },
     {
       "id": "sesc-palladium-bileto-124738",
@@ -5847,7 +7561,14 @@
       "classificacao_indicativa": "Livre",
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "sesc-palladium",
-      "mapa": "https://maps.app.goo.gl/69GL5ydEpAtcwDgv7"
+      "mapa": "https://maps.app.goo.gl/69GL5ydEpAtcwDgv7",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-23",
+          "observacao": "19h"
+        }
+      }
     },
     {
       "id": "portal-bh-980ffbadc4c9-2026-10-24-1000",
@@ -5878,7 +7599,14 @@
       ],
       "classificacao_indicativa": "Livre",
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Arte+da+Pampulha+-+MAP%2C+Av.+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+16.585%2C+Belo+Horizonte"
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Arte+da+Pampulha+-+MAP%2C+Av.+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+16.585%2C+Belo+Horizonte",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-24",
+          "observacao": "10h às 12h"
+        }
+      }
     },
     {
       "id": "portal-bh-2329d0cc3a94-2026-10-24-1530",
@@ -5907,7 +7635,14 @@
       ],
       "classificacao_indicativa": "Livre",
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Kubitschek%2C+Av.+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+4.188+-+Pampulha%2C+Belo+Horizonte"
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Kubitschek%2C+Av.+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+4.188+-+Pampulha%2C+Belo+Horizonte",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-24",
+          "observacao": "15h30 às 16h30"
+        }
+      }
     },
     {
       "id": "ufmg-ec-observacao-noturna-dos-astros-com-telescopios-5",
@@ -5930,7 +7665,14 @@
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
       "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
-      "espaco_interno": "Terraço Astronômico"
+      "espaco_interno": "Terraço Astronômico",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-24",
+          "observacao": "19h"
+        }
+      }
     },
     {
       "id": "portal-bh-1045058fe89d-2026-10-24-0830",
@@ -5957,7 +7699,14 @@
         "Turismo",
         "Cultural"
       ],
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-24",
+          "observacao": "8h30 às 12h30"
+        }
+      }
     },
     {
       "id": "ufmg-ec-museu-fechado-2",
@@ -5980,7 +7729,14 @@
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
       "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-25",
+          "observacao": "10h"
+        }
+      }
     },
     {
       "id": "manual-concertos-peter-lund-grupo-vocal-andrea-pelliccione-2026-10-25-2026-10-25",
@@ -6013,6 +7769,13 @@
       "espaco_interno": "",
       "inscricao_inicio": "",
       "inscricao_fim": "",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-25",
+          "observacao": "11h"
+        }
+      },
       "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
@@ -6035,7 +7798,14 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
+      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-27",
+          "observacao": "10h"
+        }
+      }
     },
     {
       "id": "ufmg-ec-planetario-em-manutencao",
@@ -6058,7 +7828,14 @@
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
       "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-27",
+          "observacao": "10h"
+        }
+      }
     },
     {
       "id": "ufmg-ec-mostra-iaia-de-audiovisual-disque-quilombola-exibicao-2",
@@ -6080,7 +7857,14 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
+      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-27",
+          "observacao": "11h"
+        }
+      }
     },
     {
       "id": "ufmg-ec-mostra-iaia-de-audiovisual-a-camera-de-joao-exibicao-2",
@@ -6102,7 +7886,14 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
+      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-27",
+          "observacao": "15h"
+        }
+      }
     },
     {
       "id": "ufmg-ec-exposicao-demasiado-humano-2",
@@ -6124,7 +7915,14 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
+      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-28",
+          "observacao": "10h"
+        }
+      }
     },
     {
       "id": "ufmg-ec-planetario-em-manutencao-2",
@@ -6147,7 +7945,14 @@
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
       "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-28",
+          "observacao": "10h"
+        }
+      }
     },
     {
       "id": "ufmg-ec-mostra-iaia-de-audiovisual-a-piscina-de-caique-exibicao-3",
@@ -6169,7 +7974,14 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
+      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-28",
+          "observacao": "11h"
+        }
+      }
     },
     {
       "id": "ufmg-ec-mostra-iaia-de-audiovisual-caixa-dagua-exibicao-3",
@@ -6191,7 +8003,14 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
+      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-28",
+          "observacao": "15h"
+        }
+      }
     },
     {
       "id": "ufmg-ec-exposicao-demasiado-humano-3",
@@ -6213,7 +8032,14 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
+      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-29",
+          "observacao": "10h"
+        }
+      }
     },
     {
       "id": "ufmg-ec-planetario-em-manutencao-3",
@@ -6236,7 +8062,14 @@
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
       "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-29",
+          "observacao": "10h"
+        }
+      }
     },
     {
       "id": "ufmg-ec-mostra-iaia-de-audiovisual-carrinho-de-rolima-exibicao-3",
@@ -6258,7 +8091,14 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
+      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-29",
+          "observacao": "11h"
+        }
+      }
     },
     {
       "id": "ufmg-ec-mostra-iaia-de-audiovisual-disque-quilombola-exibicao-3",
@@ -6280,7 +8120,14 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
+      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-29",
+          "observacao": "15h"
+        }
+      }
     },
     {
       "id": "fcs-wp-37779",
@@ -6304,7 +8151,14 @@
       "local_id": "palacio-das-artes",
       "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
-      "espaco_interno": "Cine Humberto Mauro"
+      "espaco_interno": "Cine Humberto Mauro",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-10-30",
+          "fim": "2026-11-08"
+        }
+      }
     },
     {
       "id": "ufmg-ec-exposicao-demasiado-humano-4",
@@ -6326,7 +8180,14 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
+      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-30",
+          "observacao": "10h"
+        }
+      }
     },
     {
       "id": "ufmg-ec-planetario-em-manutencao-4",
@@ -6349,7 +8210,14 @@
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
       "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
-      "imagem_fallback_origem": "equipamento"
+      "imagem_fallback_origem": "equipamento",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-30",
+          "observacao": "10h"
+        }
+      }
     },
     {
       "id": "ufmg-ec-roda-de-conversa-ovulario-artes-e-poeticas-ancestrais-iles-e-ialorixas-em-dialogo",
@@ -6371,7 +8239,14 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
+      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-30",
+          "observacao": "14h"
+        }
+      }
     },
     {
       "id": "portal-bh-4f026322cf55-2026-10-31-1000",
@@ -6402,7 +8277,14 @@
       ],
       "classificacao_indicativa": "Livre",
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Arte+da+Pampulha+-+MAP%2C+Av.+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+16.585+-+Pampulha%2C+Belo+Horizonte"
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Arte+da+Pampulha+-+MAP%2C+Av.+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+16.585+-+Pampulha%2C+Belo+Horizonte",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-31",
+          "observacao": "10h às 12h"
+        }
+      }
     },
     {
       "id": "ufmg-ec-sabado-com-libras-libras-para-professores-e-educadores",
@@ -6424,7 +8306,14 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
+      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-31",
+          "observacao": "14h"
+        }
+      }
     },
     {
       "id": "ufmg-ec-oficina-decorando-aboboras-de-halloween",
@@ -6446,7 +8335,14 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg"
+      "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-31",
+          "observacao": "15h"
+        }
+      }
     },
     {
       "id": "ufmg-ec-observacao-noturna-dos-astros-com-telescopios-6",
@@ -6469,7 +8365,14 @@
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
       "imagem_local": "https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg",
-      "espaco_interno": "Terraço Astronômico"
+      "espaco_interno": "Terraço Astronômico",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-31",
+          "observacao": "19h"
+        }
+      }
     },
     {
       "id": "manual-fiq-bh-2026-2026-11-04-2026-11-04",
@@ -6502,6 +8405,13 @@
       "espaco_interno": "",
       "inscricao_inicio": "",
       "inscricao_fim": "",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-11-04",
+          "fim": "2026-11-08"
+        }
+      },
       "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
@@ -6527,7 +8437,14 @@
       "pagina": "https://www.sympla.com.br/produtor/teatrodacidade",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "evento_gratuito_confirmado_na_sympla",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Teatro+da+Cidade%2C+Rua+da+Bahia%2C+1341%2C+Centro%2C+Belo+Horizonte+-+MG"
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Teatro+da+Cidade%2C+Rua+da+Bahia%2C+1341%2C+Centro%2C+Belo+Horizonte+-+MG",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-11-04",
+          "fim": "2026-11-05"
+        }
+      }
     },
     {
       "id": "fcs-wp-37639",
@@ -6551,7 +8468,14 @@
       "local_id": "palacio-das-artes",
       "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
-      "espaco_interno": "Cine Humberto Mauro"
+      "espaco_interno": "Cine Humberto Mauro",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-06",
+          "observacao": "16h às 22h"
+        }
+      }
     },
     {
       "id": "manual-concertos-peter-lund-grupo-geo-2026-11-08-2026-11-08",
@@ -6584,6 +8508,13 @@
       "espaco_interno": "",
       "inscricao_inicio": "",
       "inscricao_fim": "",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-08",
+          "observacao": "11h"
+        }
+      },
       "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
@@ -6611,7 +8542,14 @@
         "Turismo",
         "Cultural"
       ],
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-14",
+          "observacao": "9h às 12h30"
+        }
+      }
     },
     {
       "id": "manual-concertos-peter-lund-orquestra-sonoro-despertar-2026-11-29-2026-11-29",
@@ -6644,6 +8582,13 @@
       "espaco_interno": "",
       "inscricao_inicio": "",
       "inscricao_fim": "",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-29",
+          "observacao": "11h"
+        }
+      },
       "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
@@ -6671,7 +8616,14 @@
         "Turismo",
         "Cultural"
       ],
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-12-05",
+          "observacao": "13h30 às 17h30"
+        }
+      }
     },
     {
       "id": "portal-bh-1045058fe89d-2026-12-05-0830",
@@ -6698,7 +8650,14 @@
         "Turismo",
         "Cultural"
       ],
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-12-05",
+          "observacao": "8h30 às 12h30"
+        }
+      }
     },
     {
       "id": "manual-concertos-peter-lund-coral-puc-minas-2026-12-13-2026-12-13",
@@ -6731,6 +8690,13 @@
       "espaco_interno": "",
       "inscricao_inicio": "",
       "inscricao_fim": "",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-12-13",
+          "observacao": "11h"
+        }
+      },
       "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
@@ -6758,7 +8724,88 @@
         "Turismo",
         "Cultural"
       ],
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2027-01-16",
+          "observacao": "9h às 13h"
+        }
+      }
+    },
+    {
+      "id": "manual-programa-conjunto-de-conscientizacao-instrucao-e-combate-a-violencia-domestica-2026-01-01",
+      "titulo": "Programa Conjunto de Conscientização, Instrução e Combate à Violência Doméstica",
+      "data": "2026-01-01",
+      "data_fim": "2026-12-31",
+      "horario": "",
+      "local": "EJEF - Escola Judicial Desembargador Edésio Fernandes",
+      "cidade": "Belo Horizonte",
+      "categoria": "Informação",
+      "gratuito": true,
+      "inscricao": "",
+      "criterio_exibicao": "realizacao",
+      "status_inscricao": "",
+      "exibicao_ativa": true,
+      "descricao": "O Programa Conjunto de Conscientização, Instrução e Combate à Violência Doméstica reúne, em um só espaço, materiais informativos, jurisprudência, documentos e outros conteúdos voltados ao enfrentamento da violência doméstica.\n\nCriado pela EJEF, com o apoio da COMSIV/TJMG e de instituições parceiras, o programa busca ampliar o acesso à informação e fortalecer a conscientização sobre o tema.\n\nAgora, as notícias publicadas no programa também serão compartilhadas em nossas redes sociais, ampliando o alcance desse conteúdo e facilitando o acesso às principais informações.\n\nSaiba mais no portal da EJEF. Link na bio e nos stories.\n\n#ViolênciaDoméstica #Conscientização #DireitosHumanos #EJEF #TJMG",
+      "imagem": "imagens/eventos-manuais/programa-conjunto-de-conscientizacao-instrucao-e-combate-a-violencia-domestica.webp",
+      "link": "https://www.instagram.com/p/Da3JhdBtWh3/",
+      "pagina": "https://www.instagram.com/p/Da3JhdBtWh3/",
+      "link_inscricao": "https://ejef.tjmg.jus.br/combate-a-violencia-domestica",
+      "monitorar_formulario_google": false,
+      "url_formulario_google": "",
+      "acao_formulario_fechado": "marcar_encerrada",
+      "fonte": "Cadastro manual",
+      "instituicao_id": "",
+      "classificacao_indicativa": "",
+      "local_id": "ejef-escola-judicial-desembargador-edesio-fernandes",
+      "endereco": "Edifício Mirafiori - Rua dos Guajajaras, 40 - Centro, Belo Horizonte - MG, 30180-100",
+      "mapa": "https://maps.app.goo.gl/YH85vtV6rh1sGkMVA",
+      "espaco_interno": "",
+      "inscricao_inicio": "",
+      "inscricao_fim": "",
+      "temporalidade": {
+        "classe": "permanente",
+        "exibicao": {
+          "ativa": true,
+          "observacao": "Programa informativo contínuo; datas 01/01–31/12 do legado não representam uma realização delimitada."
+        }
+      },
+      "motivo_publicacao": "realizacao_permanente"
+    },
+    {
+      "id": "ccbb-bh-exposicao-permanente",
+      "titulo": "Exposição de Longa Duração",
+      "data": "2026-01-01",
+      "data_fim": "2026-12-31",
+      "horario": "10h às 22h. De quarta a segunda.",
+      "local": "CCBB Belo Horizonte",
+      "cidade": "Belo Horizonte",
+      "categoria": "Exposição",
+      "gratuito": true,
+      "inscricao": "Ingresso gratuito; consulte a página oficial",
+      "descricao": "O Centro Cultural Banco do Brasil Belo Horizonte possui duas salas de exposição permanente, o Grande Salão e o Gabinete do Secretário, que apresentam parte da história do CCBB BH e do prédio que o abriga. A expografia é fruto de uma parceria com o Arquivo Público Mineiro,",
+      "imagem": "imagens/ajustes-eventos/ccbb-bh-exposicao-permanente.jpg",
+      "link": "https://ccbb.com.br/belo-horizonte/programacao/exposicao-permanente/",
+      "fonte": "CCBB Belo Horizonte",
+      "instituicao_id": "ccbb-bh",
+      "classificacao_indicativa": "Livre",
+      "pagina": "https://ccbb.com.br/belo-horizonte/programacao/exposicao-permanente/",
+      "espaco_interno": "",
+      "criterio_exibicao": "realizacao",
+      "imagem_fonte": "Imagem adicionada manualmente pelo editor",
+      "ajuste_editor_aplicado": true,
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "ccbb-bh",
+      "endereco": "Praça da Liberdade, 450, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/Q6UrZGKEn8eCx8Kb8",
+      "temporalidade": {
+        "classe": "permanente",
+        "exibicao": {
+          "ativa": true,
+          "observacao": "Exposição de longa duração; datas 01/01–31/12 do legado não representam a realização real."
+        }
+      }
     }
   ]
 }
