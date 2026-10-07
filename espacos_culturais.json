@@ -628,6 +628,141 @@
       "link": "https://fcs.mg.gov.br/espacos-culturais/palacio-das-artes/cafe-do-palacio/"
     },
     {
+      "id": "casa-fiat-capela-de-santana",
+      "nome": "Capela de Santana",
+      "equipamento_id": "casa-fiat-de-cultura",
+      "instituicao_id": "casa-fiat-de-cultura",
+      "descricao": "Capela situada nos jardins da Casa Fiat de Cultura, utilizada em apresentações musicais e atividades culturais de pequeno porte.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Uso conforme a programação da Casa Fiat de Cultura."
+      },
+      "site": "https://casafiatdecultura.com.br/",
+      "imagem": "",
+      "imagem_fonte": "https://casafiatdecultura.com.br/",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Capela / espaço cultural",
+      "vocacoes": [
+        "Música",
+        "Cultura"
+      ],
+      "links_adicionais": [
+        {
+          "rotulo": "Programação",
+          "url": "https://casafiatdecultura.com.br/status/em-cartaz/"
+        }
+      ],
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/casafiatdecultura/"
+      },
+      "contatos": {
+        "emails": [
+          "casafiatdecultura@stellantis.com"
+        ],
+        "telefones": [
+          "(31) 3289-8900"
+        ]
+      },
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Capela de Santana",
+      "temas": [
+        "Música",
+        "Cultura"
+      ],
+      "natureza_espaco": "Capela / espaço cultural",
+      "espaco_principal": "Casa Fiat de Cultura",
+      "cidade": "Belo Horizonte",
+      "endereco": "Praça da Liberdade, 10, Funcionários, Belo Horizonte - MG",
+      "mapa": "",
+      "instituicao": "Casa Fiat de Cultura",
+      "link": "https://casafiatdecultura.com.br/"
+    },
+    {
+      "id": "casa-fiat-de-cultura",
+      "nome": "Casa Fiat de Cultura",
+      "cidade": "Belo Horizonte",
+      "endereco": "Praça da Liberdade, 10, Funcionários, Belo Horizonte - MG",
+      "fonte_endereco": "https://casafiatdecultura.com.br/",
+      "google_place_id": "",
+      "instituicao_ids": [
+        "casa-fiat-de-cultura"
+      ],
+      "aliases": [
+        "Casa Fiat de Cultura",
+        "Casa Fiat"
+      ],
+      "descricao": "Espaço cultural integrante do Circuito Liberdade, dedicado a exposições, artes visuais, atividades educativas, oficinas, palestras, música e formação. A instituição informa que toda a sua programação cultural é gratuita.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "10h às 21h",
+        "quarta": "10h às 21h",
+        "quinta": "10h às 21h",
+        "sexta": "10h às 21h",
+        "sabado": "10h às 18h",
+        "domingo": "10h às 18h",
+        "observacao": "Feriados: 10h às 18h. Fechado às segundas-feiras."
+      },
+      "site": "https://casafiatdecultura.com.br/",
+      "imagem": "",
+      "imagem_fonte": "https://casafiatdecultura.com.br/",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/casafiatdecultura/"
+      },
+      "contatos": {
+        "emails": [
+          "casafiatdecultura@stellantis.com"
+        ],
+        "telefones": [
+          "(31) 3289-8900"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Programação",
+          "url": "https://casafiatdecultura.com.br/status/em-cartaz/"
+        }
+      ],
+      "tipo_espaco": "Centro cultural",
+      "vocacoes": [
+        "Artes visuais",
+        "Exposições",
+        "Oficinas",
+        "Música",
+        "Formação",
+        "Educação",
+        "Palestras"
+      ],
+      "status_editorial": "pronto_para_teste",
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Casa Fiat de Cultura",
+      "temas": [
+        "Artes visuais",
+        "Exposições",
+        "Oficinas",
+        "Música",
+        "Formação",
+        "Educação",
+        "Palestras"
+      ],
+      "natureza_espaco": "Centro cultural",
+      "instituicao": "Casa Fiat de Cultura",
+      "link": "https://casafiatdecultura.com.br/"
+    },
+    {
       "aliases": [
         "Centro Cultural Alto Vera Cruz",
         "CC Alto Vera Cruz"
@@ -4171,6 +4306,66 @@
       "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
       "instituicao": "Fundação Clóvis Salgado",
       "link": "https://fcs.mg.gov.br/espacos-culturais/palacio-das-artes/jardins/"
+    },
+    {
+      "id": "casa-fiat-piccola-galleria",
+      "nome": "Piccola Galleria",
+      "equipamento_id": "casa-fiat-de-cultura",
+      "instituicao_id": "casa-fiat-de-cultura",
+      "descricao": "Galeria da Casa Fiat de Cultura dedicada a exposições e projetos de artes visuais, incluindo programa periódico de seleção de artistas.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Segue o funcionamento e a programação da Casa Fiat de Cultura."
+      },
+      "site": "https://casafiatdecultura.com.br/",
+      "imagem": "",
+      "imagem_fonte": "https://casafiatdecultura.com.br/",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Galeria",
+      "vocacoes": [
+        "Exposições",
+        "Artes visuais"
+      ],
+      "links_adicionais": [
+        {
+          "rotulo": "Programação",
+          "url": "https://casafiatdecultura.com.br/status/em-cartaz/"
+        }
+      ],
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/casafiatdecultura/"
+      },
+      "contatos": {
+        "emails": [
+          "casafiatdecultura@stellantis.com"
+        ],
+        "telefones": [
+          "(31) 3289-8900"
+        ]
+      },
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Piccola Galleria",
+      "temas": [
+        "Exposições",
+        "Artes visuais"
+      ],
+      "natureza_espaco": "Galeria",
+      "espaco_principal": "Casa Fiat de Cultura",
+      "cidade": "Belo Horizonte",
+      "endereco": "Praça da Liberdade, 10, Funcionários, Belo Horizonte - MG",
+      "mapa": "",
+      "instituicao": "Casa Fiat de Cultura",
+      "link": "https://casafiatdecultura.com.br/"
     },
     {
       "id": "espaco-conhecimento-ufmg-planetario",
