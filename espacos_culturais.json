@@ -200,6 +200,68 @@
       "link": "https://fcs.mg.gov.br/palacio-das-artes/"
     },
     {
+      "id": "mm-gerdau-atelie-educativo",
+      "nome": "Ateliê Educativo",
+      "equipamento_id": "mm-gerdau",
+      "instituicao_id": "mm-gerdau",
+      "descricao": "Espaço educativo do MM Gerdau usado em oficinas, atividades práticas e ações de mediação ligadas a geociências, patrimônio, arte e ciência.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Uso conforme a programação do museu."
+      },
+      "site": "https://mmgerdau.org.br/programacao/",
+      "imagem": "",
+      "imagem_fonte": "https://mmgerdau.org.br/",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Ateliê / sala educativa",
+      "vocacoes": [
+        "Oficinas",
+        "Educação",
+        "Ciência",
+        "Formação"
+      ],
+      "links_adicionais": [
+        {
+          "rotulo": "Programação",
+          "url": "https://mmgerdau.org.br/programacao/"
+        }
+      ],
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/mmgerdau/"
+      },
+      "contatos": {
+        "emails": [],
+        "telefones": [
+          "(31) 3516-7200"
+        ]
+      },
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Ateliê Educativo",
+      "temas": [
+        "Oficinas",
+        "Educação",
+        "Ciência",
+        "Formação"
+      ],
+      "natureza_espaco": "Ateliê / sala educativa",
+      "espaco_principal": "MM Gerdau – Museu das Minas e do Metal",
+      "cidade": "Belo Horizonte",
+      "endereco": "Praça da Liberdade, 680, Funcionários, Belo Horizonte - MG",
+      "mapa": "",
+      "instituicao": "MM Gerdau – Museu das Minas e do Metal",
+      "link": "https://mmgerdau.org.br/programacao/"
+    },
+    {
       "id": "centro-cultural-sesiminas-bh-auditorio",
       "nome": "Auditório",
       "equipamento_id": "centro-cultural-sesiminas-bh",
@@ -3934,6 +3996,82 @@
       "link": "https://minascentro.bhz.br/"
     },
     {
+      "id": "mm-gerdau",
+      "nome": "MM Gerdau – Museu das Minas e do Metal",
+      "cidade": "Belo Horizonte",
+      "endereco": "Praça da Liberdade, 680, Funcionários, Belo Horizonte - MG",
+      "fonte_endereco": "https://mmgerdau.org.br/",
+      "google_place_id": "",
+      "instituicao_ids": [
+        "mm-gerdau"
+      ],
+      "aliases": [
+        "MM Gerdau",
+        "Museu das Minas e do Metal",
+        "MM Gerdau – Museu das Minas e do Metal"
+      ],
+      "descricao": "Museu do Circuito Liberdade dedicado às minas, aos metais, às geociências e ao patrimônio, com exposições, atividades educativas, oficinas, apresentações, palestras e programação cultural. A visitação regular do museu tem entrada gratuita.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "10h às 17h",
+        "quarta": "10h às 17h",
+        "quinta": "10h às 22h",
+        "sexta": "10h às 17h",
+        "sabado": "10h às 17h",
+        "domingo": "10h às 17h",
+        "observacao": "Entrada regular até 16h30; às quintas-feiras, até 21h30."
+      },
+      "site": "https://mmgerdau.org.br/",
+      "imagem": "",
+      "imagem_fonte": "https://mmgerdau.org.br/",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/mmgerdau/"
+      },
+      "contatos": {
+        "emails": [],
+        "telefones": [
+          "(31) 3516-7200"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Programação",
+          "url": "https://mmgerdau.org.br/programacao/"
+        }
+      ],
+      "tipo_espaco": "Museu",
+      "vocacoes": [
+        "Museu",
+        "Ciência",
+        "Geociências",
+        "Exposições",
+        "Educação",
+        "Música",
+        "Oficinas",
+        "Patrimônio"
+      ],
+      "status_editorial": "pronto_para_teste",
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "MM Gerdau – Museu das Minas e do Metal",
+      "temas": [
+        "Museu",
+        "Ciência",
+        "Geociências",
+        "Exposições",
+        "Educação",
+        "Música",
+        "Oficinas",
+        "Patrimônio"
+      ],
+      "natureza_espaco": "Museu",
+      "instituicao": "MM Gerdau – Museu das Minas e do Metal",
+      "link": "https://mmgerdau.org.br/"
+    },
+    {
       "aliases": [
         "Museu da Moda",
         "MUMO",
@@ -4440,6 +4578,68 @@
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
       "instituicao": "Espaço do Conhecimento UFMG",
       "link": "https://www.ufmg.br/espacodoconhecimento/planetario/"
+    },
+    {
+      "id": "mm-gerdau-praca-convivencia",
+      "nome": "Praça de Convivência",
+      "equipamento_id": "mm-gerdau",
+      "instituicao_id": "mm-gerdau",
+      "descricao": "Espaço de convivência do MM Gerdau que recebe encontros, contações de histórias, ações educativas, apresentações e outras atividades da programação.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Uso conforme a programação do museu."
+      },
+      "site": "https://mmgerdau.org.br/programacao/",
+      "imagem": "",
+      "imagem_fonte": "https://mmgerdau.org.br/",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Praça de convivência",
+      "vocacoes": [
+        "Eventos",
+        "Educação",
+        "Encontros",
+        "Atividades infantis"
+      ],
+      "links_adicionais": [
+        {
+          "rotulo": "Programação",
+          "url": "https://mmgerdau.org.br/programacao/"
+        }
+      ],
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/mmgerdau/"
+      },
+      "contatos": {
+        "emails": [],
+        "telefones": [
+          "(31) 3516-7200"
+        ]
+      },
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Praça de Convivência",
+      "temas": [
+        "Eventos",
+        "Educação",
+        "Encontros",
+        "Atividades infantis"
+      ],
+      "natureza_espaco": "Praça de convivência",
+      "espaco_principal": "MM Gerdau – Museu das Minas e do Metal",
+      "cidade": "Belo Horizonte",
+      "endereco": "Praça da Liberdade, 680, Funcionários, Belo Horizonte - MG",
+      "mapa": "",
+      "instituicao": "MM Gerdau – Museu das Minas e do Metal",
+      "link": "https://mmgerdau.org.br/programacao/"
     },
     {
       "id": "ccbb-bh-patio",
