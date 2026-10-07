@@ -41,7 +41,10 @@
       ],
       "tempo_slide": 15,
       "origem": "site-only",
-      "site_only": true
+      "site_only": true,
+      "temporalidade": {
+        "classe": "permanente"
+      }
     },
     {
       "schema_version": 1,
@@ -85,7 +88,10 @@
       ],
       "tempo_slide": 15,
       "origem": "site-only",
-      "site_only": true
+      "site_only": true,
+      "temporalidade": {
+        "classe": "permanente"
+      }
     },
     {
       "schema_version": 1,
@@ -128,7 +134,10 @@
       ],
       "tempo_slide": 15,
       "origem": "site-only",
-      "site_only": true
+      "site_only": true,
+      "temporalidade": {
+        "classe": "permanente"
+      }
     },
     {
       "schema_version": 1,
@@ -171,7 +180,10 @@
       ],
       "tempo_slide": 15,
       "origem": "site-only",
-      "site_only": true
+      "site_only": true,
+      "temporalidade": {
+        "classe": "permanente"
+      }
     },
     {
       "schema_version": 1,
@@ -214,7 +226,10 @@
       ],
       "tempo_slide": 15,
       "origem": "reclassificacao-editor",
-      "site_only": true
+      "site_only": true,
+      "temporalidade": {
+        "classe": "permanente"
+      }
     },
     {
       "schema_version": 1,
@@ -318,6 +333,18 @@
         ],
         "unidade": "BRL",
         "mostrar_multiplicador": true
+      },
+      "temporalidade": {
+        "classe": "atemporal",
+        "referencia": [
+          {
+            "tipo": "competencia",
+            "valor": "2026-08"
+          }
+        ],
+        "frescor": {
+          "politica_falha": "manter_ultimo_dado"
+        }
       }
     },
     {
@@ -553,6 +580,19 @@
           }
         ],
         "unidade": "BRL"
+      },
+      "temporalidade": {
+        "classe": "atemporal",
+        "referencia": [
+          {
+            "tipo": "competencia",
+            "valor": "2026-08"
+          }
+        ],
+        "frescor": {
+          "ultima_alteracao": "2026-09-28T18:14:26Z",
+          "politica_falha": "manter_ultimo_dado"
+        }
       }
     },
     {
@@ -679,6 +719,18 @@
           "campo": "dados.percentual_salario_minimo",
           "rotulo": "do salário mínimo",
           "formato": "percentual"
+        }
+      },
+      "temporalidade": {
+        "classe": "atemporal",
+        "referencia": [
+          {
+            "tipo": "competencia",
+            "valor": "2026-08"
+          }
+        ],
+        "frescor": {
+          "politica_falha": "manter_ultimo_dado"
         }
       }
     },
@@ -848,6 +900,18 @@
           }
         ],
         "unidade": "BRL"
+      },
+      "temporalidade": {
+        "classe": "atemporal",
+        "referencia": [
+          {
+            "tipo": "competencia",
+            "valor": "2026-08"
+          }
+        ],
+        "frescor": {
+          "politica_falha": "manter_ultimo_dado"
+        }
       }
     },
     {
@@ -919,7 +983,10 @@
       "tempo_slide": 15,
       "origem": "curadoria-setembro-verde",
       "site_only": true,
-      "imagem": "imagens/curadorias/setembro-verde/direitos-pcd.jpg"
+      "imagem": "imagens/curadorias/setembro-verde/direitos-pcd.jpg",
+      "temporalidade": {
+        "classe": "permanente"
+      }
     },
     {
       "schema_version": 1,
@@ -993,7 +1060,10 @@
       "tempo_slide": 15,
       "origem": "curadoria-setembro-verde",
       "site_only": true,
-      "imagem": "imagens/curadorias/setembro-verde/bhbus-inclusao.jpg"
+      "imagem": "imagens/curadorias/setembro-verde/bhbus-inclusao.jpg",
+      "temporalidade": {
+        "classe": "permanente"
+      }
     },
     {
       "schema_version": 1,
@@ -1066,7 +1136,10 @@
       "tempo_slide": 15,
       "origem": "curadoria-setembro-verde",
       "site_only": true,
-      "imagem": "imagens/curadorias/setembro-verde/ciptea-mg.jpg"
+      "imagem": "imagens/curadorias/setembro-verde/ciptea-mg.jpg",
+      "temporalidade": {
+        "classe": "permanente"
+      }
     },
     {
       "schema_version": 1,
@@ -1136,7 +1209,10 @@
       "tempo_slide": 15,
       "origem": "curadoria-setembro-verde",
       "site_only": true,
-      "imagem": "imagens/curadorias/setembro-verde/doacao-orgaos.jpg"
+      "imagem": "imagens/curadorias/setembro-verde/doacao-orgaos.jpg",
+      "temporalidade": {
+        "classe": "permanente"
+      }
     }
   ]
 }
