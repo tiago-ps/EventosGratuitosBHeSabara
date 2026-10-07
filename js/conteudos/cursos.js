@@ -18,8 +18,86 @@
     return `${text} horas`;
   }
 
-  function isPublishable(course) {
-    return Boolean(course && course.titulo && course.exibicao_ativa !== false);
+  function muralDateKey(referenceDate = new Date()) {
+    try {
+      const parts = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/Sao_Paulo',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit'
+      }).formatToParts(referenceDate);
+      const values = Object.fromEntries(parts.map(part => [part.type, part.value]));
+      if (values.year && values.month && values.day) {
+        return values.year + '-' + values.month + '-' + values.day;
+      }
+    } catch {
+      /* fallback local abaixo */
+    }
+    return [
+      referenceDate.getFullYear(),
+      String(referenceDate.getMonth() + 1).padStart(2, '0'),
+      String(referenceDate.getDate()).padStart(2, '0')
+    ].join('-');
+  }
+
+  function normalizeDateKey(value = '') {
+    const raw = String(value || '').trim();
+    let match = raw.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+    if (match) return raw;
+    match = raw.match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
+    if (!match) return '';
+    return match[3] + '-' + match[2] + '-' + match[1];
+  }
+
+  function isTemporallyVisible(course, referenceDate = new Date()) {
+    if (!course || course.exibicao_ativa === false) return false;
+    const today = muralDateKey(referenceDate);
+    const temporal = course.temporalidade && typeof course.temporalidade === 'object'
+      ? course.temporalidade
+      : null;
+
+    if (temporal) {
+      const exhibition = temporal.exibicao && typeof temporal.exibicao === 'object'
+        ? temporal.exibicao
+        : {};
+      if (exhibition.ativa === false) return false;
+      const exhibitionStart = normalizeDateKey(exhibition.inicio);
+      const exhibitionEnd = normalizeDateKey(exhibition.fim);
+      if (exhibitionStart && today < exhibitionStart) return false;
+      if (exhibitionEnd && today > exhibitionEnd) return false;
+
+      const accessWindows = (Array.isArray(temporal.participacao) ? temporal.participacao : [])
+        .filter(window => window && window.tipo === 'acesso');
+
+      if (accessWindows.length) {
+        return accessWindows.some(window => {
+          const start = normalizeDateKey(window.inicio);
+          const end = normalizeDateKey(window.fim);
+          const status = normalizeTheme(window.status);
+          if (['encerrado', 'fechado', 'indisponivel'].includes(status)) return false;
+          if (start && today < start) return false;
+          if (end && today > end) return false;
+          return true;
+        });
+      }
+
+      // Com contrato canônico presente, data_lancamento e prazo em dias não são
+      // usados como fallback de validade.
+      return true;
+    }
+
+    // Compatibilidade com catálogos anteriores a ATC5.7.
+    const legacyDeadline = normalizeDateKey(course.data_limite_conclusao);
+    return !legacyDeadline || today <= legacyDeadline;
+  }
+
+  function isPublishable(course, referenceDate = new Date()) {
+    return Boolean(
+      course &&
+      course.titulo &&
+      course.exibicao_ativa !== false &&
+      isTemporallyVisible(course, referenceDate)
+    );
   }
 
   function matchesTheme(course, theme = '') {
@@ -294,6 +372,9 @@
   const contents = mural.contents || (mural.contents = {});
   contents.courses = Object.freeze({
     PANEL_LIMIT,
+    muralDateKey,
+    normalizeDateKey,
+    isTemporallyVisible,
     isPublishable,
     matchesTheme,
     filter,
