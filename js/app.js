@@ -6821,7 +6821,8 @@ function eventProgram(event) {
         tipo_conteudo: 'filme'
       }, platforms));
       state.allUtility = siteLayer.utilidade_publica
-        .filter(item => item?.tipo_conteudo === 'utilidade_publica' && item.id && item.titulo)
+        .filter(utilityContent.isValid)
+        .filter(item => utilityContent.isTemporallyVisible(item))
         .map(item => ({
           ...item,
           areas_utilidade: Array.isArray(item.areas_utilidade) ? [...item.areas_utilidade] : [],
