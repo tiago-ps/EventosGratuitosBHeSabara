@@ -36,6 +36,104 @@
     return month >= 1 && month <= 12 ? labels[month - 1] + '/' + match[1] : text(value);
   }
 
+  function muralDateKey(referenceDate = new Date()) {
+    try {
+      const parts = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/Sao_Paulo',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit'
+      }).formatToParts(referenceDate);
+      const values = Object.fromEntries(parts.map(function(part) {
+        return [part.type, part.value];
+      }));
+      if (values.year && values.month && values.day) {
+        return values.year + '-' + values.month + '-' + values.day;
+      }
+    } catch {
+      /* fallback local abaixo */
+    }
+    return [
+      referenceDate.getFullYear(),
+      String(referenceDate.getMonth() + 1).padStart(2, '0'),
+      String(referenceDate.getDate()).padStart(2, '0')
+    ].join('-');
+  }
+
+  function shiftDateKey(value, days) {
+    const match = text(value).match(/^(\d{4})-(\d{2})-(\d{2})$/);
+    if (!match) return '';
+    const date = new Date(
+      Number(match[1]),
+      Number(match[2]) - 1,
+      Number(match[3]),
+      12
+    );
+    date.setDate(date.getDate() + Number(days || 0));
+    return [
+      date.getFullYear(),
+      String(date.getMonth() + 1).padStart(2, '0'),
+      String(date.getDate()).padStart(2, '0')
+    ].join('-');
+  }
+
+  function isValid(item) {
+    return Boolean(
+      item &&
+      item.tipo_conteudo === 'utilidade_publica' &&
+      text(item.id) &&
+      text(item.titulo)
+    );
+  }
+
+  function isTemporallyVisible(item, referenceDate = new Date()) {
+    if (!item || item.ativo === false) return false;
+    const today = muralDateKey(referenceDate);
+    const temporal = item.temporalidade && typeof item.temporalidade === 'object'
+      ? item.temporalidade
+      : null;
+
+    if (temporal) {
+      const exhibition = temporal.exibicao && typeof temporal.exibicao === 'object'
+        ? temporal.exibicao
+        : {};
+      if (exhibition.ativa === false) return false;
+      const exhibitionStart = text(exhibition.inicio);
+      const exhibitionEnd = text(exhibition.fim);
+      if (exhibitionStart && today < exhibitionStart) return false;
+      if (exhibitionEnd && today > exhibitionEnd) return false;
+
+      const validity = temporal.vigencia && typeof temporal.vigencia === 'object'
+        ? temporal.vigencia
+        : {};
+      const validityStart = text(validity.inicio);
+      const validityEnd = text(validity.fim);
+      if (validity.expirar_automaticamente === true && validityEnd && today > validityEnd) {
+        return false;
+      }
+      if (validityStart && today < validityStart) {
+        return Boolean(exhibitionStart && today >= exhibitionStart);
+      }
+      return true;
+    }
+
+    // Compatibilidade ATC5.6 para catálogos ainda sem o bloco transversal.
+    const legacy = item.vigencia && typeof item.vigencia === 'object'
+      ? item.vigencia
+      : {};
+    const start = text(legacy.inicio);
+    const end = text(legacy.fim);
+    if (legacy.expirar_automaticamente === true && end && today > end) return false;
+    if (start && today < start) {
+      const leadDays = Number.isInteger(legacy.exibir_antes_dias)
+        ? Math.max(0, legacy.exibir_antes_dias)
+        : 0;
+      const visibleFrom = leadDays ? shiftDateKey(start, -leadDays) : start;
+      if (visibleFrom && today < visibleFrom) return false;
+    }
+    return true;
+  }
+
   function formatMetric(value, unit) {
     const number = Number(value);
     if (!Number.isFinite(number)) return '';
@@ -607,6 +705,9 @@
     createPanelSlide: createPanelSlide,
     visualizationModel: visualizationModel,
     formatMetric: formatMetric,
-    periodLabel: periodLabel
+    periodLabel: periodLabel,
+    muralDateKey: muralDateKey,
+    isValid: isValid,
+    isTemporallyVisible: isTemporallyVisible
   });
 })();
