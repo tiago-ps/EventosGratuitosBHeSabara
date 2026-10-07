@@ -8,6 +8,7 @@ const vm = require('node:vm');
 const root = path.resolve(__dirname, '..');
 const appSource = fs.readFileSync(path.join(root, 'js/app.js'), 'utf8');
 const eventsUiSource = fs.readFileSync(path.join(root, 'js/eventos-manuais-ui.js'), 'utf8');
+const searchFocusSource = fs.readFileSync(path.join(root, 'js/agenda-pesquisa-foco.js'), 'utf8');
 const stylesSource = fs.readFileSync(path.join(root, 'css/styles.css'), 'utf8');
 const coursesData = JSON.parse(fs.readFileSync(path.join(root, 'cursos.json'), 'utf8'));
 const booksData = JSON.parse(fs.readFileSync(path.join(root, 'livros.json'), 'utf8'));
@@ -123,10 +124,16 @@ assert.equal(renderedIndexes(contestsData.concursos.length).batches.at(-1), cont
 
 assert.match(appSource, /agenda-card[^`]*agenda-event-card/);
 assert.match(appSource, /state\.mobileContent === 'events' && !agendaHasSpecificEventFilters\(\)[\s\S]*?return state\.allEvents;/);
+assert.match(appSource, /function agendaVisibleSpaces\(\) \{[\s\S]*?!\['all', 'spaces'\]\.includes\(state\.mobileContent\)/);
 assert.match(appSource, /\[event\.imagem, event\.imagem_local, event\.imagem_programa\][\s\S]*?\.find\(Boolean\)/);
 assert.match(eventsUiSource, /document\.querySelectorAll\('#app \.agenda-event-card'\)/);
 assert.doesNotMatch(eventsUiSource, /agenda-card:not\(/);
 assert.doesNotMatch(eventsUiSource, /expandUnfilteredAgendaEvents/);
 assert.doesNotMatch(eventsUiSource, /createAgendaEventCard/);
+
+assert.match(searchFocusSource, /function activeAgendaContent\(shell\)/);
+assert.match(searchFocusSource, /activeAgendaContent\(shell\) !== 'events'/);
+assert.match(searchFocusSource, /querySelectorAll\('\.agenda-space-card'\)/);
+assert.match(searchFocusSource, /data-content="spaces"/);
 
 console.log('Testes da renderização progressiva da Agenda aprovados.');
