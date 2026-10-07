@@ -4678,6 +4678,77 @@
       "link": "https://www.fiemg.com.br/sesi-cultura/seu-evento-aqui/detalhe/salas-de-exposicao/"
     },
     {
+      "id": "sesc-mercado-das-flores",
+      "nome": "Sesc Centro de Atendimento ao Turista – Mercado das Flores",
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida Afonso Pena, 1055, Centro, Belo Horizonte - MG",
+      "fonte_endereco": "https://sescmg.com.br/unidade/sesc-mercado-das-flores/",
+      "google_place_id": "",
+      "instituicao_ids": [
+        "sesc-mg"
+      ],
+      "aliases": [
+        "Sesc Mercado das Flores",
+        "Sesc CAT – Mercado das Flores",
+        "CAT – Mercado das Flores",
+        "Mercado das Flores"
+      ],
+      "descricao": "Unidade do Sesc em Minas no edifício histórico do Mercado das Flores, no Centro de Belo Horizonte. Além do atendimento turístico, recebe atividades culturais, educativas, de lazer e economia criativa abertas ao público.",
+      "funcionamento": {
+        "segunda": "9h às 19h",
+        "terca": "9h às 19h",
+        "quarta": "9h às 19h",
+        "quinta": "9h às 19h",
+        "sexta": "9h às 19h",
+        "sabado": "8h às 16h",
+        "domingo": "8h às 16h",
+        "observacao": "Feriados: 8h às 16h. Atividades podem ocorrer em horários específicos conforme a programação."
+      },
+      "site": "https://sescmg.com.br/unidade/sesc-mercado-das-flores/",
+      "imagem": "",
+      "imagem_fonte": "https://sescmg.com.br/unidade/sesc-mercado-das-flores/",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "redes_sociais": {},
+      "contatos": {
+        "emails": [],
+        "telefones": [
+          "(31) 3270-8100"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Sesc em Minas",
+          "url": "https://sescmg.com.br/"
+        }
+      ],
+      "tipo_espaco": "Centro de atendimento ao turista / espaço cultural",
+      "vocacoes": [
+        "Cultura",
+        "Música",
+        "Oficinas",
+        "Lazer",
+        "Turismo",
+        "Economia criativa"
+      ],
+      "status_editorial": "pronto_para_teste",
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Sesc Centro de Atendimento ao Turista – Mercado das Flores",
+      "temas": [
+        "Cultura",
+        "Música",
+        "Oficinas",
+        "Lazer",
+        "Turismo",
+        "Economia criativa"
+      ],
+      "natureza_espaco": "Centro de atendimento ao turista / espaço cultural",
+      "instituicao": "Sesc em Minas",
+      "link": "https://sescmg.com.br/unidade/sesc-mercado-das-flores/"
+    },
+    {
       "aliases": [
         "Sesc Palladium",
         "Sesc Palladium - MG"
