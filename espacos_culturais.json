@@ -513,7 +513,7 @@
         "sesiminas-bh"
       ],
       "nome": "Biblioteca SESIMINAS – SESI Cultura",
-      "descricao": "",
+      "descricao": "A Biblioteca SESIMINAS, localizada no Centro Cultural SESIMINAS BH, reúne um acervo com mais de 30 mil exemplares, entre livros, apostilas e periódicos. \n\nA biblioteca é aberta ao público e oferece, ainda, serviços de empréstimo entre bibliotecas SESI e SENAI, atividades culturais, espaço lúdico para crianças, espaço individual para estudos, acesso à internet e impressão.",
       "funcionamento": {
         "segunda": "",
         "terca": "",
@@ -522,32 +522,44 @@
         "sexta": "",
         "sabado": "",
         "domingo": "",
-        "observacao": ""
+        "observacao": "De segunda a sexta, das 9h às 19h. Primeiro e último sábado do mês, das 9h às 14h30."
       },
-      "site": "",
-      "imagem": "",
-      "imagem_fonte": "",
+      "site": "https://www.fiemg.com.br/sesi-cultura/biblioteca/",
+      "imagem": "imagens/equipamentos/sesi-cultura-biblioteca-sesiminas.png",
+      "imagem_fonte": "https://www.fiemg.com.br/sesi-cultura/wp-content/uploads/sites/28/2023/07/biblioteca-sesiminas-bh.jpg",
       "exibicao_ativa": true,
       "exibicao_recorrente": true,
       "prioridade": 0,
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "nota_editorial": "Registro duplicado do espaço interno Biblioteca do Centro Cultural SESIMINAS BH. Manter apenas para histórico até concluir a migração.",
-      "redes_sociais": {},
+      "redes_sociais": {
+        "whatsapp": "https://wa.me/5531971696735"
+      },
       "contatos": {
-        "emails": [],
-        "telefones": []
+        "emails": [
+          "bsesiminasbh@fiemg.com.br"
+        ],
+        "telefones": [
+          "(31) 97169-6735"
+        ]
       },
       "links_adicionais": [],
-      "tipo_espaco": "",
-      "vocacoes": [],
-      "mapa": "",
+      "tipo_espaco": "Biblioteca",
+      "vocacoes": [
+        "Cultura",
+        "Formação"
+      ],
+      "mapa": "https://maps.app.goo.gl/wV29UawfQeE2brsk8",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "Biblioteca SESIMINAS – SESI Cultura",
-      "temas": [],
-      "natureza_espaco": "",
+      "temas": [
+        "Cultura",
+        "Formação"
+      ],
+      "natureza_espaco": "Biblioteca",
       "instituicao": "SESIMINAS BH",
-      "link": ""
+      "link": "https://www.fiemg.com.br/sesi-cultura/biblioteca/"
     },
     {
       "id": "palacio-das-artes-cafe-do-palacio",
