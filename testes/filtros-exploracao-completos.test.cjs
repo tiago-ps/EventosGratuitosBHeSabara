@@ -163,18 +163,18 @@ assert.ok(appSource.includes('state.mobileTheme'));
 // Cache e HTML precisam apontar para os mesmos assets novos.
 for (const asset of [
   'css/styles.css?v=106',
-  'js/conteudos/cursos.js?v=5',
+  'js/conteudos/cursos.js?v=6',
   'js/conteudos/concursos.js?v=5',
   'js/conteudos/filmes.js?v=11',
   'js/conteudos/utilidade-publica.js?v=6',
   'js/conteudos/espacos.js?v=5',
   'js/conteudos/atividades-lazer.js?v=6',
   'js/temporalidade-eventos.js?v=1',
-  'js/app.js?v=157'
+  'js/app.js?v=158'
 ]) {
   assert.ok(indexSource.includes(asset), `Asset ausente do index: ${asset}`);
   assert.ok(swSource.includes(`./${asset}`), `Asset ausente do service worker: ${asset}`);
 }
-assert.ok(swSource.includes('mural-cultural-v200-utilidade-temporalidade'));
+assert.ok(swSource.includes('mural-cultural-v201-cursos-temporalidade'));
 
 console.log('Filtros completos do modo Exploração validados.');
