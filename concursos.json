@@ -2,8 +2,8 @@
   "schema": 10,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-10-06T15:30:38.927805+00:00",
-  "total": 23,
+  "coletado_em_utc": "2026-10-07T15:50:01.562514+00:00",
+  "total": 22,
   "concursos": [
     {
       "id": "pci:noticia:marinha-do-brasil-8-distrito-naval-abre-vagas-para-oficiais-rm2-em-sp",
@@ -1102,61 +1102,6 @@
             "tipo": "candidatura",
             "inicio": "2026-10-02",
             "fim": "2026-10-16",
-            "status": "aberto"
-          }
-        ]
-      }
-    },
-    {
-      "id": "pci:noticia:tce-go-retifica-concurso-publico-para-tecnicos-de-controle-externo",
-      "titulo": "TCE - Tribunal de Contas do Estado de Goiás",
-      "url": "https://www.pciconcursos.com.br/noticias/tce-go-retifica-concurso-publico-para-tecnicos-de-controle-externo",
-      "imagem": "https://cdn.pci.app.br/img/i/49d0f07f837fcc4f15672d89520c62f4.png",
-      "formacoes_compativeis": [
-        "Sistemas de Informação / Computação"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Sistemas de Informação / Computação",
-          "nivel": "superior",
-          "evidencia": "tce - go retifica concurso publico para tecnicos de controle externo oportunidades contemplam cargos de nivel medio nas areas administrativas e de tecnologia da informacao, com remuneracao inicial de r$ 11.862,19 e selecao composta por provas objetivas e discursivas. concursos › noticias › centro-oeste quarta-feira, 16 de setembro de 2026 o tribunal de contas do estado de goias (tce-go) abriu um concurso publico visando o preenchimento de vagas para profissionais de "
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "GO",
-      "cidade": "",
-      "inscricoes_inicio_texto": "5 de outubro de 2026",
-      "inscricoes_fim_texto": "6 de novembro de 2026",
-      "inscricoes_texto": "5 de outubro de 2026 a 6 de novembro de 2026",
-      "remuneracao_faixa_texto": "R$ 11.862,19",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Tecnologia da Informação",
-          "vagas_texto": "10 vagas",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        }
-      ],
-      "janela_inscricoes": {
-        "estado": "aberto",
-        "completude": "completa",
-        "inicio": "2026-10-05",
-        "fim": "2026-11-06",
-        "texto_original": "5 de outubro de 2026 a 6 de novembro de 2026"
-      },
-      "temporalidade": {
-        "classe": "periodo",
-        "realizacao": {
-          "inicio": "2026-10-05",
-          "fim": "2026-11-06"
-        },
-        "participacao": [
-          {
-            "tipo": "candidatura",
-            "inicio": "2026-10-05",
-            "fim": "2026-11-06",
             "status": "aberto"
           }
         ]
