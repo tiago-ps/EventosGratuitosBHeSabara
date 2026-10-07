@@ -4230,6 +4230,95 @@
       "link": "https://sescmg.com.br/unidade/sesc-palladium/"
     },
     {
+      "id": "sesi-museu-artes-oficios",
+      "nome": "SESI Museu de Artes e Ofícios",
+      "cidade": "Belo Horizonte",
+      "endereco": "Praça Rui Barbosa, 600, Centro, Belo Horizonte - MG",
+      "instituicao_ids": [
+        "sesi-cultura-mg"
+      ],
+      "aliases": [
+        "SESI Museu de Artes e Ofícios",
+        "Museu de Artes e Ofícios",
+        "Museu de Artes e Oficios",
+        "MAO",
+        "SESI MAO"
+      ],
+      "google_place_id": "",
+      "fonte_endereco": "https://www.fiemg.com.br/sesi-cultura/sesi-museu-de-artes-e-oficios/",
+      "mapa": "",
+      "descricao": "Museu instalado na antiga Estação Ferroviária Central de Belo Horizonte, com acervo de mais de 2.500 peças ligadas aos ofícios e ao período pré-industrial brasileiro. Além do acervo histórico, recebe exposições, visitas mediadas, oficinas, cursos, palestras e programação musical.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "10h às 17h",
+        "quarta": "10h às 17h",
+        "quinta": "10h às 17h",
+        "sexta": "10h às 17h",
+        "sabado": "9h às 17h",
+        "domingo": "",
+        "observacao": "Entrada até 16h30. Na primeira quarta-feira de cada mês, funcionamento das 10h às 20h, com entrada até 19h30. Entrada no museu gratuita."
+      },
+      "site": "https://www.fiemg.com.br/sesi-cultura/sesi-museu-de-artes-e-oficios/",
+      "imagem": "",
+      "imagem_fonte": "https://www.fiemg.com.br/sesi-cultura/sesi-museu-de-artes-e-oficios/",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem_credito": "SESI Cultura/FIEMG",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/museudearteseoficiossesi/",
+        "whatsapp": "https://wa.me/5531994080192"
+      },
+      "contatos": {
+        "emails": [
+          "educativomao@fiemg.com.br",
+          "sesiculturamg@fiemg.com.br"
+        ],
+        "telefones": [
+          "(31) 2116-0419",
+          "(31) 99408-0192 (WhatsApp)"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Programação",
+          "url": "https://www.fiemg.com.br/sesi-cultura/categoria_programacao_unidade/sesi-museu-de-artes-e-oficios/"
+        },
+        {
+          "rotulo": "Programação geral SESI Cultura",
+          "url": "https://www.fiemg.com.br/sesi-cultura/programacao/"
+        }
+      ],
+      "tipo_espaco": "Museu",
+      "vocacoes": [
+        "Museu",
+        "Patrimônio",
+        "Exposições",
+        "Artes visuais",
+        "Educação",
+        "Oficinas",
+        "Música",
+        "Memória"
+      ],
+      "status_editorial": "pronto_para_teste",
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "SESI Museu de Artes e Ofícios",
+      "temas": [
+        "Museu",
+        "Patrimônio",
+        "Exposições",
+        "Artes visuais",
+        "Educação",
+        "Oficinas",
+        "Música",
+        "Memória"
+      ],
+      "natureza_espaco": "Museu",
+      "instituicao": "SESI Cultura MG",
+      "link": "https://www.fiemg.com.br/sesi-cultura/sesi-museu-de-artes-e-oficios/"
+    },
+    {
       "aliases": [
         "Solar Padre Correia"
       ],
