@@ -28,6 +28,7 @@
   ]);
 
   const eventRelations = window.MuralCultural?.eventRelations;
+  const eventTemporal = window.MuralCultural?.eventTemporal;
   let events = [];
   let relationIndex = Object.create(null);
   let updateQueued = false;
@@ -166,10 +167,21 @@
   }
 
   function formatAgendaRange(event) {
-    if (!event?.data_fim || event.data_fim === event.data) return '';
+    const realization = eventTemporal?.realization?.(event) || {
+      classe: event?.data_fim && event.data_fim !== event.data ? 'periodo' : 'pontual',
+      inicio: event?.data || '',
+      fim: event?.data_fim || event?.data || ''
+    };
+    if (
+      eventTemporal?.isPermanent?.(event) ||
+      ['permanente', 'atemporal'].includes(realization.classe)
+    ) {
+      return realization.classe === 'atemporal' ? 'Disponível continuamente' : 'Permanente';
+    }
+    if (!realization.fim || realization.fim === realization.inicio) return '';
 
-    const start = parseCalendarDate(event.data);
-    const end = parseCalendarDate(event.data_fim);
+    const start = parseCalendarDate(realization.inicio);
+    const end = parseCalendarDate(realization.fim);
     if (!start || !end) return '';
 
     const differentYears = start.getFullYear() !== end.getFullYear();
@@ -361,13 +373,16 @@
     when.classList.add('when-registration');
     when.replaceChildren();
 
+    const window = eventTemporal?.participation?.(event, 'inscricao');
+    const startValue = window?.inicio || event.data;
+    const endValue = window?.fim || event.data_fim;
     const registration = document.createElement('span');
     registration.className = 'registration-period';
-    appendDate(registration, event.data);
+    appendDate(registration, startValue);
 
-    if (event.data_fim && event.data_fim !== event.data) {
+    if (endValue && endValue !== startValue) {
       registration.append(document.createTextNode(' a '));
-      appendDate(registration, event.data_fim);
+      appendDate(registration, endValue);
     }
 
     when.append(registration);

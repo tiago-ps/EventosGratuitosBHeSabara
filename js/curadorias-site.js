@@ -2,6 +2,7 @@
   'use strict';
 
   const root = window.MuralCultural = window.MuralCultural || {};
+  const eventTemporal = root.eventTemporal;
   let supportDialog = null;
   let supportOpener = null;
   let supportListenerBound = false;
@@ -206,6 +207,7 @@
   }
 
   function eventIsCurrent(event, today = new Date()) {
+    if (eventTemporal?.isCurrent) return eventTemporal.isCurrent(event, today);
     const end = String(event?.data_fim || event?.data || '').slice(0, 10);
     const current = dateKey(today);
     return !end || !current || end >= current;

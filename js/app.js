@@ -85,6 +85,7 @@
   const activitiesContent = window.MuralCultural.contents.activities;
   const spacesContent = window.MuralCultural.contents.spaces;
   const eventRelations = window.MuralCultural.eventRelations;
+  const eventTemporal = window.MuralCultural.eventTemporal;
   const siteCurationsContent = window.MuralCultural.siteCurations;
   const notificationsContent = window.MuralCultural.notifications;
   let deferredInstallPrompt = null;
@@ -546,10 +547,30 @@
   ]);
 
   function displayCriterion(event) {
-    const value = normalizeText(event.criterio_exibicao);
+    if (eventTemporal?.displayCriterion) return eventTemporal.displayCriterion(event);
+    const value = normalizeText(event?.criterio_exibicao);
     return ['inscricao', 'acesso', 'manual', 'realizacao'].includes(value)
       ? value
       : 'realizacao';
+  }
+
+  function eventRealization(event) {
+    if (eventTemporal?.realization) return eventTemporal.realization(event);
+    const start = String(event?.data || '').slice(0, 10);
+    const end = String(event?.data_fim || start).slice(0, 10);
+    return { classe: end && end !== start ? 'periodo' : 'pontual', inicio: start, fim: end };
+  }
+
+  function eventParticipation(event, type) {
+    if (eventTemporal?.participation) return eventTemporal.participation(event, type);
+    const prefix = type === 'acesso' ? 'acesso' : 'inscricao';
+    const inicio = String(event?.[`${prefix}_inicio`] || '').slice(0, 10);
+    const fim = String(event?.[`${prefix}_fim`] || '').slice(0, 10);
+    const status = String(event?.[`status_${prefix}`] || '').trim();
+    const observacao = String(event?.[prefix] || '').trim();
+    return inicio || fim || status || observacao
+      ? { tipo: prefix, inicio, fim, status, observacao, canonica: false }
+      : null;
   }
 
 
@@ -567,9 +588,16 @@
   }
 
   function registrationIsClosed(event) {
-    const registrationStatus = normalizeText(event.status_inscricao).replaceAll('_', ' ');
-    const formStatus = normalizeText(event.status_formulario_google).replaceAll('_', ' ');
-    return CLOSED_ACCESS_STATUSES.has(registrationStatus) || formStatus === 'fechado';
+    const participation = eventParticipation(event, 'inscricao');
+    const registrationStatus = normalizeText(
+      participation?.status || event?.status_inscricao
+    ).replaceAll('_', ' ');
+    const formStatus = normalizeText(event?.status_formulario_google).replaceAll('_', ' ');
+    return Boolean(
+      eventTemporal?.isClosedStatus?.(registrationStatus) ||
+      CLOSED_ACCESS_STATUSES.has(registrationStatus) ||
+      formStatus === 'fechado'
+    );
   }
 
   function eventPublicLink(event) {
@@ -588,33 +616,37 @@
 
   function eventIsPublishable(event, today = todayAtMidnight()) {
     if (event?.exibicao_ativa === false) return false;
-    const criterion = displayCriterion(event);
-    if (criterion === 'manual') return event.exibicao_ativa !== false;
-
-    if (criterion === 'inscricao' || criterion === 'acesso') {
-      const status = normalizeText(
-        criterion === 'inscricao' ? event.status_inscricao : event.status_acesso
-      ).replaceAll('_', ' ');
-      if (CLOSED_ACCESS_STATUSES.has(status)) return false;
-      const deadline = safeDate(
-        criterion === 'inscricao' ? event.inscricao_fim : event.acesso_fim
-      );
-      return !deadline || deadline >= today;
+    if (eventTemporal?.isPublishable && !eventTemporal.isPublishable(event, today)) {
+      return false;
     }
 
-    const end = safeDate(event.data_fim || event.data);
-    return !end || end >= today;
+    const criterion = displayCriterion(event);
+    if (criterion === 'inscricao' && registrationIsClosed(event)) return false;
+
+    if (!eventTemporal?.isPublishable) {
+      if (criterion === 'manual') return event.exibicao_ativa !== false;
+      if (criterion === 'inscricao' || criterion === 'acesso') {
+        const participation = eventParticipation(event, criterion);
+        const status = normalizeText(participation?.status).replaceAll('_', ' ');
+        if (CLOSED_ACCESS_STATUSES.has(status)) return false;
+        const deadline = safeDate(participation?.fim);
+        return !deadline || deadline >= today;
+      }
+      const realization = eventRealization(event);
+      const end = safeDate(realization.fim || realization.inicio);
+      return !end || end >= today;
+    }
+
+    return true;
   }
 
   function eventSortKey(event) {
+    if (eventTemporal?.sortKey) return eventTemporal.sortKey(event);
     const criterion = displayCriterion(event);
-    const realization = safeDate(event.data)?.getTime() || Number.MAX_SAFE_INTEGER;
-    if (criterion === 'inscricao') {
-      const deadline = safeDate(event.inscricao_fim)?.getTime();
-      return [deadline ? 0 : 1, deadline || realization, realization];
-    }
-    if (criterion === 'acesso') {
-      const deadline = safeDate(event.acesso_fim)?.getTime();
+    const realizationWindow = eventRealization(event);
+    const realization = safeDate(realizationWindow.inicio)?.getTime() || Number.MAX_SAFE_INTEGER;
+    if (criterion === 'inscricao' || criterion === 'acesso') {
+      const deadline = safeDate(eventParticipation(event, criterion)?.fim)?.getTime();
       return [deadline ? 0 : 1, deadline || realization, realization];
     }
     return [2, realization, realization];
@@ -624,7 +656,10 @@
     const today = todayAtMidnight();
 
     return events
-      .filter(event => event && event.titulo && event.data)
+      .filter(event => event && event.titulo && (
+        event.data ||
+        eventTemporal?.temporalClass?.(event)
+      ))
       .filter(event => eventIsPublishable(event, today))
       .sort((a, b) => {
         const ka = eventSortKey(a);
@@ -1140,6 +1175,9 @@
   }
 
   function eventIntersectsPeriod(event, rangeStart, rangeEnd) {
+    if (eventTemporal?.intersectsPeriod) {
+      return eventTemporal.intersectsPeriod(event, rangeStart, rangeEnd);
+    }
     const criterion = displayCriterion(event);
     if (criterion === 'inscricao' || criterion === 'acesso') {
       const startValue = criterion === 'inscricao'
@@ -1500,8 +1538,9 @@ function eventProgram(event) {
   }
 
   function eventDurationDays(event) {
-    const start = safeDate(event.data);
-    const end = safeDate(event.data_fim);
+    const realization = eventRealization(event);
+    const start = safeDate(realization.inicio);
+    const end = safeDate(realization.fim);
 
     if (!start || !end || end <= start) {
       return 0;
@@ -1576,39 +1615,56 @@ function eventProgram(event) {
   function renderWhen(container, event) {
     container.replaceChildren();
 
+    const realization = eventRealization(event);
+    const permanent = eventTemporal?.isPermanent?.(event) ||
+      ['permanente', 'atemporal'].includes(realization.classe);
+
+    if (permanent) {
+      const label = document.createElement('span');
+      label.className = 'when-date when-permanent';
+      label.textContent = realization.classe === 'atemporal' ? 'Disponível continuamente' : 'Permanente';
+      container.append(label);
+      if (event.horario) {
+        const time = document.createElement('span');
+        time.className = 'when-time';
+        time.textContent = ` • ${event.horario}`;
+        container.append(time);
+      }
+    }
+
     const hasDateRange = Boolean(
-      event.data_fim && event.data_fim !== event.data
+      !permanent && realization.fim && realization.fim !== realization.inicio
     );
     const isLongEvent = hasDateRange &&
       eventDurationDays(event) > LONG_EVENT_THRESHOLD_DAYS;
 
-    if (isLongEvent) {
-      const start = safeDate(event.data);
-      const end = safeDate(event.data_fim);
+    if (!permanent && isLongEvent) {
+      const start = safeDate(realization.inicio);
+      const end = safeDate(realization.fim);
       const differentYears = Boolean(
         start && end && start.getFullYear() !== end.getFullYear()
       );
 
-      appendWhenDate(container, event.data, {
+      appendWhenDate(container, realization.inicio, {
         showWeekday: false,
         includeYear: differentYears
       });
-      appendWhenDate(container, event.data_fim, {
+      appendWhenDate(container, realization.fim, {
         prefix: ' a ',
         showWeekday: false,
         includeYear: true
       });
-    } else {
-      appendWhenDate(container, event.data);
+    } else if (!permanent) {
+      appendWhenDate(container, realization.inicio);
 
       if (hasDateRange) {
-        appendWhenDate(container, event.data_fim, {
+        appendWhenDate(container, realization.fim, {
           prefix: ' a '
         });
       }
     }
 
-    if (event.horario) {
+    if (event.horario && !permanent) {
       const time = document.createElement('span');
       time.className = 'when-time';
 
@@ -1622,18 +1678,22 @@ function eventProgram(event) {
       container.append(time);
     }
 
-    if (displayCriterion(event) === 'inscricao' && event.inscricao_inicio) {
+    const registrationWindow = eventParticipation(event, 'inscricao');
+    if (displayCriterion(event) === 'inscricao' && registrationWindow?.inicio) {
       const registration = document.createElement('span');
       registration.className = 'when-registration';
-      const start = formatDateParts(event.inscricao_inicio, true).date;
-      const status = normalizeText(event.status_inscricao).replaceAll('_', ' ');
-      const closed = CLOSED_ACCESS_STATUSES.has(status);
+      const start = formatDateParts(registrationWindow.inicio, true).date;
+      const status = normalizeText(registrationWindow.status).replaceAll('_', ' ');
+      const closed = Boolean(
+        eventTemporal?.isClosedStatus?.(status) ||
+        CLOSED_ACCESS_STATUSES.has(status)
+      );
 
       container.append(document.createElement('br'));
       registration.textContent = closed
         ? `Inscrições encerradas — abertas desde ${start}`
-        : event.inscricao_fim
-          ? `Inscrições: ${start} a ${formatDateParts(event.inscricao_fim, true).date}`
+        : registrationWindow.fim
+          ? `Inscrições: ${start} a ${formatDateParts(registrationWindow.fim, true).date}`
           : `Inscrições abertas desde ${start}, enquanto houver disponibilidade`;
       container.append(registration);
     }
@@ -3734,8 +3794,15 @@ function eventProgram(event) {
   }
 
   function mobileDateLabel(event) {
-    const start = safeDate(event.data);
-    if (!start) return event.data || 'Data não informada';
+    const realization = eventRealization(event);
+    if (
+      eventTemporal?.isPermanent?.(event) ||
+      ['permanente', 'atemporal'].includes(realization.classe)
+    ) {
+      return realization.classe === 'atemporal' ? 'Disponível continuamente' : 'Permanente';
+    }
+    const start = safeDate(realization.inicio);
+    if (!start) return realization.inicio || event.data || 'Data não informada';
     const today = todayAtMidnight();
     const tomorrow = addCalendarDays(today, 1);
     const sameDay = (a, b) => a.getFullYear() === b.getFullYear() &&
@@ -3929,11 +3996,16 @@ function eventProgram(event) {
 
   function eventMatchesRegistrationFilter(event, value) {
     if (!value) return true;
-    const status = normalizeText(event.status_inscricao).replaceAll('_', ' ');
+    const registrationWindow = eventParticipation(event, 'inscricao');
+    const status = normalizeText(
+      registrationWindow?.status || event.status_inscricao
+    ).replaceAll('_', ' ');
     const formStatus = normalizeText(event.status_formulario_google).replaceAll('_', ' ');
     const hasRegistrationLink = Boolean(safeExternalUrl(event.link_inscricao));
     const registrationCriterion = displayCriterion(event) === 'inscricao';
-    const hasRegistrationText = Boolean(String(event.inscricao || '').trim());
+    const hasRegistrationText = Boolean(
+      registrationWindow?.observacao || String(event.inscricao || '').trim()
+    );
 
     if (value === 'closed') return registrationIsClosed(event);
     if (value === 'open') {
@@ -4021,7 +4093,9 @@ function eventProgram(event) {
   }
 
   function compareAgendaEvents(first, second) {
-    return agendaDateValue(first?.data) - agendaDateValue(second?.data) || agendaTitleCompare(first, second);
+    const firstDate = eventRealization(first).inicio;
+    const secondDate = eventRealization(second).inicio;
+    return agendaDateValue(firstDate) - agendaDateValue(secondDate) || agendaTitleCompare(first, second);
   }
 
   function compareAgendaContests(first, second) {
