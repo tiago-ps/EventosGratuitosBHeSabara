@@ -3062,6 +3062,66 @@
       "link": "https://fcs.mg.gov.br/espacos-culturais/palacio-das-artes/galeria-arlinda-corea-de-lima/"
     },
     {
+      "id": "galpao-cine-horto-galeria-romulo-bruzzi",
+      "nome": "Galeria Corredor Rômulo Bruzzi",
+      "equipamento_id": "galpao-cine-horto",
+      "instituicao_id": "galpao-cine-horto",
+      "descricao": "Galeria de artes visuais instalada no corredor de passagem do Galpão Cine Horto, com exposições e projetos selecionados pela instituição.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Visitação conforme funcionamento e programação do Galpão Cine Horto."
+      },
+      "site": "https://galpaocinehorto.com.br/",
+      "imagem": "",
+      "imagem_fonte": "",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Galeria",
+      "vocacoes": [
+        "Artes visuais",
+        "Exposições"
+      ],
+      "links_adicionais": [
+        {
+          "rotulo": "Site e programação",
+          "url": "https://galpaocinehorto.com.br/"
+        }
+      ],
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/galpaocinehorto/"
+      },
+      "contatos": {
+        "emails": [
+          "programacao@galpaocinehorto.com.br"
+        ],
+        "telefones": [
+          "(31) 3481-5580"
+        ]
+      },
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Galeria Corredor Rômulo Bruzzi",
+      "temas": [
+        "Artes visuais",
+        "Exposições"
+      ],
+      "natureza_espaco": "Galeria",
+      "espaco_principal": "Galpão Cine Horto",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Pitangui, 3613, Horto, Belo Horizonte - MG, 31030-065",
+      "mapa": "",
+      "instituicao": "Galpão Cine Horto",
+      "link": "https://galpaocinehorto.com.br/"
+    },
+    {
       "id": "centro-cultural-sesiminas-bh-galeria-de-artes",
       "nome": "Galeria de Artes",
       "equipamento_id": "centro-cultural-sesiminas-bh",
@@ -3412,6 +3472,82 @@
       "mapa": "https://maps.app.goo.gl/Q6UrZGKEn8eCx8Kb8",
       "instituicao": "Centro Cultural Banco do Brasil Belo Horizonte",
       "link": "https://ccbb.com.br/belo-horizonte/programacao/"
+    },
+    {
+      "id": "galpao-cine-horto",
+      "nome": "Galpão Cine Horto",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Pitangui, 3613, Horto, Belo Horizonte - MG, 31030-065",
+      "fonte_endereco": "https://galpaocinehorto.com.br/",
+      "google_place_id": "",
+      "instituicao_ids": [
+        "galpao-cine-horto"
+      ],
+      "aliases": [
+        "Galpão Cine Horto",
+        "Cine Horto"
+      ],
+      "mapa": "",
+      "descricao": "Centro cultural do Grupo Galpão, com teatro, sala de cinema, salas de aula, galeria e espaços de pesquisa e memória. Mantém programação de espetáculos, festivais, exposições, oficinas e ações formativas.",
+      "funcionamento": {
+        "segunda": "9h às 22h",
+        "terca": "9h às 22h",
+        "quarta": "9h às 22h",
+        "quinta": "9h às 22h",
+        "sexta": "9h às 19h",
+        "sabado": "9h às 18h",
+        "domingo": "",
+        "observacao": "Aos domingos, conforme a programação; horários podem variar em dias de eventos noturnos."
+      },
+      "site": "https://galpaocinehorto.com.br/",
+      "imagem": "",
+      "imagem_fonte": "",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/galpaocinehorto/"
+      },
+      "contatos": {
+        "emails": [
+          "programacao@galpaocinehorto.com.br"
+        ],
+        "telefones": [
+          "(31) 3481-5580"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Site e programação",
+          "url": "https://galpaocinehorto.com.br/"
+        }
+      ],
+      "tipo_espaco": "Centro cultural / Teatro",
+      "vocacoes": [
+        "Teatro",
+        "Formação",
+        "Cinema",
+        "Artes visuais",
+        "Festivais",
+        "Memória",
+        "Oficinas"
+      ],
+      "status_editorial": "pronto_para_teste",
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Galpão Cine Horto",
+      "temas": [
+        "Teatro",
+        "Formação",
+        "Cinema",
+        "Artes visuais",
+        "Festivais",
+        "Memória",
+        "Oficinas"
+      ],
+      "natureza_espaco": "Centro cultural / Teatro",
+      "instituicao": "Galpão Cine Horto",
+      "link": "https://galpaocinehorto.com.br/"
     },
     {
       "id": "palacio-das-artes-galeria-alberto-da-veiga-guignard",
@@ -4795,6 +4931,198 @@
       "link": "https://ccbb.com.br/belo-horizonte/servicos/"
     },
     {
+      "id": "galpao-cine-horto-sala-1",
+      "nome": "Sala 1",
+      "equipamento_id": "galpao-cine-horto",
+      "instituicao_id": "galpao-cine-horto",
+      "descricao": "Sala de aula e formação do Galpão Cine Horto, utilizada em cursos, oficinas, ensaios e atividades de pesquisa.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Uso conforme programação formativa."
+      },
+      "site": "https://galpaocinehorto.com.br/o-galpao-cine-horto/",
+      "imagem": "",
+      "imagem_fonte": "",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Sala de aula",
+      "vocacoes": [
+        "Formação",
+        "Oficinas",
+        "Ensaios"
+      ],
+      "links_adicionais": [
+        {
+          "rotulo": "Site e programação",
+          "url": "https://galpaocinehorto.com.br/"
+        }
+      ],
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/galpaocinehorto/"
+      },
+      "contatos": {
+        "emails": [
+          "programacao@galpaocinehorto.com.br"
+        ],
+        "telefones": [
+          "(31) 3481-5580"
+        ]
+      },
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Sala 1",
+      "temas": [
+        "Formação",
+        "Oficinas",
+        "Ensaios"
+      ],
+      "natureza_espaco": "Sala de aula",
+      "espaco_principal": "Galpão Cine Horto",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Pitangui, 3613, Horto, Belo Horizonte - MG, 31030-065",
+      "mapa": "",
+      "instituicao": "Galpão Cine Horto",
+      "link": "https://galpaocinehorto.com.br/o-galpao-cine-horto/"
+    },
+    {
+      "id": "galpao-cine-horto-sala-2",
+      "nome": "Sala 2",
+      "equipamento_id": "galpao-cine-horto",
+      "instituicao_id": "galpao-cine-horto",
+      "descricao": "Sala de aula e formação do Galpão Cine Horto, utilizada em cursos, oficinas, ensaios e atividades de pesquisa.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Uso conforme programação formativa."
+      },
+      "site": "https://galpaocinehorto.com.br/o-galpao-cine-horto/",
+      "imagem": "",
+      "imagem_fonte": "",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Sala de aula",
+      "vocacoes": [
+        "Formação",
+        "Oficinas",
+        "Ensaios"
+      ],
+      "links_adicionais": [
+        {
+          "rotulo": "Site e programação",
+          "url": "https://galpaocinehorto.com.br/"
+        }
+      ],
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/galpaocinehorto/"
+      },
+      "contatos": {
+        "emails": [
+          "programacao@galpaocinehorto.com.br"
+        ],
+        "telefones": [
+          "(31) 3481-5580"
+        ]
+      },
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Sala 2",
+      "temas": [
+        "Formação",
+        "Oficinas",
+        "Ensaios"
+      ],
+      "natureza_espaco": "Sala de aula",
+      "espaco_principal": "Galpão Cine Horto",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Pitangui, 3613, Horto, Belo Horizonte - MG, 31030-065",
+      "mapa": "",
+      "instituicao": "Galpão Cine Horto",
+      "link": "https://galpaocinehorto.com.br/o-galpao-cine-horto/"
+    },
+    {
+      "id": "galpao-cine-horto-sala-cinema",
+      "nome": "Sala de Cinema",
+      "equipamento_id": "galpao-cine-horto",
+      "instituicao_id": "galpao-cine-horto",
+      "descricao": "Sala de cinema e vídeo do Galpão Cine Horto, com capacidade aproximada para 80 pessoas.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Uso conforme programação e atividades do centro cultural."
+      },
+      "site": "https://galpaocinehorto.com.br/o-galpao-cine-horto/",
+      "imagem": "",
+      "imagem_fonte": "",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Sala de cinema",
+      "vocacoes": [
+        "Cinema",
+        "Audiovisual",
+        "Formação",
+        "Debates"
+      ],
+      "links_adicionais": [
+        {
+          "rotulo": "Informações do espaço",
+          "url": "https://galpaocinehorto.com.br/o-galpao-cine-horto/"
+        },
+        {
+          "rotulo": "Site e programação",
+          "url": "https://galpaocinehorto.com.br/"
+        }
+      ],
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/galpaocinehorto/"
+      },
+      "contatos": {
+        "emails": [
+          "programacao@galpaocinehorto.com.br"
+        ],
+        "telefones": [
+          "(31) 3481-5580"
+        ]
+      },
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Sala de Cinema",
+      "temas": [
+        "Cinema",
+        "Audiovisual",
+        "Formação",
+        "Debates"
+      ],
+      "natureza_espaco": "Sala de cinema",
+      "espaco_principal": "Galpão Cine Horto",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Pitangui, 3613, Horto, Belo Horizonte - MG, 31030-065",
+      "mapa": "",
+      "instituicao": "Galpão Cine Horto",
+      "link": "https://galpaocinehorto.com.br/o-galpao-cine-horto/"
+    },
+    {
       "id": "palacio-das-artes-sala-juvenal-dias",
       "nome": "Sala Juvenal Dias",
       "equipamento_id": "palacio-das-artes",
@@ -5973,6 +6301,74 @@
       "mapa": "",
       "instituicao": "SESIMINAS BH",
       "link": "https://www.fiemg.com.br/sesi-cultura/seu-evento-aqui/detalhe/teatro-sesiminas-bh-2/"
+    },
+    {
+      "id": "galpao-cine-horto-teatro-wanda-fernandes",
+      "nome": "Teatro Wanda Fernandes",
+      "equipamento_id": "galpao-cine-horto",
+      "instituicao_id": "galpao-cine-horto",
+      "descricao": "Sala principal de espetáculos do Galpão Cine Horto, com capacidade aproximada para 200 pessoas e estrutura multimeios.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Uso conforme programação e pautas do Galpão Cine Horto."
+      },
+      "site": "https://galpaocinehorto.com.br/o-galpao-cine-horto/",
+      "imagem": "",
+      "imagem_fonte": "",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Teatro",
+      "vocacoes": [
+        "Teatro",
+        "Música",
+        "Festivais",
+        "Apresentações"
+      ],
+      "links_adicionais": [
+        {
+          "rotulo": "Informações do espaço",
+          "url": "https://galpaocinehorto.com.br/o-galpao-cine-horto/"
+        },
+        {
+          "rotulo": "Site e programação",
+          "url": "https://galpaocinehorto.com.br/"
+        }
+      ],
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/galpaocinehorto/"
+      },
+      "contatos": {
+        "emails": [
+          "programacao@galpaocinehorto.com.br"
+        ],
+        "telefones": [
+          "(31) 3481-5580"
+        ]
+      },
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Teatro Wanda Fernandes",
+      "temas": [
+        "Teatro",
+        "Música",
+        "Festivais",
+        "Apresentações"
+      ],
+      "natureza_espaco": "Teatro",
+      "espaco_principal": "Galpão Cine Horto",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Pitangui, 3613, Horto, Belo Horizonte - MG, 31030-065",
+      "mapa": "",
+      "instituicao": "Galpão Cine Horto",
+      "link": "https://galpaocinehorto.com.br/o-galpao-cine-horto/"
     },
     {
       "id": "espaco-conhecimento-ufmg-terraco-astronomico",
