@@ -492,6 +492,77 @@
       "link": "https://www.pucminas.br/sala-imprensa/eventos/Paginas/Concertos-Dominicais-Peter-Lund-1.aspx"
     },
     {
+      "id": "bdmg-cultural",
+      "nome": "BDMG Cultural",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Bernardo Guimarães, 1600, Lourdes, Belo Horizonte - MG",
+      "fonte_endereco": "https://bdmgcultural.mg.gov.br/",
+      "google_place_id": "",
+      "instituicao_ids": [
+        "bdmg-cultural"
+      ],
+      "aliases": [
+        "BDMG Cultural",
+        "Galeria BDMG",
+        "Instituto Cultural BDMG"
+      ],
+      "mapa": "",
+      "descricao": "Sede do BDMG Cultural em Belo Horizonte, onde funciona a Galeria de Arte BDMG Cultural e são realizadas atividades ligadas às artes visuais, música, formação e pesquisa.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Visitação e atividades conforme programação."
+      },
+      "site": "https://bdmgcultural.mg.gov.br/",
+      "imagem": "",
+      "imagem_fonte": "",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/bdmgcultural/"
+      },
+      "contatos": {
+        "emails": [],
+        "telefones": []
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Site oficial",
+          "url": "https://bdmgcultural.mg.gov.br/"
+        }
+      ],
+      "tipo_espaco": "Centro cultural / Galeria",
+      "vocacoes": [
+        "Artes visuais",
+        "Música",
+        "Exposições",
+        "Formação",
+        "Pesquisa",
+        "Cultura"
+      ],
+      "status_editorial": "pronto_para_teste",
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "BDMG Cultural",
+      "temas": [
+        "Artes visuais",
+        "Música",
+        "Exposições",
+        "Formação",
+        "Pesquisa",
+        "Cultura"
+      ],
+      "natureza_espaco": "Centro cultural / Galeria",
+      "instituicao": "BDMG Cultural",
+      "link": "https://bdmgcultural.mg.gov.br/"
+    },
+    {
       "id": "centro-cultural-sesiminas-bh-biblioteca",
       "nome": "Biblioteca",
       "equipamento_id": "centro-cultural-sesiminas-bh",
@@ -3873,6 +3944,66 @@
       "mapa": "",
       "instituicao": "Galpão Cine Horto",
       "link": "https://galpaocinehorto.com.br/"
+    },
+    {
+      "id": "bdmg-cultural-galeria",
+      "nome": "Galeria de Arte BDMG Cultural",
+      "equipamento_id": "bdmg-cultural",
+      "instituicao_id": "bdmg-cultural",
+      "descricao": "Galeria dedicada às artes visuais na sede do BDMG Cultural, em Belo Horizonte. Recebe exposições selecionadas pelo Ciclo de Mostras e outras ações culturais e educativas.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Visitação conforme exposição em cartaz e programação oficial."
+      },
+      "site": "https://bdmgcultural.mg.gov.br/",
+      "imagem": "",
+      "imagem_fonte": "",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Galeria",
+      "vocacoes": [
+        "Artes visuais",
+        "Exposições",
+        "Educação",
+        "Cultura"
+      ],
+      "links_adicionais": [
+        {
+          "rotulo": "Site oficial",
+          "url": "https://bdmgcultural.mg.gov.br/"
+        }
+      ],
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/bdmgcultural/"
+      },
+      "contatos": {
+        "emails": [],
+        "telefones": []
+      },
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Galeria de Arte BDMG Cultural",
+      "temas": [
+        "Artes visuais",
+        "Exposições",
+        "Educação",
+        "Cultura"
+      ],
+      "natureza_espaco": "Galeria",
+      "espaco_principal": "BDMG Cultural",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Bernardo Guimarães, 1600, Lourdes, Belo Horizonte - MG",
+      "mapa": "",
+      "instituicao": "BDMG Cultural",
+      "link": "https://bdmgcultural.mg.gov.br/"
     },
     {
       "equipamento_id": "centro-cultural-unimed-bh-minas",
