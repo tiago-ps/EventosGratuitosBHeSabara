@@ -98,10 +98,72 @@
     return placeParts(event, index).join(' — ');
   }
 
+  /** Imagens canônicas dos espaços e de seus equipamentos pais. */
+  function buildSpaceImageIndex(documento) {
+    const byId = Object.create(null);
+    const byName = Object.create(null);
+    const itens = Array.isArray(documento?.itens) ? documento.itens : [];
+    for (const item of itens) {
+      const id = text(item?.id);
+      if (!id) continue;
+      byId[id] = {
+        imagem: text(item?.imagem),
+        equipamentoId: text(item?.equipamento_id)
+      };
+      const nome = normalize(item?.nome || item?.titulo);
+      if (nome.length >= 12) {
+        if (Object.prototype.hasOwnProperty.call(byName, nome)) {
+          byName[nome] = '';
+        } else {
+          byName[nome] = id;
+        }
+      }
+    }
+    return { byId, byName };
+  }
+
+  function imageForEvent(event, relationIndex, spaceImageIndex) {
+    if (!spaceImageIndex?.byId) return '';
+    const { byId, byName } = spaceImageIndex;
+    const imageForId = id => {
+      const place = byId[text(id)];
+      if (!place) return '';
+      return place.imagem || text(byId[place.equipamentoId]?.imagem);
+    };
+    // Relações editoriais têm precedência sobre o local_id legado.
+    const relations = bucketFor(event, relationIndex)?.acontece_em || [];
+    for (const item of relations) {
+      const image = imageForId(item.destino?.id) ||
+        imageForId(item.equipamento?.id);
+      if (image) return image;
+    }
+    for (const id of [event?.espaco_id, event?.local_id, event?.equipamento_id]) {
+      const image = imageForId(id);
+      if (image) return image;
+    }
+    // O campo local pode vir sem ID. Evitar correspondências de salas
+    // genéricas e nunca usar o organizador como se fosse o local real.
+    const local = normalize(event?.local);
+    if (local && byName) {
+      const direct = imageForId(byName[local]);
+      if (direct) return direct;
+      const names = Object.keys(byName).filter(name =>
+        name.length >= 17 && byName[name] && local.includes(name)
+      ).sort((a, b) => b.length - a.length);
+      for (const name of names) {
+        const image = imageForId(byName[name]);
+        if (image) return image;
+      }
+    }
+    return '';
+  }
+
   root.eventRelations = Object.freeze({
     buildIndex,
     institutionName,
     placeParts,
-    placeLabel
+    placeLabel,
+    buildSpaceImageIndex,
+    imageForEvent
   });
 })();

@@ -127,7 +127,9 @@
    */
   const localImages = {
     'cine santa tereza': 'imagens/CineSantaTerezaBH.png',
-    'espaco do conhecimento ufmg': 'https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg'
+    'espaco do conhecimento ufmg': 'https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg',
+    // Equipamento ainda não cadastrado no catálogo canônico.
+    'teatro francisco nunes': 'https://prefeitura.pbh.gov.br/sites/default/files/noticia/img/2017-06/16316707854_9c3ab8583e_k.jpg'
   };
 
   /*
@@ -145,6 +147,7 @@
     data: null,
     relationsData: null,
     eventRelationsIndex: Object.create(null),
+    spaceImageIndex: { byId: Object.create(null), byName: Object.create(null) },
     booksData: null,
     curationBooksData: null,
     curationBookCoversData: null,
@@ -488,7 +491,10 @@
   function getLocalImage(event) {
     const explicitImage = String(event.imagem_local || '').trim();
     if (explicitImage) return explicitImage;
-
+    const catalogImage = eventRelations?.imageForEvent?.(
+      event, state.eventRelationsIndex, state.spaceImageIndex
+    );
+    if (catalogImage) return catalogImage;
     const locals = [
       eventCanonicalPlace(event),
       event.local
@@ -2233,7 +2239,7 @@ function eventProgram(event) {
       image.classList.remove('loaded');
 
       image.alt =
-        imageType === 'event'
+        imageType === 'event' && !event.imagem_fallback_origem
           ? `Imagem de divulgação: ${event.titulo}`
           : imageType === 'program'
             ? `Imagem do programa: ${event.programa || event.titulo}`
@@ -3778,21 +3784,6 @@ function eventProgram(event) {
       .filter(Boolean);
   }
 
-  function exclusiveAgendaEventImage(event) {
-    const explicit = [event.imagem, event.imagem_local, event.imagem_programa]
-      .map(safeImageUrl)
-      .find(Boolean);
-    if (explicit) return explicit;
-
-    if (normalizeText(eventPlace(event)).includes('cine santa tereza')) {
-      return safeImageUrl('imagens/CineSantaTerezaBH.png');
-    }
-    if (normalizeText(event.programa).includes('escola livre de artes arena da cultura')) {
-      return safeImageUrl('imagens/eventos-manuais/escola-livre-de-artes.png');
-    }
-    return '';
-  }
-
   function mobileDateLabel(event) {
     const realization = eventRealization(event);
     if (
@@ -4598,7 +4589,9 @@ function eventProgram(event) {
       img.src = candidates[index++];
     };
     img.onerror = tryNext;
-    img.alt = `Imagem de divulgação: ${event.titulo}`;
+    img.alt = event.imagem_fallback_origem || !event.imagem
+      ? `Imagem ilustrativa do espaço: ${eventPlace(event) || event.titulo}`
+      : `Imagem de divulgação: ${event.titulo}`;
     img.loading = 'lazy';
     img.decoding = 'async';
     tryNext();
@@ -5757,19 +5750,8 @@ function eventProgram(event) {
         </div>
       </div>`;
     const image = article.querySelector('img');
-    if (options.exclusiveUnfilteredEvent) {
-      const source = exclusiveAgendaEventImage(event);
-      if (source) {
-        image.src = source;
-        image.alt = `Imagem de divulgação: ${event.titulo || ''}`;
-        image.loading = 'lazy';
-        image.decoding = 'async';
-      } else {
-        image.closest('.agenda-card-media')?.remove();
-      }
-    } else {
-      setMobileCardImage(image, event);
-    }
+    // Usa a mesma cadeia em todos os filtros e preserva fallback em onerror.
+    setMobileCardImage(image, event);
     return decorateAgendaFavorite(article, item);
   }
 
@@ -6786,6 +6768,8 @@ function eventProgram(event) {
       state.utilityData = utilityData && Array.isArray(utilityData.itens) ? utilityData : { itens: [] };
       state.activitiesData = activitiesData && Array.isArray(activitiesData.atividades) ? activitiesData : { atividades: [] };
       state.spacesData = spacesData && Array.isArray(spacesData.itens) ? spacesData : { itens: [] };
+      state.spaceImageIndex = eventRelations?.buildSpaceImageIndex?.(state.spacesData) ||
+        { byId: Object.create(null), byName: Object.create(null) };
       state.siteCurationsData = siteCurationsData;
       state.config = config || {};
 
