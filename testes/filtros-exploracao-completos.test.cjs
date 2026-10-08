@@ -170,11 +170,11 @@ for (const asset of [
   'js/conteudos/espacos.js?v=5',
   'js/conteudos/atividades-lazer.js?v=6',
   'js/temporalidade-eventos.js?v=1',
-  'js/app.js?v=158'
+  'js/app.js?v=159'
 ]) {
   assert.ok(indexSource.includes(asset), `Asset ausente do index: ${asset}`);
   assert.ok(swSource.includes(`./${asset}`), `Asset ausente do service worker: ${asset}`);
 }
-assert.ok(swSource.includes('mural-cultural-v201-cursos-temporalidade'));
+assert.ok(swSource.includes('mural-cultural-v202-imagens-espacos'));
 
 console.log('Filtros completos do modo Exploração validados.');
