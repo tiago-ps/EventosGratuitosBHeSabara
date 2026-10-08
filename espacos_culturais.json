@@ -730,7 +730,7 @@
         "observacao": "Visitação e atividades conforme programação."
       },
       "site": "https://bdmgcultural.mg.gov.br/",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/bdmg-cultural.png",
       "imagem_fonte": "",
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
@@ -757,7 +757,7 @@
         "Pesquisa",
         "Cultura"
       ],
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "BDMG Cultural",
@@ -4615,7 +4615,7 @@
         "observacao": "Visitação conforme exposição em cartaz e programação oficial."
       },
       "site": "https://bdmgcultural.mg.gov.br/",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/bdmg-cultural.png",
       "imagem_fonte": "",
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
