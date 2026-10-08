@@ -4562,7 +4562,7 @@
         "observacao": "Visitação conforme funcionamento e programação do Galpão Cine Horto."
       },
       "site": "https://galpaocinehorto.com.br/",
-      "imagem": "https://galpaocinehorto.com.br/wp-content/uploads/2024/05/Recepcao-galpao-cine-horto1.jpg",
+      "imagem": "imagens/equipamentos/galpao-cine-horto.jpg",
       "imagem_fonte": "https://galpaocinehorto.com.br/o-galpao-cine-horto/",
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
@@ -5235,10 +5235,10 @@
         "observacao": "Aos domingos, conforme a programação; horários podem variar em dias de eventos noturnos."
       },
       "site": "https://galpaocinehorto.com.br/",
-      "imagem": "https://galpaocinehorto.com.br/wp-content/uploads/2024/05/Recepcao-galpao-cine-horto1.jpg",
+      "imagem": "imagens/equipamentos/galpao-cine-horto.jpg",
       "imagem_fonte": "https://galpaocinehorto.com.br/o-galpao-cine-horto/",
       "exibicao_ativa": true,
-      "exibicao_recorrente": false,
+      "exibicao_recorrente": true,
       "prioridade": 0,
       "redes_sociais": {
         "instagram": "https://www.instagram.com/galpaocinehorto/"
@@ -5267,7 +5267,7 @@
         "Memória",
         "Oficinas"
       ],
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "Galpão Cine Horto",
@@ -7572,7 +7572,7 @@
         "observacao": "Uso conforme programação formativa."
       },
       "site": "https://galpaocinehorto.com.br/o-galpao-cine-horto/",
-      "imagem": "https://galpaocinehorto.com.br/wp-content/uploads/2024/05/Recepcao-galpao-cine-horto1.jpg",
+      "imagem": "imagens/equipamentos/galpao-cine-horto.jpg",
       "imagem_fonte": "https://galpaocinehorto.com.br/o-galpao-cine-horto/",
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
@@ -7634,7 +7634,7 @@
         "observacao": "Uso conforme programação formativa."
       },
       "site": "https://galpaocinehorto.com.br/o-galpao-cine-horto/",
-      "imagem": "https://galpaocinehorto.com.br/wp-content/uploads/2024/05/Recepcao-galpao-cine-horto1.jpg",
+      "imagem": "imagens/equipamentos/galpao-cine-horto.jpg",
       "imagem_fonte": "https://galpaocinehorto.com.br/o-galpao-cine-horto/",
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
@@ -7903,7 +7903,7 @@
         "observacao": "Uso conforme programação e atividades do centro cultural."
       },
       "site": "https://galpaocinehorto.com.br/o-galpao-cine-horto/",
-      "imagem": "https://galpaocinehorto.com.br/wp-content/uploads/2024/05/Recepcao-galpao-cine-horto1.jpg",
+      "imagem": "imagens/equipamentos/galpao-cine-horto.jpg",
       "imagem_fonte": "https://galpaocinehorto.com.br/o-galpao-cine-horto/",
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
@@ -9742,7 +9742,7 @@
         "observacao": "Uso conforme programação e pautas do Galpão Cine Horto."
       },
       "site": "https://galpaocinehorto.com.br/o-galpao-cine-horto/",
-      "imagem": "https://galpaocinehorto.com.br/wp-content/uploads/2024/05/Recepcao-galpao-cine-horto1.jpg",
+      "imagem": "imagens/equipamentos/galpao-cine-horto.jpg",
       "imagem_fonte": "https://galpaocinehorto.com.br/o-galpao-cine-horto/",
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
