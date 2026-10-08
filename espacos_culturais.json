@@ -6161,7 +6161,7 @@
         "observacao": "Sede temporariamente fechada para obras de renovação. Consultar a agenda oficial para os locais das atividades itinerantes."
       },
       "site": "https://memorialvale.org/",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/memorial-minas-gerais-vale.png",
       "imagem_fonte": "",
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
@@ -6198,7 +6198,7 @@
         "Formação",
         "Oficinas"
       ],
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "Memorial Minas Gerais Vale",
