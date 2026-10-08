@@ -1,5 +1,5 @@
 {
-  "versao": 3,
+  "versao": 2,
   "modo_revisao_teste": true,
   "itens": [
     {
@@ -155,7 +155,7 @@
         "Academia Mineira de Letras",
         "AML"
       ],
-      "mapa": "",
+      "mapa": "https://maps.app.goo.gl/nWAFno2E42DH5BeP6",
       "descricao": "Sede da Academia Mineira de Letras em Belo Horizonte, integrante do Circuito Liberdade. Recebe palestras, debates, lançamentos, exposições e atividades literárias, além de manter acervo documental e bibliográfico.",
       "funcionamento": {
         "segunda": "14h às 18h",
@@ -168,7 +168,7 @@
         "observacao": "Visitação conforme a programação; pesquisa acadêmica mediante agendamento."
       },
       "site": "https://academiamineiradeletras.org.br/",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/academia-mineira-de-letras.png",
       "imagem_fonte": "",
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
@@ -201,7 +201,7 @@
         "Debates",
         "Lançamentos"
       ],
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "Academia Mineira de Letras",
