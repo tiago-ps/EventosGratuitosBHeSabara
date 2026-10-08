@@ -8663,6 +8663,7 @@
         "sesc-mg"
       ],
       "aliases": [
+        "Sesc Centro de Atendimento ao Turista – Mercado das Flores",
         "Sesc Mercado das Flores",
         "Sesc CAT – Mercado das Flores",
         "CAT – Mercado das Flores",
@@ -8680,7 +8681,7 @@
         "observacao": "Feriados: 8h às 16h. Atividades podem ocorrer em horários específicos conforme a programação."
       },
       "site": "https://sescmg.com.br/unidade/sesc-mercado-das-flores/",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/sesc-mercado-das-flores.png",
       "imagem_fonte": "https://sescmg.com.br/unidade/sesc-mercado-das-flores/",
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
@@ -8707,7 +8708,8 @@
         "Turismo",
         "Economia criativa"
       ],
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "em_analise",
+      "mapa": "",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "Sesc Centro de Atendimento ao Turista – Mercado das Flores",
