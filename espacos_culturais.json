@@ -559,7 +559,7 @@
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
       "prioridade": 0,
-      "imagem": "",
+      "imagem": "imagens/equipamentos/centro-cultural-ufmg.png",
       "imagem_fonte": "",
       "status_editorial": "pronto_para_teste",
       "redes_sociais": {
@@ -2353,10 +2353,10 @@
         "observacao": "Feriados: 9h às 17h."
       },
       "site": "https://www.ufmg.br/centrocultural/",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/centro-cultural-ufmg.png",
       "imagem_fonte": "",
       "exibicao_ativa": true,
-      "exibicao_recorrente": false,
+      "exibicao_recorrente": true,
       "prioridade": 0,
       "redes_sociais": {
         "instagram": "https://www.instagram.com/centroculturalufmg/"
@@ -2391,7 +2391,7 @@
         "Residência artística",
         "Educação"
       ],
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "em_analise",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "Centro Cultural UFMG",
@@ -4046,7 +4046,7 @@
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
       "prioridade": 0,
-      "imagem": "",
+      "imagem": "imagens/equipamentos/centro-cultural-ufmg.png",
       "imagem_fonte": "",
       "status_editorial": "pronto_para_teste",
       "redes_sociais": {
@@ -5281,7 +5281,7 @@
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
       "prioridade": 0,
-      "imagem": "",
+      "imagem": "imagens/equipamentos/centro-cultural-ufmg.png",
       "imagem_fonte": "",
       "status_editorial": "pronto_para_teste",
       "redes_sociais": {
@@ -5712,7 +5712,7 @@
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
       "prioridade": 0,
-      "imagem": "",
+      "imagem": "imagens/equipamentos/centro-cultural-ufmg.png",
       "imagem_fonte": "",
       "status_editorial": "pronto_para_teste",
       "redes_sociais": {
@@ -7416,7 +7416,7 @@
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
       "prioridade": 0,
-      "imagem": "",
+      "imagem": "imagens/equipamentos/centro-cultural-ufmg.png",
       "imagem_fonte": "",
       "status_editorial": "pronto_para_teste",
       "redes_sociais": {
@@ -7745,7 +7745,7 @@
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
       "prioridade": 0,
-      "imagem": "",
+      "imagem": "imagens/equipamentos/centro-cultural-ufmg.png",
       "imagem_fonte": "",
       "status_editorial": "pronto_para_teste",
       "redes_sociais": {
@@ -7813,7 +7813,7 @@
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
       "prioridade": 0,
-      "imagem": "",
+      "imagem": "imagens/equipamentos/centro-cultural-ufmg.png",
       "imagem_fonte": "",
       "status_editorial": "pronto_para_teste",
       "redes_sociais": {
