@@ -1478,7 +1478,7 @@
       "imagem": "imagens/equipamentos/casa-fiat-de-cultura.png",
       "imagem_fonte": "https://casafiatdecultura.com.br/",
       "exibicao_ativa": true,
-      "exibicao_recorrente": false,
+      "exibicao_recorrente": true,
       "prioridade": 0,
       "redes_sociais": {
         "instagram": "https://www.instagram.com/casafiatdecultura/"
