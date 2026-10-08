@@ -3400,6 +3400,79 @@
       "link": "https://minastenisclube.com.br/cultura/"
     },
     {
+      "id": "conservatorio-ufmg",
+      "nome": "Conservatório UFMG",
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida Afonso Pena, 1534, Centro, Belo Horizonte - MG",
+      "fonte_endereco": "https://www.ufmg.br/conservatorio/",
+      "google_place_id": "",
+      "instituicao_ids": [
+        "conservatorio-ufmg"
+      ],
+      "aliases": [
+        "Conservatório UFMG",
+        "Conservatório da UFMG",
+        "Conservatório Mineiro de Música"
+      ],
+      "mapa": "",
+      "descricao": "Edifício histórico da UFMG no centro de Belo Horizonte, com sala de concertos, miniauditório, salas de aula, pátio interno, praça coberta e espaços de convivência. Recebe intensa programação musical gratuita.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Funcionamento conforme programação."
+      },
+      "site": "https://www.ufmg.br/conservatorio/",
+      "imagem": "",
+      "imagem_fonte": "",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "redes_sociais": {},
+      "contatos": {
+        "emails": [
+          "comunica@conservatorio.ufmg.br"
+        ],
+        "telefones": [
+          "(31) 3409-8300"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Agenda mensal",
+          "url": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html"
+        }
+      ],
+      "tipo_espaco": "Conservatório / Centro cultural",
+      "vocacoes": [
+        "Música",
+        "Concertos",
+        "Formação",
+        "Exposições",
+        "Eventos acadêmicos",
+        "Memória musical"
+      ],
+      "status_editorial": "pronto_para_teste",
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Conservatório UFMG",
+      "temas": [
+        "Música",
+        "Concertos",
+        "Formação",
+        "Exposições",
+        "Eventos acadêmicos",
+        "Memória musical"
+      ],
+      "natureza_espaco": "Conservatório / Centro cultural",
+      "instituicao": "Conservatório UFMG",
+      "link": "https://www.ufmg.br/conservatorio/"
+    },
+    {
       "aliases": [
         "CRAS Conjunto Paulo VI",
         "Centro de Referência de Assistência Social — CRAS Conjunto Paulo VI",
