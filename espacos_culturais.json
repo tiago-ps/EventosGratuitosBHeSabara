@@ -501,7 +501,7 @@
         "observacao": "Uso conforme os concertos e recitais anunciados pela unidade."
       },
       "site": "https://www.uemg.br/esmu",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/esmu-uemg.png",
       "imagem_fonte": "",
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
@@ -524,9 +524,14 @@
         }
       ],
       "status_editorial": "pronto_para_teste",
-      "redes_sociais": {},
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/escolademusica.uemg/"
+      },
       "contatos": {
-        "emails": [],
+        "emails": [
+          "faleconosco@uemg.br",
+          "secretaria.esmu@uemg.br"
+        ],
         "telefones": [
           "(31) 3479-8300"
         ]
@@ -544,7 +549,7 @@
       "espaco_principal": "Escola de Música da UEMG",
       "cidade": "Belo Horizonte",
       "endereco": "Rua Riachuelo, 1351, Padre Eustáquio, Belo Horizonte - MG",
-      "mapa": "",
+      "mapa": "https://maps.app.goo.gl/qAwG3qZTShg2YkBz6",
       "instituicao": "Escola de Música da UEMG",
       "link": "https://www.uemg.br/esmu"
     },
@@ -3902,11 +3907,11 @@
         "esmu-uemg"
       ],
       "aliases": [
+        "Escola de Música da UEMG",
         "ESMU",
-        "Escola de Música UEMG",
-        "Escola de Música da UEMG"
+        "Escola de Música UEMG"
       ],
-      "mapa": "",
+      "mapa": "https://maps.app.goo.gl/qAwG3qZTShg2YkBz6",
       "descricao": "Unidade de ensino e extensão musical da UEMG, localizada no bairro Padre Eustáquio, em Belo Horizonte. Seu auditório recebe recitais e concertos de projetos como Música Comentada e Audição de Alunos.",
       "funcionamento": {
         "segunda": "",
@@ -3919,14 +3924,19 @@
         "observacao": "Recitais, concertos e visitação conforme agenda da Escola de Música."
       },
       "site": "https://www.uemg.br/esmu",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/esmu-uemg.png",
       "imagem_fonte": "",
       "exibicao_ativa": true,
-      "exibicao_recorrente": false,
+      "exibicao_recorrente": true,
       "prioridade": 0,
-      "redes_sociais": {},
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/escolademusica.uemg/"
+      },
       "contatos": {
-        "emails": [],
+        "emails": [
+          "faleconosco@uemg.br",
+          "secretaria.esmu@uemg.br"
+        ],
         "telefones": [
           "(31) 3479-8300"
         ]
@@ -3949,7 +3959,7 @@
         "Formação",
         "Extensão universitária"
       ],
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "em_analise",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "Escola de Música da UEMG",
