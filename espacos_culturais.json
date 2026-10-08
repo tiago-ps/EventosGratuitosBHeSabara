@@ -2595,6 +2595,77 @@
       "link": "https://centrodememoria.fiemg.com.br/sobre/"
     },
     {
+      "equipamento_id": "fundacao-educacao-artistica",
+      "instituicao_id": "fundacao-educacao-artistica",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem": "",
+      "imagem_fonte": "",
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/feabh/",
+        "whatsapp": "(31) 98511-2106"
+      },
+      "contatos": {
+        "emails": [
+          "contato@feabh.org.br"
+        ],
+        "telefones": [
+          "(31) 3226-6866"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Site oficial",
+          "url": "https://feabh.org.br/"
+        },
+        {
+          "rotulo": "Agenda e site oficial",
+          "url": "https://feabh.org.br/"
+        }
+      ],
+      "id": "fea-centro-memoria",
+      "nome": "Centro de Memória da Fundação de Educação Artística",
+      "descricao": "Centro dedicado à digitalização, preservação e difusão de acervos ligados à história musical e cultural de Belo Horizonte e Minas Gerais.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Acesso aos acervos conforme disponibilidade e plataforma da Fundação."
+      },
+      "site": "https://feabh.org.br/acervo/",
+      "tipo_espaco": "Centro de memória",
+      "vocacoes": [
+        "Memória",
+        "Acervo",
+        "Pesquisa",
+        "Música",
+        "História"
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Centro de Memória da Fundação de Educação Artística",
+      "temas": [
+        "Memória",
+        "Acervo",
+        "Pesquisa",
+        "Música",
+        "História"
+      ],
+      "natureza_espaco": "Centro de memória",
+      "espaco_principal": "Fundação de Educação Artística",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Gonçalves Dias, 320, Funcionários, Belo Horizonte - MG, 30140-090",
+      "mapa": "",
+      "instituicao": "Fundação de Educação Artística",
+      "link": "https://feabh.org.br/acervo/"
+    },
+    {
       "equipamento_id": "centro-cultural-unimed-bh-minas",
       "instituicao_id": "minas-tenis-clube",
       "exibicao_ativa": true,
@@ -3598,6 +3669,84 @@
       "link": "https://fcs.mg.gov.br/contato-para-eventos/"
     },
     {
+      "id": "fundacao-educacao-artistica",
+      "nome": "Fundação de Educação Artística",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Gonçalves Dias, 320, Funcionários, Belo Horizonte - MG, 30140-090",
+      "fonte_endereco": "https://feabh.org.br/",
+      "google_place_id": "",
+      "instituicao_ids": [
+        "fundacao-educacao-artistica"
+      ],
+      "aliases": [
+        "Fundação de Educação Artística",
+        "FEA",
+        "FEA BH"
+      ],
+      "mapa": "",
+      "descricao": "Sede da Fundação de Educação Artística, com salas de ensino, Sala Sergio Magnani, Galeria Mário Silésio e Centro de Memória, recebendo concertos, oficinas, masterclasses e atividades de formação musical.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Funcionamento conforme cursos e programação."
+      },
+      "site": "https://feabh.org.br/",
+      "imagem": "",
+      "imagem_fonte": "",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/feabh/",
+        "whatsapp": "(31) 98511-2106"
+      },
+      "contatos": {
+        "emails": [
+          "contato@feabh.org.br"
+        ],
+        "telefones": [
+          "(31) 3226-6866"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Agenda e site oficial",
+          "url": "https://feabh.org.br/"
+        }
+      ],
+      "tipo_espaco": "Escola de música / Centro cultural",
+      "vocacoes": [
+        "Música",
+        "Formação",
+        "Concertos",
+        "Oficinas",
+        "Pesquisa",
+        "Memória",
+        "Artes visuais"
+      ],
+      "status_editorial": "pronto_para_teste",
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Fundação de Educação Artística",
+      "temas": [
+        "Música",
+        "Formação",
+        "Concertos",
+        "Oficinas",
+        "Pesquisa",
+        "Memória",
+        "Artes visuais"
+      ],
+      "natureza_espaco": "Escola de música / Centro cultural",
+      "instituicao": "Fundação de Educação Artística",
+      "link": "https://feabh.org.br/"
+    },
+    {
       "id": "palacio-das-artes-galeria-arlinda-correa-lima",
       "nome": "Galeria Arlinda Corrêa Lima",
       "equipamento_id": "palacio-das-artes",
@@ -4064,6 +4213,71 @@
       "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
       "instituicao": "Fundação Clóvis Salgado",
       "link": "https://fcs.mg.gov.br/palacio-das-artes/"
+    },
+    {
+      "equipamento_id": "fundacao-educacao-artistica",
+      "instituicao_id": "fundacao-educacao-artistica",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem": "",
+      "imagem_fonte": "",
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/feabh/",
+        "whatsapp": "(31) 98511-2106"
+      },
+      "contatos": {
+        "emails": [
+          "contato@feabh.org.br"
+        ],
+        "telefones": [
+          "(31) 3226-6866"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Site oficial",
+          "url": "https://feabh.org.br/"
+        },
+        {
+          "rotulo": "Agenda e site oficial",
+          "url": "https://feabh.org.br/"
+        }
+      ],
+      "id": "fea-galeria-mario-silesio",
+      "nome": "Galeria Mário Silésio",
+      "descricao": "Espaço expositivo ao lado da Sala Sergio Magnani, destinado a mostras de artes plásticas e visuais.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Visitação conforme exposição em cartaz."
+      },
+      "site": "https://feabh.org.br/faca-seu-evento-aqui/",
+      "tipo_espaco": "Galeria",
+      "vocacoes": [
+        "Artes visuais",
+        "Exposições"
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Galeria Mário Silésio",
+      "temas": [
+        "Artes visuais",
+        "Exposições"
+      ],
+      "natureza_espaco": "Galeria",
+      "espaco_principal": "Fundação de Educação Artística",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Gonçalves Dias, 320, Funcionários, Belo Horizonte - MG, 30140-090",
+      "mapa": "",
+      "instituicao": "Fundação de Educação Artística",
+      "link": "https://feabh.org.br/faca-seu-evento-aqui/"
     },
     {
       "id": "ccbb-bh-galerias-do-3-andar",
@@ -5913,6 +6127,75 @@
       "link": "https://galpaocinehorto.com.br/o-galpao-cine-horto/"
     },
     {
+      "equipamento_id": "fundacao-educacao-artistica",
+      "instituicao_id": "fundacao-educacao-artistica",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem": "",
+      "imagem_fonte": "",
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/feabh/",
+        "whatsapp": "(31) 98511-2106"
+      },
+      "contatos": {
+        "emails": [
+          "contato@feabh.org.br"
+        ],
+        "telefones": [
+          "(31) 3226-6866"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Site oficial",
+          "url": "https://feabh.org.br/"
+        },
+        {
+          "rotulo": "Agenda e site oficial",
+          "url": "https://feabh.org.br/"
+        }
+      ],
+      "id": "fea-sala-2",
+      "nome": "Sala 2 da Fundação de Educação Artística",
+      "descricao": "Sala utilizada em aulas, masterclasses, oficinas e atividades formativas da Fundação de Educação Artística.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Uso conforme programação pedagógica e cultural."
+      },
+      "site": "https://feabh.org.br/",
+      "tipo_espaco": "Sala de aula / multiuso",
+      "vocacoes": [
+        "Formação",
+        "Masterclasses",
+        "Oficinas",
+        "Música"
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Sala 2 da Fundação de Educação Artística",
+      "temas": [
+        "Formação",
+        "Masterclasses",
+        "Oficinas",
+        "Música"
+      ],
+      "natureza_espaco": "Sala de aula / multiuso",
+      "espaco_principal": "Fundação de Educação Artística",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Gonçalves Dias, 320, Funcionários, Belo Horizonte - MG, 30140-090",
+      "mapa": "",
+      "instituicao": "Fundação de Educação Artística",
+      "link": "https://feabh.org.br/"
+    },
+    {
       "id": "galpao-cine-horto-sala-cinema",
       "nome": "Sala de Cinema",
       "equipamento_id": "galpao-cine-horto",
@@ -6397,6 +6680,77 @@
       "mapa": "",
       "instituicao": "SESI Cultura MG",
       "link": "https://www.fiemg.com.br/sesi-cultura/seu-evento-aqui/detalhe/salas-multiuso/"
+    },
+    {
+      "equipamento_id": "fundacao-educacao-artistica",
+      "instituicao_id": "fundacao-educacao-artistica",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem": "",
+      "imagem_fonte": "",
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/feabh/",
+        "whatsapp": "(31) 98511-2106"
+      },
+      "contatos": {
+        "emails": [
+          "contato@feabh.org.br"
+        ],
+        "telefones": [
+          "(31) 3226-6866"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Site oficial",
+          "url": "https://feabh.org.br/"
+        },
+        {
+          "rotulo": "Agenda e site oficial",
+          "url": "https://feabh.org.br/"
+        }
+      ],
+      "id": "fea-sala-sergio-magnani",
+      "nome": "Sala Sergio Magnani",
+      "descricao": "Sala de concertos da Fundação de Educação Artística, com cerca de 166 lugares e estrutura para apresentações musicais, teatro, palestras e seminários.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Uso conforme programação e locações."
+      },
+      "site": "https://feabh.org.br/faca-seu-evento-aqui/",
+      "tipo_espaco": "Sala de concertos",
+      "vocacoes": [
+        "Música",
+        "Concertos",
+        "Teatro",
+        "Palestras",
+        "Seminários"
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Sala Sergio Magnani",
+      "temas": [
+        "Música",
+        "Concertos",
+        "Teatro",
+        "Palestras",
+        "Seminários"
+      ],
+      "natureza_espaco": "Sala de concertos",
+      "espaco_principal": "Fundação de Educação Artística",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Gonçalves Dias, 320, Funcionários, Belo Horizonte - MG, 30140-090",
+      "mapa": "",
+      "instituicao": "Fundação de Educação Artística",
+      "link": "https://feabh.org.br/faca-seu-evento-aqui/"
     },
     {
       "id": "sesi-mao-salas-exposicao",
