@@ -15,23 +15,23 @@
     "atividades-lazer.json": "7b7cac673c1d63119d5adb8f47d5b7bef51f30f7ea34e0473a9897931feae478",
     "concursos.json": "80df994c1d59f2bd7a927f0e0ab5f2f31283637b9fd2543ec0b4f0145e14985c",
     "configuracao-mural.json": "49dfe7115a6f5c6d5b8dee424d3b10341b5e3014ac58a295d27ef4e6043ebfc2",
-    "cursos.json": "b20c2dd5e9b5ad86f7ac092d3041f83dafd7d1063db619b5b7e111da6899db72",
+    "cursos.json": "0a94f3854902c6f307062fe27a05c84fee3c8401e431ca378c8c99f3b4c66424",
     "espacos_culturais.json": "eb59ea4e57f916e3998389d213fd6c61377660ac995a5d8744adf74229cad450",
-    "eventos.json": "c2e93080ca6e48fd4ebbe376eeebcd063e027e45eaac9ec33e31722fa7ba69e5",
+    "eventos.json": "77ed4c98288e3fa2703f0e41eb1828d7999c01fb25a3ee5a8eef7a73e808aca0",
     "filmes.json": "23437099af05856a1a822d1b91c19c9dc93962f073b823189bf8eb96652710af",
-    "livros.json": "3c02d17909116b8024556a02cdac82411f60c0170e78ac01c27ad187f1b35813",
+    "livros.json": "eb4a3f6e386e1621549a84ee96f67f12d500e56bf77808eeb184dab301a1d56f",
     "relacoes-eventos.json": "892d65230ae58979144094333d090735f8c38822f7c7ecfa484d6cd8c229e7f5",
     "utilidade-publica.json": "cbeed08b0810b7496fd1629875c4d907a91c373905c82e8b05a315cd3a11a2bb"
   },
-  "published_at": "2026-10-08T16:15:44Z",
-  "request_id": "auto-push-37807220602-1",
+  "published_at": "2026-10-08T16:28:48Z",
+  "request_id": "auto-workflow_run-37808829045-1",
   "schema_version": "1.0",
   "source_repository": "tiago-ps/ColetorEventosGratuitos",
-  "source_sha": "01956b0dce8382cae2f7379f2eebaaae3baecce2",
+  "source_sha": "ef40b459b4ecb616479c990ae33ce996edf27947",
   "staging_repository": "tiago-ps/EventosGratuitosBHeSabara",
   "versions": {
     "manifest_schema": "1.0",
     "publication_validator": "central-v1"
   },
-  "workflow_run_id": "37807220602"
+  "workflow_run_id": "37808829045"
 }
