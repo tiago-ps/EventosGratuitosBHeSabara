@@ -226,7 +226,7 @@
       "prioridade": 0,
       "imagem": "https://www.ufmg.br/online/arquivos/anexos/Predio_diretoria.JPG",
       "imagem_fonte": "https://www.ufmg.br/online/arquivos/016251.shtml",
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {},
       "contatos": {
         "emails": [],
@@ -285,64 +285,6 @@
       "link": "https://www.ufmg.br/mhnjb/"
     },
     {
-      "id": "palacio-das-artes-arena-joao-das-neves",
-      "nome": "Arena João das Neves",
-      "equipamento_id": "palacio-das-artes",
-      "instituicao_id": "fcs",
-      "descricao": "",
-      "funcionamento": {
-        "segunda": "",
-        "terca": "",
-        "quarta": "",
-        "quinta": "",
-        "sexta": "",
-        "sabado": "",
-        "domingo": "",
-        "observacao": ""
-      },
-      "site": "https://fcs.mg.gov.br/palacio-das-artes/",
-      "imagem": "https://fcs.mg.gov.br/wp-content/uploads/2024/12/FachadaPL00141-1024x683.jpg",
-      "imagem_fonte": "https://fcs.mg.gov.br/palacio-das-artes/",
-      "exibicao_ativa": true,
-      "exibicao_recorrente": false,
-      "prioridade": 0,
-      "status_editorial": "em_analise",
-      "nota_editorial": "O nome não aparece entre os espaços atualmente listados pela Fundação Clóvis Salgado no Palácio das Artes. Confirmar se permanece ativo, foi renomeado ou corresponde a outro ambiente antes de publicar.",
-      "tipo": "espaco",
-      "tipo_conteudo": "espaco",
-      "titulo": "Arena João das Neves",
-      "vocacoes": [],
-      "temas": [],
-      "natureza_espaco": "",
-      "espaco_principal": "Palácio das Artes",
-      "cidade": "Belo Horizonte",
-      "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
-      "instituicao": "Fundação Clóvis Salgado",
-      "redes_sociais": {
-        "instagram": "https://www.instagram.com/palaciodasartes_/"
-      },
-      "contatos": {
-        "emails": [
-          "mediacao@fcs.mg.gov.br"
-        ],
-        "telefones": [
-          "(31) 3236-7400"
-        ]
-      },
-      "links_adicionais": [
-        {
-          "rotulo": "Horários e bilheterias",
-          "url": "https://fcs.mg.gov.br/institucional/horario-de-atendimento/"
-        },
-        {
-          "rotulo": "Ingressos",
-          "url": "https://www.sympla.com.br/"
-        }
-      ],
-      "link": "https://fcs.mg.gov.br/palacio-das-artes/"
-    },
-    {
       "id": "mm-gerdau-atelie-educativo",
       "nome": "Ateliê Educativo",
       "equipamento_id": "mm-gerdau",
@@ -377,7 +319,7 @@
           "url": "https://mmgerdau.org.br/programacao/"
         }
       ],
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/mmgerdau/"
       },
@@ -451,7 +393,7 @@
           "url": "https://www.fiemg.com.br/sesi-cultura/biblioteca/"
         }
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/sesiculturamg/",
         "whatsapp": "https://wa.me/5531996247612"
@@ -523,7 +465,7 @@
           "url": "https://www.uemg.br/lista-de-eventos-esmu"
         }
       ],
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/escolademusica.uemg/"
       },
@@ -561,7 +503,7 @@
       "prioridade": 0,
       "imagem": "imagens/equipamentos/centro-cultural-ufmg.png",
       "imagem_fonte": "",
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/centroculturalufmg/"
       },
@@ -680,7 +622,7 @@
           "url": "https://ingressosmuseu.pucminas.br/"
         }
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/museupucminas/?hl=pt-br"
       },
@@ -836,7 +778,7 @@
         "Leitura",
         "Formação"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "tipo": "espaco",
       "tipo_conteudo": "espaco",
       "titulo": "Biblioteca",
@@ -861,7 +803,7 @@
       "prioridade": 0,
       "imagem": "imagens/equipamentos/centro-cultural-unimed-bh-minas.png",
       "imagem_fonte": "",
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/minastenisclube/"
       },
@@ -921,7 +863,7 @@
       "prioridade": 0,
       "imagem": "https://www.ufmg.br/online/arquivos/anexos/Predio_diretoria.JPG",
       "imagem_fonte": "https://www.ufmg.br/online/arquivos/016251.shtml",
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {},
       "contatos": {
         "emails": [],
@@ -1038,7 +980,7 @@
         "Quadrinhos",
         "Jogos"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "Biblioteca Pública Estadual de Minas Gerais — Anexo Professor Francisco Iglésias",
@@ -1201,69 +1143,6 @@
       "link": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/biblioteca-infantil-e-juvenil"
     },
     {
-      "aliases": [
-        "Biblioteca SESIMINAS – SESI Cultura",
-        "SESI Cultura",
-        "Biblioteca SESIMINAS"
-      ],
-      "cidade": "Belo Horizonte",
-      "endereco": "Rua Álvares Maciel, 59, Santa Efigênia, Belo Horizonte - MG",
-      "fonte_endereco": "Página oficial do evento na Bileto",
-      "google_place_id": "https://maps.app.goo.gl/8JZjtbjNSJVHuXrh8",
-      "id": "sesi-cultura-biblioteca-sesiminas",
-      "instituicao_ids": [
-        "sesiminas-bh"
-      ],
-      "nome": "Biblioteca SESIMINAS – SESI Cultura",
-      "descricao": "A Biblioteca SESIMINAS, localizada no Centro Cultural SESIMINAS BH, reúne um acervo com mais de 30 mil exemplares, entre livros, apostilas e periódicos. \n\nA biblioteca é aberta ao público e oferece, ainda, serviços de empréstimo entre bibliotecas SESI e SENAI, atividades culturais, espaço lúdico para crianças, espaço individual para estudos, acesso à internet e impressão.",
-      "funcionamento": {
-        "segunda": "",
-        "terca": "",
-        "quarta": "",
-        "quinta": "",
-        "sexta": "",
-        "sabado": "",
-        "domingo": "",
-        "observacao": "De segunda a sexta, das 9h às 19h. Primeiro e último sábado do mês, das 9h às 14h30."
-      },
-      "site": "https://www.fiemg.com.br/sesi-cultura/biblioteca/",
-      "imagem": "imagens/equipamentos/sesi-cultura-biblioteca-sesiminas.png",
-      "imagem_fonte": "https://www.fiemg.com.br/sesi-cultura/wp-content/uploads/sites/28/2023/07/biblioteca-sesiminas-bh.jpg",
-      "exibicao_ativa": true,
-      "exibicao_recorrente": true,
-      "prioridade": 0,
-      "status_editorial": "revisado",
-      "nota_editorial": "Registro duplicado do espaço interno Biblioteca do Centro Cultural SESIMINAS BH. Manter apenas para histórico até concluir a migração.",
-      "redes_sociais": {
-        "whatsapp": "https://wa.me/5531971696735"
-      },
-      "contatos": {
-        "emails": [
-          "bsesiminasbh@fiemg.com.br"
-        ],
-        "telefones": [
-          "(31) 97169-6735"
-        ]
-      },
-      "links_adicionais": [],
-      "tipo_espaco": "Biblioteca",
-      "vocacoes": [
-        "Cultura",
-        "Formação"
-      ],
-      "mapa": "https://maps.app.goo.gl/wV29UawfQeE2brsk8",
-      "tipo": "equipamento",
-      "tipo_conteudo": "espaco",
-      "titulo": "Biblioteca SESIMINAS – SESI Cultura",
-      "temas": [
-        "Cultura",
-        "Formação"
-      ],
-      "natureza_espaco": "Biblioteca",
-      "instituicao": "SESIMINAS BH",
-      "link": "https://www.fiemg.com.br/sesi-cultura/biblioteca/"
-    },
-    {
       "equipamento_id": "centro-cultural-unimed-bh-minas",
       "instituicao_id": "minas-tenis-clube",
       "exibicao_ativa": true,
@@ -1271,7 +1150,7 @@
       "prioridade": 0,
       "imagem": "imagens/equipamentos/centro-cultural-unimed-bh-minas.png",
       "imagem_fonte": "",
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/minastenisclube/"
       },
@@ -1359,7 +1238,7 @@
           "(31) 3236-7400"
         ]
       },
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/palaciodasartes_/"
       },
@@ -1422,7 +1301,7 @@
           "url": "https://casafiatdecultura.com.br/status/em-cartaz/"
         }
       ],
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/casafiatdecultura/"
       },
@@ -1575,7 +1454,7 @@
         "Formação",
         "Leitura"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/centroculturalaltoveracruz/"
       },
@@ -1640,7 +1519,7 @@
         "Formação",
         "Leitura"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/cc.bairrodasindustrias/"
       },
@@ -1706,7 +1585,7 @@
         "Formação",
         "Leitura"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/centroculturaljardimguanabara/"
       },
@@ -1773,7 +1652,7 @@
         "Formação",
         "Leitura"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/cc.liberalinoalves/"
       },
@@ -1839,7 +1718,7 @@
         "Formação",
         "Leitura"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/centroculturallindeiaregina/"
       },
@@ -1906,7 +1785,7 @@
         "Formação",
         "Leitura"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/centroculturalpadreeustaquio/"
       },
@@ -1970,7 +1849,7 @@
         "Formação",
         "Leitura"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/centroculturalpampulha/"
       },
@@ -2035,7 +1914,7 @@
         "Formação",
         "Leitura"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/centroculturalsalgadofilho/"
       },
@@ -2057,16 +1936,14 @@
       "nome": "Centro Cultural Santa Inês",
       "cidade": "Belo Horizonte",
       "endereco": "Rua Carmésia, 500 - Santa Ines, Belo Horizonte - MG, 31080-170",
-      "instituicao_ids": [
-        "fundacao-municipal-cultura-bh"
-      ],
+      "instituicao_ids": [],
       "aliases": [
         "Centro Cultural Santa Inês"
       ],
       "google_place_id": "",
       "fonte_endereco": "https://www.instagram.com/p/DayRlq5CL1k/",
       "mapa": "https://maps.app.goo.gl/d9hMmB9xJuPXpbaB9",
-      "descricao": "",
+      "descricao": "Espaço cultural no bairro Santa Inês, em Belo Horizonte, inaugurado em 2015 como iniciativa ligada à Paróquia Nossa Senhora de Nazaré. Foi concebido para oferecer oficinas culturais e atividades comunitárias para diferentes faixas etárias, com atenção ao público em situação de vulnerabilidade. A realização e a programação atuais devem ser confirmadas pelos canais do espaço.",
       "funcionamento": {
         "segunda": "",
         "terca": "",
@@ -2083,8 +1960,8 @@
       "exibicao_ativa": true,
       "exibicao_recorrente": true,
       "prioridade": 0,
-      "status_editorial": "em_analise",
-      "nota_editorial": "O local existe em serviços de mapas no endereço Rua Carmésia, 500, mas não foi localizado na rede oficial atual de Centros Culturais da PBH. Confirmar responsável, natureza jurídica e fonte oficial antes de preencher/publicar.",
+      "status_editorial": "revisado",
+      "nota_editorial": "Histórico da inauguração confirmado pela Arquidiocese de BH (2015), ligado à Paróquia Nossa Senhora de Nazaré. Gestão atual não identificada em fonte institucional recente; removida atribuição incorreta à Fundação Municipal de Cultura. Não divulgar a gestão atual como confirmada.",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/centroculturalsantainesbh/",
         "whatsapp": "https://wa.me/+5531987105965"
@@ -2095,15 +1972,29 @@
         ],
         "telefones": []
       },
-      "links_adicionais": [],
-      "tipo_espaco": "",
-      "vocacoes": [],
+      "links_adicionais": [
+        {
+          "rotulo": "Histórico do centro cultural — Arquidiocese de BH",
+          "url": "https://arquidiocesebh.org.br/noticias/paroquia-nossa-senhora-de-nazare-inauguracao-do-centro-cultural-santa-ines/"
+        }
+      ],
+      "tipo_espaco": "Centro cultural comunitário",
+      "vocacoes": [
+        "Oficinas",
+        "Cultura comunitária",
+        "Formação artística",
+        "Arte"
+      ],
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "Centro Cultural Santa Inês",
-      "temas": [],
-      "natureza_espaco": "",
-      "instituicao": "Fundação Municipal de Cultura de Belo Horizonte",
+      "temas": [
+        "Oficinas",
+        "Cultura comunitária",
+        "Formação artística",
+        "Arte"
+      ],
+      "natureza_espaco": "Centro cultural comunitário",
       "link": "https://maps.app.goo.gl/d9hMmB9xJuPXpbaB9"
     },
     {
@@ -2178,7 +2069,7 @@
         "Leitura",
         "Artes visuais"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "Centro Cultural SESIMINAS BH",
@@ -2244,7 +2135,7 @@
         "Formação",
         "Leitura"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/cc.saobernardo/"
       },
@@ -2311,7 +2202,7 @@
         "Formação",
         "Leitura"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/centroculturalsaogeraldo/"
       },
@@ -2394,7 +2285,7 @@
         "Residência artística",
         "Educação"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "Centro Cultural UFMG",
@@ -2470,7 +2361,7 @@
         "Memória",
         "Formação"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "Centro Cultural Unimed-BH Minas",
@@ -2536,7 +2427,7 @@
         "Formação",
         "Leitura"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/centroculturalurucuia/"
       },
@@ -2601,7 +2492,7 @@
         "Formação",
         "Leitura"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/usinadecultura/"
       },
@@ -2669,7 +2560,7 @@
         "Formação",
         "Leitura"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/centroculturalvendanova/"
       },
@@ -2734,7 +2625,7 @@
         "Formação",
         "Leitura"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/centroculturalvilafatima/"
       },
@@ -2801,7 +2692,7 @@
         "Formação",
         "Leitura"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/centroculturalvilamarcola/"
       },
@@ -2868,7 +2759,7 @@
         "Formação",
         "Leitura"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/centroculturalvilasantarita/"
       },
@@ -2933,7 +2824,7 @@
         "Formação",
         "Leitura"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/centroculturalzilahsposito/"
       },
@@ -2998,7 +2889,7 @@
           "url": "https://www.fiemg.com.br/sesi-cultura/biblioteca/"
         }
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/sesiculturamg/",
         "whatsapp": "https://wa.me/5531996247612"
@@ -3040,7 +2931,7 @@
       "prioridade": 0,
       "imagem": "imagens/equipamentos/fundacao-educacao-artistica.png",
       "imagem_fonte": "",
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/feabh/",
         "facebook": "https://www.facebook.com/fea.bh",
@@ -3113,7 +3004,7 @@
       "prioridade": 0,
       "imagem": "imagens/equipamentos/centro-cultural-unimed-bh-minas.png",
       "imagem_fonte": "",
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/minastenisclube/"
       },
@@ -3227,7 +3118,7 @@
         "Formação",
         "Leitura"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "Centro de Referência da Cultura Popular e Tradicional Lagoa do Nado",
@@ -3306,7 +3197,7 @@
         "Formação",
         "Inclusão digital"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "Centro de Referência das Juventudes",
@@ -3359,7 +3250,7 @@
           "(31) 3236-7400"
         ]
       },
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/palaciodasartes_/"
       },
@@ -3451,7 +3342,7 @@
         "Audiovisual",
         "Formação"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "Cine Santa Tereza",
@@ -3530,7 +3421,7 @@
         "Patrimônio",
         "Formação"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "Cine Theatro Brasil Vallourec",
@@ -3555,7 +3446,7 @@
       "prioridade": 0,
       "imagem": "imagens/equipamentos/centro-cultural-unimed-bh-minas.png",
       "imagem_fonte": "",
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/minastenisclube/"
       },
@@ -3664,7 +3555,7 @@
         "Eventos acadêmicos",
         "Memória musical"
       ],
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "Conservatório UFMG",
@@ -3738,7 +3629,7 @@
         "Formação",
         "Inclusão digital"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "CRAS Conjunto Paulo VI",
@@ -3813,7 +3704,7 @@
         "Artes visuais",
         "Exposições"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "CâmeraSete – Casa da Fotografia de Minas Gerais",
@@ -3888,7 +3779,7 @@
         "Cultura",
         "Conhecimento"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "EJEF — Escola Judicial Desembargador Edésio Fernandes",
@@ -3964,7 +3855,7 @@
         "Formação",
         "Extensão universitária"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "Escola de Música da UEMG",
@@ -3987,7 +3878,7 @@
       "prioridade": 0,
       "imagem": "https://www.ufmg.br/online/arquivos/anexos/Predio_diretoria.JPG",
       "imagem_fonte": "https://www.ufmg.br/online/arquivos/016251.shtml",
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {},
       "contatos": {
         "emails": [],
@@ -4053,7 +3944,7 @@
       "prioridade": 0,
       "imagem": "imagens/equipamentos/centro-cultural-ufmg.png",
       "imagem_fonte": "",
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/centroculturalufmg/"
       },
@@ -4124,7 +4015,7 @@
       "prioridade": 0,
       "imagem": "imagens/equipamentos/biblioteca-publica-estadual-mg-anexo.png",
       "imagem_fonte": "",
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/bibliotecaestadualmg/"
       },
@@ -4219,7 +4110,7 @@
           "url": "https://www.ufmg.br/espacodoconhecimento/contato-e-imprensa/"
         }
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/espacoufmg",
         "youtube": "https://www.youtube.com/espacoufmg",
@@ -4312,7 +4203,7 @@
         "Natureza",
         "Fotografia"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "mapa": "",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
@@ -4365,7 +4256,7 @@
           "(31) 3236-7400"
         ]
       },
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/palaciodasartes_/"
       },
@@ -4460,7 +4351,7 @@
         "Memória",
         "Artes visuais"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "Fundação de Educação Artística",
@@ -4514,7 +4405,7 @@
           "(31) 3236-7400"
         ]
       },
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/palaciodasartes_/"
       },
@@ -4578,7 +4469,7 @@
           "url": "https://galpaocinehorto.com.br/"
         }
       ],
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/galpaocinehorto/"
       },
@@ -4640,7 +4531,7 @@
           "url": "https://bdmgcultural.mg.gov.br/"
         }
       ],
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/bdmgcultural/"
       },
@@ -4673,7 +4564,7 @@
       "prioridade": 0,
       "imagem": "imagens/equipamentos/centro-cultural-unimed-bh-minas.png",
       "imagem_fonte": "",
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/minastenisclube/"
       },
@@ -4728,7 +4619,7 @@
       "prioridade": 0,
       "imagem": "imagens/equipamentos/biblioteca-publica-estadual-mg.png",
       "imagem_fonte": "",
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/bibliotecaestadualmg/"
       },
@@ -4836,7 +4727,7 @@
           "url": "https://www.fiemg.com.br/sesi-cultura/biblioteca/"
         }
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/sesiculturamg/",
         "whatsapp": "https://wa.me/5531996247612"
@@ -4906,7 +4797,7 @@
           "(31) 3236-7400"
         ]
       },
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/palaciodasartes_/"
       },
@@ -4974,7 +4865,7 @@
           "(31) 3236-7400"
         ]
       },
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/palaciodasartes_/"
       },
@@ -5013,7 +4904,7 @@
       "prioridade": 0,
       "imagem": "imagens/equipamentos/fundacao-educacao-artistica.png",
       "imagem_fonte": "",
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/feabh/",
         "facebook": "https://www.facebook.com/fea.bh",
@@ -5111,7 +5002,7 @@
           "url": "https://ccbb.com.br/belo-horizonte/normas-de-visitacao/"
         }
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/ccbbbh/"
       },
@@ -5179,7 +5070,7 @@
           "url": "https://ccbb.com.br/belo-horizonte/normas-de-visitacao/"
         }
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/ccbbbh/"
       },
@@ -5292,7 +5183,7 @@
       "prioridade": 0,
       "imagem": "imagens/equipamentos/centro-cultural-ufmg.png",
       "imagem_fonte": "",
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/centroculturalufmg/"
       },
@@ -5391,7 +5282,7 @@
           "(31) 3236-7400"
         ]
       },
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/palaciodasartes_/"
       },
@@ -5461,7 +5352,7 @@
           "(31) 3236-7400"
         ]
       },
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/palaciodasartes_/"
       },
@@ -5544,7 +5435,7 @@
         "Dança",
         "Cinema"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
       "prioridade": 0,
@@ -5608,7 +5499,7 @@
           "url": "https://www.fiemg.com.br/sesi-cultura/programacao/"
         }
       ],
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/museudearteseoficiossesi/",
         "whatsapp": "https://wa.me/5531994080192"
@@ -5683,7 +5574,7 @@
           "url": "https://www.fiemg.com.br/sesi-cultura/programacao/"
         }
       ],
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/museudearteseoficiossesi/",
         "whatsapp": "https://wa.me/5531994080192"
@@ -5723,7 +5614,7 @@
       "prioridade": 0,
       "imagem": "imagens/equipamentos/centro-cultural-ufmg.png",
       "imagem_fonte": "",
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/centroculturalufmg/"
       },
@@ -5796,7 +5687,7 @@
       "prioridade": 0,
       "imagem": "imagens/equipamentos/biblioteca-publica-estadual-mg.png",
       "imagem_fonte": "",
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/bibliotecaestadualmg/"
       },
@@ -5897,7 +5788,7 @@
           "url": "https://www.fiemg.com.br/sesi-cultura/programacao/"
         }
       ],
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/museudearteseoficiossesi/",
         "whatsapp": "https://wa.me/5531994080192"
@@ -5936,7 +5827,7 @@
       "prioridade": 0,
       "imagem": "https://www.ufmg.br/online/arquivos/anexos/Predio_diretoria.JPG",
       "imagem_fonte": "https://www.ufmg.br/online/arquivos/016251.shtml",
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {},
       "contatos": {
         "emails": [],
@@ -6036,7 +5927,7 @@
           "url": "https://www.fiemg.com.br/sesi-cultura/programacao/"
         }
       ],
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/museudearteseoficiossesi/",
         "whatsapp": "https://wa.me/5531994080192"
@@ -6075,7 +5966,7 @@
       "prioridade": 0,
       "imagem": "https://www.ufmg.br/online/arquivos/anexos/Predio_diretoria.JPG",
       "imagem_fonte": "https://www.ufmg.br/online/arquivos/016251.shtml",
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {},
       "contatos": {
         "emails": [],
@@ -6277,7 +6168,7 @@
         "Feiras",
         "Shows"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "Minascentro",
@@ -6299,7 +6190,7 @@
       "prioridade": 0,
       "imagem": "https://www.ufmg.br/online/arquivos/anexos/ConservatorioUFMGFachada.jpg",
       "imagem_fonte": "https://www.ufmg.br/online/arquivos/036862.shtml",
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {},
       "contatos": {
         "emails": [
@@ -6415,7 +6306,7 @@
         "Oficinas",
         "Patrimônio"
       ],
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "MM Gerdau – Museu das Minas e do Metal",
@@ -6494,7 +6385,7 @@
         "Patrimônio",
         "Formação"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "Museu da Moda",
@@ -6571,7 +6462,7 @@
         "Paleontologia",
         "História Natural"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "Museu de Ciências Naturais PUC Minas",
@@ -6649,7 +6540,7 @@
         "Educação",
         "Patrimônio"
       ],
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "Museu de História Natural e Jardim Botânico da UFMG",
@@ -6725,7 +6616,7 @@
         "Formação",
         "Criação artística"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "Núcleo de Formação e Criação Artística e Cultural — NUFAC",
@@ -6802,7 +6693,7 @@
         "Artes visuais",
         "Formação"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "Palácio das Artes",
@@ -6826,7 +6717,7 @@
       "prioridade": 0,
       "imagem": "imagens/equipamentos/biblioteca-publica-estadual-mg-anexo.png",
       "imagem_fonte": "",
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/bibliotecaestadualmg/"
       },
@@ -6921,7 +6812,7 @@
           "(31) 3236-7400"
         ]
       },
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/palaciodasartes_/"
       },
@@ -6986,7 +6877,7 @@
           "url": "https://casafiatdecultura.com.br/status/em-cartaz/"
         }
       ],
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/casafiatdecultura/"
       },
@@ -7053,7 +6944,7 @@
           "url": "https://www.ufmg.br/espacodoconhecimento/contato-e-imprensa/"
         }
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/espacoufmg",
         "youtube": "https://www.youtube.com/espacoufmg",
@@ -7095,7 +6986,7 @@
       "prioridade": 0,
       "imagem": "https://www.ufmg.br/online/arquivos/anexos/ConservatorioUFMGFachada.jpg",
       "imagem_fonte": "https://www.ufmg.br/online/arquivos/036862.shtml",
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {},
       "contatos": {
         "emails": [
@@ -7188,7 +7079,7 @@
           "url": "https://mmgerdau.org.br/programacao/"
         }
       ],
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/mmgerdau/"
       },
@@ -7223,7 +7114,7 @@
       "prioridade": 0,
       "imagem": "https://www.ufmg.br/online/arquivos/anexos/Predio_diretoria.JPG",
       "imagem_fonte": "https://www.ufmg.br/online/arquivos/016251.shtml",
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {},
       "contatos": {
         "emails": [],
@@ -7289,7 +7180,7 @@
       "prioridade": 0,
       "imagem": "https://www.ufmg.br/online/arquivos/anexos/Predio_diretoria.JPG",
       "imagem_fonte": "https://www.ufmg.br/online/arquivos/016251.shtml",
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {},
       "contatos": {
         "emails": [],
@@ -7389,7 +7280,7 @@
           "url": "https://ccbb.com.br/belo-horizonte/normas-de-visitacao/"
         }
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/ccbbbh/"
       },
@@ -7427,7 +7318,7 @@
       "prioridade": 0,
       "imagem": "imagens/equipamentos/centro-cultural-ufmg.png",
       "imagem_fonte": "",
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/centroculturalufmg/"
       },
@@ -7499,7 +7390,7 @@
       "prioridade": 0,
       "imagem": "https://www.ufmg.br/online/arquivos/anexos/ConservatorioUFMGFachada.jpg",
       "imagem_fonte": "https://www.ufmg.br/online/arquivos/036862.shtml",
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {},
       "contatos": {
         "emails": [
@@ -7589,7 +7480,7 @@
           "url": "https://galpaocinehorto.com.br/"
         }
       ],
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/galpaocinehorto/"
       },
@@ -7651,7 +7542,7 @@
           "url": "https://galpaocinehorto.com.br/"
         }
       ],
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/galpaocinehorto/"
       },
@@ -7687,7 +7578,7 @@
       "prioridade": 0,
       "imagem": "imagens/equipamentos/fundacao-educacao-artistica.png",
       "imagem_fonte": "",
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/feabh/",
         "facebook": "https://www.facebook.com/fea.bh",
@@ -7758,7 +7649,7 @@
       "prioridade": 0,
       "imagem": "imagens/equipamentos/centro-cultural-ufmg.png",
       "imagem_fonte": "",
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/centroculturalufmg/"
       },
@@ -7826,7 +7717,7 @@
       "prioridade": 0,
       "imagem": "imagens/equipamentos/centro-cultural-ufmg.png",
       "imagem_fonte": "",
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/centroculturalufmg/"
       },
@@ -7925,7 +7816,7 @@
           "url": "https://galpaocinehorto.com.br/"
         }
       ],
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/galpaocinehorto/"
       },
@@ -7962,7 +7853,7 @@
       "prioridade": 0,
       "imagem": "https://www.ufmg.br/online/arquivos/anexos/ConservatorioUFMGFachada.jpg",
       "imagem_fonte": "https://www.ufmg.br/online/arquivos/036862.shtml",
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {},
       "contatos": {
         "emails": [
@@ -8058,7 +7949,7 @@
           "(31) 3236-7400"
         ]
       },
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/palaciodasartes_/"
       },
@@ -8168,7 +8059,7 @@
       "prioridade": 0,
       "imagem": "imagens/equipamentos/centro-cultural-unimed-bh-minas.png",
       "imagem_fonte": "",
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/minastenisclube/"
       },
@@ -8251,7 +8142,7 @@
         "Oficinas",
         "Palestras"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/ccbbbh/"
       },
@@ -8331,7 +8222,7 @@
           "url": "https://www.fiemg.com.br/sesi-cultura/programacao/"
         }
       ],
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/museudearteseoficiossesi/",
         "whatsapp": "https://wa.me/5531994080192"
@@ -8406,7 +8297,7 @@
           "url": "https://www.fiemg.com.br/sesi-cultura/programacao/"
         }
       ],
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/museudearteseoficiossesi/",
         "whatsapp": "https://wa.me/5531994080192"
@@ -8446,7 +8337,7 @@
       "prioridade": 0,
       "imagem": "imagens/equipamentos/fundacao-educacao-artistica.png",
       "imagem_fonte": "",
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/feabh/",
         "facebook": "https://www.facebook.com/fea.bh",
@@ -8519,7 +8410,7 @@
       "prioridade": 0,
       "imagem": "https://www.ufmg.br/online/arquivos/anexos/ConservatorioUFMGFachada.jpg",
       "imagem_fonte": "https://www.ufmg.br/online/arquivos/036862.shtml",
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {},
       "contatos": {
         "emails": [
@@ -8621,7 +8512,7 @@
           "url": "https://www.fiemg.com.br/sesi-cultura/programacao/"
         }
       ],
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/museudearteseoficiossesi/",
         "whatsapp": "https://wa.me/5531994080192"
@@ -8708,7 +8599,7 @@
         "Turismo",
         "Economia criativa"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "mapa": "",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
@@ -8778,7 +8669,7 @@
         "Formação",
         "Inovação"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "Sesc Palladium",
@@ -8867,7 +8758,7 @@
         "Música",
         "Memória"
       ],
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "SESI Museu de Artes e Ofícios",
@@ -8892,7 +8783,7 @@
       "prioridade": 0,
       "imagem": "imagens/equipamentos/biblioteca-publica-estadual-mg.png",
       "imagem_fonte": "",
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/bibliotecaestadualmg/"
       },
@@ -8956,7 +8847,7 @@
       "prioridade": 0,
       "imagem": "imagens/equipamentos/biblioteca-publica-estadual-mg.png",
       "imagem_fonte": "",
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/bibliotecaestadualmg/"
       },
@@ -9024,7 +8915,7 @@
       "prioridade": 0,
       "imagem": "imagens/equipamentos/biblioteca-publica-estadual-mg.png",
       "imagem_fonte": "",
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/bibliotecaestadualmg/"
       },
@@ -9139,7 +9030,7 @@
         "Cultura",
         "Turismo"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "Solar Padre Correia",
@@ -9198,7 +9089,7 @@
           "url": "https://www.fiemg.com.br/sesi-cultura/biblioteca/"
         }
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/sesiculturamg/",
         "whatsapp": "https://wa.me/5531996247612"
@@ -9241,7 +9132,7 @@
       "prioridade": 0,
       "imagem": "imagens/equipamentos/centro-cultural-unimed-bh-minas.png",
       "imagem_fonte": "",
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/minastenisclube/"
       },
@@ -9333,7 +9224,7 @@
           "url": "https://ccbb.com.br/belo-horizonte/normas-de-visitacao/"
         }
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/ccbbbh/"
       },
@@ -9401,7 +9292,7 @@
           "url": "https://ccbb.com.br/belo-horizonte/normas-de-visitacao/"
         }
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/ccbbbh/"
       },
@@ -9436,7 +9327,7 @@
       "prioridade": 0,
       "imagem": "imagens/equipamentos/biblioteca-publica-estadual-mg.png",
       "imagem_fonte": "",
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/bibliotecaestadualmg/"
       },
@@ -9532,7 +9423,7 @@
           "(31) 3236-7400"
         ]
       },
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/palaciodasartes_/"
       },
@@ -9631,7 +9522,7 @@
         "Dança",
         "Música"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "Teatro Marília",
@@ -9693,7 +9584,7 @@
           "url": "https://www.fiemg.com.br/sesi-cultura/biblioteca/"
         }
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/sesiculturamg/",
         "whatsapp": "https://wa.me/5531996247612"
@@ -9766,7 +9657,7 @@
           "url": "https://galpaocinehorto.com.br/"
         }
       ],
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/galpaocinehorto/"
       },
@@ -9834,7 +9725,7 @@
           "url": "https://www.ufmg.br/espacodoconhecimento/contato-e-imprensa/"
         }
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/espacoufmg",
         "youtube": "https://www.youtube.com/espacoufmg",
@@ -9875,7 +9766,7 @@
       "prioridade": 0,
       "imagem": "https://www.ufmg.br/online/arquivos/anexos/Predio_diretoria.JPG",
       "imagem_fonte": "https://www.ufmg.br/online/arquivos/016251.shtml",
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "redes_sociais": {},
       "contatos": {
         "emails": [],
@@ -9962,7 +9853,7 @@
         "Exposições",
         "Arte pública"
       ],
-      "status_editorial": "em_analise",
+      "status_editorial": "revisado",
       "redes_sociais": {
         "instagram": "https://www.instagram.com/teatromariliabh/",
         "facebook": "https://www.facebook.com/TeatroMarilia"
