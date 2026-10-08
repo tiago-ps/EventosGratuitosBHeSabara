@@ -219,6 +219,72 @@
       "link": "https://academiamineiradeletras.org.br/"
     },
     {
+      "equipamento_id": "mhnjb-ufmg",
+      "instituicao_id": "mhnjb-ufmg",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem": "",
+      "imagem_fonte": "",
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {},
+      "contatos": {
+        "emails": [],
+        "telefones": []
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Site oficial do MHNJB",
+          "url": "https://www.ufmg.br/mhnjb/"
+        },
+        {
+          "rotulo": "Planeje sua visita",
+          "url": "https://www.ufmg.br/mhnjb/visite/"
+        },
+        {
+          "rotulo": "Perguntas frequentes",
+          "url": "https://www.ufmg.br/mhnjb/contato/perguntas-frequentes/"
+        }
+      ],
+      "id": "mhnjb-ufmg-anfiteatro-mata",
+      "nome": "Anfiteatro da Mata",
+      "descricao": "Espaço ao ar livre do MHNJB utilizado para oficinas, atividades educativas e ações ligadas à natureza e à educação ambiental.",
+      "funcionamento": {
+        "segunda": "Fechado",
+        "terca": "8h30 às 16h",
+        "quarta": "8h30 às 16h",
+        "quinta": "8h30 às 16h",
+        "sexta": "8h30 às 16h",
+        "sabado": "8h30 às 16h",
+        "domingo": "Fechado",
+        "observacao": "Uso conforme programação e condições climáticas."
+      },
+      "site": "https://www.ufmg.br/mhnjb/",
+      "tipo_espaco": "Anfiteatro ao ar livre",
+      "vocacoes": [
+        "Educação ambiental",
+        "Oficinas",
+        "Ciência",
+        "Natureza"
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Anfiteatro da Mata",
+      "temas": [
+        "Educação ambiental",
+        "Oficinas",
+        "Ciência",
+        "Natureza"
+      ],
+      "natureza_espaco": "Anfiteatro ao ar livre",
+      "espaco_principal": "Museu de História Natural e Jardim Botânico da UFMG",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Gustavo da Silveira, 1035, Santa Inês, Belo Horizonte - MG",
+      "mapa": "",
+      "instituicao": "Museu de História Natural e Jardim Botânico da UFMG",
+      "link": "https://www.ufmg.br/mhnjb/"
+    },
+    {
       "id": "palacio-das-artes-arena-joao-das-neves",
       "nome": "Arena João das Neves",
       "equipamento_id": "palacio-das-artes",
@@ -777,6 +843,74 @@
       "mapa": "",
       "instituicao": "Minas Tênis Clube",
       "link": "https://minastenisclube.com.br/cultura/"
+    },
+    {
+      "equipamento_id": "mhnjb-ufmg",
+      "instituicao_id": "mhnjb-ufmg",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem": "",
+      "imagem_fonte": "",
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {},
+      "contatos": {
+        "emails": [],
+        "telefones": []
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Site oficial do MHNJB",
+          "url": "https://www.ufmg.br/mhnjb/"
+        },
+        {
+          "rotulo": "Planeje sua visita",
+          "url": "https://www.ufmg.br/mhnjb/visite/"
+        },
+        {
+          "rotulo": "Perguntas frequentes",
+          "url": "https://www.ufmg.br/mhnjb/contato/perguntas-frequentes/"
+        }
+      ],
+      "id": "mhnjb-ufmg-biblioteca",
+      "nome": "Biblioteca do MHNJB",
+      "descricao": "Biblioteca especializada do Museu, com acervo ligado às áreas científicas e patrimoniais da instituição e espaço para pesquisa e atividades educativas.",
+      "funcionamento": {
+        "segunda": "Fechado",
+        "terca": "9h às 12h e 13h às 16h",
+        "quarta": "9h às 12h e 13h às 16h",
+        "quinta": "9h às 12h e 13h às 16h",
+        "sexta": "9h às 12h e 13h às 16h",
+        "sabado": "Fechado",
+        "domingo": "Fechado",
+        "observacao": "Consultar o Museu para condições de acesso e pesquisa."
+      },
+      "site": "https://www.ufmg.br/mhnjb/visite/horarios/",
+      "tipo_espaco": "Biblioteca",
+      "vocacoes": [
+        "Pesquisa",
+        "Ciência",
+        "Memória",
+        "Acervo",
+        "Educação"
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Biblioteca do MHNJB",
+      "temas": [
+        "Pesquisa",
+        "Ciência",
+        "Memória",
+        "Acervo",
+        "Educação"
+      ],
+      "natureza_espaco": "Biblioteca",
+      "espaco_principal": "Museu de História Natural e Jardim Botânico da UFMG",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Gustavo da Silveira, 1035, Santa Inês, Belo Horizonte - MG",
+      "mapa": "",
+      "instituicao": "Museu de História Natural e Jardim Botânico da UFMG",
+      "link": "https://www.ufmg.br/mhnjb/visite/horarios/"
     },
     {
       "id": "biblioteca-publica-estadual-mg-anexo",
@@ -3694,6 +3828,72 @@
       "link": "https://ejef.tjmg.jus.br/"
     },
     {
+      "equipamento_id": "mhnjb-ufmg",
+      "instituicao_id": "mhnjb-ufmg",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem": "",
+      "imagem_fonte": "",
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {},
+      "contatos": {
+        "emails": [],
+        "telefones": []
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Site oficial do MHNJB",
+          "url": "https://www.ufmg.br/mhnjb/"
+        },
+        {
+          "rotulo": "Planeje sua visita",
+          "url": "https://www.ufmg.br/mhnjb/visite/"
+        },
+        {
+          "rotulo": "Perguntas frequentes",
+          "url": "https://www.ufmg.br/mhnjb/contato/perguntas-frequentes/"
+        }
+      ],
+      "id": "mhnjb-ufmg-espaco-arte-educacao",
+      "nome": "Espaço Arte e Educação",
+      "descricao": "Espaço educativo do MHNJB utilizado em oficinas, experimentações artísticas e atividades de divulgação científica.",
+      "funcionamento": {
+        "segunda": "Fechado",
+        "terca": "8h30 às 16h",
+        "quarta": "8h30 às 16h",
+        "quinta": "8h30 às 16h",
+        "sexta": "8h30 às 16h",
+        "sabado": "8h30 às 16h",
+        "domingo": "Fechado",
+        "observacao": "Uso conforme programação."
+      },
+      "site": "https://www.ufmg.br/mhnjb/",
+      "tipo_espaco": "Espaço educativo",
+      "vocacoes": [
+        "Arte",
+        "Educação",
+        "Oficinas",
+        "Ciência"
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Espaço Arte e Educação",
+      "temas": [
+        "Arte",
+        "Educação",
+        "Oficinas",
+        "Ciência"
+      ],
+      "natureza_espaco": "Espaço educativo",
+      "espaco_principal": "Museu de História Natural e Jardim Botânico da UFMG",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Gustavo da Silveira, 1035, Santa Inês, Belo Horizonte - MG",
+      "mapa": "",
+      "instituicao": "Museu de História Natural e Jardim Botânico da UFMG",
+      "link": "https://www.ufmg.br/mhnjb/"
+    },
+    {
       "equipamento_id": "centro-cultural-ufmg",
       "instituicao_id": "centro-cultural-ufmg",
       "exibicao_ativa": true,
@@ -5573,6 +5773,72 @@
       "link": "https://www.fiemg.com.br/sesi-cultura/seu-evento-aqui/detalhe/jardim-das-energias/"
     },
     {
+      "equipamento_id": "mhnjb-ufmg",
+      "instituicao_id": "mhnjb-ufmg",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem": "",
+      "imagem_fonte": "",
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {},
+      "contatos": {
+        "emails": [],
+        "telefones": []
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Site oficial do MHNJB",
+          "url": "https://www.ufmg.br/mhnjb/"
+        },
+        {
+          "rotulo": "Planeje sua visita",
+          "url": "https://www.ufmg.br/mhnjb/visite/"
+        },
+        {
+          "rotulo": "Perguntas frequentes",
+          "url": "https://www.ufmg.br/mhnjb/contato/perguntas-frequentes/"
+        }
+      ],
+      "id": "mhnjb-ufmg-jardim-plantas-medicinais",
+      "nome": "Jardim de Plantas Medicinais",
+      "descricao": "Área do MHNJB dedicada a plantas medicinais e a atividades de botânica, biodiversidade, saúde e educação ambiental.",
+      "funcionamento": {
+        "segunda": "Fechado",
+        "terca": "8h30 às 16h",
+        "quarta": "8h30 às 16h",
+        "quinta": "8h30 às 16h",
+        "sexta": "8h30 às 16h",
+        "sabado": "8h30 às 16h",
+        "domingo": "Fechado",
+        "observacao": "Visitação e atividades conforme funcionamento do Museu."
+      },
+      "site": "https://www.ufmg.br/mhnjb/",
+      "tipo_espaco": "Jardim temático",
+      "vocacoes": [
+        "Botânica",
+        "Plantas medicinais",
+        "Biodiversidade",
+        "Educação ambiental"
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Jardim de Plantas Medicinais",
+      "temas": [
+        "Botânica",
+        "Plantas medicinais",
+        "Biodiversidade",
+        "Educação ambiental"
+      ],
+      "natureza_espaco": "Jardim temático",
+      "espaco_principal": "Museu de História Natural e Jardim Botânico da UFMG",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Gustavo da Silveira, 1035, Santa Inês, Belo Horizonte - MG",
+      "mapa": "",
+      "instituicao": "Museu de História Natural e Jardim Botânico da UFMG",
+      "link": "https://www.ufmg.br/mhnjb/"
+    },
+    {
       "id": "sesi-mao-laboratorio-oficina",
       "nome": "Laboratório / Oficina",
       "equipamento_id": "sesi-museu-artes-oficios",
@@ -5644,6 +5910,72 @@
       "mapa": "",
       "instituicao": "SESI Cultura MG",
       "link": "https://www.fiemg.com.br/sesi-cultura/seu-evento-aqui/detalhe/laboratorio-oficina/"
+    },
+    {
+      "equipamento_id": "mhnjb-ufmg",
+      "instituicao_id": "mhnjb-ufmg",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem": "",
+      "imagem_fonte": "",
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {},
+      "contatos": {
+        "emails": [],
+        "telefones": []
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Site oficial do MHNJB",
+          "url": "https://www.ufmg.br/mhnjb/"
+        },
+        {
+          "rotulo": "Planeje sua visita",
+          "url": "https://www.ufmg.br/mhnjb/visite/"
+        },
+        {
+          "rotulo": "Perguntas frequentes",
+          "url": "https://www.ufmg.br/mhnjb/contato/perguntas-frequentes/"
+        }
+      ],
+      "id": "mhnjb-ufmg-meliponario",
+      "nome": "Meliponário do MHNJB",
+      "descricao": "Espaço dedicado às abelhas nativas sem ferrão, utilizado em visitas mediadas, trilhas interpretativas e atividades de educação ambiental.",
+      "funcionamento": {
+        "segunda": "Fechado",
+        "terca": "8h30 às 16h",
+        "quarta": "8h30 às 16h",
+        "quinta": "8h30 às 16h",
+        "sexta": "8h30 às 16h",
+        "sabado": "8h30 às 16h",
+        "domingo": "Fechado",
+        "observacao": "Visitas e atividades conforme programação."
+      },
+      "site": "https://www.ufmg.br/mhnjb/",
+      "tipo_espaco": "Espaço de educação ambiental",
+      "vocacoes": [
+        "Abelhas",
+        "Biodiversidade",
+        "Educação ambiental",
+        "Visitas guiadas"
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Meliponário do MHNJB",
+      "temas": [
+        "Abelhas",
+        "Biodiversidade",
+        "Educação ambiental",
+        "Visitas guiadas"
+      ],
+      "natureza_espaco": "Espaço de educação ambiental",
+      "espaco_principal": "Museu de História Natural e Jardim Botânico da UFMG",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Gustavo da Silveira, 1035, Santa Inês, Belo Horizonte - MG",
+      "mapa": "",
+      "instituicao": "Museu de História Natural e Jardim Botânico da UFMG",
+      "link": "https://www.ufmg.br/mhnjb/"
     },
     {
       "id": "memorial-minas-gerais-vale",
@@ -6098,6 +6430,88 @@
       "natureza_espaco": "Museu de ciências naturais",
       "instituicao": "Pontifícia Universidade Católica de Minas Gerais",
       "link": "https://www.pucminas.br/Paginas/museu.aspx"
+    },
+    {
+      "id": "mhnjb-ufmg",
+      "nome": "Museu de História Natural e Jardim Botânico da UFMG",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Gustavo da Silveira, 1035, Santa Inês, Belo Horizonte - MG",
+      "fonte_endereco": "https://www.ufmg.br/mhnjb/contato/como-chegar/",
+      "google_place_id": "",
+      "instituicao_ids": [
+        "mhnjb-ufmg"
+      ],
+      "aliases": [
+        "Museu de História Natural e Jardim Botânico da UFMG",
+        "MHNJB",
+        "MHNJB UFMG",
+        "Museu de História Natural UFMG"
+      ],
+      "mapa": "",
+      "descricao": "Museu e jardim botânico em extensa área verde de Belo Horizonte. Oferece visitação espontânea gratuita, exposições, trilhas, atividades educativas e científicas e programação especial ao longo do ano.",
+      "funcionamento": {
+        "segunda": "Fechado",
+        "terca": "8h30 às 16h",
+        "quarta": "8h30 às 16h",
+        "quinta": "8h30 às 16h",
+        "sexta": "8h30 às 16h",
+        "sabado": "8h30 às 16h",
+        "domingo": "Fechado",
+        "observacao": "Saída até 17h; feriados nacionais e municipais: fechado. Visitas agendadas de grupos com mediação possuem regras e cobrança próprias."
+      },
+      "site": "https://www.ufmg.br/mhnjb/",
+      "imagem": "",
+      "imagem_fonte": "",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "redes_sociais": {},
+      "contatos": {
+        "emails": [],
+        "telefones": []
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Planeje sua visita",
+          "url": "https://www.ufmg.br/mhnjb/visite/"
+        },
+        {
+          "rotulo": "Perguntas frequentes",
+          "url": "https://www.ufmg.br/mhnjb/contato/perguntas-frequentes/"
+        }
+      ],
+      "tipo_espaco": "Museu / Jardim botânico",
+      "vocacoes": [
+        "Ciência",
+        "Natureza",
+        "Museu",
+        "Jardim botânico",
+        "Arqueologia",
+        "Paleontologia",
+        "Botânica",
+        "Zoologia",
+        "Educação",
+        "Patrimônio"
+      ],
+      "status_editorial": "pronto_para_teste",
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Museu de História Natural e Jardim Botânico da UFMG",
+      "temas": [
+        "Ciência",
+        "Natureza",
+        "Museu",
+        "Jardim botânico",
+        "Arqueologia",
+        "Paleontologia",
+        "Botânica",
+        "Zoologia",
+        "Educação",
+        "Patrimônio"
+      ],
+      "natureza_espaco": "Museu / Jardim botânico",
+      "instituicao": "Museu de História Natural e Jardim Botânico da UFMG",
+      "link": "https://www.ufmg.br/mhnjb/"
     },
     {
       "aliases": [
@@ -6644,6 +7058,140 @@
       "mapa": "",
       "instituicao": "MM Gerdau – Museu das Minas e do Metal",
       "link": "https://mmgerdau.org.br/programacao/"
+    },
+    {
+      "equipamento_id": "mhnjb-ufmg",
+      "instituicao_id": "mhnjb-ufmg",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem": "",
+      "imagem_fonte": "",
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {},
+      "contatos": {
+        "emails": [],
+        "telefones": []
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Site oficial do MHNJB",
+          "url": "https://www.ufmg.br/mhnjb/"
+        },
+        {
+          "rotulo": "Planeje sua visita",
+          "url": "https://www.ufmg.br/mhnjb/visite/"
+        },
+        {
+          "rotulo": "Perguntas frequentes",
+          "url": "https://www.ufmg.br/mhnjb/contato/perguntas-frequentes/"
+        }
+      ],
+      "id": "mhnjb-ufmg-praca-pau-brasil",
+      "nome": "Praça Pau-Brasil",
+      "descricao": "Área aberta do MHNJB utilizada como ponto de atividades educativas, oficinas e vivências para diferentes públicos.",
+      "funcionamento": {
+        "segunda": "Fechado",
+        "terca": "8h30 às 16h",
+        "quarta": "8h30 às 16h",
+        "quinta": "8h30 às 16h",
+        "sexta": "8h30 às 16h",
+        "sabado": "8h30 às 16h",
+        "domingo": "Fechado",
+        "observacao": "Uso conforme programação."
+      },
+      "site": "https://www.ufmg.br/mhnjb/",
+      "tipo_espaco": "Praça / área aberta",
+      "vocacoes": [
+        "Oficinas",
+        "Atividades infantis",
+        "Educação",
+        "Natureza"
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Praça Pau-Brasil",
+      "temas": [
+        "Oficinas",
+        "Atividades infantis",
+        "Educação",
+        "Natureza"
+      ],
+      "natureza_espaco": "Praça / área aberta",
+      "espaco_principal": "Museu de História Natural e Jardim Botânico da UFMG",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Gustavo da Silveira, 1035, Santa Inês, Belo Horizonte - MG",
+      "mapa": "",
+      "instituicao": "Museu de História Natural e Jardim Botânico da UFMG",
+      "link": "https://www.ufmg.br/mhnjb/"
+    },
+    {
+      "equipamento_id": "mhnjb-ufmg",
+      "instituicao_id": "mhnjb-ufmg",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem": "",
+      "imagem_fonte": "",
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {},
+      "contatos": {
+        "emails": [],
+        "telefones": []
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Site oficial do MHNJB",
+          "url": "https://www.ufmg.br/mhnjb/"
+        },
+        {
+          "rotulo": "Planeje sua visita",
+          "url": "https://www.ufmg.br/mhnjb/visite/"
+        },
+        {
+          "rotulo": "Perguntas frequentes",
+          "url": "https://www.ufmg.br/mhnjb/contato/perguntas-frequentes/"
+        }
+      ],
+      "id": "mhnjb-ufmg-presepio-pipiripau",
+      "nome": "Presépio do Pipiripau",
+      "descricao": "Conjunto histórico e artístico de grande importância do acervo do MHNJB, aberto à visitação em sessões programadas e utilizado como referência para atividades educativas.",
+      "funcionamento": {
+        "segunda": "Fechado",
+        "terca": "Sessões às 10h, 11h, 14h e 16h20",
+        "quarta": "Sessões às 10h, 11h, 14h e 16h20",
+        "quinta": "Sessões às 10h, 11h, 14h e 16h20",
+        "sexta": "Sessões às 10h, 11h, 14h e 16h20",
+        "sabado": "Sessões às 10h, 11h, 14h e 16h20",
+        "domingo": "Fechado",
+        "observacao": "Consultar o Museu para alterações de sessões."
+      },
+      "site": "https://www.ufmg.br/mhnjb/visite/horarios/",
+      "tipo_espaco": "Acervo histórico / atração museal",
+      "vocacoes": [
+        "Patrimônio",
+        "Arte popular",
+        "História",
+        "Educação",
+        "Visitação"
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Presépio do Pipiripau",
+      "temas": [
+        "Patrimônio",
+        "Arte popular",
+        "História",
+        "Educação",
+        "Visitação"
+      ],
+      "natureza_espaco": "Acervo histórico / atração museal",
+      "espaco_principal": "Museu de História Natural e Jardim Botânico da UFMG",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Gustavo da Silveira, 1035, Santa Inês, Belo Horizonte - MG",
+      "mapa": "",
+      "instituicao": "Museu de História Natural e Jardim Botânico da UFMG",
+      "link": "https://www.ufmg.br/mhnjb/visite/horarios/"
     },
     {
       "id": "ccbb-bh-patio",
@@ -9156,6 +9704,72 @@
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
       "instituicao": "Espaço do Conhecimento UFMG",
       "link": "https://www.ufmg.br/espacodoconhecimento/terraco-astronomico/"
+    },
+    {
+      "equipamento_id": "mhnjb-ufmg",
+      "instituicao_id": "mhnjb-ufmg",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem": "",
+      "imagem_fonte": "",
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {},
+      "contatos": {
+        "emails": [],
+        "telefones": []
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Site oficial do MHNJB",
+          "url": "https://www.ufmg.br/mhnjb/"
+        },
+        {
+          "rotulo": "Planeje sua visita",
+          "url": "https://www.ufmg.br/mhnjb/visite/"
+        },
+        {
+          "rotulo": "Perguntas frequentes",
+          "url": "https://www.ufmg.br/mhnjb/contato/perguntas-frequentes/"
+        }
+      ],
+      "id": "mhnjb-ufmg-trilha-caratinga",
+      "nome": "Trilha da Caratinga",
+      "descricao": "Trilha em área de mata do MHNJB utilizada em atividades de interpretação ambiental, biodiversidade e manejo educativo.",
+      "funcionamento": {
+        "segunda": "Fechado",
+        "terca": "8h30 às 16h",
+        "quarta": "8h30 às 16h",
+        "quinta": "8h30 às 16h",
+        "sexta": "8h30 às 16h",
+        "sabado": "8h30 às 16h",
+        "domingo": "Fechado",
+        "observacao": "Acesso conforme condições e programação do Museu."
+      },
+      "site": "https://www.ufmg.br/mhnjb/",
+      "tipo_espaco": "Trilha",
+      "vocacoes": [
+        "Natureza",
+        "Trilhas",
+        "Educação ambiental",
+        "Biodiversidade"
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Trilha da Caratinga",
+      "temas": [
+        "Natureza",
+        "Trilhas",
+        "Educação ambiental",
+        "Biodiversidade"
+      ],
+      "natureza_espaco": "Trilha",
+      "espaco_principal": "Museu de História Natural e Jardim Botânico da UFMG",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Gustavo da Silveira, 1035, Santa Inês, Belo Horizonte - MG",
+      "mapa": "",
+      "instituicao": "Museu de História Natural e Jardim Botânico da UFMG",
+      "link": "https://www.ufmg.br/mhnjb/"
     },
     {
       "id": "teatro-marilia-vitrine-do-teatro-marilia",
