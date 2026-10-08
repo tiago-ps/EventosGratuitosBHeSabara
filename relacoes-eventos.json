@@ -1625,19 +1625,6 @@
     },
     {
       "evento_id": "fcs-wp-37666",
-      "tipo": "acontece_em",
-      "destino": {
-        "tipo": "espaco_interno",
-        "id": "palacio-das-artes-cine-humberto-mauro",
-        "nome": "Cine Humberto Mauro"
-      },
-      "equipamento": {
-        "id": "palacio-das-artes",
-        "nome": "Palácio das Artes"
-      }
-    },
-    {
-      "evento_id": "fcs-wp-37666",
       "tipo": "organizado_por",
       "destino": {
         "tipo": "instituicao",
