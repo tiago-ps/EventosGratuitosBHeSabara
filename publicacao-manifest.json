@@ -1,7 +1,7 @@
 {
   "counts": {
     "atividades-lazer.json": 42,
-    "concursos.json": 22,
+    "concursos.json": 20,
     "configuracao-mural.json": 1,
     "cursos.json": 1909,
     "espacos_culturais.json": 143,
@@ -13,25 +13,25 @@
   },
   "hashes": {
     "atividades-lazer.json": "7b7cac673c1d63119d5adb8f47d5b7bef51f30f7ea34e0473a9897931feae478",
-    "concursos.json": "e3f9d880e4f551b2f2b8739de8a3d83efd96a3ed8989daca7b5a62b5e20640ec",
+    "concursos.json": "80df994c1d59f2bd7a927f0e0ab5f2f31283637b9fd2543ec0b4f0145e14985c",
     "configuracao-mural.json": "49dfe7115a6f5c6d5b8dee424d3b10341b5e3014ac58a295d27ef4e6043ebfc2",
     "cursos.json": "b20c2dd5e9b5ad86f7ac092d3041f83dafd7d1063db619b5b7e111da6899db72",
     "espacos_culturais.json": "8990c91d56b084eeee460d3d8937afea6bec7ae1b32175e4814ada046b42ffe5",
-    "eventos.json": "8e94b05d33c940c67abd10e438cbdcf1907ec00304ec85d693f5782be586520a",
+    "eventos.json": "2950d62f6987370577aa4db4c3c659f59fc324ac2183b5bc5983de95873dda00",
     "filmes.json": "23437099af05856a1a822d1b91c19c9dc93962f073b823189bf8eb96652710af",
-    "livros.json": "13986b6daf8294f2e470167f7fd330e063188a576c01219ab3c0ac175ded18fc",
+    "livros.json": "3844a0870621c1f1e2d268de8a2f39c6d4bda74bcc79b4b238ec2ca16bdb935f",
     "relacoes-eventos.json": "892d65230ae58979144094333d090735f8c38822f7c7ecfa484d6cd8c229e7f5",
     "utilidade-publica.json": "cbeed08b0810b7496fd1629875c4d907a91c373905c82e8b05a315cd3a11a2bb"
   },
-  "published_at": "2026-10-08T15:42:51Z",
-  "request_id": "auto-push-37802797290-1",
+  "published_at": "2026-10-08T15:58:05Z",
+  "request_id": "auto-workflow_run-37804826027-1",
   "schema_version": "1.0",
   "source_repository": "tiago-ps/ColetorEventosGratuitos",
-  "source_sha": "958462056ac25010b299277ecc3f7f81199a8633",
+  "source_sha": "a9fb0557043b20e0c7ad87553ba8ff53848a47de",
   "staging_repository": "tiago-ps/EventosGratuitosBHeSabara",
   "versions": {
     "manifest_schema": "1.0",
     "publication_validator": "central-v1"
   },
-  "workflow_run_id": "37802797290"
+  "workflow_run_id": "37804826027"
 }
