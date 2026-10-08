@@ -572,6 +572,66 @@
       "link": "https://www.fiemg.com.br/sesi-cultura/biblioteca/"
     },
     {
+      "equipamento_id": "centro-cultural-unimed-bh-minas",
+      "instituicao_id": "minas-tenis-clube",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem": "",
+      "imagem_fonte": "",
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/minastenisclube/"
+      },
+      "contatos": {
+        "emails": [],
+        "telefones": []
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Programação cultural",
+          "url": "https://minastenisclube.com.br/cultura/"
+        }
+      ],
+      "id": "minas-centro-cultural-biblioteca",
+      "nome": "Biblioteca do Centro Cultural Unimed-BH Minas",
+      "descricao": "Biblioteca do centro cultural, utilizada para leitura, clubes do livro, lançamentos e atividades literárias.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Consultar horários e programação."
+      },
+      "site": "https://minastenisclube.com.br/cultura/",
+      "tipo_espaco": "Biblioteca",
+      "vocacoes": [
+        "Literatura",
+        "Leitura",
+        "Clubes do livro",
+        "Lançamentos"
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Biblioteca do Centro Cultural Unimed-BH Minas",
+      "temas": [
+        "Literatura",
+        "Leitura",
+        "Clubes do livro",
+        "Lançamentos"
+      ],
+      "natureza_espaco": "Biblioteca",
+      "espaco_principal": "Centro Cultural Unimed-BH Minas",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua da Bahia, 2244, Lourdes, Belo Horizonte - MG",
+      "mapa": "",
+      "instituicao": "Minas Tênis Clube",
+      "link": "https://minastenisclube.com.br/cultura/"
+    },
+    {
       "id": "biblioteca-publica-estadual-mg-anexo",
       "nome": "Biblioteca Pública Estadual de Minas Gerais — Anexo Professor Francisco Iglésias",
       "cidade": "Belo Horizonte",
@@ -850,6 +910,66 @@
       "natureza_espaco": "Biblioteca",
       "instituicao": "SESIMINAS BH",
       "link": "https://www.fiemg.com.br/sesi-cultura/biblioteca/"
+    },
+    {
+      "equipamento_id": "centro-cultural-unimed-bh-minas",
+      "instituicao_id": "minas-tenis-clube",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem": "",
+      "imagem_fonte": "",
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/minastenisclube/"
+      },
+      "contatos": {
+        "emails": [],
+        "telefones": []
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Programação cultural",
+          "url": "https://minastenisclube.com.br/cultura/"
+        }
+      ],
+      "id": "minas-centro-cultural-cafe",
+      "nome": "Café Cultural do Centro Cultural Unimed-BH Minas",
+      "descricao": "Café Cultural utilizado também como espaço de convivência, debates, lançamentos de livros e encontros.",
+      "funcionamento": {
+        "segunda": "8h às 21h",
+        "terca": "8h às 21h",
+        "quarta": "8h às 21h",
+        "quinta": "8h às 21h",
+        "sexta": "8h às 21h",
+        "sabado": "9h às 20h",
+        "domingo": "12h às 20h",
+        "observacao": "Horário geral informado pelo Centro Cultural."
+      },
+      "site": "https://minastenisclube.com.br/cultura/",
+      "tipo_espaco": "Café cultural",
+      "vocacoes": [
+        "Literatura",
+        "Debates",
+        "Lançamentos",
+        "Convivência"
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Café Cultural do Centro Cultural Unimed-BH Minas",
+      "temas": [
+        "Literatura",
+        "Debates",
+        "Lançamentos",
+        "Convivência"
+      ],
+      "natureza_espaco": "Café cultural",
+      "espaco_principal": "Centro Cultural Unimed-BH Minas",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua da Bahia, 2244, Lourdes, Belo Horizonte - MG",
+      "mapa": "",
+      "instituicao": "Minas Tênis Clube",
+      "link": "https://minastenisclube.com.br/cultura/"
     },
     {
       "id": "palacio-das-artes-cafe-do-palacio",
@@ -1856,6 +1976,80 @@
       "link": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/saogeraldo"
     },
     {
+      "id": "centro-cultural-unimed-bh-minas",
+      "nome": "Centro Cultural Unimed-BH Minas",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua da Bahia, 2244, Lourdes, Belo Horizonte - MG",
+      "fonte_endereco": "https://minastenisclube.com.br/cultura/",
+      "google_place_id": "",
+      "instituicao_ids": [
+        "minas-tenis-clube"
+      ],
+      "aliases": [
+        "Centro Cultural Unimed-BH Minas",
+        "Centro Cultural Minas Tênis Clube",
+        "Centro Cultural Minas",
+        "Centro Cultural do Minas Tênis Clube"
+      ],
+      "mapa": "",
+      "descricao": "Complexo cultural do Minas Tênis Clube no Minas I. Reúne teatro, galeria de arte, biblioteca, duas salas de cinema, centro de memória e café cultural, com programação diversa e parte relevante de atividades gratuitas.",
+      "funcionamento": {
+        "segunda": "8h às 21h",
+        "terca": "8h às 21h",
+        "quarta": "8h às 21h",
+        "quinta": "8h às 21h",
+        "sexta": "8h às 21h",
+        "sabado": "9h às 20h",
+        "domingo": "12h às 20h",
+        "observacao": "Os equipamentos internos podem ter horários próprios conforme a programação."
+      },
+      "site": "https://minastenisclube.com.br/cultura/",
+      "imagem": "",
+      "imagem_fonte": "",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/minastenisclube/"
+      },
+      "contatos": {
+        "emails": [],
+        "telefones": []
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Programação cultural",
+          "url": "https://minastenisclube.com.br/cultura/"
+        }
+      ],
+      "tipo_espaco": "Centro cultural",
+      "vocacoes": [
+        "Teatro",
+        "Cinema",
+        "Literatura",
+        "Música",
+        "Exposições",
+        "Memória",
+        "Formação"
+      ],
+      "status_editorial": "pronto_para_teste",
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Centro Cultural Unimed-BH Minas",
+      "temas": [
+        "Teatro",
+        "Cinema",
+        "Literatura",
+        "Música",
+        "Exposições",
+        "Memória",
+        "Formação"
+      ],
+      "natureza_espaco": "Centro cultural",
+      "instituicao": "Minas Tênis Clube",
+      "link": "https://minastenisclube.com.br/cultura/"
+    },
+    {
       "aliases": [
         "Centro Cultural Urucuia",
         "CC Urucuia"
@@ -2401,6 +2595,66 @@
       "link": "https://centrodememoria.fiemg.com.br/sobre/"
     },
     {
+      "equipamento_id": "centro-cultural-unimed-bh-minas",
+      "instituicao_id": "minas-tenis-clube",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem": "",
+      "imagem_fonte": "",
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/minastenisclube/"
+      },
+      "contatos": {
+        "emails": [],
+        "telefones": []
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Programação cultural",
+          "url": "https://minastenisclube.com.br/cultura/"
+        }
+      ],
+      "id": "minas-centro-cultural-centro-memoria",
+      "nome": "Centro de Memória do Minas Tênis Clube",
+      "descricao": "Espaço de memória institucional dedicado à preservação e difusão da história do Minas Tênis Clube e de seus acervos.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Consultar horários e atividades."
+      },
+      "site": "https://minastenisclube.com.br/cultura/",
+      "tipo_espaco": "Centro de memória",
+      "vocacoes": [
+        "Memória",
+        "História",
+        "Acervo",
+        "Exposições"
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Centro de Memória do Minas Tênis Clube",
+      "temas": [
+        "Memória",
+        "História",
+        "Acervo",
+        "Exposições"
+      ],
+      "natureza_espaco": "Centro de memória",
+      "espaco_principal": "Centro Cultural Unimed-BH Minas",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua da Bahia, 2244, Lourdes, Belo Horizonte - MG",
+      "mapa": "",
+      "instituicao": "Minas Tênis Clube",
+      "link": "https://minastenisclube.com.br/cultura/"
+    },
+    {
       "aliases": [
         "Centro de Referência da Cultura Popular e Tradicional Lagoa do Nado",
         "Centro Cultural Lagoa do Nado",
@@ -2781,6 +3035,66 @@
       ],
       "natureza_espaco": "Complexo cultural / teatro histórico",
       "link": "https://www.cineteatrobrasil.com.br/"
+    },
+    {
+      "equipamento_id": "centro-cultural-unimed-bh-minas",
+      "instituicao_id": "minas-tenis-clube",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem": "",
+      "imagem_fonte": "",
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/minastenisclube/"
+      },
+      "contatos": {
+        "emails": [],
+        "telefones": []
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Programação cultural",
+          "url": "https://minastenisclube.com.br/cultura/"
+        }
+      ],
+      "id": "minas-centro-cultural-cinema",
+      "nome": "Cinema do Centro Cultural Unimed-BH Minas",
+      "descricao": "Salas de cinema do Centro Cultural Unimed-BH Minas, dedicadas a exibições, mostras e programação audiovisual.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Funcionamento conforme sessões e programação."
+      },
+      "site": "https://minastenisclube.com.br/cultura/",
+      "tipo_espaco": "Cinema",
+      "vocacoes": [
+        "Cinema",
+        "Audiovisual",
+        "Mostras",
+        "Debates"
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Cinema do Centro Cultural Unimed-BH Minas",
+      "temas": [
+        "Cinema",
+        "Audiovisual",
+        "Mostras",
+        "Debates"
+      ],
+      "natureza_espaco": "Cinema",
+      "espaco_principal": "Centro Cultural Unimed-BH Minas",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua da Bahia, 2244, Lourdes, Belo Horizonte - MG",
+      "mapa": "",
+      "instituicao": "Minas Tênis Clube",
+      "link": "https://minastenisclube.com.br/cultura/"
     },
     {
       "aliases": [
@@ -3410,6 +3724,62 @@
       "mapa": "",
       "instituicao": "Galpão Cine Horto",
       "link": "https://galpaocinehorto.com.br/"
+    },
+    {
+      "equipamento_id": "centro-cultural-unimed-bh-minas",
+      "instituicao_id": "minas-tenis-clube",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem": "",
+      "imagem_fonte": "",
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/minastenisclube/"
+      },
+      "contatos": {
+        "emails": [],
+        "telefones": []
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Programação cultural",
+          "url": "https://minastenisclube.com.br/cultura/"
+        }
+      ],
+      "id": "minas-centro-cultural-galeria-arte",
+      "nome": "Galeria de Arte do Centro Cultural Unimed-BH Minas",
+      "descricao": "Galeria de arte do Centro Cultural Unimed-BH Minas, com exposições e programação de artes visuais.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Visitação conforme exposição em cartaz."
+      },
+      "site": "https://minastenisclube.com.br/cultura/",
+      "tipo_espaco": "Galeria",
+      "vocacoes": [
+        "Artes visuais",
+        "Exposições"
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Galeria de Arte do Centro Cultural Unimed-BH Minas",
+      "temas": [
+        "Artes visuais",
+        "Exposições"
+      ],
+      "natureza_espaco": "Galeria",
+      "espaco_principal": "Centro Cultural Unimed-BH Minas",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua da Bahia, 2244, Lourdes, Belo Horizonte - MG",
+      "mapa": "",
+      "instituicao": "Minas Tênis Clube",
+      "link": "https://minastenisclube.com.br/cultura/"
     },
     {
       "instituicao_id": "biblioteca-publica-estadual-mg",
@@ -5751,6 +6121,66 @@
       "link": "https://filarmonica.art.br/agenda/"
     },
     {
+      "equipamento_id": "centro-cultural-unimed-bh-minas",
+      "instituicao_id": "minas-tenis-clube",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem": "",
+      "imagem_fonte": "",
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/minastenisclube/"
+      },
+      "contatos": {
+        "emails": [],
+        "telefones": []
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Programação cultural",
+          "url": "https://minastenisclube.com.br/cultura/"
+        }
+      ],
+      "id": "minas-centro-cultural-sala-multimeios",
+      "nome": "Sala Multimeios do Centro Cultural Unimed-BH Minas",
+      "descricao": "Sala destinada a cursos, encontros, palestras e atividades formativas do Centro Cultural Unimed-BH Minas.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Uso conforme programação."
+      },
+      "site": "https://minastenisclube.com.br/cultura/",
+      "tipo_espaco": "Sala multiuso",
+      "vocacoes": [
+        "Cursos",
+        "Formação",
+        "Palestras",
+        "Encontros"
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Sala Multimeios do Centro Cultural Unimed-BH Minas",
+      "temas": [
+        "Cursos",
+        "Formação",
+        "Palestras",
+        "Encontros"
+      ],
+      "natureza_espaco": "Sala multiuso",
+      "espaco_principal": "Centro Cultural Unimed-BH Minas",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua da Bahia, 2244, Lourdes, Belo Horizonte - MG",
+      "mapa": "",
+      "instituicao": "Minas Tênis Clube",
+      "link": "https://minastenisclube.com.br/cultura/"
+    },
+    {
       "id": "ccbb-bh-sala-multiuso",
       "nome": "Sala Multiuso",
       "equipamento_id": "ccbb-bh",
@@ -6619,6 +7049,66 @@
       "mapa": "",
       "instituicao": "SESIMINAS BH",
       "link": "https://www.fiemg.com.br/sesi-cultura/seu-evento-aqui/detalhe/teatro-de-bolso-sesiminas-bh/"
+    },
+    {
+      "equipamento_id": "centro-cultural-unimed-bh-minas",
+      "instituicao_id": "minas-tenis-clube",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem": "",
+      "imagem_fonte": "",
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/minastenisclube/"
+      },
+      "contatos": {
+        "emails": [],
+        "telefones": []
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Programação cultural",
+          "url": "https://minastenisclube.com.br/cultura/"
+        }
+      ],
+      "id": "minas-centro-cultural-teatro",
+      "nome": "Teatro do Centro Cultural Unimed-BH Minas",
+      "descricao": "Teatro do Centro Cultural Unimed-BH Minas, com programação de artes cênicas, música e eventos culturais.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Funcionamento conforme programação."
+      },
+      "site": "https://minastenisclube.com.br/cultura/",
+      "tipo_espaco": "Teatro",
+      "vocacoes": [
+        "Teatro",
+        "Música",
+        "Dança",
+        "Eventos"
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Teatro do Centro Cultural Unimed-BH Minas",
+      "temas": [
+        "Teatro",
+        "Música",
+        "Dança",
+        "Eventos"
+      ],
+      "natureza_espaco": "Teatro",
+      "espaco_principal": "Centro Cultural Unimed-BH Minas",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua da Bahia, 2244, Lourdes, Belo Horizonte - MG",
+      "mapa": "",
+      "instituicao": "Minas Tênis Clube",
+      "link": "https://minastenisclube.com.br/cultura/"
     },
     {
       "id": "ccbb-bh-teatro-i",
