@@ -419,6 +419,82 @@
       "link": "https://www.fiemg.com.br/sesi-cultura/centro-cultural-sesiminas-bh/"
     },
     {
+      "equipamento_id": "centro-cultural-ufmg",
+      "instituicao_id": "centro-cultural-ufmg",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem": "",
+      "imagem_fonte": "",
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/centroculturalufmg/"
+      },
+      "contatos": {
+        "emails": [
+          "dir@centrocultural.ufmg.br"
+        ],
+        "telefones": [
+          "(31) 3409-8291"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Espaços do Centro Cultural UFMG",
+          "url": "https://www.ufmg.br/centrocultural/espacos/"
+        },
+        {
+          "rotulo": "Programação e notícias",
+          "url": "https://www.ufmg.br/centrocultural/category/noticias/"
+        },
+        {
+          "rotulo": "Espaços",
+          "url": "https://www.ufmg.br/centrocultural/espacos/"
+        }
+      ],
+      "id": "ccult-ufmg-auditorio",
+      "nome": "Auditório do Centro Cultural UFMG",
+      "descricao": "Auditório com palco e camarim, utilizado para teatro, música, seminários, debates, cinema e outros eventos culturais.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Uso conforme programação."
+      },
+      "site": "https://www.ufmg.br/centrocultural/",
+      "tipo_espaco": "Auditório",
+      "vocacoes": [
+        "Teatro",
+        "Música",
+        "Cinema",
+        "Palestras",
+        "Seminários",
+        "Debates"
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Auditório do Centro Cultural UFMG",
+      "temas": [
+        "Teatro",
+        "Música",
+        "Cinema",
+        "Palestras",
+        "Seminários",
+        "Debates"
+      ],
+      "natureza_espaco": "Auditório",
+      "espaco_principal": "Centro Cultural UFMG",
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida Santos Dumont, 174, Centro, Belo Horizonte - MG, 30111-040",
+      "mapa": "",
+      "instituicao": "Centro Cultural UFMG",
+      "link": "https://www.ufmg.br/centrocultural/"
+    },
+    {
       "id": "auditorio-do-museu-puc-minas",
       "nome": "Auditório do Museu PUC Minas",
       "equipamento_id": "museu-puc-minas",
@@ -2047,6 +2123,91 @@
       "link": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/centros-culturais/saogeraldo"
     },
     {
+      "id": "centro-cultural-ufmg",
+      "nome": "Centro Cultural UFMG",
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida Santos Dumont, 174, Centro, Belo Horizonte - MG, 30111-040",
+      "fonte_endereco": "https://www.ufmg.br/centrocultural/",
+      "google_place_id": "",
+      "instituicao_ids": [
+        "centro-cultural-ufmg"
+      ],
+      "aliases": [
+        "Centro Cultural UFMG",
+        "CCult UFMG",
+        "Centro Cultural da UFMG"
+      ],
+      "mapa": "",
+      "descricao": "Centro cultural da UFMG em edifício histórico no hipercentro de Belo Horizonte. Abriga galerias, auditório, pátio, salas multiuso e espaços de experimentação artística.",
+      "funcionamento": {
+        "segunda": "Fechado",
+        "terca": "9h às 20h",
+        "quarta": "9h às 20h",
+        "quinta": "9h às 20h",
+        "sexta": "9h às 20h",
+        "sabado": "9h às 17h",
+        "domingo": "9h às 17h",
+        "observacao": "Feriados: 9h às 17h."
+      },
+      "site": "https://www.ufmg.br/centrocultural/",
+      "imagem": "",
+      "imagem_fonte": "",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/centroculturalufmg/"
+      },
+      "contatos": {
+        "emails": [
+          "dir@centrocultural.ufmg.br"
+        ],
+        "telefones": [
+          "(31) 3409-8291"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Programação e notícias",
+          "url": "https://www.ufmg.br/centrocultural/category/noticias/"
+        },
+        {
+          "rotulo": "Espaços",
+          "url": "https://www.ufmg.br/centrocultural/espacos/"
+        }
+      ],
+      "tipo_espaco": "Centro cultural",
+      "vocacoes": [
+        "Artes visuais",
+        "Cinema",
+        "Teatro",
+        "Música",
+        "Literatura",
+        "Oficinas",
+        "Debates",
+        "Residência artística",
+        "Educação"
+      ],
+      "status_editorial": "pronto_para_teste",
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Centro Cultural UFMG",
+      "temas": [
+        "Artes visuais",
+        "Cinema",
+        "Teatro",
+        "Música",
+        "Literatura",
+        "Oficinas",
+        "Debates",
+        "Residência artística",
+        "Educação"
+      ],
+      "natureza_espaco": "Centro cultural",
+      "instituicao": "Centro Cultural UFMG",
+      "link": "https://www.ufmg.br/centrocultural/"
+    },
+    {
       "id": "centro-cultural-unimed-bh-minas",
       "nome": "Centro Cultural Unimed-BH Minas",
       "cidade": "Belo Horizonte",
@@ -3460,6 +3621,78 @@
       "link": "https://ejef.tjmg.jus.br/"
     },
     {
+      "equipamento_id": "centro-cultural-ufmg",
+      "instituicao_id": "centro-cultural-ufmg",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem": "",
+      "imagem_fonte": "",
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/centroculturalufmg/"
+      },
+      "contatos": {
+        "emails": [
+          "dir@centrocultural.ufmg.br"
+        ],
+        "telefones": [
+          "(31) 3409-8291"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Espaços do Centro Cultural UFMG",
+          "url": "https://www.ufmg.br/centrocultural/espacos/"
+        },
+        {
+          "rotulo": "Programação e notícias",
+          "url": "https://www.ufmg.br/centrocultural/category/noticias/"
+        },
+        {
+          "rotulo": "Espaços",
+          "url": "https://www.ufmg.br/centrocultural/espacos/"
+        }
+      ],
+      "id": "ccult-ufmg-experimentacao-imagem",
+      "nome": "Espaço Experimentação da Imagem",
+      "descricao": "Espaço expositivo do segundo piso dedicado a experimentações com imagem, artes visuais e linguagens contemporâneas.",
+      "funcionamento": {
+        "segunda": "Fechado",
+        "terca": "9h às 20h",
+        "quarta": "9h às 20h",
+        "quinta": "9h às 20h",
+        "sexta": "9h às 20h",
+        "sabado": "9h às 17h",
+        "domingo": "9h às 17h",
+        "observacao": "Visitação conforme exposição em cartaz."
+      },
+      "site": "https://www.ufmg.br/centrocultural/espacos/",
+      "tipo_espaco": "Galeria / espaço experimental",
+      "vocacoes": [
+        "Artes visuais",
+        "Imagem",
+        "Exposições",
+        "Arte contemporânea"
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Espaço Experimentação da Imagem",
+      "temas": [
+        "Artes visuais",
+        "Imagem",
+        "Exposições",
+        "Arte contemporânea"
+      ],
+      "natureza_espaco": "Galeria / espaço experimental",
+      "espaco_principal": "Centro Cultural UFMG",
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida Santos Dumont, 174, Centro, Belo Horizonte - MG, 30111-040",
+      "mapa": "",
+      "instituicao": "Centro Cultural UFMG",
+      "link": "https://www.ufmg.br/centrocultural/espacos/"
+    },
+    {
       "instituicao_id": "biblioteca-publica-estadual-mg",
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
@@ -4623,6 +4856,76 @@
       "link": "https://galpaocinehorto.com.br/"
     },
     {
+      "equipamento_id": "centro-cultural-ufmg",
+      "instituicao_id": "centro-cultural-ufmg",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem": "",
+      "imagem_fonte": "",
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/centroculturalufmg/"
+      },
+      "contatos": {
+        "emails": [
+          "dir@centrocultural.ufmg.br"
+        ],
+        "telefones": [
+          "(31) 3409-8291"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Espaços do Centro Cultural UFMG",
+          "url": "https://www.ufmg.br/centrocultural/espacos/"
+        },
+        {
+          "rotulo": "Programação e notícias",
+          "url": "https://www.ufmg.br/centrocultural/category/noticias/"
+        },
+        {
+          "rotulo": "Espaços",
+          "url": "https://www.ufmg.br/centrocultural/espacos/"
+        }
+      ],
+      "id": "ccult-ufmg-grande-galeria",
+      "nome": "Grande Galeria",
+      "descricao": "Principal espaço expositivo do Centro Cultural UFMG, no primeiro piso, destinado a exposições de artes visuais e projetos de divulgação científica.",
+      "funcionamento": {
+        "segunda": "Fechado",
+        "terca": "9h às 20h",
+        "quarta": "9h às 20h",
+        "quinta": "9h às 20h",
+        "sexta": "9h às 20h",
+        "sabado": "9h às 17h",
+        "domingo": "9h às 17h",
+        "observacao": "Visitação conforme exposição em cartaz."
+      },
+      "site": "https://www.ufmg.br/centrocultural/espacos/",
+      "tipo_espaco": "Galeria",
+      "vocacoes": [
+        "Artes visuais",
+        "Exposições",
+        "Divulgação científica"
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Grande Galeria",
+      "temas": [
+        "Artes visuais",
+        "Exposições",
+        "Divulgação científica"
+      ],
+      "natureza_espaco": "Galeria",
+      "espaco_principal": "Centro Cultural UFMG",
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida Santos Dumont, 174, Centro, Belo Horizonte - MG, 30111-040",
+      "mapa": "",
+      "instituicao": "Centro Cultural UFMG",
+      "link": "https://www.ufmg.br/centrocultural/espacos/"
+    },
+    {
       "id": "palacio-das-artes-galeria-alberto-da-veiga-guignard",
       "nome": "Grande Galeria Alberto da Veiga Guignard",
       "equipamento_id": "palacio-das-artes",
@@ -4982,6 +5285,80 @@
       "mapa": "",
       "instituicao": "SESI Cultura MG",
       "link": "https://www.fiemg.com.br/sesi-cultura/seu-evento-aqui/detalhe/hall-2o-andar-do-museu/"
+    },
+    {
+      "equipamento_id": "centro-cultural-ufmg",
+      "instituicao_id": "centro-cultural-ufmg",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem": "",
+      "imagem_fonte": "",
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/centroculturalufmg/"
+      },
+      "contatos": {
+        "emails": [
+          "dir@centrocultural.ufmg.br"
+        ],
+        "telefones": [
+          "(31) 3409-8291"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Espaços do Centro Cultural UFMG",
+          "url": "https://www.ufmg.br/centrocultural/espacos/"
+        },
+        {
+          "rotulo": "Programação e notícias",
+          "url": "https://www.ufmg.br/centrocultural/category/noticias/"
+        },
+        {
+          "rotulo": "Espaços",
+          "url": "https://www.ufmg.br/centrocultural/espacos/"
+        }
+      ],
+      "id": "ccult-ufmg-hall-superior",
+      "nome": "Hall Superior do Centro Cultural UFMG",
+      "descricao": "Espaço multiuso do Centro Cultural UFMG empregado em eventos, atividades artísticas, encontros e ações de formação.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Uso conforme programação."
+      },
+      "site": "https://www.ufmg.br/centrocultural/",
+      "tipo_espaco": "Espaço multiuso",
+      "vocacoes": [
+        "Literatura",
+        "Encontros",
+        "Formação",
+        "Performances",
+        "Cultura"
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Hall Superior do Centro Cultural UFMG",
+      "temas": [
+        "Literatura",
+        "Encontros",
+        "Formação",
+        "Performances",
+        "Cultura"
+      ],
+      "natureza_espaco": "Espaço multiuso",
+      "espaco_principal": "Centro Cultural UFMG",
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida Santos Dumont, 174, Centro, Belo Horizonte - MG, 30111-040",
+      "mapa": "",
+      "instituicao": "Centro Cultural UFMG",
+      "link": "https://www.ufmg.br/centrocultural/"
     },
     {
       "instituicao_id": "biblioteca-publica-estadual-mg",
@@ -6134,6 +6511,78 @@
       "link": "https://ccbb.com.br/belo-horizonte/servicos/"
     },
     {
+      "equipamento_id": "centro-cultural-ufmg",
+      "instituicao_id": "centro-cultural-ufmg",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem": "",
+      "imagem_fonte": "",
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/centroculturalufmg/"
+      },
+      "contatos": {
+        "emails": [
+          "dir@centrocultural.ufmg.br"
+        ],
+        "telefones": [
+          "(31) 3409-8291"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Espaços do Centro Cultural UFMG",
+          "url": "https://www.ufmg.br/centrocultural/espacos/"
+        },
+        {
+          "rotulo": "Programação e notícias",
+          "url": "https://www.ufmg.br/centrocultural/category/noticias/"
+        },
+        {
+          "rotulo": "Espaços",
+          "url": "https://www.ufmg.br/centrocultural/espacos/"
+        }
+      ],
+      "id": "ccult-ufmg-patio",
+      "nome": "Pátio Interno do Centro Cultural UFMG",
+      "descricao": "Pátio interno utilizado para apresentações, performances, encontros e atividades culturais.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Uso conforme programação."
+      },
+      "site": "https://www.ufmg.br/centrocultural/",
+      "tipo_espaco": "Pátio cultural",
+      "vocacoes": [
+        "Performances",
+        "Música",
+        "Encontros",
+        "Cultura"
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Pátio Interno do Centro Cultural UFMG",
+      "temas": [
+        "Performances",
+        "Música",
+        "Encontros",
+        "Cultura"
+      ],
+      "natureza_espaco": "Pátio cultural",
+      "espaco_principal": "Centro Cultural UFMG",
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida Santos Dumont, 174, Centro, Belo Horizonte - MG, 30111-040",
+      "mapa": "",
+      "instituicao": "Centro Cultural UFMG",
+      "link": "https://www.ufmg.br/centrocultural/"
+    },
+    {
       "id": "galpao-cine-horto-sala-1",
       "nome": "Sala 1",
       "equipamento_id": "galpao-cine-horto",
@@ -6325,6 +6774,142 @@
       "mapa": "",
       "instituicao": "Fundação de Educação Artística",
       "link": "https://feabh.org.br/"
+    },
+    {
+      "equipamento_id": "centro-cultural-ufmg",
+      "instituicao_id": "centro-cultural-ufmg",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem": "",
+      "imagem_fonte": "",
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/centroculturalufmg/"
+      },
+      "contatos": {
+        "emails": [
+          "dir@centrocultural.ufmg.br"
+        ],
+        "telefones": [
+          "(31) 3409-8291"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Espaços do Centro Cultural UFMG",
+          "url": "https://www.ufmg.br/centrocultural/espacos/"
+        },
+        {
+          "rotulo": "Programação e notícias",
+          "url": "https://www.ufmg.br/centrocultural/category/noticias/"
+        },
+        {
+          "rotulo": "Espaços",
+          "url": "https://www.ufmg.br/centrocultural/espacos/"
+        }
+      ],
+      "id": "ccult-ufmg-sala-ana-horta",
+      "nome": "Sala Ana Horta",
+      "descricao": "Sala expositiva do segundo piso do Centro Cultural UFMG, voltada a exposições e projetos artísticos.",
+      "funcionamento": {
+        "segunda": "Fechado",
+        "terca": "9h às 20h",
+        "quarta": "9h às 20h",
+        "quinta": "9h às 20h",
+        "sexta": "9h às 20h",
+        "sabado": "9h às 17h",
+        "domingo": "9h às 17h",
+        "observacao": "Visitação conforme exposição em cartaz."
+      },
+      "site": "https://www.ufmg.br/centrocultural/espacos/",
+      "tipo_espaco": "Galeria",
+      "vocacoes": [
+        "Artes visuais",
+        "Exposições"
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Sala Ana Horta",
+      "temas": [
+        "Artes visuais",
+        "Exposições"
+      ],
+      "natureza_espaco": "Galeria",
+      "espaco_principal": "Centro Cultural UFMG",
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida Santos Dumont, 174, Centro, Belo Horizonte - MG, 30111-040",
+      "mapa": "",
+      "instituicao": "Centro Cultural UFMG",
+      "link": "https://www.ufmg.br/centrocultural/espacos/"
+    },
+    {
+      "equipamento_id": "centro-cultural-ufmg",
+      "instituicao_id": "centro-cultural-ufmg",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem": "",
+      "imagem_fonte": "",
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/centroculturalufmg/"
+      },
+      "contatos": {
+        "emails": [
+          "dir@centrocultural.ufmg.br"
+        ],
+        "telefones": [
+          "(31) 3409-8291"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Espaços do Centro Cultural UFMG",
+          "url": "https://www.ufmg.br/centrocultural/espacos/"
+        },
+        {
+          "rotulo": "Programação e notícias",
+          "url": "https://www.ufmg.br/centrocultural/category/noticias/"
+        },
+        {
+          "rotulo": "Espaços",
+          "url": "https://www.ufmg.br/centrocultural/espacos/"
+        }
+      ],
+      "id": "ccult-ufmg-sala-celso-renato",
+      "nome": "Sala Celso Renato de Lima",
+      "descricao": "Sala expositiva do segundo piso do Centro Cultural UFMG, utilizada por exposições de artes visuais e projetos culturais.",
+      "funcionamento": {
+        "segunda": "Fechado",
+        "terca": "9h às 20h",
+        "quarta": "9h às 20h",
+        "quinta": "9h às 20h",
+        "sexta": "9h às 20h",
+        "sabado": "9h às 17h",
+        "domingo": "9h às 17h",
+        "observacao": "Visitação conforme exposição em cartaz."
+      },
+      "site": "https://www.ufmg.br/centrocultural/espacos/",
+      "tipo_espaco": "Galeria",
+      "vocacoes": [
+        "Artes visuais",
+        "Exposições"
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Sala Celso Renato de Lima",
+      "temas": [
+        "Artes visuais",
+        "Exposições"
+      ],
+      "natureza_espaco": "Galeria",
+      "espaco_principal": "Centro Cultural UFMG",
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida Santos Dumont, 174, Centro, Belo Horizonte - MG, 30111-040",
+      "mapa": "",
+      "instituicao": "Centro Cultural UFMG",
+      "link": "https://www.ufmg.br/centrocultural/espacos/"
     },
     {
       "id": "galpao-cine-horto-sala-cinema",
