@@ -129,7 +129,10 @@
     'cine santa tereza': 'imagens/CineSantaTerezaBH.png',
     'espaco do conhecimento ufmg': 'https://www.ufmg.br/app/uploads/2026/04/Predio-do-Espaco-do-Conhecimento-UFMG-Creditos-Fernando-Silva-1-2-scaled.jpg',
     // Equipamento ainda não cadastrado no catálogo canônico.
-    'teatro francisco nunes': 'https://prefeitura.pbh.gov.br/sites/default/files/noticia/img/2017-06/16316707854_9c3ab8583e_k.jpg'
+    'teatro francisco nunes': 'https://prefeitura.pbh.gov.br/sites/default/files/noticia/img/2017-06/16316707854_9c3ab8583e_k.jpg',
+    // Fotos dos locais: campus PUC Minas e praça da atividade externa.
+    'puc minas lourdes': 'https://carreiras.pucminas.br/sites/default/files/2025-07/Lourdes%20%28Pra%C3%A7a%20da%20Liberdade%29.png',
+    'alameda da educacao': 'https://prefeitura.pbh.gov.br/sites/default/files/noticia/img/2017-09/Pra%C3%A7a%20da%20Liberdade%20Foto%20Divulga%C3%A7%C3%A3o.jpg'
   };
 
   /*
