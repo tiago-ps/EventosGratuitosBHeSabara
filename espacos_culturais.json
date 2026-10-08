@@ -992,6 +992,7 @@
         "biblioteca-publica-estadual-mg"
       ],
       "aliases": [
+        "Biblioteca Pública Estadual de Minas Gerais — Anexo Professor Francisco Iglésias",
         "Anexo Professor Francisco Iglésias",
         "Prédio Anexo da Biblioteca Pública Estadual",
         "Biblioteca Pública Estadual - Anexo"
@@ -1009,7 +1010,7 @@
         "observacao": "Horários variam por setor; consultar a programação e o site oficial."
       },
       "site": "https://www.bibliotecapublica.mg.gov.br/",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/biblioteca-publica-estadual-mg-anexo.png",
       "imagem_fonte": "",
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
@@ -1037,7 +1038,7 @@
         "Quadrinhos",
         "Jogos"
       ],
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "em_analise",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "Biblioteca Pública Estadual de Minas Gerais — Anexo Professor Francisco Iglésias",
@@ -1065,6 +1066,7 @@
         "biblioteca-publica-estadual-mg"
       ],
       "aliases": [
+        "Biblioteca Pública Estadual de Minas Gerais — Edifício Luiz de Bessa",
         "Biblioteca Pública Estadual de Minas Gerais",
         "Edifício Luiz de Bessa",
         "Biblioteca Luiz de Bessa",
@@ -1083,10 +1085,10 @@
         "observacao": "Horários variam por setor; a Galeria pode abrir aos sábados."
       },
       "site": "https://www.bibliotecapublica.mg.gov.br/",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/biblioteca-publica-estadual-mg.png",
       "imagem_fonte": "",
       "exibicao_ativa": true,
-      "exibicao_recorrente": false,
+      "exibicao_recorrente": true,
       "prioridade": 0,
       "redes_sociais": {
         "instagram": "https://www.instagram.com/bibliotecaestadualmg/"
@@ -1115,7 +1117,7 @@
         "Teatro",
         "Cultura"
       ],
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "Biblioteca Pública Estadual de Minas Gerais — Edifício Luiz de Bessa",
@@ -1404,7 +1406,7 @@
         "observacao": "Uso conforme a programação da Casa Fiat de Cultura."
       },
       "site": "https://casafiatdecultura.com.br/",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/casa-fiat-de-cultura.png",
       "imagem_fonte": "https://casafiatdecultura.com.br/",
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
@@ -1473,7 +1475,7 @@
         "observacao": "Feriados: 10h às 18h. Fechado às segundas-feiras."
       },
       "site": "https://casafiatdecultura.com.br/",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/casa-fiat-de-cultura.png",
       "imagem_fonte": "https://casafiatdecultura.com.br/",
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
@@ -1505,7 +1507,8 @@
         "Educação",
         "Palestras"
       ],
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "revisado",
+      "mapa": "",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "Casa Fiat de Cultura",
@@ -4117,7 +4120,7 @@
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
       "prioridade": 0,
-      "imagem": "",
+      "imagem": "imagens/equipamentos/biblioteca-publica-estadual-mg-anexo.png",
       "imagem_fonte": "",
       "status_editorial": "pronto_para_teste",
       "redes_sociais": {
@@ -4719,7 +4722,7 @@
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
       "prioridade": 0,
-      "imagem": "",
+      "imagem": "imagens/equipamentos/biblioteca-publica-estadual-mg.png",
       "imagem_fonte": "",
       "status_editorial": "pronto_para_teste",
       "redes_sociais": {
@@ -5785,7 +5788,7 @@
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
       "prioridade": 0,
-      "imagem": "",
+      "imagem": "imagens/equipamentos/biblioteca-publica-estadual-mg.png",
       "imagem_fonte": "",
       "status_editorial": "pronto_para_teste",
       "redes_sociais": {
@@ -6815,7 +6818,7 @@
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
       "prioridade": 0,
-      "imagem": "",
+      "imagem": "imagens/equipamentos/biblioteca-publica-estadual-mg-anexo.png",
       "imagem_fonte": "",
       "status_editorial": "pronto_para_teste",
       "redes_sociais": {
@@ -6961,7 +6964,7 @@
         "observacao": "Segue o funcionamento e a programação da Casa Fiat de Cultura."
       },
       "site": "https://casafiatdecultura.com.br/",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/casa-fiat-de-cultura.png",
       "imagem_fonte": "https://casafiatdecultura.com.br/",
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
@@ -8875,7 +8878,7 @@
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
       "prioridade": 0,
-      "imagem": "",
+      "imagem": "imagens/equipamentos/biblioteca-publica-estadual-mg.png",
       "imagem_fonte": "",
       "status_editorial": "pronto_para_teste",
       "redes_sociais": {
@@ -8939,7 +8942,7 @@
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
       "prioridade": 0,
-      "imagem": "",
+      "imagem": "imagens/equipamentos/biblioteca-publica-estadual-mg.png",
       "imagem_fonte": "",
       "status_editorial": "pronto_para_teste",
       "redes_sociais": {
@@ -9007,7 +9010,7 @@
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
       "prioridade": 0,
-      "imagem": "",
+      "imagem": "imagens/equipamentos/biblioteca-publica-estadual-mg.png",
       "imagem_fonte": "",
       "status_editorial": "pronto_para_teste",
       "redes_sociais": {
@@ -9419,7 +9422,7 @@
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
       "prioridade": 0,
-      "imagem": "",
+      "imagem": "imagens/equipamentos/biblioteca-publica-estadual-mg.png",
       "imagem_fonte": "",
       "status_editorial": "pronto_para_teste",
       "redes_sociais": {
