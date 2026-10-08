@@ -485,6 +485,70 @@
       "link": "https://www.fiemg.com.br/sesi-cultura/centro-cultural-sesiminas-bh/"
     },
     {
+      "id": "esmu-uemg-auditorio",
+      "nome": "Auditório da Escola de Música da UEMG",
+      "equipamento_id": "esmu-uemg",
+      "instituicao_id": "esmu-uemg",
+      "descricao": "Auditório da unidade Escola de Música da UEMG usado para os concertos mensais de Música Comentada e audições de alunos abertas ao público, conforme a programação institucional.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Uso conforme os concertos e recitais anunciados pela unidade."
+      },
+      "site": "https://www.uemg.br/esmu",
+      "imagem": "",
+      "imagem_fonte": "",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "tipo_espaco": "Auditório",
+      "vocacoes": [
+        "Música",
+        "Concertos",
+        "Recitais",
+        "Apresentações didáticas"
+      ],
+      "links_adicionais": [
+        {
+          "rotulo": "Projetos de extensão",
+          "url": "https://www.uemg.br/extensao-esmu/projetos-e-programas"
+        },
+        {
+          "rotulo": "Agenda de eventos",
+          "url": "https://www.uemg.br/lista-de-eventos-esmu"
+        }
+      ],
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {},
+      "contatos": {
+        "emails": [],
+        "telefones": [
+          "(31) 3479-8300"
+        ]
+      },
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Auditório da Escola de Música da UEMG",
+      "temas": [
+        "Música",
+        "Concertos",
+        "Recitais",
+        "Apresentações didáticas"
+      ],
+      "natureza_espaco": "Auditório",
+      "espaco_principal": "Escola de Música da UEMG",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Riachuelo, 1351, Padre Eustáquio, Belo Horizonte - MG",
+      "mapa": "",
+      "instituicao": "Escola de Música da UEMG",
+      "link": "https://www.uemg.br/esmu"
+    },
+    {
       "equipamento_id": "centro-cultural-ufmg",
       "instituicao_id": "centro-cultural-ufmg",
       "exibicao_ativa": true,
@@ -3826,6 +3890,79 @@
       ],
       "natureza_espaco": "Escola judicial / espaço de formação",
       "link": "https://ejef.tjmg.jus.br/"
+    },
+    {
+      "id": "esmu-uemg",
+      "nome": "Escola de Música da UEMG",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Riachuelo, 1351, Padre Eustáquio, Belo Horizonte - MG",
+      "fonte_endereco": "https://www.uemg.br/esmu",
+      "google_place_id": "",
+      "instituicao_ids": [
+        "esmu-uemg"
+      ],
+      "aliases": [
+        "ESMU",
+        "Escola de Música UEMG",
+        "Escola de Música da UEMG"
+      ],
+      "mapa": "",
+      "descricao": "Unidade de ensino e extensão musical da UEMG, localizada no bairro Padre Eustáquio, em Belo Horizonte. Seu auditório recebe recitais e concertos de projetos como Música Comentada e Audição de Alunos.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Recitais, concertos e visitação conforme agenda da Escola de Música."
+      },
+      "site": "https://www.uemg.br/esmu",
+      "imagem": "",
+      "imagem_fonte": "",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "redes_sociais": {},
+      "contatos": {
+        "emails": [],
+        "telefones": [
+          "(31) 3479-8300"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Agenda de eventos",
+          "url": "https://www.uemg.br/lista-de-eventos-esmu"
+        },
+        {
+          "rotulo": "Projetos de extensão",
+          "url": "https://www.uemg.br/extensao-esmu/projetos-e-programas"
+        }
+      ],
+      "tipo_espaco": "Escola de música / Espaço cultural",
+      "vocacoes": [
+        "Música",
+        "Concertos",
+        "Recitais",
+        "Formação",
+        "Extensão universitária"
+      ],
+      "status_editorial": "pronto_para_teste",
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Escola de Música da UEMG",
+      "temas": [
+        "Música",
+        "Concertos",
+        "Recitais",
+        "Formação",
+        "Extensão universitária"
+      ],
+      "natureza_espaco": "Escola de música / Espaço cultural",
+      "instituicao": "Escola de Música da UEMG",
+      "link": "https://www.uemg.br/esmu"
     },
     {
       "equipamento_id": "mhnjb-ufmg",
