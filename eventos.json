@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Março de 2026 a Janeiro de 2027",
-  "atualizado_em": "2026-10-07T17:56:56-03:00",
+  "atualizado_em": "2026-10-07T23:57:23-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -5913,6 +5913,31 @@
       "origem_experimental": "mm_gerdau"
     },
     {
+      "id": "aml-segure-a-alca-do-martelo-e-puxe-ate-romper-o-lacre-multiartista-ricardo-aleixo-inaugura-exposicao-na-academia-mineira-de-letras-2026-09-24",
+      "titulo": "Segure a alça do martelo e puxe até romper o lacre: multiartista Ricardo Aleixo inaugura exposição na Academia Mineira de Letras",
+      "data": "2026-09-24",
+      "data_fim": "2026-11-21",
+      "horario": "19h",
+      "local": "Academia Mineira de Letras",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua da Bahia, 1466, Lourdes, Belo Horizonte - MG",
+      "categoria": "Exposição",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita conforme programação oficial da Academia Mineira de Letras; consulte a página para orientações de acesso ou inscrição.",
+      "descricao": "Segure a alça do martelo e puxe até romper o lacre: multiartista Ricardo Aleixo inaugura exposição na Academia Mineira de Letras De 24/09/2026 a 21/11/2026 🔊 Ouvir o conteúdo Mostra reúne 35 obras do poeta e artista visual, acadêmico da AML, e será aberta ao público no dia 24 de setembro, às 19h , seguindo em cartaz até 21 de novembro A relação entre corpo, matéria e espaço é o ponto de partida da exposição “Segure a alça do martelo e puxe até romper o lacre” , do multiartista, Ricardo Aleixo, que será aberta no dia 24 de setembro, quinta-feira, às 19h , na sede da Academia Mineira de Letras. Poeta, escritor e artista visual,",
+      "imagem": "https://academiamineiradeletras.org.br/wp-content/uploads/2026/09/SITE_Exposicao_Ricardo-Aleixo.jpg",
+      "link": "https://academiamineiradeletras.org.br/eventos/segure-a-alca-do-martelo-e-puxe-ate-romper-o-lacre-multiartista-ricardo-aleixo-inaugura-exposicao-na-academia-mineira-de-letras/",
+      "pagina": "https://academiamineiradeletras.org.br/eventos/segure-a-alca-do-martelo-e-puxe-ate-romper-o-lacre-multiartista-ricardo-aleixo-inaugura-exposicao-na-academia-mineira-de-letras/",
+      "fonte": "Academia Mineira de Letras — programação oficial",
+      "instituicao_id": "academia-mineira-de-letras",
+      "criterio_exibicao": "realizacao",
+      "motivo_publicacao": "gratuidade_explicita",
+      "local_id": "academia-mineira-de-letras",
+      "somente_teste": true,
+      "status_validacao": "experimental",
+      "origem_experimental": "academia_mineira_letras"
+    },
+    {
       "id": "fcs-wp-37771",
       "titulo": "Programação Educativa de Outubro",
       "data": "2026-10-01",
@@ -6011,264 +6036,29 @@
       "espaco_interno": "Teatro II"
     },
     {
-      "id": "sympla-teatro-da-cidade-3598079",
-      "titulo": "Gota D'água (Infantil)",
-      "data": "2026-10-07",
-      "data_fim": "",
-      "horario": "",
-      "local": "Teatro da Cidade",
+      "id": "galpao-cine-horto-mostra-infancias-2026-10-03",
+      "titulo": "Mostra Infâncias",
+      "data": "2026-10-03",
+      "data_fim": "2026-10-12",
+      "horario": "13h",
+      "local": "Galpão Cine Horto",
+      "local_id": "galpao-cine-horto",
       "cidade": "Belo Horizonte",
-      "categoria": "Atividade infantil",
-      "gratuito": true,
-      "inscricao": "Inscrição gratuita pela Sympla; consulte disponibilidade",
-      "descricao": "Espetáculo Infantil \"Gota D'Água\" com Grupo Confesso Sinopse: Em A Gota d’Água, uma menina reencontra, através das histórias da Contadora das Chuvas, as lembranças de sua relação com a natureza. Entre flores, gotas, bichos e sementes, ela redescobre a importância da água,",
-      "imagem": "https://images.sympla.com.br/6abad66a25cb8-lg.png",
-      "link": "https://www.sympla.com.br/evento/gota-d-agua-infantil/3598079",
-      "fonte": "Teatro da Cidade — Sympla",
-      "instituicao_id": "teatro-da-cidade",
-      "fonte_id": "3598079",
-      "organizador": "",
-      "endereco": "Rua da Bahia, 1341, Centro, Belo Horizonte - MG",
-      "classificacao_indicativa": "Livre",
-      "pagina": "https://www.sympla.com.br/produtor/teatrodacidade",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "evento_gratuito_confirmado_na_sympla",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-07"
-        }
-      },
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Teatro+da+Cidade%2C+Rua+da+Bahia%2C+1341%2C+Centro%2C+Belo+Horizonte+-+MG"
-    },
-    {
-      "id": "portal-bh-f52dbc705ede-2026-10-07-1230",
-      "titulo": "Projeto: Quarta Doze e Trinta \"Lu Mosqueira\"",
-      "data": "2026-10-07",
-      "data_fim": "",
-      "horario": "12h30 às 13h30",
-      "local": "Local informado na página oficial",
-      "cidade": "Belo Horizonte",
-      "categoria": "Música",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "O projeto Quarta Doze e Trinta recebe na próxima quarta-feira, 7 de outubro, a cantora e compositora Lu Mosqueira. A apresentação, gratuita e aberta ao público, será às 12h30, na Praça de Serviços, no Campus Pampulha. O Quarta Doze e Trinta é parte do Circuito Cultural UFMG, realizado pela Pró-reitoria de Cultura da UFMG. Natural de Sabará, na região metropolitana de BH,",
-      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-10/captura-de-tela-2026-10-02-151907-1.png",
-      "link": "https://portalbelohorizonte.com.br/2026/eventos/espetaculo/musica/projeto-quarta-doze-e-trinta-lu-mosqueira",
-      "fonte": "Portal Belo Horizonte",
-      "fonte_id": "f52dbc705ede",
-      "instituicao_id": "",
-      "endereco": "Praça de Serviços da UFMG - Avenida Presidente Antônio Carlos, 6627 - Pampulha",
-      "tags_fonte": [
-        "Acessibilidade",
-        "Música",
-        "MPB",
-        "Ar livre",
-        "Gratuito"
-      ],
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-07",
-          "observacao": "12h30 às 13h30"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Local+informado+na+p%C3%A1gina+oficial%2C+Pra%C3%A7a+de+Servi%C3%A7os+da+UFMG+-+Avenida+Presidente+Ant%C3%B4nio+Carlos%2C+6627+-+Pampulha%2C+Belo+Horizonte"
-    },
-    {
-      "id": "portal-bh-1e45a9fc3659-2026-10-07-1230",
-      "titulo": "Show: 'Alma Brasileira' - Lu Mosqueira",
-      "data": "2026-10-07",
-      "data_fim": "",
-      "horario": "12h30 às 13h30",
-      "local": "Local informado na página oficial",
-      "cidade": "Belo Horizonte",
-      "categoria": "Música",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "O projeto Quarta Doze e Trinta recebe no dia 7 de outubro, às 12h30, a cantora e compositora Lu Mosqueira para um show gratuito e aberto ao público na Praça de Serviços do Campus Pampulha. Integrante do Circuito Cultural UFMG, ação promovida pela Pró-reitoria de Cultura da instituição, a iniciativa leva música ao horário de almoço da comunidade universitária e de visitantes.",
-      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-09/credito-assufemg-1.jpg",
-      "link": "https://portalbelohorizonte.com.br/2026/eventos/show/musica/show-alma-brasileira-lu-mosqueira",
-      "fonte": "Portal Belo Horizonte",
-      "fonte_id": "1e45a9fc3659",
-      "instituicao_id": "",
-      "endereco": "Avenida Antônio Carlos, 6.627 - Pampulha",
-      "tags_fonte": [
-        "Gratuito",
-        "Acessível para cadeirantes",
-        "MPB",
-        "Show e Festa",
-        "Cultural",
-        "Lançamentos",
-        "Música",
-        "Experiências",
-        "Acessibilidade"
-      ],
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-07",
-          "observacao": "12h30 às 13h30"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Local+informado+na+p%C3%A1gina+oficial%2C+Avenida+Ant%C3%B4nio+Carlos%2C+6.627+-+Pampulha%2C+Belo+Horizonte"
-    },
-    {
-      "id": "portal-bh-6c26e916e790-2026-10-07-1300",
-      "titulo": "Oficina • Preservação Audiovisual • Análise Fílmica, com Soraia Nogueira",
-      "data": "2026-10-07",
-      "data_fim": "",
-      "horario": "13h às 15h",
-      "local": "Museu da Imagem e do Som – MIS BH",
-      "cidade": "Belo Horizonte",
+      "endereco": "Rua Pitangui, 3613, Horto, Belo Horizonte - MG",
       "categoria": "Oficina",
       "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "De 6 a 9/10 TER. A SEX 13h às 15h indicado para maiores de 18 anos Inscrições via formulário: Link na bio do instagram do Museu",
-      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-10/oficina-preservacao-audiovisual.png",
-      "link": "https://portalbelohorizonte.com.br/museuscentro/2026/eventos/oficina/audiovisual/oficina-preservacao-audiovisual-analise-filmica-com-soraia-nogueira",
-      "fonte": "Portal Belo Horizonte",
-      "fonte_id": "6c26e916e790",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "endereco": "",
-      "tags_fonte": [],
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-07",
-          "observacao": "13h às 15h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
-    },
-    {
-      "id": "ufmg-ec-espaco-aberto-a-educadores",
-      "titulo": "Espaço Aberto a Educadores",
-      "data": "2026-10-07",
-      "data_fim": "",
-      "horario": "14h",
-      "local": "Espaço do Conhecimento UFMG",
-      "cidade": "Belo Horizonte",
-      "categoria": "Atividade educativa",
-      "gratuito": true,
-      "inscricao": "Inscrição necessária; consulte a página oficial",
-      "descricao": "O Núcleo de Ações Educativas e Acessibilidade do Espaço do Conhecimento UFMG busca, cada vez mais, aproximar-se de educadores e instituições interessados em conhecer o museu e planejar futuras visitas em grupo. Nesse sentido,",
-      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/07/08-e-12.08-Espaco-Aberto-a-Educadores-Divulgacao-Espaco-do-Conhecimento-UFMG-scaled.jpg",
-      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/espaco-aberto-a-educadores/",
-      "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-07",
-          "observacao": "14h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "espaco-conhecimento-ufmg",
-      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
-    },
-    {
-      "id": "cine-santa-tereza-bileto-128036",
-      "titulo": "5ª AUTÊNTICA MOSTRA CINEMAS DO BRASIL - Quando a sala de projeção vira personagem",
-      "data": "2026-10-07",
-      "data_fim": "",
-      "horario": "17h",
-      "local": "Cine Santa Tereza",
-      "cidade": "Belo Horizonte",
-      "categoria": "Cinema",
-      "gratuito": true,
-      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial. Também há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade.",
-      "descricao": "Quando a sala de projeção vira personagem (Eudaldo Monção Jr. | 2025 | Brasil | Documentário | 16 min) O documentário apresenta, de modo poético, a relação afetiva do cineasta com o cinema de rua, identificando o momento em que as histórias de vida do realizador e do cinema protagonista se entrelaçam. Cinemas de rua de Guaxupé (Eudaldo Monção Jr. | 2024 | Brasil | Documentário | 15min) Os resquícios dos cinemas que já existiram em Guaxupé, como o Cine Theatro São Carlos, evidenciam ao espectador através desta narrativa, histórias da vida de seu público frequentador.",
-      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/3q657hv4b0kkm1pv4rhq99oogbi29mjsprptpp4d3proqempl95hp4l3ham77enhu2b5alkiua4tf9s6dauttvjb8hil0qi7pjhi75r.jpeg",
-      "link": "https://bileto.sympla.com.br/event/128036/d/419265/s/2719834",
-      "fonte": "Cine Santa Tereza",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "fonte_id": "128036",
-      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
-      "classificacao_indicativa": "Livre",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-07",
-          "observacao": "17h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
-    },
-    {
-      "id": "cine-santa-tereza-bileto-127828",
-      "titulo": "SEMANA DO CINEMA ESPANHOL - Os Lampejos",
-      "data": "2026-10-07",
-      "data_fim": "",
-      "horario": "19h",
-      "local": "Cine Santa Tereza",
-      "cidade": "Belo Horizonte",
-      "categoria": "Cinema",
-      "gratuito": true,
-      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
-      "descricao": "Os lampejos (Los destellos | Pilar Palomero | 2024 | Espanhol | Drama | 100 min) A vida de Isabel toma um rumo inesperado quando sua filha pede para ela cuidar de seu pai doente. Isabel enxerga seu ex-marido como um completo desconhecido, mas começa a se lembrar de sentimentos que acreditava já ter superado. Classificação indicativa: 7 anos",
-      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/39jo3ehhgve7avevge49hls4sdf6sdcmreh47t596kkffdbe4b6gadqlkg56mfcvttmliggbgqgbhpj0tsnepngm7qdd0lgfsrprejt.jpeg",
-      "link": "https://bileto.sympla.com.br/event/127828/d/418155/s/2713371",
-      "fonte": "Cine Santa Tereza",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "fonte_id": "127828",
-      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
-      "classificacao_indicativa": "Livre",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-07",
-          "observacao": "19h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
-    },
-    {
-      "id": "portal-bh-74819194d736-2026-10-07-1900",
-      "titulo": "Espetáculo: 'Travessia' - Cia. Café com Dança",
-      "data": "2026-10-07",
-      "data_fim": "",
-      "horario": "19h às 20h15",
-      "local": "Centro Cultural do TRT-MG",
-      "cidade": "Belo Horizonte",
-      "categoria": "Música",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "O espetáculo TRAVESSIA, da Cia. Café com Dança, convida o público a embarcar em uma experiência que une dança de salão, teatro, projeções visuais e elementos cênicos contemporâneos em uma narrativa emocionante e sensível. Inspirado no universo da banda de rock britânica The Beatles, a apresentação destaca a quebra de paradigmas e a coragem de construir novos horizontes,",
-      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-09/espetaculo-travessia_instagram-carrossel-08-1.jpg",
-      "link": "https://portalbelohorizonte.com.br/2026/eventos/espetaculo/danca/espetaculo-travessia-cia-cafe-com-danca",
-      "fonte": "Portal Belo Horizonte",
-      "fonte_id": "74819194d736",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "endereco": "Rua da Bahia, 112 - Centro",
-      "tags_fonte": [
-        "Acessibilidade",
-        "Acessível para cadeirantes",
-        "Cultural",
-        "Dança",
-        "Experiências",
-        "Ingressos on-line",
-        "Lançamentos",
-        "Música",
-        "Gratuito"
-      ],
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-07",
-          "observacao": "19h às 20h15"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+do+TRT-MG%2C+Rua+da+Bahia%2C+112+-+Centro%2C+Belo+Horizonte"
+      "inscricao": "Atividade gratuita conforme página oficial do Galpão Cine Horto; consulte a página para retirada de ingressos, inscrição, lotação e público-alvo.",
+      "descricao": "Rua Pitangui, 3613, Horto ✴ 31 3481-5580 ✴ programacao@galpaocinehorto.com.br Programação Pedagógico Cursos Livres Núcleos de Pesquisa Visita Virtual CPMT Centro de Pesquisa e Memória do Teatro (CPMT) Revista Subtexto Acervo Cadernos de Dramaturgia Portal Primeiro Sinal Editais Mais O Galpão Cine Horto Grupo Galpão Conexão Galpão Nossos Espaços Entre em contato programacao@galpaocinehorto.com.br (31) 3481-5580 CONEXÃO GALPÃO Mostra Infâncias Home Galpão Cine Horto Mostra Infâncias Após 27 anos de história, criando e executando projetos longevos e de grande impacto cultural para Belo Horizonte e para o Brasil, o Galpão Cine Horto decide sonhar um projeto totalmente dedicado às infâncias,",
+      "imagem": "",
+      "link": "https://galpaocinehorto.com.br/portfolio/mostra-infancias/",
+      "pagina": "https://galpaocinehorto.com.br/portfolio/mostra-infancias/",
+      "fonte": "Galpão Cine Horto — programação oficial",
+      "instituicao_id": "galpao-cine-horto",
+      "criterio_exibicao": "realizacao",
+      "motivo_publicacao": "gratuidade_explicita",
+      "somente_teste": true,
+      "status_validacao": "experimental",
+      "origem_experimental": "galpao_cine_horto"
     },
     {
       "id": "fcs-wp-37666",
@@ -6556,6 +6346,31 @@
       "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
       "espaco_interno": "Cine Humberto Mauro"
+    },
+    {
+      "id": "aml-gislayne-matos-lanca-contos-para-o-seculo-xxi-e-discute-o-poder-das-historias-no-mundo-contemporaneo-na-aml-2026-10-08",
+      "titulo": "Gislayne Matos lança “Contos para o Século XXI” e discute o poder das histórias no mundo contemporâneo, na AML",
+      "data": "2026-10-08",
+      "data_fim": "",
+      "horario": "19h30",
+      "local": "Academia Mineira de Letras",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua da Bahia, 1466, Lourdes, Belo Horizonte - MG",
+      "categoria": "Exposição",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita conforme programação oficial da Academia Mineira de Letras; consulte a página para orientações de acesso ou inscrição.",
+      "descricao": "Gislayne Matos lança “Contos para o Século XXI” e discute o poder das histórias no mundo contemporâneo, na AML 08/10/2026 🔊 Ouvir o conteúdo Escritora e pesquisadora apresenta palestra gratuita seguida do lançamento do livro, no dia 8 de outubro, às 19h30, na Academia Mineira de Letras, com tradução em Libras Em um mundo de telas, excesso de informação, relações virtuais e pouco tempo para escutar, ainda há espaço para sentar e ouvir uma história? É a partir dessa pergunta que a escritora e pesquisadora Gislayne Matos conduz a palestra “Contos para o Século XXI”, que será realizada no dia 8 de outubro, às 19h30, na Academia Mineira de Letras.",
+      "imagem": "https://academiamineiradeletras.org.br/wp-content/uploads/2026/09/SITE_Gislayne-Matos.jpg",
+      "link": "https://academiamineiradeletras.org.br/eventos/gislayne-matos-lanca-contos-para-o-seculo-xxi-e-discute-o-poder-das-historias-no-mundo-contemporaneo-na-aml/",
+      "pagina": "https://academiamineiradeletras.org.br/eventos/gislayne-matos-lanca-contos-para-o-seculo-xxi-e-discute-o-poder-das-historias-no-mundo-contemporaneo-na-aml/",
+      "fonte": "Academia Mineira de Letras — programação oficial",
+      "instituicao_id": "academia-mineira-de-letras",
+      "criterio_exibicao": "realizacao",
+      "motivo_publicacao": "gratuidade_explicita",
+      "local_id": "academia-mineira-de-letras",
+      "somente_teste": true,
+      "status_validacao": "experimental",
+      "origem_experimental": "academia_mineira_letras"
     },
     {
       "id": "fcs-wp-37664",
@@ -7384,7 +7199,7 @@
       "categoria": "Exposição",
       "gratuito": true,
       "inscricao": "Atividade gratuita conforme programação oficial do MM Gerdau; consulte a página do evento para orientações específicas de acesso, inscrição ou lotação.",
-      "descricao": "Visite Exposições Virtuais Exposições de longa duração Tour Virtual Acervo On-line Visita Presencial Visitas Virtuais Mediadas Exposições temporárias Programe-se Programa CoMciência Exposições temporárias Ações On-line Agenda Educativo Ações Educativas On-line Visitas Virtuais Mediadas Visitas Mediadas Conheça Downloads Encontro entre Educadores O Museu Atravessa a Cidade Explore Aprenda Noticias Publicações O Museu Loja Café Eventos Locação de Espaços (Eventos e Sessão de Fotos) Contato Fale Conosco Trabalhe Conosco Ações Culturais PROGRAMAÇÃO ESPECIAL | SEMANA DAS CRIANÇAS MM Gerdau > Programação > PROGRAMAÇÃO ESPECIAL | SEMANA DAS…",
+      "descricao": "Visite Exposições Virtuais Exposições de longa duração Tour Virtual Acervo On-line Visita Presencial Visitas Virtuais Mediadas Exposições temporárias Programe-se Programa CoMciência Exposições temporárias Ações On-line Agenda Educativo Ações Educativas On-line Visitas Virtuais Mediadas Visitas Mediadas Conheça Downloads Encontro entre Educadores O Museu Atravessa a Cidade Explore Aprenda Noticias Publicações O Museu Loja Café Eventos Locação de Espaços (Eventos e Sessão de Fotos) Contato Fale Conosco Trabalhe Conosco PROGRAMAÇÃO ESPECIAL | SEMANA DAS CRIANÇAS MM Gerdau > Programação > PROGRAMAÇÃO ESPECIAL | SEMANA DAS CRIANÇAS Compartilhe O…",
       "imagem": "",
       "link": "https://mmgerdau.org.br/programacoes/programacao-especial-semana-das-criancas/",
       "fonte": "MM Gerdau — programação oficial",
@@ -9376,7 +9191,7 @@
       "categoria": "Exposição",
       "gratuito": true,
       "inscricao": "Atividade gratuita conforme programação oficial do MM Gerdau; consulte a página do evento para orientações específicas de acesso, inscrição ou lotação.",
-      "descricao": "Visite Exposições Virtuais Exposições de longa duração Tour Virtual Acervo On-line Visita Presencial Visitas Virtuais Mediadas Exposições temporárias Programe-se Programa CoMciência Exposições temporárias Ações On-line Agenda Educativo Ações Educativas On-line Visitas Virtuais Mediadas Visitas Mediadas Conheça Downloads Encontro entre Educadores O Museu Atravessa a Cidade Explore Aprenda Noticias Publicações O Museu Loja Café Eventos Locação de Espaços (Eventos e Sessão de Fotos) Contato Fale Conosco Trabalhe Conosco EXPOSIÇÃO | XI UM OLHAR, UMA LUZ MM Gerdau > Programação > EXPOSIÇÃO | XI UM OLHAR, UMA LUZ Compartilhe Em sua XI edição,",
+      "descricao": "Visite Exposições Virtuais Exposições de longa duração Tour Virtual Acervo On-line Visita Presencial Visitas Virtuais Mediadas Exposições temporárias Programe-se Programa CoMciência Exposições temporárias Ações On-line Agenda Educativo Ações Educativas On-line Visitas Virtuais Mediadas Visitas Mediadas Conheça Downloads Encontro entre Educadores O Museu Atravessa a Cidade Explore Aprenda Noticias Publicações O Museu Loja Café Eventos Locação de Espaços (Eventos e Sessão de Fotos) Contato Fale Conosco Trabalhe Conosco Ações Culturais EXPOSIÇÃO | XI UM OLHAR, UMA LUZ MM Gerdau > Programação > EXPOSIÇÃO | XI UM OLHAR,",
       "imagem": "",
       "link": "https://mmgerdau.org.br/programacoes/exposicao-xi-um-olhar-uma-luz/",
       "fonte": "MM Gerdau — programação oficial",
@@ -10918,6 +10733,6 @@
     }
   ],
   "modo_teste_experimental": true,
-  "eventos_somente_teste": 60,
-  "atualizado_em_teste": "2026-10-07T17:57:23-03:00"
+  "eventos_somente_teste": 63,
+  "atualizado_em_teste": "2026-10-07T23:57:47-03:00"
 }

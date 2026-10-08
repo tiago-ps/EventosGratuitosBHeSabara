@@ -4,8 +4,8 @@
     "concursos.json": 22,
     "configuracao-mural.json": 1,
     "cursos.json": 1909,
-    "espacos_culturais.json": 93,
-    "eventos.json": 267,
+    "espacos_culturais.json": 103,
+    "eventos.json": 262,
     "filmes.json": 1292,
     "livros.json": 46,
     "relacoes-eventos.json": 205,
@@ -16,22 +16,22 @@
     "concursos.json": "e3f9d880e4f551b2f2b8739de8a3d83efd96a3ed8989daca7b5a62b5e20640ec",
     "configuracao-mural.json": "49dfe7115a6f5c6d5b8dee424d3b10341b5e3014ac58a295d27ef4e6043ebfc2",
     "cursos.json": "b20c2dd5e9b5ad86f7ac092d3041f83dafd7d1063db619b5b7e111da6899db72",
-    "espacos_culturais.json": "d9fb6d22a14bc2f9ef6c73e523de261195a68112a4cd966c46484cdcacf03d9e",
-    "eventos.json": "4cedd2e07c1a3a84374fd42836c0ec7ef3af1822a672904e11fd1e6fd1180b17",
+    "espacos_culturais.json": "7646652a5c2b8d7384c9d4fc9da392f74eeed3338d628bfb9ad7666679b9338d",
+    "eventos.json": "d0d403ab8219adb605a0ef32c36e3253cb0d02629e2ae76618c03c5020f5a1cf",
     "filmes.json": "23437099af05856a1a822d1b91c19c9dc93962f073b823189bf8eb96652710af",
-    "livros.json": "16d5653cf0de25a6074744c834a7441faf41c6e8ef6a6cc3ff3bac73ae303fd7",
+    "livros.json": "da685be53ca53b910b222c50e06c30ca63fafa95ec268fea6da77f282e87f1c3",
     "relacoes-eventos.json": "1d5f770dc0cd01df51f279b59304b1146acf2559ffe9b6cddeb9216f26425655",
     "utilidade-publica.json": "cbeed08b0810b7496fd1629875c4d907a91c373905c82e8b05a315cd3a11a2bb"
   },
-  "published_at": "2026-10-07T20:57:23Z",
-  "request_id": "auto-push-37685456796-1",
+  "published_at": "2026-10-08T02:57:47Z",
+  "request_id": "auto-push-37720294642-1",
   "schema_version": "1.0",
   "source_repository": "tiago-ps/ColetorEventosGratuitos",
-  "source_sha": "5382f4142e20aa6b6cb6aa7ff5b51deefac701e5",
+  "source_sha": "29e88e49d314ccd4fc5b8ddbfd608415a5dee4d2",
   "staging_repository": "tiago-ps/EventosGratuitosBHeSabara",
   "versions": {
     "manifest_schema": "1.0",
     "publication_validator": "central-v1"
   },
-  "workflow_run_id": "37685456796"
+  "workflow_run_id": "37720294642"
 }

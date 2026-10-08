@@ -572,6 +572,157 @@
       "link": "https://www.fiemg.com.br/sesi-cultura/biblioteca/"
     },
     {
+      "id": "biblioteca-publica-estadual-mg-anexo",
+      "nome": "Biblioteca Pública Estadual de Minas Gerais — Anexo Professor Francisco Iglésias",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua da Bahia, 1889, Funcionários, Belo Horizonte - MG, 30160-017",
+      "fonte_endereco": "https://www.bibliotecapublica.mg.gov.br/",
+      "google_place_id": "",
+      "instituicao_ids": [
+        "biblioteca-publica-estadual-mg"
+      ],
+      "aliases": [
+        "Anexo Professor Francisco Iglésias",
+        "Prédio Anexo da Biblioteca Pública Estadual",
+        "Biblioteca Pública Estadual - Anexo"
+      ],
+      "mapa": "",
+      "descricao": "Prédio anexo da Biblioteca Pública Estadual de Minas Gerais. Reúne Referência e Estudos, Empréstimo, Espaço Geek, salas de estudo e internet e a Passarela Cultural.",
+      "funcionamento": {
+        "segunda": "9h às 18h",
+        "terca": "9h às 18h",
+        "quarta": "9h às 18h",
+        "quinta": "9h às 18h",
+        "sexta": "9h às 18h",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Horários variam por setor; consultar a programação e o site oficial."
+      },
+      "site": "https://www.bibliotecapublica.mg.gov.br/",
+      "imagem": "",
+      "imagem_fonte": "",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/bibliotecaestadualmg/"
+      },
+      "contatos": {
+        "emails": [],
+        "telefones": []
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Horários",
+          "url": "https://www.bibliotecapublica.mg.gov.br/horario-de-funcionamento/"
+        }
+      ],
+      "tipo_espaco": "Biblioteca pública",
+      "vocacoes": [
+        "Literatura",
+        "Leitura",
+        "Pesquisa",
+        "Estudo",
+        "Cultura",
+        "Quadrinhos",
+        "Jogos"
+      ],
+      "status_editorial": "pronto_para_teste",
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Biblioteca Pública Estadual de Minas Gerais — Anexo Professor Francisco Iglésias",
+      "temas": [
+        "Literatura",
+        "Leitura",
+        "Pesquisa",
+        "Estudo",
+        "Cultura",
+        "Quadrinhos",
+        "Jogos"
+      ],
+      "natureza_espaco": "Biblioteca pública",
+      "instituicao": "Biblioteca Pública Estadual de Minas Gerais",
+      "link": "https://www.bibliotecapublica.mg.gov.br/"
+    },
+    {
+      "id": "biblioteca-publica-estadual-mg",
+      "nome": "Biblioteca Pública Estadual de Minas Gerais — Edifício Luiz de Bessa",
+      "cidade": "Belo Horizonte",
+      "endereco": "Praça da Liberdade, 21, Funcionários, Belo Horizonte - MG, 30140-010",
+      "fonte_endereco": "https://www.bibliotecapublica.mg.gov.br/",
+      "google_place_id": "",
+      "instituicao_ids": [
+        "biblioteca-publica-estadual-mg"
+      ],
+      "aliases": [
+        "Biblioteca Pública Estadual de Minas Gerais",
+        "Edifício Luiz de Bessa",
+        "Biblioteca Luiz de Bessa",
+        "Biblioteca Estadual MG"
+      ],
+      "mapa": "",
+      "descricao": "Prédio sede da Biblioteca Pública Estadual de Minas Gerais na Praça da Liberdade. Reúne setores especializados, a Galeria de Arte Paulo Campos Guimarães, o Teatro José Aparecido de Oliveira, o Setor Infantojuvenil, Braille, Coleções Especiais e Hemeroteca Histórica.",
+      "funcionamento": {
+        "segunda": "8h às 18h",
+        "terca": "8h às 18h",
+        "quarta": "8h às 18h",
+        "quinta": "8h às 18h",
+        "sexta": "8h às 18h",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Horários variam por setor; a Galeria pode abrir aos sábados."
+      },
+      "site": "https://www.bibliotecapublica.mg.gov.br/",
+      "imagem": "",
+      "imagem_fonte": "",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/bibliotecaestadualmg/"
+      },
+      "contatos": {
+        "emails": [],
+        "telefones": []
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Programação",
+          "url": "https://www.bibliotecapublica.mg.gov.br/"
+        },
+        {
+          "rotulo": "Horários",
+          "url": "https://www.bibliotecapublica.mg.gov.br/horario-de-funcionamento/"
+        }
+      ],
+      "tipo_espaco": "Biblioteca pública",
+      "vocacoes": [
+        "Literatura",
+        "Leitura",
+        "Pesquisa",
+        "Memória",
+        "Exposições",
+        "Teatro",
+        "Cultura"
+      ],
+      "status_editorial": "pronto_para_teste",
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Biblioteca Pública Estadual de Minas Gerais — Edifício Luiz de Bessa",
+      "temas": [
+        "Literatura",
+        "Leitura",
+        "Pesquisa",
+        "Memória",
+        "Exposições",
+        "Teatro",
+        "Cultura"
+      ],
+      "natureza_espaco": "Biblioteca pública",
+      "instituicao": "Biblioteca Pública Estadual de Minas Gerais",
+      "link": "https://www.bibliotecapublica.mg.gov.br/"
+    },
+    {
       "id": "biblioteca-publica-infantil-e-juvenil-de-belo-horizonte",
       "nome": "Biblioteca Pública Infantil e Juvenil de Belo Horizonte",
       "cidade": "Belo Horizonte",
@@ -2853,6 +3004,68 @@
       "link": "https://ejef.tjmg.jus.br/"
     },
     {
+      "instituicao_id": "biblioteca-publica-estadual-mg",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem": "",
+      "imagem_fonte": "",
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/bibliotecaestadualmg/"
+      },
+      "contatos": {
+        "emails": [],
+        "telefones": []
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Horários",
+          "url": "https://www.bibliotecapublica.mg.gov.br/horario-de-funcionamento/"
+        }
+      ],
+      "id": "bpemg-espaco-geek",
+      "nome": "Espaço Geek",
+      "equipamento_id": "biblioteca-publica-estadual-mg-anexo",
+      "descricao": "Espaço dedicado a quadrinhos, jogos de tabuleiro e cultura geek, integrado ao acervo e às atividades da Biblioteca Pública Estadual.",
+      "funcionamento": {
+        "segunda": "9h às 18h",
+        "terca": "9h às 18h",
+        "quarta": "9h às 18h",
+        "quinta": "9h às 18h",
+        "sexta": "9h às 18h",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Consultar a programação para encontros e atividades especiais."
+      },
+      "site": "https://www.bibliotecapublica.mg.gov.br/horario-de-funcionamento/",
+      "tipo_espaco": "Espaço de leitura e jogos",
+      "vocacoes": [
+        "Quadrinhos",
+        "Jogos",
+        "Cultura geek",
+        "Leitura",
+        "Formação"
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Espaço Geek",
+      "temas": [
+        "Quadrinhos",
+        "Jogos",
+        "Cultura geek",
+        "Leitura",
+        "Formação"
+      ],
+      "natureza_espaco": "Espaço de leitura e jogos",
+      "espaco_principal": "Biblioteca Pública Estadual de Minas Gerais — Anexo Professor Francisco Iglésias",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua da Bahia, 1889, Funcionários, Belo Horizonte - MG, 30160-017",
+      "mapa": "",
+      "instituicao": "Biblioteca Pública Estadual de Minas Gerais",
+      "link": "https://www.bibliotecapublica.mg.gov.br/horario-de-funcionamento/"
+    },
+    {
       "id": "espaco-conhecimento-ufmg-fachada-digital",
       "nome": "Fachada Digital",
       "equipamento_id": "espaco-conhecimento-ufmg",
@@ -3197,6 +3410,74 @@
       "mapa": "",
       "instituicao": "Galpão Cine Horto",
       "link": "https://galpaocinehorto.com.br/"
+    },
+    {
+      "instituicao_id": "biblioteca-publica-estadual-mg",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem": "",
+      "imagem_fonte": "",
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/bibliotecaestadualmg/"
+      },
+      "contatos": {
+        "emails": [
+          "galeria.biblioteca@secult.mg.gov.br"
+        ],
+        "telefones": []
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Programação",
+          "url": "https://www.bibliotecapublica.mg.gov.br/"
+        },
+        {
+          "rotulo": "Horários",
+          "url": "https://www.bibliotecapublica.mg.gov.br/horario-de-funcionamento/"
+        }
+      ],
+      "id": "bpemg-galeria-paulo-campos-guimaraes",
+      "nome": "Galeria de Arte Paulo Campos Guimarães",
+      "equipamento_id": "biblioteca-publica-estadual-mg",
+      "descricao": "Galeria localizada no foyer do Edifício Luiz de Bessa. Recebe exposições, lançamentos de livros, performances, intervenções culturais e outros eventos.",
+      "funcionamento": {
+        "segunda": "8h às 18h",
+        "terca": "8h às 18h",
+        "quarta": "8h às 18h",
+        "quinta": "8h às 18h",
+        "sexta": "8h às 18h",
+        "sabado": "8h às 18h",
+        "domingo": "",
+        "observacao": "Consultar a programação da Biblioteca."
+      },
+      "site": "https://www.bibliotecapublica.mg.gov.br/galerias-de-arte-biblioteca/",
+      "tipo_espaco": "Galeria",
+      "vocacoes": [
+        "Exposições",
+        "Artes visuais",
+        "Literatura",
+        "Lançamentos",
+        "Performances"
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Galeria de Arte Paulo Campos Guimarães",
+      "temas": [
+        "Exposições",
+        "Artes visuais",
+        "Literatura",
+        "Lançamentos",
+        "Performances"
+      ],
+      "natureza_espaco": "Galeria",
+      "espaco_principal": "Biblioteca Pública Estadual de Minas Gerais — Edifício Luiz de Bessa",
+      "cidade": "Belo Horizonte",
+      "endereco": "Praça da Liberdade, 21, Funcionários, Belo Horizonte - MG, 30140-010",
+      "mapa": "",
+      "instituicao": "Biblioteca Pública Estadual de Minas Gerais",
+      "link": "https://www.bibliotecapublica.mg.gov.br/galerias-de-arte-biblioteca/"
     },
     {
       "id": "centro-cultural-sesiminas-bh-galeria-de-artes",
@@ -3988,6 +4269,72 @@
       "link": "https://www.fiemg.com.br/sesi-cultura/seu-evento-aqui/detalhe/hall-2o-andar-do-museu/"
     },
     {
+      "instituicao_id": "biblioteca-publica-estadual-mg",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem": "",
+      "imagem_fonte": "",
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/bibliotecaestadualmg/"
+      },
+      "contatos": {
+        "emails": [
+          "hemeroteca.biblioteca@secult.mg.gov.br"
+        ],
+        "telefones": []
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Programação",
+          "url": "https://www.bibliotecapublica.mg.gov.br/"
+        },
+        {
+          "rotulo": "Horários",
+          "url": "https://www.bibliotecapublica.mg.gov.br/horario-de-funcionamento/"
+        }
+      ],
+      "id": "bpemg-hemeroteca-historica",
+      "nome": "Hemeroteca Histórica",
+      "equipamento_id": "biblioteca-publica-estadual-mg",
+      "descricao": "Setor de periódicos históricos da Biblioteca Pública Estadual, utilizado para pesquisa, exposições e atividades de memória da imprensa.",
+      "funcionamento": {
+        "segunda": "9h às 17h",
+        "terca": "9h às 17h",
+        "quarta": "9h às 17h",
+        "quinta": "9h às 17h",
+        "sexta": "9h às 17h",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Consulta mediante agendamento."
+      },
+      "site": "https://www.bibliotecapublica.mg.gov.br/horario-de-funcionamento/",
+      "tipo_espaco": "Hemeroteca",
+      "vocacoes": [
+        "Pesquisa",
+        "Memória",
+        "História",
+        "Exposições"
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Hemeroteca Histórica",
+      "temas": [
+        "Pesquisa",
+        "Memória",
+        "História",
+        "Exposições"
+      ],
+      "natureza_espaco": "Hemeroteca",
+      "espaco_principal": "Biblioteca Pública Estadual de Minas Gerais — Edifício Luiz de Bessa",
+      "cidade": "Belo Horizonte",
+      "endereco": "Praça da Liberdade, 21, Funcionários, Belo Horizonte - MG, 30140-010",
+      "mapa": "",
+      "instituicao": "Biblioteca Pública Estadual de Minas Gerais",
+      "link": "https://www.bibliotecapublica.mg.gov.br/horario-de-funcionamento/"
+    },
+    {
       "id": "sesi-mao-jardim-das-energias",
       "nome": "Jardim das Energias",
       "equipamento_id": "sesi-museu-artes-oficios",
@@ -4670,6 +5017,70 @@
       "natureza_espaco": "Complexo cultural",
       "instituicao": "Fundação Clóvis Salgado",
       "link": "https://fcs.mg.gov.br/palacio-das-artes/"
+    },
+    {
+      "instituicao_id": "biblioteca-publica-estadual-mg",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem": "",
+      "imagem_fonte": "",
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/bibliotecaestadualmg/"
+      },
+      "contatos": {
+        "emails": [
+          "galeria.biblioteca@secult.mg.gov.br"
+        ],
+        "telefones": []
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Horários",
+          "url": "https://www.bibliotecapublica.mg.gov.br/horario-de-funcionamento/"
+        }
+      ],
+      "id": "bpemg-passarela-cultural",
+      "nome": "Passarela Cultural",
+      "equipamento_id": "biblioteca-publica-estadual-mg-anexo",
+      "descricao": "Espaço cultural no segundo andar do Anexo Professor Francisco Iglésias, utilizado para exposições, lançamentos de livros e eventos culturais.",
+      "funcionamento": {
+        "segunda": "8h às 18h",
+        "terca": "8h às 18h",
+        "quarta": "8h às 18h",
+        "quinta": "8h às 20h",
+        "sexta": "8h às 18h",
+        "sabado": "8h às 12h",
+        "domingo": "",
+        "observacao": "Consultar a programação da Biblioteca."
+      },
+      "site": "https://www.bibliotecapublica.mg.gov.br/galerias-de-arte-biblioteca/",
+      "tipo_espaco": "Galeria / espaço cultural",
+      "vocacoes": [
+        "Exposições",
+        "Literatura",
+        "Lançamentos",
+        "Artes visuais",
+        "Cultura"
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Passarela Cultural",
+      "temas": [
+        "Exposições",
+        "Literatura",
+        "Lançamentos",
+        "Artes visuais",
+        "Cultura"
+      ],
+      "natureza_espaco": "Galeria / espaço cultural",
+      "espaco_principal": "Biblioteca Pública Estadual de Minas Gerais — Anexo Professor Francisco Iglésias",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua da Bahia, 1889, Funcionários, Belo Horizonte - MG, 30160-017",
+      "mapa": "",
+      "instituicao": "Biblioteca Pública Estadual de Minas Gerais",
+      "link": "https://www.bibliotecapublica.mg.gov.br/galerias-de-arte-biblioteca/"
     },
     {
       "id": "palacio-das-artes-passeio-niemeyer",
@@ -5862,6 +6273,204 @@
       "link": "https://www.fiemg.com.br/sesi-cultura/sesi-museu-de-artes-e-oficios/"
     },
     {
+      "instituicao_id": "biblioteca-publica-estadual-mg",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem": "",
+      "imagem_fonte": "",
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/bibliotecaestadualmg/"
+      },
+      "contatos": {
+        "emails": [],
+        "telefones": []
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Programação",
+          "url": "https://www.bibliotecapublica.mg.gov.br/"
+        },
+        {
+          "rotulo": "Horários",
+          "url": "https://www.bibliotecapublica.mg.gov.br/horario-de-funcionamento/"
+        }
+      ],
+      "id": "bpemg-setor-braille",
+      "nome": "Setor Braille",
+      "equipamento_id": "biblioteca-publica-estadual-mg",
+      "descricao": "Setor dedicado à acessibilidade informacional e à leitura em formatos acessíveis, com acervo e atividades para pessoas com deficiência visual.",
+      "funcionamento": {
+        "segunda": "8h às 17h",
+        "terca": "8h às 17h",
+        "quarta": "8h às 17h",
+        "quinta": "8h às 17h",
+        "sexta": "8h às 17h",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Consultar a programação para atividades especiais."
+      },
+      "site": "https://www.bibliotecapublica.mg.gov.br/horario-de-funcionamento/",
+      "tipo_espaco": "Setor de biblioteca",
+      "vocacoes": [
+        "Acessibilidade",
+        "Leitura",
+        "Literatura",
+        "Formação"
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Setor Braille",
+      "temas": [
+        "Acessibilidade",
+        "Leitura",
+        "Literatura",
+        "Formação"
+      ],
+      "natureza_espaco": "Setor de biblioteca",
+      "espaco_principal": "Biblioteca Pública Estadual de Minas Gerais — Edifício Luiz de Bessa",
+      "cidade": "Belo Horizonte",
+      "endereco": "Praça da Liberdade, 21, Funcionários, Belo Horizonte - MG, 30140-010",
+      "mapa": "",
+      "instituicao": "Biblioteca Pública Estadual de Minas Gerais",
+      "link": "https://www.bibliotecapublica.mg.gov.br/horario-de-funcionamento/"
+    },
+    {
+      "instituicao_id": "biblioteca-publica-estadual-mg",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem": "",
+      "imagem_fonte": "",
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/bibliotecaestadualmg/"
+      },
+      "contatos": {
+        "emails": [
+          "mineiriana.biblioteca@secult.mg.gov.br"
+        ],
+        "telefones": []
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Programação",
+          "url": "https://www.bibliotecapublica.mg.gov.br/"
+        },
+        {
+          "rotulo": "Horários",
+          "url": "https://www.bibliotecapublica.mg.gov.br/horario-de-funcionamento/"
+        }
+      ],
+      "id": "bpemg-colecoes-especiais",
+      "nome": "Setor de Coleções Especiais",
+      "equipamento_id": "biblioteca-publica-estadual-mg",
+      "descricao": "Setor especializado em obras raras e coleções especiais, com atividades de pesquisa, exposições, visitas guiadas e ações de memória.",
+      "funcionamento": {
+        "segunda": "8h às 17h",
+        "terca": "8h às 17h",
+        "quarta": "8h às 17h",
+        "quinta": "8h às 17h",
+        "sexta": "8h às 17h",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Alguns serviços e visitas exigem agendamento."
+      },
+      "site": "https://www.bibliotecapublica.mg.gov.br/horario-de-funcionamento/",
+      "tipo_espaco": "Acervo especial",
+      "vocacoes": [
+        "Memória",
+        "Pesquisa",
+        "Patrimônio",
+        "Visitas guiadas",
+        "Exposições"
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Setor de Coleções Especiais",
+      "temas": [
+        "Memória",
+        "Pesquisa",
+        "Patrimônio",
+        "Visitas guiadas",
+        "Exposições"
+      ],
+      "natureza_espaco": "Acervo especial",
+      "espaco_principal": "Biblioteca Pública Estadual de Minas Gerais — Edifício Luiz de Bessa",
+      "cidade": "Belo Horizonte",
+      "endereco": "Praça da Liberdade, 21, Funcionários, Belo Horizonte - MG, 30140-010",
+      "mapa": "",
+      "instituicao": "Biblioteca Pública Estadual de Minas Gerais",
+      "link": "https://www.bibliotecapublica.mg.gov.br/horario-de-funcionamento/"
+    },
+    {
+      "instituicao_id": "biblioteca-publica-estadual-mg",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem": "",
+      "imagem_fonte": "",
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/bibliotecaestadualmg/"
+      },
+      "contatos": {
+        "emails": [],
+        "telefones": []
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Programação",
+          "url": "https://www.bibliotecapublica.mg.gov.br/"
+        },
+        {
+          "rotulo": "Horários",
+          "url": "https://www.bibliotecapublica.mg.gov.br/horario-de-funcionamento/"
+        }
+      ],
+      "id": "bpemg-setor-infantojuvenil",
+      "nome": "Setor Infantojuvenil",
+      "equipamento_id": "biblioteca-publica-estadual-mg",
+      "descricao": "Setor dedicado a crianças e jovens, com acervo e atividades de incentivo à leitura, contação de histórias, oficinas e programação cultural.",
+      "funcionamento": {
+        "segunda": "8h às 17h",
+        "terca": "8h às 17h",
+        "quarta": "8h às 17h",
+        "quinta": "8h às 17h",
+        "sexta": "8h às 17h",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Consultar a programação para atividades especiais."
+      },
+      "site": "https://www.bibliotecapublica.mg.gov.br/horario-de-funcionamento/",
+      "tipo_espaco": "Setor de biblioteca",
+      "vocacoes": [
+        "Literatura",
+        "Infâncias",
+        "Leitura",
+        "Oficinas",
+        "Contação de histórias"
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Setor Infantojuvenil",
+      "temas": [
+        "Literatura",
+        "Infâncias",
+        "Leitura",
+        "Oficinas",
+        "Contação de histórias"
+      ],
+      "natureza_espaco": "Setor de biblioteca",
+      "espaco_principal": "Biblioteca Pública Estadual de Minas Gerais — Edifício Luiz de Bessa",
+      "cidade": "Belo Horizonte",
+      "endereco": "Praça da Liberdade, 21, Funcionários, Belo Horizonte - MG, 30140-010",
+      "mapa": "",
+      "instituicao": "Biblioteca Pública Estadual de Minas Gerais",
+      "link": "https://www.bibliotecapublica.mg.gov.br/horario-de-funcionamento/"
+    },
+    {
       "aliases": [
         "Solar Padre Correia"
       ],
@@ -6146,6 +6755,72 @@
       "mapa": "https://maps.app.goo.gl/Q6UrZGKEn8eCx8Kb8",
       "instituicao": "Centro Cultural Banco do Brasil Belo Horizonte",
       "link": "https://ccbb.com.br/belo-horizonte/programacao/"
+    },
+    {
+      "instituicao_id": "biblioteca-publica-estadual-mg",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem": "",
+      "imagem_fonte": "",
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/bibliotecaestadualmg/"
+      },
+      "contatos": {
+        "emails": [],
+        "telefones": []
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Programação",
+          "url": "https://www.bibliotecapublica.mg.gov.br/"
+        },
+        {
+          "rotulo": "Horários",
+          "url": "https://www.bibliotecapublica.mg.gov.br/horario-de-funcionamento/"
+        }
+      ],
+      "id": "bpemg-teatro-jose-aparecido",
+      "nome": "Teatro José Aparecido de Oliveira",
+      "equipamento_id": "biblioteca-publica-estadual-mg",
+      "descricao": "Teatro da Biblioteca Pública Estadual, utilizado para espetáculos, concertos, palestras, encontros literários e outras ações culturais.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Funcionamento conforme a programação cultural."
+      },
+      "site": "https://www.bibliotecapublica.mg.gov.br/horario-de-funcionamento/",
+      "tipo_espaco": "Teatro",
+      "vocacoes": [
+        "Teatro",
+        "Música",
+        "Literatura",
+        "Palestras",
+        "Cultura"
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Teatro José Aparecido de Oliveira",
+      "temas": [
+        "Teatro",
+        "Música",
+        "Literatura",
+        "Palestras",
+        "Cultura"
+      ],
+      "natureza_espaco": "Teatro",
+      "espaco_principal": "Biblioteca Pública Estadual de Minas Gerais — Edifício Luiz de Bessa",
+      "cidade": "Belo Horizonte",
+      "endereco": "Praça da Liberdade, 21, Funcionários, Belo Horizonte - MG, 30140-010",
+      "mapa": "",
+      "instituicao": "Biblioteca Pública Estadual de Minas Gerais",
+      "link": "https://www.bibliotecapublica.mg.gov.br/horario-de-funcionamento/"
     },
     {
       "id": "palacio-das-artes-teatro-joao-ceschiatti",
