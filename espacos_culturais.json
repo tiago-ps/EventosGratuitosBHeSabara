@@ -859,7 +859,7 @@
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
       "prioridade": 0,
-      "imagem": "",
+      "imagem": "imagens/equipamentos/centro-cultural-unimed-bh-minas.png",
       "imagem_fonte": "",
       "status_editorial": "pronto_para_teste",
       "redes_sociais": {
@@ -1267,7 +1267,7 @@
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
       "prioridade": 0,
-      "imagem": "",
+      "imagem": "imagens/equipamentos/centro-cultural-unimed-bh-minas.png",
       "imagem_fonte": "",
       "status_editorial": "pronto_para_teste",
       "redes_sociais": {
@@ -2439,10 +2439,10 @@
         "observacao": "Os equipamentos internos podem ter horários próprios conforme a programação."
       },
       "site": "https://minastenisclube.com.br/cultura/",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/centro-cultural-unimed-bh-minas.png",
       "imagem_fonte": "",
       "exibicao_ativa": true,
-      "exibicao_recorrente": false,
+      "exibicao_recorrente": true,
       "prioridade": 0,
       "redes_sociais": {
         "instagram": "https://www.instagram.com/minastenisclube/"
@@ -2467,7 +2467,7 @@
         "Memória",
         "Formação"
       ],
-      "status_editorial": "pronto_para_teste",
+      "status_editorial": "em_analise",
       "tipo": "equipamento",
       "tipo_conteudo": "espaco",
       "titulo": "Centro Cultural Unimed-BH Minas",
@@ -3106,7 +3106,7 @@
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
       "prioridade": 0,
-      "imagem": "",
+      "imagem": "imagens/equipamentos/centro-cultural-unimed-bh-minas.png",
       "imagem_fonte": "",
       "status_editorial": "pronto_para_teste",
       "redes_sociais": {
@@ -3548,7 +3548,7 @@
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
       "prioridade": 0,
-      "imagem": "",
+      "imagem": "imagens/equipamentos/centro-cultural-unimed-bh-minas.png",
       "imagem_fonte": "",
       "status_editorial": "pronto_para_teste",
       "redes_sociais": {
@@ -4664,7 +4664,7 @@
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
       "prioridade": 0,
-      "imagem": "",
+      "imagem": "imagens/equipamentos/centro-cultural-unimed-bh-minas.png",
       "imagem_fonte": "",
       "status_editorial": "pronto_para_teste",
       "redes_sociais": {
@@ -8155,7 +8155,7 @@
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
       "prioridade": 0,
-      "imagem": "",
+      "imagem": "imagens/equipamentos/centro-cultural-unimed-bh-minas.png",
       "imagem_fonte": "",
       "status_editorial": "pronto_para_teste",
       "redes_sociais": {
@@ -9224,7 +9224,7 @@
       "exibicao_ativa": true,
       "exibicao_recorrente": false,
       "prioridade": 0,
-      "imagem": "",
+      "imagem": "imagens/equipamentos/centro-cultural-unimed-bh-minas.png",
       "imagem_fonte": "",
       "status_editorial": "pronto_para_teste",
       "redes_sociais": {
