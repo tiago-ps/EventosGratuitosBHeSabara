@@ -5804,6 +5804,72 @@
       "link": "https://minascentro.bhz.br/"
     },
     {
+      "equipamento_id": "conservatorio-ufmg",
+      "instituicao_id": "conservatorio-ufmg",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem": "",
+      "imagem_fonte": "",
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {},
+      "contatos": {
+        "emails": [
+          "comunica@conservatorio.ufmg.br"
+        ],
+        "telefones": [
+          "(31) 3409-8300"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Site oficial",
+          "url": "https://www.ufmg.br/conservatorio/"
+        },
+        {
+          "rotulo": "Agenda mensal",
+          "url": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html"
+        }
+      ],
+      "id": "conservatorio-ufmg-miniauditorio",
+      "nome": "Miniauditório do Conservatório UFMG",
+      "descricao": "Espaço de menor capacidade utilizado para recitais, palestras, encontros, aulas abertas e atividades acadêmicas e culturais.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Uso conforme programação."
+      },
+      "site": "https://www.ufmg.br/conservatorio/",
+      "tipo_espaco": "Auditório",
+      "vocacoes": [
+        "Música",
+        "Palestras",
+        "Encontros",
+        "Formação"
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Miniauditório do Conservatório UFMG",
+      "temas": [
+        "Música",
+        "Palestras",
+        "Encontros",
+        "Formação"
+      ],
+      "natureza_espaco": "Auditório",
+      "espaco_principal": "Conservatório UFMG",
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida Afonso Pena, 1534, Centro, Belo Horizonte - MG",
+      "mapa": "",
+      "instituicao": "Conservatório UFMG",
+      "link": "https://www.ufmg.br/conservatorio/"
+    },
+    {
       "id": "mm-gerdau",
       "nome": "MM Gerdau – Museu das Minas e do Metal",
       "cidade": "Belo Horizonte",
@@ -6452,6 +6518,72 @@
       "link": "https://www.ufmg.br/espacodoconhecimento/planetario/"
     },
     {
+      "equipamento_id": "conservatorio-ufmg",
+      "instituicao_id": "conservatorio-ufmg",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem": "",
+      "imagem_fonte": "",
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {},
+      "contatos": {
+        "emails": [
+          "comunica@conservatorio.ufmg.br"
+        ],
+        "telefones": [
+          "(31) 3409-8300"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Site oficial",
+          "url": "https://www.ufmg.br/conservatorio/"
+        },
+        {
+          "rotulo": "Agenda mensal",
+          "url": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html"
+        }
+      ],
+      "id": "conservatorio-ufmg-praca-coberta",
+      "nome": "Praça Coberta do Conservatório UFMG",
+      "descricao": "Espaço coberto de convivência do Conservatório UFMG que pode receber ações culturais, apresentações e atividades acadêmicas.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Uso conforme programação."
+      },
+      "site": "https://www.ufmg.br/conservatorio/",
+      "tipo_espaco": "Espaço multiuso",
+      "vocacoes": [
+        "Música",
+        "Apresentações",
+        "Convivência",
+        "Eventos"
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Praça Coberta do Conservatório UFMG",
+      "temas": [
+        "Música",
+        "Apresentações",
+        "Convivência",
+        "Eventos"
+      ],
+      "natureza_espaco": "Espaço multiuso",
+      "espaco_principal": "Conservatório UFMG",
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida Afonso Pena, 1534, Centro, Belo Horizonte - MG",
+      "mapa": "",
+      "instituicao": "Conservatório UFMG",
+      "link": "https://www.ufmg.br/conservatorio/"
+    },
+    {
       "id": "mm-gerdau-praca-convivencia",
       "nome": "Praça de Convivência",
       "equipamento_id": "mm-gerdau",
@@ -6654,6 +6786,70 @@
       "mapa": "",
       "instituicao": "Centro Cultural UFMG",
       "link": "https://www.ufmg.br/centrocultural/"
+    },
+    {
+      "equipamento_id": "conservatorio-ufmg",
+      "instituicao_id": "conservatorio-ufmg",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem": "",
+      "imagem_fonte": "",
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {},
+      "contatos": {
+        "emails": [
+          "comunica@conservatorio.ufmg.br"
+        ],
+        "telefones": [
+          "(31) 3409-8300"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Site oficial",
+          "url": "https://www.ufmg.br/conservatorio/"
+        },
+        {
+          "rotulo": "Agenda mensal",
+          "url": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html"
+        }
+      ],
+      "id": "conservatorio-ufmg-patio-interno",
+      "nome": "Pátio Interno do Conservatório UFMG",
+      "descricao": "Pátio interno do edifício histórico, utilizado em apresentações, encontros e atividades culturais.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Uso conforme programação."
+      },
+      "site": "https://www.ufmg.br/conservatorio/",
+      "tipo_espaco": "Pátio cultural",
+      "vocacoes": [
+        "Música",
+        "Apresentações",
+        "Encontros"
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Pátio Interno do Conservatório UFMG",
+      "temas": [
+        "Música",
+        "Apresentações",
+        "Encontros"
+      ],
+      "natureza_espaco": "Pátio cultural",
+      "espaco_principal": "Conservatório UFMG",
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida Afonso Pena, 1534, Centro, Belo Horizonte - MG",
+      "mapa": "",
+      "instituicao": "Conservatório UFMG",
+      "link": "https://www.ufmg.br/conservatorio/"
     },
     {
       "id": "galpao-cine-horto-sala-1",
@@ -7051,6 +7247,72 @@
       "mapa": "",
       "instituicao": "Galpão Cine Horto",
       "link": "https://galpaocinehorto.com.br/o-galpao-cine-horto/"
+    },
+    {
+      "equipamento_id": "conservatorio-ufmg",
+      "instituicao_id": "conservatorio-ufmg",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem": "",
+      "imagem_fonte": "",
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {},
+      "contatos": {
+        "emails": [
+          "comunica@conservatorio.ufmg.br"
+        ],
+        "telefones": [
+          "(31) 3409-8300"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Site oficial",
+          "url": "https://www.ufmg.br/conservatorio/"
+        },
+        {
+          "rotulo": "Agenda mensal",
+          "url": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html"
+        }
+      ],
+      "id": "conservatorio-ufmg-sala-concertos",
+      "nome": "Sala de Concertos do Conservatório UFMG",
+      "descricao": "Sala principal de concertos do Conservatório UFMG, utilizada pela programação musical gratuita, recitais, apresentações e eventos acadêmicos e culturais.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Uso conforme programação."
+      },
+      "site": "https://www.ufmg.br/conservatorio/",
+      "tipo_espaco": "Sala de concertos",
+      "vocacoes": [
+        "Música",
+        "Concertos",
+        "Recitais",
+        "Eventos acadêmicos"
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Sala de Concertos do Conservatório UFMG",
+      "temas": [
+        "Música",
+        "Concertos",
+        "Recitais",
+        "Eventos acadêmicos"
+      ],
+      "natureza_espaco": "Sala de concertos",
+      "espaco_principal": "Conservatório UFMG",
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida Afonso Pena, 1534, Centro, Belo Horizonte - MG",
+      "mapa": "",
+      "instituicao": "Conservatório UFMG",
+      "link": "https://www.ufmg.br/conservatorio/"
     },
     {
       "id": "palacio-das-artes-sala-juvenal-dias",
@@ -7540,6 +7802,74 @@
       "mapa": "",
       "instituicao": "Fundação de Educação Artística",
       "link": "https://feabh.org.br/faca-seu-evento-aqui/"
+    },
+    {
+      "equipamento_id": "conservatorio-ufmg",
+      "instituicao_id": "conservatorio-ufmg",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "imagem": "",
+      "imagem_fonte": "",
+      "status_editorial": "pronto_para_teste",
+      "redes_sociais": {},
+      "contatos": {
+        "emails": [
+          "comunica@conservatorio.ufmg.br"
+        ],
+        "telefones": [
+          "(31) 3409-8300"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Site oficial",
+          "url": "https://www.ufmg.br/conservatorio/"
+        },
+        {
+          "rotulo": "Agenda mensal",
+          "url": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html"
+        }
+      ],
+      "id": "conservatorio-ufmg-salas-aula",
+      "nome": "Salas de Aula do Conservatório UFMG",
+      "descricao": "Conjunto de salas utilizadas em cursos, oficinas, ensaios, masterclasses e atividades de formação musical.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Uso conforme atividades pedagógicas e programação."
+      },
+      "site": "https://www.ufmg.br/conservatorio/",
+      "tipo_espaco": "Salas de aula",
+      "vocacoes": [
+        "Formação",
+        "Música",
+        "Oficinas",
+        "Masterclasses",
+        "Ensaios"
+      ],
+      "tipo": "espaco",
+      "tipo_conteudo": "espaco",
+      "titulo": "Salas de Aula do Conservatório UFMG",
+      "temas": [
+        "Formação",
+        "Música",
+        "Oficinas",
+        "Masterclasses",
+        "Ensaios"
+      ],
+      "natureza_espaco": "Salas de aula",
+      "espaco_principal": "Conservatório UFMG",
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida Afonso Pena, 1534, Centro, Belo Horizonte - MG",
+      "mapa": "",
+      "instituicao": "Conservatório UFMG",
+      "link": "https://www.ufmg.br/conservatorio/"
     },
     {
       "id": "sesi-mao-salas-exposicao",
