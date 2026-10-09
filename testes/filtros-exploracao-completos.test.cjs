@@ -162,7 +162,7 @@ assert.ok(appSource.includes('state.mobileTheme'));
 
 // Cache e HTML precisam apontar para os mesmos assets novos.
 for (const asset of [
-  'css/styles.css?v=108',
+  'css/styles.css?v=109',
   'js/conteudos/cursos.js?v=6',
   'js/conteudos/concursos.js?v=5',
   'js/conteudos/filmes.js?v=11',
@@ -170,12 +170,12 @@ for (const asset of [
   'js/conteudos/espacos.js?v=5',
   'js/conteudos/atividades-lazer.js?v=6',
   'js/temporalidade-eventos.js?v=1',
-  'js/app.js?v=163'
+  'js/app.js?v=164'
 ]) {
   assert.ok(indexSource.includes(asset), `Asset ausente do index: ${asset}`);
   assert.ok(swSource.includes(`./${asset}`), `Asset ausente do service worker: ${asset}`);
 }
-assert.ok(swSource.includes('mural-cultural-v206-ela-e-acoes-interativas'));
+assert.ok(swSource.includes('mural-cultural-v207-acoes-apenas-interativo-exploracao'));
 
 // Situação editorial dos Eventos: delimitação exclusiva aos itens do TESTE.
 const eventCatalog = JSON.parse(fs.readFileSync(path.join(root, 'eventos.json'), 'utf8'));
@@ -248,7 +248,7 @@ assert.ok(appSource.includes('if (specific && !agendaHasSpecificEventFilters())'
 assert.ok(appSource.includes('return orderAgendaEventsForExploration(visible);'));
 
 // Modo Interativo: estrela sincronizada com favoritos da Exploração e link de 1 item.
-assert.ok(appSource.includes("if (state.viewMode !== 'painel') return;"),
+assert.ok(appSource.includes("document.documentElement.dataset.panelExperience !== 'interativo'"),
   'Modo Automático não deve receber as ações sobre a imagem.');
 assert.ok(appSource.includes("app.querySelector('.slide .media')"));
 assert.ok(appSource.includes('attachInteractiveSlideActions(item);'));
@@ -275,3 +275,64 @@ const singleUrl = new URL(singleContext.muralItemUrl({ tipo_conteudo: 'evento', 
 assert.equal(singleUrl.searchParams.get('modo'), 'agenda');
 assert.equal(singleUrl.searchParams.get('item'), 'evento:teste-1');
 assert.equal(singleUrl.searchParams.has('selecao'), false);
+
+ 
+// Testa a diferença real de experiência: ambos são Painel, mas só interativo
+// admite botões. No passivo, nem se consulta o local de inserção dos botões.
+const panelStart = appSource.indexOf('function attachInteractiveSlideActions(');
+const panelEnd = appSource.indexOf('async function sharePanelItem(',panelStart);
+assert.ok(panelStart > 0 && panelEnd > panelStart);
+let panelSearches = 0;
+const contextModes = vm.createContext({
+  state: {viewMode:'painel'},
+  document: {documentElement:{dataset:{panelExperience:'passivo'}}},
+  app: {querySelector(){panelSearches++;return null;}},
+  agendaFavoriteId: ()=> 'evento:exemplo'
+});
+vm.runInContext(appSource.slice(panelStart,panelEnd),contextModes);
+contextModes.attachInteractiveSlideActions({tipo_conteudo:'evento',id:'exemplo'});
+assert.equal(panelSearches,0,'Painel Automático não pode criar os botões.');
+contextModes.document.documentElement.dataset.panelExperience='interativo';
+contextModes.attachInteractiveSlideActions({tipo_conteudo:'evento',id:'exemplo'});
+assert.equal(panelSearches,1,'Painel Interativo deve poder criar os botões.');
+
+// Na Exploração, o botão Compartilhar deve ficar junto da estrela e
+// enviar exatamente o item selecionado, sem alterar a lista de favoritos.
+const decorateStart = appSource.indexOf('function decorateAgendaFavorite(');
+const decorateEnd = appSource.indexOf('function renderAgendaCard(',decorateStart);
+assert.ok(decorateStart > 0 && decorateEnd > decorateStart);
+const created = [];
+const selectedItem = {id:'exemplo',tipo_conteudo:'evento',titulo:'Exemplo'};
+let shared = null;
+const favoritesSaved = new Set();
+const agendaCtx = vm.createContext({
+  state:{curationMode:true,mobileFavoritesOnly:false},
+  document:{createElement(tag){
+    const node={
+      tag, className:'',dataset:{},attrs:{},listeners:{},
+      setAttribute(k,v){this.attrs[k]=v;},
+      addEventListener(k,fn){this.listeners[k]=fn;},
+      classList:{toggle(){}}
+    };
+    created.push(node);return node;
+  }},
+  agendaFavoriteId:item=>item.tipo_conteudo+':'+item.id,
+  loadAgendaFavorites:()=>new Set(favoritesSaved),
+  saveAgendaFavorites:favs=>{favoritesSaved.clear();for(const id of favs)favoritesSaved.add(id);},
+  sharePanelItem:item=>{shared=item;}
+});
+vm.runInContext(appSource.slice(decorateStart,decorateEnd),agendaCtx);
+const card={dataset:{},elements:[],append(...items){this.elements.push(...items);}};
+agendaCtx.decorateAgendaFavorite(card,selectedItem);
+assert.equal(card.elements.length,2,'Exploração deve ter dois botões sobre a imagem.');
+assert.ok(card.elements[0].className.includes('agenda-share-item-button'));
+assert.ok(card.elements[1].className.includes('agenda-favorite-button'));
+const evt={preventDefault(){},stopPropagation(){}};
+card.elements[0].listeners.click(evt);
+assert.equal(shared,selectedItem,'Compartilhar deve usar o item do card.');
+card.elements[1].listeners.click(evt);
+assert.ok(favoritesSaved.has('evento:exemplo'),'Favoritos devem usar a mesma lista.');
+const stylesSource=fs.readFileSync(path.join(root,'css/styles.css'),'utf8');
+assert.ok(stylesSource.includes('html[data-panel-experience="passivo"] body.panel-mode .panel-item-actions'));
+assert.ok(stylesSource.includes('body.agenda-mode .agenda-card .agenda-share-item-button'));
+console.log('Visibilidade dos botões e compartilhamento individual: validados.');
