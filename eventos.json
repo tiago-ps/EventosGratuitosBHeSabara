@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Março de 2026 a Junho de 2027",
-  "atualizado_em": "2026-10-08T23:07:38-03:00",
+  "atualizado_em": "2026-10-08T23:11:17-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -6758,31 +6758,6 @@
       "imagem_fallback_origem": "equipamento"
     },
     {
-      "id": "mhnjb-ufmg-tafonogame-2026-10-10-14h20-as-16h",
-      "titulo": "Tafonogame",
-      "data": "2026-10-10",
-      "data_fim": "",
-      "horario": "14h20 às 16h",
-      "local": "Praça Pau-Brasil do MHNJB",
-      "local_id": "mhnjb-ufmg-praca-pau-brasil",
-      "cidade": "Belo Horizonte",
-      "endereco": "Rua Gustavo da Silveira, 1035, Santa Inês, Belo Horizonte - MG",
-      "categoria": "Ciência e cultura",
-      "gratuito": true,
-      "inscricao": "Atividade gratuita. A programação oficial informa que não é necessária inscrição prévia, mas as vagas são limitadas e preenchidas conforme disponibilidade.",
-      "descricao": "Principais processos da tafonomia, mostrando como os organismos se transformam em fósseis. Praça do Pau-Brasil atrás do Setor Educativo. 5 crianças / vez.",
-      "imagem": "",
-      "link": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
-      "pagina": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
-      "fonte": "MHNJB UFMG — programação oficial",
-      "instituicao_id": "mhnjb-ufmg",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "gratuidade_global_explicita",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "mhnjb_ufmg"
-    },
-    {
       "id": "casa-fiat-atelie-aberto-paisagem-construida-2026-10-10-15",
       "titulo": "Ateliê Aberto | Paisagem construída",
       "data": "2026-10-10",
@@ -8581,31 +8556,6 @@
       "imagem_fallback_origem": "equipamento"
     },
     {
-      "id": "mhnjb-ufmg-vamos-brincar-de-quebra-cabecas-2026-10-16-09h-as-10h",
-      "titulo": "Vamos brincar de quebra cabeças?",
-      "data": "2026-10-16",
-      "data_fim": "",
-      "horario": "09h às 10h",
-      "local": "Biblioteca do MHNJB",
-      "local_id": "mhnjb-ufmg-biblioteca",
-      "cidade": "Belo Horizonte",
-      "endereco": "Rua Gustavo da Silveira, 1035, Santa Inês, Belo Horizonte - MG",
-      "categoria": "Oficina",
-      "gratuito": true,
-      "inscricao": "Atividade gratuita. A programação oficial informa que não é necessária inscrição prévia, mas as vagas são limitadas e preenchidas conforme disponibilidade.",
-      "descricao": "Oficina de montagem e construção de quebra-cabeças Hall da Biblioteca. 10 vagas.",
-      "imagem": "",
-      "link": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
-      "pagina": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
-      "fonte": "MHNJB UFMG — programação oficial",
-      "instituicao_id": "mhnjb-ufmg",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "gratuidade_global_explicita",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "mhnjb_ufmg"
-    },
-    {
       "id": "casa-fiat-oficina-especial-bichos-imaginarios-bicho-arame-2026-10-16-10",
       "titulo": "Oficina Especial | Bichos imaginários: bicho-arame",
       "data": "2026-10-16",
@@ -9004,31 +8954,6 @@
       "imagem_fallback_origem": "equipamento"
     },
     {
-      "id": "mhnjb-ufmg-oficina-de-brinquedos-e-brincadeiras-2026-10-17-09h-as-11h",
-      "titulo": "Oficina de brinquedos e brincadeiras",
-      "data": "2026-10-17",
-      "data_fim": "",
-      "horario": "09h às 11h",
-      "local": "Praça Pau-Brasil do MHNJB",
-      "local_id": "mhnjb-ufmg-praca-pau-brasil",
-      "cidade": "Belo Horizonte",
-      "endereco": "Rua Gustavo da Silveira, 1035, Santa Inês, Belo Horizonte - MG",
-      "categoria": "Oficina",
-      "gratuito": true,
-      "inscricao": "Atividade gratuita. A programação oficial informa que não é necessária inscrição prévia, mas as vagas são limitadas e preenchidas conforme disponibilidade.",
-      "descricao": "Propõe a construção de brinquedos pelas próprias crianças a partir de materiais reutilizáveis e de fácil acesso, estimulando a criatividade, a imaginação e a valorização do brincar como prática cultural e educativa. Praça do Pau-Brasil atrás do Setor Educativo. 20 vagas/sessão.",
-      "imagem": "",
-      "link": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
-      "pagina": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
-      "fonte": "MHNJB UFMG — programação oficial",
-      "instituicao_id": "mhnjb-ufmg",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "gratuidade_global_explicita",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "mhnjb_ufmg"
-    },
-    {
       "id": "mhnjb-ufmg-nem-planta-nem-sujeira-o-mundo-das-algas-e-cianobacterias-2026-10-17-09h30-as-12h",
       "titulo": "Nem planta, nem sujeira: o mundo das algas e cianobactérias",
       "data": "2026-10-17",
@@ -9200,31 +9125,6 @@
         "mhnjb-ufmg-tafonogame-2026-10-17-10h30-as-12h"
       ],
       "imagem_fallback_origem": "equipamento"
-    },
-    {
-      "id": "mhnjb-ufmg-tafonogame-2026-10-17-10h30-as-12h",
-      "titulo": "Tafonogame",
-      "data": "2026-10-17",
-      "data_fim": "",
-      "horario": "10h30 às 12h",
-      "local": "Praça Pau-Brasil do MHNJB",
-      "local_id": "mhnjb-ufmg-praca-pau-brasil",
-      "cidade": "Belo Horizonte",
-      "endereco": "Rua Gustavo da Silveira, 1035, Santa Inês, Belo Horizonte - MG",
-      "categoria": "Ciência e cultura",
-      "gratuito": true,
-      "inscricao": "Atividade gratuita. A programação oficial informa que não é necessária inscrição prévia, mas as vagas são limitadas e preenchidas conforme disponibilidade.",
-      "descricao": "Principais processos da tafonomia, mostrando como os organismos se transformam em fósseis. Praça do Pau-Brasil atrás do Setor Educativo. 5 crianças / vez.",
-      "imagem": "",
-      "link": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
-      "pagina": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
-      "fonte": "MHNJB UFMG — programação oficial",
-      "instituicao_id": "mhnjb-ufmg",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "gratuidade_global_explicita",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "mhnjb_ufmg"
     },
     {
       "id": "mm-gerdau-14-encontro-de-colecionadores-de-minerais-2026-10-17",
@@ -12516,6 +12416,6 @@
     }
   ],
   "modo_teste_experimental": true,
-  "eventos_somente_teste": 4,
-  "atualizado_em_teste": "2026-10-08T23:08:01-03:00"
+  "eventos_somente_teste": 0,
+  "atualizado_em_teste": "2026-10-08T23:11:46-03:00"
 }
