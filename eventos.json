@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Março de 2026 a Junho de 2027",
-  "atualizado_em": "2026-10-08T23:18:28-03:00",
+  "atualizado_em": "2026-10-09T03:29:27-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -5653,7 +5653,7 @@
       "cidade": "Belo Horizonte",
       "categoria": "Exposição",
       "gratuito": true,
-      "inscricao": "Inscrição necessária; consulte a página oficial",
+      "inscricao": "Retirada gratuita de ingresso; consulte a página oficial",
       "descricao": "Entre os dias 1º de julho e 12 de outubro , o CCBB BH recebe a exposição inédita “ Asa de Papel – Marcelo Xavier”, que convida o público a mergulhar no universo do multiartista mineiro por meio de instalações imersivas, obras originais,",
       "imagem": "https://ccbbstg.blob.core.windows.net/site-2025/2026/06/Asa-papel-scaled.png",
       "link": "https://ccbb.com.br/belo-horizonte/programacao/marcelo-xavier-asa-de-papel/",
@@ -6211,6 +6211,37 @@
       "imagem_fallback_origem": "equipamento"
     },
     {
+      "id": "fcs-wp-37665",
+      "titulo": "Retrospectiva Hector Babenco",
+      "data": "2026-10-09",
+      "data_fim": "2026-10-18",
+      "horario": "",
+      "local": "Cine Humberto Mauro",
+      "cidade": "Belo Horizonte",
+      "categoria": "Cinema",
+      "gratuito": true,
+      "inscricao": "Ingresso gratuito; consulte a página oficial",
+      "descricao": "Cruzando trajetórias marginalizadas, cenários de extrema tensão e múltiplas linguagens do cinema, Hector Babenco (1946-2016) construiu uma filmografia que ocupa um lugar particular na história do cinema brasileiro. Esse percurso será revisitado entre os dias 9 e 18 de outubro, no Cine Humberto Mauro,",
+      "imagem": "https://fcs.mg.gov.br/wp-content/uploads/2026/09/hector-card-1024x1024.png",
+      "link": "https://fcs.mg.gov.br/evento/retrospectiva-hector-babenco/",
+      "fonte": "Fundação Clóvis Salgado",
+      "instituicao_id": "fcs",
+      "fonte_id": 37665,
+      "atualizado_na_fonte": "2026-10-07T20:41:29",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-10-09",
+          "fim": "2026-10-18"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "palacio-das-artes",
+      "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
+      "espaco_interno": "Cine Humberto Mauro"
+    },
+    {
       "id": "fcs-wp-37664",
       "titulo": "Sessão da meia-noite especial | Shadowcast The Rocky Horror Picture Show",
       "data": "2026-10-09",
@@ -6569,16 +6600,16 @@
       "horario": "10h às 17h",
       "local": "Palácio das Artes",
       "cidade": "Belo Horizonte",
-      "categoria": "Música",
+      "categoria": "Dança",
       "gratuito": true,
       "inscricao": "Ingresso gratuito; consulte a página oficial",
-      "descricao": "Palco Aberto é um espaço criado especialmente pelo Cefart para receber artistas, grupos musicais, bailarinos, atores, poetas, DJ’s, tecnologias da cena e muito mais. O projeto acolhe apresentações de estudantes do Centro de Formação Artística e Tecnológica (Cefart) e artistas convidados.",
+      "descricao": "O Centro de Formação Artística e Tecnológica (CEFART) da Fundação Clóvis Salgado (FCS) apresenta mais uma edição do projeto “Palco Aberto – Dia do Pequeno Artista”. Com música, apresentações teatrais, dança, oficinas, feira de troca de livros, contação de história e outras expressões artísticas,",
       "imagem": "https://fcs.mg.gov.br/wp-content/uploads/2026/09/Palco-Aberto-Card-1024x1024.png",
       "link": "https://fcs.mg.gov.br/evento/palco-aberto-dia-do-pequeno-artista/",
       "fonte": "Fundação Clóvis Salgado",
       "instituicao_id": "fcs",
       "fonte_id": 37720,
-      "atualizado_na_fonte": "2026-09-30T21:21:06",
+      "atualizado_na_fonte": "2026-10-07T19:30:00",
       "temporalidade": {
         "classe": "pontual",
         "realizacao": {
@@ -7707,6 +7738,36 @@
       },
       "mapa": "https://www.google.com/maps/search/?api=1&query=Conservat%C3%B3rio+UFMG%2C+Avenida+Afonso+Pena%2C+1534%2C+Centro%2C+Belo+Horizonte+-+MG",
       "imagem_fallback_origem": "equipamento"
+    },
+    {
+      "id": "cine-santa-tereza-bileto-128358",
+      "titulo": "LANÇAMENTO - Espinhenta",
+      "data": "2026-10-13",
+      "data_fim": "",
+      "horario": "20h",
+      "local": "Cine Santa Tereza",
+      "cidade": "Belo Horizonte",
+      "categoria": "Cinema",
+      "gratuito": true,
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "descricao": "Espinhenta (Gabriela Borborema de Filippo | Brasil | 2026 |História de amadurecimento | 20 min) Hoje Laurinha vai se depilar pela primeira vez. Classificação indicativa: Livre. Sessão comentada",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/gt6692io1i7f0lgv778fnj38jrv6ajhh0cq5vpfqmh80eg4j9eit5cco2416bithmv6krrr7s7l189fp5e77sec5he3v7stlbe0cmf.webp",
+      "link": "https://bileto.sympla.com.br/event/128358/d/420534/s/2724890",
+      "fonte": "Cine Santa Tereza",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "fonte_id": "128358",
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "classificacao_indicativa": "Livre",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-13",
+          "observacao": "20h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
     {
       "id": "mhnjb-ufmg-beezita-trilha-das-abelhas-nativas-sem-ferrao-2026-10-14-09h-as-10h",
@@ -10148,36 +10209,6 @@
       "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
-      "id": "sesc-palladium-bileto-124738",
-      "titulo": "MOSTRA RAY HARRYHAUSEN – O MESTRE DO CINEMA STOP-MOTION: OS PRIMEIROS HOMENS NA LUA",
-      "data": "2026-10-23",
-      "data_fim": "",
-      "horario": "19h",
-      "local": "Sesc Palladium",
-      "cidade": "Belo Horizonte",
-      "categoria": "Cinema",
-      "gratuito": true,
-      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial e na bilheteria do espaço.",
-      "descricao": "Atenção! Compras online e na bilheteria. Você poderá retirar até 2 (dois) ingressos, sendo 1 ingresso por CPF. Preencha os CPFs corretos e distintos, por ingresso, para que sua compra seja finalizada! SINOPSE MOSTRA RAY HARRYHAUSEN - O MESTRE DO CINEMA STOP-MOTION De 09 a 31 de Outubro de 2026 Sexta e Sábado às 19h e Domingo às 18h A retrospectiva RAY HARRYHAUSEN – O MESTRE DO CINEMA STOP-MOTION tem como principal objetivo reverenciar a obra desse artista e apresentar para uma nova geração de cinéfilos os filmes que contaram com sua genialidade.",
-      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/1j4pllav8hkqaegjrnathreuhvb9uunro4a9emn4394cdicvl7a2qvgi84grqh9na9semr29bofcgnh97pvhnin7hmp52jfld5d84vc.webp",
-      "link": "https://bileto.sympla.com.br/event/124738/d/403705/s/2645033",
-      "fonte": "Sesc Palladium",
-      "instituicao_id": "sesc-mg",
-      "fonte_id": "124738",
-      "endereco": "Rua Rio de Janeiro, 1046 – Centro, Belo Horizonte – MG, 30160-041",
-      "classificacao_indicativa": "Livre",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-23",
-          "observacao": "19h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "sesc-palladium",
-      "mapa": "https://maps.app.goo.gl/69GL5ydEpAtcwDgv7"
-    },
-    {
       "id": "teatro-francisco-nunes-longevidade-em-cena-2026-10-23",
       "titulo": "Longevidade em Cena",
       "data": "2026-10-23",
@@ -11478,6 +11509,45 @@
       "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
+      "id": "portal-bh-a027dc66c5a5-2026-10-31-1030",
+      "titulo": "Evento: Escape Room de Haloween",
+      "data": "2026-10-31",
+      "data_fim": "",
+      "horario": "10h30 às 13h",
+      "local": "Centro Cultural Sesiminas",
+      "cidade": "Belo Horizonte",
+      "categoria": "Atividade infantil",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "Um crime aconteceu. Livros muito valiosos estão sumindo da biblioteca. A bibliotecária desmaiou. O caso parece impossível de ser solucionado, é como se os livros simplesmente desaparecessem no ar. Quem será o culpado? Será necessária muita inteligência e perspicácia para desvendar esse crime, você está preparado para mais esse mistério? Venha desvendar o mistério da biblioteca!",
+      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-10/r9q03oi06bl2c8hvc76fanlb6lfij9uouiphafmdejihcscs2k3dj84g6659ktj7698goqfschdarmmf1cqf1ib231lkc2o8930n7h.jpg",
+      "link": "https://portalbelohorizonte.com.br/2026/eventos/encontro/lazer/evento-escape-room-de-haloween",
+      "fonte": "Portal Belo Horizonte",
+      "fonte_id": "a027dc66c5a5",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "endereco": "Rua Álvares Maciel, 59 - Santa Efigênia",
+      "tags_fonte": [
+        "Acessibilidade",
+        "Brincadeiras",
+        "Cultural",
+        "Experiências",
+        "Infantil",
+        "Ingressos on-line",
+        "Oficinas",
+        "Próximos eventos"
+      ],
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-31",
+          "observacao": "10h30 às 13h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "centro-cultural-sesiminas-bh",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+SESIMINAS+BH%2C+Rua+%C3%81lvares+Maciel%2C+59+-+Santa+Efig%C3%AAnia%2C+Belo+Horizonte"
+    },
+    {
       "id": "ufmg-ec-sabado-com-libras-libras-para-professores-e-educadores",
       "titulo": "Sábado com Libras: Libras para Professores e Educadores",
       "data": "2026-10-31",
@@ -11628,35 +11698,6 @@
       "local_id": "museu-da-moda",
       "mapa": "https://maps.app.goo.gl/NSKCeznUnR3ooTQaA",
       "espaco_interno": "MUMO"
-    },
-    {
-      "id": "sympla-sabara-3608300",
-      "titulo": "Noite de Arte Assombrada - Festival Mambus | Sabará",
-      "data": "2026-10-31",
-      "data_fim": "",
-      "horario": "18h40 às 19h",
-      "local": "Teatro Municipal de Sabará",
-      "cidade": "Sabará",
-      "categoria": "Festival",
-      "gratuito": true,
-      "inscricao": "Inscrição gratuita pela Sympla; consulte disponibilidade",
-      "descricao": "Prepare-se para uma noite cheia de encontros, descobertas e apresentações que atravessam diferentes linguagens artísticas! No Halloween, o Coletivo Mambus reúne artistas para uma noite especial de celebração da arte em suas diferentes formas. Vai ter circo, dança, teatro, música e muito mais,",
-      "imagem": "https://www.sympla.com.br/images/logo-sympla-for-facebook.png",
-      "link": "https://www.sympla.com.br/evento/noite-de-arte-assombrada-festival-mambus-sabara/3608300",
-      "fonte": "Sympla — evento em Sabará",
-      "instituicao_id": "",
-      "fonte_id": "3608300",
-      "organizador": "",
-      "endereco": "Rua Dom Pedro II, s/n, Sabará, MG",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-31",
-          "observacao": "18h40 às 19h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Teatro+Municipal+de+Sabar%C3%A1%2C+Rua+Dom+Pedro+II%2C+s%2Fn%2C+Sabar%C3%A1%2C+MG"
     },
     {
       "id": "ufmg-ec-observacao-noturna-dos-astros-com-telescopios-6",
@@ -12417,5 +12458,5 @@
   ],
   "modo_teste_experimental": true,
   "eventos_somente_teste": 0,
-  "atualizado_em_teste": "2026-10-08T23:18:53-03:00"
+  "atualizado_em_teste": "2026-10-09T03:29:49-03:00"
 }
