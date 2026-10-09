@@ -65,7 +65,7 @@ assert.ok(themeBoot.includes("js/painel-navegacao-modos.js?v=6"));
 
 // Cache busting deve entregar os mesmos assets/versionamentos no HTML e no SW.
 for (const asset of [
-  'css/styles.css?v=107',
+  'css/styles.css?v=108',
   'js/tema-visual-boot.js?v=17'
 ]) {
   assert.ok(indexHtml.includes(asset), `index sem ${asset}`);
