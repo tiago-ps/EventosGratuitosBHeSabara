@@ -240,7 +240,7 @@ const firstOrdinary = orderedEvents.findIndex(item => !isSchool(item));
 const ordinary = eventRows.filter(item => !isSchool(item));
 assert.equal(orderedEvents[0].tipo_registro, 'programa_escola_livre');
 assert.ok(firstOrdinary >= 1 && firstOrdinary <= 3, 'Até três registros iniciais da ELA.');
-assert.deepEqual(orderedEvents.slice(firstOrdinary, firstOrdinary + ordinary.length).map(item => item.id),
+assert.deepEqual(Array.from(orderedEvents.slice(firstOrdinary, firstOrdinary + ordinary.length), item => item.id),
   ordinary.map(item => item.id), 'Outros eventos devem vir antes da lista extensa da ELA.');
 assert.ok(orderedEvents.slice(firstOrdinary + ordinary.length).every(isSchool));
 assert.ok(appSource.includes('if (specific && !agendaHasSpecificEventFilters())'),
