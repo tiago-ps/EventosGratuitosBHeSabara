@@ -307,7 +307,7 @@ let shared = null;
 const favoritesSaved = new Set();
 const agendaCtx = vm.createContext({
   state:{curationMode:true,mobileFavoritesOnly:false},
-  document:{createElement(tag){
+  document:{querySelectorAll(){return [];},createElement(tag){
     const node={
       tag, className:'',dataset:{},attrs:{},listeners:{},
       setAttribute(k,v){this.attrs[k]=v;},
