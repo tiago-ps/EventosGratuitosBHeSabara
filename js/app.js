@@ -2749,7 +2749,8 @@ function eventProgram(event) {
   // Compartilha os mesmos favoritos e os links diretos da Exploração.
   // Não adiciona botões ao modo automático (viewMode = auto).
   function attachInteractiveSlideActions(item) {
-    if (state.viewMode !== 'painel') return;
+    if (state.viewMode !== 'painel' ||
+        document.documentElement.dataset.panelExperience !== 'interativo') return;
     const favoriteId = agendaFavoriteId(item);
     const media = app.querySelector('.slide .media');
     if (!favoriteId || !media) return;
@@ -5740,7 +5741,18 @@ function eventProgram(event) {
         });
       }
     });
-    article.append(button);
+    const share = document.createElement('button');
+    share.type = 'button';
+    share.className = 'agenda-favorite-button agenda-share-item-button';
+    share.setAttribute('aria-label', 'Compartilhar somente este conteúdo');
+    share.title = 'Compartilhar este conteúdo';
+    share.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="m8.8 10.7 6.4-4.3M8.8 13.3l6.4 4.3"></path></svg>';
+    share.addEventListener('click', event => {
+      event.preventDefault();
+      event.stopPropagation();
+      sharePanelItem(item);
+    });
+    article.append(share, button);
 
     if (!state.curationMode) {
       let actions = article.querySelector('.agenda-card-actions');

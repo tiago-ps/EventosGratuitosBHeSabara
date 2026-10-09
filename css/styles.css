@@ -2984,3 +2984,15 @@ body.panel-mode .slide .media .panel-item-action:focus-visible {
   body.panel-mode .slide .media .panel-item-actions { top: 8px; right: 8px; gap: 6px; }
   body.panel-mode .slide .media .panel-item-action { width: 38px; height: 38px; }
 }
+
+/* Compartilhamento individual ao lado da estrela na Exploração. */
+body.agenda-mode .agenda-card .agenda-share-item-button { right: 60px; }
+body.agenda-mode .agenda-card .agenda-share-item-button svg { width: 20px; height: 20px; }
+@media (max-width: 680px) {
+  body.agenda-mode .agenda-card .agenda-share-item-button { right: 54px; }
+}
+/* Segurança adicional: o Painel Automático nunca exibe as ações do card. */
+html[data-panel-experience="passivo"] body.panel-mode .panel-item-actions {
+  display: none !important;
+  pointer-events: none !important;
+}
