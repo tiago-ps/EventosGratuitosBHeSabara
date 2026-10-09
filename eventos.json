@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Março de 2026 a Junho de 2027",
-  "atualizado_em": "2026-10-09T13:10:45-03:00",
+  "atualizado_em": "2026-10-09T13:48:32-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -6211,6 +6211,31 @@
       "imagem_fallback_origem": "equipamento"
     },
     {
+      "id": "fea-marcio-carneiro-2026-10-08",
+      "titulo": "Márcio Carneiro",
+      "data": "2026-10-08",
+      "data_fim": "2026-10-09",
+      "horario": "10h",
+      "local": "Sala Sergio Magnani",
+      "local_id": "fea-sala-sergio-magnani",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua Gonçalves Dias, 320, Funcionários, Belo Horizonte - MG",
+      "categoria": "Formação",
+      "gratuito": true,
+      "inscricao": "Evento gratuito conforme agenda oficial da Fundação de Educação Artística; consulte a página para inscrição, vagas e orientações.",
+      "descricao": "Masterclass Temporada 2026 MÁRCIO CARNEIRO violoncelo Masterclasses de violoncelo com um dos mais respeitados professores do mundo no instrumento 8 e 9 OUT a partir das 10h FUNDAÇÃO DE EDUCAÇÃO ARTÍSTICA SALA SERGIO MAGNANI Rua Gonçalves Dias, 320, Funcionários Belo Horizonte, MG EVENTO GRATUITO Eufonias TEMPORADA 2026 Fotografia: Vinicius Correia e Marcos Lemes QUARTETO GUIGNARD — Joanna Bello, Rodrigo Bustamante, Gerry Varona e Lucas Barros Ludwig van Beethoven e Antonín Dvořák 30 OUT 20h FUNDAÇÃO DE EDUCAÇÃO ARTÍSTICA SALA SERGIO MAGNANI Rua Gonçalves Dias, 320, Funcionários Belo Horizonte,",
+      "imagem": "",
+      "link": "https://feabh.org.br/",
+      "pagina": "https://feabh.org.br/",
+      "fonte": "Fundação de Educação Artística — agenda oficial",
+      "instituicao_id": "fundacao-educacao-artistica",
+      "criterio_exibicao": "realizacao",
+      "motivo_publicacao": "gratuidade_explicita",
+      "somente_teste": true,
+      "status_validacao": "experimental",
+      "origem_experimental": "fea"
+    },
+    {
       "id": "fcs-wp-37665",
       "titulo": "Retrospectiva Hector Babenco",
       "data": "2026-10-09",
@@ -7423,36 +7448,6 @@
       "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
-      "id": "portal-bh-0afd9bd3f739-2026-10-13-1000",
-      "titulo": "Intervenção educativa “Detetives da Animação”",
-      "data": "2026-10-13",
-      "data_fim": "2026-10-31",
-      "horario": "10h às 18h",
-      "local": "Museu da Imagem e do Som – MIS BH",
-      "cidade": "Belo Horizonte",
-      "categoria": "Exposição",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "A partir do dia 13/10 TER. A SÁB. 10h ÀS 18H Classificação: Livre",
-      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-10/intervencao-educativa-detetives-da-animacao.png",
-      "link": "https://portalbelohorizonte.com.br/museuscentro/2026/eventos/exposicao/cultural/intervencao-educativa-detetives-da-animacao",
-      "fonte": "Portal Belo Horizonte",
-      "fonte_id": "0afd9bd3f739",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "endereco": "",
-      "tags_fonte": [],
-      "classificacao_indicativa": "Livre",
-      "temporalidade": {
-        "classe": "periodo",
-        "realizacao": {
-          "inicio": "2026-10-13",
-          "fim": "2026-10-31",
-          "observacao": "10h às 18h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
-    },
-    {
       "id": "ufmg-ec-mostra-iaia-de-audiovisual-carrinho-de-rolima-exibicao",
       "titulo": "Mostra IAIA de Audiovisual: “Carrinho de Rolimã” (exibição)",
       "data": "2026-10-13",
@@ -7749,7 +7744,7 @@
       "cidade": "Belo Horizonte",
       "categoria": "Cinema",
       "gratuito": true,
-      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial. Também há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade.",
       "descricao": "Espinhenta (Gabriela Borborema de Filippo | Brasil | 2026 |História de amadurecimento | 20 min) Hoje Laurinha vai se depilar pela primeira vez. Classificação indicativa: Livre. Sessão comentada",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/gt6692io1i7f0lgv778fnj38jrv6ajhh0cq5vpfqmh80eg4j9eit5cco2416bithmv6krrr7s7l189fp5e77sec5he3v7stlbe0cmf.webp",
       "link": "https://bileto.sympla.com.br/event/128358/d/420534/s/2724890",
@@ -8252,34 +8247,6 @@
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
     },
     {
-      "id": "portal-bh-8ffc1d72dbf5-2026-10-15-1400",
-      "titulo": "Brincadeiras Circenses no MIS BH",
-      "data": "2026-10-15",
-      "data_fim": "",
-      "horario": "14h às 16h",
-      "local": "Museu da Imagem e do Som – MIS BH",
-      "cidade": "Belo Horizonte",
-      "categoria": "Circo",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "Dia 15/10 QUI. 14h às 16h indicado para maiores de 4 anos Inscrições via formulário: Link na bio do Instagram do museu",
-      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-10/brincadeiras-circenses-no-mis-bh.png",
-      "link": "https://portalbelohorizonte.com.br/museuscentro/2026/eventos/circo/cultural/brincadeiras-circenses-no-mis-bh",
-      "fonte": "Portal Belo Horizonte",
-      "fonte_id": "8ffc1d72dbf5",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "endereco": "",
-      "tags_fonte": [],
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-15",
-          "observacao": "14h às 16h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
-    },
-    {
       "id": "portal-bh-104b84323e37-2026-10-15-1400",
       "titulo": "Pequenos Exploradores",
       "data": "2026-10-15",
@@ -8443,6 +8410,36 @@
       "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Hist%C3%B3ria+Natural+e+Jardim+Bot%C3%A2nico+da+UFMG%2C+Rua+Gustavo+da+Silveira%2C+1035%2C+Santa+In%C3%AAs%2C+Belo+Horizonte+-+MG",
       "espaco_interno": "Biblioteca do",
       "imagem_fallback_origem": "equipamento"
+    },
+    {
+      "id": "cine-santa-tereza-bileto-128361",
+      "titulo": "Projeto Promoção da Leitura - Histórias da Nossa Terra",
+      "data": "2026-10-15",
+      "data_fim": "",
+      "horario": "18h",
+      "local": "Cine Santa Tereza",
+      "cidade": "Belo Horizonte",
+      "categoria": "Cinema",
+      "gratuito": true,
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "descricao": "Histórias da Nossa Terra Histórias da nossa terra é um encontro com contos,adivinhas e parlendas da tradição oral brasileira. Cheio de humor, irá apresentar ao público personagens engraçados e desfechos surpreendentes. EVENTO SERÁ REALIZADO NA SALA MULTIUSO.",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/m2ibq30stu8ak2h1ht7g8aodg0nagcmggodr358kk4l1int3et6bv1hhphh5dq7amvpq7qj85scldh7e8qbgi3tskjdkatufcnhav7.webp",
+      "link": "https://bileto.sympla.com.br/event/128361/d/420537/s/2724894",
+      "fonte": "Cine Santa Tereza",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "fonte_id": "128361",
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "classificacao_indicativa": "Livre",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-15",
+          "observacao": "18h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
     {
       "id": "minas-tenis-lancamento-de-livro-templos-ao-tempo-2026-10-15",
@@ -8649,34 +8646,6 @@
       "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
-      "id": "portal-bh-f62272ead0a9-2026-10-16-1000",
-      "titulo": "Oficina “Carimbando a Vida!” — Xilogravura em Isopor",
-      "data": "2026-10-16",
-      "data_fim": "",
-      "horario": "10h às 12h",
-      "local": "Museu da Imagem e do Som – MIS BH",
-      "cidade": "Belo Horizonte",
-      "categoria": "Oficina",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "Dia 16/10 . SEX. 10h às 12h Indicado para maiores de 8 anos Inscrições via formulário: Link na bio do Instagram do museu",
-      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-10/oficina-carimbando-a-vida.png",
-      "link": "https://portalbelohorizonte.com.br/museuscentro/2026/eventos/oficina/cultural/oficina-carimbando-vida-xilogravura-em-isopor",
-      "fonte": "Portal Belo Horizonte",
-      "fonte_id": "f62272ead0a9",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "endereco": "",
-      "tags_fonte": [],
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-16",
-          "observacao": "10h às 12h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
-    },
-    {
       "id": "mhnjb-ufmg-a-biodiversidade-de-nosso-quintal-brincando-com-plantas-bichos-e-outros-seres-2026-10-16-10h20-as-11h30",
       "titulo": "A biodiversidade de nosso quintal: brincando com plantas, bichos e outros seres",
       "data": "2026-10-16",
@@ -8764,20 +8733,45 @@
       "fonte": "Portal Belo Horizonte",
       "fonte_id": "c15101a35524",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "endereco": "Rua da Bahia, 1149, Centro, Belo Horizonte - MG, 30160-011",
+      "endereco": "",
       "tags_fonte": [],
       "classificacao_indicativa": "Livre",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-16",
-          "observacao": "14h às 16h"
+      "evidencia_classificacao_indicativa": "portal_bh:texto_explicito_padrao_1",
+      "evidencia_classificacao_indicativa_trecho": "Dia 16/10 sex → 14h Classificação: livre Inscrições: via formulário Link na",
+      "evidencia_gratuidade": "campo_entrada:gratuito",
+      "evidencia_data": "sex, 16/10/2026 - 14:00 a sex, 16/10/2026 - 16:00",
+      "evidencia_titulo_origem": "breadcrumb",
+      "evidencia_titulo_pontuacao": 1.0,
+      "evidencia_titulo_candidatos_descartados": [
+        {
+          "titulo": "Oficina de Escrita Urbana e Caminhada Literária: Castelinho da Bahia",
+          "origem": "cabecalho_principal",
+          "pontuacao": 1.0,
+          "motivo": "menor_semelhanca_com_slug"
+        },
+        {
+          "titulo": "Oficina de Escrita Urbana e Caminhada Literária: Castelinho da Bahia",
+          "origem": "document_title",
+          "pontuacao": 1.0,
+          "motivo": "menor_semelhanca_com_slug"
+        },
+        {
+          "titulo": "Dia 16/10 sex → 14h",
+          "origem": "descricao",
+          "pontuacao": 0.1133,
+          "motivo": "menor_semelhanca_com_slug"
+        },
+        {
+          "titulo": "Portal Belo Horizonte",
+          "origem": "cabecalho_principal",
+          "motivo": "titulo_generico"
         }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      ],
       "local_id": "museu-da-moda",
-      "mapa": "https://maps.app.goo.gl/NSKCeznUnR3ooTQaA",
-      "espaco_interno": "MUMO"
+      "fonte_descoberta": "Portal Belo Horizonte — Museu da Moda",
+      "somente_teste": true,
+      "status_validacao": "experimental",
+      "origem_experimental": "mumo_portal_bh"
     },
     {
       "id": "mhnjb-ufmg-mutirao-da-caratinga-c-criancas-2026-10-16-14h20-as-15h30",
@@ -9283,34 +9277,6 @@
       "imagem_fallback_origem": "equipamento"
     },
     {
-      "id": "portal-bh-1b552e67c978-2026-10-17-1400",
-      "titulo": "Oficina Bandeiras e Estandartes com Cleiton Gós - Educador do MUQUIFU",
-      "data": "2026-10-17",
-      "data_fim": "",
-      "horario": "14h às 18h",
-      "local": "Museu Histórico Abílio Barreto – MHAB",
-      "cidade": "Belo Horizonte",
-      "categoria": "Oficina",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "Dia 17/10 → sábado - das 14h às 18h Indicado para maiores de 10 anos Inscrições via formulário: Link na bio do Instagram do museu",
-      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-10/oficina-bandeiras-e-estandartes.png",
-      "link": "https://portalbelohorizonte.com.br/museuscentro/2026/eventos/oficina/cultural/oficina-bandeiras-e-estandartes-com-cleiton-gos-educador-do-muquifu",
-      "fonte": "Portal Belo Horizonte",
-      "fonte_id": "1b552e67c978",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "endereco": "",
-      "tags_fonte": [],
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-17",
-          "observacao": "14h às 18h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
-    },
-    {
       "id": "mhnjb-ufmg-morcegos-mitos-e-verdades-2026-10-17-14h20-as-15h20",
       "titulo": "Morcegos, Mitos e Verdades",
       "data": "2026-10-17",
@@ -9531,34 +9497,6 @@
         }
       },
       "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
-    },
-    {
-      "id": "portal-bh-30438efdb35a-2026-10-18-1030",
-      "titulo": "Museu Criativo • Oficina: Travessias do Curral Del Rei",
-      "data": "2026-10-18",
-      "data_fim": "",
-      "horario": "10h30 às 12h30",
-      "local": "Museu Histórico Abílio Barreto – MHAB",
-      "cidade": "Belo Horizonte",
-      "categoria": "Oficina",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "18/10 - Sábado, das 10h30 às 12h30 museu criativo oficinas artísticas Aos finais de semana - das 10h30 às 12h30 com Lara Carvalho",
-      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-10/oficina-travessias-do-curral-del-rei_.png",
-      "link": "https://portalbelohorizonte.com.br/museuscentro/2026/eventos/oficina/cultural/museu-criativo-oficina-travessias-do-curral-del-rei",
-      "fonte": "Portal Belo Horizonte",
-      "fonte_id": "30438efdb35a",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "endereco": "",
-      "tags_fonte": [],
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-18",
-          "observacao": "10h30 às 12h30"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
       "id": "manual-concertos-peter-lund-recital-infantil-coracao-e-mente-2026-10-18-2026-10-18",
@@ -9903,6 +9841,36 @@
       "espaco_interno": "Café Cultural do"
     },
     {
+      "id": "cine-santa-tereza-bileto-128399",
+      "titulo": "CINECLUBE PSINE - A Loucura entre Nós",
+      "data": "2026-10-20",
+      "data_fim": "",
+      "horario": "19h30",
+      "local": "Cine Santa Tereza",
+      "cidade": "Belo Horizonte",
+      "categoria": "Cinema",
+      "gratuito": true,
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "descricao": "A loucura entre nós ( Fernanda Vareille | 2016 | Brasil l documentário |76 min) \"A loucura entre nós\" explora os corredores de um hospital psiquiátrico, revelando personagens e histórias que questionam os limites entre sanidade e loucura. Inspirado no livro homônimo do psiquiatra, psicanalista e escritor Marcelo Veras, o documentário mergulha nos paradoxos da reinserção da loucura no mundo. Com foco em personagens femininas, o filme exala as contradições da razão, convidando-nos a refletir sobre medos, desejos e erros, subvertendo rótulos e estereótipos da sanidade mental. Classificação indicativa: 12 anos",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/2dnnd55asmmba87tpoq87k72inh0tsq8ghcqinfe034he24h2tvbe0vt6ch4c9ipulv33ic77dhcn7dcrhjsgd0d1bl982elpu23b2u.webp",
+      "link": "https://bileto.sympla.com.br/event/128399/d/420771/s/2726655",
+      "fonte": "Cine Santa Tereza",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "fonte_id": "128399",
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "classificacao_indicativa": "12 anos",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-20",
+          "observacao": "19h30"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
+    },
+    {
       "id": "conservatorio-ufmg-coro-feminino-da-escola-de-musica-da-uemg-2026-10-20-1930",
       "titulo": "Coro Feminino da Escola de Música da UEMG",
       "data": "2026-10-20",
@@ -10124,34 +10092,6 @@
       "imagem_fallback_origem": "equipamento"
     },
     {
-      "id": "portal-bh-89c37e018028-2026-10-22-0800",
-      "titulo": "3º Simpósio do Patrimônio Cultural de Belo Horizonte",
-      "data": "2026-10-22",
-      "data_fim": "",
-      "horario": "8h às 18h",
-      "local": "Museu Histórico Abílio Barreto – MHAB",
-      "cidade": "Belo Horizonte",
-      "categoria": "Evento cultural",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "Dia 22/10 → QUINTA - das 8h às 18h",
-      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-10/3o-simposio-do-patrimonio-cultural-de-belo-horizonte.png",
-      "link": "https://portalbelohorizonte.com.br/museuscentro/2026/eventos/simposio/cultural/3o-simposio-do-patrimonio-cultural-de-belo-horizonte",
-      "fonte": "Portal Belo Horizonte",
-      "fonte_id": "89c37e018028",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "endereco": "",
-      "tags_fonte": [],
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-22",
-          "observacao": "8h às 18h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
-    },
-    {
       "id": "ufmg-ec-roda-de-conversa-ovulario-fabulacao-critica-como-rota",
       "titulo": "Roda de Conversa “Ovulário: Fabulação Crítica como Rota”",
       "data": "2026-10-23",
@@ -10180,33 +10120,34 @@
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
     },
     {
-      "id": "portal-bh-a7bd2375150a-2026-10-23-1830",
-      "titulo": "Abertura Pequena Mostra: “A Casa do Museu: Sujeito do Tempo”",
+      "id": "sesc-palladium-bileto-124738",
+      "titulo": "MOSTRA RAY HARRYHAUSEN – O MESTRE DO CINEMA STOP-MOTION: OS PRIMEIROS HOMENS NA LUA",
       "data": "2026-10-23",
       "data_fim": "",
-      "horario": "18h30 às 21h",
-      "local": "Museu da Imagem e do Som – MIS BH",
+      "horario": "19h",
+      "local": "Sesc Palladium",
       "cidade": "Belo Horizonte",
-      "categoria": "Evento cultural",
+      "categoria": "Cinema",
       "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "Dia 23/10 SEX. 18H30 Classificação: livre",
-      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-10/abertura-pequena-mostra.png",
-      "link": "https://portalbelohorizonte.com.br/museuscentro/2026/eventos/mostra/cultural/abertura-pequena-mostra-casa-do-museu-sujeito-do-tempo",
-      "fonte": "Portal Belo Horizonte",
-      "fonte_id": "a7bd2375150a",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "endereco": "",
-      "tags_fonte": [],
+      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial e na bilheteria do espaço.",
+      "descricao": "Atenção! Compras online e na bilheteria. Você poderá retirar até 2 (dois) ingressos, sendo 1 ingresso por CPF. Preencha os CPFs corretos e distintos, por ingresso, para que sua compra seja finalizada! SINOPSE MOSTRA RAY HARRYHAUSEN - O MESTRE DO CINEMA STOP-MOTION De 09 a 31 de Outubro de 2026 Sexta e Sábado às 19h e Domingo às 18h A retrospectiva RAY HARRYHAUSEN – O MESTRE DO CINEMA STOP-MOTION tem como principal objetivo reverenciar a obra desse artista e apresentar para uma nova geração de cinéfilos os filmes que contaram com sua genialidade.",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/1j4pllav8hkqaegjrnathreuhvb9uunro4a9emn4394cdicvl7a2qvgi84grqh9na9semr29bofcgnh97pvhnin7hmp52jfld5d84vc.webp",
+      "link": "https://bileto.sympla.com.br/event/124738/d/403705/s/2645033",
+      "fonte": "Sesc Palladium",
+      "instituicao_id": "sesc-mg",
+      "fonte_id": "124738",
+      "endereco": "Rua Rio de Janeiro, 1046 – Centro, Belo Horizonte – MG, 30160-041",
       "classificacao_indicativa": "Livre",
       "temporalidade": {
         "classe": "pontual",
         "realizacao": {
           "inicio": "2026-10-23",
-          "observacao": "18h30 às 21h"
+          "observacao": "19h"
         }
       },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "sesc-palladium",
+      "mapa": "https://maps.app.goo.gl/69GL5ydEpAtcwDgv7"
     },
     {
       "id": "teatro-francisco-nunes-longevidade-em-cena-2026-10-23",
@@ -10327,49 +10268,45 @@
       "fonte": "Portal Belo Horizonte",
       "fonte_id": "4e7283c478a5",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "endereco": "Rua da Bahia, 1149, Centro, Belo Horizonte - MG, 30160-011",
-      "tags_fonte": [],
-      "classificacao_indicativa": "Livre",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-24",
-          "observacao": "11h às 12h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "museu-da-moda",
-      "mapa": "https://maps.app.goo.gl/NSKCeznUnR3ooTQaA",
-      "espaco_interno": "MUMO"
-    },
-    {
-      "id": "portal-bh-fecbdf53e709-2026-10-24-1400",
-      "titulo": "Lançamento catálogo da exposição “Travessias do Curral Del Rei”, com roda de conversa e apresentação \"Canto para os Ancestrais\"",
-      "data": "2026-10-24",
-      "data_fim": "",
-      "horario": "14h às 18h",
-      "local": "Museu Histórico Abílio Barreto – MHAB",
-      "cidade": "Belo Horizonte",
-      "categoria": "Exposição",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "Dia 24/10 → SÁBADO - das 14h às 18h Classificação: Livre",
-      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-10/lancamento-catalogo-da-exposicao-travessias-do-curral-del-rei-com-roda-de-conversa-e-apresentacao-22canto-para-os-ancestrais-22.png",
-      "link": "https://portalbelohorizonte.com.br/museuscentro/2026/eventos/lancamento/cultural/lancamento-catalogo-da-exposicao-travessias-do-curral-del-rei-com-roda-de-conversa-e-apresentacao-canto",
-      "fonte": "Portal Belo Horizonte",
-      "fonte_id": "fecbdf53e709",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
       "endereco": "",
       "tags_fonte": [],
       "classificacao_indicativa": "Livre",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-24",
-          "observacao": "14h às 18h"
+      "evidencia_classificacao_indicativa": "portal_bh:texto_explicito_padrao_1",
+      "evidencia_classificacao_indicativa_trecho": "Dia 24/10 SÁB → 11h ÀS 12H Classificação: livre NÃO É NECESSÁRIO FAZER INSCRIÇÃO",
+      "evidencia_gratuidade": "campo_entrada:gratuito",
+      "evidencia_data": "sab, 24/10/2026 - 11:00 a sab, 24/10/2026 - 12:00",
+      "evidencia_titulo_origem": "breadcrumb",
+      "evidencia_titulo_pontuacao": 1.0,
+      "evidencia_titulo_candidatos_descartados": [
+        {
+          "titulo": "Visita Mediada à exposição • Markito – Cintilações da Noite",
+          "origem": "cabecalho_principal",
+          "pontuacao": 0.9693,
+          "motivo": "menor_semelhanca_com_slug"
+        },
+        {
+          "titulo": "Visita Mediada à exposição • Markito – Cintilações da Noite",
+          "origem": "document_title",
+          "pontuacao": 0.9393,
+          "motivo": "menor_semelhanca_com_slug"
+        },
+        {
+          "titulo": "Dia 24/10 SÁB → 11h ÀS 12H",
+          "origem": "descricao",
+          "pontuacao": 0.1439,
+          "motivo": "menor_semelhanca_com_slug"
+        },
+        {
+          "titulo": "Portal Belo Horizonte",
+          "origem": "cabecalho_principal",
+          "motivo": "titulo_generico"
         }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
+      ],
+      "local_id": "museu-da-moda",
+      "fonte_descoberta": "Portal Belo Horizonte — Museu da Moda",
+      "somente_teste": true,
+      "status_validacao": "experimental",
+      "origem_experimental": "mumo_portal_bh"
     },
     {
       "id": "portal-bh-74317b8ad264-2026-10-24-1400",
@@ -10388,19 +10325,42 @@
       "fonte": "Portal Belo Horizonte",
       "fonte_id": "74317b8ad264",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "endereco": "Rua da Bahia, 1149, Centro, Belo Horizonte - MG, 30160-011",
+      "endereco": "",
       "tags_fonte": [],
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-24",
-          "observacao": "14h às 18h"
+      "evidencia_gratuidade": "campo_entrada:gratuito",
+      "evidencia_data": "sab, 24/10/2026 - 14:00 a sab, 24/10/2026 - 18:00",
+      "evidencia_titulo_origem": "breadcrumb",
+      "evidencia_titulo_pontuacao": 1.0,
+      "evidencia_titulo_candidatos_descartados": [
+        {
+          "titulo": "Oficina de Stencil em Jeans, com o Grupo Fios",
+          "origem": "cabecalho_principal",
+          "pontuacao": 1.0,
+          "motivo": "menor_semelhanca_com_slug"
+        },
+        {
+          "titulo": "Oficina de Stencil em Jeans, com o Grupo Fios",
+          "origem": "document_title",
+          "pontuacao": 1.0,
+          "motivo": "menor_semelhanca_com_slug"
+        },
+        {
+          "titulo": "Dia 24/10 SÁB. 14h ÀS 18H Indicado para maiores de 16 anos Inscrições: via formulário Link na bio do Instagram do museu",
+          "origem": "descricao",
+          "pontuacao": 0.1669,
+          "motivo": "menor_semelhanca_com_slug"
+        },
+        {
+          "titulo": "Portal Belo Horizonte",
+          "origem": "cabecalho_principal",
+          "motivo": "titulo_generico"
         }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      ],
       "local_id": "museu-da-moda",
-      "mapa": "https://maps.app.goo.gl/NSKCeznUnR3ooTQaA",
-      "espaco_interno": "MUMO"
+      "fonte_descoberta": "Portal Belo Horizonte — Museu da Moda",
+      "somente_teste": true,
+      "status_validacao": "experimental",
+      "origem_experimental": "mumo_portal_bh"
     },
     {
       "id": "casa-fiat-atelie-aberto-paisagem-construida-2026-10-24-15",
@@ -10530,6 +10490,36 @@
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
       "espaco_interno": "Terraço Astronômico"
+    },
+    {
+      "id": "sesiminas-bh-bileto-127704",
+      "titulo": "MOVIMENTO EM CENA",
+      "data": "2026-10-24",
+      "data_fim": "",
+      "horario": "19h30",
+      "local": "Centro Cultural SESIMINAS",
+      "cidade": "Belo Horizonte",
+      "categoria": "Teatro",
+      "gratuito": true,
+      "inscricao": "Ingressos gratuitos disponíveis on-line, conforme disponibilidade",
+      "descricao": "Sobre o espetáculo “Movimento em Cena” Movimento em Cena é um espetáculo de dança protagonizado por mulheres com mais de 50 anos, que convida o público a revisitar cenas, personagens e trilhas que marcaram a história do cinema nacional e internacional, agora sob um novo olhar: o da maturidade feminina. Inspirado em grandes produções cinematográficas que atravessaram gerações, o espetáculo transforma memórias do cinema em movimento, emoção e expressão. No palco, mulheres 50+ mostram que a arte não tem idade e que cada fase da vida pode ser vivida com criatividade, presença e protagonismo.",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/38s4qlfd219g3jnjr6qhn7h9kr1crhmbrupipsv0hn3i744bg5s9012kbiq62jdgq79j0r3t5099d7qo8vp8kee1r32ro5kose66pn8.webp",
+      "link": "https://bileto.sympla.com.br/event/127704/d/417285/s/2709531",
+      "fonte": "Centro Cultural SESIMINAS BH",
+      "instituicao_id": "sesiminas-bh",
+      "fonte_id": "127704",
+      "endereco": "Rua Padre Marinho,60 – Belo Horizonte – Minas Gerais",
+      "classificacao_indicativa": "Livre",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-24",
+          "observacao": "19h30"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "centro-cultural-sesiminas-bh",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+SESIMINAS+BH%2C+Rua+Padre+Marinho%2C60+%E2%80%93+Belo+Horizonte+%E2%80%93+Minas+Gerais"
     },
     {
       "id": "portal-bh-1045058fe89d-2026-10-24-0830",
@@ -11022,34 +11012,6 @@
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
     },
     {
-      "id": "portal-bh-3cad8a650d99-2026-10-28-1900",
-      "titulo": "CineMIS apresenta: Cinema Comentado — “Filmes centenários do acervo do MIS BH e da Cinemateca Brasileira”",
-      "data": "2026-10-28",
-      "data_fim": "",
-      "horario": "19h às 22h",
-      "local": "Museu da Imagem e do Som – MIS BH",
-      "cidade": "Belo Horizonte",
-      "categoria": "Cinema",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; não requer inscrição prévia",
-      "descricao": "Dia 28/10 . qua. 19h Indicado para maiores de 12 anos NÃO É NECESSÁRIO FAZER INSCRIÇÃO \"A Visita de Washington Luiz em Minas Gerais\" Igino Bonfioli (1926) \"Minas Antiga\" Igino Bonfioli (1926)",
-      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-10/cinemis-apresenta-cinema-comentado-filmes-centenarios-do-acervo-do-mis-bh-e-da-cinemateca-brasileira.png",
-      "link": "https://portalbelohorizonte.com.br/museuscentro/2026/eventos/cinema/audiovisual/cinemis-apresenta-cinema-comentado-filmes-centenarios-do-acervo-do-mis-bh-e-da-cinemateca-brasileira",
-      "fonte": "Portal Belo Horizonte",
-      "fonte_id": "3cad8a650d99",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "endereco": "",
-      "tags_fonte": [],
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-28",
-          "observacao": "19h às 22h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
-    },
-    {
       "id": "casa-fiat-formacao-de-professores-as-cores-do-brasil-modernidade-e-modernismo-brasileiro-2026-10-29-sem-hora",
       "titulo": "Formação de Professores | As cores do Brasil: modernidade e modernismo brasileiro",
       "data": "2026-10-29",
@@ -11509,45 +11471,6 @@
       "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
-      "id": "portal-bh-a027dc66c5a5-2026-10-31-1030",
-      "titulo": "Evento: Escape Room de Haloween",
-      "data": "2026-10-31",
-      "data_fim": "",
-      "horario": "10h30 às 13h",
-      "local": "Centro Cultural Sesiminas",
-      "cidade": "Belo Horizonte",
-      "categoria": "Atividade infantil",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "Um crime aconteceu. Livros muito valiosos estão sumindo da biblioteca. A bibliotecária desmaiou. O caso parece impossível de ser solucionado, é como se os livros simplesmente desaparecessem no ar. Quem será o culpado? Será necessária muita inteligência e perspicácia para desvendar esse crime, você está preparado para mais esse mistério? Venha desvendar o mistério da biblioteca!",
-      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-10/r9q03oi06bl2c8hvc76fanlb6lfij9uouiphafmdejihcscs2k3dj84g6659ktj7698goqfschdarmmf1cqf1ib231lkc2o8930n7h.jpg",
-      "link": "https://portalbelohorizonte.com.br/2026/eventos/encontro/lazer/evento-escape-room-de-haloween",
-      "fonte": "Portal Belo Horizonte",
-      "fonte_id": "a027dc66c5a5",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "endereco": "Rua Álvares Maciel, 59 - Santa Efigênia",
-      "tags_fonte": [
-        "Acessibilidade",
-        "Brincadeiras",
-        "Cultural",
-        "Experiências",
-        "Infantil",
-        "Ingressos on-line",
-        "Oficinas",
-        "Próximos eventos"
-      ],
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-31",
-          "observacao": "10h30 às 13h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "centro-cultural-sesiminas-bh",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+SESIMINAS+BH%2C+Rua+%C3%81lvares+Maciel%2C+59+-+Santa+Efig%C3%AAnia%2C+Belo+Horizonte"
-    },
-    {
       "id": "ufmg-ec-sabado-com-libras-libras-para-professores-e-educadores",
       "titulo": "Sábado com Libras: Libras para Professores e Educadores",
       "data": "2026-10-31",
@@ -11684,20 +11607,45 @@
       "fonte": "Portal Belo Horizonte",
       "fonte_id": "dead3fd1d937",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "endereco": "Rua da Bahia, 1149, Centro, Belo Horizonte - MG, 30160-011",
+      "endereco": "",
       "tags_fonte": [],
       "classificacao_indicativa": "Livre",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-31",
-          "observacao": "15h às 16h"
+      "evidencia_classificacao_indicativa": "portal_bh:texto_explicito_padrao_1",
+      "evidencia_classificacao_indicativa_trecho": "Dia 31/10 SÁB. 15H ÀS 16h Classificação: livre Inscrições: via formulário Link na",
+      "evidencia_gratuidade": "campo_entrada:gratuito",
+      "evidencia_data": "sab, 31/10/2026 - 15:00 a sab, 31/10/2026 - 16:00",
+      "evidencia_titulo_origem": "breadcrumb",
+      "evidencia_titulo_pontuacao": 1.0,
+      "evidencia_titulo_candidatos_descartados": [
+        {
+          "titulo": "Visita Mediada à exposição Markito – Cintilações da Noite com interpretação simultânea em Libras",
+          "origem": "cabecalho_principal",
+          "pontuacao": 1.0,
+          "motivo": "menor_semelhanca_com_slug"
+        },
+        {
+          "titulo": "Visita Mediada à exposição Markito – Cintilações da Noite com interpretação simultânea em Libras",
+          "origem": "document_title",
+          "pontuacao": 1.0,
+          "motivo": "menor_semelhanca_com_slug"
+        },
+        {
+          "titulo": "Dia 31/10 SÁB. 15H ÀS 16h",
+          "origem": "descricao",
+          "pontuacao": 0.099,
+          "motivo": "menor_semelhanca_com_slug"
+        },
+        {
+          "titulo": "Portal Belo Horizonte",
+          "origem": "cabecalho_principal",
+          "motivo": "titulo_generico"
         }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      ],
       "local_id": "museu-da-moda",
-      "mapa": "https://maps.app.goo.gl/NSKCeznUnR3ooTQaA",
-      "espaco_interno": "MUMO"
+      "fonte_descoberta": "Portal Belo Horizonte — Museu da Moda",
+      "somente_teste": true,
+      "status_validacao": "experimental",
+      "origem_experimental": "mumo_portal_bh"
     },
     {
       "id": "ufmg-ec-observacao-noturna-dos-astros-com-telescopios-6",
@@ -12457,6 +12405,6 @@
     }
   ],
   "modo_teste_experimental": true,
-  "eventos_somente_teste": 0,
-  "atualizado_em_teste": "2026-10-09T13:11:07-03:00"
+  "eventos_somente_teste": 5,
+  "atualizado_em_teste": "2026-10-09T13:48:53-03:00"
 }
