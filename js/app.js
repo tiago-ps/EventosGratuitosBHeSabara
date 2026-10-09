@@ -2743,6 +2743,81 @@ function eventProgram(event) {
     else if (item.tipo_conteudo === 'espaco') renderSpaceSlide(index);
     else if (item.tipo_conteudo === 'atividade_lazer') renderActivitySlide(index);
     else renderEventSlide(index);
+    attachInteractiveSlideActions(item);
+  }
+
+  // Compartilha os mesmos favoritos e os links diretos da Exploração.
+  // Não adiciona botões ao modo automático (viewMode = auto).
+  function attachInteractiveSlideActions(item) {
+    if (state.viewMode !== 'painel') return;
+    const favoriteId = agendaFavoriteId(item);
+    const media = app.querySelector('.slide .media');
+    if (!favoriteId || !media) return;
+
+    const bar = document.createElement('div');
+    bar.className = 'panel-item-actions';
+    bar.setAttribute('aria-label', 'Ações deste conteúdo');
+
+    const share = document.createElement('button');
+    share.type = 'button';
+    share.className = 'panel-item-action panel-item-share';
+    share.setAttribute('aria-label', 'Compartilhar somente este conteúdo');
+    share.title = 'Compartilhar este conteúdo';
+    share.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="m8.8 10.7 6.4-4.3M8.8 13.3l6.4 4.3"></path></svg>';
+    share.addEventListener('click', event => {
+      event.preventDefault();
+      event.stopPropagation();
+      sharePanelItem(item);
+    });
+
+    const favorite = document.createElement('button');
+    favorite.type = 'button';
+    favorite.className = 'panel-item-action panel-item-favorite';
+    favorite.innerHTML = '<span aria-hidden="true">★</span>';
+    const sync = () => {
+      const active = loadAgendaFavorites().has(favoriteId);
+      favorite.classList.toggle('is-favorite', active);
+      favorite.setAttribute('aria-pressed', String(active));
+      favorite.setAttribute('aria-label', active ? 'Remover dos favoritos' : 'Adicionar aos favoritos');
+      favorite.title = active ? 'Remover dos favoritos' : 'Adicionar aos favoritos';
+    };
+    sync();
+    favorite.addEventListener('click', event => {
+      event.preventDefault();
+      event.stopPropagation();
+      const favorites = loadAgendaFavorites();
+      if (favorites.has(favoriteId)) favorites.delete(favoriteId);
+      else favorites.add(favoriteId);
+      saveAgendaFavorites(favorites);
+      sync();
+    });
+
+    bar.append(share, favorite);
+    media.append(bar);
+  }
+
+  async function sharePanelItem(item) {
+    const url = muralItemUrl(item);
+    if (!url) return;
+    const data = {
+      title: String(item.titulo || 'Conteúdo do Tem Sim, Uai'),
+      text: 'Veja este conteúdo no Tem Sim, Uai.',
+      url
+    };
+    if (navigator.share) {
+      try {
+        await navigator.share(data);
+        return;
+      } catch (error) {
+        if (error?.name === 'AbortError') return;
+      }
+    }
+    try {
+      await navigator.clipboard.writeText(url);
+      window.alert('Link deste conteúdo copiado. Agora é só compartilhar.');
+    } catch {
+      window.prompt('Copie o link deste conteúdo:', url);
+    }
   }
 
   function goToNext() {
@@ -4057,11 +4132,26 @@ function eventProgram(event) {
     return true;
   }
 
+  // Na exploração geral, a Escola Livre aparece com três destaques.
+  // As demais atividades ficam após os eventos comuns com datas definidas.
+  // Buscas/filtros específicos preservam todas as atividades e a ordenação.
+  function orderAgendaEventsForExploration(events) {
+    const school = events.filter(isSchoolEvent);
+    if (!school.length) return events;
+    const overview = school.find(item => item.tipo_registro === 'programa_escola_livre');
+    const units = school.filter(item => item.tipo_registro === 'resumo_unidade_escola_livre').slice(0, 2);
+    const featuredIds = new Set([overview, ...units].filter(Boolean).map(item => item.id));
+    const featured = school.filter(item => featuredIds.has(item.id));
+    const otherEvents = events.filter(item => !isSchoolEvent(item));
+    const schoolRemaining = school.filter(item => !featuredIds.has(item.id));
+    return [...featured, ...otherEvents, ...schoolRemaining];
+  }
+
   function agendaVisibleEvents() {
     if (!['all', 'events'].includes(state.mobileContent)) return [];
     const query = normalizeText(state.mobileQuery);
     const specific = state.mobileContent === 'events';
-    return agendaEventSource().filter(event => {
+    const visible = agendaEventSource().filter(event => {
       if (event.exibicao_por_filtro === false && agendaUsesDetailedEventRecords()) {
         return false;
       }
@@ -4077,6 +4167,10 @@ function eventProgram(event) {
       }
       return agendaEventQueryMatches(event, query);
     }).sort(compareAgendaEvents);
+    if (specific && !agendaHasSpecificEventFilters()) {
+      return orderAgendaEventsForExploration(visible);
+    }
+    return visible;
   }
 
   function agendaTitleCompare(first, second) {
