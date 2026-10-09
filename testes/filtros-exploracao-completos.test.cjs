@@ -162,7 +162,7 @@ assert.ok(appSource.includes('state.mobileTheme'));
 
 // Cache e HTML precisam apontar para os mesmos assets novos.
 for (const asset of [
-  'css/styles.css?v=106',
+  'css/styles.css?v=107',
   'js/conteudos/cursos.js?v=6',
   'js/conteudos/concursos.js?v=5',
   'js/conteudos/filmes.js?v=11',
@@ -170,12 +170,12 @@ for (const asset of [
   'js/conteudos/espacos.js?v=5',
   'js/conteudos/atividades-lazer.js?v=6',
   'js/temporalidade-eventos.js?v=1',
-  'js/app.js?v=161'
+  'js/app.js?v=162'
 ]) {
   assert.ok(indexSource.includes(asset), `Asset ausente do index: ${asset}`);
   assert.ok(swSource.includes(`./${asset}`), `Asset ausente do service worker: ${asset}`);
 }
-assert.ok(swSource.includes('mural-cultural-v204-filtro-eventos-experimentais'));
+assert.ok(swSource.includes('mural-cultural-v205-atalho-experimentais-teste'));
 
 // Situação editorial dos Eventos: delimitação exclusiva aos itens do TESTE.
 const eventCatalog = JSON.parse(fs.readFileSync(path.join(root, 'eventos.json'), 'utf8'));
@@ -199,6 +199,23 @@ assert.ok(appSource.includes('agenda-editorial-status'), 'Falta seletor editoria
 assert.ok(appSource.includes('state.mobileEditorialStatus = \'\';'), 'Filtro deve ser limpo ao mudar de conteúdo.');
 assert.ok(appSource.includes("if (state.mobileContent === 'events' && state.mobileEditorialStatus) return state.allEvents;"), 'Filtro não deve usar amostragem rotativa.');
 assert.ok(appSource.includes('if (!eventMatchesEditorialStatus(event, state.mobileEditorialStatus)) return false;'), 'Filtro não aplicado aos eventos.');
-assert.ok(appSource.includes("state.allEvents.some(event => event.somente_teste === true)"), 'Filtro só deve aparecer no ambiente com experimentais.');
+assert.ok(appSource.includes('isTestEditorialEnvironment() ?'), 'Seletor editorial deve aparecer no teste.');
+assert.ok(appSource.includes('agenda-editorial-shortcut'), 'Atalho visível para análise não encontrado.');
+assert.ok(appSource.includes('Ver somente experimentais'), 'Atalho deve mostrar contagem.');
+assert.ok(appSource.includes("state.mobileEditorialStatus === 'experimental' ? '' : 'experimental'"), 'Atalho não alterna o filtro.');
+const environmentStart = appSource.indexOf('function isTestEditorialEnvironment()');
+const environmentEnd = appSource.indexOf('\n  function normalizeAgendaFiltersForContent(', environmentStart);
+assert.ok(environmentStart > -1 && environmentEnd > environmentStart);
+const environmentScript = appSource.slice(environmentStart, environmentEnd);
+for (const [hostname, pathname, enabled] of [
+  ['tiago-ps.github.io', '/EventosGratuitosBHeSabara/', true],
+  ['tiago-ps.github.io', '/EventosGratuitosBHeSabara/index.html', true],
+  ['temsimuai.com.br', '/', false],
+  ['tiago-ps.github.io', '/outra-pagina/', false]
+]) {
+  const envContext = vm.createContext({ window: { location: { hostname, pathname } } });
+  vm.runInContext(environmentScript, envContext);
+  assert.equal(envContext.isTestEditorialEnvironment(), enabled);
+}
 
 console.log('Filtros completos do modo Exploração validados.');

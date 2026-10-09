@@ -3861,6 +3861,12 @@ function eventProgram(event) {
     return [...values.entries()].sort((a, b) => a[1].localeCompare(b[1], 'pt-BR'));
   }
 
+  // Somente o domínio de testes expõe a revisão editorial experimental.
+  function isTestEditorialEnvironment() {
+    return window.location.hostname === 'tiago-ps.github.io' &&
+      window.location.pathname.toLowerCase().startsWith('/eventosgratuitosbhesabara/');
+  }
+
   function normalizeAgendaFiltersForContent(content = state.mobileContent) {
     const allowedContents = new Set(['all', 'events', 'books', 'courses', 'contests', 'films', 'utility', 'spaces', 'activities']);
     state.mobileContent = allowedContents.has(content) ? content : 'all';
@@ -3885,8 +3891,7 @@ function eventProgram(event) {
       state.mobileSpace = '';
       state.mobileInstitution = '';
       state.mobileRegistration = '';
-    } else if (!state.allEvents.some(event => event.somente_teste === true)) {
-      // O filtro de revisão só existe quando há registros exclusivos do TESTE.
+    } else if (!isTestEditorialEnvironment()) {
       state.mobileEditorialStatus = '';
     }
     if (state.mobileContent !== 'books') {
@@ -6037,7 +6042,7 @@ function eventProgram(event) {
     `;
 
     const eventControls = state.mobileContent === 'events' ? `
-      ${state.allEvents.some(event => event.somente_teste === true) ? `
+      ${isTestEditorialEnvironment() ? `
       <label><span>Situação editorial</span><select class="agenda-editorial-status">
         <option value="">Todos os eventos</option>
         <option value="experimental">Somente experimentais (em análise)</option>
@@ -6322,6 +6327,24 @@ function eventProgram(event) {
       ${activeFilters ? '<button type="button" class="agenda-clear-filters">Limpar filtros</button>' : ''}
     `;
 
+    // Atalho para analisar experimentais sem precisar abrir a busca avançada.
+    if (isTestEditorialEnvironment() && state.mobileContent === 'events' &&
+        !state.mobileFavoritesOnly && !state.mobileSharedSelection && !state.mobileFocusedItem) {
+      const reviewTotal = state.allEvents.filter(event => event.somente_teste === true).length;
+      const shortcut = document.createElement('button');
+      const selected = state.mobileEditorialStatus === 'experimental';
+      shortcut.type = 'button';
+      shortcut.className = 'agenda-editorial-shortcut';
+      shortcut.setAttribute('aria-pressed', String(selected));
+      shortcut.textContent = selected
+        ? 'Mostrar todos os eventos'
+        : `Ver somente experimentais (${reviewTotal})`;
+      shortcut.title = selected
+        ? 'Desativar o filtro experimental'
+        : 'Filtrar somente eventos que precisam de análise editorial';
+      count.append(shortcut);
+    }
+
     const resultsContainer = document.createElement('div');
     resultsContainer.className = 'agenda-results';
     resultsContainer.setAttribute('aria-label', 'Conteúdos culturais');
@@ -6488,6 +6511,11 @@ function eventProgram(event) {
       resetAgendaBatches();
       renderAgenda();
     };
+
+    count.querySelector('.agenda-editorial-shortcut')?.addEventListener('click', () => {
+      state.mobileEditorialStatus = state.mobileEditorialStatus === 'experimental' ? '' : 'experimental';
+      rerender();
+    });
 
     controls.addEventListener('keydown', event => {
       if (event.key !== 'Escape') return;
