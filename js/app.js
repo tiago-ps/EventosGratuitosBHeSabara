@@ -4141,7 +4141,7 @@ function eventProgram(event) {
     const overview = school.find(item => item.tipo_registro === 'programa_escola_livre');
     const units = school.filter(item => item.tipo_registro === 'resumo_unidade_escola_livre').slice(0, 2);
     const featuredIds = new Set([overview, ...units].filter(Boolean).map(item => item.id));
-    const featured = school.filter(item => featuredIds.has(item.id));
+    const featured = [overview, ...units].filter(Boolean);
     const otherEvents = events.filter(item => !isSchoolEvent(item));
     const schoolRemaining = school.filter(item => !featuredIds.has(item.id));
     return [...featured, ...otherEvents, ...schoolRemaining];
