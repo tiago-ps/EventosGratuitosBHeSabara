@@ -2940,3 +2940,47 @@ body.agenda-mode .agenda-more-menu-list .agenda-notifications-label {
 .agenda-editorial-shortcut:hover,
 .agenda-editorial-shortcut:focus-visible { background: var(--control-bg); }
 .agenda-editorial-shortcut[aria-pressed="true"] { background: var(--accent); color: var(--accent-contrast); }
+
+/* Ações rápidas no canto superior direito da imagem do Painel Interativo. */
+body.panel-mode .slide .media .panel-item-actions {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+body.panel-mode .slide .media .panel-item-action {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid rgba(255,255,255,.28);
+  border-radius: 50%;
+  background: rgba(7,17,31,.78);
+  color: #fff;
+  font: inherit;
+  font-size: 20px;
+  line-height: 1;
+  box-shadow: 0 4px 14px rgba(0,0,0,.24);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+}
+body.panel-mode .slide .media .panel-item-action svg { width: 20px; height: 20px; }
+body.panel-mode .slide .media .panel-item-action.is-favorite {
+  background: var(--accent);
+  color: var(--accent-contrast);
+  border-color: transparent;
+}
+body.panel-mode .slide .media .panel-item-action:hover,
+body.panel-mode .slide .media .panel-item-action:focus-visible {
+  transform: scale(1.05);
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+@media (max-width: 680px) {
+  body.panel-mode .slide .media .panel-item-actions { top: 8px; right: 8px; gap: 6px; }
+  body.panel-mode .slide .media .panel-item-action { width: 38px; height: 38px; }
+}
