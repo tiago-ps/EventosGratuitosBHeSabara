@@ -1624,15 +1624,6 @@
       }
     },
     {
-      "evento_id": "fcs-wp-37666",
-      "tipo": "organizado_por",
-      "destino": {
-        "tipo": "instituicao",
-        "id": "fcs",
-        "nome": "Fundação Clóvis Salgado"
-      }
-    },
-    {
       "evento_id": "manual-bloco-da-lagoa-cortejo-teatral-2026-09-05-2026-09-05",
       "tipo": "acontece_em",
       "destino": {

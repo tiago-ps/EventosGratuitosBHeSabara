@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
-  "periodo": "Março de 2026 a Janeiro de 2027",
-  "atualizado_em": "2026-10-08T18:38:14-03:00",
+  "periodo": "Março de 2026 a Junho de 2027",
+  "atualizado_em": "2026-10-08T23:07:38-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -5623,7 +5623,7 @@
       "gratuito": true,
       "inscricao": "Atividade gratuita conforme programação oficial do MM Gerdau; consulte a página do evento para orientações específicas de acesso, inscrição ou lotação.",
       "descricao": "EXPOSIÇÃO | COLEÇÕES COM MEMÓRIA. Consulte a página oficial para conhecer a atividade, os horários e a programação.",
-      "imagem": "",
+      "imagem": "https://www.secult.mg.gov.br/images/stories/migracao/cultura/2016/MM%20Gerdau%20-%20por%20Jomar%20Bragana_.jpg",
       "link": "https://mmgerdau.org.br/programacoes/colecoes-com-memoria/",
       "fonte": "MM Gerdau — programação oficial",
       "pagina": "https://mmgerdau.org.br/programacoes/colecoes-com-memoria/",
@@ -5632,7 +5632,16 @@
       "motivo_publicacao": "gratuidade_explicita",
       "local_id": "mm-gerdau",
       "status_validacao": "aprovado",
-      "origem_experimental": "mm_gerdau"
+      "origem_experimental": "mm_gerdau",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-06-18",
+          "fim": "2026-10-18"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=MM+Gerdau+%E2%80%93+Museu+das+Minas+e+do+Metal%2C+Pra%C3%A7a+da+Liberdade%2C+680%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ccbb-bh-marcelo-xavier-asa-de-papel",
@@ -5687,7 +5696,15 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-07-07",
+          "fim": "2026-10-11"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "ccbb-bh-joaquin-torres-garcia-150-anos",
@@ -5785,7 +5802,16 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_confirmada_no_campo_ingressos",
       "status_validacao": "aprovado",
-      "origem_experimental": "fiemg_sesi_cultura"
+      "origem_experimental": "fiemg_sesi_cultura",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-08-15",
+          "fim": "2026-10-24",
+          "observacao": "11h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=SESI+Museu+de+Artes+e+Of%C3%ADcios%2C+Pra%C3%A7a+Rui+Barbosa%2C+600%2C+Centro%2C+Belo+Horizonte+-+MG"
     },
     {
       "acao_formulario_fechado": "marcar_encerrada",
@@ -5891,7 +5917,7 @@
       "data_fim": "2026-10-23",
       "horario": "18h",
       "local": "Grande Galeria do Centro Cultural UFMG",
-      "local_id": "ccult-ufmg-grande-galeria",
+      "local_id": "centro-cultural-ufmg",
       "cidade": "Belo Horizonte",
       "endereco": "Avenida Santos Dumont, 174, Centro, Belo Horizonte - MG",
       "categoria": "Exposição",
@@ -5906,10 +5932,18 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_explicita",
       "classificacao_indicativa": "12 anos",
-      "evidencia_classificacao_indicativa": "texto_explicito_padrao_1",
-      "evidencia_classificacao_indicativa_trecho": "feriados: 9h às 17h Grande Galeria Classificação indicativa: 12 anos Entrada gratuita Consulte rotas e",
       "status_validacao": "aprovado",
-      "origem_experimental": "centro_cultural_ufmg"
+      "origem_experimental": "centro_cultural_ufmg",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-18",
+          "fim": "2026-10-23",
+          "observacao": "18h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+UFMG%2C+Avenida+Santos+Dumont%2C+174%2C+Centro%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Grande Galeria do"
     },
     {
       "id": "ccult-ufmg-a-praca-raul-soares-ganha-cores-da-arte-pop-em-exposicao-de-angelo-mazzuchelli-2026-09-18",
@@ -5918,7 +5952,7 @@
       "data_fim": "2026-10-23",
       "horario": "19h",
       "local": "Espaço Experimentação da Imagem",
-      "local_id": "ccult-ufmg-experimentacao-imagem",
+      "local_id": "centro-cultural-ufmg",
       "cidade": "Belo Horizonte",
       "endereco": "Avenida Santos Dumont, 174, Centro, Belo Horizonte - MG",
       "categoria": "Exposição",
@@ -5933,10 +5967,17 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_explicita",
       "classificacao_indicativa": "Livre",
-      "evidencia_classificacao_indicativa": "texto_explicito_padrao_1",
-      "evidencia_classificacao_indicativa_trecho": "7h Espaço Experimentação da Imagem Classificação indicativa: livre Entrada gratuita Consulte rotas e",
       "status_validacao": "aprovado",
-      "origem_experimental": "centro_cultural_ufmg"
+      "origem_experimental": "centro_cultural_ufmg",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-18",
+          "fim": "2026-10-23",
+          "observacao": "19h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+UFMG%2C+Avenida+Santos+Dumont%2C+174%2C+Centro%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "minas-tenis-exposicao-leveza-2026-09-21",
@@ -5960,7 +6001,16 @@
       "motivo_publicacao": "gratuidade_explicita",
       "local_id": "centro-cultural-unimed-bh-minas",
       "status_validacao": "aprovado",
-      "origem_experimental": "minas_tenis_cultura"
+      "origem_experimental": "minas_tenis_cultura",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-21",
+          "fim": "2026-10-21",
+          "observacao": "06h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+Unimed-BH+Minas%2C+Rua+da+Bahia%2C+2244%2C+Lourdes%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "mm-gerdau-exposicao-paisagens-inventadas-2026-09-24",
@@ -5975,7 +6025,7 @@
       "gratuito": true,
       "inscricao": "Atividade gratuita conforme programação oficial do MM Gerdau; consulte a página do evento para orientações específicas de acesso, inscrição ou lotação.",
       "descricao": "EXPOSIÇÃO | PAISAGENS INVENTADAS. Consulte a página oficial para conhecer a atividade, os horários e a programação.",
-      "imagem": "",
+      "imagem": "https://www.secult.mg.gov.br/images/stories/migracao/cultura/2016/MM%20Gerdau%20-%20por%20Jomar%20Bragana_.jpg",
       "link": "https://mmgerdau.org.br/programacoes/paisagens-inventadas-aida-fischer/",
       "fonte": "MM Gerdau — programação oficial",
       "pagina": "https://mmgerdau.org.br/programacoes/paisagens-inventadas-aida-fischer/",
@@ -5984,7 +6034,16 @@
       "motivo_publicacao": "gratuidade_explicita",
       "local_id": "mm-gerdau",
       "status_validacao": "aprovado",
-      "origem_experimental": "mm_gerdau"
+      "origem_experimental": "mm_gerdau",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-24",
+          "fim": "2027-02-28"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=MM+Gerdau+%E2%80%93+Museu+das+Minas+e+do+Metal%2C+Pra%C3%A7a+da+Liberdade%2C+680%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "aml-segure-a-alca-do-martelo-e-puxe-ate-romper-o-lacre-multiartista-ricardo-aleixo-inaugura-exposicao-na-academia-mineira-de-letras-2026-09-24",
@@ -6008,7 +6067,16 @@
       "motivo_publicacao": "gratuidade_explicita",
       "local_id": "academia-mineira-de-letras",
       "status_validacao": "aprovado",
-      "origem_experimental": "academia_mineira_letras"
+      "origem_experimental": "academia_mineira_letras",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-09-24",
+          "fim": "2026-11-21",
+          "observacao": "19h"
+        }
+      },
+      "mapa": "https://maps.app.goo.gl/nWAFno2E42DH5BeP6"
     },
     {
       "id": "fcs-wp-37771",
@@ -6122,7 +6190,7 @@
       "gratuito": true,
       "inscricao": "Atividade gratuita conforme página oficial do Galpão Cine Horto; consulte a página para retirada de ingressos, inscrição, lotação e público-alvo.",
       "descricao": "Rua Pitangui, 3613, Horto ✴ 31 3481-5580 ✴ programacao@galpaocinehorto.com.br Programação Pedagógico Cursos Livres Núcleos de Pesquisa Visita Virtual CPMT Centro de Pesquisa e Memória do Teatro (CPMT) Revista Subtexto Acervo Cadernos de Dramaturgia Portal Primeiro Sinal Editais Mais O Galpão Cine Horto Grupo Galpão Conexão Galpão Nossos Espaços Entre em contato programacao@galpaocinehorto.com.br (31) 3481-5580 CONEXÃO GALPÃO Mostra Infâncias Home Galpão Cine Horto Mostra Infâncias Após 27 anos de história, criando e executando projetos longevos e de grande impacto cultural para Belo Horizonte e para o Brasil, o Galpão Cine Horto decide sonhar um projeto totalmente dedicado às infâncias,",
-      "imagem": "",
+      "imagem": "imagens/equipamentos/galpao-cine-horto.jpg",
       "link": "https://galpaocinehorto.com.br/portfolio/mostra-infancias/",
       "pagina": "https://galpaocinehorto.com.br/portfolio/mostra-infancias/",
       "fonte": "Galpão Cine Horto — programação oficial",
@@ -6130,339 +6198,17 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_explicita",
       "status_validacao": "aprovado",
-      "origem_experimental": "galpao_cine_horto"
-    },
-    {
-      "id": "fcs-wp-37666",
-      "titulo": "Lírico no Museu",
-      "data": "2026-10-08",
-      "data_fim": "",
-      "horario": "",
-      "local": "Museu Inimá de Paula",
-      "cidade": "Belo Horizonte",
-      "categoria": "Música",
-      "gratuito": true,
-      "inscricao": "Ingresso gratuito; consulte a página oficial",
-      "descricao": "O Coral Lírico de Minas Gerais apresenta, no dia 8 de outubro, no Museu Inimá de Paula, um programa dedicado à riqueza da música coral francesa e alemã do século XIX. Sob a regência da maestra Maria Clara Marco Fernández, o concerto reúne obras de Camille Saint-Saëns, Gabriel Fauré, Charles Gounod,",
-      "imagem": "https://fcs.mg.gov.br/wp-content/uploads/2026/09/lirico-card-1024x1024.png",
-      "link": "https://fcs.mg.gov.br/evento/lirico-no-museu-7/",
-      "fonte": "Fundação Clóvis Salgado",
-      "instituicao_id": "fcs",
-      "fonte_id": 37666,
-      "atualizado_na_fonte": "2026-10-04T22:36:15",
+      "origem_experimental": "galpao_cine_horto",
       "temporalidade": {
-        "classe": "pontual",
+        "classe": "periodo",
         "realizacao": {
-          "inicio": "2026-10-08"
+          "inicio": "2026-10-03",
+          "fim": "2026-10-12",
+          "observacao": "13h"
         }
       },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
-    },
-    {
-      "id": "fiemg-sesi-museologia-em-foco-praca-da-estacao-porta-de-entrada-de-bh-2026-10-08",
-      "titulo": "Museologia em Foco | Praça da Estação – Porta de Entrada de BH",
-      "data": "2026-10-08",
-      "data_fim": "",
-      "horario": "",
-      "local": "SESI Museu de Artes e Ofícios",
-      "local_id": "sesi-museu-artes-oficios",
-      "cidade": "Belo Horizonte",
-      "endereco": "Praça Rui Barbosa, 600, Centro, Belo Horizonte - MG",
-      "categoria": "Palestra e debate",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita confirmada na programação oficial do SESI Cultura MG; consulte a página do evento para eventuais orientações de inscrição ou retirada.",
-      "descricao": "Palestra: “Praça da Estação – Porta de Entrada de BH” Nesta edição do Museologia em Foco, receberemos Moacir Ricoy Pena, sociólogo, pesquisador e profissional dedicado à preservação da memória audiovisual de Belo Horizonte. Atualmente, atua no Museu da Imagem e do Som de Belo Horizonte (MIS-BH), com pesquisa e atendimento ao consulente, além de ter participado do resgate e da curadoria de acervos e exposições sobre a TV Itacolomi. A palestra propõe um mergulho na história da Praça da Estação,",
-      "imagem": "https://www.fiemg.com.br/sesi-cultura/wp-content/uploads/sites/28/2026/09/fiemg_primavera_banners_geral_datas_tropicaos_museologia_alteradas2.png",
-      "link": "https://www.fiemg.com.br/sesi-cultura/programacao/detalhe/museologia-em-foco-praca-da-estacao-porta-de-entrada-de-bh/",
-      "fonte": "SESI Cultura MG — Programação",
-      "pagina": "https://www.fiemg.com.br/sesi-cultura/programacao/detalhe/museologia-em-foco-praca-da-estacao-porta-de-entrada-de-bh/",
-      "instituicao_id": "sesi-cultura-mg",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "gratuidade_confirmada_no_campo_ingressos",
-      "status_validacao": "aprovado",
-      "origem_experimental": "fiemg_sesi_cultura"
-    },
-    {
-      "id": "portal-bh-6c26e916e790-2026-10-08-1300",
-      "titulo": "Oficina • Preservação Audiovisual • Análise Fílmica, com Soraia Nogueira",
-      "data": "2026-10-08",
-      "data_fim": "",
-      "horario": "13h às 15h",
-      "local": "Museu da Imagem e do Som – MIS BH",
-      "cidade": "Belo Horizonte",
-      "categoria": "Oficina",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "De 6 a 9/10 TER. A SEX 13h às 15h indicado para maiores de 18 anos Inscrições via formulário: Link na bio do instagram do Museu",
-      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-10/oficina-preservacao-audiovisual.png",
-      "link": "https://portalbelohorizonte.com.br/museuscentro/2026/eventos/oficina/audiovisual/oficina-preservacao-audiovisual-analise-filmica-com-soraia-nogueira",
-      "fonte": "Portal Belo Horizonte",
-      "fonte_id": "6c26e916e790",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "endereco": "",
-      "tags_fonte": [],
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-08",
-          "observacao": "13h às 15h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
-    },
-    {
-      "id": "sympla-sabara-3589577",
-      "titulo": "Identidade Gastronômica de Sabará  - Sabores, Histórias e Tradições",
-      "data": "2026-10-08",
-      "data_fim": "",
-      "horario": "15h às 17h",
-      "local": "Solar do Padre Correia",
-      "cidade": "Sabará",
-      "categoria": "Oficina",
-      "gratuito": true,
-      "inscricao": "Inscrição gratuita pela Sympla; consulte disponibilidade",
-      "descricao": "A Prefeitura de Sabará, por meio da Secretaria Municipal de Turismo, em parceria com o SEBRAE Minas, convida você para participar da II oficina do projeto Identidade Gastronômica de Sabará.O objetivo é a definição e a priorização das ações a serem trabalhadas no Plano de Futuro do projeto,",
-      "imagem": "https://images.sympla.com.br/6ab2a8f438242-lg.png",
-      "link": "https://www.sympla.com.br/evento/identidade-gastronomica-de-sabara-sabores-historias-e-tradicoes/3589577",
-      "fonte": "Sympla — evento em Sabará",
-      "instituicao_id": "prefeitura-sabara",
-      "fonte_id": "3589577",
-      "organizador": "",
-      "endereco": "Rua Dom Pedro II, 200 Centro, Sabará, MG",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-08",
-          "observacao": "15h às 17h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "solar-padre-correia",
-      "mapa": "https://maps.app.goo.gl/fNCH9XLpCY5V4z2j6"
-    },
-    {
-      "id": "portal-bh-69dbfade2381-2026-10-08-1500",
-      "titulo": "“Conexões Acadêmicas no Museus Pampulha”, com o lançamento do catálogo da exposição “trans:paisagem”",
-      "data": "2026-10-08",
-      "data_fim": "",
-      "horario": "15h às 17h",
-      "local": "Casa do Baile",
-      "cidade": "Belo Horizonte",
-      "categoria": "Exposição",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "A Casa do Baile recebe mais uma edição do projeto “Conexões Acadêmicas no Museus Pampulha”, com o lançamento do catálogo da exposição “trans:paisagem”, que reúne registros fotográficos da arquitetura moderna e contemporânea, com destaque para as obras de Burle Marx e Oscar Niemeyer. A programação inclui ainda um bate-papo sobre fotografia urbana com Leonardo Finotti,",
-      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-09/fotos-para-site-formato-440x225-3.png",
-      "link": "https://portalbelohorizonte.com.br/museuspampulha/2026/eventos/lancamento/artes-visuais/conexoes-academicas-no-museus-pampulha-com-o-lancamento-do-catalogo-da-exposicao-transpaisagem",
-      "fonte": "Portal Belo Horizonte",
-      "fonte_id": "69dbfade2381",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "endereco": "",
-      "tags_fonte": [
-        "Artes Visuais",
-        "Cultural",
-        "Exposição",
-        "Fotografia",
-        "Gratuito",
-        "Lançamentos",
-        "Pampulha"
-      ],
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-08",
-          "observacao": "15h às 17h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
-    },
-    {
-      "id": "cine-santa-tereza-bileto-128035",
-      "titulo": "5ª AUTÊNTICA MOSTRA CINEMAS DO BRASIL - Areia, memória e cinema",
-      "data": "2026-10-08",
-      "data_fim": "",
-      "horario": "17h",
-      "local": "Cine Santa Tereza",
-      "cidade": "Belo Horizonte",
-      "categoria": "Cinema",
-      "gratuito": true,
-      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial. Também há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade.",
-      "descricao": "Areia, memória e cinema (Letícia Damasceno Barreto | 2023 | Brasil |Documentário | 20 min) Narrado em primeira pessoa, o documentário revisita a história do cinema em Areia a partir da memória afetiva da realizadora e da trajetória de seu avô. Memórias – Histórias do Cine Teatro Municipal de Sumé (Ana Célia Gomes | 2025 | Brasil | Documentário | 19min) O filme revela a importância cultural do Cine Teatro Municipal de Sumé como patrimônio vivo, conectando memórias, identidades e pertencimento.",
-      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/3q657hv4b0kkm1pv4rhq99oogbi29mjsprptpp4d3proqempl95hp4l3ham77enhu2b5alkiua4tf9s6dauttvjb8hil0qi7pjhi75r.jpeg",
-      "link": "https://bileto.sympla.com.br/event/128035/d/419264/s/2719832",
-      "fonte": "Cine Santa Tereza",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "fonte_id": "128035",
-      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
-      "classificacao_indicativa": "Livre",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-08",
-          "observacao": "17h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
-    },
-    {
-      "id": "mm-gerdau-apresentacao-musical-banda-sinfonica-do-cefart-2026-10-08",
-      "titulo": "APRESENTAÇÃO MUSICAL | BANDA SINFÔNICA DO CEFART",
-      "data": "2026-10-08",
-      "data_fim": "",
-      "horario": "19h",
-      "local": "MM Gerdau – Museu das Minas e do Metal",
-      "cidade": "Belo Horizonte",
-      "endereco": "Praça da Liberdade, 680, Funcionários, Belo Horizonte - MG",
-      "categoria": "Música",
-      "gratuito": true,
-      "inscricao": "Atividade gratuita conforme programação oficial do MM Gerdau; consulte a página do evento para orientações específicas de acesso, inscrição ou lotação.",
-      "descricao": "APRESENTAÇÃO MUSICAL | BANDA SINFÔNICA DO CEFART. Consulte a página oficial para conhecer a atividade, os horários e a programação.",
-      "imagem": "",
-      "link": "https://mmgerdau.org.br/programacoes/apresentacao-musical-banda-sinfonica-do-cefart/",
-      "fonte": "MM Gerdau — programação oficial",
-      "pagina": "https://mmgerdau.org.br/programacoes/apresentacao-musical-banda-sinfonica-do-cefart/",
-      "instituicao_id": "mm-gerdau",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "gratuidade_explicita",
-      "local_id": "mm-gerdau",
-      "status_validacao": "aprovado",
-      "origem_experimental": "mm_gerdau"
-    },
-    {
-      "id": "cine-santa-tereza-bileto-127829",
-      "titulo": "SEMANA DO CINEMA ESPANHOL - Fechar os Olhos",
-      "data": "2026-10-08",
-      "data_fim": "",
-      "horario": "19h",
-      "local": "Cine Santa Tereza",
-      "cidade": "Belo Horizonte",
-      "categoria": "Cinema",
-      "gratuito": true,
-      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
-      "descricao": "Fechar os olhos (Cerrar los ojos | Víctor Erice | 2023 | Espanhol | Drama |169 min) Durante as filmagens de um filme, um ator espanhol desaparece. Embora seu corpo nunca tenha sido encontrado, a polícia concluiu que ele sofreu um acidente na beira de um penhasco. Muitos anos depois, o caso volta à tona. Classificação indicativa: 16 anos",
-      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/39jo3ehhgve7avevge49hls4sdf6sdcmreh47t596kkffdbe4b6gadqlkg56mfcvttmliggbgqgbhpj0tsnepngm7qdd0lgfsrprejt.jpeg",
-      "link": "https://bileto.sympla.com.br/event/127829/d/418156/s/2713373",
-      "fonte": "Cine Santa Tereza",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "fonte_id": "127829",
-      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
-      "classificacao_indicativa": "16 anos",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-08",
-          "observacao": "19h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
-    },
-    {
-      "id": "conservatorio-ufmg-artur-miranda-azzi-iv-coloquio-viorizontes-violoes-em-rede-2026-10-08-1930",
-      "titulo": "Artur Miranda Azzi IV Colóquio VIOrizontes - violões em rede",
-      "data": "2026-10-08",
-      "data_fim": "",
-      "horario": "19h30",
-      "local": "Conservatório UFMG",
-      "local_id": "conservatorio-ufmg",
-      "cidade": "Belo Horizonte",
-      "endereco": "Avenida Afonso Pena, 1534, Centro, Belo Horizonte - MG",
-      "categoria": "Música",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita, sujeita à capacidade do espaço, conforme agenda oficial do Conservatório UFMG.",
-      "descricao": "ESPECIAL. Artur Miranda Azzi IV Colóquio VIOrizontes - violões em rede. MÚSICA ERUDITA",
-      "imagem": "",
-      "link": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html",
-      "pagina": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html",
-      "fonte": "Conservatório UFMG — agenda oficial",
-      "instituicao_id": "conservatorio-ufmg",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "gratuidade_global_agenda_oficial",
-      "status_validacao": "aprovado",
-      "origem_experimental": "conservatorio_ufmg"
-    },
-    {
-      "id": "casa-fiat-atelie-aberto-paisagem-construida-2026-10-08-1930",
-      "titulo": "Ateliê Aberto | Paisagem construída",
-      "data": "2026-10-08",
-      "data_fim": "",
-      "horario": "19h30",
-      "local": "Casa Fiat de Cultura",
-      "local_id": "casa-fiat-de-cultura",
-      "cidade": "Belo Horizonte",
-      "endereco": "Praça da Liberdade, 10, Funcionários, Belo Horizonte - MG",
-      "categoria": "Oficina",
-      "gratuito": true,
-      "inscricao": "Programação gratuita conforme informação oficial da Casa Fiat de Cultura; consulte a página para inscrição, retirada de senha ou lotação quando aplicável.",
-      "descricao": "Ateliê Aberto | Paisagem construída 1, 3, 4, 8, 10, 11, 15, 17, 18, 22, 24, 25 e 29/out Quantas paisagens cabem em um mesmo lugar? Inspirado na exposição “Mil maneiras de matar o tempo”, da artista porto-alegrense Talita Hoffmann, o Ateliê Aberto propõe uma experiência de desaceleração do olhar. Por meio de visores cartonados, o público é convidado a recortar a paisagem e perceber detalhes entre formas, jogos de luz e texturas. Cada participante transforma o que observa em uma composição sobre tecido. Entre a observação e a imaginação,",
-      "imagem": "https://casafiatdecultura.com.br/wp-content/uploads/2026/09/Banners-newsletter-outubro_ATELIE-ABERTO-1024x384.png",
-      "link": "https://casafiatdecultura.com.br/evento/atelie-aberto-paisagem-construida/",
-      "fonte": "Casa Fiat de Cultura — programação oficial",
-      "pagina": "https://casafiatdecultura.com.br/evento/atelie-aberto-paisagem-construida/",
-      "instituicao_id": "casa-fiat-de-cultura",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
-    },
-    {
-      "id": "fcs-wp-37692",
-      "titulo": "Cineclube Comum: Visões Táteis",
-      "data": "2026-10-08",
-      "data_fim": "",
-      "horario": "19h30",
-      "local": "Cine Humberto Mauro",
-      "cidade": "Belo Horizonte",
-      "categoria": "Cinema",
-      "gratuito": true,
-      "inscricao": "Ingresso gratuito; consulte a página oficial",
-      "descricao": "No dia 8 de outubro, às 19h30, o Cine Humberto Mauro recebe mais uma sessão do Cineclube Comum: Visões Táteis, mostra realizada em correalização com o Instituto Cervantes de Belo Horizonte. Nesta edição, a programação reúne o curta-metragem Jamal (Ibrahim Shaddad, Sudão, 1981) e o longa-metragem Leviatã (Leviathan,",
-      "imagem": "https://fcs.mg.gov.br/wp-content/uploads/2026/09/CINE-CLUBE-VISOES-TATEIS-1024x1024.png",
-      "link": "https://fcs.mg.gov.br/evento/cineclube-comum-visoes-tateis-4/",
-      "fonte": "Fundação Clóvis Salgado",
-      "instituicao_id": "fcs",
-      "fonte_id": 37692,
-      "atualizado_na_fonte": "2026-09-25T21:13:54",
-      "classificacao_indicativa": "Livre",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-08",
-          "observacao": "19h30"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "palacio-das-artes",
-      "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
-      "espaco_interno": "Cine Humberto Mauro"
-    },
-    {
-      "id": "aml-gislayne-matos-lanca-contos-para-o-seculo-xxi-e-discute-o-poder-das-historias-no-mundo-contemporaneo-na-aml-2026-10-08",
-      "titulo": "Gislayne Matos lança “Contos para o Século XXI” e discute o poder das histórias no mundo contemporâneo, na AML",
-      "data": "2026-10-08",
-      "data_fim": "",
-      "horario": "19h30",
-      "local": "Academia Mineira de Letras",
-      "cidade": "Belo Horizonte",
-      "endereco": "Rua da Bahia, 1466, Lourdes, Belo Horizonte - MG",
-      "categoria": "Exposição",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita conforme programação oficial da Academia Mineira de Letras; consulte a página para orientações de acesso ou inscrição.",
-      "descricao": "Gislayne Matos lança “Contos para o Século XXI” e discute o poder das histórias no mundo contemporâneo, na AML 08/10/2026 🔊 Ouvir o conteúdo Escritora e pesquisadora apresenta palestra gratuita seguida do lançamento do livro, no dia 8 de outubro, às 19h30, na Academia Mineira de Letras, com tradução em Libras Em um mundo de telas, excesso de informação, relações virtuais e pouco tempo para escutar, ainda há espaço para sentar e ouvir uma história? É a partir dessa pergunta que a escritora e pesquisadora Gislayne Matos conduz a palestra “Contos para o Século XXI”, que será realizada no dia 8 de outubro, às 19h30, na Academia Mineira de Letras.",
-      "imagem": "https://academiamineiradeletras.org.br/wp-content/uploads/2026/09/SITE_Gislayne-Matos.jpg",
-      "link": "https://academiamineiradeletras.org.br/eventos/gislayne-matos-lanca-contos-para-o-seculo-xxi-e-discute-o-poder-das-historias-no-mundo-contemporaneo-na-aml/",
-      "pagina": "https://academiamineiradeletras.org.br/eventos/gislayne-matos-lanca-contos-para-o-seculo-xxi-e-discute-o-poder-das-historias-no-mundo-contemporaneo-na-aml/",
-      "fonte": "Academia Mineira de Letras — programação oficial",
-      "instituicao_id": "academia-mineira-de-letras",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "gratuidade_explicita",
-      "local_id": "academia-mineira-de-letras",
-      "status_validacao": "aprovado",
-      "origem_experimental": "academia_mineira_letras"
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Galp%C3%A3o+Cine+Horto%2C+Rua+Pitangui%2C+3613%2C+Horto%2C+Belo+Horizonte+-+MG",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "fcs-wp-37664",
@@ -6561,7 +6307,7 @@
       "data_fim": "2026-11-15",
       "horario": "19h",
       "local": "Sala Celso Renato de Lima",
-      "local_id": "ccult-ufmg-sala-celso-renato",
+      "local_id": "centro-cultural-ufmg",
       "cidade": "Belo Horizonte",
       "endereco": "Avenida Santos Dumont, 174, Centro, Belo Horizonte - MG",
       "categoria": "Exposição",
@@ -6576,10 +6322,17 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_explicita",
       "classificacao_indicativa": "14 anos",
-      "evidencia_classificacao_indicativa": "texto_explicito_padrao_1",
-      "evidencia_classificacao_indicativa_trecho": "h às 17h Sala Celso Renato de Lima Classificação indicativa: 14 anos Entrada gratuita Consulte rotas e",
       "status_validacao": "aprovado",
-      "origem_experimental": "centro_cultural_ufmg"
+      "origem_experimental": "centro_cultural_ufmg",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-10-09",
+          "fim": "2026-11-15",
+          "observacao": "19h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+UFMG%2C+Avenida+Santos+Dumont%2C+174%2C+Centro%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "cine-santa-tereza-bileto-127859",
@@ -6618,7 +6371,7 @@
       "data_fim": "2026-11-15",
       "horario": "19h",
       "local": "Sala Ana Horta",
-      "local_id": "ccult-ufmg-sala-ana-horta",
+      "local_id": "centro-cultural-ufmg",
       "cidade": "Belo Horizonte",
       "endereco": "Avenida Santos Dumont, 174, Centro, Belo Horizonte - MG",
       "categoria": "Exposição",
@@ -6633,10 +6386,17 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_explicita",
       "classificacao_indicativa": "Livre",
-      "evidencia_classificacao_indicativa": "texto_explicito_padrao_1",
-      "evidencia_classificacao_indicativa_trecho": "e 2026. A entrada é gratuita e tem classificação livre. Compartilhe no WhatsApp C omparti",
       "status_validacao": "aprovado",
-      "origem_experimental": "centro_cultural_ufmg"
+      "origem_experimental": "centro_cultural_ufmg",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-10-09",
+          "fim": "2026-11-15",
+          "observacao": "19h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+UFMG%2C+Avenida+Santos+Dumont%2C+174%2C+Centro%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "conservatorio-ufmg-luigi-brandao-e-duo-vincens-maciel-iv-coloquio-viorizontes-violoes-em-rede-2026-10-09-1930",
@@ -6652,7 +6412,7 @@
       "gratuito": true,
       "inscricao": "Entrada gratuita, sujeita à capacidade do espaço, conforme agenda oficial do Conservatório UFMG.",
       "descricao": "ESPECIAL. Luigi Brandão e Duo Vincens-Maciel IV Colóquio VIOrizontes - violões em rede. MÚSICA ERUDITA",
-      "imagem": "",
+      "imagem": "https://www.ufmg.br/online/arquivos/anexos/ConservatorioUFMGFachada.jpg",
       "link": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html",
       "pagina": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html",
       "fonte": "Conservatório UFMG — agenda oficial",
@@ -6660,7 +6420,16 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_agenda_oficial",
       "status_validacao": "aprovado",
-      "origem_experimental": "conservatorio_ufmg"
+      "origem_experimental": "conservatorio_ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-09",
+          "observacao": "19h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Conservat%C3%B3rio+UFMG%2C+Avenida+Afonso+Pena%2C+1534%2C+Centro%2C+Belo+Horizonte+-+MG",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "mhnjb-ufmg-oficina-de-brinquedos-e-brincadeiras-2026-10-10-09h30-as-11h30",
@@ -6669,14 +6438,14 @@
       "data_fim": "",
       "horario": "09h30 às 11h30",
       "local": "Praça Pau-Brasil do MHNJB",
-      "local_id": "mhnjb-ufmg-praca-pau-brasil",
+      "local_id": "mhnjb-ufmg",
       "cidade": "Belo Horizonte",
       "endereco": "Rua Gustavo da Silveira, 1035, Santa Inês, Belo Horizonte - MG",
       "categoria": "Oficina",
       "gratuito": true,
       "inscricao": "Atividade gratuita. A programação oficial informa que não é necessária inscrição prévia, mas as vagas são limitadas e preenchidas conforme disponibilidade.",
       "descricao": "Propõe a construção de brinquedos pelas próprias crianças a partir de materiais reutilizáveis e de fácil acesso, estimulando a criatividade, a imaginação e a valorização do brincar como prática cultural e educativa. Praça do Pau-Brasil atrás do Setor Educativo. 20 vagas /sessão.",
-      "imagem": "",
+      "imagem": "https://www.ufmg.br/online/arquivos/anexos/Predio_diretoria.JPG",
       "link": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "pagina": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "fonte": "MHNJB UFMG — programação oficial",
@@ -6684,7 +6453,17 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_explicita",
       "status_validacao": "aprovado",
-      "origem_experimental": "mhnjb_ufmg"
+      "origem_experimental": "mhnjb_ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-10",
+          "observacao": "09h30 às 11h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Hist%C3%B3ria+Natural+e+Jardim+Bot%C3%A2nico+da+UFMG%2C+Rua+Gustavo+da+Silveira%2C+1035%2C+Santa+In%C3%AAs%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Praça Pau-Brasil do",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "mm-gerdau-se-essa-rua-fosse-nossa-2026-2026-10-10",
@@ -6707,7 +6486,15 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_explicita",
       "status_validacao": "aprovado",
-      "origem_experimental": "mm_gerdau"
+      "origem_experimental": "mm_gerdau",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-10",
+          "observacao": "10h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Alameda+da+Educa%C3%A7%C3%A3o+%E2%80%93+Pra%C3%A7a+da+Liberdade%2C+Pra%C3%A7a+da+Liberdade%2C+em+frente+ao+Pr%C3%A9dio+Rosa%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "mhnjb-ufmg-tecidos-de-terra-2026-10-10-10h-as-12h",
@@ -6716,14 +6503,14 @@
       "data_fim": "",
       "horario": "10h às 12h",
       "local": "Anfiteatro da Mata do MHNJB",
-      "local_id": "mhnjb-ufmg-anfiteatro-mata",
+      "local_id": "mhnjb-ufmg",
       "cidade": "Belo Horizonte",
       "endereco": "Rua Gustavo da Silveira, 1035, Santa Inês, Belo Horizonte - MG",
       "categoria": "Oficina",
       "gratuito": true,
       "inscricao": "Atividade gratuita. A programação oficial informa que não é necessária inscrição prévia, mas as vagas são limitadas e preenchidas conforme disponibilidade.",
       "descricao": "Você já foi corpo de árvore, uma flor ou um cogumelo? Vem brincar com a gente e fazer parte do tecido da saúde planetária!! Esta oficina é um espaço de brincadeiras para lembrar o vínculo da saúde planetária (fauna, flora e funga) em relação com a saúde humana. anfiteatro da mata. 20 vagas.",
-      "imagem": "",
+      "imagem": "https://www.ufmg.br/online/arquivos/anexos/Predio_diretoria.JPG",
       "link": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "pagina": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "fonte": "MHNJB UFMG — programação oficial",
@@ -6731,7 +6518,17 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_explicita",
       "status_validacao": "aprovado",
-      "origem_experimental": "mhnjb_ufmg"
+      "origem_experimental": "mhnjb_ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-10",
+          "observacao": "10h às 12h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Hist%C3%B3ria+Natural+e+Jardim+Bot%C3%A2nico+da+UFMG%2C+Rua+Gustavo+da+Silveira%2C+1035%2C+Santa+In%C3%AAs%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Anfiteatro da Mata do",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "portal-bh-0a3afecfbfe3-2026-10-10-1000",
@@ -6816,7 +6613,15 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-10",
+          "observacao": "10h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "ufmg-ec-observacao-solar-na-alameda-da-educacao-se-essa-rua-fosse-nossa-semana-das-criancas",
@@ -6869,7 +6674,15 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-10",
+          "observacao": "10h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "casa-fiat-minicurso-entre-o-fazer-e-o-vestir-processos-criativos-na-moda-brasileira-2026-10-10-14",
@@ -6893,7 +6706,15 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-10",
+          "observacao": "14h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "mhnjb-ufmg-circuito-dos-solos-2026-10-10-14h20-as-16h",
@@ -6902,14 +6723,14 @@
       "data_fim": "",
       "horario": "14h20 às 16h",
       "local": "Espaço Arte e Educação do MHNJB",
-      "local_id": "mhnjb-ufmg-espaco-arte-educacao",
+      "local_id": "mhnjb-ufmg",
       "cidade": "Belo Horizonte",
       "endereco": "Rua Gustavo da Silveira, 1035, Santa Inês, Belo Horizonte - MG",
       "categoria": "Oficina",
       "gratuito": true,
       "inscricao": "Atividade gratuita. A programação oficial informa que não é necessária inscrição prévia, mas as vagas são limitadas e preenchidas conforme disponibilidade.",
       "descricao": "Oficina sobre os tipos de solos do museu, importância e fatores de formação dos solos e aspectos de preservação. Na sequência os alunos serão convidados a montar perfis de solos em caixas acrílicas e guiados a fazerem pinturas livres com tintas oriundas das cores dos solos do museu. As pinturas poderão ser levadas para casa. Espaço Arte e Educação (perto Jogo dos Polinizadores). 20 vagas.",
-      "imagem": "",
+      "imagem": "https://www.ufmg.br/online/arquivos/anexos/Predio_diretoria.JPG",
       "link": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "pagina": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "fonte": "MHNJB UFMG — programação oficial",
@@ -6917,7 +6738,24 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_explicita",
       "status_validacao": "aprovado",
-      "origem_experimental": "mhnjb_ufmg"
+      "origem_experimental": "mhnjb_ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-10",
+          "observacao": "14h20 às 16h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Hist%C3%B3ria+Natural+e+Jardim+Bot%C3%A2nico+da+UFMG%2C+Rua+Gustavo+da+Silveira%2C+1035%2C+Santa+In%C3%AAs%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Espaço Arte e Educação do",
+      "fontes": [
+        "MHNJB UFMG — programação oficial"
+      ],
+      "ids_mesclados": [
+        "mhnjb-ufmg-circuito-dos-solos-2026-10-10-14h20-as-16h",
+        "mhnjb-ufmg-tafonogame-2026-10-10-14h20-as-16h"
+      ],
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "mhnjb-ufmg-tafonogame-2026-10-10-14h20-as-16h",
@@ -6940,7 +6778,8 @@
       "instituicao_id": "mhnjb-ufmg",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_explicita",
-      "status_validacao": "aprovado",
+      "somente_teste": true,
+      "status_validacao": "experimental",
       "origem_experimental": "mhnjb_ufmg"
     },
     {
@@ -6965,7 +6804,15 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-10",
+          "observacao": "15h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "ufmg-ec-oficina-perceber-e-reconhecer-para-proteger-se-essa-rua-fosse-nossa-semana-das-criancas",
@@ -7017,7 +6864,15 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-10",
+          "observacao": "15h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "portal-bh-14364f6564d5-2026-10-10-1530",
@@ -7078,7 +6933,15 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-10",
+          "observacao": "16h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "cine-santa-tereza-bileto-128033",
@@ -7219,7 +7082,15 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-11",
+          "observacao": "10h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "filarmonica-mg-concertos-para-a-juventude-6-2026-2026-10-11",
@@ -7243,7 +7114,15 @@
       "motivo_publicacao": "marcador_gratuito_agenda",
       "local_id": "sala-minas-gerais",
       "status_validacao": "aprovado",
-      "origem_experimental": "filarmonica_mg"
+      "origem_experimental": "filarmonica_mg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-11",
+          "observacao": "11h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Sala+Minas+Gerais%2C+Rua+Tenente+Brito+Melo%2C+1090%2C+Barro+Preto%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "ufmg-ec-atelie-tarde-de-jogos-semana-das-criancas",
@@ -7295,7 +7174,15 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-11",
+          "observacao": "15h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "casa-fiat-visita-tematica-celebrar-as-ruas-50-anos-de-fiat-e-brasilidade-brasil-com-s-o-espetaculo-de-ser-brasileiro-2026-10-11-16",
@@ -7319,7 +7206,15 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-11",
+          "observacao": "16h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "cine-santa-tereza-bileto-128030",
@@ -7414,7 +7309,15 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-12",
+          "observacao": "10h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "casa-fiat-oficina-especial-bichos-imaginarios-bicho-arame-2026-10-12-15",
@@ -7438,7 +7341,15 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-12",
+          "observacao": "15h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "mm-gerdau-programacao-especial-semana-das-criancas-2026-10-13",
@@ -7453,7 +7364,7 @@
       "gratuito": true,
       "inscricao": "Atividade gratuita conforme programação oficial do MM Gerdau; consulte a página do evento para orientações específicas de acesso, inscrição ou lotação.",
       "descricao": "PROGRAMAÇÃO ESPECIAL | SEMANA DAS CRIANÇAS. Consulte a página oficial para conhecer a atividade, os horários e a programação.",
-      "imagem": "",
+      "imagem": "https://www.secult.mg.gov.br/images/stories/migracao/cultura/2016/MM%20Gerdau%20-%20por%20Jomar%20Bragana_.jpg",
       "link": "https://mmgerdau.org.br/programacoes/programacao-especial-semana-das-criancas/",
       "fonte": "MM Gerdau — programação oficial",
       "pagina": "https://mmgerdau.org.br/programacoes/programacao-especial-semana-das-criancas/",
@@ -7462,7 +7373,16 @@
       "motivo_publicacao": "gratuidade_explicita",
       "local_id": "mm-gerdau",
       "status_validacao": "aprovado",
-      "origem_experimental": "mm_gerdau"
+      "origem_experimental": "mm_gerdau",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-10-13",
+          "fim": "2026-10-18"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=MM+Gerdau+%E2%80%93+Museu+das+Minas+e+do+Metal%2C+Pra%C3%A7a+da+Liberdade%2C+680%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "casa-fiat-oficina-especial-bichos-imaginarios-bicho-barro-2026-10-13-10",
@@ -7486,7 +7406,15 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-13",
+          "observacao": "10h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "portal-bh-0afd9bd3f739-2026-10-13-1000",
@@ -7560,7 +7488,7 @@
       "gratuito": true,
       "inscricao": "Atividade gratuita. A programação oficial informa que não é necessária inscrição prévia, mas as vagas são limitadas e preenchidas conforme disponibilidade.",
       "descricao": "Trilha interpretativa sobre as árvores do bosque – curiosidades sobre a biologia das espécies – seguida da oficina de desenho. Ponto de encontro: em frente ao presépio. 20 vagas.",
-      "imagem": "",
+      "imagem": "https://www.ufmg.br/online/arquivos/anexos/Predio_diretoria.JPG",
       "link": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "pagina": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "fonte": "MHNJB UFMG — programação oficial",
@@ -7568,7 +7496,16 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_explicita",
       "status_validacao": "aprovado",
-      "origem_experimental": "mhnjb_ufmg"
+      "origem_experimental": "mhnjb_ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-13",
+          "observacao": "13h30 às 15h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Hist%C3%B3ria+Natural+e+Jardim+Bot%C3%A2nico+da+UFMG%2C+Rua+Gustavo+da+Silveira%2C+1035%2C+Santa+In%C3%AAs%2C+Belo+Horizonte+-+MG",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "mhnjb-ufmg-oficina-de-brinquedos-e-brincadeiras-2026-10-13-14h-as-15h30",
@@ -7577,14 +7514,14 @@
       "data_fim": "",
       "horario": "14h às 15h30",
       "local": "Praça Pau-Brasil do MHNJB",
-      "local_id": "mhnjb-ufmg-praca-pau-brasil",
+      "local_id": "mhnjb-ufmg",
       "cidade": "Belo Horizonte",
       "endereco": "Rua Gustavo da Silveira, 1035, Santa Inês, Belo Horizonte - MG",
       "categoria": "Oficina",
       "gratuito": true,
       "inscricao": "Atividade gratuita. A programação oficial informa que não é necessária inscrição prévia, mas as vagas são limitadas e preenchidas conforme disponibilidade.",
       "descricao": "Propõe a construção de brinquedos pelas próprias crianças a partir de materiais reutilizáveis e de fácil acesso, estimulando a criatividade, a imaginação e a valorização do brincar como prática cultural e educativa. Praça do Pau-Brasil atrás do Setor Educativo. 20 vagas/sessão.",
-      "imagem": "",
+      "imagem": "https://www.ufmg.br/online/arquivos/anexos/Predio_diretoria.JPG",
       "link": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "pagina": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "fonte": "MHNJB UFMG — programação oficial",
@@ -7592,7 +7529,17 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_explicita",
       "status_validacao": "aprovado",
-      "origem_experimental": "mhnjb_ufmg"
+      "origem_experimental": "mhnjb_ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-13",
+          "observacao": "14h às 15h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Hist%C3%B3ria+Natural+e+Jardim+Bot%C3%A2nico+da+UFMG%2C+Rua+Gustavo+da+Silveira%2C+1035%2C+Santa+In%C3%AAs%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Praça Pau-Brasil do",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "portal-bh-9294768d17f3-2026-10-13-1400",
@@ -7652,7 +7599,15 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-13",
+          "observacao": "15h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "ufmg-ec-oficina-libras-para-criancas-semana-das-criancas",
@@ -7696,7 +7651,7 @@
       "gratuito": true,
       "inscricao": "Atividade gratuita. A programação oficial informa que não é necessária inscrição prévia, mas as vagas são limitadas e preenchidas conforme disponibilidade.",
       "descricao": "Visita a exposição de paleontologia Ponto de encontro: em frente a exposição. 20 vagas/sessão – 3 sessões",
-      "imagem": "",
+      "imagem": "https://www.ufmg.br/online/arquivos/anexos/Predio_diretoria.JPG",
       "link": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "pagina": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "fonte": "MHNJB UFMG — programação oficial",
@@ -7704,7 +7659,16 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_explicita",
       "status_validacao": "aprovado",
-      "origem_experimental": "mhnjb_ufmg"
+      "origem_experimental": "mhnjb_ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-13",
+          "observacao": "15h às 16h20"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Hist%C3%B3ria+Natural+e+Jardim+Bot%C3%A2nico+da+UFMG%2C+Rua+Gustavo+da+Silveira%2C+1035%2C+Santa+In%C3%AAs%2C+Belo+Horizonte+-+MG",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "cine-santa-tereza-bileto-128029",
@@ -7750,7 +7714,7 @@
       "gratuito": true,
       "inscricao": "Entrada gratuita, sujeita à capacidade do espaço, conforme agenda oficial do Conservatório UFMG.",
       "descricao": "CONEXÕES MUSICAIS. Lançamento do álbum de partituras \"Da Inconfidência à seresta - música mineira para violão, volume 2\" Celso Faria. MÚSICA ERUDITA",
-      "imagem": "",
+      "imagem": "https://www.ufmg.br/online/arquivos/anexos/ConservatorioUFMGFachada.jpg",
       "link": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html",
       "pagina": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html",
       "fonte": "Conservatório UFMG — agenda oficial",
@@ -7758,7 +7722,16 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_agenda_oficial",
       "status_validacao": "aprovado",
-      "origem_experimental": "conservatorio_ufmg"
+      "origem_experimental": "conservatorio_ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-13",
+          "observacao": "19h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Conservat%C3%B3rio+UFMG%2C+Avenida+Afonso+Pena%2C+1534%2C+Centro%2C+Belo+Horizonte+-+MG",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "mhnjb-ufmg-beezita-trilha-das-abelhas-nativas-sem-ferrao-2026-10-14-09h-as-10h",
@@ -7774,7 +7747,7 @@
       "gratuito": true,
       "inscricao": "Atividade gratuita. A programação oficial informa que não é necessária inscrição prévia, mas as vagas são limitadas e preenchidas conforme disponibilidade.",
       "descricao": "Trilha interpretativa sobre as abelhas nativas sem ferrão Ponto de encontro: Portaria 1. 20 vagas.",
-      "imagem": "",
+      "imagem": "https://www.ufmg.br/online/arquivos/anexos/Predio_diretoria.JPG",
       "link": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "pagina": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "fonte": "MHNJB UFMG — programação oficial",
@@ -7782,7 +7755,16 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_explicita",
       "status_validacao": "aprovado",
-      "origem_experimental": "mhnjb_ufmg"
+      "origem_experimental": "mhnjb_ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-14",
+          "observacao": "09h às 10h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Hist%C3%B3ria+Natural+e+Jardim+Bot%C3%A2nico+da+UFMG%2C+Rua+Gustavo+da+Silveira%2C+1035%2C+Santa+In%C3%AAs%2C+Belo+Horizonte+-+MG",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "casa-fiat-oficina-especial-bichos-imaginarios-bicho-arame-2026-10-14-10",
@@ -7806,7 +7788,15 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-14",
+          "observacao": "10h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "mhnjb-ufmg-visita-mediada-no-meliponario-e-no-hotel-para-abelhas-solitarias-2026-10-14-10h20-as-11h30",
@@ -7815,14 +7805,14 @@
       "data_fim": "",
       "horario": "10h20 às 11h30",
       "local": "Meliponário do MHNJB",
-      "local_id": "mhnjb-ufmg-meliponario",
+      "local_id": "mhnjb-ufmg",
       "cidade": "Belo Horizonte",
       "endereco": "Rua Gustavo da Silveira, 1035, Santa Inês, Belo Horizonte - MG",
       "categoria": "Visita guiada",
       "gratuito": true,
       "inscricao": "Atividade gratuita. A programação oficial informa que não é necessária inscrição prévia, mas as vagas são limitadas e preenchidas conforme disponibilidade.",
       "descricao": "Ponto de encontro: em frente ao presépio do Pipiripau. 20 vagas.",
-      "imagem": "",
+      "imagem": "https://www.ufmg.br/online/arquivos/anexos/Predio_diretoria.JPG",
       "link": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "pagina": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "fonte": "MHNJB UFMG — programação oficial",
@@ -7830,7 +7820,17 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_explicita",
       "status_validacao": "aprovado",
-      "origem_experimental": "mhnjb_ufmg"
+      "origem_experimental": "mhnjb_ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-14",
+          "observacao": "10h20 às 11h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Hist%C3%B3ria+Natural+e+Jardim+Bot%C3%A2nico+da+UFMG%2C+Rua+Gustavo+da+Silveira%2C+1035%2C+Santa+In%C3%AAs%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Meliponário do",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ufmg-ec-mostra-iaia-de-audiovisual-a-camera-de-joao-exibicao",
@@ -7874,7 +7874,7 @@
       "gratuito": true,
       "inscricao": "Entrada gratuita, sujeita à capacidade do espaço, conforme agenda oficial do Conservatório UFMG.",
       "descricao": "QUARTA CULTURAL. Túlio Araújo e Choro em Conserva. CHORO",
-      "imagem": "",
+      "imagem": "https://www.ufmg.br/online/arquivos/anexos/ConservatorioUFMGFachada.jpg",
       "link": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html",
       "pagina": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html",
       "fonte": "Conservatório UFMG — agenda oficial",
@@ -7882,7 +7882,16 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_agenda_oficial",
       "status_validacao": "aprovado",
-      "origem_experimental": "conservatorio_ufmg"
+      "origem_experimental": "conservatorio_ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-14",
+          "observacao": "12h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Conservat%C3%B3rio+UFMG%2C+Avenida+Afonso+Pena%2C+1534%2C+Centro%2C+Belo+Horizonte+-+MG",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "mhnjb-ufmg-exploradores-dos-sentidos-2026-10-14-13h30-as-15h",
@@ -7891,14 +7900,14 @@
       "data_fim": "",
       "horario": "13h30 às 15h",
       "local": "Espaço Arte e Educação do MHNJB",
-      "local_id": "mhnjb-ufmg-espaco-arte-educacao",
+      "local_id": "mhnjb-ufmg",
       "cidade": "Belo Horizonte",
       "endereco": "Rua Gustavo da Silveira, 1035, Santa Inês, Belo Horizonte - MG",
       "categoria": "Ciência e natureza",
       "gratuito": true,
       "inscricao": "Atividade gratuita. A programação oficial informa que não é necessária inscrição prévia, mas as vagas são limitadas e preenchidas conforme disponibilidade.",
       "descricao": "Vivência Sensorial para estimular os cinco sentidos para explorar a biodiversidade. Espaço Arte e Educação. 15 vagas.",
-      "imagem": "",
+      "imagem": "https://www.ufmg.br/online/arquivos/anexos/Predio_diretoria.JPG",
       "link": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "pagina": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "fonte": "MHNJB UFMG — programação oficial",
@@ -7906,7 +7915,17 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_explicita",
       "status_validacao": "aprovado",
-      "origem_experimental": "mhnjb_ufmg"
+      "origem_experimental": "mhnjb_ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-14",
+          "observacao": "13h30 às 15h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Hist%C3%B3ria+Natural+e+Jardim+Bot%C3%A2nico+da+UFMG%2C+Rua+Gustavo+da+Silveira%2C+1035%2C+Santa+In%C3%AAs%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Espaço Arte e Educação do",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "casa-fiat-oficina-especial-bichos-imaginarios-bicho-arame-2026-10-14-15",
@@ -7930,7 +7949,15 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-14",
+          "observacao": "15h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "ufmg-ec-oficina-cosmologias-em-quadrinhos-semana-das-criancas",
@@ -7967,14 +7994,14 @@
       "data_fim": "",
       "horario": "15h às 16h20",
       "local": "Praça Pau-Brasil do MHNJB",
-      "local_id": "mhnjb-ufmg-praca-pau-brasil",
+      "local_id": "mhnjb-ufmg",
       "cidade": "Belo Horizonte",
       "endereco": "Rua Gustavo da Silveira, 1035, Santa Inês, Belo Horizonte - MG",
       "categoria": "Oficina",
       "gratuito": true,
       "inscricao": "Atividade gratuita. A programação oficial informa que não é necessária inscrição prévia, mas as vagas são limitadas e preenchidas conforme disponibilidade.",
       "descricao": "A oficina tem como objetivo apresentar os morcegos de forma acessível, com base em suas características biológicas, diversidade, hábitos de vida e importância ecológica, desconstruindo mitos e preconceitos relacionados a esses animais e promovendo sua valorização e conservação. Praça Pau-Brasil (atrás do Educativo). 10 vagas/sessão",
-      "imagem": "",
+      "imagem": "https://www.ufmg.br/online/arquivos/anexos/Predio_diretoria.JPG",
       "link": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "pagina": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "fonte": "MHNJB UFMG — programação oficial",
@@ -7982,7 +8009,17 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_explicita",
       "status_validacao": "aprovado",
-      "origem_experimental": "mhnjb_ufmg"
+      "origem_experimental": "mhnjb_ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-14",
+          "observacao": "15h às 16h20"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Hist%C3%B3ria+Natural+e+Jardim+Bot%C3%A2nico+da+UFMG%2C+Rua+Gustavo+da+Silveira%2C+1035%2C+Santa+In%C3%AAs%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Praça Pau-Brasil do",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "minas-tenis-lancamento-de-livro-itbi-imposto-sobre-a-transmissao-de-bens-imoveis-sua-incidencia-na-incorporacao-imobiliaria-e-nas-estruturas-societarias-a-luz-da-reforma-tributaria-2026-10-14",
@@ -8004,9 +8041,18 @@
       "instituicao_id": "minas-tenis-clube",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_explicita",
-      "local_id": "minas-centro-cultural-cafe",
+      "local_id": "centro-cultural-unimed-bh-minas",
       "status_validacao": "aprovado",
-      "origem_experimental": "minas_tenis_cultura"
+      "origem_experimental": "minas_tenis_cultura",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-14",
+          "observacao": "19h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+Unimed-BH+Minas%2C+Rua+da+Bahia%2C+2244%2C+Lourdes%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Café Cultural do"
     },
     {
       "id": "mhnjb-ufmg-vamos-brincar-de-quebra-cabecas-2026-10-15-09h-as-10h",
@@ -8015,14 +8061,14 @@
       "data_fim": "",
       "horario": "09h às 10h",
       "local": "Biblioteca do MHNJB",
-      "local_id": "mhnjb-ufmg-biblioteca",
+      "local_id": "mhnjb-ufmg",
       "cidade": "Belo Horizonte",
       "endereco": "Rua Gustavo da Silveira, 1035, Santa Inês, Belo Horizonte - MG",
       "categoria": "Oficina",
       "gratuito": true,
       "inscricao": "Atividade gratuita. A programação oficial informa que não é necessária inscrição prévia, mas as vagas são limitadas e preenchidas conforme disponibilidade.",
       "descricao": "Oficina de montagem e construção de quebra-cabeças Hall da Biblioteca. 10 vagas.",
-      "imagem": "",
+      "imagem": "https://www.ufmg.br/online/arquivos/anexos/Predio_diretoria.JPG",
       "link": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "pagina": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "fonte": "MHNJB UFMG — programação oficial",
@@ -8030,7 +8076,17 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_explicita",
       "status_validacao": "aprovado",
-      "origem_experimental": "mhnjb_ufmg"
+      "origem_experimental": "mhnjb_ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-15",
+          "observacao": "09h às 10h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Hist%C3%B3ria+Natural+e+Jardim+Bot%C3%A2nico+da+UFMG%2C+Rua+Gustavo+da+Silveira%2C+1035%2C+Santa+In%C3%AAs%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Biblioteca do",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "mhnjb-ufmg-oficina-de-brinquedos-e-brincadeiras-2026-10-15-09h30-as-11h",
@@ -8039,14 +8095,14 @@
       "data_fim": "",
       "horario": "09h30 às 11h",
       "local": "Praça Pau-Brasil do MHNJB",
-      "local_id": "mhnjb-ufmg-praca-pau-brasil",
+      "local_id": "mhnjb-ufmg",
       "cidade": "Belo Horizonte",
       "endereco": "Rua Gustavo da Silveira, 1035, Santa Inês, Belo Horizonte - MG",
       "categoria": "Oficina",
       "gratuito": true,
       "inscricao": "Atividade gratuita. A programação oficial informa que não é necessária inscrição prévia, mas as vagas são limitadas e preenchidas conforme disponibilidade.",
       "descricao": "Propõe a construção de brinquedos pelas próprias crianças a partir de materiais reutilizáveis e de fácil acesso, estimulando a criatividade, a imaginação e a valorização do brincar como prática cultural e educativa. Praça do Pau-Brasil atrás do Setor Educativo. 20 vagas/sessão.",
-      "imagem": "",
+      "imagem": "https://www.ufmg.br/online/arquivos/anexos/Predio_diretoria.JPG",
       "link": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "pagina": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "fonte": "MHNJB UFMG — programação oficial",
@@ -8054,7 +8110,17 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_explicita",
       "status_validacao": "aprovado",
-      "origem_experimental": "mhnjb_ufmg"
+      "origem_experimental": "mhnjb_ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-15",
+          "observacao": "09h30 às 11h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Hist%C3%B3ria+Natural+e+Jardim+Bot%C3%A2nico+da+UFMG%2C+Rua+Gustavo+da+Silveira%2C+1035%2C+Santa+In%C3%AAs%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Praça Pau-Brasil do",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "casa-fiat-oficina-especial-bichos-imaginarios-bicho-barro-2026-10-15-10",
@@ -8078,7 +8144,15 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-15",
+          "observacao": "10h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "mhnjb-ufmg-oficina-de-pintura-rupestre-2026-10-15-10h20-as-11h30",
@@ -8094,7 +8168,7 @@
       "gratuito": true,
       "inscricao": "Atividade gratuita. A programação oficial informa que não é necessária inscrição prévia, mas as vagas são limitadas e preenchidas conforme disponibilidade.",
       "descricao": "Visita mediada na exposição Grafismos na Pedra, onde poderão ser observadas as formas dos registros rupestres, seguido de atividade de pintura no Anfiteatro da Arqueologia, onde poderá ser usada a criatividade para criar novos grafismos. Local de encontro: Exposição Grafismos na Pedra. 20 vagas.",
-      "imagem": "",
+      "imagem": "https://www.ufmg.br/online/arquivos/anexos/Predio_diretoria.JPG",
       "link": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "pagina": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "fonte": "MHNJB UFMG — programação oficial",
@@ -8102,7 +8176,16 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_explicita",
       "status_validacao": "aprovado",
-      "origem_experimental": "mhnjb_ufmg"
+      "origem_experimental": "mhnjb_ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-15",
+          "observacao": "10h20 às 11h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Hist%C3%B3ria+Natural+e+Jardim+Bot%C3%A2nico+da+UFMG%2C+Rua+Gustavo+da+Silveira%2C+1035%2C+Santa+In%C3%AAs%2C+Belo+Horizonte+-+MG",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ufmg-ec-mostra-iaia-de-audiovisual-a-piscina-de-caique-exibicao-2",
@@ -8204,14 +8287,14 @@
       "data_fim": "",
       "horario": "14h20 às 16h",
       "local": "Espaço Arte e Educação do MHNJB",
-      "local_id": "mhnjb-ufmg-espaco-arte-educacao",
+      "local_id": "mhnjb-ufmg",
       "cidade": "Belo Horizonte",
       "endereco": "Rua Gustavo da Silveira, 1035, Santa Inês, Belo Horizonte - MG",
       "categoria": "Oficina",
       "gratuito": true,
       "inscricao": "Atividade gratuita. A programação oficial informa que não é necessária inscrição prévia, mas as vagas são limitadas e preenchidas conforme disponibilidade.",
       "descricao": "Proporcionar às crianças uma experiência educativa e divertida, explorando a natureza por meio de uma trilha com lupas, observando flores e aprendendo sobre seus polinizadores, seguida de uma atividade de colorir. Além disso, promover a acessibilidade ensinando os sinais em Libras dos polinizadores e das cores das flores. Espaço arte e educação. 12 vagas.",
-      "imagem": "",
+      "imagem": "https://www.ufmg.br/online/arquivos/anexos/Predio_diretoria.JPG",
       "link": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "pagina": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "fonte": "MHNJB UFMG — programação oficial",
@@ -8219,7 +8302,17 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_explicita",
       "status_validacao": "aprovado",
-      "origem_experimental": "mhnjb_ufmg"
+      "origem_experimental": "mhnjb_ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-15",
+          "observacao": "14h20 às 16h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Hist%C3%B3ria+Natural+e+Jardim+Bot%C3%A2nico+da+UFMG%2C+Rua+Gustavo+da+Silveira%2C+1035%2C+Santa+In%C3%AAs%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Espaço Arte e Educação do",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "casa-fiat-oficina-especial-bichos-imaginarios-bicho-barro-2026-10-15-15",
@@ -8243,7 +8336,15 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-15",
+          "observacao": "15h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "ufmg-ec-oficina-plantando-no-espaco-semana-das-criancas",
@@ -8280,14 +8381,14 @@
       "data_fim": "",
       "horario": "15h às 16h",
       "local": "Biblioteca do MHNJB",
-      "local_id": "mhnjb-ufmg-biblioteca",
+      "local_id": "mhnjb-ufmg",
       "cidade": "Belo Horizonte",
       "endereco": "Rua Gustavo da Silveira, 1035, Santa Inês, Belo Horizonte - MG",
       "categoria": "Oficina",
       "gratuito": true,
       "inscricao": "Atividade gratuita. A programação oficial informa que não é necessária inscrição prévia, mas as vagas são limitadas e preenchidas conforme disponibilidade.",
       "descricao": "Oficina de montagem e construção de quebra-cabeças Hall da Biblioteca. 10 vagas.",
-      "imagem": "",
+      "imagem": "https://www.ufmg.br/online/arquivos/anexos/Predio_diretoria.JPG",
       "link": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "pagina": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "fonte": "MHNJB UFMG — programação oficial",
@@ -8295,7 +8396,17 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_explicita",
       "status_validacao": "aprovado",
-      "origem_experimental": "mhnjb_ufmg"
+      "origem_experimental": "mhnjb_ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-15",
+          "observacao": "15h às 16h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Hist%C3%B3ria+Natural+e+Jardim+Bot%C3%A2nico+da+UFMG%2C+Rua+Gustavo+da+Silveira%2C+1035%2C+Santa+In%C3%AAs%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Biblioteca do",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "minas-tenis-lancamento-de-livro-templos-ao-tempo-2026-10-15",
@@ -8317,9 +8428,18 @@
       "instituicao_id": "minas-tenis-clube",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_explicita",
-      "local_id": "minas-centro-cultural-cafe",
+      "local_id": "centro-cultural-unimed-bh-minas",
       "status_validacao": "aprovado",
-      "origem_experimental": "minas_tenis_cultura"
+      "origem_experimental": "minas_tenis_cultura",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-15",
+          "observacao": "19h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+Unimed-BH+Minas%2C+Rua+da+Bahia%2C+2244%2C+Lourdes%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Café Cultural do"
     },
     {
       "id": "casa-fiat-atelie-aberto-paisagem-construida-2026-10-15-1930",
@@ -8343,7 +8463,15 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-15",
+          "observacao": "19h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "conservatorio-ufmg-brasileiro-nato-olivera-2026-10-15-1930",
@@ -8359,7 +8487,7 @@
       "gratuito": true,
       "inscricao": "Entrada gratuita, sujeita à capacidade do espaço, conforme agenda oficial do Conservatório UFMG.",
       "descricao": "PALCO LIVRE. Brasileiro Nato Olivêra. MÚSICA POPULAR",
-      "imagem": "",
+      "imagem": "https://www.ufmg.br/online/arquivos/anexos/ConservatorioUFMGFachada.jpg",
       "link": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html",
       "pagina": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html",
       "fonte": "Conservatório UFMG — agenda oficial",
@@ -8367,7 +8495,16 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_agenda_oficial",
       "status_validacao": "aprovado",
-      "origem_experimental": "conservatorio_ufmg"
+      "origem_experimental": "conservatorio_ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-15",
+          "observacao": "19h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Conservat%C3%B3rio+UFMG%2C+Avenida+Afonso+Pena%2C+1534%2C+Centro%2C+Belo+Horizonte+-+MG",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "mm-gerdau-concerto-musical-ars-nova-coral-da-ufmg-2026-10-15",
@@ -8382,7 +8519,7 @@
       "gratuito": true,
       "inscricao": "Atividade gratuita conforme programação oficial do MM Gerdau; consulte a página do evento para orientações específicas de acesso, inscrição ou lotação.",
       "descricao": "CONCERTO MUSICAL | ARS NOVA – CORAL DA UFMG. Consulte a página oficial para conhecer a atividade, os horários e a programação.",
-      "imagem": "",
+      "imagem": "https://www.secult.mg.gov.br/images/stories/migracao/cultura/2016/MM%20Gerdau%20-%20por%20Jomar%20Bragana_.jpg",
       "link": "https://mmgerdau.org.br/programacoes/concerto-musical-ars-nova-coral-da-ufmg/",
       "fonte": "MM Gerdau — programação oficial",
       "pagina": "https://mmgerdau.org.br/programacoes/concerto-musical-ars-nova-coral-da-ufmg/",
@@ -8391,7 +8528,16 @@
       "motivo_publicacao": "gratuidade_explicita",
       "local_id": "mm-gerdau",
       "status_validacao": "aprovado",
-      "origem_experimental": "mm_gerdau"
+      "origem_experimental": "mm_gerdau",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-15",
+          "observacao": "19h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=MM+Gerdau+%E2%80%93+Museu+das+Minas+e+do+Metal%2C+Pra%C3%A7a+da+Liberdade%2C+680%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "mhnjb-ufmg-oficina-de-escavacao-arqueologica-infantil-2026-10-16-09h-as-10h",
@@ -8407,7 +8553,7 @@
       "gratuito": true,
       "inscricao": "Atividade gratuita. A programação oficial informa que não é necessária inscrição prévia, mas as vagas são limitadas e preenchidas conforme disponibilidade.",
       "descricao": "Oficina introdutória sobre técnicas de escavação arqueológica, identificação e registro de vestígios materiais a partir de uma atividade prática. Local de encontro: em frente ao presépio. 10 pessoas.",
-      "imagem": "",
+      "imagem": "https://www.ufmg.br/online/arquivos/anexos/Predio_diretoria.JPG",
       "link": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "pagina": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "fonte": "MHNJB UFMG — programação oficial",
@@ -8415,7 +8561,24 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_explicita",
       "status_validacao": "aprovado",
-      "origem_experimental": "mhnjb_ufmg"
+      "origem_experimental": "mhnjb_ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-16",
+          "observacao": "09h às 10h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Hist%C3%B3ria+Natural+e+Jardim+Bot%C3%A2nico+da+UFMG%2C+Rua+Gustavo+da+Silveira%2C+1035%2C+Santa+In%C3%AAs%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Biblioteca do",
+      "fontes": [
+        "MHNJB UFMG — programação oficial"
+      ],
+      "ids_mesclados": [
+        "mhnjb-ufmg-oficina-de-escavacao-arqueologica-infantil-2026-10-16-09h-as-10h",
+        "mhnjb-ufmg-vamos-brincar-de-quebra-cabecas-2026-10-16-09h-as-10h"
+      ],
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "mhnjb-ufmg-vamos-brincar-de-quebra-cabecas-2026-10-16-09h-as-10h",
@@ -8438,7 +8601,8 @@
       "instituicao_id": "mhnjb-ufmg",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_explicita",
-      "status_validacao": "aprovado",
+      "somente_teste": true,
+      "status_validacao": "experimental",
       "origem_experimental": "mhnjb_ufmg"
     },
     {
@@ -8463,7 +8627,15 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-16",
+          "observacao": "10h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "portal-bh-f62272ead0a9-2026-10-16-1000",
@@ -8500,14 +8672,14 @@
       "data_fim": "",
       "horario": "10h20 às 11h30",
       "local": "Jardim de Plantas Medicinais do MHNJB",
-      "local_id": "mhnjb-ufmg-jardim-plantas-medicinais",
+      "local_id": "mhnjb-ufmg",
       "cidade": "Belo Horizonte",
       "endereco": "Rua Gustavo da Silveira, 1035, Santa Inês, Belo Horizonte - MG",
       "categoria": "Ciência e natureza",
       "gratuito": true,
       "inscricao": "Atividade gratuita. A programação oficial informa que não é necessária inscrição prévia, mas as vagas são limitadas e preenchidas conforme disponibilidade.",
       "descricao": "A atividade tem como objetivo promover um espaço para partilhar conhecimentos sobre as plantas, bichos e outros seres que habitam nossos quintais. As crianças serão convidadas a produzir desenhos e histórias, além de conhecer sobre plantas medicinais que fazem parte de nossas vidas. Jardim de Plantas Medicinais – Ceplamt. 20 vagas.",
-      "imagem": "",
+      "imagem": "https://www.ufmg.br/online/arquivos/anexos/Predio_diretoria.JPG",
       "link": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "pagina": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "fonte": "MHNJB UFMG — programação oficial",
@@ -8515,7 +8687,17 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_explicita",
       "status_validacao": "aprovado",
-      "origem_experimental": "mhnjb_ufmg"
+      "origem_experimental": "mhnjb_ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-16",
+          "observacao": "10h20 às 11h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Hist%C3%B3ria+Natural+e+Jardim+Bot%C3%A2nico+da+UFMG%2C+Rua+Gustavo+da+Silveira%2C+1035%2C+Santa+In%C3%AAs%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Jardim de Plantas Medicinais do",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "portal-bh-fb275ca457f3-2026-10-16-1400",
@@ -8593,14 +8775,14 @@
       "data_fim": "",
       "horario": "14h20 às 15h30",
       "local": "Trilha da Caratinga do MHNJB",
-      "local_id": "mhnjb-ufmg-trilha-caratinga",
+      "local_id": "mhnjb-ufmg",
       "cidade": "Belo Horizonte",
       "endereco": "Rua Gustavo da Silveira, 1035, Santa Inês, Belo Horizonte - MG",
       "categoria": "Trilha / visita",
       "gratuito": true,
       "inscricao": "Atividade gratuita. A programação oficial informa que não é necessária inscrição prévia, mas as vagas são limitadas e preenchidas conforme disponibilidade.",
       "descricao": "Atividade de manejo da planta caratinga na mata do museu, adaptada para crianças de 6 a 12 anos acompanhadas dos responsáveis. Trilha da Caratinga. até 30 crianças, acompanhadas pelos responsáveis.",
-      "imagem": "",
+      "imagem": "https://www.ufmg.br/online/arquivos/anexos/Predio_diretoria.JPG",
       "link": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "pagina": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "fonte": "MHNJB UFMG — programação oficial",
@@ -8608,7 +8790,17 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_explicita",
       "status_validacao": "aprovado",
-      "origem_experimental": "mhnjb_ufmg"
+      "origem_experimental": "mhnjb_ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-16",
+          "observacao": "14h20 às 15h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Hist%C3%B3ria+Natural+e+Jardim+Bot%C3%A2nico+da+UFMG%2C+Rua+Gustavo+da+Silveira%2C+1035%2C+Santa+In%C3%AAs%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Trilha da Caratinga do",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ufmg-ec-oficina-dinossauros-nas-pontas-dos-dedos-semana-das-criancas",
@@ -8660,7 +8852,15 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-16",
+          "observacao": "15h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "mhnjb-ufmg-vamos-brincar-de-quebra-cabecas-2026-10-16-15h-as-16h",
@@ -8669,14 +8869,14 @@
       "data_fim": "",
       "horario": "15h às 16h",
       "local": "Biblioteca do MHNJB",
-      "local_id": "mhnjb-ufmg-biblioteca",
+      "local_id": "mhnjb-ufmg",
       "cidade": "Belo Horizonte",
       "endereco": "Rua Gustavo da Silveira, 1035, Santa Inês, Belo Horizonte - MG",
       "categoria": "Oficina",
       "gratuito": true,
       "inscricao": "Atividade gratuita. A programação oficial informa que não é necessária inscrição prévia, mas as vagas são limitadas e preenchidas conforme disponibilidade.",
       "descricao": "Oficina de montagem e construção de quebra-cabeças Hall da Biblioteca. 10 vagas.",
-      "imagem": "",
+      "imagem": "https://www.ufmg.br/online/arquivos/anexos/Predio_diretoria.JPG",
       "link": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "pagina": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "fonte": "MHNJB UFMG — programação oficial",
@@ -8684,7 +8884,17 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_explicita",
       "status_validacao": "aprovado",
-      "origem_experimental": "mhnjb_ufmg"
+      "origem_experimental": "mhnjb_ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-16",
+          "observacao": "15h às 16h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Hist%C3%B3ria+Natural+e+Jardim+Bot%C3%A2nico+da+UFMG%2C+Rua+Gustavo+da+Silveira%2C+1035%2C+Santa+In%C3%AAs%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Biblioteca do",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "mhnjb-ufmg-oficina-de-escavacao-arqueologica-infantil-2026-10-16-15h20-as-16h20",
@@ -8700,7 +8910,7 @@
       "gratuito": true,
       "inscricao": "Atividade gratuita. A programação oficial informa que não é necessária inscrição prévia, mas as vagas são limitadas e preenchidas conforme disponibilidade.",
       "descricao": "Oficina introdutória sobre técnicas de escavação arqueológica, identificação e registro de vestígios materiais a partir de uma atividade prática. Local de encontro: em frente ao presépio. 10 vagas.",
-      "imagem": "",
+      "imagem": "https://www.ufmg.br/online/arquivos/anexos/Predio_diretoria.JPG",
       "link": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "pagina": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "fonte": "MHNJB UFMG — programação oficial",
@@ -8708,7 +8918,16 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_explicita",
       "status_validacao": "aprovado",
-      "origem_experimental": "mhnjb_ufmg"
+      "origem_experimental": "mhnjb_ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-16",
+          "observacao": "15h20 às 16h20"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Hist%C3%B3ria+Natural+e+Jardim+Bot%C3%A2nico+da+UFMG%2C+Rua+Gustavo+da+Silveira%2C+1035%2C+Santa+In%C3%AAs%2C+Belo+Horizonte+-+MG",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "conservatorio-ufmg-musica-eletronica-2004-22-anos-depois-henrique-iwao-mario-del-nunzio-2026-10-16-1930",
@@ -8724,7 +8943,7 @@
       "gratuito": true,
       "inscricao": "Entrada gratuita, sujeita à capacidade do espaço, conforme agenda oficial do Conservatório UFMG.",
       "descricao": "CIRCUITO CONTEMPORÂNEO. Música Eletrônica 2004, 22 anos depois Henrique Iwao & Mário Del Nunzio. MÚSICA ELETROACÚSTICA",
-      "imagem": "",
+      "imagem": "https://www.ufmg.br/online/arquivos/anexos/ConservatorioUFMGFachada.jpg",
       "link": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html",
       "pagina": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html",
       "fonte": "Conservatório UFMG — agenda oficial",
@@ -8732,7 +8951,16 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_agenda_oficial",
       "status_validacao": "aprovado",
-      "origem_experimental": "conservatorio_ufmg"
+      "origem_experimental": "conservatorio_ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-16",
+          "observacao": "19h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Conservat%C3%B3rio+UFMG%2C+Avenida+Afonso+Pena%2C+1534%2C+Centro%2C+Belo+Horizonte+-+MG",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "mhnjb-ufmg-vamos-brincar-de-quebra-cabecas-2026-10-17-09h-as-10h",
@@ -8741,14 +8969,14 @@
       "data_fim": "",
       "horario": "09h às 10h",
       "local": "Biblioteca do MHNJB",
-      "local_id": "mhnjb-ufmg-biblioteca",
+      "local_id": "mhnjb-ufmg",
       "cidade": "Belo Horizonte",
       "endereco": "Rua Gustavo da Silveira, 1035, Santa Inês, Belo Horizonte - MG",
       "categoria": "Oficina",
       "gratuito": true,
       "inscricao": "Atividade gratuita. A programação oficial informa que não é necessária inscrição prévia, mas as vagas são limitadas e preenchidas conforme disponibilidade.",
-      "descricao": "Oficina de montagem e construção de quebra-cabeças Hall da Biblioteca. 10 vagas.",
-      "imagem": "",
+      "descricao": "Propõe a construção de brinquedos pelas próprias crianças a partir de materiais reutilizáveis e de fácil acesso, estimulando a criatividade, a imaginação e a valorização do brincar como prática cultural e educativa. Praça do Pau-Brasil atrás do Setor Educativo. 20 vagas/sessão.",
+      "imagem": "https://www.ufmg.br/online/arquivos/anexos/Predio_diretoria.JPG",
       "link": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "pagina": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "fonte": "MHNJB UFMG — programação oficial",
@@ -8756,7 +8984,24 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_explicita",
       "status_validacao": "aprovado",
-      "origem_experimental": "mhnjb_ufmg"
+      "origem_experimental": "mhnjb_ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-17",
+          "observacao": "09h às 10h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Hist%C3%B3ria+Natural+e+Jardim+Bot%C3%A2nico+da+UFMG%2C+Rua+Gustavo+da+Silveira%2C+1035%2C+Santa+In%C3%AAs%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Biblioteca do",
+      "fontes": [
+        "MHNJB UFMG — programação oficial"
+      ],
+      "ids_mesclados": [
+        "mhnjb-ufmg-vamos-brincar-de-quebra-cabecas-2026-10-17-09h-as-10h",
+        "mhnjb-ufmg-oficina-de-brinquedos-e-brincadeiras-2026-10-17-09h-as-11h"
+      ],
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "mhnjb-ufmg-oficina-de-brinquedos-e-brincadeiras-2026-10-17-09h-as-11h",
@@ -8779,7 +9024,8 @@
       "instituicao_id": "mhnjb-ufmg",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_explicita",
-      "status_validacao": "aprovado",
+      "somente_teste": true,
+      "status_validacao": "experimental",
       "origem_experimental": "mhnjb_ufmg"
     },
     {
@@ -8789,14 +9035,14 @@
       "data_fim": "",
       "horario": "09h30 às 12h",
       "local": "Espaço Arte e Educação do MHNJB",
-      "local_id": "mhnjb-ufmg-espaco-arte-educacao",
+      "local_id": "mhnjb-ufmg",
       "cidade": "Belo Horizonte",
       "endereco": "Rua Gustavo da Silveira, 1035, Santa Inês, Belo Horizonte - MG",
       "categoria": "Ciência e natureza",
       "gratuito": true,
       "inscricao": "Atividade gratuita. A programação oficial informa que não é necessária inscrição prévia, mas as vagas são limitadas e preenchidas conforme disponibilidade.",
       "descricao": "Por meio de atividades investigativas e observação microscópica de algas e cianobactérias, os participantes são convidados a desenvolver habilidades de observação, curiosidade científica e pensamento investigativo, em uma experiência participativa que valoriza o diálogo entre conhecimento prévio e construção coletiva de saberes. Espaço Arte e Educação. 20 vagas.",
-      "imagem": "",
+      "imagem": "https://www.ufmg.br/online/arquivos/anexos/Predio_diretoria.JPG",
       "link": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "pagina": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "fonte": "MHNJB UFMG — programação oficial",
@@ -8804,7 +9050,17 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_explicita",
       "status_validacao": "aprovado",
-      "origem_experimental": "mhnjb_ufmg"
+      "origem_experimental": "mhnjb_ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-17",
+          "observacao": "09h30 às 12h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Hist%C3%B3ria+Natural+e+Jardim+Bot%C3%A2nico+da+UFMG%2C+Rua+Gustavo+da+Silveira%2C+1035%2C+Santa+In%C3%AAs%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Espaço Arte e Educação do",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "portal-bh-df2696d98e93-2026-10-17-1000",
@@ -8894,7 +9150,15 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-17",
+          "observacao": "10h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "mhnjb-ufmg-por-tras-dos-bastidores-visita-tecnica-a-exposicao-de-paleontologia-2026-10-17-10h30-as-12h",
@@ -8909,8 +9173,8 @@
       "categoria": "Visita guiada",
       "gratuito": true,
       "inscricao": "Atividade gratuita. A programação oficial informa que não é necessária inscrição prévia, mas as vagas são limitadas e preenchidas conforme disponibilidade.",
-      "descricao": "Visita a exposição de paleontologia Ponto de encontro: em frente a exposição. 20 vagas/sessão – 3 sessões",
-      "imagem": "",
+      "descricao": "Principais processos da tafonomia, mostrando como os organismos se transformam em fósseis. Praça do Pau-Brasil atrás do Setor Educativo. 5 crianças / vez.",
+      "imagem": "https://www.ufmg.br/online/arquivos/anexos/Predio_diretoria.JPG",
       "link": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "pagina": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "fonte": "MHNJB UFMG — programação oficial",
@@ -8918,7 +9182,24 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_explicita",
       "status_validacao": "aprovado",
-      "origem_experimental": "mhnjb_ufmg"
+      "origem_experimental": "mhnjb_ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-17",
+          "observacao": "10h30 às 12h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Hist%C3%B3ria+Natural+e+Jardim+Bot%C3%A2nico+da+UFMG%2C+Rua+Gustavo+da+Silveira%2C+1035%2C+Santa+In%C3%AAs%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Praça Pau-Brasil do",
+      "fontes": [
+        "MHNJB UFMG — programação oficial"
+      ],
+      "ids_mesclados": [
+        "mhnjb-ufmg-por-tras-dos-bastidores-visita-tecnica-a-exposicao-de-paleontologia-2026-10-17-10h30-as-12h",
+        "mhnjb-ufmg-tafonogame-2026-10-17-10h30-as-12h"
+      ],
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "mhnjb-ufmg-tafonogame-2026-10-17-10h30-as-12h",
@@ -8941,7 +9222,8 @@
       "instituicao_id": "mhnjb-ufmg",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_explicita",
-      "status_validacao": "aprovado",
+      "somente_teste": true,
+      "status_validacao": "experimental",
       "origem_experimental": "mhnjb_ufmg"
     },
     {
@@ -8957,7 +9239,7 @@
       "gratuito": true,
       "inscricao": "Atividade gratuita conforme programação oficial do MM Gerdau; consulte a página do evento para orientações específicas de acesso, inscrição ou lotação.",
       "descricao": "14º ENCONTRO DE COLECIONADORES DE MINERAIS. Consulte a página oficial para conhecer a atividade, os horários e a programação.",
-      "imagem": "",
+      "imagem": "https://www.secult.mg.gov.br/images/stories/migracao/cultura/2016/MM%20Gerdau%20-%20por%20Jomar%20Bragana_.jpg",
       "link": "https://mmgerdau.org.br/programacoes/14o-encontro-de-colecionadores-de-minerais/",
       "fonte": "MM Gerdau — programação oficial",
       "pagina": "https://mmgerdau.org.br/programacoes/14o-encontro-de-colecionadores-de-minerais/",
@@ -8966,7 +9248,16 @@
       "motivo_publicacao": "gratuidade_explicita",
       "local_id": "mm-gerdau",
       "status_validacao": "aprovado",
-      "origem_experimental": "mm_gerdau"
+      "origem_experimental": "mm_gerdau",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-17",
+          "observacao": "13h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=MM+Gerdau+%E2%80%93+Museu+das+Minas+e+do+Metal%2C+Pra%C3%A7a+da+Liberdade%2C+680%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ufmg-ec-roda-de-conversa-ovulario-racionais-mcs-e-nego-bispo-rapensando-o-territorio",
@@ -9003,14 +9294,14 @@
       "data_fim": "",
       "horario": "14h às 16h",
       "local": "Jardim de Plantas Medicinais do MHNJB",
-      "local_id": "mhnjb-ufmg-jardim-plantas-medicinais",
+      "local_id": "mhnjb-ufmg",
       "cidade": "Belo Horizonte",
       "endereco": "Rua Gustavo da Silveira, 1035, Santa Inês, Belo Horizonte - MG",
       "categoria": "Oficina",
       "gratuito": true,
       "inscricao": "Atividade gratuita. A programação oficial informa que não é necessária inscrição prévia, mas as vagas são limitadas e preenchidas conforme disponibilidade.",
       "descricao": "A oficina tem como objetivo a partilha de conhecimentos e histórias sobre plantas, animais, minerais e outros seres, cujas relações permitem e produzem a vida e os territórios das tradições de matriz africana, principalmente associadas ao candomblé e umbanda. Jardim de Plantas Medicinais (CEPLAMT). 30 vagas.",
-      "imagem": "",
+      "imagem": "https://www.ufmg.br/online/arquivos/anexos/Predio_diretoria.JPG",
       "link": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "pagina": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "fonte": "MHNJB UFMG — programação oficial",
@@ -9018,7 +9309,17 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_explicita",
       "status_validacao": "aprovado",
-      "origem_experimental": "mhnjb_ufmg"
+      "origem_experimental": "mhnjb_ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-17",
+          "observacao": "14h às 16h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Hist%C3%B3ria+Natural+e+Jardim+Bot%C3%A2nico+da+UFMG%2C+Rua+Gustavo+da+Silveira%2C+1035%2C+Santa+In%C3%AAs%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Jardim de Plantas Medicinais do",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "portal-bh-1b552e67c978-2026-10-17-1400",
@@ -9055,14 +9356,14 @@
       "data_fim": "",
       "horario": "14h20 às 15h20",
       "local": "Praça Pau-Brasil do MHNJB",
-      "local_id": "mhnjb-ufmg-praca-pau-brasil",
+      "local_id": "mhnjb-ufmg",
       "cidade": "Belo Horizonte",
       "endereco": "Rua Gustavo da Silveira, 1035, Santa Inês, Belo Horizonte - MG",
       "categoria": "Oficina",
       "gratuito": true,
       "inscricao": "Atividade gratuita. A programação oficial informa que não é necessária inscrição prévia, mas as vagas são limitadas e preenchidas conforme disponibilidade.",
       "descricao": "A oficina tem como objetivo apresentar os morcegos de forma acessível, com base em suas características biológicas, diversidade, hábitos de vida e importância ecológica, desconstruindo mitos e preconceitos relacionados a esses animais e promovendo sua valorização e conservação. Praça Pau-Brasil (atrás do Educativo). 10 vagas/sessão.",
-      "imagem": "",
+      "imagem": "https://www.ufmg.br/online/arquivos/anexos/Predio_diretoria.JPG",
       "link": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "pagina": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "fonte": "MHNJB UFMG — programação oficial",
@@ -9070,7 +9371,17 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_explicita",
       "status_validacao": "aprovado",
-      "origem_experimental": "mhnjb_ufmg"
+      "origem_experimental": "mhnjb_ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-17",
+          "observacao": "14h20 às 15h20"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Hist%C3%B3ria+Natural+e+Jardim+Bot%C3%A2nico+da+UFMG%2C+Rua+Gustavo+da+Silveira%2C+1035%2C+Santa+In%C3%AAs%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Praça Pau-Brasil do",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ufmg-ec-oficina-dinossauros-nas-pontas-dos-dedos-semana-das-criancas-2",
@@ -9122,7 +9433,15 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-17",
+          "observacao": "15h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "mhnjb-ufmg-vamos-brincar-de-quebra-cabecas-2026-10-17-15h-as-16h",
@@ -9131,14 +9450,14 @@
       "data_fim": "",
       "horario": "15h às 16h",
       "local": "Biblioteca do MHNJB",
-      "local_id": "mhnjb-ufmg-biblioteca",
+      "local_id": "mhnjb-ufmg",
       "cidade": "Belo Horizonte",
       "endereco": "Rua Gustavo da Silveira, 1035, Santa Inês, Belo Horizonte - MG",
       "categoria": "Oficina",
       "gratuito": true,
       "inscricao": "Atividade gratuita. A programação oficial informa que não é necessária inscrição prévia, mas as vagas são limitadas e preenchidas conforme disponibilidade.",
       "descricao": "Oficina de montagem e construção de quebra-cabeças Hall da Biblioteca. 10 vagas.",
-      "imagem": "",
+      "imagem": "https://www.ufmg.br/online/arquivos/anexos/Predio_diretoria.JPG",
       "link": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "pagina": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "fonte": "MHNJB UFMG — programação oficial",
@@ -9146,7 +9465,17 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_explicita",
       "status_validacao": "aprovado",
-      "origem_experimental": "mhnjb_ufmg"
+      "origem_experimental": "mhnjb_ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-17",
+          "observacao": "15h às 16h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Hist%C3%B3ria+Natural+e+Jardim+Bot%C3%A2nico+da+UFMG%2C+Rua+Gustavo+da+Silveira%2C+1035%2C+Santa+In%C3%AAs%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Biblioteca do",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "mhnjb-ufmg-oficina-de-pintura-rupestre-2026-10-17-15h20-as-16h20",
@@ -9162,7 +9491,7 @@
       "gratuito": true,
       "inscricao": "Atividade gratuita. A programação oficial informa que não é necessária inscrição prévia, mas as vagas são limitadas e preenchidas conforme disponibilidade.",
       "descricao": "Visita mediada na exposição Grafismos na Pedra, onde poderão ser observadas as formas dos registros rupestres, seguido de atividade de pintura no Anfiteatro da Arqueologia, onde poderá ser usada a criatividade para criar novos grafismos. Local de encontro: Exposição Grafismos na Pedra. 20 vagas.",
-      "imagem": "",
+      "imagem": "https://www.ufmg.br/online/arquivos/anexos/Predio_diretoria.JPG",
       "link": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "pagina": "https://www.ufmg.br/mhnjb/programacao-da-semana-das-criancas-2026/",
       "fonte": "MHNJB UFMG — programação oficial",
@@ -9170,7 +9499,16 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_explicita",
       "status_validacao": "aprovado",
-      "origem_experimental": "mhnjb_ufmg"
+      "origem_experimental": "mhnjb_ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-17",
+          "observacao": "15h20 às 16h20"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Museu+de+Hist%C3%B3ria+Natural+e+Jardim+Bot%C3%A2nico+da+UFMG%2C+Rua+Gustavo+da+Silveira%2C+1035%2C+Santa+In%C3%AAs%2C+Belo+Horizonte+-+MG",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ufmg-ec-observacao-noturna-dos-astros-com-telescopios-4",
@@ -9223,7 +9561,15 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-18",
+          "observacao": "10h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "portal-bh-30438efdb35a-2026-10-18-1030",
@@ -9314,7 +9660,15 @@
       "motivo_publicacao": "gratuidade_confirmada_no_site_oficial",
       "endereco": "Avenida Brasil, 2023, Savassi, Belo Horizonte - MG",
       "status_validacao": "aprovado",
-      "origem_experimental": "puc_minas"
+      "origem_experimental": "puc_minas",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-18",
+          "observacao": "11h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=PUC+Minas+Lourdes%2C+Avenida+Brasil%2C+2023%2C+Savassi%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "casa-fiat-musica-na-capela-grupo-d-lima-travessias-musicais-2026-10-18-11",
@@ -9338,7 +9692,15 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-18",
+          "observacao": "11h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "ufmg-ec-sessao-netuno-tea-era-uma-vez-no-ceu-andromeda-e-perseu",
@@ -9392,7 +9754,15 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-18",
+          "observacao": "15h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "ufmg-ec-oficina-abayomi-encontro-precioso-semana-das-criancas",
@@ -9558,9 +9928,18 @@
       "instituicao_id": "minas-tenis-clube",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_explicita",
-      "local_id": "minas-centro-cultural-cafe",
+      "local_id": "centro-cultural-unimed-bh-minas",
       "status_validacao": "aprovado",
-      "origem_experimental": "minas_tenis_cultura"
+      "origem_experimental": "minas_tenis_cultura",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-20",
+          "observacao": "19h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+Unimed-BH+Minas%2C+Rua+da+Bahia%2C+2244%2C+Lourdes%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Café Cultural do"
     },
     {
       "id": "conservatorio-ufmg-coro-feminino-da-escola-de-musica-da-uemg-2026-10-20-1930",
@@ -9576,7 +9955,7 @@
       "gratuito": true,
       "inscricao": "Entrada gratuita, sujeita à capacidade do espaço, conforme agenda oficial do Conservatório UFMG.",
       "descricao": "CONEXÕES MUSICAIS. Coro Feminino da Escola de Música da UEMG. MÚSICA ERUDITA",
-      "imagem": "",
+      "imagem": "https://www.ufmg.br/online/arquivos/anexos/ConservatorioUFMGFachada.jpg",
       "link": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html",
       "pagina": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html",
       "fonte": "Conservatório UFMG — agenda oficial",
@@ -9584,7 +9963,16 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_agenda_oficial",
       "status_validacao": "aprovado",
-      "origem_experimental": "conservatorio_ufmg"
+      "origem_experimental": "conservatorio_ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-20",
+          "observacao": "19h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Conservat%C3%B3rio+UFMG%2C+Avenida+Afonso+Pena%2C+1534%2C+Centro%2C+Belo+Horizonte+-+MG",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "conservatorio-ufmg-duo-mitre-luisa-mitre-piano-e-natalia-mitre-vibrafone-e-percussao-2026-10-21-1230",
@@ -9600,7 +9988,7 @@
       "gratuito": true,
       "inscricao": "Entrada gratuita, sujeita à capacidade do espaço, conforme agenda oficial do Conservatório UFMG.",
       "descricao": "QUARTA CULTURAL. Duo Mitre Luísa Mitre (piano) e Natália Mitre (vibrafone e percussão). MÚSICA POPULAR",
-      "imagem": "",
+      "imagem": "https://www.ufmg.br/online/arquivos/anexos/ConservatorioUFMGFachada.jpg",
       "link": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html",
       "pagina": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html",
       "fonte": "Conservatório UFMG — agenda oficial",
@@ -9608,7 +9996,16 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_agenda_oficial",
       "status_validacao": "aprovado",
-      "origem_experimental": "conservatorio_ufmg"
+      "origem_experimental": "conservatorio_ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-21",
+          "observacao": "12h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Conservat%C3%B3rio+UFMG%2C+Avenida+Afonso+Pena%2C+1534%2C+Centro%2C+Belo+Horizonte+-+MG",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ufmg-ec-oficina-barracao-das-artes-inteligencia-ancestral-ia-e-escrevivencias-da-maternidade-e-da-infancia-negra",
@@ -9681,7 +10078,7 @@
       "gratuito": true,
       "inscricao": "Entrada gratuita, sujeita à capacidade do espaço, conforme agenda oficial do Conservatório UFMG.",
       "descricao": "ESPECIAL. O Piano em Ressonância Santiago Velásquez (Colômbia) 10° Encontro Internacional de Piano Contemporâneo. MÚSICA ERUDITA",
-      "imagem": "",
+      "imagem": "https://www.ufmg.br/online/arquivos/anexos/ConservatorioUFMGFachada.jpg",
       "link": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html",
       "pagina": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html",
       "fonte": "Conservatório UFMG — agenda oficial",
@@ -9689,7 +10086,16 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_agenda_oficial",
       "status_validacao": "aprovado",
-      "origem_experimental": "conservatorio_ufmg"
+      "origem_experimental": "conservatorio_ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-21",
+          "observacao": "19h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Conservat%C3%B3rio+UFMG%2C+Avenida+Afonso+Pena%2C+1534%2C+Centro%2C+Belo+Horizonte+-+MG",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "casa-fiat-atelie-aberto-paisagem-construida-2026-10-22-1930",
@@ -9713,7 +10119,15 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-22",
+          "observacao": "19h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "mm-gerdau-outubro-rosa-saude-mental-reconstruindo-a-vida-2026-10-22",
@@ -9728,7 +10142,7 @@
       "gratuito": true,
       "inscricao": "Atividade gratuita conforme programação oficial do MM Gerdau; consulte a página do evento para orientações específicas de acesso, inscrição ou lotação.",
       "descricao": "OUTUBRO ROSA | SAÚDE MENTAL: RECONSTRUINDO A VIDA. Consulte a página oficial para conhecer a atividade, os horários e a programação.",
-      "imagem": "",
+      "imagem": "https://www.secult.mg.gov.br/images/stories/migracao/cultura/2016/MM%20Gerdau%20-%20por%20Jomar%20Bragana_.jpg",
       "link": "https://mmgerdau.org.br/programacoes/outubro-rosa-saude-mental-reconstruindo-a-vida/",
       "fonte": "MM Gerdau — programação oficial",
       "pagina": "https://mmgerdau.org.br/programacoes/outubro-rosa-saude-mental-reconstruindo-a-vida/",
@@ -9737,7 +10151,16 @@
       "motivo_publicacao": "gratuidade_explicita",
       "local_id": "mm-gerdau",
       "status_validacao": "aprovado",
-      "origem_experimental": "mm_gerdau"
+      "origem_experimental": "mm_gerdau",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-22",
+          "observacao": "19h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=MM+Gerdau+%E2%80%93+Museu+das+Minas+e+do+Metal%2C+Pra%C3%A7a+da+Liberdade%2C+680%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "portal-bh-89c37e018028-2026-10-22-0800",
@@ -9875,7 +10298,16 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_confirmada_na_atracao",
       "status_validacao": "aprovado",
-      "origem_experimental": "teatro_francisco_nunes"
+      "origem_experimental": "teatro_francisco_nunes",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-23",
+          "observacao": "19h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Teatro+Francisco+Nunes%2C+Avenida+Afonso+Pena%2C+1321%2C+Centro%2C+Belo+Horizonte+-+MG",
+      "classificacao_indicativa": "Livre"
     },
     {
       "id": "portal-bh-980ffbadc4c9-2026-10-24-1000",
@@ -9937,7 +10369,15 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-24",
+          "observacao": "10h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "portal-bh-4e7283c478a5-2026-10-24-1100",
@@ -10053,7 +10493,15 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-24",
+          "observacao": "15h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "portal-bh-2329d0cc3a94-2026-10-24-1530",
@@ -10112,7 +10560,16 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_confirmada_na_atracao",
       "status_validacao": "aprovado",
-      "origem_experimental": "teatro_francisco_nunes"
+      "origem_experimental": "teatro_francisco_nunes",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-24",
+          "observacao": "17h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Teatro+Francisco+Nunes%2C+Avenida+Afonso+Pena%2C+1321%2C+Centro%2C+Belo+Horizonte+-+MG",
+      "classificacao_indicativa": "Livre"
     },
     {
       "id": "ufmg-ec-observacao-noturna-dos-astros-com-telescopios-5",
@@ -10228,7 +10685,15 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-25",
+          "observacao": "10h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "manual-concertos-peter-lund-grupo-vocal-andrea-pelliccione-2026-10-25-2026-10-25",
@@ -10292,7 +10757,15 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-25",
+          "observacao": "15h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "mm-gerdau-exposicao-xi-um-olhar-uma-luz-2026-10-27",
@@ -10307,7 +10780,7 @@
       "gratuito": true,
       "inscricao": "Atividade gratuita conforme programação oficial do MM Gerdau; consulte a página do evento para orientações específicas de acesso, inscrição ou lotação.",
       "descricao": "EXPOSIÇÃO | XI UM OLHAR, UMA LUZ. Consulte a página oficial para conhecer a atividade, os horários e a programação.",
-      "imagem": "",
+      "imagem": "https://www.secult.mg.gov.br/images/stories/migracao/cultura/2016/MM%20Gerdau%20-%20por%20Jomar%20Bragana_.jpg",
       "link": "https://mmgerdau.org.br/programacoes/exposicao-xi-um-olhar-uma-luz/",
       "fonte": "MM Gerdau — programação oficial",
       "pagina": "https://mmgerdau.org.br/programacoes/exposicao-xi-um-olhar-uma-luz/",
@@ -10316,7 +10789,15 @@
       "motivo_publicacao": "gratuidade_explicita",
       "local_id": "mm-gerdau",
       "status_validacao": "aprovado",
-      "origem_experimental": "mm_gerdau"
+      "origem_experimental": "mm_gerdau",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-27"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=MM+Gerdau+%E2%80%93+Museu+das+Minas+e+do+Metal%2C+Pra%C3%A7a+da+Liberdade%2C+680%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ufmg-ec-exposicao-demasiado-humano",
@@ -10453,7 +10934,15 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-27",
+          "observacao": "19h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "conservatorio-ufmg-swiss-winds-piano-trio-ivani-filomena-venturieri-piano-afonso-venturieri-fagote-e-sergio-burgani-clarinete-2026-10-27-1930",
@@ -10469,7 +10958,7 @@
       "gratuito": true,
       "inscricao": "Entrada gratuita, sujeita à capacidade do espaço, conforme agenda oficial do Conservatório UFMG.",
       "descricao": "CONSERVATÓRIO 100 ANOS. Swiss Winds Piano Trio Ivani Filomena Venturieri (piano), Afonso Venturieri (fagote) e Sérgio Burgani (clarinete). MÚSICA ERUDITA",
-      "imagem": "",
+      "imagem": "https://www.ufmg.br/online/arquivos/anexos/ConservatorioUFMGFachada.jpg",
       "link": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html",
       "pagina": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html",
       "fonte": "Conservatório UFMG — agenda oficial",
@@ -10477,7 +10966,16 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_agenda_oficial",
       "status_validacao": "aprovado",
-      "origem_experimental": "conservatorio_ufmg"
+      "origem_experimental": "conservatorio_ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-27",
+          "observacao": "19h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Conservat%C3%B3rio+UFMG%2C+Avenida+Afonso+Pena%2C+1534%2C+Centro%2C+Belo+Horizonte+-+MG",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "ufmg-ec-exposicao-demasiado-humano-2",
@@ -10642,7 +11140,14 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-29"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "ufmg-ec-exposicao-demasiado-humano-3",
@@ -10779,7 +11284,15 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-29",
+          "observacao": "19h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "conservatorio-ufmg-das-violas-do-rio-gaviao-calebe-violeiro-convida-nanda-dearo-2026-10-29-1930",
@@ -10795,7 +11308,7 @@
       "gratuito": true,
       "inscricao": "Entrada gratuita, sujeita à capacidade do espaço, conforme agenda oficial do Conservatório UFMG.",
       "descricao": "PALCO LIVRE. Das Violas do Rio Gavião Calebe Violeiro convida Nanda Dearo. MÚSICA POPULAR",
-      "imagem": "",
+      "imagem": "https://www.ufmg.br/online/arquivos/anexos/ConservatorioUFMGFachada.jpg",
       "link": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html",
       "pagina": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html",
       "fonte": "Conservatório UFMG — agenda oficial",
@@ -10803,7 +11316,16 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_agenda_oficial",
       "status_validacao": "aprovado",
-      "origem_experimental": "conservatorio_ufmg"
+      "origem_experimental": "conservatorio_ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-29",
+          "observacao": "19h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Conservat%C3%B3rio+UFMG%2C+Avenida+Afonso+Pena%2C+1534%2C+Centro%2C+Belo+Horizonte+-+MG",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "fcs-wp-37779",
@@ -10858,7 +11380,14 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "ufmg-ec-exposicao-demasiado-humano-4",
@@ -10959,7 +11488,7 @@
       "gratuito": true,
       "inscricao": "Entrada gratuita, sujeita à capacidade do espaço, conforme agenda oficial do Conservatório UFMG.",
       "descricao": "PERSPECTIVA - CIRCUITO CULTURAL UFMG. Mazziotti canta Tom Zé Luiz Mazziotti. MÚSICA POPULAR Toda a programação oferece entrada gratuita, sujeita à capacidade do espaço. Principal | Fale Conosco | UFMG Conservatório UFMG - Av. Afonso Pena, 1534 - Tel:(31) 3409-8300 - Fax:(31) 3409-8333",
-      "imagem": "",
+      "imagem": "https://www.ufmg.br/online/arquivos/anexos/ConservatorioUFMGFachada.jpg",
       "link": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html",
       "pagina": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html",
       "fonte": "Conservatório UFMG — agenda oficial",
@@ -10967,7 +11496,16 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_global_agenda_oficial",
       "status_validacao": "aprovado",
-      "origem_experimental": "conservatorio_ufmg"
+      "origem_experimental": "conservatorio_ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-30",
+          "observacao": "19h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Conservat%C3%B3rio+UFMG%2C+Avenida+Afonso+Pena%2C+1534%2C+Centro%2C+Belo+Horizonte+-+MG",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "portal-bh-4f026322cf55-2026-10-31-1000",
@@ -11029,7 +11567,15 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-31",
+          "observacao": "10h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "ufmg-ec-sabado-com-libras-libras-para-professores-e-educadores",
@@ -11081,7 +11627,15 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-31",
+          "observacao": "15h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "casa-fiat-oficina-tematica-assombracao-a-mineira-2026-10-31-15",
@@ -11105,7 +11659,15 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-31",
+          "observacao": "15h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "ufmg-ec-oficina-decorando-aboboras-de-halloween",
@@ -11390,7 +11952,15 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-08",
+          "observacao": "15h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "portal-bh-1045058fe89d-2026-11-14-0900",
@@ -11448,7 +12018,14 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
       "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat"
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-22"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "filarmonica-mg-concertos-para-a-juventude-7-2026-2026-11-22",
@@ -11472,7 +12049,15 @@
       "motivo_publicacao": "marcador_gratuito_agenda",
       "local_id": "sala-minas-gerais",
       "status_validacao": "aprovado",
-      "origem_experimental": "filarmonica_mg"
+      "origem_experimental": "filarmonica_mg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-22",
+          "observacao": "11h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Sala+Minas+Gerais%2C+Rua+Tenente+Brito+Melo%2C+1090%2C+Barro+Preto%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "filarmonica-mg-filarmonica-em-camara-6-2026-2026-11-24",
@@ -11496,7 +12081,15 @@
       "motivo_publicacao": "marcador_gratuito_agenda",
       "local_id": "sala-minas-gerais",
       "status_validacao": "aprovado",
-      "origem_experimental": "filarmonica_mg"
+      "origem_experimental": "filarmonica_mg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-24",
+          "observacao": "20h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Sala+Minas+Gerais%2C+Rua+Tenente+Brito+Melo%2C+1090%2C+Barro+Preto%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "manual-concertos-peter-lund-orquestra-sonoro-despertar-2026-11-29-2026-11-29",
@@ -11628,7 +12221,15 @@
       "motivo_publicacao": "marcador_gratuito_agenda",
       "local_id": "sala-minas-gerais",
       "status_validacao": "aprovado",
-      "origem_experimental": "filarmonica_mg"
+      "origem_experimental": "filarmonica_mg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-12-06",
+          "observacao": "11h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Sala+Minas+Gerais%2C+Rua+Tenente+Brito+Melo%2C+1090%2C+Barro+Preto%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "portal-bh-1045058fe89d-2026-12-12-1330",
@@ -11819,7 +12420,7 @@
       "gratuito": true,
       "inscricao": "Atividade gratuita conforme programação oficial do MM Gerdau; consulte a página do evento para orientações específicas de acesso, inscrição ou lotação.",
       "descricao": "2º Seminário de Colecionismo Mineral e 15º Encontro de Colecionadores de Minerais. Consulte a página oficial para conhecer a atividade, os horários e a programação.",
-      "imagem": "",
+      "imagem": "https://www.secult.mg.gov.br/images/stories/migracao/cultura/2016/MM%20Gerdau%20-%20por%20Jomar%20Bragana_.jpg",
       "link": "https://mmgerdau.org.br/programacoes/2o-seminario-de-colecionismo-mineral-e-15o-encontro-de-colecionadores-de-minerais/",
       "fonte": "MM Gerdau — programação oficial",
       "pagina": "https://mmgerdau.org.br/programacoes/2o-seminario-de-colecionismo-mineral-e-15o-encontro-de-colecionadores-de-minerais/",
@@ -11828,7 +12429,16 @@
       "motivo_publicacao": "gratuidade_explicita",
       "local_id": "mm-gerdau",
       "status_validacao": "aprovado",
-      "origem_experimental": "mm_gerdau"
+      "origem_experimental": "mm_gerdau",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2027-06-24",
+          "fim": "2027-06-27"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=MM+Gerdau+%E2%80%93+Museu+das+Minas+e+do+Metal%2C+Pra%C3%A7a+da+Liberdade%2C+680%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
+      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "manual-programa-conjunto-de-conscientizacao-instrucao-e-combate-a-violencia-domestica-2026-01-01",
@@ -11906,7 +12516,6 @@
     }
   ],
   "modo_teste_experimental": true,
-  "eventos_somente_teste": 0,
-  "atualizado_em_teste": "2026-10-08T18:38:38-03:00",
-  "aprovacoes_eventos_experimentais": 114
+  "eventos_somente_teste": 4,
+  "atualizado_em_teste": "2026-10-08T23:08:01-03:00"
 }
