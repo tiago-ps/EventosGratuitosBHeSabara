@@ -220,3 +220,58 @@ for (const [hostname, pathname, enabled] of [
 }
 
 console.log('Filtros completos do modo Exploração validados.');
+
+ 
+// Exploração de Eventos: ELA não deve monopolizar os resultados iniciais.
+const schoolStart = appSource.indexOf('function orderAgendaEventsForExploration(');
+const schoolEnd = appSource.indexOf('function agendaVisibleEvents()', schoolStart);
+assert.ok(schoolStart > 0 && schoolEnd > schoolStart, 'Ordenação especial ELA ausente.');
+const schoolContext = vm.createContext({
+  isSchoolEvent: item => String(item.programa || '').includes('Escola Livre de Artes Arena da Cultura')
+});
+vm.runInContext(appSource.slice(schoolStart, schoolEnd), schoolContext);
+const isSchool = schoolContext.isSchoolEvent;
+const allSchool = eventRows.filter(isSchool);
+assert.ok(allSchool.length > 3, 'Base deve conter registros da ELA.');
+const orderedEvents = schoolContext.orderAgendaEventsForExploration(eventRows);
+assert.equal(orderedEvents.length, eventRows.length, 'Ordenação não pode excluir eventos.');
+assert.equal(new Set(orderedEvents.map(item => item.id)).size, eventRows.length);
+const firstOrdinary = orderedEvents.findIndex(item => !isSchool(item));
+const ordinary = eventRows.filter(item => !isSchool(item));
+assert.equal(orderedEvents[0].tipo_registro, 'programa_escola_livre');
+assert.ok(firstOrdinary >= 1 && firstOrdinary <= 3, 'Até três registros iniciais da ELA.');
+assert.deepEqual(orderedEvents.slice(firstOrdinary, firstOrdinary + ordinary.length).map(item => item.id),
+  ordinary.map(item => item.id), 'Outros eventos devem vir antes da lista extensa da ELA.');
+assert.ok(orderedEvents.slice(firstOrdinary + ordinary.length).every(isSchool));
+assert.ok(appSource.includes('if (specific && !agendaHasSpecificEventFilters())'),
+  'Filtros e buscas específicos devem mostrar todas as atividades e ordenação normal.');
+assert.ok(appSource.includes('return orderAgendaEventsForExploration(visible);'));
+
+// Modo Interativo: estrela sincronizada com favoritos da Exploração e link de 1 item.
+assert.ok(appSource.includes("if (state.viewMode !== 'painel') return;"),
+  'Modo Automático não deve receber as ações sobre a imagem.');
+assert.ok(appSource.includes("app.querySelector('.slide .media')"));
+assert.ok(appSource.includes('attachInteractiveSlideActions(item);'));
+assert.ok(appSource.includes('panel-item-favorite') && appSource.includes('panel-item-share'));
+assert.ok(appSource.includes('loadAgendaFavorites().has(favoriteId)'));
+assert.ok(appSource.includes('saveAgendaFavorites(favorites)'));
+const panelShareStart = appSource.indexOf('async function sharePanelItem(');
+const panelShareEnd = appSource.indexOf('function goToNext()', panelShareStart);
+const shareCode = appSource.slice(panelShareStart, panelShareEnd);
+assert.ok(panelShareStart > -1 && panelShareEnd > panelShareStart);
+assert.ok(shareCode.includes('const url = muralItemUrl(item);'));
+assert.ok(!shareCode.includes('sharedAgendaUrl(') && !shareCode.includes('createShortSharedAgendaUrl('));
+assert.ok(shareCode.includes('navigator.share(data)'));
+assert.ok(shareCode.includes('navigator.clipboard.writeText(url)'));
+const singleStart = appSource.indexOf('function muralItemUrl(');
+const singleEnd = appSource.indexOf('function buildSiteQr(', singleStart);
+const singleContext = vm.createContext({
+  URL,
+  muralPublicUrl: () => 'https://tiago-ps.github.io/EventosGratuitosBHeSabara/',
+  agendaFavoriteId: item => item.tipo_conteudo + ':' + item.id
+});
+vm.runInContext(appSource.slice(singleStart, singleEnd), singleContext);
+const singleUrl = new URL(singleContext.muralItemUrl({ tipo_conteudo: 'evento', id: 'teste-1' }));
+assert.equal(singleUrl.searchParams.get('modo'), 'agenda');
+assert.equal(singleUrl.searchParams.get('item'), 'evento:teste-1');
+assert.equal(singleUrl.searchParams.has('selecao'), false);
