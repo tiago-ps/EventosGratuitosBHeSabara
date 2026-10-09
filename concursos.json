@@ -2,8 +2,8 @@
   "schema": 10,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-10-08T15:56:14.910698+00:00",
-  "total": 20,
+  "coletado_em_utc": "2026-10-09T15:37:12.634628+00:00",
+  "total": 18,
   "concursos": [
     {
       "id": "pci:noticia:marinha-do-brasil-8-distrito-naval-abre-vagas-para-oficiais-rm2-em-sp",
@@ -381,73 +381,6 @@
       }
     },
     {
-      "id": "pci:noticia:hospital-metropolitano-odilon-behrens-mg-abre-concurso-publico-com-salarios-de-ate-7397",
-      "titulo": "HOB - Hospital Metropolitano Odilon Behrens",
-      "url": "https://www.pciconcursos.com.br/noticias/hospital-metropolitano-odilon-behrens-mg-abre-concurso-publico-com-salarios-de-ate-7397",
-      "imagem": "https://cdn.pci.app.br/img/i/3cb9e27177bb7edb07261559df0f1c46.png",
-      "formacoes_compativeis": [
-        "Técnico em Administração",
-        "Técnico em Eletrônica"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Técnico em Administração",
-          "nivel": "tecnico",
-          "evidencia": "as › sudeste terca-feira, 7 de julho de 2026 o hospital metropolitano odilon behrens - hob , em belo horizonte/mg, abriu um concurso publico para o preenchimento de vagas em funcoes de nivel medio/tecnico e superior. segundo o edital, as oportunidades sao para os cargos de: tecnico de nivel medio - tecnico em administracao (2 vagas) tecnico de nivel medio - tecnico em eletronica (1 vaga) tecnico de servicos de saude - tecnico em enfermagem (10 vagas) tecnico de servicos de saude - tecnico em nutricao (5 vagas) tecnico de servicos de saude - tecnico em patologia clinica (1 vaga) tecnico de servicos de saude - tecnico "
-        },
-        {
-          "nome": "Técnico em Eletrônica",
-          "nivel": "tecnico",
-          "evidencia": "opolitano odilon behrens - hob , em belo horizonte/mg, abriu um concurso publico para o preenchimento de vagas em funcoes de nivel medio/tecnico e superior. segundo o edital, as oportunidades sao para os cargos de: tecnico de nivel medio - tecnico em administracao (2 vagas) tecnico de nivel medio - tecnico em eletronica (1 vaga) tecnico de servicos de saude - tecnico em enfermagem (10 vagas) tecnico de servicos de saude - tecnico em nutricao (5 vagas) tecnico de servicos de saude - tecnico em patologia clinica (1 vaga) tecnico de servicos de saude - tecnico em radiologia (1 vaga) cirurgiao dentista clinico geral ("
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "MG",
-      "cidade": "",
-      "inscricoes_inicio_texto": "9 de setembro de 2026",
-      "inscricoes_fim_texto": "8 de outubro de 2026",
-      "inscricoes_texto": "9 de setembro de 2026 a 8 de outubro de 2026",
-      "remuneracao_faixa_texto": "R$ 7.397,55",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Técnico de Nível Médio - Técnico em Administração",
-          "vagas_texto": "2 vagas",
-          "formacao": "Técnico em Administração",
-          "confianca": "alta"
-        },
-        {
-          "cargo": "Técnico de Nível Médio - Técnico em Eletrônica",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Eletrônica",
-          "confianca": "alta"
-        }
-      ],
-      "janela_inscricoes": {
-        "estado": "encerrado",
-        "completude": "completa",
-        "inicio": "2026-09-09",
-        "fim": "2026-10-08",
-        "texto_original": "9 de setembro de 2026 a 8 de outubro de 2026"
-      },
-      "temporalidade": {
-        "classe": "periodo",
-        "realizacao": {
-          "inicio": "2026-09-09",
-          "fim": "2026-10-08"
-        },
-        "participacao": [
-          {
-            "tipo": "candidatura",
-            "inicio": "2026-09-09",
-            "fim": "2026-10-08",
-            "status": "encerrado"
-          }
-        ]
-      }
-    },
-    {
       "id": "pci:noticia:prefeitura-de-belo-vale-mg-abre-concurso-publico-com-diversas-vagas-e-salarios-de-ate-8000",
       "titulo": "Prefeitura de Belo Vale",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-belo-vale-mg-abre-concurso-publico-com-diversas-vagas-e-salarios-de-ate-8000",
@@ -500,82 +433,6 @@
             "status": "aberto"
           }
         ]
-      }
-    },
-    {
-      "id": "pci:noticia:prefeitura-de-coromandel-mg-abre-concurso-publico-com-salarios-de-ate-7821",
-      "titulo": "Prefeitura de Coromandel",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-coromandel-mg-abre-concurso-publico-com-salarios-de-ate-7821",
-      "imagem": "https://cdn.pci.app.br/img/i/175e8ccb2ed451d783e4714f0aa2f8c1.png",
-      "formacoes_compativeis": [
-        "Sistemas de Informação / Computação"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Sistemas de Informação / Computação",
-          "nivel": "superior",
-          "evidencia": "l tecnico administrativo e fiscal - assistente administrativo (7 vagas) oficial tecnico administrativo e fiscal - fiscal de obras (1 vaga) oficial tecnico administrativo e fiscal - fiscal de posturas municipais (1 vaga) oficial tecnico administrativo e fiscal - fiscal do procon (1 vaga) analista de tecnologia da informacao (1 vaga) contador (1 vaga) controlador interno (1 vaga) engenheiro civil (1 vaga) as jornadas de trabalho variam de 30 a 40 horas semanais, conforme o cargo. as remuneracoes vao de r$ 1.621,00 a r$ 7.821,98. as inscricoes deverao ser realizadas no site www.ibgpconcursos.com.br , das 9h do dia 8 de "
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "MG",
-      "cidade": "Coromandel",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "",
-      "inscricoes_texto": "",
-      "remuneracao_faixa_texto": "R$ 7.821,98",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Analista de Tecnologia da Informação",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        }
-      ],
-      "janela_inscricoes": {
-        "estado": "prazo_desconhecido",
-        "completude": "desconhecida"
-      }
-    },
-    {
-      "id": "pci:noticia:prefeitura-de-ipaba-mg-retifica-edital-de-concurso-publico-com-salarios-de-ate-5275",
-      "titulo": "Prefeitura de Ipaba",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-ipaba-mg-retifica-edital-de-concurso-publico-com-salarios-de-ate-5275",
-      "imagem": "https://cdn.pci.app.br/img/i/307411641985d6cc48a5320cc173849e.png",
-      "formacoes_compativeis": [
-        "Técnico em Informática"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Técnico em Informática",
-          "nivel": "tecnico",
-          "evidencia": "ervicos (3 vagas) escriturario (1 vaga) fiscal ambiental (2 vagas) fiscal sanitario (3 vagas) operador de video monitoramento (2 vagas) secretario(a) de gabinete (3 vagas) ensino medio/tecnico completo tecnico de enfermagem (7 vagas) tecnico em contabilidade (1 vaga) tecnico em edificacoes (1 vaga) tecnico em informatica (1 vaga) tecnico em radiologia (2 vagas) tecnico em seguranca do trabalho (1 vaga) ensino superior completo arquiteto urbanista (1 vaga) assistente social (3 vagas) biologo (1 vaga) contador (1 vaga) enfermeiro (7 vagas) engenheiro ambiental (1 vaga) engenheiro civil (1 vaga) farmaceutico (2 vagas)"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "MG",
-      "cidade": "Ipaba",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "8 de outubro de 2026",
-      "inscricoes_texto": "até 8 de outubro de 2026",
-      "remuneracao_faixa_texto": "R$ 5.275,34",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Técnico em Informática",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "alta"
-        }
-      ],
-      "janela_inscricoes": {
-        "estado": "encerrado",
-        "completude": "somente_fim",
-        "fim": "2026-10-08",
-        "texto_original": "até 8 de outubro de 2026"
       }
     },
     {
@@ -1011,6 +868,45 @@
       "janela_inscricoes": {
         "estado": "prazo_desconhecido",
         "completude": "desconhecida"
+      }
+    },
+    {
+      "id": "pci:noticia:sefaz-sc-abre-concurso-publico-para-o-cargo-de-auditor-estadual-de-financas-publicas",
+      "titulo": "SEFAZ - Secretaria de Estado da Fazenda de Santa Catarina",
+      "url": "https://www.pciconcursos.com.br/noticias/sefaz-sc-abre-concurso-publico-para-o-cargo-de-auditor-estadual-de-financas-publicas",
+      "imagem": "https://cdn.pci.app.br/img/i/bf56624401433deefeba225fe6a5a0af.png",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "mento de vagas para o cargo de auditor estadual de financas publicas, com exigencia de nivel superior completo. segundo o edital, as oportunidades sao para os cargos de: auditor estadual de financas publicas - administracao e engenharias (6 vagas) auditor estadual de financas publicas - ciencias da computacao (12 vagas) auditor estadual de financas publicas - ciencias contabeis (20 vagas) auditor estadual de financas publicas - ciencias economicas (4 vagas) auditor estadual de financas publicas - direito (8 vagas) a jornada de trabalho e de 40 horas semanais. a remuneracao inicial e de r$ 25.337,61. as "
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "SC",
+      "cidade": "",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "5 de outubro de 2026",
+      "inscricoes_texto": "até 5 de outubro de 2026",
+      "remuneracao_faixa_texto": "R$ 25.337,61",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Auditor Estadual de Finanças Públicas - Ciências da Computação",
+          "vagas_texto": "12 vagas",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "encerrado",
+        "completude": "somente_fim",
+        "fim": "2026-10-05",
+        "texto_original": "até 5 de outubro de 2026"
       }
     }
   ]
