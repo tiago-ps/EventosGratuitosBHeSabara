@@ -217,6 +217,7 @@
     mobileCuration: '',
     mobileTheme: '',
     mobilePeriod: 'all',
+    mobileEditorialStatus: '',
     mobileCategory: '',
     mobileCity: '',
     mobileSpace: '',
@@ -3877,12 +3878,16 @@ function eventProgram(event) {
     }
 
     if (state.mobileContent !== 'events') {
+      state.mobileEditorialStatus = '';
       state.mobilePeriod = 'all';
       state.mobileCategory = '';
       state.mobileCity = '';
       state.mobileSpace = '';
       state.mobileInstitution = '';
       state.mobileRegistration = '';
+    } else if (!state.allEvents.some(event => event.somente_teste === true)) {
+      // O filtro de revisão só existe quando há registros exclusivos do TESTE.
+      state.mobileEditorialStatus = '';
     }
     if (state.mobileContent !== 'books') {
       state.mobileBookAccess = '';
@@ -3975,11 +3980,13 @@ function eventProgram(event) {
     return Boolean(
       state.mobileQuery || state.mobileCuration || state.mobileTheme || state.mobilePeriod !== 'all' ||
       state.mobileCity || state.mobileCategory || state.mobileSpace ||
-      state.mobileInstitution || state.mobileRegistration
+      state.mobileInstitution || state.mobileRegistration || state.mobileEditorialStatus
     );
   }
 
   function agendaEventSource() {
+    // Situação editorial deve considerar todo o catálogo, sem amostragem rotativa.
+    if (state.mobileContent === 'events' && state.mobileEditorialStatus) return state.allEvents;
     if (state.mobileContent === 'events' && !agendaHasSpecificEventFilters()) {
       return state.allEvents;
     }
@@ -4037,6 +4044,14 @@ function eventProgram(event) {
     return haystack.includes(query);
   }
 
+  function eventMatchesEditorialStatus(event, status) {
+    if (!status) return true;
+    const experimental = event?.somente_teste === true;
+    if (status === 'experimental') return experimental;
+    if (status === 'regular') return !experimental;
+    return true;
+  }
+
   function agendaVisibleEvents() {
     if (!['all', 'events'].includes(state.mobileContent)) return [];
     const query = normalizeText(state.mobileQuery);
@@ -4047,6 +4062,7 @@ function eventProgram(event) {
       }
       if (!eventMatchesTheme(event, state.mobileTheme)) return false;
       if (specific) {
+        if (!eventMatchesEditorialStatus(event, state.mobileEditorialStatus)) return false;
         if (state.mobileCity && normalizeText(event.cidade) !== state.mobileCity) return false;
         if (!categoryMatches(event, state.mobileCategory)) return false;
         if (state.mobileSpace && normalizeText(eventUnit(event)) !== state.mobileSpace) return false;
@@ -4426,7 +4442,7 @@ function eventProgram(event) {
         state.mobileTheme,
         state.mobilePeriod !== 'all' ? state.mobilePeriod : '',
         state.mobileCategory, state.mobileCity, state.mobileSpace,
-        state.mobileInstitution, state.mobileRegistration
+        state.mobileInstitution, state.mobileRegistration, state.mobileEditorialStatus
       );
     } else if (state.mobileContent === 'books') {
       common.push(
@@ -4505,6 +4521,7 @@ function eventProgram(event) {
     state.mobileContent = 'all';
     state.mobileTheme = '';
     state.mobilePeriod = 'all';
+    state.mobileEditorialStatus = '';
     state.mobileCategory = '';
     state.mobileCity = '';
     state.mobileSpace = '';
@@ -6020,6 +6037,12 @@ function eventProgram(event) {
     `;
 
     const eventControls = state.mobileContent === 'events' ? `
+      ${state.allEvents.some(event => event.somente_teste === true) ? `
+      <label><span>Situação editorial</span><select class="agenda-editorial-status">
+        <option value="">Todos os eventos</option>
+        <option value="experimental">Somente experimentais (em análise)</option>
+        <option value="regular">Demais eventos</option>
+      </select></label>` : ''}
       <label><span>Quando</span><select class="agenda-period">
         <option value="all">Todos os eventos futuros</option><option value="today">Hoje</option>
         <option value="tomorrow">Amanhã</option><option value="weekend">Este fim de semana</option>
@@ -6194,6 +6217,8 @@ function eventProgram(event) {
       );
       controls.querySelector('.agenda-period').value = state.mobilePeriod;
       controls.querySelector('.agenda-registration').value = state.mobileRegistration;
+      const editorialSelect = controls.querySelector('.agenda-editorial-status');
+      if (editorialSelect) editorialSelect.value = state.mobileEditorialStatus;
     } else if (state.mobileContent === 'books') {
       controls.querySelector('.agenda-book-access').value = state.mobileBookAccess;
       populateDynamicSelect(controls.querySelector('.agenda-book-library'), 'Todos os acervos', agendaBookLibraryOptions(), state.mobileBookLibrary);
@@ -6507,6 +6532,7 @@ function eventProgram(event) {
     controls.querySelector('.agenda-activity-format')?.addEventListener('change', event => { state.mobileActivityFormat = event.target.value; rerender(); });
 
     if (state.mobileContent === 'events') {
+      controls.querySelector('.agenda-editorial-status')?.addEventListener('change', event => { state.mobileEditorialStatus = event.target.value; rerender(); });
       controls.querySelector('.agenda-period').addEventListener('change', event => { state.mobilePeriod = event.target.value; rerender(); });
       controls.querySelector('.agenda-category').addEventListener('change', event => { state.mobileCategory = event.target.value; rerender(); });
       controls.querySelector('.agenda-city').addEventListener('change', event => { state.mobileCity = event.target.value; rerender(); });

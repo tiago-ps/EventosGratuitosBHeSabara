@@ -170,11 +170,35 @@ for (const asset of [
   'js/conteudos/espacos.js?v=5',
   'js/conteudos/atividades-lazer.js?v=6',
   'js/temporalidade-eventos.js?v=1',
-  'js/app.js?v=160'
+  'js/app.js?v=161'
 ]) {
   assert.ok(indexSource.includes(asset), `Asset ausente do index: ${asset}`);
   assert.ok(swSource.includes(`./${asset}`), `Asset ausente do service worker: ${asset}`);
 }
-assert.ok(swSource.includes('mural-cultural-v203-imagens-espacos'));
+assert.ok(swSource.includes('mural-cultural-v204-filtro-eventos-experimentais'));
+
+// Situação editorial dos Eventos: delimitação exclusiva aos itens do TESTE.
+const eventCatalog = JSON.parse(fs.readFileSync(path.join(root, 'eventos.json'), 'utf8'));
+const eventRows = eventCatalog.eventos;
+const editorialStart = appSource.indexOf('function eventMatchesEditorialStatus(');
+const editorialEnd = appSource.indexOf('\n  function agendaVisibleEvents()', editorialStart);
+assert.ok(editorialStart > 0 && editorialEnd > editorialStart, 'Função editorial deve existir.');
+const editorialContext = vm.createContext({});
+vm.runInContext(appSource.slice(editorialStart, editorialEnd), editorialContext);
+const matchesEditorial = editorialContext.eventMatchesEditorialStatus;
+assert.equal(typeof matchesEditorial, 'function');
+const experimentalRows = eventRows.filter(item => matchesEditorial(item, 'experimental'));
+const regularRows = eventRows.filter(item => matchesEditorial(item, 'regular'));
+assert.ok(experimentalRows.length > 0, 'Catálogo de TESTE deve possuir eventos experimentais.');
+assert.equal(experimentalRows.length, eventRows.filter(item => item.somente_teste === true).length);
+assert.equal(regularRows.length + experimentalRows.length, eventRows.length);
+assert.ok(experimentalRows.every(item => item.somente_teste === true));
+assert.ok(regularRows.every(item => item.somente_teste !== true));
+assert.ok(eventRows.every(item => matchesEditorial(item, '')), 'Filtro "Todos" deve preservar todos.');
+assert.ok(appSource.includes('agenda-editorial-status'), 'Falta seletor editorial na interface.');
+assert.ok(appSource.includes('state.mobileEditorialStatus = \'\';'), 'Filtro deve ser limpo ao mudar de conteúdo.');
+assert.ok(appSource.includes("if (state.mobileContent === 'events' && state.mobileEditorialStatus) return state.allEvents;"), 'Filtro não deve usar amostragem rotativa.');
+assert.ok(appSource.includes('if (!eventMatchesEditorialStatus(event, state.mobileEditorialStatus)) return false;'), 'Filtro não aplicado aos eventos.');
+assert.ok(appSource.includes("state.allEvents.some(event => event.somente_teste === true)"), 'Filtro só deve aparecer no ambiente com experimentais.');
 
 console.log('Filtros completos do modo Exploração validados.');
