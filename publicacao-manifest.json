@@ -3,7 +3,7 @@
     "atividades-lazer.json": 42,
     "concursos.json": 18,
     "configuracao-mural.json": 1,
-    "cursos.json": 1909,
+    "cursos.json": 1910,
     "espacos_culturais.json": 141,
     "eventos.json": 298,
     "filmes.json": 1292,
@@ -15,23 +15,23 @@
     "atividades-lazer.json": "7b7cac673c1d63119d5adb8f47d5b7bef51f30f7ea34e0473a9897931feae478",
     "concursos.json": "07c01001be6fd598ebf4608af176f97218a45920f5951f67c0c259a4ebf03ce9",
     "configuracao-mural.json": "49dfe7115a6f5c6d5b8dee424d3b10341b5e3014ac58a295d27ef4e6043ebfc2",
-    "cursos.json": "0a94f3854902c6f307062fe27a05c84fee3c8401e431ca378c8c99f3b4c66424",
+    "cursos.json": "c34f190922d4f7ce9bf2013790c7754001d6d061883c8027d4a37b9cc2cddcc5",
     "espacos_culturais.json": "ddd7a40d27b8a39aeb262e754f5b69404fc74fb986f4093f652518e5a1cd8e25",
-    "eventos.json": "f28749170df9cbc3684a013e31f48d126ece235f84db87f97c918f341607c4de",
+    "eventos.json": "9f70e041eb457999696bcd55197a79ab9e33f4d5d609e01e050172a9866ff06d",
     "filmes.json": "23437099af05856a1a822d1b91c19c9dc93962f073b823189bf8eb96652710af",
-    "livros.json": "747888728a9294d261790a7b79cd0adca8d4ac538764b601000b6930a2afc684",
+    "livros.json": "fb3ad3837bdbb95da89cc4fada3bd7d6d547a813563656b10f4d7bf937e3e029",
     "relacoes-eventos.json": "14fa73e9a97b0aa37f490d25e96e1166c9f2fba629bc00e9c828eba6df093b28",
     "utilidade-publica.json": "cbeed08b0810b7496fd1629875c4d907a91c373905c82e8b05a315cd3a11a2bb"
   },
-  "published_at": "2026-10-09T15:39:02Z",
-  "request_id": "auto-workflow_run-37953099631-1",
+  "published_at": "2026-10-09T16:11:07Z",
+  "request_id": "auto-workflow_run-37957045739-1",
   "schema_version": "1.0",
   "source_repository": "tiago-ps/ColetorEventosGratuitos",
-  "source_sha": "85b453c05a5cc24891f4217563c598e75d0d0194",
+  "source_sha": "4f914d225503af1d9c4ae3bd8142160124d74f0c",
   "staging_repository": "tiago-ps/EventosGratuitosBHeSabara",
   "versions": {
     "manifest_schema": "1.0",
     "publication_validator": "central-v1"
   },
-  "workflow_run_id": "37953099631"
+  "workflow_run_id": "37957045739"
 }

@@ -2,8 +2,8 @@
   "schema": 6,
   "status": "catalogo_completo",
   "fonte": "Catálogo consolidado de cursos gratuitos",
-  "atualizado_em": "2026-10-08T16:26:32.965114+00:00",
-  "total": 1909,
+  "atualizado_em": "2026-10-09T16:09:17.934099+00:00",
+  "total": 1910,
   "cursos": [
     {
       "id_fonte": "359",
@@ -58322,6 +58322,44 @@
       "url": "https://aprendamais.mec.gov.br/course/info.php?id=3109",
       "url_acesso": "https://aprendamais.mec.gov.br/course/view.php?id=3109",
       "imagem": "https://aprendamais.mec.gov.br/pluginfile.php/3208194/course/overviewfiles/coding.png",
+      "modalidade": "online",
+      "gratuito": true,
+      "fonte": "Aprenda Mais (MEC)",
+      "data_limite_conclusao": "2027-01-31",
+      "requisitos": "conhecimentos em HTML, compreensão de leitura em língua portuguesa",
+      "modulos": "04",
+      "metodologia": "sem tutoria",
+      "nivel": "básico",
+      "idioma": "português",
+      "certificado": true,
+      "temporalidade": {
+        "classe": "atemporal",
+        "participacao": [
+          {
+            "tipo": "acesso",
+            "fim": "2027-01-31",
+            "observacao": "Prazo absoluto informado pela plataforma para concluir o curso."
+          }
+        ]
+      }
+    },
+    {
+      "id_fonte": "aprendamais:3751",
+      "titulo": "Desenvolvimento Backend com PHP: POO e Integração com MySQL - Turma 2026B",
+      "area": "Informação e Comunicação",
+      "competencias": "",
+      "instituicao": "IFRS",
+      "instituicao_parceira": "",
+      "carga_horaria": "30 horas",
+      "prazo_conclusao_dias": "5",
+      "tipo": "curso livre / MOOC",
+      "descricao": "Fundamentos do PHP e Ambiente de Desenvolvimento; Programação Orientada a Objetos (POO) com PHP; Banco de Dados com MySQL e Integração com PHP; Desenvolvimento Backend com PHP: APIs, POO e Banco de Dados",
+      "publico_alvo": "estudantes e profissionais que atuam na área da tecnologia",
+      "conteudo_programatico": "Fundamentos do PHP e Ambiente de Desenvolvimento; Programação Orientada a Objetos (POO) com PHP; Banco de Dados com MySQL e Integração com PHP; Desenvolvimento Backend com PHP: APIs, POO e Banco de Dados",
+      "data_lancamento": "",
+      "url": "https://aprendamais.mec.gov.br/course/info.php?id=3751",
+      "url_acesso": "https://aprendamais.mec.gov.br/course/view.php?id=3751",
+      "imagem": "https://aprendamais.mec.gov.br/pluginfile.php/3712078/course/overviewfiles/coding.png",
       "modalidade": "online",
       "gratuito": true,
       "fonte": "Aprenda Mais (MEC)",
