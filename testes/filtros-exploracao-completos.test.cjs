@@ -189,7 +189,8 @@ const matchesEditorial = editorialContext.eventMatchesEditorialStatus;
 assert.equal(typeof matchesEditorial, 'function');
 const experimentalRows = eventRows.filter(item => matchesEditorial(item, 'experimental'));
 const regularRows = eventRows.filter(item => matchesEditorial(item, 'regular'));
-assert.ok(experimentalRows.length > 0, 'Catálogo de TESTE deve possuir eventos experimentais.');
+assert.ok(eventRows.length > 0, 'Catálogo de TESTE não deve estar vazio.');
+// Após aprovação de todos os experimentais, a quantidade pendente pode ser zero.
 assert.equal(experimentalRows.length, eventRows.filter(item => item.somente_teste === true).length);
 assert.equal(regularRows.length + experimentalRows.length, eventRows.length);
 assert.ok(experimentalRows.every(item => item.somente_teste === true));
