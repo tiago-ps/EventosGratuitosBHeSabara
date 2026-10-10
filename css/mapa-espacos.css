@@ -45,13 +45,161 @@
   padding: 24px;
   color: #16352d;
 }
-.agenda-space-map-popup { color: #1b2925; min-width: 170px; font-size: 14px; }
-.agenda-space-map-popup strong { display: block; font-size: 15px; margin-bottom: 4px; }
-.agenda-space-map-popup p { margin: 5px 0 8px; }
-.agenda-space-map-popup ul { padding-left: 18px; margin: 5px 0 10px; max-height: 170px; overflow: auto; }
-.agenda-space-map-popup li { margin: 5px 0; }
-.agenda-space-map-popup a { color: #006b50; }
-.agenda-space-map-directions { display: inline-block; margin-top: 4px; font-weight: 700; }
+.agenda-space-map-popup {
+  color: #1d2d2a;
+  font-size: 13px;
+  line-height: 1.4;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.agenda-space-map-popup .agenda-map-popup-heading {
+  display: block;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.3;
+  margin: 0 0 4px;
+}
+.agenda-map-popup-summary {
+  color: #436257;
+  font-size: 12px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+.agenda-map-popup-address {
+  color: #455b53;
+  font-size: 12px;
+  margin: 0 0 10px;
+}
+.agenda-space-map-popup .agenda-map-popup-items {
+  padding: 0;
+  margin: 10px 0 8px;
+  list-style: none;
+  max-height: none;
+  overflow: visible;
+}
+.agenda-space-map-popup .agenda-map-popup-items.is-expanded {
+  max-height: min(33vh, 236px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-right: 5px;
+}
+.agenda-space-map-popup .agenda-map-popup-item {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  padding: 7px 0;
+  margin: 0;
+  border-bottom: 1px solid #e8eeeb;
+}
+.agenda-space-map-popup .agenda-map-popup-item:last-child { border-bottom: 0; }
+.agenda-space-map-popup .agenda-map-popup-item[hidden] { display: none !important; }
+.agenda-map-popup-item-copy { flex: 1; min-width: 0; }
+.agenda-map-popup-tag {
+  flex: 0 0 auto;
+  padding: 3px 6px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 800;
+  background: #e3e9ef;
+  color: #34414e;
+  white-space: nowrap;
+}
+.agenda-map-popup-tag--events { background: #e4f2ff; color: #075994; }
+.agenda-map-popup-tag--books { background: #fff0d7; color: #865103; }
+.agenda-map-popup-tag--spaces { background: #eee7fa; color: #5d3988; }
+.agenda-map-popup-tag--activities { background: #e1f4e6; color: #17633c; }
+.agenda-space-map-popup a.agenda-map-popup-item-title {
+  color: #075f79;
+  font-weight: 700;
+  line-height: 1.3;
+  text-decoration: none;
+}
+.agenda-space-map-popup a.agenda-map-popup-item-title:hover,
+.agenda-space-map-popup a.agenda-map-popup-item-title:focus-visible {
+  text-decoration: underline;
+}
+.agenda-space-map-popup .agenda-map-popup-item-date {
+  display: block;
+  color: #596d66;
+  font-size: 11px;
+  margin-top: 3px;
+}
+.agenda-map-popup-more {
+  display: block;
+  width: 100%;
+  margin: 4px 0 10px;
+  padding: 9px;
+  background: #edf4f1;
+  color: #145e47;
+  border: 1px solid #b6d6c9;
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  text-align: center;
+}
+.agenda-map-popup-more:hover,
+.agenda-map-popup-more:focus-visible { background: #dcece5; }
+.agenda-map-popup-precision {
+  background: #f1f5f2;
+  border-left: 3px solid #b0bfb7;
+  padding: 6px 8px;
+  margin: 8px 0;
+  font-size: 11px;
+  color: #4e6459;
+}
+.agenda-space-map-popup a.agenda-space-map-directions {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 0 0;
+  color: #086e55;
+  font-weight: 800;
+  text-decoration: none;
+}
+.agenda-space-map-popup a.agenda-space-map-directions:hover { text-decoration: underline; }
+.agenda-space-map-canvas .leaflet-popup-content {
+  width: min(310px, calc(100vw - 76px)) !important;
+  margin: 14px 18px;
+}
+.agenda-map-marker-container {
+  background: transparent;
+  border: 0;
+}
+.agenda-map-pin {
+  --map-pin-color: #566b80;
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 37px;
+  height: 37px;
+  box-sizing: border-box;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: var(--map-pin-color);
+  color: #fff;
+  font-weight: 900;
+  font-size: 13px;
+  box-shadow: 0 2px 9px rgba(0,0,0,.24);
+  text-shadow: 0 1px 1px rgba(0,0,0,.22);
+}
+.agenda-map-pin::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 12px;
+  height: 12px;
+  left: 9px;
+  bottom: -6px;
+  background: var(--map-pin-color);
+  transform: rotate(45deg);
+}
+.agenda-map-pin--events { --map-pin-color: #1476ad; }
+.agenda-map-pin--books { --map-pin-color: #ab6824; }
+.agenda-map-pin--spaces { --map-pin-color: #7654a7; }
+.agenda-map-pin--activities { --map-pin-color: #19805a; }
+.agenda-map-pin--contests { --map-pin-color: #6e6782; }
+.agenda-map-pin--utility { --map-pin-color: #a55b45; }
+.agenda-map-pin--mixed { --map-pin-color: #426579; }
 @media (max-width: 700px) {
   .agenda-map-view-toggle { margin-left: 0; }
   .agenda-map-view-button { padding: 8px 13px; }
@@ -59,3 +207,15 @@
 }
 .agenda-space-map-nearby { margin: 0 0 10px; border: 1px solid currentColor; background: transparent; color: inherit; padding: 7px 14px; border-radius: 9px; cursor: pointer; font: inherit; }
 .agenda-space-map-nearby[disabled] { opacity: .65; cursor: wait; }
+
+@media (max-width: 560px) {
+  .agenda-space-map-canvas .leaflet-popup-content {
+    width: min(285px, calc(100vw - 80px)) !important;
+    margin: 13px 14px;
+  }
+  .agenda-map-popup-tag { font-size: 9px; padding: 3px 5px; }
+  .agenda-space-map-popup .agenda-map-popup-items.is-expanded {
+    max-height: min(30vh, 180px);
+  }
+  .agenda-map-popup-item { gap: 6px; }
+}
