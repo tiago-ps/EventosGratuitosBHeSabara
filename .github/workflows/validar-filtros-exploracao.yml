@@ -5,6 +5,10 @@ on:
     branches: [main]
     paths:
       - "js/app.js"
+      - "js/mapa-espacos.js"
+      - "css/mapa-espacos.css"
+      - "coordenadas-espacos.json"
+      - "testes/mapa-espacos.test.cjs"
       - "js/temporalidade-eventos.js"
       - "js/eventos-manuais-ui.js"
       - "js/curadorias-site.js"
@@ -40,6 +44,10 @@ on:
   pull_request:
     paths:
       - "js/app.js"
+      - "js/mapa-espacos.js"
+      - "css/mapa-espacos.css"
+      - "coordenadas-espacos.json"
+      - "testes/mapa-espacos.test.cjs"
       - "js/temporalidade-eventos.js"
       - "js/eventos-manuais-ui.js"
       - "js/curadorias-site.js"
@@ -88,6 +96,7 @@ jobs:
       - name: Validar sintaxe
         run: |
           node --check js/app.js
+          node --check js/mapa-espacos.js
           node --check js/temporalidade-eventos.js
           node --check js/eventos-manuais-ui.js
           node --check js/curadorias-site.js
@@ -103,6 +112,7 @@ jobs:
       - name: Validar filtros
         run: |
           node testes/filtros-exploracao-completos.test.cjs
+          node testes/mapa-espacos.test.cjs
           node testes/cabecalho-exploracao.test.cjs
           node testes/cursos-agenda.test.cjs
           node testes/cursos-temporalidade.test.cjs
