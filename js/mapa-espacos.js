@@ -21,12 +21,12 @@
     return [lat, lon];
   }
 
-  function groupedPoints(spaces, geo) {
+  function groupedPoints(spaces, geo, allSpaces = spaces) {
     const byId = geo && typeof geo === "object" ? geo : {};
     const byAddress = Object.create(null);
     // Subespaços com endereço exatamente igual compartilham a localização
     // validada do equipamento; nomes semelhantes nunca são suficientes.
-    for (const space of spaces) {
+    for (const space of allSpaces) {
       const point = byId[space.id];
       const address = String(space.endereco || "").trim().toLowerCase();
       if (point && address && !byAddress[address]) byAddress[address] = point;
@@ -117,14 +117,14 @@
 
   function mount(options) {
     clearMap();
-    const { shell, resultsContainer, count, spaces, coordinates, content,
+    const { shell, resultsContainer, count, spaces, allSpaces, coordinates, content,
       blocked, toItemUrl } = options;
     if (!shell || !resultsContainer || !count || blocked ||
         !["all", "spaces"].includes(content)) {
       selectedView = "list";
       return;
     }
-    const located = groupedPoints(spaces, coordinates);
+    const located = groupedPoints(spaces, coordinates, allSpaces);
     const wrap = document.createElement("div");
     wrap.className = "agenda-map-view-toggle";
     wrap.setAttribute("role", "group");
