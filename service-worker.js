@@ -3,7 +3,7 @@ importScripts('./js/temporalidade-eventos.js?v=1');
 
 const SW_EVENT_RELATIONS = self.MuralCultural?.eventRelations;
 const SW_EVENT_TEMPORAL = self.MuralCultural?.eventTemporal;
-const CACHE_VERSION = 'mural-cultural-v209-mapa-multiconteudo';
+const CACHE_VERSION = 'mural-cultural-v210-mapa-popups-compactos';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -15,7 +15,7 @@ const PLATFORM_IMAGE_PREFIX = '/imagens/plataformas/';
 const CORE_ASSETS = [
   './', './index.html',
   './css/styles.css?v=109',
-  './css/mapa-espacos.css?v=2',
+  './css/mapa-espacos.css?v=3',
   './css/eventos-manuais-ui.css?v=43',
   './css/concursos-mural.css?v=3',
   './css/temas-visuais.css?v=11',
@@ -33,7 +33,7 @@ const CORE_ASSETS = [
   './js/conteudos/filmes.js?v=11',
   './js/conteudos/utilidade-publica.js?v=6',
   './js/conteudos/espacos.js?v=5',
-  './js/mapa-espacos.js?v=2',
+  './js/mapa-espacos.js?v=3',
   './js/conteudos/atividades-lazer.js?v=6',
   './js/curadorias-site.js?v=13',
   './js/metricas-pontos.js?v=2',
