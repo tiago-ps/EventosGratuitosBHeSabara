@@ -1,0 +1,26 @@
+{
+  "versao": 1,
+  "descricao": "Coordenadas de equipamentos verificadas em fontes públicas. Subespaços de endereço idêntico são localizados automaticamente.",
+  "pontos": {
+    "ccbb-bh": {
+      "latitude": -19.932167,
+      "longitude": -43.937083,
+      "fonte": "https://www.wikidata.org/wiki/Q61696384"
+    },
+    "espaco-conhecimento-ufmg": {
+      "latitude": -19.9319703,
+      "longitude": -43.9389288,
+      "fonte": "https://cadastro.museus.gov.br/museus/espaco-do-conhecimento-universidade-federal-de-minas-gerais/"
+    },
+    "casa-fiat-de-cultura": {
+      "latitude": -19.93453257,
+      "longitude": -43.93960532,
+      "fonte": "https://visite.museus.gov.br/instituicoes/casa-fiat-de-cultura/"
+    },
+    "mm-gerdau": {
+      "latitude": -19.93166812,
+      "longitude": -43.93882692,
+      "fonte": "https://visite.museus.gov.br/instituicoes/mm-gerdau-museu-das-minas-e-do-metal/"
+    }
+  }
+}
