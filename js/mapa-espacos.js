@@ -571,5 +571,6 @@
     setView(selectedView);
   }
 
-  root.spaceMap = Object.freeze({ mount, clearMap, groupedPoints, mapItems, pointOf });
+  root.spaceMap = Object.freeze({ mount, clearMap, groupedPoints, mapItems, pointOf,
+    popupEntries, popupPlaceName, popupEventDate, popupCategory, createPopup });
 })();
