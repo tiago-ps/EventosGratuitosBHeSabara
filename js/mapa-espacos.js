@@ -323,6 +323,7 @@
     section.append(mapHost);
     shell.insertBefore(section, resultsContainer);
     const myGeneration = generation;
+    const markerByKey = new Map();
 
     async function drawMap() {
       if (map || myGeneration !== generation) return;
@@ -345,9 +346,10 @@
         for (const group of located.points) {
           const label = group.items.length === 1
             ? group.items[0].venue : group.items.length + ' conteúdos';
-          L.marker(group.coords).addTo(map)
+          const marker = L.marker(group.coords).addTo(map)
             .bindTooltip(label)
             .bindPopup(createPopup(group, toItemUrl), { maxWidth: 330 });
+          markerByKey.set(group.coords.join(','), marker);
           bounds.push(group.coords);
         }
         if (bounds.length > 1) map.fitBounds(bounds, { padding: [32, 32], maxZoom: 14 });
@@ -374,7 +376,25 @@
         const L = window.L;
         L.circleMarker(coords, { radius: 9, color: '#13694f', fillColor: '#ffffff',
           fillOpacity: 1, weight: 3 }).addTo(map).bindPopup('Sua localização aproximada');
-        map.setView(coords, 13);
+        const radians = degrees => degrees * Math.PI / 180;
+        const distanceKm = point => {
+          const dLat = radians(point.coords[0] - coords[0]);
+          const dLon = radians(point.coords[1] - coords[1]);
+          const a = Math.sin(dLat / 2) ** 2 +
+            Math.cos(radians(coords[0])) * Math.cos(radians(point.coords[0])) *
+            Math.sin(dLon / 2) ** 2;
+          return 6371 * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        };
+        const closest = located.points.map(point => ({ ...point, km: distanceKm(point) }))
+          .sort((a, b) => a.km - b.km)[0];
+        if (closest) {
+          const label = closest.items[0]?.venue || closest.items[0]?.item?.titulo || 'Local';
+          information.textContent = 'Mais próximo entre os resultados com endereço verificado: ' +
+            label + ' (' + closest.km.toFixed(1).replace('.', ',') +
+            ' km em linha reta). Consulte a rota e a disponibilidade.';
+          map.fitBounds([coords, closest.coords], { padding: [55, 55], maxZoom: 15 });
+          markerByKey.get(closest.coords.join(','))?.openPopup();
+        } else map.setView(coords, 13);
       }, () => {
         locationButton.disabled = false;
         locationButton.textContent = '◎ Perto de mim';
