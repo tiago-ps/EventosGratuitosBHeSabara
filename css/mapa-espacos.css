@@ -22,6 +22,7 @@
   background: #157b53;
   color: #fff;
 }
+.agenda-results[hidden] { display: none !important; }
 .agenda-space-map-section {
   width: 100%;
   padding: 0 0 20px;
