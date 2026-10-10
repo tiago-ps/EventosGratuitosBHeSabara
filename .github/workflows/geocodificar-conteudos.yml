@@ -1,0 +1,33 @@
+name: Geocodificar conteúdos físicos - teste
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/geocodificar-conteudos.yml"
+permissions:
+  contents: write
+concurrency:
+  group: coordenadas-conteudos-teste
+  cancel-in-progress: false
+jobs:
+  localizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Analisar endereços físicos únicos e verificados
+        run: python3 scripts/geocodificar_conteudos.py
+      - name: Publicar pontos conferidos e pendências
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add coordenadas-conteudos.json pendencias-coordenadas-conteudos.json
+          if ! git diff --cached --quiet; then
+            git commit -m "data(mapa): acrescentar coordenadas de eventos e atividades"
+            for attempt in 1 2 3; do
+              git pull --rebase origin main
+              if git push origin HEAD:main; then exit 0; fi
+              sleep 4
+            done
+            exit 1
+          fi
