@@ -14,6 +14,7 @@
   const UTILITY_URL = 'utilidade-publica.json';
   const ACTIVITIES_URL = 'atividades-lazer.json';
   const SPACES_URL = 'espacos_culturais.json';
+  const SPACE_COORDINATES_URL = 'coordenadas-espacos.json';
   const SITE_CURATIONS_INDEX_URL = 'curadorias/index.json';
   const CONFIG_URL = 'configuracao-mural.json';
   const PUBLICATION_MANIFEST_URL = 'publicacao-manifest.json';
@@ -162,6 +163,7 @@
     utilityData: null,
     activitiesData: null,
     spacesData: null,
+    spaceCoordinatesData: null,
     siteCurationsData: null,
     config: null,
     publicationCourseHash: '',
@@ -6522,6 +6524,15 @@ function eventProgram(event) {
     if (filmMode) shell.append(filmSourceNotice());
     shell.append(resultsContainer, footer);
     app.replaceChildren(shell);
+    window.MuralCultural.spaceMap?.mount?.({
+      shell, resultsContainer, count,
+      spaces: results.spaces,
+      allSpaces: state.allSpaces,
+      coordinates: state.spaceCoordinatesData?.pontos || {},
+      content: state.mobileContent,
+      blocked: Boolean(state.mobileFavoritesOnly || state.mobileSharedSelection || state.mobileFocusedItem),
+      toItemUrl: muralItemUrl
+    });
 
     header.querySelector('.agenda-favorites-toggle').addEventListener('click', () => {
       exitFocusedAgendaItem();
@@ -6883,7 +6894,7 @@ function eventProgram(event) {
   async function load() {
     try {
       state.curationMode = curationModeFromUrl();
-      const [response, relationsData, booksData, curationBooksData, curationBookCoversData, coursesData, contestsData, filmsData, platformsData, utilityData, activitiesData, spacesData, siteCurationsData, config] = await Promise.all([
+      const [response, relationsData, booksData, curationBooksData, curationBookCoversData, coursesData, contestsData, filmsData, platformsData, utilityData, activitiesData, spacesData, spaceCoordinatesData, siteCurationsData, config] = await Promise.all([
         fetch(`${DATA_URL}?v=${Date.now()}`, { cache: 'no-store' }),
         loadOptionalJson(RELATIONS_URL, { relacoes: [] }),
         loadOptionalJson(BOOKS_URL, { livros: [] }),
@@ -6896,6 +6907,7 @@ function eventProgram(event) {
         loadOptionalJson(UTILITY_URL, { itens: [] }),
         loadOptionalJson(ACTIVITIES_URL, { atividades: [] }),
         loadOptionalJson(SPACES_URL, { itens: [] }),
+        loadOptionalJson(SPACE_COORDINATES_URL, { pontos: {} }),
         loadSiteCurations(),
         loadOptionalJson(CONFIG_URL, {
           nome: 'Mural Cultural',
@@ -6931,6 +6943,8 @@ function eventProgram(event) {
       state.utilityData = utilityData && Array.isArray(utilityData.itens) ? utilityData : { itens: [] };
       state.activitiesData = activitiesData && Array.isArray(activitiesData.atividades) ? activitiesData : { atividades: [] };
       state.spacesData = spacesData && Array.isArray(spacesData.itens) ? spacesData : { itens: [] };
+      state.spaceCoordinatesData = spaceCoordinatesData && typeof spaceCoordinatesData.pontos === 'object'
+        ? spaceCoordinatesData : { pontos: {} };
       state.spaceImageIndex = eventRelations?.buildSpaceImageIndex?.(state.spacesData) ||
         { byId: Object.create(null), byName: Object.create(null) };
       state.siteCurationsData = siteCurationsData;
