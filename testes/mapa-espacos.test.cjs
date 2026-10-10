@@ -76,4 +76,74 @@ for (const point of all.points) {
   }
 }
 console.log('Cobertura do mapa por tipo:', JSON.stringify(coverage));
+
+// Eventos com título igual e sessões diferentes não são duplicatas.
+const toySessions = events.filter(item => item.titulo === 'Oficina de brinquedos e brincadeiras');
+assert.ok(toySessions.length >= 3, 'Catálogo de teste contém sessões reais do mesmo evento');
+const sessionsGroup = {
+  coords: [-19.9, -43.9],
+  items: [
+    ...toySessions.map(item => ({ item, venue: 'Museu de História Natural e Jardim Botânico', address: item.endereco })),
+    { item: toySessions[0], venue: 'Museu de História Natural e Jardim Botânico', address: toySessions[0].endereco }
+  ]
+};
+const distinctSessions = moduleMap.popupEntries(sessionsGroup);
+assert.equal(distinctSessions.length, toySessions.length,
+  'Remover repetição do mesmo ID sem apagar sessões com outros dias/horários');
+assert.equal(new Set(distinctSessions.map(record => moduleMap.popupEventDate(record.item))).size,
+  toySessions.length, 'Sessões devem ter datas e horários reconhecíveis');
+assert.equal(moduleMap.popupPlaceName(sessionsGroup), 'Museu de História Natural e Jardim Botânico');
+
+// DOM mínimo para validar o resumo e a expansão dos pop-ups sem navegador.
+class FakeElement {
+  constructor(tag) {
+    this.tagName = tag;
+    this.children = [];
+    this.attributes = {};
+    this.hidden = false;
+    this.className = '';
+    this.textContent = '';
+    this.listeners = {};
+    this.classList = { toggle: () => {} };
+  }
+  append(...children) { this.children.push(...children); }
+  setAttribute(key, value) { this.attributes[key] = String(value); }
+  getAttribute(key) { return this.attributes[key] ?? null; }
+  removeAttribute(key) { delete this.attributes[key]; }
+  addEventListener(type, handler) { this.listeners[type] = handler; }
+}
+ctx.document = { createElement: tag => new FakeElement(tag) };
+ctx.window.location = { href: 'https://tiago-ps.github.io/EventosGratuitosBHeSabara/' };
+ctx.URL = URL;
+const largeGroup = all.points.find(group => moduleMap.popupEntries(group).length > 10);
+assert.ok(largeGroup, 'Ao menos um equipamento reúne muitos conteúdos');
+let resized = 0;
+const popup = moduleMap.createPopup(largeGroup, item =>
+  'https://tiago-ps.github.io/EventosGratuitosBHeSabara/?item=' + encodeURIComponent(item.id), () => { resized += 1; });
+const list = popup.children.find(child => child.className === 'agenda-map-popup-items');
+const more = popup.children.find(child => child.className === 'agenda-map-popup-more');
+assert.ok(list && more, 'Lista compacta oferece opção de expandir');
+assert.equal(list.children.filter(child => !child.hidden).length, 4);
+more.listeners.click();
+assert.equal(list.children.filter(child => !child.hidden).length, moduleMap.popupEntries(largeGroup).length);
+assert.equal(more.getAttribute('aria-expanded'), 'true');
+more.listeners.click();
+assert.equal(list.children.filter(child => !child.hidden).length, 4);
+assert.equal(resized, 2, 'Leaflet reposiciona popup após expandir ou recolher');
+
+const publicLibraryGroup = all.points.find(group =>
+  group.items.some(record => record.item.tipo_conteudo === 'livro' &&
+    record.venue === 'Biblioteca Pública Estadual de Minas Gerais'));
+assert.ok(publicLibraryGroup, 'Biblioteca estadual é encontrada');
+const publicLibraryPopup = moduleMap.createPopup(publicLibraryGroup, () => 'https://temsimuai.com.br/');
+assert.ok(!publicLibraryPopup.children.some(child => child.className === 'agenda-map-popup-precision'),
+  'Localização de equipamento validada não deve receber aviso genérico de entrada');
+const campusGroup = all.points.find(group =>
+  group.items.some(record => String(record.precision).includes('campus')));
+assert.ok(campusGroup, 'Ponto aproximado do campus é encontrado');
+const campusPopup = moduleMap.createPopup(campusGroup, () => 'https://temsimuai.com.br/');
+assert.ok(campusPopup.children.some(child => child.className === 'agenda-map-popup-precision'),
+  'Ponto do campus mantém aviso específico sobre entrada');
+console.log('Popups: datas das sessões, expansão e avisos de precisão verificados.');
+
 console.log('Mapa da Exploração: espaços, eventos, acervos físicos e filtros verificados.');
