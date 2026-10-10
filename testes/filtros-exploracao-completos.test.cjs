@@ -171,13 +171,13 @@ for (const asset of [
   'js/conteudos/atividades-lazer.js?v=6',
   'js/temporalidade-eventos.js?v=1',
   'js/app.js?v=166',
-  'js/mapa-espacos.js?v=2',
-  'css/mapa-espacos.css?v=2'
+  'js/mapa-espacos.js?v=3',
+  'css/mapa-espacos.css?v=3'
 ]) {
   assert.ok(indexSource.includes(asset), `Asset ausente do index: ${asset}`);
   assert.ok(swSource.includes(`./${asset}`), `Asset ausente do service worker: ${asset}`);
 }
-assert.ok(swSource.includes('mural-cultural-v209-mapa-multiconteudo'));
+assert.ok(swSource.includes('mural-cultural-v210-mapa-popups-compactos'));
 
 // Situação editorial dos Eventos: delimitação exclusiva aos itens do TESTE.
 const eventCatalog = JSON.parse(fs.readFileSync(path.join(root, 'eventos.json'), 'utf8'));
