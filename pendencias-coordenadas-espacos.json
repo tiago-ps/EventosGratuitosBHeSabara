@@ -394,35 +394,6 @@
       ]
     },
     {
-      "nome": "Centro de Referência das Juventudes",
-      "endereco": "Rua Guaicurus, 50, Centro, Belo Horizonte - MG, 30111-060",
-      "motivo": "Sem correspondência suficientemente precisa; revisão humana necessária",
-      "candidatos": [
-        {
-          "display_name": "Centro de Referência da Juventude, 50, Rua dos Guaicurus, Centro, Regional Centro-Sul, Belo Horizonte, Minas Gerais, Região Sudeste, 30111-060, Brasil",
-          "latitude": "-19.9155396",
-          "longitude": "-43.9336781"
-        },
-        {
-          "display_name": "Rua dos Guaicurus, Centro, Regional Centro-Sul, Belo Horizonte, Minas Gerais, Região Sudeste, 30160-040, Brasil",
-          "latitude": "-19.9150695",
-          "longitude": "-43.9375275"
-        }
-      ]
-    },
-    {
-      "nome": "Cine Theatro Brasil Vallourec",
-      "endereco": "Av. Amazonas, 315 - Centro, Belo Horizonte - MG, 30180-000",
-      "motivo": "Sem correspondência suficientemente precisa; revisão humana necessária",
-      "candidatos": [
-        {
-          "display_name": "Cine Theatro Brasil, 315, Avenida Amazonas, Centro, Regional Centro-Sul, Belo Horizonte, Minas Gerais, Região Sudeste, 30120-060, Brasil",
-          "latitude": "-19.9190461",
-          "longitude": "-43.9379691"
-        }
-      ]
-    },
-    {
       "nome": "Conservatório UFMG",
       "endereco": "Avenida Afonso Pena, 1534, Centro, Belo Horizonte - MG",
       "motivo": "Sem correspondência suficientemente precisa; revisão humana necessária",
@@ -472,12 +443,6 @@
           "longitude": "-43.8672246"
         }
       ]
-    },
-    {
-      "nome": "Hall 1º andar do Museu",
-      "endereco": "Praça Rui Barbosa, 600, Centro, Belo Horizonte - MG",
-      "motivo": "Sem correspondência suficientemente precisa; revisão humana necessária",
-      "candidatos": []
     },
     {
       "nome": "Memorial Minas Gerais Vale",
@@ -542,18 +507,6 @@
           "display_name": "Avenida Afonso Pena, Centro, Regional Centro-Sul, Belo Horizonte, Minas Gerais, Região Sudeste, 30160-909, Brasil",
           "latitude": "-19.9168452",
           "longitude": "-43.9399350"
-        }
-      ]
-    },
-    {
-      "nome": "Solar Padre Correia",
-      "endereco": "R. Dom Pedro II, 200 - Centro, Sabará - MG, 34505-000",
-      "motivo": "Sem correspondência suficientemente precisa; revisão humana necessária",
-      "candidatos": [
-        {
-          "display_name": "200, Rua Dom Pedro II, Centro, Sabará, Minas Gerais, Região Sudeste, 34525-410, Brasil",
-          "latitude": "-19.8923387",
-          "longitude": "-43.8107288"
         }
       ]
     },
