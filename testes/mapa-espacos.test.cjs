@@ -66,4 +66,12 @@ const virtualOnly = moduleMap.mapItems({
   allSpaces: spaces, coordinates: geo.pontos, extra: supplementary, relations
 });
 assert.equal(virtualOnly.mapped, 0, 'Livro exclusivamente virtual não recebe marcador');
+const coverage = {};
+for (const point of all.points) {
+  for (const record of point.items) {
+    const type = record.item.tipo_conteudo;
+    coverage[type] = (coverage[type] || 0) + 1;
+  }
+}
+console.log('Cobertura do mapa por tipo:', JSON.stringify(coverage));
 console.log('Mapa da Exploração: espaços, eventos, acervos físicos e filtros verificados.');
