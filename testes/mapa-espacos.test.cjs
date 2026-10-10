@@ -46,7 +46,7 @@ for (const point of grouped.points) {
 }
 
 const supplementary = JSON.parse(fs.readFileSync('coordenadas-conteudos.json', 'utf8'));
-const events = JSON.parse(fs.readFileSync('eventos.json', 'utf8')).eventos;
+const events = JSON.parse(fs.readFileSync('eventos.json', 'utf8')).eventos.map(item => ({ ...item, tipo_conteudo: 'evento' }));
 const books = JSON.parse(fs.readFileSync('livros.json', 'utf8')).livros;
 const activities = JSON.parse(fs.readFileSync('atividades-lazer.json', 'utf8')).atividades;
 const relations = JSON.parse(fs.readFileSync('relacoes-eventos.json', 'utf8')).relacoes;
