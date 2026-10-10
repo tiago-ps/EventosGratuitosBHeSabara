@@ -1,0 +1,804 @@
+{
+  "versao": 1,
+  "pendencias": {
+    "rua aristolino basilio de oliveira 445 regina belo horizonte mg 30692 190": {
+      "nome": "Centro Cultural Lindeia Regina",
+      "endereco": "Rua Aristolino Basílio de Oliveira, 445, Regina, Belo Horizonte - MG, 30692-190",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": []
+    },
+    "rua dom cabral 765 ipiranga belo horizonte mg 31160 150": {
+      "nome": "Centro Cultural Usina de Cultura",
+      "endereco": "Rua Dom Cabral, 765, Ipiranga, Belo Horizonte - MG, 31160-150",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Rua Dom Cabral, Ipiranga, Regional Nordeste, Belo Horizonte, Minas Gerais, Região Sudeste, 31160-210, Brasil",
+          "latitude": "-19.8865346",
+          "longitude": "-43.9319480"
+        }
+      ]
+    },
+    "rua edna quintel 320 sao bernardo belo horizonte mg 31750 030": {
+      "nome": "Centro Cultural São Bernardo",
+      "endereco": "Rua Édna Quintel, 320, São Bernardo, Belo Horizonte - MG, 31750-030",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": []
+    },
+    "avenida dos andradas 367 centro belo horizonte mg 30120 010": {
+      "nome": "Núcleo de Formação e Criação Artística e Cultural (NUFAC)",
+      "endereco": "Avenida dos Andradas, 367, Centro, Belo Horizonte - MG, 30120-010",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Avenida dos Andradas, Centro, Regional Centro-Sul, Belo Horizonte, Minas Gerais, Região Sudeste, 30160-000, Brasil",
+          "latitude": "-19.9167892",
+          "longitude": "-43.9343227"
+        },
+        {
+          "nome": "Avenida dos Andradas, Santa Efigênia, Regional Centro-Sul, Belo Horizonte, Minas Gerais, Região Sudeste, 30150-222, Brasil",
+          "latitude": "-19.9217246",
+          "longitude": "-43.9300194"
+        }
+      ]
+    },
+    "rua w 3 500 pongelupe belo horizonte mg 30628 175": {
+      "nome": "Centro Cultural Urucuia",
+      "endereco": "Rua W-3, 500, Pongelupe, Belo Horizonte - MG, 30628-175",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Rua W 3, Conjunto Pongelupe, Barreiro, Belo Horizonte, Minas Gerais, Região Sudeste, 30628-015, Brasil",
+          "latitude": "-20.0079827",
+          "longitude": "-44.0064508"
+        }
+      ]
+    },
+    "rua mangabeira da serra 320 marcola belo horizonte mg 30220 265": {
+      "nome": "Centro Cultural Vila Marçola",
+      "endereco": "Rua Mangabeira da Serra, 320, Marçola, Belo Horizonte - MG, 30220-265",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Rua Mangabeira da Serra, Vila Marçola, Regional Centro-Sul, Belo Horizonte, Minas Gerais, Região Sudeste, 30220-360, Brasil",
+          "latitude": "-19.9430634",
+          "longitude": "-43.9071420"
+        },
+        {
+          "nome": "Rua Mangabeira da Serra, Mangabeiras, Regional Centro-Sul, Belo Horizonte, Minas Gerais, Região Sudeste, 30220-330, Brasil",
+          "latitude": "-19.9434995",
+          "longitude": "-43.9121144"
+        }
+      ]
+    },
+    "rua carnauba 286 zilah sposito belo horizonte mg 31787 210": {
+      "nome": "Centro Cultural Zilah Spósito",
+      "endereco": "Rua Carnaúba, 286, Zilah Spósito, Belo Horizonte - MG, 31787-210",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Rua Leila Diniz, São Benedito, Regional Norte, Santa Luzia, Minas Gerais, Região Sudeste, 33120-400, Brasil",
+          "latitude": "-19.7990582",
+          "longitude": "-43.9253772"
+        },
+        {
+          "nome": "Rua Leila Diniz, São Benedito, Regional Norte, Santa Luzia, Minas Gerais, Região Sudeste, 31746-165, Brasil",
+          "latitude": "-19.8018964",
+          "longitude": "-43.9217201"
+        }
+      ]
+    },
+    "rua nova ponte 22 salgado filho belo horizonte mg 30550 720": {
+      "nome": "Centro Cultural Salgado Filho",
+      "endereco": "Rua Nova Ponte, 22, Salgado Filho, Belo Horizonte - MG, 30550-720",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Rua Nova Ponte, Salgado Filho, Regional Oeste, Belo Horizonte, Minas Gerais, Região Sudeste, 30550-000, Brasil",
+          "latitude": "-19.9463919",
+          "longitude": "-43.9827584"
+        }
+      ]
+    },
+    "rua dos industriarios 289 industrias i barreiro belo horizonte mg 30610 280": {
+      "nome": "Centro Cultural Bairro das Indústrias",
+      "endereco": "Rua dos Industriários, 289, Indústrias I (Barreiro), Belo Horizonte - MG, 30610-280",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Rua dos Industriários, Bairro das Indústrias I, Bairro Novo das Indústrias, Barreiro, Belo Horizonte, Minas Gerais, Região Sudeste, 30610-270, Brasil",
+          "latitude": "-19.9652470",
+          "longitude": "-43.9989743"
+        }
+      ]
+    },
+    "rua jacutinga 550 padre eustaquio belo horizonte mg 30730 430": {
+      "nome": "Centro Cultural Padre Eustáquio",
+      "endereco": "Rua Jacutinga, 550, Padre Eustáquio, Belo Horizonte - MG, 30730-430",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Rua Jacutinga, Padre Eustáquio, Regional Noroeste, Belo Horizonte, Minas Gerais, Região Sudeste, 30730-430, Brasil",
+          "latitude": "-19.9158289",
+          "longitude": "-43.9813833"
+        },
+        {
+          "nome": "Rua Jacutinga, Padre Eustáquio, Regional Noroeste, Belo Horizonte, Minas Gerais, Região Sudeste, 30730-450, Brasil",
+          "latitude": "-19.9150016",
+          "longitude": "-43.9883907"
+        }
+      ]
+    },
+    "rua expedicionario paulo de souza 185 urca belo horizonte mg 31360 310": {
+      "nome": "Centro Cultural Pampulha",
+      "endereco": "Rua Expedicionário Paulo de Souza, 185, Urca, Belo Horizonte - MG, 31360-310",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Avenida Expedicionário Paulo de Souza, Urca, Residencial Sarandi, Pampulha, Belo Horizonte, Minas Gerais, Região Sudeste, 31360-370, Brasil",
+          "latitude": "-19.8709219",
+          "longitude": "-44.0145578"
+        },
+        {
+          "nome": "Avenida Expedicionário Paulo de Souza, Confisco, Residencial Sarandi, Pampulha, Belo Horizonte, Minas Gerais, Região Sudeste, 31360-660, Brasil",
+          "latitude": "-19.8677242",
+          "longitude": "-44.0154319"
+        }
+      ]
+    },
+    "rua sao miguel arcanjo 215 nossa senhora de fatima belo horizonte mg 30230 660": {
+      "nome": "Centro Cultural Vila Fátima",
+      "endereco": "Rua São Miguel Arcanjo, 215, Nossa Senhora de Fátima, Belo Horizonte - MG, 30230-660",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Rua São Miguel Arcanjo, Vila Nossa Senhora de Fátima, Baleia, Regional Leste, Belo Horizonte, Minas Gerais, Região Sudeste, 30220-360, Brasil",
+          "latitude": "-19.9351945",
+          "longitude": "-43.9018510"
+        },
+        {
+          "nome": "Rua São Miguel Arcanjo, Vila Nossa Senhora de Fátima, Baleia, Regional Leste, Belo Horizonte, Minas Gerais, Região Sudeste, 30285-408, Brasil",
+          "latitude": "-19.9324599",
+          "longitude": "-43.9027307"
+        }
+      ]
+    },
+    "rua joao alvares cabral 277 jardim guanabara belo horizonte mg 31742 170": {
+      "nome": "Centro Cultural Jardim Guanabara",
+      "endereco": "Rua João Álvares Cabral, 277, Jardim Guanabara, Belo Horizonte - MG, 31742-170",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Rua João Alvares Cabral, Jardim Guanabara, Regional Norte, Belo Horizonte, Minas Gerais, Região Sudeste, 31872-700, Brasil",
+          "latitude": "-19.8290574",
+          "longitude": "-43.9328652"
+        }
+      ]
+    },
+    "rua silva alvarenga 548 sao geraldo belo horizonte mg 31050 640": {
+      "nome": "Centro Cultural São Geraldo",
+      "endereco": "Rua Silva Alvarenga, 548, São Geraldo, Belo Horizonte - MG, 31050-640",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Rua Silva Alvarenga, São Geraldo, Regional Leste, Belo Horizonte, Minas Gerais, Região Sudeste, 30150-500, Brasil",
+          "latitude": "-19.8948487",
+          "longitude": "-43.8984230"
+        },
+        {
+          "nome": "Rua Silva Alvarenga, Boa Vista, Regional Leste, Belo Horizonte, Minas Gerais, Região Sudeste, 30150-500, Brasil",
+          "latitude": "-19.8941504",
+          "longitude": "-43.8976326"
+        }
+      ]
+    },
+    "rua padre julio maria 1577 alto vera cruz belo horizonte mg 30285 360": {
+      "nome": "Centro Cultural Alto Vera Cruz",
+      "endereco": "Rua Padre Júlio Maria, 1577, Alto Vera Cruz, Belo Horizonte - MG, 30285-360",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Rua Padre Júlio Maria, Vila Alto Vera Cruz, Vera Cruz, Regional Leste, Belo Horizonte, Minas Gerais, Região Sudeste, 30285-330, Brasil",
+          "latitude": "-19.9160836",
+          "longitude": "-43.8955411"
+        },
+        {
+          "nome": "Rua Padre Julio Maria, Vila Alto Vera Cruz, Alto Vera Cruz, Regional Leste, Belo Horizonte, Minas Gerais, Região Sudeste, 30285-470, Brasil",
+          "latitude": "-19.9146305",
+          "longitude": "-43.8887917"
+        }
+      ]
+    },
+    "rua ana rafael dos santos 149 vila santa rita belo horizonte mg 30668 570": {
+      "nome": "Centro Cultural Vila Santa Rita",
+      "endereco": "Rua Ana Rafael dos Santos, 149, Vila Santa Rita, Belo Horizonte - MG, 30668-570",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": []
+    },
+    "rua ministro hermenegildo de barros 904 itapoa belo horizonte mg 31710 230": {
+      "nome": "Centro de Referência da Cultura Popular e Tradicional Lagoa do Nado",
+      "endereco": "Rua Ministro Hermenegildo de Barros, 904, Itapoã, Belo Horizonte - MG, 31710-230",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Rua Ministro Hermenegildo de Barros, Itapoã, Pampulha, Belo Horizonte, Minas Gerais, Região Sudeste, 31710-100, Brasil",
+          "latitude": "-19.8349644",
+          "longitude": "-43.9604045"
+        },
+        {
+          "nome": "Rua Ministro Hermenegildo de Barros, Itapoã, Pampulha, Belo Horizonte, Minas Gerais, Região Sudeste, 31710-050, Brasil",
+          "latitude": "-19.8388618",
+          "longitude": "-43.9609676"
+        }
+      ]
+    },
+    "rua jose ferreira dos santos 184 jardim dos comerciarios belo horizonte mg 31640 060": {
+      "nome": "Centro Cultural Venda Nova",
+      "endereco": "Rua José Ferreira dos Santos, 184, Jardim dos Comerciários, Belo Horizonte - MG, 31640-060",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Rua José Ferreira dos Santos, Jardim dos Comerciários, Vila SESC, Jardim dos Comerciários, Venda Nova, Belo Horizonte, Minas Gerais, Região Sudeste, 31640-060, Brasil",
+          "latitude": "-19.7967851",
+          "longitude": "-43.9744254"
+        },
+        {
+          "nome": "Rua José Ferreira dos Santos, Vila SESC, Jardim dos Comerciários, Venda Nova, Belo Horizonte, Minas Gerais, Região Sudeste, 31640-060, Brasil",
+          "latitude": "-19.8005566",
+          "longitude": "-43.9728632"
+        }
+      ]
+    },
+    "rua carmesia 500 santa ines belo horizonte mg 31080 170": {
+      "nome": "Centro Cultural Santa Inês",
+      "endereco": "Rua Carmésia, 500 - Santa Ines, Belo Horizonte - MG, 31080-170",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Rua Carmésia, Ana Lúcia, Santa Inês, Regional Leste, Belo Horizonte, Minas Gerais, Região Sudeste, 31080-320, Brasil",
+          "latitude": "-19.8815093",
+          "longitude": "-43.9090525"
+        },
+        {
+          "nome": "Rua Carmésia, Ana Lúcia, Santa Inês, Regional Leste, Belo Horizonte, Minas Gerais, Região Sudeste, 31080-160, Brasil",
+          "latitude": "-19.8902344",
+          "longitude": "-43.9078323"
+        }
+      ]
+    },
+    "rua amazonas no 15 bairro vila rica regiao de general carneiro sabara mg": {
+      "nome": "Céu das Artes",
+      "endereco": "Rua Amazonas, nº 15, Bairro Vila Rica (região de General Carneiro), Sabará/MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": []
+    },
+    "rua da bahia 1466 lourdes belo horizonte mg": {
+      "nome": "Academia Mineira de Letras",
+      "endereco": "Rua da Bahia, 1466, Lourdes, Belo Horizonte - MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Rua da Bahia, Lourdes, Regional Centro-Sul, Belo Horizonte, Minas Gerais, Região Sudeste, 30160-017, Brasil",
+          "latitude": "-19.9307295",
+          "longitude": "-43.9390996"
+        },
+        {
+          "nome": "Rua da Bahia, Lourdes, Regional Centro-Sul, Belo Horizonte, Minas Gerais, Região Sudeste, 30160-019, Brasil",
+          "latitude": "-19.9375167",
+          "longitude": "-43.9409408"
+        }
+      ]
+    },
+    "rua goncalves dias 320 funcionarios belo horizonte mg": {
+      "nome": "Sala Sergio Magnani",
+      "endereco": "Rua Gonçalves Dias, 320, Funcionários, Belo Horizonte - MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Rua Gonçalves Dias, Funcionários, Regional Centro-Sul, Belo Horizonte, Minas Gerais, Região Sudeste, 30112-020, Brasil",
+          "latitude": "-19.9339700",
+          "longitude": "-43.9259720"
+        },
+        {
+          "nome": "Rua Gonçalves Dias, Funcionários, Regional Centro-Sul, Belo Horizonte, Minas Gerais, Região Sudeste, 39140-111, Brasil",
+          "latitude": "-19.9334443",
+          "longitude": "-43.9281067"
+        }
+      ]
+    },
+    "avenida afonso pena 1534 centro belo horizonte mg": {
+      "nome": "Conservatório UFMG",
+      "endereco": "Avenida Afonso Pena, 1534, Centro, Belo Horizonte - MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Avenida Afonso Pena, Centro, Regional Centro-Sul, Belo Horizonte, Minas Gerais, Região Sudeste, 31190-000, Brasil",
+          "latitude": "-19.9233970",
+          "longitude": "-43.9360613"
+        },
+        {
+          "nome": "Avenida Afonso Pena, Centro, Regional Centro-Sul, Belo Horizonte, Minas Gerais, Região Sudeste, 30160-909, Brasil",
+          "latitude": "-19.9183469",
+          "longitude": "-43.9391896"
+        }
+      ]
+    },
+    "praca da liberdade em frente ao predio rosa funcionarios belo horizonte mg": {
+      "nome": "Alameda da Educação – Praça da Liberdade",
+      "endereco": "Praça da Liberdade, em frente ao Prédio Rosa, Funcionários, Belo Horizonte - MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": []
+    },
+    "av otacilio negrao de lima 4 188 pampulha": {
+      "nome": "Casa Kubitschek",
+      "endereco": "Av. Otacílio Negrão de Lima, 4.188 - Pampulha",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Avenida Otacílio Negrão de Lima, Bandeirantes, Pampulha, Belo Horizonte, Minas Gerais, Região Sudeste, 31310-082, Brasil",
+          "latitude": "-19.8539359",
+          "longitude": "-43.9831888"
+        },
+        {
+          "nome": "Avenida Otacílio Negrão de Lima, São Luiz, Itamarati, Pampulha, Belo Horizonte, Minas Gerais, Região Sudeste, 31310-082, Brasil",
+          "latitude": "-19.8609924",
+          "longitude": "-43.9768218"
+        }
+      ]
+    },
+    "av otacilio negrao de lima 16 585 pampulha": {
+      "nome": "Museu de Arte da Pampulha - MAP",
+      "endereco": "Av. Otacílio Negrão de Lima, 16.585 - Pampulha",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Avenida Otacílio Negrão de Lima, Jardim Atlântico, Pampulha, Belo Horizonte, Minas Gerais, Região Sudeste, 31550-000, Brasil",
+          "latitude": "-19.8459192",
+          "longitude": "-43.9876356"
+        },
+        {
+          "nome": "Avenida Otacílio Negrão de Lima, Pampulha, Belo Horizonte, Minas Gerais, Região Sudeste, 31310-082, Brasil",
+          "latitude": "-19.8629920",
+          "longitude": "-43.9751407"
+        }
+      ]
+    },
+    "av otacilio negrao de lima 16 585": {
+      "nome": "Museu de Arte da Pampulha - MAP",
+      "endereco": "Av. Otacílio Negrão de Lima, 16.585",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Avenida Otacílio Negrão de Lima, Jardim Atlântico, Pampulha, Belo Horizonte, Minas Gerais, Região Sudeste, 31550-000, Brasil",
+          "latitude": "-19.8386967",
+          "longitude": "-43.9938639"
+        },
+        {
+          "nome": "Avenida Otacílio Negrão de Lima, Bandeirantes, Bandeirantes II, Pampulha, Belo Horizonte, Minas Gerais, Região Sudeste, 31365-450, Brasil",
+          "latitude": "-19.8591447",
+          "longitude": "-43.9945007"
+        }
+      ]
+    },
+    "rua silvana almeida 236 borba gato sabara mg": {
+      "nome": "Associação Servindo e Protegendo",
+      "endereco": "Rua Silvana Almeida, 236 Borba Gato, Sabará, MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Rua Silvana Almeida, Borba Gato, Sabará, Minas Gerais, Região Sudeste, 33040-260, Brasil",
+          "latitude": "-19.8338401",
+          "longitude": "-43.8431006"
+        }
+      ]
+    },
+    "avenida afonso pena 1321 centro belo horizonte mg": {
+      "nome": "Teatro Francisco Nunes",
+      "endereco": "Avenida Afonso Pena, 1321, Centro, Belo Horizonte - MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Avenida Afonso Pena, Centro, Regional Centro-Sul, Belo Horizonte, Minas Gerais, Região Sudeste, 30130-905, Brasil",
+          "latitude": "-19.9198948",
+          "longitude": "-43.9382524"
+        },
+        {
+          "nome": "Avenida Afonso Pena, Centro, Regional Centro-Sul, Belo Horizonte, Minas Gerais, Região Sudeste, 31190-000, Brasil",
+          "latitude": "-19.9236763",
+          "longitude": "-43.9356856"
+        }
+      ]
+    },
+    "rua da bahia 1341 centro belo horizonte mg": {
+      "nome": "Teatro da Cidade",
+      "endereco": "Rua da Bahia, 1341, Centro, Belo Horizonte - MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Rua da Bahia, Centro, Regional Centro-Sul, Belo Horizonte, Minas Gerais, Região Sudeste, 30160-011, Brasil",
+          "latitude": "-19.9258695",
+          "longitude": "-43.9376996"
+        },
+        {
+          "nome": "Rua da Bahia, Centro, Regional Centro-Sul, Belo Horizonte, Minas Gerais, Região Sudeste, 31190-000, Brasil",
+          "latitude": "-19.9234393",
+          "longitude": "-43.9370274"
+        }
+      ]
+    },
+    "rua maria marcolina de souza 40 diamante belo horizonte mg": {
+      "nome": "Academia da Cidade Diamante",
+      "endereco": "Rua Maria Marcolina de Souza, 40, Diamante, Belo Horizonte, MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": []
+    },
+    "rua tabapuam 514 dom bosco belo horizonte mg": {
+      "nome": "Centro Esportivo Dom Bosco",
+      "endereco": "Rua Tabapuam, 514, Dom Bosco, Belo Horizonte, MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Rua Tabapuan, Ipanema, Dom Bosco, Regional Noroeste, Belo Horizonte, Minas Gerais, Região Sudeste, 30830-050, Brasil",
+          "latitude": "-19.9128390",
+          "longitude": "-43.9982498"
+        }
+      ]
+    },
+    "rua ulisses surette 386 solar do barreiro belo horizonte mg": {
+      "nome": "Complexo Esportivo José Calegário de Cristo",
+      "endereco": "Rua Ulisses Surette, 386, Solar do Barreiro, Belo Horizonte, MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Rua Ulisses Surette, Cardoso, Barreiro, Belo Horizonte, Minas Gerais, Região Sudeste, 30628-015, Brasil",
+          "latitude": "-20.0076591",
+          "longitude": "-44.0120651"
+        }
+      ]
+    },
+    "rua redelvim andrade 300 horto betim mg": {
+      "nome": "Horto Municipal",
+      "endereco": "Rua Redelvim Andrade, 300, Horto, Betim, MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Ginásio Poliesportivo Divino Ferreira Braga, 300, Rua Redelvim de Andrade, Regional Sede, Betim, Minas Gerais, Região Sudeste, 32604-125, Brasil",
+          "latitude": "-19.9581210",
+          "longitude": "-44.1982445"
+        }
+      ]
+    },
+    "rua jose maria de morais 200 cachoeira betim mg": {
+      "nome": "UBS Alcidez Brás",
+      "endereco": "Rua José Maria de Morais, 200, Cachoeira, Betim, MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": []
+    },
+    "r nelson de senna 120 cinquentenario belo horizonte mg": {
+      "nome": "Academia da Cidade Amílcar Viana",
+      "endereco": "R. Nelson de Senna, 120, Cinquentenário, Belo Horizonte, MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": []
+    },
+    "r guararapes 1810 pindorama belo horizonte mg": {
+      "nome": "Academia da Cidade CIAME",
+      "endereco": "R. Guararapes, 1810, Pindorama, Belo Horizonte, MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Rua Guararapes, Pindorama, Filadélfia, Regional Noroeste, Belo Horizonte, Minas Gerais, Região Sudeste, 30865-060, Brasil",
+          "latitude": "-19.9094075",
+          "longitude": "-44.0193189"
+        },
+        {
+          "nome": "Rua Guacira, Pindorama, Filadélfia, Regional Noroeste, Belo Horizonte, Minas Gerais, Região Sudeste, 30865-060, Brasil",
+          "latitude": "-19.9083528",
+          "longitude": "-44.0182039"
+        }
+      ]
+    },
+    "r ona 105 conjunto betania belo horizonte mg": {
+      "nome": "Academia da Cidade Conjunto Betânia",
+      "endereco": "R. Onã,105, Conjunto Betânia, Belo Horizonte, MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": []
+    },
+    "r dona nicolina de lima 316 havai belo horizonte mg": {
+      "nome": "Academia da Cidade / CRAS Ventosa",
+      "endereco": "R. Dona Nicolina de Lima, 316, Havaí, Belo Horizonte, MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": []
+    },
+    "r tiziu 175 goiania belo horizonte mg": {
+      "nome": "Academia da Cidade Goiânia",
+      "endereco": "R. Tiziu, 175, Goiânia, Belo Horizonte, MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Rua Tiziu, Goiânia, Regional Nordeste, Belo Horizonte, Minas Gerais, Região Sudeste, 31990-090, Brasil",
+          "latitude": "-19.8691597",
+          "longitude": "-43.8987809"
+        }
+      ]
+    },
+    "r henriqueta lisboa 99 jardim vitoria belo horizonte mg": {
+      "nome": "Academia da Cidade Jardim Vitória",
+      "endereco": "R. Henriqueta Lisboa, 99, Jardim Vitória, Belo Horizonte, MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Rua Henriqueta Lisboa, Jardim Vitória, Regional Nordeste, Belo Horizonte, Minas Gerais, Região Sudeste, 31970-360, Brasil",
+          "latitude": "-19.8578215",
+          "longitude": "-43.8779996"
+        },
+        {
+          "nome": "Rua Henriqueta Lisboa, Pousada Santo Antônio, Jardim Vitória, Regional Nordeste, Belo Horizonte, Minas Gerais, Região Sudeste, 31970-740, Brasil",
+          "latitude": "-19.8593909",
+          "longitude": "-43.8824171"
+        }
+      ]
+    },
+    "paroquia sao judas tadeu palmeiras cinquentenario belo horizonte mg": {
+      "nome": "Academia da Cidade Palmeiras",
+      "endereco": "Paróquia São Judas Tadeu/Palmeiras, Cinquentenário, Belo Horizonte, MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": []
+    },
+    "r das gabirobas 1 vila cloris belo horizonte mg": {
+      "nome": "Academia da Cidade Risoleta Neves",
+      "endereco": "R. das Gabirobas, 1, Vila Clóris, Belo Horizonte, MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Hospital Risoleta Tolentino Neves, 1, Rua das Gabirobas, Parque São Pedro, Vila Clóris, Venda Nova, Belo Horizonte, Minas Gerais, Região Sudeste, 31744-007, Brasil",
+          "latitude": "-19.8174987",
+          "longitude": "-43.9484408"
+        }
+      ]
+    },
+    "r dos canoeiros 320 santa monica belo horizonte mg": {
+      "nome": "Academia da Cidade Santa Mônica",
+      "endereco": "R. dos Canoeiros, 320, Santa Mônica, Belo Horizonte, MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Rua dos Canoeiros, Santa Mônica, Venda Nova, Belo Horizonte, Minas Gerais, Região Sudeste, 31525-380, Brasil",
+          "latitude": "-19.8287556",
+          "longitude": "-43.9778692"
+        },
+        {
+          "nome": "Rua dos Zapotecas, Santa Mônica, Venda Nova, Belo Horizonte, Minas Gerais, Região Sudeste, 31525-380, Brasil",
+          "latitude": "-19.8301288",
+          "longitude": "-43.9765630"
+        }
+      ]
+    },
+    "av maria amelia maia 270 sao bernardo belo horizonte mg": {
+      "nome": "Academia da Cidade São Bernardo",
+      "endereco": "Av. Maria Amélia Maia, 270, São Bernardo, Belo Horizonte, MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": []
+    },
+    "av risoleta neves 347 novo aarao reis belo horizonte mg": {
+      "nome": "Academia da Cidade Via 240",
+      "endereco": "Av. Risoleta Neves, 347, Novo Aarão Reis, Belo Horizonte, MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Avenida Risoleta Neves, Novo Aarão Reis, Regional Norte, Belo Horizonte, Minas Gerais, Região Sudeste, 31845-425, Brasil",
+          "latitude": "-19.8439488",
+          "longitude": "-43.9134851"
+        },
+        {
+          "nome": "Avenida Risoleta Neves, Novo Aarão Reis, Regional Norte, Belo Horizonte, Minas Gerais, Região Sudeste, 31845-000, Brasil",
+          "latitude": "-19.8430427",
+          "longitude": "-43.9127266"
+        }
+      ]
+    },
+    "r coronel joaquim tiburcio 850 heliopolis belo horizonte mg": {
+      "nome": "Academia da Cidade Vila Biquinhas",
+      "endereco": "R. Coronel Joaquim Tibúrcio, 850, Heliópólis, Belo Horizonte, MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Rua Coronel Joaquim Tibúrcio, Heliópolis, Regional Norte, Belo Horizonte, Minas Gerais, Região Sudeste, 31730-758, Brasil",
+          "latitude": "-19.8400458",
+          "longitude": "-43.9410822"
+        },
+        {
+          "nome": "Rua Coronel Joaquim Tibúrcio, Heliópolis, Regional Norte, Belo Horizonte, Minas Gerais, Região Sudeste, 31742-036, Brasil",
+          "latitude": "-19.8372779",
+          "longitude": "-43.9394636"
+        }
+      ]
+    },
+    "r coquilio 75 zilah sposito belo horizonte mg": {
+      "nome": "Academia da Cidade Ziláh Spósito",
+      "endereco": "R. Coquilio, 75, Ziláh Spósito, Belo Horizonte, MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": []
+    },
+    "r aristolino basilio de oliveira 445 regina belo horizonte mg": {
+      "nome": "Centro Cultural Lindéia/ Regina",
+      "endereco": "R. Aristolino Basílio de Oliveira, 445, Regina, Belo Horizonte, MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": []
+    },
+    "r ana rafael dos santos 149 vila santa rita belo horizonte mg": {
+      "nome": "Centro Cultural Vila Santa Rita",
+      "endereco": "R. Ana Rafael dos Santos, 149, Vila Santa Rita, Belo Horizonte, MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": []
+    },
+    "av joaquim jose diniz 855 fernao dias belo horizonte mg": {
+      "nome": "Centro de Saúde Dom Joaquim",
+      "endereco": "Av. Joaquim José Diniz, 855, Fernão Dias, Belo Horizonte, MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Avenida Joaquim José Diniz, Fernão Dias, Regional Nordeste, Belo Horizonte, Minas Gerais, Região Sudeste, 31910-520, Brasil",
+          "latitude": "-19.8732778",
+          "longitude": "-43.9213488"
+        },
+        {
+          "nome": "Avenida Joaquim José Diniz, Dom Joaquim, Regional Nordeste, Belo Horizonte, Minas Gerais, Região Sudeste, 31910-520, Brasil",
+          "latitude": "-19.8748085",
+          "longitude": "-43.9174028"
+        }
+      ]
+    },
+    "travessa dois mil quatrocentos e dezessete 235 etelvina carneiro belo horizonte mg": {
+      "nome": "Centro de Saúde Etelvina Carneiro",
+      "endereco": "Travessa Dois mil Quatrocentos e Dezessete, 235, Etelvina Carneiro, Belo Horizonte, MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": []
+    },
+    "r sonia braz xavier 60 jardim felicidade belo horizonte mg": {
+      "nome": "Centro de Saúde Felicidade 2",
+      "endereco": "R. Sônia Braz Xavier, 60, Jardim Felicidade, Belo Horizonte, MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Rua Sonia Braz Xavier, Jardim Felicidade, Regional Norte, Belo Horizonte, Minas Gerais, Região Sudeste, 31872-700, Brasil",
+          "latitude": "-19.8238915",
+          "longitude": "-43.9309749"
+        }
+      ]
+    },
+    "r hugo campos martins 15 tirol belo horizonte mg": {
+      "nome": "Centro de Saúde Francisco Gomes Barbosa (Tirol)",
+      "endereco": "R. Hugo Campos Martins, 15, Tirol, Belo Horizonte, MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Rua Hugo Campos Martins, Tirol, Barreiro, Belo Horizonte, Minas Gerais, Região Sudeste, 30640-400, Brasil",
+          "latitude": "-19.9852267",
+          "longitude": "-44.0352752"
+        }
+      ]
+    },
+    "av dom joao vi 1821 palmeiras belo horizonte mg": {
+      "nome": "Centro de Saúde Palmeiras",
+      "endereco": "Av. Dom João VI, 1821, Palmeiras, Belo Horizonte, MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Posto de Saúde Palmeiras, 1821, Avenida Dom João VI, Palmeiras, Regional Oeste, Belo Horizonte, Minas Gerais, Região Sudeste, 30575-730, Brasil",
+          "latitude": "-19.9721332",
+          "longitude": "-43.9783163"
+        }
+      ]
+    },
+    "r crisanto muniz 120 rio branco belo horizonte mg": {
+      "nome": "Centro de Saúde Rio Branco",
+      "endereco": "R. Crisanto Muniz 120, Rio Branco, Belo Horizonte, MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": []
+    },
+    "r murilo moraes de andrade 125 santa lucia belo horizonte mg": {
+      "nome": "Centro de Saúde Santa Lúcia",
+      "endereco": "R. Murilo Moraes de Andrade, 125, Santa Lúcia, Belo Horizonte, MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Rua Murilo Moraes de Andrade, Santa Lúcia, Regional Centro-Sul, Belo Horizonte, Minas Gerais, Região Sudeste, 30350-213, Brasil",
+          "latitude": "-19.9509035",
+          "longitude": "-43.9472220"
+        },
+        {
+          "nome": "Rua Murilo Moraes de Andrade, Santo Antônio, Regional Centro-Sul, Belo Horizonte, Minas Gerais, Região Sudeste, 30350-213, Brasil",
+          "latitude": "-19.9505410",
+          "longitude": "-43.9466364"
+        }
+      ]
+    },
+    "r cecilia trindade silva 55 jardim felicidade belo horizonte mg": {
+      "nome": "CRAS Jardim Felicidade",
+      "endereco": "R. Cecilia Trindade Silva, 55, Jardim Felicidade, Belo Horizonte, MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Rua Cecília Trindade Silva, Jardim Felicidade, Regional Norte, Belo Horizonte, Minas Gerais, Região Sudeste, 31742-715, Brasil",
+          "latitude": "-19.8304928",
+          "longitude": "-43.9280339"
+        }
+      ]
+    },
+    "r pastor muryllo cassete 25 sao bernardo belo horizonte mg": {
+      "nome": "Distrito Regional Norte",
+      "endereco": "R. Pastor Muryllo Cassete, 25, São Bernardo, Belo Horizonte, MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Rua Pastor Muryllo Cassete, São Bernardo, Regional Norte, Belo Horizonte, Minas Gerais, Região Sudeste, 31741-424, Brasil",
+          "latitude": "-19.8508306",
+          "longitude": "-43.9348193"
+        }
+      ]
+    },
+    "r caraca 900 serra belo horizonte mg": {
+      "nome": "Laço Associação de Apoio Social",
+      "endereco": "R. Caraça, 900, Serra, Belo Horizonte, MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Rua Caraça, Serra, Regional Centro-Sul, Belo Horizonte, Minas Gerais, Região Sudeste, 30220-330, Brasil",
+          "latitude": "-19.9428812",
+          "longitude": "-43.9138144"
+        },
+        {
+          "nome": "Rua Caraça, Serra, Regional Centro-Sul, Belo Horizonte, Minas Gerais, Região Sudeste, 30210-550, Brasil",
+          "latitude": "-19.9427639",
+          "longitude": "-43.9167692"
+        }
+      ]
+    },
+    "r tabapuam 514 dom bosco belo horizonte mg": {
+      "nome": "Poliesportiva Dom Bosco",
+      "endereco": "R. Tabapuam, 514, Dom Bosco, Belo Horizonte, MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Rua Tabapuan, Ipanema, Dom Bosco, Regional Noroeste, Belo Horizonte, Minas Gerais, Região Sudeste, 30830-050, Brasil",
+          "latitude": "-19.9128390",
+          "longitude": "-43.9982498"
+        }
+      ]
+    },
+    "av sigmund weiss s n pilar belo horizonte mg": {
+      "nome": "Praça Amadeu Lorenzato",
+      "endereco": "Av. Sigmund Weiss, S/N, Pilar, Belo Horizonte, MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Avenida Sigmund Weiss, Pilar, Barreiro, Belo Horizonte, Minas Gerais, Região Sudeste, 30390-000, Brasil",
+          "latitude": "-19.9990438",
+          "longitude": "-43.9720740"
+        }
+      ]
+    },
+    "r d 300 vila maria jardim vitoria belo horizonte mg": {
+      "nome": "Quadra Projeto Providência",
+      "endereco": "R. D, 300, Vila Maria/Jardim Vitória, Belo Horizonte, MG",
+      "motivo": "Sem número/logradouro confirmado pelo geocodificador",
+      "candidatos": [
+        {
+          "nome": "Rua D, Jardim Vitória, Regional Nordeste, Belo Horizonte, Minas Gerais, Região Sudeste, 31970-360, Brasil",
+          "latitude": "-19.8523226",
+          "longitude": "-43.8839234"
+        }
+      ]
+    },
+    "r carangola 288 santo antonio belo horizonte mg": {
+      "nome": "Secretaria Municipal de Educação (SMED)",
+      "endereco": "R. Carangola, 288, Santo Antônio, Belo Horizonte, MG",
+      "motivo": "Aguardando próximo lote"
+    },
+    "avenida afonso pena 1377 centro belo horizonte mg": {
+      "nome": "Parque Municipal Américo Renné Giannetti · Praça do Trenzinho",
+      "endereco": "Avenida Afonso Pena, 1377, Centro, Belo Horizonte, MG",
+      "motivo": "Aguardando próximo lote"
+    }
+  }
+}

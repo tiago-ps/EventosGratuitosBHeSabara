@@ -19,5 +19,55 @@
       "precisao": "equipamento"
     }
   },
-  "locais_por_endereco": {}
+  "locais_por_endereco": {
+    "Avenida Santos Dumont, 174, Centro, Belo Horizonte - MG": {
+      "latitude": -19.9161538,
+      "longitude": -43.9353817,
+      "fonte": "https://www.openstreetmap.org/way/115658334",
+      "validacao": "logradouro_numero",
+      "origem": "Nominatim OpenStreetMap"
+    },
+    "Rua Pitangui, 3613, Horto, Belo Horizonte - MG": {
+      "latitude": -19.9082909,
+      "longitude": -43.9141639,
+      "fonte": "https://www.openstreetmap.org/node/4523602063",
+      "validacao": "logradouro_numero",
+      "origem": "Nominatim OpenStreetMap"
+    },
+    "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte": {
+      "latitude": -19.9163137,
+      "longitude": -43.9168092,
+      "fonte": "https://www.openstreetmap.org/way/557091184",
+      "validacao": "logradouro_numero",
+      "origem": "Nominatim OpenStreetMap"
+    },
+    "Av. Otacílio Negrão de Lima, 751 - Pampulha": {
+      "latitude": -19.8545159,
+      "longitude": -43.9701098,
+      "fonte": "https://www.openstreetmap.org/way/223936856",
+      "validacao": "equipamento_nomeado",
+      "origem": "Nominatim OpenStreetMap"
+    },
+    "Avenida Brasil, 2023, Savassi, Belo Horizonte - MG": {
+      "latitude": -19.9333685,
+      "longitude": -43.9371631,
+      "fonte": "https://www.openstreetmap.org/way/509257348",
+      "validacao": "logradouro_numero",
+      "origem": "Nominatim OpenStreetMap"
+    },
+    "Rua Padre Marinho,60 – Belo Horizonte – Minas Gerais": {
+      "latitude": -19.9259987,
+      "longitude": -43.9205729,
+      "fonte": "https://www.openstreetmap.org/node/1558155671",
+      "validacao": "logradouro_numero",
+      "origem": "Nominatim OpenStreetMap"
+    },
+    "Edifício Mirafiori - Rua dos Guajajaras, 40 - Centro, Belo Horizonte - MG, 30180-100": {
+      "latitude": -19.9264732,
+      "longitude": -43.9345831,
+      "fonte": "https://www.openstreetmap.org/way/480247792",
+      "validacao": "logradouro_numero",
+      "origem": "Nominatim OpenStreetMap"
+    }
+  }
 }
