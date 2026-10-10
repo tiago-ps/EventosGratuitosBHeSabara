@@ -126,6 +126,30 @@
       "fonte": "https://www.openstreetmap.org/node/2429287182",
       "validacao": "logradouro_numero",
       "origem": "Nominatim OpenStreetMap"
+    },
+    "centro-de-referencia-das-juventudes": {
+      "latitude": -19.9155396,
+      "longitude": -43.9336781,
+      "fonte": "Nominatim/OpenStreetMap, equipamento Centro de Referência da Juventude, Rua dos Guaicurus 50",
+      "validacao": "conferido_logradouro_numero"
+    },
+    "grande-theatro-unimed-bh-cine-theatro-brasil": {
+      "latitude": -19.9190461,
+      "longitude": -43.9379691,
+      "fonte": "Nominatim/OpenStreetMap, Cine Theatro Brasil, Avenida Amazonas 315",
+      "validacao": "conferido_logradouro_numero"
+    },
+    "solar-padre-correia": {
+      "latitude": -19.8923387,
+      "longitude": -43.8107288,
+      "fonte": "Nominatim/OpenStreetMap, Rua Dom Pedro II 200, Sabará",
+      "validacao": "conferido_logradouro_numero"
+    },
+    "sesi-museu-artes-oficios": {
+      "latitude": -19.9169517,
+      "longitude": -43.9334705,
+      "fonte": "https://visite.museus.gov.br/instituicoes/museu-de-artes-e-oficios-mao/",
+      "validacao": "fonte_publica"
     }
   }
 }
