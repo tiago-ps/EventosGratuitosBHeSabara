@@ -28,5 +28,12 @@ jobs:
           git add coordenadas-espacos.json pendencias-coordenadas-espacos.json
           if ! git diff --cached --quiet; then
             git commit -m "data(mapa): atualizar locais geocodificados e pendências"
-            git push
+            # A publicação e outros ajustes podem avançar a main durante a coleta.
+            # Integra os novos commits sem sobrescrever alterações concorrentes.
+            for tentativa in 1 2 3; do
+              git pull --rebase origin main
+              if git push origin HEAD:main; then exit 0; fi
+              sleep 4
+            done
+            exit 1
           fi
