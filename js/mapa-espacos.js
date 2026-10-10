@@ -233,38 +233,169 @@
     return leafletPromise;
   }
 
-  function createPopup(group, toItemUrl) {
+  const POPUP_PREVIEW_SIZE = 4;
+  const MAP_CATEGORY = {
+    evento: 'events', livro: 'books', espaco: 'spaces',
+    atividade_lazer: 'activities', concurso: 'contests',
+    utilidade_publica: 'utility'
+  };
+
+  function popupEntries(group) {
+    const seen = new Set();
+    const records = [];
+    for (const record of group.items || []) {
+      const item = record.item || {};
+      // A mesma ficha não deve entrar duas vezes no mesmo endereço.
+      // Sessões distintas com IDs/datas/horários diferentes são preservadas.
+      const key = String(item.tipo_conteudo || '') + ':' +
+        String(item.id || [item.titulo, item.data, item.horario, record.venue].join('|'));
+      if (seen.has(key)) continue;
+      seen.add(key);
+      records.push(record);
+    }
+    const weight = { evento: 0, atividade_lazer: 1, livro: 2, espaco: 3,
+      concurso: 4, utilidade_publica: 5 };
+    return records.sort((a, b) => {
+      const first = a.item || {};
+      const second = b.item || {};
+      const priority = (weight[first.tipo_conteudo] ?? 10) - (weight[second.tipo_conteudo] ?? 10);
+      if (priority) return priority;
+      if (first.tipo_conteudo === 'evento') {
+        const date = String(first.data || '9999') + ' ' + String(first.horario || '');
+        const secondDate = String(second.data || '9999') + ' ' + String(second.horario || '');
+        if (date !== secondDate) return date.localeCompare(secondDate, 'pt-BR');
+      }
+      return String(first.titulo || '').localeCompare(String(second.titulo || ''), 'pt-BR');
+    });
+  }
+
+  function popupPlaceName(group, records = popupEntries(group)) {
+    const mainSpaces = records.filter(record => record.item?.tipo_conteudo === 'espaco' &&
+      record.item?.tipo === 'equipamento');
+    if (mainSpaces.length === 1) return String(mainSpaces[0].item.titulo || '').trim();
+    const frequent = new Map();
+    for (const record of records) {
+      const value = String(record.venue || '').trim();
+      const key = normalize(value);
+      if (key.length < 7) continue;
+      const entry = frequent.get(key) || { label: value, count: 0 };
+      entry.count += 1;
+      frequent.set(key, entry);
+    }
+    const ranked = [...frequent.values()].sort((a, b) => b.count - a.count);
+    if (ranked.length && (ranked[0].count > 1 || records.length === 1)) return ranked[0].label;
+    return records.length > 1 ? 'Conteúdos neste local' :
+      String(records[0]?.venue || 'Local cadastrado');
+  }
+
+  function popupEventDate(event) {
+    const date = String(event?.data || '').trim();
+    const time = String(event?.horario || '').trim();
+    let formatted = '';
+    if (/^\d{4}-\d{2}-\d{2}$/.test(date)) {
+      const parsed = new Date(date + 'T12:00:00');
+      if (!Number.isNaN(parsed.getTime())) {
+        formatted = new Intl.DateTimeFormat('pt-BR', {
+          day: '2-digit', month: 'short', weekday: 'short'
+        }).format(parsed).replace(/\./g, '');
+      }
+    }
+    return [formatted, time].filter(Boolean).join(' · ');
+  }
+
+  function popupCategory(group) {
+    const types = new Set(popupEntries(group).map(record => MAP_CATEGORY[record.item?.tipo_conteudo] || 'mixed'));
+    return types.size === 1 ? [...types][0] : 'mixed';
+  }
+
+  function createPopup(group, toItemUrl, onResize = () => {}) {
+    const records = popupEntries(group);
     const root = document.createElement('div');
     root.className = 'agenda-space-map-popup';
     const heading = document.createElement('strong');
-    heading.textContent = group.items.length === 1
-      ? group.items[0].venue : group.items.length + ' conteúdos neste local';
-    root.appendChild(heading);
+    heading.className = 'agenda-map-popup-heading';
+    heading.textContent = popupPlaceName(group, records);
+    root.append(heading);
+
+    const summary = document.createElement('p');
+    summary.className = 'agenda-map-popup-summary';
+    summary.textContent = records.length === 1 ? '1 conteúdo neste local' :
+      records.length + ' conteúdos neste local';
+    root.append(summary);
+
     const address = document.createElement('p');
-    address.textContent = group.items.find(record => record.address)?.address || '';
-    if (address.textContent) root.appendChild(address);
+    address.className = 'agenda-map-popup-address';
+    address.textContent = records.find(record => record.address)?.address || '';
+    if (address.textContent) root.append(address);
+
     const list = document.createElement('ul');
-    for (const record of group.items.slice(0, 35)) {
+    list.className = 'agenda-map-popup-items';
+    list.setAttribute('aria-label', 'Conteúdos disponíveis neste local');
+
+    records.forEach((record, index) => {
+      const item = record.item || {};
       const row = document.createElement('li');
+      row.className = 'agenda-map-popup-item';
+      if (index >= POPUP_PREVIEW_SIZE) row.hidden = true;
+
+      const tag = document.createElement('span');
+      tag.className = 'agenda-map-popup-tag agenda-map-popup-tag--' +
+        (MAP_CATEGORY[item.tipo_conteudo] || 'mixed');
+      tag.textContent = LABELS[item.tipo_conteudo] || 'Conteúdo';
+
+      const details = document.createElement('div');
+      details.className = 'agenda-map-popup-item-copy';
+      const url = externalUrl(toItemUrl(item));
       const link = document.createElement('a');
-      const url = externalUrl(toItemUrl(record.item));
+      link.className = 'agenda-map-popup-item-title';
+      link.textContent = item.titulo || 'Ver detalhes';
       link.href = url || '#';
-      link.textContent = (LABELS[record.item.tipo_conteudo] || 'Conteúdo') + ': ' +
-        (record.item.titulo || 'Ver detalhes');
-      row.appendChild(link);
-      list.appendChild(row);
+      if (!url) {
+        link.removeAttribute('href');
+        link.setAttribute('aria-disabled', 'true');
+      }
+      details.append(link);
+      const session = item.tipo_conteudo === 'evento' ? popupEventDate(item) : '';
+      if (session) {
+        const meta = document.createElement('span');
+        meta.className = 'agenda-map-popup-item-date';
+        meta.textContent = session;
+        details.append(meta);
+      }
+      row.append(tag, details);
+      list.append(row);
+    });
+    root.append(list);
+
+    if (records.length > POPUP_PREVIEW_SIZE) {
+      const more = document.createElement('button');
+      more.type = 'button';
+      more.className = 'agenda-map-popup-more';
+      const hiddenCount = records.length - POPUP_PREVIEW_SIZE;
+      more.textContent = 'Ver mais ' + hiddenCount + ' conteúdos';
+      more.setAttribute('aria-expanded', 'false');
+      more.addEventListener('click', () => {
+        const expanded = more.getAttribute('aria-expanded') !== 'true';
+        more.setAttribute('aria-expanded', String(expanded));
+        list.classList.toggle('is-expanded', expanded);
+        [...list.children].forEach((row, index) => {
+          row.hidden = !expanded && index >= POPUP_PREVIEW_SIZE;
+        });
+        more.textContent = expanded ? 'Mostrar menos' : 'Ver mais ' + hiddenCount + ' conteúdos';
+        onResize();
+      });
+      root.append(more);
     }
-    root.appendChild(list);
-    if (group.items.length > 35) {
+
+    // Apenas campus ou ponto explicitamente aproximado recebem alerta.
+    // "equipamento" indica precisão suficiente e não justifica um aviso genérico.
+    if (records.some(record => /campus|aproximad/i.test(String(record.precision || '')))) {
       const note = document.createElement('p');
-      note.textContent = '+' + (group.items.length - 35) + ' resultados; use os filtros para refinar.';
-      root.appendChild(note);
+      note.className = 'agenda-map-popup-precision';
+      note.textContent = 'Localização de referência: confirme a entrada da biblioteca no campus.';
+      root.append(note);
     }
-    if (group.items.some(record => record.precision)) {
-      const note = document.createElement('p');
-      note.textContent = 'Localização do campus/equipamento; confirme a entrada da biblioteca.';
-      root.appendChild(note);
-    }
+
     const navigate = document.createElement('a');
     navigate.className = 'agenda-space-map-directions';
     navigate.href = 'https://www.google.com/maps/dir/?api=1&destination=' +
@@ -272,7 +403,7 @@
     navigate.rel = 'noopener noreferrer';
     navigate.target = '_blank';
     navigate.textContent = 'Como chegar ↗';
-    root.appendChild(navigate);
+    root.append(navigate);
     return root;
   }
 
@@ -344,11 +475,24 @@
         }).addTo(map);
         const bounds = [];
         for (const group of located.points) {
-          const label = group.items.length === 1
-            ? group.items[0].venue : group.items.length + ' conteúdos';
-          const marker = L.marker(group.coords).addTo(map)
-            .bindTooltip(label)
-            .bindPopup(createPopup(group, toItemUrl), { maxWidth: 330 });
+          const records = popupEntries(group);
+          const label = popupPlaceName(group, records) + ' — ' +
+            records.length + (records.length === 1 ? ' conteúdo' : ' conteúdos');
+          const category = popupCategory(group);
+          const markerText = records.length > 1 ? String(Math.min(records.length, 99)) +
+            (records.length > 99 ? '+' : '') :
+            ({ events: '♪', books: '▤', spaces: '⌂', activities: '●',
+              contests: '★', utility: '+' }[category] || '•');
+          const icon = L.divIcon({
+            className: 'agenda-map-marker-container',
+            html: '<span class="agenda-map-pin agenda-map-pin--' + category + '">' +
+              markerText + '</span>',
+            iconSize: [38, 48], iconAnchor: [19, 44], popupAnchor: [0, -40]
+          });
+          const marker = L.marker(group.coords, { icon, title: label }).addTo(map)
+            .bindTooltip(label);
+          marker.bindPopup(createPopup(group, toItemUrl, () => marker.getPopup()?.update()),
+            { maxWidth: 340, minWidth: 225, autoPanPadding: [30, 30] });
           markerByKey.set(group.coords.join(','), marker);
           bounds.push(group.coords);
         }
