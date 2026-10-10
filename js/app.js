@@ -6531,7 +6531,12 @@ function eventProgram(event) {
       coordinates: state.spaceCoordinatesData?.pontos || {},
       content: state.mobileContent,
       blocked: Boolean(state.mobileFavoritesOnly || state.mobileSharedSelection || state.mobileFocusedItem),
-      toItemUrl: muralItemUrl
+      toItemUrl: item => {
+        const url = new URL(window.location.pathname, window.location.origin);
+        url.searchParams.set('modo', 'agenda');
+        url.searchParams.set('item', agendaFavoriteId(item));
+        return url.href;
+      }
     });
 
     header.querySelector('.agenda-favorites-toggle').addEventListener('click', () => {
