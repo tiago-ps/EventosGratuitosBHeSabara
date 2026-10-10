@@ -1,0 +1,23 @@
+{
+  "versao": 1,
+  "descricao": "Pontos verificados para conteúdos cujos locais físicos não fazem parte do catálogo de Espaços; nunca geocodificar a partir de uma cidade isolada.",
+  "bibliotecas": {
+    "ifmg-sabara": {
+      "nome": "Biblioteca do IFMG Campus Sabará",
+      "endereco": "Rodovia MGT 262, Km 10, Sobradinho, Sabará - MG",
+      "latitude": -19.89504,
+      "longitude": -43.79352,
+      "fonte": "https://www.escolasnobrasil.com/sudeste/ifmg-campus-sabara-sabara",
+      "precisao": "campus; confirmar entrada da biblioteca"
+    },
+    "biblioteca-publica-estadual-mg": {
+      "nome": "Biblioteca Pública Estadual de Minas Gerais",
+      "endereco": "Praça da Liberdade, 21, Funcionários, Belo Horizonte - MG",
+      "latitude": -19.9328676,
+      "longitude": -43.9392609,
+      "fonte": "OpenStreetMap: Biblioteca Pública Estadual Luiz de Bessa, 21 Praça José Mendes Júnior",
+      "precisao": "equipamento"
+    }
+  },
+  "locais_por_endereco": {}
+}
