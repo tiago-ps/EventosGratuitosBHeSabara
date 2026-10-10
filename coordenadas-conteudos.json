@@ -68,6 +68,20 @@
       "fonte": "https://www.openstreetmap.org/way/480247792",
       "validacao": "logradouro_numero",
       "origem": "Nominatim OpenStreetMap"
+    },
+    "Rua Redelvim Andrade, 300, Horto, Betim, MG": {
+      "latitude": -19.958121,
+      "longitude": -44.1982445,
+      "fonte": "OpenStreetMap/Nominatim, número 300 na Rua Redelvim de Andrade; endereço de Horto Municipal confirmado em https://www.betim.mg.gov.br/portal/secretarias-paginas/331/equipamentos-esportivos/",
+      "validacao": "logradouro_numero_institucional",
+      "precisao": "endereço do complexo esportivo, conferir entrada do Horto"
+    },
+    "R. das Gabirobas, 1, Vila Clóris, Belo Horizonte, MG": {
+      "latitude": -19.8174987,
+      "longitude": -43.9484408,
+      "fonte": "OpenStreetMap/Nominatim, Rua das Gabirobas 1; nome e endereço da Academia da Cidade Risoleta Neves confirmados no CNES https://cnes2.datasus.gov.br/Mod_Conjunto.asp?VCo_Unidade=3106206879357",
+      "validacao": "logradouro_numero_institucional",
+      "precisao": "endereço do imóvel, confirmar acesso à academia"
     }
   }
 }
