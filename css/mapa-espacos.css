@@ -57,3 +57,5 @@
   .agenda-map-view-button { padding: 8px 13px; }
   .agenda-space-map-canvas { height: 62vh; min-height: 330px; border-radius: 10px; }
 }
+.agenda-space-map-nearby { margin: 0 0 10px; border: 1px solid currentColor; background: transparent; color: inherit; padding: 7px 14px; border-radius: 9px; cursor: pointer; font: inherit; }
+.agenda-space-map-nearby[disabled] { opacity: .65; cursor: wait; }
