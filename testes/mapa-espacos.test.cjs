@@ -59,6 +59,8 @@ assert.ok(all.points.some(group => group.items.some(record => record.item.tipo_c
   'Livro físico deve aparecer no mapa da biblioteca');
 assert.ok(all.points.some(group => group.items.some(record => record.item.tipo_conteudo === 'evento')),
   'Evento de local geocodificado deve aparecer no mapa');
+assert.ok(all.points.some(group => group.items.some(record => record.item.tipo_conteudo === 'atividade_lazer')),
+  'Atividade com endereço físico verificado deve aparecer no mapa');
 assert.ok(!all.points.some(group => group.items.some(record => record.item.tipo_conteudo === 'concurso')),
   'Não inventar local de trabalho para concurso sem lotação verificada');
 const virtualOnly = moduleMap.mapItems({
