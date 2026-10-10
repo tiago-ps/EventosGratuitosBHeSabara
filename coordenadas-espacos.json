@@ -21,6 +21,111 @@
       "latitude": -19.93166812,
       "longitude": -43.93882692,
       "fonte": "https://visite.museus.gov.br/instituicoes/mm-gerdau-museu-das-minas-e-do-metal/"
+    },
+    "mhnjb-ufmg-anfiteatro-mata": {
+      "latitude": -19.8951565,
+      "longitude": -43.9145393,
+      "fonte": "https://www.openstreetmap.org/node/3337024467",
+      "validacao": "logradouro_numero",
+      "origem": "Nominatim OpenStreetMap"
+    },
+    "centro-cultural-sesiminas-bh": {
+      "latitude": -19.9259987,
+      "longitude": -43.9205729,
+      "fonte": "https://www.openstreetmap.org/node/1558155671",
+      "validacao": "logradouro_numero",
+      "origem": "Nominatim OpenStreetMap"
+    },
+    "centro-cultural-ufmg": {
+      "latitude": -19.9161538,
+      "longitude": -43.9353817,
+      "fonte": "https://www.openstreetmap.org/way/115658334",
+      "validacao": "logradouro_numero",
+      "origem": "Nominatim OpenStreetMap"
+    },
+    "museu-puc-minas": {
+      "latitude": -19.9221274,
+      "longitude": -43.9897767,
+      "fonte": "https://www.openstreetmap.org/way/253640369",
+      "validacao": "logradouro_numero",
+      "origem": "Nominatim OpenStreetMap"
+    },
+    "centro-cultural-unimed-bh-minas": {
+      "latitude": -19.9352484,
+      "longitude": -43.9410098,
+      "fonte": "https://www.openstreetmap.org/way/188991918",
+      "validacao": "logradouro_numero",
+      "origem": "Nominatim OpenStreetMap"
+    },
+    "palacio-das-artes-cine-humberto-mauro": {
+      "latitude": -19.925852,
+      "longitude": -43.9335244,
+      "fonte": "https://www.openstreetmap.org/way/8601205",
+      "validacao": "logradouro_numero",
+      "origem": "Nominatim OpenStreetMap"
+    },
+    "centro-cultural-liberalino-alves-de-oliveira": {
+      "latitude": -19.9048702,
+      "longitude": -43.9453042,
+      "fonte": "https://www.openstreetmap.org/way/1124466921",
+      "validacao": "logradouro_numero",
+      "origem": "Nominatim OpenStreetMap"
+    },
+    "cine-santa-tereza": {
+      "latitude": -19.9163137,
+      "longitude": -43.9168092,
+      "fonte": "https://www.openstreetmap.org/way/557091184",
+      "validacao": "logradouro_numero",
+      "origem": "Nominatim OpenStreetMap"
+    },
+    "camerasete": {
+      "latitude": -19.9196457,
+      "longitude": -43.9379546,
+      "fonte": "https://www.openstreetmap.org/node/4654162289",
+      "validacao": "logradouro_numero",
+      "origem": "Nominatim OpenStreetMap"
+    },
+    "ejef-escola-judicial-desembargador-edesio-fernandes": {
+      "latitude": -19.9266285,
+      "longitude": -43.9209309,
+      "fonte": "https://www.openstreetmap.org/way/370657356",
+      "validacao": "logradouro_numero",
+      "origem": "Nominatim OpenStreetMap"
+    },
+    "galpao-cine-horto": {
+      "latitude": -19.9082909,
+      "longitude": -43.9141639,
+      "fonte": "https://www.openstreetmap.org/node/4523602063",
+      "validacao": "logradouro_numero",
+      "origem": "Nominatim OpenStreetMap"
+    },
+    "minascentro": {
+      "latitude": -19.9238438,
+      "longitude": -43.9433857,
+      "fonte": "https://www.openstreetmap.org/way/31551021",
+      "validacao": "equipamento_nomeado",
+      "origem": "Nominatim OpenStreetMap"
+    },
+    "museu-da-moda": {
+      "latitude": -19.9249782,
+      "longitude": -43.9373139,
+      "fonte": "https://www.openstreetmap.org/way/110445890",
+      "validacao": "logradouro_numero",
+      "origem": "Nominatim OpenStreetMap"
+    },
+    "sala-minas-gerais": {
+      "latitude": -19.9272991,
+      "longitude": -43.9567155,
+      "fonte": "https://www.openstreetmap.org/way/536197325",
+      "validacao": "logradouro_numero",
+      "origem": "Nominatim OpenStreetMap"
+    },
+    "sesc-palladium": {
+      "latitude": -19.9235673,
+      "longitude": -43.9399861,
+      "fonte": "https://www.openstreetmap.org/node/2429287182",
+      "validacao": "logradouro_numero",
+      "origem": "Nominatim OpenStreetMap"
     }
   }
 }
