@@ -9,10 +9,10 @@ const serviceWorker = fs.readFileSync('service-worker.js', 'utf8');
 const geo = JSON.parse(fs.readFileSync('coordenadas-espacos.json', 'utf8'));
 const catalog = JSON.parse(fs.readFileSync('espacos_culturais.json', 'utf8'));
 
-assert.ok(page.includes('js/mapa-espacos.js?v=2'));
-assert.ok(page.includes('css/mapa-espacos.css?v=2'));
-assert.ok(serviceWorker.includes('./js/mapa-espacos.js?v=2'));
-assert.ok(serviceWorker.includes('./css/mapa-espacos.css?v=2'));
+assert.ok(page.includes('js/mapa-espacos.js?v=3'));
+assert.ok(page.includes('css/mapa-espacos.css?v=3'));
+assert.ok(serviceWorker.includes('./js/mapa-espacos.js?v=3'));
+assert.ok(serviceWorker.includes('./css/mapa-espacos.css?v=3'));
 assert.ok(serviceWorker.includes('/coordenadas-espacos.json'));
 
 const ctx = { window: { MuralCultural: {} } };
