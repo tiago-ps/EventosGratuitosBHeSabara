@@ -17791,10 +17791,10 @@
         "observacao": "As exposições da Vitrine podem ser vistas da rua gratuitamente e, conforme a mostra, sem limitação de horário."
       },
       "site": "https://prefeitura.pbh.gov.br/noticias/vitrine-do-teatro-marilia-recebe-exposicao-o-trajeto-do-afeto-de-paloma-parentoni",
-      "imagem": "https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/cultura/tm_foto.rafaelcosta-tm.jpg",
-      "imagem_fonte": "https://prefeitura.pbh.gov.br/fundacao-municipal-de-cultura/teatros/marilia",
+      "imagem": "imagens/espacos/teatro-marilia-vitrine-do-teatro-marilia.png",
+      "imagem_fonte": "Veronica Manevy/Aflora Imagem - Site PBH",
       "exibicao_ativa": true,
-      "exibicao_recorrente": false,
+      "exibicao_recorrente": true,
       "prioridade": 0,
       "tipo_espaco": "Vitrine expositiva / galeria urbana",
       "vocacoes": [
