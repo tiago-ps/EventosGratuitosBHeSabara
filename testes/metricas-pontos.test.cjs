@@ -9,8 +9,8 @@ const indexHtml = fs.readFileSync('index.html', 'utf8');
 const serviceWorker = fs.readFileSync('service-worker.js', 'utf8');
 const wrangler = JSON.parse(fs.readFileSync('wrangler.jsonc', 'utf8'));
 
-assert(analytics.includes('sessionStorage.getItem(STORAGE_KEY)'));
-assert(analytics.includes("url.searchParams.delete('origem')"));
+assert(analytics.includes('sessionStorage.getItem(key)'));
+assert(analytics.includes("url.searchParams.delete(key)"));
 assert(analytics.includes("'entrada'"));
 assert(analytics.includes("'sessao_ativa'"));
 assert(analytics.includes("'visualizacao_conteudo'"));
@@ -50,8 +50,8 @@ assert(schema.includes('minutos_30_59 INTEGER'));
 assert(app.includes("searchParams.get('ponto')"));
 assert(app.includes("url.searchParams.set('origem', point)"));
 assert(app.includes('article.dataset.muralContentId = favoriteId'));
-assert(indexHtml.includes('js/metricas-pontos.js?v=2'));
-assert(serviceWorker.includes('./js/metricas-pontos.js?v=2'));
+assert(indexHtml.includes('js/metricas-pontos.js?v=3'));
+assert(serviceWorker.includes('./js/metricas-pontos.js?v=3'));
 assert(wrangler.assets.run_worker_first.includes('/q/*'));
 
 console.log('Métricas anônimas por ponto de divulgação validadas.');
