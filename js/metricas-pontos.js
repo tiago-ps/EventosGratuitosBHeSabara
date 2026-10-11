@@ -174,6 +174,7 @@
   }
 
   const pageUrl = new URL(window.location.href);
+  const physicalPanelPoint = normalizeSlug(pageUrl.searchParams.get('ponto'));
   startPanelExposureTracking(pageUrl);
 
   const incomingPoint = normalizeSlug(pageUrl.searchParams.get('origem'));
@@ -189,8 +190,11 @@
     if (restored && normalizeSlug(restored.ponto)) pointState = restored;
   }
 
-  let generalState;
-  if (incomingPoint) {
+  let generalState = null;
+  if (physicalPanelPoint && !incomingPoint && !incomingChannel) {
+    // Uma instalação física não é audiência do site. Ela já possui sua métrica
+    // própria de tempo de exposição e não deve inflar entradas/visualizações.
+  } else if (incomingPoint) {
     generalState = newGeneralState('ponto', incomingPoint);
   } else if (incomingChannel) {
     generalState = newGeneralState('canal', incomingChannel);
