@@ -194,6 +194,7 @@
   if (physicalPanelPoint && !incomingPoint && !incomingChannel) {
     // Uma instalação física não é audiência do site. Ela já possui sua métrica
     // própria de tempo de exposição e não deve inflar entradas/visualizações.
+    safeRemove(GENERAL_STORAGE_KEY);
   } else if (incomingPoint) {
     generalState = newGeneralState('ponto', incomingPoint);
   } else if (incomingChannel) {
