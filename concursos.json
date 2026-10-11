@@ -2,8 +2,8 @@
   "schema": 10,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-10-09T15:37:12.634628+00:00",
-  "total": 18,
+  "coletado_em_utc": "2026-10-11T17:16:06.115401+00:00",
+  "total": 20,
   "concursos": [
     {
       "id": "pci:noticia:marinha-do-brasil-8-distrito-naval-abre-vagas-para-oficiais-rm2-em-sp",
@@ -834,43 +834,6 @@
       }
     },
     {
-      "id": "pci:noticia:prefeitura-de-massaranduba-sc-retifica-edital-de-concurso-com-salarios-de-ate-24722",
-      "titulo": "Prefeitura de Massaranduba",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-massaranduba-sc-retifica-edital-de-concurso-com-salarios-de-ate-24722",
-      "imagem": "https://cdn.pci.app.br/img/i/b362c7f66ff3bc7b091b909ff20454f1.png",
-      "formacoes_compativeis": [
-        "Técnico em Informática"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Técnico em Informática",
-          "nivel": "tecnico",
-          "evidencia": "sf 06 (cr) agente comunitario de saude - esf 07 (cr) agente de combate as endemias (1 vaga + cr) auxiliar administrativo (3 vagas + cr) educador social (cr) eletricista predial (cr) mestre de obras (cr) motorista de ambulancia (cr) tecnico agricola (1 vaga + cr) tecnico de enfermagem (3 vagas + cr) tecnico em informatica (cr) tecnico em saude bucal (2 vagas + cr) cargos de nivel superior advogado (cr) arquiteto (cr) assistente social (1 vaga + cr) cirurgiao-dentista - 20h (cr) cirurgiao-dentista - 40h (1 vaga + cr) enfermeiro (cr) engenheiro agronomo (1 vaga + cr) engenheiro civil (cr) engenheiro florestal (1 vaga "
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "SC",
-      "cidade": "Massaranduba",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "",
-      "inscricoes_texto": "",
-      "remuneracao_faixa_texto": "R$ 2.371,80 a R$ 24.722,94",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Técnico Agrícola (1 vaga + CR) Técnico de Enfermagem (3 vagas + CR) Técnico em Informática",
-          "vagas_texto": "Cadastro de Reserva",
-          "formacao": "Técnico em Informática",
-          "confianca": "alta"
-        }
-      ],
-      "janela_inscricoes": {
-        "estado": "prazo_desconhecido",
-        "completude": "desconhecida"
-      }
-    },
-    {
       "id": "pci:noticia:sefaz-sc-abre-concurso-publico-para-o-cargo-de-auditor-estadual-de-financas-publicas",
       "titulo": "SEFAZ - Secretaria de Estado da Fazenda de Santa Catarina",
       "url": "https://www.pciconcursos.com.br/noticias/sefaz-sc-abre-concurso-publico-para-o-cargo-de-auditor-estadual-de-financas-publicas",
@@ -907,6 +870,165 @@
         "completude": "somente_fim",
         "fim": "2026-10-05",
         "texto_original": "até 5 de outubro de 2026"
+      }
+    },
+    {
+      "id": "pci:noticia:ses-sc-abre-processo-seletivo-com-salarios-de-ate-5670",
+      "titulo": "SES - Secretaria de Estado da Saúde de Santa Catarina",
+      "url": "https://www.pciconcursos.com.br/noticias/ses-sc-abre-processo-seletivo-com-salarios-de-ate-5670",
+      "imagem": "https://cdn.pci.app.br/img/i/bf56624401433deefeba225fe6a5a0af.png",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": "a, 5 de outubro de 2026 no estado de santa catarina, a secretaria de estado da saude (ses) divulgou um edital de processo seletivo simplificado para preencher vagas em funcoes de nivel medio e superior. segundo o edital, as oportunidades sao para os cargos de: grande florianopolis - unidades da ses tecnico em informatica (1 vaga) engenheiro eletricista (1 vaga) florianopolis - centro catarinense de reabilitacao tecnico em protese e ortese (1 vaga) sao jose - instituto de psiquiatria terapeuta ocupacional (1 vaga) sao pedro de alcantara - hospital santa teresa terapeuta ocupacional (1 vaga) a carga horaria minima e "
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "SC",
+      "cidade": "",
+      "inscricoes_inicio_texto": "2 de outubro de 2026",
+      "inscricoes_fim_texto": "16 de outubro de 2026",
+      "inscricoes_texto": "2 de outubro de 2026 a 16 de outubro de 2026",
+      "remuneracao_faixa_texto": "R$ 5.670,38",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Grande Florianópolis - Unidades da SES Técnico em Informática",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "aberto",
+        "completude": "completa",
+        "inicio": "2026-10-02",
+        "fim": "2026-10-16",
+        "texto_original": "2 de outubro de 2026 a 16 de outubro de 2026"
+      },
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-10-02",
+          "fim": "2026-10-16"
+        },
+        "participacao": [
+          {
+            "tipo": "candidatura",
+            "inicio": "2026-10-02",
+            "fim": "2026-10-16",
+            "status": "aberto"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pci:noticia:cgu-abre-concurso-publico-com-vagas-para-auditores-federais-de-financas-e-controle",
+      "titulo": "CGU - Controladoria-Geral da União",
+      "url": "https://www.pciconcursos.com.br/noticias/cgu-abre-concurso-publico-com-vagas-para-auditores-federais-de-financas-e-controle",
+      "imagem": "https://cdn.pci.app.br/img/i/1e5a645adfbe19d6db8927f8a94112c0.png",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "cgu abre concurso publico com vagas para auditores federais de financas e controle oportunidades contemplam especialidades em auditoria e tecnologia da informacao, com subsidio inicial de r$ 20.000,00 e jornada de 40 horas semanais. a selecao sera realizada por meio de provas objetivas e discursivas. concursos › noticias › centro-oeste sexta-feira, 9 de outubro de 2026 a controladoria-geral da uniao (cgu) publicou o edital de concurso publico para o preenchi"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "PA",
+      "cidade": "",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "R$ 20.000,00",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Tecnologia da Informação - Ciência de Dados",
+          "vagas_texto": "10 vagas",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        },
+        {
+          "cargo": "Tecnologia da Informação - Infraestrutura de TI",
+          "vagas_texto": "10 vagas",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        },
+        {
+          "cargo": "Tecnologia da Informação - Desenvolvimento de Sistemas",
+          "vagas_texto": "10 vagas",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "prazo_desconhecido",
+        "completude": "desconhecida"
+      }
+    },
+    {
+      "id": "pci:noticia:tce-go-retifica-concurso-publico-para-tecnicos-de-controle-externo",
+      "titulo": "TCE - Tribunal de Contas do Estado de Goiás",
+      "url": "https://www.pciconcursos.com.br/noticias/tce-go-retifica-concurso-publico-para-tecnicos-de-controle-externo",
+      "imagem": "https://cdn.pci.app.br/img/i/49d0f07f837fcc4f15672d89520c62f4.png",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "tce - go retifica concurso publico para tecnicos de controle externo oportunidades contemplam cargos de nivel medio nas areas administrativas e de tecnologia da informacao, com remuneracao inicial de r$ 11.862,19 e selecao composta por provas objetivas e discursivas. concursos › noticias › centro-oeste quarta-feira, 16 de setembro de 2026 o tribunal de contas do estado de goias (tce-go) abriu um concurso publico visando o preenchimento de vagas para profissionais de "
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "GO",
+      "cidade": "",
+      "inscricoes_inicio_texto": "5 de outubro de 2026",
+      "inscricoes_fim_texto": "6 de novembro de 2026",
+      "inscricoes_texto": "5 de outubro de 2026 a 6 de novembro de 2026",
+      "remuneracao_faixa_texto": "R$ 11.862,19",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Tecnologia da Informação",
+          "vagas_texto": "10 vagas",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "aberto",
+        "completude": "completa",
+        "inicio": "2026-10-05",
+        "fim": "2026-11-06",
+        "texto_original": "5 de outubro de 2026 a 6 de novembro de 2026"
+      },
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-10-05",
+          "fim": "2026-11-06"
+        },
+        "participacao": [
+          {
+            "tipo": "candidatura",
+            "inicio": "2026-10-05",
+            "fim": "2026-11-06",
+            "status": "aberto"
+          }
+        ]
       }
     }
   ]

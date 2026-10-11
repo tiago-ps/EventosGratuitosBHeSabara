@@ -2,8 +2,8 @@
   "schema": 6,
   "status": "catalogo_completo",
   "fonte": "Catálogo consolidado de cursos gratuitos",
-  "atualizado_em": "2026-10-09T16:09:17.934099+00:00",
-  "total": 1910,
+  "atualizado_em": "2026-10-11T17:18:55.010724+00:00",
+  "total": 1913,
   "cursos": [
     {
       "id_fonte": "359",
@@ -26955,6 +26955,96 @@
           {
             "tipo": "publicacao",
             "valor": "01/10/26",
+            "observacao": "Data de lançamento informada pela fonte; não controla a exibição."
+          }
+        ]
+      }
+    },
+    {
+      "id_fonte": "1595",
+      "titulo": "O Processo Administrativo no Contencioso Fiscal do Brasil",
+      "area": "Direito e Legislação",
+      "competencias": "",
+      "instituicao": "Enap - Escola Nacional de Administração Pública",
+      "instituicao_parceira": "Conselho Administrativo de Recursos Fiscais - CARF",
+      "carga_horaria": "30",
+      "prazo_conclusao_dias": "30",
+      "tipo": "Curso Aberto",
+      "descricao": "Este curso capacitará os participantes a explicar os aspectos do processo administrativo no contencioso fiscal do Brasil, de forma clara, a partir da perspectiva do Conselho Administrativo de Recursos Fiscais (CARF).",
+      "publico_alvo": "Conselheiros do CARF, pessoas interessadas em atuar no Conselho e demais interessados no assunto.",
+      "conteudo_programatico": "Módulo 1 - O contencioso fiscal brasileiro: estrutura e modeloMódulo 2 - Atos e termos processuais do contencioso fiscalMódulo 3 - Comunicação dos atos processuais no contenciosoMódulo 4 - Vícios de atos e termos processuais",
+      "data_lancamento": "09/10/26",
+      "url": "https://www.escolavirtual.gov.br/curso/1595",
+      "imagem": "https://cdn.evg.gov.br/cursos/1595_EVG/imagem_curso_1595.png",
+      "modalidade": "online",
+      "gratuito": true,
+      "fonte": "Escola Virtual de Governo (EV.G)",
+      "temporalidade": {
+        "classe": "atemporal",
+        "referencia": [
+          {
+            "tipo": "publicacao",
+            "valor": "09/10/26",
+            "observacao": "Data de lançamento informada pela fonte; não controla a exibição."
+          }
+        ]
+      }
+    },
+    {
+      "id_fonte": "1597",
+      "titulo": "Procedimentos e Recursos no Processo Administrativo Fiscal em primeira instância",
+      "area": "Direito e Legislação",
+      "competencias": "",
+      "instituicao": "Enap - Escola Nacional de Administração Pública",
+      "instituicao_parceira": "Conselho Administrativo de Recursos Fiscais - CARF",
+      "carga_horaria": "30",
+      "prazo_conclusao_dias": "30",
+      "tipo": "Curso Aberto",
+      "descricao": "O curso \"Procedimentos e Recursos no Processo Administrativo Fiscal em Primeira Instância\" aborda de maneira aprofundada os procedimentos e recursos aplicados no julgamento de primeira instância, com foco nos normativos do CARF. O conteúdo é direcionado a conselheiros do CARF, pessoas interessadas em atuar no Conselho e demais interessados no assunto. O objetivo é fornecer o conhecimento necessário para a atuação eficiente e precisa em processos administrativos fiscais, garantindo a compreensão dos aspectos procedimentais e normativos, bem como das competências exigidas.",
+      "publico_alvo": "Conselheiros do CARF, pessoas interessadas em atuar no Conselho e demais interessados no assunto.",
+      "conteudo_programatico": "Módulo 1 - Impugnação e manifestação de inconformidade, concordância e revelia; medidas da litigiosidadeMódulo 2 - Requisitos da impugnação e da manifestação de inconformidadeMódulo 3 - O julgamento em primeira instância",
+      "data_lancamento": "09/10/26",
+      "url": "https://www.escolavirtual.gov.br/curso/1597",
+      "imagem": "https://cdn.evg.gov.br/cursos/1597_EVG/imagem_curso_1597.png",
+      "modalidade": "online",
+      "gratuito": true,
+      "fonte": "Escola Virtual de Governo (EV.G)",
+      "temporalidade": {
+        "classe": "atemporal",
+        "referencia": [
+          {
+            "tipo": "publicacao",
+            "valor": "09/10/26",
+            "observacao": "Data de lançamento informada pela fonte; não controla a exibição."
+          }
+        ]
+      }
+    },
+    {
+      "id_fonte": "1596",
+      "titulo": "Provas e Exigência Fiscal do Processo Administrativo Fiscal do CARF",
+      "area": "Direito e Legislação",
+      "competencias": "",
+      "instituicao": "Enap - Escola Nacional de Administração Pública",
+      "instituicao_parceira": "Conselho Administrativo de Recursos Fiscais - CARF",
+      "carga_horaria": "25",
+      "prazo_conclusao_dias": "30",
+      "tipo": "Curso Aberto",
+      "descricao": "Este curso capacitará os participantes a descrever as provas e a exigência fiscal relacionadas ao Processo Administrativo Fiscal no contexto do Conselho Administrativo de Recursos Fiscais (CARF), de forma precisa, com base nos instrumentos normativos do órgão.",
+      "publico_alvo": "Conselheiros do CARF, pessoas interessadas em atuar no Conselho e demais interessados no assunto.",
+      "conteudo_programatico": "Módulo 1 - As provas no Processo Administrativo Fiscal (PAF)Módulo 2 - A exigência fiscal no Processo Administrativo Fiscal",
+      "data_lancamento": "09/10/26",
+      "url": "https://www.escolavirtual.gov.br/curso/1596",
+      "imagem": "https://cdn.evg.gov.br/cursos/1596_EVG/imagem_curso_1596.png",
+      "modalidade": "online",
+      "gratuito": true,
+      "fonte": "Escola Virtual de Governo (EV.G)",
+      "temporalidade": {
+        "classe": "atemporal",
+        "referencia": [
+          {
+            "tipo": "publicacao",
+            "valor": "09/10/26",
             "observacao": "Data de lançamento informada pela fonte; não controla a exibição."
           }
         ]
