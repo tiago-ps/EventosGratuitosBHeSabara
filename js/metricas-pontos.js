@@ -1,41 +1,34 @@
 (() => {
   'use strict';
 
-  const STORAGE_KEY = 'mural:origem-sessao-v1';
+  const POINT_STORAGE_KEY = 'mural:origem-sessao-v1';
+  const GENERAL_STORAGE_KEY = 'mural:audiencia-geral-v1';
   const SESSION_TTL_MS = 30 * 60 * 1000;
   const PANEL_HEARTBEAT_MS = 60 * 1000;
   const MAX_OPENED_ITEMS = 500;
-  const POINT_RE = /^[a-z0-9](?:[a-z0-9-]{0,62}[a-z0-9])?$/;
+  const SLUG_RE = /^[a-z0-9](?:[a-z0-9-]{0,62}[a-z0-9])?$/;
   const CONTENT_TYPE_RE = /^[a-z0-9_]+$/;
   const PUBLIC_ORIGIN = 'https://temsimuai.com.br';
 
-  function metricsApiUrl() {
+  function apiUrl(path) {
     if (window.location.hostname === 'tiago-ps.github.io') {
-      return PUBLIC_ORIGIN + '/api/metricas-pontos';
+      return PUBLIC_ORIGIN + path;
     }
-    return '/api/metricas-pontos';
-  }
-
-  function panelHeartbeatApiUrl() {
-    if (window.location.hostname === 'tiago-ps.github.io') {
-      return PUBLIC_ORIGIN + '/api/metricas-pontos/painel';
-    }
-    return '/api/metricas-pontos/painel';
+    return path;
   }
 
   function environmentName() {
     return window.location.hostname === 'tiago-ps.github.io' ? 'teste' : 'publico';
   }
 
-  function normalizePoint(value) {
-    const point = String(value || '').trim().toLowerCase();
-    return POINT_RE.test(point) ? point : '';
+  function normalizeSlug(value) {
+    const slug = String(value || '').trim().toLowerCase();
+    return SLUG_RE.test(slug) ? slug : '';
   }
 
   function normalizePanel(value) {
-    const panel = String(value || '').trim().toLowerCase();
-    if (!panel) return 'principal';
-    return POINT_RE.test(panel) ? panel : '';
+    const panel = normalizeSlug(value);
+    return panel || (String(value || '').trim() ? '' : 'principal');
   }
 
   function isContentId(value) {
@@ -48,17 +41,58 @@
     return !Array.from(id).some(char => char.trim() === '');
   }
 
-  function startPanelExposureTracking(pageUrl) {
-    const point = normalizePoint(pageUrl.searchParams.get('ponto'));
-    if (!point) return;
+  function safeRead(key) {
+    try {
+      const parsed = JSON.parse(sessionStorage.getItem(key) || 'null');
+      if (!parsed || Number(parsed.expiresAt || 0) <= Date.now()) {
+        sessionStorage.removeItem(key);
+        return null;
+      }
+      parsed.opened = Array.isArray(parsed.opened) ? parsed.opened.slice(0, MAX_OPENED_ITEMS) : [];
+      return parsed;
+    } catch {
+      return null;
+    }
+  }
 
+  function safeWrite(key, value) {
+    try {
+      sessionStorage.setItem(key, JSON.stringify(value));
+    } catch {
+      // As métricas são opcionais. O Mural continua funcionando sem storage.
+    }
+  }
+
+  function safeRemove(key) {
+    try {
+      sessionStorage.removeItem(key);
+    } catch {}
+  }
+
+  function removeTrackingParams() {
+    try {
+      const url = new URL(window.location.href);
+      let changed = false;
+      for (const key of ['origem', 'canal']) {
+        if (url.searchParams.has(key)) {
+          url.searchParams.delete(key);
+          changed = true;
+        }
+      }
+      if (changed) history.replaceState(history.state, '', url);
+    } catch {}
+  }
+
+  function startPanelExposureTracking(pageUrl) {
+    const point = normalizeSlug(pageUrl.searchParams.get('ponto'));
+    if (!point) return;
     const panel = normalizePanel(pageUrl.searchParams.get('painel'));
     if (!panel) return;
 
     const heartbeat = () => {
       if (document.visibilityState !== 'visible') return;
       try {
-        fetch(panelHeartbeatApiUrl(), {
+        fetch(apiUrl('/api/metricas-pontos/painel'), {
           method: 'POST',
           headers: { 'content-type': 'application/json' },
           body: JSON.stringify({
@@ -69,101 +103,129 @@
           keepalive: true,
           credentials: 'omit'
         }).catch(() => {});
-      } catch {
-        // A medição de exposição nunca pode interromper a exibição do Mural.
-      }
+      } catch {}
     };
 
     window.setInterval(heartbeat, PANEL_HEARTBEAT_MS);
   }
 
-  function readState() {
-    try {
-      const parsed = JSON.parse(sessionStorage.getItem(STORAGE_KEY) || 'null');
-      if (!parsed || !normalizePoint(parsed.ponto)) return null;
-      if (Number(parsed.expiresAt || 0) <= Date.now()) {
-        sessionStorage.removeItem(STORAGE_KEY);
-        return null;
-      }
-      parsed.opened = Array.isArray(parsed.opened) ? parsed.opened.slice(0, MAX_OPENED_ITEMS) : [];
-      return parsed;
-    } catch {
-      return null;
-    }
-  }
-
-  function writeState(current) {
-    try {
-      sessionStorage.setItem(STORAGE_KEY, JSON.stringify(current));
-    } catch {
-      // Métricas são opcionais: o Mural segue funcionando quando o storage é bloqueado.
-    }
-  }
-
-  function removeOriginFromVisibleUrl() {
-    try {
-      const url = new URL(window.location.href);
-      if (!url.searchParams.has('origem')) return;
-      url.searchParams.delete('origem');
-      history.replaceState(history.state, '', url);
-    } catch {
-      // A navegação continua normalmente mesmo sem History API.
-    }
-  }
-
-  function sendMetric(current, acao, conteudoId = '') {
-    if (!current || !current.ponto) return;
+  function sendPointMetric(state, acao, conteudoId = '') {
+    if (!state?.ponto) return;
     const payload = {
-      ponto: current.ponto,
+      ponto: state.ponto,
       ambiente: environmentName(),
       acao
     };
     if (conteudoId && isContentId(conteudoId)) payload.conteudo_id = conteudoId;
-
     try {
-      fetch(metricsApiUrl(), {
+      fetch(apiUrl('/api/metricas-pontos'), {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify(payload),
         keepalive: true,
         credentials: 'omit'
       }).catch(() => {});
-    } catch {
-      // Telemetria não pode interromper a experiência.
-    }
+    } catch {}
   }
 
-  function newTrackedSession(point) {
-    const current = {
+  function sendGeneralMetric(state, acao, conteudoId = '') {
+    if (!state?.origem_tipo || !state?.origem) return;
+    const payload = {
+      origem_tipo: state.origem_tipo,
+      origem: state.origem,
+      ambiente: environmentName(),
+      acao
+    };
+    if (conteudoId && isContentId(conteudoId)) payload.conteudo_id = conteudoId;
+    try {
+      fetch(apiUrl('/api/metricas-gerais'), {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify(payload),
+        keepalive: true,
+        credentials: 'omit'
+      }).catch(() => {});
+    } catch {}
+  }
+
+  function newPointState(point) {
+    const state = {
       ponto: point,
-      startedAt: Date.now(),
       expiresAt: Date.now() + SESSION_TTL_MS,
       engaged: false,
       opened: []
     };
-    writeState(current);
-    sendMetric(current, 'entrada');
-    return current;
+    safeWrite(POINT_STORAGE_KEY, state);
+    sendPointMetric(state, 'entrada');
+    return state;
+  }
+
+  function newGeneralState(sourceType, source) {
+    const state = {
+      origem_tipo: sourceType,
+      origem: source,
+      expiresAt: Date.now() + SESSION_TTL_MS,
+      engaged: false,
+      opened: []
+    };
+    safeWrite(GENERAL_STORAGE_KEY, state);
+    sendGeneralMetric(state, 'entrada');
+    return state;
   }
 
   const pageUrl = new URL(window.location.href);
   startPanelExposureTracking(pageUrl);
 
-  const incomingPoint = normalizePoint(pageUrl.searchParams.get('origem'));
-  let state = incomingPoint ? newTrackedSession(incomingPoint) : readState();
-  if (incomingPoint) removeOriginFromVisibleUrl();
-  if (!state) return;
+  const incomingPoint = normalizeSlug(pageUrl.searchParams.get('origem'));
+  const incomingChannel = normalizeSlug(pageUrl.searchParams.get('canal'));
 
-  function touchState() {
+  let pointState = null;
+  if (incomingPoint) {
+    pointState = newPointState(incomingPoint);
+  } else if (incomingChannel) {
+    safeRemove(POINT_STORAGE_KEY);
+  } else {
+    const restored = safeRead(POINT_STORAGE_KEY);
+    if (restored && normalizeSlug(restored.ponto)) pointState = restored;
+  }
+
+  let generalState;
+  if (incomingPoint) {
+    generalState = newGeneralState('ponto', incomingPoint);
+  } else if (incomingChannel) {
+    generalState = newGeneralState('canal', incomingChannel);
+  } else {
+    const restored = safeRead(GENERAL_STORAGE_KEY);
+    if (restored &&
+        ['direto', 'canal', 'ponto'].includes(String(restored.origem_tipo || '')) &&
+        (restored.origem_tipo === 'direto' || normalizeSlug(restored.origem))) {
+      generalState = restored;
+    } else if (pointState?.ponto) {
+      generalState = newGeneralState('ponto', pointState.ponto);
+    } else {
+      generalState = newGeneralState('direto', 'direto');
+    }
+  }
+
+  if (incomingPoint || incomingChannel) removeTrackingParams();
+
+  function touchState(key, state) {
+    if (!state) return;
     state.expiresAt = Date.now() + SESSION_TTL_MS;
-    writeState(state);
+    safeWrite(key, state);
   }
 
   function markEngaged() {
-    if (!state || state.engaged) return;
-    state.engaged = true;
-    touchState();
-    sendMetric(state, 'sessao_ativa');
+    if (generalState && !generalState.engaged) {
+      generalState.engaged = true;
+      touchState(GENERAL_STORAGE_KEY, generalState);
+      sendGeneralMetric(generalState, 'sessao_ativa');
+    }
+    if (pointState && !pointState.engaged) {
+      pointState.engaged = true;
+      touchState(POINT_STORAGE_KEY, pointState);
+      sendPointMetric(pointState, 'sessao_ativa');
+    }
   }
 
   function contentIdFromElement(element) {
@@ -174,15 +236,21 @@
 
   function recordContentId(contentId) {
     const normalized = String(contentId || '').trim();
-    if (!isContentId(normalized) || state.opened.includes(normalized)) return;
-    state.opened.push(normalized);
-    if (state.opened.length > MAX_OPENED_ITEMS) state.opened.shift();
-    touchState();
-    sendMetric(state, 'visualizacao_conteudo', normalized);
-  }
+    if (!isContentId(normalized)) return;
 
-  function markContentViewed(element) {
-    recordContentId(contentIdFromElement(element));
+    if (generalState && !generalState.opened.includes(normalized)) {
+      generalState.opened.push(normalized);
+      if (generalState.opened.length > MAX_OPENED_ITEMS) generalState.opened.shift();
+      touchState(GENERAL_STORAGE_KEY, generalState);
+      sendGeneralMetric(generalState, 'visualizacao_conteudo', normalized);
+    }
+
+    if (pointState && !pointState.opened.includes(normalized)) {
+      pointState.opened.push(normalized);
+      if (pointState.opened.length > MAX_OPENED_ITEMS) pointState.opened.shift();
+      touchState(POINT_STORAGE_KEY, pointState);
+      sendPointMetric(pointState, 'visualizacao_conteudo', normalized);
+    }
   }
 
   ['pointerdown', 'keydown', 'touchstart', 'wheel'].forEach(type => {
@@ -202,7 +270,7 @@
           if (!entry.isIntersecting || entry.intersectionRatio < 0.6) return;
           const timer = setTimeout(() => {
             pendingViews.delete(element);
-            markContentViewed(element);
+            recordContentId(contentIdFromElement(element));
           }, 800);
           pendingViews.set(element, timer);
         });
@@ -237,7 +305,13 @@
   }
 
   window.MuralPointMetrics = Object.freeze({
-    ponto: () => state && state.ponto ? state.ponto : '',
+    ponto: () => pointState?.ponto || '',
+    registrarVisualizacao: recordContentId
+  });
+
+  window.MuralAudienceMetrics = Object.freeze({
+    origemTipo: () => generalState?.origem_tipo || '',
+    origem: () => generalState?.origem || '',
     registrarVisualizacao: recordContentId
   });
 })();
