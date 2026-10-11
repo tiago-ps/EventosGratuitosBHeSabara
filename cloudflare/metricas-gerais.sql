@@ -1,5 +1,5 @@
 -- Métricas anônimas de audiência geral do Mural.
--- Não armazena IP, cookie persistente, fingerprint ou identificador de visitante.
+-- Não armazena dados pessoais nem identificador técnico persistente de visitante.
 -- Cada navegador envia apenas eventos agregáveis da sessão atual.
 
 CREATE TABLE IF NOT EXISTS metricas_gerais_diarias (
