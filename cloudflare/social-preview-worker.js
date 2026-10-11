@@ -37,6 +37,10 @@ const POINT_METRIC_ACTIONS = new Set(['entrada', 'sessao_ativa', 'visualizacao_c
 const POINT_METRIC_ENVIRONMENTS = new Set(['publico', 'teste']);
 const POINT_METRIC_CONTENT_TYPE_RE = /^[a-z0-9_]+$/;
 
+const GENERAL_USAGE_API_PATH = '/api/metricas-gerais';
+const GENERAL_USAGE_ADMIN_PATH = '/api/metricas-gerais/admin';
+const GENERAL_USAGE_SOURCE_TYPES = new Set(['direto', 'canal', 'ponto']);
+
 const GENERAL_ANALYTICS_ADMIN_PATH = '/api/analytics-geral/admin';
 const CLOUDFLARE_GRAPHQL_URL = 'https://api.cloudflare.com/client/v4/graphql';
 const GENERAL_ANALYTICS_MAX_DAYS = 31;
@@ -1180,6 +1184,171 @@ async function handlePointMetricsApi(request, env) {
   }
   if (url.pathname === POINT_METRICS_ADMIN_PATH && request.method === 'GET') {
     return handlePointMetricsAdmin(request, env);
+  }
+  return null;
+}
+
+
+
+async function ensureGeneralUsageTable(env) {
+  if (!env.SUGESTOES_DB) return false;
+  try {
+    await env.SUGESTOES_DB.prepare(
+      "CREATE TABLE IF NOT EXISTS metricas_gerais_diarias (" +
+      "dia TEXT NOT NULL, " +
+      "ambiente TEXT NOT NULL CHECK (ambiente IN ('publico', 'teste')), " +
+      "origem_tipo TEXT NOT NULL CHECK (origem_tipo IN ('direto', 'canal', 'ponto')), " +
+      "origem TEXT NOT NULL, " +
+      "acao TEXT NOT NULL CHECK (acao IN ('entrada', 'sessao_ativa', 'visualizacao_conteudo')), " +
+      "tipo_conteudo TEXT NOT NULL DEFAULT '', " +
+      "conteudo_id TEXT NOT NULL DEFAULT '', " +
+      "quantidade INTEGER NOT NULL DEFAULT 0 CHECK (quantidade >= 0), " +
+      "PRIMARY KEY (dia, ambiente, origem_tipo, origem, acao, tipo_conteudo, conteudo_id)" +
+      ") WITHOUT ROWID"
+    ).run();
+    await env.SUGESTOES_DB.prepare(
+      'CREATE INDEX IF NOT EXISTS idx_metricas_gerais_periodo ' +
+      'ON metricas_gerais_diarias(ambiente, dia, origem_tipo, origem)'
+    ).run();
+    return true;
+  } catch (error) {
+    console.warn('Métricas gerais: não foi possível preparar a tabela.', error);
+    return false;
+  }
+}
+
+function normalizeGeneralUsageSource(type, value) {
+  const sourceType = String(type || '').trim().toLowerCase();
+  if (!GENERAL_USAGE_SOURCE_TYPES.has(sourceType)) return null;
+  if (sourceType === 'direto') return { tipo: 'direto', origem: 'direto' };
+  const source = normalizePointSlug(value);
+  return source ? { tipo: sourceType, origem: source } : null;
+}
+
+async function handleGeneralUsagePost(request, env) {
+  if (!(await ensureGeneralUsageTable(env))) {
+    return jsonResponse({ erro: 'Métricas temporariamente indisponíveis.' }, 503);
+  }
+
+  const contentLength = Number(request.headers.get('content-length') || 0);
+  if (contentLength > 4096) return jsonResponse({ erro: 'Métrica inválida.' }, 413);
+
+  let body;
+  try {
+    body = await request.json();
+  } catch {
+    return jsonResponse({ erro: 'Métrica inválida.' }, 400);
+  }
+
+  const source = normalizeGeneralUsageSource(body?.origem_tipo, body?.origem);
+  const action = String(body?.acao || '').trim();
+  const environment = String(body?.ambiente || '').trim();
+  if (!source || !POINT_METRIC_ACTIONS.has(action) || !POINT_METRIC_ENVIRONMENTS.has(environment)) {
+    return jsonResponse({ erro: 'Métrica inválida.' }, 422);
+  }
+
+  let contentId = '';
+  let contentType = '';
+  if (action === 'visualizacao_conteudo') {
+    contentId = String(body?.conteudo_id || '').trim();
+    if (!validPointMetricContentId(contentId)) {
+      return jsonResponse({ erro: 'Conteúdo inválido.' }, 422);
+    }
+    contentType = contentId.split(':', 1)[0];
+  }
+
+  await env.SUGESTOES_DB.prepare(
+    'INSERT INTO metricas_gerais_diarias ' +
+    '(dia, ambiente, origem_tipo, origem, acao, tipo_conteudo, conteudo_id, quantidade) ' +
+    'VALUES (?, ?, ?, ?, ?, ?, ?, 1) ' +
+    'ON CONFLICT(dia, ambiente, origem_tipo, origem, acao, tipo_conteudo, conteudo_id) ' +
+    'DO UPDATE SET quantidade = quantidade + 1'
+  ).bind(
+    pointMetricsDate(),
+    environment,
+    source.tipo,
+    source.origem,
+    action,
+    contentType,
+    contentId
+  ).run();
+
+  return jsonResponse({ ok: true }, 202);
+}
+
+async function handleGeneralUsageAdmin(request, env) {
+  if (!(await ensureGeneralUsageTable(env))) {
+    return jsonResponse({ erro: 'Métricas temporariamente indisponíveis.' }, 503);
+  }
+  if (!adminAuthorized(request, env)) return jsonResponse({ erro: 'Não autorizado.' }, 401);
+
+  const url = new URL(request.url);
+  const today = pointMetricsDate();
+  const end = normalizeMetricDate(url.searchParams.get('fim'), today);
+  const start = normalizeMetricDate(url.searchParams.get('inicio'), shiftIsoDate(end, -29));
+  if (!start || start > end) return jsonResponse({ erro: 'Período inválido.' }, 422);
+  const maxStart = shiftIsoDate(end, -365);
+  if (maxStart && start < maxStart) {
+    return jsonResponse({ erro: 'O período máximo para uma consulta é de 366 dias.' }, 422);
+  }
+
+  const [summary, daily, sources, contents] = await Promise.all([
+    env.SUGESTOES_DB.prepare(
+      "SELECT ambiente, " +
+      "SUM(CASE WHEN acao = 'entrada' THEN quantidade ELSE 0 END) AS entradas, " +
+      "SUM(CASE WHEN acao = 'sessao_ativa' THEN quantidade ELSE 0 END) AS sessoes_ativas, " +
+      "SUM(CASE WHEN acao = 'visualizacao_conteudo' THEN quantidade ELSE 0 END) AS visualizacoes " +
+      'FROM metricas_gerais_diarias WHERE dia >= ? AND dia <= ? ' +
+      'GROUP BY ambiente ORDER BY ambiente'
+    ).bind(start, end).all(),
+    env.SUGESTOES_DB.prepare(
+      "SELECT dia, ambiente, " +
+      "SUM(CASE WHEN acao = 'entrada' THEN quantidade ELSE 0 END) AS entradas, " +
+      "SUM(CASE WHEN acao = 'sessao_ativa' THEN quantidade ELSE 0 END) AS sessoes_ativas, " +
+      "SUM(CASE WHEN acao = 'visualizacao_conteudo' THEN quantidade ELSE 0 END) AS visualizacoes " +
+      'FROM metricas_gerais_diarias WHERE dia >= ? AND dia <= ? ' +
+      'GROUP BY dia, ambiente ORDER BY dia, ambiente'
+    ).bind(start, end).all(),
+    env.SUGESTOES_DB.prepare(
+      "SELECT ambiente, origem_tipo, origem, " +
+      "SUM(CASE WHEN acao = 'entrada' THEN quantidade ELSE 0 END) AS entradas, " +
+      "SUM(CASE WHEN acao = 'sessao_ativa' THEN quantidade ELSE 0 END) AS sessoes_ativas, " +
+      "SUM(CASE WHEN acao = 'visualizacao_conteudo' THEN quantidade ELSE 0 END) AS visualizacoes " +
+      'FROM metricas_gerais_diarias WHERE dia >= ? AND dia <= ? ' +
+      'GROUP BY ambiente, origem_tipo, origem ORDER BY entradas DESC, origem_tipo, origem'
+    ).bind(start, end).all(),
+    env.SUGESTOES_DB.prepare(
+      "SELECT ambiente, tipo_conteudo, conteudo_id, SUM(quantidade) AS visualizacoes " +
+      "FROM metricas_gerais_diarias " +
+      "WHERE dia >= ? AND dia <= ? AND acao = 'visualizacao_conteudo' " +
+      'GROUP BY ambiente, tipo_conteudo, conteudo_id ' +
+      'ORDER BY visualizacoes DESC LIMIT 1000'
+    ).bind(start, end).all()
+  ]);
+
+  return jsonResponse({
+    inicio: start,
+    fim: end,
+    resumo: summary.results || [],
+    diario: daily.results || [],
+    origens: sources.results || [],
+    conteudos: contents.results || []
+  });
+}
+
+async function handleGeneralUsageApi(request, env) {
+  const url = new URL(request.url);
+  if (url.pathname === GENERAL_USAGE_API_PATH && request.method === 'OPTIONS') {
+    return withSuggestionCors(request, env, new Response(null, {
+      status: 204,
+      headers: { 'cache-control': 'no-store' }
+    }));
+  }
+  if (url.pathname === GENERAL_USAGE_API_PATH && request.method === 'POST') {
+    return withSuggestionCors(request, env, await handleGeneralUsagePost(request, env));
+  }
+  if (url.pathname === GENERAL_USAGE_ADMIN_PATH && request.method === 'GET') {
+    return handleGeneralUsageAdmin(request, env);
   }
   return null;
 }
@@ -2553,6 +2722,9 @@ export default {
 
     const pointMetricsResponse = await handlePointMetricsApi(request, env);
     if (pointMetricsResponse) return pointMetricsResponse;
+
+    const generalUsageResponse = await handleGeneralUsageApi(request, env);
+    if (generalUsageResponse) return generalUsageResponse;
 
     const generalAnalyticsResponse = await handleGeneralAnalyticsApi(request, env);
     if (generalAnalyticsResponse) return generalAnalyticsResponse;
