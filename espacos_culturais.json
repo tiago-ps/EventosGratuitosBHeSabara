@@ -798,10 +798,10 @@
     {
       "id": "biblioteca-rmbh-belo-horizonte-biblioteca-agostinho-pestana-escola-de-saude-publica-de-mg",
       "nome": "Biblioteca Agostinho Pestana – Escola de Saúde Pública de MG",
-      "descricao": "Biblioteca (Pública – especializada) em Belo Horizonte, Minas Gerais. Biblioteca especializada em saúde pública; link de catálogo público não identificado. Situação da fonte: Identificada em fonte institucional. Catálogo público online não localizado. Cadastro preliminar: confirmar funcionamento, endereço e condições de acesso antes da aprovação.",
+      "descricao": "Desde sua fundação, em 1946, a biblioteca oferece suporte para o aprofundamento dos conteúdos apresentados em sala de aula além de disponibilizar seu acervo para a comunidade, sendo considerada referência para pesquisadores da área da saúde e para aqueles que se preparam para concursos públicos",
       "site": "https://esp.mg.gov.br/institucional/espmg/",
-      "imagem": "",
-      "imagem_fonte": "",
+      "imagem": "imagens/equipamentos/biblioteca-rmbh-belo-horizonte-biblioteca-agostinho-pestana-escola-de-saude-publica-de-mg.png",
+      "imagem_fonte": "https://esp.mg.gov.br/wp-content/uploads/2025/05/shared-image.jpg",
       "funcionamento": {
         "segunda": "",
         "terca": "",
@@ -810,15 +810,26 @@
         "sexta": "",
         "sabado": "",
         "domingo": "",
-        "observacao": "Horários e condições de atendimento ainda não verificados."
+        "observacao": "Segunda a sexta - 8h00 as 18h00"
       },
-      "status_editorial": "em_analise",
-      "redes_sociais": {},
+      "status_editorial": "revisado",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/esp.mg/"
+      },
       "contatos": {
-        "emails": [],
-        "telefones": []
+        "emails": [
+          "biblioteca@esp.mg.gov.br"
+        ],
+        "telefones": [
+          "(31) 3295-4010"
+        ]
       },
-      "links_adicionais": [],
+      "links_adicionais": [
+        {
+          "rotulo": "Consulta ao Acervo",
+          "url": "https://esp.phlnet.com.br/cgi-bin/wxis.exe?IsisScript=phl84.xis&cipar=phl84.cip&lang=por"
+        }
+      ],
       "tipo_espaco": "Biblioteca especializada",
       "vocacoes": [
         "Leitura",
@@ -826,7 +837,7 @@
         "Biblioteca"
       ],
       "exibicao_ativa": true,
-      "exibicao_recorrente": false,
+      "exibicao_recorrente": true,
       "prioridade": 0,
       "cidade": "Belo Horizonte",
       "endereco": "Av. Augusto de Lima, 2061 (entrada Rua Uberaba, s/n) – Barro Preto, Belo Horizonte - MG",
