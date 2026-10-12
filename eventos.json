@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Março de 2026 a Junho de 2027",
-  "atualizado_em": "2026-10-11T17:51:05-03:00",
+  "atualizado_em": "2026-10-12T15:26:15-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -5675,38 +5675,6 @@
       "espaco_interno": "Galerias do Térreo"
     },
     {
-      "id": "casa-fiat-celebrar-as-ruas-50-anos-de-fiat-e-brasilidade-na-casa-fiat-de-cultura-2026-07-07-sem-hora",
-      "titulo": "Celebrar as ruas: 50 anos de Fiat e brasilidade na Casa Fiat de Cultura",
-      "data": "2026-07-07",
-      "data_fim": "2026-10-11",
-      "horario": "",
-      "local": "Casa Fiat de Cultura",
-      "local_id": "casa-fiat-de-cultura",
-      "cidade": "Belo Horizonte",
-      "endereco": "Praça da Liberdade, 10, Funcionários, Belo Horizonte - MG",
-      "categoria": "Cultura",
-      "gratuito": true,
-      "inscricao": "Programação gratuita conforme informação oficial da Casa Fiat de Cultura; consulte a página para inscrição, retirada de senha ou lotação quando aplicável.",
-      "descricao": "Celebrar as ruas: 50 anos de Fiat e brasilidade na Casa Fiat de Cultura 7/jul a 11/out/26 EXPOSIÇÃO INÉDITA DA CASA FIAT DE CULTURA EXPANDE O OLHAR SOBRE O AUTOMÓVEL E A BRASILIDADE A mostra apresenta mais de 250 obras e objetos e ocupa todos os espaços do centro cultural na Praça da Liberdade (BH) reunindo arte, história e design Espaços de convivência e troca, as ruas revelam um Brasil plural, vibrante e em movimento, onde tradição e inovação caminham lado a lado, moldando formas de viver e de imaginar o futuro.",
-      "imagem": "https://casafiatdecultura.com.br/wp-content/uploads/2026/06/08072026_Foto_Leo_Lara_0M1A5802-scaled.jpg",
-      "link": "https://casafiatdecultura.com.br/evento/celebrar-as-ruas-50-anos-de-fiat-e-brasilidade-na-casa-fiat-de-cultura/",
-      "fonte": "Casa Fiat de Cultura — programação oficial",
-      "pagina": "https://casafiatdecultura.com.br/evento/celebrar-as-ruas-50-anos-de-fiat-e-brasilidade-na-casa-fiat-de-cultura/",
-      "instituicao_id": "casa-fiat-de-cultura",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat",
-      "temporalidade": {
-        "classe": "periodo",
-        "realizacao": {
-          "inicio": "2026-07-07",
-          "fim": "2026-10-11"
-        }
-      },
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
-    },
-    {
       "id": "ccbb-bh-joaquin-torres-garcia-150-anos",
       "titulo": "Joaquín Torres García – 150 anos",
       "data": "2026-07-15",
@@ -6340,192 +6308,6 @@
         }
       },
       "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+UFMG%2C+Avenida+Santos+Dumont%2C+174%2C+Centro%2C+Belo+Horizonte+-+MG"
-    },
-    {
-      "id": "casa-fiat-atelie-aberto-paisagem-construida-2026-10-11-1030",
-      "titulo": "Ateliê Aberto | Paisagem construída",
-      "data": "2026-10-11",
-      "data_fim": "",
-      "horario": "10h30",
-      "local": "Casa Fiat de Cultura",
-      "local_id": "casa-fiat-de-cultura",
-      "cidade": "Belo Horizonte",
-      "endereco": "Praça da Liberdade, 10, Funcionários, Belo Horizonte - MG",
-      "categoria": "Oficina",
-      "gratuito": true,
-      "inscricao": "Programação gratuita conforme informação oficial da Casa Fiat de Cultura; consulte a página para inscrição, retirada de senha ou lotação quando aplicável.",
-      "descricao": "Ateliê Aberto | Paisagem construída 1, 3, 4, 8, 10, 11, 15, 17, 18, 22, 24, 25 e 29/out Quantas paisagens cabem em um mesmo lugar? Inspirado na exposição “Mil maneiras de matar o tempo”, da artista porto-alegrense Talita Hoffmann, o Ateliê Aberto propõe uma experiência de desaceleração do olhar. Por meio de visores cartonados, o público é convidado a recortar a paisagem e perceber detalhes entre formas, jogos de luz e texturas. Cada participante transforma o que observa em uma composição sobre tecido. Entre a observação e a imaginação,",
-      "imagem": "https://casafiatdecultura.com.br/wp-content/uploads/2026/09/Banners-newsletter-outubro_ATELIE-ABERTO-1024x384.png",
-      "link": "https://casafiatdecultura.com.br/evento/atelie-aberto-paisagem-construida/",
-      "fonte": "Casa Fiat de Cultura — programação oficial",
-      "pagina": "https://casafiatdecultura.com.br/evento/atelie-aberto-paisagem-construida/",
-      "instituicao_id": "casa-fiat-de-cultura",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-11",
-          "observacao": "10h30"
-        }
-      },
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
-    },
-    {
-      "id": "filarmonica-mg-concertos-para-a-juventude-6-2026-2026-10-11",
-      "titulo": "Concertos para a Juventude 6 (2026)",
-      "data": "2026-10-11",
-      "data_fim": "",
-      "horario": "11h",
-      "local": "Sala Minas Gerais",
-      "cidade": "Belo Horizonte",
-      "endereco": "Rua Tenente Brito Melo, 1090, Barro Preto, Belo Horizonte - MG",
-      "categoria": "Música",
-      "gratuito": true,
-      "inscricao": "Concerto gratuito conforme agenda oficial da Filarmônica de Minas Gerais; consulte a página para retirada de ingressos e regras de acesso.",
-      "descricao": "Concertos para a Juventude 6 (2026). Consulte o repertório, os artistas e as orientações de acesso na programação oficial da Filarmônica de Minas Gerais.",
-      "imagem": "https://filarmonica.art.br/wp-content/uploads/2025/10/share-image.webp",
-      "link": "https://filarmonica.art.br/event/concertos-para-a-juventude-6-2026/",
-      "pagina": "https://filarmonica.art.br/event/concertos-para-a-juventude-6-2026/",
-      "fonte": "Filarmônica de Minas Gerais — agenda oficial",
-      "instituicao_id": "instituto-cultural-filarmonica",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "marcador_gratuito_agenda",
-      "local_id": "sala-minas-gerais",
-      "status_validacao": "aprovado",
-      "origem_experimental": "filarmonica_mg",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-11",
-          "observacao": "11h"
-        }
-      },
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Sala+Minas+Gerais%2C+Rua+Tenente+Brito+Melo%2C+1090%2C+Barro+Preto%2C+Belo+Horizonte+-+MG"
-    },
-    {
-      "id": "ufmg-ec-atelie-tarde-de-jogos-semana-das-criancas",
-      "titulo": "Ateliê “Tarde de Jogos” – Semana das Crianças",
-      "data": "2026-10-11",
-      "data_fim": "",
-      "horario": "14h",
-      "local": "Espaço do Conhecimento UFMG",
-      "cidade": "Belo Horizonte",
-      "categoria": "Oficina",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "Durante a atividade, o público será convidado a experienciar diversos jogos de tabuleiro que utilizam cartas, peças e outros elementos analógicos. Para que os visitantes possam interagir e se divertir de maneira coletiva, os jogos serão disponibilizados na sala de oficinas do museu,",
-      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/09/11.10-Atelie-Tarde-de-Jogos-Creditos-Maria-Clara-Ottoni-Alvarenga-Divulgacao-Espaco-do-Conhecimento-UFMG-scaled.jpg",
-      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/atelie-tarde-de-jogos-semana-das-criancas/",
-      "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-11",
-          "observacao": "14h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "espaco-conhecimento-ufmg",
-      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
-    },
-    {
-      "id": "casa-fiat-atelie-aberto-paisagem-construida-2026-10-11-15",
-      "titulo": "Ateliê Aberto | Paisagem construída",
-      "data": "2026-10-11",
-      "data_fim": "",
-      "horario": "15h",
-      "local": "Casa Fiat de Cultura",
-      "local_id": "casa-fiat-de-cultura",
-      "cidade": "Belo Horizonte",
-      "endereco": "Praça da Liberdade, 10, Funcionários, Belo Horizonte - MG",
-      "categoria": "Oficina",
-      "gratuito": true,
-      "inscricao": "Programação gratuita conforme informação oficial da Casa Fiat de Cultura; consulte a página para inscrição, retirada de senha ou lotação quando aplicável.",
-      "descricao": "Ateliê Aberto | Paisagem construída 1, 3, 4, 8, 10, 11, 15, 17, 18, 22, 24, 25 e 29/out Quantas paisagens cabem em um mesmo lugar? Inspirado na exposição “Mil maneiras de matar o tempo”, da artista porto-alegrense Talita Hoffmann, o Ateliê Aberto propõe uma experiência de desaceleração do olhar. Por meio de visores cartonados, o público é convidado a recortar a paisagem e perceber detalhes entre formas, jogos de luz e texturas. Cada participante transforma o que observa em uma composição sobre tecido. Entre a observação e a imaginação,",
-      "imagem": "https://casafiatdecultura.com.br/wp-content/uploads/2026/09/Banners-newsletter-outubro_ATELIE-ABERTO-1024x384.png",
-      "link": "https://casafiatdecultura.com.br/evento/atelie-aberto-paisagem-construida/",
-      "fonte": "Casa Fiat de Cultura — programação oficial",
-      "pagina": "https://casafiatdecultura.com.br/evento/atelie-aberto-paisagem-construida/",
-      "instituicao_id": "casa-fiat-de-cultura",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-11",
-          "observacao": "15h"
-        }
-      },
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
-    },
-    {
-      "id": "casa-fiat-visita-tematica-celebrar-as-ruas-50-anos-de-fiat-e-brasilidade-brasil-com-s-o-espetaculo-de-ser-brasileiro-2026-10-11-16",
-      "titulo": "Visita temática “Celebrar as ruas: 50 anos de Fiat e brasilidade” | Brasil com S: o espetáculo de ser brasileiro",
-      "data": "2026-10-11",
-      "data_fim": "",
-      "horario": "16h",
-      "local": "Casa Fiat de Cultura",
-      "local_id": "casa-fiat-de-cultura",
-      "cidade": "Belo Horizonte",
-      "endereco": "Praça da Liberdade, 10, Funcionários, Belo Horizonte - MG",
-      "categoria": "Visita guiada",
-      "gratuito": true,
-      "inscricao": "Programação gratuita conforme informação oficial da Casa Fiat de Cultura; consulte a página para inscrição, retirada de senha ou lotação quando aplicável.",
-      "descricao": "Visita temática “Celebrar as ruas: 50 anos de Fiat e brasilidade” | Brasil com S: o espetáculo de ser brasileiro 11/out O que faz um gesto, uma torcida ou uma festa virarem arte? Inspirado na obra de Nelson Leirner e na pergunta que ele respondeu sobre a arte no futebol, este percurso passa por temas como futebol, Carnaval, festas populares, fé e cultura de rua, refletindo sobre como gestos, rituais e celebrações constroem identidades e memórias compartilhadas. Em diálogo com a antropofagia de Oswald de Andrade, a atividade propõe uma nova leitura sobre a arte presente nas formas de viver,",
-      "imagem": "https://casafiatdecultura.com.br/wp-content/uploads/2026/09/Banners-newsletter-outubro_VISITA-3-1024x384.png",
-      "link": "https://casafiatdecultura.com.br/evento/visita-tematica-celebrar-as-ruas-50-anos-de-fiat-e-brasilidade-brasil-com-s-o-espetaculo-de-ser-brasileiro-2/",
-      "fonte": "Casa Fiat de Cultura — programação oficial",
-      "pagina": "https://casafiatdecultura.com.br/evento/visita-tematica-celebrar-as-ruas-50-anos-de-fiat-e-brasilidade-brasil-com-s-o-espetaculo-de-ser-brasileiro-2/",
-      "instituicao_id": "casa-fiat-de-cultura",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-11",
-          "observacao": "16h"
-        }
-      },
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
-    },
-    {
-      "id": "cine-santa-tereza-bileto-128030",
-      "titulo": "SESSÃO ESPECIAL - Bad Lieutenant",
-      "data": "2026-10-11",
-      "data_fim": "",
-      "horario": "18h30",
-      "local": "Cine Santa Tereza",
-      "cidade": "Belo Horizonte",
-      "categoria": "Cinema",
-      "gratuito": true,
-      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial. Também há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade.",
-      "descricao": "Bad Lieutenant (Vício frenético | Abel Ferrara | EUA | Policial/Drama | 1992 | 96 min) Enquanto investiga o estupro de uma jovem freira, um detetive corrupto da polícia de Nova Iorque com um grave vício em drogas e jogos de azar, tenta mudar seus caminhos e encontrar o perdão e a redenção. Classificação indicativa: 18 anos",
-      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/7bsu2ij922vakmefraan5ps5vbork3m3ijeo50dhc4sh3g3pm4mutjaoo8g7hkmhottncu4mghodo8j0rms31a3gj8dkbuegerqk8c.webp",
-      "link": "https://bileto.sympla.com.br/event/128030/d/419257/s/2719819",
-      "fonte": "Cine Santa Tereza",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "fonte_id": "128030",
-      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
-      "classificacao_indicativa": "18 anos",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-11",
-          "observacao": "18h30"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
     {
       "id": "manual-manual-instagram-17933113986370029-2026-10-12",
@@ -11662,5 +11444,5 @@
   ],
   "modo_teste_experimental": true,
   "eventos_somente_teste": 4,
-  "atualizado_em_teste": "2026-10-11T17:51:56-03:00"
+  "atualizado_em_teste": "2026-10-12T15:26:51-03:00"
 }
