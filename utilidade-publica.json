@@ -628,7 +628,7 @@
         "Economia",
         "Belo Horizonte"
       ],
-      "periodo_referencia": "2026-08",
+      "periodo_referencia": "2026-09",
       "escopo_geografico": {
         "tipo": "municipal",
         "pais": "BR",
@@ -674,7 +674,8 @@
           "dados.variacao_12_meses_percentual",
           "atualizacao.ultima_alteracao",
           "dados.fonte_release_url"
-        ]
+        ],
+        "ultima_alteracao": "2026-10-20T22:06:48Z"
       },
       "tempo_slide": 15,
       "origem": "colecao-salario-minimo",
@@ -688,20 +689,20 @@
       "observacao": "O indicador mede alimentação de um trabalhador adulto. Ele não representa o custo total de vida de uma família nem um cálculo de salário necessário.",
       "dados": {
         "salario_minimo_nominal": {
-          "valor": 1621,
+          "valor": 1621.0,
           "unidade": "BRL"
         },
         "cesta_basica": {
-          "valor": 757.19,
+          "valor": 768.1,
           "unidade": "BRL"
         },
-        "percentual_salario_minimo": 46.71,
-        "variacao_mensal_percentual": -0.25,
-        "variacao_ano_percentual": 1.94,
-        "variacao_12_meses_percentual": 1.98,
+        "percentual_salario_minimo": 47.38,
+        "variacao_mensal_percentual": 1.44,
+        "variacao_ano_percentual": 3.41,
+        "variacao_12_meses_percentual": 3.93,
         "quantidade_produtos": 13,
         "referencia_pessoa": "trabalhador adulto",
-        "fonte_release_url": "https://www.ipead.face.ufmg.br/site/publicacoes/download/cesta_basica-2026/08_2026_cesta/pdf"
+        "fonte_release_url": "https://www.ipead.face.ufmg.br/site/publicacoes/download/cesta_basica-2026/09_2026_cesta/pdf"
       },
       "visualizacao": {
         "tipo": "comparacao_barras",
@@ -728,10 +729,11 @@
         "referencia": [
           {
             "tipo": "competencia",
-            "valor": "2026-08"
+            "valor": "2026-09"
           }
         ],
         "frescor": {
+          "ultima_alteracao": "2026-10-20T22:06:48Z",
           "politica_falha": "manter_ultimo_dado"
         }
       }
@@ -767,7 +769,7 @@
         "Economia",
         "Belo Horizonte"
       ],
-      "periodo_referencia": "2026-08",
+      "periodo_referencia": "2026-09",
       "escopo_geografico": {
         "tipo": "municipal",
         "pais": "BR",
@@ -808,7 +810,8 @@
           "dados.serie_mensal",
           "atualizacao.ultima_alteracao",
           "dados.fonte_release_url"
-        ]
+        ],
+        "ultima_alteracao": "2026-10-20T22:06:48Z"
       },
       "tempo_slide": 15,
       "origem": "colecao-salario-minimo",
@@ -823,6 +826,11 @@
       "dados": {
         "janela_meses": 24,
         "serie_mensal": [
+          {
+            "periodo": "2026-09",
+            "custo_cesta_basica": 768.1,
+            "variacao_mensal_percentual": 1.44
+          },
           {
             "periodo": "2026-08",
             "custo_cesta_basica": 757.19,
@@ -889,7 +897,7 @@
             "variacao_mensal_percentual": -0.75
           }
         ],
-        "fonte_release_url": "https://www.ipead.face.ufmg.br/site/publicacoes/download/cesta_basica-2026/08_2026_cesta/pdf"
+        "fonte_release_url": "https://www.ipead.face.ufmg.br/site/publicacoes/download/cesta_basica-2026/09_2026_cesta/pdf"
       },
       "visualizacao": {
         "tipo": "linha",
@@ -908,10 +916,11 @@
         "referencia": [
           {
             "tipo": "competencia",
-            "valor": "2026-08"
+            "valor": "2026-09"
           }
         ],
         "frescor": {
+          "ultima_alteracao": "2026-10-20T22:06:48Z",
           "politica_falha": "manter_ultimo_dado"
         }
       }

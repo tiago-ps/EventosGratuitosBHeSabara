@@ -2,8 +2,8 @@
   "schema": 6,
   "status": "catalogo_completo",
   "fonte": "Catálogo consolidado de cursos gratuitos",
-  "atualizado_em": "2026-10-20T04:31:13.647265+00:00",
-  "total": 1914,
+  "atualizado_em": "2026-10-20T22:36:04.109765+00:00",
+  "total": 1913,
   "cursos": [
     {
       "id_fonte": "359",
@@ -34473,45 +34473,6 @@
       ],
       "url_fonte_detalhes": "https://mais-ifmg.kaptiva.com.br/enrol/index.php?id=25",
       "id_kaptiva": "25",
-      "temporalidade": {
-        "classe": "atemporal"
-      }
-    },
-    {
-      "id_fonte": "mais-ifmg:573",
-      "titulo": "Liderança e Gestão por Competências",
-      "area": "Gestão e Negócios",
-      "competencias": "",
-      "instituicao": "Instituto Federal de Minas Gerais (IFMG)",
-      "instituicao_parceira": "",
-      "carga_horaria": "",
-      "prazo_conclusao_dias": "",
-      "tipo": "curso livre / MOOC",
-      "descricao": "",
-      "publico_alvo": "",
-      "conteudo_programatico": "",
-      "data_lancamento": "",
-      "url": "https://mais-ifmg.kaptiva.com.br/enrol/index.php?id=573",
-      "url_acesso": "https://mais.ifmg.edu.br/maisifmg/course/view.php?id=573",
-      "imagem": "",
-      "modalidade": "online",
-      "gratuito": true,
-      "fonte": "+IFMG",
-      "data_limite_conclusao": "",
-      "requisitos": "",
-      "modulos": "",
-      "metodologia": "",
-      "nivel": "",
-      "idioma": "",
-      "certificado": true,
-      "campus_ofertante": "OB",
-      "total_concluintes": "0 Jose Marcio Vieira Professor",
-      "areas_ifmg": [
-        "Gestão e Negócios",
-        "Trabalho"
-      ],
-      "url_fonte_detalhes": "https://mais-ifmg.kaptiva.com.br/enrol/index.php?id=573",
-      "id_kaptiva": "573",
       "temporalidade": {
         "classe": "atemporal"
       }
