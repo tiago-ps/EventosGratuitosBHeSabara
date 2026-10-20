@@ -73,10 +73,10 @@ const contests = contents.contests;
 const contestCities = contests.cityOptions(contestsData);
 assert.ok(contestCities.length > 1);
 const [contestCity] = contestCities[0];
-const byContestCity = contests.filter(contestsData, { city: contestCity });
+const byContestCity = contests.filter(contestsData, { city: contestCity, state: 'todos' });
 assert.ok(byContestCity.length > 0);
 assert.ok(byContestCity.every(item => normalizeText(item.cidade) === contestCity));
-const highPay = contests.filter(contestsData, { remuneration: 'mais-10000' });
+const highPay = contests.filter(contestsData, { remuneration: 'mais-10000', state: 'todos' });
 assert.ok(highPay.length > 0);
 assert.ok(highPay.every(item => contests.remunerationMax(item) > 10000));
 
