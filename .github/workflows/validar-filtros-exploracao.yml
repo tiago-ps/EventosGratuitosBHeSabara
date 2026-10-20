@@ -32,6 +32,7 @@ on:
       - "utilidade-publica.json"
       - "espacos_culturais.json"
       - "testes/filtros-exploracao-completos.test.cjs"
+      - "testes/ela-exploracao-ordenacao.test.cjs"
       - "testes/cabecalho-exploracao.test.cjs"
       - "testes/filmes-catalogo.test.cjs"
       - "testes/atividades-lazer-agenda.test.cjs"
@@ -71,6 +72,7 @@ on:
       - "utilidade-publica.json"
       - "espacos_culturais.json"
       - "testes/filtros-exploracao-completos.test.cjs"
+      - "testes/ela-exploracao-ordenacao.test.cjs"
       - "testes/cabecalho-exploracao.test.cjs"
       - "testes/filmes-catalogo.test.cjs"
       - "testes/atividades-lazer-agenda.test.cjs"
@@ -109,6 +111,8 @@ jobs:
           node --check js/conteudos/atividades-lazer.js
           node --check js/conteudos/espacos.js
           node --check service-worker.js
+      - name: Validar posicionamento da Escola Livre de Artes
+        run: node testes/ela-exploracao-ordenacao.test.cjs
       - name: Validar filtros
         run: |
           node testes/filtros-exploracao-completos.test.cjs
