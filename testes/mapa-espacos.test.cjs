@@ -77,9 +77,16 @@ for (const point of all.points) {
 }
 console.log('Cobertura do mapa por tipo:', JSON.stringify(coverage));
 
-// Eventos com título igual e sessões diferentes não são duplicatas.
-const toySessions = events.filter(item => item.titulo === 'Oficina de brinquedos e brincadeiras');
-assert.ok(toySessions.length >= 3, 'Catálogo de teste contém sessões reais do mesmo evento');
+// Eventos com o mesmo título e sessões diferentes não são duplicatas.
+// Fixture controlada: não depender de oficinas que podem sair do catálogo ativo.
+const toySessions = Array.from({ length: 5 }, (_, index) => ({
+  id: 'oficina-brinquedos-sessao-' + (index + 1),
+  tipo_conteudo: 'evento',
+  titulo: 'Oficina de brinquedos e brincadeiras',
+  data: '2026-10-' + String(20 + index).padStart(2, '0'),
+  horario: '14h às 16h',
+  endereco: 'Rua Gustavo da Silveira, 1035, Belo Horizonte'
+}));
 const sessionsGroup = {
   coords: [-19.9, -43.9],
   items: [
