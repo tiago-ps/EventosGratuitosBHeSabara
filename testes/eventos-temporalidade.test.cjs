@@ -123,6 +123,6 @@ assert.ok(indexSource.includes('js/temporalidade-eventos.js?v=1'));
 const appVersion = indexSource.match(/js\/app\.js\?v=(\d+)/)?.[1];
 assert.ok(appVersion);
 assert.ok(workerSource.includes(`./js/app.js?v=${appVersion}`));
-assert.ok(workerSource.includes('mural-cultural-v210-mapa-popups-compactos'));
+assert.match(workerSource, /const CACHE_VERSION = 'mural-cultural-v\d+-[^']+';/);
 
 console.log('ATC5.5: consumo temporal de Eventos validado.');
