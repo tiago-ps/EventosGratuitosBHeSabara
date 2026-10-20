@@ -2,9 +2,58 @@
   "schema": 10,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-10-12T18:23:59.985155+00:00",
-  "total": 20,
+  "coletado_em_utc": "2026-10-20T02:15:39.228163+00:00",
+  "total": 19,
   "concursos": [
+    {
+      "id": "pci:noticia:cgu-abre-concurso-publico-com-vagas-para-auditores-federais-de-financas-e-controle",
+      "titulo": "CGU - Controladoria-Geral da União",
+      "url": "https://www.pciconcursos.com.br/noticias/cgu-abre-concurso-publico-com-vagas-para-auditores-federais-de-financas-e-controle",
+      "imagem": "https://cdn.pci.app.br/img/i/1e5a645adfbe19d6db8927f8a94112c0.png",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "cgu abre concurso publico com vagas para auditores federais de financas e controle oportunidades contemplam especialidades em auditoria e tecnologia da informacao, com subsidio inicial de r$ 20.000,00 e jornada de 40 horas semanais. a selecao sera realizada por meio de provas objetivas e discursivas. concursos › noticias › nacional sexta-feira, 9 de outubro de 2026 a controladoria-geral da uniao (cgu) publicou o edital de concurso publico para o preenchiment"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "PA",
+      "cidade": "",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "R$ 20.000,00",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Tecnologia da Informação - Ciência de Dados",
+          "vagas_texto": "10 vagas",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        },
+        {
+          "cargo": "Tecnologia da Informação - Infraestrutura de TI",
+          "vagas_texto": "10 vagas",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        },
+        {
+          "cargo": "Tecnologia da Informação - Desenvolvimento de Sistemas",
+          "vagas_texto": "10 vagas",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "prazo_desconhecido",
+        "completude": "desconhecida"
+      }
+    },
     {
       "id": "pci:noticia:marinha-do-brasil-8-distrito-naval-abre-vagas-para-oficiais-rm2-em-sp",
       "titulo": "Marinha do Brasil - Comando do 8º Distrito Naval",
@@ -177,70 +226,9 @@
       }
     },
     {
-      "id": "pci:noticia:ufrrj-publica-edital-de-concurso-publico-para-cargos-de-nivel-medio-e-tecnico",
-      "titulo": "UFRRJ - Universidade Federal Rural do Rio de Janeiro",
-      "url": "https://www.pciconcursos.com.br/noticias/ufrrj-publica-edital-de-concurso-publico-para-cargos-de-nivel-medio-e-tecnico",
-      "imagem": "https://cdn.pci.app.br/img/i/a155e6d329661fbee426b436071ea878.png",
-      "formacoes_compativeis": [
-        "Sistemas de Informação / Computação"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Sistemas de Informação / Computação",
-          "nivel": "superior",
-          "evidencia": "tunidades sao para os cargos de: assistente de aluno (2 vagas) tecnico de laboratorio/area - biologia/necropsia (3 vagas) tecnico de laboratorio/area - engenharia de materiais (1 vaga) tecnico de laboratorio/area - quimica/alimentos (2 vagas) tecnico de laboratorio/area - solos (2 vagas) tecnico de tecnologia da informacao - infraestrutura (2 vagas) tecnico de tecnologia da informacao - sistemas (1 vaga) a jornada de trabalho para todos os cargos e de 40 horas semanais. a remuneracao varia de r$ 2.607,70 a r$ 3.181,39, acrescida de incentivo a qualificacao de ate 75% e beneficios como auxilio-alimentacao de r$ 1.192,"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "RJ",
-      "cidade": "",
-      "inscricoes_inicio_texto": "14 de setembro de 2026",
-      "inscricoes_fim_texto": "13 de outubro de 2026",
-      "inscricoes_texto": "14 de setembro de 2026 a 13 de outubro de 2026",
-      "remuneracao_faixa_texto": "R$ 3.181,39",
-      "remuneracao_fonte": "catalogo",
-      "cargos_compativeis": [
-        {
-          "cargo": "Técnico de Tecnologia da Informação - Infraestrutura",
-          "vagas_texto": "2 vagas",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        },
-        {
-          "cargo": "Técnico de Tecnologia da Informação - Sistemas",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        }
-      ],
-      "janela_inscricoes": {
-        "estado": "aberto",
-        "completude": "completa",
-        "inicio": "2026-09-14",
-        "fim": "2026-10-13",
-        "texto_original": "14 de setembro de 2026 a 13 de outubro de 2026"
-      },
-      "temporalidade": {
-        "classe": "periodo",
-        "realizacao": {
-          "inicio": "2026-09-14",
-          "fim": "2026-10-13"
-        },
-        "participacao": [
-          {
-            "tipo": "candidatura",
-            "inicio": "2026-09-14",
-            "fim": "2026-10-13",
-            "status": "aberto"
-          }
-        ]
-      }
-    },
-    {
-      "id": "pci:noticia:prefeitura-de-contagem-mg-abre-concurso-publico-com-salarios-de-ate-13305",
+      "id": "pci:noticia:prefeitura-de-contagem-mg-retifica-edital-de-concurso-publico",
       "titulo": "Prefeitura de Contagem",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-contagem-mg-abre-concurso-publico-com-salarios-de-ate-13305",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-contagem-mg-retifica-edital-de-concurso-publico",
       "imagem": "https://cdn.pci.app.br/img/i/7de2c0dbeff437f4cd0052b4d16f8acf.png",
       "formacoes_compativeis": [
         "Sistemas de Informação / Computação"
@@ -249,7 +237,7 @@
         {
           "nome": "Sistemas de Informação / Computação",
           "nivel": "superior",
-          "evidencia": "alho (3 vagas) analista de ti (1 vaga) arquiteto (14 vagas) arquivista (2 vagas) assistente social (5 vagas) auditor de controle interno - ciencias contabeis (1 vaga) auditor de controle interno - direito (1 vaga) auditor de controle interno - engenharia civil (1 vaga) auditor de controle interno - tecnologia da informacao (1 vaga) biologo (7 vagas) contador (3 vagas) economista (1 vaga) engenheiro agrimensor (1 vaga) engenheiro agronomo (1 vaga) engenheiro ambiental (5 vagas) engenheiro cartografico (1 vaga) engenheiro civil (18 vagas) engenheiro de automacao (1 vaga) engenheiro eletricista (3 vagas) engenheiro flor"
+          "evidencia": "e passou a constar como engenheiro de controle e automacao. alem disso, houve a inclusao do cargo de engenheiro geotecnico, a alteracao da distribuicao das vagas para assistente administrativo, arquiteto e engenheiro civil, e a alteracao dos requisitos para arquivista, auditor de controle interno - tecnologia da informacao, engenheiro cartografico, engenheiro de controle e automacao, engenheiro sanitarista e engenheiro de seguranca do trabalho. alem das alteracoes citadas, o documento traz mudancas no quadro de provas e no conteudo programatico. segundo o edital, as oportunidades sao para os cargos de: assistente adm"
         }
       ],
       "fonte": "PCI Concursos",
@@ -260,7 +248,7 @@
       "inscricoes_fim_texto": "17 de novembro de 2026",
       "inscricoes_texto": "19 de outubro de 2026 a 17 de novembro de 2026",
       "remuneracao_faixa_texto": "R$ 13.305,57",
-      "remuneracao_fonte": "noticia",
+      "remuneracao_fonte": "catalogo",
       "cargos_compativeis": [
         {
           "cargo": "Auditor de Controle Interno - Tecnologia da Informação",
@@ -270,7 +258,7 @@
         }
       ],
       "janela_inscricoes": {
-        "estado": "futuro",
+        "estado": "aberto",
         "completude": "completa",
         "inicio": "2026-10-19",
         "fim": "2026-11-17",
@@ -287,7 +275,7 @@
             "tipo": "candidatura",
             "inicio": "2026-10-19",
             "fim": "2026-11-17",
-            "status": "futuro"
+            "status": "aberto"
           }
         ]
       }
@@ -433,6 +421,43 @@
             "status": "aberto"
           }
         ]
+      }
+    },
+    {
+      "id": "pci:noticia:prefeitura-de-confins-mg-abre-processo-seletivo-com-salarios-de-ate-23298",
+      "titulo": "Prefeitura de Confins",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-confins-mg-abre-processo-seletivo-com-salarios-de-ate-23298",
+      "imagem": "https://cdn.pci.app.br/img/i/b7dc18e8fb98721180ed92a93efc5699.png",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": " administrativo (desenvolvimento social) (1 vaga) tecnico em saude (2 vagas) ensino medio ou tecnico completo fiscal de obras e posturas (cr) projetista (cr) tecnico em enfermagem (2 vagas) tecnico em enfermagem esf (6 vagas) tecnico em higiene dental (1 vaga) tecnico em higiene dental esf (1 vaga) tecnico em informatica (1 vaga) ensino superior completo advogado (desenvolvimento social) (1 vaga) analista ambiental (cr) analista de sistema saude (cr) assistente social (desenvolvimento social) (cr) assistente social (saude) (cr) bibliotecario (cultura) (cr) enfermeiro (cr) enfermeiro esf (1 vaga) engenheiro civil (c"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "MG",
+      "cidade": "Confins",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "R$ 1.628,10 a R$ 23.298,67",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico em Informática",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "prazo_desconhecido",
+        "completude": "desconhecida"
       }
     },
     {
@@ -591,7 +616,7 @@
         }
       ],
       "janela_inscricoes": {
-        "estado": "futuro",
+        "estado": "aberto",
         "completude": "completa",
         "inicio": "2026-10-20",
         "fim": "2026-11-18",
@@ -608,7 +633,7 @@
             "tipo": "candidatura",
             "inicio": "2026-10-20",
             "fim": "2026-11-18",
-            "status": "futuro"
+            "status": "aberto"
           }
         ]
       }
@@ -756,7 +781,7 @@
         }
       ],
       "janela_inscricoes": {
-        "estado": "aberto",
+        "estado": "encerrado",
         "completude": "completa",
         "inicio": "2026-08-28",
         "fim": "2026-10-18",
@@ -773,6 +798,61 @@
             "tipo": "candidatura",
             "inicio": "2026-08-28",
             "fim": "2026-10-18",
+            "status": "encerrado"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pci:noticia:prefeitura-de-itapuca-rs-abre-concurso-publico-com-salarios-de-ate-9495",
+      "titulo": "Prefeitura de Itapuca",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-itapuca-rs-abre-concurso-publico-com-salarios-de-ate-9495",
+      "imagem": "https://cdn.pci.app.br/img/i/8c6051f19fc34862c366c31b1d6655d1.png",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "te social educacional (1 vaga) enfermeiro (1 vaga) engenheiro civil (1 vaga) farmaceutico (1 vaga) inspetor tributario (1 vaga) medico (1 vaga) nutricionista - atencao a saude (1 vaga) professor - area 1 - educacao infantil e/ou series iniciais (15 vagas) professor de ciencias (1 vaga) professor de computacao (1 vaga) professor de educacao fisica (1 vaga) professor de historia (1 vaga) professor de matematica (2 vagas) professor de portugues (1 vaga) psicologo educacional (1 vaga) professor aee (1 vaga) atendente de creche (6 vagas) atendente de consultorio dentario (1 vaga) agente de combate a endemias"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "RS",
+      "cidade": "Itapuca",
+      "inscricoes_inicio_texto": "13 de outubro de 2026",
+      "inscricoes_fim_texto": "5 de novembro de 2026",
+      "inscricoes_texto": "13 de outubro de 2026 a 5 de novembro de 2026",
+      "remuneracao_faixa_texto": "R$ 9.495,82",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Professor de Computação",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "aberto",
+        "completude": "completa",
+        "inicio": "2026-10-13",
+        "fim": "2026-11-05",
+        "texto_original": "13 de outubro de 2026 a 5 de novembro de 2026"
+      },
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-10-13",
+          "fim": "2026-11-05"
+        },
+        "participacao": [
+          {
+            "tipo": "candidatura",
+            "inicio": "2026-10-13",
+            "fim": "2026-11-05",
             "status": "aberto"
           }
         ]
@@ -834,10 +914,10 @@
       }
     },
     {
-      "id": "pci:noticia:sefaz-sc-abre-concurso-publico-para-o-cargo-de-auditor-estadual-de-financas-publicas",
-      "titulo": "SEFAZ - Secretaria de Estado da Fazenda de Santa Catarina",
-      "url": "https://www.pciconcursos.com.br/noticias/sefaz-sc-abre-concurso-publico-para-o-cargo-de-auditor-estadual-de-financas-publicas",
-      "imagem": "https://cdn.pci.app.br/img/i/bf56624401433deefeba225fe6a5a0af.png",
+      "id": "pci:noticia:prefeitura-de-rio-negrinho-sc-e-orgaos-municipais-abrem-novos-concursos-publicos",
+      "titulo": "Prefeitura de Rio Negrinho, FMC, IPRERIO e SAMAE",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-rio-negrinho-sc-e-orgaos-municipais-abrem-novos-concursos-publicos",
+      "imagem": "https://cdn.pci.app.br/img/i/366fc5888b1987e342ad75b2402dd6ea.png",
       "formacoes_compativeis": [
         "Sistemas de Informação / Computação"
       ],
@@ -845,165 +925,22 @@
         {
           "nome": "Sistemas de Informação / Computação",
           "nivel": "superior",
-          "evidencia": "mento de vagas para o cargo de auditor estadual de financas publicas, com exigencia de nivel superior completo. segundo o edital, as oportunidades sao para os cargos de: auditor estadual de financas publicas - administracao e engenharias (6 vagas) auditor estadual de financas publicas - ciencias da computacao (12 vagas) auditor estadual de financas publicas - ciencias contabeis (20 vagas) auditor estadual de financas publicas - ciencias economicas (4 vagas) auditor estadual de financas publicas - direito (8 vagas) a jornada de trabalho e de 40 horas semanais. a remuneracao inicial e de r$ 25.337,61. as "
+          "evidencia": "cao especialista em educacao (volta grande e serro azul) fiscal ambiental fiscal de obras e posturas fonoaudiologo (1 vaga) medico clinico geral medico especialista - ginecologista medico especialista - ortopedista medico especialista - pediatra medico especialista - psiquiatria (1 vaga) monitor de tecnologia da informacao (1 vaga) monitor de tecnologia da informacao (volta grande e serro azul) motorista (transporte escolar) nutricionista odontologo esf oficial administrativo (5 vagas) operador de maquinas pesadas operador de maquinas pesadas (volta grande) pedreiro professor i - nivel 2 - anos iniciais (3 vagas) pro"
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
       "uf": "SC",
-      "cidade": "",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "5 de outubro de 2026",
-      "inscricoes_texto": "até 5 de outubro de 2026",
-      "remuneracao_faixa_texto": "R$ 25.337,61",
+      "cidade": "Rio Negrinho, FMC, IPRERIO e SAMAE",
+      "inscricoes_inicio_texto": "16 de outubro de 2026",
+      "inscricoes_fim_texto": "15 de novembro de 2026",
+      "inscricoes_texto": "16 de outubro de 2026 a 15 de novembro de 2026",
+      "remuneracao_faixa_texto": "R$ 1.665,72 a R$ 18.538,78",
       "remuneracao_fonte": "noticia",
       "cargos_compativeis": [
         {
-          "cargo": "Auditor Estadual de Finanças Públicas - Ciências da Computação",
-          "vagas_texto": "12 vagas",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        }
-      ],
-      "janela_inscricoes": {
-        "estado": "encerrado",
-        "completude": "somente_fim",
-        "fim": "2026-10-05",
-        "texto_original": "até 5 de outubro de 2026"
-      }
-    },
-    {
-      "id": "pci:noticia:ses-sc-abre-processo-seletivo-com-salarios-de-ate-5670",
-      "titulo": "SES - Secretaria de Estado da Saúde de Santa Catarina",
-      "url": "https://www.pciconcursos.com.br/noticias/ses-sc-abre-processo-seletivo-com-salarios-de-ate-5670",
-      "imagem": "https://cdn.pci.app.br/img/i/bf56624401433deefeba225fe6a5a0af.png",
-      "formacoes_compativeis": [
-        "Técnico em Informática"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Técnico em Informática",
-          "nivel": "tecnico",
-          "evidencia": "a, 5 de outubro de 2026 no estado de santa catarina, a secretaria de estado da saude (ses) divulgou um edital de processo seletivo simplificado para preencher vagas em funcoes de nivel medio e superior. segundo o edital, as oportunidades sao para os cargos de: grande florianopolis - unidades da ses tecnico em informatica (1 vaga) engenheiro eletricista (1 vaga) florianopolis - centro catarinense de reabilitacao tecnico em protese e ortese (1 vaga) sao jose - instituto de psiquiatria terapeuta ocupacional (1 vaga) sao pedro de alcantara - hospital santa teresa terapeuta ocupacional (1 vaga) a carga horaria minima e "
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "SC",
-      "cidade": "",
-      "inscricoes_inicio_texto": "2 de outubro de 2026",
-      "inscricoes_fim_texto": "16 de outubro de 2026",
-      "inscricoes_texto": "2 de outubro de 2026 a 16 de outubro de 2026",
-      "remuneracao_faixa_texto": "R$ 5.670,38",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Grande Florianópolis - Unidades da SES Técnico em Informática",
+          "cargo": "Monitor de Tecnologia da Informação",
           "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "alta"
-        }
-      ],
-      "janela_inscricoes": {
-        "estado": "aberto",
-        "completude": "completa",
-        "inicio": "2026-10-02",
-        "fim": "2026-10-16",
-        "texto_original": "2 de outubro de 2026 a 16 de outubro de 2026"
-      },
-      "temporalidade": {
-        "classe": "periodo",
-        "realizacao": {
-          "inicio": "2026-10-02",
-          "fim": "2026-10-16"
-        },
-        "participacao": [
-          {
-            "tipo": "candidatura",
-            "inicio": "2026-10-02",
-            "fim": "2026-10-16",
-            "status": "aberto"
-          }
-        ]
-      }
-    },
-    {
-      "id": "pci:noticia:cgu-abre-concurso-publico-com-vagas-para-auditores-federais-de-financas-e-controle",
-      "titulo": "CGU - Controladoria-Geral da União",
-      "url": "https://www.pciconcursos.com.br/noticias/cgu-abre-concurso-publico-com-vagas-para-auditores-federais-de-financas-e-controle",
-      "imagem": "https://cdn.pci.app.br/img/i/1e5a645adfbe19d6db8927f8a94112c0.png",
-      "formacoes_compativeis": [
-        "Sistemas de Informação / Computação"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Sistemas de Informação / Computação",
-          "nivel": "superior",
-          "evidencia": "cgu abre concurso publico com vagas para auditores federais de financas e controle oportunidades contemplam especialidades em auditoria e tecnologia da informacao, com subsidio inicial de r$ 20.000,00 e jornada de 40 horas semanais. a selecao sera realizada por meio de provas objetivas e discursivas. concursos › noticias › centro-oeste sexta-feira, 9 de outubro de 2026 a controladoria-geral da uniao (cgu) publicou o edital de concurso publico para o preenchi"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "PA",
-      "cidade": "",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "",
-      "inscricoes_texto": "",
-      "remuneracao_faixa_texto": "R$ 20.000,00",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Tecnologia da Informação - Ciência de Dados",
-          "vagas_texto": "10 vagas",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        },
-        {
-          "cargo": "Tecnologia da Informação - Infraestrutura de TI",
-          "vagas_texto": "10 vagas",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        },
-        {
-          "cargo": "Tecnologia da Informação - Desenvolvimento de Sistemas",
-          "vagas_texto": "10 vagas",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        }
-      ],
-      "janela_inscricoes": {
-        "estado": "prazo_desconhecido",
-        "completude": "desconhecida"
-      }
-    },
-    {
-      "id": "pci:noticia:tce-go-retifica-concurso-publico-para-tecnicos-de-controle-externo",
-      "titulo": "TCE - Tribunal de Contas do Estado de Goiás",
-      "url": "https://www.pciconcursos.com.br/noticias/tce-go-retifica-concurso-publico-para-tecnicos-de-controle-externo",
-      "imagem": "https://cdn.pci.app.br/img/i/49d0f07f837fcc4f15672d89520c62f4.png",
-      "formacoes_compativeis": [
-        "Sistemas de Informação / Computação"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Sistemas de Informação / Computação",
-          "nivel": "superior",
-          "evidencia": "tce - go retifica concurso publico para tecnicos de controle externo oportunidades contemplam cargos de nivel medio nas areas administrativas e de tecnologia da informacao, com remuneracao inicial de r$ 11.862,19 e selecao composta por provas objetivas e discursivas. concursos › noticias › centro-oeste quarta-feira, 16 de setembro de 2026 o tribunal de contas do estado de goias (tce-go) abriu um concurso publico visando o preenchimento de vagas para profissionais de "
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "GO",
-      "cidade": "",
-      "inscricoes_inicio_texto": "5 de outubro de 2026",
-      "inscricoes_fim_texto": "6 de novembro de 2026",
-      "inscricoes_texto": "5 de outubro de 2026 a 6 de novembro de 2026",
-      "remuneracao_faixa_texto": "R$ 11.862,19",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Tecnologia da Informação",
-          "vagas_texto": "10 vagas",
           "formacao": "Sistemas de Informação / Computação",
           "confianca": "alta"
         }
@@ -1011,21 +948,21 @@
       "janela_inscricoes": {
         "estado": "aberto",
         "completude": "completa",
-        "inicio": "2026-10-05",
-        "fim": "2026-11-06",
-        "texto_original": "5 de outubro de 2026 a 6 de novembro de 2026"
+        "inicio": "2026-10-16",
+        "fim": "2026-11-15",
+        "texto_original": "16 de outubro de 2026 a 15 de novembro de 2026"
       },
       "temporalidade": {
         "classe": "periodo",
         "realizacao": {
-          "inicio": "2026-10-05",
-          "fim": "2026-11-06"
+          "inicio": "2026-10-16",
+          "fim": "2026-11-15"
         },
         "participacao": [
           {
             "tipo": "candidatura",
-            "inicio": "2026-10-05",
-            "fim": "2026-11-06",
+            "inicio": "2026-10-16",
+            "fim": "2026-11-15",
             "status": "aberto"
           }
         ]

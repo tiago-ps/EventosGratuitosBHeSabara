@@ -20,59 +20,6 @@
       }
     },
     {
-      "evento_id": "ccbb-bh-joaquin-torres-garcia-150-anos",
-      "tipo": "acontece_em",
-      "destino": {
-        "tipo": "equipamento_cultural",
-        "id": "ccbb-bh",
-        "nome": "CCBB Belo Horizonte"
-      }
-    },
-    {
-      "evento_id": "ccbb-bh-joaquin-torres-garcia-150-anos",
-      "tipo": "acontece_em",
-      "destino": {
-        "tipo": "espaco_interno",
-        "id": "ccbb-bh-3-piso",
-        "nome": "3º piso"
-      },
-      "equipamento": {
-        "id": "ccbb-bh",
-        "nome": "CCBB Belo Horizonte"
-      }
-    },
-    {
-      "evento_id": "ccbb-bh-joaquin-torres-garcia-150-anos",
-      "tipo": "organizado_por",
-      "destino": {
-        "tipo": "instituicao",
-        "id": "ccbb-bh",
-        "nome": "Centro Cultural Banco do Brasil Belo Horizonte"
-      }
-    },
-    {
-      "evento_id": "ccbb-bh-marcelo-xavier-asa-de-papel",
-      "tipo": "acontece_em",
-      "destino": {
-        "tipo": "espaco_interno",
-        "id": "ccbb-bh-galerias-do-terreo",
-        "nome": "Galerias do Térreo"
-      },
-      "equipamento": {
-        "id": "ccbb-bh",
-        "nome": "CCBB Belo Horizonte"
-      }
-    },
-    {
-      "evento_id": "ccbb-bh-marcelo-xavier-asa-de-papel",
-      "tipo": "organizado_por",
-      "destino": {
-        "tipo": "instituicao",
-        "id": "ccbb-bh",
-        "nome": "Centro Cultural Banco do Brasil Belo Horizonte"
-      }
-    },
-    {
       "evento_id": "ccbb-bh-nos-ou-ninguem-podia-ouvir-os-olhos-dela",
       "tipo": "acontece_em",
       "destino": {
@@ -141,24 +88,6 @@
     },
     {
       "evento_id": "ela-arena-atelie-livre-fcace676d6",
-      "tipo": "organizado_por",
-      "destino": {
-        "tipo": "instituicao",
-        "id": "fundacao-municipal-cultura-bh",
-        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
-      }
-    },
-    {
-      "evento_id": "ela-arena-dj-diversidade-na-pista-0a1fc71968",
-      "tipo": "acontece_em",
-      "destino": {
-        "tipo": "equipamento_cultural",
-        "id": "nufac",
-        "nome": "Núcleo de Formação e Criação Artística e Cultural — NUFAC"
-      }
-    },
-    {
-      "evento_id": "ela-arena-dj-diversidade-na-pista-0a1fc71968",
       "tipo": "organizado_por",
       "destino": {
         "tipo": "instituicao",
@@ -789,24 +718,6 @@
     },
     {
       "evento_id": "ela-encontros-para-ver-e-criar-filmes-052b55f529",
-      "tipo": "organizado_por",
-      "destino": {
-        "tipo": "instituicao",
-        "id": "fundacao-municipal-cultura-bh",
-        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
-      }
-    },
-    {
-      "evento_id": "ela-encontros-para-ver-imagens-60260a2cbf",
-      "tipo": "acontece_em",
-      "destino": {
-        "tipo": "equipamento_cultural",
-        "id": "centro-cultural-vila-marcola",
-        "nome": "Centro Cultural Vila Marçola"
-      }
-    },
-    {
-      "evento_id": "ela-encontros-para-ver-imagens-60260a2cbf",
       "tipo": "organizado_por",
       "destino": {
         "tipo": "instituicao",
@@ -1562,24 +1473,6 @@
       }
     },
     {
-      "evento_id": "ela-vamos-brincar-de-inventar-um-filme-747e60043f",
-      "tipo": "acontece_em",
-      "destino": {
-        "tipo": "equipamento_cultural",
-        "id": "centro-cultural-bairro-das-industrias",
-        "nome": "Centro Cultural Bairro das Indústrias"
-      }
-    },
-    {
-      "evento_id": "ela-vamos-brincar-de-inventar-um-filme-747e60043f",
-      "tipo": "organizado_por",
-      "destino": {
-        "tipo": "instituicao",
-        "id": "fundacao-municipal-cultura-bh",
-        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
-      }
-    },
-    {
       "evento_id": "fcs-wp-37639",
       "tipo": "acontece_em",
       "destino": {
@@ -1594,28 +1487,6 @@
     },
     {
       "evento_id": "fcs-wp-37639",
-      "tipo": "organizado_por",
-      "destino": {
-        "tipo": "instituicao",
-        "id": "fcs",
-        "nome": "Fundação Clóvis Salgado"
-      }
-    },
-    {
-      "evento_id": "fcs-wp-37664",
-      "tipo": "acontece_em",
-      "destino": {
-        "tipo": "espaco_interno",
-        "id": "palacio-das-artes-cine-humberto-mauro",
-        "nome": "Cine Humberto Mauro"
-      },
-      "equipamento": {
-        "id": "palacio-das-artes",
-        "nome": "Palácio das Artes"
-      }
-    },
-    {
-      "evento_id": "fcs-wp-37664",
       "tipo": "organizado_por",
       "destino": {
         "tipo": "instituicao",
@@ -1730,28 +1601,6 @@
       }
     },
     {
-      "evento_id": "manual-concertos-peter-lund-recital-infantil-coracao-e-mente-2026-10-18-2026-10-18",
-      "tipo": "acontece_em",
-      "destino": {
-        "tipo": "espaco_interno",
-        "id": "auditorio-do-museu-puc-minas",
-        "nome": "Auditório do Museu PUC Minas"
-      },
-      "equipamento": {
-        "id": "museu-puc-minas",
-        "nome": "Museu de Ciências Naturais PUC Minas"
-      }
-    },
-    {
-      "evento_id": "manual-concertos-peter-lund-recital-infantil-coracao-e-mente-2026-10-18-2026-10-18",
-      "tipo": "organizado_por",
-      "destino": {
-        "tipo": "instituicao",
-        "id": "puc-minas",
-        "nome": "Pontifícia Universidade Católica de Minas Gerais"
-      }
-    },
-    {
       "evento_id": "manual-ela-praticas-percussivas-ritmos-brasileiros-2157c0200a-2026-08-24",
       "tipo": "acontece_em",
       "destino": {
@@ -1821,24 +1670,6 @@
         "tipo": "instituicao",
         "id": "fundacao-municipal-cultura-bh",
         "nome": "Fundação Municipal de Cultura de Belo Horizonte"
-      }
-    },
-    {
-      "evento_id": "manual-manual-instagram-17933113986370029-2026-10-12",
-      "tipo": "acontece_em",
-      "destino": {
-        "tipo": "equipamento_cultural",
-        "id": "ccbb-bh",
-        "nome": "CCBB Belo Horizonte"
-      }
-    },
-    {
-      "evento_id": "manual-manual-instagram-17933113986370029-2026-10-12",
-      "tipo": "organizado_por",
-      "destino": {
-        "tipo": "instituicao",
-        "id": "ccbb-bh",
-        "nome": "Centro Cultural Banco do Brasil Belo Horizonte"
       }
     },
     {
