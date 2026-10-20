@@ -4137,19 +4137,32 @@ function eventProgram(event) {
     return true;
   }
 
-  // Na exploração geral, a Escola Livre aparece com três destaques.
-  // As demais atividades ficam após os eventos comuns com datas definidas.
-  // Buscas/filtros específicos preservam todas as atividades e a ordenação.
+  // Na exploração geral de Eventos, a ELA ocupa até três destaques
+  // (programa + duas unidades). As demais atividades são colocadas
+  // imediatamente após o último evento comum com início e término definidos,
+  // mas antes dos conteúdos permanentes/atemporais/sem datas delimitadas.
+  // Pesquisa e filtros específicos mantêm os registros e a ordem habituais.
   function orderAgendaEventsForExploration(events) {
     const school = events.filter(isSchoolEvent);
     if (!school.length) return events;
+
     const overview = school.find(item => item.tipo_registro === 'programa_escola_livre');
     const units = school.filter(item => item.tipo_registro === 'resumo_unidade_escola_livre').slice(0, 2);
-    const featuredIds = new Set([overview, ...units].filter(Boolean).map(item => item.id));
     const featured = [overview, ...units].filter(Boolean);
-    const otherEvents = events.filter(item => !isSchoolEvent(item));
+    const featuredIds = new Set(featured.map(item => item.id));
     const schoolRemaining = school.filter(item => !featuredIds.has(item.id));
-    return [...featured, ...otherEvents, ...schoolRemaining];
+
+    const datedEvents = [];
+    const indefiniteEvents = [];
+    for (const event of events) {
+      if (isSchoolEvent(event)) continue;
+      const realization = eventRealization(event);
+      const hasDefinedDates = Boolean(realization?.inicio && realization?.fim);
+      const permanent = ['permanente', 'atemporal'].includes(realization?.classe);
+      (hasDefinedDates && !permanent ? datedEvents : indefiniteEvents).push(event);
+    }
+
+    return [...featured, ...datedEvents, ...schoolRemaining, ...indefiniteEvents];
   }
 
   function agendaVisibleEvents() {

@@ -228,23 +228,38 @@ console.log('Filtros completos do modo Exploração validados.');
 const schoolStart = appSource.indexOf('function orderAgendaEventsForExploration(');
 const schoolEnd = appSource.indexOf('function agendaVisibleEvents()', schoolStart);
 assert.ok(schoolStart > 0 && schoolEnd > schoolStart, 'Ordenação especial ELA ausente.');
+const schoolRealization = item => ({
+  classe: String(item.temporalidade?.classe || 'pontual'),
+  inicio: item.temporalidade?.realizacao?.inicio || item.data || '',
+  fim: item.temporalidade?.realizacao?.fim || item.data_fim || item.data || ''
+});
 const schoolContext = vm.createContext({
-  isSchoolEvent: item => String(item.programa || '').includes('Escola Livre de Artes Arena da Cultura')
+  isSchoolEvent: item => String(item.programa || '').includes('Escola Livre de Artes Arena da Cultura'),
+  eventRealization: schoolRealization
 });
 vm.runInContext(appSource.slice(schoolStart, schoolEnd), schoolContext);
 const isSchool = schoolContext.isSchoolEvent;
+const isDatedOrdinary = item => {
+  if (isSchool(item)) return false;
+  const window = schoolRealization(item);
+  return Boolean(window.inicio && window.fim) && !['permanente', 'atemporal'].includes(window.classe);
+};
 const allSchool = eventRows.filter(isSchool);
 assert.ok(allSchool.length > 3, 'Base deve conter registros da ELA.');
 const orderedEvents = schoolContext.orderAgendaEventsForExploration(eventRows);
 assert.equal(orderedEvents.length, eventRows.length, 'Ordenação não pode excluir eventos.');
 assert.equal(new Set(orderedEvents.map(item => item.id)).size, eventRows.length);
 const firstOrdinary = orderedEvents.findIndex(item => !isSchool(item));
-const ordinary = eventRows.filter(item => !isSchool(item));
+const datedOrdinary = eventRows.filter(isDatedOrdinary);
+const indefiniteOrdinary = eventRows.filter(item => !isSchool(item) && !isDatedOrdinary(item));
 assert.equal(orderedEvents[0].tipo_registro, 'programa_escola_livre');
 assert.ok(firstOrdinary >= 1 && firstOrdinary <= 3, 'Até três registros iniciais da ELA.');
-assert.deepEqual(Array.from(orderedEvents.slice(firstOrdinary, firstOrdinary + ordinary.length), item => item.id),
-  ordinary.map(item => item.id), 'Outros eventos devem vir antes da lista extensa da ELA.');
-assert.ok(orderedEvents.slice(firstOrdinary + ordinary.length).every(isSchool));
+assert.deepEqual(Array.from(orderedEvents.slice(firstOrdinary, firstOrdinary + datedOrdinary.length), item => item.id),
+  datedOrdinary.map(item => item.id), 'Eventos com datas delimitadas devem anteceder o restante da ELA.');
+const endOfSchool = orderedEvents.length - indefiniteOrdinary.length;
+assert.ok(orderedEvents.slice(firstOrdinary + datedOrdinary.length, endOfSchool).every(isSchool));
+assert.deepEqual(Array.from(orderedEvents.slice(endOfSchool), item => item.id),
+  indefiniteOrdinary.map(item => item.id), 'Permanentes e eventos sem período devem vir depois da ELA.');
 assert.ok(appSource.includes('if (specific && !agendaHasSpecificEventFilters())'),
   'Filtros e buscas específicos devem mostrar todas as atividades e ordenação normal.');
 assert.ok(appSource.includes('return orderAgendaEventsForExploration(visible);'));
