@@ -41,3 +41,10 @@ Esses números representam fotografia do catálogo daquela data. A página de re
 ## Regra de publicação
 
 O workflow 02 no Coletor contém filtragem editorial de pontos por IDs de espaços aprovados, IDs/nomes de eventos públicos e endereços vinculados. Arquivos com revisão não substituem o processo de aprovação e publicação existente.
+
+## Consulta oficial da PBH (opcional)
+
+- Para endereços dentro de Belo Horizonte, verificar número, logradouro e bairro na ferramenta de endereço da PBH: https://geocoder.pbh.gov.br/geocoder/ . O retorno legado usa coordenadas projetadas em SIRGAS 2000 / UTM 23S (EPSG:31983), não latitude/longitude; converter para WGS84 (EPSG:4326) antes de registrar no mapa.
+- O serviço mais novo Endereço BH pode devolver GeoJSON com coordenadas WGS84 diretamente, mas requer conta do tipo sistema e autenticação com a PBH. Não assumir acesso público sem credenciais: https://enderecobh.pbh.gov.br/documentacao/migracao/geocoder-enderecobh/
+- O resultado de endereço geocodificado é uma referência do imóvel, não prova de que o evento ocorre nesse local. Confirmar o nome do equipamento e o endereço na fonte organizadora antes de validar.
+- Fontes institucionais de partida: https://prefeitura.pbh.gov.br/cultura/observatorio-da-cultura/mapas-e-equipamentos e https://prefeitura.pbh.gov.br/bhgeo/acesso-aos-dados .
