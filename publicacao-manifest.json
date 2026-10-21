@@ -1,11 +1,11 @@
 {
   "counts": {
     "atividades-lazer.json": 42,
-    "concursos.json": 19,
+    "concursos.json": 20,
     "configuracao-mural.json": 1,
     "cursos.json": 1913,
     "espacos_culturais.json": 268,
-    "eventos.json": 199,
+    "eventos.json": 193,
     "filmes.json": 1292,
     "livros.json": 46,
     "relacoes-eventos.json": 186,
@@ -13,25 +13,25 @@
   },
   "hashes": {
     "atividades-lazer.json": "7b7cac673c1d63119d5adb8f47d5b7bef51f30f7ea34e0473a9897931feae478",
-    "concursos.json": "110691e9942a2a893a7c2909354af39d250e1f86df829cf2a651d0be72345b5f",
+    "concursos.json": "a52ceea57572e8c3714562f078e7a662fae65fd1ce27ea643835d9bfcbdccc3e",
     "configuracao-mural.json": "49dfe7115a6f5c6d5b8dee424d3b10341b5e3014ac58a295d27ef4e6043ebfc2",
     "cursos.json": "972912cee10018ba50965843377b1b6e45ce7c78366f27178ace1e0003430be5",
     "espacos_culturais.json": "572de708c598f3392d99194f8a2a9cf4953cf7fcf401ad682c8174b03ccccda7",
-    "eventos.json": "1fc8b0dabf8a0991369c4db06c339fa939c1b98029eab3941bd1375f6ac16339",
+    "eventos.json": "278a2f1ae9218e3bbb7c53b1d2a258158dae35427ce0e8c1ef834036f7a97519",
     "filmes.json": "23437099af05856a1a822d1b91c19c9dc93962f073b823189bf8eb96652710af",
-    "livros.json": "f442a3ebc93ea5bb05cf5880f1f99b05cda6db8d4e85c0906cdac81299210e8f",
+    "livros.json": "a0a237a336f25ba30c43991c0529231aab5e3f4ee99f87909c69df5c7790a6b4",
     "relacoes-eventos.json": "1f35d0c187634842cb26a4e90c1447ad28217d3e86b231a3d74ea68c331c6e46",
     "utilidade-publica.json": "caafdd3d7927c65ad4463805d78ea0d74ca974f3a3f909eac4ffc052e57b8e4e"
   },
-  "published_at": "2026-10-20T23:19:56Z",
-  "request_id": "auto-workflow_run-39509313234-1",
+  "published_at": "2026-10-21T14:23:45Z",
+  "request_id": "auto-workflow_run-39616035792-1",
   "schema_version": "1.0",
   "source_repository": "tiago-ps/ColetorEventosGratuitos",
-  "source_sha": "fdd5dbd799203662834198ad6d77332a5952698c",
+  "source_sha": "391aa53fd8b0da9142d07622c56461185e559b41",
   "staging_repository": "tiago-ps/EventosGratuitosBHeSabara",
   "versions": {
     "manifest_schema": "1.0",
     "publication_validator": "central-v1"
   },
-  "workflow_run_id": "39509313234"
+  "workflow_run_id": "39616035792"
 }

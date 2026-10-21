@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Março de 2026 a Junho de 2027",
-  "atualizado_em": "2026-10-20T20:19:25-03:00",
+  "atualizado_em": "2026-10-21T11:23:15-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -5975,188 +5975,6 @@
       "origem_experimental": "minas_tenis_cultura"
     },
     {
-      "id": "ufmg-ec-mostra-iaia-de-audiovisual-caixa-dagua-exibicao-2",
-      "titulo": "Mostra IAIA de Audiovisual: “Caixa D’Água” (exibição)",
-      "data": "2026-10-20",
-      "data_fim": "",
-      "horario": "11h",
-      "local": "Espaço do Conhecimento UFMG",
-      "cidade": "Belo Horizonte",
-      "categoria": "Atividade educativa",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": ": Em outubro, a Mostra IAIA de Audiovisual se dedica à cultura da criança na afrodiáspora, com a exibição do filme “Caixa D’Água”. A história acompanha Verônica, seu irmão Valtinho e seus amigos Deco e Peninha, representando o universo lúdico da infância e a incrível capacidade das crianças de presenciar o absurdo.",
-      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/09/caixa-dagua-1-scaled.jpg",
-      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/mostra-iaia-de-audiovisual-caixa-dagua-exibicao-2/",
-      "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-20",
-          "observacao": "11h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "espaco-conhecimento-ufmg",
-      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
-    },
-    {
-      "id": "ufmg-ec-mostra-iaia-de-audiovisual-carrinho-de-rolima-exibicao-2",
-      "titulo": "Mostra IAIA de Audiovisual: “Carrinho de Rolimã” (exibição)",
-      "data": "2026-10-20",
-      "data_fim": "",
-      "horario": "15h",
-      "local": "Espaço do Conhecimento UFMG",
-      "cidade": "Belo Horizonte",
-      "categoria": "Atividade educativa",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": ": Em outubro, a Mostra IAIA de Audiovisual se dedica à cultura da criança na afrodiáspora, com a exibição do filme “Carrinho de Rolimã”. O curta acompanha uma competição de carrinho de rolimã que agita a Ilha de Caratateua, levando Dandará e Ayara a superar os desafios que aparecem desde a infância.",
-      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/09/Carrinho-de-rolima-Still-03.png",
-      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/mostra-iaia-de-audiovisual-carrinho-de-rolima-exibicao-2/",
-      "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-20",
-          "observacao": "15h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "espaco-conhecimento-ufmg",
-      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
-    },
-    {
-      "id": "fcs-wp-37689",
-      "titulo": "Ciclo China em Perspectiva",
-      "data": "2026-10-20",
-      "data_fim": "",
-      "horario": "16h",
-      "local": "Palácio das Artes",
-      "cidade": "Belo Horizonte",
-      "categoria": "Cinema",
-      "gratuito": true,
-      "inscricao": "Ingresso gratuito; consulte a página oficial",
-      "descricao": "Em 2026, Brasil e China celebram o Ano Cultural Brasil–China, marco que amplia as possibilidades de encontro e intercâmbio entre os dois países por meio da arte e da cultura. Em Minas Gerais, a celebração ganha ainda um significado particular: o Estado completa 30 anos do acordo de irmandade com a Província de Jiangsu,",
-      "imagem": "https://fcs.mg.gov.br/wp-content/uploads/2026/09/CICLO-CHINA-CARD-1024x1024.png",
-      "link": "https://fcs.mg.gov.br/evento/ciclo-china-em-perspectiva/",
-      "fonte": "Fundação Clóvis Salgado",
-      "instituicao_id": "fcs",
-      "fonte_id": 37689,
-      "atualizado_na_fonte": "2026-09-25T21:12:34",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-20",
-          "observacao": "16h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "palacio-das-artes",
-      "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7"
-    },
-    {
-      "id": "minas-tenis-lancamento-de-livro-entreviver-permanecer-2026-10-20",
-      "titulo": "Lançamento de livro: Entreviver // permanecer",
-      "data": "2026-10-20",
-      "data_fim": "",
-      "horario": "19h",
-      "local": "Café Cultural do Centro Cultural Unimed-BH Minas",
-      "cidade": "Belo Horizonte",
-      "endereco": "Rua da Bahia, 2244, Lourdes, Belo Horizonte - MG",
-      "categoria": "Literatura",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita conforme página oficial; consulte a programação para inscrição, retirada de ingresso e lotação.",
-      "descricao": "20 OUT Lançamento de livro: Entreviver // permanecer Centro Cultural Unimed-BH Minas Biblioteca Cultura Lançamento de Livros Data: 20/10/2026 Horário: 19:00 às 21:00 Local: Café do Centro Cultural Unimed-BH Minas - Minas Tênis Clube I Entrada gratuita Este livro nasceu no espaço delicado entre a pausa e a permanência. Entre o medo e a beleza. Entre a fragilidade do corpo e a força silenciosa da alma. Em uma escrita sensível, poética e profundamente humana, Rozália Del Gáudio transforma fragmentos de sua travessia em pequenos encontros de presença. Sem uma ordem linear,",
-      "imagem": "https://minastenisclube.com.br/wp-content/uploads/2026/09/5.jpg",
-      "link": "https://minastenisclube.com.br/programacao/lancamento-de-livro-entreviver-permanecer/",
-      "pagina": "https://minastenisclube.com.br/programacao/lancamento-de-livro-entreviver-permanecer/",
-      "fonte": "Minas Tênis Clube — programação cultural",
-      "instituicao_id": "minas-tenis-clube",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "gratuidade_explicita",
-      "local_id": "centro-cultural-unimed-bh-minas",
-      "status_validacao": "aprovado",
-      "origem_experimental": "minas_tenis_cultura",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-20",
-          "observacao": "19h"
-        }
-      },
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+Unimed-BH+Minas%2C+Rua+da+Bahia%2C+2244%2C+Lourdes%2C+Belo+Horizonte+-+MG",
-      "espaco_interno": "Café Cultural do"
-    },
-    {
-      "id": "cine-santa-tereza-bileto-128399",
-      "titulo": "CINECLUBE PSINE - A Loucura entre Nós",
-      "data": "2026-10-20",
-      "data_fim": "",
-      "horario": "19h30",
-      "local": "Cine Santa Tereza",
-      "cidade": "Belo Horizonte",
-      "categoria": "Cinema",
-      "gratuito": true,
-      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial. Também há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade.",
-      "descricao": "A loucura entre nós ( Fernanda Vareille | 2016 | Brasil l documentário |76 min) \"A loucura entre nós\" explora os corredores de um hospital psiquiátrico, revelando personagens e histórias que questionam os limites entre sanidade e loucura. Inspirado no livro homônimo do psiquiatra, psicanalista e escritor Marcelo Veras, o documentário mergulha nos paradoxos da reinserção da loucura no mundo. Com foco em personagens femininas, o filme exala as contradições da razão, convidando-nos a refletir sobre medos, desejos e erros, subvertendo rótulos e estereótipos da sanidade mental. Classificação indicativa: 12 anos",
-      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/2dnnd55asmmba87tpoq87k72inh0tsq8ghcqinfe034he24h2tvbe0vt6ch4c9ipulv33ic77dhcn7dcrhjsgd0d1bl982elpu23b2u.webp",
-      "link": "https://bileto.sympla.com.br/event/128399/d/420771/s/2726655",
-      "fonte": "Cine Santa Tereza",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "fonte_id": "128399",
-      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
-      "classificacao_indicativa": "12 anos",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-20",
-          "observacao": "19h30"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
-    },
-    {
-      "id": "conservatorio-ufmg-coro-feminino-da-escola-de-musica-da-uemg-2026-10-20-1930",
-      "titulo": "Coro Feminino da Escola de Música da UEMG",
-      "data": "2026-10-20",
-      "data_fim": "",
-      "horario": "19h30",
-      "local": "Conservatório UFMG",
-      "local_id": "conservatorio-ufmg",
-      "cidade": "Belo Horizonte",
-      "endereco": "Avenida Afonso Pena, 1534, Centro, Belo Horizonte - MG",
-      "categoria": "Música",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita, sujeita à capacidade do espaço, conforme agenda oficial do Conservatório UFMG.",
-      "descricao": "CONEXÕES MUSICAIS. Coro Feminino da Escola de Música da UEMG. MÚSICA ERUDITA",
-      "imagem": "https://www.ufmg.br/online/arquivos/anexos/ConservatorioUFMGFachada.jpg",
-      "link": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html",
-      "pagina": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html",
-      "fonte": "Conservatório UFMG — agenda oficial",
-      "instituicao_id": "conservatorio-ufmg",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "gratuidade_global_agenda_oficial",
-      "status_validacao": "aprovado",
-      "origem_experimental": "conservatorio_ufmg",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-20",
-          "observacao": "19h30"
-        }
-      },
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Conservat%C3%B3rio+UFMG%2C+Avenida+Afonso+Pena%2C+1534%2C+Centro%2C+Belo+Horizonte+-+MG",
-      "imagem_fallback_origem": "equipamento"
-    },
-    {
       "id": "conservatorio-ufmg-duo-mitre-luisa-mitre-piano-e-natalia-mitre-vibrafone-e-percussao-2026-10-21-1230",
       "titulo": "Duo Mitre Luísa Mitre (piano) e Natália Mitre (vibrafone e percussão)",
       "data": "2026-10-21",
@@ -9114,5 +8932,5 @@
   ],
   "modo_teste_experimental": true,
   "eventos_somente_teste": 6,
-  "atualizado_em_teste": "2026-10-20T20:19:56-03:00"
+  "atualizado_em_teste": "2026-10-21T11:23:45-03:00"
 }

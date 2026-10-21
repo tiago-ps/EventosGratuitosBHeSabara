@@ -2,8 +2,8 @@
   "schema": 10,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-10-20T22:33:43.744086+00:00",
-  "total": 19,
+  "coletado_em_utc": "2026-10-21T14:19:02.061128+00:00",
+  "total": 20,
   "concursos": [
     {
       "id": "pci:noticia:cgu-abre-concurso-publico-com-vagas-para-auditores-federais-de-financas-e-controle",
@@ -113,6 +113,43 @@
             "status": "aberto"
           }
         ]
+      }
+    },
+    {
+      "id": "pci:noticia:prefeitura-de-paulo-de-faria-sp-abre-concurso-publico-com-salarios-de-ate-8632",
+      "titulo": "Prefeitura de Paulo de Faria",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-paulo-de-faria-sp-abre-concurso-publico-com-salarios-de-ate-8632",
+      "imagem": "https://cdn.pci.app.br/img/i/b911126de92f3645a29a7a11a43b9c71.png",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": " escolar (cr) motorista (2 vagas + cr) nutricionista (1 vaga + cr) operador de maquinas de motoniveladora (1 vaga + cr) operador de maquinas pesadas (1 vaga + cr) orientador de esportes (1 vaga + cr) pedreiro (2 vagas + cr) procurador (cr) psicologo (1 vaga + cr) tecnico em enfermagem (1 vaga + cr) tecnico em informatica (cr) terapeuta ocupacional (2 vagas + cr) tesoureiro (1 vaga + cr) trabalhador bracal (2 vagas + cr) vigilante (1 vaga + cr) a jornada varia de 20 a 44 horas semanais. os vencimentos vao de r$ 1.657,09 a r$ 8.632,29. as inscricoes serao feitas pelo site portal.imperioconcursos.com.br , das 8h do di"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "SP",
+      "cidade": "Paulo de Faria",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "R$ 1.657,09 a R$ 8.632,29",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Psicólogo (1 vaga + CR) Técnico em Enfermagem (1 vaga + CR) Técnico em Informática",
+          "vagas_texto": "Cadastro de Reserva",
+          "formacao": "Técnico em Informática",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "prazo_desconhecido",
+        "completude": "desconhecida"
       }
     },
     {
@@ -276,6 +313,61 @@
             "inicio": "2026-10-19",
             "fim": "2026-11-17",
             "status": "aberto"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pci:noticia:prefeitura-de-santa-luzia-mg-abre-concurso-publico-com-salarios-de-ate-8628",
+      "titulo": "Prefeitura de Santa Luzia",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-santa-luzia-mg-abre-concurso-publico-com-salarios-de-ate-8628",
+      "imagem": "https://cdn.pci.app.br/img/i/235304f35049dd093385cd614f9c28c0.png",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": "uesa (1 vaga) professor de educacao basica peb iii matematica (7 vagas) psicologo (12 vagas) supervisor pedagogico (cr) tecnico agricola (1 vaga) tecnico ambiental (cr) tecnico em saude bucal (12 vagas) tecnico em edificacoes (8 vagas) tecnico em enfermagem (cr) tecnico em geoprocessamento (1 vaga) tecnico em informatica (2 vagas) tecnico em paisagismo (cr) terapeuta ocupacional (4 vagas) tesoureiro (1 vaga) topografo (3 vagas) turismologo (1 vaga) procurador municipal (3 vagas) a jornada de trabalho e de 20 a 40 horas semanais, conforme o cargo. as remuneracoes variam de r$ 1.622,41 a r$ 8.628,87. as inscricoes po"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "MG",
+      "cidade": "Santa Luzia",
+      "inscricoes_inicio_texto": "17 de dezembro de 2026",
+      "inscricoes_fim_texto": "15 de janeiro de 2027",
+      "inscricoes_texto": "17 de dezembro de 2026 a 15 de janeiro de 2027",
+      "remuneracao_faixa_texto": "R$ 8.628,87",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico em Informática",
+          "vagas_texto": "2 vagas",
+          "formacao": "Técnico em Informática",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "futuro",
+        "completude": "completa",
+        "inicio": "2026-12-17",
+        "fim": "2027-01-15",
+        "texto_original": "17 de dezembro de 2026 a 15 de janeiro de 2027"
+      },
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-12-17",
+          "fim": "2027-01-15"
+        },
+        "participacao": [
+          {
+            "tipo": "candidatura",
+            "inicio": "2026-12-17",
+            "fim": "2027-01-15",
+            "status": "futuro"
           }
         ]
       }
@@ -634,61 +726,6 @@
             "inicio": "2026-10-20",
             "fim": "2026-11-18",
             "status": "aberto"
-          }
-        ]
-      }
-    },
-    {
-      "id": "pci:noticia:prefeitura-de-santa-luzia-mg-abre-concurso-publico-com-salarios-de-ate-8628",
-      "titulo": "Prefeitura de Santa Luzia",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-santa-luzia-mg-abre-concurso-publico-com-salarios-de-ate-8628",
-      "imagem": "https://cdn.pci.app.br/img/i/235304f35049dd093385cd614f9c28c0.png",
-      "formacoes_compativeis": [
-        "Técnico em Informática"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Técnico em Informática",
-          "nivel": "tecnico",
-          "evidencia": "uesa (1 vaga) professor de educacao basica peb iii matematica (7 vagas) psicologo (12 vagas) supervisor pedagogico (cr) tecnico agricola (1 vaga) tecnico ambiental (cr) tecnico em saude bucal (12 vagas) tecnico em edificacoes (8 vagas) tecnico em enfermagem (cr) tecnico em geoprocessamento (1 vaga) tecnico em informatica (2 vagas) tecnico em paisagismo (cr) terapeuta ocupacional (4 vagas) tesoureiro (1 vaga) topografo (3 vagas) turismologo (1 vaga) procurador municipal (3 vagas) a jornada de trabalho e de 20 a 40 horas semanais, conforme o cargo. as remuneracoes variam de r$ 1.622,41 a r$ 8.628,87. as inscricoes po"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "MG",
-      "cidade": "Santa Luzia",
-      "inscricoes_inicio_texto": "17 de dezembro de 2026",
-      "inscricoes_fim_texto": "15 de janeiro de 2027",
-      "inscricoes_texto": "17 de dezembro de 2026 a 15 de janeiro de 2027",
-      "remuneracao_faixa_texto": "R$ 8.628,87",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Técnico em Informática",
-          "vagas_texto": "2 vagas",
-          "formacao": "Técnico em Informática",
-          "confianca": "alta"
-        }
-      ],
-      "janela_inscricoes": {
-        "estado": "futuro",
-        "completude": "completa",
-        "inicio": "2026-12-17",
-        "fim": "2027-01-15",
-        "texto_original": "17 de dezembro de 2026 a 15 de janeiro de 2027"
-      },
-      "temporalidade": {
-        "classe": "periodo",
-        "realizacao": {
-          "inicio": "2026-12-17",
-          "fim": "2027-01-15"
-        },
-        "participacao": [
-          {
-            "tipo": "candidatura",
-            "inicio": "2026-12-17",
-            "fim": "2027-01-15",
-            "status": "futuro"
           }
         ]
       }
