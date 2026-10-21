@@ -171,8 +171,8 @@ for (const asset of [
   'js/conteudos/atividades-lazer.js?v=6',
   'js/temporalidade-eventos.js?v=1',
   `js/app.js?v=${indexSource.match(/js\/app\.js\?v=(\d+)/)?.[1]}`,
-  'js/mapa-espacos.js?v=3',
-  'css/mapa-espacos.css?v=3'
+  'js/mapa-espacos.js?v=4',
+  'css/mapa-espacos.css?v=4'
 ]) {
   assert.ok(indexSource.includes(asset), `Asset ausente do index: ${asset}`);
   assert.ok(swSource.includes(`./${asset}`), `Asset ausente do service worker: ${asset}`);
