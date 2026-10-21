@@ -6,9 +6,14 @@ on:
     paths:
       - "js/app.js"
       - "js/mapa-espacos.js"
+      - "js/revisar-localizacoes.js"
+      - "revisar-localizacoes.html"
+      - "scripts/importar_revisoes_localizacoes.py"
       - "css/mapa-espacos.css"
       - "coordenadas-espacos.json"
       - "testes/mapa-espacos.test.cjs"
+      - "testes/auditoria-localizacoes.test.cjs"
+      - "testes/test_importar_revisoes_localizacoes.py"
       - "js/temporalidade-eventos.js"
       - "js/eventos-manuais-ui.js"
       - "js/curadorias-site.js"
@@ -46,9 +51,14 @@ on:
     paths:
       - "js/app.js"
       - "js/mapa-espacos.js"
+      - "js/revisar-localizacoes.js"
+      - "revisar-localizacoes.html"
+      - "scripts/importar_revisoes_localizacoes.py"
       - "css/mapa-espacos.css"
       - "coordenadas-espacos.json"
       - "testes/mapa-espacos.test.cjs"
+      - "testes/auditoria-localizacoes.test.cjs"
+      - "testes/test_importar_revisoes_localizacoes.py"
       - "js/temporalidade-eventos.js"
       - "js/eventos-manuais-ui.js"
       - "js/curadorias-site.js"
@@ -99,6 +109,7 @@ jobs:
         run: |
           node --check js/app.js
           node --check js/mapa-espacos.js
+          node --check js/revisar-localizacoes.js
           node --check js/temporalidade-eventos.js
           node --check js/eventos-manuais-ui.js
           node --check js/curadorias-site.js
@@ -117,6 +128,8 @@ jobs:
         run: |
           node testes/filtros-exploracao-completos.test.cjs
           node testes/mapa-espacos.test.cjs
+          node testes/auditoria-localizacoes.test.cjs
+          python3 -m unittest discover -s testes -p test_importar_revisoes_localizacoes.py
           node testes/cabecalho-exploracao.test.cjs
           node testes/cursos-agenda.test.cjs
           node testes/cursos-temporalidade.test.cjs
