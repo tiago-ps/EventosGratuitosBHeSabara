@@ -77,9 +77,15 @@
     const address = normalize(rawAddress);
     if (address && index.addresses.has(address)) return index.addresses.get(address);
     const additional = extra?.locais_por_endereco || {};
-    if (hasStreetAddress(rawAddress)) {
+    // Endereços editoriais conferidos podem começar por "Edifício" ou
+    // nome do equipamento. Exigir número e correspondência EXATA do endereço,
+    // jamais aproximar uma cidade ou um bairro a um único marcador.
+    if (address.length > 15 && /\b\d{1,6}\b/.test(address)) {
       for (const [key, value] of Object.entries(additional)) {
-        if (normalize(key) === address) return pointOf(value);
+        if (normalize(key) === address) {
+          const coords = pointOf(value);
+          if (coords) return coords;
+        }
       }
     }
     // Coordenadas revisadas para locais ausentes do catálogo de equipamentos.
