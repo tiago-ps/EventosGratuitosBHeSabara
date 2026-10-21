@@ -82,10 +82,18 @@
         if (normalize(key) === address) return pointOf(value);
       }
     }
+    // Coordenadas revisadas para locais ausentes do catálogo de equipamentos.
+    // Nunca utilizar nomes genéricos como "local a definir" na revisão.
+    const byId = extra?.locais_por_id || {};
+    for (const id of ids) {
+      const coords = pointOf(byId[String(id || '')]);
+      if (coords) return coords;
+    }
+    const byName = extra?.locais_por_nome || {};
     const names = [item?.local?.nome, item?.unidade, item?.local, item?.espaco_principal]
       .filter(name => typeof name === 'string');
     for (const name of names) {
-      const coords = index.names.get(normalize(name));
+      const coords = index.names.get(normalize(name)) || pointOf(byName[normalize(name)]);
       if (coords) return coords;
     }
     return null;
@@ -132,8 +140,13 @@
     const index = spaceIndex(allSpaces || [], coordinates || {});
     const items = [];
     let unmapped = 0;
+    const unmappedRecords = [];
     const add = (item, coords, venue, address, precision) => {
-      if (!coords) { unmapped += 1; return; }
+      if (!coords) {
+        unmapped += 1;
+        unmappedRecords.push({ item, venue: venue || item.titulo || '', address: address || '' });
+        return;
+      }
       items.push({ item, coords, venue: venue || item.titulo || '',
         address: address || '', precision: precision || '' });
     };
@@ -193,7 +206,7 @@
       if (!grouped.has(key)) grouped.set(key, { coords: record.coords, items: [] });
       grouped.get(key).items.push(record);
     }
-    return { points: [...grouped.values()], mapped: items.length, unmapped };
+    return { points: [...grouped.values()], mapped: items.length, unmapped, unmappedRecords };
   }
 
   // API mantida para testes do agrupamento de espaços e compatibilidade.
@@ -452,6 +465,48 @@
     mapHost.className = 'agenda-space-map-canvas';
     mapHost.setAttribute('aria-label', 'Mapa interativo de locais');
     section.append(mapHost);
+    // Resultados ainda sem coordenadas também devem ser recuperáveis pelo
+    // modo Mapa, sem inventar um marcador ou ocultar o evento do visitante.
+    const withoutPosition = located.unmappedRecords.filter(record =>
+      record.item?.tipo_conteudo === 'evento');
+    if (withoutPosition.length) {
+      const pending = document.createElement('details');
+      pending.className = 'agenda-map-pending';
+      pending.open = content === 'events';
+      const summary = document.createElement('summary');
+      summary.textContent = withoutPosition.length +
+        ' eventos sem ponto geográfico confirmado — consultar na lista';
+      pending.append(summary);
+      const search = document.createElement('input');
+      search.type = 'search';
+      search.className = 'agenda-map-pending-search';
+      search.placeholder = 'Filtrar por evento ou local';
+      search.setAttribute('aria-label', 'Pesquisar eventos sem coordenadas');
+      pending.append(search);
+      const list = document.createElement('ul');
+      list.className = 'agenda-map-pending-items';
+      for (const record of withoutPosition) {
+        const entry = document.createElement('li');
+        const link = document.createElement('a');
+        const href = externalUrl(toItemUrl(record.item));
+        link.textContent = record.item.titulo || 'Ver evento';
+        if (href) link.href = href;
+        entry.append(link);
+        const venue = document.createElement('small');
+        venue.textContent = record.venue || 'Local a confirmar';
+        entry.append(venue);
+        entry.dataset.searchText = normalize(link.textContent + ' ' + venue.textContent);
+        list.append(entry);
+      }
+      search.addEventListener('input', () => {
+        const value = normalize(search.value);
+        for (const entry of list.children) {
+          entry.hidden = Boolean(value && !entry.dataset.searchText.includes(value));
+        }
+      });
+      pending.append(list);
+      section.append(pending);
+    }
     shell.insertBefore(section, resultsContainer);
     const myGeneration = generation;
     const markerByKey = new Map();
