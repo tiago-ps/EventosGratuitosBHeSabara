@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; script-src 'self' https://cdn.jsdelivr.net; img-src 'self' data: https:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<title>Conferir endereços — Tem Sim, Uai (teste)</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
+<style>
+:root { color-scheme: light; font-family: system-ui,-apple-system,Arial,sans-serif; color:#182d29; background:#f5f8f7 }
+* { box-sizing: border-box }
+body { margin: 0 }
+header { padding: 18px clamp(14px,3vw,32px); background:#102c29; color:#fff }
+header a { color:#b6f1dd }
+h1 { font-size:clamp(1.3rem,3vw,1.9rem); margin:4px 0 8px }
+h2 { font-size:1.15rem; margin:10px 0 }
+small,.muted { color:#546a64 }
+header small { color:#d6e6e1 }
+p { line-height:1.5 }
+.toolbar { padding: 14px clamp(14px,3vw,32px); display:flex; gap:10px; flex-wrap:wrap; align-items:center; border-bottom:1px solid #dde8e1 }
+#status { font-weight:700 }
+input,select,button,textarea { font:inherit; }
+button,.btn { background:#126a50; color:#fff; border:0; padding:10px 13px; border-radius:9px; cursor:pointer; font-weight:650; text-decoration:none; display:inline-block }
+button:disabled { opacity:.5; cursor:not-allowed }
+button.secondary,.btn.secondary { background:#e5f0eb; color:#134434; border:1px solid #9ec5b6 }
+button:focus-visible,input:focus-visible,textarea:focus-visible { outline:3px solid #e4a900; outline-offset:2px }
+input[type=search],input[type=text],input[type=url],input[type=number],textarea,select { width:100%; border:1px solid #9aafa7; border-radius:8px; background:#fff; color:#15342a; padding:10px }
+main { display:grid; grid-template-columns:minmax(285px,35%) minmax(0,65%); min-height:calc(100vh - 175px) }
+aside { padding:12px; border-right:1px solid #d9e5dc; max-height:calc(100vh - 168px); overflow:auto }
+#records { list-style:none; margin:10px 0; padding:0 }
+#records button { width:100%; display:block; text-align:left; background:#fff; color:#17382d; border:1px solid #d6e4dc; padding:12px 14px; margin:0 0 8px; font-weight:400; overflow-wrap:anywhere }
+#records button.is-selected { border:2px solid #166b50; background:#e5f4ec }
+#records button.is-done { border-left:6px solid #197953 }
+#records b { display:block; margin-bottom:5px }
+#records span { display:block; color:#53665e; font-size:.83rem }
+article { padding:18px clamp(14px,3vw,27px) 40px; min-width:0 }
+.panel { background:#fff; border:1px solid #d5e5dc; border-radius:12px; padding:17px; margin:12px 0 }
+#event-list { max-height:125px; overflow:auto; padding-left:20px }
+#event-list li { margin:6px 0 }
+#review-map { width:100%; height: min(45vh,390px); min-height:245px; border-radius:10px; background:#dcebe0 }
+.field-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px }
+label { display:block; font-weight:650; margin:10px 0 5px }
+label small { font-weight:400 }
+.tools { display:flex; flex-wrap:wrap; gap:8px; margin:12px 0 }
+.warning { color:#834f08; background:#fff6dd; border-left:4px solid #d2a438; padding:9px 12px }
+.notice { background:#e8f7ee; border-left:4px solid #188357; padding:9px 12px }
+#empty { margin:15px }
+a { color:#075f83 }
+footer { font-size:.85rem; padding:14px 28px; border-top:1px solid #d5e5dc }
+@media(max-width:800px) {
+ main { display:block }
+ aside { max-height:35vh; border-right:0; border-bottom:1px solid #c7dacf }
+ article { padding:12px }
+ .field-grid { grid-template-columns:1fr }
+ #review-map { height:310px }
+}
+</style>
+</head>
+<body>
+<header>
+<small>Ambiente de teste • Revisão editorial de localizações</small>
+<h1>Conferir endereços e pontos do mapa</h1>
+<p>Revise <strong>um local de cada vez</strong>; todos os eventos desse local serão beneficiados. Esta página não altera automaticamente os dados oficiais.</p>
+<a href="./?modo=agenda">← Voltar ao mural de teste</a>
+</header>
+<div class="toolbar">
+<strong id="status">Carregando catálogos…</strong>
+<button type="button" id="export" class="secondary">Exportar revisões (JSON)</button>
+<button type="button" id="clear" class="secondary">Limpar revisões locais</button>
+</div>
+<main>
+<aside aria-label="Fila de endereços">
+<label for="search">Pesquisar local ou evento</label>
+<input id="search" type="search" placeholder="NUFAC, São Bernardo, MHAB…">
+<label for="filter">Situação</label>
+<select id="filter">
+<option value="all">Todos os locais pendentes</option>
+<option value="address">Com endereço cadastrado</option>
+<option value="no-address">Sem endereço cadastrado</option>
+<option value="reviewed">Já conferidos neste navegador</option>
+<option value="pending">Ainda por conferir</option>
+</select>
+<p id="count" class="muted">—</p>
+<ul id="records"></ul>
+</aside>
+<article>
+<div id="empty" class="panel">Selecione um local da lista para consultar os eventos e validar a localização.</div>
+<div id="editor" hidden>
+<div class="panel">
+<h2 id="venue"></h2>
+<p id="address"></p>
+<p id="warning" class="warning" hidden></p>
+<div class="tools">
+<a id="source-maps" class="btn secondary" target="_blank" rel="noopener noreferrer">Conferir link cadastrado ↗</a>
+<a id="osm-search" class="btn secondary" target="_blank" rel="noopener noreferrer">Pesquisar no OpenStreetMap ↗</a>
+</div>
+<small id="group-info"></small>
+<ul id="event-list"></ul>
+</div>
+<div class="panel">
+<h2>1. Confirmar no mapa</h2>
+<p class="muted">Confira o endereço na fonte oficial, procure o equipamento no OpenStreetMap e clique no ponto correto no mapa abaixo. Não use o centro de uma rua como se fosse a entrada.</p>
+<div id="review-map" aria-label="Mapa interativo para selecionar o ponto validado"></div>
+<div class="tools">
+<button type="button" id="center" class="secondary">Usar centro do mapa</button>
+<button type="button" id="reset" class="secondary">Limpar ponto selecionado</button>
+</div>
+<div class="field-grid">
+<div><label for="lat">Latitude</label><input id="lat" type="number" step="any" placeholder="-19.9"></div>
+<div><label for="lon">Longitude</label><input id="lon" type="number" step="any" placeholder="-43.9"></div>
+</div>
+<label for="evidence">Fonte de confirmação (URL oficial ou OpenStreetMap)</label>
+<input id="evidence" type="url" placeholder="https://...">
+<label for="notes">Observação / precisão do ponto</label>
+<input id="notes" type="text" placeholder="Entrada principal do equipamento, conferida no endereço oficial">
+<label><input type="checkbox" id="confirmed"> Conferi que este ponto pertence ao local e endereço dos eventos acima.</label>
+<div class="tools">
+<button type="button" id="save">Salvar validação neste navegador</button>
+<button type="button" id="discard" class="secondary">Descartar validação deste local</button>
+</div>
+<p id="feedback" role="status"></p>
+</div>
+</div>
+</article>
+</main>
+<footer>As revisões ficam apenas neste navegador até exportar o JSON. Para incorporá-las ao repositório, envie o arquivo exportado para revisão e integração. Não há acesso de edição automática ao GitHub nesta página.</footer>
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js" defer></script>
+<script src="js/mapa-espacos.js?v=4" defer></script>
+<script src="js/revisar-localizacoes.js?v=1" defer></script>
+</body>
+</html>
