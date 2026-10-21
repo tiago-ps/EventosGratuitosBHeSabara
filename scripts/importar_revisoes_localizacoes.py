@@ -77,8 +77,6 @@ def plan(root: Path, patch: dict) -> tuple[dict, dict, dict]:
                 raise ValueError(f"Evento não encontrado; exportação desatualizada: {event_id}")
             if address and normalize(event.get("endereco")) != normalize(address):
                 raise ValueError(f"Endereço diferente do cadastro no evento {event_id}")
-            if location_id and str(event.get("local_id") or "") != location_id:
-                raise ValueError(f"ID do local diverge em {event_id}")
             summary["eventos"].add(event_id)
         point = {
             "latitude": round(lat, 7),
@@ -97,10 +95,16 @@ def plan(root: Path, patch: dict) -> tuple[dict, dict, dict]:
         if address:
             extra["locais_por_endereco"][address] = point
             summary["enderecos"].add(address)
-        if location_id:
+        # O mesmo endereço pode reunir subespaços com IDs distintos.
+        # Não vincular toda a programação a um ID de outro equipamento.
+        if location_id and all(str(events[event_id].get("local_id") or "") == location_id
+                               for event_id in linked_ids):
             extra["locais_por_id"][location_id] = point
             summary["ids"].add(location_id)
-        if name:
+        # Nomes só são aliases seguros quando TODOS os eventos do grupo
+        # possuem a mesma identificação editorial.
+        if name and all(normalize(events[event_id].get("local")) == normalize(name)
+                        for event_id in linked_ids):
             extra["locais_por_nome"][normalize(name)] = point
             summary["nomes"].add(normalize(name))
         summary["revisoes"] += 1
