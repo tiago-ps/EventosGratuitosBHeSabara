@@ -27,7 +27,7 @@ assert.equal(contests.filter(catalog).length, catalog.filter(contest => contests
 
 const searchable = catalog.find(contest => contest.titulo);
 assert.ok(searchable);
-const queryMatches = contests.filter(catalog, { query: searchable.titulo });
+const queryMatches = contests.filter(catalog, { query: searchable.titulo, state: 'todos' });
 assert.ok(queryMatches.some(contest => contest.url === searchable.url));
 
 const formationOptions = contests.formationOptions(catalog);
@@ -36,14 +36,14 @@ assert.ok(formationOptions.length > 0);
 assert.ok(ufOptions.length > 0);
 
 const [formation] = formationOptions[0];
-const formationMatches = contests.filter(catalog, { formation });
+const formationMatches = contests.filter(catalog, { formation, state: 'todos' });
 assert.ok(formationMatches.length > 0);
 assert.ok(formationMatches.every(contest =>
   (contest.formacoes_compativeis || []).includes(formation)
 ));
 
 const [uf] = ufOptions[0];
-const ufMatches = contests.filter(catalog, { uf });
+const ufMatches = contests.filter(catalog, { uf, state: 'todos' });
 assert.ok(ufMatches.length > 0);
 assert.ok(ufMatches.every(contest => contest.uf === uf));
 
@@ -55,11 +55,11 @@ assert.equal(contests.filter(catalog, { query: 'resultado impossível 9xq7' }).l
 const cityOptions = contests.cityOptions(catalog);
 assert.ok(cityOptions.length > 0);
 const [cityValue] = cityOptions[0];
-const cityMatches = contests.filter(catalog, { city: cityValue });
+const cityMatches = contests.filter(catalog, { city: cityValue, state: 'todos' });
 assert.ok(cityMatches.length > 0);
 assert.ok(cityMatches.every(contest => normalizeText(contest.cidade) === cityValue));
 
-const highRemuneration = contests.filter(catalog, { remuneration: 'mais-10000' });
+const highRemuneration = contests.filter(catalog, { remuneration: 'mais-10000', state: 'todos' });
 assert.ok(highRemuneration.length > 0);
 assert.ok(highRemuneration.every(contest => contests.remunerationMax(contest) > 10000));
 assert.equal(
