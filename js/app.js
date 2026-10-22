@@ -5040,7 +5040,7 @@ function eventProgram(event) {
               <span><strong>Biblioteca do IFMG Campus Sabará</strong></span>
               <span>Segunda a sexta, das 09h00 às 21h00</span>
               <a href="tel:+553121029374">(31) 2102-9374</a>
-              <a href="mailto:temsimuai@ifmg.edu.br">temsimuai@ifmg.edu.br</a>
+              <a href="mailto:biblioteca.sabara@ifmg.edu.br">biblioteca.sabara@ifmg.edu.br</a>
             </address>
           </section>
         </div>
