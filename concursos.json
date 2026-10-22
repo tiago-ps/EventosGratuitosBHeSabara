@@ -405,7 +405,7 @@
         }
       ],
       "janela_inscricoes": {
-        "estado": "aberto",
+        "estado": "encerrado",
         "completude": "somente_fim",
         "fim": "2026-10-21",
         "texto_original": "até 21 de outubro de 2026"

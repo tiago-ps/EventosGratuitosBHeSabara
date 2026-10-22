@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Março de 2026 a Junho de 2027",
-  "atualizado_em": "2026-10-21T11:36:30-03:00",
+  "atualizado_em": "2026-10-22T00:40:08-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -5655,39 +5655,6 @@
       "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+UFMG%2C+Avenida+Santos+Dumont%2C+174%2C+Centro%2C+Belo+Horizonte+-+MG"
     },
     {
-      "id": "minas-tenis-exposicao-leveza-2026-09-21",
-      "titulo": "Exposição Leveza",
-      "data": "2026-09-21",
-      "data_fim": "2026-10-21",
-      "horario": "06h",
-      "local": "Centro Cultural Unimed-BH Minas",
-      "cidade": "Belo Horizonte",
-      "endereco": "Rua da Bahia, 2244, Lourdes, Belo Horizonte - MG",
-      "categoria": "Exposição",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita conforme página oficial; consulte a programação para inscrição, retirada de ingresso e lotação.",
-      "descricao": "21 SET — 21 OUT Exposição Leveza Minas II Cultura Galeria de Arte do Minas II Data: 21/09/2026 a 21/10/2026 Horário: 06:00 às 19:00 Local: Galeria de Arte do Minas II - Minas Tênis Clube II Entrada gratuita Leveza é a exposição da artista plástica belo-horizontina Lúcia Araujo, que reúne um conjunto de obras inspirado na figuração de pássaros, peixes, flores e seres que parecem flutuar. Em um universo lírico e utópico, a artista explora o imaginário da leveza como um território de possibilidades poéticas, alcançado por meio de um olhar atento à subjetividade e à delicadeza do que parece impossível.",
-      "imagem": "https://minastenisclube.com.br/wp-content/uploads/2026/09/Formatinho-agenda-Pink-Floyd-Eclipse-1.png",
-      "link": "https://minastenisclube.com.br/programacao/exposicao-leveza/",
-      "pagina": "https://minastenisclube.com.br/programacao/exposicao-leveza/",
-      "fonte": "Minas Tênis Clube — programação cultural",
-      "instituicao_id": "minas-tenis-clube",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "gratuidade_explicita",
-      "local_id": "centro-cultural-unimed-bh-minas",
-      "status_validacao": "aprovado",
-      "origem_experimental": "minas_tenis_cultura",
-      "temporalidade": {
-        "classe": "periodo",
-        "realizacao": {
-          "inicio": "2026-09-21",
-          "fim": "2026-10-21",
-          "observacao": "06h"
-        }
-      },
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+Unimed-BH+Minas%2C+Rua+da+Bahia%2C+2244%2C+Lourdes%2C+Belo+Horizonte+-+MG"
-    },
-    {
       "id": "mm-gerdau-exposicao-paisagens-inventadas-2026-09-24",
       "titulo": "EXPOSIÇÃO | PAISAGENS INVENTADAS",
       "data": "2026-09-24",
@@ -5973,159 +5940,6 @@
       "somente_teste": true,
       "status_validacao": "experimental",
       "origem_experimental": "minas_tenis_cultura"
-    },
-    {
-      "id": "conservatorio-ufmg-duo-mitre-luisa-mitre-piano-e-natalia-mitre-vibrafone-e-percussao-2026-10-21-1230",
-      "titulo": "Duo Mitre Luísa Mitre (piano) e Natália Mitre (vibrafone e percussão)",
-      "data": "2026-10-21",
-      "data_fim": "",
-      "horario": "12h30",
-      "local": "Conservatório UFMG",
-      "local_id": "conservatorio-ufmg",
-      "cidade": "Belo Horizonte",
-      "endereco": "Avenida Afonso Pena, 1534, Centro, Belo Horizonte - MG",
-      "categoria": "Música",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita, sujeita à capacidade do espaço, conforme agenda oficial do Conservatório UFMG.",
-      "descricao": "QUARTA CULTURAL. Duo Mitre Luísa Mitre (piano) e Natália Mitre (vibrafone e percussão). MÚSICA POPULAR",
-      "imagem": "https://www.ufmg.br/online/arquivos/anexos/ConservatorioUFMGFachada.jpg",
-      "link": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html",
-      "pagina": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html",
-      "fonte": "Conservatório UFMG — agenda oficial",
-      "instituicao_id": "conservatorio-ufmg",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "gratuidade_global_agenda_oficial",
-      "status_validacao": "aprovado",
-      "origem_experimental": "conservatorio_ufmg",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-21",
-          "observacao": "12h30"
-        }
-      },
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Conservat%C3%B3rio+UFMG%2C+Avenida+Afonso+Pena%2C+1534%2C+Centro%2C+Belo+Horizonte+-+MG",
-      "imagem_fallback_origem": "equipamento"
-    },
-    {
-      "id": "ufmg-ec-oficina-barracao-das-artes-inteligencia-ancestral-ia-e-escrevivencias-da-maternidade-e-da-infancia-negra",
-      "titulo": "Oficina “Barracão das Artes: Inteligência Ancestral (IA) e Escrevivências da Maternidade e da Infância Negra”",
-      "data": "2026-10-21",
-      "data_fim": "",
-      "horario": "13h",
-      "local": "Espaço do Conhecimento UFMG",
-      "cidade": "Belo Horizonte",
-      "categoria": "Oficina",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "Barracão das Artes é uma ação do projeto “Espaço Experimental IAIA – Inteligências Ancestrais Afrodiaspóricas” , voltada à criação artística e às culturas afrodiaspóricas. Nesta edição, a oficina propõe uma vivência de escrita, poesia e arte urbana a partir das experiências da maternidade e da infância negra.",
-      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/09/blogimagens-12.png",
-      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/oficina-barracao-das-artes-inteligencia-ancestral-ia-e-escrevivencias-da-maternidade-e-da-infancia-negra/",
-      "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-21",
-          "observacao": "13h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "espaco-conhecimento-ufmg",
-      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
-    },
-    {
-      "id": "sympla-sabara-3594196",
-      "titulo": "Oficina MESA POSTA - CONEXÃO SABARÁ",
-      "data": "2026-10-21",
-      "data_fim": "",
-      "horario": "14h às 17h",
-      "local": "Associação Servindo e Protegendo",
-      "cidade": "Sabará",
-      "categoria": "Oficina",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página da Sympla",
-      "descricao": "Olá, nossa OFICINA MESA POSTA será realizada na Conexão Sabará será um encontro de muito carinho e acolhimento!Encerrando nosso programa de Oficinas 2026 com chave de ouro e com muita solidariedade.Você vai descobrir que mesa posta não precisa ser complicada, cara ou perfeita. Ela pode ser simples,",
-      "imagem": "https://images.sympla.com.br/6ab5c315018e8-lg.jpg",
-      "link": "https://www.sympla.com.br/evento/oficina-mesa-posta-conexao-sabara/3594196",
-      "fonte": "Sympla — evento em Sabará",
-      "instituicao_id": "",
-      "fonte_id": "3594196",
-      "organizador": "",
-      "endereco": "Rua Silvana Almeida, 236 Borba Gato, Sabará, MG",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-21",
-          "observacao": "14h às 17h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Associa%C3%A7%C3%A3o+Servindo+e+Protegendo%2C+Rua+Silvana+Almeida%2C+236+Borba+Gato%2C+Sabar%C3%A1%2C+MG"
-    },
-    {
-      "id": "cine-santa-tereza-bileto-128674",
-      "titulo": "9ª MOSTRA CINEMA DOS QUILOMBOS - Na pisada de vovó/Cordões e sinos de além-mar",
-      "data": "2026-10-21",
-      "data_fim": "",
-      "horario": "19h",
-      "local": "Cine Santa Tereza",
-      "cidade": "Belo Horizonte",
-      "categoria": "Cinema",
-      "gratuito": true,
-      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
-      "descricao": "Na pisada de vovó (Isabel Cassimira, Fernanda de Oliveira, Marco Antônio Gonçalves, Leandro César | 2025 | Brasil | Documentário | 29min) Um dia especial do longo festejo no Reino Treze de Maio de Nossa Senhora do Rosário que acontece há 80 anos com a participação de dezenas de congos, catopês, marujos, caboclinhos, moçambiques, no bairro Concórdia em Belo Horizonte. Nesse dia a Casa recebe o candombe do Quilombo Mato do Tição, Jaboticatubas, MG. Há três gerações, essas duas comunidades se encontram para a festa, renovando vínculos reparadores de uma fratura colonial. Em 2025,",
-      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/1h04id109ok3a5dv1attut4fjbnr4305d7iik6jqdp2dgfs1cgokv07tm3f41ua61h8pggkvcjaifpqctdgea6d565cbb7o9df8mkr2.jpeg",
-      "link": "https://bileto.sympla.com.br/event/128674/d/421785/s/2731064",
-      "fonte": "Cine Santa Tereza",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "fonte_id": "128674",
-      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
-      "classificacao_indicativa": "Livre",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-21",
-          "observacao": "19h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
-    },
-    {
-      "id": "conservatorio-ufmg-o-piano-em-ressonancia-santiago-velasquez-colombia-10-encontro-internacional-de-piano-contemporaneo-2026-10-21-1930",
-      "titulo": "O Piano em Ressonância Santiago Velásquez (Colômbia) 10° Encontro Internacional de Piano Contemporâneo",
-      "data": "2026-10-21",
-      "data_fim": "",
-      "horario": "19h30",
-      "local": "Conservatório UFMG",
-      "local_id": "conservatorio-ufmg",
-      "cidade": "Belo Horizonte",
-      "endereco": "Avenida Afonso Pena, 1534, Centro, Belo Horizonte - MG",
-      "categoria": "Música",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita, sujeita à capacidade do espaço, conforme agenda oficial do Conservatório UFMG.",
-      "descricao": "ESPECIAL. O Piano em Ressonância Santiago Velásquez (Colômbia) 10° Encontro Internacional de Piano Contemporâneo. MÚSICA ERUDITA",
-      "imagem": "https://www.ufmg.br/online/arquivos/anexos/ConservatorioUFMGFachada.jpg",
-      "link": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html",
-      "pagina": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html",
-      "fonte": "Conservatório UFMG — agenda oficial",
-      "instituicao_id": "conservatorio-ufmg",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "gratuidade_global_agenda_oficial",
-      "status_validacao": "aprovado",
-      "origem_experimental": "conservatorio_ufmg",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-21",
-          "observacao": "19h30"
-        }
-      },
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Conservat%C3%B3rio+UFMG%2C+Avenida+Afonso+Pena%2C+1534%2C+Centro%2C+Belo+Horizonte+-+MG",
-      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "puc-minas-puc-minas-lourdes-recebe-palestra-a-letra-como-imagem-com-claudio-rocha-2026-10-22",
@@ -8932,5 +8746,5 @@
   ],
   "modo_teste_experimental": true,
   "eventos_somente_teste": 6,
-  "atualizado_em_teste": "2026-10-21T11:37:00-03:00"
+  "atualizado_em_teste": "2026-10-22T00:40:41-03:00"
 }
