@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Março de 2026 a Junho de 2027",
-  "atualizado_em": "2026-10-22T00:40:08-03:00",
+  "atualizado_em": "2026-10-23T20:54:03-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -5942,123 +5942,6 @@
       "origem_experimental": "minas_tenis_cultura"
     },
     {
-      "id": "puc-minas-puc-minas-lourdes-recebe-palestra-a-letra-como-imagem-com-claudio-rocha-2026-10-22",
-      "titulo": "PUC Minas Lourdes recebe palestra “A letra como imagem”, com Cláudio Rocha",
-      "data": "2026-10-22",
-      "data_fim": "",
-      "horario": "15h",
-      "local": "PUC Minas Lourdes",
-      "cidade": "Belo Horizonte",
-      "categoria": "Música",
-      "gratuito": true,
-      "inscricao": "Evento gratuito confirmado no site oficial da PUC Minas; consulte a página do evento para orientações de acesso.",
-      "descricao": "A PUC Minas Lourdes promove, no dia 22 de outubro, quinta-feira, às 15h, a palestra \"A letra como imagem\", ministrada pelo designer gráfico e editor Cláudio Rocha. O evento gratuito e aberto ao público abordará as conexões entre tipografia, criatividade e expressão visual no Auditório Liberdade, Ed. Dom Cabral (prédio 1). Na oportunidade, também será lançada a nova edição da revista Tupigrafia, intitulada \"Ensaio\", que explora letterings e experimentos tipográficos transformados em fontes digitais.",
-      "imagem": "",
-      "link": "https://www.pucminas.br/campus/lourdes/sala-imprensa/eventos/Paginas/PUC-Minas-Lourdes-recebe-palestra-%E2%80%9CA-letra-como-imagem%E2%80%9D,-com-Cl%C3%A1udio-Rocha.aspx?date=22/10/2026",
-      "fonte": "PUC Minas — Calendário de Eventos",
-      "pagina": "https://www.pucminas.br/campus/lourdes/sala-imprensa/eventos/Paginas/PUC-Minas-Lourdes-recebe-palestra-%E2%80%9CA-letra-como-imagem%E2%80%9D,-com-Cl%C3%A1udio-Rocha.aspx?date=22/10/2026",
-      "instituicao_id": "puc-minas",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "gratuidade_confirmada_no_site_oficial",
-      "endereco": "Avenida Brasil, 2023, Savassi, Belo Horizonte - MG",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "puc_minas"
-    },
-    {
-      "id": "casa-fiat-atelie-aberto-paisagem-construida-2026-10-22-1930",
-      "titulo": "Ateliê Aberto | Paisagem construída",
-      "data": "2026-10-22",
-      "data_fim": "",
-      "horario": "19h30",
-      "local": "Casa Fiat de Cultura",
-      "local_id": "casa-fiat-de-cultura",
-      "cidade": "Belo Horizonte",
-      "endereco": "Praça da Liberdade, 10, Funcionários, Belo Horizonte - MG",
-      "categoria": "Oficina",
-      "gratuito": true,
-      "inscricao": "Programação gratuita conforme informação oficial da Casa Fiat de Cultura; consulte a página para inscrição, retirada de senha ou lotação quando aplicável.",
-      "descricao": "Ateliê Aberto | Paisagem construída 1, 3, 4, 8, 10, 11, 15, 17, 18, 22, 24, 25 e 29/out Quantas paisagens cabem em um mesmo lugar? Inspirado na exposição “Mil maneiras de matar o tempo”, da artista porto-alegrense Talita Hoffmann, o Ateliê Aberto propõe uma experiência de desaceleração do olhar. Por meio de visores cartonados, o público é convidado a recortar a paisagem e perceber detalhes entre formas, jogos de luz e texturas. Cada participante transforma o que observa em uma composição sobre tecido. Entre a observação e a imaginação,",
-      "imagem": "https://casafiatdecultura.com.br/wp-content/uploads/2026/09/Banners-newsletter-outubro_ATELIE-ABERTO-1024x384.png",
-      "link": "https://casafiatdecultura.com.br/evento/atelie-aberto-paisagem-construida/",
-      "fonte": "Casa Fiat de Cultura — programação oficial",
-      "pagina": "https://casafiatdecultura.com.br/evento/atelie-aberto-paisagem-construida/",
-      "instituicao_id": "casa-fiat-de-cultura",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-22",
-          "observacao": "19h30"
-        }
-      },
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
-    },
-    {
-      "id": "mm-gerdau-outubro-rosa-saude-mental-reconstruindo-a-vida-2026-10-22",
-      "titulo": "OUTUBRO ROSA | SAÚDE MENTAL: RECONSTRUINDO A VIDA",
-      "data": "2026-10-22",
-      "data_fim": "",
-      "horario": "19h30",
-      "local": "MM Gerdau – Museu das Minas e do Metal",
-      "cidade": "Belo Horizonte",
-      "endereco": "Praça da Liberdade, 680, Funcionários, Belo Horizonte - MG",
-      "categoria": "Palestra e debate",
-      "gratuito": true,
-      "inscricao": "Atividade gratuita conforme programação oficial do MM Gerdau; consulte a página do evento para orientações específicas de acesso, inscrição ou lotação.",
-      "descricao": "OUTUBRO ROSA | SAÚDE MENTAL: RECONSTRUINDO A VIDA. Consulte a página oficial para conhecer a atividade, os horários e a programação.",
-      "imagem": "https://www.secult.mg.gov.br/images/stories/migracao/cultura/2016/MM%20Gerdau%20-%20por%20Jomar%20Bragana_.jpg",
-      "link": "https://mmgerdau.org.br/programacoes/outubro-rosa-saude-mental-reconstruindo-a-vida/",
-      "fonte": "MM Gerdau — programação oficial",
-      "pagina": "https://mmgerdau.org.br/programacoes/outubro-rosa-saude-mental-reconstruindo-a-vida/",
-      "instituicao_id": "mm-gerdau",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "gratuidade_explicita",
-      "local_id": "mm-gerdau",
-      "status_validacao": "aprovado",
-      "origem_experimental": "mm_gerdau",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-22",
-          "observacao": "19h30"
-        }
-      },
-      "mapa": "https://www.google.com/maps/search/?api=1&query=MM+Gerdau+%E2%80%93+Museu+das+Minas+e+do+Metal%2C+Pra%C3%A7a+da+Liberdade%2C+680%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
-      "imagem_fallback_origem": "equipamento"
-    },
-    {
-      "id": "portal-bh-89c37e018028-2026-10-22-0800",
-      "titulo": "3º Simpósio do Patrimônio Cultural de Belo Horizonte",
-      "data": "2026-10-22",
-      "data_fim": "",
-      "horario": "8h às 18h",
-      "local": "Museu Histórico Abílio Barreto – MHAB",
-      "cidade": "Belo Horizonte",
-      "categoria": "Evento cultural",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "Dia 22/10 → QUINTA - das 8h às 18h",
-      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-10/3o-simposio-do-patrimonio-cultural-de-belo-horizonte.png",
-      "link": "https://portalbelohorizonte.com.br/museuscentro/2026/eventos/simposio/cultural/3o-simposio-do-patrimonio-cultural-de-belo-horizonte",
-      "fonte": "Portal Belo Horizonte",
-      "fonte_id": "89c37e018028",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "endereco": "",
-      "tags_fonte": [],
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-22",
-          "observacao": "8h às 18h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
-    },
-    {
       "id": "portal-bh-554cc0ae1250-2026-10-23-1000",
       "titulo": "Exposição: \"Guimarães Rosa: Travessias do Imaginário\"",
       "data": "2026-10-23",
@@ -8745,6 +8628,6 @@
     }
   ],
   "modo_teste_experimental": true,
-  "eventos_somente_teste": 6,
-  "atualizado_em_teste": "2026-10-22T00:40:41-03:00"
+  "eventos_somente_teste": 5,
+  "atualizado_em_teste": "2026-10-23T20:54:35-03:00"
 }

@@ -2,8 +2,8 @@
   "schema": 10,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-10-21T14:19:02.061128+00:00",
-  "total": 20,
+  "coletado_em_utc": "2026-10-23T21:53:44.544021+00:00",
+  "total": 21,
   "concursos": [
     {
       "id": "pci:noticia:cgu-abre-concurso-publico-com-vagas-para-auditores-federais-de-financas-e-controle",
@@ -113,6 +113,55 @@
             "status": "aberto"
           }
         ]
+      }
+    },
+    {
+      "id": "pci:noticia:prefeitura-de-birigui-sp-abre-concurso-publico-com-salarios-de-ate-13881",
+      "titulo": "Prefeitura de Birigui",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-birigui-sp-abre-concurso-publico-com-salarios-de-ate-13881",
+      "imagem": "https://cdn.pci.app.br/img/i/acecfb0e9940bea842595bb317f7a9b7.png",
+      "formacoes_compativeis": [
+        "Técnico em Informática",
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": "o de tratamento de agua (3 vagas) orientador social (cr) recepcionista (4 vagas) salva-vidas (cr) tecnico agricola (cr) tecnico em agrimensura (cr) tecnico em contabilidade (cr) tecnico em edificacoes (cr) tecnico em enfermagem (cr) tecnico em enfermagem esf (11 vagas) tecnico em farmacia (4 vagas) tecnico em informatica (1 vaga) tecnico em nutricao (1 vaga) tecnico em seguranca do trabalho (cr) acupunturista (cr) analista de tecnologia da informacao (1 vaga) arquiteto (cr) assistente social (4 vagas) assistente social educacional (1 vaga) cirurgiao-dentista (cr) contador (1 vaga) controlador interno (1 vaga) enfer"
+        },
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": " agrimensura (cr) tecnico em contabilidade (cr) tecnico em edificacoes (cr) tecnico em enfermagem (cr) tecnico em enfermagem esf (11 vagas) tecnico em farmacia (4 vagas) tecnico em informatica (1 vaga) tecnico em nutricao (1 vaga) tecnico em seguranca do trabalho (cr) acupunturista (cr) analista de tecnologia da informacao (1 vaga) arquiteto (cr) assistente social (4 vagas) assistente social educacional (1 vaga) cirurgiao-dentista (cr) contador (1 vaga) controlador interno (1 vaga) enfermeiro (cr) enfermeiro esf (11 vagas) engenheiro ambiental (cr) engenheiro civil (cr) engenheiro eletrico (cr) engenheiro quimico (cr"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "SP",
+      "cidade": "Birigui",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "R$ 13.881,85",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico em Informática",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "alta"
+        },
+        {
+          "cargo": "Analista de Tecnologia da Informação",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "prazo_desconhecido",
+        "completude": "desconhecida"
       }
     },
     {
@@ -370,45 +419,6 @@
             "status": "futuro"
           }
         ]
-      }
-    },
-    {
-      "id": "pci:noticia:camara-de-capelinha-mg-retifica-edital-do-concurso-publico-com-salarios-de-ate-4527",
-      "titulo": "Câmara de Capelinha",
-      "url": "https://www.pciconcursos.com.br/noticias/camara-de-capelinha-mg-retifica-edital-do-concurso-publico-com-salarios-de-ate-4527",
-      "imagem": "https://cdn.pci.app.br/img/i/a1d5b403f9ea399b00f7cb388788453a.png",
-      "formacoes_compativeis": [
-        "Técnico em Informática"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Técnico em Informática",
-          "nivel": "tecnico",
-          "evidencia": "icacao (2 vagas) agente legislativo (2 vagas) assistente legislativo (1 vaga) auxiliar de administracao (4 vagas) auxiliar tecnico administrativo (3 vagas) monitor (3 vagas) motorista (categoria b) (1 vaga) motorista (categoria d) (1 vaga) oficial legislativo (1 vaga) tecnico em radio e tv (1 vaga) tecnico em informatica (1 vaga) tradutor e interprete de libras (1 vaga) agente de servicos externos (1 vaga) auxiliar de servicos gerais (2 vagas) zelador (1 vaga) a jornada semanal e de 20 a 40 horas, conforme o cargo. as remuneracoes variam de r$ 1.914,05 a r$ 4.527,60. as inscricoes estarao abertas de 21 de setembro "
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "MG",
-      "cidade": "Capelinha",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "21 de outubro de 2026",
-      "inscricoes_texto": "até 21 de outubro de 2026",
-      "remuneracao_faixa_texto": "R$ 1.914,05 a R$ 4.527,60",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Técnico em Informática",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "alta"
-        }
-      ],
-      "janela_inscricoes": {
-        "estado": "encerrado",
-        "completude": "somente_fim",
-        "fim": "2026-10-21",
-        "texto_original": "até 21 de outubro de 2026"
       }
     },
     {
@@ -841,6 +851,61 @@
       }
     },
     {
+      "id": "pci:noticia:prefeitura-de-ijui-rs-abre-concurso-publico-com-salarios-de-ate-21312",
+      "titulo": "Prefeitura de Ijuí",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-ijui-rs-abre-concurso-publico-com-salarios-de-ate-21312",
+      "imagem": "https://cdn.pci.app.br/img/i/36988704f932b88f2ecd0b64fec5a829.png",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": "ssor de musica (2 vagas) psicologo (4 vagas) tesoureiro turismologo (1 vaga) zootecnista com formacao pedagogica (1 vaga) nivel tecnico completo tecnico de enfermagem plantonista tecnico em enfermagem (2 vagas) tecnico de topografia (1 vaga) tecnico em agropecuaria tecnico em contabilidade (1 vaga) tecnico em informatica nivel medio completo agente comunitario de saude (3 vagas) agente de transito (2 vagas) agente de vigilancia em saude (2 vagas) almoxarife (1 vaga) assessor administrativo (10 vagas) atendente de consultorio dentario (2 vagas) auxiliar da educacao inclusiva e de ensino fundamental (12 vagas) auxili"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "RS",
+      "cidade": "Ijuí",
+      "inscricoes_inicio_texto": "23 de outubro de 2026",
+      "inscricoes_fim_texto": "19 de novembro de 2026",
+      "inscricoes_texto": "23 de outubro de 2026 a 19 de novembro de 2026",
+      "remuneracao_faixa_texto": "R$ 21.312,22",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico em Informática Nível médio completo Agente Comunitário de Saúde",
+          "vagas_texto": "3 vagas",
+          "formacao": "Técnico em Informática",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "aberto",
+        "completude": "completa",
+        "inicio": "2026-10-23",
+        "fim": "2026-11-19",
+        "texto_original": "23 de outubro de 2026 a 19 de novembro de 2026"
+      },
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-10-23",
+          "fim": "2026-11-19"
+        },
+        "participacao": [
+          {
+            "tipo": "candidatura",
+            "inicio": "2026-10-23",
+            "fim": "2026-11-19",
+            "status": "aberto"
+          }
+        ]
+      }
+    },
+    {
       "id": "pci:noticia:prefeitura-de-itapuca-rs-abre-concurso-publico-com-salarios-de-ate-9495",
       "titulo": "Prefeitura de Itapuca",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-itapuca-rs-abre-concurso-publico-com-salarios-de-ate-9495",
@@ -896,6 +961,43 @@
       }
     },
     {
+      "id": "pci:noticia:prefeitura-de-novo-xingu-rs-abre-concurso-publico-com-salarios-de-ate-8797",
+      "titulo": "Prefeitura de Novo Xingu",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-novo-xingu-rs-abre-concurso-publico-com-salarios-de-ate-8797",
+      "imagem": "https://cdn.pci.app.br/img/i/d7a1f13706ba03b2bae7cc33fd31947e.png",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": "rativo (1 vaga) auditor fiscal da receita municipal (1 vaga) auxiliar de apoio operacional (1 vaga) contador municipal 40h (1 vaga) engenheiro civil engenheiro sanitarista e ambiental (1 vaga) fonoaudiologo (1 vaga) mecanico monitor (1 vaga) motorista operario (1 vaga) operador de maquinas (1 vaga) tecnico em informatica (1 vaga) vigilante (1 vaga) as jornadas sao de 20 a 40 horas semanais, com remuneracao inicial de r$ 1.626,94 a r$ 8.797,52. o edital tambem preve vale-alimentacao de r$ 600,16. as inscricoes devem ser feitas no site do instituto objetiva , das 13h de 30 de outubro de 2026 as 13h de 30 de novembro "
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "RS",
+      "cidade": "Novo Xingu",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "R$ 8.797,52",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico em Informática",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "prazo_desconhecido",
+        "completude": "desconhecida"
+      }
+    },
+    {
       "id": "pci:noticia:prefeitura-de-maravilha-sc-retifica-concurso-com-salarios-de-ate-15748",
       "titulo": "Prefeitura de Maravilha",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-maravilha-sc-retifica-concurso-com-salarios-de-ate-15748",
@@ -945,61 +1047,6 @@
             "tipo": "candidatura",
             "inicio": "2026-10-02",
             "fim": "2026-11-03",
-            "status": "aberto"
-          }
-        ]
-      }
-    },
-    {
-      "id": "pci:noticia:prefeitura-de-rio-negrinho-sc-e-orgaos-municipais-abrem-novos-concursos-publicos",
-      "titulo": "Prefeitura de Rio Negrinho, FMC, IPRERIO e SAMAE",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-rio-negrinho-sc-e-orgaos-municipais-abrem-novos-concursos-publicos",
-      "imagem": "https://cdn.pci.app.br/img/i/366fc5888b1987e342ad75b2402dd6ea.png",
-      "formacoes_compativeis": [
-        "Sistemas de Informação / Computação"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Sistemas de Informação / Computação",
-          "nivel": "superior",
-          "evidencia": "cao especialista em educacao (volta grande e serro azul) fiscal ambiental fiscal de obras e posturas fonoaudiologo (1 vaga) medico clinico geral medico especialista - ginecologista medico especialista - ortopedista medico especialista - pediatra medico especialista - psiquiatria (1 vaga) monitor de tecnologia da informacao (1 vaga) monitor de tecnologia da informacao (volta grande e serro azul) motorista (transporte escolar) nutricionista odontologo esf oficial administrativo (5 vagas) operador de maquinas pesadas operador de maquinas pesadas (volta grande) pedreiro professor i - nivel 2 - anos iniciais (3 vagas) pro"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "SC",
-      "cidade": "Rio Negrinho, FMC, IPRERIO e SAMAE",
-      "inscricoes_inicio_texto": "16 de outubro de 2026",
-      "inscricoes_fim_texto": "15 de novembro de 2026",
-      "inscricoes_texto": "16 de outubro de 2026 a 15 de novembro de 2026",
-      "remuneracao_faixa_texto": "R$ 1.665,72 a R$ 18.538,78",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Monitor de Tecnologia da Informação",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        }
-      ],
-      "janela_inscricoes": {
-        "estado": "aberto",
-        "completude": "completa",
-        "inicio": "2026-10-16",
-        "fim": "2026-11-15",
-        "texto_original": "16 de outubro de 2026 a 15 de novembro de 2026"
-      },
-      "temporalidade": {
-        "classe": "periodo",
-        "realizacao": {
-          "inicio": "2026-10-16",
-          "fim": "2026-11-15"
-        },
-        "participacao": [
-          {
-            "tipo": "candidatura",
-            "inicio": "2026-10-16",
-            "fim": "2026-11-15",
             "status": "aberto"
           }
         ]
