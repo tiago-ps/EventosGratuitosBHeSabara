@@ -5,7 +5,7 @@
     "configuracao-mural.json": 1,
     "cursos.json": 1913,
     "espacos_culturais.json": 268,
-    "eventos.json": 183,
+    "eventos.json": 189,
     "filmes.json": 1292,
     "livros.json": 46,
     "relacoes-eventos.json": 186,
@@ -17,21 +17,21 @@
     "configuracao-mural.json": "49dfe7115a6f5c6d5b8dee424d3b10341b5e3014ac58a295d27ef4e6043ebfc2",
     "cursos.json": "1880f36e60c29643096cdd7a707d6e59a116316667d10217dc6b2dadd1266297",
     "espacos_culturais.json": "572de708c598f3392d99194f8a2a9cf4953cf7fcf401ad682c8174b03ccccda7",
-    "eventos.json": "f8cf8a9e6e8ad15e26773c65bada0a450589acc0da0e2eca371c0acbd3e54ea2",
+    "eventos.json": "2f254f4ea7d4bec122662af04cb516c2df4ed846d837570ebfade2b4755d3e6a",
     "filmes.json": "23437099af05856a1a822d1b91c19c9dc93962f073b823189bf8eb96652710af",
-    "livros.json": "d3aefa928ba5db2f2e4a4c360ae2509a6e611e32e41c1e14fc80b4d224bd67c1",
+    "livros.json": "5691ac6458c3dfd90f280d4f13b86d0888d80714fc72e8270e0533dcedc6c7eb",
     "relacoes-eventos.json": "1f35d0c187634842cb26a4e90c1447ad28217d3e86b231a3d74ea68c331c6e46",
     "utilidade-publica.json": "caafdd3d7927c65ad4463805d78ea0d74ca974f3a3f909eac4ffc052e57b8e4e"
   },
-  "published_at": "2026-10-23T23:54:35Z",
-  "request_id": "auto-workflow_run-40030124153-1",
+  "published_at": "2026-10-24T02:10:23Z",
+  "request_id": "auto-workflow_dispatch-40052919738-1",
   "schema_version": "1.0",
   "source_repository": "tiago-ps/ColetorEventosGratuitos",
-  "source_sha": "26a623affddb27e7b3bc41ef7367ca995075decc",
+  "source_sha": "07a4fcbecc7bddf03e664ab10d233574f1f886b1",
   "staging_repository": "tiago-ps/EventosGratuitosBHeSabara",
   "versions": {
     "manifest_schema": "1.0",
     "publication_validator": "central-v1"
   },
-  "workflow_run_id": "40030124153"
+  "workflow_run_id": "40052919738"
 }
