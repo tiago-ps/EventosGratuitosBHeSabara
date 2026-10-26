@@ -2,7 +2,7 @@
   "schema": 10,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-10-23T21:53:44.544021+00:00",
+  "coletado_em_utc": "2026-10-26T06:57:02.361567+00:00",
   "total": 21,
   "concursos": [
     {
@@ -252,61 +252,6 @@
             "inicio": "2026-10-05",
             "fim": "2026-11-10",
             "status": "aberto"
-          }
-        ]
-      }
-    },
-    {
-      "id": "pci:noticia:seplag-rj-publica-retificacoes-do-concurso-com-60-vagas-para-cargos-de-nivel-superior",
-      "titulo": "SEPLAG - Secretaria de Estado de Planejamento e Gestão",
-      "url": "https://www.pciconcursos.com.br/noticias/seplag-rj-publica-retificacoes-do-concurso-com-60-vagas-para-cargos-de-nivel-superior",
-      "imagem": "https://cdn.pci.app.br/img/i/02a0902e96add5bdcef15c892a527dbb.png",
-      "formacoes_compativeis": [
-        "Sistemas de Informação / Computação"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Sistemas de Informação / Computação",
-          "nivel": "superior",
-          "evidencia": "ecialista em politicas publicas e gestao governamental - gestao e governanca publica (15 vagas) especialista em politicas publicas e gestao governamental - politicas publicas (15 vagas) analista de planejamento e orcamento - planejamento e orcamento (25 vagas) analista de planejamento e orcamento - tecnologia da informacao (5 vagas) a jornada de trabalho sera de 40 horas semanais. a remuneracao inicial e composta por vencimento-base de r$ 7.572,50, gratificacao de desempenho de ate r$ 3.786,25 e adicional de qualificacao (ate r$ 3.029,00 para doutorado), podendo chegar a r$ 14.387,75, de acordo com titulacao. as insc"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "RJ",
-      "cidade": "",
-      "inscricoes_inicio_texto": "10 de setembro de 2026",
-      "inscricoes_fim_texto": "8 de outubro de 2026",
-      "inscricoes_texto": "10 de setembro de 2026 a 8 de outubro de 2026",
-      "remuneracao_faixa_texto": "R$ 3.029,00 a R$ 14.387,75",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Analista de Planejamento e Orçamento - Tecnologia da Informação",
-          "vagas_texto": "5 vagas",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        }
-      ],
-      "janela_inscricoes": {
-        "estado": "encerrado",
-        "completude": "completa",
-        "inicio": "2026-09-10",
-        "fim": "2026-10-08",
-        "texto_original": "10 de setembro de 2026 a 8 de outubro de 2026"
-      },
-      "temporalidade": {
-        "classe": "periodo",
-        "realizacao": {
-          "inicio": "2026-09-10",
-          "fim": "2026-10-08"
-        },
-        "participacao": [
-          {
-            "tipo": "candidatura",
-            "inicio": "2026-09-10",
-            "fim": "2026-10-08",
-            "status": "encerrado"
           }
         ]
       }
@@ -1047,6 +992,61 @@
             "tipo": "candidatura",
             "inicio": "2026-10-02",
             "fim": "2026-11-03",
+            "status": "aberto"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pci:noticia:prefeitura-de-rio-negrinho-sc-e-orgaos-municipais-abrem-novos-concursos-publicos",
+      "titulo": "Prefeitura de Rio Negrinho, FMC, IPRERIO e SAMAE",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-rio-negrinho-sc-e-orgaos-municipais-abrem-novos-concursos-publicos",
+      "imagem": "https://cdn.pci.app.br/img/i/366fc5888b1987e342ad75b2402dd6ea.png",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "cao especialista em educacao (volta grande e serro azul) fiscal ambiental fiscal de obras e posturas fonoaudiologo (1 vaga) medico clinico geral medico especialista - ginecologista medico especialista - ortopedista medico especialista - pediatra medico especialista - psiquiatria (1 vaga) monitor de tecnologia da informacao (1 vaga) monitor de tecnologia da informacao (volta grande e serro azul) motorista (transporte escolar) nutricionista odontologo esf oficial administrativo (5 vagas) operador de maquinas pesadas operador de maquinas pesadas (volta grande) pedreiro professor i - nivel 2 - anos iniciais (3 vagas) pro"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "SC",
+      "cidade": "Rio Negrinho, FMC, IPRERIO e SAMAE",
+      "inscricoes_inicio_texto": "16 de outubro de 2026",
+      "inscricoes_fim_texto": "15 de novembro de 2026",
+      "inscricoes_texto": "16 de outubro de 2026 a 15 de novembro de 2026",
+      "remuneracao_faixa_texto": "R$ 1.665,72 a R$ 18.538,78",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Monitor de Tecnologia da Informação",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "aberto",
+        "completude": "completa",
+        "inicio": "2026-10-16",
+        "fim": "2026-11-15",
+        "texto_original": "16 de outubro de 2026 a 15 de novembro de 2026"
+      },
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-10-16",
+          "fim": "2026-11-15"
+        },
+        "participacao": [
+          {
+            "tipo": "candidatura",
+            "inicio": "2026-10-16",
+            "fim": "2026-11-15",
             "status": "aberto"
           }
         ]
