@@ -5,6 +5,7 @@ const fs = require('node:fs');
 
 const app = fs.readFileSync('js/app.js', 'utf8');
 const styles = fs.readFileSync('css/styles.css', 'utf8');
+const panelStyles = fs.readFileSync('css/tem-sim-uai-painel.css', 'utf8');
 const panelNavigation = fs.readFileSync('js/painel-navegacao-modos.js', 'utf8');
 const themeBoot = fs.readFileSync('js/tema-visual-boot.js', 'utf8');
 const indexHtml = fs.readFileSync('index.html', 'utf8');
@@ -62,11 +63,18 @@ assert.ok(panelNavigation.includes("const menuList = actions.querySelector('.age
 assert.ok(panelNavigation.includes("'view-toggle passive-view-toggle agenda-more-menu-action'"));
 assert.ok(panelNavigation.includes("button.closest('.agenda-more-menu')?.removeAttribute('open')"));
 assert.ok(themeBoot.includes("js/painel-navegacao-modos.js?v=6"));
+assert.ok(themeBoot.includes("css/tem-sim-uai-painel.css?v=2"));
+assert.ok(styles.includes('width: clamp(81px, 7vw, 115px);'));
+assert.ok(styles.includes('height: clamp(81px, 7vw, 115px);'));
+assert.ok(styles.includes('.site-qr-code { width: 78.4px; height: 78.4px; }'));
+assert.ok(panelStyles.includes('width: clamp(70px, 5.88vw, 101px);'));
+assert.ok(panelStyles.includes('height: clamp(70px, 5.88vw, 101px);'));
+
 
 // Cache busting deve entregar os mesmos assets/versionamentos no HTML e no SW.
 for (const asset of [
-  'css/styles.css?v=109',
-  'js/tema-visual-boot.js?v=17'
+  'css/styles.css?v=110',
+  'js/tema-visual-boot.js?v=18'
 ]) {
   assert.ok(indexHtml.includes(asset), `index sem ${asset}`);
   assert.ok(serviceWorker.includes(`./${asset}`), `service worker sem ${asset}`);
@@ -75,6 +83,9 @@ const appVersion = indexHtml.match(/js\/app\.js\?v=(\d+)/)?.[1];
 assert.ok(appVersion, 'index sem versão de js/app.js');
 assert.ok(serviceWorker.includes(`./js/app.js?v=${appVersion}`), 'service worker com versão divergente de js/app.js');
 assert.ok(serviceWorker.includes("'./js/painel-navegacao-modos.js?v=6'"));
+assert.ok(serviceWorker.includes("'./css/tem-sim-uai-painel.css?v=2'"));
+assert.ok(serviceWorker.includes("mural-cultural-v214-qr-40pct"));
+
 assert.match(serviceWorker, /const CACHE_VERSION = 'mural-cultural-v\d+-[^']+';/);
 
 console.log('Cabeçalho compacto do modo Exploração validado.');
