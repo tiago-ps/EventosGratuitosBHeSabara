@@ -3,7 +3,7 @@ importScripts('./js/temporalidade-eventos.js?v=1');
 
 const SW_EVENT_RELATIONS = self.MuralCultural?.eventRelations;
 const SW_EVENT_TEMPORAL = self.MuralCultural?.eventTemporal;
-const CACHE_VERSION = 'mural-cultural-v213-revisao-mapa';
+const CACHE_VERSION = 'mural-cultural-v214-qr-40pct';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -14,7 +14,7 @@ const PLATFORM_IMAGE_PREFIX = '/imagens/plataformas/';
 
 const CORE_ASSETS = [
   './', './index.html',
-  './css/styles.css?v=109',
+  './css/styles.css?v=110',
   './css/mapa-espacos.css?v=4',
   './css/eventos-manuais-ui.css?v=43',
   './css/concursos-mural.css?v=3',
@@ -24,8 +24,8 @@ const CORE_ASSETS = [
   './css/notificacoes.css?v=1',
   './css/painel-modos.css?v=2',
   './css/painel-acoes-contextuais.css?v=3',
-  './css/tem-sim-uai-painel.css?v=1',
-  './js/tema-visual-boot.js?v=17',
+  './css/tem-sim-uai-painel.css?v=2',
+  './js/tema-visual-boot.js?v=18',
   './js/core/rotacao.js?v=2',
   './js/notificacoes.js?v=1',
   './js/conteudos/cursos.js?v=6',
