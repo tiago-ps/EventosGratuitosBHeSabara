@@ -66,7 +66,7 @@
   // Composição oficial do Painel Tem Sim, Uai, compartilhada entre teste e público.
   const temSimUaiPanelStyles = document.createElement('link');
   temSimUaiPanelStyles.rel = 'stylesheet';
-  temSimUaiPanelStyles.href = 'css/tem-sim-uai-painel.css?v=1';
+  temSimUaiPanelStyles.href = 'css/tem-sim-uai-painel.css?v=2';
   document.head.appendChild(temSimUaiPanelStyles);
 
   const temSimUaiPanelLayout = document.createElement('script');
