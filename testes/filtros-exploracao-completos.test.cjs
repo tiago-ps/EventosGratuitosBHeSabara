@@ -162,7 +162,7 @@ assert.ok(appSource.includes('state.mobileTheme'));
 
 // Cache e HTML precisam apontar para os mesmos assets novos.
 for (const asset of [
-  'css/styles.css?v=109',
+  'css/styles.css?v=110',
   'js/conteudos/cursos.js?v=6',
   'js/conteudos/concursos.js?v=5',
   'js/conteudos/filmes.js?v=11',
