@@ -157,10 +157,11 @@ html body.panel-mode .panel-subtitle {
     opacity: .8;
   }
 
+  /* QR geral ampliado em 40% no layout do Painel. */
   html body.panel-mode .site-qr-code {
     flex: 0 0 auto;
-    width: clamp(50px, 4.2vw, 72px);
-    height: clamp(50px, 4.2vw, 72px);
+    width: clamp(70px, 5.88vw, 101px);
+    height: clamp(70px, 5.88vw, 101px);
     border-radius: 6px;
   }
 }
