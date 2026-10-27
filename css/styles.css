@@ -236,9 +236,10 @@ body {
   color: var(--muted);
   font-size: clamp(9px, .68vw, 13px);
 }
+/* QR geral do site ampliado em aproximadamente 40%. */
 .site-qr-code {
-  width: clamp(58px, 5vw, 82px);
-  height: clamp(58px, 5vw, 82px);
+  width: clamp(81px, 7vw, 115px);
+  height: clamp(81px, 7vw, 115px);
   box-sizing: border-box;
   flex: 0 0 auto;
   display: grid;
@@ -535,7 +536,7 @@ dd { margin: 0; font-size: clamp(14px, 1.15vw, 23px); line-height: 1.25; overflo
 /* TV/monitor baixo, como notebook em tela dividida */
 @media (min-aspect-ratio: 5/4) and (max-height: 650px) {
   .site-qr-copy span { display: none; }
-  .site-qr-code { width: 56px; height: 56px; }
+  .site-qr-code { width: 78.4px; height: 78.4px; }
   .content { padding: 16px 26px; gap: 10px; }
   .panel-title { font-size: 14px; }
   .event-title { font-size: clamp(28px, 4.3vw, 56px); -webkit-line-clamp: 2; }
