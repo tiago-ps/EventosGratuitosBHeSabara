@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Março de 2026 a Junho de 2027",
-  "atualizado_em": "2026-10-28T17:48:24-03:00",
+  "atualizado_em": "2026-10-28T18:13:45-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -6332,35 +6332,6 @@
       "imagem_fallback_origem": "equipamento"
     },
     {
-      "id": "sympla-sabara-3589117",
-      "titulo": "Festa no Céu 2026",
-      "data": "2026-10-30",
-      "data_fim": "",
-      "horario": "20h00",
-      "local": "Casa De Recepções Impacto",
-      "cidade": "Sabará",
-      "categoria": "Festival",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página da Sympla",
-      "descricao": "* A Festa no Céu é um evento idealizado e organizado pelo Grupo de Oração Caminhando com Jesus, da Renovação Carismática Católica (Sabará, MG).* A inscrição é obrigatória e deverá ser realizada individualmente para cada criança.* O valor da inscrição é referente somente à criança.",
-      "imagem": "https://images.sympla.com.br/6ab27c2f171fc-lg.jpg",
-      "link": "https://www.sympla.com.br/evento/festa-no-ceu-2026/3589117",
-      "fonte": "Sympla — evento em Sabará",
-      "instituicao_id": "",
-      "fonte_id": "3589117",
-      "organizador": "",
-      "endereco": "Avenida Albert Scharlé, 1626 Paciência, Sabará, MG",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-30",
-          "observacao": "20h00"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+De+Recep%C3%A7%C3%B5es+Impacto%2C+Avenida+Albert+Scharl%C3%A9%2C+1626+Paci%C3%AAncia%2C+Sabar%C3%A1%2C+MG"
-    },
-    {
       "id": "portal-bh-4f026322cf55-2026-10-31-1000",
       "titulo": "Isogravura – Gravura com Isopor",
       "data": "2026-10-31",
@@ -6706,36 +6677,6 @@
       "espaco_interno": "Terraço Astronômico"
     },
     {
-      "id": "sympla-sabara-3622015",
-      "titulo": "assombro / PREMOLAR",
-      "data": "2026-10-31",
-      "data_fim": "",
-      "horario": "19h30",
-      "local": "Solar do Padre Correa",
-      "cidade": "Sabará",
-      "categoria": "Teatro",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página da Sympla",
-      "descricao": "Pela primeira vez fora do Teatro Municipal de Sabará e com entrada gratuita, o ASSOMBRO de outubro será realizado como parte do Halloween de Sabará (cidade que tem o maior Halloween de rua de Minas, segundo a Globo ¯\\_(ツ)_/¯). O evento será no dia 31 de outubro, sábado, no Solar Assombrado",
-      "imagem": "https://images.sympla.com.br/6ad2a586b4a63-lg.jpg",
-      "link": "https://www.sympla.com.br/evento/assombro-premolar/3622015",
-      "fonte": "Sympla — evento em Sabará",
-      "instituicao_id": "",
-      "fonte_id": "3622015",
-      "organizador": "",
-      "endereco": "Rua Dom Pedro II, 200 Centro, Sabará, MG",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-31",
-          "observacao": "19h30"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "solar-padre-correia",
-      "mapa": "https://maps.app.goo.gl/fNCH9XLpCY5V4z2j6"
-    },
-    {
       "id": "ufmg-ec-oficina-historias-da-africa-de-a-a-z",
       "titulo": "Oficina “Histórias da África de A a Z”",
       "data": "2026-11-01",
@@ -6869,6 +6810,35 @@
         "realizacao": {
           "inicio": "2026-11-04",
           "fim": "2026-11-08"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
+    },
+    {
+      "id": "portal-bh-3aca1ac3858e-2026-11-04-1600",
+      "titulo": "Falar sobre o que sentimos: o papel dos quadrinhos na saúde mental",
+      "data": "2026-11-04",
+      "data_fim": "",
+      "horario": "16h às 17h",
+      "local": "Auditório Jaguar",
+      "cidade": "Belo Horizonte",
+      "categoria": "Festival",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "Mesa de debate “Falar sobre o que sentimos: o papel dos quadrinhos na saúde mental” Convidados: Helena Cunha, Gabriel Dantas, Lark Mediação: Val Armanelli Sinopse: Contemporaneamente se tem a percepção de que o tema da saúde mental se tornou presente em várias esferas da nossa vida e, obviamente, esse assunto não ficaria de fora dos quadrinhos.",
+      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-10/mesa_falar-sobre-o-que-sentimos.jpg",
+      "link": "https://portalbelohorizonte.com.br/fiq/2026/eventos/festival/artes-visuais/falar-sobre-o-que-sentimos-o-papel-dos-quadrinhos-na-saude-mental",
+      "fonte": "Portal Belo Horizonte",
+      "fonte_id": "3aca1ac3858e",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "endereco": "",
+      "tags_fonte": [],
+      "classificacao_indicativa": "Livre",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-04",
+          "observacao": "16h às 17h"
         }
       },
       "motivo_publicacao": "realizacao_em_andamento_ou_futura"
@@ -7175,6 +7145,40 @@
       "espaco_interno": "Planetário"
     },
     {
+      "id": "portal-bh-1045058fe89d-2026-11-07-0900",
+      "titulo": "Tours Gratuitos em Belo Horizonte 2026",
+      "data": "2026-11-07",
+      "data_fim": "",
+      "horario": "9h às 12h30",
+      "local": "Local informado na página oficial",
+      "cidade": "Belo Horizonte",
+      "categoria": "Visita guiada",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "A nova temporada dos city tours e walking tours começará dia 25 de abril e vai se estender até janeiro de 2027. Desde 2016, A Belotur realiza passeios de sensibilização para seus habitantes, temporários ou não, a olhar para a cidade com outros olhares, estimulando a valorização da identidade cultural, das tradições populares,",
+      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-04/69e23e29a0bc6-lg.png",
+      "link": "https://portalbelohorizonte.com.br/2026/eventos/circuito/turismo/tours-gratuitos-em-belo-horizonte-2026",
+      "fonte": "Portal Belo Horizonte",
+      "fonte_id": "1045058fe89d",
+      "instituicao_id": "",
+      "endereco": "",
+      "tags_fonte": [
+        "Ar livre",
+        "Gratuito",
+        "Ingressos on-line",
+        "Turismo",
+        "Cultural"
+      ],
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-07",
+          "observacao": "9h às 12h30"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
+    },
+    {
       "id": "manual-concertos-peter-lund-grupo-geo-2026-11-08-2026-11-08",
       "titulo": "Concertos Dominicais Peter Lund — Grupo GEO",
       "data": "2026-11-08",
@@ -7416,40 +7420,6 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
-    },
-    {
-      "id": "portal-bh-1045058fe89d-2026-11-14-0900",
-      "titulo": "Tours Gratuitos em Belo Horizonte 2026",
-      "data": "2026-11-14",
-      "data_fim": "",
-      "horario": "9h às 12h30",
-      "local": "Local informado na página oficial",
-      "cidade": "Belo Horizonte",
-      "categoria": "Visita guiada",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "A nova temporada dos city tours e walking tours começará dia 25 de abril e vai se estender até janeiro de 2027. Desde 2016, A Belotur realiza passeios de sensibilização para seus habitantes, temporários ou não, a olhar para a cidade com outros olhares, estimulando a valorização da identidade cultural, das tradições populares,",
-      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-04/69e23e29a0bc6-lg.png",
-      "link": "https://portalbelohorizonte.com.br/2026/eventos/circuito/turismo/tours-gratuitos-em-belo-horizonte-2026",
-      "fonte": "Portal Belo Horizonte",
-      "fonte_id": "1045058fe89d",
-      "instituicao_id": "",
-      "endereco": "",
-      "tags_fonte": [
-        "Ar livre",
-        "Gratuito",
-        "Ingressos on-line",
-        "Turismo",
-        "Cultural"
-      ],
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-11-14",
-          "observacao": "9h às 12h30"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
       "id": "ufmg-ec-museu-fechado-feriado-proclamacao-da-republica",
@@ -8374,5 +8344,5 @@
   ],
   "modo_teste_experimental": true,
   "eventos_somente_teste": 8,
-  "atualizado_em_teste": "2026-10-28T17:48:53-03:00"
+  "atualizado_em_teste": "2026-10-28T18:14:23-03:00"
 }
