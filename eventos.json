@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Março de 2026 a Junho de 2027",
-  "atualizado_em": "2026-10-26T04:18:13-03:00",
+  "atualizado_em": "2026-10-28T17:48:24-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -5646,77 +5646,6 @@
       "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
-      "imagem": "imagens/eventos-manuais/coleta-4e74180f20b4316b2792e08e01ff770ba472d8e3d6b227e0cd82213af77a79c4.jpg",
-      "titulo": "NÓS ou NINGUÉM PODIA OUVIR OS OLHOS DELA",
-      "data": "2026-10-02",
-      "data_fim": "2026-10-26",
-      "horario": "19h",
-      "local": "Centro Cultural Banco do Brasil",
-      "cidade": "Belo Horizonte",
-      "categoria": "Teatro",
-      "descricao": "Vem aí “NÓS ou NINGUÉM PODIA OUVIR OS OLHOS DELA”, espetáculo que combina dança-teatro e jazz para abordar a violência contra a mulher.\r\n\r\nA montagem da Cia. Entre Nós (SP), com atuação de Daniela Rosa e Rafael Bougleux, direção de Fernando Gimenes e trilha sonora executada ao vivo por Renata Prado e Wendel Dima, apresenta uma dramaturgia que revela estados de afeto, tensão e colisão entre um casal.\r\n\r\nPor meio da dança e da música ao vivo, o espetáculo investiga diferentes formas de violência de gênero e convida o público a refletir sobre situações que, muitas vezes, são silenciadas ou naturalizadas no cotidiano.\r\n\r\nVenha assistir a essa montagem conosco.\r\n\r\n🙅‍♀️ NÓS ou NINGUÉM PODIA OUVIR OS OLHOS DELA\r\n🗓️ 02/10 a 26/10\r\n⏰ às 19h\r\n📍 Teatro II\r\n🔴 Classificação indicativa: 16 anos\r\n🎟️ Ingressos gratuitos retirados na bilheteria e pelo site, a partir de 23/09 (quarta-feira). Um novo lote de ingressos será disponibilizado exclusivamente na bilheteria, uma hora antes de cada apresentação.",
-      "gratuito": true,
-      "link": "https://www.instagram.com/reel/DdPejbYCIqn/",
-      "link_inscricao": "",
-      "classificacao_indicativa": "16 anos",
-      "id": "manual-evento-instagram-17963803902177937-2026-10-02",
-      "fonte": "Instagram",
-      "pagina": "https://www.instagram.com/reel/DdPejbYCIqn/",
-      "mapa": "",
-      "criterio_exibicao": "realizacao",
-      "status_inscricao": "",
-      "monitorar_formulario_google": false,
-      "url_formulario_google": "",
-      "acao_formulario_fechado": "marcar_encerrada",
-      "instituicao_id": "",
-      "inscricao": "",
-      "inscricao_inicio": "",
-      "inscricao_fim": "",
-      "endereco": "",
-      "local_id": "",
-      "espaco_interno": "",
-      "temporalidade": {
-        "classe": "periodo",
-        "realizacao": {
-          "inicio": "2026-10-02",
-          "fim": "2026-10-26",
-          "observacao": "19h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
-    },
-    {
-      "id": "ccbb-bh-nos-ou-ninguem-podia-ouvir-os-olhos-dela",
-      "titulo": "NÓS ou NINGUÉM PODIA OUVIR OS OLHOS DELA",
-      "data": "2026-10-02",
-      "data_fim": "2026-10-26",
-      "horario": "Sexta a segunda, às 19h",
-      "local": "CCBB Belo Horizonte – Teatro II",
-      "cidade": "Belo Horizonte",
-      "categoria": "Teatro",
-      "gratuito": true,
-      "inscricao": "Inscrição necessária; consulte a página oficial",
-      "descricao": "Ingressos gratuitos liberados sempre na quarta-feira da semana anterior às apresentações. Um novo lote de ingressos será disponibilizado exclusivamente na bilheteria, uma hora antes de cada apresentação.",
-      "imagem": "https://ccbbstg.blob.core.windows.net/site-2025/2026/09/01_FOTO-PRINCIPAL_NOS-OU-NINGUEM-PODIA-OUVIR-OS-OLHOS-DELA_foto-por-Leandro-Alves-scaled.jpg",
-      "link": "https://ccbb.com.br/belo-horizonte/programacao/nos-ou-ninguem-podia-ouvir-os-olhos-dela/",
-      "fonte": "CCBB Belo Horizonte",
-      "instituicao_id": "ccbb-bh",
-      "classificacao_indicativa": "16 anos",
-      "temporalidade": {
-        "classe": "periodo",
-        "realizacao": {
-          "inicio": "2026-10-02",
-          "fim": "2026-10-26",
-          "observacao": "Sexta a segunda, às 19h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "ccbb-bh",
-      "endereco": "Praça da Liberdade, 450, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/Q6UrZGKEn8eCx8Kb8",
-      "espaco_interno": "Teatro II"
-    },
-    {
       "id": "ccult-ufmg-metal-articula-dialogo-entre-quatro-artistas-em-mostra-de-arte-contemporanea-2026-10-09",
       "titulo": "Metal articula diálogo entre quatro artistas em mostra de arte contemporânea",
       "data": "2026-10-09",
@@ -5810,440 +5739,63 @@
       "origem_experimental": "minas_tenis_cultura"
     },
     {
-      "id": "portal-bh-554cc0ae1250-2026-10-23-1000",
-      "titulo": "Exposição: \"Guimarães Rosa: Travessias do Imaginário\"",
-      "data": "2026-10-23",
-      "data_fim": "2027-02-05",
-      "horario": "10h às 23h59",
-      "local": "Centro Cultural do TRT-MG:",
+      "id": "ufmg-ec-museufechado",
+      "titulo": "Museu Fechado – Feriado Dia do Servidor Público",
+      "data": "2026-10-28",
+      "data_fim": "",
+      "horario": "10h",
+      "local": "Espaço do Conhecimento UFMG",
       "cidade": "Belo Horizonte",
-      "categoria": "Exposição",
+      "categoria": "Atividade educativa",
       "gratuito": true,
       "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "O Centro Cultural do TRT-MG recebe, a partir de 23 de outubro de 2026, a exposição coletiva \"Guimarães Rosa: Travessias do Imaginário\", organizada para celebrar o escritor mineiro e marcar os 70 anos de publicação do romance Grande Sertão: Veredas . A mostra reúne obras dos artistas Cely Ferreira, Fátima Mirandda, Lenice Pitanguy, Marcos Esteves, Maria Inez Ribeiro,",
-      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-10/8.jpeg",
-      "link": "https://portalbelohorizonte.com.br/2026/eventos/exposicao/artes-plasticas/exposicao-guimaraes-rosa-travessias-do-imaginario",
-      "fonte": "Portal Belo Horizonte",
-      "fonte_id": "554cc0ae1250",
+      "descricao": "No dia 28 de outubro de 2026 (quarta-feira), o Espaço do Conhecimento UFMG estará fechado. Seguindo o funcionamento regular do museu (terça a domingo), as atividades presenciais serão retomadas na quinta-feira, 29 de outubro, das 10h às 17h.",
+      "imagem": "imagens/instituicoes/espaco-conhecimento-ufmg.png",
+      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/museufechado/",
+      "fonte": "Espaço do Conhecimento UFMG",
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-28",
+          "observacao": "10h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
+      "imagem_fallback_origem": "equipamento"
+    },
+    {
+      "id": "cine-santa-tereza-bileto-129060",
+      "titulo": "XI COLÓQUIO CINEMA, ESTÉTICA E POLÍTICA - A estrela do Oriente visita o Reino 13 de Maio",
+      "data": "2026-10-28",
+      "data_fim": "",
+      "horario": "19h",
+      "local": "Cine Santa Tereza",
+      "cidade": "Belo Horizonte",
+      "categoria": "Cinema",
+      "gratuito": true,
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "descricao": "A estrela do Oriente visita o Reino 13 de Maio (Isabel Casimira/Júnia Torres | Brasil | 2025 | documentário | 75 min) A Estrela do Oriente do bairro Primeiro de Maio, folia da antiga ocupação operária da capital, visita, a cada dia 6 de janeiro, dia de Santos Reis, o presépio do Reino Treze de Maio na Concórdia. Filmamos, em 2006, os “primos do Primeiro de Maio” sendo recebidos pela Rainha mãe Isabel, e, quase vinte anos depois, retomamos as gravações com sua filha e agora rainha, que recebe a mesma folia, os mesmos cantos e presentes. Visita que devolve à sede do Estrela, acompanhada pela equipe do filme.",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/otbchqutjs1957g9agg5j8dp0evc959t3t4da241opcii83n8c8hj5jke9mimq0843u0fukfnvsohueheqc6t4kdmn698bfmt2hnao.jpeg",
+      "link": "https://bileto.sympla.com.br/event/129060/d/423484/s/2741916",
+      "fonte": "Cine Santa Tereza",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "endereco": "Rua da Bahia, 112 - Centro",
-      "tags_fonte": [
-        "Acessibilidade",
-        "Acessível para cadeirantes",
-        "Artes Plásticas",
-        "Cultural",
-        "Exposição",
-        "Gratuito",
-        "Lançamentos"
-      ],
-      "temporalidade": {
-        "classe": "periodo",
-        "realizacao": {
-          "inicio": "2026-10-23",
-          "fim": "2027-02-05",
-          "observacao": "10h às 23h59"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+do+TRT-MG%3A%2C+Rua+da+Bahia%2C+112+-+Centro%2C+Belo+Horizonte"
-    },
-    {
-      "id": "mm-gerdau-exposicao-xi-um-olhar-uma-luz-2026-10-27",
-      "titulo": "EXPOSIÇÃO | XI UM OLHAR, UMA LUZ",
-      "data": "2026-10-27",
-      "data_fim": "",
-      "horario": "",
-      "local": "MM Gerdau – Museu das Minas e do Metal",
-      "cidade": "Belo Horizonte",
-      "endereco": "Praça da Liberdade, 680, Funcionários, Belo Horizonte - MG",
-      "categoria": "Exposição",
-      "gratuito": true,
-      "inscricao": "Atividade gratuita conforme programação oficial do MM Gerdau; consulte a página do evento para orientações específicas de acesso, inscrição ou lotação.",
-      "descricao": "EXPOSIÇÃO | XI UM OLHAR, UMA LUZ. Consulte a página oficial para conhecer a atividade, os horários e a programação.",
-      "imagem": "https://www.secult.mg.gov.br/images/stories/migracao/cultura/2016/MM%20Gerdau%20-%20por%20Jomar%20Bragana_.jpg",
-      "link": "https://mmgerdau.org.br/programacoes/exposicao-xi-um-olhar-uma-luz/",
-      "fonte": "MM Gerdau — programação oficial",
-      "pagina": "https://mmgerdau.org.br/programacoes/exposicao-xi-um-olhar-uma-luz/",
-      "instituicao_id": "mm-gerdau",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "gratuidade_explicita",
-      "local_id": "mm-gerdau",
-      "status_validacao": "aprovado",
-      "origem_experimental": "mm_gerdau",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-27"
-        }
-      },
-      "mapa": "https://www.google.com/maps/search/?api=1&query=MM+Gerdau+%E2%80%93+Museu+das+Minas+e+do+Metal%2C+Pra%C3%A7a+da+Liberdade%2C+680%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG",
-      "imagem_fallback_origem": "equipamento"
-    },
-    {
-      "id": "ufmg-ec-exposicao-demasiado-humano",
-      "titulo": "Exposição “demasiado humano”",
-      "data": "2026-10-27",
-      "data_fim": "",
-      "horario": "10h",
-      "local": "Espaço do Conhecimento UFMG",
-      "cidade": "Belo Horizonte",
-      "categoria": "Exposição",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "Organizada em quatro módulos – O Aleph, Pensar as Origens, Modos de Existir e Sonhar a Terra – a exposição “demasiado humano” trata da aventura do conhecimento, abordando a origem da vida, a evolução e a trajetória humana no planeta, convidando o público a compreender ciência e cultura como processos vivos,",
-      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/04/Visita-mediada-a-exposicao-demasiado-humano-Creditos-Julia-Lobato-Divulgacao-Espaco-do-Conhecimento-UFMG-1-scaled.jpg",
-      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/exposicao-demasiado-humano/",
-      "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-27",
-          "observacao": "10h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "espaco-conhecimento-ufmg",
-      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
-    },
-    {
-      "id": "ufmg-ec-planetario-em-manutencao",
-      "titulo": "Planetário em Manutenção",
-      "data": "2026-10-27",
-      "data_fim": "",
-      "horario": "10h",
-      "local": "Espaço do Conhecimento UFMG",
-      "cidade": "Belo Horizonte",
-      "categoria": "Atividade educativa",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "Entre os dias 27 e 30/10 (terça-feira a sexta-feira), o Espaço do Conhecimento estará aberto ao público normalmente, mas não haverá sessões de Planetário devido à manutenção anual de equipamentos.",
-      "imagem": "imagens/instituicoes/espaco-conhecimento-ufmg.png",
-      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/planetario-em-manutencao/",
-      "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-27",
-          "observacao": "10h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "espaco-conhecimento-ufmg",
-      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_fallback_origem": "equipamento"
-    },
-    {
-      "id": "ufmg-ec-mostra-iaia-de-audiovisual-disque-quilombola-exibicao-2",
-      "titulo": "Mostra IAIA de Audiovisual: “Disque Quilombola” (exibição)",
-      "data": "2026-10-27",
-      "data_fim": "",
-      "horario": "11h",
-      "local": "Espaço do Conhecimento UFMG",
-      "cidade": "Belo Horizonte",
-      "categoria": "Atividade educativa",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": ": Em outubro, a Mostra IAIA de Audiovisual se dedica à cultura da criança na afrodiáspora, com a exibição do filme “Disque Quilombola”. A história se passa no Espírito Santo, enquanto crianças conversam de um jeito divertido sobre como é a vida em uma comunidade quilombola e em um morro na cidade de Vitória.",
-      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/09/cbs_id_disque_quilombola.jpg",
-      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/mostra-iaia-de-audiovisual-disque-quilombola-exibicao-2/",
-      "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-27",
-          "observacao": "11h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "espaco-conhecimento-ufmg",
-      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
-    },
-    {
-      "id": "bpemg-events-2026-10-27",
-      "titulo": "Events",
-      "data": "2026-10-27",
-      "data_fim": "",
-      "horario": "15h",
-      "local": "Teatro José Aparecido de Oliveira",
-      "local_id": "bpemg-teatro-jose-aparecido",
-      "cidade": "Belo Horizonte",
-      "endereco": "Praça da Liberdade, 21, Funcionários, Belo Horizonte - MG",
-      "categoria": "Teatro",
-      "gratuito": true,
-      "inscricao": "Atividade gratuita conforme programação oficial; consulte a página para regras de acesso, inscrição ou retirada de ingresso.",
-      "descricao": "Outubro Rosa na Biblioteca Pública Estadual de Minas Gerais! No dia 27 de outubro, às 15h, teremos a palestra Autocuidado Salva Vidas! Vista esta camisa!, com Mônica Maria Câmara de Bessa Reis, em uma ação de conscientização sobre a importância do autocuidado e da prevenção. 📅 Data: 27/10, às 15h 📍 Local: Teatro José Aparecido de Oliveira – Praça da Liberdade, 21, Funcionários 🎟️ Entrada gratuita! Participe dessa iniciativa de conscientização e cuidado com a saúde! 💗 ... 27 out 15:00 Ver Detalhes",
-      "imagem": "",
-      "link": "https://www.bibliotecapublica.mg.gov.br/programacao-cultural/",
-      "pagina": "https://www.bibliotecapublica.mg.gov.br/programacao-cultural/",
-      "fonte": "Biblioteca Pública Estadual de Minas Gerais — programação oficial",
-      "instituicao_id": "biblioteca-publica-estadual-mg",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "gratuidade_explicita",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "biblioteca_publica_mg"
-    },
-    {
-      "id": "ufmg-ec-mostra-iaia-de-audiovisual-a-camera-de-joao-exibicao-2",
-      "titulo": "Mostra IAIA de Audiovisual: “A Câmera de João” (exibição)",
-      "data": "2026-10-27",
-      "data_fim": "",
-      "horario": "15h",
-      "local": "Espaço do Conhecimento UFMG",
-      "cidade": "Belo Horizonte",
-      "categoria": "Atividade educativa",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": ": Em outubro, a Mostra IAIA de Audiovisual se dedica à cultura da criança na afrodiáspora, com a exibição do filme “A Câmera de João”. A história retrata a relação de João com o avô fotógrafo e a descoberta da fotografia como uma forma de registrar sentimentos.",
-      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/09/a-camera-de-joao.png",
-      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/mostra-iaia-de-audiovisual-a-camera-de-joao-exibicao-2/",
-      "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-27",
-          "observacao": "15h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "espaco-conhecimento-ufmg",
-      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
-    },
-    {
-      "id": "bpemg-outubro-rosa-na-biblioteca-publica-estadual-de-minas-gerais-2026-10-27",
-      "titulo": "Outubro Rosa na Biblioteca Pública Estadual de Minas Gerais!",
-      "data": "2026-10-27",
-      "data_fim": "",
-      "horario": "15h",
-      "local": "Teatro José Aparecido de Oliveira",
-      "local_id": "bpemg-teatro-jose-aparecido",
-      "cidade": "Belo Horizonte",
-      "endereco": "Praça da Liberdade, 21, Funcionários, Belo Horizonte - MG",
-      "categoria": "Teatro",
-      "gratuito": true,
-      "inscricao": "Atividade gratuita conforme programação oficial; consulte a página para regras de acesso, inscrição ou retirada de ingresso.",
-      "descricao": "Outubro Rosa na Biblioteca Pública Estadual de Minas Gerais! No dia 27 de outubro, às 15h, teremos a palestra Autocuidado Salva Vidas! Vista esta camisa!, com Mônica Maria Câmara de Bessa Reis, em uma ação de conscientização sobre a importância do autocuidado e da prevenção. 📅 Data: 27/10, às 15h 📍 Local: Teatro José Aparecido de Oliveira – Praça da Liberdade, 21, Funcionários 🎟️ *Entrada gratuita! Participe dessa iniciativa de conscientização e cuidado com a saúde! 💗 Previous article DIÁLOGOS COM O SISTEMA DE OUTUBRO ABORDA O USA DA INTELIGÊNCIA ARTIFICIAL NA CATALOGAÇÃO DE ACERVOS",
-      "imagem": "",
-      "link": "https://www.bibliotecapublica.mg.gov.br/outubro-rosa-na-biblioteca-publica-estadual-de-minas-gerais/",
-      "pagina": "https://www.bibliotecapublica.mg.gov.br/outubro-rosa-na-biblioteca-publica-estadual-de-minas-gerais/",
-      "fonte": "Biblioteca Pública Estadual de Minas Gerais — programação oficial",
-      "instituicao_id": "biblioteca-publica-estadual-mg",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "gratuidade_explicita",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "biblioteca_publica_mg"
-    },
-    {
-      "id": "casa-fiat-palestra-as-formas-do-tempo-inhotim-com-joao-paulo-andrade-2026-10-27-1930",
-      "titulo": "Palestra | As formas do tempo: Inhotim com João Paulo Andrade",
-      "data": "2026-10-27",
-      "data_fim": "",
-      "horario": "19h30",
-      "local": "Casa Fiat de Cultura",
-      "local_id": "casa-fiat-de-cultura",
-      "cidade": "Belo Horizonte",
-      "endereco": "Praça da Liberdade, 10, Funcionários, Belo Horizonte - MG",
-      "categoria": "Palestra e debate",
-      "gratuito": true,
-      "inscricao": "Programação gratuita conforme informação oficial da Casa Fiat de Cultura; consulte a página para inscrição, retirada de senha ou lotação quando aplicável.",
-      "descricao": "Palestra | As formas do tempo: Inhotim com João Paulo Andrade 27/out No ano em que a Casa Fiat de Cultura e o Instituto Inhotim, instituições de referência no cenário artístico mineiro e nacional, celebram 20 anos de atuação, convidamos João Paulo Andrade, gerente de Educação do Instituto Inhotim, para uma palestra sobre as diferentes formas de perceber e experimentar o tempo por meio das artes visuais. Em “ Mil maneiras de matar o tempo” , exposição em cartaz na Piccola Galeria da Casa Fiat de Cultura, o tempo é pensado para além da sucessão cronológica, atravessado por memórias, transformações,",
-      "imagem": "https://casafiatdecultura.com.br/wp-content/uploads/2026/09/Banners-newsletter-outubro_BATE-PAPO-2.png",
-      "link": "https://casafiatdecultura.com.br/evento/palestra-as-formas-do-tempo-inhotim-com-joao-paulo-andrade/",
-      "fonte": "Casa Fiat de Cultura — programação oficial",
-      "pagina": "https://casafiatdecultura.com.br/evento/palestra-as-formas-do-tempo-inhotim-com-joao-paulo-andrade/",
-      "instituicao_id": "casa-fiat-de-cultura",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-27",
-          "observacao": "19h30"
-        }
-      },
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
-    },
-    {
-      "id": "casa-fiat-palestra-nosso-amplo-presente-e-o-tempo-como-promessa-2026-10-27-1930",
-      "titulo": "Palestra | Nosso amplo presente e o tempo como promessa",
-      "data": "2026-10-27",
-      "data_fim": "",
-      "horario": "19h30",
-      "local": "Casa Fiat de Cultura",
-      "local_id": "casa-fiat-de-cultura",
-      "cidade": "Belo Horizonte",
-      "endereco": "Praça da Liberdade, 10, Funcionários, Belo Horizonte - MG",
-      "categoria": "Palestra e debate",
-      "gratuito": true,
-      "inscricao": "Programação gratuita conforme informação oficial da Casa Fiat de Cultura; consulte a página para inscrição, retirada de senha ou lotação quando aplicável.",
-      "descricao": "Palestra | Nosso amplo presente e o tempo como promessa 27/out CASA FIAT DE CULTURA REALIZA PALESTRA SOBRE COMO A ARTE TRANSFORMA NOSSA PERCEPÇÃO DO TEMPO No ano em que completam 20 anos, Casa Fiat de Cultura e Inhotim se unem para explorar o papel da cultura na construção de novos futuros A arte nos ajuda a compreender o passado e, a partir dele, a lançar novos projetos de futuro no mundo. É a partir dessa relação com o tempo que a Casa Fiat de Cultura convida João Paulo Andrade, gerente de Educação do Instituto Inhotim , para a palestra “Nosso amplo presente e o tempo como promessa” . O encontro,",
-      "imagem": "https://casafiatdecultura.com.br/wp-content/uploads/2026/09/​Giuseppe-Penone-Elevazione-2000-01-detalhe.-Foto-William-Gomes-1024x576.png",
-      "link": "https://casafiatdecultura.com.br/evento/palestra-as-formas-do-tempo-inhotim-com-joao-paulo-andrade/",
-      "fonte": "Casa Fiat de Cultura — programação oficial",
-      "pagina": "https://casafiatdecultura.com.br/evento/palestra-as-formas-do-tempo-inhotim-com-joao-paulo-andrade/",
-      "instituicao_id": "casa-fiat-de-cultura",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "casa_fiat"
-    },
-    {
-      "id": "conservatorio-ufmg-swiss-winds-piano-trio-ivani-filomena-venturieri-piano-afonso-venturieri-fagote-e-sergio-burgani-clarinete-2026-10-27-1930",
-      "titulo": "Swiss Winds Piano Trio Ivani Filomena Venturieri (piano), Afonso Venturieri (fagote) e Sérgio Burgani (clarinete)",
-      "data": "2026-10-27",
-      "data_fim": "",
-      "horario": "19h30",
-      "local": "Conservatório UFMG",
-      "local_id": "conservatorio-ufmg",
-      "cidade": "Belo Horizonte",
-      "endereco": "Avenida Afonso Pena, 1534, Centro, Belo Horizonte - MG",
-      "categoria": "Música",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita, sujeita à capacidade do espaço, conforme agenda oficial do Conservatório UFMG.",
-      "descricao": "CONSERVATÓRIO 100 ANOS. Swiss Winds Piano Trio Ivani Filomena Venturieri (piano), Afonso Venturieri (fagote) e Sérgio Burgani (clarinete). MÚSICA ERUDITA",
-      "imagem": "https://www.ufmg.br/online/arquivos/anexos/ConservatorioUFMGFachada.jpg",
-      "link": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html",
-      "pagina": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html",
-      "fonte": "Conservatório UFMG — agenda oficial",
-      "instituicao_id": "conservatorio-ufmg",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "gratuidade_global_agenda_oficial",
-      "status_validacao": "aprovado",
-      "origem_experimental": "conservatorio_ufmg",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-27",
-          "observacao": "19h30"
-        }
-      },
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Conservat%C3%B3rio+UFMG%2C+Avenida+Afonso+Pena%2C+1534%2C+Centro%2C+Belo+Horizonte+-+MG",
-      "imagem_fallback_origem": "equipamento"
-    },
-    {
-      "id": "ufmg-ec-exposicao-demasiado-humano-2",
-      "titulo": "Exposição “demasiado humano”",
-      "data": "2026-10-28",
-      "data_fim": "",
-      "horario": "10h",
-      "local": "Espaço do Conhecimento UFMG",
-      "cidade": "Belo Horizonte",
-      "categoria": "Exposição",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "Organizada em quatro módulos – O Aleph, Pensar as Origens, Modos de Existir e Sonhar a Terra – a exposição “demasiado humano” trata da aventura do conhecimento, abordando a origem da vida, a evolução e a trajetória humana no planeta, convidando o público a compreender ciência e cultura como processos vivos,",
-      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/04/Visita-mediada-a-exposicao-demasiado-humano-Creditos-Julia-Lobato-Divulgacao-Espaco-do-Conhecimento-UFMG-1-scaled.jpg",
-      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/exposicao-demasiado-humano-2/",
-      "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg",
+      "fonte_id": "129060",
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "classificacao_indicativa": "Livre",
       "temporalidade": {
         "classe": "pontual",
         "realizacao": {
           "inicio": "2026-10-28",
-          "observacao": "10h"
+          "observacao": "19h"
         }
       },
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "espaco-conhecimento-ufmg",
-      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
-    },
-    {
-      "id": "ufmg-ec-planetario-em-manutencao-2",
-      "titulo": "Planetário em Manutenção",
-      "data": "2026-10-28",
-      "data_fim": "",
-      "horario": "10h",
-      "local": "Espaço do Conhecimento UFMG",
-      "cidade": "Belo Horizonte",
-      "categoria": "Atividade educativa",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "Entre os dias 27 e 30/10 (terça-feira a sexta-feira), o Espaço do Conhecimento estará aberto ao público normalmente, mas não haverá sessões de Planetário devido à manutenção anual de equipamentos.",
-      "imagem": "imagens/instituicoes/espaco-conhecimento-ufmg.png",
-      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/planetario-em-manutencao-2/",
-      "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-28",
-          "observacao": "10h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "espaco-conhecimento-ufmg",
-      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_fallback_origem": "equipamento"
-    },
-    {
-      "id": "ufmg-ec-mostra-iaia-de-audiovisual-a-piscina-de-caique-exibicao-3",
-      "titulo": "Mostra IAIA de Audiovisual: “A Piscina de Caíque” (exibição)",
-      "data": "2026-10-28",
-      "data_fim": "",
-      "horario": "11h",
-      "local": "Espaço do Conhecimento UFMG",
-      "cidade": "Belo Horizonte",
-      "categoria": "Atividade educativa",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": ": Em outubro, a Mostra IAIA de Audiovisual se dedica à cultura da criança na afrodiáspora, com a exibição do filme “A Piscina de Caíque”. O curta-metragem aborda a história de dois amigos inseparáveis que se divertem escorregando no chão molhado da área de serviço, enquanto sonham em ter uma piscina.",
-      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/09/a-piscina-de-caique-1.jpg",
-      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/mostra-iaia-de-audiovisual-a-piscina-de-caique-exibicao-3/",
-      "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-28",
-          "observacao": "11h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "espaco-conhecimento-ufmg",
-      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
-    },
-    {
-      "id": "ufmg-ec-mostra-iaia-de-audiovisual-caixa-dagua-exibicao-3",
-      "titulo": "Mostra IAIA de Audiovisual: “Caixa D’Água” (exibição)",
-      "data": "2026-10-28",
-      "data_fim": "",
-      "horario": "15h",
-      "local": "Espaço do Conhecimento UFMG",
-      "cidade": "Belo Horizonte",
-      "categoria": "Atividade educativa",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": ": Em outubro, a Mostra IAIA de Audiovisual se dedica à cultura da criança na afrodiáspora, com a exibição do filme “Caixa D’Água”. A história acompanha Verônica, seu irmão Valtinho e seus amigos Deco e Peninha, representando o universo lúdico da infância e a incrível capacidade das crianças de presenciar o absurdo.",
-      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/09/caixa-dagua-1-scaled.jpg",
-      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/mostra-iaia-de-audiovisual-caixa-dagua-exibicao-3/",
-      "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-28",
-          "observacao": "15h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "espaco-conhecimento-ufmg",
-      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
     {
       "id": "portal-bh-3cad8a650d99-2026-10-28-1900",
@@ -6393,7 +5945,7 @@
       "categoria": "Atividade educativa",
       "gratuito": true,
       "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "Entre os dias 27 e 30/10 (terça-feira a sexta-feira), o Espaço do Conhecimento estará aberto ao público normalmente, mas não haverá sessões de Planetário devido à manutenção anual de equipamentos.",
+      "descricao": "Nos dias 27, 29 e 30 de outubro (terça, quinta e sexta-feira), o museu funcionará normalmente, das 10h às 17h, mas não haverá sessões de Planetário devido à manutenção anual dos equipamentos. As sessões serão retomadas após a conclusão da manutenção.",
       "imagem": "imagens/instituicoes/espaco-conhecimento-ufmg.png",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/planetario-em-manutencao-3/",
       "fonte": "Espaço do Conhecimento UFMG",
@@ -6533,6 +6085,73 @@
       "imagem_fallback_origem": "equipamento"
     },
     {
+      "id": "portal-bh-33bc9e18f6ba-2026-10-29-0800",
+      "titulo": "4ª Edição do Circuito de Brechós na PUC Minas Lourdes",
+      "data": "2026-10-29",
+      "data_fim": "2026-10-31",
+      "horario": "8h às 13h",
+      "local": "Local informado na página oficial",
+      "cidade": "Belo Horizonte",
+      "categoria": "Festival",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "A PUC Minas Lourdes, em Belo Horizonte, recebe a 4ª edição do Circuito de Brechós, evento com entrada gratuita que reúne mais de 10 expositores com uma seleção de roupas, acessórios e óculos de sol. A iniciativa transforma o campus em um ponto de encontro para quem aprecia moda, estilo e consumo consciente. Com peças selecionadas e opções para diferentes gostos,",
+      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-10/imagem.jpg.jpg",
+      "link": "https://portalbelohorizonte.com.br/2026/eventos/encontro/empreendedorismo/4a-edicao-do-circuito-de-brechos-na-puc-minas-lourdes",
+      "fonte": "Portal Belo Horizonte",
+      "fonte_id": "33bc9e18f6ba",
+      "instituicao_id": "",
+      "endereco": "Avenida Brasil, 2023 - Funcionários",
+      "tags_fonte": [
+        "Ar livre",
+        "Gratuito",
+        "Beleza",
+        "Cultural",
+        "Brechó"
+      ],
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-10-29",
+          "fim": "2026-10-31",
+          "observacao": "8h às 13h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "biblioteca-rmbh-belo-horizonte-biblioteca-puc-minas-praca-da-liberdade",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Biblioteca+PUC+Minas+%E2%80%93+Pra%C3%A7a+da+Liberdade%2C+Av.+Brasil%2C+2023+%E2%80%93+Funcion%C3%A1rios%2C+Belo+Horizonte%2C+Minas+Gerais%2C+Brasil"
+    },
+    {
+      "id": "cine-santa-tereza-bileto-129061",
+      "titulo": "XI COLÓQUIO CINEMA, ESTÉTICA E POLÍTICA - Retratos de identificação",
+      "data": "2026-10-29",
+      "data_fim": "",
+      "horario": "9h",
+      "local": "Cine Santa Tereza",
+      "cidade": "Belo Horizonte",
+      "categoria": "Cinema",
+      "gratuito": true,
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "descricao": "Retratos de identificação (Anita Leandro | 2014 | Brasil | Documentário | 73 min) Dois combatentes da luta contra a ditadura militar no Brasil se deparam, pela primeira vez, com fotografias de suas respectivas prisões, tiradas pela polícia. O passado retorna e, com ele, uma história de crimes perpetrados pelo Estado, até hoje, impunes. Classificação indicativa: 12 anos Sessão comentada",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/otbchqutjs1957g9agg5j8dp0evc959t3t4da241opcii83n8c8hj5jke9mimq0843u0fukfnvsohueheqc6t4kdmn698bfmt2hnao.jpeg",
+      "link": "https://bileto.sympla.com.br/event/129061/d/423485/s/2741918",
+      "fonte": "Cine Santa Tereza",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "fonte_id": "129061",
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "classificacao_indicativa": "12 anos",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-29",
+          "observacao": "9h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
+    },
+    {
       "id": "fcs-wp-37779",
       "titulo": "28º FestCurtasBH",
       "data": "2026-10-30",
@@ -6633,7 +6252,7 @@
       "categoria": "Atividade educativa",
       "gratuito": true,
       "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "Entre os dias 27 e 30/10 (terça-feira a sexta-feira), o Espaço do Conhecimento estará aberto ao público normalmente, mas não haverá sessões de Planetário devido à manutenção anual de equipamentos.",
+      "descricao": "Nos dias 27, 29 e 30 de outubro (terça, quinta e sexta-feira), o museu funcionará normalmente, das 10h às 17h, mas não haverá sessões de Planetário devido à manutenção anual dos equipamentos. As sessões serão retomadas após a conclusão da manutenção.",
       "imagem": "imagens/instituicoes/espaco-conhecimento-ufmg.png",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/planetario-em-manutencao-4/",
       "fonte": "Espaço do Conhecimento UFMG",
@@ -6711,6 +6330,35 @@
       },
       "mapa": "https://www.google.com/maps/search/?api=1&query=Conservat%C3%B3rio+UFMG%2C+Avenida+Afonso+Pena%2C+1534%2C+Centro%2C+Belo+Horizonte+-+MG",
       "imagem_fallback_origem": "equipamento"
+    },
+    {
+      "id": "sympla-sabara-3589117",
+      "titulo": "Festa no Céu 2026",
+      "data": "2026-10-30",
+      "data_fim": "",
+      "horario": "20h00",
+      "local": "Casa De Recepções Impacto",
+      "cidade": "Sabará",
+      "categoria": "Festival",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página da Sympla",
+      "descricao": "* A Festa no Céu é um evento idealizado e organizado pelo Grupo de Oração Caminhando com Jesus, da Renovação Carismática Católica (Sabará, MG).* A inscrição é obrigatória e deverá ser realizada individualmente para cada criança.* O valor da inscrição é referente somente à criança.",
+      "imagem": "https://images.sympla.com.br/6ab27c2f171fc-lg.jpg",
+      "link": "https://www.sympla.com.br/evento/festa-no-ceu-2026/3589117",
+      "fonte": "Sympla — evento em Sabará",
+      "instituicao_id": "",
+      "fonte_id": "3589117",
+      "organizador": "",
+      "endereco": "Avenida Albert Scharlé, 1626 Paciência, Sabará, MG",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-30",
+          "observacao": "20h00"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+De+Recep%C3%A7%C3%B5es+Impacto%2C+Avenida+Albert+Scharl%C3%A9%2C+1626+Paci%C3%AAncia%2C+Sabar%C3%A1%2C+MG"
     },
     {
       "id": "portal-bh-4f026322cf55-2026-10-31-1000",
@@ -6999,6 +6647,36 @@
       "espaco_interno": "MUMO"
     },
     {
+      "id": "sesc-palladium-bileto-114386",
+      "titulo": "CINE SESC - TEMTODOSABADO: A MENINA QUE QUERIA VOAR - NOTÍCIAS DA LUA",
+      "data": "2026-10-31",
+      "data_fim": "",
+      "horario": "16h",
+      "local": "Sesc Palladium",
+      "cidade": "Belo Horizonte",
+      "categoria": "Festival",
+      "gratuito": true,
+      "inscricao": "Ingressos gratuitos disponíveis on-line, conforme disponibilidade",
+      "descricao": "Atenção! Compras online e na bilheteria. Você poderá retirar até 2 (dois) ingressos, sendo 1 ingresso por CPF. Preencha os CPFs corretos e distintos, por ingresso, para que sua compra seja finalizada! Os ingressos são gratuitos e podem ser reservados tanto pelo Sympla quanto retirados na bilheteria 90 minutos antes da sessão. Caso os ingressos no Sympla estejam esgotados, procure a bilheteria do Palladium para retirar o seu ingresso.",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/ao1r8i5lrothjg8dc5a7n7d0rn68i03g4h57fhfbe10kedhoh6p5bqdigvbqeog5bsr5355g2j4686oaaef250mf05umaoi5oielmp.jpeg",
+      "link": "https://bileto.sympla.com.br/event/114386/d/408958/s/2663266",
+      "fonte": "Sesc Palladium",
+      "instituicao_id": "sesc-mg",
+      "fonte_id": "114386",
+      "endereco": "Rua Rio de Janeiro, 1046 – Centro, Belo Horizonte – MG, 30160-041",
+      "classificacao_indicativa": "Livre",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-31",
+          "observacao": "16h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "sesc-palladium",
+      "mapa": "https://maps.app.goo.gl/69GL5ydEpAtcwDgv7"
+    },
+    {
       "id": "ufmg-ec-observacao-noturna-dos-astros-com-telescopios-6",
       "titulo": "Observação Noturna dos Astros com Telescópios",
       "data": "2026-10-31",
@@ -7026,6 +6704,36 @@
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
       "espaco_interno": "Terraço Astronômico"
+    },
+    {
+      "id": "sympla-sabara-3622015",
+      "titulo": "assombro / PREMOLAR",
+      "data": "2026-10-31",
+      "data_fim": "",
+      "horario": "19h30",
+      "local": "Solar do Padre Correa",
+      "cidade": "Sabará",
+      "categoria": "Teatro",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página da Sympla",
+      "descricao": "Pela primeira vez fora do Teatro Municipal de Sabará e com entrada gratuita, o ASSOMBRO de outubro será realizado como parte do Halloween de Sabará (cidade que tem o maior Halloween de rua de Minas, segundo a Globo ¯\\_(ツ)_/¯). O evento será no dia 31 de outubro, sábado, no Solar Assombrado",
+      "imagem": "https://images.sympla.com.br/6ad2a586b4a63-lg.jpg",
+      "link": "https://www.sympla.com.br/evento/assombro-premolar/3622015",
+      "fonte": "Sympla — evento em Sabará",
+      "instituicao_id": "",
+      "fonte_id": "3622015",
+      "organizador": "",
+      "endereco": "Rua Dom Pedro II, 200 Centro, Sabará, MG",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-10-31",
+          "observacao": "19h30"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "solar-padre-correia",
+      "mapa": "https://maps.app.goo.gl/fNCH9XLpCY5V4z2j6"
     },
     {
       "id": "ufmg-ec-oficina-historias-da-africa-de-a-a-z",
@@ -7065,7 +6773,7 @@
       "cidade": "Belo Horizonte",
       "categoria": "Teatro",
       "gratuito": true,
-      "inscricao": "Ingressos gratuitos disponíveis on-line, conforme disponibilidade",
+      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial e na bilheteria do espaço.",
       "descricao": "Atenção! Compras online e na bilheteria. Você poderá retirar até 2 (dois) ingressos, sendo 1 ingresso por CPF. Preencha os CPFs corretos e distintos, por ingresso, para que sua compra seja finalizada! Evento sujeito à lotação do espaço. Os ingressos podem ser adquiridos na plataforma Sympla e na bilheteria do Sesc Palladium. Haverá acessibilidade em Libras e venda dos livros. SINOPSE A programação de novembro do projeto “Literatura no Palladium” homenageia João das Neves com espetáculo musical Grupo Opinião - “Por Cima do Temporal” , no Grande Teatro do Sesc Palladium.",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/2fh74ql41334u74ntr3f6n94f8deenc4c4dndrduea09lh2ap2lhggi9hgbihsgvh3grq3mgfpipf0n2oiteofltijledt67otkomng.webp",
       "link": "https://bileto.sympla.com.br/event/118756/d/418110/s/2713306",
@@ -7084,6 +6792,46 @@
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "sesc-palladium",
       "mapa": "https://maps.app.goo.gl/69GL5ydEpAtcwDgv7"
+    },
+    {
+      "id": "portal-bh-cb69f5285df6-2026-11-03-2030",
+      "titulo": "Show: Grupo Opinião – Por Cima do Temporal",
+      "data": "2026-11-03",
+      "data_fim": "",
+      "horario": "20h30 às 22h30",
+      "local": "Sesc Palladium - Grande Teatro",
+      "cidade": "Belo Horizonte",
+      "categoria": "Teatro",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "O Grande Teatro do Sesc Palladium acolhe, no dia 3 de novembro, às 20h30, o espetáculo cênico-musical \"Grupo Opinião – Por Cima do Temporal\". A apresentação gratuita marca o lançamento oficial do livro homônimo e autobiográfico do dramaturgo, ator e encenador carioca João das Neves (1934–2018), obra redigida em seus últimos meses de vida e que resgata a memória,",
+      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-10/pbrlft1a3j7o7inaf58iru9mofn2ftd8qa7tjpuatku78njhv326m0kg529hlesoj34qcq8hd6qsvf3d3mulim3j7hn5ksm12q7d0q_0.jpg",
+      "link": "https://portalbelohorizonte.com.br/2026/eventos/show/musica/show-grupo-opiniao-por-cima-do-temporal",
+      "fonte": "Portal Belo Horizonte",
+      "fonte_id": "cb69f5285df6",
+      "instituicao_id": "sesc-mg",
+      "endereco": "Rua Rio de Janeiro, 1046 - Centro",
+      "tags_fonte": [
+        "Acessibilidade",
+        "Acessível para cadeirantes",
+        "Cultural",
+        "Experiências",
+        "Gratuito",
+        "Ingressos on-line",
+        "Música",
+        "Show e Festa"
+      ],
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-03",
+          "observacao": "20h30 às 22h30"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "sesc-palladium",
+      "mapa": "https://maps.app.goo.gl/69GL5ydEpAtcwDgv7",
+      "espaco_interno": "Grande Teatro"
     },
     {
       "id": "manual-fiq-bh-2026-2026-11-04-2026-11-04",
@@ -7156,6 +6904,34 @@
         }
       },
       "mapa": "https://www.google.com/maps/search/?api=1&query=Teatro+da+Cidade%2C+Rua+da+Bahia%2C+1341%2C+Centro%2C+Belo+Horizonte+-+MG"
+    },
+    {
+      "id": "ufmg-ec-minicurso-ovulario-contribuicoes-tecnologicas-africanas-novembro-negro-ufmg",
+      "titulo": "Minicurso “Ovulário: Contribuições Tecnológicas Africanas” – Novembro Negro UFMG",
+      "data": "2026-11-06",
+      "data_fim": "",
+      "horario": "14h",
+      "local": "Espaço do Conhecimento UFMG",
+      "cidade": "Belo Horizonte",
+      "categoria": "Atividade educativa",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "Ovulário é uma ação do projeto “Espaço Experimental IAIA – Inteligências Ancestrais Afrodiaspóricas”, dedicada à troca de ideias que fertilizam o mundo negro. Composta por palestras, rodas de conversa e outros formatos expositivos, a atividade é ministrada de maneira aberta ao público do Espaço do Conhecimento.",
+      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/10/henrique.png",
+      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/minicurso-ovulario-contribuicoes-tecnologicas-africanas-novembro-negro-ufmg/",
+      "fonte": "Espaço do Conhecimento UFMG",
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-06",
+          "observacao": "14h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
     },
     {
       "id": "fcs-wp-37639",
@@ -7245,6 +7021,160 @@
       "origem_experimental": "centro_cultural_ufmg"
     },
     {
+      "id": "portal-bh-05092d3bd6b0-2026-11-06-1900",
+      "titulo": "Exposição: ‘Do que não é meu, nem só para mim’",
+      "data": "2026-11-06",
+      "data_fim": "2026-12-06",
+      "horario": "19h às 17h",
+      "local": "Centro Cultural UFMG - Grande Galeria do Centro Cultural UFMG",
+      "cidade": "Belo Horizonte",
+      "categoria": "Exposição",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "O Centro Cultural UFMG inaugura no dia 6 de novembro de 2026, às 19h, a exposição coletiva \"Do que não é meu, nem só para mim\", reunindo os trabalhos de conclusão de curso de mais de cinquenta formandos dos cursos de Bacharelado e Licenciatura em Artes Visuais da Escola de Belas Artes da UFMG. Com curadoria da professora Fernanda Goulart,",
+      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-10/casa-da-terceira-rua-heloisa-brabo.jpg",
+      "link": "https://portalbelohorizonte.com.br/2026/eventos/exposicao/artes-plasticas/exposicao-do-que-nao-e-meu-nem-so-para-mim",
+      "fonte": "Portal Belo Horizonte",
+      "fonte_id": "05092d3bd6b0",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "endereco": "Avenida Santos Dumont, 174 - Centro",
+      "tags_fonte": [
+        "Acessibilidade",
+        "Acessível para cadeirantes",
+        "Artes Plásticas",
+        "Cultural",
+        "Experiências",
+        "Exposição",
+        "Gratuito",
+        "Lançamentos"
+      ],
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-11-06",
+          "fim": "2026-12-06",
+          "observacao": "19h às 17h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "centro-cultural-ufmg",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+UFMG%2C+Avenida+Santos+Dumont%2C+174+-+Centro%2C+Belo+Horizonte",
+      "espaco_interno": "Grande Galeria do Centro Cultural UFMG"
+    },
+    {
+      "id": "ufmg-ec-minicurso-ovulario-contribuicoes-tecnologicas-africanas-novembro-negro-ufmg-2",
+      "titulo": "Minicurso “Ovulário: Contribuições Tecnológicas Africanas” – Novembro Negro UFMG",
+      "data": "2026-11-07",
+      "data_fim": "",
+      "horario": "14h",
+      "local": "Espaço do Conhecimento UFMG",
+      "cidade": "Belo Horizonte",
+      "categoria": "Atividade educativa",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "Ovulário é uma ação do projeto “Espaço Experimental IAIA – Inteligências Ancestrais Afrodiaspóricas”, dedicada à troca de ideias que fertilizam o mundo negro. Composta por palestras, rodas de conversa e outros formatos expositivos, a atividade é ministrada de maneira aberta ao público do Espaço do Conhecimento.",
+      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/10/henrique.png",
+      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/minicurso-ovulario-contribuicoes-tecnologicas-africanas-novembro-negro-ufmg-2/",
+      "fonte": "Espaço do Conhecimento UFMG",
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-07",
+          "observacao": "14h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
+    },
+    {
+      "id": "ufmg-ec-sabado-com-libras-caca-aos-sinais-no-museu",
+      "titulo": "Sábado com Libras: Caça aos Sinais no Museu",
+      "data": "2026-11-07",
+      "data_fim": "",
+      "horario": "14h",
+      "local": "Espaço do Conhecimento UFMG",
+      "cidade": "Belo Horizonte",
+      "categoria": "Atividade educativa",
+      "gratuito": true,
+      "inscricao": "Ingresso gratuito emitido 2h antes da atividade",
+      "descricao": "Durante a atividade, os participantes receberão um mapa ilustrado que os conduzirá por diferentes lugares do museu. Em cada parada, conhecerão curiosidades sobre fósseis, planetas, estrelas e instrumentos científicos,",
+      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/10/blogimagens-16-2.png",
+      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/sabado-com-libras-caca-aos-sinais-no-museu/",
+      "fonte": "Espaço do Conhecimento UFMG",
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-07",
+          "observacao": "14h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
+    },
+    {
+      "id": "ufmg-ec-oficina-fabrica-de-planetas",
+      "titulo": "Oficina “Fábrica de Planetas”",
+      "data": "2026-11-07",
+      "data_fim": "",
+      "horario": "15h",
+      "local": "Espaço do Conhecimento UFMG",
+      "cidade": "Belo Horizonte",
+      "categoria": "Oficina",
+      "gratuito": true,
+      "inscricao": "Ingresso gratuito emitido 2h antes da atividade",
+      "descricao": "A oficina convida os participantes a criarem artisticamente o seu próprio planeta, por meio de bolas de isopor, explorando possibilidades de cores, tamanhos e estruturas. A partir da imaginação e criatividade, também poderão compreender características físicas de planetas pertencentes a diferentes sistemas planetários.",
+      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/10/07.11-Oficina-Fabrica-de-Planetas-Divulgacao-Espaco-do-Conhecimento-UFMG_Easy-Resize.com_.jpg",
+      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/oficina-fabrica-de-planetas/",
+      "fonte": "Espaço do Conhecimento UFMG",
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-07",
+          "observacao": "15h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
+    },
+    {
+      "id": "ufmg-ec-sessao-comentada-caminhos-da-liberdade-com-rafael-rg-novembro-negro-ufmg",
+      "titulo": "Sessão Comentada “Caminhos da Liberdade”, com Rafael RG – Novembro Negro UFMG",
+      "data": "2026-11-07",
+      "data_fim": "",
+      "horario": "18h",
+      "local": "Espaço do Conhecimento UFMG – Planetário",
+      "cidade": "Belo Horizonte",
+      "categoria": "Atividade educativa",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "A atividade “Caminhos da Liberdade” consiste em uma conversa que será realizada após a exibição da sessão de Planetário “Ao Cair da Noite, Eu Me Guiarei pelo Brilho dos Seus Olhos”. Durante o bate-papo,",
+      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/10/Planetario-do-Espaco-do-Conhecimento-UFMG-Creditos-Vitor-Amaro-Divulgacao-Espaco-do-Conhecimento-UFMG-scaled.jpg",
+      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/sessao-comentada-caminhos-da-liberdade-com-rafael-rg-novembro-negro-ufmg/",
+      "fonte": "Espaço do Conhecimento UFMG",
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-07",
+          "observacao": "18h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
+      "espaco_interno": "Planetário"
+    },
+    {
       "id": "manual-concertos-peter-lund-grupo-geo-2026-11-08-2026-11-08",
       "titulo": "Concertos Dominicais Peter Lund — Grupo GEO",
       "data": "2026-11-08",
@@ -7315,6 +7245,34 @@
         }
       },
       "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
+    },
+    {
+      "id": "ufmg-ec-oficina-do-caos-ao-olimpo",
+      "titulo": "Oficina “Do Caos ao Olimpo”",
+      "data": "2026-11-08",
+      "data_fim": "",
+      "horario": "15h",
+      "local": "Espaço do Conhecimento UFMG",
+      "cidade": "Belo Horizonte",
+      "categoria": "Oficina",
+      "gratuito": true,
+      "inscricao": "Ingresso gratuito emitido 2h antes da atividade",
+      "descricao": "A atividade convida o público a conhecer as histórias da cosmologia grega que explicam a criação do mundo e dos humanos, a origem das estações do ano e o surgimento dos males. As narrativas propõem reflexões múltiplas que incentivam o pensamento crítico acerca das diferentes interpretações sobre os fenômenos naturais…",
+      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/10/08.11-Oficina-Do-Caos-ao-Olimpo-Creditos-Guilherme-Maciel-Divulgacao-Espaco-do-Conhecimento-UFMG_Easy-Resize.com_.jpg",
+      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/oficina-do-caos-ao-olimpo/",
+      "fonte": "Espaço do Conhecimento UFMG",
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-08",
+          "observacao": "15h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
     },
     {
       "id": "minas-tenis-exposicao-sempre-uma-nova-infancia-2026-11-09",
@@ -7404,6 +7362,62 @@
       "espaco_interno": "Cine Humberto Mauro"
     },
     {
+      "id": "ufmg-ec-oficina-ceramica-terra-viva",
+      "titulo": "Oficina “Cerâmica Terra Viva”",
+      "data": "2026-11-14",
+      "data_fim": "",
+      "horario": "15h",
+      "local": "Espaço do Conhecimento UFMG",
+      "cidade": "Belo Horizonte",
+      "categoria": "Oficina",
+      "gratuito": true,
+      "inscricao": "Ingresso gratuito emitido 2h antes da atividade",
+      "descricao": "Nesta oficina de cerâmica, o público será convidado a conhecer instalações da exposição “demasiado humano” que abordam diferentes cosmologias e saberes. A partir do contato com as instalações, os participantes escolherão os elementos, seres,",
+      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/10/14.11-Oficina-Ceramica-Terra-Viva-Divulgacao-Espaco-do-Conhecimento-UFMG-scaled.jpg",
+      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/oficina-ceramica-terra-viva/",
+      "fonte": "Espaço do Conhecimento UFMG",
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-14",
+          "observacao": "15h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
+    },
+    {
+      "id": "ufmg-ec-conversas-de-terreiro-o-dancehall-com-rudgirl-novembro-negro-ufmg",
+      "titulo": "Conversas de Terreiro: “O Dancehall”, com Rudgirl – Novembro Negro UFMG",
+      "data": "2026-11-14",
+      "data_fim": "",
+      "horario": "17h",
+      "local": "Espaço do Conhecimento UFMG",
+      "cidade": "Belo Horizonte",
+      "categoria": "Atividade educativa",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "Conversas de Terreiro é um bate-papo sonoro, visual e performático que visa receber artistas conectados à tradição e à potência das tecnologias afrodiaspóricas. A cada edição, o Espaço do Conhecimento UFMG é tomado pelo protagonismo de vozes negras por meio do canto, da dança, da música,",
+      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/10/blogimagens-18.png",
+      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/conversas-de-terreiro-o-dancehall-com-rudgirl-novembro-negro-ufmg/",
+      "fonte": "Espaço do Conhecimento UFMG",
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-14",
+          "observacao": "17h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
+    },
+    {
       "id": "portal-bh-1045058fe89d-2026-11-14-0900",
       "titulo": "Tours Gratuitos em Belo Horizonte 2026",
       "data": "2026-11-14",
@@ -7438,6 +7452,35 @@
       "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
+      "id": "ufmg-ec-museu-fechado-feriado-proclamacao-da-republica",
+      "titulo": "Museu Fechado – Feriado Proclamação da República",
+      "data": "2026-11-15",
+      "data_fim": "",
+      "horario": "10h",
+      "local": "Espaço do Conhecimento UFMG",
+      "cidade": "Belo Horizonte",
+      "categoria": "Atividade educativa",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "No dia 15 de novembro de 2026, o Espaço do Conhecimento UFMG estará fechado devido ao feriado da Proclamação da República. Seguindo o funcionamento regular do museu (terça a domingo), a s atividades presenciais serão retomadas na terça-feira, 17 de novembro, das 10h às 17h.",
+      "imagem": "imagens/instituicoes/espaco-conhecimento-ufmg.png",
+      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/museu-fechado-feriado-proclamacao-da-republica/",
+      "fonte": "Espaço do Conhecimento UFMG",
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-15",
+          "observacao": "10h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
+      "imagem_fallback_origem": "equipamento"
+    },
+    {
       "id": "fcs-wp-37928",
       "titulo": "Retrospectiva Rosa Von Praunheim",
       "data": "2026-11-15",
@@ -7467,6 +7510,121 @@
       "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
       "espaco_interno": "Cine Humberto Mauro"
+    },
+    {
+      "id": "ufmg-ec-museu-fechado-feriado-dia-da-consciencia-negra",
+      "titulo": "Museu Fechado – Feriado Dia da Consciência Negra",
+      "data": "2026-11-20",
+      "data_fim": "",
+      "horario": "10h",
+      "local": "Espaço do Conhecimento UFMG",
+      "cidade": "Belo Horizonte",
+      "categoria": "Atividade educativa",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "No dia 20 de novembro de 2026, o Espaço do Conhecimento UFMG estará fechado devido ao feriado do Dia da Consciência Negra. As atividades presenciais serão retomadas no sábado, 21 de novembro, das 13h às 20h.",
+      "imagem": "imagens/instituicoes/espaco-conhecimento-ufmg.png",
+      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/museu-fechado-feriado-dia-da-consciencia-negra/",
+      "fonte": "Espaço do Conhecimento UFMG",
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-20",
+          "observacao": "10h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
+      "imagem_fallback_origem": "equipamento"
+    },
+    {
+      "id": "ufmg-ec-roda-de-conversa-territorios-iaia-conversa-com-os-residentes-novembro-negro-ufmg",
+      "titulo": "Roda de conversa “Territórios IAIA: Conversa com os Residentes” – Novembro Negro UFMG",
+      "data": "2026-11-21",
+      "data_fim": "",
+      "horario": "10h30",
+      "local": "Espaço do Conhecimento UFMG",
+      "cidade": "Belo Horizonte",
+      "categoria": "Palestra e debate",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "A atividade consiste em um bate-papo com os artistas que participam da residência “Fabulações e Territórios da Afrodiáspora”, proposta pelo projeto “Espaço Experimental IAIA – Inteligências Ancestrais Afrodiaspóricas”. A residência reúne artistas,",
+      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/10/foto2022.jpeg",
+      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/roda-de-conversa-territorios-iaia-conversa-com-os-residentes-novembro-negro-ufmg/",
+      "fonte": "Espaço do Conhecimento UFMG",
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-21",
+          "observacao": "10h30"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
+    },
+    {
+      "id": "ufmg-ec-oficina-rap-nas-raizes-influencias-afro-brasileiras-novembro-negro-ufmg",
+      "titulo": "Oficina “Rap nas Raízes: Influências Afro-brasileiras” – Novembro Negro UFMG",
+      "data": "2026-11-21",
+      "data_fim": "",
+      "horario": "15h",
+      "local": "Espaço do Conhecimento UFMG",
+      "cidade": "Belo Horizonte",
+      "categoria": "Oficina",
+      "gratuito": true,
+      "inscricao": "Ingresso gratuito emitido 2h antes da atividade",
+      "descricao": "A atividade visa discutir e apresentar a influência das culturas de matriz africana no movimento do hip-hop brasileiro, tanto na sonoridade quanto nas composições. Nesta edição, a oficina também busca evidenciar a presença do rap no estado de Minas Gerais, abordando a chegada do movimento,",
+      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/10/21.11-Oficina-Rap-nas-Raizes_-Influencias-Afro-brasileiras-Novembro-Negro-UFMG-Divulgacao-Espaco-do-Conhecimento-UFMG.png",
+      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/oficina-rap-nas-raizes-influencias-afro-brasileiras-novembro-negro-ufmg/",
+      "fonte": "Espaço do Conhecimento UFMG",
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-21",
+          "observacao": "15h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
+    },
+    {
+      "id": "ufmg-ec-sessao-de-planetario-ao-cair-da-noite-eu-me-guiarei-pelo-brilho-dos-seus-olhos-2",
+      "titulo": "Sessão de Planetário “Ao Cair da Noite, Eu Me Guiarei pelo Brilho dos Seus Olhos”",
+      "data": "2026-11-21",
+      "data_fim": "",
+      "horario": "19h",
+      "local": "Espaço do Conhecimento UFMG – Planetário",
+      "cidade": "Belo Horizonte",
+      "categoria": "Planetário",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "A partir de anúncios de fuga de pessoas negras escravizadas publicados em jornais do século XIX, Ao Cair da Noite, Eu Me Guiarei pelo Brilho dos Seus Olhos utiliza informações como data e localização para reconstruir astronomicamente o céu que podia ser observado na noite de cada fuga. Em sua nova versão,",
+      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/10/capa-noticias-14.png",
+      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/sessao-de-planetario-ao-cair-da-noite-eu-me-guiarei-pelo-brilho-dos-seus-olhos-2/",
+      "fonte": "Espaço do Conhecimento UFMG",
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "classificacao_indicativa": "Livre",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-21",
+          "observacao": "19h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
+      "espaco_interno": "Planetário"
     },
     {
       "id": "casa-fiat-mil-maneiras-de-matar-o-tempo-na-piccola-galleria-2026-11-22-sem-hora",
@@ -7532,6 +7690,34 @@
       "mapa": "https://www.google.com/maps/search/?api=1&query=Sala+Minas+Gerais%2C+Rua+Tenente+Brito+Melo%2C+1090%2C+Barro+Preto%2C+Belo+Horizonte+-+MG"
     },
     {
+      "id": "ufmg-ec-visita-mediada-a-exposicao-demasiado-humano",
+      "titulo": "Visita mediada à exposição “demasiado humano”",
+      "data": "2026-11-22",
+      "data_fim": "",
+      "horario": "15h",
+      "local": "Espaço do Conhecimento UFMG",
+      "cidade": "Belo Horizonte",
+      "categoria": "Visita guiada",
+      "gratuito": true,
+      "inscricao": "Ingresso gratuito emitido 2h antes da atividade",
+      "descricao": "A atividade consiste em um diálogo repleto de questionamentos e reflexões entre os visitantes e os mediadores do museu, ao longo da exposição de longa duração “demasiado humano”. Durante a visita, que abordará a origem da vida, a evolução e a trajetória humana na Terra,",
+      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/10/22-e-29.11-Visita-mediada-a-exposicao-demasiado-humano-Creditos-Julia-Lobato-Divulgacao-Espaco-do-Conhecimento-UFMG_Easy-Resize.com_.jpg",
+      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/visita-mediada-a-exposicao-demasiado-humano/",
+      "fonte": "Espaço do Conhecimento UFMG",
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-22",
+          "observacao": "15h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
+    },
+    {
       "id": "filarmonica-mg-filarmonica-em-camara-6-2026-2026-11-24",
       "titulo": "Filarmônica em Câmara 6 (2026)",
       "data": "2026-11-24",
@@ -7562,6 +7748,92 @@
         }
       },
       "mapa": "https://www.google.com/maps/search/?api=1&query=Sala+Minas+Gerais%2C+Rua+Tenente+Brito+Melo%2C+1090%2C+Barro+Preto%2C+Belo+Horizonte+-+MG"
+    },
+    {
+      "id": "ufmg-ec-roda-de-conversa-ovulario-a-palavra-viva-na-performance",
+      "titulo": "Roda de Conversa “Ovulário: A Palavra Viva na Performance”",
+      "data": "2026-11-28",
+      "data_fim": "",
+      "horario": "14h",
+      "local": "Espaço do Conhecimento UFMG",
+      "cidade": "Belo Horizonte",
+      "categoria": "Palestra e debate",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "Ovulário é uma ação do projeto “Espaço Experimental IAIA – Inteligências Ancestrais Afrodiaspóricas”, dedicada à troca de ideias que fertilizam o mundo negro. Composta por palestras, rodas de conversa e outros formatos expositivos, a atividade é ministrada de maneira aberta ao público do Espaço do Conhecimento.",
+      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/10/28.11-Roda-de-Conversa-Ovulario_-A-Palavra-Viva-na-Performance-com-Nivea-Sabino-Foto-Pablo-Bernardo-1024x682.jpg",
+      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/roda-de-conversa-ovulario-a-palavra-viva-na-performance/",
+      "fonte": "Espaço do Conhecimento UFMG",
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-28",
+          "observacao": "14h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
+    },
+    {
+      "id": "ufmg-ec-oficina-como-o-aviao-voa",
+      "titulo": "Oficina “Como o Avião Voa?”",
+      "data": "2026-11-28",
+      "data_fim": "",
+      "horario": "15h",
+      "local": "Espaço do Conhecimento UFMG",
+      "cidade": "Belo Horizonte",
+      "categoria": "Oficina",
+      "gratuito": true,
+      "inscricao": "Ingresso gratuito emitido 2h antes da atividade",
+      "descricao": "Para apresentar o funcionamento do voo de um avião, a atividade propõe a confecção de diferentes modelos de aviões de papel, que poderão ser personalizados com desenhos e pinturas. Também será realizada uma pequena gincana, que testará qual avião tem a capacidade de voar mais longe.",
+      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/10/28.11-Oficina-Como-o-Aviao-Voa_-Divulgacao-Espaco-do-Conhecimento-UFMG.jpg",
+      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/oficina-como-o-aviao-voa/",
+      "fonte": "Espaço do Conhecimento UFMG",
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-28",
+          "observacao": "15h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
+    },
+    {
+      "id": "ufmg-ec-sessao-de-planetario-ao-cair-da-noite-eu-me-guiarei-pelo-brilho-dos-seus-olhos-4",
+      "titulo": "Sessão de Planetário “Ao Cair da Noite, Eu Me Guiarei pelo Brilho dos Seus Olhos”",
+      "data": "2026-11-28",
+      "data_fim": "",
+      "horario": "19h",
+      "local": "Espaço do Conhecimento UFMG – Planetário",
+      "cidade": "Belo Horizonte",
+      "categoria": "Planetário",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "A partir de anúncios de fuga de pessoas negras escravizadas publicados em jornais do século XIX, Ao Cair da Noite, Eu Me Guiarei pelo Brilho dos Seus Olhos utiliza informações como data e localização para reconstruir astronomicamente o céu que podia ser observado na noite de cada fuga. Em sua nova versão,",
+      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/10/capa-noticias-14.png",
+      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/sessao-de-planetario-ao-cair-da-noite-eu-me-guiarei-pelo-brilho-dos-seus-olhos-4/",
+      "fonte": "Espaço do Conhecimento UFMG",
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "classificacao_indicativa": "Livre",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-28",
+          "observacao": "19h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
+      "espaco_interno": "Planetário"
     },
     {
       "id": "manual-concertos-peter-lund-orquestra-sonoro-despertar-2026-11-29-2026-11-29",
@@ -7602,6 +7874,94 @@
         }
       },
       "motivo_publicacao": "realizacao_em_andamento_ou_futura"
+    },
+    {
+      "id": "ufmg-ec-sessao-netuno-tea-era-uma-vez-no-ceu-andromeda-e-perseu-2",
+      "titulo": "Sessão Netuno (TEA) “Era Uma Vez no Céu: Andrômeda e Perseu”",
+      "data": "2026-11-29",
+      "data_fim": "",
+      "horario": "14h",
+      "local": "Espaço do Conhecimento UFMG – Planetário",
+      "cidade": "Belo Horizonte",
+      "categoria": "Planetário",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": ": Sessão direcionada ao público infantil, com contação da história da princesa Andrômeda e do herói Perseu a partir de constelações que podem ser reconhecidas no céu noturno. Além disso, os planetas do Sistema Solar serão identificados da maneira como são vistos a olho nu da superfície terrestre,",
+      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/08/Era-Uma-Vez-no-Ceu-Andromeda-e-Perseu-Creditos-Fernando-Silva-1024x412-1.png",
+      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/sessao-netuno-tea-era-uma-vez-no-ceu-andromeda-e-perseu-2/",
+      "fonte": "Espaço do Conhecimento UFMG",
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "classificacao_indicativa": "Livre",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-29",
+          "observacao": "14h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
+      "espaco_interno": "Planetário"
+    },
+    {
+      "id": "ufmg-ec-sessao-netuno-tea-dois-pedacinhos-de-vidro-3",
+      "titulo": "Sessão Netuno (TEA) “Dois Pedacinhos de Vidro”",
+      "data": "2026-11-29",
+      "data_fim": "",
+      "horario": "15h",
+      "local": "Espaço do Conhecimento UFMG – Planetário",
+      "cidade": "Belo Horizonte",
+      "categoria": "Planetário",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "A partir de uma noite de observação astronômica, o filme conta a história do telescópio, desde a luneta de Galileu até os modernos instrumentos de observação astronômicos. São apresentados os diversos tipos de telescópios, a partir do funcionamento e da observação que cada um permite,",
+      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2025/11/Dois-pedacinhos-de-vidro.jpg",
+      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/sessao-netuno-tea-dois-pedacinhos-de-vidro-3/",
+      "fonte": "Espaço do Conhecimento UFMG",
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "classificacao_indicativa": "Livre",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-29",
+          "observacao": "15h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
+      "espaco_interno": "Planetário"
+    },
+    {
+      "id": "ufmg-ec-visita-mediada-a-exposicao-demasiado-humano-2",
+      "titulo": "Visita mediada à exposição “demasiado humano”",
+      "data": "2026-11-29",
+      "data_fim": "",
+      "horario": "15h",
+      "local": "Espaço do Conhecimento UFMG",
+      "cidade": "Belo Horizonte",
+      "categoria": "Visita guiada",
+      "gratuito": true,
+      "inscricao": "Ingresso gratuito emitido 2h antes da atividade",
+      "descricao": "A atividade consiste em um diálogo repleto de questionamentos e reflexões entre os visitantes e os mediadores do museu, ao longo da exposição de longa duração “demasiado humano”. Durante a visita, que abordará a origem da vida, a evolução e a trajetória humana na Terra,",
+      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/10/Demasiado-Humano-Creditos-Guilherme-Maciel-1_Easy-Resize.com_.jpg",
+      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/visita-mediada-a-exposicao-demasiado-humano-2/",
+      "fonte": "Espaço do Conhecimento UFMG",
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-29",
+          "observacao": "15h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
     },
     {
       "id": "filarmonica-mg-recital-da-academia-filarmonica-2026-2026-11-30",
@@ -8013,6 +8373,6 @@
     }
   ],
   "modo_teste_experimental": true,
-  "eventos_somente_teste": 11,
-  "atualizado_em_teste": "2026-10-26T04:18:42-03:00"
+  "eventos_somente_teste": 8,
+  "atualizado_em_teste": "2026-10-28T17:48:53-03:00"
 }

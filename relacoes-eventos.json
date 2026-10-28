@@ -20,28 +20,6 @@
       }
     },
     {
-      "evento_id": "ccbb-bh-nos-ou-ninguem-podia-ouvir-os-olhos-dela",
-      "tipo": "acontece_em",
-      "destino": {
-        "tipo": "espaco_interno",
-        "id": "ccbb-bh-teatro-ii",
-        "nome": "Teatro II"
-      },
-      "equipamento": {
-        "id": "ccbb-bh",
-        "nome": "CCBB Belo Horizonte"
-      }
-    },
-    {
-      "evento_id": "ccbb-bh-nos-ou-ninguem-podia-ouvir-os-olhos-dela",
-      "tipo": "organizado_por",
-      "destino": {
-        "tipo": "instituicao",
-        "id": "ccbb-bh",
-        "nome": "Centro Cultural Banco do Brasil Belo Horizonte"
-      }
-    },
-    {
       "evento_id": "ela-arena-atelie-livre-52e864fa5b",
       "tipo": "acontece_em",
       "destino": {
@@ -1675,6 +1653,28 @@
         "tipo": "equipamento_cultural",
         "id": "ejef-escola-judicial-desembargador-edesio-fernandes",
         "nome": "EJEF — Escola Judicial Desembargador Edésio Fernandes"
+      }
+    },
+    {
+      "evento_id": "ufmg-ec-sessao-netuno-tea-era-uma-vez-no-ceu-andromeda-e-perseu-2",
+      "tipo": "acontece_em",
+      "destino": {
+        "tipo": "espaco_interno",
+        "id": "espaco-conhecimento-ufmg-planetario",
+        "nome": "Planetário"
+      },
+      "equipamento": {
+        "id": "espaco-conhecimento-ufmg",
+        "nome": "Espaço do Conhecimento UFMG"
+      }
+    },
+    {
+      "evento_id": "ufmg-ec-sessao-netuno-tea-era-uma-vez-no-ceu-andromeda-e-perseu-2",
+      "tipo": "organizado_por",
+      "destino": {
+        "tipo": "instituicao",
+        "id": "espaco-conhecimento-ufmg",
+        "nome": "Espaço do Conhecimento UFMG"
       }
     }
   ]

@@ -406,7 +406,7 @@
           "dados.serie_mensal",
           "atualizacao.ultima_alteracao"
         ],
-        "ultima_alteracao": "2026-10-12T20:16:33Z"
+        "ultima_alteracao": "2026-10-26T21:58:17Z"
       },
       "tempo_slide": 15,
       "origem": "colecao-salario-minimo",
@@ -472,8 +472,8 @@
           {
             "periodo": "2026-01",
             "salario_minimo_nominal": 1621.0,
-            "salario_minimo_necessario": 7156.15,
-            "multiplicador": 4.41
+            "salario_minimo_necessario": 7177.57,
+            "multiplicador": 4.43
           },
           {
             "periodo": "2025-12",
@@ -592,7 +592,7 @@
           }
         ],
         "frescor": {
-          "ultima_alteracao": "2026-10-12T20:16:33Z",
+          "ultima_alteracao": "2026-10-26T21:58:17Z",
           "politica_falha": "manter_ultimo_dado"
         }
       }

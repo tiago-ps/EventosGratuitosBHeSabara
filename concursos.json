@@ -2,8 +2,8 @@
   "schema": 10,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-10-26T06:57:02.361567+00:00",
-  "total": 21,
+  "coletado_em_utc": "2026-10-28T20:28:53.487188+00:00",
+  "total": 22,
   "concursos": [
     {
       "id": "pci:noticia:cgu-abre-concurso-publico-com-vagas-para-auditores-federais-de-financas-e-controle",
@@ -45,6 +45,55 @@
         {
           "cargo": "Tecnologia da Informação - Desenvolvimento de Sistemas",
           "vagas_texto": "10 vagas",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "prazo_desconhecido",
+        "completude": "desconhecida"
+      }
+    },
+    {
+      "id": "pci:noticia:trf3-sp-ms-abre-concurso-publico-para-analistas-e-tecnicos-judiciarios",
+      "titulo": "TRF3 - Tribunal Regional Federal da 3ª Região",
+      "url": "https://www.pciconcursos.com.br/noticias/trf3-sp-ms-abre-concurso-publico-para-analistas-e-tecnicos-judiciarios",
+      "imagem": "https://cdn.pci.app.br/img/i/ef55417ea829357554ed31948e70aa1c.png",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "l regional federal da 3a regiao (trf3) abriu um concurso publico visando preencher vagas e formar cadastro de reserva para profissionais de nivel superior. segundo o edital, as oportunidades sao para os cargos de: tribunal regional federal da 3a regiao analista judiciario, especialidade: analise de sistemas de informacao (1 vaga) analista judiciario, especialidade: suporte em tecnologia da informacao (1 vaga) tecnico judiciario, especialidade: desenvolvimento de sistemas de informacao (5 vagas) tecnico judiciario, especialidade: suporte tecnico (4 vagas) secao judiciaria do estado de sao paulo analista judiciario, "
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "SP",
+      "cidade": "",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "R$ 9.776,73 a R$ 20.013,11",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Análise de Sistemas de Informação",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        },
+        {
+          "cargo": "Suporte em Tecnologia da Informação",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        },
+        {
+          "cargo": "Desenvolvimento de Sistemas de Informação",
+          "vagas_texto": "5 vagas",
           "formacao": "Sistemas de Informação / Computação",
           "confianca": "alta"
         }
@@ -943,6 +992,43 @@
       }
     },
     {
+      "id": "pci:noticia:camara-de-sao-francisco-do-sul-sc-abre-concurso-publico-com-salarios-de-ate-10924",
+      "titulo": "Câmara de São Francisco do Sul",
+      "url": "https://www.pciconcursos.com.br/noticias/camara-de-sao-francisco-do-sul-sc-abre-concurso-publico-com-salarios-de-ate-10924",
+      "imagem": "https://cdn.pci.app.br/img/i/dfcf1f0904806be7b35e2852c91a34f2.png",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": " edital, as oportunidades sao para os cargos de: nivel fundamental motorista (2 vagas) nivel medio assistente legislativo (2 vagas) assistente administrativo (4 vagas) assistente de gestao de pessoal (2 vagas) nivel superior analista administrativo (1 vaga) analista legislativo (1 vaga) analista de tecnologia da informacao (1 vaga) advogado (1 vaga) contador (1 vaga) controlador (1 vaga) jornalista (1 vaga) a jornada e de 30 horas semanais para todos os cargos. os vencimentos variam de r$ 3.763,50 a r$ 10.924,72. as inscricoes poderao ser feitas das 8h de 6 de novembro de 2026 as 23h59 de 7 de dezembro de 2026, pelo "
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "SC",
+      "cidade": "São Francisco do Sul",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "R$ 3.763,50 a R$ 10.924,72",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Analista de Tecnologia da Informação",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "prazo_desconhecido",
+        "completude": "desconhecida"
+      }
+    },
+    {
       "id": "pci:noticia:prefeitura-de-maravilha-sc-retifica-concurso-com-salarios-de-ate-15748",
       "titulo": "Prefeitura de Maravilha",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-maravilha-sc-retifica-concurso-com-salarios-de-ate-15748",
@@ -992,61 +1078,6 @@
             "tipo": "candidatura",
             "inicio": "2026-10-02",
             "fim": "2026-11-03",
-            "status": "aberto"
-          }
-        ]
-      }
-    },
-    {
-      "id": "pci:noticia:prefeitura-de-rio-negrinho-sc-e-orgaos-municipais-abrem-novos-concursos-publicos",
-      "titulo": "Prefeitura de Rio Negrinho, FMC, IPRERIO e SAMAE",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-rio-negrinho-sc-e-orgaos-municipais-abrem-novos-concursos-publicos",
-      "imagem": "https://cdn.pci.app.br/img/i/366fc5888b1987e342ad75b2402dd6ea.png",
-      "formacoes_compativeis": [
-        "Sistemas de Informação / Computação"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Sistemas de Informação / Computação",
-          "nivel": "superior",
-          "evidencia": "cao especialista em educacao (volta grande e serro azul) fiscal ambiental fiscal de obras e posturas fonoaudiologo (1 vaga) medico clinico geral medico especialista - ginecologista medico especialista - ortopedista medico especialista - pediatra medico especialista - psiquiatria (1 vaga) monitor de tecnologia da informacao (1 vaga) monitor de tecnologia da informacao (volta grande e serro azul) motorista (transporte escolar) nutricionista odontologo esf oficial administrativo (5 vagas) operador de maquinas pesadas operador de maquinas pesadas (volta grande) pedreiro professor i - nivel 2 - anos iniciais (3 vagas) pro"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "SC",
-      "cidade": "Rio Negrinho, FMC, IPRERIO e SAMAE",
-      "inscricoes_inicio_texto": "16 de outubro de 2026",
-      "inscricoes_fim_texto": "15 de novembro de 2026",
-      "inscricoes_texto": "16 de outubro de 2026 a 15 de novembro de 2026",
-      "remuneracao_faixa_texto": "R$ 1.665,72 a R$ 18.538,78",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Monitor de Tecnologia da Informação",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        }
-      ],
-      "janela_inscricoes": {
-        "estado": "aberto",
-        "completude": "completa",
-        "inicio": "2026-10-16",
-        "fim": "2026-11-15",
-        "texto_original": "16 de outubro de 2026 a 15 de novembro de 2026"
-      },
-      "temporalidade": {
-        "classe": "periodo",
-        "realizacao": {
-          "inicio": "2026-10-16",
-          "fim": "2026-11-15"
-        },
-        "participacao": [
-          {
-            "tipo": "candidatura",
-            "inicio": "2026-10-16",
-            "fim": "2026-11-15",
             "status": "aberto"
           }
         ]
