@@ -2,8 +2,8 @@
   "schema": 10,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-10-28T20:28:53.487188+00:00",
-  "total": 22,
+  "coletado_em_utc": "2026-10-29T17:55:51.118708+00:00",
+  "total": 24,
   "concursos": [
     {
       "id": "pci:noticia:cgu-abre-concurso-publico-com-vagas-para-auditores-federais-de-financas-e-controle",
@@ -211,6 +211,61 @@
       "janela_inscricoes": {
         "estado": "prazo_desconhecido",
         "completude": "desconhecida"
+      }
+    },
+    {
+      "id": "pci:noticia:prefeitura-de-leme-sp-abre-concurso-publico-com-salarios-de-ate-13359",
+      "titulo": "Prefeitura de Leme",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-leme-sp-abre-concurso-publico-com-salarios-de-ate-13359",
+      "imagem": "https://cdn.pci.app.br/img/i/5eb504e3f75ecdeb01a34816b49c4374.png",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": ") operador de maquinas (1 vaga) tratador de animais (1 vaga) tratorista (1 vaga) ensino medio e tecnico tecnico em enfermagem - saude da familia (1 vaga) tecnico em enfermagem (1 vaga) tecnico em seguranca do trabalho (1 vaga) topografo (1 vaga) ensino superior advogado do suas (1 vaga) analista de tecnologia da informacao (1 vaga) biologo (1 vaga) biomedico (1 vaga) enfermeiro (180 horas) (1 vaga) engenheiro agrimensor (1 vaga) engenheiro de seguranca do trabalho (cr) fiscal de rendas (1 vaga) medico do trabalho (1 vaga) medico horista (cr) medico horista ginecologista e obstetra (1 vaga) medico horista oftalmologis"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "SP",
+      "cidade": "Leme",
+      "inscricoes_inicio_texto": "30 de outubro de 2026",
+      "inscricoes_fim_texto": "30 de novembro de 2026",
+      "inscricoes_texto": "30 de outubro de 2026 a 30 de novembro de 2026",
+      "remuneracao_faixa_texto": "R$ 2.065,11 a R$ 13.359,44",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Analista de Tecnologia da Informação",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "futuro",
+        "completude": "completa",
+        "inicio": "2026-10-30",
+        "fim": "2026-11-30",
+        "texto_original": "30 de outubro de 2026 a 30 de novembro de 2026"
+      },
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-10-30",
+          "fim": "2026-11-30"
+        },
+        "participacao": [
+          {
+            "tipo": "candidatura",
+            "inicio": "2026-10-30",
+            "fim": "2026-11-30",
+            "status": "futuro"
+          }
+        ]
       }
     },
     {
@@ -1078,6 +1133,61 @@
             "tipo": "candidatura",
             "inicio": "2026-10-02",
             "fim": "2026-11-03",
+            "status": "aberto"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pci:noticia:prefeitura-de-rio-negrinho-sc-e-orgaos-municipais-abrem-novos-concursos-publicos",
+      "titulo": "Prefeitura de Rio Negrinho, FMC, IPRERIO e SAMAE",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-rio-negrinho-sc-e-orgaos-municipais-abrem-novos-concursos-publicos",
+      "imagem": "https://cdn.pci.app.br/img/i/366fc5888b1987e342ad75b2402dd6ea.png",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "cao especialista em educacao (volta grande e serro azul) fiscal ambiental fiscal de obras e posturas fonoaudiologo (1 vaga) medico clinico geral medico especialista - ginecologista medico especialista - ortopedista medico especialista - pediatra medico especialista - psiquiatria (1 vaga) monitor de tecnologia da informacao (1 vaga) monitor de tecnologia da informacao (volta grande e serro azul) motorista (transporte escolar) nutricionista odontologo esf oficial administrativo (5 vagas) operador de maquinas pesadas operador de maquinas pesadas (volta grande) pedreiro professor i - nivel 2 - anos iniciais (3 vagas) pro"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "SC",
+      "cidade": "Rio Negrinho, FMC, IPRERIO e SAMAE",
+      "inscricoes_inicio_texto": "16 de outubro de 2026",
+      "inscricoes_fim_texto": "15 de novembro de 2026",
+      "inscricoes_texto": "16 de outubro de 2026 a 15 de novembro de 2026",
+      "remuneracao_faixa_texto": "R$ 1.665,72 a R$ 18.538,78",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Monitor de Tecnologia da Informação",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "aberto",
+        "completude": "completa",
+        "inicio": "2026-10-16",
+        "fim": "2026-11-15",
+        "texto_original": "16 de outubro de 2026 a 15 de novembro de 2026"
+      },
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-10-16",
+          "fim": "2026-11-15"
+        },
+        "participacao": [
+          {
+            "tipo": "candidatura",
+            "inicio": "2026-10-16",
+            "fim": "2026-11-15",
             "status": "aberto"
           }
         ]

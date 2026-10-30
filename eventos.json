@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Março de 2026 a Junho de 2027",
-  "atualizado_em": "2026-10-28T18:13:45-03:00",
+  "atualizado_em": "2026-10-29T22:51:22-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -5739,118 +5739,6 @@
       "origem_experimental": "minas_tenis_cultura"
     },
     {
-      "id": "ufmg-ec-museufechado",
-      "titulo": "Museu Fechado – Feriado Dia do Servidor Público",
-      "data": "2026-10-28",
-      "data_fim": "",
-      "horario": "10h",
-      "local": "Espaço do Conhecimento UFMG",
-      "cidade": "Belo Horizonte",
-      "categoria": "Atividade educativa",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "No dia 28 de outubro de 2026 (quarta-feira), o Espaço do Conhecimento UFMG estará fechado. Seguindo o funcionamento regular do museu (terça a domingo), as atividades presenciais serão retomadas na quinta-feira, 29 de outubro, das 10h às 17h.",
-      "imagem": "imagens/instituicoes/espaco-conhecimento-ufmg.png",
-      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/museufechado/",
-      "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-28",
-          "observacao": "10h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "espaco-conhecimento-ufmg",
-      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_fallback_origem": "equipamento"
-    },
-    {
-      "id": "cine-santa-tereza-bileto-129060",
-      "titulo": "XI COLÓQUIO CINEMA, ESTÉTICA E POLÍTICA - A estrela do Oriente visita o Reino 13 de Maio",
-      "data": "2026-10-28",
-      "data_fim": "",
-      "horario": "19h",
-      "local": "Cine Santa Tereza",
-      "cidade": "Belo Horizonte",
-      "categoria": "Cinema",
-      "gratuito": true,
-      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
-      "descricao": "A estrela do Oriente visita o Reino 13 de Maio (Isabel Casimira/Júnia Torres | Brasil | 2025 | documentário | 75 min) A Estrela do Oriente do bairro Primeiro de Maio, folia da antiga ocupação operária da capital, visita, a cada dia 6 de janeiro, dia de Santos Reis, o presépio do Reino Treze de Maio na Concórdia. Filmamos, em 2006, os “primos do Primeiro de Maio” sendo recebidos pela Rainha mãe Isabel, e, quase vinte anos depois, retomamos as gravações com sua filha e agora rainha, que recebe a mesma folia, os mesmos cantos e presentes. Visita que devolve à sede do Estrela, acompanhada pela equipe do filme.",
-      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/otbchqutjs1957g9agg5j8dp0evc959t3t4da241opcii83n8c8hj5jke9mimq0843u0fukfnvsohueheqc6t4kdmn698bfmt2hnao.jpeg",
-      "link": "https://bileto.sympla.com.br/event/129060/d/423484/s/2741916",
-      "fonte": "Cine Santa Tereza",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "fonte_id": "129060",
-      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
-      "classificacao_indicativa": "Livre",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-28",
-          "observacao": "19h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
-    },
-    {
-      "id": "portal-bh-3cad8a650d99-2026-10-28-1900",
-      "titulo": "CineMIS apresenta: Cinema Comentado — “Filmes centenários do acervo do MIS BH e da Cinemateca Brasileira”",
-      "data": "2026-10-28",
-      "data_fim": "",
-      "horario": "19h às 22h",
-      "local": "Museu da Imagem e do Som – MIS BH",
-      "cidade": "Belo Horizonte",
-      "categoria": "Cinema",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; não requer inscrição prévia",
-      "descricao": "Dia 28/10 . qua. 19h Indicado para maiores de 12 anos NÃO É NECESSÁRIO FAZER INSCRIÇÃO \"A Visita de Washington Luiz em Minas Gerais\" Igino Bonfioli (1926) \"Minas Antiga\" Igino Bonfioli (1926)",
-      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-10/cinemis-apresenta-cinema-comentado-filmes-centenarios-do-acervo-do-mis-bh-e-da-cinemateca-brasileira.png",
-      "link": "https://portalbelohorizonte.com.br/museuscentro/2026/eventos/cinema/audiovisual/cinemis-apresenta-cinema-comentado-filmes-centenarios-do-acervo-do-mis-bh-e-da-cinemateca-brasileira",
-      "fonte": "Portal Belo Horizonte",
-      "fonte_id": "3cad8a650d99",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "endereco": "",
-      "tags_fonte": [],
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-28",
-          "observacao": "19h às 22h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
-    },
-    {
-      "id": "filarmonica-mg-laboratorio-de-regencia-2026-2026-10-28",
-      "titulo": "Laboratório de Regência (2026)",
-      "data": "2026-10-28",
-      "data_fim": "",
-      "horario": "20h30",
-      "local": "Sala Minas Gerais",
-      "cidade": "Belo Horizonte",
-      "endereco": "Rua Tenente Brito Melo, 1090, Barro Preto, Belo Horizonte - MG",
-      "categoria": "Música",
-      "gratuito": true,
-      "inscricao": "Concerto gratuito conforme agenda oficial da Filarmônica de Minas Gerais; consulte a página para retirada de ingressos e regras de acesso.",
-      "descricao": "Laboratório de Regência (2026). Consulte o repertório, os artistas e as orientações de acesso na programação oficial da Filarmônica de Minas Gerais.",
-      "imagem": "https://filarmonica.art.br/wp-content/uploads/2025/10/share-image.webp",
-      "link": "https://filarmonica.art.br/event/laboratorio-de-regencia-2026/",
-      "pagina": "https://filarmonica.art.br/event/laboratorio-de-regencia-2026/",
-      "fonte": "Filarmônica de Minas Gerais — agenda oficial",
-      "instituicao_id": "instituto-cultural-filarmonica",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "marcador_gratuito_agenda",
-      "local_id": "sala-minas-gerais",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "filarmonica_mg"
-    },
-    {
       "id": "casa-fiat-formacao-de-professores-as-cores-do-brasil-modernidade-e-modernismo-brasileiro-2026-10-29-sem-hora",
       "titulo": "Formação de Professores | As cores do Brasil: modernidade e modernismo brasileiro",
       "data": "2026-10-29",
@@ -8343,6 +8231,6 @@
     }
   ],
   "modo_teste_experimental": true,
-  "eventos_somente_teste": 8,
-  "atualizado_em_teste": "2026-10-28T18:14:23-03:00"
+  "eventos_somente_teste": 7,
+  "atualizado_em_teste": "2026-10-29T22:51:57-03:00"
 }
