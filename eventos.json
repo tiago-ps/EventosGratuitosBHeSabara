@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Março de 2026 a Junho de 2027",
-  "atualizado_em": "2026-10-30T15:29:51-03:00",
+  "atualizado_em": "2026-10-30T15:32:02-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -7993,5 +7993,5 @@
   ],
   "modo_teste_experimental": true,
   "eventos_somente_teste": 7,
-  "atualizado_em_teste": "2026-10-30T15:30:22-03:00"
+  "atualizado_em_teste": "2026-10-30T15:32:31-03:00"
 }
