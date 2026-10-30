@@ -2,8 +2,8 @@
   "schema": 10,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-10-29T17:55:51.118708+00:00",
-  "total": 24,
+  "coletado_em_utc": "2026-10-30T16:52:14.820453+00:00",
+  "total": 23,
   "concursos": [
     {
       "id": "pci:noticia:cgu-abre-concurso-publico-com-vagas-para-auditores-federais-de-financas-e-controle",
@@ -246,7 +246,7 @@
         }
       ],
       "janela_inscricoes": {
-        "estado": "futuro",
+        "estado": "aberto",
         "completude": "completa",
         "inicio": "2026-10-30",
         "fim": "2026-11-30",
@@ -263,7 +263,7 @@
             "tipo": "candidatura",
             "inicio": "2026-10-30",
             "fim": "2026-11-30",
-            "status": "futuro"
+            "status": "aberto"
           }
         ]
       }
@@ -790,61 +790,6 @@
       }
     },
     {
-      "id": "pci:noticia:municipio-e-camara-de-nova-prata-do-iguacu-pr-abrem-concursos-com-salarios-de-ate-12823",
-      "titulo": "Município e Câmara de Nova Prata do Iguaçu",
-      "url": "https://www.pciconcursos.com.br/noticias/municipio-e-camara-de-nova-prata-do-iguacu-pr-abrem-concursos-com-salarios-de-ate-12823",
-      "imagem": "https://cdn.pci.app.br/img/i/7fd2541f865c625d22eaba4491a5751f.png",
-      "formacoes_compativeis": [
-        "Técnico em Informática"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Técnico em Informática",
-          "nivel": "tecnico",
-          "evidencia": "aga + cr) auxiliar de servicos gerais (12 vagas + cr) motorista (4 vagas + cr) operador de maquinas (3 vagas + cr) servicos bracais (2 vagas + cr) camara municipal de nova prata do iguacu advogado (cr) contador (cr) tesoureiro (cr) agente administrativo (1 vaga) auxiliar de servicos gerais (1 vaga) tecnico em informatica (1 vaga) tecnico de relacoes publicas (cr) a jornada de trabalho varia de 20 a 40 horas semanais, conforme o cargo. a remuneracao inicial bruta vai de r$ 1.619,19 a r$ 12.823,98. as inscricoes serao realizadas exclusivamente via internet, pelo site www.concursosfau.com.br , das 12h do dia 30 de set"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "PR",
-      "cidade": "Nova Prata do Iguaçu",
-      "inscricoes_inicio_texto": "30 de setembro de 2026",
-      "inscricoes_fim_texto": "29 de outubro de 2026",
-      "inscricoes_texto": "30 de setembro de 2026 a 29 de outubro de 2026",
-      "remuneracao_faixa_texto": "R$ 1.619,19 a R$ 12.823,98",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Técnico em Informática",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "alta"
-        }
-      ],
-      "janela_inscricoes": {
-        "estado": "aberto",
-        "completude": "completa",
-        "inicio": "2026-09-30",
-        "fim": "2026-10-29",
-        "texto_original": "30 de setembro de 2026 a 29 de outubro de 2026"
-      },
-      "temporalidade": {
-        "classe": "periodo",
-        "realizacao": {
-          "inicio": "2026-09-30",
-          "fim": "2026-10-29"
-        },
-        "participacao": [
-          {
-            "tipo": "candidatura",
-            "inicio": "2026-09-30",
-            "fim": "2026-10-29",
-            "status": "aberto"
-          }
-        ]
-      }
-    },
-    {
       "id": "pci:noticia:prefeitura-de-alvorada-rs-retifica-concurso-publico-com-salarios-de-ate-18974",
       "titulo": "Prefeitura de Alvorada",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-alvorada-rs-retifica-concurso-publico-com-salarios-de-ate-18974",
@@ -1047,6 +992,61 @@
       }
     },
     {
+      "id": "pci:noticia:prefeitura-de-sao-jose-do-inhacora-rs-abre-concurso-publico-com-salarios-de-ate-9885",
+      "titulo": "Prefeitura de São José do Inhacorá",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-sao-jose-do-inhacora-rs-abre-concurso-publico-com-salarios-de-ate-9885",
+      "imagem": "https://cdn.pci.app.br/img/i/1138419da04b9ca79ce005215f75b842.png",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": " oportunidades sao para os cargos de: grupo 1 agente educacional (3 vagas) educador social (cadastro de reserva) grupo 2 professor de educacao especial aee (cadastro de reserva) professor de anos iniciais 20h (2 vagas) professor de anos iniciais 40h (2 vagas) professor de arte (1 vaga) professor de computacao e inovacao (1 vaga) professor de educacao fisica (1 vaga) professor de educacao infantil 25h (5 vagas) professor de educacao infantil 40h (3 vagas) professor de lingua inglesa (cadastro de reserva) professor de historia (1 vaga) professor de lingua portuguesa (1 vaga) professor de matematica (cadas"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "RS",
+      "cidade": "São José do Inhacorá",
+      "inscricoes_inicio_texto": "30 de outubro de 2026",
+      "inscricoes_fim_texto": "23 de novembro de 2026",
+      "inscricoes_texto": "30 de outubro de 2026 a 23 de novembro de 2026",
+      "remuneracao_faixa_texto": "R$ 1.798,62 a R$ 9.885,71",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Professor de Computação e Inovação",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "aberto",
+        "completude": "completa",
+        "inicio": "2026-10-30",
+        "fim": "2026-11-23",
+        "texto_original": "30 de outubro de 2026 a 23 de novembro de 2026"
+      },
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-10-30",
+          "fim": "2026-11-23"
+        },
+        "participacao": [
+          {
+            "tipo": "candidatura",
+            "inicio": "2026-10-30",
+            "fim": "2026-11-23",
+            "status": "aberto"
+          }
+        ]
+      }
+    },
+    {
       "id": "pci:noticia:camara-de-sao-francisco-do-sul-sc-abre-concurso-publico-com-salarios-de-ate-10924",
       "titulo": "Câmara de São Francisco do Sul",
       "url": "https://www.pciconcursos.com.br/noticias/camara-de-sao-francisco-do-sul-sc-abre-concurso-publico-com-salarios-de-ate-10924",
@@ -1133,61 +1133,6 @@
             "tipo": "candidatura",
             "inicio": "2026-10-02",
             "fim": "2026-11-03",
-            "status": "aberto"
-          }
-        ]
-      }
-    },
-    {
-      "id": "pci:noticia:prefeitura-de-rio-negrinho-sc-e-orgaos-municipais-abrem-novos-concursos-publicos",
-      "titulo": "Prefeitura de Rio Negrinho, FMC, IPRERIO e SAMAE",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-rio-negrinho-sc-e-orgaos-municipais-abrem-novos-concursos-publicos",
-      "imagem": "https://cdn.pci.app.br/img/i/366fc5888b1987e342ad75b2402dd6ea.png",
-      "formacoes_compativeis": [
-        "Sistemas de Informação / Computação"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Sistemas de Informação / Computação",
-          "nivel": "superior",
-          "evidencia": "cao especialista em educacao (volta grande e serro azul) fiscal ambiental fiscal de obras e posturas fonoaudiologo (1 vaga) medico clinico geral medico especialista - ginecologista medico especialista - ortopedista medico especialista - pediatra medico especialista - psiquiatria (1 vaga) monitor de tecnologia da informacao (1 vaga) monitor de tecnologia da informacao (volta grande e serro azul) motorista (transporte escolar) nutricionista odontologo esf oficial administrativo (5 vagas) operador de maquinas pesadas operador de maquinas pesadas (volta grande) pedreiro professor i - nivel 2 - anos iniciais (3 vagas) pro"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "SC",
-      "cidade": "Rio Negrinho, FMC, IPRERIO e SAMAE",
-      "inscricoes_inicio_texto": "16 de outubro de 2026",
-      "inscricoes_fim_texto": "15 de novembro de 2026",
-      "inscricoes_texto": "16 de outubro de 2026 a 15 de novembro de 2026",
-      "remuneracao_faixa_texto": "R$ 1.665,72 a R$ 18.538,78",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Monitor de Tecnologia da Informação",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        }
-      ],
-      "janela_inscricoes": {
-        "estado": "aberto",
-        "completude": "completa",
-        "inicio": "2026-10-16",
-        "fim": "2026-11-15",
-        "texto_original": "16 de outubro de 2026 a 15 de novembro de 2026"
-      },
-      "temporalidade": {
-        "classe": "periodo",
-        "realizacao": {
-          "inicio": "2026-10-16",
-          "fim": "2026-11-15"
-        },
-        "participacao": [
-          {
-            "tipo": "candidatura",
-            "inicio": "2026-10-16",
-            "fim": "2026-11-15",
             "status": "aberto"
           }
         ]

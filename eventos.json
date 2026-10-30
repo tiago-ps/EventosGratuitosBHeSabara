@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Março de 2026 a Junho de 2027",
-  "atualizado_em": "2026-10-29T22:51:22-03:00",
+  "atualizado_em": "2026-10-30T15:29:51-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -5739,37 +5739,6 @@
       "origem_experimental": "minas_tenis_cultura"
     },
     {
-      "id": "casa-fiat-formacao-de-professores-as-cores-do-brasil-modernidade-e-modernismo-brasileiro-2026-10-29-sem-hora",
-      "titulo": "Formação de Professores | As cores do Brasil: modernidade e modernismo brasileiro",
-      "data": "2026-10-29",
-      "data_fim": "",
-      "horario": "",
-      "local": "Casa Fiat de Cultura",
-      "local_id": "casa-fiat-de-cultura",
-      "cidade": "Belo Horizonte",
-      "endereco": "Praça da Liberdade, 10, Funcionários, Belo Horizonte - MG",
-      "categoria": "Curso",
-      "gratuito": true,
-      "inscricao": "Programação gratuita conforme informação oficial da Casa Fiat de Cultura; consulte a página para inscrição, retirada de senha ou lotação quando aplicável.",
-      "descricao": "Formação de Professores | As cores do Brasil: modernidade e modernismo brasileiro 29 e 30/out Como a arte brasileira rompeu com a tradição acadêmica? Na Formação de Professores de outubro, essa transformação é explorada a partir da produção de Anita Malfatti até a Semana de Arte Moderna de 1922. Em dois episódios , o conteúdo percorre acontecimentos, artistas e conceitos fundamentais do período, passando pelas experiências de renovação estética, pela Antropofagia e pela exploração de novas formas e paletas de cores. A partir desse percurso,",
-      "imagem": "https://casafiatdecultura.com.br/wp-content/uploads/2026/09/Banners-newsletter-outubro_FORM.-DE-PROFESSORES.png",
-      "link": "https://casafiatdecultura.com.br/evento/formacao-de-professores-as-cores-do-brasil-modernidade-e-modernismo-brasileiro/",
-      "fonte": "Casa Fiat de Cultura — programação oficial",
-      "pagina": "https://casafiatdecultura.com.br/evento/formacao-de-professores-as-cores-do-brasil-modernidade-e-modernismo-brasileiro/",
-      "instituicao_id": "casa-fiat-de-cultura",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-29"
-        }
-      },
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
-    },
-    {
       "id": "mm-gerdau-mosaico-puc-minas-2026-2026-10-29",
       "titulo": "MOSAICO PUC MINAS 2026",
       "data": "2026-10-29",
@@ -5793,184 +5762,6 @@
       "somente_teste": true,
       "status_validacao": "experimental",
       "origem_experimental": "mm_gerdau"
-    },
-    {
-      "id": "ufmg-ec-exposicao-demasiado-humano-3",
-      "titulo": "Exposição “demasiado humano”",
-      "data": "2026-10-29",
-      "data_fim": "",
-      "horario": "10h",
-      "local": "Espaço do Conhecimento UFMG",
-      "cidade": "Belo Horizonte",
-      "categoria": "Exposição",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "Organizada em quatro módulos – O Aleph, Pensar as Origens, Modos de Existir e Sonhar a Terra – a exposição “demasiado humano” trata da aventura do conhecimento, abordando a origem da vida, a evolução e a trajetória humana no planeta, convidando o público a compreender ciência e cultura como processos vivos,",
-      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/04/Visita-mediada-a-exposicao-demasiado-humano-Creditos-Julia-Lobato-Divulgacao-Espaco-do-Conhecimento-UFMG-1-scaled.jpg",
-      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/exposicao-demasiado-humano-3/",
-      "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-29",
-          "observacao": "10h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "espaco-conhecimento-ufmg",
-      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
-    },
-    {
-      "id": "ufmg-ec-planetario-em-manutencao-3",
-      "titulo": "Planetário em Manutenção",
-      "data": "2026-10-29",
-      "data_fim": "",
-      "horario": "10h",
-      "local": "Espaço do Conhecimento UFMG",
-      "cidade": "Belo Horizonte",
-      "categoria": "Atividade educativa",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "Nos dias 27, 29 e 30 de outubro (terça, quinta e sexta-feira), o museu funcionará normalmente, das 10h às 17h, mas não haverá sessões de Planetário devido à manutenção anual dos equipamentos. As sessões serão retomadas após a conclusão da manutenção.",
-      "imagem": "imagens/instituicoes/espaco-conhecimento-ufmg.png",
-      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/planetario-em-manutencao-3/",
-      "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-29",
-          "observacao": "10h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "espaco-conhecimento-ufmg",
-      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_fallback_origem": "equipamento"
-    },
-    {
-      "id": "ufmg-ec-mostra-iaia-de-audiovisual-carrinho-de-rolima-exibicao-3",
-      "titulo": "Mostra IAIA de Audiovisual: “Carrinho de Rolimã” (exibição)",
-      "data": "2026-10-29",
-      "data_fim": "",
-      "horario": "11h",
-      "local": "Espaço do Conhecimento UFMG",
-      "cidade": "Belo Horizonte",
-      "categoria": "Atividade educativa",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": ": Em outubro, a Mostra IAIA de Audiovisual se dedica à cultura da criança na afrodiáspora, com a exibição do filme “Carrinho de Rolimã”. O curta acompanha uma competição de carrinho de rolimã que agita a Ilha de Caratateua, levando Dandará e Ayara a superar os desafios que aparecem desde a infância.",
-      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/09/Carrinho-de-rolima-Still-03.png",
-      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/mostra-iaia-de-audiovisual-carrinho-de-rolima-exibicao-3/",
-      "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-29",
-          "observacao": "11h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "espaco-conhecimento-ufmg",
-      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
-    },
-    {
-      "id": "ufmg-ec-mostra-iaia-de-audiovisual-disque-quilombola-exibicao-3",
-      "titulo": "Mostra IAIA de Audiovisual: “Disque Quilombola” (exibição)",
-      "data": "2026-10-29",
-      "data_fim": "",
-      "horario": "15h",
-      "local": "Espaço do Conhecimento UFMG",
-      "cidade": "Belo Horizonte",
-      "categoria": "Atividade educativa",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": ": Em outubro, a Mostra IAIA de Audiovisual se dedica à cultura da criança na afrodiáspora, com a exibição do filme “Disque Quilombola”. A história se passa no Espírito Santo, enquanto crianças conversam de um jeito divertido sobre como é a vida em uma comunidade quilombola e em um morro na cidade de Vitória.",
-      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/09/cbs_id_disque_quilombola.jpg",
-      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/mostra-iaia-de-audiovisual-disque-quilombola-exibicao-3/",
-      "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-29",
-          "observacao": "15h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "espaco-conhecimento-ufmg",
-      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
-    },
-    {
-      "id": "casa-fiat-atelie-aberto-paisagem-construida-2026-10-29-1930",
-      "titulo": "Ateliê Aberto | Paisagem construída",
-      "data": "2026-10-29",
-      "data_fim": "",
-      "horario": "19h30",
-      "local": "Casa Fiat de Cultura",
-      "local_id": "casa-fiat-de-cultura",
-      "cidade": "Belo Horizonte",
-      "endereco": "Praça da Liberdade, 10, Funcionários, Belo Horizonte - MG",
-      "categoria": "Oficina",
-      "gratuito": true,
-      "inscricao": "Programação gratuita conforme informação oficial da Casa Fiat de Cultura; consulte a página para inscrição, retirada de senha ou lotação quando aplicável.",
-      "descricao": "Ateliê Aberto | Paisagem construída 1, 3, 4, 8, 10, 11, 15, 17, 18, 22, 24, 25 e 29/out Quantas paisagens cabem em um mesmo lugar? Inspirado na exposição “Mil maneiras de matar o tempo”, da artista porto-alegrense Talita Hoffmann, o Ateliê Aberto propõe uma experiência de desaceleração do olhar. Por meio de visores cartonados, o público é convidado a recortar a paisagem e perceber detalhes entre formas, jogos de luz e texturas. Cada participante transforma o que observa em uma composição sobre tecido. Entre a observação e a imaginação,",
-      "imagem": "https://casafiatdecultura.com.br/wp-content/uploads/2026/09/Banners-newsletter-outubro_ATELIE-ABERTO-1024x384.png",
-      "link": "https://casafiatdecultura.com.br/evento/atelie-aberto-paisagem-construida/",
-      "fonte": "Casa Fiat de Cultura — programação oficial",
-      "pagina": "https://casafiatdecultura.com.br/evento/atelie-aberto-paisagem-construida/",
-      "instituicao_id": "casa-fiat-de-cultura",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-29",
-          "observacao": "19h30"
-        }
-      },
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
-    },
-    {
-      "id": "conservatorio-ufmg-das-violas-do-rio-gaviao-calebe-violeiro-convida-nanda-dearo-2026-10-29-1930",
-      "titulo": "Das Violas do Rio Gavião Calebe Violeiro convida Nanda Dearo",
-      "data": "2026-10-29",
-      "data_fim": "",
-      "horario": "19h30",
-      "local": "Conservatório UFMG",
-      "local_id": "conservatorio-ufmg",
-      "cidade": "Belo Horizonte",
-      "endereco": "Avenida Afonso Pena, 1534, Centro, Belo Horizonte - MG",
-      "categoria": "Música",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita, sujeita à capacidade do espaço, conforme agenda oficial do Conservatório UFMG.",
-      "descricao": "PALCO LIVRE. Das Violas do Rio Gavião Calebe Violeiro convida Nanda Dearo. MÚSICA POPULAR",
-      "imagem": "https://www.ufmg.br/online/arquivos/anexos/ConservatorioUFMGFachada.jpg",
-      "link": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html",
-      "pagina": "https://www.ufmg.br/conservatorio/paginas/programacao_agenda_mes.html",
-      "fonte": "Conservatório UFMG — agenda oficial",
-      "instituicao_id": "conservatorio-ufmg",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "gratuidade_global_agenda_oficial",
-      "status_validacao": "aprovado",
-      "origem_experimental": "conservatorio_ufmg",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-29",
-          "observacao": "19h30"
-        }
-      },
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Conservat%C3%B3rio+UFMG%2C+Avenida+Afonso+Pena%2C+1534%2C+Centro%2C+Belo+Horizonte+-+MG",
-      "imagem_fallback_origem": "equipamento"
     },
     {
       "id": "portal-bh-33bc9e18f6ba-2026-10-29-0800",
@@ -6008,36 +5799,6 @@
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "biblioteca-rmbh-belo-horizonte-biblioteca-puc-minas-praca-da-liberdade",
       "mapa": "https://www.google.com/maps/search/?api=1&query=Biblioteca+PUC+Minas+%E2%80%93+Pra%C3%A7a+da+Liberdade%2C+Av.+Brasil%2C+2023+%E2%80%93+Funcion%C3%A1rios%2C+Belo+Horizonte%2C+Minas+Gerais%2C+Brasil"
-    },
-    {
-      "id": "cine-santa-tereza-bileto-129061",
-      "titulo": "XI COLÓQUIO CINEMA, ESTÉTICA E POLÍTICA - Retratos de identificação",
-      "data": "2026-10-29",
-      "data_fim": "",
-      "horario": "9h",
-      "local": "Cine Santa Tereza",
-      "cidade": "Belo Horizonte",
-      "categoria": "Cinema",
-      "gratuito": true,
-      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
-      "descricao": "Retratos de identificação (Anita Leandro | 2014 | Brasil | Documentário | 73 min) Dois combatentes da luta contra a ditadura militar no Brasil se deparam, pela primeira vez, com fotografias de suas respectivas prisões, tiradas pela polícia. O passado retorna e, com ele, uma história de crimes perpetrados pelo Estado, até hoje, impunes. Classificação indicativa: 12 anos Sessão comentada",
-      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/otbchqutjs1957g9agg5j8dp0evc959t3t4da241opcii83n8c8hj5jke9mimq0843u0fukfnvsohueheqc6t4kdmn698bfmt2hnao.jpeg",
-      "link": "https://bileto.sympla.com.br/event/129061/d/423485/s/2741918",
-      "fonte": "Cine Santa Tereza",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "fonte_id": "129061",
-      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
-      "classificacao_indicativa": "12 anos",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-10-29",
-          "observacao": "9h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
     {
       "id": "fcs-wp-37779",
@@ -8232,5 +7993,5 @@
   ],
   "modo_teste_experimental": true,
   "eventos_somente_teste": 7,
-  "atualizado_em_teste": "2026-10-29T22:51:57-03:00"
+  "atualizado_em_teste": "2026-10-30T15:30:22-03:00"
 }
