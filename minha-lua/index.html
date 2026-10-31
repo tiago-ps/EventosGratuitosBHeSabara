@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#101b35">
+<meta name="description" content="Veja a fase da Lua de hoje de um jeito simples.">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./icon.svg" type="image/svg+xml">
+<title>Minha Lua</title>
+<style>
+:root{color-scheme:dark;font-family:Arial,Helvetica,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:#101b35;color:#fff}
+main{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:18px 20px;text-align:center}
+header{width:min(100%,900px);display:flex;justify-content:space-between;align-items:center}
+h1{font-size:clamp(2.2rem,7vw,4.4rem);margin:8px 0 0}
+#date{font-size:clamp(1.1rem,3vw,1.7rem);color:#d7e1f8;margin:5px 0}
+#moon{width:min(58vw,330px);height:auto;margin:10px 0;filter:drop-shadow(0 0 28px #dce8ff55)}
+#phase{font-size:clamp(2rem,7vw,4.2rem);font-weight:800;margin:0}
+#description{font-size:clamp(1.2rem,3.5vw,1.8rem);line-height:1.4;max-width:760px;color:#e3eaff;margin:10px auto 18px}
+.nav,.actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;width:min(100%,850px)}
+.nav{margin:5px 0 16px}
+button{border:0;border-radius:18px;padding:15px 22px;min-height:62px;font-size:clamp(1.05rem,3vw,1.4rem);font-weight:700;color:#101b35;background:#f3f5fb;cursor:pointer}
+button.primary{background:#f4d77c}
+button:focus-visible{outline:4px solid #7ed6ff;outline-offset:4px}
+button.small{font-size:1rem;min-height:48px;padding:10px 15px}
+.hint{margin-top:18px;color:#b9c8e8;font-size:1.05rem}
+@media(orientation:landscape) and (min-width:700px){main{padding:8px 24px}h1{margin:2px 0}#moon{width:min(36vh,250px);margin:2px}#description{margin:4px auto 8px}.nav{margin:2px 0 8px}.hint{margin-top:8px}}
+</style>
+</head>
+<body>
+<main>
+<header><span aria-hidden="true" style="font-size:1.8rem">🌙</span><button class="small" id="fullscreen" type="button">📺 Tela cheia</button></header>
+<h1>Minha Lua</h1>
+<div id="date" aria-live="polite"></div>
+<svg id="moon" viewBox="0 0 300 300" role="img" aria-label="Lua">
+<defs><clipPath id="moonClip"><circle cx="150" cy="150" r="112"/></clipPath></defs>
+<circle cx="150" cy="150" r="112" fill="#263653"/>
+<g id="lit" clip-path="url(#moonClip)"></g>
+<g fill="#b8ad8d" opacity=".45"><circle cx="105" cy="100" r="13"/><circle cx="190" cy="115" r="9"/><circle cx="165" cy="190" r="18"/><circle cx="95" cy="185" r="7"/></g>
+</svg>
+<p id="phase">Carregando...</p>
+<p id="description">Veja como a Lua está hoje.</p>
+<div class="nav">
+<button id="prev" type="button">◀ Ontem</button>
+<button id="today" class="primary" type="button">Hoje</button>
+<button id="next" type="button">Amanhã ▶</button>
+</div>
+<div class="actions"><button class="primary" id="speak" type="button">🔊 Ouvir</button></div>
+<div class="hint">Toque em “Ouvir” para escutar.</div>
+</main>
+<script>
+(function(){
+const synodic=29.530588853;
+const reference=Date.UTC(2000,0,6,18,14);
+let shown=new Date();shown.setHours(12,0,0,0);
+const phases=[
+["Lua nova","A Lua quase não aparece no céu."],
+["Lua crescente","A parte iluminada está aumentando."],
+["Quarto crescente","Vemos metade da Lua iluminada."],
+["Lua crescente","A parte iluminada continua aumentando."],
+["Lua cheia","A Lua aparece redonda e bem iluminada."],
+["Lua minguante","A parte iluminada está diminuindo."],
+["Quarto minguante","Vemos metade da Lua iluminada."],
+["Lua minguante","A parte iluminada continua diminuindo."]
+];
+const el=id=>document.getElementById(id);
+function render(){
+const age=((shown.getTime()-reference)/86400000%synodic+synodic)%synodic;
+const fraction=age/synodic;
+const index=Math.round(fraction*8)%8;
+const illumination=(1-Math.cos(2*Math.PI*fraction))/2;
+const waxing=fraction<.5;
+const lit=el("lit");lit.innerHTML="";
+if(index!==0){
+const bright=document.createElementNS("http://www.w3.org/2000/svg","circle");
+bright.setAttribute("cx","150");bright.setAttribute("cy","150");bright.setAttribute("r","112");bright.setAttribute("fill","#f4e7b6");lit.appendChild(bright);
+if(index!==4){
+const rx=Math.max(1,Math.abs(Math.cos(2*Math.PI*fraction))*112);
+const shadow=document.createElementNS("http://www.w3.org/2000/svg","path");
+if(waxing){
+shadow.setAttribute("d","M150 38 A112 112 0 1 0 150 262 A"+rx+" 112 0 0 1 150 38");
+}else{
+shadow.setAttribute("d","M150 38 A112 112 0 1 1 150 262 A"+rx+" 112 0 0 0 150 38");
+}
+shadow.setAttribute("fill","#263653");lit.appendChild(shadow);
+}
+}
+el("phase").textContent=phases[index][0];
+let dateText=shown.toLocaleDateString("pt-BR",{weekday:"long",day:"numeric",month:"long",year:"numeric"});
+el("date").textContent=dateText.charAt(0).toUpperCase()+dateText.slice(1);
+el("description").textContent=phases[index][1]+" Cerca de "+Math.round(illumination*100)+"% iluminada.";
+el("moon").setAttribute("aria-label",phases[index][0]+", "+Math.round(illumination*100)+"% iluminada");
+}
+function move(days){shown.setDate(shown.getDate()+days);render();}
+el("prev").addEventListener("click",()=>move(-1));
+el("next").addEventListener("click",()=>move(1));
+el("today").addEventListener("click",()=>{shown=new Date();shown.setHours(12,0,0,0);render();});
+el("speak").addEventListener("click",()=>{
+if(!("speechSynthesis" in window)){alert("Este aparelho não tem leitura em voz alta.");return;}
+speechSynthesis.cancel();
+const utterance=new SpeechSynthesisUtterance(el("phase").textContent+". "+el("date").textContent+". "+el("description").textContent);
+utterance.lang="pt-BR";utterance.rate=.88;speechSynthesis.speak(utterance);
+});
+el("fullscreen").addEventListener("click",async()=>{
+try{if(!document.fullscreenElement){await document.documentElement.requestFullscreen();}else{await document.exitFullscreen();}}
+catch(error){alert("A tela cheia não está disponível neste aparelho.");}
+});
+if("serviceWorker" in navigator && location.protocol==="https:"){navigator.serviceWorker.register("./sw.js").catch(()=>{});}
+render();
+})();
+</script>
+</body>
+</html>
