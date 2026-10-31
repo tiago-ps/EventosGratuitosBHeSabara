@@ -2,8 +2,8 @@
   "schema": 10,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-10-30T16:52:14.820453+00:00",
-  "total": 23,
+  "coletado_em_utc": "2026-10-31T17:57:53.668006+00:00",
+  "total": 24,
   "concursos": [
     {
       "id": "pci:noticia:cgu-abre-concurso-publico-com-vagas-para-auditores-federais-de-financas-e-controle",
@@ -698,43 +698,6 @@
       }
     },
     {
-      "id": "pci:noticia:prefeitura-de-pedro-teixeira-mg-publica-edital-retificado-de-concurso-publico",
-      "titulo": "Prefeitura de Pedro Teixeira",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-pedro-teixeira-mg-publica-edital-retificado-de-concurso-publico",
-      "imagem": "https://cdn.pci.app.br/img/i/b7726c9aae144008454dee3887826030.png",
-      "formacoes_compativeis": [
-        "Sistemas de Informação / Computação"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Sistemas de Informação / Computação",
-          "nivel": "superior",
-          "evidencia": "ga) professor regente ii - portugues (2 vagas) professor regente ii - redacao (1 vaga) profissional de apoio escolar (5 vagas ac, 1 vaga pcd) psicologo (2 vagas) psicologo (educacao) (1 vaga) recepcionista (3 vagas) tecnico em enfermagem 12x36 (4 vagas) tecnico em enfermagem 40h (1 vaga) tecnico em tecnologia da informacao (1 vaga) vigia de reparticoes publicas (4 vagas) zelador de reparticao (2 vagas) a jornada de trabalho varia de 20 a 44 horas semanais, incluindo escalas de 12x36 para alguns cargos. as remuneracoes vao de r$ 1.621,00 a r$ 5.494,76, com valores diferenciados para a carreira do magisterio (professor"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "MG",
-      "cidade": "Pedro Teixeira",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "",
-      "inscricoes_texto": "",
-      "remuneracao_faixa_texto": "R$ 1.621,00",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Técnico em Tecnologia da Informação",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        }
-      ],
-      "janela_inscricoes": {
-        "estado": "prazo_desconhecido",
-        "completude": "desconhecida"
-      }
-    },
-    {
       "id": "pci:noticia:prefeitura-de-piracema-mg-abre-concurso-e-processo-seletivo-com-diversas-vagas",
       "titulo": "Prefeitura de Piracema",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-piracema-mg-abre-concurso-e-processo-seletivo-com-diversas-vagas",
@@ -1084,6 +1047,43 @@
       }
     },
     {
+      "id": "pci:noticia:prefeitura-de-blumenau-sc-abre-concurso-publico-para-a-area-da-educacao",
+      "titulo": "Prefeitura de Blumenau",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-blumenau-sc-abre-concurso-publico-para-a-area-da-educacao",
+      "imagem": "https://cdn.pci.app.br/img/i/63af340c63b9053c3ca2f184e31f2211.png",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": " outubro de 2026 a prefeitura municipal de blumenau , no estado de santa catarina, abriu um concurso publico para preencher vagas e formar cadastro de reserva em cargos efetivos de nivel superior. segundo o edital, as oportunidades sao para os cargos de: coordenador pedagogico (1 vaga) professor de computacao (1 vaga) professor i - alemao (1 vaga) professor i - anos iniciais (1 vaga) professor i - arte (1 vaga) professor i - bandas e fanfarras (1 vaga) professor i - ciencias (1 vaga) professor i - educacao especial salas multifuncionais (1 vaga) professor i - educacao fisica (1 vaga) professor i - educa"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "SC",
+      "cidade": "Blumenau",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "R$ 5.130,63",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Professor de Computação",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "prazo_desconhecido",
+        "completude": "desconhecida"
+      }
+    },
+    {
       "id": "pci:noticia:prefeitura-de-maravilha-sc-retifica-concurso-com-salarios-de-ate-15748",
       "titulo": "Prefeitura de Maravilha",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-maravilha-sc-retifica-concurso-com-salarios-de-ate-15748",
@@ -1133,6 +1133,61 @@
             "tipo": "candidatura",
             "inicio": "2026-10-02",
             "fim": "2026-11-03",
+            "status": "aberto"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pci:noticia:prefeitura-de-rio-negrinho-sc-e-orgaos-municipais-abrem-novos-concursos-publicos",
+      "titulo": "Prefeitura de Rio Negrinho, FMC, IPRERIO e SAMAE",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-rio-negrinho-sc-e-orgaos-municipais-abrem-novos-concursos-publicos",
+      "imagem": "https://cdn.pci.app.br/img/i/366fc5888b1987e342ad75b2402dd6ea.png",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "cao especialista em educacao (volta grande e serro azul) fiscal ambiental fiscal de obras e posturas fonoaudiologo (1 vaga) medico clinico geral medico especialista - ginecologista medico especialista - ortopedista medico especialista - pediatra medico especialista - psiquiatria (1 vaga) monitor de tecnologia da informacao (1 vaga) monitor de tecnologia da informacao (volta grande e serro azul) motorista (transporte escolar) nutricionista odontologo esf oficial administrativo (5 vagas) operador de maquinas pesadas operador de maquinas pesadas (volta grande) pedreiro professor i - nivel 2 - anos iniciais (3 vagas) pro"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "SC",
+      "cidade": "Rio Negrinho, FMC, IPRERIO e SAMAE",
+      "inscricoes_inicio_texto": "16 de outubro de 2026",
+      "inscricoes_fim_texto": "15 de novembro de 2026",
+      "inscricoes_texto": "16 de outubro de 2026 a 15 de novembro de 2026",
+      "remuneracao_faixa_texto": "R$ 1.665,72 a R$ 18.538,78",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Monitor de Tecnologia da Informação",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "aberto",
+        "completude": "completa",
+        "inicio": "2026-10-16",
+        "fim": "2026-11-15",
+        "texto_original": "16 de outubro de 2026 a 15 de novembro de 2026"
+      },
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-10-16",
+          "fim": "2026-11-15"
+        },
+        "participacao": [
+          {
+            "tipo": "candidatura",
+            "inicio": "2026-10-16",
+            "fim": "2026-11-15",
             "status": "aberto"
           }
         ]
