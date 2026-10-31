@@ -47,7 +47,7 @@ button.small{font-size:1rem;min-height:48px;padding:10px 15px}
 <button id="today" class="primary" type="button">Hoje</button>
 <button id="next" type="button">Amanhã ▶</button>
 </div>
-<div class="actions"><button class="primary" id="speak" type="button">🔊 Ouvir</button></div>
+<div class="actions"><button class="primary" id="speak" type="button">🔊 Ouvir</button><button id="install" type="button" hidden>⬇ Instalar no celular</button></div>
 <div class="hint">Toque em “Ouvir” para escutar.</div>
 </main>
 <script>
@@ -103,7 +103,7 @@ speechSynthesis.cancel();
 const utterance=new SpeechSynthesisUtterance(el("phase").textContent+". "+el("date").textContent+". "+el("description").textContent);
 utterance.lang="pt-BR";utterance.rate=.88;speechSynthesis.speak(utterance);
 });
-el("fullscreen").addEventListener("click",async()=>{
+let installPrompt=null;\nwindow.addEventListener("beforeinstallprompt",event=>{event.preventDefault();installPrompt=event;el("install").hidden=false;});\nel("install").addEventListener("click",async()=>{if(!installPrompt)return;installPrompt.prompt();await installPrompt.userChoice;installPrompt=null;el("install").hidden=true;});\nel("fullscreen").addEventListener("click",async()=>{
 try{if(!document.fullscreenElement){await document.documentElement.requestFullscreen();}else{await document.exitFullscreen();}}
 catch(error){alert("A tela cheia não está disponível neste aparelho.");}
 });
