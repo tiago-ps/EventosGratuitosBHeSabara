@@ -2,8 +2,8 @@
   "schema": 10,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-10-31T17:57:53.668006+00:00",
-  "total": 24,
+  "coletado_em_utc": "2026-11-03T11:51:29.140538+00:00",
+  "total": 23,
   "concursos": [
     {
       "id": "pci:noticia:cgu-abre-concurso-publico-com-vagas-para-auditores-federais-de-financas-e-controle",
@@ -748,61 +748,6 @@
             "inicio": "2026-10-20",
             "fim": "2026-11-18",
             "status": "aberto"
-          }
-        ]
-      }
-    },
-    {
-      "id": "pci:noticia:prefeitura-de-alvorada-rs-retifica-concurso-publico-com-salarios-de-ate-18974",
-      "titulo": "Prefeitura de Alvorada",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-alvorada-rs-retifica-concurso-publico-com-salarios-de-ate-18974",
-      "imagem": "https://cdn.pci.app.br/img/i/00f5df785afbb7b0d109128451d5ac79.png",
-      "formacoes_compativeis": [
-        "Técnico em Informática"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Técnico em Informática",
-          "nivel": "tecnico",
-          "evidencia": " historia (cr) professor de lingua estrangeira - ingles (cr) professor de lingua portuguesa (cr) professor de matematica (cr) programador de informatica (cr) secretario de escola (cr) supervisor educacional (cr) tecnico ambiental (cr) tecnico de seguranca do trabalho (cr) tecnico em enfermagem (cr) tecnico em informatica (cr) tecnico em saude bucal (cr) topografo (cr) tradutor e interprete de libras (cr) a jornada de trabalho varia de 20 a 40 horas semanais, conforme o cargo, com remuneracoes que vao de r$ 1.738,24 a r$ 18.974,55. as inscricoes devem ser realizadas exclusivamente pela internet, no site www.institut"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "RS",
-      "cidade": "Alvorada",
-      "inscricoes_inicio_texto": "28 de agosto de 2026",
-      "inscricoes_fim_texto": "18 de outubro de 2026",
-      "inscricoes_texto": "28 de agosto de 2026 a 18 de outubro de 2026",
-      "remuneracao_faixa_texto": "R$ 18.974,55",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Técnico em Informática",
-          "vagas_texto": "Cadastro de Reserva",
-          "formacao": "Técnico em Informática",
-          "confianca": "alta"
-        }
-      ],
-      "janela_inscricoes": {
-        "estado": "encerrado",
-        "completude": "completa",
-        "inicio": "2026-08-28",
-        "fim": "2026-10-18",
-        "texto_original": "28 de agosto de 2026 a 18 de outubro de 2026"
-      },
-      "temporalidade": {
-        "classe": "periodo",
-        "realizacao": {
-          "inicio": "2026-08-28",
-          "fim": "2026-10-18"
-        },
-        "participacao": [
-          {
-            "tipo": "candidatura",
-            "inicio": "2026-08-28",
-            "fim": "2026-10-18",
-            "status": "encerrado"
           }
         ]
       }
