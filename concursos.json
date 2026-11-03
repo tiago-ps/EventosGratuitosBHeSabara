@@ -2,8 +2,8 @@
   "schema": 10,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-11-03T11:51:29.140538+00:00",
-  "total": 23,
+  "coletado_em_utc": "2026-11-03T17:16:16.769533+00:00",
+  "total": 24,
   "concursos": [
     {
       "id": "pci:noticia:cgu-abre-concurso-publico-com-vagas-para-auditores-federais-de-financas-e-controle",
@@ -689,6 +689,43 @@
           "cargo": "Técnico em Informática",
           "vagas_texto": "2 vagas",
           "formacao": "Técnico em Informática",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "prazo_desconhecido",
+        "completude": "desconhecida"
+      }
+    },
+    {
+      "id": "pci:noticia:prefeitura-de-pedro-teixeira-mg-prorroga-inscricoes-de-concurso-publico",
+      "titulo": "Prefeitura de Pedro Teixeira",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-pedro-teixeira-mg-prorroga-inscricoes-de-concurso-publico",
+      "imagem": "https://cdn.pci.app.br/img/i/b7726c9aae144008454dee3887826030.png",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "ga) professor regente ii - portugues (2 vagas) professor regente ii - redacao (1 vaga) profissional de apoio escolar (5 vagas ac, 1 vaga pcd) psicologo (2 vagas) psicologo (educacao) (1 vaga) recepcionista (3 vagas) tecnico em enfermagem 12x36 (4 vagas) tecnico em enfermagem 40h (1 vaga) tecnico em tecnologia da informacao (1 vaga) vigia de reparticoes publicas (4 vagas) zelador de reparticao (2 vagas) a jornada de trabalho varia de 20 a 44 horas semanais, incluindo escalas de 12x36 para alguns cargos. as remuneracoes vao de r$ 1.621,00 a r$ 5.494,76, com valores diferenciados para a carreira do magisterio (professor"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "MG",
+      "cidade": "Pedro Teixeira",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "R$ 1.621,00",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico em Tecnologia da Informação",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
           "confianca": "alta"
         }
       ],

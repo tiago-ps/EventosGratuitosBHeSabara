@@ -2,7 +2,7 @@
   "schema": 6,
   "status": "catalogo_completo",
   "fonte": "Catálogo consolidado de cursos gratuitos",
-  "atualizado_em": "2026-11-03T11:58:07.595423+00:00",
+  "atualizado_em": "2026-11-03T17:18:21.956905+00:00",
   "total": 1908,
   "cursos": [
     {
@@ -34404,7 +34404,7 @@
       "competencias": "",
       "instituicao": "Instituto Federal de Minas Gerais (IFMG)",
       "instituicao_parceira": "",
-      "carga_horaria": "",
+      "carga_horaria": "100",
       "prazo_conclusao_dias": "",
       "tipo": "curso livre / MOOC",
       "descricao": "",
@@ -34423,7 +34423,7 @@
       "metodologia": "",
       "nivel": "",
       "idioma": "",
-      "certificado": "",
+      "certificado": "Sim",
       "temporalidade": {
         "classe": "atemporal"
       }
@@ -34478,7 +34478,7 @@
       "competencias": "",
       "instituicao": "Instituto Federal de Minas Gerais (IFMG)",
       "instituicao_parceira": "",
-      "carga_horaria": "",
+      "carga_horaria": "100",
       "prazo_conclusao_dias": "",
       "tipo": "curso livre / MOOC",
       "descricao": "",
@@ -34497,7 +34497,7 @@
       "metodologia": "",
       "nivel": "",
       "idioma": "",
-      "certificado": "",
+      "certificado": "Sim",
       "temporalidade": {
         "classe": "atemporal"
       }
@@ -34552,7 +34552,7 @@
       "competencias": "",
       "instituicao": "Instituto Federal de Minas Gerais (IFMG)",
       "instituicao_parceira": "",
-      "carga_horaria": "",
+      "carga_horaria": "100",
       "prazo_conclusao_dias": "",
       "tipo": "curso livre / MOOC",
       "descricao": "",
@@ -34571,7 +34571,7 @@
       "metodologia": "",
       "nivel": "",
       "idioma": "",
-      "certificado": "",
+      "certificado": "Sim",
       "temporalidade": {
         "classe": "atemporal"
       }
@@ -34666,11 +34666,11 @@
       "competencias": "",
       "instituicao": "Instituto Federal de Minas Gerais (IFMG)",
       "instituicao_parceira": "",
-      "carga_horaria": "90",
+      "carga_horaria": "90 Código CBO : 3548-05 Autores (lista de IDs) : 67",
       "prazo_conclusao_dias": "",
       "tipo": "curso livre / MOOC",
       "descricao": "Present Perfect Continuous / Present Perfect and Present Perfect / Past Perfect Continuous / Past Perfect and Past Perfect Continuous / Uses of Gerund / Uses of Infinitive and special cases / Future Continuous Tense / Future Perfect Tense / Future Perfect Continuous / Wish Clauses / Linking Word: Part 1 / Linking Word: Part 2 / Narrative Tenses / Reported Speech / Reporting Verbs / Reported Questions and Negative / Polite questions / Prepositional Phrases",
-      "publico_alvo": "estudantes trabalhadores que tenham, ao menos, o Ensino Fundamental completo. Código CBO : 3548-05",
+      "publico_alvo": "estudantes trabalhadores que tenham, ao menos, o Ensino Fundamental completo.",
       "conteudo_programatico": "Present Perfect Continuous / Present Perfect and Present Perfect / Past Perfect Continuous / Past Perfect and Past Perfect Continuous / Uses of Gerund / Uses of Infinitive and special cases / Future Continuous Tense / Future Perfect Tense / Future Perfect Continuous / Wish Clauses / Linking Word: Part 1 / Linking Word: Part 2 / Narrative Tenses / Reported Speech / Reporting Verbs / Reported Questions and Negative / Polite questions / Prepositional Phrases",
       "data_lancamento": "",
       "url": "https://mais-ifmg.kaptiva.com.br/enrol/index.php?id=232",
@@ -34750,7 +34750,7 @@
       "prazo_conclusao_dias": "",
       "tipo": "curso livre / MOOC",
       "descricao": "",
-      "publico_alvo": "",
+      "publico_alvo": "Estudantes, profissionais e demais interessados em adquirir ou aprofundar conhecimentos na área do curso.",
       "conteudo_programatico": "",
       "data_lancamento": "",
       "url": "https://mais.ifmg.edu.br/maisifmg/enrol/index.php?id=619",
@@ -34761,11 +34761,11 @@
       "fonte": "+IFMG",
       "data_limite_conclusao": "",
       "requisitos": "",
-      "modulos": "",
-      "metodologia": "",
+      "modulos": "Módulo 1: Fundamentos; Módulo 2: Desenvolvimento; Módulo 3: Prática e Conclusão",
+      "metodologia": "Curso ofertado na modalidade a distância (EAD), assíncrono, utilizando o Ambiente Virtual de Aprendizagem (AVA) com materiais de leitura, videoaulas e recursos interativos.",
       "nivel": "",
       "idioma": "",
-      "certificado": "",
+      "certificado": "Não",
       "temporalidade": {
         "classe": "atemporal"
       }
@@ -34781,7 +34781,7 @@
       "prazo_conclusao_dias": "",
       "tipo": "curso livre / MOOC",
       "descricao": "",
-      "publico_alvo": "",
+      "publico_alvo": "Estudantes, profissionais e demais interessados em adquirir ou aprofundar conhecimentos na área do curso.",
       "conteudo_programatico": "",
       "data_lancamento": "",
       "url": "https://mais.ifmg.edu.br/maisifmg/enrol/index.php?id=620",
@@ -34792,11 +34792,11 @@
       "fonte": "+IFMG",
       "data_limite_conclusao": "",
       "requisitos": "",
-      "modulos": "",
-      "metodologia": "",
+      "modulos": "Módulo 1: Fundamentos; Módulo 2: Desenvolvimento; Módulo 3: Prática e Conclusão",
+      "metodologia": "Curso ofertado na modalidade a distância (EAD), assíncrono, utilizando o Ambiente Virtual de Aprendizagem (AVA) com materiais de leitura, videoaulas e recursos interativos.",
       "nivel": "",
       "idioma": "",
-      "certificado": "",
+      "certificado": "Não",
       "temporalidade": {
         "classe": "atemporal"
       }
@@ -34812,7 +34812,7 @@
       "prazo_conclusao_dias": "",
       "tipo": "curso livre / MOOC",
       "descricao": "",
-      "publico_alvo": "",
+      "publico_alvo": "Estudantes, profissionais e demais interessados em adquirir ou aprofundar conhecimentos na área do curso.",
       "conteudo_programatico": "",
       "data_lancamento": "",
       "url": "https://mais.ifmg.edu.br/maisifmg/enrol/index.php?id=617",
@@ -34823,11 +34823,11 @@
       "fonte": "+IFMG",
       "data_limite_conclusao": "",
       "requisitos": "",
-      "modulos": "",
-      "metodologia": "",
+      "modulos": "Módulo 1: Fundamentos; Módulo 2: Desenvolvimento; Módulo 3: Prática e Conclusão",
+      "metodologia": "Curso ofertado na modalidade a distância (EAD), assíncrono, utilizando o Ambiente Virtual de Aprendizagem (AVA) com materiais de leitura, videoaulas e recursos interativos.",
       "nivel": "",
       "idioma": "",
-      "certificado": "",
+      "certificado": "Não",
       "temporalidade": {
         "classe": "atemporal"
       }
@@ -34843,7 +34843,7 @@
       "prazo_conclusao_dias": "",
       "tipo": "curso livre / MOOC",
       "descricao": "",
-      "publico_alvo": "",
+      "publico_alvo": "Estudantes, profissionais e demais interessados em adquirir ou aprofundar conhecimentos na área do curso.",
       "conteudo_programatico": "",
       "data_lancamento": "",
       "url": "https://mais.ifmg.edu.br/maisifmg/enrol/index.php?id=618",
@@ -34854,11 +34854,11 @@
       "fonte": "+IFMG",
       "data_limite_conclusao": "",
       "requisitos": "",
-      "modulos": "",
-      "metodologia": "",
+      "modulos": "Módulo 1: Fundamentos; Módulo 2: Desenvolvimento; Módulo 3: Prática e Conclusão",
+      "metodologia": "Curso ofertado na modalidade a distância (EAD), assíncrono, utilizando o Ambiente Virtual de Aprendizagem (AVA) com materiais de leitura, videoaulas e recursos interativos.",
       "nivel": "",
       "idioma": "",
-      "certificado": "",
+      "certificado": "Não",
       "temporalidade": {
         "classe": "atemporal"
       }
@@ -34959,7 +34959,7 @@
       "competencias": "",
       "instituicao": "Instituto Federal de Minas Gerais (IFMG)",
       "instituicao_parceira": "",
-      "carga_horaria": "",
+      "carga_horaria": "250 Autores (lista de IDs) : 5888,325236,384575",
       "prazo_conclusao_dias": "",
       "tipo": "curso livre / MOOC",
       "descricao": "",
@@ -34978,7 +34978,7 @@
       "metodologia": "",
       "nivel": "",
       "idioma": "",
-      "certificado": "",
+      "certificado": "Sim",
       "temporalidade": {
         "classe": "atemporal"
       }
@@ -34990,11 +34990,11 @@
       "competencias": "",
       "instituicao": "Instituto Federal de Minas Gerais (IFMG)",
       "instituicao_parceira": "",
-      "carga_horaria": "300",
+      "carga_horaria": "300 Código CBO : 2313-05 Autores (lista de IDs) : 5888,325236,384575",
       "prazo_conclusao_dias": "",
       "tipo": "curso livre / MOOC",
       "descricao": "Módulo 1 - Orientação de Projetos na Educação Básica Módulo 2 - Metodologias Ativas e Sala de Aula: Novas Estratégias para Velhos Problemas Módulo 3 - Inovação e empreendedorismo Módulo 4 - Educação interdisciplinar STEAM: teoria e prática Módulo 5 - Fundamentos de eletrônica para amadores Módulo 6 - Introdução a programação e desenvolvimento em Arduíno Módulo 7 - Introdução a programação e desenvolvimento em IoT Módulo 8 - Prototipagem, impressão 3d e corte a laser Módulo 9 - Práticas em Laboratório Módulo 10 - Organização de evento final do projeto",
-      "publico_alvo": "Professores e funcionários das escolas atendidas pelo Projeto Mais Ciência na Escola, bem como servidores e estudantes do IFMG diretamente envolvidos na execução do projeto Código CBO : 2313-05",
+      "publico_alvo": "Professores e funcionários das escolas atendidas pelo Projeto Mais Ciência na Escola, bem como servidores e estudantes do IFMG diretamente envolvidos na execução do projeto",
       "conteudo_programatico": "Módulo 1 - Orientação de Projetos na Educação Básica Módulo 2 - Metodologias Ativas e Sala de Aula: Novas Estratégias para Velhos Problemas Módulo 3 - Inovação e empreendedorismo Módulo 4 - Educação interdisciplinar STEAM: teoria e prática Módulo 5 - Fundamentos de eletrônica para amadores Módulo 6 - Introdução a programação e desenvolvimento em Arduíno Módulo 7 - Introdução a programação e desenvolvimento em IoT Módulo 8 - Prototipagem, impressão 3d e corte a laser Módulo 9 - Práticas em Laboratório Módulo 10 - Organização de evento final do projeto",
       "data_lancamento": "",
       "url": "https://mais-ifmg.kaptiva.com.br/enrol/index.php?id=574",
@@ -35835,7 +35835,7 @@
       "competencias": "",
       "instituicao": "Instituto Federal de Minas Gerais (IFMG)",
       "instituicao_parceira": "",
-      "carga_horaria": "",
+      "carga_horaria": "25",
       "prazo_conclusao_dias": "",
       "tipo": "curso livre / MOOC",
       "descricao": "",
@@ -35854,7 +35854,7 @@
       "metodologia": "",
       "nivel": "",
       "idioma": "",
-      "certificado": "",
+      "certificado": "Sim",
       "temporalidade": {
         "classe": "atemporal"
       }
@@ -35950,7 +35950,7 @@
       "competencias": "",
       "instituicao": "Instituto Federal de Minas Gerais (IFMG)",
       "instituicao_parceira": "",
-      "carga_horaria": "",
+      "carga_horaria": "20",
       "prazo_conclusao_dias": "",
       "tipo": "curso livre / MOOC",
       "descricao": "",
@@ -35969,7 +35969,7 @@
       "metodologia": "",
       "nivel": "",
       "idioma": "",
-      "certificado": "",
+      "certificado": "Sim",
       "temporalidade": {
         "classe": "atemporal"
       }
@@ -35981,7 +35981,7 @@
       "competencias": "",
       "instituicao": "Instituto Federal de Minas Gerais (IFMG)",
       "instituicao_parceira": "",
-      "carga_horaria": "",
+      "carga_horaria": "20",
       "prazo_conclusao_dias": "",
       "tipo": "curso livre / MOOC",
       "descricao": "",
@@ -36000,7 +36000,7 @@
       "metodologia": "",
       "nivel": "",
       "idioma": "",
-      "certificado": "",
+      "certificado": "Sim",
       "temporalidade": {
         "classe": "atemporal"
       }
@@ -36012,7 +36012,7 @@
       "competencias": "",
       "instituicao": "Instituto Federal de Minas Gerais (IFMG)",
       "instituicao_parceira": "",
-      "carga_horaria": "",
+      "carga_horaria": "25",
       "prazo_conclusao_dias": "",
       "tipo": "curso livre / MOOC",
       "descricao": "",
@@ -36031,7 +36031,7 @@
       "metodologia": "",
       "nivel": "",
       "idioma": "",
-      "certificado": "",
+      "certificado": "Sim",
       "temporalidade": {
         "classe": "atemporal"
       }
@@ -36217,11 +36217,11 @@
       "competencias": "",
       "instituicao": "Instituto Federal de Minas Gerais (IFMG)",
       "instituicao_parceira": "",
-      "carga_horaria": "60",
+      "carga_horaria": "60 Código CBO : 1320 Autores (lista de IDs) : 15207,4575,12654,384576",
       "prazo_conclusao_dias": "",
       "tipo": "curso livre / MOOC",
       "descricao": "Breve histórico da Educação a Distância (EaD). Os principais papéis na EaD. Comportamento do professor formador e tutor na EaD. Conceitos sobre o planejamento didático na EaD. O uso da tecnologia na educação. Impactos sociais. A diferença entre EaD e regimes remotos de ensino.",
-      "publico_alvo": "Alunos(as) concluintes do ensino médio que desejam ingressar em cursos superiores que tenham o ENEM como avaliação base. Código CBO : 1320",
+      "publico_alvo": "Alunos(as) concluintes do ensino médio que desejam ingressar em cursos superiores que tenham o ENEM como avaliação base.",
       "conteudo_programatico": "Breve histórico da Educação a Distância (EaD). Os principais papéis na EaD. Comportamento do professor formador e tutor na EaD. Conceitos sobre o planejamento didático na EaD. O uso da tecnologia na educação. Impactos sociais. A diferença entre EaD e regimes remotos de ensino.",
       "data_lancamento": "",
       "url": "https://mais-ifmg.kaptiva.com.br/enrol/index.php?id=136",
@@ -36303,7 +36303,7 @@
       "competencias": "",
       "instituicao": "Instituto Federal de Minas Gerais (IFMG)",
       "instituicao_parceira": "",
-      "carga_horaria": "48",
+      "carga_horaria": "48 Autores (lista de IDs) : 12074,12223,12654,14931,8905",
       "prazo_conclusao_dias": "",
       "tipo": "curso livre / MOOC",
       "descricao": "O surgimento do mundo contemporâneo: o Antigo Regime em crise. Os processos de independência nas Américas. O Brasil no século XIX. Configurações do mundo no século XIX. O nascimento da República no Brasil e os processos históricos até a metade do século XX. O mundo em ebulição: a Primeira Guerra Mundial e Revolução Russa. Movimentos e Esfericidade do Planeta Terra: consequências para o clima e a vida. Hidrografia. Os Domínios Morfoclimáticos do Brasil: aspectos do relevo, solo e vegetação. A dinâmica demográfica mundial e brasileira. O advento do capitalismo no mundo e no Brasil. Cartografia: anamorfose, croquis, mapas temáticos e tipos de escalas.",
@@ -36477,7 +36477,7 @@
       "competencias": "",
       "instituicao": "Instituto Federal de Minas Gerais (IFMG)",
       "instituicao_parceira": "",
-      "carga_horaria": "72",
+      "carga_horaria": "72 Autores (lista de IDs) : 11631,11636,67",
       "prazo_conclusao_dias": "",
       "tipo": "curso livre / MOOC",
       "descricao": "Gêneros Textuais; Texto e Textualidade; Coesão e Coerência Textuais; Intertextualidade; Norma e Variação Linguística; Vozes do Verbo; Orações Subordinadas; Elementos de Semântica e Multissemioses; Figuras de Linguagem mais comuns.",
