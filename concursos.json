@@ -552,7 +552,7 @@
         }
       ],
       "janela_inscricoes": {
-        "estado": "aberto",
+        "estado": "encerrado",
         "completude": "completa",
         "inicio": "2026-10-02",
         "fim": "2026-11-03",
@@ -569,7 +569,7 @@
             "tipo": "candidatura",
             "inicio": "2026-10-02",
             "fim": "2026-11-03",
-            "status": "aberto"
+            "status": "encerrado"
           }
         ]
       }
@@ -1098,7 +1098,7 @@
         }
       ],
       "janela_inscricoes": {
-        "estado": "aberto",
+        "estado": "encerrado",
         "completude": "completa",
         "inicio": "2026-10-02",
         "fim": "2026-11-03",
@@ -1115,7 +1115,7 @@
             "tipo": "candidatura",
             "inicio": "2026-10-02",
             "fim": "2026-11-03",
-            "status": "aberto"
+            "status": "encerrado"
           }
         ]
       }
