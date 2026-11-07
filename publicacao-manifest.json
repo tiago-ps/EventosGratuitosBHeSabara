@@ -1,37 +1,37 @@
 {
   "counts": {
     "atividades-lazer.json": 42,
-    "concursos.json": 22,
+    "concursos.json": 23,
     "configuracao-mural.json": 1,
     "cursos.json": 1908,
     "espacos_culturais.json": 268,
-    "eventos.json": 254,
+    "eventos.json": 232,
     "filmes.json": 1292,
     "livros.json": 46,
-    "relacoes-eventos.json": 184,
+    "relacoes-eventos.json": 182,
     "utilidade-publica.json": 13
   },
   "hashes": {
     "atividades-lazer.json": "7b7cac673c1d63119d5adb8f47d5b7bef51f30f7ea34e0473a9897931feae478",
-    "concursos.json": "4374605ada2b1f61c91c818a65c440b2592fb0212763894ccc6c9f60cd410a2e",
+    "concursos.json": "a0a58c6c01f500335c49000565f8488575840651075cea336271a64a0c6f5c17",
     "configuracao-mural.json": "49dfe7115a6f5c6d5b8dee424d3b10341b5e3014ac58a295d27ef4e6043ebfc2",
     "cursos.json": "b30ad391ca8104f646d6e2c1bd78ef2080d57b38605153543a701aaeecb41948",
     "espacos_culturais.json": "572de708c598f3392d99194f8a2a9cf4953cf7fcf401ad682c8174b03ccccda7",
-    "eventos.json": "b5a3b5b51dac1d07997fa3524696eb7bd5a0eef824370eaec9fb79dee2446462",
+    "eventos.json": "e78d6c8937301df87573eaab5e3994c6516e5df568b7084cd36940a864414901",
     "filmes.json": "23437099af05856a1a822d1b91c19c9dc93962f073b823189bf8eb96652710af",
-    "livros.json": "7b269ae8b023e22d76ff2b1f8c76b447666f052cf7c2c4f69912e3b251b499a7",
-    "relacoes-eventos.json": "ce3859841796b8bb31975b40024610c26d9563dd8bb5864899b7d3f028859fef",
+    "livros.json": "739f394c763aa73a8de106dd323e74a685370ab408c33809dc664b066e9898bd",
+    "relacoes-eventos.json": "0621c253194adb1baf621366bcff4bde3a555179823e3a7c9037d10a94cc4ca5",
     "utilidade-publica.json": "802855dab1947d041edd92cfa3cd35291b93f505e04ee149978472605f32e73c"
   },
-  "published_at": "2026-11-07T02:20:51Z",
-  "request_id": "auto-push-42325382197-1",
+  "published_at": "2026-11-07T19:29:38Z",
+  "request_id": "auto-workflow_run-42395615857-1",
   "schema_version": "1.0",
   "source_repository": "tiago-ps/ColetorEventosGratuitos",
-  "source_sha": "6f428c31c772d237b1cf709bb1072c5b8e09922f",
+  "source_sha": "2fc1ed4b75f51a7208ae309c260c60bcb12c675b",
   "staging_repository": "tiago-ps/EventosGratuitosBHeSabara",
   "versions": {
     "manifest_schema": "1.0",
     "publication_validator": "central-v1"
   },
-  "workflow_run_id": "42325382197"
+  "workflow_run_id": "42395615857"
 }

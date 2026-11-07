@@ -2,8 +2,8 @@
   "schema": 10,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-11-07T02:17:21.297477+00:00",
-  "total": 22,
+  "coletado_em_utc": "2026-11-07T17:16:49.568576+00:00",
+  "total": 23,
   "concursos": [
     {
       "id": "pci:noticia:trf3-sp-ms-retifica-concurso-publico-para-analistas-e-tecnicos-judiciarios",
@@ -1075,6 +1075,61 @@
       "janela_inscricoes": {
         "estado": "prazo_desconhecido",
         "completude": "desconhecida"
+      }
+    },
+    {
+      "id": "pci:noticia:prefeitura-de-rio-negrinho-sc-e-orgaos-municipais-abrem-novos-concursos-publicos",
+      "titulo": "Prefeitura de Rio Negrinho, FMC, IPRERIO e SAMAE",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-rio-negrinho-sc-e-orgaos-municipais-abrem-novos-concursos-publicos",
+      "imagem": "https://cdn.pci.app.br/img/i/366fc5888b1987e342ad75b2402dd6ea.png",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "cao especialista em educacao (volta grande e serro azul) fiscal ambiental fiscal de obras e posturas fonoaudiologo (1 vaga) medico clinico geral medico especialista - ginecologista medico especialista - ortopedista medico especialista - pediatra medico especialista - psiquiatria (1 vaga) monitor de tecnologia da informacao (1 vaga) monitor de tecnologia da informacao (volta grande e serro azul) motorista (transporte escolar) nutricionista odontologo esf oficial administrativo (5 vagas) operador de maquinas pesadas operador de maquinas pesadas (volta grande) pedreiro professor i - nivel 2 - anos iniciais (3 vagas) pro"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "SC",
+      "cidade": "Rio Negrinho, FMC, IPRERIO e SAMAE",
+      "inscricoes_inicio_texto": "16 de outubro de 2026",
+      "inscricoes_fim_texto": "15 de novembro de 2026",
+      "inscricoes_texto": "16 de outubro de 2026 a 15 de novembro de 2026",
+      "remuneracao_faixa_texto": "R$ 1.665,72 a R$ 18.538,78",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Monitor de Tecnologia da Informação",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "aberto",
+        "completude": "completa",
+        "inicio": "2026-10-16",
+        "fim": "2026-11-15",
+        "texto_original": "16 de outubro de 2026 a 15 de novembro de 2026"
+      },
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-10-16",
+          "fim": "2026-11-15"
+        },
+        "participacao": [
+          {
+            "tipo": "candidatura",
+            "inicio": "2026-10-16",
+            "fim": "2026-11-15",
+            "status": "aberto"
+          }
+        ]
       }
     }
   ]
