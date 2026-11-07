@@ -2,8 +2,8 @@
   "schema": 10,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-11-06T02:47:54.051958+00:00",
-  "total": 21,
+  "coletado_em_utc": "2026-11-07T02:17:21.297477+00:00",
+  "total": 22,
   "concursos": [
     {
       "id": "pci:noticia:trf3-sp-ms-retifica-concurso-publico-para-analistas-e-tecnicos-judiciarios",
@@ -76,7 +76,7 @@
       "inscricoes_inicio_texto": "18 de setembro de 2026",
       "inscricoes_fim_texto": "10 de novembro de 2026",
       "inscricoes_texto": "18 de setembro de 2026 a 10 de novembro de 2026",
-      "remuneracao_faixa_texto": "R$ 4.106,09",
+      "remuneracao_faixa_texto": "R$ 5.482,21",
       "remuneracao_fonte": "catalogo",
       "cargos_compativeis": [
         {
@@ -165,6 +165,43 @@
       }
     },
     {
+      "id": "pci:noticia:prefeitura-de-jandira-sp-abre-concurso-publico-com-salarios-de-ate-6812",
+      "titulo": "Prefeitura de Jandira",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-jandira-sp-abre-concurso-publico-com-salarios-de-ate-6812",
+      "imagem": "https://cdn.pci.app.br/img/i/f5e9eb16c240b995b5320a329f9c8af9.png",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "rativo (125 vagas) auxiliar de comunicacao e eventos (1 vaga) auxiliar de habitacao e urbanismo (cadastro de reserva) instrutor de curso de violao (1 vaga) instrutor de musica classica (1 vaga) motorista (10 vagas) orientador social (22 vagas) tecnico em edificacoes (cadastro de reserva) tecnico em tecnologia da informacao (2 vagas) topografo (1 vaga) ensino superior agente de contratacao (2 vagas) agente fiscal de renda (1 vaga) analista administrativo (6 vagas) analista de beneficios previdenciarios (1 vaga) analista de contratacao (cadastro de reserva) analista de controle de convenio (1 vaga) analista de controle"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "SP",
+      "cidade": "Jandira",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "R$ 1.621,00 a R$ 6.812,14",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico em Tecnologia da Informação",
+          "vagas_texto": "2 vagas",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "prazo_desconhecido",
+        "completude": "desconhecida"
+      }
+    },
+    {
       "id": "pci:noticia:prefeitura-de-leme-sp-abre-concurso-publico-com-salarios-de-ate-13359",
       "titulo": "Prefeitura de Leme",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-leme-sp-abre-concurso-publico-com-salarios-de-ate-13359",
@@ -217,43 +254,6 @@
             "status": "aberto"
           }
         ]
-      }
-    },
-    {
-      "id": "pci:noticia:prefeitura-de-paulo-de-faria-sp-abre-concurso-publico-com-salarios-de-ate-8632",
-      "titulo": "Prefeitura de Paulo de Faria",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-paulo-de-faria-sp-abre-concurso-publico-com-salarios-de-ate-8632",
-      "imagem": "https://cdn.pci.app.br/img/i/b911126de92f3645a29a7a11a43b9c71.png",
-      "formacoes_compativeis": [
-        "Técnico em Informática"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Técnico em Informática",
-          "nivel": "tecnico",
-          "evidencia": " escolar (cr) motorista (2 vagas + cr) nutricionista (1 vaga + cr) operador de maquinas de motoniveladora (1 vaga + cr) operador de maquinas pesadas (1 vaga + cr) orientador de esportes (1 vaga + cr) pedreiro (2 vagas + cr) procurador (cr) psicologo (1 vaga + cr) tecnico em enfermagem (1 vaga + cr) tecnico em informatica (cr) terapeuta ocupacional (2 vagas + cr) tesoureiro (1 vaga + cr) trabalhador bracal (2 vagas + cr) vigilante (1 vaga + cr) a jornada varia de 20 a 44 horas semanais. os vencimentos vao de r$ 1.657,09 a r$ 8.632,29. as inscricoes serao feitas pelo site portal.imperioconcursos.com.br , das 8h do di"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "SP",
-      "cidade": "Paulo de Faria",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "",
-      "inscricoes_texto": "",
-      "remuneracao_faixa_texto": "R$ 1.657,09 a R$ 8.632,29",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Psicólogo (1 vaga + CR) Técnico em Enfermagem (1 vaga + CR) Técnico em Informática",
-          "vagas_texto": "Cadastro de Reserva",
-          "formacao": "Técnico em Informática",
-          "confianca": "alta"
-        }
-      ],
-      "janela_inscricoes": {
-        "estado": "prazo_desconhecido",
-        "completude": "desconhecida"
       }
     },
     {
@@ -704,6 +704,67 @@
       }
     },
     {
+      "id": "pci:noticia:prefeitura-de-anchieta-es-abre-concurso-publico-com-salarios-de-ate-7362",
+      "titulo": "Prefeitura de Anchieta",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-anchieta-es-abre-concurso-publico-com-salarios-de-ate-7362",
+      "imagem": "https://cdn.pci.app.br/img/i/de1c9cd7c6ba2f60643ee963e104e0a0.png",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "blico no 002/2026 com o objetivo de preencher vagas imediatas e formar cadastro de reserva para profissionais de nivel medio com formacao tecnica ou de nivel superior. segundo o edital, as oportunidades sao para os seguintes cargos: nivel medio e tecnico fiscal do meio ambiente (3 vagas) tecnico de tecnologia da informacao (1 vaga) tecnico em agrimensura (1 vaga) tecnico em agropecuaria (1 vaga) tecnico em seguranca do trabalho (1 vaga) nivel superior analista ambiental (3 vagas) analista em tecnologia da informacao (1 vaga) assistente social (6 vagas) auditor de controle interno (1 vaga) bibliotecario (1 vaga) biolo"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "ES",
+      "cidade": "Anchieta",
+      "inscricoes_inicio_texto": "18 de novembro de 2026",
+      "inscricoes_fim_texto": "14 de dezembro de 2026",
+      "inscricoes_texto": "18 de novembro de 2026 a 14 de dezembro de 2026",
+      "remuneracao_faixa_texto": "R$ 4.083,53 a R$ 7.362,50",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico de Tecnologia da Informação",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        },
+        {
+          "cargo": "Analista em Tecnologia da Informação",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "futuro",
+        "completude": "completa",
+        "inicio": "2026-11-18",
+        "fim": "2026-12-14",
+        "texto_original": "18 de novembro de 2026 a 14 de dezembro de 2026"
+      },
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-11-18",
+          "fim": "2026-12-14"
+        },
+        "participacao": [
+          {
+            "tipo": "candidatura",
+            "inicio": "2026-11-18",
+            "fim": "2026-12-14",
+            "status": "futuro"
+          }
+        ]
+      }
+    },
+    {
       "id": "pci:noticia:prefeitura-de-ijui-rs-abre-concurso-publico-com-salarios-de-ate-21312",
       "titulo": "Prefeitura de Ijuí",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-ijui-rs-abre-concurso-publico-com-salarios-de-ate-21312",
@@ -906,9 +967,9 @@
       }
     },
     {
-      "id": "pci:noticia:camara-de-sao-francisco-do-sul-sc-abre-concurso-publico-com-salarios-de-ate-10924",
+      "id": "pci:noticia:camara-de-sao-francisco-do-sul-sc-retifica-edital-de-concurso-publico",
       "titulo": "Câmara de São Francisco do Sul",
-      "url": "https://www.pciconcursos.com.br/noticias/camara-de-sao-francisco-do-sul-sc-abre-concurso-publico-com-salarios-de-ate-10924",
+      "url": "https://www.pciconcursos.com.br/noticias/camara-de-sao-francisco-do-sul-sc-retifica-edital-de-concurso-publico",
       "imagem": "https://cdn.pci.app.br/img/i/dfcf1f0904806be7b35e2852c91a34f2.png",
       "formacoes_compativeis": [
         "Sistemas de Informação / Computação"
@@ -917,7 +978,7 @@
         {
           "nome": "Sistemas de Informação / Computação",
           "nivel": "superior",
-          "evidencia": " edital, as oportunidades sao para os cargos de: nivel fundamental motorista (2 vagas) nivel medio assistente legislativo (2 vagas) assistente administrativo (4 vagas) assistente de gestao de pessoal (2 vagas) nivel superior analista administrativo (1 vaga) analista legislativo (1 vaga) analista de tecnologia da informacao (1 vaga) advogado (1 vaga) contador (1 vaga) controlador (1 vaga) jornalista (1 vaga) a jornada e de 30 horas semanais para todos os cargos. os vencimentos variam de r$ 3.763,50 a r$ 10.924,72. as inscricoes poderao ser feitas das 8h de 6 de novembro de 2026 as 23h59 de 7 de dezembro de 2026, pelo "
+          "evidencia": " edital, as oportunidades sao para os cargos de: nivel fundamental motorista (2 vagas) nivel medio assistente legislativo (2 vagas) assistente administrativo (4 vagas) assistente de gestao de pessoal (2 vagas) nivel superior analista administrativo (1 vaga) analista legislativo (1 vaga) analista de tecnologia da informacao (1 vaga) advogado (1 vaga) contador (1 vaga) controlador (1 vaga) jornalista (1 vaga) a jornada e de 30 horas semanais para todos os cargos. os vencimentos variam de r$ 4.912,43 a r$ 10.924,72. as inscricoes poderao ser feitas das 8h de 6 de novembro de 2026 as 23h59 de 7 de dezembro de 2026, pelo "
         }
       ],
       "fonte": "PCI Concursos",
@@ -927,7 +988,7 @@
       "inscricoes_inicio_texto": "",
       "inscricoes_fim_texto": "",
       "inscricoes_texto": "",
-      "remuneracao_faixa_texto": "R$ 3.763,50 a R$ 10.924,72",
+      "remuneracao_faixa_texto": "R$ 4.912,43 a R$ 10.924,72",
       "remuneracao_fonte": "noticia",
       "cargos_compativeis": [
         {

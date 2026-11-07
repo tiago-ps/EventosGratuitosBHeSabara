@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Março de 2026 a Junho de 2027",
-  "atualizado_em": "2026-11-06T03:22:24-03:00",
+  "atualizado_em": "2026-11-06T23:20:10-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -6537,6 +6537,47 @@
       "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
+      "id": "manual-novo-evento-2026-11-07",
+      "titulo": "Manhã Cultural",
+      "data": "2026-11-07",
+      "data_fim": "2026-11-07",
+      "horario": "08h às 12h",
+      "local": "Academia da Cidade",
+      "cidade": "Belo Horizonte",
+      "categoria": "Festival",
+      "gratuito": true,
+      "inscricao": "",
+      "criterio_exibicao": "realizacao",
+      "status_inscricao": "",
+      "exibicao_ativa": true,
+      "descricao": "Arte, Cultura e Bem-Estar para Todos! Coral, Poesia, Strong, Tai Chi Chuan e Música com Flora e os Basófilos.",
+      "imagem": "imagens/eventos-manuais/novo-evento.webp",
+      "link": "https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/promocao-da-saude/academia-da-cidade",
+      "pagina": "https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/promocao-da-saude/academia-da-cidade",
+      "link_inscricao": "",
+      "monitorar_formulario_google": false,
+      "url_formulario_google": "",
+      "acao_formulario_fechado": "marcar_encerrada",
+      "fonte": "Cadastro manual",
+      "instituicao_id": "portal-bh",
+      "classificacao_indicativa": "",
+      "local_id": "",
+      "endereco": "Rua Anis, 147, Jardim Belmonte, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/TxWX2erKApg1orKX7",
+      "espaco_interno": "",
+      "temas": [],
+      "inscricao_inicio": "",
+      "inscricao_fim": "",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-07",
+          "observacao": "08h às 12h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
+    },
+    {
       "id": "aml-escuta-aqui-academia-mineira-de-letras-lanca-projeto-de-leitura-em-voz-alta-com-homenagem-as-escritoras-da-instituicao-2026-11-07",
       "titulo": "Escuta aqui: Academia Mineira de Letras lança projeto de leitura em voz alta com homenagem às escritoras da instituição",
       "data": "2026-11-07",
@@ -10311,5 +10352,5 @@
   ],
   "modo_teste_experimental": true,
   "eventos_somente_teste": 57,
-  "atualizado_em_teste": "2026-11-06T03:22:53-03:00"
+  "atualizado_em_teste": "2026-11-06T23:20:51-03:00"
 }
