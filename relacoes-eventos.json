@@ -1491,28 +1491,6 @@
       }
     },
     {
-      "evento_id": "manual-concertos-peter-lund-grupo-geo-2026-11-08-2026-11-08",
-      "tipo": "acontece_em",
-      "destino": {
-        "tipo": "espaco_interno",
-        "id": "auditorio-do-museu-puc-minas",
-        "nome": "Auditório do Museu PUC Minas"
-      },
-      "equipamento": {
-        "id": "museu-puc-minas",
-        "nome": "Museu de Ciências Naturais PUC Minas"
-      }
-    },
-    {
-      "evento_id": "manual-concertos-peter-lund-grupo-geo-2026-11-08-2026-11-08",
-      "tipo": "organizado_por",
-      "destino": {
-        "tipo": "instituicao",
-        "id": "puc-minas",
-        "nome": "Pontifícia Universidade Católica de Minas Gerais"
-      }
-    },
-    {
       "evento_id": "manual-concertos-peter-lund-orquestra-sonoro-despertar-2026-11-29-2026-11-29",
       "tipo": "acontece_em",
       "destino": {
@@ -1581,24 +1559,6 @@
     },
     {
       "evento_id": "manual-ela-voa-palavra-elaboracao-de-projetos-culturais-em-literatura-e-leitura-d3a8ca75d9-2026-09-15",
-      "tipo": "organizado_por",
-      "destino": {
-        "tipo": "instituicao",
-        "id": "fundacao-municipal-cultura-bh",
-        "nome": "Fundação Municipal de Cultura de Belo Horizonte"
-      }
-    },
-    {
-      "evento_id": "manual-fiq-bh-2026-2026-11-04-2026-11-04",
-      "tipo": "acontece_em",
-      "destino": {
-        "tipo": "equipamento_cultural",
-        "id": "minascentro",
-        "nome": "Minascentro"
-      }
-    },
-    {
-      "evento_id": "manual-fiq-bh-2026-2026-11-04-2026-11-04",
       "tipo": "organizado_por",
       "destino": {
         "tipo": "instituicao",

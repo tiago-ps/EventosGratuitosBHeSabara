@@ -2,8 +2,8 @@
   "schema": 10,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-11-08T17:54:13.021927+00:00",
-  "total": 23,
+  "coletado_em_utc": "2026-11-09T21:42:52.152192+00:00",
+  "total": 25,
   "concursos": [
     {
       "id": "pci:noticia:trf3-sp-ms-retifica-concurso-publico-para-analistas-e-tecnicos-judiciarios",
@@ -52,6 +52,61 @@
       "janela_inscricoes": {
         "estado": "prazo_desconhecido",
         "completude": "desconhecida"
+      }
+    },
+    {
+      "id": "pci:noticia:cis-itu-sp-abre-concurso-publico-com-salarios-de-ate-7553",
+      "titulo": "CIS - Companhia Ituana de Saneamento",
+      "url": "https://www.pciconcursos.com.br/noticias/cis-itu-sp-abre-concurso-publico-com-salarios-de-ate-7553",
+      "imagem": "https://cdn.pci.app.br/img/i/2a616a02355fc8c900b76563adf8f554.png",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": "a companhia ituana de saneamento (cis) , no estado de sao paulo, abriu um concurso publico para preencher vagas em funcoes de nivel fundamental, medio, tecnico e superior. segundo o edital, as oportunidades sao para os cargos de: ajudante de servicos gerais (2 vagas) agente administrativo (2 vagas) tecnico em informatica (1 vaga) tecnico em operacao de tratamento (21 vagas) tecnico em seguranca do trabalho (1 vaga) controlador interno (1 vaga) a jornada e de 40 horas semanais, com remuneracao de r$ 1.954,45 a r$ 7.553,69. os beneficios incluem vale-alimentacao, vale-transporte, licenca-premio por assiduidade e prog"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "SP",
+      "cidade": "",
+      "inscricoes_inicio_texto": "7 de novembro de 2026",
+      "inscricoes_fim_texto": "7 de dezembro de 2026",
+      "inscricoes_texto": "7 de novembro de 2026 a 7 de dezembro de 2026",
+      "remuneracao_faixa_texto": "R$ 7.553,69",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico em Informática",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "aberto",
+        "completude": "completa",
+        "inicio": "2026-11-07",
+        "fim": "2026-12-07",
+        "texto_original": "7 de novembro de 2026 a 7 de dezembro de 2026"
+      },
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-11-07",
+          "fim": "2026-12-07"
+        },
+        "participacao": [
+          {
+            "tipo": "candidatura",
+            "inicio": "2026-11-07",
+            "fim": "2026-12-07",
+            "status": "aberto"
+          }
+        ]
       }
     },
     {
@@ -760,6 +815,61 @@
             "inicio": "2026-11-18",
             "fim": "2026-12-14",
             "status": "futuro"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pci:noticia:fundacao-escola-tecnica-liberato-salzano-vieira-da-cunha-rs-abre-concurso-publico-para-diversos-cargos",
+      "titulo": "Fundação Escola Técnica Liberato Salzano Vieira da Cunha",
+      "url": "https://www.pciconcursos.com.br/noticias/fundacao-escola-tecnica-liberato-salzano-vieira-da-cunha-rs-abre-concurso-publico-para-diversos-cargos",
+      "imagem": "https://cdn.pci.app.br/img/i/608ca4c08d9dc9acfcab38cd71880faf.png",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "ato salzano vieira da cunha , em novo hamburgo, realiza um concurso publico para preencher vagas em empregos de nivel medio e superior. segundo o edital, as oportunidades sao para os cargos de: agente administrativo (8 vagas) orientador educacional (5 vagas) professor de artes (1 vaga) professor de ciencia da computacao (1 vaga) professor de design de interiores (1 vaga) professor de educacao fisica (1 vaga) professor de eletronica (1 vaga) professor de eletrotecnica (2 vagas) professor de filosofia (1 vaga) professor de fisica (1 vaga) professor de geografia (1 vaga) professor de gestao e empreendedorismo (1 vaga"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "RS",
+      "cidade": "",
+      "inscricoes_inicio_texto": "9 de novembro de 2026",
+      "inscricoes_fim_texto": "8 de dezembro de 2026",
+      "inscricoes_texto": "9 de novembro de 2026 a 8 de dezembro de 2026",
+      "remuneracao_faixa_texto": "R$ 4.999,82 a R$ 10.370,94",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Professor de Ciência da Computação",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "aberto",
+        "completude": "completa",
+        "inicio": "2026-11-09",
+        "fim": "2026-12-08",
+        "texto_original": "9 de novembro de 2026 a 8 de dezembro de 2026"
+      },
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-11-09",
+          "fim": "2026-12-08"
+        },
+        "participacao": [
+          {
+            "tipo": "candidatura",
+            "inicio": "2026-11-09",
+            "fim": "2026-12-08",
+            "status": "aberto"
           }
         ]
       }
