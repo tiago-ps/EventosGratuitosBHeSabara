@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Março de 2026 a Junho de 2027",
-  "atualizado_em": "2026-11-11T13:47:04-03:00",
+  "atualizado_em": "2026-11-11T16:13:13-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -5635,7 +5635,7 @@
       "fonte": "Fundação Clóvis Salgado",
       "instituicao_id": "fcs",
       "fonte_id": 37771,
-      "atualizado_na_fonte": "2026-10-03T13:15:50",
+      "atualizado_na_fonte": "2026-11-05T21:23:33",
       "temporalidade": {
         "classe": "periodo",
         "realizacao": {
@@ -5795,45 +5795,31 @@
       "origem_experimental": "centro_cultural_ufmg"
     },
     {
-      "id": "portal-bh-05092d3bd6b0-2026-11-06-1900",
-      "titulo": "Exposição: ‘Do que não é meu, nem só para mim’",
-      "data": "2026-11-06",
-      "data_fim": "2026-12-06",
-      "horario": "19h às 17h",
-      "local": "Centro Cultural UFMG - Grande Galeria do Centro Cultural UFMG",
+      "id": "fcs-wp-38001",
+      "titulo": "Programação Educativa de Novembro",
+      "data": "2026-11-07",
+      "data_fim": "2026-11-28",
+      "horario": "",
+      "local": "Vários espaços da Fundação Clóvis Salgado",
       "cidade": "Belo Horizonte",
-      "categoria": "Exposição",
+      "categoria": "Programação",
       "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "O Centro Cultural UFMG inaugura no dia 6 de novembro de 2026, às 19h, a exposição coletiva \"Do que não é meu, nem só para mim\", reunindo os trabalhos de conclusão de curso de mais de cinquenta formandos dos cursos de Bacharelado e Licenciatura em Artes Visuais da Escola de Belas Artes da UFMG. Com curadoria da professora Fernanda Goulart,",
-      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-10/casa-da-terceira-rua-heloisa-brabo.jpg",
-      "link": "https://portalbelohorizonte.com.br/2026/eventos/exposicao/artes-plasticas/exposicao-do-que-nao-e-meu-nem-so-para-mim",
-      "fonte": "Portal Belo Horizonte",
-      "fonte_id": "05092d3bd6b0",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "endereco": "Avenida Santos Dumont, 174 - Centro",
-      "tags_fonte": [
-        "Acessibilidade",
-        "Acessível para cadeirantes",
-        "Artes Plásticas",
-        "Cultural",
-        "Experiências",
-        "Exposição",
-        "Gratuito",
-        "Lançamentos"
-      ],
+      "inscricao": "Consulte a página oficial; algumas atividades exigem inscrição",
+      "descricao": "Programação gratuita com atividades educativas em diferentes datas e espaços da Fundação Clóvis Salgado. Consulte a página oficial para escolher a atividade e conferir horário, público, vagas e necessidade de inscrição.",
+      "imagem": "https://fcs.mg.gov.br/wp-content/uploads/2026/11/educativo-card-1024x1024.png",
+      "link": "https://fcs.mg.gov.br/evento/programacao-educativa-de-novembro/",
+      "fonte": "Fundação Clóvis Salgado",
+      "instituicao_id": "fcs",
+      "fonte_id": 38001,
+      "atualizado_na_fonte": "2026-11-06T20:45:22",
       "temporalidade": {
         "classe": "periodo",
         "realizacao": {
-          "inicio": "2026-11-06",
-          "fim": "2026-12-06",
-          "observacao": "19h às 17h"
+          "inicio": "2026-11-07",
+          "fim": "2026-11-28"
         }
       },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "centro-cultural-ufmg",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+UFMG%2C+Avenida+Santos+Dumont%2C+174+-+Centro%2C+Belo+Horizonte",
-      "espaco_interno": "Grande Galeria do Centro Cultural UFMG"
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
       "id": "minas-tenis-exposicao-sempre-uma-nova-infancia-2026-11-09",
@@ -5859,6 +5845,65 @@
       "somente_teste": true,
       "status_validacao": "experimental",
       "origem_experimental": "minas_tenis_cultura"
+    },
+    {
+      "id": "fcs-wp-37928",
+      "titulo": "Retrospectiva Rosa Von Praunheim",
+      "data": "2026-11-11",
+      "data_fim": "2026-11-15",
+      "horario": "",
+      "local": "Cine Humberto Mauro",
+      "cidade": "Belo Horizonte",
+      "categoria": "Cinema",
+      "gratuito": true,
+      "inscricao": "Ingresso gratuito; consulte a página oficial",
+      "descricao": "Em novembro, o Cine Humberto Mauro apresenta, pela primeira vez em Belo Horizonte, uma retrospectiva do diretor de cinema, autor e ativista alemão Rosa von Praunheim . Considerado um pioneiro do movimento LGBTQIAPN+ na Alemanha Ocidental e uma das vozes marcantes do cinema queer ,",
+      "imagem": "https://fcs.mg.gov.br/wp-content/uploads/2026/10/rosa-card-1024x1024.png",
+      "link": "https://fcs.mg.gov.br/evento/retrospectiva-rosa-von-praunheim/",
+      "fonte": "Fundação Clóvis Salgado",
+      "instituicao_id": "fcs",
+      "fonte_id": 37928,
+      "atualizado_na_fonte": "2026-11-10T14:09:33",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-11-11",
+          "fim": "2026-11-15"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "palacio-das-artes",
+      "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
+      "espaco_interno": "Cine Humberto Mauro"
+    },
+    {
+      "id": "ccult-ufmg-espetaculo-ficar-com-o-problema-ocupa-ruas-do-baixo-centro-de-bh-praca-da-estacao-e-centro-cultural-ufmg-em-experiencia-cenica-itinerante-2026-11-11",
+      "titulo": "Espetáculo ‘Ficar com o Problema’ ocupa ruas do Baixo Centro de BH, Praça da Estação e Centro Cultural UFMG em experiência cênica itinerante",
+      "data": "2026-11-11",
+      "data_fim": "",
+      "horario": "17h30",
+      "local": "Auditório do Centro Cultural UFMG",
+      "local_id": "ccult-ufmg-auditorio",
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida Santos Dumont, 174, Centro, Belo Horizonte - MG",
+      "categoria": "Teatro",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita conforme programação oficial do Centro Cultural UFMG; consulte a página para inscrição, lotação ou orientações de acesso.",
+      "descricao": "Entre os dias 16 e 19 e 23 e 26 de novembro de 2026, às 17h30, o Centro Cultural UFMG recebe o espetáculo Ficar com o problema , do Coletivo Polvoado , formado por estudantes da Graduação em Teatro da Escola de Belas Artes da UFMG, sob a direção de Altemar Di Monteiro . A peça propõe uma ocupação poética e política das ruas do centro de Belo Horizonte. Livremente inspirada nas obras de Donna Haraway e Vinciane Despret, a dramaturgia articula o pensamento ecológico multiespécie a um repertório negro, indígena e anticolonial. A entrada é gratuita e a classificação indicativa é de 14 anos.",
+      "imagem": "https://www.ufmg.br/centrocultural/wp-content/uploads/2026/11/site-scaled.jpg",
+      "link": "https://www.ufmg.br/centrocultural/espetaculo-ficar-com-o-problema-ocupa-ruas-do-baixo-centro-de-bh-praca-da-estacao-e-centro-cultural-ufmg-em-experiencia-cenica-itinerante/",
+      "pagina": "https://www.ufmg.br/centrocultural/espetaculo-ficar-com-o-problema-ocupa-ruas-do-baixo-centro-de-bh-praca-da-estacao-e-centro-cultural-ufmg-em-experiencia-cenica-itinerante/",
+      "fonte": "Centro Cultural UFMG — programação oficial",
+      "instituicao_id": "centro-cultural-ufmg",
+      "criterio_exibicao": "realizacao",
+      "motivo_publicacao": "gratuidade_explicita",
+      "classificacao_indicativa": "14 anos",
+      "evidencia_classificacao_indicativa": "texto_explicito_padrao_1",
+      "evidencia_classificacao_indicativa_trecho": "portaria do Centro Cultural UFMG. Classificação indicativa: 14 anos O Centro Cultural UFMG fica na Av.",
+      "somente_teste": true,
+      "status_validacao": "experimental",
+      "origem_experimental": "centro_cultural_ufmg"
     },
     {
       "id": "ccbb-bh-viva-mauricio-mauricio-de-sousa-a-experiencia-imersiva",
@@ -5942,6 +5987,34 @@
       "origem_experimental": "casa_fiat"
     },
     {
+      "id": "ufmg-ec-leitura-de-poemas-no-planetario-tres-vezes-lazaro-anos-luz-com-natasha-felix",
+      "titulo": "Leitura de Poemas no Planetário “Três vezes Lázaro: Anos-Luz”, com Natasha Felix",
+      "data": "2026-11-12",
+      "data_fim": "",
+      "horario": "18h",
+      "local": "Espaço do Conhecimento UFMG",
+      "cidade": "Belo Horizonte",
+      "categoria": "Atividade educativa",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "A escritora Natasha Felix apresenta uma leitura performática de seu livro Três Vezes Lázaro (Círculo de Poemas), organizada em três capítulos que se associam a uma distância progressiva da Terra. Enquanto a autora conduz a narrativa, o Planetário recebe projeções de objetos astronômicos,",
+      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/11/Planetario-Divulgacao-Espaco-do-Conhecimento-UFMG-scaled.jpg",
+      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/leitura-de-poemas-no-planetario-tres-vezes-lazaro-anos-luz-com-natasha-felix/",
+      "fonte": "Espaço do Conhecimento UFMG",
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-12",
+          "observacao": "18h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
+    },
+    {
       "id": "mm-gerdau-bate-papo-online-minerais-do-carste-de-formiga-mg-2026-11-12",
       "titulo": "BATE-PAPO ONLINE | MINERAIS DO CARSTE DE FORMIGA/MG",
       "data": "2026-11-12",
@@ -5965,6 +6038,79 @@
       "somente_teste": true,
       "status_validacao": "experimental",
       "origem_experimental": "mm_gerdau"
+    },
+    {
+      "id": "portal-bh-06a9b3dee7d4-2026-11-13-1000",
+      "titulo": "Exposição - Ócio Fabril do artista Talles Lopes",
+      "data": "2026-11-13",
+      "data_fim": "2027-03-31",
+      "horario": "10h às 18h",
+      "local": "Casa do Baile",
+      "cidade": "Belo Horizonte",
+      "categoria": "Exposição",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "Uma estrutura inspirada em um silo de soja encontra as curvas de Oscar Niemeyer em “Ócio Fabril”, exposição do artista Talles Lopes , com curadoria de Bruno Pinheiro. Criada especialmente para a Casa do Baile, a intervenção aproxima a arquitetura moderna da paisagem agrícola brasileira e propõe uma reflexão sobre as transformações do território,",
+      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-11/fotos-para-site-formato-440x225-1.png",
+      "link": "https://portalbelohorizonte.com.br/museuspampulha/2026/eventos/exposicao/artes-visuais/exposicao-ocio-fabril-do-artista-talles-lopes",
+      "fonte": "Portal Belo Horizonte",
+      "fonte_id": "06a9b3dee7d4",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "endereco": "Av. Otacílio Negrão de Lima, 751 - Pampulha",
+      "tags_fonte": [
+        "Gratuito",
+        "Cultura PBH",
+        "Pampulha",
+        "Exposição",
+        "Cultural",
+        "Artes Visuais"
+      ],
+      "classificacao_indicativa": "Livre",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-11-13",
+          "fim": "2027-03-31",
+          "observacao": "10h às 18h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+do+Baile%2C+Av.+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+751+-+Pampulha%2C+Belo+Horizonte"
+    },
+    {
+      "id": "portal-bh-dc04f06b451d-2026-11-13-1000",
+      "titulo": "Lançamentos do Educativo | 84 anos da Casa do Baile",
+      "data": "2026-11-13",
+      "data_fim": "2026-12-31",
+      "horario": "10h às 18h",
+      "local": "Casa do Baile",
+      "cidade": "Belo Horizonte",
+      "categoria": "Cinema",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "No mês em que completa 84 anos, a Casa do Baile celebra sua trajetória com o lançamento de três conteúdos especiais produzidos pelo Educativo do Museu. O mini documentário “O Baile de 1951” recupera a história do Grande Baile das Debutantes Mineiras, realizado no espaço em 27 de outubro daquele ano, com o depoimento de Maria José Capanema, uma das 30 debutantes da ocasião.",
+      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-11/fotos-para-site-formato-440x225.png",
+      "link": "https://portalbelohorizonte.com.br/museuspampulha/2026/eventos/lancamento/artes-visuais/lancamentos-do-educativo-84-anos-da-casa-do-baile",
+      "fonte": "Portal Belo Horizonte",
+      "fonte_id": "dc04f06b451d",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "endereco": "",
+      "tags_fonte": [
+        "Gratuito",
+        "Audiovisual",
+        "Pampulha",
+        "Cultural",
+        "Artes Visuais"
+      ],
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-11-13",
+          "fim": "2026-12-31",
+          "observacao": "10h às 18h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
       "id": "fcs-wp-37927",
@@ -6054,32 +6200,44 @@
       "origem_experimental": "mm_gerdau"
     },
     {
-      "id": "portal-bh-84a6dfaf8032-2026-11-14-1000",
-      "titulo": "Oficina: Inventário de Memórias — Uma manhã no Museu",
+      "id": "portal-bh-61c064c62347-2026-11-14-1000",
+      "titulo": "Oficina “Bonecos Articulados: Cartas de Baralho”, no Jardim do MAP",
       "data": "2026-11-14",
       "data_fim": "",
-      "horario": "10h às 13h",
-      "local": "Museu da Imagem e do Som – MIS BH",
+      "horario": "10h às 12h",
+      "local": "Museu de Arte da Pampulha - MAP",
       "cidade": "Belo Horizonte",
       "categoria": "Oficina",
       "gratuito": true,
       "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "DIA 14/11 SÁB. 10h às 13h indicado para maiores de 10 anos Inscrições via formulário: LINK NA BIO do instagram do Museu",
-      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-10/03-inventario.png",
-      "link": "https://portalbelohorizonte.com.br/museuscentro/2026/eventos/oficina/cultural/oficina-inventario-de-memorias-uma-manha-no-museu",
+      "descricao": "Cartas de baralho, seus símbolos, imagens e narrativas tornam-se ponto de partida para a oficina “Bonecos Articulados: Cartas de Baralho”, no Jardim do MAP . Inspirada na produção do artista FROIID, a atividade convida o público a criar personagens articulados, combinando artes visuais, construção tridimensional e experimentação cênica. Entre jogos, formas e movimentos,",
+      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-11/fotos-para-site-formato-440x225-2.png",
+      "link": "https://portalbelohorizonte.com.br/museuspampulha/2026/eventos/oficina/artes-plasticas/oficina-bonecos-articulados-cartas-de-baralho-no-jardim-do-map",
       "fonte": "Portal Belo Horizonte",
-      "fonte_id": "84a6dfaf8032",
+      "fonte_id": "61c064c62347",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "endereco": "",
-      "tags_fonte": [],
+      "endereco": "Av. Otacílio Negrão de Lima, 16.585 - Pampulha",
+      "tags_fonte": [
+        "Ar livre",
+        "Artes Visuais",
+        "Artes Plásticas",
+        "Cultural",
+        "Curso e Oficina",
+        "Gratuito",
+        "Pampulha",
+        "Oficinas"
+      ],
+      "classificacao_indicativa": "Livre",
       "temporalidade": {
         "classe": "pontual",
         "realizacao": {
           "inicio": "2026-11-14",
-          "observacao": "10h às 13h"
+          "observacao": "10h às 12h"
         }
       },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "biblioteca-rmbh-belo-horizonte-biblioteca-do-museu-de-arte-da-pampulha-atendimento-temporario",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Biblioteca+do+Museu+de+Arte+da+Pampulha+%28atendimento+tempor%C3%A1rio%29%2C+Av.+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+16.585+%E2%80%93+Museu+Casa+Kubitschek+%E2%80%93+Jardim+Atl%C3%A2ntico%2C+Belo+Horizonte%2C+Minas+Gerais%2C+Brasil"
     },
     {
       "id": "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-14-1030",
@@ -6105,6 +6263,44 @@
       "somente_teste": true,
       "status_validacao": "experimental",
       "origem_experimental": "casa_fiat"
+    },
+    {
+      "id": "portal-bh-c45a3d957af2-2026-11-14-1030",
+      "titulo": "Oficina “Observando raízes: oficina de carimbaria a partir de plantas africanas”, do projeto “MCK Feito à Mão”.",
+      "data": "2026-11-14",
+      "data_fim": "",
+      "horario": "10h30 às 12h30",
+      "local": "Casa Kubitschek",
+      "cidade": "Belo Horizonte",
+      "categoria": "Oficina",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "As plantas de origem africana presentes no Jardim do Museu Casa Kubitschek inspiram a oficina “Observando raízes: oficina de carimbaria a partir de plantas africanas”, do projeto “MCK Feito à Mão” . Ministrada por Fernando Costa, a atividade aproxima natureza, ancestralidade e identidade por meio da técnica de carimbaria. As criações serão reunidas em um varal coletivo e,",
+      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-11/fotos-para-site-formato-440x225-3.png",
+      "link": "https://portalbelohorizonte.com.br/museuspampulha/2026/eventos/oficina/artes-plasticas/oficina-observando-raizes-oficina-de-carimbaria-partir-de-plantas-africanas-do-projeto-mck-feito",
+      "fonte": "Portal Belo Horizonte",
+      "fonte_id": "c45a3d957af2",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "endereco": "Av. Otacílio Negrão de Lima, 4.188 - Pampulha",
+      "tags_fonte": [
+        "Ar livre",
+        "Gratuito",
+        "Pampulha",
+        "Curso e Oficina",
+        "Cultural",
+        "Oficinas",
+        "Artes Plásticas"
+      ],
+      "classificacao_indicativa": "Livre",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-14",
+          "observacao": "10h30 às 12h30"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Kubitschek%2C+Av.+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+4.188+-+Pampulha%2C+Belo+Horizonte"
     },
     {
       "id": "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-14-15",
@@ -6176,20 +6372,46 @@
       "fonte": "Portal Belo Horizonte",
       "fonte_id": "e94b4ea81491",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "endereco": "Rua da Bahia, 1149, Centro, Belo Horizonte - MG, 30160-011",
+      "endereco": "",
       "tags_fonte": [],
       "classificacao_indicativa": "Livre",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-11-14",
-          "observacao": "15h às 16h"
+      "evidencia_classificacao_indicativa": "portal_bh:texto_explicito_padrao_1",
+      "evidencia_classificacao_indicativa_trecho": "Dia 14/11 SÁB. 15h ÀS 16H Classificação: livre NÃO É NECESSÁRIO FAZER INSCRIÇÃO",
+      "evidencia_gratuidade": "campo_entrada:gratuito",
+      "evidencia_data": "sab, 14/11/2026 - 15:00 a sab, 14/11/2026 - 16:00",
+      "evidencia_titulo_origem": "breadcrumb",
+      "evidencia_titulo_pontuacao": 1.0,
+      "evidencia_titulo_candidatos_descartados": [
+        {
+          "titulo": "Visita Mediada à exposição Markito – Cintilações da Noite",
+          "origem": "cabecalho_principal",
+          "pontuacao": 0.9693,
+          "motivo": "menor_semelhanca_com_slug"
+        },
+        {
+          "titulo": "Visita Mediada à exposição Markito – Cintilações da Noite",
+          "origem": "document_title",
+          "pontuacao": 0.9393,
+          "motivo": "menor_semelhanca_com_slug"
+        },
+        {
+          "titulo": "Dia 14/11 SÁB. 15h ÀS 16H",
+          "origem": "descricao",
+          "pontuacao": 0.1313,
+          "motivo": "menor_semelhanca_com_slug"
+        },
+        {
+          "titulo": "Portal Belo Horizonte",
+          "origem": "cabecalho_principal",
+          "motivo": "titulo_generico"
         }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      ],
       "local_id": "museu-da-moda",
-      "mapa": "https://maps.app.goo.gl/NSKCeznUnR3ooTQaA",
-      "espaco_interno": "MUMO"
+      "fonte_descoberta": "Portal Belo Horizonte — Museu da Moda",
+      "somente_teste": true,
+      "status_validacao": "experimental",
+      "origem_experimental": "mumo_portal_bh",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
       "id": "ufmg-ec-conversas-de-terreiro-o-dancehall-com-rudgirl-novembro-negro-ufmg",
@@ -6220,35 +6442,6 @@
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
     },
     {
-      "id": "ufmg-ec-museu-fechado-feriado-proclamacao-da-republica",
-      "titulo": "Museu Fechado – Feriado Proclamação da República",
-      "data": "2026-11-15",
-      "data_fim": "",
-      "horario": "10h",
-      "local": "Espaço do Conhecimento UFMG",
-      "cidade": "Belo Horizonte",
-      "categoria": "Atividade educativa",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "No dia 15 de novembro de 2026, o Espaço do Conhecimento UFMG estará fechado devido ao feriado da Proclamação da República. Seguindo o funcionamento regular do museu (terça a domingo), a s atividades presenciais serão retomadas na terça-feira, 17 de novembro, das 10h às 17h.",
-      "imagem": "imagens/instituicoes/espaco-conhecimento-ufmg.png",
-      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/museu-fechado-feriado-proclamacao-da-republica/",
-      "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-11-15",
-          "observacao": "10h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "espaco-conhecimento-ufmg",
-      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_fallback_origem": "equipamento"
-    },
-    {
       "id": "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-15-1030",
       "titulo": "Ateliê Aberto | Bonecas Abayomi: nós de memórias",
       "data": "2026-11-15",
@@ -6274,6 +6467,35 @@
       "origem_experimental": "casa_fiat"
     },
     {
+      "id": "ufmg-ec-museu-fechado-feriado-proclamacao-da-republica",
+      "titulo": "Museu Fechado – Feriado Proclamação da República",
+      "data": "2026-11-15",
+      "data_fim": "",
+      "horario": "13h",
+      "local": "Espaço do Conhecimento UFMG",
+      "cidade": "Belo Horizonte",
+      "categoria": "Atividade educativa",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "No dia 15 de novembro de 2026, o Espaço do Conhecimento UFMG estará fechado devido ao feriado da Proclamação da República. Seguindo o funcionamento regular do museu (terça a domingo), a s atividades presenciais serão retomadas na terça-feira, 17 de novembro, das 10h às 17h.",
+      "imagem": "imagens/instituicoes/espaco-conhecimento-ufmg.png",
+      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/museu-fechado-feriado-proclamacao-da-republica/",
+      "fonte": "Espaço do Conhecimento UFMG",
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-15",
+          "observacao": "13h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
+      "imagem_fallback_origem": "equipamento"
+    },
+    {
       "id": "casa-fiat-21-festival-de-cinema-italiano-na-casa-fiat-de-cultura-2026-11-15-14",
       "titulo": "21º Festival de Cinema Italiano na Casa Fiat de Cultura",
       "data": "2026-11-15",
@@ -6286,7 +6508,7 @@
       "categoria": "Cultura",
       "gratuito": true,
       "inscricao": "Programação gratuita conforme informação oficial da Casa Fiat de Cultura; consulte a página para inscrição, retirada de senha ou lotação quando aplicável.",
-      "descricao": "21º Festival de Cinema Italiano na Casa Fiat de Cultura 5 a 15/nov/26 O cinema italiano volta à tela da Casa Fiat de Cultura entre os dias 5 e 15 de novembro de 2026, com uma programação que reúne clássicos e produções contemporâneas. Ao longo de dois fins de semana, o espaço cultural exibe filmes de diferentes épocas e estilos, dos grandes nomes do neorrealismo às histórias que retratam a Itália atual. As exibições integram o 21º Festival de Cinema Italiano no Brasil, com sessões de quinta-feira a domingo. Às quintas e sextas-feiras, os filmes serão exibidos às 15h e às 18h; aos sábados, às 11h, 14h e 16h;",
+      "descricao": "21º Festival de Cinema Italiano na Casa Fiat de Cultura 5 a 15/nov/26 CASA FIAT DE CULTURA INTEGRA 21º FESTIVAL DE CINEMA ITALIANO COM SESSÕES GRATUITAS DE CLÁSSICOS E PRODUÇÕES CONTEMPORÂNEAS Programação reúne filmes de Federico Fellini, Roberto Rossellini e outros nomes do cinema italiano, além de produções recentes O cinema italiano volta à tela da Casa Fiat de Cultura entre os dias 5 e 15 de novembro , com uma programação que reúne clássicos e produções contemporâneas . Ao longo de dois fins de semana, o espaço cultural exibe filmes de diferentes épocas e estilos,",
       "imagem": "https://casafiatdecultura.com.br/wp-content/uploads/2026/10/Cena-de-Viaggio-in-Italia_credito-21-Festival-de-Cinema-Italiano-no-Brasil.jpg",
       "link": "https://casafiatdecultura.com.br/evento/festival-de-cinema-italiano/",
       "fonte": "Casa Fiat de Cultura — programação oficial",
@@ -6336,7 +6558,7 @@
       "categoria": "Cultura",
       "gratuito": true,
       "inscricao": "Programação gratuita conforme informação oficial da Casa Fiat de Cultura; consulte a página para inscrição, retirada de senha ou lotação quando aplicável.",
-      "descricao": "21º Festival de Cinema Italiano na Casa Fiat de Cultura 5 a 15/nov/26 O cinema italiano volta à tela da Casa Fiat de Cultura entre os dias 5 e 15 de novembro de 2026, com uma programação que reúne clássicos e produções contemporâneas. Ao longo de dois fins de semana, o espaço cultural exibe filmes de diferentes épocas e estilos, dos grandes nomes do neorrealismo às histórias que retratam a Itália atual. As exibições integram o 21º Festival de Cinema Italiano no Brasil, com sessões de quinta-feira a domingo. Às quintas e sextas-feiras, os filmes serão exibidos às 15h e às 18h; aos sábados, às 11h, 14h e 16h;",
+      "descricao": "21º Festival de Cinema Italiano na Casa Fiat de Cultura 5 a 15/nov/26 CASA FIAT DE CULTURA INTEGRA 21º FESTIVAL DE CINEMA ITALIANO COM SESSÕES GRATUITAS DE CLÁSSICOS E PRODUÇÕES CONTEMPORÂNEAS Programação reúne filmes de Federico Fellini, Roberto Rossellini e outros nomes do cinema italiano, além de produções recentes O cinema italiano volta à tela da Casa Fiat de Cultura entre os dias 5 e 15 de novembro , com uma programação que reúne clássicos e produções contemporâneas . Ao longo de dois fins de semana, o espaço cultural exibe filmes de diferentes épocas e estilos,",
       "imagem": "https://casafiatdecultura.com.br/wp-content/uploads/2026/10/Cena-de-Viaggio-in-Italia_credito-21-Festival-de-Cinema-Italiano-no-Brasil.jpg",
       "link": "https://casafiatdecultura.com.br/evento/festival-de-cinema-italiano/",
       "fonte": "Casa Fiat de Cultura — programação oficial",
@@ -6347,37 +6569,6 @@
       "somente_teste": true,
       "status_validacao": "experimental",
       "origem_experimental": "casa_fiat"
-    },
-    {
-      "id": "fcs-wp-37928",
-      "titulo": "Retrospectiva Rosa Von Praunheim",
-      "data": "2026-11-15",
-      "data_fim": "",
-      "horario": "17h",
-      "local": "Cine Humberto Mauro",
-      "cidade": "Belo Horizonte",
-      "categoria": "Cinema",
-      "gratuito": true,
-      "inscricao": "Ingresso gratuito; consulte a página oficial",
-      "descricao": "O diretor de cinema, autor e ativista Rosa von Praunheim é considerado um pioneiro do movimento homossexual na Alemanha Ocidental e uma das vozes marcantes do cinema queer. Ao longo de uma trajetória que reúne mais de 150 filmes, abordou temas autobiográficos e questões políticas e sociais,",
-      "imagem": "https://fcs.mg.gov.br/wp-content/uploads/2026/10/rosa-card-1024x1024.png",
-      "link": "https://fcs.mg.gov.br/evento/retrospectiva-rosa-von-praunheim/",
-      "fonte": "Fundação Clóvis Salgado",
-      "instituicao_id": "fcs",
-      "fonte_id": 37928,
-      "atualizado_na_fonte": "2026-10-16T21:00:55",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-11-15",
-          "observacao": "17h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "palacio-das-artes",
-      "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
-      "espaco_interno": "Cine Humberto Mauro"
     },
     {
       "id": "casa-fiat-casa-fiat-de-cultura-no-brasil-e-no-mundo-2026-11-17-sem-hora",
@@ -6405,6 +6596,36 @@
       "origem_experimental": "casa_fiat"
     },
     {
+      "id": "cine-santa-tereza-bileto-129765",
+      "titulo": "ENTRELINHAS E LETRAS - Sessão de Abertura",
+      "data": "2026-11-17",
+      "data_fim": "",
+      "horario": "14h",
+      "local": "Cine Santa Tereza",
+      "cidade": "Belo Horizonte",
+      "categoria": "Exposição",
+      "gratuito": true,
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "descricao": "SESSÃO DE ABERTURA Iª Ocupação Artística Entrelinhas e Letras - “Palavras a Olhos Vendo” Cortejo “Vestir e portar a palavra em trânsito - concentração no Coreto da Praça Duque de Caxias, mesa de abertura com convidados, lançamento de publicações literárias e exposição de artes visuais.",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/lio5oit2u7arg7bkml05j03g5klk4ueuqjcuorrcpp3644k3c5rdm3j79qsld36re05rinhb9qgehfapoaic10b6l4tp52qvt0lqtp.webp",
+      "link": "https://bileto.sympla.com.br/event/129765/d/427092/s/2761144",
+      "fonte": "Cine Santa Tereza",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "fonte_id": "129765",
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "classificacao_indicativa": "Livre",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-17",
+          "observacao": "14h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
+    },
+    {
       "id": "aml-academia-mineira-de-letras-celebra-centenario-da-escritora-rachel-jardim-em-encontro-especial-2026-11-17",
       "titulo": "Academia Mineira de Letras celebra centenário da escritora Rachel Jardim em encontro especial",
       "data": "2026-11-17",
@@ -6430,6 +6651,36 @@
       "origem_experimental": "academia_mineira_letras"
     },
     {
+      "id": "cine-santa-tereza-bileto-129766",
+      "titulo": "ENTRELINHAS E LETRAS - PALAVRAS EM MOVIMENTOS: CORPOS EM ENFRENTAMENTOS E ENCONTROS",
+      "data": "2026-11-18",
+      "data_fim": "",
+      "horario": "14h",
+      "local": "Cine Santa Tereza",
+      "cidade": "Belo Horizonte",
+      "categoria": "Cinema",
+      "gratuito": true,
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "descricao": "PALAVRAS EM MOVIMENTOS: CORPOS EM ENFRENTAMENTOS E ENCONTROS Performance \"Abre-caminho” seguida da exibição dos filmes: Um dos lugares de onde jorra a imanência (Dayane Lacerda | Brasil | Documentário Experimental | 2019 | 11 min) O filme busca provocar uma reflexão sobre a redução de danos no cuidado de pessoas que fazem uso prejudicial de álcool e outras drogas. Gravado no CERSAM AD Venda Nova em 2019, as imagens e narrativas propõe uma caminha sensível e poética sobre temas que atravessam o proibicionismo, a RD e o cuidado exercido por artistas e profissionais da saúde no SUS.",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/lio5oit2u7arg7bkml05j03g5klk4ueuqjcuorrcpp3644k3c5rdm3j79qsld36re05rinhb9qgehfapoaic10b6l4tp52qvt0lqtp.webp",
+      "link": "https://bileto.sympla.com.br/event/129766/d/427093/s/2761146",
+      "fonte": "Cine Santa Tereza",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "fonte_id": "129766",
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "classificacao_indicativa": "Livre",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-18",
+          "observacao": "14h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
+    },
+    {
       "id": "minas-tenis-lancamento-de-livro-no-mundo-sem-voce-2026-11-18",
       "titulo": "Lançamento de Livro – No Mundo Sem Você",
       "data": "2026-11-18",
@@ -6453,6 +6704,62 @@
       "somente_teste": true,
       "status_validacao": "experimental",
       "origem_experimental": "minas_tenis_cultura"
+    },
+    {
+      "id": "aml-lacan-na-academia-aml-recebe-debate-sobre-fotografia-natureza-e-crise-ecologica-em-encontro-com-joao-marcos-rosa-2026-11-18",
+      "titulo": "Lacan na Academia: AML recebe debate sobre fotografia, natureza e crise ecológica em encontro com João Marcos Rosa",
+      "data": "2026-11-18",
+      "data_fim": "",
+      "horario": "20h",
+      "local": "Academia Mineira de Letras",
+      "cidade": "Belo Horizonte",
+      "endereco": "Rua da Bahia, 1466, Lourdes, Belo Horizonte - MG",
+      "categoria": "Exposição",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita conforme programação oficial da Academia Mineira de Letras; consulte a página para orientações de acesso ou inscrição.",
+      "descricao": "Lacan na Academia: AML recebe debate sobre fotografia, natureza e crise ecológica em encontro com João Marcos Rosa 18/11/2026 🔊 Ouvir o conteúdo Nova edição do projeto “Lacan na Academia: conversando com a literatura” propõe uma reflexão sobre os limites da ação humana sobre o meio ambiente e os desafios de registrar e preservar a vida, no dia 18 de novembro. Entada gratuita A Academia Mineira de Letras realiza, no dia 18 de novembro, às 20h, mais uma edição do projeto “Lacan na Academia: conversando com a literatura”. Com o tema “Fotografar o vivo, interrogar o mundo”, o encontro terá como convidado o fotógrafo e contador de histórias visuais João Marcos Rosa,",
+      "imagem": "https://academiamineiradeletras.org.br/wp-content/uploads/2026/11/SITE_lacan-na-academia.jpg",
+      "link": "https://academiamineiradeletras.org.br/eventos/lacan-na-academia-aml-recebe-debate-sobre-fotografia-natureza-e-crise-ecologica-em-encontro-com-joao-marcos-rosa/",
+      "pagina": "https://academiamineiradeletras.org.br/eventos/lacan-na-academia-aml-recebe-debate-sobre-fotografia-natureza-e-crise-ecologica-em-encontro-com-joao-marcos-rosa/",
+      "fonte": "Academia Mineira de Letras — programação oficial",
+      "instituicao_id": "academia-mineira-de-letras",
+      "criterio_exibicao": "realizacao",
+      "motivo_publicacao": "gratuidade_explicita",
+      "local_id": "academia-mineira-de-letras",
+      "somente_teste": true,
+      "status_validacao": "experimental",
+      "origem_experimental": "academia_mineira_letras"
+    },
+    {
+      "id": "fcs-wp-37999",
+      "titulo": "Lançamentos de Novembro",
+      "data": "2026-11-18",
+      "data_fim": "",
+      "horario": "20h",
+      "local": "Cine Humberto Mauro",
+      "cidade": "Belo Horizonte",
+      "categoria": "Cinema",
+      "gratuito": true,
+      "inscricao": "Ingresso gratuito; consulte a página oficial",
+      "descricao": "Em novembro, o Cine Humberto Mauro abre espaço em sua programação para um conjunto de lançamentos que passa a ocupar diferentes sessões ao longo do mês. São filmes que chegam à sala trazendo novas perspectivas, propostas estéticas e possibilidades de encontro com o público. Ao acolher esses trabalhos,",
+      "imagem": "https://fcs.mg.gov.br/wp-content/uploads/2026/11/lancamentos-card-1024x1024.png",
+      "link": "https://fcs.mg.gov.br/evento/lancamentos-de-novembro/",
+      "fonte": "Fundação Clóvis Salgado",
+      "instituicao_id": "fcs",
+      "fonte_id": 37999,
+      "atualizado_na_fonte": "2026-11-10T19:23:16",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-18",
+          "observacao": "20h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "palacio-das-artes",
+      "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
+      "espaco_interno": "Cine Humberto Mauro"
     },
     {
       "id": "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-19-1030",
@@ -6555,40 +6862,33 @@
       "origem_experimental": "minas_tenis_cultura"
     },
     {
-      "id": "portal-bh-545653492bfa-2026-11-19-2000",
-      "titulo": "Samba de Preto Velho - Sérgio Pererê",
+      "id": "aml-academia-mineira-de-letras-recebe-palestra-sobre-a-literatura-timorense-em-portugues-e-tetum-com-a-embaixadora-maria-angela-carrascalao-2026-11-19",
+      "titulo": "Academia Mineira de Letras recebe palestra sobre a literatura timorense em português e tétum com a embaixadora Maria Ângela Carrascalão",
       "data": "2026-11-19",
       "data_fim": "",
-      "horario": "20h às 21h",
-      "local": "Espaço Cênico Yoshifumi Yagi/Teatro Raul Belém Machado",
+      "horario": "19h30",
+      "local": "Academia Mineira de Letras",
       "cidade": "Belo Horizonte",
-      "categoria": "Música",
+      "endereco": "Rua da Bahia, 1466, Lourdes, Belo Horizonte - MG",
+      "categoria": "Exposição",
       "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "Em “Samba de Preto Velho”, Sérgio Pererê apresenta composições próprias, algumas escritas há mais de dez anos, mas todas baseadas em ramificações do samba. O repertório seguem as toadas do ijexá, do samba de gafieira e do partido alto, por exemplo, mas carregam também raízes da música afro-brasileira, essência primária de Pererê, como as células rítmicas do candomblé,",
-      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-11/cmc-a7c-0010_foto1_tamas-bodolay.jpg.jpg",
-      "link": "https://portalbelohorizonte.com.br/circuitomunicipaldecultura/2026/eventos/apresentacao-artistica/musica/samba-de-preto-velho-sergio-perere",
-      "fonte": "Portal Belo Horizonte",
-      "fonte_id": "545653492bfa",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "endereco": "Rua Leonil Prata, 53 - Alípio de Melo, Belo Horizonte",
-      "tags_fonte": [
-        "Cultural",
-        "Música"
-      ],
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-11-19",
-          "observacao": "20h às 21h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+C%C3%AAnico+Yoshifumi+Yagi%2FTeatro+Raul+Bel%C3%A9m+Machado%2C+Rua+Leonil+Prata%2C+53+-+Al%C3%ADpio+de+Melo%2C+Belo+Horizonte"
+      "inscricao": "Entrada gratuita conforme programação oficial da Academia Mineira de Letras; consulte a página para orientações de acesso ou inscrição.",
+      "descricao": "Academia Mineira de Letras recebe palestra sobre a literatura timorense em português e tétum com a embaixadora Maria Ângela Carrascalão 19/11/2026 🔊 Ouvir o conteúdo Embaixadora de Timor-Leste no Brasil e professora de Direito, a palestrante apresenta um panorama da produção literária do país, da tradição oral à literatura contemporânea, no dia 19 de novembro. O evento é gratuito e aberto ao público A Academia Mineira de Letras realiza, no dia 19 de novembro, às 19h30, a palestra “A literatura timorense nas línguas portuguesa e tétum”, com a embaixadora de Timor-Leste no Brasil, Maria Ângela Guterres Viegas Carrascalão. O encontro é gratuito e aberto ao público. Ao longo da conversa,",
+      "imagem": "https://academiamineiradeletras.org.br/wp-content/uploads/2026/11/SITE_timor-leste.jpg",
+      "link": "https://academiamineiradeletras.org.br/eventos/academia-mineira-de-letras-recebe-palestra-sobre-a-literatura-timorense-em-portugues-e-tetum-com-a-embaixadora-maria-angela-carrascalao/",
+      "pagina": "https://academiamineiradeletras.org.br/eventos/academia-mineira-de-letras-recebe-palestra-sobre-a-literatura-timorense-em-portugues-e-tetum-com-a-embaixadora-maria-angela-carrascalao/",
+      "fonte": "Academia Mineira de Letras — programação oficial",
+      "instituicao_id": "academia-mineira-de-letras",
+      "criterio_exibicao": "realizacao",
+      "motivo_publicacao": "gratuidade_explicita",
+      "local_id": "academia-mineira-de-letras",
+      "somente_teste": true,
+      "status_validacao": "experimental",
+      "origem_experimental": "academia_mineira_letras"
     },
     {
-      "id": "ufmg-ec-museu-fechado-feriado-dia-da-consciencia-negra",
-      "titulo": "Museu Fechado – Feriado Dia da Consciência Negra",
+      "id": "ufmg-ec-museu-fechado",
+      "titulo": "Museu Fechado",
       "data": "2026-11-20",
       "data_fim": "",
       "horario": "10h",
@@ -6597,9 +6897,9 @@
       "categoria": "Atividade educativa",
       "gratuito": true,
       "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "No dia 20 de novembro de 2026, o Espaço do Conhecimento UFMG estará fechado devido ao feriado do Dia da Consciência Negra. As atividades presenciais serão retomadas no sábado, 21 de novembro, das 10h às 20h.",
+      "descricao": "Nos dias 20 e 22 de novembro de 2026, o Espaço do Conhecimento UFMG estará fechado. No sábado, 21 de novembro, o museu funcionará das 10h às 20h.",
       "imagem": "imagens/instituicoes/espaco-conhecimento-ufmg.png",
-      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/museu-fechado-feriado-dia-da-consciencia-negra/",
+      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/museu-fechado/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg",
       "temporalidade": {
@@ -6614,35 +6914,6 @@
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
       "imagem_fallback_origem": "equipamento"
-    },
-    {
-      "id": "portal-bh-5923afc2640a-2026-11-20-1000",
-      "titulo": "LANÇAMENTO NO YOUTUBE @CANALMISBH DO VÍDEO: Vozes Tradicionais — Laços: Mãe Glória, Pai Geraldo e a Casa Lode Apara",
-      "data": "2026-11-20",
-      "data_fim": "",
-      "horario": "10h às 12h",
-      "local": "Museu da Imagem e do Som – MIS BH",
-      "cidade": "Belo Horizonte",
-      "categoria": "Literatura",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "Dia 20/11 SEX. 10h Classificação: Livre",
-      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-10/05-video.png",
-      "link": "https://portalbelohorizonte.com.br/museuscentro/2026/eventos/lancamento/video/lancamento-no-youtube-canalmisbh-do-video-vozes-tradicionais-lacos-mae-gloria-pai-geraldo-e-casa-lode",
-      "fonte": "Portal Belo Horizonte",
-      "fonte_id": "5923afc2640a",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "endereco": "",
-      "tags_fonte": [],
-      "classificacao_indicativa": "Livre",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-11-20",
-          "observacao": "10h às 12h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
       "id": "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-20-1030",
@@ -6748,6 +7019,44 @@
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
     },
     {
+      "id": "portal-bh-b417a14751b2-2026-11-21-1030",
+      "titulo": "Ateliê Dona Juracy de brinquedos e brincadeiras inventadas",
+      "data": "2026-11-21",
+      "data_fim": "",
+      "horario": "10h30 às 12h30",
+      "local": "Casa Kubitschek",
+      "cidade": "Belo Horizonte",
+      "categoria": "Oficina",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "A criatividade de Juracy Guerra, antiga moradora da casa onde hoje funciona o MCK, inspira o “Ateliê Dona Juracy de brinquedos e brincadeiras inventadas” . Em referência ao Dia do Inventor, a atividade convida crianças e adultos a experimentar novas possibilidades de brincar, utilizando materiais reciclados e elementos naturais do jardim para criar brinquedos,",
+      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-11/fotos-para-site-formato-440x225-4.png",
+      "link": "https://portalbelohorizonte.com.br/museuspampulha/2026/eventos/oficina/artes-plasticas/atelie-dona-juracy-de-brinquedos-e-brincadeiras-inventadas",
+      "fonte": "Portal Belo Horizonte",
+      "fonte_id": "b417a14751b2",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "endereco": "Av. Otacílio Negrão de Lima, 4.188 - Pampulha",
+      "tags_fonte": [
+        "Ar livre",
+        "Artes Plásticas",
+        "Cultural",
+        "Curso e Oficina",
+        "Gratuito",
+        "Oficinas",
+        "Pampulha"
+      ],
+      "classificacao_indicativa": "Livre",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-21",
+          "observacao": "10h30 às 12h30"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Kubitschek%2C+Av.+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+4.188+-+Pampulha%2C+Belo+Horizonte"
+    },
+    {
       "id": "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-21-15",
       "titulo": "Ateliê Aberto | Bonecas Abayomi: nós de memórias",
       "data": "2026-11-21",
@@ -6784,7 +7093,7 @@
       "gratuito": true,
       "inscricao": "Ingresso gratuito emitido 2h antes da atividade",
       "descricao": "A atividade visa discutir e apresentar a influência das culturas de matriz africana no movimento do hip-hop brasileiro, tanto na sonoridade quanto nas composições. Nesta edição, a oficina também busca evidenciar a presença do rap no estado de Minas Gerais, abordando a chegada do movimento,",
-      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/10/21.11-Oficina-Rap-nas-Raizes_-Influencias-Afro-brasileiras-Novembro-Negro-UFMG-Divulgacao-Espaco-do-Conhecimento-UFMG.png",
+      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/10/blogimagens-28.png",
       "link": "https://www.ufmg.br/espacodoconhecimento/programacao/oficina-rap-nas-raizes-influencias-afro-brasileiras-novembro-negro-ufmg/",
       "fonte": "Espaço do Conhecimento UFMG",
       "instituicao_id": "espaco-conhecimento-ufmg",
@@ -6887,34 +7196,6 @@
       "origem_experimental": "casa_fiat"
     },
     {
-      "id": "portal-bh-179ded5016f3-2026-11-22-1030",
-      "titulo": "Museu Criativo . Oficina: Pintura de Símbolos Adinkra — em parceria com Nicolle Dominique",
-      "data": "2026-11-22",
-      "data_fim": "",
-      "horario": "10h30 às 12h30",
-      "local": "Museu Histórico Abílio Barreto – MHAB",
-      "cidade": "Belo Horizonte",
-      "categoria": "Oficina",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "22/11 Domingo, das 10h30 às 12h30",
-      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-10/06-oficina-pintura.png",
-      "link": "https://portalbelohorizonte.com.br/museuscentro/2026/eventos/oficina/cultural/museu-criativo-oficina-pintura-de-simbolos-adinkra-em-parceria-com-nicolle-dominique",
-      "fonte": "Portal Belo Horizonte",
-      "fonte_id": "179ded5016f3",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "endereco": "",
-      "tags_fonte": [],
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-11-22",
-          "observacao": "10h30 às 12h30"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
-    },
-    {
       "id": "filarmonica-mg-concertos-para-a-juventude-7-2026-2026-11-22",
       "titulo": "Concertos para a Juventude 7 (2026)",
       "data": "2026-11-22",
@@ -6972,6 +7253,35 @@
       "origem_experimental": "casa_fiat"
     },
     {
+      "id": "ufmg-ec-museu-fechado-2",
+      "titulo": "Museu Fechado",
+      "data": "2026-11-22",
+      "data_fim": "",
+      "horario": "13h",
+      "local": "Espaço do Conhecimento UFMG",
+      "cidade": "Belo Horizonte",
+      "categoria": "Atividade educativa",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "Nos dias 20 e 22 de novembro de 2026, o Espaço do Conhecimento UFMG estará fechado. No sábado, 21 de novembro, o museu funcionará das 10h às 20h.",
+      "imagem": "imagens/instituicoes/espaco-conhecimento-ufmg.png",
+      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/museu-fechado-2/",
+      "fonte": "Espaço do Conhecimento UFMG",
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-22",
+          "observacao": "13h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
+      "imagem_fallback_origem": "equipamento"
+    },
+    {
       "id": "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-22-15",
       "titulo": "Ateliê Aberto | Bonecas Abayomi: nós de memórias",
       "data": "2026-11-22",
@@ -6997,32 +7307,34 @@
       "origem_experimental": "casa_fiat"
     },
     {
-      "id": "ufmg-ec-visita-mediada-a-exposicao-demasiado-humano",
-      "titulo": "Visita mediada à exposição “demasiado humano”",
+      "id": "sesc-palladium-bileto-126071",
+      "titulo": "CINE SESC- MOSTRA ENTRE CANTOS E RESISTÊNCIAS: LUIZ MELODIA - NO CORAÇÃO DO BRASIL",
       "data": "2026-11-22",
       "data_fim": "",
-      "horario": "15h",
-      "local": "Espaço do Conhecimento UFMG",
+      "horario": "18h",
+      "local": "Sesc Palladium",
       "cidade": "Belo Horizonte",
-      "categoria": "Visita guiada",
+      "categoria": "Festival",
       "gratuito": true,
-      "inscricao": "Ingresso gratuito emitido 2h antes da atividade",
-      "descricao": "A atividade consiste em um diálogo repleto de questionamentos e reflexões entre os visitantes e os mediadores do museu, ao longo da exposição de longa duração “demasiado humano”. Durante a visita, que abordará a origem da vida, a evolução e a trajetória humana na Terra,",
-      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/10/22-e-29.11-Visita-mediada-a-exposicao-demasiado-humano-Creditos-Julia-Lobato-Divulgacao-Espaco-do-Conhecimento-UFMG_Easy-Resize.com_.jpg",
-      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/visita-mediada-a-exposicao-demasiado-humano/",
-      "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg",
+      "inscricao": "Ingressos gratuitos disponíveis on-line, conforme disponibilidade",
+      "descricao": "Atenção! Compras online e na bilheteria. Você poderá retirar até 2 (dois) ingressos, sendo 1 ingresso por CPF. Preencha os CPFs corretos e distintos, por ingresso, para que sua compra seja finalizada! Os ingressos são gratuitos e podem ser reservados tanto pelo Sympla quanto retirados na bilheteria 90 minutos antes da sessão. Caso os ingressos no Sympla estejam esgotados, procure a bilheteria do Palladium para retirar o seu ingresso. Ingressos limitados! CINE SESC- MOSTRA ENTRE CANTOS E RESISTÊNCIAS Em celebração ao Mês da Consciência Negra,",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/3bem5thfth200hds7pfb5cm1ohoa1vlt0rap12aensrrrjrmeve7aot40tuc4po0t6jqlkn149nv2m18hm7pqs0qv2elv8bn7ul3dpm.webp",
+      "link": "https://bileto.sympla.com.br/event/126071/d/409588/s/2668989",
+      "fonte": "Sesc Palladium",
+      "instituicao_id": "sesc-mg",
+      "fonte_id": "126071",
+      "endereco": "Rua Rio de Janeiro, 1046 – Centro, Belo Horizonte – MG, 30160-041",
+      "classificacao_indicativa": "12 anos",
       "temporalidade": {
         "classe": "pontual",
         "realizacao": {
           "inicio": "2026-11-22",
-          "observacao": "15h"
+          "observacao": "18h"
         }
       },
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "espaco-conhecimento-ufmg",
-      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
+      "local_id": "sesc-palladium",
+      "mapa": "https://maps.app.goo.gl/69GL5ydEpAtcwDgv7"
     },
     {
       "id": "casa-fiat-elogio-ao-amor-na-casa-fiat-de-cultura-2026-11-24-sem-hora",
@@ -7048,6 +7360,33 @@
       "somente_teste": true,
       "status_validacao": "experimental",
       "origem_experimental": "casa_fiat"
+    },
+    {
+      "id": "cine-theatro-brasil-serie-bh-instrumental-e-xxiv-premio-da-musica-instrumental-mineira-2026-11-24-19",
+      "titulo": "Série BH Instrumental e XXIV Prêmio da Música Instrumental Mineira",
+      "data": "2026-11-24",
+      "data_fim": "",
+      "horario": "19h",
+      "local": "Cine Theatro Brasil Vallourec – Teatro de Câmara",
+      "cidade": "Belo Horizonte",
+      "categoria": "Teatro",
+      "gratuito": true,
+      "inscricao": "Evento gratuito; consulte disponibilidade e retirada de ingresso no site oficial.",
+      "descricao": "SÉRIE BH INSTRUMENTAL & PRÊMIO DA MÚSICA INSTRUMENTAL MINEIRA Duas histórias, uma parceria especial em celebração à música instrumental mineira! Nos dias 24 e 25 de novembro, acontece uma edição especial dos projetos Série BH Instrumental e Prêmio da Música Instrumental Mineira, que se unem em uma realização conjunta para celebrar a trajetória dessas duas importantes iniciativas de valorização da música instrumental produzida em Minas Gerais. A parceria aproxima a experiência da Série BH Instrumental,",
+      "imagem": "https://www.cinetheatrobrasil.com.br/wp-content/uploads/2026/11/imagem-destaque_156x198px_Serie-BH-Instrumental-e-Premio-Instrumental.png",
+      "link": "https://www.cinetheatrobrasil.com.br/cadastro-de-eventos/serie-bh-instrumental-e-xxiv-premio-da-musica-instrumental-mineira/",
+      "fonte": "Cine Theatro Brasil Vallourec",
+      "pagina": "https://www.cinetheatrobrasil.com.br/cadastro-de-eventos/serie-bh-instrumental-e-xxiv-premio-da-musica-instrumental-mineira/",
+      "local_id": "grande-theatro-unimed-bh-cine-theatro-brasil",
+      "endereco": "Avenida Amazonas, 315, Centro, Belo Horizonte - MG",
+      "criterio_exibicao": "realizacao",
+      "motivo_publicacao": "gratuidade_confirmada_na_secao_de_precos",
+      "espaco_interno": "Teatro de Câmara",
+      "classificacao_indicativa": "Livre",
+      "evidencia_classificacao_indicativa": "campo_existente",
+      "somente_teste": true,
+      "status_validacao": "experimental",
+      "origem_experimental": "cine_theatro_brasil"
     },
     {
       "id": "filarmonica-mg-filarmonica-em-camara-6-2026-2026-11-24",
@@ -7080,6 +7419,33 @@
         }
       },
       "mapa": "https://www.google.com/maps/search/?api=1&query=Sala+Minas+Gerais%2C+Rua+Tenente+Brito+Melo%2C+1090%2C+Barro+Preto%2C+Belo+Horizonte+-+MG"
+    },
+    {
+      "id": "cine-theatro-brasil-serie-bh-instrumental-e-xxiv-premio-da-musica-instrumental-mineira-2026-11-25-19",
+      "titulo": "Série BH Instrumental e XXIV Prêmio da Música Instrumental Mineira",
+      "data": "2026-11-25",
+      "data_fim": "",
+      "horario": "19h",
+      "local": "Cine Theatro Brasil Vallourec – Teatro de Câmara",
+      "cidade": "Belo Horizonte",
+      "categoria": "Teatro",
+      "gratuito": true,
+      "inscricao": "Evento gratuito; consulte disponibilidade e retirada de ingresso no site oficial.",
+      "descricao": "SÉRIE BH INSTRUMENTAL & PRÊMIO DA MÚSICA INSTRUMENTAL MINEIRA Duas histórias, uma parceria especial em celebração à música instrumental mineira! Nos dias 24 e 25 de novembro, acontece uma edição especial dos projetos Série BH Instrumental e Prêmio da Música Instrumental Mineira, que se unem em uma realização conjunta para celebrar a trajetória dessas duas importantes iniciativas de valorização da música instrumental produzida em Minas Gerais. A parceria aproxima a experiência da Série BH Instrumental,",
+      "imagem": "https://www.cinetheatrobrasil.com.br/wp-content/uploads/2026/11/imagem-destaque_156x198px_Serie-BH-Instrumental-e-Premio-Instrumental.png",
+      "link": "https://www.cinetheatrobrasil.com.br/cadastro-de-eventos/serie-bh-instrumental-e-xxiv-premio-da-musica-instrumental-mineira/",
+      "fonte": "Cine Theatro Brasil Vallourec",
+      "pagina": "https://www.cinetheatrobrasil.com.br/cadastro-de-eventos/serie-bh-instrumental-e-xxiv-premio-da-musica-instrumental-mineira/",
+      "local_id": "grande-theatro-unimed-bh-cine-theatro-brasil",
+      "endereco": "Avenida Amazonas, 315, Centro, Belo Horizonte - MG",
+      "criterio_exibicao": "realizacao",
+      "motivo_publicacao": "gratuidade_confirmada_na_secao_de_precos",
+      "espaco_interno": "Teatro de Câmara",
+      "classificacao_indicativa": "Livre",
+      "evidencia_classificacao_indicativa": "campo_existente",
+      "somente_teste": true,
+      "status_validacao": "experimental",
+      "origem_experimental": "cine_theatro_brasil"
     },
     {
       "id": "casa-fiat-elogio-ao-amor-bate-papo-com-a-artista-marila-dardot-e-a-curadora-cristiana-tejo-2026-11-25-1930",
@@ -7257,32 +7623,73 @@
       "origem_experimental": "casa_fiat"
     },
     {
-      "id": "portal-bh-2fb9dfbc9310-2026-11-28-1000",
-      "titulo": "Oficina Fotografia do Flâneur: O Olhar Sensível sobre a Cidade e suas Expressões Naturais • Com Jennifer Martins",
+      "id": "sesc-palladium-bileto-126065",
+      "titulo": "CINE SESC- MOSTRA ENTRE CANTOS E RESISTÊNCIAS: ZEZÉ MOTTA, LA FEMME ENCHANTÉE",
+      "data": "2026-11-27",
+      "data_fim": "",
+      "horario": "19h",
+      "local": "Sesc Palladium",
+      "cidade": "Belo Horizonte",
+      "categoria": "Festival",
+      "gratuito": true,
+      "inscricao": "Ingressos gratuitos disponíveis on-line, conforme disponibilidade",
+      "descricao": "Atenção! Compras online e na bilheteria. Você poderá retirar até 2 (dois) ingressos, sendo 1 ingresso por CPF. Preencha os CPFs corretos e distintos, por ingresso, para que sua compra seja finalizada! Os ingressos são gratuitos e podem ser reservados tanto pelo Sympla quanto retirados na bilheteria 90 minutos antes da sessão. Caso os ingressos no Sympla estejam esgotados, procure a bilheteria do Palladium para retirar o seu ingresso. Ingressos limitados! CINE SESC- MOSTRA ENTRE CANTOS E RESISTÊNCIAS Em celebração ao Mês da Consciência Negra,",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/384m4oj20o9o2neo86qsjlvn7eej95dgb1hn8ktd424ir60c2l85p7i0bgklp3tikr1olrsjpfr53vl8s9aghaea99bp818jcp2edtl.jpeg",
+      "link": "https://bileto.sympla.com.br/event/126065/d/409580/s/2668971",
+      "fonte": "Sesc Palladium",
+      "instituicao_id": "sesc-mg",
+      "fonte_id": "126065",
+      "endereco": "Rua Rio de Janeiro, 1046 – Centro, Belo Horizonte – MG, 30160-041",
+      "classificacao_indicativa": "16 anos",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-27",
+          "observacao": "19h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "sesc-palladium",
+      "mapa": "https://maps.app.goo.gl/69GL5ydEpAtcwDgv7"
+    },
+    {
+      "id": "portal-bh-b994764efa9f-2026-11-28-1000",
+      "titulo": "Oficina de Caleidoscópio",
       "data": "2026-11-28",
       "data_fim": "",
-      "horario": "10h às 13h",
-      "local": "Museu da Imagem e do Som – MIS BH",
+      "horario": "10h às 12h",
+      "local": "Museu de Arte da Pampulha - MAP",
       "cidade": "Belo Horizonte",
       "categoria": "Oficina",
       "gratuito": true,
       "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "Dia 28/11 . SÁB. 10h às 13h Indicado para maiores de 16 anos Inscrições via formulário: Link na bio do Instagram do museu",
-      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-10/07-fotografia.png",
-      "link": "https://portalbelohorizonte.com.br/museuscentro/2026/eventos/oficina/fotografia/oficina-fotografia-do-flaneur-o-olhar-sensivel-sobre-cidade-e-suas-expressoes-naturais-com-jennifer",
+      "descricao": "Cores, formas e imagens em constante transformação conduzem a oficina “Caleidoscópio”, no Jardim do MAP. A atividade propõe a construção manual do objeto e convida os participantes a investigar como diferentes elementos se reorganizam a cada movimento, criando composições inesperadas. Uma experiência que combina curiosidade, percepção visual e experimentação artística.",
+      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-11/fotos-para-site-formato-440x225-5.png",
+      "link": "https://portalbelohorizonte.com.br/museuspampulha/2026/eventos/oficina/artes-plasticas/oficina-de-caleidoscopio",
       "fonte": "Portal Belo Horizonte",
-      "fonte_id": "2fb9dfbc9310",
+      "fonte_id": "b994764efa9f",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "endereco": "",
-      "tags_fonte": [],
+      "endereco": "Av. Otacílio Negrão de Lima, 16.585 - Pampulha",
+      "tags_fonte": [
+        "Ar livre",
+        "Artes Plásticas",
+        "Cultural",
+        "Curso e Oficina",
+        "Gratuito",
+        "Oficinas",
+        "Pampulha"
+      ],
+      "classificacao_indicativa": "Livre",
       "temporalidade": {
         "classe": "pontual",
         "realizacao": {
           "inicio": "2026-11-28",
-          "observacao": "10h às 13h"
+          "observacao": "10h às 12h"
         }
       },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "biblioteca-rmbh-belo-horizonte-biblioteca-do-museu-de-arte-da-pampulha-atendimento-temporario",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Biblioteca+do+Museu+de+Arte+da+Pampulha+%28atendimento+tempor%C3%A1rio%29%2C+Av.+Otac%C3%ADlio+Negr%C3%A3o+de+Lima%2C+16.585+%E2%80%93+Museu+Casa+Kubitschek+%E2%80%93+Jardim+Atl%C3%A2ntico%2C+Belo+Horizonte%2C+Minas+Gerais%2C+Brasil"
     },
     {
       "id": "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-28-1030",
@@ -7326,20 +7733,46 @@
       "fonte": "Portal Belo Horizonte",
       "fonte_id": "c63cd2989c7c",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "endereco": "Rua da Bahia, 1149, Centro, Belo Horizonte - MG, 30160-011",
+      "endereco": "",
       "tags_fonte": [],
       "classificacao_indicativa": "Livre",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-11-28",
-          "observacao": "10h30 às 11h30"
+      "evidencia_classificacao_indicativa": "portal_bh:texto_explicito_padrao_1",
+      "evidencia_classificacao_indicativa_trecho": "Dia 28/11 SÁB. 10h30 ÀS 11H30 Classificação: livre NÃO É NECESSÁRIO FAZER INSCRIÇÃO",
+      "evidencia_gratuidade": "campo_entrada:gratuito",
+      "evidencia_data": "sab, 28/11/2026 - 10:30 a sab, 28/11/2026 - 11:30",
+      "evidencia_titulo_origem": "breadcrumb",
+      "evidencia_titulo_pontuacao": 1.0,
+      "evidencia_titulo_candidatos_descartados": [
+        {
+          "titulo": "Visita Mediada à exposição Markito – Cintilações da Noite",
+          "origem": "cabecalho_principal",
+          "pontuacao": 0.9693,
+          "motivo": "menor_semelhanca_com_slug"
+        },
+        {
+          "titulo": "Visita Mediada à exposição Markito – Cintilações da Noite",
+          "origem": "document_title",
+          "pontuacao": 0.9393,
+          "motivo": "menor_semelhanca_com_slug"
+        },
+        {
+          "titulo": "Dia 28/11 SÁB. 10h30 ÀS 11H30",
+          "origem": "descricao",
+          "pontuacao": 0.1384,
+          "motivo": "menor_semelhanca_com_slug"
+        },
+        {
+          "titulo": "Portal Belo Horizonte",
+          "origem": "cabecalho_principal",
+          "motivo": "titulo_generico"
         }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      ],
       "local_id": "museu-da-moda",
-      "mapa": "https://maps.app.goo.gl/NSKCeznUnR3ooTQaA",
-      "espaco_interno": "MUMO"
+      "fonte_descoberta": "Portal Belo Horizonte — Museu da Moda",
+      "somente_teste": true,
+      "status_validacao": "experimental",
+      "origem_experimental": "mumo_portal_bh",
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
       "id": "ufmg-ec-roda-de-conversa-ovulario-a-palavra-viva-na-performance",
@@ -7448,6 +7881,34 @@
       "origem_experimental": "casa_fiat"
     },
     {
+      "id": "ufmg-ec-palestra-cronologia-da-vida-do-simples-ao-complexo-com-beatriz-hormanseder",
+      "titulo": "Palestra “Cronologia da Vida: do simples ao complexo”, com Beatriz Hörmanseder",
+      "data": "2026-11-28",
+      "data_fim": "",
+      "horario": "18h",
+      "local": "Espaço do Conhecimento UFMG",
+      "cidade": "Belo Horizonte",
+      "categoria": "Palestra e debate",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "A paleontóloga e divulgadora científica Beatriz Hörmanseder convida os participantes a se aventurarem pelos aspectos biológicos e geológicos da história, conectando grandes acontecimentos e mudanças à evolução da biodiversidade atual. Ao longo da palestra,",
+      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/11/blogimagens-29.png",
+      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/palestra-cronologia-da-vida-do-simples-ao-complexo-com-beatriz-hormanseder/",
+      "fonte": "Espaço do Conhecimento UFMG",
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-28",
+          "observacao": "18h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
+    },
+    {
       "id": "ufmg-ec-sessao-de-planetario-ao-cair-da-noite-eu-me-guiarei-pelo-brilho-dos-seus-olhos-4",
       "titulo": "Sessão de Planetário “Ao Cair da Noite, Eu Me Guiarei pelo Brilho dos Seus Olhos”",
       "data": "2026-11-28",
@@ -7501,34 +7962,6 @@
       "somente_teste": true,
       "status_validacao": "experimental",
       "origem_experimental": "casa_fiat"
-    },
-    {
-      "id": "portal-bh-322ddc7eb8dc-2026-11-29-1030",
-      "titulo": "Museu Criativo . Oficina: Chuva Sensorial",
-      "data": "2026-11-29",
-      "data_fim": "",
-      "horario": "10h30 às 12h30",
-      "local": "Museu Histórico Abílio Barreto – MHAB",
-      "cidade": "Belo Horizonte",
-      "categoria": "Oficina",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "29/11 Domingo, das 10h30 às 12h30",
-      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-10/09-chuva.png",
-      "link": "https://portalbelohorizonte.com.br/museuscentro/2026/eventos/oficina/cultural/museu-criativo-oficina-chuva-sensorial",
-      "fonte": "Portal Belo Horizonte",
-      "fonte_id": "322ddc7eb8dc",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "endereco": "",
-      "tags_fonte": [],
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-11-29",
-          "observacao": "10h30 às 12h30"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
       "id": "manual-concertos-peter-lund-orquestra-sonoro-despertar-2026-11-29-2026-11-29",
@@ -7967,11 +8400,11 @@
       "origem_experimental": "minas_tenis_cultura"
     },
     {
-      "id": "casa-fiat-12-presepio-colaborativo-da-casa-fiat-de-cultura-2027-01-10-sem-hora",
+      "id": "casa-fiat-12-presepio-colaborativo-da-casa-fiat-de-cultura-2027-01-10-19",
       "titulo": "12º Presépio Colaborativo da Casa Fiat de Cultura",
       "data": "2027-01-10",
       "data_fim": "",
-      "horario": "",
+      "horario": "19h",
       "local": "Casa Fiat de Cultura",
       "local_id": "casa-fiat-de-cultura",
       "cidade": "Belo Horizonte",
@@ -7979,7 +8412,7 @@
       "categoria": "Cultura",
       "gratuito": true,
       "inscricao": "Programação gratuita conforme informação oficial da Casa Fiat de Cultura; consulte a página para inscrição, retirada de senha ou lotação quando aplicável.",
-      "descricao": "12º Presépio Colaborativo da Casa Fiat de Cultura 10/nov/26 a 10/jan/27 Em 2026, quando a Casa Fiat de Cultura celebra 20 anos e a Fiat comemora 50 anos no Brasil, o 12º Presépio Colaborativo aproxima passado, presente e futuro, evocando a paz. Para criar essa conexão entre os tempos, a Sagrada Família ganha a forma de uma família dos anos 1970, em referência ao início da trajetória da Fiat no Brasil. Ao seu lado, um disco voador surge como uma nova Estrela-Guia, trazendo o futuro à cena e convidando a imaginar o que ainda está por vir, em meio ao branco que simboliza a serenidade.",
+      "descricao": "12º Presépio Colaborativo da Casa Fiat de Cultura 10/nov/26 a 10/jan/27 ARTE E SUSTENTABILIDADE DÃO VIDA AO 12º PRESÉPIO COLABORATIVO DA CASA FIAT DE CULTURA Com curadoria de Leo Piló, instalação revisita a tradição natalina com uma mensagem de paz e um olhar para o futuro Todo nascimento anuncia a força da vida e renova nossa esperança. Em sua 12ª edição , o Presépio Colaborativo da Casa Fiat de Cultura traz essa essência que inspira novos começos. Com curadoria do artista plástico Leo Piló , a instalação tem a paz como tema central e propõe um olhar para o futuro ,",
       "imagem": "https://casafiatdecultura.com.br/wp-content/uploads/2026/11/Banners-newsletter-novembro_PRESEPIO.png",
       "link": "https://casafiatdecultura.com.br/evento/12o-presepio-colaborativo-da-casa-fiat-de-cultura/",
       "fonte": "Casa Fiat de Cultura — programação oficial",
@@ -8268,6 +8701,6 @@
     }
   ],
   "modo_teste_experimental": true,
-  "eventos_somente_teste": 49,
-  "atualizado_em_teste": "2026-11-11T13:47:38-03:00"
+  "eventos_somente_teste": 56,
+  "atualizado_em_teste": "2026-11-11T16:13:50-03:00"
 }
