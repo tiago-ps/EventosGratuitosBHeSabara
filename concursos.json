@@ -2,8 +2,8 @@
   "schema": 10,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-11-09T21:42:52.152192+00:00",
-  "total": 25,
+  "coletado_em_utc": "2026-11-11T16:44:30.292833+00:00",
+  "total": 26,
   "concursos": [
     {
       "id": "pci:noticia:trf3-sp-ms-retifica-concurso-publico-para-analistas-e-tecnicos-judiciarios",
@@ -45,6 +45,61 @@
         {
           "cargo": "Desenvolvimento de Sistemas de Informação",
           "vagas_texto": "5 vagas",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "prazo_desconhecido",
+        "completude": "desconhecida"
+      }
+    },
+    {
+      "id": "pci:noticia:cetesb-sp-abre-concursos-publicos-para-diversos-cargos",
+      "titulo": "CETESB - Companhia Ambiental do Estado de São Paulo",
+      "url": "https://www.pciconcursos.com.br/noticias/cetesb-sp-abre-concursos-publicos-para-diversos-cargos",
+      "imagem": "https://cdn.pci.app.br/img/i/e8de253e54617c2ec4e4e1340e6d80d2.png",
+      "formacoes_compativeis": [
+        "Técnico em Eletrônica",
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Eletrônica",
+          "nivel": "tecnico",
+          "evidencia": " paulo (cetesb) abriu inscricoes para dois editais de concurso publico destinados a preencher vagas em funcoes de nivel medio, tecnico ou superior. segundo o edital, as oportunidades sao para os cargos de: nivel medio e tecnico, edital no 02/2026 tecnico administrativo (17 vagas) tecnico ambiental, tecnico em eletronica (1 vaga) tecnico ambiental, tecnico em quimica (2 vagas) tecnico ambiental, tecnico em meio ambiente (3 vagas) nivel superior, edital no 01/2026 advogado (2 vagas) analista administrativo, administracao (7 vagas) analista administrativo, contabilidade (2 vagas) analista administrativo, psicologia ("
+        },
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "ngenharia florestal (1 vaga) analista ambiental, engenharia mecanica (4 vagas) analista ambiental, engenharia quimica (4 vagas) analista ambiental, oceanografia (2 vagas) analista ambiental, geografia (4 vagas) analista ambiental, geologia (3 vagas) analista ambiental, quimica (8 vagas) analista de tecnologia da informacao, redes e telecomunicacao (1 vaga) analista de tecnologia da informacao, sistemas (3 vagas) engenheiro, engenharia civil (2 vagas) a jornada e de 40 horas semanais. a remuneracao inicial e de r$ 5.614,38 para os empregos de niveis medio e tecnico e de r$ 8.971,98 para os de nivel superior. para as m"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "SP",
+      "cidade": "",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "R$ 5.614,38 a R$ 8.971,98",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico Ambiental, Técnico em Eletrônica",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Eletrônica",
+          "confianca": "alta"
+        },
+        {
+          "cargo": "Analista de Tecnologia da Informação, Redes e Telecomunicação",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        },
+        {
+          "cargo": "Analista de Tecnologia da Informação, Sistemas",
+          "vagas_texto": "3 vagas",
           "formacao": "Sistemas de Informação / Computação",
           "confianca": "alta"
         }
@@ -110,10 +165,10 @@
       }
     },
     {
-      "id": "pci:noticia:marinha-do-brasil-8-distrito-naval-abre-vagas-para-oficiais-rm2-em-sp",
-      "titulo": "Marinha do Brasil - Comando do 8º Distrito Naval",
-      "url": "https://www.pciconcursos.com.br/noticias/marinha-do-brasil-8-distrito-naval-abre-vagas-para-oficiais-rm2-em-sp",
-      "imagem": "https://cdn.pci.app.br/img/i/beeb75028c81e9d534d8ab4a39fd7fc0.png",
+      "id": "pci:noticia:ifsp-abre-concurso-publico-para-cargos-tecnico-administrativos",
+      "titulo": "IFSP - Instituto Federal de Educação, Ciência e Tecnologia de São Paulo",
+      "url": "https://www.pciconcursos.com.br/noticias/ifsp-abre-concurso-publico-para-cargos-tecnico-administrativos",
+      "imagem": "https://cdn.pci.app.br/img/i/6360c4b5557558aeb5f47ad7fe6bdc36.png",
       "formacoes_compativeis": [
         "Sistemas de Informação / Computação"
       ],
@@ -121,51 +176,45 @@
         {
           "nome": "Sistemas de Informação / Computação",
           "nivel": "superior",
-          "evidencia": "- sp (1 vaga) informatica, sao paulo - sp (1 vaga) engenharia civil, sao paulo - sp (2 vagas) engenharia civil, ipero - sp (1 vaga) engenharia de materiais, sao paulo - sp (1 vaga) engenharia de producao, ipero - sp (1 vaga) engenharia de producao, sao paulo - sp (2 vagas) engenharia de sistemas de computacao, ipero - sp (1 vaga) engenharia de sistemas de computacao, sao paulo - sp (1 vaga) engenharia de telecomunicacoes, sao paulo - sp (1 vaga) engenharia eletrica, sao paulo - sp (4 vagas) engenharia eletronica, ipero - sp (1 vaga) engenharia eletronica, sao paulo - sp (4 vagas) engenharia mecanica, sa"
+          "evidencia": "em cargos tecnico-administrativos. as oportunidades exigem formacao tecnica de nivel medio ou ensino superior, conforme o cargo. segundo o edital, as oportunidades sao para os cargos de: tecnico de laboratorio, area informatica (3 vagas) tecnico de laboratorio, area mecatronica (1 vaga) analista de tecnologia da informacao, ciencia de dados (1 vaga) engenheiro de seguranca do trabalho (1 vaga) a jornada e de 40 horas semanais. o vencimento basico varia de r$ 3.181,39 a r$ 5.215,39, conforme o nivel do cargo, e pode ser acrescido de incentivo a qualificacao. os servidores poderao receber auxilio-alimentacao, atualment"
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
       "uf": "SP",
       "cidade": "",
-      "inscricoes_inicio_texto": "18 de setembro de 2026",
-      "inscricoes_fim_texto": "10 de novembro de 2026",
-      "inscricoes_texto": "18 de setembro de 2026 a 10 de novembro de 2026",
-      "remuneracao_faixa_texto": "R$ 5.482,21",
-      "remuneracao_fonte": "catalogo",
+      "inscricoes_inicio_texto": "17 de novembro de 2026",
+      "inscricoes_fim_texto": "4 de janeiro de 2027",
+      "inscricoes_texto": "17 de novembro de 2026 a 4 de janeiro de 2027",
+      "remuneracao_faixa_texto": "R$ 3.181,39 a R$ 5.215,39",
+      "remuneracao_fonte": "noticia",
       "cargos_compativeis": [
         {
-          "cargo": "Engenharia de Sistemas de Computação, Iperó - SP",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        },
-        {
-          "cargo": "Engenharia de Sistemas de Computação, São Paulo - SP",
+          "cargo": "Analista de Tecnologia da Informação, Ciência de Dados",
           "vagas_texto": "1 vaga",
           "formacao": "Sistemas de Informação / Computação",
           "confianca": "alta"
         }
       ],
       "janela_inscricoes": {
-        "estado": "aberto",
+        "estado": "futuro",
         "completude": "completa",
-        "inicio": "2026-09-18",
-        "fim": "2026-11-10",
-        "texto_original": "18 de setembro de 2026 a 10 de novembro de 2026"
+        "inicio": "2026-11-17",
+        "fim": "2027-01-04",
+        "texto_original": "17 de novembro de 2026 a 4 de janeiro de 2027"
       },
       "temporalidade": {
         "classe": "periodo",
         "realizacao": {
-          "inicio": "2026-09-18",
-          "fim": "2026-11-10"
+          "inicio": "2026-11-17",
+          "fim": "2027-01-04"
         },
         "participacao": [
           {
             "tipo": "candidatura",
-            "inicio": "2026-09-18",
-            "fim": "2026-11-10",
-            "status": "aberto"
+            "inicio": "2026-11-17",
+            "fim": "2027-01-04",
+            "status": "futuro"
           }
         ]
       }
@@ -312,58 +361,40 @@
       }
     },
     {
-      "id": "pci:noticia:prudenprev-sp-abre-concurso-publico-com-salarios-de-ate-11102",
-      "titulo": "PRUDENPREV - Sistema de Previdência do Município de Presidente Prudente",
-      "url": "https://www.pciconcursos.com.br/noticias/prudenprev-sp-abre-concurso-publico-com-salarios-de-ate-11102",
-      "imagem": "https://cdn.pci.app.br/img/i/589955d0ecc37f14cd5d77e38c092b0f.png",
+      "id": "pci:noticia:sp-aguas-sp-abre-concurso-publico-com-salarios-de-ate-12070",
+      "titulo": "SP-Águas - Agência de Águas do Estado de São Paulo",
+      "url": "https://www.pciconcursos.com.br/noticias/sp-aguas-sp-abre-concurso-publico-com-salarios-de-ate-12070",
+      "imagem": "https://cdn.pci.app.br/img/i/445d8016e48f226d6e228b8c0dcd1b7e.png",
       "formacoes_compativeis": [
-        "Técnico em Informática"
+        "Sistemas de Informação / Computação"
       ],
       "evidencias_formacao": [
         {
-          "nome": "Técnico em Informática",
-          "nivel": "tecnico",
-          "evidencia": "oncurso publico destinado ao preenchimento de vagas e a formacao de cadastro de reserva para profissionais de nivel fundamental, medio e superior. segundo o edital, as oportunidades sao para os cargos de: motorista (cadastro de reserva) servicos gerais (1 vaga) escriturario (5 vagas ac + 1 vaga ni) tecnico em informatica (1 vaga) contador (1 vaga) controlador interno (1 vaga) medico perito (cadastro de reserva) a jornada de trabalho varia de 20 a 40 horas semanais, conforme o cargo. a remuneracao inicial vai de r$ 1.984,14 a r$ 11.102,06, alem de cartao-alimentacao no valor mensal de r$ 1.309,59. as inscricoes sera"
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "stao ambiental e recursos hidricos (59 vagas) direito e regulacao economica de recursos hidricos (16 vagas) monitoramento hidrologico e ciencia de dados (18 vagas) analista de suporte a regulacao de recursos hidricos i administracao publica (8 vagas) direito (5 vagas) economico-financeira (4 vagas) tecnologia da informacao e ciencia de dados (3 vagas) a jornada e de 40 horas semanais. o salario inicial e de r$ 12.070,00 para especialista e r$ 10.366,00 para analista. os empregados tambem terao vale-refeicao de r$ 55,00 por dia efetivamente trabalhado. as inscricoes serao feitas pelo site da fundacao getulio vargas (f"
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
       "uf": "SP",
-      "cidade": "Presidente Prudente",
-      "inscricoes_inicio_texto": "5 de outubro de 2026",
-      "inscricoes_fim_texto": "10 de novembro de 2026",
-      "inscricoes_texto": "5 de outubro de 2026 a 10 de novembro de 2026",
-      "remuneracao_faixa_texto": "R$ 1.309,59 a R$ 11.102,06",
+      "cidade": "",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "R$ 12.070,00",
       "remuneracao_fonte": "noticia",
       "cargos_compativeis": [
         {
-          "cargo": "Escriturário (5 vagas AC + 1 vaga NI) Técnico em Informática",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
+          "cargo": "Tecnologia da Informação e Ciência de Dados",
+          "vagas_texto": "3 vagas",
+          "formacao": "Sistemas de Informação / Computação",
           "confianca": "alta"
         }
       ],
       "janela_inscricoes": {
-        "estado": "aberto",
-        "completude": "completa",
-        "inicio": "2026-10-05",
-        "fim": "2026-11-10",
-        "texto_original": "5 de outubro de 2026 a 10 de novembro de 2026"
-      },
-      "temporalidade": {
-        "classe": "periodo",
-        "realizacao": {
-          "inicio": "2026-10-05",
-          "fim": "2026-11-10"
-        },
-        "participacao": [
-          {
-            "tipo": "candidatura",
-            "inicio": "2026-10-05",
-            "fim": "2026-11-10",
-            "status": "aberto"
-          }
-        ]
+        "estado": "prazo_desconhecido",
+        "completude": "desconhecida"
       }
     },
     {
