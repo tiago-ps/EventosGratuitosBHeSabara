@@ -6026,9 +6026,9 @@ function eventProgram(event) {
     grid.className = 'agenda-section-grid';
     const progressiveControl = createAgendaProgressiveControl(grid, items, contentValue);
     section.append(heading);
-    if (contentValue === 'films') section.append(filmSourceNotice());
     section.append(grid);
     if (progressiveControl) section.append(progressiveControl);
+    if (contentValue === 'films') section.append(filmSourceNotice());
     container.append(section);
   }
 
@@ -6536,8 +6536,9 @@ function eventProgram(event) {
     shell.className = 'agenda-shell';
     shell.append(header);
     shell.append(controls, count);
+    shell.append(resultsContainer);
     if (filmMode) shell.append(filmSourceNotice());
-    shell.append(resultsContainer, footer);
+    shell.append(footer);
     app.replaceChildren(shell);
     window.MuralCultural.spaceMap?.mount?.({
       shell, resultsContainer, count, results,
