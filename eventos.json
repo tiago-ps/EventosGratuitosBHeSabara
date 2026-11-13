@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Março de 2026 a Junho de 2027",
-  "atualizado_em": "2026-11-11T16:13:13-03:00",
+  "atualizado_em": "2026-11-13T14:10:10.122Z",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -5733,10 +5733,19 @@
       "instituicao_id": "minas-tenis-clube",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_explicita",
-      "local_id": "minas-centro-cultural-galeria-arte",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "minas_tenis_cultura"
+      "local_id": "centro-cultural-unimed-bh-minas",
+      "status_validacao": "aprovado",
+      "origem_experimental": "minas_tenis_cultura",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-10-20",
+          "fim": "2027-01-03",
+          "observacao": "12h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+Unimed-BH+Minas%2C+Rua+da+Bahia%2C+2244%2C+Lourdes%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Galeria de Arte do"
     },
     {
       "id": "ccult-ufmg-centro-cultural-ufmg-abre-exposicao-coletiva-dos-formandos-em-artes-visuais-da-escola-de-belas-artes-da-ufmg-2026-11-06",
@@ -5745,7 +5754,7 @@
       "data_fim": "2026-12-06",
       "horario": "19h",
       "local": "Grande Galeria do Centro Cultural UFMG",
-      "local_id": "ccult-ufmg-grande-galeria",
+      "local_id": "centro-cultural-ufmg",
       "cidade": "Belo Horizonte",
       "endereco": "Avenida Santos Dumont, 174, Centro, Belo Horizonte - MG",
       "categoria": "Exposição",
@@ -5760,11 +5769,18 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_explicita",
       "classificacao_indicativa": "12 anos",
-      "evidencia_classificacao_indicativa": "texto_explicito_padrao_1",
-      "evidencia_classificacao_indicativa_trecho": "de Galeria do Centro Cultural UFMG Classificação indicativa: 12 anos Entrada gratuita Consulte rotas e",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "centro_cultural_ufmg"
+      "status_validacao": "aprovado",
+      "origem_experimental": "centro_cultural_ufmg",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-11-06",
+          "fim": "2026-12-06",
+          "observacao": "19h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+UFMG%2C+Avenida+Santos+Dumont%2C+174%2C+Centro%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Grande Galeria do"
     },
     {
       "id": "ccult-ufmg-coletivo-memoria-de-peixe-une-ceramica-pintura-e-fotografia-para-falar-sobre-territorios-aguas-e-ancestralidade-2026-11-06",
@@ -5773,7 +5789,7 @@
       "data_fim": "2026-12-06",
       "horario": "19h",
       "local": "Sala Ana Horta",
-      "local_id": "ccult-ufmg-sala-ana-horta",
+      "local_id": "centro-cultural-ufmg",
       "cidade": "Belo Horizonte",
       "endereco": "Avenida Santos Dumont, 174, Centro, Belo Horizonte - MG",
       "categoria": "Exposição",
@@ -5788,11 +5804,17 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_explicita",
       "classificacao_indicativa": "Livre",
-      "evidencia_classificacao_indicativa": "texto_explicito_padrao_1",
-      "evidencia_classificacao_indicativa_trecho": "7h Espaço Experimentação da Imagem Classificação indicativa: livre Entrada gratuita Consulte rotas e",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "centro_cultural_ufmg"
+      "status_validacao": "aprovado",
+      "origem_experimental": "centro_cultural_ufmg",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-11-06",
+          "fim": "2026-12-06",
+          "observacao": "19h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+UFMG%2C+Avenida+Santos+Dumont%2C+174%2C+Centro%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "fcs-wp-38001",
@@ -5842,9 +5864,17 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_explicita",
       "local_id": "centro-cultural-unimed-bh-minas",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "minas_tenis_cultura"
+      "status_validacao": "aprovado",
+      "origem_experimental": "minas_tenis_cultura",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-11-09",
+          "fim": "2026-12-09",
+          "observacao": "06h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+Unimed-BH+Minas%2C+Rua+da+Bahia%2C+2244%2C+Lourdes%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "fcs-wp-37928",
@@ -5876,34 +5906,6 @@
       "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
       "espaco_interno": "Cine Humberto Mauro"
-    },
-    {
-      "id": "ccult-ufmg-espetaculo-ficar-com-o-problema-ocupa-ruas-do-baixo-centro-de-bh-praca-da-estacao-e-centro-cultural-ufmg-em-experiencia-cenica-itinerante-2026-11-11",
-      "titulo": "Espetáculo ‘Ficar com o Problema’ ocupa ruas do Baixo Centro de BH, Praça da Estação e Centro Cultural UFMG em experiência cênica itinerante",
-      "data": "2026-11-11",
-      "data_fim": "",
-      "horario": "17h30",
-      "local": "Auditório do Centro Cultural UFMG",
-      "local_id": "ccult-ufmg-auditorio",
-      "cidade": "Belo Horizonte",
-      "endereco": "Avenida Santos Dumont, 174, Centro, Belo Horizonte - MG",
-      "categoria": "Teatro",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita conforme programação oficial do Centro Cultural UFMG; consulte a página para inscrição, lotação ou orientações de acesso.",
-      "descricao": "Entre os dias 16 e 19 e 23 e 26 de novembro de 2026, às 17h30, o Centro Cultural UFMG recebe o espetáculo Ficar com o problema , do Coletivo Polvoado , formado por estudantes da Graduação em Teatro da Escola de Belas Artes da UFMG, sob a direção de Altemar Di Monteiro . A peça propõe uma ocupação poética e política das ruas do centro de Belo Horizonte. Livremente inspirada nas obras de Donna Haraway e Vinciane Despret, a dramaturgia articula o pensamento ecológico multiespécie a um repertório negro, indígena e anticolonial. A entrada é gratuita e a classificação indicativa é de 14 anos.",
-      "imagem": "https://www.ufmg.br/centrocultural/wp-content/uploads/2026/11/site-scaled.jpg",
-      "link": "https://www.ufmg.br/centrocultural/espetaculo-ficar-com-o-problema-ocupa-ruas-do-baixo-centro-de-bh-praca-da-estacao-e-centro-cultural-ufmg-em-experiencia-cenica-itinerante/",
-      "pagina": "https://www.ufmg.br/centrocultural/espetaculo-ficar-com-o-problema-ocupa-ruas-do-baixo-centro-de-bh-praca-da-estacao-e-centro-cultural-ufmg-em-experiencia-cenica-itinerante/",
-      "fonte": "Centro Cultural UFMG — programação oficial",
-      "instituicao_id": "centro-cultural-ufmg",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "gratuidade_explicita",
-      "classificacao_indicativa": "14 anos",
-      "evidencia_classificacao_indicativa": "texto_explicito_padrao_1",
-      "evidencia_classificacao_indicativa_trecho": "portaria do Centro Cultural UFMG. Classificação indicativa: 14 anos O Centro Cultural UFMG fica na Av.",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "centro_cultural_ufmg"
     },
     {
       "id": "ccbb-bh-viva-mauricio-mauricio-de-sousa-a-experiencia-imersiva",
@@ -5957,9 +5959,16 @@
       "instituicao_id": "casa-fiat-de-cultura",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "casa_fiat"
+      "status_validacao": "aprovado",
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-12",
+          "observacao": "10h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-12-15",
@@ -5982,9 +5991,16 @@
       "instituicao_id": "casa-fiat-de-cultura",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "casa_fiat"
+      "status_validacao": "aprovado",
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-12",
+          "observacao": "15h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "ufmg-ec-leitura-de-poemas-no-planetario-tres-vezes-lazaro-anos-luz-com-natasha-felix",
@@ -6035,9 +6051,16 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_explicita",
       "local_id": "mm-gerdau",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "mm_gerdau"
+      "status_validacao": "aprovado",
+      "origem_experimental": "mm_gerdau",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-12",
+          "observacao": "19h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=MM+Gerdau+%E2%80%93+Museu+das+Minas+e+do+Metal%2C+Pra%C3%A7a+da+Liberdade%2C+680%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "portal-bh-06a9b3dee7d4-2026-11-13-1000",
@@ -6195,9 +6218,16 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_explicita",
       "local_id": "mm-gerdau",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "mm_gerdau"
+      "status_validacao": "aprovado",
+      "origem_experimental": "mm_gerdau",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-14",
+          "observacao": "10h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=MM+Gerdau+%E2%80%93+Museu+das+Minas+e+do+Metal%2C+Pra%C3%A7a+da+Liberdade%2C+680%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "portal-bh-61c064c62347-2026-11-14-1000",
@@ -6260,9 +6290,16 @@
       "instituicao_id": "casa-fiat-de-cultura",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "casa_fiat"
+      "status_validacao": "aprovado",
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-14",
+          "observacao": "10h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "portal-bh-c45a3d957af2-2026-11-14-1030",
@@ -6323,9 +6360,16 @@
       "instituicao_id": "casa-fiat-de-cultura",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "casa_fiat"
+      "status_validacao": "aprovado",
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-14",
+          "observacao": "15h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "ufmg-ec-oficina-ceramica-terra-viva",
@@ -6372,46 +6416,23 @@
       "fonte": "Portal Belo Horizonte",
       "fonte_id": "e94b4ea81491",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "endereco": "",
+      "endereco": "Rua da Bahia, 1149, Centro, Belo Horizonte - MG, 30160-011",
       "tags_fonte": [],
       "classificacao_indicativa": "Livre",
-      "evidencia_classificacao_indicativa": "portal_bh:texto_explicito_padrao_1",
-      "evidencia_classificacao_indicativa_trecho": "Dia 14/11 SÁB. 15h ÀS 16H Classificação: livre NÃO É NECESSÁRIO FAZER INSCRIÇÃO",
-      "evidencia_gratuidade": "campo_entrada:gratuito",
-      "evidencia_data": "sab, 14/11/2026 - 15:00 a sab, 14/11/2026 - 16:00",
-      "evidencia_titulo_origem": "breadcrumb",
-      "evidencia_titulo_pontuacao": 1.0,
-      "evidencia_titulo_candidatos_descartados": [
-        {
-          "titulo": "Visita Mediada à exposição Markito – Cintilações da Noite",
-          "origem": "cabecalho_principal",
-          "pontuacao": 0.9693,
-          "motivo": "menor_semelhanca_com_slug"
-        },
-        {
-          "titulo": "Visita Mediada à exposição Markito – Cintilações da Noite",
-          "origem": "document_title",
-          "pontuacao": 0.9393,
-          "motivo": "menor_semelhanca_com_slug"
-        },
-        {
-          "titulo": "Dia 14/11 SÁB. 15h ÀS 16H",
-          "origem": "descricao",
-          "pontuacao": 0.1313,
-          "motivo": "menor_semelhanca_com_slug"
-        },
-        {
-          "titulo": "Portal Belo Horizonte",
-          "origem": "cabecalho_principal",
-          "motivo": "titulo_generico"
-        }
-      ],
       "local_id": "museu-da-moda",
       "fonte_descoberta": "Portal Belo Horizonte — Museu da Moda",
-      "somente_teste": true,
-      "status_validacao": "experimental",
+      "status_validacao": "aprovado",
       "origem_experimental": "mumo_portal_bh",
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
+      "motivo_publicacao": "aprovacao_editorial_eventos_experimentais_20261112",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-14",
+          "observacao": "15h às 16h"
+        }
+      },
+      "mapa": "https://maps.app.goo.gl/NSKCeznUnR3ooTQaA",
+      "espaco_interno": "MUMO"
     },
     {
       "id": "ufmg-ec-conversas-de-terreiro-o-dancehall-com-rudgirl-novembro-negro-ufmg",
@@ -6462,9 +6483,16 @@
       "instituicao_id": "casa-fiat-de-cultura",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "casa_fiat"
+      "status_validacao": "aprovado",
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-15",
+          "observacao": "10h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "ufmg-ec-museu-fechado-feriado-proclamacao-da-republica",
@@ -6516,9 +6544,16 @@
       "instituicao_id": "casa-fiat-de-cultura",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "casa_fiat"
+      "status_validacao": "aprovado",
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-15",
+          "observacao": "14h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-15-15",
@@ -6541,9 +6576,16 @@
       "instituicao_id": "casa-fiat-de-cultura",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "casa_fiat"
+      "status_validacao": "aprovado",
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-15",
+          "observacao": "15h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "casa-fiat-21-festival-de-cinema-italiano-na-casa-fiat-de-cultura-2026-11-15-16",
@@ -6566,9 +6608,16 @@
       "instituicao_id": "casa-fiat-de-cultura",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "casa_fiat"
+      "status_validacao": "aprovado",
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-15",
+          "observacao": "16h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "casa-fiat-casa-fiat-de-cultura-no-brasil-e-no-mundo-2026-11-17-sem-hora",
@@ -6591,9 +6640,15 @@
       "instituicao_id": "casa-fiat-de-cultura",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "casa_fiat"
+      "status_validacao": "aprovado",
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-17"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "cine-santa-tereza-bileto-129765",
@@ -6646,9 +6701,16 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_explicita",
       "local_id": "academia-mineira-de-letras",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "academia_mineira_letras"
+      "status_validacao": "aprovado",
+      "origem_experimental": "academia_mineira_letras",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-17",
+          "observacao": "19h30"
+        }
+      },
+      "mapa": "https://maps.app.goo.gl/nWAFno2E42DH5BeP6"
     },
     {
       "id": "cine-santa-tereza-bileto-129766",
@@ -6700,10 +6762,18 @@
       "instituicao_id": "minas-tenis-clube",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_explicita",
-      "local_id": "minas-centro-cultural-cafe",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "minas_tenis_cultura"
+      "local_id": "centro-cultural-unimed-bh-minas",
+      "status_validacao": "aprovado",
+      "origem_experimental": "minas_tenis_cultura",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-18",
+          "observacao": "19h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+Unimed-BH+Minas%2C+Rua+da+Bahia%2C+2244%2C+Lourdes%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Café Cultural do"
     },
     {
       "id": "aml-lacan-na-academia-aml-recebe-debate-sobre-fotografia-natureza-e-crise-ecologica-em-encontro-com-joao-marcos-rosa-2026-11-18",
@@ -6726,9 +6796,16 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_explicita",
       "local_id": "academia-mineira-de-letras",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "academia_mineira_letras"
+      "status_validacao": "aprovado",
+      "origem_experimental": "academia_mineira_letras",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-18",
+          "observacao": "20h"
+        }
+      },
+      "mapa": "https://maps.app.goo.gl/nWAFno2E42DH5BeP6"
     },
     {
       "id": "fcs-wp-37999",
@@ -6782,9 +6859,16 @@
       "instituicao_id": "casa-fiat-de-cultura",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "casa_fiat"
+      "status_validacao": "aprovado",
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-19",
+          "observacao": "10h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "mm-gerdau-novembro-negro-ufmg-2026-tudo-e-historia-negra-2026-11-19",
@@ -6807,9 +6891,16 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_explicita",
       "local_id": "mm-gerdau",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "mm_gerdau"
+      "status_validacao": "aprovado",
+      "origem_experimental": "mm_gerdau",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-19",
+          "observacao": "13h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=MM+Gerdau+%E2%80%93+Museu+das+Minas+e+do+Metal%2C+Pra%C3%A7a+da+Liberdade%2C+680%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-19-15",
@@ -6832,9 +6923,16 @@
       "instituicao_id": "casa-fiat-de-cultura",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "casa_fiat"
+      "status_validacao": "aprovado",
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-19",
+          "observacao": "15h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "minas-tenis-lancamento-de-livro-plaquete-para-o-fim-do-mundo-2026-11-19",
@@ -6856,10 +6954,18 @@
       "instituicao_id": "minas-tenis-clube",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_explicita",
-      "local_id": "minas-centro-cultural-cafe",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "minas_tenis_cultura"
+      "local_id": "centro-cultural-unimed-bh-minas",
+      "status_validacao": "aprovado",
+      "origem_experimental": "minas_tenis_cultura",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-19",
+          "observacao": "19h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+Unimed-BH+Minas%2C+Rua+da+Bahia%2C+2244%2C+Lourdes%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Café Cultural do"
     },
     {
       "id": "aml-academia-mineira-de-letras-recebe-palestra-sobre-a-literatura-timorense-em-portugues-e-tetum-com-a-embaixadora-maria-angela-carrascalao-2026-11-19",
@@ -6882,9 +6988,16 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_explicita",
       "local_id": "academia-mineira-de-letras",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "academia_mineira_letras"
+      "status_validacao": "aprovado",
+      "origem_experimental": "academia_mineira_letras",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-19",
+          "observacao": "19h30"
+        }
+      },
+      "mapa": "https://maps.app.goo.gl/nWAFno2E42DH5BeP6"
     },
     {
       "id": "ufmg-ec-museu-fechado",
@@ -6936,9 +7049,16 @@
       "instituicao_id": "casa-fiat-de-cultura",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "casa_fiat"
+      "status_validacao": "aprovado",
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-20",
+          "observacao": "10h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-20-15",
@@ -6961,9 +7081,16 @@
       "instituicao_id": "casa-fiat-de-cultura",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "casa_fiat"
+      "status_validacao": "aprovado",
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-20",
+          "observacao": "15h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-21-1030",
@@ -6986,9 +7113,16 @@
       "instituicao_id": "casa-fiat-de-cultura",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "casa_fiat"
+      "status_validacao": "aprovado",
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-21",
+          "observacao": "10h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "ufmg-ec-roda-de-conversa-territorios-iaia-conversa-com-os-residentes-novembro-negro-ufmg",
@@ -7077,9 +7211,16 @@
       "instituicao_id": "casa-fiat-de-cultura",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "casa_fiat"
+      "status_validacao": "aprovado",
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-21",
+          "observacao": "15h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "ufmg-ec-oficina-rap-nas-raizes-influencias-afro-brasileiras-novembro-negro-ufmg",
@@ -7191,9 +7332,16 @@
       "instituicao_id": "casa-fiat-de-cultura",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "casa_fiat"
+      "status_validacao": "aprovado",
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-22",
+          "observacao": "10h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "filarmonica-mg-concertos-para-a-juventude-7-2026-2026-11-22",
@@ -7248,9 +7396,16 @@
       "instituicao_id": "casa-fiat-de-cultura",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "casa_fiat"
+      "status_validacao": "aprovado",
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-22",
+          "observacao": "11h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "ufmg-ec-museu-fechado-2",
@@ -7302,9 +7457,16 @@
       "instituicao_id": "casa-fiat-de-cultura",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "casa_fiat"
+      "status_validacao": "aprovado",
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-22",
+          "observacao": "15h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "sesc-palladium-bileto-126071",
@@ -7357,9 +7519,15 @@
       "instituicao_id": "casa-fiat-de-cultura",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "casa_fiat"
+      "status_validacao": "aprovado",
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-24"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "cine-theatro-brasil-serie-bh-instrumental-e-xxiv-premio-da-musica-instrumental-mineira-2026-11-24-19",
@@ -7383,10 +7551,17 @@
       "motivo_publicacao": "gratuidade_confirmada_na_secao_de_precos",
       "espaco_interno": "Teatro de Câmara",
       "classificacao_indicativa": "Livre",
-      "evidencia_classificacao_indicativa": "campo_existente",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "cine_theatro_brasil"
+      "status_validacao": "aprovado",
+      "origem_experimental": "cine_theatro_brasil",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-24",
+          "observacao": "19h"
+        }
+      },
+      "instituicao_id": "",
+      "mapa": "https://maps.app.goo.gl/z4yFHAmeFRKHg3ro9"
     },
     {
       "id": "filarmonica-mg-filarmonica-em-camara-6-2026-2026-11-24",
@@ -7442,10 +7617,17 @@
       "motivo_publicacao": "gratuidade_confirmada_na_secao_de_precos",
       "espaco_interno": "Teatro de Câmara",
       "classificacao_indicativa": "Livre",
-      "evidencia_classificacao_indicativa": "campo_existente",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "cine_theatro_brasil"
+      "status_validacao": "aprovado",
+      "origem_experimental": "cine_theatro_brasil",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-25",
+          "observacao": "19h"
+        }
+      },
+      "instituicao_id": "",
+      "mapa": "https://maps.app.goo.gl/z4yFHAmeFRKHg3ro9"
     },
     {
       "id": "casa-fiat-elogio-ao-amor-bate-papo-com-a-artista-marila-dardot-e-a-curadora-cristiana-tejo-2026-11-25-1930",
@@ -7468,9 +7650,16 @@
       "instituicao_id": "casa-fiat-de-cultura",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "casa_fiat"
+      "status_validacao": "aprovado",
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-25",
+          "observacao": "19h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "casa-fiat-formacao-de-professores-a-presenca-indigena-e-negra-na-producao-artistica-brasileira-2026-11-26-sem-hora",
@@ -7493,9 +7682,15 @@
       "instituicao_id": "casa-fiat-de-cultura",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "casa_fiat"
+      "status_validacao": "aprovado",
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-26"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-26-1030",
@@ -7518,9 +7713,16 @@
       "instituicao_id": "casa-fiat-de-cultura",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "casa_fiat"
+      "status_validacao": "aprovado",
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-26",
+          "observacao": "10h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-26-15",
@@ -7543,9 +7745,16 @@
       "instituicao_id": "casa-fiat-de-cultura",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "casa_fiat"
+      "status_validacao": "aprovado",
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-26",
+          "observacao": "15h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "mm-gerdau-bate-papo-ao-vivo-risco-geologico-em-areas-turisticas-no-brasil-2026-11-26",
@@ -7568,9 +7777,16 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_explicita",
       "local_id": "mm-gerdau",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "mm_gerdau"
+      "status_validacao": "aprovado",
+      "origem_experimental": "mm_gerdau",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-26",
+          "observacao": "19h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=MM+Gerdau+%E2%80%93+Museu+das+Minas+e+do+Metal%2C+Pra%C3%A7a+da+Liberdade%2C+680%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "mm-gerdau-eee-virtual-encontro-entre-educadores-2026-11-26",
@@ -7593,9 +7809,16 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_explicita",
       "local_id": "mm-gerdau",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "mm_gerdau"
+      "status_validacao": "aprovado",
+      "origem_experimental": "mm_gerdau",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-26",
+          "observacao": "19h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=MM+Gerdau+%E2%80%93+Museu+das+Minas+e+do+Metal%2C+Pra%C3%A7a+da+Liberdade%2C+680%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "casa-fiat-formacao-de-professores-a-presenca-indigena-e-negra-na-producao-artistica-brasileira-2026-11-27-sem-hora",
@@ -7618,9 +7841,15 @@
       "instituicao_id": "casa-fiat-de-cultura",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "casa_fiat"
+      "status_validacao": "aprovado",
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-27"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "sesc-palladium-bileto-126065",
@@ -7712,9 +7941,16 @@
       "instituicao_id": "casa-fiat-de-cultura",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "casa_fiat"
+      "status_validacao": "aprovado",
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-28",
+          "observacao": "10h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "portal-bh-c63cd2989c7c-2026-11-28-1030",
@@ -7733,46 +7969,23 @@
       "fonte": "Portal Belo Horizonte",
       "fonte_id": "c63cd2989c7c",
       "instituicao_id": "fundacao-municipal-cultura-bh",
-      "endereco": "",
+      "endereco": "Rua da Bahia, 1149, Centro, Belo Horizonte - MG, 30160-011",
       "tags_fonte": [],
       "classificacao_indicativa": "Livre",
-      "evidencia_classificacao_indicativa": "portal_bh:texto_explicito_padrao_1",
-      "evidencia_classificacao_indicativa_trecho": "Dia 28/11 SÁB. 10h30 ÀS 11H30 Classificação: livre NÃO É NECESSÁRIO FAZER INSCRIÇÃO",
-      "evidencia_gratuidade": "campo_entrada:gratuito",
-      "evidencia_data": "sab, 28/11/2026 - 10:30 a sab, 28/11/2026 - 11:30",
-      "evidencia_titulo_origem": "breadcrumb",
-      "evidencia_titulo_pontuacao": 1.0,
-      "evidencia_titulo_candidatos_descartados": [
-        {
-          "titulo": "Visita Mediada à exposição Markito – Cintilações da Noite",
-          "origem": "cabecalho_principal",
-          "pontuacao": 0.9693,
-          "motivo": "menor_semelhanca_com_slug"
-        },
-        {
-          "titulo": "Visita Mediada à exposição Markito – Cintilações da Noite",
-          "origem": "document_title",
-          "pontuacao": 0.9393,
-          "motivo": "menor_semelhanca_com_slug"
-        },
-        {
-          "titulo": "Dia 28/11 SÁB. 10h30 ÀS 11H30",
-          "origem": "descricao",
-          "pontuacao": 0.1384,
-          "motivo": "menor_semelhanca_com_slug"
-        },
-        {
-          "titulo": "Portal Belo Horizonte",
-          "origem": "cabecalho_principal",
-          "motivo": "titulo_generico"
-        }
-      ],
       "local_id": "museu-da-moda",
       "fonte_descoberta": "Portal Belo Horizonte — Museu da Moda",
-      "somente_teste": true,
-      "status_validacao": "experimental",
+      "status_validacao": "aprovado",
       "origem_experimental": "mumo_portal_bh",
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
+      "motivo_publicacao": "aprovacao_editorial_eventos_experimentais_20261112",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-28",
+          "observacao": "10h30 às 11h30"
+        }
+      },
+      "mapa": "https://maps.app.goo.gl/NSKCeznUnR3ooTQaA",
+      "espaco_interno": "MUMO"
     },
     {
       "id": "ufmg-ec-roda-de-conversa-ovulario-a-palavra-viva-na-performance",
@@ -7823,9 +8036,16 @@
       "instituicao_id": "casa-fiat-de-cultura",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "casa_fiat"
+      "status_validacao": "aprovado",
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-28",
+          "observacao": "15h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "ufmg-ec-oficina-como-o-aviao-voa",
@@ -7876,9 +8096,16 @@
       "instituicao_id": "casa-fiat-de-cultura",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "casa_fiat"
+      "status_validacao": "aprovado",
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-28",
+          "observacao": "16h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "ufmg-ec-palestra-cronologia-da-vida-do-simples-ao-complexo-com-beatriz-hormanseder",
@@ -7959,9 +8186,16 @@
       "instituicao_id": "casa-fiat-de-cultura",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "casa_fiat"
+      "status_validacao": "aprovado",
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-29",
+          "observacao": "10h30"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "manual-concertos-peter-lund-orquestra-sonoro-despertar-2026-11-29-2026-11-29",
@@ -8054,9 +8288,16 @@
       "instituicao_id": "casa-fiat-de-cultura",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "casa_fiat"
+      "status_validacao": "aprovado",
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-29",
+          "observacao": "15h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "ufmg-ec-sessao-netuno-tea-dois-pedacinhos-de-vidro-3",
@@ -8137,9 +8378,16 @@
       "instituicao_id": "casa-fiat-de-cultura",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "casa_fiat"
+      "status_validacao": "aprovado",
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-29",
+          "observacao": "16h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "filarmonica-mg-recital-da-academia-filarmonica-2026-2026-11-30",
@@ -8162,9 +8410,16 @@
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "marcador_gratuito_agenda",
       "local_id": "sala-minas-gerais",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "filarmonica_mg"
+      "status_validacao": "aprovado",
+      "origem_experimental": "filarmonica_mg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-30",
+          "observacao": "20h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Sala+Minas+Gerais%2C+Rua+Tenente+Brito+Melo%2C+1090%2C+Barro+Preto%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "portal-bh-1045058fe89d-2026-12-05-1330",
@@ -8394,10 +8649,18 @@
       "instituicao_id": "minas-tenis-clube",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_explicita",
-      "local_id": "minas-centro-cultural-cafe",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "minas_tenis_cultura"
+      "local_id": "centro-cultural-unimed-bh-minas",
+      "status_validacao": "aprovado",
+      "origem_experimental": "minas_tenis_cultura",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-12-17",
+          "observacao": "19h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+Unimed-BH+Minas%2C+Rua+da+Bahia%2C+2244%2C+Lourdes%2C+Belo+Horizonte+-+MG",
+      "espaco_interno": "Café Cultural do"
     },
     {
       "id": "casa-fiat-12-presepio-colaborativo-da-casa-fiat-de-cultura-2027-01-10-19",
@@ -8420,9 +8683,16 @@
       "instituicao_id": "casa-fiat-de-cultura",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "casa_fiat"
+      "status_validacao": "aprovado",
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2027-01-10",
+          "observacao": "19h"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "portal-bh-1045058fe89d-2027-01-16-1330",
@@ -8513,9 +8783,15 @@
       "instituicao_id": "casa-fiat-de-cultura",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "casa_fiat"
+      "status_validacao": "aprovado",
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2027-01-24"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "casa-fiat-a-construcao-da-forma-na-casa-fiat-de-cultura-2027-01-31-sem-hora",
@@ -8538,9 +8814,15 @@
       "instituicao_id": "casa-fiat-de-cultura",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "casa_fiat"
+      "status_validacao": "aprovado",
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2027-01-31"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "casa-fiat-casa-fiat-de-cultura-no-brasil-e-no-mundo-2027-02-13-sem-hora",
@@ -8563,9 +8845,15 @@
       "instituicao_id": "casa-fiat-de-cultura",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "casa_fiat"
+      "status_validacao": "aprovado",
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2027-02-13"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "casa-fiat-casa-fiat-de-cultura-no-brasil-e-no-mundo-2027-02-14-sem-hora",
@@ -8588,9 +8876,15 @@
       "instituicao_id": "casa-fiat-de-cultura",
       "criterio_exibicao": "realizacao",
       "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "somente_teste": true,
-      "status_validacao": "experimental",
-      "origem_experimental": "casa_fiat"
+      "status_validacao": "aprovado",
+      "origem_experimental": "casa_fiat",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2027-02-14"
+        }
+      },
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
       "id": "mm-gerdau-2-seminario-de-colecionismo-mineral-e-15-encontro-de-colecionadores-de-minerais-2027-06-24",
