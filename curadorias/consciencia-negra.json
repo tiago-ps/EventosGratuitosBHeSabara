@@ -375,7 +375,8 @@
         "link": "https://prefeitura.pbh.gov.br/direitos-humanos/eventos/novembro-negro",
         "pagina": "https://prefeitura.pbh.gov.br/direitos-humanos/eventos/novembro-negro",
         "eixo_curadoria": "Essencial",
-        "exibicao_ativa": true
+        "exibicao_ativa": true,
+        "imagem": "imagens/curadorias/consciencia-negra/novembro-negro-pbh.jpg"
       },
       {
         "id": "site:novembro-negro-2026:pbh-simbolos-adinkra",
@@ -390,7 +391,8 @@
         "link": "https://prefeitura.pbh.gov.br/direitos-humanos/eventos/novembro-negro",
         "pagina": "https://prefeitura.pbh.gov.br/direitos-humanos/eventos/novembro-negro",
         "eixo_curadoria": "Essencial",
-        "exibicao_ativa": true
+        "exibicao_ativa": true,
+        "imagem": "imagens/curadorias/consciencia-negra/novembro-negro-pbh.jpg"
       },
       {
         "id": "site:novembro-negro-2026:pbh-cinema-quilombos",
