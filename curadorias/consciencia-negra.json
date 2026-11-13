@@ -114,7 +114,12 @@
       "por-um-feminismo-afro-latino-americano",
       "racismo-sexismo-e-desigualdade-no-brasil",
       "sobrevivendo-ao-racismo",
-      "miss-davis"
+      "miss-davis",
+      "historia-e-cultura-afro-brasileira",
+      "quarto-de-despejo",
+      "o-avesso-da-pele",
+      "poncia-vicencio",
+      "olhos-dagua"
     ],
     "cursos": [
       "1197",
@@ -326,6 +331,21 @@
       },
       "miss-davis": {
         "eixo_curadoria": "Essencial"
+      },
+      "historia-e-cultura-afro-brasileira": {
+        "eixo_curadoria": "Essencial"
+      },
+      "quarto-de-despejo": {
+        "eixo_curadoria": "Essencial"
+      },
+      "o-avesso-da-pele": {
+        "eixo_curadoria": "Essencial"
+      },
+      "poncia-vicencio": {
+        "eixo_curadoria": "Essencial"
+      },
+      "olhos-dagua": {
+        "eixo_curadoria": "Essencial"
       }
     }
   },
@@ -424,7 +444,8 @@
       "Livros foram ampliados com títulos do catálogo do Mural que tratam diretamente de racismo, relações raciais, feminismo negro, memória e protagonismo negro.",
       "Foi feita uma nova varredura do catálogo completo de livros, além da lista inicial exibida no filtro, e foram acrescentados três títulos claramente pertinentes: Racismo, sexismo e desigualdade no Brasil; Sobrevivendo ao racismo; e Miss Davis: a vida e as lutas de Angela Davis.",
       "Cursos: foi feita uma varredura do catálogo completo de 1.908 registros. Foram associados sete cursos gratuitos e online com aderência direta à história da África e da diáspora, memória e reparação da escravidão, lutas antirracistas, racismo religioso e letramento/legislação racial. A seleção usa os IDs canônicos id_fonte e não duplica registros.",
-      "A segunda seleção aprovada foi incorporada a esta curadoria: filmes, cursos e eventos foram unidos por IDs únicos, sem duplicar conteúdos já presentes. A curadoria original e seus metadados editoriais foram mantidos."
+      "A segunda seleção aprovada foi incorporada a esta curadoria: filmes, cursos e eventos foram unidos por IDs únicos, sem duplicar conteúdos já presentes. A curadoria original e seus metadados editoriais foram mantidos.",
+      "Foram incorporados à seleção cinco títulos do acervo ampliado com aderência direta à Consciência Negra: História e cultura afro-brasileira; Quarto de despejo: diário de uma favelada; O avesso da pele; Ponciá Vicêncio; e Olhos d'água."
     ]
   }
 }
