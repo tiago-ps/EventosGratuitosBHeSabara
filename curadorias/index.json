@@ -35,6 +35,16 @@
       "ordem": 0
     },
     {
+      "id": "consciencia-negra2",
+      "arquivo": "curadorias/consciencia-negra2.json",
+      "nome": "consciencia negra filmes e mais",
+      "tema": "consciencia negra",
+      "permanente": false,
+      "ativo_de": "",
+      "ativo_ate": "",
+      "ordem": 0
+    },
+    {
       "id": "saude-mental",
       "arquivo": "curadorias/saude-mental.json",
       "nome": "Saúde Mental",
