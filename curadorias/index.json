@@ -85,7 +85,8 @@
       "permanente": false,
       "ativo_de": "2026-11-12",
       "ativo_ate": "2026-12-01",
-      "ordem": 45
+      "ordem": 45,
+      "banner": "imagens/curadorias/consciencia-negra/consciencia-negra.png"
     }
   ]
 }
