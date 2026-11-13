@@ -3,7 +3,7 @@ importScripts('./js/temporalidade-eventos.js?v=1');
 
 const SW_EVENT_RELATIONS = self.MuralCultural?.eventRelations;
 const SW_EVENT_TEMPORAL = self.MuralCultural?.eventTemporal;
-const CACHE_VERSION = 'mural-cultural-v214-qr-40pct';
+const CACHE_VERSION = 'mural-cultural-v215-aviso-filmes-final';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -40,7 +40,7 @@ const CORE_ASSETS = [
   './js/metricas-pontos.js?v=3',
   './js/relacoes-eventos.js?v=3',
   './js/temporalidade-eventos.js?v=1',
-  './js/app.js?v=167',
+  './js/app.js?v=168',
   './js/temas-visuais.js?v=14',
   './js/eventos-manuais-ui.js?v=46',
   './js/ios-install.js?v=3',
