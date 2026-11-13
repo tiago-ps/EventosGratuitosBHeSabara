@@ -110,7 +110,15 @@
       "sobrevivendo-ao-racismo",
       "miss-davis"
     ],
-    "cursos": [],
+    "cursos": [
+      "1197",
+      "1206",
+      "632",
+      "1192",
+      "1054",
+      "mais-ifmg:159",
+      "ifrs:10503"
+    ],
     "filmes": [],
     "utilidade_publica": []
   },
@@ -280,7 +288,8 @@
       "Encontros para dançar em diálogo com saberes ancestrais, Música percussiva de rua e Observando raízes foram mantidos como relacionados, não como eixo principal.",
       "O Ciclo de Vivências ODS – Sabará foi incluído como complemento local por sua programação pública e pelo foco explícito em protagonismo negro e igualdade étnico-racial.",
       "Livros foram ampliados com títulos do catálogo do Mural que tratam diretamente de racismo, relações raciais, feminismo negro, memória e protagonismo negro.",
-      "Foi feita uma nova varredura do catálogo completo de livros, além da lista inicial exibida no filtro, e foram acrescentados três títulos claramente pertinentes: Racismo, sexismo e desigualdade no Brasil; Sobrevivendo ao racismo; e Miss Davis: a vida e as lutas de Angela Davis."
+      "Foi feita uma nova varredura do catálogo completo de livros, além da lista inicial exibida no filtro, e foram acrescentados três títulos claramente pertinentes: Racismo, sexismo e desigualdade no Brasil; Sobrevivendo ao racismo; e Miss Davis: a vida e as lutas de Angela Davis.",
+      "Cursos: foi feita uma varredura do catálogo completo de 1.908 registros. Foram associados sete cursos gratuitos e online com aderência direta à história da África e da diáspora, memória e reparação da escravidão, lutas antirracistas, racismo religioso e letramento/legislação racial. A seleção usa os IDs canônicos id_fonte e não duplica registros."
     ]
   }
 }
