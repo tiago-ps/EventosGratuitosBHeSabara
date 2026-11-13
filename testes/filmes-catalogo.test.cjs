@@ -135,6 +135,29 @@ assert.equal(films.catalogUsesTmdb([{ imagem_fonte: 'TMDB' }]), true);
 assert.equal(films.catalogUsesTmdb([{ sinopse_fonte: 'TMDB' }]), true);
 assert.equal(films.catalogUsesTmdb([{ imagem_fonte: 'Ecofalante Play' }]), false);
 assert.match(appSource, /Este produto usa a API do TMDB, mas não é endossado nem certificado pelo TMDB\./);
+const filmSectionStart = appSource.indexOf('function appendAgendaSection(');
+const filmSectionEnd = appSource.indexOf('function renderAgenda()', filmSectionStart);
+assert.ok(filmSectionStart > 0 && filmSectionEnd > filmSectionStart);
+const filmSectionCode = appSource.slice(filmSectionStart, filmSectionEnd);
+assert.ok(
+  filmSectionCode.indexOf('section.append(grid)') <
+  filmSectionCode.indexOf('if (progressiveControl) section.append(progressiveControl)') &&
+  filmSectionCode.indexOf('if (progressiveControl) section.append(progressiveControl)') <
+  filmSectionCode.indexOf("if (contentValue === 'films') section.append(filmSourceNotice())"),
+  'O aviso de Filmes deve vir depois dos cards e do controle Mostrar mais.'
+);
+const renderAgendaStart = appSource.indexOf('function renderAgenda()');
+const renderAgendaEnd = appSource.indexOf('function addPanelViewToggle()', renderAgendaStart);
+assert.ok(renderAgendaStart > 0 && renderAgendaEnd > renderAgendaStart);
+const renderAgendaCode = appSource.slice(renderAgendaStart, renderAgendaEnd);
+assert.ok(
+  renderAgendaCode.indexOf('shell.append(resultsContainer);') <
+  renderAgendaCode.indexOf('if (filmMode) shell.append(filmSourceNotice());') &&
+  renderAgendaCode.indexOf('if (filmMode) shell.append(filmSourceNotice());') <
+  renderAgendaCode.indexOf('shell.append(footer);'),
+  'No filtro de Filmes, o aviso deve aparecer depois dos resultados e antes do rodapé.'
+);
+
 assert.doesNotMatch(appSource, /tmdb-global-credit|Créditos TMDB|blue_square_2-/);
 assert.doesNotMatch(stylesSource, /\.tmdb-global-credit/);
 assert.match(appSource, /renderFilmSlide/);
