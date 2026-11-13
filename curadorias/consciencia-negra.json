@@ -23,6 +23,10 @@
   ],
   "perfil_painel": {
     "nome": "Semana da Consciência Negra — curadoria do mês",
+    "banner": {
+      "src": "imagens/curadorias/consciencia-negra/consciencia-negra.png",
+      "alt": "Semana da Consciência Negra"
+    },
     "destaque": "Novembro Negro",
     "configuracao": {
       "modules": {
