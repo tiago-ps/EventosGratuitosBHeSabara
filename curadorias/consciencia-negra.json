@@ -27,10 +27,10 @@
     "configuracao": {
       "modules": {
         "events": true,
-        "books": false,
-        "courses": false,
+        "books": true,
+        "courses": true,
         "contests": false,
-        "films": false,
+        "films": true,
         "utility": false
       },
       "theme": "consciência negra",
@@ -42,9 +42,17 @@
       "eventProgram": "",
       "eventUnit": "",
       "weights": {
-        "events": 1
+        "events": 4,
+        "books": 2,
+        "courses": 1,
+        "films": 2
       },
-      "slideDuration": 0
+      "slideDuration": 0,
+      "bookCampuses": [],
+      "bookAccess": "",
+      "filmGenre": "",
+      "filmRating": "",
+      "filmDuration": ""
     }
   },
   "perfil_visual": {
@@ -89,7 +97,16 @@
       "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-29-1030",
       "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-29-15"
     ],
-    "livros": [],
+    "livros": [
+      "parem-de-nos-matar",
+      "e-eu-nao-sou-uma-mulher-sojourner-truth",
+      "bibliotecas-do-ifmg-103266",
+      "insubmissas-lagrimas-de-mulheres",
+      "interseccionalidade",
+      "lelia-gonzalez",
+      "mulheres-raca-e-classe",
+      "por-um-feminismo-afro-latino-americano"
+    ],
     "cursos": [],
     "filmes": [],
     "utilidade_publica": []
@@ -130,6 +147,32 @@
         "eixo_curadoria": "Essencial"
       },
       "mm-gerdau-novembro-negro-ufmg-2026-tudo-e-historia-negra-2026-11-19": {
+        "eixo_curadoria": "Essencial"
+      }
+    },
+    "livros": {
+      "parem-de-nos-matar": {
+        "eixo_curadoria": "Essencial"
+      },
+      "e-eu-nao-sou-uma-mulher-sojourner-truth": {
+        "eixo_curadoria": "Essencial"
+      },
+      "bibliotecas-do-ifmg-103266": {
+        "eixo_curadoria": "Essencial"
+      },
+      "insubmissas-lagrimas-de-mulheres": {
+        "eixo_curadoria": "Essencial"
+      },
+      "interseccionalidade": {
+        "eixo_curadoria": "Essencial"
+      },
+      "lelia-gonzalez": {
+        "eixo_curadoria": "Essencial"
+      },
+      "mulheres-raca-e-classe": {
+        "eixo_curadoria": "Essencial"
+      },
+      "por-um-feminismo-afro-latino-americano": {
         "eixo_curadoria": "Essencial"
       }
     }
@@ -223,7 +266,8 @@
     "observacoes": [
       "Cinema e Cidadania, de Sabará, não foi incluído na programação pública principal por não haver confirmação de acesso aberto ao público.",
       "Encontros para dançar em diálogo com saberes ancestrais, Música percussiva de rua e Observando raízes foram mantidos como relacionados, não como eixo principal.",
-      "O Ciclo de Vivências ODS – Sabará foi incluído como complemento local por sua programação pública e pelo foco explícito em protagonismo negro e igualdade étnico-racial."
+      "O Ciclo de Vivências ODS – Sabará foi incluído como complemento local por sua programação pública e pelo foco explícito em protagonismo negro e igualdade étnico-racial.",
+      "Livros foram ampliados com títulos do catálogo do Mural que tratam diretamente de racismo, relações raciais, feminismo negro, memória e protagonismo negro."
     ]
   }
 }
