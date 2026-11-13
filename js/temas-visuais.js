@@ -223,6 +223,17 @@
       try { ids = JSON.parse(slide.dataset.curadoriaIds || '[]'); } catch (_) { /* Sem associação. */ }
       return window.MuralCultural.siteCurations.mergeCurationIds(ids).includes(profileId);
     }
+
+    // Curadorias editoriais também acompanham diretamente os slides associados.
+    // Antes, apenas promoções de painel usavam curadoria_ids; por isso um banner
+    // configurado corretamente podia ficar invisível mesmo com o conteúdo da
+    // curadoria sendo exibido no painel.
+    let curationIds = [];
+    try { curationIds = JSON.parse(slide.dataset.curadoriaIds || '[]'); } catch (_) { /* Sem associação. */ }
+    if (window.MuralCultural?.siteCurations &&
+        window.MuralCultural.siteCurations.mergeCurationIds(curationIds).includes(profileId)) {
+      return true;
+    }
     if (slide.classList.contains('support-slide') && root.dataset.siteCurationHelp === profileId) {
       return true;
     }
