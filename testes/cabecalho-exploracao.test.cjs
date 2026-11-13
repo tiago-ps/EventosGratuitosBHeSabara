@@ -84,7 +84,7 @@ assert.ok(appVersion, 'index sem versão de js/app.js');
 assert.ok(serviceWorker.includes(`./js/app.js?v=${appVersion}`), 'service worker com versão divergente de js/app.js');
 assert.ok(serviceWorker.includes("'./js/painel-navegacao-modos.js?v=6'"));
 assert.ok(serviceWorker.includes("'./css/tem-sim-uai-painel.css?v=2'"));
-assert.ok(serviceWorker.includes("mural-cultural-v214-qr-40pct"));
+assert.ok(serviceWorker.includes("mural-cultural-v215-aviso-filmes-final"));
 
 assert.match(serviceWorker, /const CACHE_VERSION = 'mural-cultural-v\d+-[^']+';/);
 
