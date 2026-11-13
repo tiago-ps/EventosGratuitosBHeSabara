@@ -66,6 +66,16 @@
       "nome": "Agosto Lilás",
       "tema": "Agosto Lilás",
       "ordem": 40
+    },
+    {
+      "id": "consciencia-negra",
+      "arquivo": "curadorias/consciencia-negra.json",
+      "nome": "Semana da Consciência Negra",
+      "tema": "Consciência Negra",
+      "permanente": false,
+      "ativo_de": "2026-11-12",
+      "ativo_ate": "2026-12-01",
+      "ordem": 45
     }
   ]
 }

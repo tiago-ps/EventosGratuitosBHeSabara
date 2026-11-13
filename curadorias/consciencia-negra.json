@@ -1,0 +1,229 @@
+{
+  "id": "consciencia-negra",
+  "status_editorial": "aprovada",
+  "nome": "Semana da Consciência Negra",
+  "tema": "Consciência Negra",
+  "permanente": false,
+  "ativo_de": "2026-11-12",
+  "ativo_ate": "2026-12-01",
+  "titulo_editorial": "Semana da Consciência Negra",
+  "subtitulo_editorial": "Cultura negra, ancestralidade, memória, resistência e protagonismo",
+  "texto_introdutorio": "Uma seleção de atividades gratuitas em Belo Horizonte e Sabará que valorizam histórias, culturas, saberes, artistas e intelectuais negros. A curadoria prioriza programações abertas ao público e diretamente relacionadas à Consciência Negra e ao Novembro Negro, sem incluir atividades exclusivamente internas ou escolares.",
+  "eixos_editoriais": [
+    {
+      "id": "essencial",
+      "titulo": "Essencial",
+      "descricao": "Atividades diretamente ligadas ao Novembro Negro, à Consciência Negra ou ao protagonismo negro."
+    },
+    {
+      "id": "relacionado",
+      "titulo": "Relacionado",
+      "descricao": "Atividades com forte relação com ancestralidade, cultura afro-brasileira e diáspora negra, ainda que não tenham sido criadas especificamente para o Novembro Negro."
+    }
+  ],
+  "perfil_painel": {
+    "nome": "Semana da Consciência Negra — curadoria do mês",
+    "destaque": "Novembro Negro",
+    "configuracao": {
+      "modules": {
+        "events": true,
+        "books": false,
+        "courses": false,
+        "contests": false,
+        "films": false,
+        "utility": false
+      },
+      "theme": "consciência negra",
+      "eventCities": [
+        "Belo Horizonte",
+        "Sabará"
+      ],
+      "eventCategory": "",
+      "eventProgram": "",
+      "eventUnit": "",
+      "weights": {
+        "events": 1
+      },
+      "slideDuration": 0
+    }
+  },
+  "perfil_visual": {
+    "id": "consciencia-negra",
+    "label": "Consciência Negra",
+    "profileLabel": "Consciência Negra",
+    "auto_ativar": true,
+    "themeColor": "#24150f"
+  },
+  "membros": {
+    "eventos": [
+      "ufmg-ec-conversas-de-terreiro-o-dancehall-com-rudgirl-novembro-negro-ufmg",
+      "ufmg-ec-roda-de-conversa-territorios-iaia-conversa-com-os-residentes-novembro-negro-ufmg",
+      "ufmg-ec-oficina-rap-nas-raizes-influencias-afro-brasileiras-novembro-negro-ufmg",
+      "ufmg-ec-sessao-de-planetario-ao-cair-da-noite-eu-me-guiarei-pelo-brilho-dos-seus-olhos-2",
+      "ufmg-ec-sessao-de-planetario-ao-cair-da-noite-eu-me-guiarei-pelo-brilho-dos-seus-olhos-4",
+      "sesc-palladium-bileto-126071",
+      "sesc-palladium-bileto-126065",
+      "ufmg-ec-roda-de-conversa-ovulario-a-palavra-viva-na-performance",
+      "mm-gerdau-novembro-negro-ufmg-2026-tudo-e-historia-negra-2026-11-19",
+      "ela-encontros-para-dancar-em-dialogo-com-saberes-ancestrais-2b3263ef42",
+      "ela-musica-percussiva-de-rua-4d8887bc14",
+      "portal-bh-c45a3d957af2-2026-11-14-1030",
+      "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-12-1030",
+      "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-12-15",
+      "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-14-1030",
+      "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-14-15",
+      "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-15-1030",
+      "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-15-15",
+      "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-19-1030",
+      "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-19-15",
+      "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-20-1030",
+      "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-20-15",
+      "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-21-1030",
+      "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-21-15",
+      "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-22-1030",
+      "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-22-15",
+      "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-26-1030",
+      "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-26-15",
+      "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-28-1030",
+      "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-28-15",
+      "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-29-1030",
+      "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-29-15"
+    ],
+    "livros": [],
+    "cursos": [],
+    "filmes": [],
+    "utilidade_publica": []
+  },
+  "overlays": {
+    "eventos": {
+      "ela-encontros-para-dancar-em-dialogo-com-saberes-ancestrais-2b3263ef42": {
+        "eixo_curadoria": "Relacionado"
+      },
+      "ela-musica-percussiva-de-rua-4d8887bc14": {
+        "eixo_curadoria": "Relacionado"
+      },
+      "portal-bh-c45a3d957af2-2026-11-14-1030": {
+        "eixo_curadoria": "Relacionado"
+      },
+      "ufmg-ec-conversas-de-terreiro-o-dancehall-com-rudgirl-novembro-negro-ufmg": {
+        "eixo_curadoria": "Essencial"
+      },
+      "ufmg-ec-roda-de-conversa-territorios-iaia-conversa-com-os-residentes-novembro-negro-ufmg": {
+        "eixo_curadoria": "Essencial"
+      },
+      "ufmg-ec-oficina-rap-nas-raizes-influencias-afro-brasileiras-novembro-negro-ufmg": {
+        "eixo_curadoria": "Essencial"
+      },
+      "ufmg-ec-sessao-de-planetario-ao-cair-da-noite-eu-me-guiarei-pelo-brilho-dos-seus-olhos-2": {
+        "eixo_curadoria": "Essencial"
+      },
+      "ufmg-ec-sessao-de-planetario-ao-cair-da-noite-eu-me-guiarei-pelo-brilho-dos-seus-olhos-4": {
+        "eixo_curadoria": "Essencial"
+      },
+      "sesc-palladium-bileto-126071": {
+        "eixo_curadoria": "Essencial"
+      },
+      "sesc-palladium-bileto-126065": {
+        "eixo_curadoria": "Essencial"
+      },
+      "ufmg-ec-roda-de-conversa-ovulario-a-palavra-viva-na-performance": {
+        "eixo_curadoria": "Essencial"
+      },
+      "mm-gerdau-novembro-negro-ufmg-2026-tudo-e-historia-negra-2026-11-19": {
+        "eixo_curadoria": "Essencial"
+      }
+    }
+  },
+  "complementos": {
+    "eventos": [
+      {
+        "id": "site:novembro-negro-2026:sabara-ciclo-ods",
+        "titulo": "Ciclo de Vivências ODS – Sabará: Protagonismo negro e igualdade étnico-racial",
+        "data": "2026-11-10",
+        "data_fim": "2026-12-10",
+        "local": "Solar Padre Correia e outros espaços de Sabará",
+        "cidade": "Sabará",
+        "categoria": "Programação cultural",
+        "gratuito": true,
+        "descricao": "Programação gratuita com exposição, atividades de capoeira, contação de histórias sobre grandes personagens negros e ações de educação para a igualdade étnico-racial. A programação inclui atividades públicas durante o Festival da Jabuticaba.",
+        "fonte": "SESI Cultura / FIEMG",
+        "link": "https://www.fiemg.com.br/sesi-cultura/programacao/detalhe/ciclo-de-vivencias-ods-sabara/",
+        "pagina": "https://www.fiemg.com.br/sesi-cultura/programacao/detalhe/ciclo-de-vivencias-ods-sabara/",
+        "eixo_curadoria": "Essencial",
+        "exibicao_ativa": true
+      },
+      {
+        "id": "site:novembro-negro-2026:pbh-encontro-quilombos",
+        "titulo": "Encontro de Quilombos Ervas e Raízes",
+        "data": "2026-11-19",
+        "local": "Centro Cultural Vila Fátima",
+        "cidade": "Belo Horizonte",
+        "categoria": "Encontro",
+        "gratuito": true,
+        "descricao": "Atividade da programação oficial do Novembro Negro 2026 dedicada a saberes, ervas e raízes quilombolas.",
+        "fonte": "Prefeitura de Belo Horizonte — Novembro Negro 2026",
+        "link": "https://prefeitura.pbh.gov.br/direitos-humanos/eventos/novembro-negro",
+        "pagina": "https://prefeitura.pbh.gov.br/direitos-humanos/eventos/novembro-negro",
+        "eixo_curadoria": "Essencial",
+        "exibicao_ativa": true
+      },
+      {
+        "id": "site:novembro-negro-2026:pbh-premio-zumbi",
+        "titulo": "17º Prêmio Zumbi de Cultura",
+        "data": "2026-11-20",
+        "local": "Grande Teatro Sesc Palladium",
+        "cidade": "Belo Horizonte",
+        "categoria": "Premiação",
+        "gratuito": true,
+        "descricao": "Premiação integrante da programação oficial do Novembro Negro 2026 da Prefeitura de Belo Horizonte.",
+        "fonte": "Prefeitura de Belo Horizonte — Novembro Negro 2026",
+        "link": "https://prefeitura.pbh.gov.br/direitos-humanos/eventos/novembro-negro",
+        "pagina": "https://prefeitura.pbh.gov.br/direitos-humanos/eventos/novembro-negro",
+        "eixo_curadoria": "Essencial",
+        "exibicao_ativa": true
+      },
+      {
+        "id": "site:novembro-negro-2026:pbh-simbolos-adinkra",
+        "titulo": "Oficina de pintura de Símbolos Adinkra",
+        "data": "2026-11-22",
+        "local": "Museu Histórico Abílio Barreto",
+        "cidade": "Belo Horizonte",
+        "categoria": "Oficina",
+        "gratuito": true,
+        "descricao": "Oficina integrante da programação oficial do Novembro Negro 2026.",
+        "fonte": "Prefeitura de Belo Horizonte — Novembro Negro 2026",
+        "link": "https://prefeitura.pbh.gov.br/direitos-humanos/eventos/novembro-negro",
+        "pagina": "https://prefeitura.pbh.gov.br/direitos-humanos/eventos/novembro-negro",
+        "eixo_curadoria": "Essencial",
+        "exibicao_ativa": true
+      },
+      {
+        "id": "site:novembro-negro-2026:pbh-cinema-quilombos",
+        "titulo": "9ª Mostra Cinema dos Quilombos – Exibição Quilombo Manzo",
+        "data": "2026-11-26",
+        "local": "Centro Cultural Venda Nova",
+        "cidade": "Belo Horizonte",
+        "categoria": "Cinema",
+        "gratuito": true,
+        "descricao": "Exibição integrante da programação oficial do Novembro Negro 2026.",
+        "fonte": "Prefeitura de Belo Horizonte — Novembro Negro 2026",
+        "link": "https://prefeitura.pbh.gov.br/direitos-humanos/eventos/novembro-negro",
+        "pagina": "https://prefeitura.pbh.gov.br/direitos-humanos/eventos/novembro-negro",
+        "eixo_curadoria": "Essencial",
+        "exibicao_ativa": true
+      }
+    ],
+    "livros": [],
+    "cursos": [],
+    "filmes": []
+  },
+  "auditoria_dados": {
+    "revisado_em": "2026-11-12",
+    "criterio": "Foram priorizadas atividades gratuitas, abertas ao público e diretamente relacionadas à Consciência Negra/Novembro Negro. Atividades exclusivamente internas ou escolares não foram incluídas.",
+    "observacoes": [
+      "Cinema e Cidadania, de Sabará, não foi incluído na programação pública principal por não haver confirmação de acesso aberto ao público.",
+      "Encontros para dançar em diálogo com saberes ancestrais, Música percussiva de rua e Observando raízes foram mantidos como relacionados, não como eixo principal.",
+      "O Ciclo de Vivências ODS – Sabará foi incluído como complemento local por sua programação pública e pelo foco explícito em protagonismo negro e igualdade étnico-racial."
+    ]
+  }
+}
