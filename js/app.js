@@ -3839,6 +3839,23 @@ function eventProgram(event) {
   const MOBILE_BREAKPOINT = 760;
   const VIEW_MODE_KEY = 'agenda-cultural-modo-visualizacao';
 
+  function requestedViewModeFromUrl() {
+    try {
+      const mode = String(new URLSearchParams(window.location.search).get('modo') || '')
+        .trim()
+        .toLowerCase();
+      if (['passivo', 'tv', 'painel', 'interativo', 'interactive', 'terminal'].includes(mode)) {
+        return 'painel';
+      }
+      if (mode === 'auto') return 'auto';
+      // Sem indicação explícita de modo de exibição, a entrada pública é a Exploração.
+      // Isso evita que um visitante novo confunda o Painel automático com todo o Mural.
+      return 'agenda';
+    } catch {
+      return 'agenda';
+    }
+  }
+
   function storedViewMode() {
     try {
       const value = localStorage.getItem(VIEW_MODE_KEY);
@@ -7043,7 +7060,9 @@ function eventProgram(event) {
         return;
       }
 
-      state.viewMode = state.curationMode ? 'agenda' : storedViewMode();
+      // Links sem modo de exibição explícito entram na Exploração.
+      // Modos explícitos (?modo=agenda|passivo|interativo|auto) continuam prevalecendo.
+      state.viewMode = state.curationMode ? requestedViewModeFromUrl() : requestedViewModeFromUrl();
       const requestedCurationContent = state.curationMode ? requestedCurationContentFromUrl() : '';
       if (requestedCurationContent) {
         state.mobileContent = requestedCurationContent;
