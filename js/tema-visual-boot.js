@@ -31,6 +31,10 @@
       localStorage.setItem('agenda-cultural-modo-visualizacao', 'painel');
     } else if (requestedMode === 'agenda') {
       localStorage.setItem('agenda-cultural-modo-visualizacao', 'agenda');
+    } else if (!requestedMode) {
+      // Sem modo de exibição na URL, a porta de entrada pública é a Exploração.
+      // Assim um visitante novo não fica preso à apresentação automática.
+      localStorage.setItem('agenda-cultural-modo-visualizacao', 'agenda');
     }
   } catch (_) {
     // Mantém o comportamento histórico quando URL/storage não estiverem disponíveis.
