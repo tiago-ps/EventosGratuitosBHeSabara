@@ -2,8 +2,8 @@
   "schema": 10,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-11-12T17:12:30.201898+00:00",
-  "total": 31,
+  "coletado_em_utc": "2026-11-18T17:43:15.577057+00:00",
+  "total": 30,
   "concursos": [
     {
       "id": "pci:noticia:trf3-sp-ms-retifica-concurso-publico-para-analistas-e-tecnicos-judiciarios",
@@ -45,6 +45,189 @@
         {
           "cargo": "Desenvolvimento de Sistemas de Informação",
           "vagas_texto": "5 vagas",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "prazo_desconhecido",
+        "completude": "desconhecida"
+      }
+    },
+    {
+      "id": "pci:noticia:associacao-das-pioneiras-sociais-abre-processo-seletivo-para-analista-de-tecnologia-da-informacao",
+      "titulo": "APS - Associação das Pioneiras Sociais",
+      "url": "https://www.pciconcursos.com.br/noticias/associacao-das-pioneiras-sociais-abre-processo-seletivo-para-analista-de-tecnologia-da-informacao",
+      "imagem": "https://cdn.pci.app.br/img/i/1f13ae08599612293a37a811ed4bbbf2.png",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "associacao das pioneiras sociais abre processo seletivo para analista de tecnologia da informacao estao abertas as oportunidades para profissionais de nivel superior em diversas capitais com remuneracao inicial de r$ 14.972,56. a selecao contempla areas de desenvolvimento e infraestrutura. concursos › noticias › nacional sexta-feira, 13 de novembro de 2026 a associacao das pioneiras sociais (ap"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "RJ",
+      "cidade": "",
+      "inscricoes_inicio_texto": "23 de novembro de 2026",
+      "inscricoes_fim_texto": "17 de dezembro de 2026",
+      "inscricoes_texto": "23 de novembro de 2026 a 17 de dezembro de 2026",
+      "remuneracao_faixa_texto": "R$ 7.843,38 a R$ 14.972,56",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Analista de Tecnologia da Informação, área de Desenvolvimento, Brasília",
+          "vagas_texto": "4 vagas",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        },
+        {
+          "cargo": "Analista de Tecnologia da Informação, área de Infraestrutura, Brasília",
+          "vagas_texto": "4 vagas",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        },
+        {
+          "cargo": "Analista de Tecnologia da Informação, área de Infraestrutura, Rio de Janeiro",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        },
+        {
+          "cargo": "Analista de Tecnologia da Informação, área de Infraestrutura, Salvador",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        },
+        {
+          "cargo": "Analista de Tecnologia da Informação, área de Infraestrutura, São Luís",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "futuro",
+        "completude": "completa",
+        "inicio": "2026-11-23",
+        "fim": "2026-12-17",
+        "texto_original": "23 de novembro de 2026 a 17 de dezembro de 2026"
+      },
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-11-23",
+          "fim": "2026-12-17"
+        },
+        "participacao": [
+          {
+            "tipo": "candidatura",
+            "inicio": "2026-11-23",
+            "fim": "2026-12-17",
+            "status": "futuro"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pci:noticia:cetesb-sp-abre-concursos-publicos-para-diversos-cargos",
+      "titulo": "CETESB - Companhia Ambiental do Estado de São Paulo",
+      "url": "https://www.pciconcursos.com.br/noticias/cetesb-sp-abre-concursos-publicos-para-diversos-cargos",
+      "imagem": "https://cdn.pci.app.br/img/i/e8de253e54617c2ec4e4e1340e6d80d2.png",
+      "formacoes_compativeis": [
+        "Técnico em Eletrônica",
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Eletrônica",
+          "nivel": "tecnico",
+          "evidencia": " paulo (cetesb) abriu inscricoes para dois editais de concurso publico destinados a preencher vagas em funcoes de nivel medio, tecnico ou superior. segundo o edital, as oportunidades sao para os cargos de: nivel medio e tecnico, edital no 02/2026 tecnico administrativo (17 vagas) tecnico ambiental, tecnico em eletronica (1 vaga) tecnico ambiental, tecnico em quimica (2 vagas) tecnico ambiental, tecnico em meio ambiente (3 vagas) nivel superior, edital no 01/2026 advogado (2 vagas) analista administrativo, administracao (7 vagas) analista administrativo, contabilidade (2 vagas) analista administrativo, psicologia ("
+        },
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "ngenharia florestal (1 vaga) analista ambiental, engenharia mecanica (4 vagas) analista ambiental, engenharia quimica (4 vagas) analista ambiental, oceanografia (2 vagas) analista ambiental, geografia (4 vagas) analista ambiental, geologia (3 vagas) analista ambiental, quimica (8 vagas) analista de tecnologia da informacao, redes e telecomunicacao (1 vaga) analista de tecnologia da informacao, sistemas (3 vagas) engenheiro, engenharia civil (2 vagas) a jornada e de 40 horas semanais. a remuneracao inicial e de r$ 5.614,38 para os empregos de niveis medio e tecnico e de r$ 8.971,98 para os de nivel superior. para as m"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "SP",
+      "cidade": "",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "R$ 5.614,38 a R$ 8.971,98",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico Ambiental, Técnico em Eletrônica",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Eletrônica",
+          "confianca": "alta"
+        },
+        {
+          "cargo": "Analista de Tecnologia da Informação, Redes e Telecomunicação",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        },
+        {
+          "cargo": "Analista de Tecnologia da Informação, Sistemas",
+          "vagas_texto": "3 vagas",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "prazo_desconhecido",
+        "completude": "desconhecida"
+      }
+    },
+    {
+      "id": "pci:noticia:prefeitura-de-birigui-sp-abre-concurso-publico-com-salarios-de-ate-13881",
+      "titulo": "Prefeitura de Birigui",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-birigui-sp-abre-concurso-publico-com-salarios-de-ate-13881",
+      "imagem": "https://cdn.pci.app.br/img/i/acecfb0e9940bea842595bb317f7a9b7.png",
+      "formacoes_compativeis": [
+        "Técnico em Informática",
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": "o de tratamento de agua (3 vagas) orientador social (cr) recepcionista (4 vagas) salva-vidas (cr) tecnico agricola (cr) tecnico em agrimensura (cr) tecnico em contabilidade (cr) tecnico em edificacoes (cr) tecnico em enfermagem (cr) tecnico em enfermagem esf (11 vagas) tecnico em farmacia (4 vagas) tecnico em informatica (1 vaga) tecnico em nutricao (1 vaga) tecnico em seguranca do trabalho (cr) acupunturista (cr) analista de tecnologia da informacao (1 vaga) arquiteto (cr) assistente social (4 vagas) assistente social educacional (1 vaga) cirurgiao-dentista (cr) contador (1 vaga) controlador interno (1 vaga) enfer"
+        },
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": " agrimensura (cr) tecnico em contabilidade (cr) tecnico em edificacoes (cr) tecnico em enfermagem (cr) tecnico em enfermagem esf (11 vagas) tecnico em farmacia (4 vagas) tecnico em informatica (1 vaga) tecnico em nutricao (1 vaga) tecnico em seguranca do trabalho (cr) acupunturista (cr) analista de tecnologia da informacao (1 vaga) arquiteto (cr) assistente social (4 vagas) assistente social educacional (1 vaga) cirurgiao-dentista (cr) contador (1 vaga) controlador interno (1 vaga) enfermeiro (cr) enfermeiro esf (11 vagas) engenheiro ambiental (cr) engenheiro civil (cr) engenheiro eletrico (cr) engenheiro quimico (cr"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "SP",
+      "cidade": "Birigui",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "R$ 13.881,85",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico em Informática",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "alta"
+        },
+        {
+          "cargo": "Analista de Tecnologia da Informação",
+          "vagas_texto": "1 vaga",
           "formacao": "Sistemas de Informação / Computação",
           "confianca": "alta"
         }
@@ -137,61 +320,6 @@
         {
           "cargo": "Técnico em Tecnologia da Informação",
           "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        }
-      ],
-      "janela_inscricoes": {
-        "estado": "prazo_desconhecido",
-        "completude": "desconhecida"
-      }
-    },
-    {
-      "id": "pci:noticia:cetesb-sp-abre-concursos-publicos-para-diversos-cargos",
-      "titulo": "CETESB - Companhia Ambiental do Estado de São Paulo",
-      "url": "https://www.pciconcursos.com.br/noticias/cetesb-sp-abre-concursos-publicos-para-diversos-cargos",
-      "imagem": "https://cdn.pci.app.br/img/i/e8de253e54617c2ec4e4e1340e6d80d2.png",
-      "formacoes_compativeis": [
-        "Técnico em Eletrônica",
-        "Sistemas de Informação / Computação"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Técnico em Eletrônica",
-          "nivel": "tecnico",
-          "evidencia": " paulo (cetesb) abriu inscricoes para dois editais de concurso publico destinados a preencher vagas em funcoes de nivel medio, tecnico ou superior. segundo o edital, as oportunidades sao para os cargos de: nivel medio e tecnico, edital no 02/2026 tecnico administrativo (17 vagas) tecnico ambiental, tecnico em eletronica (1 vaga) tecnico ambiental, tecnico em quimica (2 vagas) tecnico ambiental, tecnico em meio ambiente (3 vagas) nivel superior, edital no 01/2026 advogado (2 vagas) analista administrativo, administracao (7 vagas) analista administrativo, contabilidade (2 vagas) analista administrativo, psicologia ("
-        },
-        {
-          "nome": "Sistemas de Informação / Computação",
-          "nivel": "superior",
-          "evidencia": "ngenharia florestal (1 vaga) analista ambiental, engenharia mecanica (4 vagas) analista ambiental, engenharia quimica (4 vagas) analista ambiental, oceanografia (2 vagas) analista ambiental, geografia (4 vagas) analista ambiental, geologia (3 vagas) analista ambiental, quimica (8 vagas) analista de tecnologia da informacao, redes e telecomunicacao (1 vaga) analista de tecnologia da informacao, sistemas (3 vagas) engenheiro, engenharia civil (2 vagas) a jornada e de 40 horas semanais. a remuneracao inicial e de r$ 5.614,38 para os empregos de niveis medio e tecnico e de r$ 8.971,98 para os de nivel superior. para as m"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "SP",
-      "cidade": "",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "",
-      "inscricoes_texto": "",
-      "remuneracao_faixa_texto": "R$ 5.614,38 a R$ 8.971,98",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Técnico Ambiental, Técnico em Eletrônica",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Eletrônica",
-          "confianca": "alta"
-        },
-        {
-          "cargo": "Analista de Tecnologia da Informação, Redes e Telecomunicação",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        },
-        {
-          "cargo": "Analista de Tecnologia da Informação, Sistemas",
-          "vagas_texto": "3 vagas",
           "formacao": "Sistemas de Informação / Computação",
           "confianca": "alta"
         }
@@ -312,55 +440,6 @@
       }
     },
     {
-      "id": "pci:noticia:prefeitura-de-birigui-sp-abre-concurso-publico-com-salarios-de-ate-13881",
-      "titulo": "Prefeitura de Birigui",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-birigui-sp-abre-concurso-publico-com-salarios-de-ate-13881",
-      "imagem": "https://cdn.pci.app.br/img/i/acecfb0e9940bea842595bb317f7a9b7.png",
-      "formacoes_compativeis": [
-        "Técnico em Informática",
-        "Sistemas de Informação / Computação"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Técnico em Informática",
-          "nivel": "tecnico",
-          "evidencia": "o de tratamento de agua (3 vagas) orientador social (cr) recepcionista (4 vagas) salva-vidas (cr) tecnico agricola (cr) tecnico em agrimensura (cr) tecnico em contabilidade (cr) tecnico em edificacoes (cr) tecnico em enfermagem (cr) tecnico em enfermagem esf (11 vagas) tecnico em farmacia (4 vagas) tecnico em informatica (1 vaga) tecnico em nutricao (1 vaga) tecnico em seguranca do trabalho (cr) acupunturista (cr) analista de tecnologia da informacao (1 vaga) arquiteto (cr) assistente social (4 vagas) assistente social educacional (1 vaga) cirurgiao-dentista (cr) contador (1 vaga) controlador interno (1 vaga) enfer"
-        },
-        {
-          "nome": "Sistemas de Informação / Computação",
-          "nivel": "superior",
-          "evidencia": " agrimensura (cr) tecnico em contabilidade (cr) tecnico em edificacoes (cr) tecnico em enfermagem (cr) tecnico em enfermagem esf (11 vagas) tecnico em farmacia (4 vagas) tecnico em informatica (1 vaga) tecnico em nutricao (1 vaga) tecnico em seguranca do trabalho (cr) acupunturista (cr) analista de tecnologia da informacao (1 vaga) arquiteto (cr) assistente social (4 vagas) assistente social educacional (1 vaga) cirurgiao-dentista (cr) contador (1 vaga) controlador interno (1 vaga) enfermeiro (cr) enfermeiro esf (11 vagas) engenheiro ambiental (cr) engenheiro civil (cr) engenheiro eletrico (cr) engenheiro quimico (cr"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "SP",
-      "cidade": "Birigui",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "",
-      "inscricoes_texto": "",
-      "remuneracao_faixa_texto": "R$ 13.881,85",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Técnico em Informática",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "alta"
-        },
-        {
-          "cargo": "Analista de Tecnologia da Informação",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        }
-      ],
-      "janela_inscricoes": {
-        "estado": "prazo_desconhecido",
-        "completude": "desconhecida"
-      }
-    },
-    {
       "id": "pci:noticia:prefeitura-de-jandira-sp-abre-concurso-publico-com-salarios-de-ate-6812",
       "titulo": "Prefeitura de Jandira",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-jandira-sp-abre-concurso-publico-com-salarios-de-ate-6812",
@@ -478,6 +557,43 @@
       }
     },
     {
+      "id": "pci:noticia:crp-05-rj-abre-concurso-publico-com-salarios-de-ate-7313",
+      "titulo": "CRP/05 - Conselho Regional de Psicologia da 5ª Região",
+      "url": "https://www.pciconcursos.com.br/noticias/crp-05-rj-abre-concurso-publico-com-salarios-de-ate-7313",
+      "imagem": "https://cdn.pci.app.br/img/i/f7ff37607e6708f6b59c4bb2f5d71053.png",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "iu um concurso publico para preencher vagas imediatas e formar cadastro de reserva em empregos publicos permanentes de niveis medio e superior. segundo o edital, as oportunidades sao para os cargos de: sede, no rio de janeiro tecnico administrativo nivel superior (5 vagas) contador (1 vaga) tecnico tecnologia da informacao (1 vaga) jornalista (1 vaga) psicologa(o) (8 vagas) agente administrativo (4 vagas) subsede norte e noroeste fluminense psicologa(o) (2 vagas) agente administrativo (1 vaga) subsede serrana psicologa(o) (2 vagas) agente administrativo (1 vaga) subsede sul fluminense psicologa(o) (2 vagas) agente ad"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "RJ",
+      "cidade": "",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "R$ 7.313,35",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico Tecnologia da Informação",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "prazo_desconhecido",
+        "completude": "desconhecida"
+      }
+    },
+    {
       "id": "pci:noticia:prefeitura-de-contagem-mg-retifica-edital-de-concurso-publico",
       "titulo": "Prefeitura de Contagem",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-contagem-mg-retifica-edital-de-concurso-publico",
@@ -489,7 +605,7 @@
         {
           "nome": "Sistemas de Informação / Computação",
           "nivel": "superior",
-          "evidencia": "e passou a constar como engenheiro de controle e automacao. alem disso, houve a inclusao do cargo de engenheiro geotecnico, a alteracao da distribuicao das vagas para assistente administrativo, arquiteto e engenheiro civil, e a alteracao dos requisitos para arquivista, auditor de controle interno - tecnologia da informacao, engenheiro cartografico, engenheiro de controle e automacao, engenheiro sanitarista e engenheiro de seguranca do trabalho. alem das alteracoes citadas, o documento traz mudancas no quadro de provas e no conteudo programatico. segundo o edital, as oportunidades sao para os cargos de: assistente adm"
+          "evidencia": "e passou a constar como engenheiro de controle e automacao. alem disso, houve a inclusao do cargo de engenheiro geotecnico, a alteracao da distribuicao das vagas para assistente administrativo, arquiteto e engenheiro civil, e a alteracao dos requisitos para arquivista, auditor de controle interno - tecnologia da informacao, engenheiro cartografico, engenheiro de controle e automacao, engenheiro sanitarista e engenheiro de seguranca do trabalho. alem das alteracoes citadas, o documento traz mudancas no quadro de provas e no conteudo programatico. a retificacao no 02 esclareceu que as reservas de vagas sao calculadas s"
         }
       ],
       "fonte": "PCI Concursos",
@@ -497,8 +613,8 @@
       "uf": "MG",
       "cidade": "Contagem",
       "inscricoes_inicio_texto": "19 de outubro de 2026",
-      "inscricoes_fim_texto": "17 de novembro de 2026",
-      "inscricoes_texto": "19 de outubro de 2026 a 17 de novembro de 2026",
+      "inscricoes_fim_texto": "3 de dezembro de 2026",
+      "inscricoes_texto": "19 de outubro de 2026 a 3 de dezembro de 2026",
       "remuneracao_faixa_texto": "R$ 13.305,57",
       "remuneracao_fonte": "catalogo",
       "cargos_compativeis": [
@@ -510,24 +626,24 @@
         }
       ],
       "janela_inscricoes": {
-        "estado": "encerrado",
+        "estado": "aberto",
         "completude": "completa",
         "inicio": "2026-10-19",
-        "fim": "2026-11-17",
-        "texto_original": "19 de outubro de 2026 a 17 de novembro de 2026"
+        "fim": "2026-12-03",
+        "texto_original": "19 de outubro de 2026 a 3 de dezembro de 2026"
       },
       "temporalidade": {
         "classe": "periodo",
         "realizacao": {
           "inicio": "2026-10-19",
-          "fim": "2026-11-17"
+          "fim": "2026-12-03"
         },
         "participacao": [
           {
             "tipo": "candidatura",
             "inicio": "2026-10-19",
-            "fim": "2026-11-17",
-            "status": "encerrado"
+            "fim": "2026-12-03",
+            "status": "aberto"
           }
         ]
       }
@@ -628,43 +744,6 @@
           "cargo": "Professor de Ensino Profissionalizante - Engenharia da Computação",
           "vagas_texto": "1 vaga",
           "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        }
-      ],
-      "janela_inscricoes": {
-        "estado": "prazo_desconhecido",
-        "completude": "desconhecida"
-      }
-    },
-    {
-      "id": "pci:noticia:prefeitura-de-confins-mg-divulga-retificacoes-de-processo-seletivo",
-      "titulo": "Prefeitura de Confins",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-confins-mg-divulga-retificacoes-de-processo-seletivo",
-      "imagem": "https://cdn.pci.app.br/img/i/b7dc18e8fb98721180ed92a93efc5699.png",
-      "formacoes_compativeis": [
-        "Técnico em Informática"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Técnico em Informática",
-          "nivel": "tecnico",
-          "evidencia": " administrativo (desenvolvimento social) (1 vaga) tecnico em saude (2 vagas) ensino medio ou tecnico completo fiscal de obras e posturas (cr) projetista (cr) tecnico em enfermagem (2 vagas) tecnico em enfermagem esf (6 vagas) tecnico em higiene dental (1 vaga) tecnico em higiene dental esf (1 vaga) tecnico em informatica (1 vaga) ensino superior completo advogado (desenvolvimento social) (1 vaga) analista ambiental (cr) analista de sistema - saude (cr) assistente social (desenvolvimento social) (cr) assistente social (saude) (cr) bibliotecario (cultura) (cr) enfermeiro (cr) enfermeiro esf (1 vaga) engenheiro civil "
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "MG",
-      "cidade": "Confins",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "",
-      "inscricoes_texto": "",
-      "remuneracao_faixa_texto": "R$ 1.628,10 a R$ 23.298,67",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Técnico em Informática",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
           "confianca": "alta"
         }
       ],
@@ -980,6 +1059,55 @@
       }
     },
     {
+      "id": "pci:noticia:prefeitura-de-muqui-es-abre-concurso-publico-com-diversas-vagas",
+      "titulo": "Prefeitura de Muqui",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-muqui-es-abre-concurso-publico-com-diversas-vagas",
+      "imagem": "https://cdn.pci.app.br/img/i/bfdeefa6c37c8fee9f5b4595918613b7.png",
+      "formacoes_compativeis": [
+        "Técnico em Administração",
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Administração",
+          "nivel": "tecnico",
+          "evidencia": "al (1 vaga) professor base nacional comum (1o ao 5o ano do ef) (10 vagas) professor de arte (1 vaga) professor de educacao fisica (1 vaga) professor de educacao infantil (creche e pre-escola) (5 vagas) professor de ensino religioso (1 vaga) psicologo (2 vagas) tecnico agricola (cadastro de reserva) tecnico em administracao (2 vagas) tecnico em contabilidade (1 vaga) tecnico em edificacoes (1 vaga) tecnico em enfermagem (5 vagas) tecnico em informatica (2 vagas) tecnico em laboratorio (1 vaga) tecnico em meio ambiente (cadastro de reserva) tecnico em radiologia (1 vaga) tecnico em seguranca do trabalho (1 vaga) trabal"
+        },
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": "vaga) professor de educacao infantil (creche e pre-escola) (5 vagas) professor de ensino religioso (1 vaga) psicologo (2 vagas) tecnico agricola (cadastro de reserva) tecnico em administracao (2 vagas) tecnico em contabilidade (1 vaga) tecnico em edificacoes (1 vaga) tecnico em enfermagem (5 vagas) tecnico em informatica (2 vagas) tecnico em laboratorio (1 vaga) tecnico em meio ambiente (cadastro de reserva) tecnico em radiologia (1 vaga) tecnico em seguranca do trabalho (1 vaga) trabalhador bracal (8 vagas) vigia (4 vagas) as jornadas variam de 20 a 40 horas semanais, com vencimentos iniciais de r$ 1.631,00 a r$ 4"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "ES",
+      "cidade": "Muqui",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "R$ 1.631,00 a R$ 4.554,00",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico em Administração",
+          "vagas_texto": "2 vagas",
+          "formacao": "Técnico em Administração",
+          "confianca": "alta"
+        },
+        {
+          "cargo": "Técnico em Informática",
+          "vagas_texto": "2 vagas",
+          "formacao": "Técnico em Informática",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "prazo_desconhecido",
+        "completude": "desconhecida"
+      }
+    },
+    {
       "id": "pci:noticia:fundacao-escola-tecnica-liberato-salzano-vieira-da-cunha-rs-abre-concurso-publico-para-diversos-cargos",
       "titulo": "Fundação Escola Técnica Liberato Salzano Vieira da Cunha",
       "url": "https://www.pciconcursos.com.br/noticias/fundacao-escola-tecnica-liberato-salzano-vieira-da-cunha-rs-abre-concurso-publico-para-diversos-cargos",
@@ -1090,120 +1218,10 @@
       }
     },
     {
-      "id": "pci:noticia:prefeitura-de-barra-do-guarita-rs-abre-processo-seletivo-com-salarios-de-ate-4059",
-      "titulo": "Prefeitura de Barra do Guarita",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-barra-do-guarita-rs-abre-processo-seletivo-com-salarios-de-ate-4059",
-      "imagem": "https://cdn.pci.app.br/img/i/943041e2ea53f46c60759ff068a29cdc.png",
-      "formacoes_compativeis": [
-        "Técnico em Informática"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Técnico em Informática",
-          "nivel": "tecnico",
-          "evidencia": " geografia (1 vaga) professor de ciencias (1 vaga) professor de danca gaucha (1 vaga) professor de historia (1 vaga) professor de ingles (1 vaga) professor de lingua portuguesa (1 vaga) professor de matematica (1 vaga) psicologo, jornada de 40 horas (2 vagas) psicologo, jornada de 20 horas (1 vaga) tecnico em informatica (1 vaga) a jornada semanal varia de 20 a 40 horas. a remuneracao vai de r$ 1.621,00 a r$ 4.059,98. as inscricoes serao realizadas de 11 a 16 de novembro de 2026, das 7h30 as 11h30 e das 13h as 17h, no departamento de pessoal da prefeitura municipal, na rua sobradinho, no 09, centro. a taxa e de r$ "
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "RS",
-      "cidade": "Barra do Guarita",
-      "inscricoes_inicio_texto": "11 de novembro de 2026",
-      "inscricoes_fim_texto": "16 de novembro de 2026",
-      "inscricoes_texto": "11 de novembro de 2026 a 16 de novembro de 2026",
-      "remuneracao_faixa_texto": "R$ 1.621,00 a R$ 4.059,98",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Técnico em Informática",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "alta"
-        }
-      ],
-      "janela_inscricoes": {
-        "estado": "encerrado",
-        "completude": "completa",
-        "inicio": "2026-11-11",
-        "fim": "2026-11-16",
-        "texto_original": "11 de novembro de 2026 a 16 de novembro de 2026"
-      },
-      "temporalidade": {
-        "classe": "periodo",
-        "realizacao": {
-          "inicio": "2026-11-11",
-          "fim": "2026-11-16"
-        },
-        "participacao": [
-          {
-            "tipo": "candidatura",
-            "inicio": "2026-11-11",
-            "fim": "2026-11-16",
-            "status": "encerrado"
-          }
-        ]
-      }
-    },
-    {
-      "id": "pci:noticia:prefeitura-de-ijui-rs-abre-concurso-publico-com-salarios-de-ate-21312",
-      "titulo": "Prefeitura de Ijuí",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-ijui-rs-abre-concurso-publico-com-salarios-de-ate-21312",
-      "imagem": "https://cdn.pci.app.br/img/i/36988704f932b88f2ecd0b64fec5a829.png",
-      "formacoes_compativeis": [
-        "Técnico em Informática"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Técnico em Informática",
-          "nivel": "tecnico",
-          "evidencia": "ssor de musica (2 vagas) psicologo (4 vagas) tesoureiro turismologo (1 vaga) zootecnista com formacao pedagogica (1 vaga) nivel tecnico completo tecnico de enfermagem plantonista tecnico em enfermagem (2 vagas) tecnico de topografia (1 vaga) tecnico em agropecuaria tecnico em contabilidade (1 vaga) tecnico em informatica nivel medio completo agente comunitario de saude (3 vagas) agente de transito (2 vagas) agente de vigilancia em saude (2 vagas) almoxarife (1 vaga) assessor administrativo (10 vagas) atendente de consultorio dentario (2 vagas) auxiliar da educacao inclusiva e de ensino fundamental (12 vagas) auxili"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "RS",
-      "cidade": "Ijuí",
-      "inscricoes_inicio_texto": "23 de outubro de 2026",
-      "inscricoes_fim_texto": "19 de novembro de 2026",
-      "inscricoes_texto": "23 de outubro de 2026 a 19 de novembro de 2026",
-      "remuneracao_faixa_texto": "R$ 21.312,22",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Técnico em Informática Nível médio completo Agente Comunitário de Saúde",
-          "vagas_texto": "3 vagas",
-          "formacao": "Técnico em Informática",
-          "confianca": "alta"
-        }
-      ],
-      "janela_inscricoes": {
-        "estado": "aberto",
-        "completude": "completa",
-        "inicio": "2026-10-23",
-        "fim": "2026-11-19",
-        "texto_original": "23 de outubro de 2026 a 19 de novembro de 2026"
-      },
-      "temporalidade": {
-        "classe": "periodo",
-        "realizacao": {
-          "inicio": "2026-10-23",
-          "fim": "2026-11-19"
-        },
-        "participacao": [
-          {
-            "tipo": "candidatura",
-            "inicio": "2026-10-23",
-            "fim": "2026-11-19",
-            "status": "aberto"
-          }
-        ]
-      }
-    },
-    {
-      "id": "pci:noticia:prefeitura-de-itapuca-rs-retifica-concurso-publico-com-salarios-de-ate-9495",
-      "titulo": "Prefeitura de Itapuca",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-itapuca-rs-retifica-concurso-publico-com-salarios-de-ate-9495",
-      "imagem": "https://cdn.pci.app.br/img/i/8c6051f19fc34862c366c31b1d6655d1.png",
+      "id": "pci:noticia:prefeitura-de-gramado-dos-loureiros-rs-abre-processo-seletivo-com-salarios-de-ate-5899",
+      "titulo": "Prefeitura de Gramado dos Loureiros",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-gramado-dos-loureiros-rs-abre-processo-seletivo-com-salarios-de-ate-5899",
+      "imagem": "https://cdn.pci.app.br/img/i/f79a916a5f338ddba0a9d4f2dd464e4c.png",
       "formacoes_compativeis": [
         "Sistemas de Informação / Computação"
       ],
@@ -1211,17 +1229,17 @@
         {
           "nome": "Sistemas de Informação / Computação",
           "nivel": "superior",
-          "evidencia": "te social educacional (1 vaga) enfermeiro (1 vaga) engenheiro civil (1 vaga) farmaceutico (1 vaga) inspetor tributario (1 vaga) medico (1 vaga) nutricionista - atencao a saude (1 vaga) professor - area 1 - educacao infantil e/ou series iniciais (15 vagas) professor de ciencias (1 vaga) professor de computacao (1 vaga) professor de educacao fisica (1 vaga) professor de historia (1 vaga) professor de matematica (2 vagas) professor de portugues (1 vaga) psicologo educacional (1 vaga) professor aee (1 vaga) atendente de creche (6 vagas) atendente de consultorio dentario (1 vaga) agente de combate a endemias"
+          "evidencia": ", as oportunidades sao para os cargos de: professor de educacao fisica (3 vagas) professor de historia (1 vaga) professor de educacao basica (12 vagas) psicologo (educacao) (1 vaga) supervisao/orientacao (1 vaga) professor de pedagogia com especializacao em neuropsicopedagogia (1 vaga) professor de computacao (1 vaga) professor de educacao especial (1 vaga) professor de matematica (1 vaga) atendente educacional (6 vagas) monitor (2 vagas) psicologo cras (1 vaga) a jornada varia de 20 a 40 horas semanais, com vencimentos basicos de r$ 1.868,58 a r$ 5.899,08. as inscricoes serao recebidas de 16 a 23 de no"
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
       "uf": "RS",
-      "cidade": "Itapuca",
-      "inscricoes_inicio_texto": "13 de outubro de 2026",
-      "inscricoes_fim_texto": "12 de novembro de 2026",
-      "inscricoes_texto": "13 de outubro de 2026 a 12 de novembro de 2026",
-      "remuneracao_faixa_texto": "R$ 9.495,82",
+      "cidade": "Gramado dos Loureiros",
+      "inscricoes_inicio_texto": "16 de novembro de 2026",
+      "inscricoes_fim_texto": "23 de novembro de 2026",
+      "inscricoes_texto": "16 de novembro de 2026 a 23 de novembro de 2026",
+      "remuneracao_faixa_texto": "R$ 1.868,58 a R$ 5.899,08",
       "remuneracao_fonte": "noticia",
       "cargos_compativeis": [
         {
@@ -1232,24 +1250,24 @@
         }
       ],
       "janela_inscricoes": {
-        "estado": "encerrado",
+        "estado": "aberto",
         "completude": "completa",
-        "inicio": "2026-10-13",
-        "fim": "2026-11-12",
-        "texto_original": "13 de outubro de 2026 a 12 de novembro de 2026"
+        "inicio": "2026-11-16",
+        "fim": "2026-11-23",
+        "texto_original": "16 de novembro de 2026 a 23 de novembro de 2026"
       },
       "temporalidade": {
         "classe": "periodo",
         "realizacao": {
-          "inicio": "2026-10-13",
-          "fim": "2026-11-12"
+          "inicio": "2026-11-16",
+          "fim": "2026-11-23"
         },
         "participacao": [
           {
             "tipo": "candidatura",
-            "inicio": "2026-10-13",
-            "fim": "2026-11-12",
-            "status": "encerrado"
+            "inicio": "2026-11-16",
+            "fim": "2026-11-23",
+            "status": "aberto"
           }
         ]
       }
@@ -1455,61 +1473,6 @@
       "janela_inscricoes": {
         "estado": "prazo_desconhecido",
         "completude": "desconhecida"
-      }
-    },
-    {
-      "id": "pci:noticia:prefeitura-de-rio-negrinho-sc-e-orgaos-municipais-abrem-novos-concursos-publicos",
-      "titulo": "Prefeitura de Rio Negrinho, FMC, IPRERIO e SAMAE",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-rio-negrinho-sc-e-orgaos-municipais-abrem-novos-concursos-publicos",
-      "imagem": "https://cdn.pci.app.br/img/i/366fc5888b1987e342ad75b2402dd6ea.png",
-      "formacoes_compativeis": [
-        "Sistemas de Informação / Computação"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Sistemas de Informação / Computação",
-          "nivel": "superior",
-          "evidencia": "cao especialista em educacao (volta grande e serro azul) fiscal ambiental fiscal de obras e posturas fonoaudiologo (1 vaga) medico clinico geral medico especialista - ginecologista medico especialista - ortopedista medico especialista - pediatra medico especialista - psiquiatria (1 vaga) monitor de tecnologia da informacao (1 vaga) monitor de tecnologia da informacao (volta grande e serro azul) motorista (transporte escolar) nutricionista odontologo esf oficial administrativo (5 vagas) operador de maquinas pesadas operador de maquinas pesadas (volta grande) pedreiro professor i - nivel 2 - anos iniciais (3 vagas) pro"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "SC",
-      "cidade": "Rio Negrinho, FMC, IPRERIO e SAMAE",
-      "inscricoes_inicio_texto": "16 de outubro de 2026",
-      "inscricoes_fim_texto": "15 de novembro de 2026",
-      "inscricoes_texto": "16 de outubro de 2026 a 15 de novembro de 2026",
-      "remuneracao_faixa_texto": "R$ 1.665,72 a R$ 18.538,78",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Monitor de Tecnologia da Informação",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        }
-      ],
-      "janela_inscricoes": {
-        "estado": "encerrado",
-        "completude": "completa",
-        "inicio": "2026-10-16",
-        "fim": "2026-11-15",
-        "texto_original": "16 de outubro de 2026 a 15 de novembro de 2026"
-      },
-      "temporalidade": {
-        "classe": "periodo",
-        "realizacao": {
-          "inicio": "2026-10-16",
-          "fim": "2026-11-15"
-        },
-        "participacao": [
-          {
-            "tipo": "candidatura",
-            "inicio": "2026-10-16",
-            "fim": "2026-11-15",
-            "status": "encerrado"
-          }
-        ]
       }
     }
   ]
