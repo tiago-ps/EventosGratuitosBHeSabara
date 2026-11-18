@@ -2,8 +2,8 @@
   "schema": 10,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-11-11T16:44:30.292833+00:00",
-  "total": 26,
+  "coletado_em_utc": "2026-11-12T17:12:30.201898+00:00",
+  "total": 31,
   "concursos": [
     {
       "id": "pci:noticia:trf3-sp-ms-retifica-concurso-publico-para-analistas-e-tecnicos-judiciarios",
@@ -45,6 +45,98 @@
         {
           "cargo": "Desenvolvimento de Sistemas de Informação",
           "vagas_texto": "5 vagas",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "prazo_desconhecido",
+        "completude": "desconhecida"
+      }
+    },
+    {
+      "id": "pci:noticia:prefeitura-de-leme-sp-abre-concurso-publico-com-salarios-de-ate-13359",
+      "titulo": "Prefeitura de Leme",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-leme-sp-abre-concurso-publico-com-salarios-de-ate-13359",
+      "imagem": "https://cdn.pci.app.br/img/i/5eb504e3f75ecdeb01a34816b49c4374.png",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": ") operador de maquinas (1 vaga) tratador de animais (1 vaga) tratorista (1 vaga) ensino medio e tecnico tecnico em enfermagem - saude da familia (1 vaga) tecnico em enfermagem (1 vaga) tecnico em seguranca do trabalho (1 vaga) topografo (1 vaga) ensino superior advogado do suas (1 vaga) analista de tecnologia da informacao (1 vaga) biologo (1 vaga) biomedico (1 vaga) enfermeiro (180 horas) (1 vaga) engenheiro agrimensor (1 vaga) engenheiro de seguranca do trabalho (cr) fiscal de rendas (1 vaga) medico do trabalho (1 vaga) medico horista (cr) medico horista ginecologista e obstetra (1 vaga) medico horista oftalmologis"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "SP",
+      "cidade": "Leme",
+      "inscricoes_inicio_texto": "30 de outubro de 2026",
+      "inscricoes_fim_texto": "30 de novembro de 2026",
+      "inscricoes_texto": "30 de outubro de 2026 a 30 de novembro de 2026",
+      "remuneracao_faixa_texto": "R$ 2.065,11 a R$ 13.359,44",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Analista de Tecnologia da Informação",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "aberto",
+        "completude": "completa",
+        "inicio": "2026-10-30",
+        "fim": "2026-11-30",
+        "texto_original": "30 de outubro de 2026 a 30 de novembro de 2026"
+      },
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-10-30",
+          "fim": "2026-11-30"
+        },
+        "participacao": [
+          {
+            "tipo": "candidatura",
+            "inicio": "2026-10-30",
+            "fim": "2026-11-30",
+            "status": "aberto"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pci:noticia:camara-de-carapicuiba-sp-abre-concurso-publico-para-oficial-de-manutencao-e-tecnico-em-tecnologia-da-informacao",
+      "titulo": "Câmara de Carapicuíba",
+      "url": "https://www.pciconcursos.com.br/noticias/camara-de-carapicuiba-sp-abre-concurso-publico-para-oficial-de-manutencao-e-tecnico-em-tecnologia-da-informacao",
+      "imagem": "https://cdn.pci.app.br/img/i/046873d86eee4791e04b8c8a5e1c1070.png",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "camara de carapicuiba - sp abre concurso publico para oficial de manutencao e tecnico em tecnologia da informacao oportunidades para os niveis medio e superior contam com salarios de ate r$ 5.295,09 e jornada de 40 horas. a selecao sera feita por meio de prova objetiva e teste pratico. concursos › noticias › sudeste quinta-feira, 12 de novembro de 2026 a camara municipal de carapicuiba , no estado de sao paulo"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "SP",
+      "cidade": "Carapicuíba",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "R$ 1.749,20 a R$ 5.295,09",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico em Tecnologia da Informação",
+          "vagas_texto": "1 vaga",
           "formacao": "Sistemas de Informação / Computação",
           "confianca": "alta"
         }
@@ -197,7 +289,7 @@
         }
       ],
       "janela_inscricoes": {
-        "estado": "futuro",
+        "estado": "aberto",
         "completude": "completa",
         "inicio": "2026-11-17",
         "fim": "2027-01-04",
@@ -214,7 +306,7 @@
             "tipo": "candidatura",
             "inicio": "2026-11-17",
             "fim": "2027-01-04",
-            "status": "futuro"
+            "status": "aberto"
           }
         ]
       }
@@ -306,10 +398,10 @@
       }
     },
     {
-      "id": "pci:noticia:prefeitura-de-leme-sp-abre-concurso-publico-com-salarios-de-ate-13359",
-      "titulo": "Prefeitura de Leme",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-leme-sp-abre-concurso-publico-com-salarios-de-ate-13359",
-      "imagem": "https://cdn.pci.app.br/img/i/5eb504e3f75ecdeb01a34816b49c4374.png",
+      "id": "pci:noticia:prefeitura-de-santana-de-parnaiba-sp-abre-concurso-publico-com-salarios-de-ate-7497",
+      "titulo": "Prefeitura do Município de Santana de Parnaíba",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-santana-de-parnaiba-sp-abre-concurso-publico-com-salarios-de-ate-7497",
+      "imagem": "https://cdn.pci.app.br/img/i/74ec33ae7b9c6534f1d85e017ed2dfa4.png",
       "formacoes_compativeis": [
         "Sistemas de Informação / Computação"
       ],
@@ -317,47 +409,35 @@
         {
           "nome": "Sistemas de Informação / Computação",
           "nivel": "superior",
-          "evidencia": ") operador de maquinas (1 vaga) tratador de animais (1 vaga) tratorista (1 vaga) ensino medio e tecnico tecnico em enfermagem - saude da familia (1 vaga) tecnico em enfermagem (1 vaga) tecnico em seguranca do trabalho (1 vaga) topografo (1 vaga) ensino superior advogado do suas (1 vaga) analista de tecnologia da informacao (1 vaga) biologo (1 vaga) biomedico (1 vaga) enfermeiro (180 horas) (1 vaga) engenheiro agrimensor (1 vaga) engenheiro de seguranca do trabalho (cr) fiscal de rendas (1 vaga) medico do trabalho (1 vaga) medico horista (cr) medico horista ginecologista e obstetra (1 vaga) medico horista oftalmologis"
+          "evidencia": "damental completo motorista a/b (cadastro de reserva) motorista d (1 vaga) ensino medio ou tecnico completo agente de atendimento (3 vagas) agente de defesa civil (cadastro de reserva) monitor assistencial (1 vaga) oficial administrativo (cadastro de reserva) operador de trafego (1 vaga) tecnico em tecnologia da informacao (1 vaga) ensino superior completo analista de tecnologia da informacao (cadastro de reserva) educador esportivo atividades aquaticas (2 vagas) educador esportivo ginastica ritmica (1 vaga) educador esportivo jiu-jitsu (cadastro de reserva) educador esportivo muay thai (1 vaga) educador esportivo te"
         }
       ],
       "fonte": "PCI Concursos",
       "status_manual": "revisar",
       "uf": "SP",
-      "cidade": "Leme",
-      "inscricoes_inicio_texto": "30 de outubro de 2026",
-      "inscricoes_fim_texto": "30 de novembro de 2026",
-      "inscricoes_texto": "30 de outubro de 2026 a 30 de novembro de 2026",
-      "remuneracao_faixa_texto": "R$ 2.065,11 a R$ 13.359,44",
+      "cidade": "Município de Santana de Parnaíba",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "R$ 7.497,97",
       "remuneracao_fonte": "noticia",
       "cargos_compativeis": [
         {
-          "cargo": "Analista de Tecnologia da Informação",
+          "cargo": "Técnico em Tecnologia da Informação",
           "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        },
+        {
+          "cargo": "Ensino superior completo Analista de Tecnologia da Informação",
+          "vagas_texto": "Cadastro de Reserva",
           "formacao": "Sistemas de Informação / Computação",
           "confianca": "alta"
         }
       ],
       "janela_inscricoes": {
-        "estado": "aberto",
-        "completude": "completa",
-        "inicio": "2026-10-30",
-        "fim": "2026-11-30",
-        "texto_original": "30 de outubro de 2026 a 30 de novembro de 2026"
-      },
-      "temporalidade": {
-        "classe": "periodo",
-        "realizacao": {
-          "inicio": "2026-10-30",
-          "fim": "2026-11-30"
-        },
-        "participacao": [
-          {
-            "tipo": "candidatura",
-            "inicio": "2026-10-30",
-            "fim": "2026-11-30",
-            "status": "aberto"
-          }
-        ]
+        "estado": "prazo_desconhecido",
+        "completude": "desconhecida"
       }
     },
     {
@@ -430,7 +510,7 @@
         }
       ],
       "janela_inscricoes": {
-        "estado": "aberto",
+        "estado": "encerrado",
         "completude": "completa",
         "inicio": "2026-10-19",
         "fim": "2026-11-17",
@@ -447,7 +527,7 @@
             "tipo": "candidatura",
             "inicio": "2026-10-19",
             "fim": "2026-11-17",
-            "status": "aberto"
+            "status": "encerrado"
           }
         ]
       }
@@ -790,6 +870,55 @@
       }
     },
     {
+      "id": "pci:noticia:banestes-es-abre-concurso-publico-para-cargos-de-nivel-superior",
+      "titulo": "Banestes - Banco do Estado do Espírito Santo",
+      "url": "https://www.pciconcursos.com.br/noticias/banestes-es-abre-concurso-publico-para-cargos-de-nivel-superior",
+      "imagem": "https://cdn.pci.app.br/img/i/3a70bf3b203adf92593868b82304013f.png",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "em vitoria. segundo o edital, as oportunidades sao para os cargos de: analista economico-financeiro em gestao contabil (cadastro de reserva) analista economico-financeiro em gestao financeira (cadastro de reserva) analista economico-financeiro em gestao estatistica (cadastro de reserva) analista de tecnologia da informacao - desenvolvimento de sistemas (cadastro de reserva) analista de tecnologia da informacao - suporte e infraestrutura (cadastro de reserva) analista de tecnologia da informacao - seguranca da informacao (cadastro de reserva) assistente social (cadastro de reserva) analista de comunicacao (cadastro de"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "ES",
+      "cidade": "",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "R$ 5.618,71",
+      "remuneracao_fonte": "catalogo",
+      "cargos_compativeis": [
+        {
+          "cargo": "Analista de Tecnologia da Informação - Desenvolvimento de Sistemas",
+          "vagas_texto": "Cadastro de Reserva",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        },
+        {
+          "cargo": "Analista de Tecnologia da Informação - Suporte e Infraestrutura",
+          "vagas_texto": "Cadastro de Reserva",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        },
+        {
+          "cargo": "Analista de Tecnologia da Informação - Segurança da Informação",
+          "vagas_texto": "Cadastro de Reserva",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "prazo_desconhecido",
+        "completude": "desconhecida"
+      }
+    },
+    {
       "id": "pci:noticia:prefeitura-de-anchieta-es-abre-concurso-publico-com-salarios-de-ate-7362",
       "titulo": "Prefeitura de Anchieta",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-anchieta-es-abre-concurso-publico-com-salarios-de-ate-7362",
@@ -828,7 +957,7 @@
         }
       ],
       "janela_inscricoes": {
-        "estado": "futuro",
+        "estado": "aberto",
         "completude": "completa",
         "inicio": "2026-11-18",
         "fim": "2026-12-14",
@@ -845,7 +974,7 @@
             "tipo": "candidatura",
             "inicio": "2026-11-18",
             "fim": "2026-12-14",
-            "status": "futuro"
+            "status": "aberto"
           }
         ]
       }
@@ -901,6 +1030,116 @@
             "inicio": "2026-11-09",
             "fim": "2026-12-08",
             "status": "aberto"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pci:noticia:iffar-rs-abre-concurso-publico-com-vagas-para-diversas-areas",
+      "titulo": "IFFar - Instituto Federal de Educação, Ciência e Tecnologia Farroupilha",
+      "url": "https://www.pciconcursos.com.br/noticias/iffar-rs-abre-concurso-publico-com-vagas-para-diversas-areas",
+      "imagem": "https://cdn.pci.app.br/img/i/6360c4b5557558aeb5f47ad7fe6bdc36.png",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": " novembro de 2026 o instituto federal de educacao, ciencia e tecnologia farroupilha (iffar) abriu um concurso publico com o objetivo de preencher vagas para profissionais de nivel medio, tecnico e superior. segundo o edital, as oportunidades sao para os cargos de: administrador (1 vaga) analista de tecnologia da informacao desenvolvedor python (2 vagas) arquiteto e urbanista (1 vaga) economista (1 vaga) enfermeiro (2 vagas) engenheiro civil (1 vaga) estatistico (1 vaga) medico (3 vagas) nutricionista (3 vagas) odontologo (4 vagas) tecnico em assuntos educacionais (6 vagas) tecnico de laboratorio area biologia (1 vaga"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "RS",
+      "cidade": "",
+      "inscricoes_inicio_texto": "19 de novembro de 2026",
+      "inscricoes_fim_texto": "21 de dezembro de 2026",
+      "inscricoes_texto": "19 de novembro de 2026 a 21 de dezembro de 2026",
+      "remuneracao_faixa_texto": "R$ 4.976,27",
+      "remuneracao_fonte": "catalogo",
+      "cargos_compativeis": [
+        {
+          "cargo": "Analista de Tecnologia da Informação Desenvolvedor Python",
+          "vagas_texto": "2 vagas",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "futuro",
+        "completude": "completa",
+        "inicio": "2026-11-19",
+        "fim": "2026-12-21",
+        "texto_original": "19 de novembro de 2026 a 21 de dezembro de 2026"
+      },
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-11-19",
+          "fim": "2026-12-21"
+        },
+        "participacao": [
+          {
+            "tipo": "candidatura",
+            "inicio": "2026-11-19",
+            "fim": "2026-12-21",
+            "status": "futuro"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pci:noticia:prefeitura-de-barra-do-guarita-rs-abre-processo-seletivo-com-salarios-de-ate-4059",
+      "titulo": "Prefeitura de Barra do Guarita",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-barra-do-guarita-rs-abre-processo-seletivo-com-salarios-de-ate-4059",
+      "imagem": "https://cdn.pci.app.br/img/i/943041e2ea53f46c60759ff068a29cdc.png",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": " geografia (1 vaga) professor de ciencias (1 vaga) professor de danca gaucha (1 vaga) professor de historia (1 vaga) professor de ingles (1 vaga) professor de lingua portuguesa (1 vaga) professor de matematica (1 vaga) psicologo, jornada de 40 horas (2 vagas) psicologo, jornada de 20 horas (1 vaga) tecnico em informatica (1 vaga) a jornada semanal varia de 20 a 40 horas. a remuneracao vai de r$ 1.621,00 a r$ 4.059,98. as inscricoes serao realizadas de 11 a 16 de novembro de 2026, das 7h30 as 11h30 e das 13h as 17h, no departamento de pessoal da prefeitura municipal, na rua sobradinho, no 09, centro. a taxa e de r$ "
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "RS",
+      "cidade": "Barra do Guarita",
+      "inscricoes_inicio_texto": "11 de novembro de 2026",
+      "inscricoes_fim_texto": "16 de novembro de 2026",
+      "inscricoes_texto": "11 de novembro de 2026 a 16 de novembro de 2026",
+      "remuneracao_faixa_texto": "R$ 1.621,00 a R$ 4.059,98",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico em Informática",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "encerrado",
+        "completude": "completa",
+        "inicio": "2026-11-11",
+        "fim": "2026-11-16",
+        "texto_original": "11 de novembro de 2026 a 16 de novembro de 2026"
+      },
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-11-11",
+          "fim": "2026-11-16"
+        },
+        "participacao": [
+          {
+            "tipo": "candidatura",
+            "inicio": "2026-11-11",
+            "fim": "2026-11-16",
+            "status": "encerrado"
           }
         ]
       }
@@ -993,7 +1232,7 @@
         }
       ],
       "janela_inscricoes": {
-        "estado": "aberto",
+        "estado": "encerrado",
         "completude": "completa",
         "inicio": "2026-10-13",
         "fim": "2026-11-12",
@@ -1010,7 +1249,7 @@
             "tipo": "candidatura",
             "inicio": "2026-10-13",
             "fim": "2026-11-12",
-            "status": "aberto"
+            "status": "encerrado"
           }
         ]
       }
@@ -1251,7 +1490,7 @@
         }
       ],
       "janela_inscricoes": {
-        "estado": "aberto",
+        "estado": "encerrado",
         "completude": "completa",
         "inicio": "2026-10-16",
         "fim": "2026-11-15",
@@ -1268,7 +1507,7 @@
             "tipo": "candidatura",
             "inicio": "2026-10-16",
             "fim": "2026-11-15",
-            "status": "aberto"
+            "status": "encerrado"
           }
         ]
       }

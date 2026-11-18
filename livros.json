@@ -1,6 +1,6 @@
 {
   "versao": 2,
-  "atualizado_em": "2026-11-11T19:13:40.086587+00:00",
+  "atualizado_em": "2026-11-18T11:24:12.524372+00:00",
   "titulo": "Descobertas de leitura",
   "origem": "Acervos consultados em catálogos públicos Pergamum e bases institucionais",
   "aviso": "Seleção construída progressivamente e sujeita a curadoria. Não representa a totalidade dos acervos. Consulte o registro oficial para confirmar localização e disponibilidade.",
@@ -1229,6 +1229,86 @@
     },
     {
       "tipo_conteudo": "livro",
+      "id": "historia-e-cultura-afro-brasileira",
+      "titulo": "História e cultura afro-brasileira",
+      "autor": "Regiane Augusto de Mattos",
+      "pergunta_curiosidade": "Quanto da história do Brasil desaparece quando a experiência negra fica fora da narrativa?",
+      "texto_apoio": "Uma introdução à história e à cultura afro-brasileira para estudantes e educadores.",
+      "temas": [
+        "africanidades",
+        "educação",
+        "história do Brasil",
+        "relações étnico-raciais"
+      ],
+      "icone": "🌍",
+      "numero_chamada": "",
+      "unidade": "",
+      "biblioteca_rede": "IFMG Sabará",
+      "codigo_acervo": "5459",
+      "exemplares_fisicos_catalogados": 1,
+      "outras_edicoes_fisicas": 0,
+      "acesso_fisico": true,
+      "acesso_virtual": true,
+      "link_fisico": "https://pergamum.ifmg.edu.br/acervo/5459",
+      "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=1467&page=1&perPage=20&orderBy=obra&direction=C",
+      "link": "https://pergamum.ifmg.edu.br/acervo/5459",
+      "tipo_link_principal": "fisico",
+      "imagem": "imagens/livros/capas/5459.webp",
+      "imagem_fonte": "Capa exibida no registro do Pergamum de IFMG Sabará; cópia local otimizada",
+      "imagem_url_origem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000014/000014a7.jpg",
+      "qr_code": "imagens/livros/qrcodes/historia-e-cultura-afro-brasileira.svg",
+      "fonte": "IFMG Sabará",
+      "exibicao_ativa": true,
+      "exibir_de": "",
+      "exibir_ate": "",
+      "prioridade": 5,
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": "",
+      "observacoes": "Selecionado para a Semana da Consciência Negra. Dados bibliográficos conferidos; o registro físico permanece sem número de chamada informado.",
+      "id_obra": "obra-historia-e-cultura-afro-brasileira-295e5319",
+      "registros_ids": [
+        "historia-e-cultura-afro-brasileira"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "IFMG Sabará",
+          "biblioteca_rede": "IFMG Sabará",
+          "unidade": "",
+          "acesso_fisico": true,
+          "acesso_virtual": true,
+          "exemplares_fisicos_catalogados": 1,
+          "registros": [
+            {
+              "registro_id": "historia-e-cultura-afro-brasileira",
+              "titulo_registro": "História e cultura afro-brasileira",
+              "autor_registro": "Regiane Augusto de Mattos",
+              "biblioteca_rede": "IFMG Sabará",
+              "unidade": "",
+              "codigo_acervo": "5459",
+              "numero_chamada": "",
+              "exemplares_fisicos_catalogados": 1,
+              "acesso_fisico": true,
+              "acesso_virtual": true,
+              "link_fisico": "https://pergamum.ifmg.edu.br/acervo/5459",
+              "link_virtual": "https://pergamum.ifmg.edu.br/pesquisa_geral?for=LIVRE&q=1467&page=1&perPage=20&orderBy=obra&direction=C",
+              "link": "https://pergamum.ifmg.edu.br/acervo/5459",
+              "tipo_link_principal": "fisico",
+              "fonte": "IFMG Sabará"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "IFMG Sabará"
+      ]
+    },
+    {
+      "tipo_conteudo": "livro",
       "id": "insubmissas-lagrimas-de-mulheres",
       "titulo": "Insubmissas lágrimas de mulheres",
       "autor": "Conceição Evaristo",
@@ -2086,6 +2166,86 @@
     },
     {
       "tipo_conteudo": "livro",
+      "id": "o-avesso-da-pele",
+      "titulo": "O avesso da pele",
+      "autor": "Jeferson Tenório",
+      "pergunta_curiosidade": "Como um filho reconstrói a vida do pai quando o racismo atravessou cada escolha da família?",
+      "texto_apoio": "A memória de um professor negro é reconstruída pelo filho entre afetos, perdas e violência racial.",
+      "temas": [
+        "africanidades",
+        "racismo",
+        "família",
+        "memória"
+      ],
+      "icone": "🧩",
+      "numero_chamada": "821(81)-3 T312a 2020",
+      "unidade": "",
+      "biblioteca_rede": "IFMG Sabará",
+      "codigo_acervo": "105536",
+      "exemplares_fisicos_catalogados": 1,
+      "outras_edicoes_fisicas": 0,
+      "acesso_fisico": true,
+      "acesso_virtual": false,
+      "link_fisico": "https://pergamum.ifmg.edu.br/acervo/105536",
+      "link_virtual": "",
+      "link": "https://pergamum.ifmg.edu.br/acervo/105536",
+      "tipo_link_principal": "fisico",
+      "imagem": "imagens/livros/capas/105536.webp",
+      "imagem_fonte": "Capa exibida no registro do Pergamum de IFMG Sabará; cópia local otimizada",
+      "imagem_url_origem": "https://pergamum.ifmg.edu.br/pergamumweb/download/4E6E05B9-853C-490A-A1C4-88F34BBD3A38.jpg",
+      "qr_code": "imagens/livros/qrcodes/o-avesso-da-pele.svg",
+      "fonte": "IFMG Sabará",
+      "exibicao_ativa": true,
+      "exibir_de": "",
+      "exibir_ate": "",
+      "prioridade": 5,
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": "",
+      "observacoes": "Selecionado para a Semana da Consciência Negra.",
+      "id_obra": "obra-avesso-da-pele-84bd7051",
+      "registros_ids": [
+        "o-avesso-da-pele"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "IFMG Sabará",
+          "biblioteca_rede": "IFMG Sabará",
+          "unidade": "",
+          "acesso_fisico": true,
+          "acesso_virtual": false,
+          "exemplares_fisicos_catalogados": 1,
+          "registros": [
+            {
+              "registro_id": "o-avesso-da-pele",
+              "titulo_registro": "O avesso da pele",
+              "autor_registro": "Jeferson Tenório",
+              "biblioteca_rede": "IFMG Sabará",
+              "unidade": "",
+              "codigo_acervo": "105536",
+              "numero_chamada": "821(81)-3 T312a 2020",
+              "exemplares_fisicos_catalogados": 1,
+              "acesso_fisico": true,
+              "acesso_virtual": false,
+              "link_fisico": "https://pergamum.ifmg.edu.br/acervo/105536",
+              "link_virtual": "",
+              "link": "https://pergamum.ifmg.edu.br/acervo/105536",
+              "tipo_link_principal": "fisico",
+              "fonte": "IFMG Sabará"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "IFMG Sabará"
+      ]
+    },
+    {
+      "tipo_conteudo": "livro",
       "id": "o-segundo-sexo",
       "titulo": "O segundo sexo",
       "autor": "Simone de Beauvoir",
@@ -2150,6 +2310,86 @@
               "link_fisico": "https://pergamum.ifmg.edu.br/acervo/106588",
               "link_virtual": "",
               "link": "https://pergamum.ifmg.edu.br/acervo/106588",
+              "tipo_link_principal": "fisico",
+              "fonte": "IFMG Sabará"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "IFMG Sabará"
+      ]
+    },
+    {
+      "tipo_conteudo": "livro",
+      "id": "olhos-dagua",
+      "titulo": "Olhos d'água",
+      "autor": "Conceição Evaristo",
+      "pergunta_curiosidade": "Quantas vidas cabem em histórias curtas quando quase ninguém costuma escutá-las?",
+      "texto_apoio": "Contos sobre mulheres negras, famílias, violência, afeto e sobrevivência revelam diferentes faces da experiência brasileira.",
+      "temas": [
+        "africanidades",
+        "mulheres",
+        "contos",
+        "literatura brasileira"
+      ],
+      "icone": "💧",
+      "numero_chamada": "821(81)-34 E92o 2018",
+      "unidade": "",
+      "biblioteca_rede": "IFMG Sabará",
+      "codigo_acervo": "98999",
+      "exemplares_fisicos_catalogados": 3,
+      "outras_edicoes_fisicas": 1,
+      "acesso_fisico": true,
+      "acesso_virtual": false,
+      "link_fisico": "https://pergamum.ifmg.edu.br/acervo/98999",
+      "link_virtual": "",
+      "link": "https://pergamum.ifmg.edu.br/acervo/98999",
+      "tipo_link_principal": "fisico",
+      "imagem": "imagens/livros/capas/98999.webp",
+      "imagem_fonte": "Capa exibida no registro do Pergamum de IFMG Sabará; cópia local otimizada",
+      "imagem_url_origem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000061/00006105.jpg",
+      "qr_code": "imagens/livros/qrcodes/olhos-dagua.svg",
+      "fonte": "IFMG Sabará",
+      "exibicao_ativa": true,
+      "exibir_de": "",
+      "exibir_ate": "",
+      "prioridade": 5,
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": "",
+      "observacoes": "Selecionado para a Semana da Consciência Negra.",
+      "id_obra": "obra-olhos-d-agua-62504996",
+      "registros_ids": [
+        "olhos-dagua"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "IFMG Sabará",
+          "biblioteca_rede": "IFMG Sabará",
+          "unidade": "",
+          "acesso_fisico": true,
+          "acesso_virtual": false,
+          "exemplares_fisicos_catalogados": 3,
+          "registros": [
+            {
+              "registro_id": "olhos-dagua",
+              "titulo_registro": "Olhos d'água",
+              "autor_registro": "Conceição Evaristo",
+              "biblioteca_rede": "IFMG Sabará",
+              "unidade": "",
+              "codigo_acervo": "98999",
+              "numero_chamada": "821(81)-34 E92o 2018",
+              "exemplares_fisicos_catalogados": 3,
+              "acesso_fisico": true,
+              "acesso_virtual": false,
+              "link_fisico": "https://pergamum.ifmg.edu.br/acervo/98999",
+              "link_virtual": "",
+              "link": "https://pergamum.ifmg.edu.br/acervo/98999",
               "tipo_link_principal": "fisico",
               "fonte": "IFMG Sabará"
             }
@@ -2241,6 +2481,86 @@
     },
     {
       "tipo_conteudo": "livro",
+      "id": "poncia-vicencio",
+      "titulo": "Ponciá Vicêncio",
+      "autor": "Conceição Evaristo",
+      "pergunta_curiosidade": "É possível recomeçar longe de casa sem perder as marcas de onde viemos?",
+      "texto_apoio": "Ponciá atravessa deslocamentos, memórias familiares e heranças da escravidão em busca de outra vida.",
+      "temas": [
+        "africanidades",
+        "memória",
+        "migração",
+        "literatura brasileira"
+      ],
+      "icone": "🧵",
+      "numero_chamada": "821(81)-3 E92p 2017",
+      "unidade": "",
+      "biblioteca_rede": "IFMG Sabará",
+      "codigo_acervo": "96122",
+      "exemplares_fisicos_catalogados": 3,
+      "outras_edicoes_fisicas": 1,
+      "acesso_fisico": true,
+      "acesso_virtual": false,
+      "link_fisico": "https://pergamum.ifmg.edu.br/acervo/96122",
+      "link_virtual": "",
+      "link": "https://pergamum.ifmg.edu.br/acervo/96122",
+      "tipo_link_principal": "fisico",
+      "imagem": "imagens/livros/capas/96122.webp",
+      "imagem_fonte": "Capa exibida no registro do Pergamum de IFMG Sabará; cópia local otimizada",
+      "imagem_url_origem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000056/000056ea.jpg",
+      "qr_code": "imagens/livros/qrcodes/poncia-vicencio.svg",
+      "fonte": "IFMG Sabará",
+      "exibicao_ativa": true,
+      "exibir_de": "",
+      "exibir_ate": "",
+      "prioridade": 5,
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": "",
+      "observacoes": "Selecionado para a Semana da Consciência Negra.",
+      "id_obra": "obra-poncia-vicencio-3c59c327",
+      "registros_ids": [
+        "poncia-vicencio"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "IFMG Sabará",
+          "biblioteca_rede": "IFMG Sabará",
+          "unidade": "",
+          "acesso_fisico": true,
+          "acesso_virtual": false,
+          "exemplares_fisicos_catalogados": 3,
+          "registros": [
+            {
+              "registro_id": "poncia-vicencio",
+              "titulo_registro": "Ponciá Vicêncio",
+              "autor_registro": "Conceição Evaristo",
+              "biblioteca_rede": "IFMG Sabará",
+              "unidade": "",
+              "codigo_acervo": "96122",
+              "numero_chamada": "821(81)-3 E92p 2017",
+              "exemplares_fisicos_catalogados": 3,
+              "acesso_fisico": true,
+              "acesso_virtual": false,
+              "link_fisico": "https://pergamum.ifmg.edu.br/acervo/96122",
+              "link_virtual": "",
+              "link": "https://pergamum.ifmg.edu.br/acervo/96122",
+              "tipo_link_principal": "fisico",
+              "fonte": "IFMG Sabará"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "IFMG Sabará"
+      ]
+    },
+    {
+      "tipo_conteudo": "livro",
       "id": "por-um-feminismo-afro-latino-americano",
       "titulo": "Por um feminismo afro-latino-americano: ensaios, intervenções e diálogos",
       "autor": "Lélia Gonzalez",
@@ -2304,6 +2624,86 @@
               "link_fisico": "https://pergamum.ifmg.edu.br/acervo/109261",
               "link_virtual": "",
               "link": "https://pergamum.ifmg.edu.br/acervo/109261",
+              "tipo_link_principal": "fisico",
+              "fonte": "IFMG Sabará"
+            }
+          ]
+        }
+      ],
+      "acervos_quantidade": 1,
+      "registros_acervo_quantidade": 1,
+      "bibliotecas": [
+        "IFMG Sabará"
+      ]
+    },
+    {
+      "tipo_conteudo": "livro",
+      "id": "quarto-de-despejo",
+      "titulo": "Quarto de despejo: diário de uma favelada",
+      "autor": "Carolina Maria de Jesus",
+      "pergunta_curiosidade": "O que muda quando quem costuma ser tratado como estatística começa a escrever a própria história?",
+      "texto_apoio": "O diário de Carolina Maria de Jesus registra fome, trabalho, maternidade e vida na favela com uma voz que se recusou a desaparecer.",
+      "temas": [
+        "africanidades",
+        "desigualdade",
+        "memória",
+        "literatura brasileira"
+      ],
+      "icone": "📓",
+      "numero_chamada": "821(81)-3 J58q 2020",
+      "unidade": "",
+      "biblioteca_rede": "IFMG Sabará",
+      "codigo_acervo": "104122",
+      "exemplares_fisicos_catalogados": 1,
+      "outras_edicoes_fisicas": 0,
+      "acesso_fisico": true,
+      "acesso_virtual": false,
+      "link_fisico": "https://pergamum.ifmg.edu.br/acervo/104122",
+      "link_virtual": "",
+      "link": "https://pergamum.ifmg.edu.br/acervo/104122",
+      "tipo_link_principal": "fisico",
+      "imagem": "imagens/livros/capas/104122.webp",
+      "imagem_fonte": "Capa exibida no registro do Pergamum de IFMG Sabará; cópia local otimizada",
+      "imagem_url_origem": "https://pergamum.ifmg.edu.br/pergamumweb/vinculos/000073/00007379.png",
+      "qr_code": "imagens/livros/qrcodes/quarto-de-despejo.svg",
+      "fonte": "IFMG Sabará",
+      "exibicao_ativa": true,
+      "exibir_de": "",
+      "exibir_ate": "",
+      "prioridade": 5,
+      "tempo_slide": 15,
+      "exibir_comentario": false,
+      "comentario_aprovado": "",
+      "credito_comentario": "",
+      "link_formulario_opiniao": "",
+      "observacoes": "Selecionado para a Semana da Consciência Negra.",
+      "id_obra": "obra-quarto-de-despejo-diario-de-uma-favelada-a39bf77a",
+      "registros_ids": [
+        "quarto-de-despejo"
+      ],
+      "acervos": [
+        {
+          "biblioteca": "IFMG Sabará",
+          "biblioteca_rede": "IFMG Sabará",
+          "unidade": "",
+          "acesso_fisico": true,
+          "acesso_virtual": false,
+          "exemplares_fisicos_catalogados": 1,
+          "registros": [
+            {
+              "registro_id": "quarto-de-despejo",
+              "titulo_registro": "Quarto de despejo: diário de uma favelada",
+              "autor_registro": "Carolina Maria de Jesus",
+              "biblioteca_rede": "IFMG Sabará",
+              "unidade": "",
+              "codigo_acervo": "104122",
+              "numero_chamada": "821(81)-3 J58q 2020",
+              "exemplares_fisicos_catalogados": 1,
+              "acesso_fisico": true,
+              "acesso_virtual": false,
+              "link_fisico": "https://pergamum.ifmg.edu.br/acervo/104122",
+              "link_virtual": "",
+              "link": "https://pergamum.ifmg.edu.br/acervo/104122",
               "tipo_link_principal": "fisico",
               "fonte": "IFMG Sabará"
             }
