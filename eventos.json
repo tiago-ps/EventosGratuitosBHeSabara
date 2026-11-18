@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Março de 2026 a Junho de 2027",
-  "atualizado_em": "2026-11-18T14:50:48-03:00",
+  "atualizado_em": "2026-11-18T15:45:23-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -5813,36 +5813,6 @@
       "espaco_interno": "Galerias do Térreo, Galerias do 3º andar e Pátio"
     },
     {
-      "id": "cine-santa-tereza-bileto-129766",
-      "titulo": "ENTRELINHAS E LETRAS - PALAVRAS EM MOVIMENTOS: CORPOS EM ENFRENTAMENTOS E ENCONTROS",
-      "data": "2026-11-18",
-      "data_fim": "",
-      "horario": "14h",
-      "local": "Cine Santa Tereza",
-      "cidade": "Belo Horizonte",
-      "categoria": "Cinema",
-      "gratuito": true,
-      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial. Também há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade.",
-      "descricao": "PALAVRAS EM MOVIMENTOS: CORPOS EM ENFRENTAMENTOS E ENCONTROS Performance \"Abre-caminho” seguida da exibição dos filmes: Um dos lugares de onde jorra a imanência (Dayane Lacerda | Brasil | Documentário Experimental | 2019 | 11 min) O filme busca provocar uma reflexão sobre a redução de danos no cuidado de pessoas que fazem uso prejudicial de álcool e outras drogas. Gravado no CERSAM AD Venda Nova em 2019, as imagens e narrativas propõe uma caminha sensível e poética sobre temas que atravessam o proibicionismo, a RD e o cuidado exercido por artistas e profissionais da saúde no SUS.",
-      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/lio5oit2u7arg7bkml05j03g5klk4ueuqjcuorrcpp3644k3c5rdm3j79qsld36re05rinhb9qgehfapoaic10b6l4tp52qvt0lqtp.webp",
-      "link": "https://bileto.sympla.com.br/event/129766/d/427093/s/2761146",
-      "fonte": "Cine Santa Tereza",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "fonte_id": "129766",
-      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
-      "classificacao_indicativa": "Livre",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-11-18",
-          "observacao": "14h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
-    },
-    {
       "id": "cine-santa-tereza-bileto-129770",
       "titulo": "LANÇAMENTO - Queremos dançar o Carnaval - A história de um clube negro do Brasil",
       "data": "2026-11-18",
@@ -6472,6 +6442,36 @@
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
     },
     {
+      "id": "cine-santa-tereza-bileto-130114",
+      "titulo": "FORUMDOC.BH - Sagrado",
+      "data": "2026-11-21",
+      "data_fim": "",
+      "horario": "19h",
+      "local": "Cine Santa Tereza",
+      "cidade": "Belo Horizonte",
+      "categoria": "Cinema",
+      "gratuito": true,
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "descricao": "Sagrado (Alice Riff | Brasil | 2026 | Documentário | 90min) Sagrado acompanha a rotina de professores e funcionários de uma escola pública em Diadema, São Paulo. Sem sair da escola, o documentário constrói um retrato sensível sobre o território, seus dilemas e desafios. Classificação indicativa: Livre",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/3kmth6u653cujo3mmvtmjickn8ckecu36fh0v27kqt34kfaits14ch5l8v4n803qbq7ek74ns2d96dt9dog75rqmft50roi828icgqb.webp",
+      "link": "https://bileto.sympla.com.br/event/130114/d/428839/s/2770078",
+      "fonte": "Cine Santa Tereza",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "fonte_id": "130114",
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "classificacao_indicativa": "Livre",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-21",
+          "observacao": "19h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
+    },
+    {
       "id": "ufmg-ec-sessao-de-planetario-ao-cair-da-noite-eu-me-guiarei-pelo-brilho-dos-seus-olhos-2",
       "titulo": "Sessão de Planetário “Ao Cair da Noite, Eu Me Guiarei pelo Brilho dos Seus Olhos” – Novembro Negro UFMG",
       "data": "2026-11-21",
@@ -6688,6 +6688,36 @@
         }
       },
       "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
+    },
+    {
+      "id": "cine-santa-tereza-bileto-130113",
+      "titulo": "FORUMDOC.BH - Nuestra Tierra",
+      "data": "2026-11-22",
+      "data_fim": "",
+      "horario": "16h30",
+      "local": "Cine Santa Tereza",
+      "cidade": "Belo Horizonte",
+      "categoria": "Cinema",
+      "gratuito": true,
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "descricao": "Nuestra Tierra (Lucrecia Martel | Argentina, Estados Unidos, México, França, Países Baixos e Dinamarca | 2025 | Documentário | 122 min) Documentário que investiga o assassinato do líder indígena argentino Javier Chocobar, membro da comunidade Chuschagasta, e a luta da sua comunidade por terras ancestrais. A obra explora a longa história de colonialismo e desapropriação que levou ao crime, ocorrido em 2009, e que resultou num processo judicial de nove anos após a morte de Chocobar. Sessão apresentada por Ernesto de Carvalho - fotógrafo do filme Classificação indicativa: 14 anos",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/1a70qk611o8upke1kffhcv35h6rl1sr1ha1bc7pj0r935hpf8vudmjcqiflbc5a42t869mji921pkeacgihjeqs9pta1047grdcbop1.jpeg",
+      "link": "https://bileto.sympla.com.br/event/130113/d/428838/s/2770076",
+      "fonte": "Cine Santa Tereza",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "fonte_id": "130113",
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "classificacao_indicativa": "14 anos",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-22",
+          "observacao": "16h30"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
     {
       "id": "sesc-palladium-bileto-126071",
@@ -8731,5 +8761,5 @@
   ],
   "modo_teste_experimental": true,
   "eventos_somente_teste": 2,
-  "atualizado_em_teste": "2026-11-18T14:51:26-03:00"
+  "atualizado_em_teste": "2026-11-18T15:45:55-03:00"
 }
