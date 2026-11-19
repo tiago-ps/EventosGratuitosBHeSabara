@@ -2,8 +2,8 @@
   "schema": 10,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-11-18T17:43:15.577057+00:00",
-  "total": 30,
+  "coletado_em_utc": "2026-11-19T22:59:10.322741+00:00",
+  "total": 28,
   "concursos": [
     {
       "id": "pci:noticia:trf3-sp-ms-retifica-concurso-publico-para-analistas-e-tecnicos-judiciarios",
@@ -704,55 +704,6 @@
       }
     },
     {
-      "id": "pci:noticia:fumep-de-sete-lagoas-mg-retifica-concurso-publico-para-diversos-niveis-de-escolaridade",
-      "titulo": "FUMEP - Fundação Municipal de Ensino Profissionalizante de Sete Lagoas",
-      "url": "https://www.pciconcursos.com.br/noticias/fumep-de-sete-lagoas-mg-retifica-concurso-publico-para-diversos-niveis-de-escolaridade",
-      "imagem": "https://cdn.pci.app.br/img/i/a08ecc9bdb956a3140668a2d27e53828.png",
-      "formacoes_compativeis": [
-        "Engenharia de Automação",
-        "Sistemas de Informação / Computação"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Sistemas de Informação / Computação",
-          "nivel": "superior",
-          "evidencia": "te - arquitetura (1 vaga) professor de ensino profissionalizante - engenharia mecatronica (1 vaga) professor de ensino profissionalizante - engenharia de automacao e controle (1 vaga) professor de ensino profissionalizante - enfermagem (1 vaga) professor de ensino profissionalizante - engenharia da computacao (1 vaga) professor de ensino profissionalizante - tecnologo em rede de computadores (1 vaga) professor de ensino profissionalizante - engenharia mecanica (1 vaga) professor de ensino profissionalizante - engenharia metalurgica (1 vaga) professor de ensino profissionalizante - engenharia ambiental ("
-        },
-        {
-          "nome": "Engenharia de Automação",
-          "nivel": "superior",
-          "evidencia": "ioquimica com habilitacao em analises clinicas (2 vagas) professor de ensino profissionalizante - engenharia civil (1 vaga) professor de ensino profissionalizante - arquitetura (1 vaga) professor de ensino profissionalizante - engenharia mecatronica (1 vaga) professor de ensino profissionalizante - engenharia de automacao e controle (1 vaga) professor de ensino profissionalizante - enfermagem (1 vaga) professor de ensino profissionalizante - engenharia da computacao (1 vaga) professor de ensino profissionalizante - tecnologo em rede de computadores (1 vaga) professor de ensino profissionalizante - engenharia mecanic"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "MG",
-      "cidade": "",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "",
-      "inscricoes_texto": "",
-      "remuneracao_faixa_texto": "R$ 1.621,00 a R$ 2.530,56",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Professor de Ensino Profissionalizante - Engenharia de Automação e Controle",
-          "vagas_texto": "1 vaga",
-          "formacao": "Engenharia de Automação",
-          "confianca": "alta"
-        },
-        {
-          "cargo": "Professor de Ensino Profissionalizante - Engenharia da Computação",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        }
-      ],
-      "janela_inscricoes": {
-        "estado": "prazo_desconhecido",
-        "completude": "desconhecida"
-      }
-    },
-    {
       "id": "pci:noticia:prefeitura-de-luislandia-mg-abre-concurso-publico-com-vagas-em-diversas-areas",
       "titulo": "Prefeitura de Luislândia",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-luislandia-mg-abre-concurso-publico-com-vagas-em-diversas-areas",
@@ -836,61 +787,6 @@
       "janela_inscricoes": {
         "estado": "prazo_desconhecido",
         "completude": "desconhecida"
-      }
-    },
-    {
-      "id": "pci:noticia:prefeitura-de-piracema-mg-abre-concurso-e-processo-seletivo-com-diversas-vagas",
-      "titulo": "Prefeitura de Piracema",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-piracema-mg-abre-concurso-e-processo-seletivo-com-diversas-vagas",
-      "imagem": "https://cdn.pci.app.br/img/i/3d740a107e7990d7db076db948811802.png",
-      "formacoes_compativeis": [
-        "Técnico em Informática"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Técnico em Informática",
-          "nivel": "tecnico",
-          "evidencia": "orteiro (4 vagas) tratorista (1 vaga) agente de defesa civil (1 vaga) assistente administrativo (2 vagas) assistente escolar (8 vagas) fiscal de postura (1 vaga) fiscal sanitario (1 vaga) operador de eta (2 vagas) recepcionista (1 vaga) tecnico de enfermagem (6 vagas) tecnico de radiologia (1 vaga) tecnico em informatica (1 vaga) agente de licitacao (1 vaga) assistente social - educacao (1 vaga) enfermeiro (1 vaga) fiscal de obras (1 vaga) fisioterapeuta (2 vagas) fonoaudiologo (1 vaga) medico (2 vagas) nutricionista - educacao (1 vaga) nutricionista - saude (1 vaga) professor da educacao basica - regente de turma "
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "MG",
-      "cidade": "Piracema",
-      "inscricoes_inicio_texto": "20 de outubro de 2026",
-      "inscricoes_fim_texto": "18 de novembro de 2026",
-      "inscricoes_texto": "20 de outubro de 2026 a 18 de novembro de 2026",
-      "remuneracao_faixa_texto": "R$ 1.621,00 a R$ 18.647,01",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Técnico em Informática",
-          "vagas_texto": "1 vaga",
-          "formacao": "Técnico em Informática",
-          "confianca": "alta"
-        }
-      ],
-      "janela_inscricoes": {
-        "estado": "aberto",
-        "completude": "completa",
-        "inicio": "2026-10-20",
-        "fim": "2026-11-18",
-        "texto_original": "20 de outubro de 2026 a 18 de novembro de 2026"
-      },
-      "temporalidade": {
-        "classe": "periodo",
-        "realizacao": {
-          "inicio": "2026-10-20",
-          "fim": "2026-11-18"
-        },
-        "participacao": [
-          {
-            "tipo": "candidatura",
-            "inicio": "2026-10-20",
-            "fim": "2026-11-18",
-            "status": "aberto"
-          }
-        ]
       }
     },
     {
@@ -1195,7 +1091,7 @@
         }
       ],
       "janela_inscricoes": {
-        "estado": "futuro",
+        "estado": "aberto",
         "completude": "completa",
         "inicio": "2026-11-19",
         "fim": "2026-12-21",
@@ -1212,7 +1108,7 @@
             "tipo": "candidatura",
             "inicio": "2026-11-19",
             "fim": "2026-12-21",
-            "status": "futuro"
+            "status": "aberto"
           }
         ]
       }

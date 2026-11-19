@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Março de 2026 a Junho de 2027",
-  "atualizado_em": "2026-11-18T15:45:23-03:00",
+  "atualizado_em": "2026-11-19T20:01:59-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -5813,162 +5813,6 @@
       "espaco_interno": "Galerias do Térreo, Galerias do 3º andar e Pátio"
     },
     {
-      "id": "cine-santa-tereza-bileto-129770",
-      "titulo": "LANÇAMENTO - Queremos dançar o Carnaval - A história de um clube negro do Brasil",
-      "data": "2026-11-18",
-      "data_fim": "",
-      "horario": "19h",
-      "local": "Cine Santa Tereza",
-      "cidade": "Belo Horizonte",
-      "categoria": "Cinema",
-      "gratuito": true,
-      "inscricao": "Ingressos on-line esgotados; há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade",
-      "descricao": "Queremos dançar o Carnaval - A história de um clube negro do Brasil ( Gustavo Nolasco | Brasil | 2026 | Documentário | 61 min) O documentário conta a história da Sociedade Operária Paracatuense, o \"Saca Rolha\", primeiro clube fundado por pessoas negras em Paracatu (MG), em 1950. Criado pelo sanfoneiro e operário Luís de Darillo, no bairro Santana, o clube surgiu como resposta à proibição da entrada de negros em espaços de convívio e lazer da elite local e se tornou símbolo de resistência ao racismo, promovendo bailes dançantes e de Carnaval até seu fechamento, após a morte de Darillo, em 1958.",
-      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/3hp73f2li2n2km0aba12rn1jhj7srnhuqjsiihc1fa7rq52a0eo4dralqsh0bv5oefa50rj4p2hpu3j734c5m8b4q9tjq8i0ga0jfjv.jpeg",
-      "link": "https://bileto.sympla.com.br/event/129770/d/427097/s/2761154",
-      "fonte": "Cine Santa Tereza",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "fonte_id": "129770",
-      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
-      "classificacao_indicativa": "Livre",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-11-18",
-          "observacao": "19h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
-    },
-    {
-      "id": "minas-tenis-lancamento-de-livro-no-mundo-sem-voce-2026-11-18",
-      "titulo": "Lançamento de Livro – No Mundo Sem Você",
-      "data": "2026-11-18",
-      "data_fim": "",
-      "horario": "19h",
-      "local": "Café Cultural do Centro Cultural Unimed-BH Minas",
-      "cidade": "Belo Horizonte",
-      "endereco": "Rua da Bahia, 2244, Lourdes, Belo Horizonte - MG",
-      "categoria": "Literatura",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita conforme página oficial; consulte a programação para inscrição, retirada de ingresso e lotação.",
-      "descricao": "18 NOV Lançamento de Livro – No Mundo Sem Você Centro Cultural Unimed-BH Minas Cultura Data: 18/11/2026 Horário: 19:00 às 21:00 Local: Café do Centro Cultural Unimed-BH Minas Entrada gratuita A autora dá voz à dor de quem perdeu um animal de estimação e precisou aprender a viver em um mundo que, muitas vezes, não reconhece a profundidade desse sofrimento. Entre histórias reais, relatos emocionantes, cartas de tutores e reflexões da Psicologia, a autora percorre as diferentes faces do luto animal, revelando a intensidade dos vínculos que construímos com aqueles que compartilham a vida. Da saudade à culpa, da ausência à reconstrução,",
-      "imagem": "https://minastenisclube.com.br/wp-content/uploads/2026/10/5.jpg",
-      "link": "https://minastenisclube.com.br/programacao/lancamento-de-livro-no-mundo-sem-voce/",
-      "pagina": "https://minastenisclube.com.br/programacao/lancamento-de-livro-no-mundo-sem-voce/",
-      "fonte": "Minas Tênis Clube — programação cultural",
-      "instituicao_id": "minas-tenis-clube",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "gratuidade_explicita",
-      "local_id": "centro-cultural-unimed-bh-minas",
-      "status_validacao": "aprovado",
-      "origem_experimental": "minas_tenis_cultura",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-11-18",
-          "observacao": "19h"
-        }
-      },
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Centro+Cultural+Unimed-BH+Minas%2C+Rua+da+Bahia%2C+2244%2C+Lourdes%2C+Belo+Horizonte+-+MG",
-      "espaco_interno": "Café Cultural do"
-    },
-    {
-      "id": "aml-lacan-na-academia-aml-recebe-debate-sobre-fotografia-natureza-e-crise-ecologica-em-encontro-com-joao-marcos-rosa-2026-11-18",
-      "titulo": "Lacan na Academia: AML recebe debate sobre fotografia, natureza e crise ecológica em encontro com João Marcos Rosa",
-      "data": "2026-11-18",
-      "data_fim": "",
-      "horario": "20h",
-      "local": "Academia Mineira de Letras",
-      "cidade": "Belo Horizonte",
-      "endereco": "Rua da Bahia, 1466, Lourdes, Belo Horizonte - MG",
-      "categoria": "Exposição",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita conforme programação oficial da Academia Mineira de Letras; consulte a página para orientações de acesso ou inscrição.",
-      "descricao": "Lacan na Academia: AML recebe debate sobre fotografia, natureza e crise ecológica em encontro com João Marcos Rosa 18/11/2026 🔊 Ouvir o conteúdo Nova edição do projeto “Lacan na Academia: conversando com a literatura” propõe uma reflexão sobre os limites da ação humana sobre o meio ambiente e os desafios de registrar e preservar a vida, no dia 18 de novembro. Entada gratuita A Academia Mineira de Letras realiza, no dia 18 de novembro, às 20h, mais uma edição do projeto “Lacan na Academia: conversando com a literatura”. Com o tema “Fotografar o vivo, interrogar o mundo”, o encontro terá como convidado o fotógrafo e contador de histórias visuais João Marcos Rosa,",
-      "imagem": "https://academiamineiradeletras.org.br/wp-content/uploads/2026/11/SITE_lacan-na-academia.jpg",
-      "link": "https://academiamineiradeletras.org.br/eventos/lacan-na-academia-aml-recebe-debate-sobre-fotografia-natureza-e-crise-ecologica-em-encontro-com-joao-marcos-rosa/",
-      "pagina": "https://academiamineiradeletras.org.br/eventos/lacan-na-academia-aml-recebe-debate-sobre-fotografia-natureza-e-crise-ecologica-em-encontro-com-joao-marcos-rosa/",
-      "fonte": "Academia Mineira de Letras — programação oficial",
-      "instituicao_id": "academia-mineira-de-letras",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "gratuidade_explicita",
-      "local_id": "academia-mineira-de-letras",
-      "status_validacao": "aprovado",
-      "origem_experimental": "academia_mineira_letras",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-11-18",
-          "observacao": "20h"
-        }
-      },
-      "mapa": "https://maps.app.goo.gl/nWAFno2E42DH5BeP6"
-    },
-    {
-      "id": "fcs-wp-37999",
-      "titulo": "Lançamentos de Novembro",
-      "data": "2026-11-18",
-      "data_fim": "",
-      "horario": "20h",
-      "local": "Cine Humberto Mauro",
-      "cidade": "Belo Horizonte",
-      "categoria": "Cinema",
-      "gratuito": true,
-      "inscricao": "Ingresso gratuito; consulte a página oficial",
-      "descricao": "Em novembro, o Cine Humberto Mauro abre espaço em sua programação para um conjunto de lançamentos que passa a ocupar diferentes sessões ao longo do mês. São filmes que chegam à sala trazendo novas perspectivas, propostas estéticas e possibilidades de encontro com o público. Ao acolher esses trabalhos,",
-      "imagem": "https://fcs.mg.gov.br/wp-content/uploads/2026/11/lancamentos-card-1024x1024.png",
-      "link": "https://fcs.mg.gov.br/evento/lancamentos-de-novembro/",
-      "fonte": "Fundação Clóvis Salgado",
-      "instituicao_id": "fcs",
-      "fonte_id": 37999,
-      "atualizado_na_fonte": "2026-11-10T19:23:16",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-11-18",
-          "observacao": "20h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "palacio-das-artes",
-      "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
-      "espaco_interno": "Cine Humberto Mauro"
-    },
-    {
-      "id": "ccbb-bh-encantaria-ancestral-nzinga-40-anos",
-      "titulo": "Encantaria ancestral: Nzinga 40 anos",
-      "data": "2026-11-18",
-      "data_fim": "",
-      "horario": "Quarta-feira, das 16h às 21h",
-      "local": "CCBB Belo Horizonte – Teatro I, Teatro II e Foyer do Teatro II",
-      "cidade": "Belo Horizonte",
-      "categoria": "Multilinguagem",
-      "gratuito": true,
-      "inscricao": "Retirada gratuita de ingresso; consulte a página oficial",
-      "descricao": "Entrada gratuita, mediante retirada de ingresso no dia do evento, exclusivamente na bilheteria do CCBB BH, a partir das 10h.",
-      "imagem": "https://ccbbstg.blob.core.windows.net/site-2025/2026/11/Nzinga.png",
-      "link": "https://ccbb.com.br/belo-horizonte/programacao/encantaria-ancestral-nzinga-40-anos/",
-      "fonte": "CCBB Belo Horizonte",
-      "instituicao_id": "ccbb-bh",
-      "classificacao_indicativa": "Livre",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-11-18",
-          "observacao": "Quarta-feira, das 16h às 21h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "ccbb-bh",
-      "endereco": "Praça da Liberdade, 450, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/Q6UrZGKEn8eCx8Kb8",
-      "espaco_interno": "Teatro I, Teatro II e Foyer do Teatro II"
-    },
-    {
       "id": "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-19-1030",
       "titulo": "Ateliê Aberto | Bonecas Abayomi: nós de memórias",
       "data": "2026-11-19",
@@ -8761,5 +8605,5 @@
   ],
   "modo_teste_experimental": true,
   "eventos_somente_teste": 2,
-  "atualizado_em_teste": "2026-11-18T15:45:55-03:00"
+  "atualizado_em_teste": "2026-11-19T20:02:22-03:00"
 }
