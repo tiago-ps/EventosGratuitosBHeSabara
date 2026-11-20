@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Março de 2026 a Junho de 2027",
-  "atualizado_em": "2026-11-20T14:26:03-03:00",
+  "atualizado_em": "2026-11-20T15:16:25-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -6064,6 +6064,36 @@
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
     },
     {
+      "id": "cine-santa-tereza-bileto-130115",
+      "titulo": "FORUMDOC.BH - Lira",
+      "data": "2026-11-21",
+      "data_fim": "",
+      "horario": "17h",
+      "local": "Cine Santa Tereza",
+      "cidade": "Belo Horizonte",
+      "categoria": "Cinema",
+      "gratuito": true,
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "descricao": "Lira (Beth Formaggini, Maria Lira Marques | Brasil | 2026 | Documentário | 109 min) Lira é o fio condutor da narrativa enquanto percorre o Vale do Jequitinhonha recolhendo pigmentos de terra colorida para as suas pinturas e canções para o Coral dos Trovadores do Vale de Araçuaí. Devolve para os seus informantes e familiares a pesquisa que realizou com “Frei Chico” sobre a cultura do Vale nos anos setenta: côcos, cantos de trabalho, contra-dança, cantos de roda, benditos e beira-mar, que falam de amores e da dor de viver. Sessão comentada pelas diretoras Classificação indicativa: Livre",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/1a70qk611o8upke1kffhcv35h6rl1sr1ha1bc7pj0r935hpf8vudmjcqiflbc5a42t869mji921pkeacgihjeqs9pta1047grdcbop1.jpeg",
+      "link": "https://bileto.sympla.com.br/event/130115/d/428840/s/2770080",
+      "fonte": "Cine Santa Tereza",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "fonte_id": "130115",
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "classificacao_indicativa": "Livre",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-21",
+          "observacao": "17h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
+    },
+    {
       "id": "cine-santa-tereza-bileto-130114",
       "titulo": "FORUMDOC.BH - Sagrado",
       "data": "2026-11-21",
@@ -6073,7 +6103,7 @@
       "cidade": "Belo Horizonte",
       "categoria": "Cinema",
       "gratuito": true,
-      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial. Também há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade.",
       "descricao": "Sagrado (Alice Riff | Brasil | 2026 | Documentário | 90min) Sagrado acompanha a rotina de professores e funcionários de uma escola pública em Diadema, São Paulo. Sem sair da escola, o documentário constrói um retrato sensível sobre o território, seus dilemas e desafios. Classificação indicativa: Livre",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/3kmth6u653cujo3mmvtmjickn8ckecu36fh0v27kqt34kfaits14ch5l8v4n803qbq7ek74ns2d96dt9dog75rqmft50roi828icgqb.webp",
       "link": "https://bileto.sympla.com.br/event/130114/d/428839/s/2770078",
@@ -6321,7 +6351,7 @@
       "cidade": "Belo Horizonte",
       "categoria": "Cinema",
       "gratuito": true,
-      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial. Também há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade.",
       "descricao": "Nuestra Tierra (Lucrecia Martel | Argentina, Estados Unidos, México, França, Países Baixos e Dinamarca | 2025 | Documentário | 122 min) Documentário que investiga o assassinato do líder indígena argentino Javier Chocobar, membro da comunidade Chuschagasta, e a luta da sua comunidade por terras ancestrais. A obra explora a longa história de colonialismo e desapropriação que levou ao crime, ocorrido em 2009, e que resultou num processo judicial de nove anos após a morte de Chocobar. Sessão apresentada por Ernesto de Carvalho - fotógrafo do filme Classificação indicativa: 14 anos",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/1a70qk611o8upke1kffhcv35h6rl1sr1ha1bc7pj0r935hpf8vudmjcqiflbc5a42t869mji921pkeacgihjeqs9pta1047grdcbop1.jpeg",
       "link": "https://bileto.sympla.com.br/event/130113/d/428838/s/2770076",
@@ -6401,6 +6431,36 @@
         }
       },
       "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
+    },
+    {
+      "id": "cine-santa-tereza-bileto-130116",
+      "titulo": "FORUMDOC.BH - Reparação",
+      "data": "2026-11-24",
+      "data_fim": "",
+      "horario": "17h",
+      "local": "Cine Santa Tereza",
+      "cidade": "Belo Horizonte",
+      "categoria": "Cinema",
+      "gratuito": true,
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "descricao": "Reparação (Marcus Curvelo | Brasil | 2026 | 70 min) No dia em que completa 35 anos, Marcus e sua mãe procuram um lugar no litoral para espalhar as cinzas do pai. Quando sua mãe adoece, ele passa a sentir que o sal do mar onde o pai descansa corrói lentamente a sua vida. Classificação indicativa: 14 anos",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/1a70qk611o8upke1kffhcv35h6rl1sr1ha1bc7pj0r935hpf8vudmjcqiflbc5a42t869mji921pkeacgihjeqs9pta1047grdcbop1.jpeg",
+      "link": "https://bileto.sympla.com.br/event/130116/d/428841/s/2770082",
+      "fonte": "Cine Santa Tereza",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "fonte_id": "130116",
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "classificacao_indicativa": "14 anos",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-24",
+          "observacao": "17h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
     {
       "id": "cine-theatro-brasil-serie-bh-instrumental-e-xxiv-premio-da-musica-instrumental-mineira-2026-11-24-19",
@@ -6839,6 +6899,62 @@
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "sesc-palladium",
       "mapa": "https://maps.app.goo.gl/69GL5ydEpAtcwDgv7"
+    },
+    {
+      "id": "ccult-ufmg-obra-de-liel-gabin-explora-relacoes-entre-arquitetura-espaco-e-imaginacao-2026-11-27",
+      "titulo": "Obra de Liel Gabin explora relações entre arquitetura, espaço e imaginação",
+      "data": "2026-11-27",
+      "data_fim": "2027-01-10",
+      "horario": "19h",
+      "local": "Sala Ana Horta",
+      "local_id": "ccult-ufmg-sala-ana-horta",
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida Santos Dumont, 174, Centro, Belo Horizonte - MG",
+      "categoria": "Exposição",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita conforme programação oficial do Centro Cultural UFMG; consulte a página para inscrição, lotação ou orientações de acesso.",
+      "descricao": "O Centro Cultural UFMG convida para a abertura da exposição individual ‘Gravidade’ , do artista visual Liel Gabin . A mostra apresenta uma instalação artística que propõe uma reflexão sobre a arquitetura, o espaço, a percepção e a relação entre matéria e imaginação. O evento de inauguração acontece no dia 27 de novembro de 2026, sexta-feira, às 19 horas. A obra poderá ser vista até 10 de janeiro de 2027. A entrada é gratuita e a classificação é livre. Compartilhe no WhatsApp C ompartilhe no Telegram Gravidade – O sonho frágil da sala – por Liel Gabin No teto da sala Ana Horta, uma estrutura de iluminação artificial desenha um quadrado luminoso em torno de outro, escuro,",
+      "imagem": "https://www.ufmg.br/centrocultural/wp-content/uploads/2026/11/gravidade-lielgabin-foto-04.jpeg",
+      "link": "https://www.ufmg.br/centrocultural/obra-de-liel-gabin-explora-relacoes-entre-arquitetura-espaco-e-imaginacao/",
+      "pagina": "https://www.ufmg.br/centrocultural/obra-de-liel-gabin-explora-relacoes-entre-arquitetura-espaco-e-imaginacao/",
+      "fonte": "Centro Cultural UFMG — programação oficial",
+      "instituicao_id": "centro-cultural-ufmg",
+      "criterio_exibicao": "realizacao",
+      "motivo_publicacao": "gratuidade_explicita",
+      "classificacao_indicativa": "Livre",
+      "evidencia_classificacao_indicativa": "texto_explicito_padrao_1",
+      "evidencia_classificacao_indicativa_trecho": "feriados: 9h às 17h Sala Ana Horta Classificação indicativa: livre Entrada gratuita Consulte rotas e",
+      "somente_teste": true,
+      "status_validacao": "experimental",
+      "origem_experimental": "centro_cultural_ufmg"
+    },
+    {
+      "id": "ccult-ufmg-temporal-fotografias-de-eduardo-vargas-revelam-paisagens-transformadas-pela-acao-das-aguas-2026-11-27",
+      "titulo": "Temporal: fotografias de Eduardo Vargas revelam paisagens transformadas pela ação das águas",
+      "data": "2026-11-27",
+      "data_fim": "2027-01-10",
+      "horario": "19h",
+      "local": "Sala Celso Renato de Lima",
+      "local_id": "ccult-ufmg-sala-celso-renato",
+      "cidade": "Belo Horizonte",
+      "endereco": "Avenida Santos Dumont, 174, Centro, Belo Horizonte - MG",
+      "categoria": "Exposição",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita conforme programação oficial do Centro Cultural UFMG; consulte a página para inscrição, lotação ou orientações de acesso.",
+      "descricao": "O Centro Cultural UFMG convida para a abertura da exposição individual ‘Temporal’ , do artista Eduardo Vargas , com curadoria de Eduardo de Jesus. A mostra reúne séries de fotografias realizadas em Moçambique, na Bolívia e no Brasil, que exploram a relação entre paisagem, água, chuva e passagem do tempo. O evento de inauguração acontece no dia 27 de novembro de 2026, sexta-feira, às 19 horas. As obras poderão ser vistas até 10 de janeiro de 2027. A entrada é gratuita e a classificação é livre.",
+      "imagem": "https://www.ufmg.br/centrocultural/wp-content/uploads/2026/11/temporal-no-salar-salar-do-uyuni-bolivia-2015-por-eduardo-vargas.jpg",
+      "link": "https://www.ufmg.br/centrocultural/temporal-fotografias-de-eduardo-vargas-revelam-paisagens-transformadas-pela-acao-das-aguas/",
+      "pagina": "https://www.ufmg.br/centrocultural/temporal-fotografias-de-eduardo-vargas-revelam-paisagens-transformadas-pela-acao-das-aguas/",
+      "fonte": "Centro Cultural UFMG — programação oficial",
+      "instituicao_id": "centro-cultural-ufmg",
+      "criterio_exibicao": "realizacao",
+      "motivo_publicacao": "gratuidade_explicita",
+      "classificacao_indicativa": "Livre",
+      "evidencia_classificacao_indicativa": "texto_explicito_padrao_1",
+      "evidencia_classificacao_indicativa_trecho": "h às 17h Sala Celso Renato de Lima Classificação indicativa: livre Entrada gratuita Consulte rotas e",
+      "somente_teste": true,
+      "status_validacao": "experimental",
+      "origem_experimental": "centro_cultural_ufmg"
     },
     {
       "id": "portal-bh-b994764efa9f-2026-11-28-1000",
@@ -7441,38 +7557,6 @@
       "mapa": "https://www.google.com/maps/search/?api=1&query=Teatro+da+Cidade%2C+Rua+da+Bahia%2C+1341%2C+Centro%2C+Belo+Horizonte+-+MG"
     },
     {
-      "id": "fcs-wp-38039",
-      "titulo": "Viva o Filme: Clássicos em 16mm",
-      "data": "2026-12-02",
-      "data_fim": "2026-12-08",
-      "horario": "16h às 22h",
-      "local": "Cine Humberto Mauro",
-      "cidade": "Belo Horizonte",
-      "categoria": "Cinema",
-      "gratuito": true,
-      "inscricao": "Ingresso gratuito; consulte a página oficial",
-      "descricao": "A mostra “Viva o Filme: Clássicos em 16mm” exibirá importantes obras da história do cinema mundial no formato 16mm, suporte que marcou durante décadas a programação do Cine Humberto Mauro antes da consolidação do cinema digital como principal forma de exibição.",
-      "imagem": "https://fcs.mg.gov.br/wp-content/uploads/2026/11/viva-o-filme-card-1024x1024.png",
-      "link": "https://fcs.mg.gov.br/evento/viva-o-filme-classicos-em-16mm/",
-      "fonte": "Fundação Clóvis Salgado",
-      "instituicao_id": "fcs",
-      "fonte_id": 38039,
-      "atualizado_na_fonte": "2026-11-13T18:37:09",
-      "temporalidade": {
-        "classe": "periodo",
-        "realizacao": {
-          "inicio": "2026-12-02",
-          "fim": "2026-12-08",
-          "observacao": "16h às 22h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "palacio-das-artes",
-      "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
-      "espaco_interno": "Cine Humberto Mauro"
-    },
-    {
       "id": "portal-bh-1045058fe89d-2026-12-05-1330",
       "titulo": "Tours Gratuitos em Belo Horizonte 2026",
       "data": "2026-12-05",
@@ -7627,6 +7711,36 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
+    },
+    {
+      "id": "fcs-wp-38039",
+      "titulo": "Viva o Filme: Clássicos em 16mm",
+      "data": "2026-12-07",
+      "data_fim": "",
+      "horario": "",
+      "local": "Cine Humberto Mauro",
+      "cidade": "Belo Horizonte",
+      "categoria": "Cinema",
+      "gratuito": true,
+      "inscricao": "Ingresso gratuito; consulte a página oficial",
+      "descricao": "A mostra “Viva o Filme: Clássicos em 16mm” exibirá importantes obras da história do cinema mundial no formato 16mm, Em 15 de outubro de 1978, o Cine Humberto Mauro era inaugurado. Tendo como um dos principais diferenciais a exibição de filmes em película 16mm e fora do circuito comercial,",
+      "imagem": "https://fcs.mg.gov.br/wp-content/uploads/2026/11/viva-o-filme-card-1024x1024.png",
+      "link": "https://fcs.mg.gov.br/evento/viva-o-filme-classicos-em-16mm/",
+      "fonte": "Fundação Clóvis Salgado",
+      "instituicao_id": "fcs",
+      "fonte_id": 38039,
+      "atualizado_na_fonte": "2026-11-19T19:24:49",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-12-07"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "palacio-das-artes",
+      "endereco": "Avenida Afonso Pena, 1537, Centro, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/AqdgUQr8p4BkuvJB7",
+      "espaco_interno": "Cine Humberto Mauro"
     },
     {
       "id": "ufmg-ec-museu-fechado-feriado-imaculada-conceicao",
@@ -8382,6 +8496,6 @@
     }
   ],
   "modo_teste_experimental": true,
-  "eventos_somente_teste": 2,
-  "atualizado_em_teste": "2026-11-20T14:26:26-03:00"
+  "eventos_somente_teste": 4,
+  "atualizado_em_teste": "2026-11-20T15:16:43-03:00"
 }
