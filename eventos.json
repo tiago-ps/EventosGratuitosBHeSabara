@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Março de 2026 a Junho de 2027",
-  "atualizado_em": "2026-11-21T13:29:47-03:00",
+  "atualizado_em": "2026-11-21T14:12:24-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -6370,6 +6370,36 @@
       "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
     {
+      "id": "cine-santa-tereza-bileto-130117",
+      "titulo": "FORUMDOC.BH - Telúrica, a Íntima Utopia",
+      "data": "2026-11-24",
+      "data_fim": "",
+      "horario": "19h",
+      "local": "Cine Santa Tereza",
+      "cidade": "Belo Horizonte",
+      "categoria": "Cinema",
+      "gratuito": true,
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "descricao": "Telúrica, a Íntima Utopia (Mariana Lacerda | Brasil | 2026 | Documentário | 104 min) Uma trupe teatral - formada por atores e atrizes cujas almas sentem vacilar o mundo - ensaia uma peça sobre a existência na Terra e a extinção das espécies, bem como seu desejo de perseverar na vida. Enquanto criam o espetáculo, refletem sobre suas trajetórias e a preservação de sua comunidade. Pensamentos, projeções sobre o futuro e o passado, visões e formas de existir também são entidades a serem preservadas. Classificação indicativa: Livre",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/1a70qk611o8upke1kffhcv35h6rl1sr1ha1bc7pj0r935hpf8vudmjcqiflbc5a42t869mji921pkeacgihjeqs9pta1047grdcbop1.jpeg",
+      "link": "https://bileto.sympla.com.br/event/130117/d/428842/s/2770084",
+      "fonte": "Cine Santa Tereza",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "fonte_id": "130117",
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "classificacao_indicativa": "Livre",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-24",
+          "observacao": "19h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
+    },
+    {
       "id": "cine-theatro-brasil-serie-bh-instrumental-e-xxiv-premio-da-musica-instrumental-mineira-2026-11-24-19",
       "titulo": "Série BH Instrumental e XXIV Prêmio da Música Instrumental Mineira",
       "data": "2026-11-24",
@@ -6434,6 +6464,36 @@
         }
       },
       "mapa": "https://www.google.com/maps/search/?api=1&query=Sala+Minas+Gerais%2C+Rua+Tenente+Brito+Melo%2C+1090%2C+Barro+Preto%2C+Belo+Horizonte+-+MG"
+    },
+    {
+      "id": "cine-santa-tereza-bileto-130118",
+      "titulo": "FORUMDOC.BH - Sessões Especiais",
+      "data": "2026-11-25",
+      "data_fim": "",
+      "horario": "17h",
+      "local": "Cine Santa Tereza",
+      "cidade": "Belo Horizonte",
+      "categoria": "Cinema",
+      "gratuito": true,
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "descricao": "Paz e Prosperidade, W7 na Voz (Arthur Medrado, Dávila da Paixão | Brasil | 2026 | 26 min) O Filme acompanha W7 Blackout, multiartista do Alto Vera Cruz que perdeu a visão em 2017. Percorre seu cotidiano, a criação de um podcast sobre música periférica, encontros com artistas do território e a realização do sonho de produzir o videoclipe de sua nova música. Entre memória, resistência e criação, a obra afirma a potência da cultura da periferia, a importância da acessibilidade e a força da arte como caminho de autonomia e prosperidade.",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/1a70qk611o8upke1kffhcv35h6rl1sr1ha1bc7pj0r935hpf8vudmjcqiflbc5a42t869mji921pkeacgihjeqs9pta1047grdcbop1.jpeg",
+      "link": "https://bileto.sympla.com.br/event/130118/d/428847/s/2770106",
+      "fonte": "Cine Santa Tereza",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "fonte_id": "130118",
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "classificacao_indicativa": "12 anos",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-25",
+          "observacao": "17h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
     {
       "id": "fcs-wp-38045",
@@ -8404,5 +8464,5 @@
   ],
   "modo_teste_experimental": true,
   "eventos_somente_teste": 4,
-  "atualizado_em_teste": "2026-11-21T13:30:05-03:00"
+  "atualizado_em_teste": "2026-11-21T14:12:43-03:00"
 }
