@@ -5,7 +5,7 @@
     "configuracao-mural.json": 1,
     "cursos.json": 1908,
     "espacos_culturais.json": 268,
-    "eventos.json": 180,
+    "eventos.json": 177,
     "filmes.json": 1292,
     "livros.json": 51,
     "relacoes-eventos.json": 178,
@@ -13,25 +13,25 @@
   },
   "hashes": {
     "atividades-lazer.json": "7b7cac673c1d63119d5adb8f47d5b7bef51f30f7ea34e0473a9897931feae478",
-    "concursos.json": "7d071c2fe47dc3e43b6146bae2d52563ff930c8cafc7ecc3ce74fa9a4070413c",
+    "concursos.json": "ccbbf4f9d742fd36ed9a1042c156c8169465844bbb553e43396cbb011ca3eadb",
     "configuracao-mural.json": "49dfe7115a6f5c6d5b8dee424d3b10341b5e3014ac58a295d27ef4e6043ebfc2",
     "cursos.json": "b30ad391ca8104f646d6e2c1bd78ef2080d57b38605153543a701aaeecb41948",
     "espacos_culturais.json": "572de708c598f3392d99194f8a2a9cf4953cf7fcf401ad682c8174b03ccccda7",
-    "eventos.json": "3da5518b190351dcc7a1ea0ff4c9b8e04e0f90d542ddb432595048d0b4a09fb9",
+    "eventos.json": "502e49c234878870b2eb0c3eb7f899c5fad3cf8c0cbe8fcb74748205714dde2c",
     "filmes.json": "23437099af05856a1a822d1b91c19c9dc93962f073b823189bf8eb96652710af",
-    "livros.json": "c6a1e1dc70bcbb11ad948a0294f6ab862134e5d8b8bb8778defb014e86b4967b",
+    "livros.json": "d926149be61376118d5d7b4478fd19439850c147053e1000196504eba68b63fd",
     "relacoes-eventos.json": "5ce598cf7241e3725f9173ab5ad3ed9b828d0c9667474bb9535a69320f26f08d",
     "utilidade-publica.json": "802855dab1947d041edd92cfa3cd35291b93f505e04ee149978472605f32e73c"
   },
-  "published_at": "2026-11-20T18:16:43Z",
-  "request_id": "auto-workflow_run-44790921410-1",
+  "published_at": "2026-11-21T16:30:05Z",
+  "request_id": "auto-workflow_run-44924760436-1",
   "schema_version": "1.0",
   "source_repository": "tiago-ps/ColetorEventosGratuitos",
-  "source_sha": "d7fa2bb01ab610dc0d2c886ada33c53b1a9a60ce",
+  "source_sha": "10e8e34b37aaa2ba41435f7cff6a9ef28b558853",
   "staging_repository": "tiago-ps/EventosGratuitosBHeSabara",
   "versions": {
     "manifest_schema": "1.0",
     "publication_validator": "central-v1"
   },
-  "workflow_run_id": "44790921410"
+  "workflow_run_id": "44924760436"
 }

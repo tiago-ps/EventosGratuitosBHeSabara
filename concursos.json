@@ -2,7 +2,7 @@
   "schema": 10,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-11-20T17:24:27.172477+00:00",
+  "coletado_em_utc": "2026-11-21T16:28:18.432309+00:00",
   "total": 28,
   "concursos": [
     {
@@ -293,6 +293,43 @@
       }
     },
     {
+      "id": "pci:noticia:sp-aguas-sp-abre-concurso-publico-com-salarios-de-ate-12070",
+      "titulo": "SP-Águas - Agência de Águas do Estado de São Paulo",
+      "url": "https://www.pciconcursos.com.br/noticias/sp-aguas-sp-abre-concurso-publico-com-salarios-de-ate-12070",
+      "imagem": "https://cdn.pci.app.br/img/i/445d8016e48f226d6e228b8c0dcd1b7e.png",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "stao ambiental e recursos hidricos (59 vagas) direito e regulacao economica de recursos hidricos (16 vagas) monitoramento hidrologico e ciencia de dados (18 vagas) analista de suporte a regulacao de recursos hidricos i administracao publica (8 vagas) direito (5 vagas) economico-financeira (4 vagas) tecnologia da informacao e ciencia de dados (3 vagas) a jornada e de 40 horas semanais. o salario inicial e de r$ 12.070,00 para especialista e r$ 10.366,00 para analista. os empregados tambem terao vale-refeicao de r$ 55,00 por dia efetivamente trabalhado. as inscricoes serao feitas pelo site da fundacao getulio vargas (f"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "SP",
+      "cidade": "",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "R$ 12.070,00",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Tecnologia da Informação e Ciência de Dados",
+          "vagas_texto": "3 vagas",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "prazo_desconhecido",
+        "completude": "desconhecida"
+      }
+    },
+    {
       "id": "pci:noticia:camara-de-carapicuiba-sp-abre-concurso-publico-para-oficial-de-manutencao-e-tecnico-em-tecnologia-da-informacao",
       "titulo": "Câmara de Carapicuíba",
       "url": "https://www.pciconcursos.com.br/noticias/camara-de-carapicuiba-sp-abre-concurso-publico-para-oficial-de-manutencao-e-tecnico-em-tecnologia-da-informacao",
@@ -510,43 +547,6 @@
         {
           "cargo": "Ensino superior completo Analista de Tecnologia da Informação",
           "vagas_texto": "Cadastro de Reserva",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        }
-      ],
-      "janela_inscricoes": {
-        "estado": "prazo_desconhecido",
-        "completude": "desconhecida"
-      }
-    },
-    {
-      "id": "pci:noticia:sp-aguas-sp-abre-concurso-publico-com-salarios-de-ate-12070",
-      "titulo": "SP-Águas - Agência de Águas do Estado de São Paulo",
-      "url": "https://www.pciconcursos.com.br/noticias/sp-aguas-sp-abre-concurso-publico-com-salarios-de-ate-12070",
-      "imagem": "https://cdn.pci.app.br/img/i/445d8016e48f226d6e228b8c0dcd1b7e.png",
-      "formacoes_compativeis": [
-        "Sistemas de Informação / Computação"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Sistemas de Informação / Computação",
-          "nivel": "superior",
-          "evidencia": "stao ambiental e recursos hidricos (59 vagas) direito e regulacao economica de recursos hidricos (16 vagas) monitoramento hidrologico e ciencia de dados (18 vagas) analista de suporte a regulacao de recursos hidricos i administracao publica (8 vagas) direito (5 vagas) economico-financeira (4 vagas) tecnologia da informacao e ciencia de dados (3 vagas) a jornada e de 40 horas semanais. o salario inicial e de r$ 12.070,00 para especialista e r$ 10.366,00 para analista. os empregados tambem terao vale-refeicao de r$ 55,00 por dia efetivamente trabalhado. as inscricoes serao feitas pelo site da fundacao getulio vargas (f"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "SP",
-      "cidade": "",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "",
-      "inscricoes_texto": "",
-      "remuneracao_faixa_texto": "R$ 12.070,00",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Tecnologia da Informação e Ciência de Dados",
-          "vagas_texto": "3 vagas",
           "formacao": "Sistemas de Informação / Computação",
           "confianca": "alta"
         }
