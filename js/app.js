@@ -42,6 +42,7 @@
     courses: { singular: 'curso', plural: 'cursos' },
     contests: { singular: 'concurso', plural: 'concursos' },
     films: { singular: 'filme', plural: 'filmes' },
+    platforms: { singular: 'plataforma audiovisual', plural: 'plataformas audiovisuais' },
     utility: { singular: 'item de utilidade pública', plural: 'itens de utilidade pública' },
     spaces: { singular: 'espaço', plural: 'espaços' },
     activities: { singular: 'atividade de esporte e lazer', plural: 'atividades de esporte e lazer' }
