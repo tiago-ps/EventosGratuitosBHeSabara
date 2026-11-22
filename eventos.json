@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Março de 2026 a Junho de 2027",
-  "atualizado_em": "2026-11-22T13:44:54-03:00",
+  "atualizado_em": "2026-11-22T14:35:53-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -5732,6 +5732,41 @@
       "espaco_interno": "Galerias do Térreo, Galerias do 3º andar e Pátio"
     },
     {
+      "id": "portal-bh-6704c18e84a4-2026-11-21-1400",
+      "titulo": "Duelo de MCs Nacional 2026",
+      "data": "2026-11-21",
+      "data_fim": "2026-11-22",
+      "horario": "14h às 21h",
+      "local": "Viaduto Santa Teza",
+      "cidade": "Belo Horizonte",
+      "categoria": "Música",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "Neste final de semana, o Duelo de MCs Nacional ocupa o Viaduto Santa Tereza e o Circuito Municipal de Cultura chega junto com cinco atrações incríveis para uma das maiores competições de batalha de rima do país! Drizzy é rapper e representou Minas Gerais no Duelo de MCs Nacional de 2017. No sábado, ele apresenta o show de seu primeiro álbum de estúdio,",
+      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-11/910177062_18135853921783504_7976590831355293611_n.jpg",
+      "link": "https://portalbelohorizonte.com.br/circuitomunicipaldecultura/2026/eventos/evento-de-rua/musica/duelo-de-mcs-nacional-2026",
+      "fonte": "Portal Belo Horizonte",
+      "fonte_id": "6704c18e84a4",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "endereco": "",
+      "tags_fonte": [
+        "Hip Hop",
+        "Dj",
+        "Música",
+        "Trap/Rap"
+      ],
+      "classificacao_indicativa": "Livre",
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-11-21",
+          "fim": "2026-11-22",
+          "observacao": "14h às 21h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
+    },
+    {
       "id": "casa-fiat-mil-maneiras-de-matar-o-tempo-na-piccola-galleria-2026-11-22-sem-hora",
       "titulo": "Mil maneiras de matar o tempo na Piccola Galleria",
       "data": "2026-11-22",
@@ -5793,6 +5828,34 @@
         }
       },
       "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
+    },
+    {
+      "id": "portal-bh-179ded5016f3-2026-11-22-1030",
+      "titulo": "Museu Criativo . Oficina: Pintura de Símbolos Adinkra — em parceria com Nicolle Dominique",
+      "data": "2026-11-22",
+      "data_fim": "",
+      "horario": "10h30 às 12h30",
+      "local": "Museu Histórico Abílio Barreto – MHAB",
+      "cidade": "Belo Horizonte",
+      "categoria": "Oficina",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": "22/11 Domingo, das 10h30 às 12h30",
+      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-10/06-oficina-pintura.png",
+      "link": "https://portalbelohorizonte.com.br/museuscentro/2026/eventos/oficina/cultural/museu-criativo-oficina-pintura-de-simbolos-adinkra-em-parceria-com-nicolle-dominique",
+      "fonte": "Portal Belo Horizonte",
+      "fonte_id": "179ded5016f3",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "endereco": "",
+      "tags_fonte": [],
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-22",
+          "observacao": "10h30 às 12h30"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
       "id": "filarmonica-mg-concertos-para-a-juventude-7-2026-2026-11-22",
@@ -5980,6 +6043,36 @@
       "mapa": "https://maps.app.goo.gl/69GL5ydEpAtcwDgv7"
     },
     {
+      "id": "cine-santa-tereza-bileto-130121",
+      "titulo": "FORUMDOC.BH - Mostra Contemporânea Brasileira",
+      "data": "2026-11-22",
+      "data_fim": "",
+      "horario": "19h",
+      "local": "Cine Santa Tereza",
+      "cidade": "Belo Horizonte",
+      "categoria": "Cinema",
+      "gratuito": true,
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "descricao": "Divino Sua Alma, Sua Lente (Gilson Costa, Clea Torres, Divino Tserewahú | Brasil | 2025 | 24min) “Divino: sua alma, sua lente” acompanha a trajetória do cineasta xavante Divino Tserewahú. Entre memórias, arquivos e vivências na Terra Indígena Sangradouro, o filme revela como o cinema se tornou, para ele, e a sua comunidade, instrumento de luta, preservação cultural e inspiração para novas gerações. Entre as veredas de sua aldeia e os caminhos que percorreu pelo país e pelo mundo, Divino revisita arquivos, fotos e registros que atravessam sua história, imagens feitas por ele,",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/1a70qk611o8upke1kffhcv35h6rl1sr1ha1bc7pj0r935hpf8vudmjcqiflbc5a42t869mji921pkeacgihjeqs9pta1047grdcbop1.jpeg",
+      "link": "https://bileto.sympla.com.br/event/130121/d/428850/s/2770112",
+      "fonte": "Cine Santa Tereza",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "fonte_id": "130121",
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "classificacao_indicativa": "Livre",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-22",
+          "observacao": "19h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
+    },
+    {
       "id": "casa-fiat-elogio-ao-amor-na-casa-fiat-de-cultura-2026-11-24-sem-hora",
       "titulo": "Elogio ao amor na Casa Fiat de Cultura",
       "data": "2026-11-24",
@@ -6020,7 +6113,7 @@
       "cidade": "Belo Horizonte",
       "categoria": "Cinema",
       "gratuito": true,
-      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial. Também há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade.",
       "descricao": "Reparação (Marcus Curvelo | Brasil | 2026 | 70 min) No dia em que completa 35 anos, Marcus e sua mãe procuram um lugar no litoral para espalhar as cinzas do pai. Quando sua mãe adoece, ele passa a sentir que o sal do mar onde o pai descansa corrói lentamente a sua vida. Classificação indicativa: 14 anos",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/1a70qk611o8upke1kffhcv35h6rl1sr1ha1bc7pj0r935hpf8vudmjcqiflbc5a42t869mji921pkeacgihjeqs9pta1047grdcbop1.jpeg",
       "link": "https://bileto.sympla.com.br/event/130116/d/428841/s/2770082",
@@ -6160,6 +6253,36 @@
         "realizacao": {
           "inicio": "2026-11-25",
           "observacao": "17h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
+    },
+    {
+      "id": "cine-santa-tereza-bileto-130119",
+      "titulo": "FORUMDOC.BH - Mostra Cinema de Transformação",
+      "data": "2026-11-25",
+      "data_fim": "",
+      "horario": "19h",
+      "local": "Cine Santa Tereza",
+      "cidade": "Belo Horizonte",
+      "categoria": "Cinema",
+      "gratuito": true,
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "descricao": "Semente Exterminadora (Isadora Neves Marques | Brasil, Portugal | 2017 | 28 min) Um derrame de petróleo contamina a costa brasileira. Capivara, trabalhador numa plataforma petrolífera, é evacuado para o Rio de Janeiro, onde a população permanece ignorante do desastre que se aproxima. Apesar do perigo, Capivara deseja retornar aos campos de extração em alto mar. Na cidade, é ajudado por Ywy. Nas plantações, Ywy expressa à Capivara, sua intimidade com as plantações transgênicas. Ela fala sobre a infertilidade daquelas sementes geneticamente manipuladas e de uma androide como ela. Capivara, humano,",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/1a70qk611o8upke1kffhcv35h6rl1sr1ha1bc7pj0r935hpf8vudmjcqiflbc5a42t869mji921pkeacgihjeqs9pta1047grdcbop1.jpeg",
+      "link": "https://bileto.sympla.com.br/event/130119/d/428848/s/2770108",
+      "fonte": "Cine Santa Tereza",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "fonte_id": "130119",
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "classificacao_indicativa": "14 anos",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-25",
+          "observacao": "19h"
         }
       },
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
@@ -6789,6 +6912,36 @@
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
     },
     {
+      "id": "sesc-palladium-bileto-128759",
+      "titulo": "CINE SESC - TEMTODOSABADO - CHEF JACK: O COZINHEIRO AVENTUREIRO",
+      "data": "2026-11-28",
+      "data_fim": "",
+      "horario": "16h",
+      "local": "Sesc Palladium",
+      "cidade": "Belo Horizonte",
+      "categoria": "Festival",
+      "gratuito": true,
+      "inscricao": "Ingressos gratuitos disponíveis on-line, conforme disponibilidade",
+      "descricao": "Atenção! Compras online e na bilheteria. Você poderá retirar até 2 (dois) ingressos, sendo 1 ingresso por CPF. Preencha os CPFs corretos e distintos, por ingresso, para que sua compra seja finalizada! Os ingressos podem ser reservados tanto pelo Sympla quanto retirados na bilheteria 90 minutos antes da sessão. Caso os ingressos no Sympla estejam esgotados, procure a bilheteria do Palladium para retirar o seu ingresso. Ingressos limitados! SINOPSE Chef Jack: o Cozinheiro Aventureiro Chef Jack é um chef de cozinha de bom coração, mas com uma pitada a mais do que o necessário de confiança.",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/1a6ogq9fggje8cv1tmtqc78htu8g78ab8d5p0i15fplei31avida31jlnae69io3034v0aug4iabsng2g4grj9fjq0lj2b091vok2h8.jpeg",
+      "link": "https://bileto.sympla.com.br/event/128759/d/422255/s/2733691",
+      "fonte": "Sesc Palladium",
+      "instituicao_id": "sesc-mg",
+      "fonte_id": "128759",
+      "endereco": "Rua Rio de Janeiro, 1046 – Centro, Belo Horizonte – MG, 30160-041",
+      "classificacao_indicativa": "Livre",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-28",
+          "observacao": "16h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "sesc-palladium",
+      "mapa": "https://maps.app.goo.gl/69GL5ydEpAtcwDgv7"
+    },
+    {
       "id": "casa-fiat-visita-tematica-elogio-ao-amor-na-casa-fiat-de-cultura-o-que-e-o-amor-2026-11-28-16",
       "titulo": "Visita temática “Elogio ao amor na Casa Fiat de Cultura” | O que é o amor?",
       "data": "2026-11-28",
@@ -7255,6 +7408,36 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
+    },
+    {
+      "id": "sesc-palladium-bileto-128753",
+      "titulo": "CINE SESC - TEMTODOSABADO - MEU PÉ DE LARANJA LIMA",
+      "data": "2026-12-05",
+      "data_fim": "",
+      "horario": "16h",
+      "local": "Sesc Palladium",
+      "cidade": "Belo Horizonte",
+      "categoria": "Festival",
+      "gratuito": true,
+      "inscricao": "Ingressos gratuitos disponíveis on-line, conforme disponibilidade",
+      "descricao": "Atenção! Compras online e na bilheteria. Você poderá retirar até 2 (dois) ingressos, sendo 1 ingresso por CPF. Preencha os CPFs corretos e distintos, por ingresso, para que sua compra seja finalizada! Os ingressos podem ser reservados tanto pelo Sympla quanto retirados na bilheteria 90 minutos antes da sessão. Caso os ingressos no Sympla estejam esgotados, procure a bilheteria do Palladium para retirar o seu ingresso. Ingressos limitados! SINOPSE Meu Pé de Laranja Lima Zezé (João Guilherme de Ávila) é um garoto de oito anos que, apesar de levado, tem um bom coração. Ele leva uma vida bem modesta,",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/igavgs0h561cpblkmqg54bjsavelgksc8rs59k9a2tp64vphgprmh297sp8cs78iheht1h3g1mqnc27139m4np3rmqcsb9e91ee3nf.webp",
+      "link": "https://bileto.sympla.com.br/event/128753/d/422245/s/2733659",
+      "fonte": "Sesc Palladium",
+      "instituicao_id": "sesc-mg",
+      "fonte_id": "128753",
+      "endereco": "Rua Rio de Janeiro, 1046 – Centro, Belo Horizonte – MG, 30160-041",
+      "classificacao_indicativa": "Livre",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-12-05",
+          "observacao": "16h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "sesc-palladium",
+      "mapa": "https://maps.app.goo.gl/69GL5ydEpAtcwDgv7"
     },
     {
       "id": "portal-bh-1045058fe89d-2026-12-05-0830",
@@ -8135,5 +8318,5 @@
   ],
   "modo_teste_experimental": true,
   "eventos_somente_teste": 4,
-  "atualizado_em_teste": "2026-11-22T13:45:18-03:00"
+  "atualizado_em_teste": "2026-11-22T14:36:15-03:00"
 }
