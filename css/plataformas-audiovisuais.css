@@ -1,0 +1,8 @@
+.agenda-platform-card .agenda-platform-media{display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg,#edf3ed,#dce8df);min-height:190px}
+.agenda-platform-placeholder{font-size:4rem;line-height:1}
+.agenda-platform-body{display:flex;flex-direction:column;gap:.55rem}
+.agenda-platform-eyebrow{margin:0;color:var(--muted,#65736a);font-size:.72rem;font-weight:800;letter-spacing:.08em}
+.agenda-platform-access{display:inline-flex;align-self:flex-start;margin:.15rem 0;padding:.35rem .65rem;border-radius:999px;background:#e5efe6;color:#234b32;font-size:.82rem;font-weight:700}
+.agenda-platform-note{margin:0;color:var(--muted,#65736a);font-size:.88rem}
+.agenda-platform-card .agenda-card-link{align-self:flex-start}
+.platform-slide .badge.film-platform{max-width:100%;white-space:normal}

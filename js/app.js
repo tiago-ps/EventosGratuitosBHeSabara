@@ -59,6 +59,7 @@
     courses: 'cursos',
     contests: 'concursos',
     films: 'filmes',
+    platforms: 'plataformas_audiovisuais',
     utility: 'utilidade_publica',
     spaces: 'espacos',
     activities: 'atividades_lazer'
@@ -83,6 +84,7 @@
   const coursesContent = window.MuralCultural.contents.courses;
   const contestsContent = window.MuralCultural.contents.contests;
   const filmsContent = window.MuralCultural.contents.films;
+  const platformsContent = window.MuralCultural.contents.platforms;
   const utilityContent = window.MuralCultural.contents.utility;
   const activitiesContent = window.MuralCultural.contents.activities;
   const spacesContent = window.MuralCultural.contents.spaces;
@@ -175,6 +177,7 @@
     allCourses: [],
     allContests: [],
     allFilms: [],
+    allPlatforms: [],
     allUtility: [],
     allActivities: [],
     allSpaces: [],
@@ -1040,6 +1043,7 @@
     const coursesEnabled = moduleEnabled('courses');
     const contestsEnabled = moduleEnabled('contests');
     const filmsEnabled = moduleEnabled('films');
+    const platformsEnabled = moduleEnabled('platforms');
     const utilityEnabled = moduleEnabled('utility');
     const spacesEnabled = moduleEnabled('spaces');
     const activitiesEnabled = moduleEnabled('activities');
@@ -1071,6 +1075,7 @@
         ? contestsContent.filter(state.allContests).map(contestsContent.publicRecord)
         : [],
       films: filmsEnabled ? filmsContent.filter(state.allFilms, filmFilters, normalizeText) : [],
+      platforms: platformsEnabled ? platformsContent.filter(state.allPlatforms) : [],
       utility: eligibleUtility,
       spaces: spacesEnabled
         ? spacesContent.filter(
@@ -1099,6 +1104,7 @@
       courses: coursesContent.PANEL_LIMIT || 15,
       contests: contestsContent.PANEL_CONTEST_LIMIT || 15,
       films: filmsContent.PANEL_LIMIT || 15,
+      platforms: 8,
       utility: PANEL_UTILITY_LIMIT,
       spaces: 6,
       activities: PANEL_ACTIVITY_LIMIT
@@ -2717,6 +2723,10 @@ function eventProgram(event) {
     renderMediaSlide(index, filmsContent.createPanelSlide);
   }
 
+  function renderPlatformSlide(index) {
+    renderMediaSlide(index, platformsContent.createPanelSlide);
+  }
+
   function renderUtilitySlide(index) {
     renderMediaSlide(index, utilityContent.createPanelSlide);
   }
@@ -2743,6 +2753,7 @@ function eventProgram(event) {
     else if (item.tipo_conteudo === 'curso') renderCourseSlide(index);
     else if (item.tipo_conteudo === 'concurso') renderContestSlide(index);
     else if (item.tipo_conteudo === 'filme') renderFilmSlide(index);
+    else if (item.tipo_conteudo === 'plataforma') renderPlatformSlide(index);
     else if (item.tipo_conteudo === 'utilidade_publica') renderUtilitySlide(index);
     else if (item.tipo_conteudo === 'espaco') renderSpaceSlide(index);
     else if (item.tipo_conteudo === 'atividade_lazer') renderActivitySlide(index);
@@ -3427,10 +3438,11 @@ function eventProgram(event) {
     const coursesEnabled = Boolean(slide.querySelector('.panel-module-courses')?.checked);
     const contestsEnabled = Boolean(slide.querySelector('.panel-module-contests')?.checked);
     const filmsEnabled = Boolean(slide.querySelector('.panel-module-films')?.checked);
+    const platformsEnabled = Boolean(slide.querySelector('.panel-module-platforms')?.checked);
     const utilityEnabled = Boolean(slide.querySelector('.panel-module-utility')?.checked);
     const spacesEnabled = Boolean(slide.querySelector('.panel-module-spaces')?.checked);
     const activitiesEnabled = Boolean(slide.querySelector('.panel-module-activities')?.checked);
-    if (!eventsEnabled && !booksEnabled && !coursesEnabled && !contestsEnabled && !filmsEnabled && !utilityEnabled && !spacesEnabled && !activitiesEnabled) {
+    if (!eventsEnabled && !booksEnabled && !coursesEnabled && !contestsEnabled && !filmsEnabled && !platformsEnabled && !utilityEnabled && !spacesEnabled && !activitiesEnabled) {
       throw new Error('Ative pelo menos um tipo de conteúdo para o painel.');
     }
 
@@ -3452,6 +3464,7 @@ function eventProgram(event) {
         courses: coursesEnabled,
         contests: contestsEnabled,
         films: filmsEnabled,
+        platforms: platformsEnabled,
         utility: utilityEnabled,
         spaces: spacesEnabled,
         activities: activitiesEnabled
@@ -3473,6 +3486,7 @@ function eventProgram(event) {
         courses: slide.querySelector('.panel-course-weight')?.value || 1,
         contests: slide.querySelector('.panel-contest-weight')?.value || 1,
         films: slide.querySelector('.panel-film-weight')?.value || 1,
+        platforms: slide.querySelector('.panel-platform-weight')?.value || 1,
         utility: slide.querySelector('.panel-utility-weight')?.value || 1,
         spaces: slide.querySelector('.panel-space-weight')?.value || 1,
         activities: slide.querySelector('.panel-activity-weight')?.value || 1
@@ -3487,6 +3501,7 @@ function eventProgram(event) {
     const coursesEnabled = Boolean(slide.querySelector('.panel-module-courses')?.checked);
     const contestsEnabled = Boolean(slide.querySelector('.panel-module-contests')?.checked);
     const filmsEnabled = Boolean(slide.querySelector('.panel-module-films')?.checked);
+    const platformsEnabled = Boolean(slide.querySelector('.panel-module-platforms')?.checked);
     const utilityEnabled = Boolean(slide.querySelector('.panel-module-utility')?.checked);
     const spacesEnabled = Boolean(slide.querySelector('.panel-module-spaces')?.checked);
     const activitiesEnabled = Boolean(slide.querySelector('.panel-module-activities')?.checked);
@@ -3495,6 +3510,7 @@ function eventProgram(event) {
     const courseSection = slide.querySelector('.panel-course-section');
     const contestSection = slide.querySelector('.panel-contest-section');
     const filmSection = slide.querySelector('.panel-film-section');
+    const platformsSection = slide.querySelector('.panel-platform-section');
     const utilitySection = slide.querySelector('.panel-utility-section');
     const spaceSection = slide.querySelector('.panel-space-section');
     const activitySection = slide.querySelector('.panel-activity-section');
@@ -3503,6 +3519,7 @@ function eventProgram(event) {
     if (courseSection) courseSection.hidden = !coursesEnabled;
     if (contestSection) contestSection.hidden = !contestsEnabled;
     if (filmSection) filmSection.hidden = !filmsEnabled;
+    if (platformsSection) platformsSection.hidden = !platformsEnabled;
     if (utilitySection) utilitySection.hidden = !utilityEnabled;
     if (spaceSection) spaceSection.hidden = !spacesEnabled;
     if (activitySection) activitySection.hidden = !activitiesEnabled;
@@ -3526,6 +3543,7 @@ function eventProgram(event) {
     const coursesToggle = slide.querySelector('.panel-module-courses');
     const contestsToggle = slide.querySelector('.panel-module-contests');
     const filmsToggle = slide.querySelector('.panel-module-films');
+    const platformsToggle = slide.querySelector('.panel-module-platforms');
     const utilityToggle = slide.querySelector('.panel-module-utility');
     const spacesToggle = slide.querySelector('.panel-module-spaces');
     const activitiesToggle = slide.querySelector('.panel-module-activities');
@@ -3534,6 +3552,7 @@ function eventProgram(event) {
     if (coursesToggle) coursesToggle.checked = value.modules.courses;
     if (contestsToggle) contestsToggle.checked = value.modules.contests;
     if (filmsToggle) filmsToggle.checked = value.modules.films;
+    if (platformsToggle) platformsToggle.checked = value.modules.platforms;
     if (utilityToggle) utilityToggle.checked = value.modules.utility;
     if (spacesToggle) spacesToggle.checked = value.modules.spaces;
     if (activitiesToggle) activitiesToggle.checked = value.modules.activities;
@@ -3543,6 +3562,7 @@ function eventProgram(event) {
     const courseWeight = slide.querySelector('.panel-course-weight');
     const contestWeight = slide.querySelector('.panel-contest-weight');
     const filmWeight = slide.querySelector('.panel-film-weight');
+    const platformsWeight = slide.querySelector('.panel-platform-weight');
     const utilityWeight = slide.querySelector('.panel-utility-weight');
     const spaceWeight = slide.querySelector('.panel-space-weight');
     const activityWeight = slide.querySelector('.panel-activity-weight');
@@ -3551,6 +3571,7 @@ function eventProgram(event) {
     if (courseWeight) courseWeight.value = String(value.weights.courses);
     if (contestWeight) contestWeight.value = String(value.weights.contests);
     if (filmWeight) filmWeight.value = String(value.weights.films);
+    if (platformsWeight) platformsWeight.value = String(value.weights.platforms);
     if (utilityWeight) utilityWeight.value = String(value.weights.utility);
     if (spaceWeight) spaceWeight.value = String(value.weights.spaces);
     if (activityWeight) activityWeight.value = String(value.weights.activities);
@@ -3750,6 +3771,7 @@ function eventProgram(event) {
     slide.querySelector('.panel-module-courses')?.addEventListener('change', () => updatePanelModuleVisibility(slide));
     slide.querySelector('.panel-module-contests')?.addEventListener('change', () => updatePanelModuleVisibility(slide));
     slide.querySelector('.panel-module-films')?.addEventListener('change', () => updatePanelModuleVisibility(slide));
+    slide.querySelector('.panel-module-platforms')?.addEventListener('change', () => updatePanelModuleVisibility(slide));
     slide.querySelector('.panel-module-utility')?.addEventListener('change', () => updatePanelModuleVisibility(slide));
     slide.querySelector('.panel-module-activities')?.addEventListener('change', () => updatePanelModuleVisibility(slide));
     slide.querySelector('.panel-profile-save')?.addEventListener('click', () => savePanelProfile(slide));
@@ -3965,7 +3987,7 @@ function eventProgram(event) {
   }
 
   function normalizeAgendaFiltersForContent(content = state.mobileContent) {
-    const allowedContents = new Set(['all', 'events', 'books', 'courses', 'contests', 'films', 'utility', 'spaces', 'activities']);
+    const allowedContents = new Set(['all', 'events', 'books', 'courses', 'contests', 'films', 'platforms', 'utility', 'spaces', 'activities']);
     state.mobileContent = allowedContents.has(content) ? content : 'all';
 
     // A troca de conteúdo preserva a curadoria; apenas uma opção indisponível expira.
@@ -4333,6 +4355,11 @@ function eventProgram(event) {
     }).sort(compareAgendaContests);
   }
 
+  function agendaVisiblePlatforms() {
+    if (!['all', 'platforms'].includes(state.mobileContent)) return [];
+    return platformsContent.filter(state.allPlatforms, { query: state.mobileQuery }, normalizeText);
+  }
+
   function agendaVisibleFilms() {
     if (!['all', 'films'].includes(state.mobileContent)) return [];
     return filmsContent.filter(state.allFilms, {
@@ -4524,16 +4551,18 @@ function eventProgram(event) {
     const utility = agendaVisibleUtility().filter(matchesCuration);
     const spaces = agendaVisibleSpaces().filter(matchesCuration);
     const activities = agendaVisibleActivities().filter(matchesCuration);
+    const platforms = agendaVisiblePlatforms().filter(matchesCuration);
     return {
       events,
       books,
       courses,
       contests,
       films,
+      platforms,
       utility,
       spaces,
       activities,
-      total: events.length + books.length + courses.length + contests.length + films.length + utility.length + spaces.length + activities.length
+      total: events.length + books.length + courses.length + contests.length + films.length + platforms.length + utility.length + spaces.length + activities.length
     };
   }
 
@@ -4951,7 +4980,7 @@ function eventProgram(event) {
   function agendaItemsForIds(ids) {
     const catalogs = [
       state.allEvents, state.allBooks, state.allCourses,
-      state.allContests, state.allFilms, state.allUtility, state.allSpaces, state.allActivities
+      state.allContests, state.allFilms, state.allPlatforms, state.allUtility, state.allSpaces, state.allActivities
     ];
     return catalogs.flat().filter(item => ids.has(agendaFavoriteId(item)));
   }
@@ -5827,6 +5856,10 @@ function eventProgram(event) {
       return decorateAgendaFavorite(utilityContent.createAgendaCard(item, { safeExternalUrl, safeImageUrl }), item);
     }
 
+    if (item.tipo_conteudo === 'plataforma') {
+      return platformsContent.createAgendaCard(item, { safeExternalUrl, safeImageUrl });
+    }
+
     if (item.tipo_conteudo === 'filme') {
       return decorateAgendaFavorite(filmsContent.createAgendaCard(item, {
         escapeHtml,
@@ -6070,6 +6103,7 @@ function eventProgram(event) {
       ['courses', 'Cursos'],
       ['contests', 'Concursos'],
       ['films', 'Filmes'],
+      ['platforms', 'Plataformas'],
       ['spaces', 'Espaços'],
       ['activities', 'Esporte e Lazer'],
       ['utility', 'Utilidade pública']
@@ -6508,6 +6542,7 @@ function eventProgram(event) {
       appendAgendaSection(resultsContainer, 'Cursos Online Gratuitos', results.courses, 'courses', 'Ver somente cursos');
       appendAgendaSection(resultsContainer, 'Concursos públicos', results.contests, 'contests', 'Ver somente concursos');
       appendAgendaSection(resultsContainer, 'Filmes gratuitos', results.films, 'films', 'Ver somente filmes');
+      appendAgendaSection(resultsContainer, 'Plataformas audiovisuais', results.platforms, 'platforms', 'Ver plataformas');
     } else {
       const list = document.createElement('section');
       list.className = 'agenda-list';
@@ -6519,7 +6554,9 @@ function eventProgram(event) {
             ? results.contests
             : state.mobileContent === 'films'
               ? results.films
-              : state.mobileContent === 'utility'
+              : state.mobileContent === 'platforms'
+                ? results.platforms
+                : state.mobileContent === 'utility'
                 ? results.utility
                 : state.mobileContent === 'spaces'
                   ? results.spaces
@@ -7024,6 +7061,9 @@ function eventProgram(event) {
         ...movie,
         tipo_conteudo: 'filme'
       }, platforms));
+      state.allPlatforms = state.platformsData.plataformas
+        .filter(platform => platform.exibicao_ativa !== false)
+        .map(platform => ({ ...platform, tipo_conteudo: 'plataforma' }));
       state.allUtility = siteLayer.utilidade_publica
         .filter(utilityContent.isValid)
         .filter(item => utilityContent.isTemporallyVisible(item))
