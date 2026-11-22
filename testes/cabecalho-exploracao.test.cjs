@@ -43,6 +43,7 @@ for (const action of [
 }
 
 assert.ok(app.includes("const closeAgendaMoreMenu = () => header.querySelector('.agenda-more-menu')?.removeAttribute('open');"));
+assert.ok(app.includes("platforms: { singular: 'plataforma audiovisual', plural: 'plataformas audiovisuais' }"));
 assert.ok(styles.includes('Agenda v164 — navegação prioritária e menu compacto de ações.'));
 assert.ok(styles.includes('.agenda-more-menu-list'));
 assert.ok(styles.includes('.agenda-more-menu-action'));
@@ -84,7 +85,7 @@ assert.ok(appVersion, 'index sem versão de js/app.js');
 assert.ok(serviceWorker.includes(`./js/app.js?v=${appVersion}`), 'service worker com versão divergente de js/app.js');
 assert.ok(serviceWorker.includes("'./js/painel-navegacao-modos.js?v=6'"));
 assert.ok(serviceWorker.includes("'./css/tem-sim-uai-painel.css?v=2'"));
-assert.ok(serviceWorker.includes("mural-cultural-v217-diagnostico-inicializacao"));
+assert.ok(serviceWorker.includes("mural-cultural-v218-rotulos-plataformas"));
 
 assert.match(serviceWorker, /const CACHE_VERSION = 'mural-cultural-v\d+-[^']+';/);
 
