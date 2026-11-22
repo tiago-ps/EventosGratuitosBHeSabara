@@ -4510,10 +4510,11 @@ function eventProgram(event) {
       const courses = group('curso').sort(agendaTitleCompare);
       const contests = group('concurso').sort(agendaTitleCompare);
       const films = group('filme').sort(agendaTitleCompare);
+      const platforms = group('plataforma').sort(agendaTitleCompare);
       const utility = group('utilidade_publica').sort(agendaTitleCompare);
       const spaces = group('espaco').sort(agendaTitleCompare);
       const activities = group('atividade_lazer').sort(agendaTitleCompare);
-      return { events, books, courses, contests, films, utility, spaces, activities, total: items.length };
+      return { events, books, courses, contests, films, platforms, utility, spaces, activities, total: items.length };
     }
     if (state.mobileSharedSelection) {
       const items = agendaItemsForIds(state.mobileSharedSelection);
@@ -4523,10 +4524,11 @@ function eventProgram(event) {
       const courses = group('curso').sort(agendaTitleCompare);
       const contests = group('concurso').sort(agendaTitleCompare);
       const films = group('filme').sort(agendaTitleCompare);
+      const platforms = group('plataforma').sort(agendaTitleCompare);
       const utility = group('utilidade_publica').sort(agendaTitleCompare);
       const spaces = group('espaco').sort(agendaTitleCompare);
       const activities = group('atividade_lazer').sort(agendaTitleCompare);
-      return { events, books, courses, contests, films, utility, spaces, activities, total: items.length };
+      return { events, books, courses, contests, films, platforms, utility, spaces, activities, total: items.length };
     }
     if (state.mobileFavoritesOnly) {
       const items = agendaFavoriteItems();
@@ -4536,10 +4538,11 @@ function eventProgram(event) {
       const courses = group('curso').sort(agendaTitleCompare);
       const contests = group('concurso').sort(agendaTitleCompare);
       const films = group('filme').sort(agendaTitleCompare);
+      const platforms = group('plataforma').sort(agendaTitleCompare);
       const utility = group('utilidade_publica').sort(agendaTitleCompare);
       const spaces = group('espaco').sort(agendaTitleCompare);
       const activities = group('atividade_lazer').sort(agendaTitleCompare);
-      return { events, books, courses, contests, films, utility, spaces, activities, total: items.length };
+      return { events, books, courses, contests, films, platforms, utility, spaces, activities, total: items.length };
     }
     const curation = agendaCurationEntries().find(entry => entry.id === state.mobileCuration);
     const matchesCuration = item => agendaItemMatchesCuration(item, curation);
@@ -5857,7 +5860,7 @@ function eventProgram(event) {
     }
 
     if (item.tipo_conteudo === 'plataforma') {
-      return platformsContent.createAgendaCard(item, { safeExternalUrl, safeImageUrl });
+      return decorateAgendaFavorite(platformsContent.createAgendaCard(item, { safeExternalUrl, safeImageUrl }), item);
     }
 
     if (item.tipo_conteudo === 'filme') {
@@ -7138,11 +7141,12 @@ function eventProgram(event) {
       startLivePublicationWatch();
       renderCurrentView();
     } catch (error) {
-      console.error(error);
+      console.error('Falha ao inicializar o Mural Cultural:', error);
+      const diagnostic = error instanceof Error ? error.message : String(error);
       showMessage(
         'error',
         'Não foi possível carregar o Mural Cultural',
-        'Verifique se eventos.json contém um JSON válido.'
+        `Falha durante a inicialização: ${diagnostic || 'erro não identificado'}. Verifique o console para mais detalhes.`
       );
     }
   }
