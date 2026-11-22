@@ -132,7 +132,7 @@ assert.match(appSource, /tipo_conteudo === 'plataforma'/);
 assert.match(appSource, /panel-module-platforms/);
 assert.match(indexSource, /js\/conteudos\/plataformas\.js\?v=1/);
 assert.match(indexSource, /panel-module-platforms/);
-assert.match(indexSource, /data-content=\\"platforms\\"/);
+assert.match(appSource, /\['platforms', 'Plataformas'\]/);
 assert.match(platformsSource, /createPanelSlide/);
 assert.match(platformsSource, /createAgendaCard/);
 assert.match(platformsSource, /Acessar site oficial/);
