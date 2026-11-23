@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Março de 2026 a Junho de 2027",
-  "atualizado_em": "2026-11-23T20:21:49.967Z",
+  "atualizado_em": "2026-11-23T17:40:28-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -6720,6 +6720,42 @@
       "espaco_interno": "Planetário"
     },
     {
+      "acao_formulario_fechado": "marcar_encerrada",
+      "categoria": "Música",
+      "cidade": "Sabará",
+      "classificacao_indicativa": "",
+      "criterio_exibicao": "realizacao",
+      "data": "2026-11-28",
+      "data_fim": "",
+      "descricao": "No dia 28/11 (sábado), às 20h, a Sociedade Musical Santa Cecília terá a honra de comemorar os seus 245 anos, com a quarta edição do concerto Conectando Gerações.\n\nConvidamos todos para se juntar a nós nessa data tão especial, que celebra a música e o legado da identidade sabarense através da história, reunindo os quatro grupos que formam a nossa sociedade.\n\nA entrada é franca, mas não esqueça de retirar seu ingresso no Sympla (link na bio)!\n\nContamos com a sua presença! ✨️\n\n📍 Santuário Arquidiocesano Santo Antônio de Roça Grande, Sabará\n\n🎨 Design: bu_sanches e ana_gabisilv\n\n#Concerto #conectandogerações",
+      "endereco": "",
+      "espaco_interno": "",
+      "exibicao_ativa": true,
+      "fonte": "Instagram · @smscsabara",
+      "gratuito": true,
+      "horario": "20h",
+      "id": "manual-santa-cecilia-conectando-geracoes-2026-11-28",
+      "imagem": "imagens/eventos-manuais/santa-cecilia-conectando-geracoes-2026-11-28.jpg",
+      "inscricao": "A entrada é franca, mas é necessário retirar o ingresso no Sympla pelo link da bio do Instagram.",
+      "instituicao_id": "",
+      "link": "https://www.instagram.com/p/DfXN2dzxB9L/",
+      "link_inscricao": "",
+      "local": "Santuário Arquidiocesano Santo Antônio de Roça Grande",
+      "local_id": "",
+      "mapa": "",
+      "monitorar_formulario_google": false,
+      "pagina": "https://www.instagram.com/p/DfXN2dzxB9L/",
+      "status_inscricao": "",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-28",
+          "observacao": "20h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
+    },
+    {
       "id": "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-29-1030",
       "titulo": "Ateliê Aberto | Bonecas Abayomi: nós de memórias",
       "data": "2026-11-29",
@@ -7973,35 +8009,9 @@
       "local_id": "ccbb-bh",
       "endereco": "Praça da Liberdade, 450, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/Q6UrZGKEn8eCx8Kb8"
-    },
-    {
-      "id": "manual-santa-cecilia-conectando-geracoes-2026-11-28",
-      "titulo": "Concerto Conectando Gerações — 245 anos da Sociedade Musical Santa Cecília",
-      "data": "2026-11-28",
-      "data_fim": "",
-      "horario": "20h",
-      "local": "Santuário Arquidiocesano Santo Antônio de Roça Grande",
-      "cidade": "Sabará",
-      "categoria": "Música",
-      "gratuito": true,
-      "inscricao": "A entrada é franca, mas é necessário retirar o ingresso no Sympla pelo link da bio do Instagram.",
-      "criterio_exibicao": "realizacao",
-      "status_inscricao": "",
-      "descricao": "A Sociedade Musical Santa Cecília comemora seus 245 anos com a quarta edição do concerto Conectando Gerações, reunindo os quatro grupos que formam a sociedade e celebrando a música e a identidade sabarense.",
-      "imagem": "https://raw.githubusercontent.com/tiago-ps/ColetorEventosGratuitos/d1799764585d65f4f380f1a95e48aa0b6d26b9fa/imagens/eventos-manuais/santa-cecilia-conectando-geracoes-2026-11-28.jpg",
-      "link": "https://www.instagram.com/p/DfXN2dzxB9L/",
-      "pagina": "https://www.instagram.com/p/DfXN2dzxB9L/",
-      "link_inscricao": "",
-      "fonte": "Instagram · @smscsabara",
-      "instituicao_id": "",
-      "classificacao_indicativa": "",
-      "local_id": "",
-      "endereco": "",
-      "mapa": "",
-      "espaco_interno": ""
     }
   ],
   "modo_teste_experimental": true,
   "eventos_somente_teste": 4,
-  "atualizado_em_teste": "2026-11-23T17:21:26-03:00"
+  "atualizado_em_teste": "2026-11-23T17:40:54-03:00"
 }
