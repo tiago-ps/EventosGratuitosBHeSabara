@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Março de 2026 a Junho de 2027",
-  "atualizado_em": "2026-11-22T14:35:53-03:00",
+  "atualizado_em": "2026-11-23T17:20:55-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -5732,347 +5732,6 @@
       "espaco_interno": "Galerias do Térreo, Galerias do 3º andar e Pátio"
     },
     {
-      "id": "portal-bh-6704c18e84a4-2026-11-21-1400",
-      "titulo": "Duelo de MCs Nacional 2026",
-      "data": "2026-11-21",
-      "data_fim": "2026-11-22",
-      "horario": "14h às 21h",
-      "local": "Viaduto Santa Teza",
-      "cidade": "Belo Horizonte",
-      "categoria": "Música",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "Neste final de semana, o Duelo de MCs Nacional ocupa o Viaduto Santa Tereza e o Circuito Municipal de Cultura chega junto com cinco atrações incríveis para uma das maiores competições de batalha de rima do país! Drizzy é rapper e representou Minas Gerais no Duelo de MCs Nacional de 2017. No sábado, ele apresenta o show de seu primeiro álbum de estúdio,",
-      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-11/910177062_18135853921783504_7976590831355293611_n.jpg",
-      "link": "https://portalbelohorizonte.com.br/circuitomunicipaldecultura/2026/eventos/evento-de-rua/musica/duelo-de-mcs-nacional-2026",
-      "fonte": "Portal Belo Horizonte",
-      "fonte_id": "6704c18e84a4",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "endereco": "",
-      "tags_fonte": [
-        "Hip Hop",
-        "Dj",
-        "Música",
-        "Trap/Rap"
-      ],
-      "classificacao_indicativa": "Livre",
-      "temporalidade": {
-        "classe": "periodo",
-        "realizacao": {
-          "inicio": "2026-11-21",
-          "fim": "2026-11-22",
-          "observacao": "14h às 21h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
-    },
-    {
-      "id": "casa-fiat-mil-maneiras-de-matar-o-tempo-na-piccola-galleria-2026-11-22-sem-hora",
-      "titulo": "Mil maneiras de matar o tempo na Piccola Galleria",
-      "data": "2026-11-22",
-      "data_fim": "",
-      "horario": "",
-      "local": "Casa Fiat de Cultura",
-      "local_id": "casa-fiat-de-cultura",
-      "cidade": "Belo Horizonte",
-      "endereco": "Praça da Liberdade, 10, Funcionários, Belo Horizonte - MG",
-      "categoria": "Cultura",
-      "gratuito": true,
-      "inscricao": "Programação gratuita conforme informação oficial da Casa Fiat de Cultura; consulte a página para inscrição, retirada de senha ou lotação quando aplicável.",
-      "descricao": "Mil maneiras de matar o tempo na Piccola Galleria 6/out a 22/nov CASA FIAT DE CULTURA INAUGURA “MIL MANEIRAS DE MATAR O TEMPO”, EXPOSIÇÃO DE TALITA HOFFMANN NA PICCOLA GALLERIA Artista cria paisagens marcadas por vestígios e sobreposições, em pinturas que colocam em tensão a percepção do tempo Há algo que parece ter acabado de acontecer nas pinturas da artista Talita Hoffmann . Objetos e fragmentos arquitetônicos se acumulam em paisagens nas quais o movimento sugere uma interrupção no instante seguinte a uma explosão. Não há pessoas, mas os sinais de sua passagem estão por toda parte.",
-      "imagem": "https://casafiatdecultura.com.br/wp-content/uploads/2026/09/Banners-newsletter-outubro_PICCOLA-1-1024x384.png",
-      "link": "https://casafiatdecultura.com.br/evento/mil-maneiras-de-matar-o-tempo-na-piccola-galleria/",
-      "fonte": "Casa Fiat de Cultura — programação oficial",
-      "pagina": "https://casafiatdecultura.com.br/evento/mil-maneiras-de-matar-o-tempo-na-piccola-galleria/",
-      "instituicao_id": "casa-fiat-de-cultura",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-11-22"
-        }
-      },
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
-    },
-    {
-      "id": "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-22-1030",
-      "titulo": "Ateliê Aberto | Bonecas Abayomi: nós de memórias",
-      "data": "2026-11-22",
-      "data_fim": "",
-      "horario": "10h30",
-      "local": "Casa Fiat de Cultura",
-      "local_id": "casa-fiat-de-cultura",
-      "cidade": "Belo Horizonte",
-      "endereco": "Praça da Liberdade, 10, Funcionários, Belo Horizonte - MG",
-      "categoria": "Oficina",
-      "gratuito": true,
-      "inscricao": "Programação gratuita conforme informação oficial da Casa Fiat de Cultura; consulte a página para inscrição, retirada de senha ou lotação quando aplicável.",
-      "descricao": "Ateliê Aberto | Bonecas Abayomi: nós de memórias 5, 7, 8, 12, 14, 15, 19, 20, 21, 22, 26, 28 e 29/nov/26 No Mês da Consciência Negra, o Ateliê Aberto convida o público a confeccionar bonecas Abayomi. Com tecidos e técnicas de amarração, os participantes criarão suas próprias bonecas em uma experiência de partilha e reflexão sobre ancestralidade e identidade afro-brasileira. O primeiro encontro, no dia 5 de novembro, contará com a participação especial de Isabel Miranda. A artista, pesquisadora e arte-educadora compartilhará seus conhecimentos e orientará a prática,",
-      "imagem": "https://casafiatdecultura.com.br/wp-content/uploads/2026/11/Banners-newsletter-novembro_ATELIE-ABERTO-scaled.png",
-      "link": "https://casafiatdecultura.com.br/evento/atelie-aberto-bonecas-abayomi-nos-de-memorias/",
-      "fonte": "Casa Fiat de Cultura — programação oficial",
-      "pagina": "https://casafiatdecultura.com.br/evento/atelie-aberto-bonecas-abayomi-nos-de-memorias/",
-      "instituicao_id": "casa-fiat-de-cultura",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-11-22",
-          "observacao": "10h30"
-        }
-      },
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
-    },
-    {
-      "id": "portal-bh-179ded5016f3-2026-11-22-1030",
-      "titulo": "Museu Criativo . Oficina: Pintura de Símbolos Adinkra — em parceria com Nicolle Dominique",
-      "data": "2026-11-22",
-      "data_fim": "",
-      "horario": "10h30 às 12h30",
-      "local": "Museu Histórico Abílio Barreto – MHAB",
-      "cidade": "Belo Horizonte",
-      "categoria": "Oficina",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "22/11 Domingo, das 10h30 às 12h30",
-      "imagem": "https://portalbelohorizonte.com.br/sites/default/files/arquivos/eventos/2026-10/06-oficina-pintura.png",
-      "link": "https://portalbelohorizonte.com.br/museuscentro/2026/eventos/oficina/cultural/museu-criativo-oficina-pintura-de-simbolos-adinkra-em-parceria-com-nicolle-dominique",
-      "fonte": "Portal Belo Horizonte",
-      "fonte_id": "179ded5016f3",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "endereco": "",
-      "tags_fonte": [],
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-11-22",
-          "observacao": "10h30 às 12h30"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
-    },
-    {
-      "id": "filarmonica-mg-concertos-para-a-juventude-7-2026-2026-11-22",
-      "titulo": "Concertos para a Juventude 7 (2026)",
-      "data": "2026-11-22",
-      "data_fim": "",
-      "horario": "11h",
-      "local": "Sala Minas Gerais",
-      "cidade": "Belo Horizonte",
-      "endereco": "Rua Tenente Brito Melo, 1090, Barro Preto, Belo Horizonte - MG",
-      "categoria": "Música",
-      "gratuito": true,
-      "inscricao": "Concerto gratuito conforme agenda oficial da Filarmônica de Minas Gerais; consulte a página para retirada de ingressos e regras de acesso.",
-      "descricao": "Concertos para a Juventude 7 (2026). Consulte o repertório, os artistas e as orientações de acesso na programação oficial da Filarmônica de Minas Gerais.",
-      "imagem": "https://filarmonica.art.br/wp-content/uploads/2025/10/share-image.webp",
-      "link": "https://filarmonica.art.br/event/concertos-para-a-juventude-7-2026/",
-      "pagina": "https://filarmonica.art.br/event/concertos-para-a-juventude-7-2026/",
-      "fonte": "Filarmônica de Minas Gerais — agenda oficial",
-      "instituicao_id": "instituto-cultural-filarmonica",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "marcador_gratuito_agenda",
-      "local_id": "sala-minas-gerais",
-      "status_validacao": "aprovado",
-      "origem_experimental": "filarmonica_mg",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-11-22",
-          "observacao": "11h"
-        }
-      },
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Sala+Minas+Gerais%2C+Rua+Tenente+Brito+Melo%2C+1090%2C+Barro+Preto%2C+Belo+Horizonte+-+MG"
-    },
-    {
-      "id": "casa-fiat-musica-na-capela-toque-de-classe-prisma-lirico-2026-11-22-11",
-      "titulo": "Música na Capela | Toque de Classe: Prisma lírico",
-      "data": "2026-11-22",
-      "data_fim": "",
-      "horario": "11h",
-      "local": "Casa Fiat de Cultura",
-      "local_id": "casa-fiat-de-cultura",
-      "cidade": "Belo Horizonte",
-      "endereco": "Praça da Liberdade, 10, Funcionários, Belo Horizonte - MG",
-      "categoria": "Música",
-      "gratuito": true,
-      "inscricao": "Programação gratuita conforme informação oficial da Casa Fiat de Cultura; consulte a página para inscrição, retirada de senha ou lotação quando aplicável.",
-      "descricao": "Música na Capela | Toque de Classe: Prisma lírico 22/nov/26 Inspirado na temática da nova exposição da Casa Fiat de Cultura, “Elogio ao Amor”, o Toque de Classe apresenta um concerto que reúne árias de ópera em um repertório dedicado às múltiplas expressões do amor na música. A programação percorre obras marcantes da música lírica do século XIX, com trechos de “La Bohème”, de Giacomo Puccini, “La Traviata”, de Giuseppe Verdi, “Romeu e Julieta”, de Charles Gounod, e “O Guarani”, de Antônio Carlos Gomes.",
-      "imagem": "https://casafiatdecultura.com.br/wp-content/uploads/2026/04/Banners-newsletter-marco_MUSICA-NA-CAPELA-1-1024x384.png",
-      "link": "https://casafiatdecultura.com.br/evento/musica-na-capela-toque-de-classe-prisma-lirico/",
-      "fonte": "Casa Fiat de Cultura — programação oficial",
-      "pagina": "https://casafiatdecultura.com.br/evento/musica-na-capela-toque-de-classe-prisma-lirico/",
-      "instituicao_id": "casa-fiat-de-cultura",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-11-22",
-          "observacao": "11h"
-        }
-      },
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
-    },
-    {
-      "id": "ufmg-ec-museu-fechado-2",
-      "titulo": "Museu Fechado",
-      "data": "2026-11-22",
-      "data_fim": "",
-      "horario": "13h",
-      "local": "Espaço do Conhecimento UFMG",
-      "cidade": "Belo Horizonte",
-      "categoria": "Atividade educativa",
-      "gratuito": true,
-      "inscricao": "Entrada gratuita; consulte a página oficial",
-      "descricao": "Nos dias 20 e 22 de novembro de 2026, o Espaço do Conhecimento UFMG estará fechado. No sábado, 21 de novembro, o museu funcionará das 10h às 20h.",
-      "imagem": "imagens/instituicoes/espaco-conhecimento-ufmg.png",
-      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/museu-fechado-2/",
-      "fonte": "Espaço do Conhecimento UFMG",
-      "instituicao_id": "espaco-conhecimento-ufmg",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-11-22",
-          "observacao": "13h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "espaco-conhecimento-ufmg",
-      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
-      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
-      "imagem_fallback_origem": "equipamento"
-    },
-    {
-      "id": "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-22-15",
-      "titulo": "Ateliê Aberto | Bonecas Abayomi: nós de memórias",
-      "data": "2026-11-22",
-      "data_fim": "",
-      "horario": "15h",
-      "local": "Casa Fiat de Cultura",
-      "local_id": "casa-fiat-de-cultura",
-      "cidade": "Belo Horizonte",
-      "endereco": "Praça da Liberdade, 10, Funcionários, Belo Horizonte - MG",
-      "categoria": "Oficina",
-      "gratuito": true,
-      "inscricao": "Programação gratuita conforme informação oficial da Casa Fiat de Cultura; consulte a página para inscrição, retirada de senha ou lotação quando aplicável.",
-      "descricao": "Ateliê Aberto | Bonecas Abayomi: nós de memórias 5, 7, 8, 12, 14, 15, 19, 20, 21, 22, 26, 28 e 29/nov/26 No Mês da Consciência Negra, o Ateliê Aberto convida o público a confeccionar bonecas Abayomi. Com tecidos e técnicas de amarração, os participantes criarão suas próprias bonecas em uma experiência de partilha e reflexão sobre ancestralidade e identidade afro-brasileira. O primeiro encontro, no dia 5 de novembro, contará com a participação especial de Isabel Miranda. A artista, pesquisadora e arte-educadora compartilhará seus conhecimentos e orientará a prática,",
-      "imagem": "https://casafiatdecultura.com.br/wp-content/uploads/2026/11/Banners-newsletter-novembro_ATELIE-ABERTO-scaled.png",
-      "link": "https://casafiatdecultura.com.br/evento/atelie-aberto-bonecas-abayomi-nos-de-memorias/",
-      "fonte": "Casa Fiat de Cultura — programação oficial",
-      "pagina": "https://casafiatdecultura.com.br/evento/atelie-aberto-bonecas-abayomi-nos-de-memorias/",
-      "instituicao_id": "casa-fiat-de-cultura",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-11-22",
-          "observacao": "15h"
-        }
-      },
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
-    },
-    {
-      "id": "cine-santa-tereza-bileto-130113",
-      "titulo": "FORUMDOC.BH - Nuestra Tierra",
-      "data": "2026-11-22",
-      "data_fim": "",
-      "horario": "16h30",
-      "local": "Cine Santa Tereza",
-      "cidade": "Belo Horizonte",
-      "categoria": "Cinema",
-      "gratuito": true,
-      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial. Também há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade.",
-      "descricao": "Nuestra Tierra (Lucrecia Martel | Argentina, Estados Unidos, México, França, Países Baixos e Dinamarca | 2025 | Documentário | 122 min) Documentário que investiga o assassinato do líder indígena argentino Javier Chocobar, membro da comunidade Chuschagasta, e a luta da sua comunidade por terras ancestrais. A obra explora a longa história de colonialismo e desapropriação que levou ao crime, ocorrido em 2009, e que resultou num processo judicial de nove anos após a morte de Chocobar. Sessão apresentada por Ernesto de Carvalho - fotógrafo do filme Classificação indicativa: 14 anos",
-      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/1a70qk611o8upke1kffhcv35h6rl1sr1ha1bc7pj0r935hpf8vudmjcqiflbc5a42t869mji921pkeacgihjeqs9pta1047grdcbop1.jpeg",
-      "link": "https://bileto.sympla.com.br/event/130113/d/428838/s/2770076",
-      "fonte": "Cine Santa Tereza",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "fonte_id": "130113",
-      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
-      "classificacao_indicativa": "14 anos",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-11-22",
-          "observacao": "16h30"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
-    },
-    {
-      "id": "sesc-palladium-bileto-126071",
-      "titulo": "CINE SESC- MOSTRA ENTRE CANTOS E RESISTÊNCIAS: LUIZ MELODIA - NO CORAÇÃO DO BRASIL",
-      "data": "2026-11-22",
-      "data_fim": "",
-      "horario": "18h",
-      "local": "Sesc Palladium",
-      "cidade": "Belo Horizonte",
-      "categoria": "Festival",
-      "gratuito": true,
-      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial e na bilheteria do espaço.",
-      "descricao": "Atenção! Compras online e na bilheteria. Você poderá retirar até 2 (dois) ingressos, sendo 1 ingresso por CPF. Preencha os CPFs corretos e distintos, por ingresso, para que sua compra seja finalizada! Os ingressos são gratuitos e podem ser reservados tanto pelo Sympla quanto retirados na bilheteria 90 minutos antes da sessão. Caso os ingressos no Sympla estejam esgotados, procure a bilheteria do Palladium para retirar o seu ingresso. Ingressos limitados! CINE SESC- MOSTRA ENTRE CANTOS E RESISTÊNCIAS Em celebração ao Mês da Consciência Negra,",
-      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/3bem5thfth200hds7pfb5cm1ohoa1vlt0rap12aensrrrjrmeve7aot40tuc4po0t6jqlkn149nv2m18hm7pqs0qv2elv8bn7ul3dpm.webp",
-      "link": "https://bileto.sympla.com.br/event/126071/d/409588/s/2668989",
-      "fonte": "Sesc Palladium",
-      "instituicao_id": "sesc-mg",
-      "fonte_id": "126071",
-      "endereco": "Rua Rio de Janeiro, 1046 – Centro, Belo Horizonte – MG, 30160-041",
-      "classificacao_indicativa": "12 anos",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-11-22",
-          "observacao": "18h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "sesc-palladium",
-      "mapa": "https://maps.app.goo.gl/69GL5ydEpAtcwDgv7"
-    },
-    {
-      "id": "cine-santa-tereza-bileto-130121",
-      "titulo": "FORUMDOC.BH - Mostra Contemporânea Brasileira",
-      "data": "2026-11-22",
-      "data_fim": "",
-      "horario": "19h",
-      "local": "Cine Santa Tereza",
-      "cidade": "Belo Horizonte",
-      "categoria": "Cinema",
-      "gratuito": true,
-      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
-      "descricao": "Divino Sua Alma, Sua Lente (Gilson Costa, Clea Torres, Divino Tserewahú | Brasil | 2025 | 24min) “Divino: sua alma, sua lente” acompanha a trajetória do cineasta xavante Divino Tserewahú. Entre memórias, arquivos e vivências na Terra Indígena Sangradouro, o filme revela como o cinema se tornou, para ele, e a sua comunidade, instrumento de luta, preservação cultural e inspiração para novas gerações. Entre as veredas de sua aldeia e os caminhos que percorreu pelo país e pelo mundo, Divino revisita arquivos, fotos e registros que atravessam sua história, imagens feitas por ele,",
-      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/1a70qk611o8upke1kffhcv35h6rl1sr1ha1bc7pj0r935hpf8vudmjcqiflbc5a42t869mji921pkeacgihjeqs9pta1047grdcbop1.jpeg",
-      "link": "https://bileto.sympla.com.br/event/130121/d/428850/s/2770112",
-      "fonte": "Cine Santa Tereza",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "fonte_id": "130121",
-      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
-      "classificacao_indicativa": "Livre",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-11-22",
-          "observacao": "19h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
-    },
-    {
       "id": "casa-fiat-elogio-ao-amor-na-casa-fiat-de-cultura-2026-11-24-sem-hora",
       "titulo": "Elogio ao amor na Casa Fiat de Cultura",
       "data": "2026-11-24",
@@ -7059,6 +6718,42 @@
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
       "espaco_interno": "Planetário"
+    },
+    {
+      "acao_formulario_fechado": "marcar_encerrada",
+      "categoria": "Música",
+      "cidade": "Sabará",
+      "classificacao_indicativa": "",
+      "criterio_exibicao": "realizacao",
+      "data": "2026-11-28",
+      "data_fim": "",
+      "descricao": "No dia 28/11 (sábado), às 20h, a Sociedade Musical Santa Cecília terá a honra de comemorar os seus 245 anos, com a quarta edição do concerto Conectando Gerações.\n\nConvidamos todos para se juntar a nós nessa data tão especial, que celebra a música e o legado da identidade sabarense através da história, reunindo os quatro grupos que formam a nossa sociedade.\n\nA entrada é franca, mas não esqueça de retirar seu ingresso no Sympla (link na bio)!\n\nContamos com a sua presença! ✨️\n\n📍 Santuário Arquidiocesano Santo Antônio de Roça Grande, Sabará\n\n🎨 Design: bu_sanches e ana_gabisilv\n\n#Concerto #conectandogerações",
+      "endereco": "",
+      "espaco_interno": "",
+      "exibicao_ativa": true,
+      "fonte": "Instagram · @smscsabara",
+      "gratuito": true,
+      "horario": "20h",
+      "id": "manual-santa-cecilia-conectando-geracoes-2026-11-28",
+      "imagem": "imagens/eventos-manuais/santa-cecilia-conectando-geracoes-2026-11-28.jpg",
+      "inscricao": "A entrada é franca, mas é necessário retirar o ingresso no Sympla pelo link da bio do Instagram.",
+      "instituicao_id": "",
+      "link": "https://www.instagram.com/p/DfXN2dzxB9L/",
+      "link_inscricao": "",
+      "local": "Santuário Arquidiocesano Santo Antônio de Roça Grande",
+      "local_id": "",
+      "mapa": "",
+      "monitorar_formulario_google": false,
+      "pagina": "https://www.instagram.com/p/DfXN2dzxB9L/",
+      "status_inscricao": "",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-28",
+          "observacao": "20h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
       "id": "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-29-1030",
@@ -8318,5 +8013,5 @@
   ],
   "modo_teste_experimental": true,
   "eventos_somente_teste": 4,
-  "atualizado_em_teste": "2026-11-22T14:36:15-03:00"
+  "atualizado_em_teste": "2026-11-23T17:21:26-03:00"
 }

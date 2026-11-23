@@ -111,7 +111,7 @@
         }
       ],
       "janela_inscricoes": {
-        "estado": "futuro",
+        "estado": "aberto",
         "completude": "completa",
         "inicio": "2026-11-23",
         "fim": "2026-12-17",
@@ -128,7 +128,7 @@
             "tipo": "candidatura",
             "inicio": "2026-11-23",
             "fim": "2026-12-17",
-            "status": "futuro"
+            "status": "aberto"
           }
         ]
       }
