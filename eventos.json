@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Março de 2026 a Junho de 2027",
-  "atualizado_em": "2026-11-24T16:47:46-03:00",
+  "atualizado_em": "2026-11-24T17:10:37-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -5928,7 +5928,7 @@
       "cidade": "Belo Horizonte",
       "categoria": "Cinema",
       "gratuito": true,
-      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial. Também há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade.",
       "descricao": "Semente Exterminadora (Isadora Neves Marques | Brasil, Portugal | 2017 | 28 min) Um derrame de petróleo contamina a costa brasileira. Capivara, trabalhador numa plataforma petrolífera, é evacuado para o Rio de Janeiro, onde a população permanece ignorante do desastre que se aproxima. Apesar do perigo, Capivara deseja retornar aos campos de extração em alto mar. Na cidade, é ajudado por Ywy. Nas plantações, Ywy expressa à Capivara, sua intimidade com as plantações transgênicas. Ela fala sobre a infertilidade daquelas sementes geneticamente manipuladas e de uma androide como ela. Capivara, humano,",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/1a70qk611o8upke1kffhcv35h6rl1sr1ha1bc7pj0r935hpf8vudmjcqiflbc5a42t869mji921pkeacgihjeqs9pta1047grdcbop1.jpeg",
       "link": "https://bileto.sympla.com.br/event/130119/d/428848/s/2770108",
@@ -6351,6 +6351,36 @@
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
     },
     {
+      "id": "cine-santa-tereza-bileto-130429",
+      "titulo": "FORUMDOC.BH - Sagrado",
+      "data": "2026-11-27",
+      "data_fim": "",
+      "horario": "17h",
+      "local": "Cine Santa Tereza",
+      "cidade": "Belo Horizonte",
+      "categoria": "Cinema",
+      "gratuito": true,
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "descricao": "Sagrado (Alice Riff | Brasil | 2026 | Documentário | 90min) Sagrado acompanha a rotina de professores e funcionários de uma escola pública em Diadema, São Paulo. Sem sair da escola, o documentário constrói um retrato sensível sobre o território, seus dilemas e desafios. Classificação indicativa: Livre",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/3kmth6u653cujo3mmvtmjickn8ckecu36fh0v27kqt34kfaits14ch5l8v4n803qbq7ek74ns2d96dt9dog75rqmft50roi828icgqb.webp",
+      "link": "https://bileto.sympla.com.br/event/130429/d/430030/s/2774307",
+      "fonte": "Cine Santa Tereza",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "fonte_id": "130429",
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "classificacao_indicativa": "Livre",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-27",
+          "observacao": "17h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
+    },
+    {
       "id": "sesc-palladium-bileto-126065",
       "titulo": "CINE SESC- MOSTRA ENTRE CANTOS E RESISTÊNCIAS: ZEZÉ MOTTA, LA FEMME ENCHANTÉE",
       "data": "2026-11-27",
@@ -6379,6 +6409,36 @@
       "motivo_publicacao": "realizacao_em_andamento_ou_futura",
       "local_id": "sesc-palladium",
       "mapa": "https://maps.app.goo.gl/69GL5ydEpAtcwDgv7"
+    },
+    {
+      "id": "cine-santa-tereza-bileto-130430",
+      "titulo": "FORUMDOC.BH - Empeleitada",
+      "data": "2026-11-27",
+      "data_fim": "",
+      "horario": "19h",
+      "local": "Cine Santa Tereza",
+      "cidade": "Belo Horizonte",
+      "categoria": "Cinema",
+      "gratuito": true,
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "descricao": "Empeleitada (Micaele Xukuru, Chico Ludermir, Sérgio Borges | Brasil | 2026 | Documentário | 64 min) A construção coletiva de uma casa de taipa dá forma à memória do povo indígena Xukuru. Uma morada nascida da terra, da luta e dos encantados. Sessão com acessibilidade | Legendas descritivas Classificação indicativa: Livre",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/1a70qk611o8upke1kffhcv35h6rl1sr1ha1bc7pj0r935hpf8vudmjcqiflbc5a42t869mji921pkeacgihjeqs9pta1047grdcbop1.jpeg",
+      "link": "https://bileto.sympla.com.br/event/130430/d/430031/s/2774309",
+      "fonte": "Cine Santa Tereza",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "fonte_id": "130430",
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "classificacao_indicativa": "Livre",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-27",
+          "observacao": "19h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
     {
       "id": "ccult-ufmg-obra-de-liel-gabin-explora-relacoes-entre-arquitetura-espaco-e-imaginacao-2026-11-27",
@@ -6640,7 +6700,7 @@
       "cidade": "Belo Horizonte",
       "categoria": "Festival",
       "gratuito": true,
-      "inscricao": "Ingressos gratuitos disponíveis on-line, conforme disponibilidade",
+      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial e na bilheteria do espaço.",
       "descricao": "Atenção! Compras online e na bilheteria. Você poderá retirar até 2 (dois) ingressos, sendo 1 ingresso por CPF. Preencha os CPFs corretos e distintos, por ingresso, para que sua compra seja finalizada! Os ingressos podem ser reservados tanto pelo Sympla quanto retirados na bilheteria 90 minutos antes da sessão. Caso os ingressos no Sympla estejam esgotados, procure a bilheteria do Palladium para retirar o seu ingresso. Ingressos limitados! SINOPSE Chef Jack: o Cozinheiro Aventureiro Chef Jack é um chef de cozinha de bom coração, mas com uma pitada a mais do que o necessário de confiança.",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/1a6ogq9fggje8cv1tmtqc78htu8g78ab8d5p0i15fplei31avida31jlnae69io3034v0aug4iabsng2g4grj9fjq0lj2b091vok2h8.jpeg",
       "link": "https://bileto.sympla.com.br/event/128759/d/422255/s/2733691",
@@ -6815,6 +6875,35 @@
         }
       },
       "motivo_publicacao": "realizacao_em_andamento_ou_futura"
+    },
+    {
+      "id": "sympla-sabara-3644413",
+      "titulo": "Concerto Conectando Gerações - IV Edição",
+      "data": "2026-11-28",
+      "data_fim": "",
+      "horario": "20h00",
+      "local": "Santuário Arquidiocesano Santo Antônio de Roça Grande",
+      "cidade": "Sabará",
+      "categoria": "Música",
+      "gratuito": true,
+      "inscricao": "Inscrição gratuita pela Sympla; consulte disponibilidade",
+      "descricao": "No dia 28/11, às 20h, a Sociedade Musical Santa Cecília terá a honra de comemorar os seus 245 anos, com a quarta edição do concerto Conectando Gerações.Convidamos todos para se juntar a nós nessa data tão especial, que celebra a música e o legado da identidade sabarense através da história,",
+      "imagem": "https://images.sympla.com.br/6aebf0bf2d383-lg.png",
+      "link": "https://www.sympla.com.br/evento/concerto-conectando-geracoes-iv-edicao/3644413",
+      "fonte": "Sympla — evento em Sabará",
+      "instituicao_id": "",
+      "fonte_id": "3644413",
+      "organizador": "",
+      "endereco": "Avenida Doutor Henrique de Melo, 323, Igreja , Santo Antonio (Roca Grande), Sabará, MG",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-28",
+          "observacao": "20h00"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Santu%C3%A1rio+Arquidiocesano+Santo+Ant%C3%B4nio+de+Ro%C3%A7a+Grande%2C+Avenida+Doutor+Henrique+de+Melo%2C+323%2C+Igreja+%2C+Santo+Antonio+%28Roca+Grande%29%2C+Sabar%C3%A1%2C+MG"
     },
     {
       "id": "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-29-1030",
@@ -7175,7 +7264,7 @@
       "cidade": "Belo Horizonte",
       "categoria": "Festival",
       "gratuito": true,
-      "inscricao": "Ingressos gratuitos disponíveis on-line, conforme disponibilidade",
+      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial e na bilheteria do espaço.",
       "descricao": "Atenção! Compras online e na bilheteria. Você poderá retirar até 2 (dois) ingressos, sendo 1 ingresso por CPF. Preencha os CPFs corretos e distintos, por ingresso, para que sua compra seja finalizada! Os ingressos podem ser reservados tanto pelo Sympla quanto retirados na bilheteria 90 minutos antes da sessão. Caso os ingressos no Sympla estejam esgotados, procure a bilheteria do Palladium para retirar o seu ingresso. Ingressos limitados! SINOPSE Meu Pé de Laranja Lima Zezé (João Guilherme de Ávila) é um garoto de oito anos que, apesar de levado, tem um bom coração. Ele leva uma vida bem modesta,",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/igavgs0h561cpblkmqg54bjsavelgksc8rs59k9a2tp64vphgprmh297sp8cs78iheht1h3g1mqnc27139m4np3rmqcsb9e91ee3nf.webp",
       "link": "https://bileto.sympla.com.br/event/128753/d/422245/s/2733659",
@@ -7347,6 +7436,34 @@
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8",
       "imagem_fallback_origem": "equipamento"
+    },
+    {
+      "id": "ufmg-ec-fabulacoes-e-territorios-da-afrodiaspora-apresentacao",
+      "titulo": "Fabulações e Territórios da Afrodiáspora (apresentação)",
+      "data": "2026-12-09",
+      "data_fim": "",
+      "horario": "18h",
+      "local": "Espaço do Conhecimento UFMG",
+      "cidade": "Belo Horizonte",
+      "categoria": "Atividade educativa",
+      "gratuito": true,
+      "inscricao": "Entrada gratuita; consulte a página oficial",
+      "descricao": ": As instalações cenográficas concebidas durante a residência artística “Fabulações e Territórios da Afrodiáspora” ganham forma em uma apresentação que articula arte, ancestralidade e experimentação. A atividade é acompanhada por intervenções cênicas realizadas pelos próprios residentes, que exploram os territórios,",
+      "imagem": "https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2026/11/barracao-das-artes.jpeg",
+      "link": "https://www.ufmg.br/espacodoconhecimento/programacao/fabulacoes-e-territorios-da-afrodiaspora-apresentacao/",
+      "fonte": "Espaço do Conhecimento UFMG",
+      "instituicao_id": "espaco-conhecimento-ufmg",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-12-09",
+          "observacao": "18h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "espaco-conhecimento-ufmg",
+      "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
+      "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
     },
     {
       "id": "portal-bh-1045058fe89d-2026-12-12-1330",
@@ -8074,5 +8191,5 @@
   ],
   "modo_teste_experimental": true,
   "eventos_somente_teste": 4,
-  "atualizado_em_teste": "2026-11-24T16:48:03-03:00"
+  "atualizado_em_teste": "2026-11-24T17:10:58-03:00"
 }
