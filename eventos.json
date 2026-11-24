@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Março de 2026 a Junho de 2027",
-  "atualizado_em": "2026-11-24T17:10:37-03:00",
+  "atualizado_em": "2026-11-24T17:37:22-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -5763,36 +5763,6 @@
       "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
-      "id": "cine-santa-tereza-bileto-130116",
-      "titulo": "FORUMDOC.BH - Reparação",
-      "data": "2026-11-24",
-      "data_fim": "",
-      "horario": "17h",
-      "local": "Cine Santa Tereza",
-      "cidade": "Belo Horizonte",
-      "categoria": "Cinema",
-      "gratuito": true,
-      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial. Também há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade.",
-      "descricao": "Reparação (Marcus Curvelo | Brasil | 2026 | 70 min) No dia em que completa 35 anos, Marcus e sua mãe procuram um lugar no litoral para espalhar as cinzas do pai. Quando sua mãe adoece, ele passa a sentir que o sal do mar onde o pai descansa corrói lentamente a sua vida. Classificação indicativa: 14 anos",
-      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/1a70qk611o8upke1kffhcv35h6rl1sr1ha1bc7pj0r935hpf8vudmjcqiflbc5a42t869mji921pkeacgihjeqs9pta1047grdcbop1.jpeg",
-      "link": "https://bileto.sympla.com.br/event/130116/d/428841/s/2770082",
-      "fonte": "Cine Santa Tereza",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "fonte_id": "130116",
-      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
-      "classificacao_indicativa": "14 anos",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-11-24",
-          "observacao": "17h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
-    },
-    {
       "id": "cine-santa-tereza-bileto-130117",
       "titulo": "FORUMDOC.BH - Telúrica, a Íntima Utopia",
       "data": "2026-11-24",
@@ -6753,6 +6723,36 @@
       "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
     },
     {
+      "id": "cine-santa-tereza-bileto-130431",
+      "titulo": "FORUMDOC.BH - Mostra Cinema de Transformação 2",
+      "data": "2026-11-28",
+      "data_fim": "",
+      "horario": "17h",
+      "local": "Cine Santa Tereza",
+      "cidade": "Belo Horizonte",
+      "categoria": "Cinema",
+      "gratuito": true,
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "descricao": "Porcos Raivosos (Isabel Penoni, Leonardo Sette | Brasil | 2012 | Documentário | 10 min) Depois de descobrirem que seus maridos se transformaram misteriosamente em porcos furiosos, as mulheres da aldeia decidem agir. Txêjkhô khâm mby – Mulheres Guerreiras (Whinti Suyá, Kambrinti Suya, Yaiku Suya, Kamikia P.T. Kisedje, Kokoyamaratxi Suya | Brasil | 2012 | Documentário | 12 min) Dois velhos narram um mito, encenado em ficção pelos jovens Kisêdjê, em que uma moça namora secretamente com o próprio irmão. Os acontecimentos que se sucedem a essa paixão proibida dão origem à revolta das “Mulheres Guerreiras”.",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/1c97l37uf9bopmade65tlpvodhuoq5s56cjhnpfslvq18o2g4pnbajetglt3n9rg4267cn9g8qm08u355t47jntdper68356n6vv9t3.webp",
+      "link": "https://bileto.sympla.com.br/event/130431/d/430032/s/2774311",
+      "fonte": "Cine Santa Tereza",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "fonte_id": "130431",
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "classificacao_indicativa": "14 anos",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-28",
+          "observacao": "17h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
+    },
+    {
       "id": "ufmg-ec-mostra-domo-animado-no-planetario-sessoes-digitais-2",
       "titulo": "Mostra Domo Animado no Planetário (sessões digitais)",
       "data": "2026-11-28",
@@ -6808,6 +6808,36 @@
       "local_id": "espaco-conhecimento-ufmg",
       "endereco": "Praça da Liberdade, 700, Funcionários, Belo Horizonte - MG",
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
+    },
+    {
+      "id": "cine-santa-tereza-bileto-130432",
+      "titulo": "FORUMDOC.BH - Flora & Airto: O Som Revolucionário",
+      "data": "2026-11-28",
+      "data_fim": "",
+      "horario": "19h",
+      "local": "Cine Santa Tereza",
+      "cidade": "Belo Horizonte",
+      "categoria": "Cinema",
+      "gratuito": true,
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "descricao": "Flora & Airto: O Som Revolucionário (Jom Tob Azulay | Brasil | 2026 | Documentário | 98 min) Documentário musical de longa-metragem sobre a história do célebre casal de músicos Flora Purim e Airto Moreira, que marcaram o panorama da música mundial a partir dos anos 1970 como pioneiros da jazz-fusion. Durante uma gravação fonográfica nos dias de hoje, o filme entrelaça as vidas pessoais e profissionais dos dois artistas no passado e no presente. Sessão comentada pelo diretor Classificação indicativa: Livre",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/368t291biia4u3mponhji8t2ni2qusalapeqda35cktnms4sm636v8b8frsj8mpvl43tcd0l17lt2qfdoqk9k1r1brkkqhmgktha9m1.jpeg",
+      "link": "https://bileto.sympla.com.br/event/130432/d/430033/s/2774313",
+      "fonte": "Cine Santa Tereza",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "fonte_id": "130432",
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "classificacao_indicativa": "Livre",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-11-28",
+          "observacao": "19h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
     {
       "id": "ufmg-ec-sessao-de-planetario-ao-cair-da-noite-eu-me-guiarei-pelo-brilho-dos-seus-olhos-4",
@@ -7556,6 +7586,36 @@
       "mapa": "https://maps.app.goo.gl/dHLjZpqEDWJ9aJ7y8"
     },
     {
+      "id": "sympla-sabara-3650369",
+      "titulo": "Ser Flor e Ser",
+      "data": "2026-12-12",
+      "data_fim": "",
+      "horario": "19h00",
+      "local": "Teatro Municipal de Sabará",
+      "cidade": "Sabará",
+      "categoria": "Música",
+      "gratuito": true,
+      "inscricao": "Inscrição gratuita pela Sympla; consulte disponibilidade",
+      "descricao": "\"Ser Flor e Ser\" é um projeto criado pelo músico, poeta e professor Raul Neto, com fomento da Lei Nacional Aldir Blanc, a fim de compartilhar e de conceder uma experiência musical e de entretenimento para todo o público de interesse.",
+      "imagem": "https://images.sympla.com.br/6afc947b4460e-lg.jpg",
+      "link": "https://www.sympla.com.br/evento/ser-flor-e-ser/3650369",
+      "fonte": "Sympla — evento em Sabará",
+      "instituicao_id": "",
+      "fonte_id": "3650369",
+      "organizador": "",
+      "endereco": "Rua Dom Pedro II, 200 Centro, Sabará, MG",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-12-12",
+          "observacao": "19h00"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "solar-padre-correia",
+      "mapa": "https://maps.app.goo.gl/fNCH9XLpCY5V4z2j6"
+    },
+    {
       "id": "portal-bh-1045058fe89d-2026-12-12-0830",
       "titulo": "Tours Gratuitos em Belo Horizonte 2026",
       "data": "2026-12-12",
@@ -8191,5 +8251,5 @@
   ],
   "modo_teste_experimental": true,
   "eventos_somente_teste": 4,
-  "atualizado_em_teste": "2026-11-24T17:10:58-03:00"
+  "atualizado_em_teste": "2026-11-24T17:37:40-03:00"
 }
