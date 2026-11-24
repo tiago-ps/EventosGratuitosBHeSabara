@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Março de 2026 a Junho de 2027",
-  "atualizado_em": "2026-11-23T19:05:21-03:00",
+  "atualizado_em": "2026-11-24T09:26:22-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -6806,6 +6806,7 @@
       "monitorar_formulario_google": false,
       "pagina": "https://www.instagram.com/p/DfXN2dzxB9L/",
       "status_inscricao": "",
+      "exibicao_padrao": true,
       "temporalidade": {
         "classe": "pontual",
         "realizacao": {
@@ -6813,8 +6814,7 @@
           "observacao": "20h"
         }
       },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "exibicao_padrao": true
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
     },
     {
       "id": "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-29-1030",
@@ -8074,5 +8074,5 @@
   ],
   "modo_teste_experimental": true,
   "eventos_somente_teste": 4,
-  "atualizado_em_teste": "2026-11-23T19:05:49-03:00"
+  "atualizado_em_teste": "2026-11-24T09:26:52-03:00"
 }
