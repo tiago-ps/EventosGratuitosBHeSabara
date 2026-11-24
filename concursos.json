@@ -2,58 +2,9 @@
   "schema": 10,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-11-23T20:38:51.663947+00:00",
-  "total": 29,
+  "coletado_em_utc": "2026-11-24T19:46:25.812854+00:00",
+  "total": 27,
   "concursos": [
-    {
-      "id": "pci:noticia:trf3-sp-ms-retifica-concurso-publico-para-analistas-e-tecnicos-judiciarios",
-      "titulo": "TRF3 - Tribunal Regional Federal da 3ª Região",
-      "url": "https://www.pciconcursos.com.br/noticias/trf3-sp-ms-retifica-concurso-publico-para-analistas-e-tecnicos-judiciarios",
-      "imagem": "https://cdn.pci.app.br/img/i/ef55417ea829357554ed31948e70aa1c.png",
-      "formacoes_compativeis": [
-        "Sistemas de Informação / Computação"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Sistemas de Informação / Computação",
-          "nivel": "superior",
-          "evidencia": "nto tambem inclui a exigencia de envio de autodeclaracao para candidatos as vagas reservadas a negros e retifica disposicoes sobre as provas e os recursos. segundo o edital, as oportunidades sao para os cargos de: tribunal regional federal da 3a regiao analista judiciario, especialidade: analise de sistemas de informacao (1 vaga) analista judiciario, especialidade: suporte em tecnologia da informacao (1 vaga) tecnico judiciario, especialidade: desenvolvimento de sistemas de informacao (5 vagas) tecnico judiciario, especialidade: suporte tecnico (4 vagas) secao judiciaria do estado de sao paulo analista judiciario, "
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "SP",
-      "cidade": "",
-      "inscricoes_inicio_texto": "",
-      "inscricoes_fim_texto": "",
-      "inscricoes_texto": "",
-      "remuneracao_faixa_texto": "R$ 9.776,73 a R$ 20.013,11",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Análise de Sistemas de Informação",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        },
-        {
-          "cargo": "Suporte em Tecnologia da Informação",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        },
-        {
-          "cargo": "Desenvolvimento de Sistemas de Informação",
-          "vagas_texto": "5 vagas",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        }
-      ],
-      "janela_inscricoes": {
-        "estado": "prazo_desconhecido",
-        "completude": "desconhecida"
-      }
-    },
     {
       "id": "pci:noticia:associacao-das-pioneiras-sociais-abre-processo-seletivo-para-analista-de-tecnologia-da-informacao",
       "titulo": "APS - Associação das Pioneiras Sociais",
@@ -131,6 +82,55 @@
             "status": "aberto"
           }
         ]
+      }
+    },
+    {
+      "id": "pci:noticia:trf3-sp-ms-retifica-concurso-publico-para-analistas-e-tecnicos-judiciarios",
+      "titulo": "TRF3 - Tribunal Regional Federal da 3ª Região",
+      "url": "https://www.pciconcursos.com.br/noticias/trf3-sp-ms-retifica-concurso-publico-para-analistas-e-tecnicos-judiciarios",
+      "imagem": "https://cdn.pci.app.br/img/i/ef55417ea829357554ed31948e70aa1c.png",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": "nto tambem inclui a exigencia de envio de autodeclaracao para candidatos as vagas reservadas a negros e retifica disposicoes sobre as provas e os recursos. segundo o edital, as oportunidades sao para os cargos de: tribunal regional federal da 3a regiao analista judiciario, especialidade: analise de sistemas de informacao (1 vaga) analista judiciario, especialidade: suporte em tecnologia da informacao (1 vaga) tecnico judiciario, especialidade: desenvolvimento de sistemas de informacao (5 vagas) tecnico judiciario, especialidade: suporte tecnico (4 vagas) secao judiciaria do estado de sao paulo analista judiciario, "
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "SP",
+      "cidade": "",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "R$ 9.776,73 a R$ 20.013,11",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Análise de Sistemas de Informação",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        },
+        {
+          "cargo": "Suporte em Tecnologia da Informação",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        },
+        {
+          "cargo": "Desenvolvimento de Sistemas de Informação",
+          "vagas_texto": "5 vagas",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "prazo_desconhecido",
+        "completude": "desconhecida"
       }
     },
     {
@@ -584,7 +584,7 @@
       "inscricoes_inicio_texto": "23 de outubro de 2026",
       "inscricoes_fim_texto": "30 de novembro de 2026",
       "inscricoes_texto": "23 de outubro de 2026 a 30 de novembro de 2026",
-      "remuneracao_faixa_texto": "R$ 7.313,35",
+      "remuneracao_faixa_texto": "R$ 4.310,48",
       "remuneracao_fonte": "catalogo",
       "cargos_compativeis": [
         {
@@ -933,7 +933,7 @@
       "inscricoes_inicio_texto": "",
       "inscricoes_fim_texto": "",
       "inscricoes_texto": "",
-      "remuneracao_faixa_texto": "R$ 5.618,71",
+      "remuneracao_faixa_texto": "R$ 6.393,38",
       "remuneracao_fonte": "catalogo",
       "cargos_compativeis": [
         {
@@ -1181,61 +1181,6 @@
       }
     },
     {
-      "id": "pci:noticia:prefeitura-de-gramado-dos-loureiros-rs-abre-processo-seletivo-com-salarios-de-ate-5899",
-      "titulo": "Prefeitura de Gramado dos Loureiros",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-gramado-dos-loureiros-rs-abre-processo-seletivo-com-salarios-de-ate-5899",
-      "imagem": "https://cdn.pci.app.br/img/i/f79a916a5f338ddba0a9d4f2dd464e4c.png",
-      "formacoes_compativeis": [
-        "Sistemas de Informação / Computação"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Sistemas de Informação / Computação",
-          "nivel": "superior",
-          "evidencia": ", as oportunidades sao para os cargos de: professor de educacao fisica (3 vagas) professor de historia (1 vaga) professor de educacao basica (12 vagas) psicologo (educacao) (1 vaga) supervisao/orientacao (1 vaga) professor de pedagogia com especializacao em neuropsicopedagogia (1 vaga) professor de computacao (1 vaga) professor de educacao especial (1 vaga) professor de matematica (1 vaga) atendente educacional (6 vagas) monitor (2 vagas) psicologo cras (1 vaga) a jornada varia de 20 a 40 horas semanais, com vencimentos basicos de r$ 1.868,58 a r$ 5.899,08. as inscricoes serao recebidas de 16 a 23 de no"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "RS",
-      "cidade": "Gramado dos Loureiros",
-      "inscricoes_inicio_texto": "16 de novembro de 2026",
-      "inscricoes_fim_texto": "23 de novembro de 2026",
-      "inscricoes_texto": "16 de novembro de 2026 a 23 de novembro de 2026",
-      "remuneracao_faixa_texto": "R$ 1.868,58 a R$ 5.899,08",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Professor de Computação",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        }
-      ],
-      "janela_inscricoes": {
-        "estado": "encerrado",
-        "completude": "completa",
-        "inicio": "2026-11-16",
-        "fim": "2026-11-23",
-        "texto_original": "16 de novembro de 2026 a 23 de novembro de 2026"
-      },
-      "temporalidade": {
-        "classe": "periodo",
-        "realizacao": {
-          "inicio": "2026-11-16",
-          "fim": "2026-11-23"
-        },
-        "participacao": [
-          {
-            "tipo": "candidatura",
-            "inicio": "2026-11-16",
-            "fim": "2026-11-23",
-            "status": "encerrado"
-          }
-        ]
-      }
-    },
-    {
       "id": "pci:noticia:prefeitura-de-novo-xingu-rs-abre-concurso-publico-com-salarios-de-ate-8797",
       "titulo": "Prefeitura de Novo Xingu",
       "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-novo-xingu-rs-abre-concurso-publico-com-salarios-de-ate-8797",
@@ -1270,61 +1215,6 @@
       "janela_inscricoes": {
         "estado": "prazo_desconhecido",
         "completude": "desconhecida"
-      }
-    },
-    {
-      "id": "pci:noticia:prefeitura-de-sao-jose-do-inhacora-rs-abre-concurso-publico-com-salarios-de-ate-9885",
-      "titulo": "Prefeitura de São José do Inhacorá",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-sao-jose-do-inhacora-rs-abre-concurso-publico-com-salarios-de-ate-9885",
-      "imagem": "https://cdn.pci.app.br/img/i/1138419da04b9ca79ce005215f75b842.png",
-      "formacoes_compativeis": [
-        "Sistemas de Informação / Computação"
-      ],
-      "evidencias_formacao": [
-        {
-          "nome": "Sistemas de Informação / Computação",
-          "nivel": "superior",
-          "evidencia": " oportunidades sao para os cargos de: grupo 1 agente educacional (3 vagas) educador social (cadastro de reserva) grupo 2 professor de educacao especial aee (cadastro de reserva) professor de anos iniciais 20h (2 vagas) professor de anos iniciais 40h (2 vagas) professor de arte (1 vaga) professor de computacao e inovacao (1 vaga) professor de educacao fisica (1 vaga) professor de educacao infantil 25h (5 vagas) professor de educacao infantil 40h (3 vagas) professor de lingua inglesa (cadastro de reserva) professor de historia (1 vaga) professor de lingua portuguesa (1 vaga) professor de matematica (cadas"
-        }
-      ],
-      "fonte": "PCI Concursos",
-      "status_manual": "revisar",
-      "uf": "RS",
-      "cidade": "São José do Inhacorá",
-      "inscricoes_inicio_texto": "30 de outubro de 2026",
-      "inscricoes_fim_texto": "23 de novembro de 2026",
-      "inscricoes_texto": "30 de outubro de 2026 a 23 de novembro de 2026",
-      "remuneracao_faixa_texto": "R$ 1.798,62 a R$ 9.885,71",
-      "remuneracao_fonte": "noticia",
-      "cargos_compativeis": [
-        {
-          "cargo": "Professor de Computação e Inovação",
-          "vagas_texto": "1 vaga",
-          "formacao": "Sistemas de Informação / Computação",
-          "confianca": "alta"
-        }
-      ],
-      "janela_inscricoes": {
-        "estado": "encerrado",
-        "completude": "completa",
-        "inicio": "2026-10-30",
-        "fim": "2026-11-23",
-        "texto_original": "30 de outubro de 2026 a 23 de novembro de 2026"
-      },
-      "temporalidade": {
-        "classe": "periodo",
-        "realizacao": {
-          "inicio": "2026-10-30",
-          "fim": "2026-11-23"
-        },
-        "participacao": [
-          {
-            "tipo": "candidatura",
-            "inicio": "2026-10-30",
-            "fim": "2026-11-23",
-            "status": "encerrado"
-          }
-        ]
       }
     },
     {
