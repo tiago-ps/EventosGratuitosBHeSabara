@@ -6813,7 +6813,8 @@
           "observacao": "20h"
         }
       },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura"
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "exibicao_padrao": true
     },
     {
       "id": "casa-fiat-atelie-aberto-bonecas-abayomi-nos-de-memorias-2026-11-29-1030",
