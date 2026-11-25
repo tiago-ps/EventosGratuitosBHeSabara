@@ -22,6 +22,10 @@
   text-align: center;
 }
 
+.media:has(.campaign-profile-selectors) .local-participation-banner {
+  top: 94px;
+}
+
 .local-participation-eyebrow {
   display: inline-flex;
   align-items: center;
@@ -73,6 +77,10 @@
     max-width: calc(100% - 16px);
     padding: 7px 10px 8px;
     border-radius: 12px;
+  }
+
+  .media:has(.campaign-profile-selectors) .local-participation-banner {
+    top: 74px;
   }
 
   .local-participation-eyebrow {
