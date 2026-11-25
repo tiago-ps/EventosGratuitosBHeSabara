@@ -1,0 +1,99 @@
+.local-participation-banner {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9;
+  display: grid;
+  justify-items: center;
+  gap: 2px;
+  width: max-content;
+  max-width: min(78%, 720px);
+  padding: 8px 14px 9px;
+  border: 1px solid rgba(255, 255, 255, .28);
+  border-radius: 14px;
+  background:
+    linear-gradient(110deg, rgba(20, 184, 166, .78), rgba(99, 102, 241, .72), rgba(236, 72, 153, .72));
+  color: #fff;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, .28);
+  backdrop-filter: blur(9px) saturate(1.25);
+  -webkit-backdrop-filter: blur(9px) saturate(1.25);
+  pointer-events: none;
+  text-align: center;
+}
+
+.local-participation-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  min-height: 19px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .20);
+  font: 900 10px/1.1 system-ui, sans-serif;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.local-participation-label {
+  margin-top: 1px;
+  font: 700 11px/1.2 system-ui, sans-serif;
+  opacity: .92;
+}
+
+.local-participation-names {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3px 12px;
+  max-width: 100%;
+}
+
+.local-participation-person {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+  min-width: 0;
+  font-size: clamp(12px, 1.35vw, 16px);
+  line-height: 1.2;
+}
+
+.local-participation-person strong {
+  font-weight: 850;
+}
+
+.local-participation-person small {
+  font-size: .78em;
+  font-weight: 650;
+  opacity: .88;
+}
+
+@media (max-width: 720px) {
+  .local-participation-banner {
+    top: 6px;
+    max-width: calc(100% - 16px);
+    padding: 7px 10px 8px;
+    border-radius: 12px;
+  }
+
+  .local-participation-eyebrow {
+    font-size: 9px;
+  }
+
+  .local-participation-label {
+    font-size: 10px;
+  }
+
+  .local-participation-names {
+    gap: 2px 8px;
+  }
+
+  .local-participation-person {
+    font-size: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .local-participation-banner {
+    transition: none;
+  }
+}
