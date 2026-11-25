@@ -1,107 +1,107 @@
 .local-participation-banner {
   position: absolute;
-  top: 8px;
+  top: 10px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 9;
   display: grid;
-  justify-items: center;
-  gap: 2px;
+  place-items: center;
   width: max-content;
-  max-width: min(78%, 720px);
-  padding: 8px 14px 9px;
-  border: 1px solid rgba(255, 255, 255, .28);
-  border-radius: 14px;
+  max-width: min(72%, 560px);
+  padding: 10px 22px 11px;
+  border: 1px solid rgba(255, 255, 255, .30);
+  border-radius: 999px;
   background:
-    linear-gradient(110deg, rgba(20, 184, 166, .78), rgba(99, 102, 241, .72), rgba(236, 72, 153, .72));
+    linear-gradient(110deg, rgba(20, 184, 166, .88), rgba(99, 102, 241, .84), rgba(236, 72, 153, .84));
   color: #fff;
-  box-shadow: 0 8px 28px rgba(0, 0, 0, .28);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .30);
   backdrop-filter: blur(9px) saturate(1.25);
   -webkit-backdrop-filter: blur(9px) saturate(1.25);
   pointer-events: none;
   text-align: center;
 }
 
+.local-participation-title {
+  display: block;
+  font: 900 clamp(14px, 1.7vw, 21px)/1.05 system-ui, sans-serif;
+  letter-spacing: .045em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
 .media:has(.campaign-profile-selectors) .local-participation-banner {
   top: 94px;
 }
 
-.local-participation-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  min-height: 19px;
-  padding: 2px 8px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, .20);
-  font: 900 10px/1.1 system-ui, sans-serif;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-}
-
-.local-participation-label {
-  margin-top: 1px;
-  font: 700 11px/1.2 system-ui, sans-serif;
-  opacity: .92;
-}
-
-.local-participation-names {
+.local-participation-people {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 3px 12px;
-  max-width: 100%;
+  align-items: center;
+  gap: 8px;
+  margin: 14px 0 2px;
 }
 
-.local-participation-person {
+.local-participation-person-tag {
   display: inline-flex;
   align-items: baseline;
-  gap: 5px;
+  gap: 6px;
+  max-width: 100%;
+  padding: 7px 11px;
+  border: 1px solid rgba(255, 255, 255, .24);
+  border-radius: 999px;
+  background:
+    linear-gradient(110deg, rgba(20, 184, 166, .82), rgba(99, 102, 241, .78), rgba(236, 72, 153, .78));
+  color: #fff;
+  box-shadow: 0 7px 20px rgba(0, 0, 0, .18), inset 0 1px 0 rgba(255, 255, 255, .10);
+}
+
+.local-participation-person-tag strong {
   min-width: 0;
-  font-size: clamp(12px, 1.35vw, 16px);
-  line-height: 1.2;
+  font: 850 clamp(12px, 1.25vw, 16px)/1.2 system-ui, sans-serif;
 }
 
-.local-participation-person strong {
-  font-weight: 850;
-}
-
-.local-participation-person small {
-  font-size: .78em;
-  font-weight: 650;
-  opacity: .88;
+.local-participation-person-tag small {
+  font: 650 clamp(10px, 1vw, 13px)/1.2 system-ui, sans-serif;
+  opacity: .90;
 }
 
 @media (max-width: 720px) {
   .local-participation-banner {
     top: 6px;
     max-width: calc(100% - 16px);
-    padding: 7px 10px 8px;
-    border-radius: 12px;
+    padding: 8px 15px 9px;
+    border-radius: 999px;
   }
 
   .media:has(.campaign-profile-selectors) .local-participation-banner {
     top: 74px;
   }
 
-  .local-participation-eyebrow {
-    font-size: 9px;
+  .local-participation-title {
+    font-size: 13px;
   }
 
-  .local-participation-label {
-    font-size: 10px;
+  .local-participation-people {
+    gap: 6px;
+    margin-top: 11px;
   }
 
-  .local-participation-names {
-    gap: 2px 8px;
+  .local-participation-person-tag {
+    padding: 6px 9px;
   }
 
-  .local-participation-person {
+  .local-participation-person-tag strong {
     font-size: 12px;
+  }
+
+  .local-participation-person-tag small {
+    font-size: 10px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .local-participation-banner {
+  .local-participation-banner,
+  .local-participation-person-tag {
     transition: none;
   }
 }
