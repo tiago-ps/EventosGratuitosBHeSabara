@@ -159,7 +159,7 @@
     if (observer) return;
     observer = new MutationObserver(scheduleRefresh);
     const app = document.getElementById('app');
-    if (app) observer.observe(app, { childList: true, subtree: true });
+    if (app) observer.observe(app, { childList: true });
     observer.observe(document.body, {
       attributes: true,
       attributeFilter: ['class']
