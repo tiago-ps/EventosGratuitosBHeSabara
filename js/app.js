@@ -5922,7 +5922,10 @@ function eventProgram(event) {
   function renderAgendaCard(item, options = {}) {
     const finishAgendaCard = article => {
       const decorated = decorateAgendaFavorite(article, item);
-      return localParticipation?.decorateAgendaCard?.(decorated, agendaFavoriteId(item)) || decorated;
+      const withCurationBanners =
+        siteCurationsContent?.decorateAgendaCard?.(decorated, item) || decorated;
+      return localParticipation?.decorateAgendaCard?.(withCurationBanners, agendaFavoriteId(item)) ||
+        withCurationBanners;
     };
     if (item.tipo_conteudo === 'espaco') {
       return finishAgendaCard(spacesContent.createAgendaCard(item, { safeExternalUrl, safeImageUrl }), item);
