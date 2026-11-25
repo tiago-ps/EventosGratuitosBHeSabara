@@ -4,12 +4,14 @@
   const PEOPLE_URL = 'pessoas.json';
   const PARTICIPATIONS_URL = 'participacoes-locais.json';
   const OVERLAY_CLASS = 'local-participation-banner';
-  const OVERLAY_ID_PREFIX = 'local-participation-';
+  const PEOPLE_CLASS = 'local-participation-people';
+  const LOCAL_THEME = 'talentos-casa-glow';
   let people = new Map();
   let participations = [];
   let loaded = false;
   let observer = null;
   let scheduled = false;
+  let localThemeActive = false;
 
   function currentPoint() {
     try {
@@ -50,71 +52,118 @@
     const contentId = safeText(slide?.dataset?.communityItemId);
     if (!point || !contentId) return [];
 
+    const seen = new Set();
     return participations
       .filter(item => item.ponto === point && item.conteudo_id === contentId)
       .map(item => ({
         ...item,
         pessoa: people.get(item.pessoa_id)
       }))
-      .filter(item => item.pessoa?.nome);
+      .filter(item => {
+        const personId = safeText(item.pessoa?.id);
+        if (!personId || !item.pessoa?.nome || seen.has(personId)) return false;
+        seen.add(personId);
+        return true;
+      });
   }
 
-  function createOverlay(slide, matches) {
-    const overlay = document.createElement('section');
-    overlay.className = OVERLAY_CLASS;
-    overlay.id = `local-participation-${matches.map(item => item.pessoa.id).join('-')}`;
-    overlay.setAttribute('aria-label', 'Talentos da Casa');
-    overlay.setAttribute('data-local-participation', 'true');
+  function createBanner() {
+    const banner = document.createElement('section');
+    banner.className = OVERLAY_CLASS;
+    banner.setAttribute('aria-label', 'Talentos da Casa');
+    banner.setAttribute('data-local-participation', 'true');
 
-    const eyebrow = document.createElement('span');
-    eyebrow.className = 'local-participation-eyebrow';
-    eyebrow.textContent = 'Talentos da Casa';
+    const title = document.createElement('strong');
+    title.className = 'local-participation-title';
+    title.textContent = 'Talentos da Casa';
 
-    const label = document.createElement('span');
-    label.className = 'local-participation-label';
-    label.textContent = 'Com participação de';
+    banner.appendChild(title);
+    return banner;
+  }
 
-    const names = document.createElement('div');
-    names.className = 'local-participation-names';
+  function createPeopleTags(matches) {
+    const section = document.createElement('div');
+    section.className = PEOPLE_CLASS;
+    section.setAttribute('aria-label', 'Pessoas relacionadas a este conteúdo');
 
     for (const match of matches) {
-      const person = document.createElement('span');
-      person.className = 'local-participation-person';
+      const tag = document.createElement('span');
+      tag.className = 'local-participation-person-tag';
 
       const name = document.createElement('strong');
       name.textContent = match.pessoa.nome;
-      person.appendChild(name);
+      tag.appendChild(name);
 
       if (match.papel) {
         const role = document.createElement('small');
         role.textContent = match.papel;
-        person.appendChild(role);
+        tag.appendChild(role);
       }
 
-      names.appendChild(person);
+      section.appendChild(tag);
     }
 
-    overlay.append(eyebrow, label, names);
-    return overlay;
+    return section;
+  }
+
+  function informationHost(slide) {
+    return slide.querySelector('.event-copy:not([hidden])') ||
+      slide.querySelector('.book-copy:not([hidden])') ||
+      slide.querySelector('.content');
+  }
+
+  function insertPeopleTags(slide, matches) {
+    const host = informationHost(slide);
+    if (!host) return;
+
+    const tags = createPeopleTags(matches);
+    const details = host.querySelector('.details, .book-details');
+    if (details) host.insertBefore(tags, details);
+    else host.appendChild(tags);
   }
 
   function decorateSlide(slide) {
     if (!slide?.classList?.contains('slide')) return;
-    slide.querySelectorAll(`.${OVERLAY_CLASS}`).forEach(node => node.remove());
+    slide.querySelectorAll('.' + OVERLAY_CLASS + ', .' + PEOPLE_CLASS).forEach(node => node.remove());
 
     const matches = matchingPeople(slide);
     if (!matches.length) return;
 
     const media = slide.querySelector('.media');
-    if (!media) return;
+    if (media) media.appendChild(createBanner());
 
-    media.appendChild(createOverlay(slide, matches));
+    insertPeopleTags(slide, matches);
+  }
+
+  function visibleSlide(slides) {
+    return slides.find(slide =>
+      !slide.hidden &&
+      slide.getAttribute('aria-hidden') !== 'true' &&
+      slide.getClientRects().length > 0
+    ) || null;
+  }
+
+  function syncLocalTheme(slides) {
+    const slide = visibleSlide(slides);
+    const active = Boolean(panelIsActive() && slide && matchingPeople(slide).length);
+    const root = document.documentElement;
+
+    if (active) root.dataset.localParticipationTheme = LOCAL_THEME;
+    else delete root.dataset.localParticipationTheme;
+
+    if (active !== localThemeActive) {
+      localThemeActive = active;
+      window.dispatchEvent(new CustomEvent('mural:local-participation-change', {
+        detail: { active, theme: active ? LOCAL_THEME : 'padrao' }
+      }));
+    }
   }
 
   function refresh() {
     scheduled = false;
-    const slides = document.querySelectorAll('#app > .slide');
+    const slides = [...document.querySelectorAll('#app > .slide')];
     slides.forEach(decorateSlide);
+    syncLocalTheme(slides);
   }
 
   function scheduleRefresh() {
@@ -130,7 +179,9 @@
         fetch(`${PARTICIPATIONS_URL}?v=1`, { cache: 'no-store' })
       ]);
 
-      if (!peopleResponse.ok || !participationsResponse.ok) throw new Error('dados_locais_indisponiveis');
+      if (!peopleResponse.ok || !participationsResponse.ok) {
+        throw new Error('dados_locais_indisponiveis');
+      }
 
       const peopleData = await peopleResponse.json();
       const participationsData = await participationsResponse.json();
@@ -152,18 +203,23 @@
     } catch (error) {
       loaded = false;
       console.warn('Participações locais indisponíveis.', error);
+      scheduleRefresh();
     }
   }
 
   function start() {
     if (observer) return;
     observer = new MutationObserver(scheduleRefresh);
+
     const app = document.getElementById('app');
     if (app) observer.observe(app, { childList: true });
+
     observer.observe(document.body, {
       attributes: true,
       attributeFilter: ['class']
     });
+
+    window.addEventListener('popstate', scheduleRefresh);
     void loadData();
   }
 
