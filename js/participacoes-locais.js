@@ -86,6 +86,11 @@
     section.className = PEOPLE_CLASS;
     section.setAttribute('aria-label', 'Pessoas relacionadas a este conteúdo');
 
+    const label = document.createElement('span');
+    label.className = 'local-participation-people-label';
+    label.textContent = 'Com a participação de nossos talentos:';
+    section.appendChild(label);
+
     for (const match of matches) {
       const tag = document.createElement('span');
       tag.className = 'local-participation-person-tag';
