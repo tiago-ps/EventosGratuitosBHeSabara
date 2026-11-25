@@ -9,6 +9,7 @@ const events = JSON.parse(fs.readFileSync(path.join(root, 'eventos.json'), 'utf8
 const source = fs.readFileSync(path.join(root, 'js/participacoes-locais.js'), 'utf8');
 const css = fs.readFileSync(path.join(root, 'css/participacoes-locais.css'), 'utf8');
 const themesSource = fs.readFileSync(path.join(root, 'js/temas-visuais.js'), 'utf8');
+const appSource = fs.readFileSync(path.join(root, 'js/app.js'), 'utf8');
 
 assert.equal(people.schema, 1);
 assert.equal(people.pessoas.length, 2);
@@ -50,7 +51,15 @@ assert.match(css, /\.local-participation-banner/);
 assert.match(css, /\.local-participation-person-tag/);
 assert.match(source, /localParticipationTheme/);
 assert.match(source, /mural:local-participation-change/);
+assert.match(source, /mural:talent-place-change/);
+assert.match(source, /selectedPlace/);
+assert.match(source, /personBelongsToPlace/);
+assert.match(source, /decorateAgendaCard/);
 assert.match(themesSource, /talentos-casa-glow/);
 assert.match(themesSource, /localParticipationTheme/);
+assert.match(appSource, /openTalentPlaceDialog/);
+assert.match(appSource, /filterAgendaItemsByTalentPlace/);
+assert.match(appSource, /agenda-talent-place-button/);
+assert.match(appSource, /localParticipation\?\.decorateAgendaCard/);
 
 console.log('Participações locais: cadastro, vínculo por ponto/conteúdo e selo visual verificados.');
