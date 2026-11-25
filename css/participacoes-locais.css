@@ -130,3 +130,60 @@
 .local-participation-agenda-people .local-participation-people-label{font-size:12px;line-height:1.25}
 .local-participation-agenda-people .local-participation-person-tag{font-size:10px;min-height:26px;padding:.35em .65em}
 @media (max-width:760px){.agenda-talent-place-button{max-width:44px;width:44px;padding:0}.agenda-talent-place-label{display:none}}
+
+
+/* Banners das curadorias nos cards da Agenda.
+   O tamanho é proporcional à própria área de imagem para não dominar o card. */
+.agenda-card-media {
+  position: relative;
+}
+
+.agenda-curation-banners {
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  z-index: 5;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 6px;
+  pointer-events: none;
+}
+
+.agenda-curation-banner {
+  display: block;
+  flex: 0 1 auto;
+  width: min(52%, 220px);
+  max-width: 52%;
+  max-height: 28%;
+  overflow: hidden;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, .18);
+  box-shadow: 0 7px 20px rgba(0, 0, 0, .38);
+  backdrop-filter: blur(2px);
+}
+
+.agenda-curation-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 760px) {
+  .agenda-curation-banners {
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    gap: 4px;
+  }
+
+  .agenda-curation-banner {
+    width: min(52%, 170px);
+    max-width: 52%;
+    border-radius: 7px;
+  }
+}
