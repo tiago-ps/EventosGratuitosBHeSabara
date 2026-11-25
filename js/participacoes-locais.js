@@ -84,7 +84,7 @@
     const seen = new Set();
     return participations
       .filter(item => item.conteudo_id === id)
-      .filter(item => !point || item.ponto === point || place)
+      .filter(item => point ? item.ponto === point : Boolean(place))
       .filter(item => !place || personBelongsToPlace(people.get(item.pessoa_id), place))
       .map(item => ({ ...item, pessoa: people.get(item.pessoa_id) }))
       .filter(item => {
@@ -96,8 +96,11 @@
   }
 
   function matchingPeople(slide) {
-    if (!panelIsActive()) return [];
-    return peopleForContent(slide?.dataset?.communityItemId, { point: currentPoint(), place: '' });
+    const point = currentPoint();
+    // O selo no painel é específico de um ponto de divulgação. Sem ?ponto=,
+    // não associamos conteúdos a uma comunidade por inferência.
+    if (!panelIsActive() || !point) return [];
+    return peopleForContent(slide?.dataset?.communityItemId, { point, place: '' });
   }
 
   function createBanner() {
