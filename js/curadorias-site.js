@@ -805,6 +805,70 @@
     });
   }
 
+  function curationBannerSource(curation) {
+    return safeImage(
+      curation?.perfil_painel?.banner?.src ||
+      curation?.banner ||
+      ''
+    );
+  }
+
+  function decorateAgendaCard(article, item) {
+    if (!article) return article;
+
+    const media = article.querySelector('.agenda-card-media');
+    if (!media) return article;
+
+    media.querySelectorAll('.agenda-curation-banners').forEach(node => node.remove());
+
+    const ids = mergeCurationIds(item?.curadoria_ids);
+    const curations = Array.isArray(root.loadedCurations) ? root.loadedCurations : [];
+    if (!ids.length || !curations.length) return article;
+
+    const matches = [];
+    const seen = new Set();
+    for (const curation of curations) {
+      const id = mergeCurationIds(curation?.id)[0];
+      if (!id || seen.has(id) || !ids.includes(id)) continue;
+      const src = curationBannerSource(curation);
+      if (!src) continue;
+      seen.add(id);
+      matches.push({ curation, id, src });
+    }
+    if (!matches.length) return article;
+
+    const container = document.createElement('div');
+    container.className = 'agenda-curation-banners';
+    container.setAttribute('aria-label', 'Banners das curadorias relacionadas');
+
+    for (const match of matches) {
+      const banner = document.createElement('span');
+      banner.className = 'agenda-curation-banner';
+      banner.dataset.curationId = match.id;
+      banner.title = String(match.curation?.nome || match.id);
+
+      const image = document.createElement('img');
+      image.src = match.src;
+      image.alt = String(
+        match.curation?.perfil_painel?.banner?.alt ||
+        match.curation?.nome ||
+        match.id
+      );
+      image.loading = 'lazy';
+      image.decoding = 'async';
+      image.draggable = false;
+      image.addEventListener('error', () => banner.remove(), { once: true });
+
+      banner.appendChild(image);
+      container.appendChild(banner);
+    }
+
+    if (!container.children.length) return article;
+    media.appendChild(container);
+    article.dataset.curadoriaBanners = matches.map(match => match.id).join(',');
+    return article;
+  }
+
   root.siteCurations = Object.freeze({
     apply,
     bindSupportRequest,
@@ -824,7 +888,8 @@
     openSupportArea,
     safeExternalUrl,
     safeImage,
-    setPanelSupportImageState
+    setPanelSupportImageState,
+    decorateAgendaCard
   });
 
   (() => {
