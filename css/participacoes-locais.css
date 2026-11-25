@@ -4,29 +4,24 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 9;
-  display: grid;
-  place-items: center;
-  width: max-content;
-  max-width: min(72%, 560px);
-  padding: 10px 22px 11px;
-  border: 1px solid rgba(255, 255, 255, .30);
-  border-radius: 999px;
-  background:
-    linear-gradient(110deg, rgba(20, 184, 166, .88), rgba(99, 102, 241, .84), rgba(236, 72, 153, .84));
-  color: #fff;
+  display: block;
+  width: min(68%, 520px);
+  max-width: min(68%, 520px);
+  padding: 0;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
   box-shadow: 0 10px 30px rgba(0, 0, 0, .30);
-  backdrop-filter: blur(9px) saturate(1.25);
-  -webkit-backdrop-filter: blur(9px) saturate(1.25);
+  overflow: hidden;
   pointer-events: none;
-  text-align: center;
 }
 
-.local-participation-title {
+.local-participation-banner-image {
   display: block;
-  font: 900 clamp(14px, 1.7vw, 21px)/1.05 system-ui, sans-serif;
-  letter-spacing: .045em;
-  text-transform: uppercase;
-  white-space: nowrap;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1200 / 260;
+  object-fit: contain;
 }
 
 .media:has(.campaign-profile-selectors) .local-participation-banner {
@@ -76,17 +71,13 @@
 @media (max-width: 720px) {
   .local-participation-banner {
     top: 6px;
-    max-width: calc(100% - 16px);
-    padding: 8px 15px 9px;
-    border-radius: 999px;
+    width: min(76%, 420px);
+    max-width: min(76%, 420px);
+    border-radius: 10px;
   }
 
   .media:has(.campaign-profile-selectors) .local-participation-banner {
     top: 74px;
-  }
-
-  .local-participation-title {
-    font-size: 13px;
   }
 
   .local-participation-people {
