@@ -93,7 +93,9 @@
 
     const label = document.createElement('span');
     label.className = 'local-participation-people-label';
-    label.textContent = 'Com a participação de nossos talentos:';
+    label.textContent = matches.length === 1
+      ? 'Com a participação de nosso talento:'
+      : 'Com a participação de nossos talentos:';
     section.appendChild(label);
 
     for (const match of matches) {
