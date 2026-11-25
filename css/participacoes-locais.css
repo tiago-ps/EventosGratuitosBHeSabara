@@ -41,6 +41,14 @@
   margin: 14px 0 2px;
 }
 
+.local-participation-people-label {
+  flex: 0 0 100%;
+  margin: 0 0 2px;
+  color: var(--detail-heading, #a5b4fc);
+  font: 850 clamp(11px, 1.05vw, 14px)/1.25 system-ui, sans-serif;
+  letter-spacing: .02em;
+}
+
 .local-participation-person-tag {
   display: inline-flex;
   align-items: baseline;
