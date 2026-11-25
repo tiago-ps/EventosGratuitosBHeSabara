@@ -805,9 +805,21 @@
     });
   }
 
+  function setLoadedCurations(curations) {
+    root.loadedCurations = Array.isArray(curations) ? curations.filter(Boolean) : [];
+    document.querySelectorAll('.agenda-card').forEach(article => {
+      const id = article.dataset.agendaItemId || '';
+      if (!id) return;
+      const item = root.agendaItemsById?.get?.(id);
+      if (item) decorateAgendaCard(article, item);
+    });
+    return root.loadedCurations.length;
+  }
+
   function curationBannerSource(curation) {
     return safeImage(
       curation?.perfil_painel?.banner?.src ||
+      curation?.banner?.src ||
       curation?.banner ||
       ''
     );
@@ -889,6 +901,7 @@
     safeExternalUrl,
     safeImage,
     setPanelSupportImageState,
+    setLoadedCurations,
     decorateAgendaCard
   });
 
