@@ -8,6 +8,7 @@ const participations = JSON.parse(fs.readFileSync(path.join(root, 'participacoes
 const events = JSON.parse(fs.readFileSync(path.join(root, 'eventos.json'), 'utf8'));
 const source = fs.readFileSync(path.join(root, 'js/participacoes-locais.js'), 'utf8');
 const css = fs.readFileSync(path.join(root, 'css/participacoes-locais.css'), 'utf8');
+const themesSource = fs.readFileSync(path.join(root, 'js/temas-visuais.js'), 'utf8');
 
 assert.equal(people.schema, 1);
 assert.equal(people.pessoas.length, 2);
@@ -20,10 +21,15 @@ assert.ok(people.pessoas.find(person => person.id === 'jose-marcello-sales-giffo
 ));
 
 assert.equal(participations.schema, 1);
-assert.equal(participations.participacoes.length, 2);
+assert.equal(participations.participacoes.length, 3);
 assert.ok(participations.participacoes.some(item =>
   item.ponto === 'ifmg-sabara-balcao-biblioteca' &&
   item.conteudo_id === 'evento:manual-santa-cecilia-conectando-geracoes-2026-11-28' &&
+  item.pessoa_id === 'luisa-cordeiro-martines'
+));
+assert.ok(participations.participacoes.some(item =>
+  item.ponto === 'ifmg-sabara-balcao-biblioteca' &&
+  item.conteudo_id === 'evento:sympla-sabara-3644413' &&
   item.pessoa_id === 'luisa-cordeiro-martines'
 ));
 assert.ok(participations.participacoes.some(item =>
@@ -37,5 +43,10 @@ assert.match(source, /searchParams\.get\('ponto'\)/);
 assert.match(source, /dataset\.communityItemId/);
 assert.match(source, /Talentos da Casa/);
 assert.match(css, /\.local-participation-banner/);
+assert.match(css, /\.local-participation-person-tag/);
+assert.match(source, /localParticipationTheme/);
+assert.match(source, /mural:local-participation-change/);
+assert.match(themesSource, /talentos-casa-glow/);
+assert.match(themesSource, /localParticipationTheme/);
 
 console.log('Participações locais: cadastro, vínculo por ponto/conteúdo e selo visual verificados.');
