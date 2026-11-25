@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Março de 2026 a Junho de 2027",
-  "atualizado_em": "2026-11-24T17:37:22-03:00",
+  "atualizado_em": "2026-11-25T15:53:27-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -5732,133 +5732,6 @@
       "espaco_interno": "Galerias do Térreo, Galerias do 3º andar e Pátio"
     },
     {
-      "id": "casa-fiat-elogio-ao-amor-na-casa-fiat-de-cultura-2026-11-24-sem-hora",
-      "titulo": "Elogio ao amor na Casa Fiat de Cultura",
-      "data": "2026-11-24",
-      "data_fim": "",
-      "horario": "",
-      "local": "Casa Fiat de Cultura",
-      "local_id": "casa-fiat-de-cultura",
-      "cidade": "Belo Horizonte",
-      "endereco": "Praça da Liberdade, 10, Funcionários, Belo Horizonte - MG",
-      "categoria": "Cultura",
-      "gratuito": true,
-      "inscricao": "Programação gratuita conforme informação oficial da Casa Fiat de Cultura; consulte a página para inscrição, retirada de senha ou lotação quando aplicável.",
-      "descricao": "Elogio ao amor na Casa Fiat de Cultura 24/nov/26 a 24/jan/27 O que pode o amor? Nesta exposição, Marilá Dardot toma como referência o livro “Elogio ao Amor”, do filósofo francês Alain Badiou, e recorre a mais de 60 outros autores e autoras para pensar o amor em suas múltiplas dimensões – filosófica, política, ética e romântica. Depois de uma década fora do país, a artista reúne trabalhos de diferentes momentos de sua trajetória em Belo Horizonte, sua cidade natal. O conjunto de obras, entre instalação, pintura, livro de artista e vídeo, inclui oito trabalhos inéditos.",
-      "imagem": "https://casafiatdecultura.com.br/wp-content/uploads/2026/11/Banners-newsletter-novembro_EXPO-elogio-ao-amor_1.png",
-      "link": "https://casafiatdecultura.com.br/evento/elogio-ao-amor-na-casa-fiat-de-cultura/",
-      "fonte": "Casa Fiat de Cultura — programação oficial",
-      "pagina": "https://casafiatdecultura.com.br/evento/elogio-ao-amor-na-casa-fiat-de-cultura/",
-      "instituicao_id": "casa-fiat-de-cultura",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "gratuidade_institucional_confirmada",
-      "status_validacao": "aprovado",
-      "origem_experimental": "casa_fiat",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-11-24"
-        }
-      },
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Casa+Fiat+de+Cultura%2C+Pra%C3%A7a+da+Liberdade%2C+10%2C+Funcion%C3%A1rios%2C+Belo+Horizonte+-+MG"
-    },
-    {
-      "id": "cine-santa-tereza-bileto-130117",
-      "titulo": "FORUMDOC.BH - Telúrica, a Íntima Utopia",
-      "data": "2026-11-24",
-      "data_fim": "",
-      "horario": "19h",
-      "local": "Cine Santa Tereza",
-      "cidade": "Belo Horizonte",
-      "categoria": "Cinema",
-      "gratuito": true,
-      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial. Também há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade.",
-      "descricao": "Telúrica, a Íntima Utopia (Mariana Lacerda | Brasil | 2026 | Documentário | 104 min) Uma trupe teatral - formada por atores e atrizes cujas almas sentem vacilar o mundo - ensaia uma peça sobre a existência na Terra e a extinção das espécies, bem como seu desejo de perseverar na vida. Enquanto criam o espetáculo, refletem sobre suas trajetórias e a preservação de sua comunidade. Pensamentos, projeções sobre o futuro e o passado, visões e formas de existir também são entidades a serem preservadas. Classificação indicativa: Livre",
-      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/1a70qk611o8upke1kffhcv35h6rl1sr1ha1bc7pj0r935hpf8vudmjcqiflbc5a42t869mji921pkeacgihjeqs9pta1047grdcbop1.jpeg",
-      "link": "https://bileto.sympla.com.br/event/130117/d/428842/s/2770084",
-      "fonte": "Cine Santa Tereza",
-      "instituicao_id": "fundacao-municipal-cultura-bh",
-      "fonte_id": "130117",
-      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
-      "classificacao_indicativa": "Livre",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-11-24",
-          "observacao": "19h"
-        }
-      },
-      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
-      "local_id": "cine-santa-tereza",
-      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
-    },
-    {
-      "id": "cine-theatro-brasil-serie-bh-instrumental-e-xxiv-premio-da-musica-instrumental-mineira-2026-11-24-19",
-      "titulo": "Série BH Instrumental e XXIV Prêmio da Música Instrumental Mineira",
-      "data": "2026-11-24",
-      "data_fim": "",
-      "horario": "19h",
-      "local": "Cine Theatro Brasil Vallourec – Teatro de Câmara",
-      "cidade": "Belo Horizonte",
-      "categoria": "Teatro",
-      "gratuito": true,
-      "inscricao": "Evento gratuito; consulte disponibilidade e retirada de ingresso no site oficial.",
-      "descricao": "SÉRIE BH INSTRUMENTAL & PRÊMIO DA MÚSICA INSTRUMENTAL MINEIRA Duas histórias, uma parceria especial em celebração à música instrumental mineira! Nos dias 24 e 25 de novembro, acontece uma edição especial dos projetos Série BH Instrumental e Prêmio da Música Instrumental Mineira, que se unem em uma realização conjunta para celebrar a trajetória dessas duas importantes iniciativas de valorização da música instrumental produzida em Minas Gerais. A parceria aproxima a experiência da Série BH Instrumental,",
-      "imagem": "https://www.cinetheatrobrasil.com.br/wp-content/uploads/2026/11/imagem-destaque_156x198px_Serie-BH-Instrumental-e-Premio-Instrumental.png",
-      "link": "https://www.cinetheatrobrasil.com.br/cadastro-de-eventos/serie-bh-instrumental-e-xxiv-premio-da-musica-instrumental-mineira/",
-      "fonte": "Cine Theatro Brasil Vallourec",
-      "pagina": "https://www.cinetheatrobrasil.com.br/cadastro-de-eventos/serie-bh-instrumental-e-xxiv-premio-da-musica-instrumental-mineira/",
-      "local_id": "grande-theatro-unimed-bh-cine-theatro-brasil",
-      "endereco": "Avenida Amazonas, 315, Centro, Belo Horizonte - MG",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "gratuidade_confirmada_na_secao_de_precos",
-      "espaco_interno": "Teatro de Câmara",
-      "classificacao_indicativa": "Livre",
-      "status_validacao": "aprovado",
-      "origem_experimental": "cine_theatro_brasil",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-11-24",
-          "observacao": "19h"
-        }
-      },
-      "instituicao_id": "",
-      "mapa": "https://maps.app.goo.gl/z4yFHAmeFRKHg3ro9"
-    },
-    {
-      "id": "filarmonica-mg-filarmonica-em-camara-6-2026-2026-11-24",
-      "titulo": "Filarmônica em Câmara 6 (2026)",
-      "data": "2026-11-24",
-      "data_fim": "",
-      "horario": "20h30",
-      "local": "Sala Minas Gerais",
-      "cidade": "Belo Horizonte",
-      "endereco": "Rua Tenente Brito Melo, 1090, Barro Preto, Belo Horizonte - MG",
-      "categoria": "Música",
-      "gratuito": true,
-      "inscricao": "Concerto gratuito conforme agenda oficial da Filarmônica de Minas Gerais; consulte a página para retirada de ingressos e regras de acesso.",
-      "descricao": "Filarmônica em Câmara 6 (2026). Consulte o repertório, os artistas e as orientações de acesso na programação oficial da Filarmônica de Minas Gerais.",
-      "imagem": "https://filarmonica.art.br/wp-content/uploads/2025/10/share-image.webp",
-      "link": "https://filarmonica.art.br/event/filarmonica-em-camara-6-2026/",
-      "pagina": "https://filarmonica.art.br/event/filarmonica-em-camara-6-2026/",
-      "fonte": "Filarmônica de Minas Gerais — agenda oficial",
-      "instituicao_id": "instituto-cultural-filarmonica",
-      "criterio_exibicao": "realizacao",
-      "motivo_publicacao": "marcador_gratuito_agenda",
-      "local_id": "sala-minas-gerais",
-      "status_validacao": "aprovado",
-      "origem_experimental": "filarmonica_mg",
-      "temporalidade": {
-        "classe": "pontual",
-        "realizacao": {
-          "inicio": "2026-11-24",
-          "observacao": "20h30"
-        }
-      },
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Sala+Minas+Gerais%2C+Rua+Tenente+Brito+Melo%2C+1090%2C+Barro+Preto%2C+Belo+Horizonte+-+MG"
-    },
-    {
       "id": "cine-santa-tereza-bileto-130118",
       "titulo": "FORUMDOC.BH - Sessões Especiais",
       "data": "2026-11-25",
@@ -8251,5 +8124,5 @@
   ],
   "modo_teste_experimental": true,
   "eventos_somente_teste": 4,
-  "atualizado_em_teste": "2026-11-24T17:37:40-03:00"
+  "atualizado_em_teste": "2026-11-25T15:53:46-03:00"
 }

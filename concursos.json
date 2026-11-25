@@ -2,8 +2,8 @@
   "schema": 10,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-11-24T19:46:25.812854+00:00",
-  "total": 27,
+  "coletado_em_utc": "2026-11-25T18:52:10.277490+00:00",
+  "total": 29,
   "concursos": [
     {
       "id": "pci:noticia:associacao-das-pioneiras-sociais-abre-processo-seletivo-para-analista-de-tecnologia-da-informacao",
@@ -1071,6 +1071,43 @@
       }
     },
     {
+      "id": "pci:noticia:cro-pr-abre-concurso-publico-com-12-vagas-e-salarios-de-ate-14318",
+      "titulo": "CRO/PR - Conselho Regional de Odontologia do Paraná",
+      "url": "https://www.pciconcursos.com.br/noticias/cro-pr-abre-concurso-publico-com-12-vagas-e-salarios-de-ate-14318",
+      "imagem": "https://cdn.pci.app.br/img/i/c76f39f5050d5baf7672a159f3f3485b.png",
+      "formacoes_compativeis": [
+        "Técnico em Informática"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Informática",
+          "nivel": "tecnico",
+          "evidencia": "oticias › sul terca-feira, 24 de novembro de 2026 no parana, o conselho regional de odontologia do parana (cro/pr) abriu concurso publico para preencher 12 vagas em cargos de nivel medio e superior. segundo o edital, as oportunidades sao para os cargos de: curitiba auxiliar administrativo (3 vagas) tecnico em informatica (1 vaga) analista de conteudo e ia (1 vaga) analista de recursos humanos (1 vaga) contador (1 vaga) procurador juridico (1 vaga) foz do iguacu auxiliar administrativo (1 vaga) cascavel fiscal (2 vagas) londrina fiscal (1 vaga) a jornada e de 40 horas semanais. a remuneracao inicial vai de r$ 4.300,"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "PR",
+      "cidade": "",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "R$ 14.318,45",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico em Informática",
+          "vagas_texto": "1 vaga",
+          "formacao": "Técnico em Informática",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "prazo_desconhecido",
+        "completude": "desconhecida"
+      }
+    },
+    {
       "id": "pci:noticia:fundacao-escola-tecnica-liberato-salzano-vieira-da-cunha-rs-abre-concurso-publico-para-diversos-cargos",
       "titulo": "Fundação Escola Técnica Liberato Salzano Vieira da Cunha",
       "url": "https://www.pciconcursos.com.br/noticias/fundacao-escola-tecnica-liberato-salzano-vieira-da-cunha-rs-abre-concurso-publico-para-diversos-cargos",
@@ -1320,6 +1357,43 @@
           "cargo": "Professor de Computação",
           "vagas_texto": "1 vaga",
           "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "prazo_desconhecido",
+        "completude": "desconhecida"
+      }
+    },
+    {
+      "id": "pci:noticia:municipio-de-chapeco-sc-abre-concurso-com-91-vagas-e-salarios-de-ate-25599",
+      "titulo": "Prefeitura de Chapecó",
+      "url": "https://www.pciconcursos.com.br/noticias/municipio-de-chapeco-sc-abre-concurso-com-91-vagas-e-salarios-de-ate-25599",
+      "imagem": "https://cdn.pci.app.br/img/i/9227c60067b4cd825bd546a12a1f0684.png",
+      "formacoes_compativeis": [
+        "Técnico em Administração"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Técnico em Administração",
+          "nivel": "tecnico",
+          "evidencia": "o pediatra medico pneumologista medico pneumologista infantil medico proctologista medico psiquiatra medico reumatologista medico urologista medico veterinario (3 vagas) monitor social (5 vagas) nutricionista (1 vaga) operador de maquinas (10 vagas) procurador municipal (1 vaga) psicologo (2 vagas) tecnico em administracao (6 vagas) tecnico em enfermagem (5 vagas) terapeuta ocupacional (3 vagas) a jornada varia de 20 a 40 horas semanais, com remuneracao inicial de r$ 2.989,20 a r$ 25.599,11. poderao ser concedidos beneficios, vantagens e gratificacoes conforme a legislacao vigente. as inscricoes serao realizadas excl"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "SC",
+      "cidade": "Chapecó",
+      "inscricoes_inicio_texto": "",
+      "inscricoes_fim_texto": "",
+      "inscricoes_texto": "",
+      "remuneracao_faixa_texto": "R$ 25.599,11",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Técnico em Administração",
+          "vagas_texto": "6 vagas",
+          "formacao": "Técnico em Administração",
           "confianca": "alta"
         }
       ],
