@@ -42,6 +42,10 @@ assert.ok(events.eventos.some(item => item.id === 'manual-santa-cecilia-conectan
 assert.match(source, /searchParams\.get\('ponto'\)/);
 assert.match(source, /dataset\.communityItemId/);
 assert.match(source, /Talentos da Casa/);
+assert.match(source, /imagens\/selos\/talentos-da-casa-banner\.png/);
+assert.match(css, /\.local-participation-banner-image/);
+assert.match(css, /1200 \/ 260/);
+assert.ok(fs.existsSync(path.join(root, 'imagens/selos/talentos-da-casa-banner.png')));
 assert.match(css, /\.local-participation-banner/);
 assert.match(css, /\.local-participation-person-tag/);
 assert.match(source, /localParticipationTheme/);
