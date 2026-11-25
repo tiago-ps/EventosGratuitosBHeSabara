@@ -3,7 +3,7 @@ importScripts('./js/temporalidade-eventos.js?v=1');
 
 const SW_EVENT_RELATIONS = self.MuralCultural?.eventRelations;
 const SW_EVENT_TEMPORAL = self.MuralCultural?.eventTemporal;
-const CACHE_VERSION = 'mural-cultural-v218-rotulos-plataformas';
+const CACHE_VERSION = 'mural-cultural-v219-talentos-casa';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -26,6 +26,7 @@ const CORE_ASSETS = [
   './css/painel-modos.css?v=2',
   './css/painel-acoes-contextuais.css?v=3',
   './css/tem-sim-uai-painel.css?v=2',
+  './css/participacoes-locais.css?v=1',
   './js/tema-visual-boot.js?v=18',
   './js/core/rotacao.js?v=2',
   './js/notificacoes.js?v=1',
@@ -42,6 +43,7 @@ const CORE_ASSETS = [
   './js/metricas-pontos.js?v=3',
   './js/relacoes-eventos.js?v=3',
   './js/temporalidade-eventos.js?v=1',
+  './js/participacoes-locais.js?v=1',
   './js/app.js?v=171',
   './js/temas-visuais.js?v=14',
   './js/eventos-manuais-ui.js?v=46',
@@ -73,7 +75,9 @@ const DATA_PATHS = [
   '/coordenadas-conteudos.json',
   '/atividades-lazer.json',
   '/curadorias/index.json',
-  '/configuracao-mural.json'
+  '/configuracao-mural.json',
+  '/pessoas.json',
+  '/participacoes-locais.json'
 ];
 
 self.addEventListener('install', event => {
