@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "descricao": "Participações locais experimentais. A participação é ligada ao conteúdo e ao ponto de divulgação; o conteúdo continua público e independente do vínculo local.",
+  "participacoes": [
+    {
+      "ponto": "ifmg-sabara-balcao-biblioteca",
+      "conteudo_id": "evento:manual-santa-cecilia-conectando-geracoes-2026-11-28",
+      "pessoa_id": "luisa-cordeiro-martines",
+      "papel": ""
+    },
+    {
+      "ponto": "ifmg-sabara-balcao-biblioteca",
+      "conteudo_id": "atividade_lazer:atividade:pbh:tai-chi-parque-municipal",
+      "pessoa_id": "jose-marcello-sales-giffoni",
+      "papel": "professor de Tai Chi Chuan"
+    }
+  ]
+}
