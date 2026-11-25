@@ -7121,6 +7121,7 @@ function eventProgram(event) {
       state.spaceImageIndex = eventRelations?.buildSpaceImageIndex?.(state.spacesData) ||
         { byId: Object.create(null), byName: Object.create(null) };
       state.siteCurationsData = siteCurationsData;
+      siteCurationsContent?.setLoadedCurations?.(siteCurationsData?.curadorias);
       state.config = config || {};
 
       const requestedAgendaCuration = requestedCurationIdFromUrl();
