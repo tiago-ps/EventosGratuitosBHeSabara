@@ -93,6 +93,7 @@
   const eventTemporal = window.MuralCultural.eventTemporal;
   const siteCurationsContent = window.MuralCultural.siteCurations;
   const notificationsContent = window.MuralCultural.notifications;
+  const localParticipation = window.MuralCultural.localParticipation;
   let deferredInstallPrompt = null;
   let bookLocationsDialog = null;
 
@@ -4547,15 +4548,15 @@ function eventProgram(event) {
     }
     const curation = agendaCurationEntries().find(entry => entry.id === state.mobileCuration);
     const matchesCuration = item => agendaItemMatchesCuration(item, curation);
-    const events = agendaVisibleEvents().filter(matchesCuration);
-    const books = agendaVisibleBooks().filter(matchesCuration);
-    const courses = agendaVisibleCourses().filter(matchesCuration);
-    const contests = agendaVisibleContests().filter(matchesCuration);
-    const films = agendaVisibleFilms().filter(matchesCuration);
-    const utility = agendaVisibleUtility().filter(matchesCuration);
-    const spaces = agendaVisibleSpaces().filter(matchesCuration);
-    const activities = agendaVisibleActivities().filter(matchesCuration);
-    const platforms = agendaVisiblePlatforms().filter(matchesCuration);
+    const events = filterAgendaItemsByTalentPlace(agendaVisibleEvents().filter(matchesCuration));
+    const books = filterAgendaItemsByTalentPlace(agendaVisibleBooks().filter(matchesCuration));
+    const courses = filterAgendaItemsByTalentPlace(agendaVisibleCourses().filter(matchesCuration));
+    const contests = filterAgendaItemsByTalentPlace(agendaVisibleContests().filter(matchesCuration));
+    const films = filterAgendaItemsByTalentPlace(agendaVisibleFilms().filter(matchesCuration));
+    const utility = filterAgendaItemsByTalentPlace(agendaVisibleUtility().filter(matchesCuration));
+    const spaces = filterAgendaItemsByTalentPlace(agendaVisibleSpaces().filter(matchesCuration));
+    const activities = filterAgendaItemsByTalentPlace(agendaVisibleActivities().filter(matchesCuration));
+    const platforms = filterAgendaItemsByTalentPlace(agendaVisiblePlatforms().filter(matchesCuration));
     return {
       events,
       books,
@@ -5774,6 +5775,77 @@ function eventProgram(event) {
     return agendaItemsForIds(favorites);
   }
 
+  function talentPlaceSelected() {
+    return String(localParticipation?.selectedPlace?.() || '').trim();
+  }
+
+  function talentPlaceMatches(item) {
+    const place = talentPlaceSelected();
+    if (!place) return true;
+    return Boolean(localParticipation?.matchesContent?.(agendaFavoriteId(item)));
+  }
+
+  function filterAgendaItemsByTalentPlace(items) {
+    if (!talentPlaceSelected()) return items;
+    return items.filter(talentPlaceMatches);
+  }
+
+  function openTalentPlaceDialog() {
+    document.getElementById('agenda-talent-place-dialog')?.remove();
+    const places = localParticipation?.places?.() || [];
+    const selected = talentPlaceSelected();
+    const dialog = document.createElement('dialog');
+    dialog.id = 'agenda-talent-place-dialog';
+    dialog.className = 'agenda-curation-suggestion-dialog agenda-talent-place-dialog';
+    const card = document.createElement('form');
+    card.method = 'dialog';
+    card.className = 'agenda-curation-suggestion-card agenda-talent-place-card';
+    card.innerHTML = `
+      <div class="agenda-curation-suggestion-heading">
+        <div><p class="agenda-curation-suggestion-eyebrow">Talentos da Casa</p><h2>Escolha seu lugar</h2></div>
+        <button type="button" class="agenda-curation-suggestion-close" aria-label="Fechar">×</button>
+      </div>
+      <p>Escolha uma instituição ou comunidade para encontrar conteúdos que tenham a participação de pessoas vinculadas a esse lugar.</p>
+      <div class="agenda-talent-place-options"></div>
+      <p class="agenda-talent-place-help">A escolha fica somente neste dispositivo. O Tem Sim, Uai não precisa saber quem você é.</p>
+      <div class="agenda-curation-suggestion-actions">
+        <button type="button" class="secondary agenda-talent-place-cancel">Fechar</button>
+        <button type="submit" class="agenda-talent-place-apply">Aplicar</button>
+      </div>
+    `;
+    const options = card.querySelector('.agenda-talent-place-options');
+    const entries = [
+      { value: '', label: 'Todos os conteúdos', detail: 'Não aplicar o filtro de Talentos da Casa.' },
+      ...places.map(place => ({ value: place.value, label: place.value, detail: `${place.count} ${place.count === 1 ? 'pessoa vinculada' : 'pessoas vinculadas'}` }))
+    ];
+    entries.forEach(entry => {
+      const label = document.createElement('label');
+      label.className = `agenda-talent-place-option${selected === entry.value ? ' is-selected' : ''}`;
+      const input = document.createElement('input');
+      input.type = 'radio'; input.name = 'talent-place'; input.value = entry.value; input.checked = selected === entry.value;
+      const text = document.createElement('span');
+      const strong = document.createElement('strong'); strong.textContent = entry.label;
+      const small = document.createElement('small'); small.textContent = entry.detail;
+      text.append(strong, small); label.append(input, text); options.append(label);
+      input.addEventListener('change', () => {
+        options.querySelectorAll('.agenda-talent-place-option').forEach(item => item.classList.remove('is-selected'));
+        label.classList.add('is-selected');
+      });
+    });
+    dialog.append(card); document.body.append(dialog);
+    const close = () => { if (dialog.open) dialog.close(); dialog.remove(); };
+    card.querySelector('.agenda-curation-suggestion-close')?.addEventListener('click', close);
+    card.querySelector('.agenda-talent-place-cancel')?.addEventListener('click', close);
+    dialog.addEventListener('cancel', event => { event.preventDefault(); close(); });
+    card.addEventListener('submit', event => {
+      event.preventDefault();
+      const value = card.querySelector('input[name="talent-place"]:checked')?.value || '';
+      localParticipation?.setSelectedPlace?.(value);
+      close();
+    });
+    dialog.showModal();
+  }
+
   function decorateAgendaFavorite(article, item) {
     const favoriteId = agendaFavoriteId(item);
     if (!article || !favoriteId) return article;
@@ -5848,24 +5920,28 @@ function eventProgram(event) {
   }
 
   function renderAgendaCard(item, options = {}) {
+    const finishAgendaCard = article => {
+      const decorated = decorateAgendaFavorite(article, item);
+      return localParticipation?.decorateAgendaCard?.(decorated, agendaFavoriteId(item)) || decorated;
+    };
     if (item.tipo_conteudo === 'espaco') {
-      return decorateAgendaFavorite(spacesContent.createAgendaCard(item, { safeExternalUrl, safeImageUrl }), item);
+      return finishAgendaCard(spacesContent.createAgendaCard(item, { safeExternalUrl, safeImageUrl }), item);
     }
 
     if (item.tipo_conteudo === 'atividade_lazer') {
-      return decorateAgendaFavorite(activitiesContent.createAgendaCard(item, { safeExternalUrl, safeImageUrl }), item);
+      return finishAgendaCard(activitiesContent.createAgendaCard(item, { safeExternalUrl, safeImageUrl }), item);
     }
 
     if (item.tipo_conteudo === 'utilidade_publica') {
-      return decorateAgendaFavorite(utilityContent.createAgendaCard(item, { safeExternalUrl, safeImageUrl }), item);
+      return finishAgendaCard(utilityContent.createAgendaCard(item, { safeExternalUrl, safeImageUrl }), item);
     }
 
     if (item.tipo_conteudo === 'plataforma') {
-      return decorateAgendaFavorite(platformsContent.createAgendaCard(item, { safeExternalUrl, safeImageUrl }), item);
+      return finishAgendaCard(platformsContent.createAgendaCard(item, { safeExternalUrl, safeImageUrl }), item);
     }
 
     if (item.tipo_conteudo === 'filme') {
-      return decorateAgendaFavorite(filmsContent.createAgendaCard(item, {
+      return finishAgendaCard(filmsContent.createAgendaCard(item, {
         escapeHtml,
         safeExternalUrl,
         showDetails: (movie, opener) => filmsContent.showDetails(movie, opener, escapeHtml, safeExternalUrl)
@@ -5873,14 +5949,14 @@ function eventProgram(event) {
     }
 
     if (item.tipo_conteudo === 'concurso') {
-      return decorateAgendaFavorite(contestsContent.createAgendaCard(item, {
+      return finishAgendaCard(contestsContent.createAgendaCard(item, {
         safeExternalUrl,
         safeImageUrl
       }), item);
     }
 
     if (item.tipo_conteudo === 'curso') {
-      return decorateAgendaFavorite(coursesContent.createAgendaCard(item, {
+      return finishAgendaCard(coursesContent.createAgendaCard(item, {
         safeExternalUrl,
         safeImageUrl,
         escapeHtml
@@ -5927,7 +6003,7 @@ function eventProgram(event) {
           });
         });
       }
-      return decorateAgendaFavorite(article, item);
+      return finishAgendaCard(article, item);
     }
 
     const event = item;
@@ -5954,7 +6030,7 @@ function eventProgram(event) {
     const image = article.querySelector('img');
     // Usa a mesma cadeia em todos os filtros e preserva fallback em onerror.
     setMobileCardImage(image, event);
-    return decorateAgendaFavorite(article, item);
+    return finishAgendaCard(article, item);
   }
 
   function resetAgendaBatches() {
@@ -6132,6 +6208,12 @@ function eventProgram(event) {
       </nav>
       <div class="agenda-header-actions">
         <button
+          class="agenda-talent-place-button${talentPlaceSelected() ? ' is-active' : ''}"
+          type="button"
+          title="Talentos da Casa"
+          aria-label="Encontrar conteúdos com participação de pessoas do meu lugar"
+        ><span aria-hidden="true">★</span><span class="agenda-talent-place-label">${talentPlaceSelected() ? 'Talentos: ' + escapeHtml(talentPlaceSelected()) : 'Talentos da Casa'}</span></button>
+        <button
           class="agenda-favorites-toggle${state.mobileFavoritesOnly ? ' is-active' : ''}"
           type="button"
           aria-pressed="${state.mobileFavoritesOnly ? 'true' : 'false'}"
@@ -6175,6 +6257,8 @@ function eventProgram(event) {
         </details>
       </div>
     `;
+
+    header.querySelector('.agenda-talent-place-button')?.addEventListener('click', openTalentPlaceDialog);
 
     const controls = document.createElement('section');
     controls.className = `agenda-tools agenda-tools-${state.mobileContent}`;
@@ -6876,6 +6960,10 @@ function eventProgram(event) {
     });
     controls.prepend(button);
   }
+
+  window.addEventListener('mural:talent-place-change', () => {
+    if (effectiveViewMode() === 'agenda') renderAgenda();
+  });
 
   function renderCurrentView() {
     if (effectiveViewMode() === 'agenda') {
