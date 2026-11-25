@@ -15,7 +15,8 @@
   }
 
   const BASE_THEMES = [
-    { id: 'padrao', label: 'Padrão' }
+    { id: 'padrao', label: 'Padrão' },
+    { id: 'talentos-casa-glow', label: 'Talentos da Casa', themeColor: '#07141f' }
   ];
 
   let THEMES = [...BASE_THEMES];
@@ -139,6 +140,10 @@
       (!theme.start || current >= theme.start) && (!theme.end || current <= theme.end) &&
       panelProfileMatchesCurrentSlide(theme.panelProfile)
     );
+    if (root.dataset.localParticipationTheme === 'talentos-casa-glow') {
+      return 'talentos-casa-glow';
+    }
+
     return contextual?.id || 'padrao';
   }
 
@@ -451,6 +456,7 @@
   window.addEventListener('mural:curations-loaded', registerLoadedThemes);
   window.addEventListener('mural:panel-profile-change', syncExperience);
   window.addEventListener('mural:site-curation-change', scheduleSync);
+  window.addEventListener('mural:local-participation-change', scheduleSync);
 
   function start() {
     try { localStorage.removeItem('mural:visual-theme'); } catch (_) {}
