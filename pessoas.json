@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "descricao": "Cadastro experimental de pessoas relacionado ao contexto local do Mural. O vínculo com um local é separado da participação em cada conteúdo.",
+  "pessoas": [
+    {
+      "id": "luisa-cordeiro-martines",
+      "nome": "Luísa Cordeiro Martines",
+      "vinculos": [
+        {
+          "instituicao": "IFMG Campus Sabará",
+          "tipo": "estudante",
+          "ativo": true
+        }
+      ],
+      "obras": []
+    },
+    {
+      "id": "jose-marcello-sales-giffoni",
+      "nome": "José Marcello Salles Giffoni",
+      "vinculos": [
+        {
+          "instituicao": "IFMG Campus Sabará",
+          "tipo": "servidor",
+          "ativo": true
+        },
+        {
+          "instituicao": "UFMG",
+          "tipo": "aluno",
+          "ativo": true
+        }
+      ],
+      "obras": [
+        {
+          "tipo": "obra",
+          "relacionamento": "autor",
+          "titulo": "Trilhos Arrancados: História da Estrada de Ferro Bahia e Minas (1878-1966)",
+          "conteudo_id": "",
+          "observacao": "Registro preparado para futura ligação ao item correspondente do acervo da biblioteca."
+        }
+      ]
+    }
+  ]
+}
