@@ -3,12 +3,13 @@
   "descricao": "Cadastro experimental de pessoas relacionado ao contexto local do Mural. O vínculo com um local é separado da participação em cada conteúdo.",
   "pessoas": [
     {
-      "id": "luisa-cordeiro-martines",
-      "nome": "Luísa Cordeiro Martines",
+      "id": "luiza-cordeiro-martines",
+      "nome": "Luíza Cordeiro Martines",
       "vinculos": [
         {
-          "instituicao": "IFMG Campus Sabará",
-          "tipo": "estudante",
+          "instituicao": "Sociedade Musical Santa Cecília",
+          "tipo": "musicista",
+          "papel": "violinista",
           "ativo": true
         }
       ],
@@ -21,11 +22,6 @@
         {
           "instituicao": "IFMG Campus Sabará",
           "tipo": "servidor",
-          "ativo": true
-        },
-        {
-          "instituicao": "UFMG",
-          "tipo": "aluno",
           "ativo": true
         }
       ],
