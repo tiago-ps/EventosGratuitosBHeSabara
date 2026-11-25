@@ -3,7 +3,7 @@ importScripts('./js/temporalidade-eventos.js?v=1');
 
 const SW_EVENT_RELATIONS = self.MuralCultural?.eventRelations;
 const SW_EVENT_TEMPORAL = self.MuralCultural?.eventTemporal;
-const CACHE_VERSION = 'mural-cultural-v221-talentos-casa-banner';
+const CACHE_VERSION = 'mural-cultural-v222-talentos-casa-png';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -54,6 +54,7 @@ const CORE_ASSETS = [
   './js/tem-sim-uai-painel.js?v=1',
   './js/cursos-runtime-fix.js?v=2',
   './imagens/curadorias/agosto-lilas-banner.png',
+  './imagens/selos/talentos-da-casa-banner.png?v=1',
   './manifest.webmanifest',
   './imagens/app-icons/icon-192.png?v=3', './imagens/app-icons/icon-512.png?v=3',
   './imagens/app-icons/apple-touch-icon.png?v=3'
@@ -132,6 +133,15 @@ async function cacheFirstImage(request) {
   const cache = await caches.open(IMAGE_CACHE);
   const cached = await cache.match(request);
   if (cached) return cached;
+
+  // Imagens incluídas no núcleo do app também servem como fallback offline.
+  const coreCache = await caches.open(CORE_CACHE);
+  const precached = await coreCache.match(request);
+  if (precached) {
+    await cache.put(request, precached.clone());
+    return precached;
+  }
+
   const response = await fetch(request);
   const contentType = response.headers.get('content-type') || '';
   if (isCacheableResponse(response) && contentType.startsWith('image/')) {
