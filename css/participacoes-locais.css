@@ -57,16 +57,22 @@
     linear-gradient(110deg, rgba(20, 184, 166, .82), rgba(99, 102, 241, .78), rgba(236, 72, 153, .78));
   color: #fff;
   box-shadow: 0 7px 20px rgba(0, 0, 0, .18), inset 0 1px 0 rgba(255, 255, 255, .10);
+  font-size: clamp(11px, .85vw, 17px);
+  font-weight: 850;
+  letter-spacing: .06em;
+  text-transform: uppercase;
 }
 
 .local-participation-person-tag strong {
   min-width: 0;
-  font: 850 clamp(12px, 1.25vw, 16px)/1 system-ui, sans-serif;
+  font: inherit;
+  letter-spacing: inherit;
 }
 
 .local-participation-person-tag small {
-  font: 650 clamp(10px, 1vw, 13px)/1 system-ui, sans-serif;
+  font: inherit;
   opacity: .90;
+  letter-spacing: inherit;
 }
 
 @media (max-width: 720px) {
@@ -92,11 +98,11 @@
   }
 
   .local-participation-person-tag strong {
-    font-size: 12px;
+    font: inherit;
   }
 
   .local-participation-person-tag small {
-    font-size: 10px;
+    font: inherit;
   }
 }
 
