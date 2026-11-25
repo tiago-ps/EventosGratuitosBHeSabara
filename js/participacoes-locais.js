@@ -12,6 +12,9 @@
   let observer = null;
   let scheduled = false;
   let localThemeActive = false;
+  const TALENT_PLACE_KEY = 'tem-sim-uai-talento-lugar-v1';
+  const TALENT_PLACE_EVENT = 'mural:talent-place-change';
+  let selectedPlace = '';
 
   function currentPoint() {
     try {
@@ -26,6 +29,32 @@
 
   function panelIsActive() {
     return document.body?.classList.contains('panel-mode');
+  }
+
+  function selectedPlaceFromStorage() {
+    try { return safeText(localStorage.getItem(TALENT_PLACE_KEY)); } catch { return ''; }
+  }
+
+  function placeOptions() {
+    const counts = new Map();
+    for (const person of people.values()) {
+      for (const vinculo of Array.isArray(person?.vinculos) ? person.vinculos : []) {
+        if (vinculo?.ativo === false) continue;
+        const label = safeText(vinculo?.instituicao);
+        if (!label) continue;
+        const key = label.toLowerCase();
+        counts.set(key, { value: label, count: (counts.get(key)?.count || 0) + 1 });
+      }
+    }
+    return [...counts.values()].sort((a, b) => a.value.localeCompare(b.value, 'pt-BR'));
+  }
+
+  function personBelongsToPlace(person, place) {
+    const wanted = safeText(place).toLowerCase();
+    if (!wanted || !person) return false;
+    return (Array.isArray(person.vinculos) ? person.vinculos : []).some(vinculo =>
+      vinculo?.ativo !== false && safeText(vinculo?.instituicao).toLowerCase() === wanted
+    );
   }
 
   function safeText(value) {
@@ -46,25 +75,29 @@
     };
   }
 
-  function matchingPeople(slide) {
-    if (!loaded || !panelIsActive()) return [];
-    const point = currentPoint();
-    const contentId = safeText(slide?.dataset?.communityItemId);
-    if (!point || !contentId) return [];
-
+  function peopleForContent(contentId, options = {}) {
+    if (!loaded) return [];
+    const id = safeText(contentId);
+    if (!id) return [];
+    const point = safeText(options.point ?? currentPoint()).toLowerCase();
+    const place = safeText(options.place ?? selectedPlace);
     const seen = new Set();
     return participations
-      .filter(item => item.ponto === point && item.conteudo_id === contentId)
-      .map(item => ({
-        ...item,
-        pessoa: people.get(item.pessoa_id)
-      }))
+      .filter(item => item.conteudo_id === id)
+      .filter(item => !point || item.ponto === point || place)
+      .filter(item => !place || personBelongsToPlace(people.get(item.pessoa_id), place))
+      .map(item => ({ ...item, pessoa: people.get(item.pessoa_id) }))
       .filter(item => {
         const personId = safeText(item.pessoa?.id);
         if (!personId || !item.pessoa?.nome || seen.has(personId)) return false;
         seen.add(personId);
         return true;
       });
+  }
+
+  function matchingPeople(slide) {
+    if (!panelIsActive()) return [];
+    return peopleForContent(slide?.dataset?.communityItemId, { point: currentPoint(), place: '' });
   }
 
   function createBanner() {
@@ -171,6 +204,20 @@
     }
   }
 
+  function decorateAgendaCard(article, contentId) {
+    if (!article || !selectedPlace || !contentId) return article;
+    article.querySelectorAll('.' + PEOPLE_CLASS).forEach(node => node.remove());
+    const matches = peopleForContent(contentId, { point: '', place: selectedPlace });
+    if (!matches.length) return article;
+    const body = article.querySelector('.agenda-card-body');
+    if (!body) return article;
+    const section = createPeopleTags(matches);
+    section.classList.add('local-participation-agenda-people');
+    body.insertBefore(section, body.firstChild);
+    article.dataset.talentosCasa = 'true';
+    return article;
+  }
+
   function refresh() {
     scheduled = false;
     const slides = [...document.querySelectorAll('#app > .slide')];
@@ -211,9 +258,16 @@
         .filter(Boolean);
 
       loaded = true;
+      selectedPlace = selectedPlaceFromStorage();
+      window.dispatchEvent(new CustomEvent(TALENT_PLACE_EVENT, {
+        detail: { loaded: true, places: placeOptions(), selectedPlace }
+      }));
       scheduleRefresh();
     } catch (error) {
       loaded = false;
+      window.dispatchEvent(new CustomEvent(TALENT_PLACE_EVENT, {
+        detail: { loaded: false, places: [], selectedPlace: '' }
+      }));
       console.warn('Participações locais indisponíveis.', error);
       scheduleRefresh();
     }
@@ -236,9 +290,37 @@
   }
 
   window.MuralCultural = window.MuralCultural || {};
-  window.MuralCultural.localParticipation = Object.freeze({
-    refresh: scheduleRefresh
-  });
+  window.MuralCultural.localParticipation = {
+    refresh: scheduleRefresh,
+    isLoaded: () => loaded,
+    places: () => placeOptions(),
+    selectedPlace: () => selectedPlace,
+    setSelectedPlace: value => {
+      const next = safeText(value);
+      selectedPlace = placeOptions().some(item => item.value === next) ? next : '';
+      try {
+        if (selectedPlace) localStorage.setItem(TALENT_PLACE_KEY, selectedPlace);
+        else localStorage.removeItem(TALENT_PLACE_KEY);
+      } catch { /* a escolha continua válida nesta sessão */ }
+      window.dispatchEvent(new CustomEvent(TALENT_PLACE_EVENT, {
+        detail: { loaded, places: placeOptions(), selectedPlace }
+      }));
+      scheduleRefresh();
+      return selectedPlace;
+    },
+    clearSelectedPlace: () => {
+      selectedPlace = '';
+      try { localStorage.removeItem(TALENT_PLACE_KEY); } catch { /* opcional */ }
+      window.dispatchEvent(new CustomEvent(TALENT_PLACE_EVENT, {
+        detail: { loaded, places: placeOptions(), selectedPlace: '' }
+      }));
+      scheduleRefresh();
+    },
+    peopleForContent,
+    matchesContent: contentId => Boolean(selectedPlace && peopleForContent(contentId, { point: '', place: selectedPlace }).length),
+    decorateAgendaCard,
+    TALENT_PLACE_EVENT
+  };
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', start, { once: true });
