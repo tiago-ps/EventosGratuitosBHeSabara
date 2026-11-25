@@ -73,11 +73,16 @@
     banner.setAttribute('aria-label', 'Talentos da Casa');
     banner.setAttribute('data-local-participation', 'true');
 
-    const title = document.createElement('strong');
-    title.className = 'local-participation-title';
-    title.textContent = 'Talentos da Casa';
+    const image = document.createElement('img');
+    image.className = 'local-participation-banner-image';
+    image.src = './imagens/selos/talentos-da-casa-banner.png?v=1';
+    image.alt = 'Talentos da Casa';
+    image.width = 1200;
+    image.height = 260;
+    image.decoding = 'async';
+    image.draggable = false;
 
-    banner.appendChild(title);
+    banner.appendChild(image);
     return banner;
   }
 
