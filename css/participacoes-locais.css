@@ -162,23 +162,25 @@
 
 .agenda-curation-banners {
   position: absolute;
-  left: 8px;
-  right: 8px;
-  bottom: 8px;
+  inset: 0 8px 8px;
   z-index: 5;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
+  align-content: flex-end;
   justify-content: flex-start;
   gap: 6px;
   pointer-events: none;
 }
 
 .agenda-curation-banner {
-  display: block;
+  display: flex;
   flex: 0 1 auto;
+  align-items: flex-end;
+  justify-content: flex-start;
   width: min(52%, 220px);
   max-width: 52%;
+  height: 28%;
   max-height: 28%;
   overflow: hidden;
   margin: 0;
@@ -188,26 +190,24 @@
   appearance: none;
   cursor: pointer;
   pointer-events: auto;
-  background: rgba(0, 0, 0, .18);
-  box-shadow: 0 7px 20px rgba(0, 0, 0, .38);
-  backdrop-filter: blur(2px);
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
 }
 
-
-.agenda-curation-banner:focus-visible,
-.local-participation-agenda-banner:focus-visible {
-  outline: 3px solid currentColor;
-  outline-offset: 3px;
-}
-
-.agenda-card-media .agenda-curation-banner img {
+/* Isola o banner das regras genéricas aplicadas às imagens dos cards,
+   inclusive do seletor mais específico usado no modo Agenda mobile. */
+body.agenda-mode .agenda-card-media .agenda-curation-banner img {
+  position: static;
+  inset: auto;
   display: block;
   width: 100%;
-  height: auto;
-  max-height: none;
+  height: 100%;
+  min-height: 0;
+  max-height: 100%;
   object-fit: contain;
+  object-position: left bottom;
 }
-
 @media (max-width: 760px) {
   .agenda-curation-banners {
     left: 6px;
