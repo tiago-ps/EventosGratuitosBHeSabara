@@ -4548,15 +4548,15 @@ function eventProgram(event) {
     }
     const curation = agendaCurationEntries().find(entry => entry.id === state.mobileCuration);
     const matchesCuration = item => agendaItemMatchesCuration(item, curation);
-    const events = filterAgendaItemsByTalentPlace(agendaVisibleEvents().filter(matchesCuration));
-    const books = filterAgendaItemsByTalentPlace(agendaVisibleBooks().filter(matchesCuration));
-    const courses = filterAgendaItemsByTalentPlace(agendaVisibleCourses().filter(matchesCuration));
-    const contests = filterAgendaItemsByTalentPlace(agendaVisibleContests().filter(matchesCuration));
-    const films = filterAgendaItemsByTalentPlace(agendaVisibleFilms().filter(matchesCuration));
-    const utility = filterAgendaItemsByTalentPlace(agendaVisibleUtility().filter(matchesCuration));
-    const spaces = filterAgendaItemsByTalentPlace(agendaVisibleSpaces().filter(matchesCuration));
-    const activities = filterAgendaItemsByTalentPlace(agendaVisibleActivities().filter(matchesCuration));
-    const platforms = filterAgendaItemsByTalentPlace(agendaVisiblePlatforms().filter(matchesCuration));
+    const events = filterAgendaItemsByTalentPoint(agendaVisibleEvents().filter(matchesCuration));
+    const books = filterAgendaItemsByTalentPoint(agendaVisibleBooks().filter(matchesCuration));
+    const courses = filterAgendaItemsByTalentPoint(agendaVisibleCourses().filter(matchesCuration));
+    const contests = filterAgendaItemsByTalentPoint(agendaVisibleContests().filter(matchesCuration));
+    const films = filterAgendaItemsByTalentPoint(agendaVisibleFilms().filter(matchesCuration));
+    const utility = filterAgendaItemsByTalentPoint(agendaVisibleUtility().filter(matchesCuration));
+    const spaces = filterAgendaItemsByTalentPoint(agendaVisibleSpaces().filter(matchesCuration));
+    const activities = filterAgendaItemsByTalentPoint(agendaVisibleActivities().filter(matchesCuration));
+    const platforms = filterAgendaItemsByTalentPoint(agendaVisiblePlatforms().filter(matchesCuration));
     return {
       events,
       books,
@@ -5775,52 +5775,52 @@ function eventProgram(event) {
     return agendaItemsForIds(favorites);
   }
 
-  function talentPlaceSelected() {
-    return String(localParticipation?.selectedPlace?.() || '').trim();
+  function talentPointSelected() {
+    return String(localParticipation?.selectedPoint?.() || '').trim();
   }
 
-  function talentPlaceMatches(item) {
-    const place = talentPlaceSelected();
-    if (!place) return true;
+  function talentPointMatches(item) {
+    const point = talentPointSelected();
+    if (!point) return true;
     return Boolean(localParticipation?.matchesContent?.(agendaFavoriteId(item)));
   }
 
-  function filterAgendaItemsByTalentPlace(items) {
-    if (!talentPlaceSelected()) return items;
-    return items.filter(talentPlaceMatches);
+  function filterAgendaItemsByTalentPoint(items) {
+    if (!talentPointSelected()) return items;
+    return items.filter(talentPointMatches);
   }
 
-  function openTalentPlaceDialog() {
-    document.getElementById('agenda-talent-place-dialog')?.remove();
-    const places = localParticipation?.places?.() || [];
-    const selected = talentPlaceSelected();
+  function openTalentPointDialog() {
+    document.getElementById('agenda-talent-point-dialog')?.remove();
+    const points = localParticipation?.points?.() || [];
+    const selected = talentPointSelected();
     const dialog = document.createElement('dialog');
-    dialog.id = 'agenda-talent-place-dialog';
-    dialog.className = 'agenda-curation-suggestion-dialog agenda-talent-place-dialog';
+    dialog.id = 'agenda-talent-point-dialog';
+    dialog.className = 'agenda-curation-suggestion-dialog agenda-talent-point-dialog';
     const card = document.createElement('form');
     card.method = 'dialog';
     card.className = 'agenda-curation-suggestion-card agenda-talent-place-card';
     card.innerHTML = `
       <div class="agenda-curation-suggestion-heading">
-        <div><p class="agenda-curation-suggestion-eyebrow">Talentos da Casa</p><h2>Escolha seu lugar</h2></div>
+        <div><p class="agenda-curation-suggestion-eyebrow">Talentos da Casa</p><h2>Escolha o ponto</h2></div>
         <button type="button" class="agenda-curation-suggestion-close" aria-label="Fechar">×</button>
       </div>
-      <p>Escolha uma instituição ou comunidade para encontrar conteúdos que tenham a participação de pessoas vinculadas a esse lugar.</p>
-      <div class="agenda-talent-place-options"></div>
+      <p>Escolha um ponto de exibição para encontrar conteúdos que tenham a participação de pessoas cadastradas como Talento da Casa nesse ponto.</p>
+      <div class="agenda-talent-point-options"></div>
       <p class="agenda-talent-place-help">A escolha fica somente neste dispositivo. O Tem Sim, Uai não precisa saber quem você é.</p>
       <div class="agenda-curation-suggestion-actions">
         <button type="button" class="secondary agenda-talent-place-cancel">Fechar</button>
         <button type="submit" class="agenda-talent-place-apply">Aplicar</button>
       </div>
     `;
-    const options = card.querySelector('.agenda-talent-place-options');
+    const options = card.querySelector('.agenda-talent-point-options');
     const entries = [
       { value: '', label: 'Todos os conteúdos', detail: 'Não aplicar o filtro de Talentos da Casa.' },
-      ...places.map(place => ({ value: place.value, label: place.value, detail: `${place.count} ${place.count === 1 ? 'pessoa vinculada' : 'pessoas vinculadas'}` }))
+      ...points.map(point => ({ value: point.value, label: point.label, detail: `${point.count} ${point.count === 1 ? 'pessoa vinculada' : 'pessoas vinculadas'}` }))
     ];
     entries.forEach(entry => {
       const label = document.createElement('label');
-      label.className = `agenda-talent-place-option${selected === entry.value ? ' is-selected' : ''}`;
+      label.className = `agenda-talent-point-option${selected === entry.value ? ' is-selected' : ''}`;
       const input = document.createElement('input');
       input.type = 'radio'; input.name = 'talent-place'; input.value = entry.value; input.checked = selected === entry.value;
       const text = document.createElement('span');
@@ -5828,7 +5828,7 @@ function eventProgram(event) {
       const small = document.createElement('small'); small.textContent = entry.detail;
       text.append(strong, small); label.append(input, text); options.append(label);
       input.addEventListener('change', () => {
-        options.querySelectorAll('.agenda-talent-place-option').forEach(item => item.classList.remove('is-selected'));
+        options.querySelectorAll('.agenda-talent-point-option').forEach(item => item.classList.remove('is-selected'));
         label.classList.add('is-selected');
       });
     });
@@ -5839,8 +5839,8 @@ function eventProgram(event) {
     dialog.addEventListener('cancel', event => { event.preventDefault(); close(); });
     card.addEventListener('submit', event => {
       event.preventDefault();
-      const value = card.querySelector('input[name="talent-place"]:checked')?.value || '';
-      localParticipation?.setSelectedPlace?.(value);
+      const value = card.querySelector('input[name="talent-point"]:checked')?.value || '';
+      localParticipation?.setSelectedPoint?.(value);
       close();
     });
     dialog.showModal();
@@ -6211,11 +6211,11 @@ function eventProgram(event) {
       </nav>
       <div class="agenda-header-actions">
         <button
-          class="agenda-talent-place-button${talentPlaceSelected() ? ' is-active' : ''}"
+          class="agenda-talent-place-button${talentPointSelected() ? ' is-active' : ''}"
           type="button"
           title="Talentos da Casa"
-          aria-label="Encontrar conteúdos com participação de pessoas do meu lugar"
-        ><span aria-hidden="true">★</span><span class="agenda-talent-place-label">${talentPlaceSelected() ? 'Talentos: ' + escapeHtml(talentPlaceSelected()) : 'Talentos da Casa'}</span></button>
+          aria-label="Encontrar conteúdos com participação de Talentos da Casa no meu ponto"
+        ><span aria-hidden="true">★</span><span class="agenda-talent-place-label">${talentPointSelected() ? 'Talentos: ' + escapeHtml(localParticipation?.points?.().find(point => point.value === talentPointSelected())?.label || talentPointSelected()) : 'Talentos da Casa'}</span></button>
         <button
           class="agenda-favorites-toggle${state.mobileFavoritesOnly ? ' is-active' : ''}"
           type="button"
@@ -6261,7 +6261,7 @@ function eventProgram(event) {
       </div>
     `;
 
-    header.querySelector('.agenda-talent-place-button')?.addEventListener('click', openTalentPlaceDialog);
+    header.querySelector('.agenda-talent-place-button')?.addEventListener('click', openTalentPointDialog);
 
     const controls = document.createElement('section');
     controls.className = `agenda-tools agenda-tools-${state.mobileContent}`;
