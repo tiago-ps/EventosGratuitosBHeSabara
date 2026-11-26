@@ -816,13 +816,69 @@
     return root.loadedCurations.length;
   }
 
+  const CURATION_MEMBER_COLLECTIONS = Object.freeze({
+    evento: 'eventos',
+    livro: 'livros',
+    curso: 'cursos',
+    filme: 'filmes',
+    utilidade_publica: 'utilidade_publica',
+    concurso: 'concursos'
+  });
+
+  const CURATION_MEMBER_ID_FIELDS = Object.freeze({
+    eventos: 'id',
+    livros: 'id',
+    cursos: 'id_fonte',
+    filmes: 'id',
+    utilidade_publica: 'id',
+    concursos: 'id'
+  });
+
+  function curationAgendaItemMatches(item, curation) {
+    if (!item || !curation) return false;
+    if (matchesCuration(item, curation)) return true;
+
+    // A associação formal da curadoria também é consultada diretamente.
+    // Isso evita que uma transformação intermediária da Agenda elimine
+    // curadoria_ids antes da criação do card.
+    const collection = CURATION_MEMBER_COLLECTIONS[item?.tipo_conteudo];
+    const idField = CURATION_MEMBER_ID_FIELDS[collection];
+    const itemId = idField ? String(item?.[idField] ?? '').trim() : '';
+    if (!collection || !itemId) return false;
+
+    const members = Array.isArray(curation?.membros?.[collection])
+      ? curation.membros[collection]
+      : [];
+    if (members.some(value => String(value ?? '').trim() === itemId)) return true;
+
+    const overlays = curation?.overlays?.[collection];
+    if (overlays && typeof overlays === 'object' &&
+        Object.prototype.hasOwnProperty.call(overlays, itemId)) {
+      return true;
+    }
+
+    const complements = Array.isArray(curation?.complementos?.[collection])
+      ? curation.complementos[collection]
+      : [];
+    return complements.some(record => {
+      const complementId = String(record?.[idField] ?? '').trim();
+      return complementId === itemId;
+    });
+  }
+
   function curationBannerSource(curation) {
-    return safeImage(
+    const candidate = safeImage(
       curation?.perfil_painel?.banner?.src ||
       curation?.banner?.src ||
       curation?.banner ||
       ''
     );
+    if (!candidate) return '';
+    try {
+      return new URL(candidate, document.baseURI).href;
+    } catch {
+      return candidate;
+    }
   }
 
   function decorateAgendaCard(article, item) {
@@ -833,15 +889,14 @@
 
     media.querySelectorAll('.agenda-curation-banners').forEach(node => node.remove());
 
-    const ids = mergeCurationIds(item?.curadoria_ids);
     const curations = Array.isArray(root.loadedCurations) ? root.loadedCurations : [];
-    if (!ids.length || !curations.length) return article;
+    if (!curations.length) return article;
 
     const matches = [];
     const seen = new Set();
     for (const curation of curations) {
       const id = mergeCurationIds(curation?.id)[0];
-      if (!id || seen.has(id) || !ids.includes(id)) continue;
+      if (!id || seen.has(id) || !curationAgendaItemMatches(item, curation)) continue;
       const src = curationBannerSource(curation);
       if (!src) continue;
       seen.add(id);
@@ -866,7 +921,7 @@
         match.curation?.nome ||
         match.id
       );
-      image.loading = 'lazy';
+      image.loading = 'eager';
       image.decoding = 'async';
       image.draggable = false;
       image.addEventListener('error', () => banner.remove(), { once: true });
@@ -902,7 +957,8 @@
     safeImage,
     setPanelSupportImageState,
     setLoadedCurations,
-    decorateAgendaCard
+    decorateAgendaCard,
+    curationAgendaItemMatches
   });
 
   (() => {
