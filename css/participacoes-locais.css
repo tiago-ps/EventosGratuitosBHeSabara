@@ -165,11 +165,11 @@
   backdrop-filter: blur(2px);
 }
 
-.agenda-curation-banner img {
+.agenda-card-media .agenda-curation-banner img {
   display: block;
   width: 100%;
   height: auto;
-  max-height: 100%;
+  max-height: none;
   object-fit: contain;
 }
 
