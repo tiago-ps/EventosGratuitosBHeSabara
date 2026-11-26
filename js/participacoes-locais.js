@@ -12,9 +12,9 @@
   let observer = null;
   let scheduled = false;
   let localThemeActive = false;
-  const TALENT_PLACE_KEY = 'tem-sim-uai-talento-lugar-v1';
-  const TALENT_PLACE_EVENT = 'mural:talent-place-change';
-  let selectedPlace = '';
+  const TALENT_POINT_KEY = 'tem-sim-uai-talento-ponto-v2';
+  const TALENT_POINT_EVENT = 'mural:talent-point-change';
+  let selectedPoint = '';
 
   function currentPoint() {
     try {
@@ -31,29 +31,35 @@
     return document.body?.classList.contains('panel-mode');
   }
 
-  function selectedPlaceFromStorage() {
-    try { return safeText(localStorage.getItem(TALENT_PLACE_KEY)); } catch { return ''; }
+  function selectedPointFromStorage() {
+    try { return safeText(localStorage.getItem(TALENT_POINT_KEY)); } catch { return ''; }
   }
 
-  function placeOptions() {
+  function pointOptions() {
     const counts = new Map();
     for (const person of people.values()) {
-      for (const vinculo of Array.isArray(person?.vinculos) ? person.vinculos : []) {
-        if (vinculo?.ativo === false) continue;
-        const label = safeText(vinculo?.instituicao);
-        if (!label) continue;
-        const key = label.toLowerCase();
-        counts.set(key, { value: label, count: (counts.get(key)?.count || 0) + 1 });
+      for (const talento of Array.isArray(person?.talentos) ? person.talentos : []) {
+        if (talento?.ativo === false) continue;
+        const point = safeText(talento?.ponto).toLowerCase();
+        if (!point) continue;
+        const label = safeText(talento?.nome_ponto) || point;
+        const entry = counts.get(point) || { value: point, label, count: 0, people: new Set() };
+        entry.label = entry.label || label;
+        entry.people.add(safeText(person.id));
+        entry.count = entry.people.size;
+        counts.set(point, entry);
       }
     }
-    return [...counts.values()].sort((a, b) => a.value.localeCompare(b.value, 'pt-BR'));
+    return [...counts.values()]
+      .map(({ people, ...entry }) => entry)
+      .sort((a, b) => a.label.localeCompare(b.label, 'pt-BR'));
   }
 
-  function personBelongsToPlace(person, place) {
-    const wanted = safeText(place).toLowerCase();
+  function personIsTalentAtPoint(person, point) {
+    const wanted = safeText(point).toLowerCase();
     if (!wanted || !person) return false;
-    return (Array.isArray(person.vinculos) ? person.vinculos : []).some(vinculo =>
-      vinculo?.ativo !== false && safeText(vinculo?.instituicao).toLowerCase() === wanted
+    return (Array.isArray(person.talentos) ? person.talentos : []).some(talento =>
+      talento?.ativo !== false && safeText(talento?.ponto).toLowerCase() === wanted
     );
   }
 
@@ -79,13 +85,14 @@
     if (!loaded) return [];
     const id = safeText(contentId);
     if (!id) return [];
-    const point = safeText(options.point ?? currentPoint()).toLowerCase();
-    const place = safeText(options.place ?? selectedPlace);
+    const point = safeText(options.point ?? currentPoint()).toLowerCase() ||
+      safeText(options.talentPoint ?? selectedPoint).toLowerCase();
+    if (!point) return [];
     const seen = new Set();
     return participations
       .filter(item => item.conteudo_id === id)
-      .filter(item => point ? item.ponto === point : Boolean(place))
-      .filter(item => !place || personBelongsToPlace(people.get(item.pessoa_id), place))
+      .filter(item => item.ponto === point)
+      .filter(item => personIsTalentAtPoint(people.get(item.pessoa_id), point))
       .map(item => ({ ...item, pessoa: people.get(item.pessoa_id) }))
       .filter(item => {
         const personId = safeText(item.pessoa?.id);
@@ -100,7 +107,7 @@
     // O selo no painel é específico de um ponto de divulgação. Sem ?ponto=,
     // não associamos conteúdos a uma comunidade por inferência.
     if (!panelIsActive() || !point) return [];
-    return peopleForContent(slide?.dataset?.communityItemId, { point, place: '' });
+    return peopleForContent(slide?.dataset?.communityItemId, { point });
   }
 
   function createBanner() {
@@ -208,9 +215,9 @@
   }
 
   function decorateAgendaCard(article, contentId) {
-    if (!article || !selectedPlace || !contentId) return article;
+    if (!article || !selectedPoint || !contentId) return article;
     article.querySelectorAll('.' + PEOPLE_CLASS).forEach(node => node.remove());
-    const matches = peopleForContent(contentId, { point: '', place: selectedPlace });
+    const matches = peopleForContent(contentId, { point: selectedPoint });
     if (!matches.length) return article;
     const body = article.querySelector('.agenda-card-body');
     if (!body) return article;
@@ -261,15 +268,16 @@
         .filter(Boolean);
 
       loaded = true;
-      selectedPlace = selectedPlaceFromStorage();
-      window.dispatchEvent(new CustomEvent(TALENT_PLACE_EVENT, {
-        detail: { loaded: true, places: placeOptions(), selectedPlace }
+      selectedPoint = selectedPointFromStorage();
+      if (!pointOptions().some(item => item.value === selectedPoint)) selectedPoint = '';
+      window.dispatchEvent(new CustomEvent(TALENT_POINT_EVENT, {
+        detail: { loaded: true, points: pointOptions(), selectedPoint }
       }));
       scheduleRefresh();
     } catch (error) {
       loaded = false;
-      window.dispatchEvent(new CustomEvent(TALENT_PLACE_EVENT, {
-        detail: { loaded: false, places: [], selectedPlace: '' }
+      window.dispatchEvent(new CustomEvent(TALENT_POINT_EVENT, {
+        detail: { loaded: false, points: [], selectedPoint: '' }
       }));
       console.warn('Participações locais indisponíveis.', error);
       scheduleRefresh();
@@ -296,33 +304,35 @@
   window.MuralCultural.localParticipation = {
     refresh: scheduleRefresh,
     isLoaded: () => loaded,
-    places: () => placeOptions(),
-    selectedPlace: () => selectedPlace,
-    setSelectedPlace: value => {
-      const next = safeText(value);
-      selectedPlace = placeOptions().some(item => item.value === next) ? next : '';
+    points: () => pointOptions(),
+    selectedPoint: () => selectedPoint,
+    setSelectedPoint: value => {
+      const next = safeText(value).toLowerCase();
+      selectedPoint = pointOptions().some(item => item.value === next) ? next : '';
       try {
-        if (selectedPlace) localStorage.setItem(TALENT_PLACE_KEY, selectedPlace);
-        else localStorage.removeItem(TALENT_PLACE_KEY);
+        if (selectedPoint) localStorage.setItem(TALENT_POINT_KEY, selectedPoint);
+        else localStorage.removeItem(TALENT_POINT_KEY);
       } catch { /* a escolha continua válida nesta sessão */ }
-      window.dispatchEvent(new CustomEvent(TALENT_PLACE_EVENT, {
-        detail: { loaded, places: placeOptions(), selectedPlace }
+      window.dispatchEvent(new CustomEvent(TALENT_POINT_EVENT, {
+        detail: { loaded, points: pointOptions(), selectedPoint }
       }));
       scheduleRefresh();
-      return selectedPlace;
+      return selectedPoint;
     },
-    clearSelectedPlace: () => {
-      selectedPlace = '';
-      try { localStorage.removeItem(TALENT_PLACE_KEY); } catch { /* opcional */ }
-      window.dispatchEvent(new CustomEvent(TALENT_PLACE_EVENT, {
-        detail: { loaded, places: placeOptions(), selectedPlace: '' }
+    clearSelectedPoint: () => {
+      selectedPoint = '';
+      try { localStorage.removeItem(TALENT_POINT_KEY); } catch { /* opcional */ }
+      window.dispatchEvent(new CustomEvent(TALENT_POINT_EVENT, {
+        detail: { loaded, points: pointOptions(), selectedPoint: '' }
       }));
       scheduleRefresh();
     },
     peopleForContent,
-    matchesContent: contentId => Boolean(selectedPlace && peopleForContent(contentId, { point: '', place: selectedPlace }).length),
+    matchesContent: contentId => Boolean(
+      selectedPoint && peopleForContent(contentId, { point: selectedPoint }).length
+    ),
     decorateAgendaCard,
-    TALENT_PLACE_EVENT
+    TALENT_POINT_EVENT
   };
 
   if (document.readyState === 'loading') {
