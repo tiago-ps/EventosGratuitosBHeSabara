@@ -6968,6 +6968,33 @@ function eventProgram(event) {
     if (effectiveViewMode() === 'agenda') renderAgenda();
   });
 
+  window.addEventListener('mural:agenda-curation-filter-request', event => {
+    if (effectiveViewMode() !== 'agenda') return;
+    const curationId = String(event.detail?.curationId || '').trim();
+    if (!curationId || !agendaCurationEntries().some(curation => curation.id === curationId)) return;
+
+    state.mobileFavoritesOnly = false;
+    exitSharedAgendaSelection();
+    exitFocusedAgendaItem();
+    state.mobileCuration = curationId;
+    state.mobileFiltersOpen = true;
+    resetAgendaBatches();
+    renderAgenda();
+
+    requestAnimationFrame(() => {
+      const select = document.querySelector('#agenda-filter-panel .agenda-curation');
+      select?.focus();
+    });
+  });
+
+  window.addEventListener('mural:agenda-talent-filter-request', () => {
+    if (effectiveViewMode() !== 'agenda') return;
+    state.mobileFavoritesOnly = false;
+    exitSharedAgendaSelection();
+    exitFocusedAgendaItem();
+    openTalentPointDialog();
+  });
+
   function renderCurrentView() {
     if (effectiveViewMode() === 'agenda') {
       renderAgenda();
