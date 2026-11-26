@@ -165,7 +165,7 @@
 
       if (match.papel) {
         const role = document.createElement('small');
-        role.textContent = match.papel;
+        role.textContent = `— ${match.papel}`;
         tag.appendChild(role);
       }
 
