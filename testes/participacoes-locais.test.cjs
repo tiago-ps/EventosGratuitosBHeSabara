@@ -101,6 +101,10 @@ assert.match(appSource, /localParticipation\?\.decorateAgendaCard/);
 assert.match(source, /local-participation-agenda-banner/);
 assert.match(appSource, /localParticipation\?\.selectedPoint/);
 assert.match(appSource, /localParticipation\?\.points/);
+assert.match(appSource, /mural:agenda-curation-filter-request/);
+assert.match(appSource, /mural:agenda-talent-filter-request/);
+assert.match(source, /mural:agenda-talent-filter-request/);
+assert.match(source, /interactive: true/);
 assert.doesNotMatch(appSource, /localParticipation\?\.selectedPlace/);
 assert.doesNotMatch(appSource, /localParticipation\?\.places/);
 
