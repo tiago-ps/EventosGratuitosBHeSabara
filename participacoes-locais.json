@@ -19,6 +19,30 @@
       "conteudo_id": "atividade_lazer:atividade:pbh:tai-chi-parque-municipal",
       "pessoa_id": "jose-marcello-sales-giffoni",
       "papel": "professor de Tai Chi Chuan"
+    },
+    {
+      "ponto": "ifmg-sabara-balcao-biblioteca",
+      "conteudo_id": "evento:manual-santa-cecilia-conectando-geracoes-2026-11-28",
+      "pessoa_id": "mario-matheus-de-oliveira-silva",
+      "papel": "coral"
+    },
+    {
+      "ponto": "ifmg-sabara-balcao-biblioteca",
+      "conteudo_id": "evento:manual-santa-cecilia-conectando-geracoes-2026-11-28",
+      "pessoa_id": "luisa-martins-vieira",
+      "papel": "violinista"
+    },
+    {
+      "ponto": "ifmg-sabara-balcao-biblioteca",
+      "conteudo_id": "evento:sympla-sabara-3644413",
+      "pessoa_id": "mario-matheus-de-oliveira-silva",
+      "papel": "coral"
+    },
+    {
+      "ponto": "ifmg-sabara-balcao-biblioteca",
+      "conteudo_id": "evento:sympla-sabara-3644413",
+      "pessoa_id": "luisa-martins-vieira",
+      "papel": "violinista"
     }
   ]
 }
