@@ -6964,7 +6964,7 @@ function eventProgram(event) {
     controls.prepend(button);
   }
 
-  window.addEventListener('mural:talent-place-change', () => {
+  window.addEventListener('mural:talent-point-change', () => {
     if (effectiveViewMode() === 'agenda') renderAgenda();
   });
 
