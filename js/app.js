@@ -5816,13 +5816,13 @@ function eventProgram(event) {
     const options = card.querySelector('.agenda-talent-point-options');
     const entries = [
       { value: '', label: 'Todos os conteúdos', detail: 'Não aplicar o filtro de Talentos da Casa.' },
-      ...points.map(point => ({ value: point.value, label: point.label, detail: `${point.count} ${point.count === 1 ? 'pessoa vinculada' : 'pessoas vinculadas'}` }))
+      ...points.map(point => ({ value: point.value, label: point.label, detail: `${point.count} ${point.count === 1 ? 'talento associado' : 'talentos associados'}` }))
     ];
     entries.forEach(entry => {
       const label = document.createElement('label');
       label.className = `agenda-talent-point-option${selected === entry.value ? ' is-selected' : ''}`;
       const input = document.createElement('input');
-      input.type = 'radio'; input.name = 'talent-place'; input.value = entry.value; input.checked = selected === entry.value;
+      input.type = 'radio'; input.name = 'talent-point'; input.value = entry.value; input.checked = selected === entry.value;
       const text = document.createElement('span');
       const strong = document.createElement('strong'); strong.textContent = entry.label;
       const small = document.createElement('small'); small.textContent = entry.detail;
