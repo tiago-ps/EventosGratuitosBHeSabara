@@ -3,7 +3,7 @@ importScripts('./js/temporalidade-eventos.js?v=1');
 
 const SW_EVENT_RELATIONS = self.MuralCultural?.eventRelations;
 const SW_EVENT_TEMPORAL = self.MuralCultural?.eventTemporal;
-const CACHE_VERSION = 'mural-cultural-v234-banners-agenda-alinhamento';
+const CACHE_VERSION = 'mural-cultural-v235-selo-talentos-atividade';
 const CORE_CACHE = `${CACHE_VERSION}-core`;
 const DATA_CACHE = `${CACHE_VERSION}-data`;
 const IMAGE_CACHE = `${CACHE_VERSION}-images`;
@@ -26,7 +26,7 @@ const CORE_ASSETS = [
   './css/painel-modos.css?v=2',
   './css/painel-acoes-contextuais.css?v=3',
   './css/tem-sim-uai-painel.css?v=2',
-  './css/participacoes-locais.css?v=10',
+  './css/participacoes-locais.css?v=11',
   './js/tema-visual-boot.js?v=18',
   './js/core/rotacao.js?v=2',
   './js/notificacoes.js?v=1',
