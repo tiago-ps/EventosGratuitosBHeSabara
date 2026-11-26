@@ -84,6 +84,7 @@ assert.match(css, /\.local-participation-banner/);
 assert.match(css, /\.local-participation-person-tag/);
 assert.match(css, /agenda-talent-point-button/);
 assert.match(css, /\.local-participation-agenda-banner/);
+assert.match(css, /\.agenda-activity-card \.activity-agenda-media \.local-participation-agenda-banner \.local-participation-banner-image\s*\{[^}]*min-height:\s*0[^}]*object-fit:\s*contain/s);
 assert.match(css, /agenda-talent-point-option/);
 
 assert.match(source, /localParticipationTheme/);
