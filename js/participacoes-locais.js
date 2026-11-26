@@ -215,10 +215,21 @@
   }
 
   function decorateAgendaCard(article, contentId) {
-    if (!article || !selectedPoint || !contentId) return article;
-    article.querySelectorAll('.' + PEOPLE_CLASS).forEach(node => node.remove());
+    if (!article) return article;
+    article.querySelectorAll('.' + PEOPLE_CLASS + ', .local-participation-agenda-banner')
+      .forEach(node => node.remove());
+    if (!selectedPoint || !contentId) return article;
+
     const matches = peopleForContent(contentId, { point: selectedPoint });
     if (!matches.length) return article;
+
+    const media = article.querySelector('.agenda-card-media');
+    if (media) {
+      const banner = createBanner();
+      banner.classList.add('local-participation-agenda-banner');
+      media.appendChild(banner);
+    }
+
     const body = article.querySelector('.agenda-card-body');
     if (!body) return article;
     const section = createPeopleTags(matches);
