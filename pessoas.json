@@ -56,6 +56,46 @@
           "observacao": "Registro preparado para futura ligação ao item correspondente do acervo da biblioteca."
         }
       ]
+    },
+    {
+      "id": "mario-matheus-de-oliveira-silva",
+      "nome": "Mário Matheus De Oliveira Silva",
+      "vinculos": [
+        {
+          "instituicao": "IFMG Campus Sabará",
+          "tipo": "aluna",
+          "ativo": true
+        }
+      ],
+      "talentos": [
+        {
+          "ponto": "ifmg-sabara-balcao-biblioteca",
+          "nome_ponto": "Biblioteca do IFMG Campus Sabará",
+          "papel": "coral",
+          "ativo": true
+        }
+      ],
+      "obras": []
+    },
+    {
+      "id": "luisa-martins-vieira",
+      "nome": "Luisa Martins Vieira",
+      "vinculos": [
+        {
+          "instituicao": "IFMG Campus Sabará",
+          "tipo": "aluna",
+          "ativo": true
+        }
+      ],
+      "talentos": [
+        {
+          "ponto": "ifmg-sabara-balcao-biblioteca",
+          "nome_ponto": "Biblioteca do IFMG Campus Sabará",
+          "papel": "violinista",
+          "ativo": true
+        }
+      ],
+      "obras": []
     }
   ]
 }
