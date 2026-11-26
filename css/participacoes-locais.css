@@ -206,7 +206,7 @@ body.agenda-mode .agenda-card-media .agenda-curation-banner img {
   min-height: 0;
   max-height: 100%;
   object-fit: contain;
-  object-position: left bottom;
+  object-position: center bottom;
 }
 @media (max-width: 760px) {
   .agenda-curation-banners {
