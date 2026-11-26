@@ -68,6 +68,8 @@ assert.match(source, /dataset\.communityItemId/);
 assert.match(source, /Talentos da Casa/);
 assert.match(source, /imagens\/selos\/talentos-da-casa-banner\.png/);
 assert.match(source, /personIsTalentAtPoint/);
+assert.match(source, /curationAgendaItemMatches/);
+assert.match(source, /CURATION_MEMBER_COLLECTIONS/);
 assert.match(source, /talentos/);
 assert.match(source, /TALENT_POINT_KEY/);
 assert.match(source, /selectedPoint/);
