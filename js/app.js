@@ -5799,7 +5799,7 @@ function eventProgram(event) {
     dialog.className = 'agenda-curation-suggestion-dialog agenda-talent-point-dialog';
     const card = document.createElement('form');
     card.method = 'dialog';
-    card.className = 'agenda-curation-suggestion-card agenda-talent-place-card';
+    card.className = 'agenda-curation-suggestion-card agenda-talent-point-card';
     card.innerHTML = `
       <div class="agenda-curation-suggestion-heading">
         <div><p class="agenda-curation-suggestion-eyebrow">Talentos da Casa</p><h2>Escolha o ponto</h2></div>
@@ -5807,10 +5807,10 @@ function eventProgram(event) {
       </div>
       <p>Escolha um ponto de exibição para encontrar conteúdos que tenham a participação de pessoas cadastradas como Talento da Casa nesse ponto.</p>
       <div class="agenda-talent-point-options"></div>
-      <p class="agenda-talent-place-help">A escolha fica somente neste dispositivo. O Tem Sim, Uai não precisa saber quem você é.</p>
+      <p class="agenda-talent-point-help">A escolha fica somente neste dispositivo. O Tem Sim, Uai não precisa saber quem você é.</p>
       <div class="agenda-curation-suggestion-actions">
-        <button type="button" class="secondary agenda-talent-place-cancel">Fechar</button>
-        <button type="submit" class="agenda-talent-place-apply">Aplicar</button>
+        <button type="button" class="secondary agenda-talent-point-cancel">Fechar</button>
+        <button type="submit" class="agenda-talent-point-apply">Aplicar</button>
       </div>
     `;
     const options = card.querySelector('.agenda-talent-point-options');
@@ -5835,7 +5835,7 @@ function eventProgram(event) {
     dialog.append(card); document.body.append(dialog);
     const close = () => { if (dialog.open) dialog.close(); dialog.remove(); };
     card.querySelector('.agenda-curation-suggestion-close')?.addEventListener('click', close);
-    card.querySelector('.agenda-talent-place-cancel')?.addEventListener('click', close);
+    card.querySelector('.agenda-talent-point-cancel')?.addEventListener('click', close);
     dialog.addEventListener('cancel', event => { event.preventDefault(); close(); });
     card.addEventListener('submit', event => {
       event.preventDefault();
@@ -6211,11 +6211,11 @@ function eventProgram(event) {
       </nav>
       <div class="agenda-header-actions">
         <button
-          class="agenda-talent-place-button${talentPointSelected() ? ' is-active' : ''}"
+          class="agenda-talent-point-button${talentPointSelected() ? ' is-active' : ''}"
           type="button"
           title="Talentos da Casa"
           aria-label="Encontrar conteúdos com participação de Talentos da Casa no meu ponto"
-        ><span aria-hidden="true">★</span><span class="agenda-talent-place-label">${talentPointSelected() ? 'Talentos: ' + escapeHtml(localParticipation?.points?.().find(point => point.value === talentPointSelected())?.label || talentPointSelected()) : 'Talentos da Casa'}</span></button>
+        ><span aria-hidden="true">★</span><span class="agenda-talent-point-label">${talentPointSelected() ? 'Talentos: ' + escapeHtml(localParticipation?.points?.().find(point => point.value === talentPointSelected())?.label || talentPointSelected()) : 'Talentos da Casa'}</span></button>
         <button
           class="agenda-favorites-toggle${state.mobileFavoritesOnly ? ' is-active' : ''}"
           type="button"
@@ -6261,7 +6261,7 @@ function eventProgram(event) {
       </div>
     `;
 
-    header.querySelector('.agenda-talent-place-button')?.addEventListener('click', openTalentPointDialog);
+    header.querySelector('.agenda-talent-point-button')?.addEventListener('click', openTalentPointDialog);
 
     const controls = document.createElement('section');
     controls.className = `agenda-tools agenda-tools-${state.mobileContent}`;
