@@ -230,3 +230,15 @@ body.agenda-mode .agenda-card-media .agenda-curation-banner img {
     border-radius: 7px;
   }
 }
+
+
+/* O card de atividade aplica uma altura mínima às imagens da mídia.
+   Esta exceção mantém o selo Talentos da Casa compacto e proporcional. */
+body.agenda-mode .agenda-activity-card .activity-agenda-media .local-participation-agenda-banner .local-participation-banner-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  max-height: none;
+  object-fit: contain;
+}
