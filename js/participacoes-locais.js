@@ -110,10 +110,24 @@
     return peopleForContent(slide?.dataset?.communityItemId, { point });
   }
 
-  function createBanner() {
-    const banner = document.createElement('section');
+  function createBanner(options = {}) {
+    const interactive = options.interactive === true;
+    const banner = document.createElement(interactive ? 'button' : 'section');
     banner.className = OVERLAY_CLASS;
-    banner.setAttribute('aria-label', 'Talentos da Casa');
+    if (interactive) {
+      banner.type = 'button';
+      banner.title = 'Abrir filtro de Talentos da Casa';
+      banner.setAttribute('aria-label', 'Abrir filtro de Talentos da Casa');
+      banner.addEventListener('click', event => {
+        event.preventDefault();
+        event.stopPropagation();
+        window.dispatchEvent(new CustomEvent('mural:agenda-talent-filter-request', {
+          detail: { point: safeText(options.point || selectedPoint).toLowerCase() }
+        }));
+      });
+    } else {
+      banner.setAttribute('aria-label', 'Talentos da Casa');
+    }
     banner.setAttribute('data-local-participation', 'true');
 
     const image = document.createElement('img');
@@ -225,7 +239,10 @@
 
     const media = article.querySelector('.agenda-card-media');
     if (media) {
-      const banner = createBanner();
+      const banner = createBanner({
+        interactive: true,
+        point: selectedPoint
+      });
       banner.classList.add('local-participation-agenda-banner');
       media.appendChild(banner);
     }
