@@ -1,14 +1,27 @@
 {
-  "schema": 1,
-  "descricao": "Cadastro experimental de pessoas relacionado ao contexto local do Mural. O vínculo com um local é separado da participação em cada conteúdo.",
+  "schema": 2,
+  "descricao": "Cadastro experimental de pessoas. Vínculos institucionais e comunitários não tornam alguém automaticamente um Talento da Casa. O cadastro de talentos é explícito e sempre ligado a um ponto de exibição do Tem Sim, Uai.",
   "pessoas": [
     {
       "id": "luiza-cordeiro-martines",
       "nome": "Luíza Cordeiro Martines",
       "vinculos": [
         {
+          "instituicao": "IFMG Campus Sabará",
+          "tipo": "aluna",
+          "ativo": true
+        },
+        {
           "instituicao": "Sociedade Musical Santa Cecília",
           "tipo": "musicista",
+          "papel": "violinista",
+          "ativo": true
+        }
+      ],
+      "talentos": [
+        {
+          "ponto": "ifmg-sabara-balcao-biblioteca",
+          "nome_ponto": "Biblioteca do IFMG Campus Sabará",
           "papel": "violinista",
           "ativo": true
         }
@@ -22,6 +35,15 @@
         {
           "instituicao": "IFMG Campus Sabará",
           "tipo": "servidor",
+          "papel": "técnico-administrativo",
+          "ativo": true
+        }
+      ],
+      "talentos": [
+        {
+          "ponto": "ifmg-sabara-balcao-biblioteca",
+          "nome_ponto": "Biblioteca do IFMG Campus Sabará",
+          "papel": "professor de Tai Chi Chuan",
           "ativo": true
         }
       ],
