@@ -145,7 +145,11 @@
   transform: none;
   width: min(52%, 220px);
   max-width: 52%;
-  border-radius: 8px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  appearance: none;
+  cursor: pointer;
   z-index: 6;
 }
 
@@ -177,10 +181,23 @@
   max-width: 52%;
   max-height: 28%;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border: 0;
   border-radius: 8px;
+  appearance: none;
+  cursor: pointer;
+  pointer-events: auto;
   background: rgba(0, 0, 0, .18);
   box-shadow: 0 7px 20px rgba(0, 0, 0, .38);
   backdrop-filter: blur(2px);
+}
+
+
+.agenda-curation-banner:focus-visible,
+.local-participation-agenda-banner:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 3px;
 }
 
 .agenda-card-media .agenda-curation-banner img {
