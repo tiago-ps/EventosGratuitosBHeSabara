@@ -909,10 +909,15 @@
     container.setAttribute('aria-label', 'Banners das curadorias relacionadas');
 
     for (const match of matches) {
-      const banner = document.createElement('span');
+      const banner = document.createElement('button');
+      banner.type = 'button';
       banner.className = 'agenda-curation-banner';
       banner.dataset.curationId = match.id;
       banner.title = String(match.curation?.nome || match.id);
+      banner.setAttribute(
+        'aria-label',
+        `Filtrar por esta curadoria: ${String(match.curation?.nome || match.id)}`
+      );
 
       const image = document.createElement('img');
       image.src = match.src;
@@ -925,6 +930,14 @@
       image.decoding = 'async';
       image.draggable = false;
       image.addEventListener('error', () => banner.remove(), { once: true });
+
+      banner.addEventListener('click', event => {
+        event.preventDefault();
+        event.stopPropagation();
+        window.dispatchEvent(new CustomEvent('mural:agenda-curation-filter-request', {
+          detail: { curationId: match.id }
+        }));
+      });
 
       banner.appendChild(image);
       container.appendChild(banner);
