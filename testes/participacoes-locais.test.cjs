@@ -83,6 +83,7 @@ assert.ok(fs.existsSync(path.join(root, 'imagens/selos/talentos-da-casa-banner.p
 assert.match(css, /\.local-participation-banner/);
 assert.match(css, /\.local-participation-person-tag/);
 assert.match(css, /agenda-talent-point-button/);
+assert.match(css, /\.local-participation-agenda-banner/);
 assert.match(css, /agenda-talent-point-option/);
 
 assert.match(source, /localParticipationTheme/);
@@ -97,6 +98,7 @@ assert.match(appSource, /openTalentPointDialog/);
 assert.match(appSource, /filterAgendaItemsByTalentPoint/);
 assert.match(appSource, /agenda-talent-point-button/);
 assert.match(appSource, /localParticipation\?\.decorateAgendaCard/);
+assert.match(source, /local-participation-agenda-banner/);
 assert.match(appSource, /localParticipation\?\.selectedPoint/);
 assert.match(appSource, /localParticipation\?\.points/);
 assert.doesNotMatch(appSource, /localParticipation\?\.selectedPlace/);
