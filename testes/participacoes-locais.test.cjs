@@ -1,6 +1,7 @@
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const vm = require('node:vm');
 
 const root = path.resolve(__dirname, '..');
 const people = JSON.parse(fs.readFileSync(path.join(root, 'pessoas.json'), 'utf8'));
@@ -109,4 +110,71 @@ assert.match(source, /interactive: true/);
 assert.doesNotMatch(appSource, /localParticipation\?\.selectedPlace/);
 assert.doesNotMatch(appSource, /localParticipation\?\.places/);
 
-console.log('Participações locais: vínculo institucional separado de talento por ponto de exibição.');
+// O link individual da Agenda prevalece sobre preferências antigas do dispositivo.
+const selectionStart = source.indexOf('function selectedPointFromStorage()');
+const selectionEnd = source.indexOf('function pointOptions()', selectionStart);
+assert.ok(selectionStart >= 0 && selectionEnd > selectionStart);
+const selectionCode = source.slice(selectionStart, selectionEnd);
+
+function resolveSharedTalentContext(href, storedValue, availablePoints) {
+  let storageValue = storedValue;
+  const context = vm.createContext({
+    URL,
+    window: { location: { href } },
+    safeText: value => String(value ?? '').trim(),
+    TALENT_POINT_KEY: 'tem-sim-uai-talento-ponto-v2',
+    localStorage: {
+      getItem: () => storageValue,
+      setItem: (_key, value) => { storageValue = value; },
+      removeItem: () => { storageValue = null; }
+    }
+  });
+  vm.runInContext(selectionCode, context);
+  return {
+    selectedPoint: context.resolveSelectedPoint(availablePoints),
+    storedPoint: storageValue
+  };
+}
+
+const sharedPoint = 'ifmg-sabara-balcao-biblioteca';
+const availableTalentPoints = [{ value: sharedPoint }];
+const itemId = encodeURIComponent('evento:teste-1');
+
+assert.deepEqual(
+  resolveSharedTalentContext(
+    'https://tiago-ps.github.io/EventosGratuitosBHeSabara/?modo=agenda&item=' + itemId + '&talentos=' + sharedPoint,
+    'outro-ponto-salvo',
+    availableTalentPoints
+  ),
+  { selectedPoint: sharedPoint, storedPoint: sharedPoint }
+);
+assert.deepEqual(
+  resolveSharedTalentContext(
+    'https://tiago-ps.github.io/EventosGratuitosBHeSabara/?modo=agenda&item=' + itemId,
+    sharedPoint,
+    availableTalentPoints
+  ),
+  { selectedPoint: '', storedPoint: null }
+);
+assert.deepEqual(
+  resolveSharedTalentContext(
+    'https://tiago-ps.github.io/EventosGratuitosBHeSabara/?modo=agenda&item=' + itemId + '&talentos=ponto-inexistente',
+    sharedPoint,
+    availableTalentPoints
+  ),
+  { selectedPoint: '', storedPoint: null }
+);
+assert.deepEqual(
+  resolveSharedTalentContext(
+    'https://tiago-ps.github.io/EventosGratuitosBHeSabara/?modo=agenda',
+    sharedPoint,
+    availableTalentPoints
+  ),
+  { selectedPoint: sharedPoint, storedPoint: sharedPoint }
+);
+
+assert.match(appSource, /url\.searchParams\.set\('talentos', talentPoint\)/);
+assert.match(appSource, /url\.searchParams\.delete\('talentos'\)/);
+assert.match(appSource, /const items = filterAgendaItemsByTalentPoint\(/);
+
+console.log('Participações locais: vínculos, filtro por ponto e contexto de compartilhamento validados.');

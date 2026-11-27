@@ -35,6 +35,36 @@
     try { return safeText(localStorage.getItem(TALENT_POINT_KEY)); } catch { return ''; }
   }
 
+  function requestedTalentContextFromUrl() {
+    try {
+      const url = new URL(window.location.href);
+      const itemId = safeText(url.searchParams.get('item'));
+      if (!itemId || itemId.length > 500 || !itemId.includes(':')) return null;
+      return {
+        point: safeText(url.searchParams.get('talentos')).toLowerCase()
+      };
+    } catch {
+      return null;
+    }
+  }
+
+  function resolveSelectedPoint(availablePoints) {
+    const requested = requestedTalentContextFromUrl();
+    if (requested) {
+      const point = availablePoints.some(item => item.value === requested.point)
+        ? requested.point
+        : '';
+      try {
+        if (point) localStorage.setItem(TALENT_POINT_KEY, point);
+        else localStorage.removeItem(TALENT_POINT_KEY);
+      } catch { /* O link continua valendo durante esta sessão. */ }
+      return point;
+    }
+
+    const stored = selectedPointFromStorage();
+    return availablePoints.some(item => item.value === stored) ? stored : '';
+  }
+
   function pointOptions() {
     const counts = new Map();
     for (const person of people.values()) {
@@ -296,8 +326,7 @@
         .filter(Boolean);
 
       loaded = true;
-      selectedPoint = selectedPointFromStorage();
-      if (!pointOptions().some(item => item.value === selectedPoint)) selectedPoint = '';
+      selectedPoint = resolveSelectedPoint(pointOptions());
       window.dispatchEvent(new CustomEvent(TALENT_POINT_EVENT, {
         detail: { loaded: true, points: pointOptions(), selectedPoint }
       }));

@@ -322,6 +322,7 @@
       const url = new URL(window.location.href);
       if (!url.searchParams.has('item')) return;
       url.searchParams.delete('item');
+      url.searchParams.delete('talentos');
       history.replaceState(history.state, '', url);
     } catch {
       // A exploração continua funcional mesmo sem normalizar a URL.
@@ -1862,10 +1863,15 @@ function eventProgram(event) {
     const itemId = agendaFavoriteId(item);
     if (!itemId) return base;
 
+    const talentPoint = effectiveViewMode() === 'agenda'
+      ? String(localParticipation?.selectedPoint?.() || '').trim().toLowerCase()
+      : '';
+
     try {
       const url = new URL(base);
       url.searchParams.set('modo', 'agenda');
       url.searchParams.set('item', itemId);
+      if (talentPoint) url.searchParams.set('talentos', talentPoint);
       return url.href;
     } catch {
       return base;
@@ -4505,7 +4511,9 @@ function eventProgram(event) {
 
   function agendaVisibleContents() {
     if (state.mobileFocusedItem) {
-      const items = agendaItemsForIds(new Set([state.mobileFocusedItem]));
+      const items = filterAgendaItemsByTalentPoint(
+        agendaItemsForIds(new Set([state.mobileFocusedItem]))
+      );
       const group = type => items.filter(item => item.tipo_conteudo === type);
       const events = group('evento').sort(compareAgendaEvents);
       const books = group('livro').sort(agendaTitleCompare);

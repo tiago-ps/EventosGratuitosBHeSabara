@@ -285,13 +285,24 @@ const singleEnd = appSource.indexOf('function buildSiteQr(', singleStart);
 const singleContext = vm.createContext({
   URL,
   muralPublicUrl: () => 'https://tiago-ps.github.io/EventosGratuitosBHeSabara/',
-  agendaFavoriteId: item => item.tipo_conteudo + ':' + item.id
+  agendaFavoriteId: item => item.tipo_conteudo + ':' + item.id,
+  effectiveViewMode: () => 'agenda',
+  localParticipation: { selectedPoint: () => '' }
 });
 vm.runInContext(appSource.slice(singleStart, singleEnd), singleContext);
 const singleUrl = new URL(singleContext.muralItemUrl({ tipo_conteudo: 'evento', id: 'teste-1' }));
 assert.equal(singleUrl.searchParams.get('modo'), 'agenda');
 assert.equal(singleUrl.searchParams.get('item'), 'evento:teste-1');
 assert.equal(singleUrl.searchParams.has('selecao'), false);
+assert.equal(singleUrl.searchParams.has('talentos'), false);
+
+singleContext.localParticipation.selectedPoint = () => 'ifmg-sabara-balcao-biblioteca';
+const talentShareUrl = new URL(singleContext.muralItemUrl({ tipo_conteudo: 'evento', id: 'teste-1' }));
+assert.equal(talentShareUrl.searchParams.get('talentos'), 'ifmg-sabara-balcao-biblioteca');
+
+singleContext.effectiveViewMode = () => 'painel';
+const panelShareUrl = new URL(singleContext.muralItemUrl({ tipo_conteudo: 'evento', id: 'teste-1' }));
+assert.equal(panelShareUrl.searchParams.has('talentos'), false);
 
  
 // Testa a diferença real de experiência: ambos são Painel, mas só interativo
