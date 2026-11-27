@@ -85,7 +85,7 @@ for (const personId of ['mario-matheus-de-oliveira-silva', 'luisa-martins-vieira
 
 assert.ok(events.eventos.some(item => item.id === 'manual-santa-cecilia-conectando-geracoes-2026-11-28'));
 assert.match(source, /searchParams\.get\('ponto'\)/);
-assert.match(source, /dataset\.communityItemId/);
+assert.match(source, /dataset\??\.communityItemId/);
 assert.match(source, /Talentos da Casa/);
 assert.match(source, /imagens\/selos\/talentos-da-casa-banner\.png/);
 assert.match(source, /personIsTalentAtPoint/);
