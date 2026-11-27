@@ -1,7 +1,7 @@
 {
   "titulo_painel": "Agenda Cultural Gratuita - Belo Horizonte e Sabará",
   "periodo": "Março de 2026 a Junho de 2027",
-  "atualizado_em": "2026-11-27T15:39:32-03:00",
+  "atualizado_em": "2026-11-27T16:34:07-03:00",
   "tempo_slide": 12,
   "eventos": [
     {
@@ -6728,7 +6728,7 @@
       "cidade": "Belo Horizonte",
       "categoria": "Cinema",
       "gratuito": true,
-      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial. Também há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade.",
       "descricao": "Tudo que Capoeira Toca (Pedro Aspahan e César Guimarães | Brasil | 2026 | Documentário | 80 min) A partir dos cantos de importantes mestres de capoeira do país, o filme expressa musicalmente a história da diáspora africana no Brasil. As vozes e os gestos revelam a capoeira como uma prática política da memória, onde o canto e o toque do berimbau se tornam resistência e o corpo se torna história. Sessão comentada pelos diretores. Classificação indicativa: Livre",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/3kg6vm13ojoqt7vml6i59il8329rvgo1pbk3m99npo1f8u9vqdu6mqa2iaei4m758v0f1m4umf2bg9a4uv51sl4vi2fjf0vmhhj6qao.jpeg",
       "link": "https://bileto.sympla.com.br/event/130433/d/430034/s/2774315",
@@ -6758,7 +6758,7 @@
       "cidade": "Belo Horizonte",
       "categoria": "Cinema",
       "gratuito": true,
-      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "inscricao": "Evento gratuito. Consulte a disponibilidade no link oficial. Também há cota para retirada na bilheteria 30 minutos antes da sessão, conforme disponibilidade.",
       "descricao": "Kakxop Pahok: As Crianças Cegas (Cassiano Maxakali, Charles Bicalho | Brasil | 2025 | Documentário | 17 min) Os homens da aldeia foram caçar. Muito tempo se passou... e eles não retornaram. As mulheres da aldeia trocaram seus filhos entre si, para não ficarem sem maridos, e passaram a viver uma nova vida. Porém, um dia os homens voltaram... Falado em seu idioma e ilustrado pelos Maxakali de Minas Gerais, Kakxop pahok se baseia na história tradicional do povo Maxakali (Tikmû´ûn). E formam a Trilogia Hãmnõgnõy de animações indígenas com Konãgxeka: o dilúvio maxakali (2016) e Mãtãnãg, a encantada (2019).",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/1f7bu9hkabpk25o77ivm3c4g8tiej892afcj7smss43k8ue7mkd5k1ik1phodifvoubbuj59cq4vm1k4dtliktqj40kj2rq1u44ppdv.webp",
       "link": "https://bileto.sympla.com.br/event/130434/d/430035/s/2774317",
@@ -6840,6 +6840,66 @@
         }
       },
       "mapa": "https://www.google.com/maps/search/?api=1&query=Teatro+da+Cidade%2C+Rua+da+Bahia%2C+1341%2C+Centro%2C+Belo+Horizonte+-+MG"
+    },
+    {
+      "id": "cine-santa-tereza-bileto-130908",
+      "titulo": "CINECLUBE PSINE - Mulheres Que Migram",
+      "data": "2026-12-01",
+      "data_fim": "",
+      "horario": "19h",
+      "local": "Cine Santa Tereza",
+      "cidade": "Belo Horizonte",
+      "categoria": "Cinema",
+      "gratuito": true,
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "descricao": "Mulheres que Migram — Cineclube Psine (Sabrina Demozzi | Brasil | 2023 | Documentário | 52 min) Cruzar fronteiras em busca de liberdade é o que move Romina, Ruth e Eliana, que deixaram seus países de origem para viver no Brasil. Os desafios e sonhos daquelas que ousam deixar tudo para trás. Classificação indicativa: livre.",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/2dnnd55asmmba87tpoq87k72inh0tsq8ghcqinfe034he24h2tvbe0vt6ch4c9ipulv33ic77dhcn7dcrhjsgd0d1bl982elpu23b2u.webp",
+      "link": "https://bileto.sympla.com.br/event/130908/d/431858/s/2784703",
+      "fonte": "Cine Santa Tereza",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "fonte_id": "130908",
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "classificacao_indicativa": "Livre",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-12-01",
+          "observacao": "19h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
+    },
+    {
+      "id": "cine-santa-tereza-bileto-130914",
+      "titulo": "16ª Mostra de Cinema e Direitos Humanos - Solenidade de Abertura: Nossa Mãe Era Atriz",
+      "data": "2026-12-02",
+      "data_fim": "",
+      "horario": "18h",
+      "local": "Cine Santa Tereza",
+      "cidade": "Belo Horizonte",
+      "categoria": "Cinema",
+      "gratuito": true,
+      "inscricao": "Ingressos gratuitos disponíveis on-line e na bilheteria, conforme disponibilidade",
+      "descricao": "Solenidade de abertura: Nossa Mãe Era Atriz — 16ª Mostra de Cinema e Direitos Humanos (André Novais | Brasil | 2023 | Documentário | 27 min) Maria José Novais Oliveira, uma senhora negra, moradora da periferia de Contagem, já nos seus 60 anos se tornou atriz de cinema, com uma carreira premiada no Brasil e internacionalmente. Classificação indicativa: 12 anos.",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/1a70qk611o8upke1kffhcv35h6rl1sr1ha1bc7pj0r935hpf8vudmjcqiflbc5a42t869mji921pkeacgihjeqs9pta1047grdcbop1.jpeg",
+      "link": "https://bileto.sympla.com.br/event/130914/d/431942/s/2785028",
+      "fonte": "Cine Santa Tereza",
+      "instituicao_id": "fundacao-municipal-cultura-bh",
+      "fonte_id": "130914",
+      "endereco": "Rua Estrela do Sul, 89 – Santa Tereza, Belo Horizonte",
+      "classificacao_indicativa": "12 anos",
+      "temporalidade": {
+        "classe": "pontual",
+        "realizacao": {
+          "inicio": "2026-12-02",
+          "observacao": "18h"
+        }
+      },
+      "motivo_publicacao": "realizacao_em_andamento_ou_futura",
+      "local_id": "cine-santa-tereza",
+      "mapa": "https://maps.app.goo.gl/YAtnJctDFWe7fR2j9"
     },
     {
       "id": "cine-santa-tereza-bileto-130789",
@@ -7897,5 +7957,5 @@
   ],
   "modo_teste_experimental": true,
   "eventos_somente_teste": 6,
-  "atualizado_em_teste": "2026-11-27T15:40:12-03:00"
+  "atualizado_em_teste": "2026-11-27T16:34:53-03:00"
 }
