@@ -13,13 +13,23 @@ const themesSource = fs.readFileSync(path.join(root, 'js/temas-visuais.js'), 'ut
 const appSource = fs.readFileSync(path.join(root, 'js/app.js'), 'utf8');
 
 assert.equal(people.schema, 2);
-assert.equal(people.pessoas.length, 2);
+assert.equal(people.pessoas.length, 4);
 
 const luiza = people.pessoas.find(person => person.id === 'luiza-cordeiro-martines');
 const jose = people.pessoas.find(person => person.id === 'jose-marcello-sales-giffoni');
+const mario = people.pessoas.find(person => person.id === 'mario-matheus-de-oliveira-silva');
+const luisaMartins = people.pessoas.find(person => person.id === 'luisa-martins-vieira');
 
 assert.ok(luiza);
 assert.ok(jose);
+assert.ok(mario);
+assert.ok(luisaMartins);
+assert.ok(mario.talentos.some(talento =>
+  talento.ponto === 'ifmg-sabara-balcao-biblioteca' && talento.papel === 'coral'
+));
+assert.ok(luisaMartins.talentos.some(talento =>
+  talento.ponto === 'ifmg-sabara-balcao-biblioteca' && talento.papel === 'violinista'
+));
 
 assert.ok(luiza.vinculos.some(vinculo =>
   vinculo.instituicao === 'IFMG Campus Sabará' && vinculo.tipo === 'aluna'
@@ -46,7 +56,7 @@ assert.ok(jose.talentos.some(talento =>
 assert.ok(!jose.vinculos.some(vinculo => vinculo.instituicao === 'UFMG'));
 
 assert.equal(participations.schema, 1);
-assert.equal(participations.participacoes.length, 3);
+assert.equal(participations.participacoes.length, 7);
 assert.ok(participations.participacoes.every(item =>
   item.ponto === 'ifmg-sabara-balcao-biblioteca'
 ));
@@ -62,6 +72,16 @@ assert.ok(participations.participacoes.some(item =>
   item.conteudo_id === 'atividade_lazer:atividade:pbh:tai-chi-parque-municipal' &&
   item.pessoa_id === 'jose-marcello-sales-giffoni'
 ));
+for (const personId of ['mario-matheus-de-oliveira-silva', 'luisa-martins-vieira']) {
+  for (const contentId of [
+    'evento:manual-santa-cecilia-conectando-geracoes-2026-11-28',
+    'evento:sympla-sabara-3644413'
+  ]) {
+    assert.ok(participations.participacoes.some(item =>
+      item.conteudo_id === contentId && item.pessoa_id === personId
+    ));
+  }
+}
 
 assert.ok(events.eventos.some(item => item.id === 'manual-santa-cecilia-conectando-geracoes-2026-11-28'));
 assert.match(source, /searchParams\.get\('ponto'\)/);
