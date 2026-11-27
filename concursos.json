@@ -2,8 +2,8 @@
   "schema": 10,
   "fonte": "PCI Concursos",
   "url_catalogo": "https://www.pciconcursos.com.br/concursos/",
-  "coletado_em_utc": "2026-11-25T18:52:10.277490+00:00",
-  "total": 29,
+  "coletado_em_utc": "2026-11-27T18:36:13.519729+00:00",
+  "total": 30,
   "concursos": [
     {
       "id": "pci:noticia:associacao-das-pioneiras-sociais-abre-processo-seletivo-para-analista-de-tecnologia-da-informacao",
@@ -808,9 +808,9 @@
       }
     },
     {
-      "id": "pci:noticia:prefeitura-de-patis-mg-abre-concurso-publico-com-salarios-de-ate-13500",
+      "id": "pci:noticia:prefeitura-de-patis-mg-abre-concurso-com-salarios-de-ate-13500",
       "titulo": "Prefeitura de Patis",
-      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-patis-mg-abre-concurso-publico-com-salarios-de-ate-13500",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-patis-mg-abre-concurso-com-salarios-de-ate-13500",
       "imagem": "https://cdn.pci.app.br/img/i/3033ed48d2583d45d3dc8c87905075ce.png",
       "formacoes_compativeis": [
         "Sistemas de Informação / Computação",
@@ -820,7 +820,7 @@
         {
           "nome": "Técnico em Informática",
           "nivel": "tecnico",
-          "evidencia": "es) (1 vaga) professor de educacao empreendedora (1 vaga) psicologo (area social) (1 vaga) psicologo (saude) (1 vaga) servente de pedreiro (3 vagas) tecnico de nivel medio em politicas sociais (1 vaga) tecnico em contabilidade (1 vaga) tecnico em edificacoes (1 vaga) tecnico em enfermagem (4 vagas) tecnico em informatica (2 vagas) tecnico em saude bucal (cr) vigia (cr) a jornada de trabalho varia de 24 a 40 horas semanais, conforme o cargo. o vencimento basico inicial vai de r$ 1.621,00 a r$ 13.500,00. as inscricoes poderao ser realizadas das 8h do dia 3 de dezembro de 2026 as 17h do dia 30 de dezembro de 2026, pel"
+          "evidencia": "es) (1 vaga) professor de educacao empreendedora (1 vaga) psicologo (area social) (1 vaga) psicologo (saude) (1 vaga) servente de pedreiro (3 vagas) tecnico de nivel medio em politicas sociais (1 vaga) tecnico em contabilidade (1 vaga) tecnico em edificacoes (1 vaga) tecnico em enfermagem (4 vagas) tecnico em informatica (2 vagas) tecnico em saude bucal (cr) vigia (cr) a jornada de trabalho varia de 24 a 40 horas semanais, conforme o cargo. o vencimento basico inicial vai de r$ 1.621,00 a r$ 13.500,00. as inscricoes poderao ser realizadas das 8h do dia 18 de dezembro de 2026 as 17h do dia 15 de janeiro de 2027, pel"
         },
         {
           "nome": "Sistemas de Informação / Computação",
@@ -1163,9 +1163,9 @@
       }
     },
     {
-      "id": "pci:noticia:iffar-rs-abre-concurso-publico-com-vagas-para-diversas-areas",
+      "id": "pci:noticia:iffar-rs-abre-concurso-publico-para-cargos-de-niveis-medio-e-superior",
       "titulo": "IFFar - Instituto Federal de Educação, Ciência e Tecnologia Farroupilha",
-      "url": "https://www.pciconcursos.com.br/noticias/iffar-rs-abre-concurso-publico-com-vagas-para-diversas-areas",
+      "url": "https://www.pciconcursos.com.br/noticias/iffar-rs-abre-concurso-publico-para-cargos-de-niveis-medio-e-superior",
       "imagem": "https://cdn.pci.app.br/img/i/6360c4b5557558aeb5f47ad7fe6bdc36.png",
       "formacoes_compativeis": [
         "Sistemas de Informação / Computação"
@@ -1184,8 +1184,8 @@
       "inscricoes_inicio_texto": "19 de novembro de 2026",
       "inscricoes_fim_texto": "21 de dezembro de 2026",
       "inscricoes_texto": "19 de novembro de 2026 a 21 de dezembro de 2026",
-      "remuneracao_faixa_texto": "R$ 4.976,27",
-      "remuneracao_fonte": "catalogo",
+      "remuneracao_faixa_texto": "R$ 3.181,39",
+      "remuneracao_fonte": "noticia",
       "cargos_compativeis": [
         {
           "cargo": "Analista de Tecnologia da Informação Desenvolvedor Python",
@@ -1252,6 +1252,61 @@
       "janela_inscricoes": {
         "estado": "prazo_desconhecido",
         "completude": "desconhecida"
+      }
+    },
+    {
+      "id": "pci:noticia:prefeitura-de-sao-jose-do-inhacora-rs-abre-concurso-para-diversos-niveis-de-escolaridade",
+      "titulo": "Prefeitura de São José do Inhacorá",
+      "url": "https://www.pciconcursos.com.br/noticias/prefeitura-de-sao-jose-do-inhacora-rs-abre-concurso-para-diversos-niveis-de-escolaridade",
+      "imagem": "https://cdn.pci.app.br/img/i/1138419da04b9ca79ce005215f75b842.png",
+      "formacoes_compativeis": [
+        "Sistemas de Informação / Computação"
+      ],
+      "evidencias_formacao": [
+        {
+          "nome": "Sistemas de Informação / Computação",
+          "nivel": "superior",
+          "evidencia": " oportunidades sao para os cargos de: grupo 1 agente educacional (3 vagas) educador social (cadastro de reserva) grupo 2 professor de educacao especial aee (cadastro de reserva) professor de anos iniciais 20h (2 vagas) professor de anos iniciais 40h (2 vagas) professor de arte (1 vaga) professor de computacao e inovacao (1 vaga) professor de educacao fisica (1 vaga) professor de educacao infantil 25h (5 vagas) professor de educacao infantil 40h (3 vagas) professor de lingua inglesa (cadastro de reserva) professor de historia (1 vaga) professor de lingua portuguesa (1 vaga) professor de matematica (cadas"
+        }
+      ],
+      "fonte": "PCI Concursos",
+      "status_manual": "revisar",
+      "uf": "RS",
+      "cidade": "São José do Inhacorá",
+      "inscricoes_inicio_texto": "30 de outubro de 2026",
+      "inscricoes_fim_texto": "30 de novembro de 2026",
+      "inscricoes_texto": "30 de outubro de 2026 a 30 de novembro de 2026",
+      "remuneracao_faixa_texto": "R$ 1.798,62 a R$ 9.885,71",
+      "remuneracao_fonte": "noticia",
+      "cargos_compativeis": [
+        {
+          "cargo": "Professor de Computação e Inovação",
+          "vagas_texto": "1 vaga",
+          "formacao": "Sistemas de Informação / Computação",
+          "confianca": "alta"
+        }
+      ],
+      "janela_inscricoes": {
+        "estado": "aberto",
+        "completude": "completa",
+        "inicio": "2026-10-30",
+        "fim": "2026-11-30",
+        "texto_original": "30 de outubro de 2026 a 30 de novembro de 2026"
+      },
+      "temporalidade": {
+        "classe": "periodo",
+        "realizacao": {
+          "inicio": "2026-10-30",
+          "fim": "2026-11-30"
+        },
+        "participacao": [
+          {
+            "tipo": "candidatura",
+            "inicio": "2026-10-30",
+            "fim": "2026-11-30",
+            "status": "aberto"
+          }
+        ]
       }
     },
     {
