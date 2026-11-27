@@ -65,6 +65,12 @@
           "instituicao": "IFMG Campus Sabará",
           "tipo": "aluna",
           "ativo": true
+        },
+        {
+          "instituicao": "Sociedade Musical Santa Cecília",
+          "tipo": "musicista",
+          "papel": "coral",
+          "ativo": true
         }
       ],
       "talentos": [
@@ -84,6 +90,12 @@
         {
           "instituicao": "IFMG Campus Sabará",
           "tipo": "aluna",
+          "ativo": true
+        },
+        {
+          "instituicao": "Sociedade Musical Santa Cecília",
+          "tipo": "musicista",
+          "papel": "violinista",
           "ativo": true
         }
       ],

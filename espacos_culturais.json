@@ -17924,7 +17924,13 @@
       ],
       "natureza_espaco": "Escola de música",
       "instituicao": "Sociedade Musical Santa Cecília",
-      "link": ""
+      "link": "",
+      "pessoas_ids": [
+        "luiza-cordeiro-martines",
+        "mario-matheus-de-oliveira-silva",
+        "luisa-martins-vieira"
+      ],
+      "associacao_automatica_eventos": true
     }
   ]
 }
