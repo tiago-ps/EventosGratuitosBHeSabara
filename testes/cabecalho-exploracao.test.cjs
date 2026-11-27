@@ -89,5 +89,5 @@ assert.match(serviceWorker, /const CACHE_VERSION = 'mural-cultural-v\d+-[^']+';/
 
 console.log('Cabeçalho compacto do modo Exploração validado.');
 
-assert.ok(serviceWorker.includes("'./css/participacoes-locais.css?v=9'"));
+assert.ok(serviceWorker.includes("'./css/participacoes-locais.css?v=11'"));
 assert.ok(serviceWorker.includes("'./js/participacoes-locais.js?v=9'"));
