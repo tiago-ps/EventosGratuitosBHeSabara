@@ -4,8 +4,8 @@
     "concursos.json": 29,
     "configuracao-mural.json": 1,
     "cursos.json": 1908,
-    "espacos_culturais.json": 268,
-    "eventos.json": 169,
+    "espacos_culturais.json": 269,
+    "eventos.json": 161,
     "filmes.json": 1292,
     "livros.json": 51,
     "relacoes-eventos.json": 178,
@@ -16,22 +16,22 @@
     "concursos.json": "2271e1bc7dd4bd1aae961e40898ced64e2315a0e572fb64f3eba8d42723bf293",
     "configuracao-mural.json": "49dfe7115a6f5c6d5b8dee424d3b10341b5e3014ac58a295d27ef4e6043ebfc2",
     "cursos.json": "b30ad391ca8104f646d6e2c1bd78ef2080d57b38605153543a701aaeecb41948",
-    "espacos_culturais.json": "572de708c598f3392d99194f8a2a9cf4953cf7fcf401ad682c8174b03ccccda7",
-    "eventos.json": "f9ac3e5705200d29638399f848d0b1d3e63b2ba5b0212398b7e1866e656adf7c",
+    "espacos_culturais.json": "9649910e1cec16fde9fc1c98d1e5bd2ce1904d4d0f0ed7b3d97ef9e965c72594",
+    "eventos.json": "8b9b2dee9fcfdaf9be9209e8a7e1f03cae4e0ee01c95eb83110109376e922ab2",
     "filmes.json": "23437099af05856a1a822d1b91c19c9dc93962f073b823189bf8eb96652710af",
-    "livros.json": "fb7d4b1d2acf15989f864b5c7796ffadcf2eddf56d23fc9e10d022e6b730553a",
+    "livros.json": "572b4fb281bde133afa98afd1dc3688458897e350eb95493f9f48fc7d1569b35",
     "relacoes-eventos.json": "5ce598cf7241e3725f9173ab5ad3ed9b828d0c9667474bb9535a69320f26f08d",
     "utilidade-publica.json": "f8d79edb5165fcf0a07be6a94fb51b1fa021251afef2c00309eca46a373e45c4"
   },
-  "published_at": "2026-11-25T18:53:46Z",
-  "request_id": "auto-workflow_run-45679517866-1",
+  "published_at": "2026-11-27T04:02:17Z",
+  "request_id": "auto-push-45937399924-1",
   "schema_version": "1.0",
   "source_repository": "tiago-ps/ColetorEventosGratuitos",
-  "source_sha": "f566c0230c6a7bb78d56ad2b2b861b9dfcff0634",
+  "source_sha": "91cb0415f8959d85a716ddd1e270fa78c9751a48",
   "staging_repository": "tiago-ps/EventosGratuitosBHeSabara",
   "versions": {
     "manifest_schema": "1.0",
     "publication_validator": "central-v1"
   },
-  "workflow_run_id": "45679517866"
+  "workflow_run_id": "45937399924"
 }

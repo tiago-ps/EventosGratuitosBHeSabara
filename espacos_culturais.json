@@ -16936,6 +16936,83 @@
       "link": "https://www.bibliotecapublica.mg.gov.br/horario-de-funcionamento/"
     },
     {
+      "id": "sociedade-musical-santa-cecilia-sabara",
+      "nome": "Sociedade Musical Santa Cecília",
+      "cidade": "Sabará",
+      "endereco": "R. do Carmo, 91 - Centro, Sabará - MG, 34505-460",
+      "fonte_endereco": "https://sistema.funarte.gov.br/consultaBandas/listagem.php?uf=MG",
+      "google_place_id": "ChIJGZ5Hz0CdpgARWR6W73SJitc",
+      "instituicao_ids": [
+        "sociedade-musical-santa-cecilia-sabara"
+      ],
+      "aliases": [
+        "Sociedade Musical Santa Cecília de Sabará",
+        "SMSC",
+        "Banda Santa Cecília de Sabará",
+        "Escola de Música Santa Cecília"
+      ],
+      "mapa": "https://www.google.com/maps/search/?api=1&query=Sociedade%20Musical%20Santa%20Cec%C3%ADlia%2C%20R.%20do%20Carmo%2C%2091%20-%20Centro%2C%20Sabar%C3%A1%20-%20MG%2C%2034505-460&query_place_id=ChIJGZ5Hz0CdpgARWR6W73SJitc",
+      "descricao": "Entidade bicentenária dedicada à formação musical gratuita e à difusão da música em Sabará. Mantém uma escola de música gratuita e reúne Banda de Música, Orquestra de Câmara, Coral Adulto e Coro Infantojuvenil.",
+      "funcionamento": {
+        "segunda": "",
+        "terca": "",
+        "quarta": "",
+        "quinta": "",
+        "sexta": "",
+        "sabado": "",
+        "domingo": "",
+        "observacao": "Horários de aulas, ensaios e atendimento não informados. Consulte os canais oficiais para confirmar a programação."
+      },
+      "site": "",
+      "imagem": "https://ugc.production.linktr.ee/78022706-8625-4132-874a-934f035cadd4_304741894-472410618227208-8116753966185509907-n.jpeg?io=true&size=avatar-v3_0",
+      "imagem_fonte": "https://ugc.production.linktr.ee/78022706-8625-4132-874a-934f035cadd4_304741894-472410618227208-8116753966185509907-n.jpeg?io=true&size=avatar-v3_0",
+      "imagem_credito": "Imagem de perfil disponibilizada no Linktree da Sociedade Musical Santa Cecília.",
+      "exibicao_ativa": true,
+      "exibicao_recorrente": false,
+      "prioridade": 0,
+      "status_editorial": "revisado",
+      "redes_sociais": {
+        "instagram": "https://www.instagram.com/smscsabara/",
+        "facebook": "https://www.facebook.com/SociedadeMusicalSantaCeciliadeSabara/?locale=pt_BR",
+        "youtube": "https://www.youtube.com/@sociedademusicalsantacecil8641"
+      },
+      "contatos": {
+        "emails": [],
+        "telefones": [
+          "(31) 3674-5331"
+        ]
+      },
+      "links_adicionais": [
+        {
+          "rotulo": "Todos os canais e redes sociais",
+          "url": "https://linktr.ee/smsc.sabara"
+        }
+      ],
+      "tipo_espaco": "Sociedade musical e escola de música",
+      "vocacoes": [
+        "Música",
+        "Formação",
+        "Cultura"
+      ],
+      "pessoas_ids": [
+        "luiza-cordeiro-martines",
+        "mario-matheus-de-oliveira-silva",
+        "luisa-martins-vieira"
+      ],
+      "associacao_automatica_eventos": true,
+      "tipo": "equipamento",
+      "tipo_conteudo": "espaco",
+      "titulo": "Sociedade Musical Santa Cecília",
+      "temas": [
+        "Música",
+        "Formação",
+        "Cultura"
+      ],
+      "natureza_espaco": "Sociedade musical e escola de música",
+      "instituicao": "Sociedade Musical Santa Cecília",
+      "link": "https://www.google.com/maps/search/?api=1&query=Sociedade%20Musical%20Santa%20Cec%C3%ADlia%2C%20R.%20do%20Carmo%2C%2091%20-%20Centro%2C%20Sabar%C3%A1%20-%20MG%2C%2034505-460&query_place_id=ChIJGZ5Hz0CdpgARWR6W73SJitc"
+    },
+    {
       "aliases": [
         "Solar Padre Correia"
       ],
@@ -17854,83 +17931,6 @@
       "mapa": "https://maps.app.goo.gl/MtyButkEtXBbL1Ae8",
       "instituicao": "Fundação Municipal de Cultura de Belo Horizonte",
       "link": "https://prefeitura.pbh.gov.br/noticias/vitrine-do-teatro-marilia-recebe-exposicao-o-trajeto-do-afeto-de-paloma-parentoni"
-    },
-    {
-      "aliases": [
-        "Sociedade Musical Santa Cecília de Sabará",
-        "SMSC",
-        "Banda Santa Cecília de Sabará",
-        "Escola de Música Santa Cecília"
-      ],
-      "cidade": "Sabará",
-      "endereco": "R. do Carmo, 91 - Centro, Sabará - MG, 34505-460",
-      "fonte_endereco": "https://sistema.funarte.gov.br/consultaBandas/listagem.php?uf=MG",
-      "google_place_id": "ChIJGZ5Hz0CdpgARWR6W73SJitc",
-      "id": "sociedade-musical-santa-cecilia-sabara",
-      "instituicao_ids": [
-        "sociedade-musical-santa-cecilia-sabara"
-      ],
-      "mapa": "https://www.google.com/maps/search/?api=1&query=Sociedade%20Musical%20Santa%20Cec%C3%ADlia%2C%20R.%20do%20Carmo%2C%2091%20-%20Centro%2C%20Sabar%C3%A1%20-%20MG%2C%2034505-460&query_place_id=ChIJGZ5Hz0CdpgARWR6W73SJitc",
-      "nome": "Sociedade Musical Santa Cecília",
-      "descricao": "Entidade bicentenária dedicada à formação musical gratuita e à difusão da música em Sabará. Mantém uma escola de música gratuita e reúne Banda de Música, Orquestra de Câmara, Coral Adulto e Coro Infantojuvenil.",
-      "funcionamento": {
-        "segunda": "",
-        "terca": "",
-        "quarta": "",
-        "quinta": "",
-        "sexta": "",
-        "sabado": "",
-        "domingo": "",
-        "observacao": "Horários de aulas, ensaios e atendimento não informados. Consulte os canais oficiais para confirmar a programação."
-      },
-      "site": "",
-      "imagem": "https://ugc.production.linktr.ee/78022706-8625-4132-874a-934f035cadd4_304741894-472410618227208-8116753966185509907-n.jpeg?io=true&size=avatar-v3_0",
-      "imagem_fonte": "https://ugc.production.linktr.ee/78022706-8625-4132-874a-934f035cadd4_304741894-472410618227208-8116753966185509907-n.jpeg?io=true&size=avatar-v3_0",
-      "imagem_credito": "Imagem de perfil disponibilizada no Linktree da Sociedade Musical Santa Cecília.",
-      "exibicao_ativa": true,
-      "exibicao_recorrente": false,
-      "prioridade": 0,
-      "status_editorial": "revisado",
-      "tipo_espaco": "Sociedade musical e escola de música",
-      "vocacoes": [
-        "Música",
-        "Formação",
-        "Cultura"
-      ],
-      "contatos": {
-        "emails": [],
-        "telefones": [
-          "(31) 3674-5331"
-        ]
-      },
-      "links_adicionais": [
-        {
-          "rotulo": "Todos os canais e redes sociais",
-          "url": "https://linktr.ee/smsc.sabara"
-        }
-      ],
-      "redes_sociais": {
-        "instagram": "https://www.instagram.com/smscsabara",
-        "facebook": "https://www.facebook.com/SociedadeMusicalSantaCeciliadeSabara/?locale=pt_BR",
-        "youtube": "https://www.youtube.com/@sociedademusicalsantacecil8641"
-      },
-      "tipo": "equipamento",
-      "tipo_conteudo": "espaco",
-      "titulo": "Sociedade Musical Santa Cecília",
-      "temas": [
-        "Música",
-        "Formação",
-        "Cultura"
-      ],
-      "natureza_espaco": "Escola de música",
-      "instituicao": "Sociedade Musical Santa Cecília",
-      "link": "",
-      "pessoas_ids": [
-        "luiza-cordeiro-martines",
-        "mario-matheus-de-oliveira-silva",
-        "luisa-martins-vieira"
-      ],
-      "associacao_automatica_eventos": true
     }
   ]
 }
